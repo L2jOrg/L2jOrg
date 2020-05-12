@@ -153,9 +153,9 @@
     <spawn name="22_21">
         <group>
             <npc id="25020" x="90355" y="125663" z="-2113" heading="29175" dbSave="true" dbName="Breka Warlock Pastu" respawnTime="24hour" respawnRandom="12hour" /> <!-- Breka Warlock Pastu -->
-            <npc id="25412" x="81955" y="113135" z="-3051" heading="904" dbSave="true" dbName="Necrosentinel Royal Guard" respawnTime="24hour" respawnRandom="12hour" /> <!-- Necrosentinel Royal Guard -->
+            <!--<npc id="25412" x="81955" y="113135" z="-3051" heading="904" dbSave="true" dbName="Necrosentinel Royal Guard" respawnTime="24hour" respawnRandom="12hour" /> --><!-- Necrosentinel Royal Guard -->
             <npc id="25217" x="89943" y="105762" z="-3275" heading="904" dbSave="true" dbName="Cursed Clara" respawnTime="24hour" respawnRandom="12hour" /> <!-- Cursed Clara -->
-            <npc id="25176" x="92583" y="115265" z="-3179" heading="39687" dbSave="true" dbName="Black Lily" respawnTime="24hour" respawnRandom="12hour" /> <!-- Black Lily -->
+          <!--  <npc id="25176" x="92583" y="115265" z="-3179" heading="39687" dbSave="true" dbName="Black Lily" respawnTime="24hour" respawnRandom="12hour" /> --><!-- Black Lily -->
             <npc id="25226" x="81403" y="129457" z="-3572" heading="9823" dbSave="true" dbName="Roaring Lord Kastor" respawnTime="24hour" respawnRandom="12hour" /> <!-- Roaring Lord Kastor -->
         </group>
     </spawn>
@@ -217,9 +217,9 @@
     <spawn name="23_21">
         <group>
             <npc id="25401" x="118335" y="103317" z="-3558" heading="42143" dbSave="true" dbName="Skyla" respawnTime="24hour" respawnRandom="12hour" /> <!-- Skyla -->
-            <npc id="25137" x="120326" y="112855" z="-3787" heading="39687" dbSave="true" dbName="Beleth' Seer Sephia" respawnTime="24hour" respawnRandom="12hour" /> <!-- Beleth' Seer Sephia -->
+           <!-- <npc id="25137" x="120326" y="112855" z="-3787" heading="39687" dbSave="true" dbName="Beleth' Seer Sephia" respawnTime="24hour" respawnRandom="12hour" />--> <!-- Beleth' Seer Sephia -->
             <npc id="25234" x="120031" y="111137" z="-3047" heading="13913" dbSave="true" dbName="Ancient Weird Drake" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ancient Weird Drake -->
-            <npc id="25407" x="115114" y="112233" z="-3015" heading="51786" dbSave="true" dbName="Lord Ishka" respawnTime="24hour" respawnRandom="12hour" /> <!-- Lord Ishka -->
+            <npc id="22100" x="115114" y="112233" z="-3015" heading="51786" dbSave="true" dbName="Lord Ishka" respawnTime="24hour" respawnRandom="12hour" /> <!-- Lord Ishka -->
         </group>
     </spawn>
     <spawn name="23_23">

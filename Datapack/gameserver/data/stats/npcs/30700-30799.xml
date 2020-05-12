@@ -2075,7 +2075,7 @@
             <height normal="22.4"/>
         </collision>
     </npc>
-    <npc id="30754" level="70" type="Folk" name="Gilmore" title="Antharas Watchman">
+    <npc id="30754" level="70" type="Teleporter" name="Gilmore" title="Antharas Watchman">
         <parameters>
             <param name="MoveAroundSocial" value="215"/>
             <param name="MoveAroundSocial1" value="215"/>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc element="EARTH" id="22100" level="85" name="Lord Ishka" type="RaidBoss" title="Raid Boss">
+        <acquire attribute_exp="1530" exp="2768115" sp="83044"/>
+        <stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+            <vitals hp="70000" hpRegen="10" mp="3413" mpRegen="5"/>
+            <attack physical="2000.00" magical="133.511957686818" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="742.95024" magical="362.44" evasion="-18"/>
+            <speed>
+                <walk ground="100"/>
+                <run ground="190"/>
+            </speed>
+                <hitTime>450</hitTime>
+            <abnormalResist physical="230" magical="230"/>
+        </stats>
+        <status attackable="true" undying="false"/>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="300"/>
+        <collision>
+            <radius normal="22"/>
+            <height normal="67"/>
+        </collision>
+        <parameters>
+            <minions name="Privates">
+                <npc id="25408" count="1" respawnTime="360" weightPoint="1"/>
+                <npc id="25409" count="2" respawnTime="360" weightPoint="1"/>
+            </minions>
+            <param name="RaidSpawnMusic" value="Rm01_A"/>
+            <skill name="RangeHold_a" id="4197" level="6"/>
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <equipment rhand="1472"/> <!-- Dreadbane -->
+        <!--Lord Ishka-->
+        <dropLists>
+            <drop>
+                <item id="57" min="4085" max="9532" chance="70" />
+                <item id="91034" min="1" max="1" chance="2" />
+                <item id="91953" min="1" max="2" chance="5" />
+                <item id="91967" min="1" max="5" chance="7" />
+            </drop>
+        </dropLists>
+        <skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+            <skill id="4416" level="1"/><!--HP увеличены (4x):-->
+            <skill id="4408" level="12"/><!--Сильная Физ. Атк.:-->
+            <skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+            <skill id="4411" level="14"/><!--Предельно Сильная Физ. Защ.:-->
+            <skill id="4412" level="19"/><!--Предельно Сильная Маг. Защ.:-->
+            <skill id="4413" level="19"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+            <skill id="48047" level="1"/><!--Критическая Мощность: Предоставляет возможность мощной физ. крит. атаки-->
+            <skill id="4085" level="1"/><!--Шанс Крит. Удара: Увеличивает шанс Физ. Крит. Атк.-->
+            <skill id="4086" level="1"/>
+        </skillList>
+    </npc>
+</list>

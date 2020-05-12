@@ -1216,25 +1216,2228 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc element="EARTH" id="22093" level="82" name="Gargoyle Hunter" type="Monster">
-		<acquire attribute_exp="1230" exp="1396911" sp="41908"/>
-		<stats con="28" dex="28" int="28" men="28" str="28" wit="28">
-			<vitals hp="67893" hpRegen="10" mp="3221" mpRegen="5"/>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+	<npc element="EARTH" id="22064" level="84" name="Cave Maiden" type="Monster">
+		<acquire attribute_exp="1428" exp="1394760" sp="41843"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
 			</speed>
 		</stats>
-		<status attackable="true"/><!--Gargoyle Hunter-->
+		<status attackable="true"/>
+		<!--Cave Maiden-->
+		<dropLists>
+			<drop>
+				<!--Sealed Armor of Nightmare (Запечатанный Доспех Кошмаров)-->
+				<item chance="0.003" id="5311" max="1" min="1"/>
+				<!--Sealed Majestic Plate Armor (Запечатанный Латный Доспех Величия)-->
+				<item chance="0.003" id="5316" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4770" min="2044"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Sealed Armor of Nightmare Pattern (Выкройка Запечатанного Доспеха Кошмаров)-->
+				<item chance="0.3" id="5522" max="1" min="1"/>
+				<!--Sealed Majestic Plate Armor Pattern (Выкройка Запечатанного Латного Доспеха Величия)-->
+				<item chance="0.3" id="5523" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Leather Armor Fabric (Материя Запечатанного Кожаного Доспеха Величия)-->
+				<item chance="2.195" id="5481" max="1" min="1"/>
+				<!--Sealed Leather Armor of Nightmare Fabric (Материя Запечатанного Кожаного Доспеха Кошмаров)-->
+				<item chance="2.141" id="5480" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Чудовища: Это чудовища, питающиеся плотью гуманоидов. Также к ним относятся такие монстры, как химеры, обладающие более чем 2 видами клеток, и мифологические существа, жившие в этом мире еще до появления человечества.-->
+			<skill id="4416" level="3"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="10"/><!--Сильная Физ. Защ.:-->
+			<skill id="4412" level="14"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22065" level="85" name="Drake" type="Monster">
+		<acquire attribute_exp="1530" exp="1435319" sp="43060"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<!--Drake-->
+		<dropLists>
+			<drop>
+				<!--Shyeed's Bow (Лук Шиид)-->
+				<item chance="0.003" id="8684" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4834" min="2072"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Shyeed's Bow Shaft (Рукоять Лука Шиид)-->
+				<item chance="0.75" id="8718" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Shyeed's Bow Shaft (Рукоять Лука Шиид)-->
+				<item chance="1.171" id="8718" max="1" min="1"/>
+				<!--Recipe: Shyeed's Bow (60%) (Рецепт: Лук Шиид (60%))-->
+				<item chance="0.3" id="8702" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Драконы: Это название напоминает об Истинных Драконах, которые являются самыми могущественными воплощениями зла из тех, кому дала жизнь Шилен. Большинство представителей этой древней расы похожи на крылатых рептилий, могут летать и изрыгают энергии стихий из своих страшных пастей.-->
+			<skill id="4416" level="10"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="13"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="15"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22066" level="85" name="Blood Queen" type="Monster">
+		<acquire attribute_exp="1530" exp="1458078" sp="43743"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<!--Blood Queen-->
+		<dropLists>
+			<drop>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="5038" min="2159"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Cloth Piece (Лоскут Ткани)-->
+				<item chance="0.3" id="49756" max="1" min="1"/>
+				<!--Magical Tablet (Магическая Табличка)-->
+				<item chance="0.3" id="90045" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Cloth Piece (Лоскут Ткани)-->
+				<item chance="1.202" id="49756" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
+			<skill id="4416" level="9"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Очень Сильная Физ. Атк.:-->
+			<skill id="4410" level="16"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="12"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22067" level="85" name="Headless Knight" type="Monster">
+		<acquire attribute_exp="1530" exp="1449841" sp="43496"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<!--Headless Knight-->
+		<dropLists>
+			<drop>
+				<!--Tiphon's Spear (Копье Тифона)-->
+				<item chance="0.003" id="8683" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4964" min="2127"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Tiphon's Spear Edge (Лезвие Копья Тифона)-->
+				<item chance="0.75" id="8717" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Tiphon's Spear Edge (Лезвие Копья Тифона)-->
+				<item chance="1.2839999" id="8717" max="1" min="1"/>
+				<!--Recipe: Tiphon's Spear (60%) (Рецепт: Копье Тифона (60%))-->
+				<item chance="0.3" id="8700" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="14"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Сильная Физ. Защ.:-->
+			<skill id="4412" level="14"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22068" level="82" name="Shackle" type="Monster">
+		<acquire attribute_exp="1230" exp="1341237" sp="40238"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="67892" hpRegen="10" mp="3221" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<!--Shackle-->
+		<dropLists>
+			<drop>
+				<!--Sealed Shield of Nightmare (Запечатанный Щит Кошмаров)-->
+				<item chance="0.030000001" id="5315" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4886" min="2094"/>
+				<!--Cord (Веревка)-->
+				<item chance="38.41" id="1884" max="9" min="3"/>
+				<!--Sealed Shield of Nightmare Fragment (Часть Запечатанного Щита Кошмаров)-->
+				<item chance="3.2979999" id="5495" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Shield of Nightmare Fragment (Часть Запечатанного Щита Кошмаров)-->
+				<item chance="15.75" id="5495" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22069" level="83" name="Cave Servant" type="Monster">
+		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<parameters>
+			<param name="MoveAroundSocial" value="167"/>
+			<param name="MoveAroundSocial1" value="167"/>
+			<param name="MoveAroundSocial2" value="167"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<status attackable="true"/>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13"/>
+			<height normal="25" grown="31"/>
+		</collision>
+		<!--Cave Servant-->
+		<dropLists>
+			<drop>
+				<!--Sealed Boots of Nightmare (Запечатанные Сапоги Кошмаров)-->
+				<item chance="0.030000001" id="5314" max="1" min="1"/>
+				<!--Sealed Majestic Boots (Запечатанные Сапоги Величия)-->
+				<item chance="0.030000001" id="5319" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4886" min="2094"/>
+				<!--Mithril Alloy (Мифриловый Сплав)-->
+				<item chance="5.665" id="1890" max="1" min="1"/>
+				<!--Sealed Majestic Boot Lining (Подкладка Запечатанных Сапог Величия)-->
+				<item chance="1.8470001" id="5503" max="1" min="1"/>
+				<!--Sealed Boots of Nightmare Lining (Подкладка Запечатанных Сапог Кошмаров)-->
+				<item chance="1.838" id="5502" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Boot Lining (Подкладка Запечатанных Сапог Величия)-->
+				<item chance="8.327" id="5503" max="1" min="1"/>
+				<!--Sealed Boots of Nightmare Lining (Подкладка Запечатанных Сапог Кошмаров)-->
+				<item chance="8.323999" id="5502" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22070" level="83" name="Cave Servant Archer" type="Monster">
+		<acquire attribute_exp="1328" exp="1316282" sp="39489"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<parameters>
+			<param name="MoveAroundSocial" value="157"/>
+			<param name="MoveAroundSocial1" value="157"/>
+			<param name="MoveAroundSocial2" value="157"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="275"/> <!-- Longbow -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11"/>
+			<height normal="27"/>
+		</collision>
+		<status attackable="true"/>
+		<!--Cave Servant Archer-->
+		<dropLists>
+			<drop>
+				<!--Sealed Gauntlets of Nightmare (Запечатанные Рукавицы Кошмаров)-->
+				<item chance="0.030000001" id="5313" max="1" min="1"/>
+				<!--Sealed Majestic Gauntlets (Запечатанные Рукавицы Величия)-->
+				<item chance="0.030000001" id="5318" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4344" min="1862"/>
+				<!--Sealed Gauntlets of Nightmare Design (Выкройка Запечатанных Рукавиц Кошмаров)-->
+				<item chance="1.675" id="5514" max="1" min="1"/>
+				<!--Sealed Majestic Gauntlet Design (Выкройка Запечатанных Рукавиц Величия)-->
+				<item chance="1.651" id="5515" max="1" min="1"/>
+				<!--Artisan's Frame (Заготовка Ремесленника)-->
+				<item chance="0.75" id="1891" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Gauntlet Design (Выкройка Запечатанных Рукавиц Величия)-->
+				<item chance="7.49" id="5515" max="1" min="1"/>
+				<!--Sealed Gauntlets of Nightmare Design (Выкройка Запечатанных Рукавиц Кошмаров)-->
+				<item chance="7.4110003" id="5514" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Ослабленная Физ. Защ.:-->
+			<skill id="4412" level="10"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22071" level="84" name="Cave Servant Warrior" type="Monster">
+		<acquire attribute_exp="1428" exp="1480702" sp="44422"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69386" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<parameters>
+			<param name="MoveAroundSocial" value="167"/>
+			<param name="MoveAroundSocial1" value="167"/>
+			<param name="MoveAroundSocial2" value="167"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="77"/> <!-- Tsurugi -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13"/>
+			<height normal="25" grown="31"/>
+		</collision>
+		<status attackable="true"/>
+		<!--Cave Servant Warrior-->
 		<dropLists>
 			<drop>
 				<!--Earth Spirit Ore (Руда Духа Земли)-->
 				<item chance="0.0075" id="91038" max="1" min="1"/>
+			</drop>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="14"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22072" level="84" name="Cave Servant Captain" type="Monster">
+		<acquire attribute_exp="1428" exp="1404286" sp="42129"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="110"/>
+			<param name="MoveAroundSocial1" value="110"/>
+			<param name="MoveAroundSocial2" value="110"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="73"/> <!-- Shamshir -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13"/>
+			<height normal="27" grown="34"/>
+		</collision>
+		<!--Cave Servant Captain-->
+		<dropLists>
+			<drop>
+				<!--Sealed Majestic Ring (Запечатанное Кольцо Величия)-->
+				<item chance="0.030000001" id="6328" max="1" min="1"/>
+				<!--Sealed Majestic Necklace (Запечатанное Ожерелье Величия)-->
+				<item chance="0.0075" id="6326" max="1" min="1"/>
+				<!--Sealed Majestic Earring (Запечатанная Серьга Величия)-->
+				<item chance="0.0075" id="6327" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4857" min="2082"/>
+				<!--Sealed Majestic Ring Gemstone (Самоцвет Запечатанного Кольца Величия)-->
+				<item chance="2.3140001" id="6346" max="1" min="1"/>
+				<!--Sealed Majestic Earring Gemstone (Самоцвет Запечатанной Серьги Величия)-->
+				<item chance="1.536" id="6342" max="1" min="1"/>
+				<!--Sealed Majestic Necklace Beads (Бусина Запечатанного Ожерелья Величия)-->
+				<item chance="1.043" id="6344" max="1" min="1"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Ring Gemstone (Самоцвет Запечатанного Кольца Величия)-->
+				<item chance="11.18" id="6346" max="1" min="1"/>
+				<!--Sealed Majestic Earring Gemstone (Самоцвет Запечатанной Серьги Величия)-->
+				<item chance="7.4590006" id="6342" max="1" min="1"/>
+				<!--Sealed Majestic Necklace Beads (Бусина Запечатанного Ожерелья Величия)-->
+				<item chance="4.887" id="6344" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22073" level="85" name="Royal Cave Servant" type="Monster">
+		<acquire attribute_exp="1530" exp="1471516" sp="44146"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="80"/>
+			<param name="MoveAroundSocial1" value="80"/>
+			<param name="MoveAroundSocial2" value="80"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="SleepMagic" id="4046" level="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" lhand="945"/> <!-- Skeleton Dagger / Skeleton Buckler -->
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11"/>
+			<height normal="28.5"/>
+		</collision>
+		<!--Royal Cave Servant-->
+		<dropLists>
+			<drop>
+				<!--Daimon Crystal (Кристалл Дэймона)-->
+				<item chance="0.003" id="8688" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="5158" min="2210"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Daimon Crystal Fragment (Осколок Кристалла Дэймона)-->
+				<item chance="0.75" id="8722" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Daimon Crystal Fragment (Осколок Кристалла Дэймона)-->
+				<item chance="1.326" id="8722" max="1" min="1"/>
+				<!--Recipe: Daimon Crystal (60%) (Рецепт: Кристалл Дэймона (60%))-->
+				<item chance="0.3" id="8710" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Сильная Физ. Защ.:-->
+			<skill id="4412" level="14"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22074" level="82" name="Gargoyle Hunter" type="Monster">
+		<acquire attribute_exp="1230" exp="1396911" sp="41908"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="67893" hpRegen="10" mp="3221" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="0"/>
+			<param name="MoveAroundSocial1" value="0"/>
+			<param name="MoveAroundSocial2" value="0"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false"/>
+		<collision>
+			<radius normal="25"/>
+			<height normal="65"/>
+		</collision>
+		<!--Gargoyle Hunter-->
+		<dropLists>
+			<drop>
 				<!--Earth Spirit Ore (Руда Духа Земли)-->
 				<item chance="0.0075" id="91038" max="1" min="1"/>
 			</drop>
 		</dropLists>
+		<skillList><!--Магические Создания: Распространенное название для биотехнологических предметов времен Магии и Гигантов. Их Маг. Атк. достаточно сильна - порой даже ими используется высшая магия и заклинания. Например, телепортация.-->
+			<skill id="4416" level="2"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
 	</npc>
+	<npc element="EARTH" id="22075" level="82" name="Dustwind Gargoyle" type="Monster">
+		<acquire attribute_exp="1230" exp="1332159" sp="39965"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="67892" hpRegen="10" mp="3221" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="0"/>
+			<param name="MoveAroundSocial1" value="0"/>
+			<param name="MoveAroundSocial2" value="0"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="PhysicalSpecial" id="4073" level="5"/>
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450"/>
+		<collision>
+			<radius normal="25"/>
+			<height normal="65"/>
+		</collision>
+		<!--Dustwind Gargoyle-->
+		<dropLists>
+			<drop>
+				<!--Sealed Helm of Nightmare (Запечатанный Шлем Кошмаров)-->
+				<item chance="0.0075" id="5312" max="1" min="1"/>
+				<!--Sealed Majestic Circlet (Запечатанная Диадема Величия)-->
+				<item chance="0.0075" id="5317" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4799" min="2057"/>
+				<!--Silver Mold (Серебряная Заготовка)-->
+				<item chance="5.325" id="1886" max="1" min="1"/>
+				<!--Sealed Majestic Circlet Design (Модель Запечатанной Диадемы Величия)-->
+				<item chance="1.289" id="5528" max="1" min="1"/>
+				<!--Sealed Helm of Nightmare Design (Модель Запечатанного Шлема Кошмаров)-->
+				<item chance="1.2" id="5527" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Circlet Design (Модель Запечатанной Диадемы Величия)-->
+				<item chance="5.877" id="5528" max="1" min="1"/>
+				<!--Sealed Helm of Nightmare Design (Модель Запечатанного Шлема Кошмаров)-->
+				<item chance="5.796" id="5527" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Магические Создания: Распространенное название для биотехнологических предметов времен Магии и Гигантов. Их Маг. Атк. достаточно сильна - порой даже ими используется высшая магия и заклинания. Например, телепортация.-->
+			<skill id="4416" level="2"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="13"/><!--Сильная Физ. Защ.:-->
+			<skill id="4412" level="14"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22076" level="83" name="Thunder Wyrm" type="Monster">
+		<acquire attribute_exp="1328" exp="1365883" sp="40977"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="60"/>
+			<param name="MoveAroundSocial1" value="60"/>
+			<param name="MoveAroundSocial2" value="60"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true"/>
+		<collision>
+			<radius normal="29"/>
+			<height normal="72"/>
+		</collision>
+		<!--Thunder Wyrm-->
+		<dropLists>
+			<drop>
+				<!--Sealed Leather Armor of Nightmare (Запечатанный Кожаный Доспех Кошмаров)-->
+				<item chance="0.003" id="5320" max="1" min="1"/>
+				<!--Sealed Majestic Leather Armor (Запечатанный Кожаный Доспех Величия)-->
+				<item chance="0.003" id="5323" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4809" min="2061"/>
+				<!--Blacksmith's Frame (Заготовка Кузнеца)-->
+				<item chance="1.0699999" id="1892" max="1" min="1"/>
+				<!--Sealed Leather Armor of Nightmare Fabric (Материя Запечатанного Кожаного Доспеха Кошмаров)-->
+				<item chance="0.3" id="5480" max="1" min="1"/>
+				<!--Sealed Majestic Leather Armor Fabric (Материя Запечатанного Кожаного Доспеха Величия)-->
+				<item chance="0.3" id="5481" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Armor of Nightmare Pattern (Выкройка Запечатанного Доспеха Кошмаров)-->
+				<item chance="1.683" id="5522" max="1" min="1"/>
+				<!--Sealed Majestic Plate Armor Pattern (Выкройка Запечатанного Латного Доспеха Величия)-->
+				<item chance="1.675" id="5523" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Драконы: Это название напоминает об Истинных Драконах, которые являются самыми могущественными воплощениями зла из тех, кому дала жизнь Шилен. Большинство представителей этой древней расы похожи на крылатых рептилий, могут летать и изрыгают энергии стихий из своих страшных пастей.-->
+			<skill id="4416" level="10"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="14"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22077" level="83" name="Maluk Succubus" type="Monster">
+		<acquire attribute_exp="1328" exp="1472524" sp="44176"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="110"/>
+			<param name="MoveAroundSocial1" value="110"/>
+			<param name="MoveAroundSocial2" value="110"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="DDMagic" id="4039" level="5"/>
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>SUCCUBUS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10"/>
+			<height normal="36"/>
+		</collision>
+		<!--Maluk Succubus-->
+		<dropLists>
+			<drop>
+				<!--Naga Storm (Буря Наги)-->
+				<item chance="0.0009" id="8682" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="2956" min="1267"/>
+				<!--Oriharukon (Орихарукон)-->
+				<item chance="1.7720001" id="1893" max="1" min="1"/>
+				<!--Naga Storm Piece (Часть Бури Наги)-->
+				<item chance="0.3" id="8716" max="1" min="1"/>
+				<!--Earth Spirit Ore (Руда Духа Земли)-->
+				<item chance="0.0075" id="91038" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Naga Storm Piece (Часть Бури Наги)-->
+				<item chance="0.75" id="8716" max="1" min="1"/>
+				<!--Recipe: Naga Storm (60%) (Рецепт: Буря Наги (60%))-->
+				<item chance="0.3" id="8698" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
+			<skill id="4416" level="9"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22078" level="83" name="Maluk Succubus Turen" type="Monster">
+		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68000" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="110"/>
+			<param name="MoveAroundSocial1" value="110"/>
+			<param name="MoveAroundSocial2" value="110"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="DDMagic" id="4034" level="5"/>
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>SUCCUBUS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10"/>
+			<height normal="36"/>
+		</collision>
+		<!--Maluk Succubus Turen-->
+		<dropLists>
+			<drop>
+				<!--Sealed Robe of Nightmare (Запечатанная Мантия Кошмаров)-->
+				<item chance="0.003" id="5326" max="1" min="1"/>
+				<!--Sealed Majestic Robe (Запечатанная Мантия Величия)-->
+				<item chance="0.003" id="5329" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4886" min="2094"/>
+				<!--Quality Leather (Выделанная Кожа)-->
+				<item chance="12.71" id="1894" max="1" min="1"/>
+				<!--Sealed Robe of Nightmare Fabric (Материя Запечатанной Мантии Кошмаров)-->
+				<item chance="0.3" id="5487" max="1" min="1"/>
+				<!--Sealed Majestic Robe Fabric (Материя Запечатанной Мантии Величия)-->
+				<item chance="0.3" id="5488" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Robe Fabric (Материя Запечатанной Мантии Величия)-->
+				<item chance="2.276" id="5488" max="1" min="1"/>
+				<!--Sealed Robe of Nightmare Fabric (Материя Запечатанной Мантии Кошмаров)-->
+				<item chance="2.23" id="5487" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
+			<skill id="4416" level="9"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22079" level="84" name="Cave Keeper" type="Monster">
+		<acquire attribute_exp="1428" exp="1508220" sp="45247"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69386" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="120"/>
+			<param name="MoveAroundSocial1" value="120"/>
+			<param name="MoveAroundSocial2" value="120"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="PhysicalSpecial" id="4032" level="5"/>
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+			</clanList>
+		</ai>
+		<!--Cave Keeper-->
+		<dropLists>
+			<drop>
+				<!--Earth Spirit Ore (Руда Духа Земли)-->
+				<item chance="0.0075" id="91038" max="1" min="1"/>
+			</drop>
+		</dropLists>
+		<skillList><!--Чудовища: Это чудовища, питающиеся плотью гуманоидов. Также к ним относятся такие монстры, как химеры, обладающие более чем 2 видами клеток, и мифологические существа, жившие в этом мире еще до появления человечества.-->
+			<skill id="4416" level="3"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22080" level="83" name="Cave Servant" type="Monster">
+		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="167"/>
+			<param name="MoveAroundSocial1" value="167"/>
+			<param name="MoveAroundSocial2" value="167"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" lhand="945"/> <!-- Damascus Sword / Skeleton Buckler -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13"/>
+			<height normal="25" grown="31"/>
+		</collision>
+		<!--Cave Servant-->
+		<dropLists>
+			<drop>
+				<!--Sealed Helm of Nightmare (Запечатанный Шлем Кошмаров)-->
+				<item chance="0.0075" id="5312" max="1" min="1"/>
+				<!--Sealed Majestic Circlet (Запечатанная Диадема Величия)-->
+				<item chance="0.0075" id="5317" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4886" min="2094"/>
+				<!--Metallic Fiber (Металлическое Волокно)-->
+				<item chance="18.24" id="1895" max="9" min="3"/>
+				<!--Sealed Helm of Nightmare Design (Модель Запечатанного Шлема Кошмаров)-->
+				<item chance="1.255" id="5527" max="1" min="1"/>
+				<!--Sealed Majestic Circlet Design (Модель Запечатанной Диадемы Величия)-->
+				<item chance="1.224" id="5528" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Robe Fabric (Материя Запечатанной Мантии Величия)-->
+				<item chance="2.28" id="5488" max="1" min="1"/>
+				<!--Sealed Robe of Nightmare Fabric (Материя Запечатанной Мантии Кошмаров)-->
+				<item chance="2.227" id="5487" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22081" level="83" name="Cave Servant Archer" type="Monster">
+		<acquire attribute_exp="1328" exp="1316282" sp="39489"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="157"/>
+			<param name="MoveAroundSocial1" value="157"/>
+			<param name="MoveAroundSocial2" value="157"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="275"/> <!-- Longbow -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11"/>
+			<height normal="27"/>
+		</collision>
+		<!--Cave Servant Archer-->
+		<dropLists>
+			<drop>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4344" min="1862"/>
+				<!--High-grade Suede (Качественная Замша)-->
+				<item chance="26.009998" id="1885" max="1" min="1"/>
+				<!--Scroll: Enchant A-grade Armor (Свиток: Модифицировать Доспех Ранга A)-->
+				<item chance="0.3" id="730" max="1" min="1"/>
+				<!--Scroll: Enchant A-grade Weapon (Свиток: Модифицировать Оружие Ранга A)-->
+				<item chance="0.030000001" id="729" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Stone of Purity (Камень Чистоты)-->
+				<item chance="90.02" id="1875" max="3" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Ослабленная Физ. Защ.:-->
+			<skill id="4412" level="10"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22082" level="84" name="Cave Servant Warrior" type="Monster">
+		<acquire attribute_exp="1428" exp="1480702" sp="44422"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69386" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="167"/>
+			<param name="MoveAroundSocial1" value="167"/>
+			<param name="MoveAroundSocial2" value="167"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="77"/> <!-- Tsurugi -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13"/>
+			<height normal="25" grown="31"/>
+		</collision>
+		<!--Cave Servant Warrior-->
+		<dropLists>
+			<drop>
+				<!--Earth Spirit Ore (Руда Духа Земли)-->
+				<item chance="0.0075" id="91038" max="1" min="1"/>
+			</drop>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="14"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22083" level="84" name="Cave Servant Captain" type="Monster">
+		<acquire attribute_exp="1428" exp="1404286" sp="42129"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="110"/>
+			<param name="MoveAroundSocial1" value="110"/>
+			<param name="MoveAroundSocial2" value="110"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="73"/> <!-- Shamshir -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13"/>
+			<height normal="27" grown="34"/>
+		</collision>
+		<!--Cave Servant Captain-->
+		<dropLists>
+			<drop>
+				<!--Sword of Ipos (Меч Ипоса)-->
+				<item chance="0.003" id="8679" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4857" min="2082"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Sword of Ipos Blade (Клинок Меча Ипоса)-->
+				<item chance="0.75" id="8713" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sword of Ipos Blade (Клинок Меча Ипоса)-->
+				<item chance="1.179" id="8713" max="1" min="1"/>
+				<!--Recipe: Sword of Ipos (60%) (Рецепт: Меч Ипоса (60%))-->
+				<item chance="0.3" id="8692" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22084" level="85" name="Royal Cave Servant" type="Monster">
+		<acquire attribute_exp="1530" exp="1471516" sp="44146"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="80"/>
+			<param name="MoveAroundSocial1" value="80"/>
+			<param name="MoveAroundSocial2" value="80"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="SleepMagic" id="4046" level="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" lhand="945"/> <!-- Skeleton Dagger / Skeleton Buckler -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11"/>
+			<height normal="28.5"/>
+		</collision>
+		<!--Royal Cave Servant-->
+		<dropLists>
+			<drop>
+				<!--Barakiel's Axe (Топор Баракиэля)-->
+				<item chance="0.003" id="8680" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="5158" min="2210"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Barakiel's Axe Piece (Часть Топора Баракиэля)-->
+				<item chance="0.75" id="8714" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Barakiel's Axe Piece (Часть Топора Баракиэля)-->
+				<item chance="1.335" id="8714" max="1" min="1"/>
+				<!--Recipe: Barakiel's Axe (60%) (Рецепт: Топор Баракиэля (60%))-->
+				<item chance="0.3" id="8694" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Сильная Физ. Защ.:-->
+			<skill id="4412" level="14"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22085" level="84" name="Cave Keeper" type="Monster">
+		<acquire attribute_exp="1428" exp="1493403" sp="44803"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69386" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="120"/>
+			<param name="MoveAroundSocial1" value="120"/>
+			<param name="MoveAroundSocial2" value="120"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="DDMagic" id="4002" level="5"/>
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="223"/> <!-- Kukuri -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="17"/>
+			<height normal="46"/>
+		</collision>
+		<!--Cave Keeper-->
+		<dropLists>
+			<drop>
+				<!--Sobekk's Hurricane (Ураган Собекка)-->
+				<item chance="0.0009" id="8685" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="2820" min="1209"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.3" id="2133" max="1" min="1"/>
+				<!--Sobekk's Hurricane Edge (Лезвие Урагана Собекка)-->
+				<item chance="0.3" id="8719" max="1" min="1"/>
+				<!--Earth Spirit Ore (Руда Духа Земли)-->
+				<item chance="0.0075" id="91038" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sobekk's Hurricane Edge (Лезвие Урагана Собекка)-->
+				<item chance="0.75" id="8719" max="1" min="1"/>
+				<!--Recipe: Sobekk's Hurricane (60%) (Рецепт: Ураган Собекка (60%))-->
+				<item chance="0.3" id="8704" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Чудовища: Это чудовища, питающиеся плотью гуманоидов. Также к ним относятся такие монстры, как химеры, обладающие более чем 2 видами клеток, и мифологические существа, жившие в этом мире еще до появления человечества.-->
+			<skill id="4416" level="3"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="14"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22086" level="82" name="Shackle" type="Monster">
+		<acquire attribute_exp="1230" exp="1341237" sp="40238"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="67892" hpRegen="10" mp="3221" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="130"/>
+			<param name="MoveAroundSocial1" value="130"/>
+			<param name="MoveAroundSocial2" value="130"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="DDMagic" id="4002" level="4"/> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300"/>
+		<collision>
+			<radius normal="30" grown="15.5"/>
+			<height normal="40" grown="48.5"/>
+		</collision>
+		<!--Shackle-->
+		<dropLists>
+			<drop>
+				<!--Sealed Boots of Nightmare (Запечатанные Сапоги Кошмаров)-->
+				<item chance="0.030000001" id="5314" max="1" min="1"/>
+				<!--Sealed Majestic Boots (Запечатанные Сапоги Величия)-->
+				<item chance="0.030000001" id="5319" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4886" min="2094"/>
+				<!--Varnish of Purity (Очищенный Лак)-->
+				<item chance="8.9939995" id="1887" max="1" min="1"/>
+				<!--Sealed Boots of Nightmare Lining (Подкладка Запечатанных Сапог Кошмаров)-->
+				<item chance="1.753" id="5502" max="1" min="1"/>
+				<!--Sealed Majestic Boot Lining (Подкладка Запечатанных Сапог Величия)-->
+				<item chance="1.752" id="5503" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Boot Lining (Подкладка Запечатанных Сапог Величия)-->
+				<item chance="8.403999" id="5503" max="1" min="1"/>
+				<!--Sealed Boots of Nightmare Lining (Подкладка Запечатанных Сапог Кошмаров)-->
+				<item chance="8.333" id="5502" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22087" level="85" name="Headless Knight" type="Monster">
+		<acquire attribute_exp="1530" exp="1475851" sp="44276"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="110"/>
+			<param name="MoveAroundSocial1" value="110"/>
+			<param name="MoveAroundSocial2" value="110"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="DDMagic" id="4078" level="5"/>
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="124"/> <!-- Two-handed Sword -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21"/>
+			<height normal="31"/>
+		</collision>
+		<!--Headless Knight-->
+		<dropLists>
+			<drop>
+				<!--Themis' Tongue (Язык Темис)-->
+				<item chance="0.003" id="8686" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="5197" min="2227"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Themis' Tongue Piece (Часть Языка Темис)-->
+				<item chance="0.75" id="8720" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Themis' Tongue Piece (Часть Языка Темис)-->
+				<item chance="0.75" id="8720" max="1" min="1"/>
+				<!--Magical Tablet (Магическая Табличка)-->
+				<item chance="0.75" id="90045" max="1" min="1"/>
+				<!--Recipe: Themis' Tongue (60%) (Рецепт: Язык Темис (60%))-->
+				<item chance="0.3" id="8706" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Очень Сильная Физ. Атк.:-->
+			<skill id="4410" level="16"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22088" level="82" name="Dustwind Gargoyle" type="Monster">
+		<acquire attribute_exp="1230" exp="1326108" sp="39784"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="67892" hpRegen="10" mp="3221" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="0"/>
+			<param name="MoveAroundSocial1" value="0"/>
+			<param name="MoveAroundSocial2" value="0"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false"/>
+		<collision>
+			<radius normal="25"/>
+			<height normal="65"/>
+		</collision>
+		<!--Dustwind Gargoyle-->
+		<dropLists>
+			<drop>
+				<!--Sealed Gauntlets of Nightmare (Запечатанные Рукавицы Кошмаров)-->
+				<item chance="0.030000001" id="5313" max="1" min="1"/>
+				<!--Sealed Majestic Gauntlets (Запечатанные Рукавицы Величия)-->
+				<item chance="0.030000001" id="5318" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4741" min="2032"/>
+				<!--Synthetic Cokes (Синтетический Кокс)-->
+				<item chance="11.309999" id="1888" max="1" min="1"/>
+				<!--Sealed Majestic Gauntlet Design (Выкройка Запечатанных Рукавиц Величия)-->
+				<item chance="1.7820001" id="5515" max="1" min="1"/>
+				<!--Sealed Gauntlets of Nightmare Design (Выкройка Запечатанных Рукавиц Кошмаров)-->
+				<item chance="1.7179999" id="5514" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Gauntlet Design (Выкройка Запечатанных Рукавиц Величия)-->
+				<item chance="8.183001" id="5515" max="1" min="1"/>
+				<!--Sealed Gauntlets of Nightmare Design (Выкройка Запечатанных Рукавиц Кошмаров)-->
+				<item chance="8.104" id="5514" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Магические Создания: Распространенное название для биотехнологических предметов времен Магии и Гигантов. Их Маг. Атк. достаточно сильна - порой даже ими используется высшая магия и заклинания. Например, телепортация.-->
+			<skill id="4416" level="2"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Сильная Физ. Защ.:-->
+			<skill id="4412" level="14"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22089" level="83" name="Thunder Wyrm" type="Monster">
+		<acquire attribute_exp="1328" exp="1351416" sp="40543"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="60"/>
+			<param name="MoveAroundSocial1" value="60"/>
+			<param name="MoveAroundSocial2" value="60"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true"/>
+		<collision>
+			<radius normal="29"/>
+			<height normal="72"/>
+		</collision>
+		<!--Thunder Wyrm-->
+		<dropLists>
+			<drop>
+				<!--Behemoth' Tuning Fork (Трезубец Чудовища)-->
+				<item chance="0.003" id="8681" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4673" min="2003"/>
+				<!--Synthetic Braid (Синтетическая Веревка)-->
+				<item chance="24.42" id="1889" max="1" min="1"/>
+				<!--Behemoth' Tuning Fork Piece (Часть Трезубца Чудовища)-->
+				<item chance="0.3" id="8715" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Behemoth' Tuning Fork Piece (Часть Трезубца Чудовища)-->
+				<item chance="1.092" id="8715" max="1" min="1"/>
+				<!--Recipe: Behemoth' Tuning Fork (60%) (Рецепт: Трезубец Чудовища (60%))-->
+				<item chance="0.3" id="8696" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Драконы: Это название напоминает об Истинных Драконах, которые являются самыми могущественными воплощениями зла из тех, кому дала жизнь Шилен. Большинство представителей этой древней расы похожи на крылатых рептилий, могут летать и изрыгают энергии стихий из своих страшных пастей.-->
+			<skill id="4416" level="10"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="13"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22090" level="83" name="Maluk Succubus" type="Monster">
+		<acquire attribute_exp="1328" exp="1472524" sp="44176"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="110"/>
+			<param name="MoveAroundSocial1" value="110"/>
+			<param name="MoveAroundSocial2" value="110"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="SleepMagic" id="4046" level="5"/> <!-- Sleep -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SUCCUBUS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10"/>
+			<height normal="36"/>
+		</collision>
+		<!--Maluk Succubus-->
+		<dropLists>
+			<drop>
+				<!--Earth Spirit Ore (Руда Духа Земли)-->
+				<item chance="0.0075" id="91038" max="1" min="1"/>
+			</drop>
+		</dropLists>
+		<skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
+			<skill id="4416" level="9"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22091" level="83" name="Maluk Succubus Turen" type="Monster">
+		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="110"/>
+			<param name="MoveAroundSocial1" value="110"/>
+			<param name="MoveAroundSocial2" value="110"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="SleepMagic" id="4046" level="5"/> <!-- Sleep -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SUCCUBUS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10"/>
+			<height normal="36"/>
+		</collision>
+		<!--Maluk Succubus Turen-->
+		<dropLists>
+			<drop>
+				<!--Sealed Helm of Nightmare (Запечатанный Шлем Кошмаров)-->
+				<item chance="0.0075" id="5312" max="1" min="1"/>
+				<!--Sealed Majestic Circlet (Запечатанная Диадема Величия)-->
+				<item chance="0.0075" id="5317" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4886" min="2094"/>
+				<!--Sealed Helm of Nightmare Design (Модель Запечатанного Шлема Кошмаров)-->
+				<item chance="1.342" id="5527" max="1" min="1"/>
+				<!--Sealed Majestic Circlet Design (Модель Запечатанной Диадемы Величия)-->
+				<item chance="1.26" id="5528" max="1" min="1"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Circlet Design (Модель Запечатанной Диадемы Величия)-->
+				<item chance="5.999" id="5528" max="1" min="1"/>
+				<!--Sealed Helm of Nightmare Design (Модель Запечатанного Шлема Кошмаров)-->
+				<item chance="5.9" id="5527" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
+			<skill id="4416" level="9"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22092" level="85" name="Drake" type="Monster">
+		<acquire attribute_exp="1530" exp="1462846" sp="43886"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="60"/>
+			<param name="MoveAroundSocial1" value="60"/>
+			<param name="MoveAroundSocial2" value="60"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="30"/>
+			<height normal="100"/>
+		</collision>
+		<!--Drake-->
+		<dropLists>
+			<drop>
+				<!--Cabrio's Hand (Рука Кабрио)-->
+				<item chance="0.003" id="8687" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="5080" min="2177"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Cabrio's Hand Head (Навершие Руки Кабрио)-->
+				<item chance="0.75" id="8721" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Cabrio's Hand Head (Навершие Руки Кабрио)-->
+				<item chance="0.75" id="8721" max="1" min="1"/>
+				<!--Magical Tablet (Магическая Табличка)-->
+				<item chance="0.75" id="90045" max="1" min="1"/>
+				<!--Recipe: Cabrio's Hand (60%) (Рецепт: Рука Кабрио (60%))-->
+				<item chance="0.3" id="8708" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Драконы: Это название напоминает об Истинных Драконах, которые являются самыми могущественными воплощениями зла из тех, кому дала жизнь Шилен. Большинство представителей этой древней расы похожи на крылатых рептилий, могут летать и изрыгают энергии стихий из своих страшных пастей.-->
+			<skill id="4416" level="10"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Очень Сильная Физ. Атк.:-->
+			<skill id="4410" level="16"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22093" level="82" name="Gargoyle Hunter" type="Monster">
+		<acquire attribute_exp="1230" exp="1409015" sp="42271"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="67893" hpRegen="10" mp="3221" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="0"/>
+			<param name="MoveAroundSocial1" value="0"/>
+			<param name="MoveAroundSocial2" value="0"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false"/>
+		<collision>
+			<radius normal="25"/>
+			<height normal="65"/>
+		</collision>
+		<!--Gargoyle Hunter-->
+		<dropLists>
+			<drop>
+				<!--Earth Spirit Ore (Руда Духа Земли)-->
+				<item chance="0.0075" id="91038" max="1" min="1"/>
+			</drop>
+		</dropLists>
+		<skillList><!--Магические Создания: Распространенное название для биотехнологических предметов времен Магии и Гигантов. Их Маг. Атк. достаточно сильна - порой даже ими используется высшая магия и заклинания. Например, телепортация.-->
+			<skill id="4416" level="2"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22094" level="84" name="Cave Maiden" type="Monster">
+		<acquire attribute_exp="1428" exp="1409578" sp="42288"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="0"/>
+			<param name="MoveAroundSocial1" value="0"/>
+			<param name="MoveAroundSocial2" value="0"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+		</parameters>
+		<race>BEAST</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="68"/> <!-- Falchion -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25"/>
+			<height normal="65"/>
+		</collision>
+		<!--Cave Maiden-->
+		<dropLists>
+			<drop>
+				<!--Sirra's Blade (Клинок Сирры)-->
+				<item chance="0.003" id="8678" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4906" min="2103"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Sirra's Blade Edge (Лезвие Клинка Сирры)-->
+				<item chance="0.75" id="8712" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sirra's Blade Edge (Лезвие Клинка Сирры)-->
+				<item chance="1.8729999" id="8712" max="1" min="1"/>
+				<!--Recipe: Sirra's Blade (60%) (Рецепт: Клинок Сирры (60%))-->
+				<item chance="0.3" id="8690" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Чудовища: Это чудовища, питающиеся плотью гуманоидов. Также к ним относятся такие монстры, как химеры, обладающие более чем 2 видами клеток, и мифологические существа, жившие в этом мире еще до появления человечества.-->
+			<skill id="4416" level="3"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="14"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Сильная Физ. Защ.:-->
+			<skill id="4412" level="14"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22095" level="83" name="Cave Banshee" type="Monster">
+		<acquire attribute_exp="1328" exp="1376009" sp="41281"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="0"/>
+			<param name="MoveAroundSocial1" value="0"/>
+			<param name="MoveAroundSocial2" value="0"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="DDMagic" id="4001" level="4"/>
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11"/>
+			<height normal="28.5"/>
+		</collision>
+		<!--Cave Banshee-->
+		<dropLists>
+			<drop>
+				<!--Sealed Boots of Nightmare (Запечатанные Сапоги Кошмаров)-->
+				<item chance="0.030000001" id="5314" max="1" min="1"/>
+				<!--Sealed Majestic Boots (Запечатанные Сапоги Величия)-->
+				<item chance="0.030000001" id="5319" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4904" min="2102"/>
+				<!--Sealed Majestic Boot Lining (Подкладка Запечатанных Сапог Величия)-->
+				<item chance="1.8529999" id="5503" max="1" min="1"/>
+				<!--Sealed Boots of Nightmare Lining (Подкладка Запечатанных Сапог Кошмаров)-->
+				<item chance="1.8" id="5502" max="1" min="1"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Boot Lining (Подкладка Запечатанных Сапог Величия)-->
+				<item chance="8.436" id="5503" max="1" min="1"/>
+				<!--Sealed Boots of Nightmare Lining (Подкладка Запечатанных Сапог Кошмаров)-->
+				<item chance="8.345" id="5502" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
+			<skill id="4416" level="9"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="15"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22096" level="85" name="Dragon Bearer Captain" type="Monster">
+		<acquire attribute_exp="1530" exp="4188044" sp="125642"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="110"/>
+			<param name="MoveAroundSocial1" value="110"/>
+			<param name="MoveAroundSocial2" value="110"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="PhysicalSpecial" id="4032" level="4"/> <!-- NPC Strike -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="123" lhand="945" />
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13"/>
+			<height normal="27" grown="34"/>
+		</collision>
+		<!--Dragon Bearer Captain-->
+		<dropLists>
+			<drop>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4935" min="2115"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Cloth Piece (Лоскут Ткани)-->
+				<item chance="0.3" id="49756" max="1" min="1"/>
+				<!--Magical Tablet (Магическая Табличка)-->
+				<item chance="0.3" id="90045" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Cloth Piece (Лоскут Ткани)-->
+				<item chance="1.239" id="49756" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Очень Сильная Физ. Атк.:-->
+			<skill id="4410" level="16"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22097" level="84" name="Dragon Bearer Warrior" type="Monster">
+		<acquire attribute_exp="1428" exp="4051344" sp="121541"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="167"/>
+			<param name="MoveAroundSocial1" value="167"/>
+			<param name="MoveAroundSocial2" value="167"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="PhysicalSpecial" id="4073" level="4"/> <!-- Stun -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" lhand="945"/> <!-- rhand: Long Sword lhand: Skeleton Buckler -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" grown="13"/>
+			<height normal="25" grown="31"/>
+		</collision>
+		<!--Dragon Bearer Warrior-->
+		<dropLists>
+			<drop>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4580" min="1963"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Low-grade Life Stone (Обычный Камень Жизни)-->
+				<item chance="0.75" id="90012" max="1" min="1"/>
+				<!--Mid-grade Life Stone (Камень Жизни Среднего Ранга)-->
+				<item chance="0.3" id="90013" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Low-grade Life Stone (Обычный Камень Жизни)-->
+				<item chance="1.36" id="90012" max="1" min="1"/>
+				<!--Mid-grade Life Stone (Камень Жизни Среднего Ранга)-->
+				<item chance="0.3" id="90013" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="13"/><!--Ослабленная Физ. Защ.:-->
+			<skill id="4412" level="10"/><!--Ослабленная Маг. Защ.:-->
+			<skill id="4413" level="10"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22098" level="84" name="Dragon Bearer Archer" type="Monster">
+		<acquire attribute_exp="1428" exp="4045629" sp="121369"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="157"/>
+			<param name="MoveAroundSocial1" value="157"/>
+			<param name="MoveAroundSocial2" value="157"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<skill name="PhysicalSpecial" id="4120" level="4"/> <!-- Stun -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="14"/> <!-- rhand: Bow -->
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11"/>
+			<height normal="27"/>
+		</collision>
+		<!--Dragon Bearer Archer-->
+		<dropLists>
+			<drop>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4528" min="1941"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Low-grade Life Stone (Обычный Камень Жизни)-->
+				<item chance="0.75" id="90012" max="1" min="1"/>
+				<!--Mid-grade Life Stone (Камень Жизни Среднего Ранга)-->
+				<item chance="0.3" id="90013" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Low-grade Life Stone (Обычный Камень Жизни)-->
+				<item chance="1.356" id="90012" max="1" min="1"/>
+				<!--Mid-grade Life Stone (Камень Жизни Среднего Ранга)-->
+				<item chance="0.3" id="90013" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="13"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+	<npc element="EARTH" id="22099" level="83" name="Cave Banshee" type="Monster">
+		<acquire attribute_exp="1328" exp="1376009" sp="41281"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/>
+		<parameters>
+			<param name="MoveAroundSocial" value="0"/>
+			<param name="MoveAroundSocial1" value="0"/>
+			<param name="MoveAroundSocial2" value="0"/>
+			<param name="SoulShot" value="100"/>
+			<param name="SoulShotRate" value="10"/>
+			<param name="SpiritShot" value="100"/>
+			<param name="SpiritShotRate" value="5"/>
+			<param name="LongRangeGuardRate" value="5"/>
+			<skill name="DDMagic" id="4001" level="4"/>
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<shots shotChance="30" spiritChance="30"/>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="500" clanHelpRange="500">
+			<clanList>
+				<clan>MALRUK</clan>
+			</clanList>
+		</ai>
+		<!--Cave Banshee-->
+		<dropLists>
+			<drop>
+				<!--Sealed Gauntlets of Nightmare (Запечатанные Рукавицы Кошмаров)-->
+				<item chance="0.030000001" id="5313" max="1" min="1"/>
+				<!--Sealed Majestic Gauntlets (Запечатанные Рукавицы Величия)-->
+				<item chance="0.030000001" id="5318" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4904" min="2102"/>
+				<!--Sealed Gauntlets of Nightmare Design (Выкройка Запечатанных Рукавиц Кошмаров)-->
+				<item chance="1.869" id="5514" max="1" min="1"/>
+				<!--Sealed Majestic Gauntlet Design (Выкройка Запечатанных Рукавиц Величия)-->
+				<item chance="1.793" id="5515" max="1" min="1"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+			</drop>
+			<spoil>
+				<!--Sealed Majestic Gauntlet Design (Выкройка Запечатанных Рукавиц Величия)-->
+				<item chance="8.38" id="5515" max="1" min="1"/>
+				<!--Sealed Gauntlets of Nightmare Design (Выкройка Запечатанных Рукавиц Кошмаров)-->
+				<item chance="8.353001" id="5514" max="1" min="1"/>
+			</spoil>
+		</dropLists>
+		<skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
+			<skill id="4416" level="9"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="15"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="13"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
+	</npc>
+
 </list>

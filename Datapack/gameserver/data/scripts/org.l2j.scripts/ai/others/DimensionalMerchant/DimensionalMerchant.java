@@ -27,8 +27,6 @@ public class DimensionalMerchant extends AbstractNpcAI
 
     private DimensionalMerchant()
     {
-        addStartNpc(MERCHANT);
-        addFirstTalkId(MERCHANT);
         addTalkId(MERCHANT);
     }
 

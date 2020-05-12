@@ -4183,7 +4183,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21084" level="68" type="Monster" name="Bloody Lady">
+    <npc id="21084" level="84" name="Bloody Lady" type="Monster">
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -4198,33 +4198,19 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
-        <acquire exp="51038" sp="1531"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="962.82579" hpRegen="7.5" mp="1398.3" mpRegen="2.7"/>
-            <attack physical="529.480061" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="225.1364364" magical="181.21958"/>
+        <acquire exp="1436673" sp="43101"/>
+        <stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+            <vitals hp="45000" hpRegen="10" mp="3349" mpRegen="5"/>
+            <attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="357.86723" magical="261.87171" />
             <speed>
-                <walk ground="80"/>
-                <run ground="174"/>
+                <walk ground="50"/>
+                <run ground="110"/>
             </speed>
-            <hitTime>500</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
-        <skillList>
-            <skill id="4035" level="6"/> <!-- Poison -->
-            <skill id="4039" level="6"/> <!-- NPC MP Drain -->
-            <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4413" level="9"/> <!-- Slightly Weak M. Def. -->
-            <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
-        </skillList>
+        <status attackable="true"/>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>3</sNpcPropHpRate>
         <ai aggroRange="500" clanHelpRange="400">
             <clanList>
                 <clan>BLOODY</clan>
@@ -4234,29 +4220,36 @@
             <radius normal="14"/>
             <height normal="40"/>
         </collision>
+        <!--Bloody Lady-->
         <dropLists>
             <drop>
-                <item id="358" min="1" max="1" chance="0.03"/> <!-- Blue Wolf Breastplate -->
-                <item id="2380" min="1" max="1" chance="0.03"/> <!-- Blue Wolf Gaiters -->
-                <item id="57" min="2091" max="4883" chance="70"/> <!-- Adena -->
-                <item id="1865" min="1" max="3" chance="13.38"/> <!-- Varnish -->
-                <item id="1895" min="1" max="1" chance="11.18"/> <!-- Metallic Fiber -->
-                <item id="1864" min="4" max="12" chance="9.7"/> <!-- Stem -->
-                <item id="4080" min="1" max="1" chance="6.635"/> <!-- Blue Wolf Gaiter Material -->
-                <item id="4078" min="1" max="1" chance="4.645"/> <!-- Blue Wolf Breastplate Part -->
-                <item id="4044" min="1" max="1" chance="1.4"/> <!-- Thons -->
-                <item id="4975" min="1" max="1" chance="0.3"/> <!-- Recipe: Black Ore Necklace (70%) -->
-                <item id="4985" min="1" max="1" chance="0.3"/> <!-- Recipe: Leather Armor of Doom (60%) -->
-                <item id="4618" min="1" max="1" chance="0.075"/> <!-- Greater Dye of DEX <Dex +4 CON -4> - 2nd Class Transfer -->
-                <item id="4621" min="1" max="1" chance="0.075"/> <!-- Greater Dye of MEN <Men +4 Int -4> - 2nd Class Transfer -->
-                <item id="5008" min="1" max="1" chance="0.075"/> <!-- Recipe: Pata (60%) -->
+                <!--Cabrio's Hand (Рука Кабрио)-->
+                <item chance="0.003" id="8687" max="1" min="1"/>
+                <!--Adena (Адена)-->
+                <item chance="70.0" id="57" max="5927" min="2540"/>
+                <!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+                <item chance="0.75" id="2133" max="1" min="1"/>
+                <!--Cabrio's Hand Head (Навершие Руки Кабрио)-->
+                <item chance="0.75" id="8721" max="1" min="1"/>
             </drop>
             <spoil>
-                <item id="4975" min="1" max="1" chance="8.126"/> <!-- Recipe: Black Ore Necklace (70%) -->
-                <item id="4985" min="1" max="1" chance="2.75"/> <!-- Recipe: Leather Armor of Doom (60%) -->
-                <item id="5008" min="1" max="1" chance="1.295"/> <!-- Recipe: Pata (60%) -->
+                <!--Cabrio's Hand Head (Навершие Руки Кабрио)-->
+                <item chance="0.75" id="8721" max="1" min="1"/>
+                <!--Magical Tablet (Магическая Табличка)-->
+                <item chance="0.75" id="90045" max="1" min="1"/>
+                <!--Recipe: Cabrio's Hand (60%) (Рецепт: Рука Кабрио (60%))-->
+                <item chance="0.3" id="8708" max="1" min="1"/>
             </spoil>
         </dropLists>
+        <skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
+            <skill id="4416" level="9"/><!--HP увеличены (3x):-->
+            <skill id="4408" level="11"/><!--Усиленная Физ. Атк.:-->
+            <skill id="4410" level="12"/><!--Усиленная Маг. Атк.:-->
+            <skill id="4411" level="12"/><!--Очень Слабая Маг. Защ.:-->
+            <skill id="4413" level="6"/><!--Уязвимость к Лукам: Уязвимость к атакам луками.-->
+            <skill id="4276" level="3"/><!--Уязвимость к Древковому Оружию: Уязвимость к атакам древковым оружием.-->
+            <skill id="4458" level="1"/>
+        </skillList>
     </npc>
     <npc id="21085" level="78" type="Monster" name="Bloody Sniper">
         <parameters>
