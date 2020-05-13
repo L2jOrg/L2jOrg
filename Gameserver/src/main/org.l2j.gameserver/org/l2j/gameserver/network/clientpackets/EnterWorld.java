@@ -279,12 +279,6 @@ public class EnterWorld extends ClientPacket {
             PetitionManager.getInstance().checkPetitionMessages(player);
         }
 
-        if (player.isAlikeDead()) // dead or fake dead
-        {
-            // no broadcast needed since the player will already spawn dead to others
-            client.sendPacket(new Die(player));
-        }
-
         client.sendPacket(new SkillCoolTime(player));
         client.sendPacket(new ExVoteSystemInfo(player));
 

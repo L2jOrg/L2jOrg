@@ -8134,6 +8134,12 @@ public final class Player extends Playable {
             setCurrentMp(_originalMp);
         }
 
+        if (isAlikeDead()) // dead or fake dead
+        {
+            // no broadcast needed since the player will already spawn dead to others
+            sendPacket(new Die(this));
+        }
+
         revalidateZone(true);
 
         notifyFriends(FriendStatus.ONLINE);
