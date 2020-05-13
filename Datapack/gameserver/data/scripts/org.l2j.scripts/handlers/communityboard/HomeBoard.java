@@ -18,12 +18,9 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.network.serverpackets.BuyList;
-import org.l2j.gameserver.network.serverpackets.ExBuySellList;
-import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2j.gameserver.network.serverpackets.ShowBoard;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -59,7 +56,8 @@ public final class HomeBoard implements IParseBoardHandler {
 			Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbssell" : null,
 			Config.COMMUNITYBOARD_ENABLE_TELEPORTS ? "_bbsteleport" : null,
 			Config.COMMUNITYBOARD_ENABLE_BUFFS ? "_bbsbuff" : null,
-			Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null
+			Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null,
+			Config.COMMUNITYBOARD_ENABLE_PREMIUM ? "_bbspremium" : null
 	};
 
 	private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {
@@ -280,6 +278,23 @@ public final class HomeBoard implements IParseBoardHandler {
 
 			activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");
 			AdminData.getInstance().broadcastMessageToGMs(String.format("Player: %s (%s) has just submitted a report!", activeChar.getName(), activeChar.getObjectId()));
+		} else if (command.startsWith("_bbspremium")) {
+			//_bbspremium;L2 amount;VIP amout ex: _bbspremium;100;200
+			final String fullBypass = command.replace("_bbspremium;", "");
+			final String[] buypassOptions = fullBypass.split(";");
+			final long buypassL2Coins = Long.parseLong(buypassOptions[0]);
+			final long buypassVIPPoints = Long.parseLong(buypassOptions[1]);
+
+			if (activeChar.getVipTier() >= 5) {
+				activeChar.sendMessage("Max VIP already reached!");
+			}
+			else if (activeChar.getL2Coins() <= buypassL2Coins) {
+				activeChar.sendMessage("Not enough currency!");
+			} else {
+				activeChar.addL2Coins(-buypassL2Coins);
+				activeChar.updateVipPoints(buypassVIPPoints);
+				//TODO : Update client ui (ex % boost xp bottom left screen)
+			}
 		}
 
 		if (returnHtml != null)
