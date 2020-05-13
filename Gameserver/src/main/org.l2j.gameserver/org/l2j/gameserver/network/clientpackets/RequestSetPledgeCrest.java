@@ -71,10 +71,8 @@ public final class RequestSetPledgeCrest extends ClientPacket {
             }
 
             final CrestData crest = CrestTable.getInstance().createCrest(_data, CrestType.PLEDGE);
-            if (crest != null) {
-                clan.changeClanCrest(crest.getId());
-                activeChar.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);
-            }
+            clan.changeClanCrest(crest.getId());
+            activeChar.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);
         }
     }
 

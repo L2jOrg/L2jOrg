@@ -1,6 +1,5 @@
 package org.l2j.gameserver.data.database.data;
 
-import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 
@@ -11,7 +10,6 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
 @Table("crests")
 public final class CrestData implements IIdentifiable {
 
-    @Column("crest_id")
     private int id;
     private byte[] data;
     private CrestType type;
