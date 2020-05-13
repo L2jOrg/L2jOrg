@@ -513,6 +513,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             player.setVipTier(newTier);
             if(newTier > 0) {
                 getAccountData().setVipTierExpiration(Instant.now().plus(30, ChronoUnit.DAYS).toEpochMilli());
+                VipEngine.getInstance().manageTier(player);
             } else {
                 getAccountData().setVipTierExpiration(0);
             }
