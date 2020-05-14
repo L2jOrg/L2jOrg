@@ -745,7 +745,7 @@
             <height normal="35"/>
         </collision>
     </npc>
-    <npc id="24025" level="70" type="Monster" name="Bloody Purple">
+    <npc id="24025" level="70" type="Monster" name="Bloody Purple" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="70"/>
             <param name="MoveAroundSocial1" value="70"/>
@@ -759,7 +759,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="77020" sp="2310"/>
+        <acquire exp="77020" sp="2310" attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="2006.93388" hpRegen="7.5" mp="2200.995" mpRegen="2.7"/>
             <attack physical="11407.9" magical="1816.2" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -809,14 +809,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24026" level="71" type="Monster" name="Clipher">
+    <npc id="24026" level="71" type="Monster" name="Clipher" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>UNDEAD</race>
-        <acquire exp="79766" sp="2392"/>
+        <acquire exp="79766" sp="2392" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2046.220325" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
@@ -858,14 +858,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24027" level="72" type="Monster" name="Sairon">
+    <npc id="24027" level="72" type="Monster" name="Sairon" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>UNDEAD</race>
-        <acquire exp="86040" sp="2581"/>
+        <acquire exp="86040" sp="2581" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2085.137305" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
@@ -906,14 +906,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24028" level="73" type="Monster" name="Demon Warrior">
+    <npc id="24028" level="73" type="Monster" name="Demon Warrior" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>UNDEAD</race>
-        <acquire exp="89303" sp="2679"/>
+        <acquire exp="89303" sp="2679" attribute_exp="40"/>
         <equipment rhand="234"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2123.68482" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
@@ -954,14 +954,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24029" level="74" type="Monster" name="Veil Master">
+    <npc id="24029" level="74" type="Monster" name="Veil Master" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>DEMONIC</race>
-        <acquire exp="90904" sp="2727"/>
+        <acquire exp="90904" sp="2727" attribute_exp="40"/>
         <equipment rhand="78"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2161.000785" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
@@ -1004,14 +1004,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24030" level="74" type="Monster" name="Stone Vanul">
+    <npc id="24030" level="74" type="Monster" name="Stone Vanul" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>UNDEAD</race>
-        <acquire exp="129198" sp="3875"/>
+        <acquire exp="129198" sp="3875" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2161.0418366667" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
@@ -1053,14 +1053,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24031" level="75" type="Monster" name="Death Flyer">
+    <npc id="24031" level="75" type="Monster" name="Death Flyer" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>DEMONIC</race>
-        <acquire exp="94263" sp="2827"/>
+        <acquire exp="94263" sp="2827" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2197.208355" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <speed>
@@ -1102,14 +1102,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24032" level="70" type="Monster" name="Seer">
+    <npc id="24032" level="70" type="Monster" name="Seer" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>UNDEAD</race>
-        <acquire exp="77020" sp="2310"/>
+        <acquire exp="77020" sp="2310" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2006.93388" hpRegen="7.5" mp="2200.995" mpRegen="2.7"/>
             <speed>
@@ -1153,14 +1153,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24033" level="71" type="Monster" name="Guardian Spirit">
+    <npc id="24033" level="71" type="Monster" name="Guardian Spirit" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>DEMONIC</race>
-        <acquire exp="79766" sp="2392"/>
+        <acquire exp="79766" sp="2392" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2046.220325" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
@@ -1200,14 +1200,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24034" level="72" type="Monster" name="Midnight Sairon">
+    <npc id="24034" level="72" type="Monster" name="Midnight Sairon" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>DEMONIC</race>
-        <acquire exp="86040" sp="2581"/>
+        <acquire exp="86040" sp="2581" attribute_exp="40"/>
         <equipment rhand="5129" lhand="5129"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2085.137305" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
@@ -1247,14 +1247,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24035" level="73" type="Monster" name="Daymen">
+    <npc id="24035" level="73" type="Monster" name="Daymen" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>UNDEAD</race>
-        <acquire exp="89303" sp="2679"/>
+        <acquire exp="89303" sp="2679" attribute_exp="40"/>
         <equipment rhand="84"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2123.68482" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
@@ -1293,14 +1293,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24036" level="74" type="Monster" name="Dolores">
+    <npc id="24036" level="74" type="Monster" name="Dolores" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>DEMONIC</race>
-        <acquire exp="90904" sp="2727"/>
+        <acquire exp="90904" sp="2727" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2161.000785" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
@@ -1337,14 +1337,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24037" level="74" type="Monster" name="Maiden Doll">
+    <npc id="24037" level="74" type="Monster" name="Maiden Doll" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>DEMONIC</race>
-        <acquire exp="129198" sp="3875"/>
+        <acquire exp="129198" sp="3875" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2161.0418366667" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
@@ -1381,14 +1381,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24038" level="75" type="Monster" name="Tor Scorpion">
+    <npc id="24038" level="75" type="Monster" name="Tor Scorpion" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>BUG</race>
-        <acquire exp="94263" sp="2827"/>
+        <acquire exp="94263" sp="2827" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2197.208355" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <speed>
@@ -1425,14 +1425,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24039" level="75" type="Monster" name="Pearl Horror" title="Cursed Soul">
+    <npc id="24039" level="75" type="Monster" name="Pearl Horror" title="Cursed Soul" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>UNDEAD</race>
-        <acquire exp="181912" sp="5457"/>
+        <acquire exp="181912" sp="5457" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="2197.2494066667" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <speed>
@@ -1509,14 +1509,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24041" level="71" type="Monster" name="Bloody Mourner">
+    <npc id="24041" level="71" type="Monster" name="Bloody Mourner" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>BEAST</race>
-        <acquire exp="0" sp="0"/>
+        <acquire exp="0" sp="0" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
@@ -1636,10 +1636,10 @@
             <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
         </skillList>
     </npc>
-    <npc id="24046" level="70" type="Monster" name="Floating Eye Seer">
+    <npc id="24046" level="70" type="Monster" name="Floating Eye Seer" element="FIRE">
         <!-- Source: www.l2wiki.com -->
         <race>ETC</race> <!-- TODO: Magic Creatures -->
-        <acquire exp="14700" sp="441"/>
+        <acquire exp="14700" sp="441" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1204.20959" hpRegen="7.5" mp="2200.995" mpRegen="2.7"/>
             <speed>
@@ -1675,10 +1675,10 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24047" level="71" type="Monster" name="Floating Eye Seer" title="Shadow Curse">
+    <npc id="24047" level="71" type="Monster" name="Floating Eye Seer" title="Shadow Curse" element="FIRE">
         <!-- Source: www.l2wiki.com -->
         <race>ETC</race> <!-- TODO: Magic Creatures -->
-        <acquire exp="15123" sp="453"/>
+        <acquire exp="15123" sp="453" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
@@ -1715,14 +1715,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24048" level="71" type="Monster" name="Immortal Spirit">
+    <npc id="24048" level="71" type="Monster" name="Immortal Spirit" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>HUMAN</race>
-        <acquire exp="15123" sp="453"/>
+        <acquire exp="15123" sp="453" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
@@ -1756,10 +1756,10 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24049" level="72" type="Monster" name="Immortal Spirit" title="Shadow Curse">
+    <npc id="24049" level="72" type="Monster" name="Immortal Spirit" title="Shadow Curse" element="FIRE">
         <!-- Source: www.l2wiki.com -->
         <race>HUMAN</race>
-        <acquire exp="15549" sp="466"/>
+        <acquire exp="15549" sp="466" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
@@ -1790,14 +1790,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24050" level="71" type="Monster" name="Starving Spirit">
+    <npc id="24050" level="71" type="Monster" name="Starving Spirit" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>DIVINE</race>
-        <acquire exp="15123" sp="453"/>
+        <acquire exp="15123" sp="453" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
@@ -1842,10 +1842,10 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24051" level="72" type="Monster" name="Starving Spirit" title="Shadow Curse">
+    <npc id="24051" level="72" type="Monster" name="Starving Spirit" title="Shadow Curse" element="FIRE">
         <!-- Source: www.l2wiki.com -->
         <race>UNDEAD</race>
-        <acquire exp="15549" sp="466"/>
+        <acquire exp="15549" sp="466" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
@@ -1879,14 +1879,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24052" level="72" type="Monster" name="Starving Soldier">
+    <npc id="24052" level="72" type="Monster" name="Starving Soldier" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>DIVINE</race>
-        <acquire exp="15549" sp="466"/>
+        <acquire exp="15549" sp="466" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
@@ -1927,10 +1927,10 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24053" level="73" type="Monster" name="Starving Soldier" title="Shadow Curse">
+    <npc id="24053" level="73" type="Monster" name="Starving Soldier" title="Shadow Curse" element="FIRE">
         <!-- Source: www.l2wiki.com -->
         <race>UNDEAD</race>
-        <acquire exp="15987" sp="479"/>
+        <acquire exp="15987" sp="479" attribute_exp="40"/>
         <equipment rhand="47716"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1274.16163" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
@@ -1965,14 +1965,14 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24054" level="73" type="Monster" name="Starving Warrior">
+    <npc id="24054" level="73" type="Monster" name="Starving Warrior" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
         </parameters>
         <race>HUMAN</race>
-        <acquire exp="15987" sp="479"/>
+        <acquire exp="15987" sp="479" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1274.16163" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
             <speed>
@@ -2011,10 +2011,10 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="24055" level="74" type="Monster" name="Starving Warrior" title="Shadow Curse">
+    <npc id="24055" level="74" type="Monster" name="Starving Warrior" title="Shadow Curse" element="FIRE">
         <!-- Source: www.l2wiki.com -->
         <race>UNDEAD</race>
-        <acquire exp="16428" sp="492"/>
+        <acquire exp="16428" sp="492" attribute_exp="40"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
             <vitals hp="1296.32953" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>

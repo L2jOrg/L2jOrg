@@ -237,7 +237,10 @@ public final class HomeBoard implements IParseBoardHandler {
 				report.setReport(reportText);
 				report.setPending(true);
 				getDAO(ReportDAO.class).save(report);
-			} else if (command.startsWith("_bbspremium")) {
+				activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");
+				AdminData.getInstance().broadcastMessageToGMs(String.format("Player: %s (%s) has just submitted a report!", activeChar.getName(), activeChar.getObjectId()));
+			}
+			else if (command.startsWith("_bbspremium")) {
 				//_bbspremium;L2 amount;VIP amout ex: _bbspremium;100;200
 				final String fullBypass = command.replace("_bbspremium;", "");
 				final String[] buypassOptions = fullBypass.split(";");
@@ -251,9 +254,6 @@ public final class HomeBoard implements IParseBoardHandler {
 				} else {
 					activeChar.addL2Coins(-buypassL2Coins);
 					activeChar.updateVipPoints(buypassVIPPoints);
-					//TODO : Update client ui (ex % boost xp bottom left screen)
-					activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");
-					AdminData.getInstance().broadcastMessageToGMs(String.format("Player: %s (%s) has just submitted a report!", activeChar.getName(), activeChar.getObjectId()));
 				}
 			}
 
@@ -273,9 +273,9 @@ public final class HomeBoard implements IParseBoardHandler {
 				}
 				CommunityBoardHandler.separateAndSend(returnHtml, activeChar);
 			}
+		}
 			return false;
 		}
-	}
 
 	/**
 	 * Gets the count Favorite links for the given player.
