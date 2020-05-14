@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PackageToList;
 import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
+import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 
 /**
  * Dimensional Merchant AI.
@@ -74,6 +75,11 @@ public class DimensionalMerchant extends AbstractNpcAI
                 break;
             }
             case "attendance_rewards":
+            {
+                player.sendPacket(new ExVipAttendanceItemList(player));
+                break;
+            }
+            case "shop":
             {
                 MultisellData.getInstance().separateAndSend(ATTENDANCE_REWARD_MULTISELL, player, null, false);
                 break;

@@ -634,7 +634,7 @@
             <height normal="24"/>
         </collision>
     </npc>
-    <npc id="21742" level="79" type="Monster" name="Varka Silenos Searcher">
+    <npc id="21742" level="79" type="Monster" name="Varka Silenos Searcher" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="65"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -655,7 +655,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2504" lhand="6918"/> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-        <acquire exp="37333" sp="1008"/>
+        <acquire exp="37333" sp="1008" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="1399.902885" hpRegen="8.5" mp="2683.32" mpRegen="3"/>
             <attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -712,7 +712,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21743" level="80" type="Monster" name="Varka Silenos Archer">
+    <npc id="21743" level="80" type="Monster" name="Varka Silenos Archer" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="75"/>
             <param name="MoveAroundSocial1" value="75"/>
@@ -731,7 +731,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6917"/> <!-- Monster Only (Poison Sting) -->
-        <acquire exp="39072" sp="1054"/>
+        <acquire exp="39072" sp="1054" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="1418.868755" hpRegen="8.5" mp="2739.075" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0"/>
@@ -790,7 +790,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21744" level="81" type="Monster" name="Varka Silenos Searcher Leader">
+    <npc id="21744" level="81" type="Monster" name="Varka Silenos Searcher Leader"  element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="90"/>
@@ -812,7 +812,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2504"/> <!-- Meteor Shower -->
-        <acquire exp="43794" sp="1182"/>
+        <acquire exp="43794" sp="1182" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="1436.849385" hpRegen="8.5" mp="2794.83" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -867,7 +867,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21745" level="82" type="Monster" name="Varka Priest">
+    <npc id="21745" level="82" type="Monster" name="Varka Priest" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="70"/>
             <param name="MoveAroundSocial1" value="70"/>
@@ -888,7 +888,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6716"/> <!-- Monster Only (Silenos Shaman) -->
-        <acquire exp="42098" sp="1136"/>
+        <acquire exp="42098" sp="1136" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -949,7 +949,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21733" level="79" type="Monster" name="Ketra Orc Searcher">
+    <npc id="21733" level="79" type="Monster" name="Ketra Orc Searcher" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -969,7 +969,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="79"/> <!-- Damascus Sword -->
-        <acquire exp="37333" sp="1008"/>
+        <acquire exp="37333" sp="1008" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="1399.902885" hpRegen="8.5" mp="2683.32" mpRegen="3"/>
             <attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1026,7 +1026,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21735" level="81" type="Monster" name="Ketra Orc Searcher Leader">
+    <npc id="21735" level="81" type="Monster" name="Ketra Orc Searcher Leader" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="140"/>
             <param name="MoveAroundSocial1" value="54"/>
@@ -1048,7 +1048,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6719"/> <!-- Monster Only (Ketra Orc Chieftain) -->
-        <acquire exp="43794" sp="1182"/>
+        <acquire exp="43794" sp="1182" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="1436.849385" hpRegen="8.5" mp="2794.83" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1103,7 +1103,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21736" level="82" type="Monster" name="Ketra Priest">
+    <npc id="21736" level="82" type="Monster" name="Ketra Priest" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="75"/>
@@ -1127,7 +1127,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="92"/> <!-- Spirit's Staff -->
-        <acquire exp="42098" sp="1136"/>
+        <acquire exp="42098" sp="1136" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="14758" hpRegen="8.5" mp="2614" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1195,7 +1195,7 @@
             <height normal="28.2"/>
         </collision>
     </npc>
-    <npc id="21734" level="80" type="Monster" name="Ketra Orc Archer">
+    <npc id="21734" level="80" type="Monster" name="Ketra Orc Archer" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -1213,7 +1213,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="288"/> <!-- Carnage Bow -->
-        <acquire exp="39072" sp="1054"/>
+        <acquire exp="39072" sp="1054" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="1418.868755" hpRegen="8.5" mp="2739.075" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0"/>
@@ -1272,10 +1272,10 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21751" level="80" type="Monster" name="Treasure Lookout">
+    <npc id="21751" level="80" type="Monster" name="Treasure Lookout" element="EARTH">
         <race>BEAST</race>
         <sex>MALE</sex>
-        <acquire exp="266169" sp="7186"/>
+        <acquire exp="266169" sp="7186" attribute_exp="1130"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1418.9098066667" hpRegen="8.5" mp="2739.075" mpRegen="3"/>
             <attack physical="970.5375485" magical="662.7513291" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
@@ -1299,7 +1299,7 @@
             <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
         </skillList>
     </npc>
-    <npc id="21754" level="81" type="Monster" name="Commander's Ghost">
+    <npc id="21754" level="81" type="Monster" name="Commander's Ghost" element="EARTH">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>HUMANOID</race>
         <sex>FEMALE</sex>
@@ -1338,7 +1338,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21755" level="81" type="Monster" name="Commander's Ghost">
+    <npc id="21755" level="81" type="Monster" name="Commander's Ghost" element="EARTH">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>HUMANOID</race>
         <sex>FEMALE</sex>
@@ -1377,10 +1377,10 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21758" level="80" type="Monster" name="Treasure Lookout">
+    <npc id="21758" level="80" type="Monster" name="Treasure Lookout" element="EARTH">
         <race>BEAST</race>
         <sex>MALE</sex>
-        <acquire exp="1772332" sp="47852"/>
+        <acquire exp="1772332" sp="47852" attribute_exp="1130"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="2758.7130516667" hpRegen="8.5" mp="2739.075" mpRegen="3"/>
             <attack physical="970.5375485" magical="662.7513291" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
@@ -1404,7 +1404,7 @@
             <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
         </skillList>
     </npc>
-    <npc id="21759" level="80" type="Monster" name="Ketra Orc Captain">
+    <npc id="21759" level="80" type="Monster" name="Ketra Orc Captain" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="140"/>
             <param name="MoveAroundSocial1" value="54"/>
@@ -1426,7 +1426,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6719"/> <!-- Monster Only (Ketra Orc Chieftain) -->
-        <acquire exp="48203" sp="1123"/>
+        <acquire exp="48203" sp="1123" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1470,7 +1470,7 @@
             <height normal="38.5" grown="46.2"/>
         </collision>
     </npc>
-    <npc id="21760" level="80" type="Monster" name="Varka Silenos Chief">
+    <npc id="21760" level="80" type="Monster" name="Varka Silenos Chief" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="90"/>
@@ -1492,7 +1492,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2504"/> <!-- Meteor Shower -->
-        <acquire exp="49275" sp="1121"/>
+        <acquire exp="49275" sp="1121" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1561,7 +1561,7 @@
             <height normal="12.4"/>
         </collision>
     </npc>
-    <npc id="21746" level="79" type="Monster" name="Varka Silenos Ranger">
+    <npc id="21746" level="79" type="Monster" name="Varka Silenos Ranger" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="65"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -1582,7 +1582,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="142"/>
-        <acquire exp="328744" sp="8876"/>
+        <acquire exp="328744" sp="8876" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2916.80302" hpRegen="8.5" mp="2683.32" mpRegen="3"/>
             <attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1643,7 +1643,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21737" level="79" type="Monster" name="Ketra Orc Ranger">
+    <npc id="21737" level="79" type="Monster" name="Ketra Orc Ranger" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -1665,7 +1665,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="79"/>
-        <acquire exp="328744" sp="8876"/>
+        <acquire exp="328744" sp="8876" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2916.80302" hpRegen="8.5" mp="2683.32" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1727,7 +1727,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21748" level="81" type="Monster" name="Varka Silenos Grand Priest">
+    <npc id="21748" level="81" type="Monster" name="Varka Silenos Grand Priest" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="123"/>
             <param name="MoveAroundSocial1" value="123"/>
@@ -1750,7 +1750,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6716"/> <!-- Monster Only (Silenos Shaman) -->
-        <acquire exp="710812" sp="19191"/>
+        <acquire exp="710812" sp="19191" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2873.45246" hpRegen="8.5" mp="2794.83" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1789,7 +1789,7 @@
             <height normal="39.5"/>
         </collision>
     </npc>
-    <npc id="21747" level="80" type="Monster" name="Varka Silenos Ranger Officer">
+    <npc id="21747" level="80" type="Monster" name="Varka Silenos Ranger Officer" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="85"/>
             <param name="MoveAroundSocial1" value="85"/>
@@ -1808,7 +1808,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2500" lhand="6918"/> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-        <acquire exp="357548" sp="9653"/>
+        <acquire exp="357548" sp="9653" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2837.4912" hpRegen="8.5" mp="2739.075" mpRegen="3"/>
             <attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1867,7 +1867,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21753" level="82" type="Monster" name="Varka Silenos Commander">
+    <npc id="21753" level="82" type="Monster" name="Varka Silenos Commander" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="90"/>
@@ -1889,7 +1889,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2504"/> <!-- Meteor Shower -->
-        <acquire exp="394947" sp="10663"/>
+        <acquire exp="394947" sp="10663" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2827.269335" hpRegen="8.5" mp="2850.585" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1939,7 +1939,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21750" level="81" type="Monster" name="Varka Elite Searcher">
+    <npc id="21750" level="81" type="Monster" name="Varka Elite Searcher" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="85"/>
             <param name="MoveAroundSocial1" value="85"/>
@@ -1958,7 +1958,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2500"/>
-        <acquire exp="364522" sp="9842"/>
+        <acquire exp="364522" sp="9842" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2873.45246" hpRegen="8.5" mp="2794.83" mpRegen="3"/>
             <attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2022,7 +2022,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21749" level="82" type="Monster" name="Varka Silenos Escort Chief">
+    <npc id="21749" level="82" type="Monster" name="Varka Silenos Escort Chief" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="90"/>
@@ -2044,7 +2044,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2500"/> <!-- Meteor Shower -->
-        <acquire exp="378944" sp="10231"/>
+        <acquire exp="378944" sp="10231" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2908.034384" hpRegen="8.5" mp="2850.585" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -2102,7 +2102,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21739" level="81" type="Monster" name="Ketra Orc Grand Priest">
+    <npc id="21739" level="81" type="Monster" name="Ketra Orc Grand Priest" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="75"/>
@@ -2126,7 +2126,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="213"/> <!-- Spirit's Staff -->
-        <acquire exp="710812" sp="19191"/>
+        <acquire exp="710812" sp="19191" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2873.45246" hpRegen="8.5" mp="2794.83" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -2165,7 +2165,7 @@
             <height normal="33.4"/>
         </collision>
     </npc>
-    <npc id="21738" level="80" type="Monster" name="Ketra Orc Ranger Officer">
+    <npc id="21738" level="80" type="Monster" name="Ketra Orc Ranger Officer" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -2183,7 +2183,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="80"/> <!-- Tallum Blade -->
-        <acquire exp="357548" sp="9653"/>
+        <acquire exp="357548" sp="9653" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2837.4912" hpRegen="8.5" mp="2739.075" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2242,7 +2242,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21752" level="82" type="Monster" name="Ketra Orc Commander">
+    <npc id="21752" level="82" type="Monster" name="Ketra Orc Commander" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="140"/>
             <param name="MoveAroundSocial1" value="54"/>
@@ -2264,7 +2264,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6719"/> <!-- Monster Only (Ketra Orc Chieftain) -->
-        <acquire exp="394947" sp="10663"/>
+        <acquire exp="394947" sp="10663" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2827.269335" hpRegen="8.5" mp="2850.585" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -2314,7 +2314,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21741" level="81" type="Monster" name="Ketra Elite Searcher">
+    <npc id="21741" level="81" type="Monster" name="Ketra Elite Searcher" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -2332,7 +2332,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="80"/> <!-- Tallum Blade -->
-        <acquire exp="364522" sp="9842"/>
+        <acquire exp="364522" sp="9842" attribute_exp="1130"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
             <vitals hp="2873.45246" hpRegen="8.5" mp="2794.83" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>

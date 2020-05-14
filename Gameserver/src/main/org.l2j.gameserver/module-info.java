@@ -115,6 +115,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.sessionzones;
     exports org.l2j.gameserver.network.serverpackets.item;
     exports org.l2j.gameserver.api.item;
+    exports org.l2j.gameserver.network.serverpackets.attendance;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

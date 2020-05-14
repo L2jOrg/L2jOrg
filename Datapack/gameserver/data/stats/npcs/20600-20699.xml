@@ -3801,7 +3801,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20659" level="67" type="Monster" name="Graveyard Wanderer">
+    <npc id="20659" level="67" type="Monster" name="Graveyard Wanderer" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="120"/>
             <param name="MoveAroundSocial1" value="120"/>
@@ -3815,7 +3815,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="7660" sp="229"/>
+        <acquire exp="7660" sp="229" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="942.13575" hpRegen="7.5" mp="1363.785" mpRegen="2.7"/>
             <attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -3865,7 +3865,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20660" level="67" type="Monster" name="Archer of Greed">
+    <npc id="20660" level="67" type="Monster" name="Archer of Greed" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="157"/>
             <param name="MoveAroundSocial1" value="157"/>
@@ -3880,7 +3880,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="14"/> <!-- Bow -->
-        <acquire exp="6491" sp="194"/>
+        <acquire exp="6491" sp="194" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="942.13575" hpRegen="7.5" mp="1363.785" mpRegen="2.7"/>
             <attack physical="606.2901649" magical="169.38777" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
@@ -3941,7 +3941,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20661" level="68" type="Monster" name="Hatar Ratman Thief">
+    <npc id="20661" level="68" type="Monster" name="Hatar Ratman Thief" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="100"/>
@@ -3956,7 +3956,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="946"/> <!-- Skeleton Dagger -->
-        <acquire exp="6658" sp="199"/>
+        <acquire exp="6658" sp="199" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="962.82579" hpRegen="7.5" mp="1398.3" mpRegen="2.7"/>
             <attack physical="228.9835538" magical="178.7041" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
@@ -4007,7 +4007,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20662" level="68" type="Monster" name="Hatar Ratman Boss">
+    <npc id="20662" level="68" type="Monster" name="Hatar Ratman Boss" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="100"/>
@@ -4022,7 +4022,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="221"/> <!-- Assassin Knife -->
-        <acquire exp="6658" sp="199"/>
+        <acquire exp="6658" sp="199" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="962.82579" hpRegen="7.5" mp="1398.3" mpRegen="2.7"/>
             <attack physical="241.3486688" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
@@ -4071,7 +4071,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20663" level="69" type="Monster" name="Hatar Hanishee">
+    <npc id="20663" level="69" type="Monster" name="Hatar Hanishee" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -4085,7 +4085,7 @@
         </parameters>
         <race>BEAST</race>
         <sex>FEMALE</sex>
-        <acquire exp="6884" sp="206"/>
+        <acquire exp="6884" sp="206" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="983.02321" hpRegen="7.5" mp="1432.815" mpRegen="2.7"/>
             <attack physical="319.490468" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -4141,7 +4141,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20664" level="70" type="Monster" name="Deprive">
+    <npc id="20664" level="70" type="Monster" name="Deprive" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="40"/>
             <param name="MoveAroundSocial1" value="40"/>
@@ -4155,7 +4155,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="7085" sp="212"/>
+        <acquire exp="7085" sp="212" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
             <attack physical="336.103966" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -4203,7 +4203,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20665" level="71" type="Monster" name="Taik Orc Supply">
+    <npc id="20665" level="71" type="Monster" name="Taik Orc Supply" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -4218,7 +4218,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="69"/> <!-- Bastard Sword -->
-        <acquire exp="7216" sp="216"/>
+        <acquire exp="7216" sp="216" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1023.17174" hpRegen="8.5" mp="1501.845" mpRegen="3"/>
             <attack physical="291.9382455" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5276,7 +5276,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20681" level="60" type="Monster" name="Vanor Silenos">
+    <npc id="20681" level="60" type="Monster" name="Vanor Silenos" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="50"/>
@@ -5292,7 +5292,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="88"/> <!-- Morning Star -->
-        <acquire exp="5184" sp="155"/>
+        <acquire exp="5184" sp="155" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="793.61082" hpRegen="6.5" mp="1130.145" mpRegen="2.4"/>
             <attack physical="234.89829" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -5341,7 +5341,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20682" level="61" type="Monster" name="Vanor Silenos Solider">
+    <npc id="20682" level="61" type="Monster" name="Vanor Silenos Solider" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="50"/>
@@ -5356,7 +5356,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="158" lhand="18"/> <!-- Tarbar / Leather Shield -->
-        <acquire exp="5358" sp="160"/>
+        <acquire exp="5358" sp="160" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="815.03979" hpRegen="7.5" mp="1162.89" mpRegen="2.7"/>
             <attack physical="248.0526" magical="169.38777" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -5410,7 +5410,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20683" level="62" type="Monster" name="Vanor Silenos Scout">
+    <npc id="20683" level="62" type="Monster" name="Vanor Silenos Scout" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="50"/>
@@ -5425,7 +5425,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="5"/> <!-- Mace -->
-        <acquire exp="5503" sp="165"/>
+        <acquire exp="5503" sp="165" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="836.22245" hpRegen="7.5" mp="1196.52" mpRegen="2.7"/>
             <attack physical="237.9049909" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -5481,7 +5481,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20684" level="63" type="Monster" name="Vanor Silenos Warrior">
+    <npc id="20684" level="63" type="Monster" name="Vanor Silenos Warrior" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
             <param name="MoveAroundSocial1" value="50"/>
@@ -5496,7 +5496,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="160"/> <!-- Battle Axe -->
-        <acquire exp="5739" sp="172"/>
+        <acquire exp="5739" sp="172" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="857.65142" hpRegen="7.5" mp="1229.265" mpRegen="2.7"/>
             <attack physical="303.409755" magical="188.35412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -5550,7 +5550,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20685" level="64" type="Monster" name="Vanor Silenos Shaman">
+    <npc id="20685" level="64" type="Monster" name="Vanor Silenos Shaman" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -5567,7 +5567,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="9"/> <!-- Cedar Staff -->
-        <acquire exp="5922" sp="177"/>
+        <acquire exp="5922" sp="177" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="879.08039" hpRegen="7.5" mp="1262.895" mpRegen="2.7"/>
             <attack physical="319.490468" magical="198.33688" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -5625,7 +5625,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20686" level="65" type="Monster" name="Vanor Silenos Chieftain">
+    <npc id="20686" level="65" type="Monster" name="Vanor Silenos Chieftain" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -5640,7 +5640,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="75"/> <!-- Caliburs -->
-        <acquire exp="11280" sp="338"/>
+        <acquire exp="11280" sp="338" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="900.139895" hpRegen="7.5" mp="1295.64" mpRegen="2.7"/>
             <attack physical="277.7718727" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>

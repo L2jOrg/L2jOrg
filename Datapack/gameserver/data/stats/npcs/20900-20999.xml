@@ -3225,7 +3225,7 @@
             <height normal="31" grown="37.5"/>
         </collision>
     </npc>
-    <npc id="20965" level="72" type="Monster" name="Chimera Piece">
+    <npc id="20965" level="72" type="Monster" name="Chimera Piece" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -3239,7 +3239,7 @@
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
-        <acquire exp="15549" sp="466"/>
+        <acquire exp="15549" sp="466" attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3290,7 +3290,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20966" level="74" type="Monster" name="Mutated Creation">
+    <npc id="20966" level="74" type="Monster" name="Mutated Creation" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -3304,7 +3304,7 @@
         </parameters>
         <race>DRAGON</race>
         <sex>MALE</sex>
-        <acquire exp="16428" sp="492"/>
+        <acquire exp="16428" sp="492"  attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1296.32953" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3358,7 +3358,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20967" level="75" type="Monster" name="Creature of the Past">
+    <npc id="20967" level="75" type="Monster" name="Creature of the Past" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -3367,7 +3367,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="31387" sp="941"/>
+        <acquire exp="31387" sp="941"  attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1318.49743" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3418,7 +3418,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20968" level="75" type="Monster" name="Forgotten Face">
+    <npc id="20968" level="75" type="Monster" name="Forgotten Face" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -3427,7 +3427,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="16875" sp="506"/>
+        <acquire exp="16875" sp="506"  attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1318.49743" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <attack physical="855.81387" magical="584.40994" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3482,7 +3482,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20969" level="75" type="Monster" name="Giant's Shadow">
+    <npc id="20969" level="75" type="Monster" name="Giant's Shadow" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="120"/>
             <param name="MoveAroundSocial1" value="120"/>
@@ -3492,7 +3492,7 @@
         <race>GIANT</race>
         <sex>MALE</sex>
         <equipment rhand="4028"/> <!-- Giant Cannon -->
-        <acquire exp="31387" sp="941"/>
+        <acquire exp="31387" sp="941"  attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1318.49743" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <attack physical="1945.355645" magical="597.85136" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
@@ -3549,7 +3549,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20970" level="73" type="Monster" name="Soldier of Ancient Times">
+    <npc id="20970" level="73" type="Monster" name="Soldier of Ancient Times" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="170"/>
             <param name="MoveAroundSocial1" value="170"/>
@@ -3564,7 +3564,7 @@
         <race>GIANT</race>
         <sex>MALE</sex>
         <equipment rhand="3937"/> <!-- Monster Only (Lesser Giant) -->
-        <acquire exp="15987" sp="479"/>
+        <acquire exp="15987" sp="479"  attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1274.16163" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
             <attack physical="752.73928" magical="514.02335" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3614,7 +3614,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20971" level="74" type="Monster" name="Warrior of Ancient Times">
+    <npc id="20971" level="74" type="Monster" name="Warrior of Ancient Times" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="170"/>
             <param name="MoveAroundSocial1" value="170"/>
@@ -3629,7 +3629,7 @@
         <race>GIANT</race>
         <sex>MALE</sex>
         <equipment rhand="3937"/> <!-- Monster Only (Lesser Giant) -->
-        <acquire exp="16428" sp="492"/>
+        <acquire exp="16428" sp="492"  attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1296.32953" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <attack physical="794.70901" magical="542.68324" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3682,7 +3682,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20972" level="75" type="Monster" name="Shaman of Ancient Times">
+    <npc id="20972" level="75" type="Monster" name="Shaman of Ancient Times" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="110"/>
             <param name="MoveAroundSocial1" value="110"/>
@@ -3699,7 +3699,7 @@
         <race>GIANT</race>
         <sex>MALE</sex>
         <equipment rhand="3938"/> <!-- Monster Only (Lesser Giant Wizard's Weapon) -->
-        <acquire exp="31387" sp="941"/>
+        <acquire exp="31387" sp="941"  attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1318.49743" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <attack physical="794.70901" magical="542.68324" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3755,7 +3755,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20973" level="75" type="Monster" name="Forgotten Ancient People">
+    <npc id="20973" level="75" type="Monster" name="Forgotten Ancient People" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="110"/>
             <param name="MoveAroundSocial1" value="110"/>
@@ -3765,7 +3765,7 @@
         <race>GIANT</race>
         <sex>MALE</sex>
         <equipment rhand="3938"/> <!-- Monster Only (Lesser Giant Wizard's Weapon) -->
-        <acquire exp="16875" sp="506"/>
+        <acquire exp="16875" sp="506"  attribute_exp="40"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1318.49743" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <attack physical="835.75573" magical="570.71283" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3817,7 +3817,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20974" level="65" type="Monster" name="Spiteful Soul Leader">
+    <npc id="20974" level="65" type="Monster" name="Spiteful Soul Leader" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="80"/>
@@ -3836,7 +3836,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="946" lhand="945"/> <!-- Skeleton Dagger / Skeleton Buckler -->
-        <acquire exp="10049" sp="301"/>
+        <acquire exp="10049" sp="301" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="857.65142" hpRegen="7.5" mp="1229.265" mpRegen="2.7"/>
             <attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -3888,7 +3888,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20975" level="63" type="Monster" name="Spiteful Soul Wizard">
+    <npc id="20975" level="63" type="Monster" name="Spiteful Soul Wizard" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -3903,6 +3903,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
+        <acquire exp="9733" sp="291" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="262.19426" magical="191.86238"/>
@@ -3926,7 +3927,7 @@
             <height normal="32"/>
         </collision>
     </npc>
-    <npc id="20976" level="62" type="Monster" name="Spiteful Soul Warrior">
+    <npc id="20976" level="62" type="Monster" name="Spiteful Soul Warrior" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -3940,7 +3941,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="9733" sp="291"/>
+        <acquire exp="9733" sp="291" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="836.22245" hpRegen="7.5" mp="1196.52" mpRegen="2.7"/>
             <attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
