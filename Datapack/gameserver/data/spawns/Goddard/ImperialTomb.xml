@@ -550,4 +550,14 @@
             <npc id="32011" x="181376" y="-81008" z="-2728" heading="16500" respawnTime="60sec" /> <!-- Imperial Tomb Guide -->
         </group>
     </spawn>
+    <spawn name="FourGoblets">
+        <npc id="31653" x="164711" y="-74121" z="-2825" heading="33000" respawnTime="60sec" /> <!-- Tablet Of Vision -->
+        <npc id="31453" x="178292" y="-85577" z="-7200" heading="16256" respawnTime="60sec" /> <!-- Nameless Spirit -->
+        <npc id="31454" x="169589" y="-91293" z="-2896" heading="16384" respawnTime="60sec" /> <!-- Ghost of Wigoth -->
+        <npc id="31919" x="170279" y="-88244" z="-2896" heading="22024" respawnTime="60sec" /> <!-- Elmoreden Chamberlain's Ghost -->
+        <npc id="31921" x="181061" y="-85595" z="-7200" respawnTime="60sec" /> <!-- Conquerors' Sepulcher Manager -->
+        <npc id="31922" x="179292" y="-88981" z="-7200" respawnTime="60sec" /> <!-- Sepulcher of Rulers Manager -->
+        <npc id="31924" x="175606" y="-82853" z="-7200" respawnTime="60sec" /> <!-- Judges' Sepulcher Manager -->
+        <npc id="31923" x="173202" y="-87004" z="-7200" respawnTime="60sec" /> <!-- Great Sages' Sepulcher Manager -->
+    </spawn>
 </list>

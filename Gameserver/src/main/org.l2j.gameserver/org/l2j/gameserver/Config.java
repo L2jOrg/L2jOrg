@@ -800,6 +800,7 @@ public final class Config {
     public static boolean COMMUNITYBOARD_ENABLE_TELEPORTS;
     public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
     public static boolean COMMUNITYBOARD_ENABLE_HEAL;
+    public static boolean COMMUNITYBOARD_ENABLE_PREMIUM;
     public static int COMMUNITYBOARD_TELEPORT_PRICE;
     public static int COMMUNITYBOARD_BUFF_PRICE;
     public static int COMMUNITYBOARD_HEAL_PRICE;
@@ -1717,9 +1718,10 @@ public final class Config {
         CUSTOM_CB_ENABLED = CommunityBoard.getBoolean("CustomCommunityBoard", false);
         COMMUNITYBOARD_CURRENCY = CommunityBoard.getInt("CommunityCurrencyId", 57);
         COMMUNITYBOARD_ENABLE_MULTISELLS = CommunityBoard.getBoolean("CommunityEnableMultisells", true);
-        COMMUNITYBOARD_ENABLE_TELEPORTS = CommunityBoard.getBoolean("CommunityEnableTeleports", true);
-        COMMUNITYBOARD_ENABLE_BUFFS = CommunityBoard.getBoolean("CommunityEnableBuffs", true);
-        COMMUNITYBOARD_ENABLE_HEAL = CommunityBoard.getBoolean("CommunityEnableHeal", true);
+        COMMUNITYBOARD_ENABLE_TELEPORTS = CommunityBoard.getBoolean("CommunityEnableTeleports", false);
+        COMMUNITYBOARD_ENABLE_BUFFS = CommunityBoard.getBoolean("CommunityEnableBuffs", false);
+        COMMUNITYBOARD_ENABLE_HEAL = CommunityBoard.getBoolean("CommunityEnableHeal", false);
+        COMMUNITYBOARD_ENABLE_PREMIUM = CommunityBoard.getBoolean("CommunityEnablePremium", false);
         COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
         COMMUNITYBOARD_BUFF_PRICE = CommunityBoard.getInt("CommunityBuffPrice", 0);
         COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);

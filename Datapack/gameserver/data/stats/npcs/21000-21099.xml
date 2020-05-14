@@ -66,7 +66,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21001" level="55" type="Monster" name="Archer of Destruction">
+    <npc id="21001" level="55" type="Monster" name="Archer of Destruction" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="157"/>
             <param name="MoveAroundSocial1" value="157"/>
@@ -81,7 +81,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="282"/> <!-- Elemental Bow -->
-        <acquire exp="5463" sp="163"/>
+        <acquire exp="5463" sp="163"  attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="686.46597" hpRegen="6.5" mp="969.075" mpRegen="2.4"/>
             <attack physical="948.6219328" magical="265.02979" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
@@ -139,7 +139,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21002" level="56" type="Monster" name="Doom Scout">
+    <npc id="21002" level="56" type="Monster" name="Doom Scout" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="80"/>
@@ -154,7 +154,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="242" lhand="2496"/> <!-- Soulfire Dirk / Dwarven Chain Shield -->
-        <acquire exp="5663" sp="169"/>
+        <acquire exp="5663" sp="169"  attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="707.89494" hpRegen="6.5" mp="1000.935" mpRegen="2.4"/>
             <attack physical="390.7408794" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
@@ -218,7 +218,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21003" level="57" type="Monster" name="Graveyard Lich">
+    <npc id="21003" level="57" type="Monster" name="Graveyard Lich" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="57"/>
             <param name="MoveAroundSocial1" value="57"/>
@@ -236,7 +236,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="11669" sp="350"/>
+        <acquire exp="11669" sp="350"  attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="729.32391" hpRegen="6.5" mp="1033.68" mpRegen="2.4"/>
             <attack physical="385.6663182" magical="289.69611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -274,7 +274,7 @@
             <height normal="28"/>
         </collision>
     </npc>
-    <npc id="21004" level="58" type="Monster" name="Dismal Pole">
+    <npc id="21004" level="58" type="Monster" name="Dismal Pole" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="100"/>
@@ -288,7 +288,7 @@
         </parameters>
         <race>PLANT</race>
         <sex>MALE</sex>
-        <acquire exp="6026" sp="180"/>
+        <acquire exp="6026" sp="180" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="750.26026" hpRegen="6.5" mp="1065.54" mpRegen="2.4"/>
             <attack physical="469.8757876" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120"/>
@@ -348,7 +348,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21005" level="59" type="Monster" name="Graveyard Predator">
+    <npc id="21005" level="59" type="Monster" name="Graveyard Predator" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
             <param name="MoveAroundSocial1" value="82"/>
@@ -362,7 +362,7 @@
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
-        <acquire exp="6286" sp="188"/>
+        <acquire exp="6286" sp="188" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="772.18185" hpRegen="6.5" mp="1098.285" mpRegen="2.4"/>
             <attack physical="508.138257" magical="315.44778" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -416,7 +416,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21006" level="60" type="Monster" name="Doom Servant">
+    <npc id="21006" level="60" type="Monster" name="Doom Servant" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="130"/>
             <param name="MoveAroundSocial1" value="130"/>
@@ -432,7 +432,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="6501" sp="195"/>
+        <acquire exp="6501" sp="195" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="793.61082" hpRegen="6.5" mp="1130.145" mpRegen="2.4"/>
             <attack physical="529.480061" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -492,7 +492,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21007" level="61" type="Monster" name="Doom Guard">
+    <npc id="21007" level="61" type="Monster" name="Doom Guard" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="130"/>
             <param name="MoveAroundSocial1" value="130"/>
@@ -506,7 +506,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="6720" sp="201"/>
+        <acquire exp="6720" sp="201" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="815.03979" hpRegen="7.5" mp="1162.89" mpRegen="2.7"/>
             <attack physical="551.188748" magical="342.17315" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -560,7 +560,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21008" level="62" type="Monster" name="Doom Archer">
+    <npc id="21008" level="62" type="Monster" name="Doom Archer" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="157"/>
             <param name="MoveAroundSocial1" value="157"/>
@@ -575,7 +575,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="286"/> <!-- Eminence Bow -->
-        <acquire exp="6942" sp="208"/>
+        <acquire exp="6942" sp="208" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="836.22245" hpRegen="7.5" mp="1196.52" mpRegen="2.7"/>
             <attack physical="1273.731061" magical="355.86007" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
@@ -627,7 +627,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21009" level="63" type="Monster" name="Doom Trooper">
+    <npc id="21009" level="63" type="Monster" name="Doom Trooper" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -644,7 +644,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="301"/> <!-- Scorpion -->
-        <acquire exp="7168" sp="215"/>
+        <acquire exp="7168" sp="215" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="857.65142" hpRegen="7.5" mp="1229.265" mpRegen="2.7"/>
             <attack physical="695.0564638" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120"/>
@@ -707,7 +707,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21010" level="64" type="Monster" name="Doom Warrior">
+    <npc id="21010" level="64" type="Monster" name="Doom Warrior" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="215"/>
             <param name="MoveAroundSocial1" value="215"/>
@@ -722,7 +722,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="71"/> <!-- Flamberge -->
-        <acquire exp="7397" sp="221"/>
+        <acquire exp="7397" sp="221" attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="879.08039" hpRegen="7.5" mp="1262.895" mpRegen="2.7"/>
             <attack physical="540.9468969" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>

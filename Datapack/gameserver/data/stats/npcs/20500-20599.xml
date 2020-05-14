@@ -2927,7 +2927,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20555" level="40" type="Monster" name="Giant Fungus">
+    <npc id="20555" level="40" type="Monster" name="Giant Fungus" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -2941,7 +2941,7 @@
         </parameters>
         <race>PLANT</race>
         <sex>MALE</sex>
-        <acquire exp="2880" sp="86"/>
+        <acquire exp="2880" sp="86" attribute_exp="6"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="396.5591" hpRegen="4.5" mp="521.265" mpRegen="1.8"/>
             <attack physical="176.36077" magical="120.43155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2995,7 +2995,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20556" level="41" type="Monster" name="Giant Monster Eye">
+    <npc id="20556" level="41" type="Monster" name="Giant Monster Eye" element="WATER">
         <!-- L2wiki: https://l2wiki.com/classic/Giant_Monster_Eye -->
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
@@ -3011,7 +3011,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="3035" sp="91"/>
+        <acquire exp="3035" sp="91" attribute_exp="6"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="413.8008" hpRegen="5.5" mp="549.585" mpRegen="2.1"/>
             <speed>
@@ -3060,7 +3060,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20557" level="42" type="Monster" name="Dire Wyrm">
+    <npc id="20557" level="42" type="Monster" name="Dire Wyrm" element="WATER">
         <!-- L2wiki: https://l2wiki.com/classic/Dire_Wyrm -->
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
@@ -3074,7 +3074,7 @@
         </parameters>
         <race>DRAGON</race>
         <sex>MALE</sex>
-        <acquire exp="3160" sp="94"/>
+        <acquire exp="3160" sp="94" attribute_exp="6"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="431.28881" hpRegen="5.5" mp="578.79" mpRegen="2.1"/>
             <speed>
@@ -3114,7 +3114,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20558" level="43" type="Monster" name="Rotting tree">
+    <npc id="20558" level="43" type="Monster" name="Rotting tree" element="WATER">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="100"/>
@@ -3128,7 +3128,7 @@
         </parameters>
         <race>PLANT</race>
         <sex>MALE</sex>
-        <acquire exp="3312" sp="99"/>
+        <acquire exp="3312" sp="99" attribute_exp="6"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="449.02313" hpRegen="5.5" mp="607.11" mpRegen="2.1"/>
             <attack physical="190.9530182" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -3179,7 +3179,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20559" level="44" type="Monster" name="Rotting Golem">
+    <npc id="20559" level="44" type="Monster" name="Rotting Golem" element="WATER">
         <!-- L2wiki: https://l2wiki.com/classic/Rotting_Golem -->
         <parameters>
             <param name="MoveAroundSocial" value="116"/>
@@ -3194,7 +3194,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="3914" sp="117"/>
+        <acquire exp="3914" sp="117" attribute_exp="6"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="467.49638" hpRegen="5.5" mp="637.2" mpRegen="2.1"/>
             <speed>
@@ -3242,7 +3242,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20560" level="45" type="Monster" name="Trisalim">
+    <npc id="20560" level="45" type="Monster" name="Trisalim" element="WATER">
         <!-- L2wiki: https://l2wiki.com/classic/Trisalim -->
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
@@ -3256,7 +3256,7 @@
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
-        <acquire exp="3657" sp="109"/>
+        <acquire exp="3657" sp="109" attribute_exp="6"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="485.72332" hpRegen="5.5" mp="665.52" mpRegen="2.1"/>
             <speed>
@@ -3302,7 +3302,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20561" level="46" type="Monster" name="Trisalim Tarantula">
+    <npc id="20561" level="46" type="Monster" name="Trisalim Tarantula" element="WATER">
         <!-- L2wiki: https://l2wiki.com/classic/Trisalim_Tarantula -->
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
@@ -3317,7 +3317,7 @@
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
-        <acquire exp="3791" sp="113"/>
+        <acquire exp="3791" sp="113" attribute_exp="6"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="504.68919" hpRegen="5.5" mp="694.725" mpRegen="2.1"/>
             <speed>
@@ -3367,7 +3367,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20562" level="47" type="Monster" name="Spore Zombie">
+    <npc id="20562" level="47" type="Monster" name="Spore Zombie" element="WATER">
         <!-- L2wiki: https://l2wiki.com/classic/Spore_Zombie -->
         <parameters>
             <param name="MoveAroundSocial" value="120"/>
@@ -3382,7 +3382,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="4212" sp="126"/>
+        <acquire exp="4212" sp="126" attribute_exp="6"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="523.90137" hpRegen="5.5" mp="724.815" mpRegen="2.1"/>
             <speed>
@@ -5151,7 +5151,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20589" level="50" type="Monster" name="Fline">
+    <npc id="20589" level="50" type="Monster" name="Fline" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="80"/>
@@ -5165,7 +5165,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>FEMALE</sex>
-        <acquire exp="6675" sp="200"/>
+        <acquire exp="6675" sp="200" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="485.72332" hpRegen="5.5" mp="665.52" mpRegen="2.1"/>
             <attack physical="213.5439" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5216,7 +5216,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20590" level="51" type="Monster" name="Liele">
+    <npc id="20590" level="51" type="Monster" name="Liele" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -5230,7 +5230,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>FEMALE</sex>
-        <acquire exp="6944" sp="208"/>
+        <acquire exp="6944" sp="208" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="504.812345" hpRegen="6.5" mp="694.725" mpRegen="2.4"/>
             <attack physical="225.5023636" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5289,7 +5289,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20591" level="52" type="Monster" name="Valley Treant">
+    <npc id="20591" level="52" type="Monster" name="Valley Treant" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="120"/>
             <param name="MoveAroundSocial1" value="120"/>
@@ -5303,7 +5303,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>MALE</sex>
-        <acquire exp="7839" sp="235"/>
+        <acquire exp="7839" sp="235" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="523.778215" hpRegen="6.5" mp="724.815" mpRegen="2.4"/>
             <attack physical="237.9049909" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5359,7 +5359,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20592" level="53" type="Monster" name="Satyr">
+    <npc id="20592" level="53" type="Monster" name="Satyr" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="71"/>
             <param name="MoveAroundSocial1" value="71"/>
@@ -5373,7 +5373,7 @@
         <race>FAIRY</race>
         <sex>MALE</sex>
         <equipment rhand="291"/> <!-- rhand: Trident -->
-        <acquire exp="10897" sp="326"/>
+        <acquire exp="10897" sp="326" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="543.27775666667" hpRegen="6.5" mp="754.905" mpRegen="2.4"/>
             <attack physical="250.7518636" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5429,7 +5429,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20593" level="54" type="Monster" name="Unicorn">
+    <npc id="20593" level="54" type="Monster" name="Unicorn" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -5443,7 +5443,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>MALE</sex>
-        <acquire exp="11312" sp="339"/>
+        <acquire exp="11312" sp="339" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="563.14676333333" hpRegen="6.5" mp="784.995" mpRegen="2.4"/>
             <attack physical="264.0417091" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5498,7 +5498,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20594" level="55" type="Monster" name="Forest Runner">
+    <npc id="20594" level="55" type="Monster" name="Forest Runner" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -5511,7 +5511,7 @@
         </parameters>
         <race>PLANT</race>
         <sex>FEMALE</sex>
-        <acquire exp="8076" sp="242"/>
+        <acquire exp="8076" sp="242" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="583.01577" hpRegen="6.5" mp="814.2" mpRegen="2.4"/>
             <attack physical="277.7718727" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5564,7 +5564,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20595" level="56" type="Monster" name="Fline Elder">
+    <npc id="20595" level="56" type="Monster" name="Fline Elder" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="80"/>
@@ -5578,7 +5578,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>FEMALE</sex>
-        <acquire exp="8418" sp="252"/>
+        <acquire exp="8418" sp="252" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="603.582655" hpRegen="6.5" mp="845.175" mpRegen="2.4"/>
             <attack physical="353.245277" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5632,7 +5632,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20596" level="57" type="Monster" name="Liele Elder">
+    <npc id="20596" level="57" type="Monster" name="Liele Elder" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -5646,7 +5646,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>FEMALE</sex>
-        <acquire exp="17423" sp="522"/>
+        <acquire exp="17423" sp="522" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="623.780075" hpRegen="6.5" mp="877.035" mpRegen="2.4"/>
             <attack physical="370.907537" magical="230.25615" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5682,7 +5682,7 @@
             <height normal="27"/>
         </collision>
     </npc>
-    <npc id="20597" level="58" type="Monster" name="Valley Treant Elder">
+    <npc id="20597" level="58" type="Monster" name="Valley Treant Elder" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="120"/>
             <param name="MoveAroundSocial1" value="120"/>
@@ -5696,7 +5696,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>MALE</sex>
-        <acquire exp="14015" sp="420"/>
+        <acquire exp="14015" sp="420" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="644.83958" hpRegen="6.5" mp="907.125" mpRegen="2.4"/>
             <attack physical="389.082012" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5750,7 +5750,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20598" level="59" type="Monster" name="Satyr Elder">
+    <npc id="20598" level="59" type="Monster" name="Satyr Elder" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="71"/>
             <param name="MoveAroundSocial1" value="71"/>
@@ -5764,7 +5764,7 @@
         <race>FAIRY</race>
         <sex>MALE</sex>
         <equipment rhand="297"/> <!-- rhand: Glaive -->
-        <acquire exp="13555" sp="406"/>
+        <acquire exp="13555" sp="406" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="665.44751666667" hpRegen="6.5" mp="938.985" mpRegen="2.4"/>
             <attack physical="407.757944" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5815,7 +5815,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20599" level="60" type="Monster" name="Elder the Unicorn">
+    <npc id="20599" level="60" type="Monster" name="Elder the Unicorn" element="EARTH">
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -5829,7 +5829,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>MALE</sex>
-        <acquire exp="14018" sp="420"/>
+        <acquire exp="14018" sp="420" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="686.46597" hpRegen="6.5" mp="969.075" mpRegen="2.4"/>
             <attack physical="426.922562" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>

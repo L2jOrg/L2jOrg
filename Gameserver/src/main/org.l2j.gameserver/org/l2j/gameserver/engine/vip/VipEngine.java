@@ -39,21 +39,7 @@ public final class VipEngine extends GameXmlReader {
         listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
             final var player = event.getPlayer();
             if(player.getVipTier() > 0) {
-                if(!checkVipTierExpiration(player)) {
-                    player.sendPacket(new ReceiveVipInfo());
-                }
-                var skillId = vipTiers.get(player.getVipTier()).getSkill();
-                if(skillId > 0) {
-                    var skill = SkillEngine.getInstance().getSkill(skillId, 1);
-                    if(nonNull(skill)) {
-                        player.addSkill(skill);
-                    }
-                }
-                if(PrimeShopData.getInstance().canReceiveVipGift(player)) {
-                    player.sendPacket(ExBRNewIconCashBtnWnd.SHOW);
-                } else {
-                    player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
-                }
+                manageTier(player);
             } else {
                 player.sendPacket(new ReceiveVipInfo());
                 player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
@@ -61,6 +47,34 @@ public final class VipEngine extends GameXmlReader {
         }, this));
     }
 
+    public void manageTier(Player player) {
+        if(!checkVipTierExpiration(player)) {
+            player.sendPacket(new ReceiveVipInfo());
+        }
+
+        if(player.getVipTier() > 1) {
+            var oldSkillId = vipTiers.get(player.getVipTier() - 1).getSkill();
+            if(oldSkillId > 0) {
+                var oldSkill = SkillEngine.getInstance().getSkill(oldSkillId, 1);
+                if(nonNull(oldSkill)) {
+                    player.removeSkill(oldSkill);
+                }
+            }
+        }
+
+        var skillId = vipTiers.get(player.getVipTier()).getSkill();
+        if(skillId > 0) {
+            var skill = SkillEngine.getInstance().getSkill(skillId, 1);
+            if(nonNull(skill)) {
+                player.addSkill(skill);
+            }
+        }
+        if(PrimeShopData.getInstance().canReceiveVipGift(player)) {
+            player.sendPacket(ExBRNewIconCashBtnWnd.SHOW);
+        } else {
+            player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
+        }
+    }
 
     @Override
     protected Path getSchemaFilePath() {

@@ -1358,7 +1358,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21620" level="65" type="Monster" name="Purgatory Serpent">
+    <npc id="21620" level="65" type="Monster" name="Purgatory Serpent" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1375,7 +1375,7 @@
         <race>BEAST</race>
         <sex>MALE</sex>
         <equipment rhand="73"/> <!-- rhand: Shamshir -->
-        <acquire exp="35687" sp="1070"/>
+        <acquire exp="35687" sp="1070" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1080.167874" hpRegen="7.5" mp="1295.64" mpRegen="2.7"/>
             <attack physical="405.96455" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1435,7 +1435,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21621" level="66" type="Monster" name="Hell Keeper Medusa">
+    <npc id="21621" level="66" type="Monster" name="Hell Keeper Medusa" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1451,7 +1451,7 @@
         </parameters>
         <race>BEAST</race>
         <sex>FEMALE</sex>
-        <acquire exp="37003" sp="1110"/>
+        <acquire exp="37003" sp="1110" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1105.390018" hpRegen="7.5" mp="1329.27" mpRegen="2.7"/>
             <attack physical="442.8992" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1509,7 +1509,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21622" level="66" type="Monster" name="Purgatory Conjurer">
+    <npc id="21622" level="66" type="Monster" name="Purgatory Conjurer" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1525,7 +1525,7 @@
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
-        <acquire exp="37316" sp="1119"/>
+        <acquire exp="37316" sp="1119" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1105.390018" hpRegen="7.5" mp="1329.27" mpRegen="2.7"/>
             <attack physical="461.94387" magical="315.44778" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1582,7 +1582,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21623" level="67" type="Monster" name="Purgatory Gargoyle">
+    <npc id="21623" level="67" type="Monster" name="Purgatory Gargoyle" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1598,7 +1598,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="38133" sp="1143"/>
+        <acquire exp="38133" sp="1143" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1130.612162" hpRegen="7.5" mp="1363.785" mpRegen="2.7"/>
             <attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1656,7 +1656,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21624" level="67" type="Monster" name="Nephilim Swordsman">
+    <npc id="21624" level="67" type="Monster" name="Nephilim Swordsman" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1674,7 +1674,7 @@
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
-        <acquire exp="38510" sp="1155"/>
+        <acquire exp="38510" sp="1155" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1130.612162" hpRegen="7.5" mp="1363.785" mpRegen="2.7"/>
             <attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1731,7 +1731,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21625" level="68" type="Monster" name="Nephilim Guard">
+    <npc id="21625" level="68" type="Monster" name="Nephilim Guard" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1747,7 +1747,7 @@
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
-        <acquire exp="39834" sp="1195"/>
+        <acquire exp="39834" sp="1195" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1155.390948" hpRegen="7.5" mp="1398.3" mpRegen="2.7"/>
             <attack physical="424.23295" magical="289.69611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1804,7 +1804,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21626" level="68" type="Monster" name="Mausoleum Inquisitor">
+    <npc id="21626" level="68" type="Monster" name="Mausoleum Inquisitor" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1820,7 +1820,7 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
-        <acquire exp="40167" sp="1205"/>
+        <acquire exp="40167" sp="1205" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1155.390948" hpRegen="7.5" mp="1398.3" mpRegen="2.7"/>
             <attack physical="337.18867" magical="230.25615" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1885,7 +1885,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21627" level="69" type="Monster" name="Sepulcher Archon">
+    <npc id="21627" level="69" type="Monster" name="Sepulcher Archon" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1902,7 +1902,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="298"/> <!-- rhand: Orcish Glaive -->
-        <acquire exp="42711" sp="1281"/>
+        <acquire exp="42711" sp="1281" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1179.627852" hpRegen="7.5" mp="1432.815" mpRegen="2.7"/>
             <attack physical="388.11142" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1957,7 +1957,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21628" level="69" type="Monster" name="Sepulcher Inquisitor">
+    <npc id="21628" level="69" type="Monster" name="Sepulcher Inquisitor" element="WIND">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -1973,7 +1973,7 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
-        <acquire exp="42711" sp="1281"/>
+        <acquire exp="42711" sp="1281" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1179.627852" hpRegen="7.5" mp="1432.815" mpRegen="2.7"/>
             <attack physical="424.23295" magical="289.69611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2036,7 +2036,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21629" level="71" type="Monster" name="Purgatory Tarantula">
+    <npc id="21629" level="71" type="Monster" name="Purgatory Tarantula" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2052,7 +2052,7 @@
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
-        <acquire exp="44298" sp="1328"/>
+        <acquire exp="44298" sp="1328" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1227.756826" hpRegen="8.5" mp="1501.845" mpRegen="3"/>
             <attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2112,7 +2112,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21630" level="72" type="Monster" name="Purgatory Shadow">
+    <npc id="21630" level="72" type="Monster" name="Purgatory Shadow" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2129,7 +2129,7 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
-        <acquire exp="46373" sp="1391"/>
+        <acquire exp="46373" sp="1391" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1251.107014" hpRegen="8.5" mp="1537.245" mpRegen="3"/>
             <attack physical="501.08068" magical="342.17315" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -2183,7 +2183,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21631" level="72" type="Monster" name="Hell Keeper Crimson Doll">
+    <npc id="21631" level="72" type="Monster" name="Hell Keeper Crimson Doll" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2199,7 +2199,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="46043" sp="1381"/>
+        <acquire exp="46043" sp="1381" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1251.107014" hpRegen="8.5" mp="1537.245" mpRegen="3"/>
             <attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2252,7 +2252,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21632" level="73" type="Monster" name="Lilim Priest">
+    <npc id="21632" level="73" type="Monster" name="Lilim Priest" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2272,7 +2272,7 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
-        <acquire exp="47909" sp="1437"/>
+        <acquire exp="47909" sp="1437" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1273.964582" hpRegen="8.5" mp="1572.645" mpRegen="3"/>
             <attack physical="481.34551" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -2333,7 +2333,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21633" level="73" type="Monster" name="Lilim Knight">
+    <npc id="21633" level="73" type="Monster" name="Lilim Knight" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2352,7 +2352,7 @@
         <race>DEMONIC</race>
         <sex>MALE</sex>
         <equipment rhand="5800" lhand="5799"/> <!-- rhand: Nephilim Lord lhand: Nephilim Lord -->
-        <acquire exp="48210" sp="1446"/>
+        <acquire exp="48210" sp="1446" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1273.964582" hpRegen="8.5" mp="1572.645" mpRegen="3"/>
             <attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2411,7 +2411,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21634" level="74" type="Monster" name="Nephilim Scout">
+    <npc id="21634" level="74" type="Monster" name="Nephilim Scout" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2427,7 +2427,7 @@
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
-        <acquire exp="48462" sp="1453"/>
+        <acquire exp="48462" sp="1453" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1296.378792" hpRegen="8.5" mp="1608.045" mpRegen="3"/>
             <attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2487,7 +2487,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21635" level="74" type="Monster" name="Mausoleum Royal Guardian">
+    <npc id="21635" level="74" type="Monster" name="Mausoleum Royal Guardian" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2505,7 +2505,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="233"/> <!-- rhand: Dark Screamer -->
-        <acquire exp="41273" sp="1238"/>
+        <acquire exp="41273" sp="1238" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="2776.57843923523" hpRegen="6.5" mp="1475" mpRegen="2.4"/>
             <attack physical="481.34551" magical="328.69659" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120"/>
@@ -2564,7 +2564,7 @@
             <height normal="34.5"/>
         </collision>
     </npc>
-    <npc id="21636" level="75" type="Monster" name="Mausoleum Sage">
+    <npc id="21636" level="75" type="Monster" name="Mausoleum Sage" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2581,7 +2581,7 @@
         <race>DEMONIC</race>
         <sex>MALE</sex>
         <equipment rhand="311"/> <!-- rhand: Crucifix of Blessing -->
-        <acquire exp="57017" sp="1710"/>
+        <acquire exp="57017" sp="1710" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1318.349644" hpRegen="8.5" mp="1643.445" mpRegen="3"/>
             <attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -2641,7 +2641,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21637" level="75" type="Monster" name="Sepulcher Royal Guardian">
+    <npc id="21637" level="75" type="Monster" name="Sepulcher Royal Guardian" element="EARTH">
         <!-- Classic Antharas -->
         <!-- Catacomb Classic -->
         <parameters>
@@ -2657,7 +2657,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="57017" sp="1710"/>
+        <acquire exp="57017" sp="1710" attribute_exp="35"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="1318.349644" hpRegen="8.5" mp="1643.445" mpRegen="3"/>
             <attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
