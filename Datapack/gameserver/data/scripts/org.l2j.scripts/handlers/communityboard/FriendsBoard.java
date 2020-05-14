@@ -21,6 +21,8 @@ import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import java.util.StringTokenizer;
+
 /**
  * Friends board.
  * @author Zoey76
@@ -40,7 +42,7 @@ public class FriendsBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, Player activeChar)
+	public boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player activeChar)
 	{
 		if (command.equals("_friendlist"))
 		{

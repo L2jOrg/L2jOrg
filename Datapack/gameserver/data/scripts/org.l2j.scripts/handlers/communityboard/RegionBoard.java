@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.communityboard;
 
 import org.l2j.gameserver.cache.HtmCache;
@@ -25,7 +9,10 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.util.GameUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.StringTokenizer;
 
 import static org.l2j.commons.util.Util.isDigit;
 
@@ -33,14 +20,15 @@ import static org.l2j.commons.util.Util.isDigit;
  * Region board.
  * @author Zoey76
  */
-public class RegionBoard implements IWriteBoardHandler
-{
+public class RegionBoard implements IWriteBoardHandler {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(RegionBoard.class);
+
 	// Region data
 	// @formatter:off
 	private static final int[] REGIONS = { 1049, 1052, 1053, 1057, 1060, 1059, 1248, 1247, 1056 };
 	// @formatter:on
-	private static final String[] COMMANDS =
-	{
+	private static final String[] COMMANDS = {
 		"_bbsloc"
 	};
 	
@@ -51,7 +39,7 @@ public class RegionBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, Player activeChar)
+	public boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player activeChar)
 	{
 		if (command.equals("_bbsloc"))
 		{
@@ -82,7 +70,7 @@ public class RegionBoard implements IWriteBoardHandler
 			final String id = command.replace("_bbsloc;", "");
 			if (!isDigit(id))
 			{
-				LOG.warn(RegionBoard.class.getSimpleName() + ": Player " + activeChar + " sent and invalid region bypass " + command + "!");
+				LOGGER.warn("Player {} sent and invalid region bypass {}!", activeChar,  command);
 				return false;
 			}
 			

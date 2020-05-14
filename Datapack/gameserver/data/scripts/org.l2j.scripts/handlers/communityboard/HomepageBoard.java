@@ -21,6 +21,8 @@ import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import java.util.StringTokenizer;
+
 /**
  * Homepage board.
  * @author Zoey76
@@ -39,7 +41,7 @@ public class HomepageBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, Player activeChar)
+	public boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player activeChar)
 	{
 		CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/homepage.html"), activeChar);
 		return true;

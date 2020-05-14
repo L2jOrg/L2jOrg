@@ -1,15 +1,17 @@
 package handlers.communityboard;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.database.dao.CommunityDAO;
 import org.l2j.gameserver.data.database.dao.ReportDAO;
 import org.l2j.gameserver.data.database.data.ReportData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
@@ -17,21 +19,14 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.BuyList;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneType;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
@@ -41,16 +36,16 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
 /**
  * Home board.
  * @author Zoey76, Mobius
+ * @author JoeAlisson
  */
 public final class HomeBoard implements IParseBoardHandler {
-	// SQL Queries
-	private static final String COUNT_FAVORITES = "SELECT COUNT(*) AS favorites FROM `bbs_favorites` WHERE `playerId`=?";
+
 	private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/navigation.html";
 
 	private static final String[] COMMANDS = {
-			"_bbshome",
-			"_bbstop",
-			"_bbsreport"
+		"_bbshome",
+		"_bbstop",
+		"_bbsreport"
 	};
 
 	private static final String[] CUSTOM_COMMANDS = {
@@ -88,7 +83,7 @@ public final class HomeBoard implements IParseBoardHandler {
 	}
 
 	@Override
-	public boolean parseCommunityBoardCommand(String command, Player activeChar)
+	public boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player activeChar)
 	{
 		// Old custom conditions check move to here
 		if (COMBAT_CHECK.test(command, activeChar))
@@ -271,15 +266,17 @@ public final class HomeBoard implements IParseBoardHandler {
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 		} else if(command.startsWith("_bbsreport")) {
 			var reportText =  command.replace("_bbsreport", "");
+			if(Util.isNotEmpty(reportText)) {
 
-			var report = new ReportData();
-			report.setPlayerId(activeChar.getObjectId());
-			report.setReport(reportText);
-			report.setPending(true);
-			getDAO(ReportDAO.class).save(report);
+				var report = new ReportData();
+				report.setPlayerId(activeChar.getObjectId());
+				report.setReport(reportText);
+				report.setPending(true);
+				getDAO(ReportDAO.class).save(report);
 
-			activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");
-			AdminData.getInstance().broadcastMessageToGMs(String.format("Player: %s (%s) has just submitted a report!", activeChar.getName(), activeChar.getObjectId()));
+				activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");
+				AdminData.getInstance().broadcastMessageToGMs(String.format("Player: %s (%s) has just submitted a report!", activeChar.getName(), activeChar.getObjectId()));
+			}
 		}
 
 		if (returnHtml != null)
@@ -304,30 +301,12 @@ public final class HomeBoard implements IParseBoardHandler {
 	}
 
 	/**
-	 * Gets the Favorite links for the given player.
+	 * Gets the count Favorite links for the given player.
 	 * @param player the player
 	 * @return the favorite links count
 	 */
-	private static int getFavoriteCount(Player player)
-	{
-		int count = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			 PreparedStatement ps = con.prepareStatement(COUNT_FAVORITES))
-		{
-			ps.setInt(1, player.getObjectId());
-			try (ResultSet rs = ps.executeQuery())
-			{
-				if (rs.next())
-				{
-					count = rs.getInt("favorites");
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			LOG.warn(FavoriteBoard.class.getSimpleName() + ": Coudn't load favorites count for player " + player.getName());
-		}
-		return count;
+	private static int getFavoriteCount(Player player) {
+		return getDAO(CommunityDAO.class).getFavoritesCount(player.getObjectId());
 	}
 
 	/**

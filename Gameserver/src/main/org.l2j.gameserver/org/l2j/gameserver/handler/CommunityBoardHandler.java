@@ -1,5 +1,7 @@
 package org.l2j.gameserver.handler;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -9,68 +11,50 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.StringTokenizer;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * Community Board handler.
  *
  * @author Zoey76
+ * @author JoeAlisson
  */
 public final class CommunityBoardHandler implements IHandler<IParseBoardHandler, String> {
-    private static final Logger LOG = LoggerFactory.getLogger(CommunityBoardHandler.class.getName());
-    /**
-     * The registered handlers.
-     */
-    private final Map<String, IParseBoardHandler> _datatable = new HashMap<>();
-    /**
-     * The bypasses used by the players.
-     */
-    private final Map<Integer, String> _bypasses = new ConcurrentHashMap<>();
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(CommunityBoardHandler.class);
+
+    private final Map<String, IParseBoardHandler> handlers = new HashMap<>();
+    private final IntMap<String> bypasses = new CHashIntMap<>();
 
     private CommunityBoardHandler() {
-    }
-
-    /**
-     * Separates and send an HTML into multiple packets, to display into the community board.<br>
-     * The limit is 16383 characters.
-     *
-     * @param html   the HTML to send
-     * @param player the player
-     */
-    public static void separateAndSend(String html, Player player) {
-        GameUtils.sendCBHtml(player, html);
     }
 
     @Override
     public void registerHandler(IParseBoardHandler handler) {
         for (String cmd : handler.getCommunityBoardCommands()) {
-            _datatable.put(cmd.toLowerCase(), handler);
+            handlers.put(cmd.toLowerCase(), handler);
         }
     }
 
     @Override
     public synchronized void removeHandler(IParseBoardHandler handler) {
         for (String cmd : handler.getCommunityBoardCommands()) {
-            _datatable.remove(cmd.toLowerCase());
+            handlers.remove(cmd.toLowerCase());
         }
     }
 
     @Override
     public IParseBoardHandler getHandler(String cmd) {
-        for (IParseBoardHandler cb : _datatable.values()) {
-            for (String command : cb.getCommunityBoardCommands()) {
-                if (cmd.toLowerCase().startsWith(command.toLowerCase())) {
-                    return cb;
-                }
-            }
-        }
-        return null;
+        return handlers.get(cmd.toLowerCase());
     }
 
     @Override
     public int size() {
-        return _datatable.size();
+        return handlers.size();
     }
 
     /**
@@ -80,7 +64,11 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @return {@code true} if the command has been registered, {@code false} otherwise
      */
     public boolean isCommunityBoardCommand(String cmd) {
-        return getHandler(cmd) != null;
+        var whitespaceIndex = cmd.indexOf(" ");
+        if(whitespaceIndex < 0){
+            return nonNull(getHandler(cmd));
+        }
+        return nonNull(getHandler(cmd.substring(0, whitespaceIndex)));
     }
 
     /**
@@ -90,7 +78,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @param player  the player
      */
     public void handleParseCommand(String command, Player player) {
-        if (player == null) {
+        if (isNull(player) || isNullOrEmpty(command)) {
             return;
         }
 
@@ -99,13 +87,16 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
             return;
         }
 
-        final IParseBoardHandler cb = getHandler(command);
-        if (cb == null) {
-            LOG.warn(CommunityBoardHandler.class.getSimpleName() + ": Couldn't find parse handler for command " + command + "!");
+        final var tokens = new StringTokenizer(command);
+
+        final var cb = getHandler(tokens.nextToken());
+        if (isNull(cb)) {
+            LOGGER.warn("Couldn't find parse handler for command {}!", command);
             return;
         }
 
-        cb.parseCommunityBoardCommand(command, player);
+        cb.parseCommunityBoardCommand(command, tokens, player);
+        addBypass(player, cb.name(), command);
     }
 
     /**
@@ -129,41 +120,17 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
             return;
         }
 
-        String cmd = "";
-        switch (url) {
-            case "Topic": {
-                cmd = "_bbstop";
-                break;
-            }
-            case "Post": {
-                cmd = "_bbspos"; // TODO: Implement.
-                break;
-            }
-            case "Region": {
-                cmd = "_bbsloc";
-                break;
-            }
-            case "Notice": {
-                cmd = "_bbsclan";
-                break;
-            }
-            default: {
-                separateAndSend("<html><body><br><br><center>The command: " + url + " is not implemented yet.</center><br><br></body></html>", player);
-                return;
-            }
-        }
-
-        final IParseBoardHandler cb = getHandler(cmd);
-        if (cb == null) {
-            LOG.warn(CommunityBoardHandler.class.getSimpleName() + ": Couldn't find write handler for command " + cmd + "!");
+        final var cb = getHandler(url);
+        if (isNull(cb)) {
+            LOGGER.warn("Couldn't find write handler for command {}!", url);
             return;
         }
 
-        if (!(cb instanceof IWriteBoardHandler)) {
-            LOG.warn(CommunityBoardHandler.class.getSimpleName() + ": " + cb.getClass().getSimpleName() + " doesn't implement write!");
-            return;
+        if (!(cb instanceof IWriteBoardHandler writable)) {
+            LOGGER.warn("{} doesn't implement write!",  cb.getClass().getSimpleName());
+        } else {
+            writable.writeCommunityBoardCommand(player, arg1, arg2, arg3, arg4, arg5);
         }
-        ((IWriteBoardHandler) cb).writeCommunityBoardCommand(player, arg1, arg2, arg3, arg4, arg5);
     }
 
     /**
@@ -174,7 +141,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @param bypass the bypass
      */
     public void addBypass(Player player, String title, String bypass) {
-        _bypasses.put(player.getObjectId(), title + "&" + bypass);
+        bypasses.put(player.getObjectId(), title + "&" + bypass);
     }
 
     /**
@@ -184,7 +151,18 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
      * @return the last bypass used
      */
     public String removeBypass(Player player) {
-        return _bypasses.remove(player.getObjectId());
+        return bypasses.remove(player.getObjectId());
+    }
+
+    /**
+     * Separates and send an HTML into multiple packets, to display into the community board.<br>
+     * The limit is 16383 characters.
+     *
+     * @param html   the HTML to send
+     * @param player the player
+     */
+    public static void separateAndSend(String html, Player player) {
+        GameUtils.sendCBHtml(player, html);
     }
 
     public static CommunityBoardHandler getInstance() {

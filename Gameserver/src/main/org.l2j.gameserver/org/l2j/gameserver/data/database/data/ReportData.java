@@ -17,7 +17,7 @@ public class ReportData {
     String report;
 
     @Column("report_date")
-    LocalDate data;
+    LocalDate data = LocalDate.now();
 
     boolean pending;
 

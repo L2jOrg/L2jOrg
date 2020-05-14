@@ -36,7 +36,7 @@ public class ShowBoard extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.SHOW_BOARD);
 
-        writeByte((byte) _showBoard); // c4 1 to show community 00 to hide
+        writeByte(_showBoard); // c4 1 to show community 00 to hide
         writeString("bypass _bbshome"); // top
         writeString("bypass _bbsgetfav"); // favorite
         writeString("bypass _bbsloc"); // region

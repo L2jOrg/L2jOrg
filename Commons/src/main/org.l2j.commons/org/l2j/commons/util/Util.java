@@ -6,6 +6,8 @@ import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -24,6 +26,7 @@ public class Util {
     public static final int[] INT_ARRAY_EMPTY = new int[0];
     public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
     public static final String[] STRING_ARRAY_EMPTY = new String[0];
+    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public static boolean isNullOrEmpty(final CharSequence value) {
         return isNull(value) || value.length() == 0;
@@ -225,5 +228,13 @@ public class Util {
 
     public static boolean isNotEmpty(IntCollection collection) {
         return nonNull(collection) && collection.size() > 0;
+    }
+
+    public static String formatDate(LocalDateTime dateTime) {
+        return dateTime.format(DateTimeFormatter.ISO_DATE);
+    }
+
+    public static String formatDateTime(LocalDateTime dateTime) {
+        return dateTime.format(DATE_TIME_FORMATTER);
     }
 }

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.util.StringTokenizer;
 
 /**
  * Community Board interface.
@@ -10,16 +10,16 @@ import org.slf4j.LoggerFactory;
  * @author Zoey76
  */
 public interface IParseBoardHandler {
-    Logger LOG = LoggerFactory.getLogger(IParseBoardHandler.class.getName());
 
     /**
      * Parses a community board command.
      *
      * @param command the command
+     * @param tokens command tokenized
      * @param player  the player
-     * @return
+     * @return true if the command was completed
      */
-    boolean parseCommunityBoardCommand(String command, Player player);
+    boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player player);
 
     /**
      * Gets the community board commands.
@@ -27,4 +27,8 @@ public interface IParseBoardHandler {
      * @return the community board commands
      */
     String[] getCommunityBoardCommands();
+
+    default String name() {
+        return getClass().getSimpleName().replace("Board", "");
+    }
 }

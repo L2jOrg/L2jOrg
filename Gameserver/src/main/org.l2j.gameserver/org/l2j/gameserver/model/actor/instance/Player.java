@@ -15,8 +15,6 @@ import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.api.elemental.ElementalSpirit;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.WarehouseCacheManager;
-import org.l2j.gameserver.communitybbs.BB.Forum;
-import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
@@ -1010,8 +1008,7 @@ public final class Player extends Playable {
      * This can be used for htmls continuing the conversation with an npc.
      */
     private int _lastHtmlActionOriginObjId;
-    private Forum _forumMail;
-    private Forum _forumMemo;
+
     /**
      * Skills queued because a skill is already in progress
      */
@@ -5601,49 +5598,6 @@ public final class Player extends Playable {
         return true;
     }
 
-    public Forum getMail() {
-        if (_forumMail == null) {
-            setMail(ForumsBBSManager.getInstance().getForumByName("MailRoot").getChildByName(getName()));
-
-            if (_forumMail == null) {
-                ForumsBBSManager.getInstance().createNewForum(getName(), ForumsBBSManager.getInstance().getForumByName("MailRoot"), Forum.MAIL, Forum.OWNERONLY, getObjectId());
-                setMail(ForumsBBSManager.getInstance().getForumByName("MailRoot").getChildByName(getName()));
-            }
-        }
-
-        return _forumMail;
-    }
-
-    /**
-     * @param forum
-     */
-    public void setMail(Forum forum) {
-        _forumMail = forum;
-    }
-
-    /**
-     * @return
-     */
-    public Forum getMemo() {
-        if (_forumMemo == null) {
-            setMemo(ForumsBBSManager.getInstance().getForumByName("MemoRoot").getChildByName(model.getAccountName()));
-
-            if (_forumMemo == null) {
-                ForumsBBSManager.getInstance().createNewForum(model.getAccountName(), ForumsBBSManager.getInstance().getForumByName("MemoRoot"), Forum.MEMO, Forum.OWNERONLY, getObjectId());
-                setMemo(ForumsBBSManager.getInstance().getForumByName("MemoRoot").getChildByName(model.getAccountName()));
-            }
-        }
-
-        return _forumMemo;
-    }
-
-    /**
-     * @param forum
-     */
-    public void setMemo(Forum forum) {
-        _forumMemo = forum;
-    }
-
     /**
      * Restores:
      * <ul>
@@ -6253,17 +6207,14 @@ public final class Player extends Playable {
                 while (rset.next()) {
                     final int id = rset.getInt("skill_id");
                     final int level = rset.getInt("skill_level");
-                    final int subLevel = rset.getInt("skill_sub_level");
 
-                    // Create a L2Skill object for each record
                     final Skill skill = SkillEngine.getInstance().getSkill(id, level);
 
                     if (skill == null) {
-                        LOGGER.warn("Skipped null skill Id: " + id + " Level: " + level + " while restoring player skills for playerObjId: " + getObjectId());
+                        LOGGER.warn("Skipped null skill id: {} level: {} while restoring player skills for player: {}", id, level, this);
                         continue;
                     }
 
-                    // Add the L2Skill object to the Creature _skills and its Func objects to the calculator set of the Creature
                     addSkill(skill);
 
                     if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)) {
