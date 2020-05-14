@@ -4,8 +4,6 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.communitybbs.BB.Forum;
-import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.ClanData;
@@ -131,7 +129,6 @@ public class Clan implements IIdentifiable, INamable {
     private IntMap<SubPledgeData> subPledges = new CHashIntMap<>();
     private int _fortId;
     private int _hideoutId;
-    private Forum _forum;
     private int _rank = 0;
     private String notice;
     private boolean noticeEnabled = false;
@@ -522,15 +519,6 @@ public class Clan implements IIdentifiable, INamable {
      */
     public void setLevel(int level) {
         data.setLevel(level);
-        if ((level >= 2) && (_forum == null) && Config.ENABLE_COMMUNITY_BOARD) {
-            final Forum forum = ForumsBBSManager.getInstance().getForumByName("ClanRoot");
-            if (forum != null) {
-                _forum = forum.getChildByName(data.getName());
-                if (_forum == null) {
-                    _forum = ForumsBBSManager.getInstance().createNewForum(data.getName(), ForumsBBSManager.getInstance().getForumByName("ClanRoot"), Forum.CLAN, Forum.CLANMEMBERONLY, getId());
-                }
-            }
-        }
     }
 
     public int getCastleId() {
@@ -680,7 +668,7 @@ public class Clan implements IIdentifiable, INamable {
 
         this.notice = notice;
         noticeEnabled = enabled;
-        getDAO(ClanDAO.class).saveNotice(data.getId(), notice, enabled);
+            getDAO(ClanDAO.class).saveNotice(data.getId(), notice, enabled);
     }
 
     public boolean isNoticeEnabled() {

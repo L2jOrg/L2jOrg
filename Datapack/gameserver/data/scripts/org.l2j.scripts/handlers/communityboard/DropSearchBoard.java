@@ -133,7 +133,7 @@ public class DropSearchBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, Player player)
+	public boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player player)
 	{
 		final String navigation = HtmCache.getInstance().getHtm(player, NAVIGATION_PATH);
 		String[] params = command.split(" ");

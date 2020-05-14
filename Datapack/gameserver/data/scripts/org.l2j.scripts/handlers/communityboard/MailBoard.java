@@ -21,6 +21,8 @@ import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IWriteBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import java.util.StringTokenizer;
+
 /**
  * Mail board.
  * @author Zoey76
@@ -39,7 +41,7 @@ public class MailBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, Player activeChar)
+	public boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player activeChar)
 	{
 		CommunityBoardHandler.getInstance().addBypass(activeChar, "Mail Command", command);
 		

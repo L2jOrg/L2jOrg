@@ -36,8 +36,6 @@ public abstract class IdFactory {
         var clanDao = getDAO(ClanDAO.class);
         cleanCount += clanDao.deleteWithoutMembers();
 
-        cleanCount += getDAO(ForumDAO.class).deleteWithoutOwner();
-
         // Update needed items after cleaning has taken place.
         clanDao.resetAuctionBidWithoutAction();
         clanDao.resetNewLeaderWithoutCharacter();

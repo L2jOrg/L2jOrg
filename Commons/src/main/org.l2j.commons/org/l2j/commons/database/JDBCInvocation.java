@@ -11,7 +11,6 @@ import org.l2j.commons.database.annotation.Transient;
 import org.l2j.commons.database.handler.TypeHandler;
 import org.l2j.commons.database.helpers.EntityBasedStrategy;
 import org.l2j.commons.database.helpers.QueryDescriptor;
-import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

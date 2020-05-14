@@ -306,52 +306,52 @@ public final class GameUtils {
      * with the npcObjId as origin. An origin of 0 means the cached bypasses<br>
      * are not bound to a specific npc.
      *
-     * @param activeChar    the player
+     * @param player    the player
      * @param html          the html content
      * @param fillMultiEdit text to fill the multiedit field with(may be null)
      * @param npcObjId      bypass origin to use
      */
-    public static void sendCBHtml(Player activeChar, String html, String fillMultiEdit, int npcObjId) {
-        if ((activeChar == null) || (html == null)) {
+    public static void sendCBHtml(Player player, String html, String fillMultiEdit, int npcObjId) {
+        if (isNull(player) || isNull(html)) {
             return;
         }
 
-        activeChar.clearHtmlActions(HtmlActionScope.COMM_BOARD_HTML);
+        player.clearHtmlActions(HtmlActionScope.COMM_BOARD_HTML);
 
         if (npcObjId > -1) {
-            buildHtmlActionCache(activeChar, HtmlActionScope.COMM_BOARD_HTML, npcObjId, html);
+            buildHtmlActionCache(player, HtmlActionScope.COMM_BOARD_HTML, npcObjId, html);
         }
 
         if (fillMultiEdit != null) {
-            activeChar.sendPacket(new ShowBoard(html, "1001"));
-            fillMultiEditContent(activeChar, fillMultiEdit);
+            player.sendPacket(new ShowBoard(html, "1001"));
+            fillMultiEditContent(player, fillMultiEdit);
         } else if (html.length() < 16250) {
-            activeChar.sendPacket(new ShowBoard(html, "101"));
-            activeChar.sendPacket(new ShowBoard(null, "102"));
-            activeChar.sendPacket(new ShowBoard(null, "103"));
+            player.sendPacket(new ShowBoard(html, "101"));
+            player.sendPacket(new ShowBoard(null, "102"));
+            player.sendPacket(new ShowBoard(null, "103"));
         } else if (html.length() < (16250 * 2)) {
-            activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-            activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
-            activeChar.sendPacket(new ShowBoard(null, "103"));
+            player.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+            player.sendPacket(new ShowBoard(html.substring(16250), "102"));
+            player.sendPacket(new ShowBoard(null, "103"));
         } else if (html.length() < (16250 * 3)) {
-            activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-            activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
-            activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
+            player.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+            player.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
+            player.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
         } else {
-            activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
-            activeChar.sendPacket(new ShowBoard(null, "102"));
-            activeChar.sendPacket(new ShowBoard(null, "103"));
+            player.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
+            player.sendPacket(new ShowBoard(null, "102"));
+            player.sendPacket(new ShowBoard(null, "103"));
         }
     }
 
     /**
      * Fills the community board's multiedit window with text. Must send after sendCBHtml
      *
-     * @param activeChar
+     * @param player
      * @param text
      */
-    public static void fillMultiEditContent(Player activeChar, String text) {
-        activeChar.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", activeChar.getName(), Integer.toString(activeChar.getObjectId()), activeChar.getAccountName(), "9", " ", " ", text.replaceAll("<br>", System.lineSeparator()), "0", "0", "0", "0")));
+    public static void fillMultiEditContent(Player player, String text) {
+        player.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", player.getName(), Integer.toString(player.getObjectId()), player.getAccountName(), "9", " ", " ", text.replaceAll("<br>", System.lineSeparator()), "0", "0", "0", "0")));
     }
 
     public static boolean isInsideRangeOfObjectId(WorldObject obj, int targetObjId, int radius) {

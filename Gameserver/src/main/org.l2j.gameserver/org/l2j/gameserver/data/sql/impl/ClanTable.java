@@ -3,8 +3,6 @@ package org.l2j.gameserver.data.sql.impl;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.enums.UserInfoType;
@@ -55,11 +53,6 @@ public class ClanTable {
     }
 
     private void load() {
-        // forums has to be loaded before clan data, because of last forum id used should have also memo included
-        if (Config.ENABLE_COMMUNITY_BOARD) {
-            ForumsBBSManager.getInstance().initRoot();
-        }
-
         getDAO(ClanDAO.class).findAll().forEach(data -> {
             var clan = new Clan(data);
             clans.put(data.getId(), clan);
