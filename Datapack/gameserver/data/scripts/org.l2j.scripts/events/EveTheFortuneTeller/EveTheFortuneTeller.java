@@ -25,7 +25,6 @@ import org.l2j.gameserver.network.serverpackets.luckygame.ExStartLuckyGame;
 
 /**
  * Eve the Fortune Teller Returns<br>
- * Info - http://www.lineage2.com/en/news/events/11182015-eve-the-fortune-teller-returns.php
  * @author Mobius
  */
 public final class EveTheFortuneTeller extends LongTimeEvent implements ScriptEvent

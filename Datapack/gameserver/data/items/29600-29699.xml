@@ -1086,12 +1086,12 @@
 		</skill-reducer>
 	</item>
 
-	<item id="29692" name="LineageII Box" type="NONE" icon="icon.ev_10th_present2">
-	<!-- Reward box for collecting all the Lineage II letters. You can get weapon recipes and ingredients. -->
+	<item id="29692" name="Box" type="NONE" icon="icon.ev_10th_present2">
+	<!-- Reward box for collecting all the letters. You can get weapon recipes and ingredients. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="55072" value="-1"/>  <!-- LineageII Box -->
+			<skill id="55072" value="-1"/>  <!-- Box -->
 		</skill-reducer>
 	</item>
 

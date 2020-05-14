@@ -370,7 +370,7 @@
         <target/>
     </skill>
     <skill id="32030" name="Dandy's Homerun Ball" action="A1">
-        <!-- XP/SP Gain +100%% for 1 hour. Armor appearance changes to that of an NC Dinos uniform. -->
+        <!-- XP/SP Gain +100%% for 1 hour. Armor appearance changes to that of an Dinos uniform. -->
         <icon initial="BranchIcon.icon.g_ev_homerunball"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>

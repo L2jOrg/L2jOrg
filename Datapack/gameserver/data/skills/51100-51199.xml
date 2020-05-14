@@ -104,7 +104,7 @@
         <target/>
     </skill>
     <skill id="51108" name="Dandy's Golden Ball" action="A1">
-        <!-- Sayha's Grace recovers all, for 1 hour XP/SP +100%%. Armor changes to NC Dinos Uniform. -->
+        <!-- Sayha's Grace recovers all, for 1 hour XP/SP +100%%. Armor changes to Dinos Uniform. -->
         <icon initial="BranchIcon.icon.g_ev_goldenball"/>
         <attributes property="PHYSIC" auto-use="BUFF">
             <cast-range initial="-1"/>

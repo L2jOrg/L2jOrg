@@ -62,7 +62,7 @@ public final class LetterCollector extends LongTimeEvent implements ScriptEvent
 		II
 	};
 	// Reward
-	private static final int LINEAGEII = 29581;
+	private static final int REWARD = 29581;
 	private static final int MEMMORIES = 29583;
 	private static final int CHRONICLE = 29582;
 	
@@ -85,7 +85,7 @@ public final class LetterCollector extends LongTimeEvent implements ScriptEvent
 				htmltext = event;
 				break;
 			}
-			case "lineage":
+			case "reward":
 			{
 				if ((getQuestItemsCount(player, L) >= 1) && //
 					(getQuestItemsCount(player, I) >= 1) && //
@@ -102,7 +102,7 @@ public final class LetterCollector extends LongTimeEvent implements ScriptEvent
 					takeItems(player, A, 1);
 					takeItems(player, G, 1);
 					takeItems(player, II, 1);
-					giveItems(player, LINEAGEII, 1);
+					giveItems(player, REWARD, 1);
 					htmltext = "9000-1.htm";
 				}
 				else

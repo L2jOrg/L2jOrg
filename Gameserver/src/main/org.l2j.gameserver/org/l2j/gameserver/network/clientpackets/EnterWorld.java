@@ -253,7 +253,7 @@ public class EnterWorld extends ClientPacket {
         var world = World.getInstance();
         player.getFriendList().stream().mapToObj(world::findPlayer).filter(Objects::nonNull).forEach(sm::sendTo);
 
-        player.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
+        player.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD);
 
         AnnouncementsManager.getInstance().showAnnouncements(player);
 

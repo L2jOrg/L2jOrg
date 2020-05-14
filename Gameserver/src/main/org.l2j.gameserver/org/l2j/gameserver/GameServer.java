@@ -74,7 +74,7 @@ public class GameServer {
             throw new Exception("Could not initialize the Identity factory!");
         }
 
-        printSection("Lineage II World");
+        printSection("World");
         World.init();
 
         printSection("Skills");
