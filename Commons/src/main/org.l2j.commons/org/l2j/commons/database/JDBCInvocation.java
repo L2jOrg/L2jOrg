@@ -5,9 +5,9 @@ import io.github.joealisson.primitive.IntKeyValue;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.annotation.Transient;
 import org.l2j.commons.database.handler.TypeHandler;
 import org.l2j.commons.database.helpers.EntityBasedStrategy;
 import org.l2j.commons.database.helpers.QueryDescriptor;
@@ -152,7 +152,7 @@ class JDBCInvocation implements InvocationHandler {
         var fields = fieldsOf(clazz);
         Map<String, IntKeyValue<Class<?>>> parameterMap = new HashMap<>(fields.size());
 
-        var columns = fields.stream().filter(f -> !f.isAnnotationPresent(Transient.class) && !Modifier.isStatic(f.getModifiers()))
+        var columns = fields.stream().filter(f -> !f.isAnnotationPresent(NonUpdatable.class) && !Modifier.isStatic(f.getModifiers()))
                 .peek(f -> parameterMap.put(f.getName(), new IntKeyValue<>(parameterMap.size()+1, f.getType())))
                 .map(this::fieldToColumnName).collect(Collectors.joining(",", "(", ")"));
 
