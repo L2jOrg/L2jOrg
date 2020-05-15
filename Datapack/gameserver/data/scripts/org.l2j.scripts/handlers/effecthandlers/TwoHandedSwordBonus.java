@@ -40,12 +40,12 @@ public class TwoHandedSwordBonus extends AbstractEffect {
         if (weaponTypeCondition.test(effected, effected, skill) && slotCondition.test(effected, effected, skill)) {
             switch (pAtkmode) {
                 case DIFF -> effected.getStats().mergeAdd(Stat.PHYSICAL_ATTACK, pAtkAmount);
-                case PER -> effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, (pAtkAmount / 100) + 1);
+                case PER -> effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, pAtkAmount);
             }
 
             switch (accuracyMode) {
                 case DIFF -> effected.getStats().mergeAdd(Stat.ACCURACY, accuracyAmount);
-                case PER -> effected.getStats().mergeMul(Stat.ACCURACY, (accuracyAmount / 100) + 1);
+                case PER -> effected.getStats().mergeMul(Stat.ACCURACY, accuracyAmount);
             }
         }
     }

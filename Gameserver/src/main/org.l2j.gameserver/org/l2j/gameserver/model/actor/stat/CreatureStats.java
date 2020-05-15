@@ -7,6 +7,7 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.EffectList;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -21,8 +22,10 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.l2j.commons.util.Util.falseIfNullOrElse;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
@@ -701,7 +704,10 @@ public class CreatureStats {
     public double getMul(Stat stat, double defaultValue) {
         _lock.readLock().lock();
         try {
-            return statsMul.getOrDefault(stat, defaultValue);
+            if(statsMul.containsKey(stat)) {
+                return statsMul.get(stat) / 100 + 1;
+            }
+            return defaultValue;
         } finally {
             _lock.readLock().unlock();
         }
@@ -730,16 +736,6 @@ public class CreatureStats {
         statsAdd.clear();
         statsMul.clear();
         _vampiricSum = 0;
-
-        // Initialize default values
-        for (Stat stat : Stat.values()) {
-            if (stat.getResetAddValue() != null) {
-                statsAdd.put(stat, stat.getResetAddValue());
-            }
-            if (stat.getResetMulValue() != null) {
-                statsMul.put(stat, stat.getResetMulValue());
-            }
-        }
     }
 
     /**
@@ -749,8 +745,8 @@ public class CreatureStats {
      */
     public final void recalculateStats(boolean broadcast) {
         // Copy old data before wiping it out
-        final Map<Stat, Double> adds = !broadcast ? Collections.emptyMap() : new EnumMap<>(statsAdd);
-        final Map<Stat, Double> muls = !broadcast ? Collections.emptyMap() : new EnumMap<>(statsMul);
+        final Map<Stat, Double> oldAdds = !broadcast ? Collections.emptyMap() : new EnumMap<>(statsAdd);
+        final Map<Stat, Double> oldMuls = !broadcast ? Collections.emptyMap() : new EnumMap<>(statsMul);
 
         _lock.writeLock().lock();
         try {
@@ -766,19 +762,16 @@ public class CreatureStats {
             // Call pump to each effect
             //@formatter:off
             effectsStream.forEach(info -> info.getEffects().stream()
-                    .filter(effect -> effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
-                    .filter(effect -> effect.canPump(info.getEffector(), info.getEffected(), info.getSkill()))
+                    .filter(effect -> canActivate(info, effect))
                     .forEach(effect -> effect.pump(info.getEffected(), info.getSkill())));
             //@formatter:on
 
-            if (isSummon(creature) && (creature.getActingPlayer() != null) && creature.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
+            if (isSummon(creature) && falseIfNullOrElse(creature.getActingPlayer(), player -> player.hasAbnormalType(AbnormalType.ABILITY_CHANGE))) {
                 //@formatter:off
-                creature.getActingPlayer().getEffectList().getEffects().stream()
-                        .filter(BuffInfo::isInUse)
+                creature.getActingPlayer().getEffectList().getEffects().stream().filter(BuffInfo::isInUse)
                         .filter(info -> info.isAbnormalType(AbnormalType.ABILITY_CHANGE))
                         .forEach(info -> info.getEffects().stream()
-                                .filter(effect -> effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
-                                .filter(effect -> effect.canPump(creature, creature, info.getSkill()))
+                                .filter(effect -> canActivate(info, effect))
                                 .forEach(effect -> effect.pump(creature, info.getSkill())));
                 //@formatter:on
             }
@@ -793,22 +786,20 @@ public class CreatureStats {
             _lock.writeLock().unlock();
         }
 
-        // Notify recalculation to child classes
         onRecalculateStats(broadcast);
 
         if (broadcast) {
-            // Calculate the difference between old and new stats
-            final Set<Stat> changed = new HashSet<>();
-            for (Stat stat : Stat.values()) {
-                Double value;
-                if ( ( value = statsAdd.getOrDefault(stat, stat.getResetAddValue()) ) != null && !value.equals(adds.getOrDefault(stat, stat.getResetAddValue()))) {
-                    changed.add(stat);
-                } else if ( (value = statsMul.getOrDefault(stat, stat.getResetMulValue())) != null && !value.equals(muls.getOrDefault(stat, stat.getResetMulValue()))) {
-                    changed.add(stat);
-                }
-            }
-            creature.broadcastModifiedStats(changed);
+            final var modified = Stat.stream().filter(stat -> isStatChanged(oldAdds, oldMuls, stat)).collect(Collectors.toSet());
+            creature.broadcastModifiedStats(modified);
         }
+    }
+
+    protected boolean isStatChanged(Map<Stat, Double> oldAdds, Map<Stat, Double> oldMuls, Stat stat) {
+        return !( Objects.equals( statsAdd.get(stat), oldAdds.get(stat) ) && Objects.equals( statsMul.get(stat), oldMuls.get(stat) ));
+    }
+
+    private boolean canActivate(BuffInfo info, AbstractEffect effect) {
+        return effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()) && effect.canPump(info.getEffector(), info.getEffected(), info.getSkill());
     }
 
     protected void onRecalculateStats(boolean broadcast) {
