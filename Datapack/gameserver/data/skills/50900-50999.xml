@@ -186,4 +186,22 @@
         </attributes>
         <target/>
     </skill>
+    <skill id="50915" name="Eva's Talisman">
+        <!-- Talisman for Aden Warriors -->
+        <icon initial="icon.bm_eva_talisman"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+                <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                    <power initial="20">
+                    </power>
+                </stat-modify>
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="50">
+                    <value level="2">50</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
+    </skill>
 </list>
