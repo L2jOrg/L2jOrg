@@ -77,7 +77,6 @@ public class DimensionalMerchant extends AbstractNpcAI
             case "attendance_rewards":
             {
                 player.sendPacket(new ExVipAttendanceItemList(player));
-                //MultisellData.getInstance().separateAndSend(ATTENDANCE_REWARD_MULTISELL, player, null, false);
                 break;
             }
             case "shop":
