@@ -120,9 +120,9 @@ public final class HomeBoard implements IParseBoardHandler {
 				returnHtml = returnHtml.replaceAll("%online%", String.valueOf(activeChar.getUptime()).toString());
 				returnHtml = returnHtml.replaceAll("%onlinePlayers%", String.valueOf(World.getInstance().getPlayers().size()));
 			}
-		} else if (command.startsWith("_bbstop;")) {
+		} else if (command.startsWith("_bbstop")) {
 			final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
-			final String path = command.replace("_bbstop;", "");
+			final String path = command.replace("_bbstop ", "");
 			if ((path.length() > 0) && path.endsWith(".html")) {
 				returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
 			}
@@ -139,26 +139,26 @@ public final class HomeBoard implements IParseBoardHandler {
 				returnHtml = returnHtml.replaceAll("%onlinePlayers%", String.valueOf(World.getInstance().getPlayers().size()));
 			}
 		} else if (command.startsWith("_bbsmultisell")) {
-			final String fullBypass = command.replace("_bbsmultisell;", "");
+			final String fullBypass = command.replace("_bbsmultisell ", "");
 			final String[] buypassOptions = fullBypass.split(",");
 			final int multisellId = Integer.parseInt(buypassOptions[0]);
 			final String page = buypassOptions[1];
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
 		} else if (command.startsWith("_bbsexcmultisell")) {
-			final String fullBypass = command.replace("_bbsexcmultisell;", "");
+			final String fullBypass = command.replace("_bbsexcmultisell ", "");
 			final String[] buypassOptions = fullBypass.split(",");
 			final int multisellId = Integer.parseInt(buypassOptions[0]);
 			final String page = buypassOptions[1];
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, true);
 		} else if (command.startsWith("_bbssell")) {
-			final String page = command.replace("_bbssell;", "");
+			final String page = command.replace("_bbssell ", "");
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 			activeChar.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), activeChar, 0));
 			activeChar.sendPacket(new ExBuySellList(activeChar, false));
 		} else if (command.startsWith("_bbsteleport")) {
-			final String teleBuypass = command.replace("_bbsteleport;", "");
+			final String teleBuypass = command.replace("_bbsteleport ", "");
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_TELEPORT_PRICE) {
 				activeChar.sendMessage("Not enough currency!");
 			} else if (Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass) != null) {
@@ -170,7 +170,7 @@ public final class HomeBoard implements IParseBoardHandler {
 				ThreadPool.schedule(activeChar::enableAllSkills, 3000);
 			}
 		} else if (command.startsWith("_bbsbuff")) {
-			final String fullBypass = command.replace("_bbsbuff;", "");
+			final String fullBypass = command.replace("_bbsbuff ", "");
 			final String[] buypassOptions = fullBypass.split(";");
 			final int buffCount = buypassOptions.length - 1;
 			final String page = buypassOptions[buffCount];
@@ -206,7 +206,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 		} else if (command.startsWith("_bbsheal")) {
-			final String page = command.replace("_bbsheal;", "");
+			final String page = command.replace("_bbsheal ", "");
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_HEAL_PRICE)) {
 				activeChar.sendMessage("Not enough currency!");
 			} else {
@@ -229,7 +229,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 		} else if (command.startsWith("_bbsreport")) {
-			var reportText = command.replace("_bbsreport", "");
+			var reportText = command.replace("_bbsreport ", "");
 			if (Util.isNotEmpty(reportText)) {
 
 				var report = new ReportData();
@@ -240,9 +240,10 @@ public final class HomeBoard implements IParseBoardHandler {
 				activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");
 				AdminData.getInstance().broadcastMessageToGMs(String.format("Player: %s (%s) has just submitted a report!", activeChar.getName(), activeChar.getObjectId()));
 			}
-			else if (command.startsWith("_bbspremium")) {
-				//_bbspremium;L2 amount;VIP amout ex: _bbspremium;100;200
-				final String fullBypass = command.replace("_bbspremium;", "");
+		}
+		else if (command.startsWith("_bbspremium")) {
+				//_bbspremium L2 amount;VIP amout ex: _bbspremium 100;200
+				final String fullBypass = command.replace("_bbspremium ", "");
 				final String[] buypassOptions = fullBypass.split(";");
 				final long buypassL2Coins = Long.parseLong(buypassOptions[0]);
 				final long buypassVIPPoints = Long.parseLong(buypassOptions[1]);
@@ -256,7 +257,6 @@ public final class HomeBoard implements IParseBoardHandler {
 					activeChar.updateVipPoints(buypassVIPPoints);
 				}
 			}
-
 			if (returnHtml != null) {
 				if (Config.CUSTOM_CB_ENABLED) {
 					returnHtml = returnHtml.replace("%navigation%", navigation);
@@ -273,9 +273,9 @@ public final class HomeBoard implements IParseBoardHandler {
 				}
 				CommunityBoardHandler.separateAndSend(returnHtml, activeChar);
 			}
-		}
 			return false;
 		}
+
 
 	/**
 	 * Gets the count Favorite links for the given player.
