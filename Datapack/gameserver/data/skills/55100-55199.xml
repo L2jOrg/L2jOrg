@@ -2454,9 +2454,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="5.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE">
                 <power initial="5.0"/>
             </stat-modify>

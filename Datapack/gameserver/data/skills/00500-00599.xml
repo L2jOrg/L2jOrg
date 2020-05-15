@@ -425,9 +425,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="3.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="563" name="Horn of Doom" max-level="4" action="A1">

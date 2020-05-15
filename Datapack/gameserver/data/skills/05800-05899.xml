@@ -1901,9 +1901,9 @@
             <speed mode="PER">
                 <power initial="-20.0"/>
             </speed>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-10.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="5887" name="Howl from Beyond" debuff="true" action="A2">
@@ -2108,9 +2108,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-20.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="10.0"/>
             </stat-modify>
@@ -2123,9 +2123,9 @@
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
                 <power initial="-50.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="-20.0"/>
             </vital-stat-modify>
@@ -2160,9 +2160,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-20.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
                 <power initial="-90.0"/>
             </stat-modify>
@@ -2222,9 +2222,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-10.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-5.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="5898" name="Blast of Anchor" max-level="2" debuff="true" action="A2" type="MAGIC">
@@ -2260,9 +2260,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-20.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-10.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="5899" name="Burst of Pain" max-level="2" debuff="true" action="A1" type="MAGIC">

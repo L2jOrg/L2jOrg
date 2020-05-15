@@ -531,15 +531,15 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="3.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="3.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15.0"/>
             </stat-modify>
@@ -595,9 +595,9 @@
             <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="4.0"/>
             </stat-modify>
@@ -613,9 +613,9 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="15.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="15.0"/>
             </stat-modify>
@@ -730,15 +730,15 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="3.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
                 <power initial="3.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15.0"/>
             </stat-modify>
@@ -1415,9 +1415,9 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="12.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5.0"/>
             </stat-modify>

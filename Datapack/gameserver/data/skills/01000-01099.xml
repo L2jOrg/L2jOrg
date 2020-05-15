@@ -2898,11 +2898,11 @@
                     <value level="2">-8.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-2.0">
                     <value level="2">-4.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="5.0">
                     <value level="2">8.0</value>
@@ -3518,7 +3518,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0">
                     <value level="2">25.0</value>
                     <value level="3">30.0</value>
@@ -3529,7 +3529,7 @@
                     <value level="8">25.0</value>
                     <value level="9">30.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="1078" name="Concentration" max-level="18" action="A2" type="MAGIC">
@@ -3910,7 +3910,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -3921,7 +3921,7 @@
                     <value level="8">3.0</value>
                     <value level="9">4.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="1090" name="Life Drain" max-level="6" action="A1" type="MAGIC">

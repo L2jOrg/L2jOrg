@@ -293,9 +293,9 @@
             <resist-abnormal-by-category category="DEBUFF">
                 <power initial="10.0"/>
             </resist-abnormal-by-category>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="20.0"/>
             </stat-modify>
@@ -444,9 +444,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <call-skill scope="SELF" skill="5602">
                 <power initial="1.0"/>
             </call-skill>
@@ -560,9 +560,9 @@
             <resist-abnormal-by-category category="DEBUFF">
                 <power initial="20.0"/>
             </resist-abnormal-by-category>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="713" name="Divine Summoner Servitor Hill" action="A1" type="MAGIC">
@@ -611,9 +611,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <call-skill scope="SELF" skill="5602">
                 <power initial="1.0"/>
             </call-skill>
@@ -1967,9 +1967,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="762" name="Insane Crusher" debuff="true" action="A2">
@@ -2077,9 +2077,9 @@
             <speed>
                 <power initial="10.0"/>
             </speed>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
                 <power initial="15.0"/>
             </stat-modify>
@@ -2115,9 +2115,9 @@
             <speed>
                 <power initial="30.0"/>
             </speed>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="15.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
                 <power initial="10.0"/>
             </stat-modify>
@@ -2153,9 +2153,9 @@
             <speed>
                 <power initial="20.0"/>
             </speed>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="50.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
                 <power initial="20.0"/>
             </stat-modify>
@@ -2432,12 +2432,12 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="10.0">
                     <value level="2">20.0</value>
                     <value level="3">30.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="795" name="Divine Knight Brandish" action="A1">

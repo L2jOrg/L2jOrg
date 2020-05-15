@@ -336,9 +336,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="50.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0"/>
             </stat-modify>
@@ -702,12 +702,12 @@
                     <value level="3">-30.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify mode="PER" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-10.0">
                     <value level="2">-20.0</value>
                     <value level="3">-30.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="6143" name="Ancient Beam" action="A1" type="MAGIC">
@@ -995,13 +995,13 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="150.0">
                     <value level="2">200.0</value>
                     <value level="3">520.0</value>
                     <value level="4">750.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="6155" name="Kasha's Despair" max-level="4" debuff="true" action="A2">
@@ -1048,9 +1048,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="15.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="33.0"/>
             </stat-modify>

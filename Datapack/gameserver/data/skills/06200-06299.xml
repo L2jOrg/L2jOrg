@@ -313,13 +313,13 @@
                     <value level="4">-40.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="-10.0">
                     <value level="2">-20.0</value>
                     <value level="3">-30.0</value>
                     <value level="4">-40.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="6213" name="Armor Grade Penalty" max-level="4">
@@ -345,13 +345,13 @@
                     <value level="4">-51.77</value>
                 </power>
             </speed>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-2.5">
                     <value level="2">-5.0</value>
                     <value level="3">-7.5</value>
                     <value level="4">-10.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="-16.67">
                     <value level="2">-30.56</value>

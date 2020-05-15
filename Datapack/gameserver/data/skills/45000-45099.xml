@@ -228,7 +228,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="25.0">
                     <value level="2">31.0</value>
                     <value level="3">269.0</value>
@@ -244,7 +244,7 @@
                     <value level="13">407.0</value>
                     <value level="14">80.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="45006" name="Othell's Mortal Strike" max-level="25">

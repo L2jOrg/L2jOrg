@@ -1598,7 +1598,7 @@
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="3.0">
                     <value level="3">5.0</value>
                     <value level="61">7.0</value>
@@ -1607,7 +1607,7 @@
                     <value level="64">10.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="228" name="Fast Spell Casting" max-level="3">
@@ -5206,11 +5206,11 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="100.0">
                     <value level="2">105.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="270" name="Song of Invocation" max-level="2" action="A2" type="DANCE">
@@ -7431,10 +7431,10 @@
                 <power initial="6.0"/>
                 <weapon-type>FIST</weapon-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="6.0"/>
                 <weapon-type>FIST</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="299" name="Summon Wild Hog Cannon" action="A1">

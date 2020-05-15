@@ -2439,7 +2439,7 @@
                     <value level="15">-60.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-5.0">
                     <value level="2">-9.0</value>
                     <value level="3">-13.0</value>
@@ -2456,7 +2456,7 @@
                     <value level="14">-48.0</value>
                     <value level="15">-50.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="-5.0">
                     <value level="2">-9.0</value>
@@ -2562,9 +2562,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
                 <power initial="33.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="5080" name="Haste Might" action="A2">

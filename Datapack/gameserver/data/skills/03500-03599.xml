@@ -147,9 +147,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <defence-trait start-level="2">
                 <trait type="BLEED">
                     <power initial="30"/>
@@ -435,12 +435,12 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
-            <stat-hp-based hp-percent="0" start-level="2" stat="CRITICAL_RATE">
+            </stat-modify>
+            <stat-modify start-level="2" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <defence-trait start-level="3">
                 <trait type="PARALYZE">
                     <power initial="30"/>
@@ -795,9 +795,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <base-stat type="CON">
                 <power initial="-1.0">
                     <value level="4">1.0</value>
@@ -1787,12 +1787,12 @@
                     </power>
                 </trait>
             </defence-trait>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE">
                 <power initial="1.0">
                     <value level="2">2.0</value>
@@ -2163,9 +2163,9 @@
             <vital-stat-modify mode="PER" stat="MAX_CP">
                 <power initial="30.0"/>
             </vital-stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="5.0"/>
             </stat-modify>

@@ -582,9 +582,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7042" name="Master's Blessing - Death Whisper" max-level="3" action="A2">
@@ -762,9 +762,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7048" name="Master's Blessing - Acumen" max-level="3" action="A2">
@@ -1047,9 +1047,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-8.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-4.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0"/>
             </stat-modify>
@@ -1357,9 +1357,9 @@
             <resist-abnormal-by-category category="DEBUFF">
                 <power initial="10.0"/>
             </resist-abnormal-by-category>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="20.0"/>
             </vital-stat-modify>
@@ -1932,9 +1932,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="35.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7092" name="Master's Blessing - Improve Shield Defense" max-level="3" action="A2">
@@ -2022,9 +2022,9 @@
             <speed>
                 <power initial="33.0"/>
             </speed>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7094" name="Master's Blessing - Sharpen Edge" max-level="3" action="A2">
@@ -2056,10 +2056,10 @@
                 <power initial="5.0"/>
                 <weapon-type>SWORD DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER</weapon-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
                 <weapon-type>SWORD DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7095" name="Master's Blessing - Encase Armor" max-level="3" action="A2">

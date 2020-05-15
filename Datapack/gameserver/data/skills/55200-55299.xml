@@ -710,9 +710,9 @@
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="-10.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-2.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5.0"/>
             </stat-modify>
@@ -1075,7 +1075,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="75.0">
                     <value level="2">100.0</value>
                     <value level="3">125.0</value>
@@ -1091,7 +1091,7 @@
                     <value level="13">375.0</value>
                     <value level="14">1.8</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55258" name="Othell Critical Damage" max-level="20">

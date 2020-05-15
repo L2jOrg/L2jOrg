@@ -478,12 +478,12 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0">
                     <value level="2">25.0</value>
                     <value level="3">30.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="1309" name="Chant of Eagle" max-level="3" action="A2" type="MAGIC">
@@ -1017,9 +1017,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
                 <power initial="-30.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-6.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="-30.0"/>
             </stat-modify>
@@ -1290,9 +1290,9 @@
                     <value level="3">20.0</value>
                 </power>
             </effect>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="-10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
                 <power initial="-10.0"/>
             </stat-modify>
@@ -1478,9 +1478,9 @@
             <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="4.0"/>
             </stat-modify>
@@ -1996,9 +1996,9 @@
             <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="4.0"/>
             </stat-modify>
@@ -2018,11 +2018,11 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="15.0">
                     <value level="2">20.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="15.0">
                     <value level="2">20.0</value>
@@ -2088,9 +2088,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="-10.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="-30.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="-30.0"/>
             </stat-modify>
@@ -2294,9 +2294,9 @@
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="-50.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-16.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="SHIELD_DEFENCE_RATE">
                 <power initial="-50.0"/>
             </stat-modify>

@@ -1226,9 +1226,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-10.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="EVASION_RATE">
+            <stat-modify mode="PER" stat="EVASION_RATE">
                 <power initial="-2.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5.0"/>
             </stat-modify>
@@ -1971,9 +1971,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="26.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55095" name="Lv. 3 Fire Dragon's Pendant Enchant Effect" max-level="10">
@@ -2020,7 +2020,7 @@
                     <value level="10">498.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="2.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -2032,7 +2032,7 @@
                     <value level="9">12.0</value>
                     <value level="10">15.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55096" name="Lv. 4 Fire Dragon's Pendant Basic Effect">
@@ -2048,9 +2048,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="26.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55097" name="Lv. 4 Fire Dragon's Pendant Enchant Effect" max-level="10">
@@ -2097,7 +2097,7 @@
                     <value level="10">498.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -2109,7 +2109,7 @@
                     <value level="9">12.0</value>
                     <value level="10">15.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55098" name="Lv. 5 Fire Dragon's Pendant Basic Effect">
@@ -2125,9 +2125,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="26.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55099" name="Lv. 5 Fire Dragon's Pendant Enchant Effect" max-level="10">
@@ -2183,7 +2183,7 @@
                     <value level="10">15.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -2195,7 +2195,7 @@
                     <value level="9">12.0</value>
                     <value level="10">15.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
 </list>

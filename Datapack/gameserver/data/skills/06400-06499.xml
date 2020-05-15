@@ -402,9 +402,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="35.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="6433" name="Feral Guidance" action="A2" type="MAGIC">
@@ -500,13 +500,13 @@
                 </power>
                 <weapon-type>BOW CROSSBOW</weapon-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0">
                     <value level="2">50.0</value>
                     <value level="3">75.0</value>
                 </power>
                 <weapon-type>BOW CROSSBOW</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="6436" name="Curse of the Dark Abyss" debuff="true" action="A2">
@@ -532,10 +532,10 @@
                 <power initial="50.0"/>
                 <weapon-type>BOW CROSSBOW</weapon-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="90.0"/>
                 <weapon-type>BOW CROSSBOW</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="6437" name="Freezing Core Area" max-level="7" debuff="true" action="A2">

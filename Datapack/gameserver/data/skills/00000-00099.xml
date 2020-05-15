@@ -6838,12 +6838,12 @@
                     <value level="3">15.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-2.0">
                     <value level="2">-4.0</value>
                     <value level="3">-6.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="83" name="Wolf Spirit Totem" action="A2">

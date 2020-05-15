@@ -973,11 +973,11 @@
                     <value level="2">40.0</value>
                 </power>
             </skill-evasion>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="20.0">
                     <value level="2">25.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <resist-dispel-by-category category="BUFF">
                 <power initial="80.0"/>
             </resist-dispel-by-category>
@@ -1821,13 +1821,13 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0">
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
                     <value level="4">50.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="139" name="Guts" max-level="6" action="A2">
@@ -1948,12 +1948,12 @@
                     <value level="5">14.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power>
                     <value level="4">3.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="10.0"/>
             </stat-modify>

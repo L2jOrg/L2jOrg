@@ -1160,10 +1160,10 @@
                 <power initial="30.0"/>
                 <weapon-type>FIST</weapon-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="50.0"/>
                 <weapon-type>FIST</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="429" name="Knighthood" max-level="13">

@@ -498,10 +498,10 @@
                 <power initial="14.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="3613" name="Enchant Robe (D-grade)">
@@ -547,10 +547,10 @@
                 <power initial="20.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="3616" name="Enchant Robe (C-grade)">
@@ -596,10 +596,10 @@
                 <power initial="24.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="3619" name="Enchant Robe (B-grade)">
@@ -645,10 +645,10 @@
                 <power initial="27.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="3622" name="Enchant Robe (A-grade)">
@@ -694,10 +694,10 @@
                 <power initial="33.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="3625" name="Enchant Robe (S-grade)" max-level="3">
