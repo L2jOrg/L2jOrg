@@ -32,10 +32,6 @@ public class CommunityFavorite {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getPlayerId() {
         return playerId;
     }
@@ -62,9 +58,5 @@ public class CommunityFavorite {
 
     public LocalDateTime getDate() {
         return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
     }
 }
