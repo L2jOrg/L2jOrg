@@ -3983,6 +3983,9 @@ public final class SystemMessageId {
     @ClientString(id = 2064, message = "You cannot polymorph while under the effect of a special skill.")
     public static SystemMessageId YOU_CANNOT_POLYMORPH_WHILE_UNDER_THE_EFFECT_OF_A_SPECIAL_SKILL;
 
+    @ClientString(id = 2165, message = "The barracks function has been restored.")
+    public static SystemMessageId THE_BARRACKS_FUNCTION_HAS_BEEN_RESTORED;
+
     @ClientString(id = 2068, message = "You do not have all of the items needed to enchant that skill.")
     public static SystemMessageId YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL_2068;
 
@@ -4012,6 +4015,15 @@ public final class SystemMessageId {
 
     @ClientString(id = 2086, message = "Search on user $c2 for third-party program use will be completed in $s1 minute(s).")
     public static SystemMessageId SEARCH_ON_USER_C2_FOR_THIRDPARTY_PROGRAM_USE_WILL_BE_COMPLETED_IN_S1_MINUTE_S;
+
+    @ClientString(id = 2087, message = "A fortress is under attack!")
+    public static SystemMessageId A_FORTRESS_IS_UNDER_ATTACK;
+
+    @ClientString(id = 2088, message = "$s1 minute(s) until the fortress battle starts.")
+    public static SystemMessageId S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS;
+
+    @ClientString(id = 2090, message = "The fortress battle $s1 has begun.")
+    public static SystemMessageId THE_FORTRESS_BATTLE_S1_HAS_BEGUN;
 
     @ClientString(id = 2091, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the websitewebsite .")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_WEBSITE_SUPPORT_COM_2091;
@@ -4160,6 +4172,15 @@ public final class SystemMessageId {
     @ClientString(id = 2161, message = "There is no space to move to, so teleportation effect does not apply.")
     public static SystemMessageId THERE_IS_NO_SPACE_TO_MOVE_TO_SO_TELEPORTATION_EFFECT_DOES_NOT_APPLY;
 
+    @ClientString(id = 2164, message = "The barracks have been seized.")
+    public static SystemMessageId THE_BARRACKS_HAVE_BEEN_SEIZED;
+
+    @ClientString(id = 2166, message = "All barracks are occupied.")
+    public static SystemMessageId ALL_BARRACKS_ARE_OCCUPIED;
+
+    @ClientString(id = 2169, message = "Your clan has been registered to $s1's fortress battle.")
+    public static SystemMessageId YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE;
+
     @ClientString(id = 2170, message = "You cannot use skills that may harm other players in this area.")
     public static SystemMessageId YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_THIS_AREA;
 
@@ -4172,6 +4193,9 @@ public final class SystemMessageId {
     @ClientString(id = 2175, message = "Party duel cannot be initiated due to a polymorphed party member.")
     public static SystemMessageId PARTY_DUEL_CANNOT_BE_INITIATED_DUE_TO_A_POLYMORPHED_PARTY_MEMBER;
 
+    @ClientString(id = 2276, message = "The rebel army recaptured the fortress.")
+    public static SystemMessageId THE_REBEL_ARMY_RECAPTURED_THE_FORTRESS;
+
     @ClientString(id = 2178, message = "Attribute removal has failed.")
     public static SystemMessageId ATTRIBUTE_REMOVAL_HAS_FAILED;
 
@@ -4183,6 +4207,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 2181, message = "You have highest the bid submitted in a Rune Castle auction.")
     public static SystemMessageId YOU_HAVE_HIGHEST_THE_BID_SUBMITTED_IN_A_RUNE_CASTLE_AUCTION;
+
+    @ClientString(id = 2183, message = "The fortress battle of $s1 has finished.")
+    public static SystemMessageId THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED;
 
     @ClientString(id = 2191, message = "To apply selected options, the game needs to be reloaded. If you don't apply now, it will be applied when you start the game next time. Will you apply now?")
     public static SystemMessageId TO_APPLY_SELECTED_OPTIONS_THE_GAME_NEEDS_TO_BE_RELOADED_IF_YOU_DON_T_APPLY_NOW_IT_WILL_BE_APPLIED_WHEN_YOU_START_THE_GAME_NEXT_TIME_WILL_YOU_APPLY_NOW;
@@ -16283,17 +16310,8 @@ public final class SystemMessageId {
     @ClientString(id = 2085, message = "Shout and trade chatting cannot be used while possessing a cursed weapon.")
     public static SystemMessageId SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON;
 
-    @ClientString(id = 2087, message = "A fortress is under attack!")
-    public static SystemMessageId A_FORTRESS_IS_UNDER_ATTACK;
-
-    @ClientString(id = 2088, message = "$s1 minute(s) until the fortress battle starts.")
-    public static SystemMessageId S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS;
-
     @ClientString(id = 2089, message = "$s1 second(s) until the fortress battle starts.")
     public static SystemMessageId S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS;
-
-    @ClientString(id = 2090, message = "The fortress battle $s1 has begun.")
-    public static SystemMessageId THE_FORTRESS_BATTLE_S1_HAS_BEGUN;
 
     @ClientString(id = 2096, message = "$c1 is in a location which cannot be entered, therefore it cannot be processed.")
     public static SystemMessageId C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED;
@@ -16367,23 +16385,11 @@ public final class SystemMessageId {
     @ClientString(id = 2163, message = "Soul cannot be increased anymore.")
     public static SystemMessageId SOUL_CANNOT_BE_INCREASED_ANYMORE;
 
-    @ClientString(id = 2164, message = "The barracks have been seized.")
-    public static SystemMessageId THE_BARRACKS_HAVE_BEEN_SEIZED;
-
-    @ClientString(id = 2165, message = "The barracks function has been restored.")
-    public static SystemMessageId THE_BARRACKS_FUNCTION_HAS_BEEN_RESTORED;
-
-    @ClientString(id = 2166, message = "All barracks are occupied.")
-    public static SystemMessageId ALL_BARRACKS_ARE_OCCUPIED;
-
     @ClientString(id = 2167, message = "You cannot use skills that may harm other players in here.")
     public static SystemMessageId YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE;
 
     @ClientString(id = 2168, message = "$c1 has acquired the flag.")
     public static SystemMessageId C1_HAS_ACQUIRED_THE_FLAG;
-
-    @ClientString(id = 2169, message = "Your clan has been registered to $s1's fortress battle.")
-    public static SystemMessageId YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE;
 
     @ClientString(id = 2171, message = "This item cannot be crystallized.")
     public static SystemMessageId THIS_ITEM_CANNOT_BE_CRYSTALLIZED;
@@ -16400,9 +16406,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 2182, message = "You cannot polymorph while riding a boat.")
     public static SystemMessageId YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_BOAT;
-
-    @ClientString(id = 2183, message = "The fortress battle of $s1 has finished.")
-    public static SystemMessageId THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED;
 
     @ClientString(id = 2184, message = "$s1 is victorious in the fortress battle of $s2.")
     public static SystemMessageId S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2;
@@ -16466,9 +16469,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 2271, message = "$c1 weakly resisted $c2's magic.")
     public static SystemMessageId C1_WEAKLY_RESISTED_C2_S_MAGIC;
-
-    @ClientString(id = 2276, message = "The rebel army recaptured the fortress.")
-    public static SystemMessageId THE_REBEL_ARMY_RECAPTURED_THE_FORTRESS;
 
     @ClientString(id = 2280, message = "Damage is decreased because $c1 resisted $c2's magic.")
     public static SystemMessageId DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC;

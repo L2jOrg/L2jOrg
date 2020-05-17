@@ -2,7 +2,6 @@ package org.l2j.gameserver.world;
 
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.WorldObject;
@@ -10,7 +9,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -212,9 +210,7 @@ public final class MapRegionManager extends GameXmlReader {
             location = getClanHallLocation(player);
         } else if (teleportWhere == TeleportWhereType.CASTLE) {
             location = getCastleLocation(player);
-        } else if (teleportWhere == TeleportWhereType.FORTRESS) {
-            location = getFortLocation(player);
-        } else if (teleportWhere == TeleportWhereType.SIEGEFLAG) {
+        }  else if (teleportWhere == TeleportWhereType.SIEGEFLAG) {
             location = getSiegeFlagLocation(player);
         }
         return location;
@@ -253,34 +249,12 @@ public final class MapRegionManager extends GameXmlReader {
         }
         return null;
     }
-
-    private Location getFortLocation(Player player) {
-        Fort fort = FortDataManager.getInstance().getFortByOwner(player.getClan());
-
-        if (isNull(fort)) {
-            fort = FortDataManager.getInstance().getFort(player);
-            if (!(( nonNull(fort)) && fort.getSiege().isInProgress() && (fort.getOwnerClan() == player.getClan()))) {
-               return null;
-            }
-        }
-
-        if (fort.getId() > 0) {
-            if (player.getReputation() < 0) {
-                return fort.getResidenceZone().getChaoticSpawnLoc();
-            }
-            return fort.getResidenceZone().getSpawnLoc();
-        }
-        return null;
-    }
     
     private Location getSiegeFlagLocation(Player player) {
         Castle castle = CastleManager.getInstance().getCastle(player);
-        Fort fort;
         Set<Npc> flags = null;
         if (nonNull(castle) && castle.getSiege().isInProgress()) {
             flags = castle.getSiege().getFlag(player.getClan());
-        } else if (nonNull(fort = FortDataManager.getInstance().getFort(player)) && fort.getSiege().isInProgress()) {
-            flags = fort.getSiege().getFlag(player.getClan());
         }
 
         if(isNull(flags) || flags.isEmpty()) {

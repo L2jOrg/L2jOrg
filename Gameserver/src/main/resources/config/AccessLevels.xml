@@ -263,17 +263,6 @@
 	<admin command="admin_fight_calculator_show" accessLevel="100" />
 	<admin command="admin_fcs" accessLevel="100" />
 
-	<!-- ADMIN FORT SIEGE -->
-	<admin command="admin_fortsiege" accessLevel="100" />
-	<admin command="admin_add_fortattacker" accessLevel="100" />
-	<admin command="admin_list_fortsiege_clans" accessLevel="100" />
-	<admin command="admin_clear_fortsiege_list" accessLevel="100" />
-	<admin command="admin_spawn_fortdoors" accessLevel="100" />
-	<admin command="admin_endfortsiege" accessLevel="100" />
-	<admin command="admin_startfortsiege" accessLevel="100" />
-	<admin command="admin_setfort" accessLevel="100" />
-	<admin command="admin_removefort" accessLevel="100" />
-
 	<!-- ADMIN GEODATA -->
 	<admin command="admin_geo_pos" accessLevel="100" />
 	<admin command="admin_geo_spawn_pos" accessLevel="100" />

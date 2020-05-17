@@ -46,7 +46,6 @@ public final class Config {
 
     public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
-    public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
     private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
@@ -161,8 +160,7 @@ public final class Config {
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_TRADE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE;
     public static int MAX_PERSONAL_FAME_POINTS;
-    public static int FORTRESS_ZONE_FAME_TASK_FREQUENCY;
-    public static int FORTRESS_ZONE_FAME_AQUIRE_POINTS;
+
     public static int CASTLE_ZONE_FAME_TASK_FREQUENCY;
     public static int CASTLE_ZONE_FAME_AQUIRE_POINTS;
     public static boolean FAME_FOR_DEAD_PLAYERS;
@@ -263,34 +261,8 @@ public final class Config {
     public static int TRAP_UPGRADE_PRICE4;
 
     // --------------------------------------------------
-    // Fortress Settings
-    // --------------------------------------------------
-    public static long FS_TELE_FEE_RATIO;
-    public static int FS_TELE1_FEE;
-    public static int FS_TELE2_FEE;
-    public static long FS_MPREG_FEE_RATIO;
-    public static int FS_MPREG1_FEE;
-    public static int FS_MPREG2_FEE;
-    public static long FS_HPREG_FEE_RATIO;
-    public static int FS_HPREG1_FEE;
-    public static int FS_HPREG2_FEE;
-    public static long FS_EXPREG_FEE_RATIO;
-    public static int FS_EXPREG1_FEE;
-    public static int FS_EXPREG2_FEE;
-    public static long FS_SUPPORT_FEE_RATIO;
-    public static int FS_SUPPORT1_FEE;
-    public static int FS_SUPPORT2_FEE;
-    public static int FS_BLOOD_OATH_COUNT;
-    public static int FS_UPDATE_FRQ;
-    public static int FS_MAX_SUPPLY_LEVEL;
-    public static int FS_FEE_FOR_CASTLE;
-    public static int FS_MAX_OWN_TIME;
-
-    // --------------------------------------------------
     // Feature Settings
     // --------------------------------------------------
-    public static int TAKE_FORT_POINTS;
-    public static int LOOSE_FORT_POINTS;
     public static int TAKE_CASTLE_POINTS;
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
@@ -960,29 +932,6 @@ public final class Config {
         TRAP_UPGRADE_PRICE3 = Feature.getInt("TrapUpgradePriceLvl3", 5000000);
         TRAP_UPGRADE_PRICE4 = Feature.getInt("TrapUpgradePriceLvl4", 6000000);
 
-        FS_TELE_FEE_RATIO = Feature.getLong("FortressTeleportFunctionFeeRatio", 604800000);
-        FS_TELE1_FEE = Feature.getInt("FortressTeleportFunctionFeeLvl1", 1000);
-        FS_TELE2_FEE = Feature.getInt("FortressTeleportFunctionFeeLvl2", 10000);
-        FS_SUPPORT_FEE_RATIO = Feature.getLong("FortressSupportFunctionFeeRatio", 86400000);
-        FS_SUPPORT1_FEE = Feature.getInt("FortressSupportFeeLvl1", 7000);
-        FS_SUPPORT2_FEE = Feature.getInt("FortressSupportFeeLvl2", 17000);
-        FS_MPREG_FEE_RATIO = Feature.getLong("FortressMpRegenerationFunctionFeeRatio", 86400000);
-        FS_MPREG1_FEE = Feature.getInt("FortressMpRegenerationFeeLvl1", 6500);
-        FS_MPREG2_FEE = Feature.getInt("FortressMpRegenerationFeeLvl2", 9300);
-        FS_HPREG_FEE_RATIO = Feature.getLong("FortressHpRegenerationFunctionFeeRatio", 86400000);
-        FS_HPREG1_FEE = Feature.getInt("FortressHpRegenerationFeeLvl1", 2000);
-        FS_HPREG2_FEE = Feature.getInt("FortressHpRegenerationFeeLvl2", 3500);
-        FS_EXPREG_FEE_RATIO = Feature.getLong("FortressExpRegenerationFunctionFeeRatio", 86400000);
-        FS_EXPREG1_FEE = Feature.getInt("FortressExpRegenerationFeeLvl1", 9000);
-        FS_EXPREG2_FEE = Feature.getInt("FortressExpRegenerationFeeLvl2", 10000);
-        FS_UPDATE_FRQ = Feature.getInt("FortressPeriodicUpdateFrequency", 360);
-        FS_BLOOD_OATH_COUNT = Feature.getInt("FortressBloodOathCount", 1);
-        FS_MAX_SUPPLY_LEVEL = Feature.getInt("FortressMaxSupplyLevel", 6);
-        FS_FEE_FOR_CASTLE = Feature.getInt("FortressFeeForCastle", 25000);
-        FS_MAX_OWN_TIME = Feature.getInt("FortressMaximumOwnTime", 168);
-
-        TAKE_FORT_POINTS = Feature.getInt("TakeFortPoints", 200);
-        LOOSE_FORT_POINTS = Feature.getInt("LooseFortPoints", 0);
         TAKE_CASTLE_POINTS = Feature.getInt("TakeCastlePoints", 1500);
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
@@ -1132,8 +1081,7 @@ public final class Config {
         ALT_GAME_KARMA_PLAYER_CAN_TRADE = Character.getBoolean("AltKarmaPlayerCanTrade", true);
         ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = Character.getBoolean("AltKarmaPlayerCanUseWareHouse", true);
         MAX_PERSONAL_FAME_POINTS = Character.getInt("MaxPersonalFamePoints", 100000);
-        FORTRESS_ZONE_FAME_TASK_FREQUENCY = Character.getInt("FortressZoneFameTaskFrequency", 300);
-        FORTRESS_ZONE_FAME_AQUIRE_POINTS = Character.getInt("FortressZoneFameAquirePoints", 31);
+
         CASTLE_ZONE_FAME_TASK_FREQUENCY = Character.getInt("CastleZoneFameTaskFrequency", 300);
         CASTLE_ZONE_FAME_AQUIRE_POINTS = Character.getInt("CastleZoneFameAquirePoints", 125);
         FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);

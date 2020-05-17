@@ -171,7 +171,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                 }
 
                 final Clan clan = player.getClan();
-                if ((clan.getFortId() == 0) && (clan.getCastleId() == 0)) {
+                if (clan.getCastleId() == 0) {
                     return;
                 }
 

@@ -193,7 +193,6 @@ public class GameServer {
         // No fortresses TODO remove: at some point these instances will be loaded
         // FortDataManager.getInstance().loadInstances();
         // FortDataManager.getInstance().activateInstances();
-        // FortSiegeManager.getInstance();
 
         var generalSettings = getSettings(GeneralSettings.class);
         if (generalSettings.saveDroppedItems()) {

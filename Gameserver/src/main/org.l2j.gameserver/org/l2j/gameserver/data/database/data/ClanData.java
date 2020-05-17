@@ -27,9 +27,6 @@ public class ClanData {
     @Column("blood_alliance_count")
     private int bloodAllianceCount;
 
-    @Column("blood_oath_count")
-    private int bloodOathCount;
-
     @Column("ally_id")
     private int allyId;
 
@@ -125,14 +122,6 @@ public class ClanData {
 
     public void setBloodAllianceCount(int count) {
         bloodAllianceCount = count;
-    }
-
-    public int getBloodOathCount() {
-        return bloodOathCount;
-    }
-
-    public void setBloodOathCount(int count) {
-        bloodOathCount = count;
     }
 
     public int getLeaderId() {
