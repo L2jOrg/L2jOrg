@@ -5,7 +5,6 @@
         <icon initial="icon.skill1505"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true">
             <magic-level initial="81"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="668"/>
             <effect-range initial="-1"/>
@@ -107,7 +106,6 @@
             <hit-time initial="1000"/>
         </attributes>
         <consume>
-            <mana-init initial="5"/>
             <mana initial="50">
                 <value level="2">60</value>
             </mana>
@@ -141,13 +139,17 @@
                 <value level="4">82</value>
                 <value level="5">84</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="8"/>
+            <mana-init initial="10">
+                <value level="2">12</value>
+                <value level="3">15</value>
+                <value level="4">17</value>
+                <value level="5">20</value>
+            </mana-init>
             <mana initial="30">
                 <value level="2">35</value>
                 <value level="3">40</value>
@@ -162,7 +164,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <trigger-skill-by-damage min-damage="1" skill="5592" target="TARGET">
+            <trigger-skill-by-damage skill="5592" target="TARGET">
                 <power initial="1.0"/>
                 <chance initial="40.0"/>
             </trigger-skill-by-damage>
@@ -202,7 +204,7 @@
                     <value level="9">9</value>
                     <value level="10">10</value>
                 </power>
-				<chance initial="40.0"/> 
+                <chance initial="40.0"/>
                 <types>PHYSIC</types>
             </trigger-skill-by-magic>
             <trigger-skill-by-magic skill="45167" target="ENEMY">
@@ -217,7 +219,7 @@
                     <value level="9">9</value>
                     <value level="10">10</value>
                 </power>
-				<chance initial="40.0"/> 
+                <chance initial="40.0"/>
                 <types>MAGIC</types>
             </trigger-skill-by-magic>
         </effects>
@@ -251,13 +253,13 @@
         <icon initial="icon.skill1532"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="78"/>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <consume>
+            <mana-init initial="16"/>
             <mana initial="80"/>
         </consume>
         <target/>
@@ -279,7 +281,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="50.0"/>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power initial="-70.0"/>
             </magic-cost>
         </effects>
@@ -294,14 +296,15 @@
             <magic-level initial="44">
                 <value level="2">52</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="14"/>
+            <mana-init initial="14">
+                <value level="2">15</value>
+            </mana-init>
             <mana initial="69">
                 <value level="2">76</value>
             </mana>
@@ -385,6 +388,15 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
+            <mana-init initial="4">
+                <value level="2">5</value>
+                <value level="3">6</value>
+                <value level="4">7</value>
+                <value level="5">8</value>
+                <value level="7">9</value>
+                <value level="9">10</value>
+                <value level="11">11</value>
+            </mana-init>
             <mana initial="18">
                 <value level="2">24</value>
                 <value level="3">29</value>
@@ -551,7 +563,6 @@
         <icon initial="icon.skill1540"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="79"/>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="343"/>
             <effect-range initial="-1"/>
@@ -592,7 +603,9 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="15"/>
+            <mana-init initial="15">
+                <value level="2">19</value>
+            </mana-init>
             <mana initial="73">
                 <value level="2">81</value>
             </mana>
@@ -645,7 +658,6 @@
                 <value level="4">78</value>
                 <value level="5">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="418">
                 <value level="2">582</value>
@@ -659,7 +671,9 @@
         <consume>
             <mana-init initial="8">
                 <value level="2">12</value>
-                <value level="3">17</value>
+                <value level="3">13</value>
+                <value level="4">16</value>
+                <value level="5">18</value>
             </mana-init>
             <mana initial="39">
                 <value level="2">58</value>
@@ -667,6 +681,11 @@
                 <value level="4">78</value>
                 <value level="5">86</value>
             </mana>
+            <item initial="3031"/>
+            <item-count initial="5">
+                <value level="4">6</value>
+                <value level="5">7</value>
+            </item-count>
         </consume>
         <target/>
         <abnormal type="SPIRIT_SHARING">
@@ -732,7 +751,6 @@
         <icon initial="icon.skill1550"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="77"/>
-            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="662"/>
             <effect-range initial="-1"/>
@@ -757,7 +775,6 @@
         <icon initial="icon.skill1551"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="77"/>
-            <cast-range initial="-1"/>
             <reuse initial="9000"/>
             <effect-point initial="662"/>
             <effect-range initial="-1"/>
@@ -796,7 +813,6 @@
             <magic-level initial="77">
                 <value level="2">81</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="9000"/>
             <effect-point initial="1261"/>
             <effect-range initial="-1"/>
@@ -804,7 +820,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="39"/>
+            <mana-init initial="39">
+                <value level="2">43</value>
+            </mana-init>
             <mana initial="193">
                 <value level="2">212</value>
             </mana>
@@ -844,7 +862,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="39"/>
+            <mana-init initial="39">
+                <value level="2">43</value>
+            </mana-init>
             <mana initial="194">
                 <value level="2">214</value>
             </mana>
@@ -878,7 +898,6 @@
                 <value level="4">83</value>
                 <value level="5">84</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="138">
                 <value level="2">152</value>
@@ -890,7 +909,7 @@
             <hit-time initial="1000"/>
         </attributes>
         <consume>
-            <mana-init initial="23"/>
+            <mana-init initial="25"/>
             <mana initial="110">
                 <value level="2">115</value>
                 <value level="3">120</value>
@@ -931,7 +950,6 @@
                 <value level="4">83</value>
                 <value level="5">84</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="379">
                 <value level="2">382</value>
@@ -941,7 +959,10 @@
             <hit-time initial="1000"/>
         </attributes>
         <consume>
-            <mana-init initial="7"/>
+            <mana-init initial="21">
+                <value level="2">23</value>
+                <value level="3">25</value>
+            </mana-init>
             <mana initial="105">
                 <value level="2">109</value>
                 <value level="3">113</value>
@@ -997,8 +1018,7 @@
             level 5: Increases Max MP by 200.
          -->
         <icon initial="icon.skill19168"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">

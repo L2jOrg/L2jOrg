@@ -667,21 +667,21 @@
                     <value level="10">2.8</value>
                 </power>
             </stat-modify>
-           <trigger-skill-by-magic skill="55153">
-               <power initial="1"/>
-               <chance initial="2">
-                   <value level="2">4</value>
-                   <value level="3">6</value>
-                   <value level="4">8</value>
-                   <value level="5">10</value>
-                   <value level="6">12</value>
-                   <value level="7">14</value>
-                   <value level="8">16</value>
-                   <value level="9">20</value>
-                   <value level="10">24</value>
-               </chance>
-               <types>PHYSIC MAGIC</types>
-           </trigger-skill-by-magic>
+            <trigger-skill-by-magic skill="55153">
+                <power initial="1"/>
+                <chance initial="2">
+                    <value level="2">4</value>
+                    <value level="3">6</value>
+                    <value level="4">8</value>
+                    <value level="5">10</value>
+                    <value level="6">12</value>
+                    <value level="7">14</value>
+                    <value level="8">16</value>
+                    <value level="9">20</value>
+                    <value level="10">24</value>
+                </chance>
+                <types>PHYSIC MAGIC</types>
+            </trigger-skill-by-magic>
         </effects>
     </skill>
     <skill id="55118" name="Lv. 5 Wind Dragon's Pendant Basic Effect">
@@ -817,7 +817,6 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1287,7 +1286,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1297,7 +1295,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1307,7 +1304,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1317,7 +1313,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1327,7 +1322,6 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1339,7 +1333,6 @@
         <!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
         <icon initial="icon.skill6038"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1349,7 +1342,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1731,11 +1723,10 @@
         <target/>
     </skill>
     <skill id="55160" name="Special Fruit Buff" action="A2">
-        <!-- For 20 minutes, Bonus XP/SP Gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of damage dealt to enemies as HP. Effect remains even after death. -->
+        <!-- For 20 minutes, Bonus XP/SP Gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of damage dealt to enemies as HP.\nDeath protection. You can delete it yourself. -->
         <icon initial="icon.etc_codran_i09"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1745,7 +1736,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal> <!-- EXP_SP_K -->
+        <abnormal>
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -1784,7 +1775,7 @@
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0"/>
             </stat-modify>
-			<vampiric-attack chance="30">
+            <vampiric-attack chance="30">
                 <power initial="3.0"/>
             </vampiric-attack>
         </effects>
@@ -2011,12 +2002,11 @@
         <!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +3%%. -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC" stay-after-death="true">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal> <!-- EXP_SP_B -->
+        <abnormal>
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -2034,12 +2024,11 @@
         <!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +5%%, damage received in PvE -2%%. -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC" stay-after-death="true">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal> <!-- EXP_SP_B -->
+        <abnormal>
             <level initial="2"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -2066,12 +2055,11 @@
         <!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +7%%, damage received in PvE -5%%. -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC" stay-after-death="true">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal> <!-- EXP_SP_B -->
+        <abnormal>
             <level initial="3"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -2098,12 +2086,11 @@
         <!-- Clan Alliance Buff. XP/SP gain +10%%, PvE damage +7%%, damage received in PvE -8%% for 3 hours. -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC" stay-after-death="true">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal> <!-- EXP_SP_B -->
+        <abnormal>
             <level initial="4"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -2140,7 +2127,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -2175,7 +2161,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -2223,7 +2208,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -2284,7 +2268,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -2479,7 +2462,6 @@
         <icon initial="icon.etc_talisman_i01"/>
         <attributes property="PHYSIC">
             <magic-level initial="40"/>
-            <cast-range initial="-1"/>
             <reuse initial="240000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>
@@ -2502,7 +2484,6 @@
         <icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -2524,7 +2505,6 @@
         <icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -2546,7 +2526,6 @@
         <icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -2568,7 +2547,6 @@
         <icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -2590,7 +2568,6 @@
         <icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -2612,7 +2589,6 @@
         <icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -2634,7 +2610,6 @@
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2666,7 +2641,6 @@
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2698,7 +2672,6 @@
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2730,7 +2703,6 @@
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2762,7 +2734,6 @@
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2794,7 +2765,6 @@
         <icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2826,7 +2796,6 @@
         <icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>

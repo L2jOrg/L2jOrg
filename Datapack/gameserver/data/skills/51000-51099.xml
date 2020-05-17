@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="51001" name="Sayha's Storm Lv. 2 - Event" action="A1">
-        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +150%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute. -->
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +150%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute.\nDeath protection. You can delete it yourself. -->
         <icon initial="icon.bm_sayha_storm"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -12,10 +11,9 @@
         <target/>
     </skill>
     <skill id="51002" name="Sayha's Storm Lv. 2" action="A1">
-        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +150%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute. -->
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +150%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute.\nDeath protection. You can delete it yourself. -->
         <icon initial="icon.bm_sayha_storm"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -26,7 +24,6 @@
         <!-- none -->
         <icon initial="icon.bm_nebit_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -39,7 +36,6 @@
         <!-- none -->
         <icon initial="icon.bm_sayha_gold_present"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -52,7 +48,6 @@
         <!-- none -->
         <icon initial="icon.bm_sayha_silver_present"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -65,7 +60,6 @@
         <!-- Maintains Sayha's Grace for 10 minutes. Cooldown: 1 minute. Effect remains even after death. -->
         <icon initial="icon.bm_freya_potion"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -83,7 +77,6 @@
         <!-- none -->
         <icon initial="icon.scroll_of_unidentify_am_s"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -93,7 +86,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -106,7 +98,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -119,7 +110,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -132,7 +122,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -145,7 +134,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -158,7 +146,6 @@
         <!-- Grants you Blessing of Fire Dragon for 20 minutes: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
         <icon initial="icon.bm_blessing_dragon"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -167,11 +154,10 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="51015" name="Shining Mood Melody" action="A1">
-        <!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
+    <skill id="51015" name="Shining Moody’s Melody" action="A1">
+        <!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
         <icon initial="icon.bm_magmeld"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -183,7 +169,6 @@
         <!-- XP/SP gain +3%% for 4 hours thanks to the clan members' activities. (Available when 7 or more clan members have logged in.) -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -194,7 +179,6 @@
         <!-- XP/SP gain +6%% for 4 hours thanks to the clan members' activities. (Available when 14 or more clan members have logged in.) -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -205,7 +189,6 @@
         <!-- XP/SP gain +10%% for 4 hours thanks to the clan members' activities. (Available when 21 or more clan members have logged in.) -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -216,7 +199,6 @@
         <!-- XP/SP gain +20%% for 4 hours thanks to the clan members' activities. (Available when 28 or more clan members have logged in.) -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -227,7 +209,6 @@
         <!-- By Clan Members' activity, power of unity applied. For 4 hours PVE Damage +5%%. (Obtained when Clan Hunting status exceeds 3,267,000 points.) -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -238,7 +219,6 @@
         <!-- By Clan Members' activity, power of unity applied. For 4 hours PVE Damage +10%%. (Obtained when Clan Hunting status exceeds 6,534,000 points.) -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -249,7 +229,6 @@
         <!-- By Clan Members' activity, power of unity applied. For 4 hours PVE Damage +15%%. (Obtained when Clan Hunting status exceeds 9,801,000 points.) -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -260,7 +239,6 @@
         <!-- By Clan Members' activity, power of unity applied. For 4 hours PVE Damage +15%%, PVP Damage +10%%. (Obtained when Clan Hunting status exceeds 13,068,000 points.) -->
         <icon initial="icon.skill19011"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -303,7 +281,6 @@
         <!-- Release Agathion's Seal - Aries. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -314,7 +291,6 @@
         <!-- Release Agathion's Seal - Joy. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -329,7 +305,7 @@
         </attributes>
         <target/>
         <effects>
-            <summon-agathion id="13562"/> <!-- Agathion Pisces -->
+            <summon-agathion id="13562"/>
         </effects>
     </skill>
     <skill id="51029" name="Summon Cancer Agathion" action="A1">
@@ -340,7 +316,7 @@
         </attributes>
         <target/>
         <effects>
-            <summon-agathion id="13564"/> <!-- Agathion Cancer -->
+            <summon-agathion id="13564"/>
         </effects>
     </skill>
     <skill id="51030" name="Teleport: Gludio" action="A1">
@@ -442,7 +418,6 @@
         <!-- Release Agathion's Seal - Rudolph. -->
         <icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -455,14 +430,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<!-- <abnormal type="EXP_SP_W"> -->
-            <!-- <level initial="2"/> -->
-        <!-- </abnormal> -->
         <effects>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="5.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="5.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_EXP">
@@ -477,7 +449,6 @@
         <!-- Release summoned Agathion. -->
         <icon initial="icon.etc_unsummon_aga_agit_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -489,7 +460,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -517,7 +487,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -547,7 +516,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -576,7 +544,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -609,7 +576,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -623,7 +589,6 @@
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -644,7 +609,6 @@
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -665,7 +629,6 @@
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -685,7 +648,6 @@
         <!-- none -->
         <icon initial="icon.star_agathion_cube"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -697,7 +659,6 @@
         <!-- none -->
         <icon initial="icon.star_scrl_of_ench_ag"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -707,7 +668,6 @@
         <!-- none -->
         <icon initial="icon.star_giantscrl_of_ench_ag"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -717,7 +677,6 @@
         <!-- none -->
         <icon initial="icon.star_giantscrl_of_ench_ag"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -734,7 +693,6 @@
         <!-- none -->
         <icon initial="icon.star_agathion_cube"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -746,7 +704,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -758,7 +715,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -771,7 +727,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -784,7 +739,6 @@
         <!-- none -->
         <icon initial="icon.scrl_item_lock"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -794,7 +748,6 @@
         <!-- none -->
         <icon initial="icon.scrl_item_unlock"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -805,7 +758,6 @@
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -851,7 +803,6 @@
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -862,7 +813,6 @@
         <!-- Enchants Savior's Earring. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -872,7 +822,6 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -885,7 +834,6 @@
         <!-- For 5 minutes, a party member's XP/SP Gain +10%% and XP/SP Gain +20%% during Sayha's Grace. -->
         <icon initial="icon.Accessary_middle_ages_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="669"/>
             <effect-range initial="-1"/>
@@ -898,7 +846,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -908,7 +855,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -918,7 +864,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -928,7 +873,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -938,7 +882,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -951,7 +894,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -964,7 +906,6 @@
         <!-- Release Agathion's Seal - Sin Eater. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -975,7 +916,6 @@
         <!-- For 2 hours, has a chance of obtaining Proof of Penitence while hunting. -->
         <icon initial="icon.etc_leash_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -983,16 +923,15 @@
     </skill>
     <skill id="51070" name="Dragon's Miracle Potion" max-level="3" action="A1">
         <!--
-            level 1: Restores Sayha's Grace points. For 20 minutes XP and SP gain +20%%, P. Atk./M. Atk. +12%%, P. Def./M. Def. +15%%, P. Critical Rate/M. Critical Rate +20, P. Critical Damage/M. Critical Damage +5%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, Sayha's Grace Consumption -10%%. At a certain chance absorbs 5%% of the damage inflicted on target as HP. Can stack up to 3 times. The effect does not disappear after death.
-            level 2: Restores Sayha's Grace points. For 20 minutes XP and SP gain +30%%, P. Atk./M. Atk. +15%%, P. Def./M. Def. +18%%, P. Critical Rate/M. Critical Rate +20, P. Critical Damage/M. Critical Damage +10%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, Sayha's Grace Consumption -10%%. At a certain chance absorbs 5%% of the damage inflicted on target as HP. Can stack up to 3 times. The effect does not disappear after death.
-            level 3: Restores Sayha's Grace points. For 30 minutes XP and SP gain +50%%, P. Atk./M. Atk. +18%%, P. Def./M. Def. +22%%, Atk. Spd./Casting Spd. +5%%, P. Critical Rate/M. Critical Rate +30, P. Critical Damage/M. Critical Damage +10%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, Sayha's Grace Consumption -15%%. At a certain chance absorbs 5%% of the damage inflicted on target as HP. Can stack up to 3 times. The effect does not disappear after death.
+            level 1: Restores Sayha's Grace points. For 20 minutes XP and SP gain +20%%, P. Atk./M. Atk. +12%%, P. Def./M. Def. +15%%, P. Critical Rate/M. Critical Rate +20, P. Critical Damage/M. Critical Damage +5%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, Sayha's Grace Consumption -10%%. Has a chance to recover 5%% of damage inflicted to enemy as HP. Can stack up to 3 times when using Dragon's Miracle Potion. \nDeath protection. You can delete it yourself.
+            level 2: Restores Sayha's Grace points. For 20 minutes XP and SP gain +30%%, P. Atk./M. Atk. +15%%, P. Def./M. Def. +18%%, P. Critical Rate/M. Critical Rate +20, P. Critical Damage/M. Critical Damage +10%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, Sayha's Grace Consumption -10%%. Has a chance to recover 5%% of damage inflicted to enemy as HP. Can stack up to 3 times when using Dragon's Miracle Potion.\nDeath protection. You can delete it yourself.
+            level 3: Restores Sayha's Grace points. For 20 minutes XP and SP gain +50%%, P. Atk./M. Atk. +18%%, P. Def./M. Def. +22%%, Atk. Spd./Casting Spd. +5%%, P. Critical Rate/M. Critical Rate +30, P. Critical Damage/M. Critical Damage +10%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, Sayha's Grace Consumption -15%%. Has a chance to recover 5%% of damage inflicted to enemy as HP. Can stack up to 3 times when using Dragon's Miracle Potion.\nDeath protection. You can delete it yourself.
          -->
         <icon initial="icon.bm_dragon_posion_brave_1">
             <value level="2">icon.bm_dragon_posion_brave_2</value>
             <value level="3">icon.bm_dragon_posion_brave_3</value>
         </icon>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1003,7 +942,6 @@
         <!-- none -->
         <icon initial="icon.bm_special_pendant_abradant_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1016,7 +954,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1029,7 +966,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1042,7 +978,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1055,7 +990,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1068,7 +1002,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1081,7 +1014,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1094,7 +1026,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1107,7 +1038,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1120,7 +1050,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1133,7 +1062,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1146,7 +1074,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1158,7 +1085,6 @@
     <skill id="51083" name="Maliss's High-grade HP Potion" action="A1">
         <icon initial="icon.etc_bm_hero_red_potion"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1168,7 +1094,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1178,7 +1103,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1188,7 +1112,6 @@
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1199,7 +1122,6 @@
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1359,7 +1281,6 @@
         <!-- none -->
         <icon initial="icon.ev_charge_scroll"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1369,7 +1290,6 @@
         <!-- Transforms to Blue Dynasty. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
         <icon initial="icon.armor_t91_u_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1381,7 +1301,6 @@
         <!-- Transforms to Cat the Cat. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
         <icon initial="icon.cat_the_cat_change_0"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>

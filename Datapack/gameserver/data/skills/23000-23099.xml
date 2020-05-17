@@ -5,7 +5,6 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -20,7 +19,6 @@
         <icon initial="icon.skill_sing"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -52,7 +50,6 @@
         <icon initial="icon.skill_sing"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>

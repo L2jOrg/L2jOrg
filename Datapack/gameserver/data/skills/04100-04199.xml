@@ -77,7 +77,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <cool-time initial="800"/>
             <effect-point initial="-100"/>
@@ -164,7 +163,6 @@
             <magic-level initial="40">
                 <value level="2">70</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -324,7 +322,6 @@
         <icon initial="icon.skill4106"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="99"/>
-            <cast-range initial="-1"/>
             <cool-time initial="2000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -338,7 +335,7 @@
             <time initial="9"/>
             <chance initial="-1"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -351,7 +348,6 @@
         <!-- Stunned and temporarily rendered immobile. -->
         <icon initial="icon.skill4107"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="3000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -379,7 +375,7 @@
             <time initial="30"/>
             <chance initial="90"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <effect name="BlockControl"/>
@@ -391,7 +387,6 @@
         <icon initial="icon.skill4109"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" hit-cancel-time="2.0" level-bonus-rate="1">
             <magic-level initial="99"/>
-            <cast-range initial="-1"/>
             <cool-time initial="1200"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -405,7 +400,7 @@
             <time initial="120"/>
             <chance initial="90"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
@@ -461,7 +456,7 @@
         <target type="ENEMY" scope="SQUARE" object="NOT_FRIEND" range="1200">
             <fan-range start-angle="0" radius="1200" angle="300"/>
         </target>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <magical-attack>
@@ -488,7 +483,7 @@
             <time initial="120"/>
             <chance initial="50"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -515,7 +510,7 @@
             <element type="FIRE" value="180"/>
         </attributes>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100"/>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -538,7 +533,7 @@
             <element type="FIRE" value="180"/>
         </attributes>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100"/>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -641,17 +636,6 @@
             <hit-time initial="6000"/>
         </attributes>
         <consume>
-            <mana-init initial="3">
-                <value level="2">4</value>
-                <value level="3">6</value>
-                <value level="4">7</value>
-                <value level="5">9</value>
-                <value level="6">11</value>
-                <value level="7">13</value>
-                <value level="8">14</value>
-                <value level="9">15</value>
-                <value level="11">16</value>
-            </mana-init>
             <mana initial="13">
                 <value level="2">20</value>
                 <value level="3">27</value>
@@ -700,18 +684,6 @@
             <hit-time initial="6000"/>
         </attributes>
         <consume>
-            <mana-init initial="4">
-                <value level="2">6</value>
-                <value level="3">8</value>
-                <value level="4">11</value>
-                <value level="5">14</value>
-                <value level="6">17</value>
-                <value level="7">20</value>
-                <value level="8">21</value>
-                <value level="9">22</value>
-                <value level="10">23</value>
-                <value level="12">24</value>
-            </mana-init>
             <mana initial="18">
                 <value level="2">29</value>
                 <value level="3">40</value>
@@ -879,7 +851,7 @@
         <attributes property="MAGIC" magic-critical-rate="-5.0">
         </attributes>
         <target/>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <effect name="DebuffBlock"/>
@@ -1006,7 +978,6 @@
         <icon initial="icon.skill1044"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -1065,7 +1036,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
-            <cast-range initial="-1"/>
             <cool-time initial="1700"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -1086,7 +1056,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
-            <cast-range initial="-1"/>
             <cool-time initial="2500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -1145,7 +1114,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -1195,7 +1163,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="100"/>
@@ -1388,7 +1355,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="8000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -1547,7 +1513,6 @@
                 <value level="9">85</value>
                 <value level="10">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1750,7 +1715,6 @@
         <icon initial="icon.skill4037"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1777,7 +1741,6 @@
         <icon initial="icon.skill0122"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1811,7 +1774,6 @@
                 <value level="6">60</value>
                 <value level="7">70</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1838,7 +1800,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1889,7 +1850,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1940,7 +1900,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
 
@@ -2060,15 +2019,6 @@
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="2">
-                <value level="2">3</value>
-                <value level="3">4</value>
-                <value level="4">5</value>
-                <value level="5">7</value>
-                <value level="6">8</value>
-                <value level="7">10</value>
-                <value level="9">11</value>
-            </mana-init>
             <mana initial="9">
                 <value level="2">14</value>
                 <value level="3">19</value>
@@ -2128,14 +2078,6 @@
             <element type="WATER" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="2">
-                <value level="3">3</value>
-                <value level="4">4</value>
-                <value level="5">5</value>
-                <value level="6">6</value>
-                <value level="7">7</value>
-                <value level="9">8</value>
-            </mana-init>
             <mana initial="7">
                 <value level="2">10</value>
                 <value level="3">14</value>
@@ -2372,14 +2314,6 @@
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="2">
-                <value level="3">3</value>
-                <value level="4">4</value>
-                <value level="5">5</value>
-                <value level="6">6</value>
-                <value level="7">7</value>
-                <value level="9">8</value>
-            </mana-init>
             <mana initial="7">
                 <value level="2">10</value>
                 <value level="3">14</value>
@@ -2598,7 +2532,6 @@
         <icon initial="icon.skill1206"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -2637,7 +2570,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="8000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1800"/>
@@ -2689,7 +2621,6 @@
                 <value level="14">81</value>
                 <value level="15">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="ENEMY"/>
@@ -2732,7 +2663,6 @@
                 <value level="13">81</value>
                 <value level="14">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
 
             <element type="WATER" value="20"/>
@@ -2778,7 +2708,6 @@
                 <value level="14">81</value>
                 <value level="15">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="ENEMY"/>
@@ -3012,7 +2941,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <cool-time initial="660"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -3070,7 +2998,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <cool-time initial="660"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -3313,7 +3240,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
@@ -3596,7 +3522,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -3663,7 +3588,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -3718,7 +3642,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -3773,7 +3696,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -3822,7 +3744,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -3871,7 +3792,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -3926,7 +3846,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -3993,7 +3912,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -4042,7 +3960,6 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>

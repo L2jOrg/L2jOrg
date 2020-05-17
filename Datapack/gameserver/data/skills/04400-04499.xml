@@ -1702,10 +1702,6 @@
             <hit-time initial="2000"/>
         </attributes>
         <consume>
-            <mana-init initial="4">
-                <value level="2">7</value>
-                <value level="3">13</value>
-            </mana-init>
             <mana initial="20">
                 <value level="2">35</value>
                 <value level="3">65</value>
@@ -1744,10 +1740,6 @@
             <hit-time initial="2000"/>
         </attributes>
         <consume>
-            <mana-init initial="4">
-                <value level="2">7</value>
-                <value level="3">13</value>
-            </mana-init>
             <mana initial="20">
                 <value level="2">35</value>
                 <value level="3">65</value>
@@ -1786,10 +1778,6 @@
             <hit-time initial="2000"/>
         </attributes>
         <consume>
-            <mana-init initial="4">
-                <value level="2">7</value>
-                <value level="3">13</value>
-            </mana-init>
             <mana initial="20">
                 <value level="2">35</value>
                 <value level="3">65</value>
@@ -1828,10 +1816,6 @@
             <hit-time initial="2000"/>
         </attributes>
         <consume>
-            <mana-init initial="4">
-                <value level="2">7</value>
-                <value level="3">13</value>
-            </mana-init>
             <mana initial="20">
                 <value level="2">35</value>
                 <value level="3">65</value>
@@ -1870,10 +1854,6 @@
             <hit-time initial="2000"/>
         </attributes>
         <consume>
-            <mana-init initial="4">
-                <value level="2">7</value>
-                <value level="3">13</value>
-            </mana-init>
             <mana initial="20">
                 <value level="2">35</value>
                 <value level="3">65</value>
@@ -1904,7 +1884,6 @@
             <magic-level initial="30">
                 <value level="2">70</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1929,7 +1908,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="35"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1969,23 +1947,11 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1800"/>
         </attributes>
         <consume>
-            <mana-init initial="3">
-                <value level="2">4</value>
-                <value level="3">6</value>
-                <value level="4">7</value>
-                <value level="5">9</value>
-                <value level="6">11</value>
-                <value level="7">13</value>
-                <value level="8">14</value>
-                <value level="9">15</value>
-                <value level="11">16</value>
-            </mana-init>
             <mana initial="13">
                 <value level="2">20</value>
                 <value level="3">27</value>
@@ -2185,7 +2151,6 @@
                 <value level="4">40</value>
                 <value level="5">50</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2239,19 +2204,12 @@
                 <value level="4">40</value>
                 <value level="5">50</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="3">
-                <value level="2">4</value>
-                <value level="3">6</value>
-                <value level="4">7</value>
-                <value level="5">9</value>
-            </mana-init>
             <mana initial="13">
                 <value level="2">20</value>
                 <value level="3">27</value>
@@ -2300,18 +2258,6 @@
             <element type="WATER" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="4">
-                <value level="2">6</value>
-                <value level="3">8</value>
-                <value level="4">11</value>
-                <value level="5">14</value>
-                <value level="6">17</value>
-                <value level="7">20</value>
-                <value level="8">21</value>
-                <value level="9">22</value>
-                <value level="10">23</value>
-                <value level="12">24</value>
-            </mana-init>
             <mana initial="18">
                 <value level="2">29</value>
                 <value level="3">40</value>
@@ -2382,7 +2328,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="8"/>
             <mana initial="39"/>
         </consume>
         <target type="TARGET"/>
@@ -2409,7 +2354,6 @@
             <hit-time initial="1200"/>
         </attributes>
         <consume>
-            <mana-init initial="24"/>
             <mana initial="117"/>
         </consume>
         <target type="TARGET"/>
@@ -2436,7 +2380,6 @@
             <hit-time initial="1200"/>
         </attributes>
         <consume>
-            <mana-init initial="24"/>
             <mana initial="117"/>
         </consume>
         <target type="TARGET"/>
@@ -2489,25 +2432,12 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="8000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
         </attributes>
         <consume>
-            <mana-init initial="5">
-                <value level="2">8</value>
-                <value level="3">11</value>
-                <value level="4">14</value>
-                <value level="5">18</value>
-                <value level="6">22</value>
-                <value level="7">26</value>
-                <value level="8">28</value>
-                <value level="9">29</value>
-                <value level="10">30</value>
-                <value level="11">31</value>
-            </mana-init>
             <mana initial="24">
                 <value level="2">39</value>
                 <value level="3">53</value>
@@ -2590,18 +2520,6 @@
             <hit-time initial="1200"/>
         </attributes>
         <consume>
-            <mana-init initial="5">
-                <value level="2">8</value>
-                <value level="3">11</value>
-                <value level="4">14</value>
-                <value level="5">18</value>
-                <value level="6">22</value>
-                <value level="7">26</value>
-                <value level="8">28</value>
-                <value level="9">29</value>
-                <value level="10">30</value>
-                <value level="11">31</value>
-            </mana-init>
             <mana initial="24">
                 <value level="2">39</value>
                 <value level="3">53</value>
@@ -2658,18 +2576,6 @@
             <hit-time initial="1200"/>
         </attributes>
         <consume>
-            <mana-init initial="5">
-                <value level="2">8</value>
-                <value level="3">11</value>
-                <value level="4">14</value>
-                <value level="5">18</value>
-                <value level="6">22</value>
-                <value level="7">26</value>
-                <value level="8">28</value>
-                <value level="9">29</value>
-                <value level="10">30</value>
-                <value level="11">31</value>
-            </mana-init>
             <mana initial="24">
                 <value level="2">39</value>
                 <value level="3">53</value>
@@ -2719,7 +2625,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="1100"/>
         </attributes>
@@ -2765,7 +2670,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2831,18 +2735,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="4">
-                <value level="2">6</value>
-                <value level="3">8</value>
-                <value level="4">11</value>
-                <value level="5">14</value>
-                <value level="6">17</value>
-                <value level="7">20</value>
-                <value level="8">21</value>
-                <value level="9">22</value>
-                <value level="10">23</value>
-                <value level="12">24</value>
-            </mana-init>
             <mana initial="18">
                 <value level="2">29</value>
                 <value level="3">40</value>
@@ -3021,17 +2913,6 @@
             <hit-time initial="2000"/>
         </attributes>
         <consume>
-            <mana-init initial="3">
-                <value level="2">4</value>
-                <value level="3">6</value>
-                <value level="4">7</value>
-                <value level="5">9</value>
-                <value level="6">11</value>
-                <value level="7">13</value>
-                <value level="8">14</value>
-                <value level="9">15</value>
-                <value level="11">16</value>
-            </mana-init>
             <mana initial="13">
                 <value level="2">20</value>
                 <value level="3">27</value>

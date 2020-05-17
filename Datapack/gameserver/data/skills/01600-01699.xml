@@ -12,17 +12,12 @@
                 <value level="2">54</value>
                 <value level="3">67</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="180000"/>
             <effect-point initial="268"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
         </attributes>
         <consume>
-            <mana-init initial="2">
-                <value level="2">5</value>
-                <value level="3">8</value>
-            </mana-init>
             <mana initial="15">
                 <value level="2">18</value>
                 <value level="3">21</value>
@@ -330,11 +325,11 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD BLUNT DUAL_BLUNT</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</type>
             </weapon>
         </conditions>
         <effects>
-			<physical-attack defense-mod="0.8" ignore-shield="true" over-hit="true">
+            <physical-attack defense-mod="0.8" ignore-shield="true" over-hit="true">
                 <power initial="465.0">
                     <value level="2">494.0</value>
                     <value level="3">525.0</value>
@@ -391,7 +386,6 @@
          -->
         <icon initial="icon.skill1608"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="2"/>
             <effect-range initial="-1"/>
@@ -433,11 +427,11 @@
                 <value level="3">70</value>
                 <value level="4">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="1"/>
             <mana initial="1"/>
         </consume>
         <target type="NONE"/>
@@ -575,6 +569,21 @@
             <hit-time initial="3500"/>
         </attributes>
         <consume>
+            <mana-init initial="6">
+                <value level="2">8</value>
+                <value level="3">9</value>
+                <value level="4">10</value>
+                <value level="5">12</value>
+                <value level="7">13</value>
+                <value level="8">14</value>
+                <value level="9">15</value>
+                <value level="10">16</value>
+                <value level="11">17</value>
+                <value level="12">18</value>
+                <value level="16">19</value>
+                <value level="20">20</value>
+                <value level="25">21</value>
+            </mana-init>
             <mana initial="32">
                 <value level="2">39</value>
                 <value level="3">45</value>
@@ -676,7 +685,6 @@
          -->
         <icon initial="icon.skill1611"/>
         <attributes magic-critical-rate="5.0">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -705,7 +713,7 @@
     <skill id="1612" name="Slow Force" debuff="true" action="A2">
         <!-- Movement Speed -20%% for 15 seconds. -->
         <icon initial="icon.skill0210"/>
-        <attributes property="PHYSIC" level-bonus-rate="20" triggered="true" magic-critical-rate="5">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" triggered="true" auto-use="ACTIVE">
             <cast-range initial="400"/>
             <effect-point initial="-204"/>
             <effect-range initial="-1"/>
@@ -790,7 +798,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD BLUNT SPEAR DUAL_BLUNT</type>
+                <type>BLUNT HAMMER ROD STAFF</type>
             </weapon>
         </conditions>
         <effects>
@@ -829,7 +837,6 @@
                 <value level="2">52</value>
                 <value level="3">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -904,7 +911,6 @@
                 <value level="3">64</value>
                 <value level="4">80</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="379"/>
@@ -960,7 +966,6 @@
                 <value level="2">56</value>
                 <value level="3">64</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="204"/>
             <effect-range initial="-1"/>
@@ -990,12 +995,16 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes auto-use="ACTIVE">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <weapon>
+                <type>SWORD TWO_HAND_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="1620" name="Focus Force" max-level="8" action="A1">
         <!--
@@ -1010,12 +1019,16 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes auto-use="ACTIVE">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <weapon>
+                <type>FIST</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="1621" name="Shield of Sacrifice" max-level="5" action="A4">
         <!--
@@ -1033,7 +1046,6 @@
                 <value level="4">83</value>
                 <value level="5">84</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="450000"/>
             <effect-point initial="835">
                 <value level="2">838</value>
@@ -1096,7 +1108,6 @@
         <icon initial="icon.skill1621"/>
         <attributes property="PHYSIC" dispellable="false">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1105,6 +1116,7 @@
         <abnormal>
             <level initial="1"/>
             <time initial="180"/>
+            <chance initial="-1"/>
         </abnormal>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
@@ -1128,7 +1140,6 @@
                 <value level="4">83</value>
                 <value level="5">84</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="450000"/>
             <effect-point initial="835">
                 <value level="2">838</value>
@@ -1284,7 +1295,6 @@
         <icon initial="icon.skill1626"/>
         <attributes next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="8000"/>
             <cool-time initial="500"/>
             <effect-point initial="-137"/>
@@ -1315,7 +1325,6 @@
         <icon initial="icon.skill1627"/>
         <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
             <magic-level initial="77"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-point initial="-137"/>
@@ -1325,7 +1334,7 @@
         <consume>
             <mana initial="57"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" affect-min="10" range="200"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10"/>
         <abnormal type="TURN_FLEE" visual="TURN_FLEE">
             <level initial="1"/>
             <time initial="7"/>
@@ -1333,7 +1342,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</type>
             </weapon>
         </conditions>
         <effects>
@@ -1358,7 +1367,6 @@
                 <value level="3">80</value>
                 <value level="4">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="75000"/>
             <effect-point initial="549">
                 <value level="2">552</value>
@@ -1391,7 +1399,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD</type>
             </weapon>
         </conditions>
         <effects>
@@ -1477,7 +1485,6 @@
             <magic-level initial="77">
                 <value level="2">81</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="600000">
                 <value level="2">420000</value>
             </reuse>
@@ -1517,7 +1524,7 @@
             level 8: Attacks the enemy with 3194 Power added to P. Atk. and decreases P. Def. by 23% for 10 seconds. Requires a sword, blunt weapon, or dualsword. Over-hit.
          -->
         <icon initial="icon.skill0986"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" next-action="ATTACK" trait="DERANGEMENT" level-bonus-rate="30" auto-use="ACTIVE">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30" auto-use="ACTIVE">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1566,7 +1573,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT DUAL</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
             </weapon>
         </conditions>
         <effects>

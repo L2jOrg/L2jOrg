@@ -4,7 +4,6 @@
         <!-- XP and SP gain +50%% for 1 hour. -->
         <icon initial="BranchSys2.icon.g_giant_gem"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -15,7 +14,6 @@
         <!-- XP and SP gain +50%% for 1 hour. -->
         <icon initial="BranchSys2.icon.g_twilight_gem"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

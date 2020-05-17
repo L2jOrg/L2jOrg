@@ -130,7 +130,7 @@
                 </power>
                 <weapon-type>SWORD BLUNT</weapon-type>
             </stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="3">
                     <value level="2">6</value>
                     <value level="3">8</value>
@@ -191,7 +191,7 @@
                     <value level="58">162</value>
                     <value level="59">165</value>
                 </power>
-                <weapon-type>SWORD </weapon-type>
+                <weapon-type>SWORD</weapon-type>
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="3">
@@ -255,7 +255,7 @@
                     <value level="59">180</value>
                 </power>
                 <weapon-type>BLUNT</weapon-type>
-            </stat-modify>            
+            </stat-modify>
         </effects>
     </skill>
     <skill id="208" name="Bow Mastery" max-level="66">
@@ -666,7 +666,7 @@
                 </power>
                 <weapon-type>FIST</weapon-type>
             </stat-modify>
-			<trigger-skill-by-attack skill="1612" start-level="11">
+            <trigger-skill-by-attack skill="1612" start-level="11">
                 <power initial="1.0"/>
                 <chance initial="10">
                     <value level="11">20</value>
@@ -1041,7 +1041,7 @@
                     <value level="52">297.0</value>
                     <value level="53">303.0</value>
                     <value level="54">309.0</value>
-					<value level="55">315.0</value>
+                    <value level="55">315.0</value>
                     <value level="56">321.0</value>
                     <value level="57">327.0</value>
                     <value level="58">333.0</value>
@@ -1052,12 +1052,13 @@
         </effects>
     </skill>
     <skill id="221" name="Silent Move" action="T">
-        <!-- Disables preemptive attacks from enemies. Decreases Speed by 20%% and continuously consumes MP. -->
+        <!-- Disables preemptive attacks from enemies. Decreases Speed by 40%% and continuously consumes MP. -->
         <icon initial="icon.skill0221"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="40"/>
-        </attributes>
+            </attributes>
         <consume>
+            <mana-init initial="7"/>
             <mana initial="7"/>
         </consume>
         <target type="NONE"/>
@@ -1084,11 +1085,11 @@
         <icon initial="icon.skill0222"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="43"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="8"/>
             <mana initial="8"/>
         </consume>
         <target type="NONE"/>
@@ -1099,13 +1100,13 @@
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="15.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power>
-					<value level="2">5.0</value>
+                    <value level="2">5.0</value>
                     <value level="3">10.0</value>
                     <value level="4">15.0</value>
                 </power>
-				<weapon-type>FIST</weapon-type>
+                <weapon-type>FIST</weapon-type>
             </stat-modify>
         </effects>
     </skill>
@@ -1342,7 +1343,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD DAGGER DUAL DUAL_DAGGER DUAL_BLUNT</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD DAGGER DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -1429,7 +1430,7 @@
                     <value level="3">6.0</value>
                 </power>
             </stat-by-move-type>
-            <defence-trait> <!-- PTS Script info, no info of Descriptions on skill -->
+            <defence-trait>
                 <trait type="SHOCK">
                     <power initial="-11.0"/>
                 </trait>
@@ -1441,11 +1442,11 @@
         <icon initial="icon.skill0226"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="5"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="2"/>
             <mana initial="2"/>
         </consume>
         <target type="NONE"/>
@@ -1666,7 +1667,6 @@
             <magic-level initial="32">
                 <value level="2">52</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="219">
                 <value level="2">495</value>
@@ -1759,11 +1759,11 @@
 		level 57: P. Def. +97 when equipped with a heavy armor.
 		level 58: P. Def. +99 when equipped with a heavy armor.
 		level 59: P. Def. +101 when equipped with a heavy armor.
-		level 60: P. Def. +103 when equipped with a heavy armor.
-		level 61: P. Def. +105 when equipped with a heavy armor.
-		level 62: P. Def. +107 when equipped with a heavy armor.
-		level 63: P. Def. +109 when equipped with a heavy armor.
-		level 64: P. Def. +111 when equipped with a heavy armor.
+		level 60: P. Def. +105 when equipped with a heavy armor.
+		level 61: P. Def. +110 when equipped with a heavy armor.
+		level 62: P. Def. +115 when equipped with a heavy armor.
+		level 63: P. Def. +120 when equipped with a heavy armor.
+		level 64: P. Def. +130 when equipped with a heavy armor.
 	 -->
         <icon initial="icon.skill0231"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
@@ -1830,7 +1830,7 @@
                     <value level="57">97.0</value>
                     <value level="58">99.0</value>
                     <value level="59">101.0</value>
-					<value level="60">105.0</value>
+                    <value level="60">105.0</value>
                     <value level="61">110.0</value>
                     <value level="62">115.0</value>
                     <value level="63">120.0</value>
@@ -2119,11 +2119,11 @@
                     <value level="54">90.0</value>
                     <value level="55">93.0</value>
                     <value level="56">96.0</value>
-					<value level="57">100.0</value>
+                    <value level="57">100.0</value>
                     <value level="58">105.0</value>
                     <value level="59">110.0</value>
                     <value level="60">115.0</value>
-                    <value level="61">120.0</value>                   
+                    <value level="61">120.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
@@ -2199,10 +2199,10 @@
 		level 49: P. Def. +82 and Max HP +310 when equipped with a robe.
 		level 50: P. Def. +85 and Max HP +320 when equipped with a robe.
 		level 51: P. Def. +88 and Max HP +325 when equipped with a robe.
-		level 52: P. Def. +91 and Max HP +325 when equipped with a robe.
-		level 53: P. Def. +94 and Max HP +330 when equipped with a robe.
-		level 54: P. Def. +97 and Max HP +330 when equipped with a robe.
-		level 55: P. Def. +100 and Max HP +330 when equipped with a robe.
+		level 52: P. Def. +91 and Max HP +330 when equipped with a robe.
+		level 53: P. Def. +94 and Max HP +335 when equipped with a robe.
+		level 54: P. Def. +97 and Max HP +340 when equipped with a robe.
+		level 55: P. Def. +100 and Max HP +350 when equipped with a robe.
 	 -->
         <icon initial="icon.skill0234"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
@@ -2315,7 +2315,7 @@
                     <value level="48">300.0</value>
                     <value level="49">310.0</value>
                     <value level="50">320.0</value>
-					<value level="51">325.0</value>
+                    <value level="51">325.0</value>
                     <value level="52">330.0</value>
                     <value level="53">335.0</value>
                     <value level="54">340.0</value>
@@ -2439,7 +2439,7 @@
                     <value level="48">111.0</value>
                     <value level="49">114.0</value>
                     <value level="50">117.0</value>
-					<value level="51">120.0</value>
+                    <value level="51">120.0</value>
                     <value level="52">123.0</value>
                     <value level="53">127.0</value>
                     <value level="54">131.0</value>
@@ -2562,8 +2562,8 @@
                     <value level="47">91.0</value>
                     <value level="48">94.0</value>
                     <value level="49">97.0</value>
-					<value level="50">100.0</value>
-					<value level="51">103.0</value>
+                    <value level="50">100.0</value>
+                    <value level="51">103.0</value>
                     <value level="52">106.0</value>
                     <value level="53">109.0</value>
                     <value level="54">112.0</value>
@@ -2577,7 +2577,7 @@
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="91.0">
-					<value level="52">92.0</value>
+                    <value level="52">92.0</value>
                     <value level="53">93.0</value>
                     <value level="54">94.0</value>
                     <value level="55">95.0</value>
@@ -2725,7 +2725,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="50"/>
             <mana initial="50"/>
         </consume>
         <target type="HOLYTHING"/>
@@ -2741,14 +2740,12 @@
         <icon initial="icon.skill0247"/>
         <attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
             <magic-level initial="30"/>
-            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="30"/>
             <mana initial="30"/>
             <item initial="1458"/>
             <item-count initial="500"/>
@@ -2958,7 +2955,7 @@
                     <value level="56">200</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="-30"/>
                 <weapon-type>BOW SPEAR</weapon-type>
             </stat-modify>
@@ -3146,7 +3143,7 @@
                     <value level="56">200.0</value>
                 </power>
             </stat-modify>
-			<stat-modify start-level="43" stat="ABSORB_MANA_DAMAGE_PERCENT">
+            <stat-modify start-level="43" stat="ABSORB_MANA_DAMAGE_PERCENT">
                 <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
@@ -3476,10 +3473,10 @@
 		level 51: P. Def. +114, Casting Spd. +71%, and Atk. Spd. +25% when equipped with a heavy armor.
 		level 52: P. Def. +117, Casting Spd. +71%, and Atk. Spd. +25% when equipped with a heavy armor.
 		level 53: P. Def. +120, Casting Spd. +71%, and Atk. Spd. +25% when equipped with a heavy armor.
-		level 54: P. Def. +123, Casting Spd. +71%, and Atk. Spd. +25% when equipped with a heavy armor.
-		level 55: P. Def. +126, Casting Spd. +71%, and Atk. Spd. +25% when equipped with a heavy armor.
-		level 56: P. Def. +129, Casting Spd. +71%, and Atk. Spd. +25% when equipped with a heavy armor.
-		level 57: P. Def. +132, Casting Spd. +71%, and Atk. Spd. +25% when equipped with a heavy armor.
+		level 54: P. Def. +123, Casting Spd. +72%, and Atk. Spd. +25% when equipped with a heavy armor.
+		level 55: P. Def. +127, Casting Spd. +73%, and Atk. Spd. +25% when equipped with a heavy armor.
+		level 56: P. Def. +131, Casting Spd. +74%, and Atk. Spd. +25% when equipped with a heavy armor.
+		level 57: P. Def. +135, Casting Spd. +75%, and Atk. Spd. +25% when equipped with a heavy armor.
 	 -->
         <icon initial="icon.skill0253"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
@@ -3700,7 +3697,7 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF SPEAR DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -3729,11 +3726,11 @@
         <icon initial="icon.skill0256"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="24"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="5"/>
             <mana initial="5"/>
         </consume>
         <target type="NONE"/>
@@ -4302,7 +4299,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT SPEAR DUAL</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF SPEAR DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -4498,7 +4495,7 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>DUAL DUAL_BLUNT</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -4662,6 +4659,33 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="23">
+                <value level="2">24</value>
+                <value level="3">25</value>
+                <value level="5">26</value>
+                <value level="7">27</value>
+                <value level="8">28</value>
+                <value level="9">29</value>
+                <value level="10">30</value>
+                <value level="11">31</value>
+                <value level="12">32</value>
+                <value level="15">33</value>
+                <value level="16">34</value>
+                <value level="17">35</value>
+                <value level="18">36</value>
+                <value level="20">37</value>
+                <value level="21">38</value>
+                <value level="22">39</value>
+                <value level="25">40</value>
+                <value level="26">41</value>
+                <value level="27">42</value>
+                <value level="29">43</value>
+                <value level="30">44</value>
+                <value level="31">45</value>
+                <value level="33">46</value>
+                <value level="35">47</value>
+                <value level="36">48</value>
+            </mana-init>
             <mana initial="115">
                 <value level="2">119</value>
                 <value level="3">122</value>
@@ -4939,7 +4963,7 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>DAGGER DUAL_DAGGER</type>
+                <type>DAGGER</type>
             </weapon>
         </conditions>
         <effects>
@@ -5003,7 +5027,6 @@
             <magic-level initial="55">
                 <value level="2">71</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="523">
                 <value level="2">575</value>
@@ -5035,7 +5058,6 @@
         <icon initial="icon.skill0265"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="52"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
@@ -5066,7 +5088,6 @@
             <magic-level initial="58">
                 <value level="2">73</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="549">
                 <value level="2">604</value>
@@ -5108,7 +5129,6 @@
             <magic-level initial="40">
                 <value level="2">61</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="379">
                 <value level="2">417</value>
@@ -5145,7 +5165,6 @@
             <magic-level initial="46">
                 <value level="2">81</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="438">
                 <value level="2">445</value>
@@ -5184,7 +5203,6 @@
             <magic-level initial="40">
                 <value level="2">83</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="467">
                 <value level="2">470</value>
@@ -5223,7 +5241,6 @@
             <magic-level initial="43">
                 <value level="2">65</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="408">
                 <value level="2">449</value>
@@ -5265,7 +5282,6 @@
             <magic-level initial="55">
                 <value level="2">71</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="523">
                 <value level="2">575</value>
@@ -5286,7 +5302,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL DUAL_BLUNT</type>
+                <type>DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -5302,7 +5318,6 @@
         <icon initial="icon.skill0272"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="46"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="438"/>
             <effect-range initial="-1"/>
@@ -5319,7 +5334,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL DUAL_BLUNT</type>
+                <type>DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -5338,7 +5353,6 @@
             <magic-level initial="49">
                 <value level="2">69</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="467">
                 <value level="2">514</value>
@@ -5359,7 +5373,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL DUAL_BLUNT</type>
+                <type>DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -5380,7 +5394,6 @@
             <magic-level initial="40">
                 <value level="2">61</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -5401,7 +5414,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL DUAL_BLUNT</type>
+                <type>DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -5422,7 +5435,6 @@
             <magic-level initial="58">
                 <value level="2">81</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="549">
                 <value level="2">555</value>
@@ -5445,7 +5457,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL DUAL_BLUNT</type>
+                <type>DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -5466,7 +5478,6 @@
             <magic-level initial="52">
                 <value level="2">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="495">
                 <value level="2">500</value>
@@ -5489,7 +5500,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL DUAL_BLUNT</type>
+                <type>DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -5510,7 +5521,6 @@
         <icon initial="icon.skill0277"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="43"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="408"/>
             <effect-range initial="-1"/>
@@ -5529,7 +5539,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL DUAL_BLUNT</type>
+                <type>DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -5561,7 +5571,6 @@
                 <value level="11">82</value>
                 <value level="12">84</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="6000"/>
@@ -5574,6 +5583,12 @@
                 <value level="4">12</value>
                 <value level="5">13</value>
                 <value level="6">14</value>
+                <value level="7">15</value>
+                <value level="8">16</value>
+                <value level="9">17</value>
+                <value level="10">18</value>
+                <value level="11">19</value>
+                <value level="12">20</value>
             </mana-init>
             <mana initial="44">
                 <value level="2">50</value>
@@ -5592,7 +5607,8 @@
             <item-count initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
-                <value level="4">5</value>
+                <value level="6">5</value>
+                <value level="10">6</value>
             </item-count>
         </consume>
         <target/>
@@ -6219,7 +6235,6 @@
         <icon initial="icon.skill0282"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="40"/>
-            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -6277,7 +6292,6 @@
                 <value level="10">83</value>
                 <value level="11">84</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="15000"/>
@@ -6291,8 +6305,10 @@
                 <value level="5">25</value>
                 <value level="6">26</value>
                 <value level="7">28</value>
-                <value level="8">29</value>
-                <value level="9">30</value>
+                <value level="8">31</value>
+                <value level="9">33</value>
+                <value level="10">37</value>
+                <value level="11">41</value>
             </mana-init>
             <mana initial="70">
                 <value level="2">88</value>
@@ -6686,7 +6702,6 @@
                 <value level="10">90</value>
                 <value level="11">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="4000"/>
             <effect-point initial="-436">
                 <value level="4">-439</value>
@@ -6723,7 +6738,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT SPEAR</type>
+                <type>BLUNT HAMMER ROD STAFF SPEAR</type>
             </weapon>
         </conditions>
         <effects>
@@ -6785,7 +6800,6 @@
                 <value level="2">49</value>
                 <value level="3">62</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="150000"/>
             <effect-point initial="341">
                 <value level="2">467</value>
@@ -6860,11 +6874,16 @@
                 <value level="4">70</value>
                 <value level="5">80</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="8">
+                <value level="2">10</value>
+                <value level="3">12</value>
+                <value level="4">13</value>
+                <value level="5">14</value>
+            </mana-init>
             <mana initial="8">
                 <value level="2">10</value>
                 <value level="3">12</value>
@@ -6958,13 +6977,15 @@
         </attributes>
         <consume>
             <mana-init initial="10">
-                <value level="3">12</value>
-                <value level="6">14</value>
-                <value level="8">16</value>
-                <value level="9">15</value>
+                <value level="3">11</value>
+                <value level="4">12</value>
+                <value level="5">13</value>
+                <value level="7">14</value>
+                <value level="8">15</value>
                 <value level="10">16</value>
-                <value level="11">17</value>
-                <value level="15">19</value>
+                <value level="12">17</value>
+                <value level="14">18</value>
+                <value level="16">20</value>
             </mana-init>
             <mana initial="47">
                 <value level="2">49</value>
@@ -7115,7 +7136,6 @@
         <icon initial="icon.skill0292"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="68"/>
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="624"/>
             <effect-range initial="-1"/>
@@ -7333,11 +7353,11 @@
         <icon initial="icon.skill0296"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="46"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="9"/>
             <mana initial="9"/>
         </consume>
         <target type="NONE"/>
@@ -7359,7 +7379,6 @@
                 <value level="2">72</value>
                 <value level="3">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="597">
                 <value level="2">646</value>
@@ -7399,7 +7418,6 @@
         <icon initial="icon.skill0298"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="62"/>
-            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="582"/>
             <effect-range initial="-1"/>
@@ -7440,9 +7458,8 @@
     <skill id="299" name="Summon Wild Hog Cannon" action="A1">
         <!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it can inflict ranged attacks while immobile. Switching modes takes 30 seconds. Consumes 70 B-grade Crystals when summoned. -->
         <icon initial="icon.skill0299"/>
-        <attributes magic-critical-rate="5.0" static-reuse="true">
+        <attributes static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="58"/>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="15000"/>

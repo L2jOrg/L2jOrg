@@ -268,7 +268,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1800"/>
@@ -308,7 +307,6 @@
         </icon>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -777,7 +775,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -802,7 +799,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1736,7 +1732,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1756,7 +1751,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1779,7 +1773,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1802,7 +1795,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1825,7 +1817,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1848,7 +1839,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1871,7 +1861,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1894,7 +1883,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1917,7 +1905,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -2023,7 +2010,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="8000">
                 <value level="4">5000</value>
                 <value level="8">8000</value>
@@ -2171,7 +2157,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
 

@@ -532,7 +532,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -776,7 +775,6 @@
         <!-- For 15 seconds, recovers HP by 100 and MP by 50 per second, and increases Speed by 33. -->
         <icon initial="icon.dragon_invocation"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <effect-range initial="-1"/>
@@ -789,7 +787,6 @@
         <!-- Creates a barrier for 10 seconds. Becomes invincible to normal hits, skills, and debuffs. -->
         <icon initial="icon.dragon_barrier"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <effect-range initial="-1"/>
@@ -802,7 +799,6 @@
         <!-- Removes the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -813,7 +809,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -826,7 +821,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>

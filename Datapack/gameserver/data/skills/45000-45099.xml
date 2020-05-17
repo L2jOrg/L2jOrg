@@ -12,25 +12,21 @@
     </skill>
     <skill id="45001" name="Tyrr Critical Stun" max-level="25">
         <!--
-            level 1: Has a 9%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 2: Has a 11%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 8: Has a 13%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 9: Has a 15%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 10: Has a 17%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 11: Has a 19%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 12: Has a 21%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 13: Has a 23%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 14: Has a 25%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 15: Has a 27%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 16: Has a 29%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 17: Has a 31%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 18: Has a 33%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 19: Has a 25%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 20: Has a 27%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 21: Has a 29%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 22: Has a 31%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 23: Has a 33%% chance to cast Stun on the target upon a critical attack. Requires a polearm.
-            level 24: Has a 40%% chance to Stun the target upon a Crit. Rate. Requires a polearm.
+            level 1: Has a 9%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 2: Has a 11%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 8: Has a 13%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 9: Has a 15%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 10: Has a 17%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 11: Has a 19%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 12: Has a 21%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 13: Has a 23%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 14: Has a 25%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 15: Has a 27%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 16: Has a 29%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 17: Has a 31%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 18: Has a 33%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 19: Has a 40%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
+            level 25: Has a 100%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
          -->
         <icon initial="BranchIcon.Icon.g_rune_tir_lv00">
             <value level="8">BranchIcon.Icon.g_rune_tir_lv01</value>
@@ -48,7 +44,7 @@
             </weapon>
         </conditions>
     </skill>
-    <skill id="45002" name="Sigel's Protection" max-level="25">
+    <skill id="45002" name="Sigel Defense" max-level="25">
         <!--
             level 1: P. Def. +56
             level 2: P. Def. +68
@@ -95,7 +91,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45003" name="Sigel Protection" max-level="25">
+    <skill id="45003" name="Sigel Health" max-level="25">
         <!--
             level 1: Max HP +4%
             level 2: Max HP +5%
@@ -200,7 +196,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45005" name="Othell's Focus" max-level="25">
+    <skill id="45005" name="Othell Focus" max-level="25">
         <!--
             level 1: P. Critical Rate. +25.
             level 2: P. Critical Rate. +31.
@@ -247,7 +243,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45006" name="Othell's Mortal Strike" max-level="25">
+    <skill id="45006" name="Othell Might Mortal" max-level="25">
         <!--
             level 1: Increases success rate of attacks targeting the enemy's vital parts by 14%.
             level 2: Increases success rate of attacks targeting the enemy's vital parts by 18%.
@@ -295,20 +291,20 @@
     </skill>
     <skill id="45007" name="Yul Critical Damage" max-level="22">
         <!--
-            level 1: Increases Critical Damage by 92.
-            level 2: Increases Critical Damage by 113.
-            level 3: Increases Critical Damage by 134.
-            level 4: Increases Critical Damage by 155.
-            level 5: Increases Critical Damage by 176.
-            level 8: Increases Critical Damage by 196.
-            level 9: Increases Critical Damage by 216.
-            level 10: Increases Critical Damage by 236.
-            level 11: Increases Critical Damage by 256.
-            level 12: Increases Critical Damage by 276.
-            level 13: Increases Critical Damage by 286.
-            level 14: Increases Critical Damage by 296.
-            level 15: Increases Critical Damage by 306.
-            level 16: Increases Critical Damage by 20.
+            level 1: P. Critical Damage +92
+            level 2: P. Critical Damage +113
+            level 3: P. Critical Damage +134
+            level 4: P. Critical Damage +155
+            level 5: P. Critical Damage +176
+            level 8: P. Critical Damage +196
+            level 9: P. Critical Damage +216
+            level 10: P. Critical Damage +236
+            level 11: P. Critical Damage +256
+            level 12: P. Critical Damage +276
+            level 13: P. Critical Damage +286
+            level 14: P. Critical Damage +296
+            level 15: P. Critical Damage +306
+            level 16: P. Critical Damage +20
          -->
         <icon initial="BranchIcon.Icon.g_rune_yr_lv01">
             <value level="8">BranchIcon.Icon.g_rune_yr_lv02</value>
@@ -340,20 +336,20 @@
     </skill>
     <skill id="45008" name="Yul Guidance" max-level="22">
         <!--
-            level 1: Accuracy +2.
-            level 2: Accuracy +2.4.
-            level 3: Accuracy +2.8.
-            level 4: Accuracy +3.2.
-            level 5: Accuracy +3.6.
-            level 8: Accuracy +4.
-            level 9: Accuracy +4.4.
-            level 10: Accuracy +4.8.
-            level 11: Accuracy +5.2.
-            level 12: Accuracy +5.6.
-            level 13: Accuracy +6.
-            level 14: Accuracy +6.4.
-            level 15: Accuracy +6.8.
-            level 16: Accuracy +1.
+            level 1: P. Accuracy +2
+            level 2: P. Accuracy +2.4
+            level 3: P. Accuracy +2.8
+            level 4: P. Accuracy +3.2
+            level 5: P. Accuracy +3.6
+            level 8: P. Accuracy +4
+            level 9: P. Accuracy +4.4
+            level 10: P. Accuracy +4.8
+            level 11: P. Accuracy +5.2
+            level 12: P. Accuracy +5.6
+            level 13: P. Accuracy +6
+            level 14: P. Accuracy +6.4
+            level 15: P. Accuracy +6.8
+            level 16: P. Accuracy +1
          -->
         <icon initial="BranchIcon.Icon.g_rune_yr_lv01">
             <value level="8">BranchIcon.Icon.g_rune_yr_lv02</value>
@@ -383,21 +379,21 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45009" name="Feoh Magic Focus" max-level="20">
+    <skill id="45009" name="Magic Focus" max-level="20">
         <!--
-            level 1: Has a 3% chance to increase M. Critical Damage.
-            level 2: Has a 4% chance to increase M. Critical Damage.
-            level 3: Has a 5% chance to increase M. Critical Damage.
-            level 4: Has a 6% chance to increase M. Critical Damage.
-            level 5: Has a 7% chance to increase M. Critical Damage.
-            level 6: Has a 8% chance to increase M. Critical Damage.
-            level 7: Has a 9% chance to increase M. Critical Damage.
-            level 8: Has a 10% chance to increase M. Critical Damage.
-            level 9: Has a 11% chance to increase M. Critical Damage.
-            level 10: Has a 12% chance to increase M. Critical Damage.
-            level 11: Has a 13% chance to increase M. Critical Damage.
-            level 12: Has a 14% chance to increase M. Critical Damage.
-            level 13: Has a 15% chance to increase M. Critical Damage.
+            level 1: M. Critical Rate +3%.
+            level 2: M. Critical Rate +4%.
+            level 3: M. Critical Rate +5%.
+            level 4: M. Critical Rate +6%.
+            level 5: M. Critical Rate +7%.
+            level 6: M. Critical Rate +8%.
+            level 7: M. Critical Rate +9%.
+            level 8: M. Critical Rate +10%.
+            level 9: M. Critical Rate +11%.
+            level 10: M. Critical Rate +12%.
+            level 11: M. Critical Rate +13%.
+            level 12: M. Critical Rate +14%.
+            level 13: M. Critical Rate +15%.
          -->
         <icon initial="BranchIcon.Icon.g_rune_feoh_lv01">
             <value level="6">BranchIcon.Icon.g_rune_feoh_lv02</value>
@@ -517,7 +513,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45012" name="Iss Wind Walk" max-level="25">
+    <skill id="45012" name="Iss Wind Wind Walk" max-level="25">
         <!--
             level 1: Speed +4.
             level 2: Speed +4.5.
@@ -697,7 +693,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45016" name="Aeore's Heal" max-level="25">
+    <skill id="45016" name="Aeore Healing" max-level="25">
         <!--
             level 1: Power of Healing Magic +30.
             level 2: Power of Healing Magic +38.
@@ -1103,7 +1099,6 @@
         <!-- Recovers 100 HP and 50 MP per second for 15 seconds and Movement Speed +33. -->
         <icon initial="icon.dragon_invocation"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <effect-range initial="-1"/>
@@ -1116,7 +1111,6 @@
         <!-- Creates a barrier for 10 seconds. Becomes invincible against normal attacks, skills, and debuffs. -->
         <icon initial="icon.dragon_barrier"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <effect-range initial="-1"/>
@@ -1129,7 +1123,6 @@
         <!-- Prevents enemies from targeting you for 5 sec. -->
         <icon initial="icon.dragon_evasion"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

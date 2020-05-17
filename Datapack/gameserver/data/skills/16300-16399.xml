@@ -146,7 +146,6 @@
         <!-- Presentation skill -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="5000"/>
@@ -158,7 +157,6 @@
         <!-- For 10 sec., dance against your will to Frintezza's music. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -170,7 +168,6 @@
         <!-- Blown away. -->
         <icon initial="icon.skill4107"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -183,7 +180,6 @@
         <!-- Blown away. -->
         <icon initial="icon.skill3080"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -233,7 +229,6 @@
         <!-- Event presentation skill. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -243,7 +238,6 @@
         <!-- Event presentation skill. -->
         <icon initial="icon.skill0922"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -373,7 +367,6 @@
         <!-- Petrified. -->
         <icon initial="icon.skill4111"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
@@ -387,7 +380,6 @@
         <!-- Branded with a seal and targeted by the Undead of Dragon Valley. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -455,7 +447,6 @@
         <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -833,7 +824,6 @@
         <!-- Attacks nearby enemies with 100%% of P. Atk. power and inflicts Stun for 5 sec. -->
         <icon initial="icon.skill10265"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -846,7 +836,6 @@
         <!-- Recover 40%% of Max HP. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -859,7 +848,6 @@
         <!-- Allied monsters nearby have P./M. Def. + 100%%. -->
         <icon initial="icon.skill1503"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>
@@ -923,7 +911,6 @@
         <!-- Consumed by vengeful fury toward all who harm Giselle. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="1000"/>
             <effect-range initial="-1"/>

@@ -384,7 +384,7 @@
             <stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
                 <power initial="40.0"/>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power>
                     <value level="2">-5.0</value>
                 </power>
@@ -421,7 +421,7 @@
             <stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
                 <power initial="40.0"/>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power>
                     <value level="2">-5.0</value>
                 </power>
@@ -458,7 +458,7 @@
             <stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
                 <power initial="40.0"/>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power>
                     <value level="2">-5.0</value>
                 </power>
@@ -888,7 +888,6 @@
         <icon initial="icon.skill3630"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="78"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -932,7 +931,6 @@
         <icon initial="icon.accessory_crown_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="10000"/>
@@ -961,7 +959,6 @@
         <icon initial="icon.accessory_pledge_cap1_i05"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-range initial="-1"/>
         </attributes>

@@ -5,7 +5,6 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -20,7 +19,7 @@
         <icon initial="icon.skill0771"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
+            <effect-point initial="-800"/>
             <effect-range initial="-1"/>
             <element type="FIRE" value="20"/>
         </attributes>
@@ -41,9 +40,8 @@
         <icon initial="icon.skill0772"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
+            <effect-point initial="-800"/>
             <effect-range initial="-1"/>
-
             <element type="WIND" value="20"/>
         </attributes>
         <target type="TARGET"/>

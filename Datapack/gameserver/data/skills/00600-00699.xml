@@ -289,7 +289,6 @@
         <icon initial="icon.skilltransform2"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="56"/>
-            <cast-range initial="-1"/>
             <effect-point initial="10"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>
@@ -317,7 +316,6 @@
             <magic-level initial="28">
                 <value level="2">52</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="200">
                 <value level="2">300</value>
@@ -487,7 +485,6 @@
         <icon initial="icon.skill_transform_s_attack"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="4000"/>
             <cool-time initial="733"/>
             <effect-point initial="-342"/>
@@ -510,7 +507,6 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="45000"/>
             <effect-point initial="408"/>
             <effect-range initial="-1"/>
@@ -536,7 +532,6 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -590,7 +585,6 @@
         <icon initial="icon.skill_transform_etc"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="30">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="40000"/>
             <effect-point initial="-6752"/>
             <effect-range initial="-1"/>
@@ -642,7 +636,6 @@
         <icon initial="icon.skill_transform_debuff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="720"/>
             <effect-point initial="-171"/>
@@ -670,7 +663,6 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="676"/>
             <effect-range initial="-1"/>
@@ -703,7 +695,6 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -869,7 +860,6 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1025,7 +1015,6 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>

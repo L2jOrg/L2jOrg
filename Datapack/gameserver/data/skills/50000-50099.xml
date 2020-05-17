@@ -4,7 +4,6 @@
         <!-- Increases Atk. Spd. +50%%. -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -31,7 +30,6 @@
         <!-- Cursed by Zaken. Movement Speed decreased by 30%% and HP momentarily decreased. -->
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -81,7 +79,6 @@
         <!-- Decreases HP/ MP of the target and restores player's HP. -->
         <icon initial="icon.skill0289"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -93,7 +90,6 @@
         <!-- Deals ranged damage to all targets around you. Inflicts bleeding. -->
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="10000"/>
@@ -105,7 +101,6 @@
         <!-- Attacks and knocks down a target. Attack energy dissolves among multiple targets. -->
         <icon initial="icon.skill0003"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-point initial="-52"/>
@@ -188,7 +183,6 @@
         <!-- For 1 hour activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. -->
         <icon initial="icon.etc_x_mas_tree_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -269,7 +263,6 @@
         <!-- Deals damage to the enemies around and knocks them down. -->
         <icon initial="icon.skill10262"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <cool-time initial="1000"/>
             <effect-point initial="-200"/>
@@ -286,7 +279,6 @@
         <!-- Increases Atk. Spd. And P. Atk. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
@@ -303,7 +295,6 @@
         <!-- Increases the size of the body. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -317,7 +308,6 @@
         <!-- Increases the size of the head. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -362,7 +352,6 @@
         <!-- Provokes target into attacking you by forcefully changing their target. -->
         <icon initial="icon.skill10027"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-10000"/>
             <effect-range initial="-1"/>
@@ -420,7 +409,6 @@
         <!-- Performs a dance. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -443,7 +431,6 @@
         <!-- Pulls the target into your reach. -->
         <icon initial="icon.skill10015"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-point initial="-150"/>
@@ -471,7 +458,6 @@
         <!-- Actions prohibited for 5 seconds, -50 HP per second. -->
         <icon initial="icon.skill6274"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -485,7 +471,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -522,7 +507,6 @@
             <value level="5">icon.skill50036_5</value>
         </icon>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="1000"/>
@@ -578,7 +562,6 @@
         <!-- Summons water drops. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -593,7 +576,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -606,7 +588,6 @@
         <!-- Clears Aqua Rage state at 50%% Chance. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -630,7 +611,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -645,7 +625,6 @@
          -->
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -658,7 +637,6 @@
         <!-- Summon Cyclone Skill -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -692,7 +670,7 @@
             <block-all-actions/>
             <magical-attack>
                 <power initial="138.0">
-					<value level="2">276.0</value>
+                    <value level="2">276.0</value>
                 </power>
             </magical-attack>
         </effects>
@@ -704,7 +682,6 @@
          -->
         <icon initial="icon.skill10262"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -718,7 +695,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -815,7 +791,6 @@
         </icon>
         <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
             <magic-level initial="82"/>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="1000"/>
@@ -863,7 +838,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -876,7 +850,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
@@ -888,7 +861,6 @@
         <!-- Cursed by King Ignis' Flame, decreases Heal received by 100%%. -->
         <icon initial="icon.skill11365"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -922,7 +894,6 @@
         <!-- Increases Long Distance Attack Resistance +100%%, drastically raises M. Def -->
         <icon initial="icon.skill30515"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -935,7 +906,6 @@
         <!-- Increases Short Distance Attack Resistance +100%%. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -946,12 +916,11 @@
     </skill>
     <skill id="50057" name="Stone Earthquake" max-level="2" debuff="true" action="A1">
         <!--
-            level 1: King Petram's powerful rotating attack inflicts damage with bonus 10000 Power to surrounding enemies, and momentarily stuns them.
+            level 1: King Petram's powerful rotating attack inflicts damage with bonus 10000 Power to surrounding enemies, and temporarily stuns them.
             level 2: King Petram's powerful rotating attack inflicts damage with bonus 100000 Power to surrounding enemies, and momentarily stuns them.
          -->
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -962,12 +931,11 @@
     </skill>
     <skill id="50058" name="Stone Slide" max-level="2" debuff="true" action="A1">
         <!--
-            level 1: Causes a rockslide and that inflicts damage with bonus 10000 Power to surrounding enemies, and momentarily stuns them.
+            level 1: Causes a rockslide and that inflicts damage with bonus 10000 Power to surrounding enemies, and temporarily stuns them.
             level 2: Causes a rockslide and that inflicts damage with bonus 100000 Power to surrounding enemies, and momentarily stuns them.
          -->
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -990,7 +958,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -1008,7 +975,6 @@
         <!-- Fall into Paralyzed state for 1 minute, P./M. Def. -50%%. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -1047,7 +1013,6 @@
     <skill id="50063" name="Energy of Fire" action="A1" type="MAGIC">
         <icon initial="icon.skill1083"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1058,7 +1023,6 @@
     <skill id="50064" name="Energy of Water" action="A1" type="MAGIC">
         <icon initial="icon.skill1071"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1069,7 +1033,6 @@
     <skill id="50065" name="Energy of Wind" action="A1" type="MAGIC">
         <icon initial="icon.skill1074"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1080,7 +1043,6 @@
     <skill id="50066" name="Earth Energy" action="A1" type="MAGIC">
         <icon initial="icon.skill1223"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1106,7 +1068,6 @@
         <!-- Deals damage to the targets around the boss. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -1121,7 +1082,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -1132,7 +1092,7 @@
             <element type="FIRE" value="180"/>
         </attributes>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150"/>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <magical-attack>
@@ -1145,7 +1105,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="82"/>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -1155,9 +1114,6 @@
 
             <element type="FIRE" value="150"/>
         </attributes>
-        <consume>
-            <mana-init initial="21"/>
-        </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
         <effects>
             <magical-attack>
@@ -1183,7 +1139,6 @@
         <!-- Affects the area. Deals a lot of damage. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -1211,7 +1166,6 @@
         <!-- Affects the area. Deals a lot of damage. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -1343,7 +1297,6 @@
             <value level="10">icon.skill50050_10</value>
         </icon>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -1377,7 +1330,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -1432,7 +1384,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -1489,7 +1440,6 @@
                 <value level="5">84</value>
                 <value level="6">85</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-1621">
                 <value level="2">-1831</value>
@@ -1582,7 +1532,6 @@
             <value level="5">icon.skill5008_psycho</value>
         </icon>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="100">
                 <value level="4">-100</value>
             </effect-point>
@@ -1600,7 +1549,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -1624,7 +1572,6 @@
          -->
         <icon initial="icon.karma"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1640,7 +1587,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -1664,7 +1610,6 @@
          -->
         <icon initial="icon.karma"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

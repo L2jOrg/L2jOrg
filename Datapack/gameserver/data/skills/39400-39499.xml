@@ -4,7 +4,6 @@
         <!-- Transforms you into White Dog for 60 minutes and increases Movement Speed by20. \n<Alt + left click> to delete the buff. -->
         <icon initial="icon.skill11540"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>

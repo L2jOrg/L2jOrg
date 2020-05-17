@@ -4,7 +4,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -14,7 +13,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -26,7 +24,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -45,7 +42,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -56,7 +52,6 @@
         <!-- none -->
         <icon initial="icon.star_scrl_of_ench_ag"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -66,7 +61,6 @@
         <!-- Increases XP/SP for successful fishing by 50% for 1 hour. Does not disappear upon death and cannot be forcefully removed. -->
         <icon initial="BranchIcon.etc_sign_agathion_feed_blue_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -78,7 +72,6 @@
         <!-- Double-click to get a random item. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -90,7 +83,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -125,7 +117,6 @@
          -->
         <icon initial="icon.skill_agathion_special"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -138,7 +129,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -157,7 +147,6 @@
         <!-- Gives the Blessing of Castle effect to all party members. Buffs and debuffs do not disappear upon death, but Noblesse Blessing and Lucky Charm disappear. -->
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -170,7 +159,6 @@
         <!-- Bestows all party members with the effects of Might Lv. 2, Empower Lv. 2, Acumen Lv. 1, and Haste Lv. 1. -->
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <hit-time initial="700"/>
@@ -182,7 +170,6 @@
         <!-- Increases Speed of all party members by 33. -->
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -214,7 +201,6 @@
         <!-- Double-click to obtain a +7 Elmoreden Cloak. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -225,7 +211,6 @@
         <!-- Double-click to obtain a +7 Aden Cloak. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -236,7 +221,6 @@
         <!-- Double-click to obtain a +7 Elmore Cloak. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -247,7 +231,6 @@
         <!-- Double-click to obtain a +7 Ferios Cloak. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -258,7 +241,6 @@
         <!-- Summons  Agathion - Gnosian. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -269,7 +251,6 @@
         <!-- Summons  Agathion - Orodriel. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -280,7 +261,6 @@
         <!-- Summons Agathion - Penalty Kick. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -291,7 +271,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -352,7 +331,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -363,7 +341,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -374,7 +351,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -385,7 +361,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -396,7 +371,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -407,7 +381,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -418,7 +391,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -429,7 +401,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -440,7 +411,6 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -887,7 +857,6 @@
     <skill id="56070" name="Power of Twin Bow Herritt" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -904,7 +873,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For. For 20 min, P. Atk. +15%. -->
         <icon initial="icon.skill1068"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
@@ -916,7 +884,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Atk. Spd. +33%. -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -927,7 +894,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, M. Atk. +75%. -->
         <icon initial="icon.skill1059"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -938,7 +904,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Casting Spd. +30%. -->
         <icon initial="icon.skill1085"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -949,7 +914,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Speed +33. -->
         <icon initial="icon.skill1204"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -960,7 +924,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, recovers 9% P. Damage dealt to enemy as HP at a certain rate. -->
         <icon initial="icon.skill1268"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -971,7 +934,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Party members' Defense +8%, M. Def. +16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Speed +8%, Casting Spd. +8%, Speed +8. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -982,7 +944,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, P. Def. +15%. -->
         <icon initial="icon.skill1040"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -993,7 +954,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Critical Atk. Rate +30%. -->
         <icon initial="icon.skill1077"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1004,7 +964,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Critical Atk. Power +35%. -->
         <icon initial="icon.skill1242"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1015,7 +974,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Accuracy +4. -->
         <icon initial="icon.skill1240"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1026,7 +984,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, MP Consumption of Song / Dance Skills -20%. Uses 3 Spiritshots. -->
         <icon initial="icon.skill1397"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1037,7 +994,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, increases critical rate of magic damage by 20. -->
         <icon initial="icon.skill1303"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1048,7 +1004,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, damage with cancelled magic -53. -->
         <icon initial="icon.skill1078"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1059,7 +1014,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Max HP +35%. -->
         <icon initial="icon.skill1045"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1070,7 +1024,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Max MP +35%. -->
         <icon initial="icon.skill1048"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1081,7 +1034,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, M. Def. +30%. -->
         <icon initial="icon.skill1036"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1092,7 +1044,6 @@
         <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, HP / MP Recovery Bonus + 20%, Accuracy / Evasion +4, P./M. Atk. +15%, P./M. Atk. Spd. +10%, P./M. Critical Rate +15%, P./M. Critical Damage +15%. -->
         <icon initial="BranchSys3.icon1.g_beerfestival_octoberfest_beer"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1104,7 +1055,6 @@
     <skill id="56090" name="Snake's Blessing" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1128,7 +1078,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1138,7 +1087,6 @@
         <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1155,7 +1103,6 @@
     <skill id="56095" name="+5 Hawk Agathion - Stage 3 (7-day) Box" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1166,7 +1113,6 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1177,7 +1123,6 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

@@ -33,7 +33,6 @@
         <icon initial="icon.skill0223"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
             <magic-level initial="40"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -229,7 +228,6 @@
                 <value level="5">58</value>
                 <value level="6">61</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-92"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -258,7 +256,6 @@
          -->
         <icon initial="icon.skill1044"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="379">
                 <value level="3">457</value>
@@ -317,7 +314,6 @@
                 <value level="5">58</value>
                 <value level="6">61</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -352,7 +348,6 @@
                 <value level="5">58</value>
                 <value level="6">61</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -484,7 +479,6 @@
                 <value level="5">58</value>
                 <value level="6">61</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1119,7 +1113,6 @@
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -1141,7 +1134,6 @@
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -1166,7 +1158,6 @@
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -1191,7 +1182,6 @@
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -1359,7 +1349,6 @@
                 <value level="3">70</value>
                 <value level="4">82</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1483,7 +1472,7 @@
                     <value level="6">139.41</value>
                 </power>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power initial="15.0"/>
             </magic-cost>
         </effects>
