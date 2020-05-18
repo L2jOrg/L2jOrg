@@ -44,36 +44,66 @@
 	<!-- Double-click the item to receive 834 Soulshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract >
+			<item id="91927" min-count="834" max-count="834" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
+			<item id="29648" min-count="6" max-count="6" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="6" max-count="6" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
+		</extract>
 	</item>
 
 	<item id="70206" name="Wizard Hunter Pack Lv. 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 167 Blessed Spiritshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract >
+			<item id="91930" min-count="167" max-count="167" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
+			<item id="29648" min-count="6" max-count="6" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="6" max-count="6" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
+		</extract>
 	</item>
 
 	<item id="70207" name="Fighter Hunter Pack Lv. 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 1250 Soulshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract >
+			<item id="91927" min-count="1250" max-count="1250" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
+			<item id="29648" min-count="6" max-count="6" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="6" max-count="6" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
+		</extract>
 	</item>
 
 	<item id="70208" name="Wizard Hunter Pack Lv. 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 250 Blessed Spiritshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract >
+			<item id="91930" min-count="250" max-count="250" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
+			<item id="29648" min-count="6" max-count="6" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="6" max-count="6" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
+		</extract>
 	</item>
 
 	<item id="70209" name="Fighter Hunter Pack Lv. 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 2500 Soulshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract >
+			<item id="91927" min-count="2500" max-count="2500" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
+			<item id="29648" min-count="6" max-count="6" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="6" max-count="6" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
+		</extract>
 	</item>
 
 	<item id="70210" name="Wizard Hunter Pack Lv. 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 500 Blessed Spiritshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract >
+			<item id="91930" min-count="500" max-count="500" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
+			<item id="29648" min-count="6" max-count="6" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="6" max-count="6" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
+		</extract>
 	</item>
 
 	<item id="70211" name="Wondrous Cubic" type="NONE" icon="icon.etc_ore_cube_event_i00">
@@ -104,6 +134,9 @@
 	<!-- Double-click to receive XP Rune - 100%.  -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+		<item id="71966" min-count="5" max-count="5" chance="100000000"/>  <!-- XP Rune Box - 100% -->
+		</extract>
 	</item>
 
 	<item id="70216" name="Chronicle Cube" type="NONE" icon="icon.etc_ore_cube_event_i00">

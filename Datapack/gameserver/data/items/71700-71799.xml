@@ -9,7 +9,7 @@
 	<armor id="71701" name="Fire Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
 	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
@@ -19,7 +19,7 @@
 	<armor id="71702" name="Water Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
 	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
@@ -29,7 +29,7 @@
 	<armor id="71703" name="Wind Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve_white">
 	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
@@ -39,7 +39,7 @@
 	<armor id="71704" name="Earth Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp">
 	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="28.0"/>

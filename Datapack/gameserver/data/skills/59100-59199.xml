@@ -618,6 +618,7 @@
                     <value level="7">18</value>
                     <value level="8">19</value>
                     <value level="9">20</value>
+                    <value level="10">20</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" start-level="6" stat="PHYSICAL_ATTACK">
@@ -641,6 +642,7 @@
                     <value level="7">7</value>
                     <value level="8">8</value>
                     <value level="9">9</value>
+                    <value level="10">10</value>
                 </power>
             </trigger-skill-by-charge-shot>
             <trigger-skill-by-charge-shot blessed="true" skill="55478">
@@ -653,6 +655,7 @@
                     <value level="7">7</value>
                     <value level="8">8</value>
                     <value level="9">9</value>
+                    <value level="10">10</value>
                 </power>
             </trigger-skill-by-charge-shot>
             <trigger-skill-by-charge-shot for-beast="true" skill="55479">
@@ -665,6 +668,7 @@
                     <value level="7">7</value>
                     <value level="8">8</value>
                     <value level="9">9</value>
+                    <value level="10">10</value>
                 </power>
             </trigger-skill-by-charge-shot>
         </effects>
@@ -699,6 +703,7 @@
                     <value level="7">18</value>
                     <value level="8">19</value>
                     <value level="9">20</value>
+                    <value level="10">20</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" start-level="6" stat="MAGIC_ATTACK">
@@ -722,6 +727,7 @@
                     <value level="7">7</value>
                     <value level="8">8</value>
                     <value level="9">9</value>
+                    <value level="10">10</value>
                 </power>
             </trigger-skill-by-charge-shot>
             <trigger-skill-by-charge-shot blessed="true" skill="55482" type="SPIRITSHOTS">
@@ -734,6 +740,7 @@
                     <value level="7">7</value>
                     <value level="8">8</value>
                     <value level="9">9</value>
+                    <value level="10">10</value>
                 </power>
             </trigger-skill-by-charge-shot>
             <trigger-skill-by-charge-shot for-beast="true" skill="55483" type="SPIRITSHOTS">
@@ -746,6 +753,7 @@
                     <value level="7">7</value>
                     <value level="8">8</value>
                     <value level="9">9</value>
+                    <value level="10">10</value>
                 </power>
             </trigger-skill-by-charge-shot>
             <trigger-skill-by-charge-shot blessed="true" for-beast="true" skill="55483" type="SPIRITSHOTS">
@@ -758,6 +766,7 @@
                     <value level="7">7</value>
                     <value level="8">8</value>
                     <value level="9">9</value>
+                    <value level="10">10</value>
                 </power>
             </trigger-skill-by-charge-shot>
         </effects>

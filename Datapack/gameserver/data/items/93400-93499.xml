@@ -134,9 +134,16 @@
 
 	<armor id="93421" name="Valakas' Necklace" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_valakas_i00">
 	<!-- MP +30, Paralysis Attack and Resistance +10%, P. Atk./M. Atk. +5%, Skill Cooldown -4%, Damage Reflect Resistance +5%, P./M. Skill Power +5%. Cannot be enchanted. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" />
-		<crystal />
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" enchant-enabled="true" />
+		<crystal type="S"/>
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="62.0"/>
+			<stat type="MAX_MP" value="30.0"/>
+		</stats>
+		<skills>
+			<skill id="3557" value="-1"/>  <!-- Damaged Baium's Ring -->
+		</skills>
 	</armor>
 
 	<weapon id="93422" name="Damascus" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_damascus_i00">
@@ -473,49 +480,92 @@
 	<item id="93477" name="3000 L2 Coins" type="NONE" icon="icon.bm_lcoin_box_i01">
 	<!-- Double-click to obtain 3000 L2 Coins. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="3000" max-count="3000" chance="100"/>
+			</extract>
 	</item>
 
 	<item id="93478" name="Lv. 60 Reward Box" type="NONE" icon="icon.bm_2019_cube_lv1">
 	<!-- Double-click to obtain +2 Aden Talisman, 500 L2 Coins, and Lv. 65 Reward Box.\n\nCan be used by characters level 60 or higher. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes/>
+		<condition add-name="true" msg-id="113">
+			<player level-min="60"/>
+		</condition>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="500" max-count="500" chance="100"/>
+			<item id="91745" min-count="1" max-count="1" chance="100"/>
+			<item id="91756" min-count="2" max-count="2" chance="100"/>
+			<item id="93479" min-count="1" max-count="1" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="93479" name="Lv. 65 Reward Box" type="NONE" icon="icon.bm_2019_cube_lv2">
 	<!-- Double-click to obtain +2 Cloak of Protection, 500 L2 Coins, and Lv. 70 Reward Box.\n\nCan be used by characters level 65 or higher. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes/>
+		<condition add-name="true" msg-id="113">
+			<player level-min="65"/>
+		</condition>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="500" max-count="500" chance="100"/>
+			<item id="93301" min-count="1" max-count="1" chance="100"/>
+			<item id="93302" min-count="2" max-count="2" chance="100"/>
+			<item id="93480" min-count="1" max-count="1" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="93480" name="Lv. 70 Reward Box" type="NONE" icon="icon.bm_2019_cube_lv3">
 	<!-- Double-click to obtain +2 Dragon’s Belt, 1000 L2 Coins.\n\nCan be used by characters level 70 or higher. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes/>
+		<condition add-name="true" msg-id="113">
+			<player level-min="70"/>
+		</condition>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="1000" max-count="1000" chance="100"/>
+			<item id="91862" min-count="1" max-count="1" chance="100"/>
+			<item id="91863" min-count="2" max-count="2" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="93481" name="Everyday Grace Cube" type="COUPON" icon="icon.sa_cube">
 	<!-- Double-click to obtain Sayha's Blessing x20. Can only be used once a day. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="49845" min-count="20" max-count="20" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="93482" name="5000 L2 Coins" type="NONE" icon="icon.bm_lcoin_box_i02">
 	<!-- Double-click to obtain 5000 L2 Coins. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="5000" max-count="5000" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="93483" name="L2 Coins Growth Package" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click to obtain 3000 L2 Coins, Lv. 60 Reward Box. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="3000" max-count="3000" chance="100"/>
+			<item id="93478" min-count="1" max-count="1" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="93484" name="L2 Coins Grace Package" type="NONE" icon="icon.npoint_earring_of_lind_30day_box">
 	<!-- Double-click to obtain 5000 L2 Coins and 1 Everyday Grace Cube. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="5000" max-count="5000" chance="100"/>
+			<item id="93481" min-count="1" max-count="1" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="93485" name="Spellbook: Mount Wyvern" type="NONE" icon="icon.etc_spellbook_red_i00">

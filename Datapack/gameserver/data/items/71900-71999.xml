@@ -423,7 +423,10 @@
 	<item id="71967" name="XP Boosting Rune (7-day) Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a XP Boosting Rune (7-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+		<item id="71831" min-count="2" max-count="2" chance="100000000"/>  <!-- XP Rune Box - 100% -->
+		</extract>
 	</item>
 
 	<item id="71968" name="Night Goblin Coin" type="NONE" icon="icon.bm_goblin_coin">

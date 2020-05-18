@@ -633,7 +633,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29746" min-count="100" max-count="100" chance="100000000"/>  <!-- Mysterious Soulshot (B-grade) -->
+			<item id="91927" min-count="300" max-count="300" chance="100000000"/>  <!-- Mysterious Soulshot (B-grade) -->
 		</extract>
 	</item>
 
@@ -642,7 +642,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29747" min-count="100" max-count="100" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
+			<item id="91930" min-count="300" max-count="300" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
 		</extract>
 	</item>
 
@@ -651,7 +651,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29746" min-count="3000" max-count="3000" chance="100000000"/>  <!-- Mysterious Soulshot (B-grade) -->
+			<item id="91927" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (B-grade) -->
 			<item id="29648" min-count="12" max-count="12" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29012" min-count="15" max-count="15" chance="100000000"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</extract>
@@ -662,7 +662,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29747" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
+			<item id="91930" min-count="3000" max-count="3000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
 			<item id="29648" min-count="12" max-count="12" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29012" min-count="15" max-count="15" chance="100000000"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</extract>

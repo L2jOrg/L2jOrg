@@ -30,7 +30,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public final class VipEngine extends GameXmlReader {
 
-    private static final byte VIP_MAX_TIER = 7;
+    private static final byte VIP_MAX_TIER = 10;
     private IntMap<VipInfo> vipTiers = new HashIntMap<>(8);
 
     private VipEngine() {
