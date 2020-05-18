@@ -1,6 +1,8 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.data.database.dao.BuyListDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
@@ -15,25 +17,23 @@ import org.w3c.dom.NamedNodeMap;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.HashMap;
-import java.util.Map;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * Loads buy lists for NPCs.
  *
  * @author NosBit
+ * @author JoeAlisson
  */
 public final class BuyListData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(BuyListData.class.getName());
-    private final Map<Integer, ProductList> _buyLists = new HashMap<>();
+    private static final Logger LOGGER = LoggerFactory.getLogger(BuyListData.class);
+
+    private final IntMap<ProductList> buyLists = new HashIntMap<>();
 
     private BuyListData() {
-        load();
     }
 
     @Override
@@ -43,41 +43,30 @@ public final class BuyListData extends GameXmlReader {
 
     @Override
     public synchronized void load() {
-        _buyLists.clear();
+        buyLists.clear();
         parseDatapackDirectory("data/buylists", false);
         if (getSettings(GeneralSettings.class).loadCustomBuyList()) {
             parseDatapackDirectory("data/buylists/custom", false);
         }
         releaseResources();
 
-        LOGGER.info("Loaded {} BuyLists.", _buyLists.size());
+        LOGGER.info("Loaded {} BuyLists.", buyLists.size());
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement statement = con.createStatement();
-             ResultSet rs = statement.executeQuery("SELECT * FROM `buylists`")) {
-            while (rs.next()) {
-                final int buyListId = rs.getInt("buylist_id");
-                final int itemId = rs.getInt("item_id");
-                final long count = rs.getLong("count");
-                final long nextRestockTime = rs.getLong("next_restock_time");
-                final ProductList buyList = getBuyList(buyListId);
-                if (buyList == null) {
-                    LOGGER.warn("BuyList found in database but not loaded from xml! BuyListId: " + buyListId);
-                    continue;
-                }
-                final Product product = buyList.getProductByItemId(itemId);
-                if (product == null) {
-                    LOGGER.warn("ItemId found in database but not loaded from xml! BuyListId: " + buyListId + " ItemId: " + itemId);
-                    continue;
-                }
-                if (count < product.getMaxCount()) {
-                    product.setCount(count);
-                    product.restartRestockTask(nextRestockTime);
-                }
+        getDAO(BuyListDAO.class).findAll().forEach(info -> {
+            final var list = getBuyList(info.getId());
+            if(isNull(list)) {
+                LOGGER.warn("BuyList found in database but not loaded from xml! BuyListId: {}", info.getId());
+                return;
             }
-        } catch (Exception e) {
-            LOGGER.warn("Failed to load buyList data from database.", e);
-        }
+
+            final Product product = list.getProductByItemId(info.getItemId());
+            if (isNull(product)) {
+                LOGGER.warn("ItemId found in database but not loaded from xml! BuyListId: {} item id {}", info.getId(), info.getItemId());
+                return;
+            }
+
+            product.updateInfo(info);
+        });
     }
 
     @Override
@@ -114,7 +103,7 @@ public final class BuyListData extends GameXmlReader {
                         }
                     }
                 });
-                _buyLists.put(buyListId, buyList);
+                buyLists.put(buyListId, buyList);
             });
         } catch (Exception e) {
             LOGGER.warn("Failed to load buyList data from xml File:" + f.getName(), e);
@@ -122,14 +111,18 @@ public final class BuyListData extends GameXmlReader {
     }
 
     public ProductList getBuyList(int listId) {
-        return _buyLists.get(listId);
+        return buyLists.get(listId);
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static BuyListData getInstance() {
-        return Singleton._instance;
+        return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final BuyListData _instance = new BuyListData();
+        private static final BuyListData INSTANCE = new BuyListData();
     }
 }

@@ -25,7 +25,6 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 
 /**
  * The Power Of Love
- * @URL http://www.lineage2.com/en/news/events/02102016-the-power-of-love-part-iii.php
  * @author hlwrave
  */
 public final class ThePowerOfLove extends LongTimeEvent implements ScriptEvent

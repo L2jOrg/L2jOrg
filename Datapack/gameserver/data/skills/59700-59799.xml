@@ -146,7 +146,7 @@
     </skill>
     <skill id="59720" name="Chipao Transformation">
         <!-- For 20 min., Max HP/MP +5%%, P. Accuracy/M. Accuracy +1, P. Atk./M. Atk./P. Def./M. Def. +2%%, Atk. Spd. +3%%, M. Skill Critical Rate +10, Speed +4. \n\n<Item Consumption>\n1 Elemental Stone. -->
-        <icon initial="L2Icon_CN.qipao_armor_u_i00"/>
+        <icon initial="br_L2Icon.qipao_armor_ul_i00"/>
         <attributes property="PHYSIC" auto-use="BUFF">
         </attributes>
         <target/>
@@ -155,6 +155,83 @@
         <!-- For 20 min., Max HP/MP +5%%, P. Accuracy/M. Accuracy +1, P. Atk./M. Atk./P. Def./M. Def. +2%%, Atk. Spd. +3%%, M. Skill Critical Rate +10, Speed +4. \n\n<Item Consumption>\n1 Elemental Stone. -->
         <icon initial="BranchSys3.icon1.g_co_paiwan_u"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59722" name="XP Boost Energy">
+        <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
+        <icon initial="BranchIcon.Icon.etc_g_bonus_herb_i00"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59723" name="VIP Level 8">
+        <!-- Receives the daily VIP Lv. 8 gift box. XP/SP Gain +35%%, Item Drop Rate +300%%, World Chat Use +50, XP/Item Drop Rate Penalty at Death -30%%, PvE Damage +15%%, All Stats +2, P. Def./M. Def. +50, PvP Damage +12%%, Skill Cooldown -1%%, Max HP/MP +100. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip8"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59724" name="VIP Level 9">
+        <!-- Receives the daily VIP Lv. 9 gift box. XP/SP Gain +40%%, Item Drop Rate +300%%, World Chat Use +50, XP/Item Drop Rate Penalty at Death -40%%, PvE Damage +15%%, All Stats +3, P. Def./M. Def. +80, PvP Damage +13%%, Skill Cooldown -3%%, Max HP/MP +200. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip9"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59725" name="VIP Level 10">
+        <!-- Receives the daily VIP Lv. 10 gift box. XP/SP Gain +50%%, Item Drop Rate +300%%, World Chat Use +50, XP/Item Drop Rate Penalty at Death -50%%, PvE Damage +15%%, All Stats +4, P. Def./M. Def. +100, PvP Damage +15%%, Skill Cooldown -5%%, Max HP/MP +500. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip10"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59726" name="VIP Battle Scroll">
+        <!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. -->
+        <icon initial="icon.ev_charge_scroll"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59727" name="Scroll: VIP XP/SP Boost">
+        <!-- For 20 minutes, XP/SP Gain from hunting +120%. Does not disappear when dying. -->
+        <icon initial="icon.bm_elmoaden_exp_scrl"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59728" name="Chronicle Successor’s Necklace">
+        <!-- Damage Reflect Resistance +1%%, P. Skill Power/M. Skill Power +4%%, and Skill Cooldown -1%%. -->
+        <icon initial="BranchIcon.Icon.accessary_vip_necklace_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59729" name="VIP Agathion Bracelet Resistance Increase">
+        <!-- MEN/Stun/Sleep/Paralysis Resistance +10%. -->
+        <icon initial="icon.skill6366_2"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59730" name="VIP Talisman Bracelet">
+        <!-- Can equip 6 Talismans.\n\n<Special Effects>\nHP Recovery Bonus/MP Recovery Bonus +20%, P. Accuracy +3, M. Accuracy +3, Weight Limit +10000. -->
+        <icon initial="icon.dimension_bracelet_i05"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59731" name="XP Boosting Rune">
+        <!-- XP/SP Gain from hunting +150%%. -->
+        <icon initial="br_cashtex.item.br_cash_rune_of_exp_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="59732" name="+3-+8 Talisman &amp; Belt Ticket Box">
+        <!-- none -->
+        <icon initial="icon.bm_gold_lure_box"/>
+        <attributes>
         </attributes>
         <target/>
     </skill>

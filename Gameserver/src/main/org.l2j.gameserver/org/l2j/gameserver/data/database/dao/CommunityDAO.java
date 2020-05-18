@@ -2,6 +2,7 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.CommunityFavorite;
 import org.l2j.gameserver.data.database.data.CommunityMemo;
 
 import java.util.List;
@@ -28,4 +29,10 @@ public interface CommunityDAO extends DAO<Object> {
 
     @Query("DELETE FROM community_memos WHERE owner_id=:playerId: AND id=:id:")
     void deleteMemo(int playerId, int id);
+
+    @Query("SELECT * FROM `bbs_favorites` WHERE `playerId`=:playerId: ORDER BY `favAddDate` DESC")
+    List<CommunityFavorite> findFavorites(int playerId);
+
+    @Query("DELETE FROM `bbs_favorites` WHERE `playerId`=:playerId: AND `favId`=:id:")
+    void deleteFavorite(int playerId, int id);
 }

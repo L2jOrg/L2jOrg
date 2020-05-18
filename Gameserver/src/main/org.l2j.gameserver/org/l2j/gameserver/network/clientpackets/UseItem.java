@@ -10,7 +10,6 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
@@ -184,11 +183,6 @@ public final class UseItem extends ClientPacket {
     }
 
     private boolean checkCanUse(Player player, Item item) {
-        // TODO Remove FortSiege check
-        if (player.isCombatFlagEquipped() || FortSiegeManager.getInstance().isCombat(itemId)) {
-            return false;
-        }
-
         var bodyPart = item.getBodyPart();
 
         if (player.getInventory().isItemSlotBlocked(bodyPart)) {

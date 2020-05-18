@@ -127,7 +127,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="58.0">
                     <value level="2">64.0</value>
                     <value level="3">70.0</value>
@@ -144,7 +144,7 @@
                     <value level="14">136.0</value>
                     <value level="15">142.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
                 <power initial="5.0"/>
             </stat-modify>
@@ -379,7 +379,6 @@
         <icon initial="icon.ensoul_big_m"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="900"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -608,7 +607,7 @@
                     <value level="15">12.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="26.0">
                     <value level="2">29.0</value>
                     <value level="3">32.0</value>
@@ -625,7 +624,7 @@
                     <value level="14">65.0</value>
                     <value level="15">68.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
                 <power initial="5.0"/>
             </stat-modify>
@@ -818,7 +817,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="26.0">
                     <value level="2">29.0</value>
                     <value level="3">32.0</value>
@@ -835,7 +834,7 @@
                     <value level="14">65.0</value>
                     <value level="15">68.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="1.0">
                     <value level="2">2.0</value>
@@ -927,7 +926,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="26.0">
                     <value level="2">29.0</value>
                     <value level="3">32.0</value>
@@ -944,7 +943,7 @@
                     <value level="14">65.0</value>
                     <value level="15">68.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="10.0">
                     <value level="2">11.0</value>
@@ -1561,7 +1560,7 @@
                     <value level="15">20.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="26.0">
                     <value level="2">29.0</value>
                     <value level="3">32.0</value>
@@ -1578,7 +1577,7 @@
                     <value level="14">61.0</value>
                     <value level="15">64.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
                 <power initial="5.0"/>
             </stat-modify>

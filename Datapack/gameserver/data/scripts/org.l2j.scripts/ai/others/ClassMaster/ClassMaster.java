@@ -18,7 +18,6 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.TutorialCloseHtml;
-import org.l2j.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -40,7 +39,7 @@ public final class ClassMaster extends AbstractNpcAI
 {
 	// NPCs
 	private static final List<Integer> CLASS_MASTERS = new ArrayList<>();
-	{
+	static {
 		CLASS_MASTERS.add(31756); // Mr. Cat
 		CLASS_MASTERS.add(31757); // Queen of Hearts
 	}
@@ -714,9 +713,7 @@ public final class ClassMaster extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
-	{
-		final Player player = event.getActiveChar();
+	public void OnPlayerLevelChanged(OnPlayerLevelChanged event) {
 		showPopupWindow(event.getActiveChar());
 	}
 	

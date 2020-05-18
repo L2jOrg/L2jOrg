@@ -4,14 +4,12 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
-import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -21,15 +19,9 @@ import org.l2j.gameserver.world.MapRegionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
- */
 public final class RequestRestartPoint extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestRestartPoint.class);
     protected int _requestedPointType;
-    protected boolean _continuation;
 
     @Override
     public void readImpl() {
@@ -139,32 +131,15 @@ public final class RequestRestartPoint extends ClientPacket {
             }
             case 3: // to fortress
             {
-                final Clan clan = player.getClan();
-                if ((clan == null) || (clan.getFortId() == 0)) {
-                    LOGGER.warn("Player [" + player.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
-                    return;
-                }
-                loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.FORTRESS);
-
-                final Fort fort = FortDataManager.getInstance().getFortByOwner(clan);
-                if (fort != null) {
-                    final Fort.FortFunction fortFunction = fort.getFortFunction(Fort.FUNC_RESTORE_EXP);
-                    if (fortFunction != null) {
-                        player.restoreExp(fortFunction.getLvl());
-                    }
-                }
                 break;
             }
             case 4: // to siege HQ
             {
                 SiegeClanData siegeClan = null;
                 final Castle castle = CastleManager.getInstance().getCastle(player);
-                final Fort fort = FortDataManager.getInstance().getFort(player);
 
                 if ((castle != null) && castle.getSiege().isInProgress()) {
                     siegeClan = castle.getSiege().getAttackerClan(player.getClan());
-                } else if ((fort != null) && fort.getSiege().isInProgress()) {
-                    siegeClan = fort.getSiege().getAttackerClan(player.getClan());
                 }
 
                 if (((siegeClan == null) || siegeClan.getFlags().isEmpty())) {
@@ -189,9 +164,6 @@ public final class RequestRestartPoint extends ClientPacket {
                 break;
             }
             case 6: // TODO: Agathion resurrection
-            {
-                break;
-            }
             case 7: // TODO: Adventurer's Song
             {
                 break;

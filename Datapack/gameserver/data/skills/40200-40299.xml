@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+    <skill id="40200" name="Maliss's High-grade HP Potion - Event">
+        <icon initial="icon.etc_bm_hero_red_potion"/>
+        <attributes auto-use="ACTIVE">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40201" name="Cadmus Transformation Scroll - Song Dance - Event">
+        <!-- Transformed into Cadmus - Song Dance. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
+        <icon initial="icon.etc_roll_of_paper_black_i00"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40202" name="Special Dragon's Fruit Lv. 2 - Event">
+        <!-- For 20 minutes, XP/SP Gain +15%%, P. Atk./M. Atk. +15%%, P. Critical/M. Critical Rate +20, P. Critical Damage/M. Critical Damage +7%%, P. Def./M. Def. +20%%, HP/MP/CP +30%%, HP Recovery Bonus/MP Recovery Bonus +40%%, and has a chance to absorb 7%% of physical damage dealt to enemies as HP.\nDeath protection. You can delete it yourself. -->
+        <icon initial="icon.bm_dragon_fruit"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40203" name="Dragon's Special Elixir Lv. 2 - Event">
+        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP.\nDeath protection. You can delete it yourself. -->
+        <icon initial="icon.bm_dragon_posion"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40204" name="Scroll: Fire Dragon's Blessing - Event">
+        <!-- For 20 min., you feel the Fire Dragon's Blessing. Cannot be dropped.\n\nFire Dragon's Blessing: The targets buff/debuff remains after death. The Fire Dragon's Blessing disappears. -->
+        <icon initial="icon.bm_blessing_dragon"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40205" name="16th Anniversary Special Buff" max-level="8">
+        <!--
+            level 1: \n\nFor 1, CON +1.
+            level 2: \n\nFor 2, CON/MEN +1.
+            level 3: \n\nFor 3, WIT/CON/MEN +1.
+            level 4: \n\nFor 4, DEX/WIT/CON/MEN +1.
+            level 5: \n\nFor 5, INT/DEX/WIT/CON/MEN +1.
+            level 6: For 6, STR/INT/DEX/WIT/CON/MEN +1.
+            level 7: For 7, STR/INT/DEX/WIT/CON/MEN +1.
+            level 8: For 8, STR/INT/DEX/WIT/CON/MEN +1.
+         -->
+        <icon initial="icon.ev_16th"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40206" name="Remove 16th Anniversary Buff">
+        <!-- Removes the 16th Anniversary buff. -->
+        <icon initial="icon.skill1169"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40207" name="Spellbook: Air Bike">
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40208" name="16th Anniversary Cake">
+        <!-- \n\nFor 5 min., party members’ P. Atk. +160, M. Atk. +160, XP/SP Gain +160%%, Max HP/MP +160, Atk. Spd. +160, Casting Spd. +160, P. Def. +160, M. Def. +160. -->
+        <icon initial="BranchSys.icon.br_birthday_cake_i00"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40209" name="Rice Cake Soup">
+        <!-- \n\nFor 20 min., P. Atk./M. Atk. +150, P. Def./M. Def. +100, All Critical Rate +10%%, Max HP/MP +150. -->
+        <icon initial="BranchSys.icon.br_taiwan_newyear_food_d_i00"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+</list>

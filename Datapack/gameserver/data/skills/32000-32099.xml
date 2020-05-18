@@ -5,7 +5,6 @@
         <icon initial="icon.bm_rice_cake_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -14,7 +13,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal> <!-- EXP_SP_J -->
+        <abnormal>
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -33,7 +32,6 @@
         <icon initial="icon.bm_rice_cake_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -42,7 +40,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal> <!-- EXP_SP_J -->
+        <abnormal>
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -57,11 +55,10 @@
         </effects>
     </skill>
     <skill id="32002" name="XP Boost Scroll - Exchangeable" action="A2">
-        <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
+        <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute.\nDeath protection. You can delete it yourself. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -75,10 +72,10 @@
             <level max-level="85" scope="PASSIVE"/>
         </conditions>
         <effects>
-            <stat-modify stat="BONUS_EXP" mode="PER">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="30.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP" mode="PER">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="30.0"/>
             </stat-modify>
         </effects>
@@ -87,7 +84,6 @@
         <!-- none -->
         <icon initial="icon.event_high_oriental_park_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -110,7 +106,6 @@
         <!-- none -->
         <icon initial="icon.etc_marguene_collection_box_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -138,7 +133,6 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
             <activate-rate initial="-1"/>
@@ -149,7 +143,6 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_2_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -159,7 +152,6 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_3_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -170,7 +162,6 @@
         <icon initial="icon.etc_box_of_adventure_4_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -204,7 +195,6 @@
         <icon initial="icon.etc_box_of_adventure_5_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -237,7 +227,6 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i02"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -247,7 +236,6 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i03"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -257,7 +245,6 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -267,7 +254,6 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i05"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -277,7 +263,6 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i06"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -287,7 +272,6 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -297,7 +281,6 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i08"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -307,7 +290,6 @@
         <!-- none -->
         <icon initial="icon.new_user_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -372,8 +354,7 @@
     <skill id="32030" name="Dandy's Homerun Ball" action="A1">
         <!-- XP/SP Gain +100%% for 1 hour. Armor appearance changes to that of an NC Dinos uniform. -->
         <icon initial="BranchIcon.icon.g_ev_homerunball"/>
-        <attributes property="PHYSIC" stay-after-death="true">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
             <reuse initial="15000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -383,7 +364,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-		<abnormal visual="CHANGE_DINOS"> <!-- EXP_SP_F -->
+        <abnormal visual="CHANGE_DINOS">
             <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -402,7 +383,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -428,7 +408,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -454,7 +433,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -480,7 +458,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -506,7 +483,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -532,7 +508,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -558,7 +533,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -583,7 +557,6 @@
         <!-- Teleport to Dion. Cooldown is 60 minutes. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -595,7 +568,6 @@
         <!-- Teleport to Floran. Cooldown is 60 minutes. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -607,7 +579,6 @@
         <!-- Teleport to Giran. Cooldown is 60 minutes. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -619,7 +590,6 @@
         <!-- Teleport to Oren. Cooldown is 60 minutes. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -631,7 +601,6 @@
         <!-- Teleport to Ivory Tower. Cooldown is 60 minutes. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -643,7 +612,6 @@
         <!-- Teleport to Hunter's Village. Cooldown is 60 minutes. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -656,7 +624,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -682,7 +649,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -708,7 +674,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -733,7 +698,6 @@
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -744,7 +708,6 @@
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -755,18 +718,17 @@
         <!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
         <icon initial="icon.power_of_storm"/>
         <attributes property="PHYSIC" stay-after-death="true">
-            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal> <!-- EXP_SP_I -->
+        <abnormal>
             <level initial="2"/>
             <time initial="7200"/>
             <chance initial="-1"/>
         </abnormal>
-		<conditions>
+        <conditions>
             <level max-level="60" scope="PASSIVE"/>
         </conditions>
         <effects>
@@ -782,7 +744,6 @@
         <!-- none -->
         <icon initial="icon.etc_pi_gift_box_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -792,7 +753,6 @@
         <!-- For 20 minutes, P. Def. -5%%, M. Def. -10%%, P. Evasion -2, P. Atk. +5%%, M. Atk. +10%%, Atk. Spd. +5%%, Casting Spd. +5%%, and Movement Speed +5. -->
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
             <activate-rate initial="-1"/>

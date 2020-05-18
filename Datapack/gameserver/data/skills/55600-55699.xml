@@ -2,9 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="55600" name="Blessed Support Cube" action="A1">
         <!-- none -->
-        <icon initial="[icon.etc_golden_ore_cube_pc_i00]"/>
+        <icon initial="[icon.etc_golden_ore_cube_pc_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -13,9 +12,8 @@
     </skill>
     <skill id="55601" name="Party Support Cube - Lv. 2" action="A1">
         <!-- none -->
-        <icon initial="[icon.etc_silver_ore_cube_pc_i00]"/>
+        <icon initial="[icon.etc_silver_ore_cube_pc_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -24,9 +22,8 @@
     </skill>
     <skill id="55602" name="Fishing Support Cube" action="A1">
         <!-- none -->
-        <icon initial="[icon.etc_cupreous_ore_cube_pc_i00]"/>
+        <icon initial="[icon.etc_cupreous_ore_cube_pc_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -35,9 +32,8 @@
     </skill>
     <skill id="55603" name="Potion Support Cube - Lv. 2" action="A1">
         <!-- none -->
-        <icon initial="[icon.etc_earthen_ore_cube_pc_i00]"/>
+        <icon initial="[icon.etc_earthen_ore_cube_pc_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -46,9 +42,8 @@
     </skill>
     <skill id="55604" name="Progression Support Cube" action="A1">
         <!-- none -->
-        <icon initial="[icon.etc_crystal_cube_event_i00]"/>
+        <icon initial="[icon.etc_crystal_cube_event_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -851,7 +846,6 @@
         <!-- To Enchant Hair Accessory. -->
         <icon initial="icon.scroll_of_unidentify_am_d"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -861,7 +855,6 @@
         <!-- To Enchant Hair Accessory. -->
         <icon initial="icon.scroll_of_unidentify_am_d"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -871,7 +864,6 @@
         <!-- none -->
         <icon initial="Branchsys2.icon.br_lucky_bag_box_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -885,7 +877,6 @@
         <icon initial="BranchSys.icon.br_silver_box_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -927,7 +918,6 @@
         <!-- none -->
         <icon initial="Branchsys2.icon.br_lucky_bag_box_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -940,7 +930,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -950,7 +939,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -960,7 +948,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -970,7 +957,6 @@
         <!-- For 5 min, Max HP+10%%, HP Recovery +10%%, P. Atk. +10%%, P. Def. +10%%, Atk. Spd. +5%%, Debuff Resistance +10%%. -->
         <icon initial="icon.etc_fruit_cocktail_i01"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -981,7 +967,6 @@
         <!-- For 5 min, MP Recovery +10%%, M. Atk. +10%%, M. Def. +10%%, Casting Spd. +5%%, Debuff Resistance +10%%. Skill MP Cost -3%%. -->
         <icon initial="icon.etc_fruit_cocktail_i03"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -992,7 +977,6 @@
         <!-- For 5 min, P. Evasion +3, P. Accuracy +3, Critical Rate +10%%, Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%. -->
         <icon initial="icon.etc_fruit_cocktail_i02"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1004,7 +988,6 @@
         <icon initial="icon.bm_dragon_fruit"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1033,9 +1016,9 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="12.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5.0"/>
             </stat-modify>
@@ -1066,7 +1049,6 @@
         <!-- The essence of Frintezza's feelings. P. Atk./ M. Atk. +15%%, P. Def./ M. Def. +15%%. Changes the appearance of your weapon. Deleted upon logout. Not deleted upon death. -->
         <icon initial="BranchSys2.icon.g_illumination_skyblue"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1092,7 +1074,6 @@
     <skill id="55686" name="The Royal Confectionary Box" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -1103,7 +1084,6 @@
         <!-- You feel unusually confident about yourself and you are ready to express your feelings as they are. For 2 hr., acquired XP/SP +5%%, Atk. Spd./Casting Spd. +10%%, Movement Speed +20. Cannot be stacked with Blessing of Light. Changes the appearance of your weapon. Not deleted upon death. -->
         <icon initial="icon.release_thirst"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1115,7 +1095,6 @@
         <!-- none -->
         <icon initial="icon.card_event_blue_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1134,7 +1113,6 @@
         <!-- Transformation into a Pirate. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i03"/>
         <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1145,7 +1123,6 @@
         <!-- Transformation into a Dark Assassin. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
         <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1156,11 +1133,9 @@
         <!-- Transformation into a White Assassin. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
         <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
-        </attributes>      
+        </attributes>
         <target/>
         <abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
             <level initial="1"/>
@@ -1207,7 +1182,6 @@
         <!-- Makes you armor look like Blue Dynasty one. Fighting characteristics are improved. Remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i01"/>
         <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1218,7 +1192,6 @@
         <!-- Makes you armor look like Red Zubei one. Fighting characteristics are improved. Remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i04"/>
         <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1229,7 +1202,6 @@
         <!-- none -->
         <icon initial="icon.etc_golden_ore_cube_pc_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1248,14 +1220,13 @@
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="50.0"/>
-            </stat-modify>			
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55697" name="Kusto Lucky Enchant Pack" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1268,7 +1239,6 @@
         <!-- none -->
         <icon initial="icon.card_event_blue_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1280,7 +1250,6 @@
         <!-- Increases P. Critical Rate +100%% for 10 minutes. -->
         <icon initial="icon.skill0269"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>

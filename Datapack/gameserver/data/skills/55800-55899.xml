@@ -1414,10 +1414,10 @@
             </trigger-skill-by-magic>
         </effects>
     </skill>
-    <skill id="55859" name="Legendary Cloak - Silence" debuff="true" action="A2">
+    <skill id="55859" name="Legendary Cloak - Silence" action="A2">
         <!-- Skills are sealed momentarily because of Silence. Ignores debuff immunity. -->
         <icon initial="icon.skill1064"/>
-        <attributes triggered="true"  magic-critical-rate="5" property="PHYSIC" level-bonus-rate="20">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" triggered="true">
             <magic-level initial="81"/>
             <cast-range initial="1000"/>
             <reuse initial="300000"/>
@@ -1466,7 +1466,6 @@
         </icon>
         <attributes property="PHYSIC" triggered="true">
             <magic-level initial="80"/>
-            <cast-range initial="1200"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-point initial="867"/>
@@ -1508,19 +1507,19 @@
     <skill id="55863" name="Empire Legendary Cloak Augmentation" action="A2" type="MAGIC">
         <!-- Resurrects from death with full recovery. Buffs/ debuffs stay when dying. However, the Noblesse Blessing and Lucky Charms disappear. -->
         <icon initial="icon.skill11826"/>
-        <attributes property="PHYSIC" magic-critical-rate="5" static-reuse="true">
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="79"/>
             <cast-range initial="600"/>
             <reuse initial="3600000"/>
             <effect-point initial="867"/>
             <effect-range initial="900"/>
             <hit-time initial="4000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="RESURRECTION_SPECIAL">
             <level initial="2"/>
             <time initial="3600"/>
+            <chance initial="-1"/>
         </abnormal>
         <effects>
             <effect name="ResurrectionSpecial">
@@ -1544,16 +1543,16 @@
     <skill id="55865" name="Legendary Cloak - Invincibility" action="A2">
         <!-- Become invincible. -->
         <icon initial="icon.skill1917"/>
-        <attributes triggered="true" property="PHYSIC">
+        <attributes property="PHYSIC" triggered="true">
             <magic-level initial="80"/>
             <reuse initial="300000"/>
             <hit-time initial="200"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="SUB_TRIGGER_DEFENCE" visual="INVINCIBILITY">
             <level initial="1"/>
             <time initial="5"/>
+            <chance initial="-1"/>
         </abnormal>
         <conditions>
             <remain-status amount="30" stat="HP"/>
@@ -1605,7 +1604,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1615,7 +1613,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1625,7 +1622,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1635,7 +1631,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1647,7 +1642,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1655,11 +1649,10 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="55873" name="Stable Scroll: Enchant Cloak - Legendary" action="A1">
+    <skill id="55873" name="Stable Scroll: Enchant Cloak - Legendary" max-level="2" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1669,7 +1662,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1681,7 +1673,6 @@
         <!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1692,7 +1683,6 @@
         <!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1703,7 +1693,6 @@
         <!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1714,7 +1703,6 @@
         <!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1725,7 +1713,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1738,7 +1725,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1751,7 +1737,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1764,7 +1749,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1777,7 +1761,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1814,7 +1797,7 @@
             <base-stats types="CON STR INT MEN">
                 <power initial="1"/>
             </base-stats>
-            <base-stats types="DEX WIT" start-level="2">
+            <base-stats start-level="2" types="DEX WIT">
                 <power initial="1"/>
             </base-stats>
         </effects>
@@ -1830,7 +1813,7 @@
         <target/>
         <effects>
             <defence-trait>
-                <trait type="SHOCK" >
+                <trait type="SHOCK">
                     <power initial="5">
                         <value level="2">8</value>
                     </power>
@@ -1862,38 +1845,38 @@
             level 5: HP / MP / CP Recovery + 30%, Damage Received in PvE - 10%, XP / SP /Attribute XP + 20%, Stun / Mental / Paralysis Attack Success Rate + 5% for all clan members.
          -->
         <icon initial="icon.skill19014"/>
-        <attributes property="PHYSIC">
+        <attributes property="MAGIC">
         </attributes>
         <target/>
-		 <abnormal type="EXP_SP_Q">
-			 <level initial="1">
-                 <value level="2">2</value>
-                 <value level="3">3</value>
-                 <value level="4">4</value>
-                 <value level="5">5</value>
-             </level>
-             <time initial="-1"/>
-         </abnormal>
-		<effects>
-			<stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+        <abnormal type="EXP_SP_Q">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">5</value>
+            </level>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
                 <power initial="4.0">
-					<value level="2">8.0</value>
+                    <value level="2">8.0</value>
                     <value level="3">12.0</value>
                     <value level="4">20.0</value>
                     <value level="5">30.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="4.0">
-					<value level="2">8.0</value>
+                    <value level="2">8.0</value>
                     <value level="3">12.0</value>
                     <value level="4">20.0</value>
                     <value level="5">30.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="REGENERATE_CP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_CP_RATE">
                 <power initial="4.0">
-					<value level="2">8.0</value>
+                    <value level="2">8.0</value>
                     <value level="3">12.0</value>
                     <value level="4">20.0</value>
                     <value level="5">30.0</value>
@@ -1901,7 +1884,7 @@
             </stat-modify>
             <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
                 <power initial="3.0">
-					<value level="2">5.0</value>
+                    <value level="2">5.0</value>
                     <value level="3">7.0</value>
                     <value level="4">10.0</value>
                     <value level="5">10.0</value>
@@ -1909,7 +1892,7 @@
             </stat-modify>
             <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
                 <power initial="3.0">
-					<value level="2">5.0</value>
+                    <value level="2">5.0</value>
                     <value level="3">7.0</value>
                     <value level="4">10.0</value>
                     <value level="5">10.0</value>
@@ -1917,15 +1900,15 @@
             </stat-modify>
             <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
                 <power initial="3.0">
-					<value level="2">5.0</value>
+                    <value level="2">5.0</value>
                     <value level="3">7.0</value>
                     <value level="4">10.0</value>
                     <value level="5">10.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="5.0">
-					<value level="2">8.0</value>
+                    <value level="2">8.0</value>
                     <value level="3">11.0</value>
                     <value level="4">15.0</value>
                     <value level="5">20.0</value>
@@ -1933,13 +1916,13 @@
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0">
-					<value level="2">8.0</value>
+                    <value level="2">8.0</value>
                     <value level="3">11.0</value>
                     <value level="4">15.0</value>
                     <value level="5">20.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP">
+            <stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP">
                 <power>
                     <value level="4">15.0</value>
                     <value level="5">20.0</value>
@@ -1955,14 +1938,12 @@
             level 4: Rico's Halloween buff.
          -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5" blocked-on-olympiad="true" irreplacable="true" block-action-skill="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" block-action-skill="true">
             <cast-range initial="900">
                 <value level="2">-1</value>
             </cast-range>
-            <reuse initial="3600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="BR_EVENT_BUF1">
@@ -1971,6 +1952,7 @@
                 <value level="3">3</value>
             </level>
             <time initial="3600"/>
+            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP" stop-level="3">
@@ -2002,17 +1984,15 @@
     <skill id="55889" name="Halloween Blessing" action="A1">
         <icon initial="icon.event_halloween_pumpkin_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="55890" name="Halloween Gift" action="A1" type="STATIC">
+    <skill id="55890" name="Halloween Gift" action="A1">
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5">
-            <cast-range initial="-1"/>
+        <attributes magic-critical-rate="5.0">
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2020,7 +2000,7 @@
         </attributes>
         <target/>
         <conditions>
-            <encumbered weight="20" slots="10"/>
+            <encumbered slots="10" weight="20"/>
         </conditions>
         <effects>
             <restoration item="90136"/>
@@ -2030,7 +2010,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2042,7 +2021,6 @@
         <!-- For 20 min. XP and SP gain +50%%, P./ M. Atk. +18%%, P./ M. Def. +22%%, Atk. Spd./ Casting Spd. +5%%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%%, HP/ MP/ CP +25%%, HP/ MP Recovery +30%%. At a certain chance absorbs 5%% of the damage inflicted on target as HP. Buff remains after death. -->
         <icon initial="icon.bm_dragon_posion_brave"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2053,7 +2031,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -2065,7 +2042,6 @@
         <!-- Transforms into teddy bear. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
         <icon initial="icon.gomdori_chest_change"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -2077,7 +2053,6 @@
         <!-- Transforms into panda. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
         <icon initial="icon.sayha2017_panda"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -2089,7 +2064,6 @@
         <!-- Transforms into cat. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
         <icon initial="icon.sayha2017_cat"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -2100,7 +2074,6 @@
     <skill id="55897" name="Bonfire" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -2114,7 +2087,6 @@
         <!-- For 30 minutes, STR/DEX/CON/INT/WIT/MEN +1. Additionally, XP/SP Gain +5%%. -->
         <icon initial="icon.etc_food_dish_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2124,7 +2096,6 @@
     <skill id="55899" name="Match Girls' Gift" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>

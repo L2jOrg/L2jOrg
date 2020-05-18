@@ -87,7 +87,7 @@ public final class CallPc extends AbstractEffect {
             return false;
         }
 
-        if (target.isFlyingMounted() || target.isCombatFlagEquipped() || target.isInTraingCamp() || target.isInTimedHuntingZone()) {
+        if (target.isFlyingMounted() || target.isInTraingCamp() || target.isInTimedHuntingZone()) {
             creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
             return false;
         }

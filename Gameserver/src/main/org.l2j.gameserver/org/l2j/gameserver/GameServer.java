@@ -74,7 +74,7 @@ public class GameServer {
             throw new Exception("Could not initialize the Identity factory!");
         }
 
-        printSection("Lineage II World");
+        printSection("World");
         World.init();
 
         printSection("Skills");
@@ -104,7 +104,7 @@ public class GameServer {
         GlobalVariablesManager.init();
         ActionManager.init();
         EnchantItemHPBonusData.getInstance();
-        BuyListData.getInstance();
+        BuyListData.init();
         MultisellData.getInstance();
         RecipeData.getInstance();
         ArmorSetsData.getInstance();
@@ -193,7 +193,6 @@ public class GameServer {
         // No fortresses TODO remove: at some point these instances will be loaded
         // FortDataManager.getInstance().loadInstances();
         // FortDataManager.getInstance().activateInstances();
-        // FortSiegeManager.getInstance();
 
         var generalSettings = getSettings(GeneralSettings.class);
         if (generalSettings.saveDroppedItems()) {

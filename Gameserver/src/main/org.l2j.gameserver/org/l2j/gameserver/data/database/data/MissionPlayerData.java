@@ -1,8 +1,8 @@
 package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.annotation.Transient;
 import org.l2j.gameserver.engine.mission.MissionStatus;
 
 /**
@@ -20,7 +20,7 @@ public class MissionPlayerData {
     private MissionStatus status = MissionStatus.NOT_AVAILABLE;
     private int progress;
 
-    @Transient
+    @NonUpdatable
     private boolean recentlyCompleted;
 
     public MissionPlayerData() {

@@ -48,10 +48,6 @@ public final class ConditionHasResidence extends Condition {
                 test = clan.getCastleId() == id;
                 break;
             }
-            case FORTRESS: {
-                test = clan.getFortId() == id;
-                break;
-            }
             case CLANHALL: {
                 test = clan.getHideoutId() == id;
                 break;

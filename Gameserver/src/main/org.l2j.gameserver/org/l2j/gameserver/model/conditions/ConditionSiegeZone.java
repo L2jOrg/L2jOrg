@@ -18,11 +18,9 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -90,53 +88,15 @@ public final class ConditionSiegeZone extends Condition {
         return false;
     }
 
-    /**
-     * Check if ok.
-     *
-     * @param activeChar the active char
-     * @param fort       the fort
-     * @param value      the value
-     * @return true, if successful
-     */
-    public static boolean checkIfOk(Creature activeChar, Fort fort, int value) {
-        if (!isPlayer(activeChar)) {
-            return false;
-        }
-
-        final Player player = (Player) activeChar;
-
-        if (((fort == null) || (fort.getId() <= 0))) {
-            if ((value & COND_NOT_ZONE) != 0) {
-                return true;
-            }
-        } else if (!fort.getZone().isActive()) {
-            if ((value & COND_NOT_ZONE) != 0) {
-                return true;
-            }
-        } else if (((value & COND_FORT_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(fort.getId()) && (player.getSiegeState() == 1)) {
-            return true;
-        } else if (((value & COND_FORT_DEFEND) != 0) && player.isRegisteredOnThisSiegeField(fort.getId()) && (player.getSiegeState() == 2)) {
-            return true;
-        } else if (((value & COND_FORT_NEUTRAL) != 0) && (player.getSiegeState() == 0)) {
-            return true;
-        }
-
-        return false;
-    }
-
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         final Creature target = _self ? effector : effected;
         final Castle castle = CastleManager.getInstance().getCastle(target);
-        final Fort fort = FortDataManager.getInstance().getFort(target);
 
-        if ((castle == null) && (fort == null)) {
+        if (castle == null) {
             return (_value & COND_NOT_ZONE) != 0;
         }
-        if (castle != null) {
-            return checkIfOk(target, castle, _value);
-        }
-        return checkIfOk(target, fort, _value);
+        return checkIfOk(target, castle, _value);
     }
 
 }

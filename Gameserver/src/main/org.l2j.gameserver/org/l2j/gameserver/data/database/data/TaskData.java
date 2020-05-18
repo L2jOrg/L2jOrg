@@ -1,15 +1,15 @@
 package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.annotation.Transient;
 
 import java.util.Objects;
 
 @Table("global_tasks")
 public class TaskData {
 
-    @Transient
+    @NonUpdatable
     private int id;
     private String name;
     private String type;

@@ -464,7 +464,6 @@ open module org.l2j.scripts {
             handlers.admincommandhandlers.AdminExpSp,
             handlers.admincommandhandlers.AdminFence,
             handlers.admincommandhandlers.AdminFightCalculator,
-            handlers.admincommandhandlers.AdminFortSiege,
             handlers.admincommandhandlers.AdminGeodata,
             handlers.admincommandhandlers.AdminGm,
             handlers.admincommandhandlers.AdminGmChat,

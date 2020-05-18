@@ -5,7 +5,6 @@
         <icon initial="icon.skill_transform_etc"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="83"/>
-            <cast-range initial="-1"/>
             <reuse initial="75000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -27,7 +26,6 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="83"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -81,7 +79,6 @@
         <icon initial="icon.skill_transform_s_attack"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="83"/>
-            <cast-range initial="-1"/>
             <reuse initial="8000"/>
             <cool-time initial="660"/>
             <effect-point initial="-100"/>
@@ -123,7 +120,6 @@
                 <value level="8">83</value>
                 <value level="9">84</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <cool-time initial="733"/>
             <effect-point initial="-169">
@@ -155,7 +151,7 @@
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="100" affect-min="6" affect-random="12"/>
         <conditions>
             <weapon>
-                <type>TWO_HAND_SWORD DUAL_BLUNT</type>
+                <type>TWO_HAND_SWORD HAMMER STAFF</type>
             </weapon>
         </conditions>
         <effects>
@@ -189,7 +185,15 @@
             <cast-range initial="600"/>
             <reuse initial="60000"/>
             <cool-time initial="200"/>
-            <effect-point initial="-1"/>
+            <effect-point initial="-500">
+                <value level="2">-540</value>
+                <value level="3">-580</value>
+                <value level="4">-620</value>
+                <value level="5">-660</value>
+                <value level="6">-700</value>
+                <value level="7">-740</value>
+                <value level="8">-780</value>
+            </effect-point>
             <effect-range initial="1100"/>
             <hit-time initial="100"/>
         </attributes>
@@ -435,7 +439,6 @@
         <icon initial="icon.skilltransform2"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="56"/>
-            <cast-range initial="-1"/>
             <effect-point initial="10"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>
@@ -455,14 +458,12 @@
         <icon initial="icon.skill0247"/>
         <attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="30"/>
             <mana initial="30"/>
             <item initial="2132"/>
             <item-count initial="120"/>
@@ -477,7 +478,6 @@
         <icon initial="icon.skill0247"/>
         <attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-range initial="600"/>
             <hit-time initial="4000"/>
@@ -753,7 +753,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="7"/>
             <mana initial="35"/>
         </consume>
         <target type="TARGET"/>
@@ -829,7 +828,6 @@
         <icon initial="icon.skill0099"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="70"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="549"/>
             <effect-range initial="-1"/>
@@ -889,7 +887,6 @@
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="8"/>
             <mana initial="40"/>
         </consume>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12"/>
@@ -917,7 +914,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="14"/>
             <mana initial="70"/>
         </consume>
         <target type="TARGET"/>
@@ -1104,7 +1100,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="14"/>
             <mana initial="70"/>
         </consume>
         <target type="ENEMY_ONLY"/>
@@ -1123,7 +1118,6 @@
         <icon initial="icon.skill0110"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="438"/>
             <effect-range initial="-1"/>
@@ -1181,7 +1175,6 @@
             <element type="WIND" value="25"/>
         </attributes>
         <consume>
-            <mana-init initial="14"/>
             <mana initial="70"/>
         </consume>
         <target type="ENEMY"/>
@@ -1228,7 +1221,6 @@
             <element type="FIRE" value="25"/>
         </attributes>
         <consume>
-            <mana-init initial="14"/>
             <mana initial="70"/>
         </consume>
         <target type="ENEMY"/>
@@ -1257,14 +1249,12 @@
                 <value level="6">85</value>
                 <value level="7">86</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="14"/>
             <mana initial="70"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>

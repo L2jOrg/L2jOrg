@@ -4,7 +4,6 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.Creature;
@@ -15,6 +14,8 @@ import org.l2j.gameserver.model.entity.Siegable;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+
+import static java.util.Objects.nonNull;
 
 public class SiegeFlag extends Npc {
     private final Clan _clan;
@@ -29,9 +30,6 @@ public class SiegeFlag extends Npc {
         _clan = player.getClan();
         _canTalk = true;
         _siege = SiegeManager.getInstance().getSiege(player);
-        if (_siege == null) {
-            _siege = FortSiegeManager.getInstance().getSiege(player.getX(), player.getY(), player.getZ());
-        }
         if ((_clan == null) || (_siege == null)) {
             throw new NullPointerException(getClass().getSimpleName() + ": Initialization failed.");
         }
@@ -114,7 +112,7 @@ public class SiegeFlag extends Npc {
     public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
         super.reduceCurrentHp(damage, attacker, skill);
         if (canTalk()) {
-            if (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getFort() != null) && getFort().getSiege().isInProgress())) {
+            if (nonNull(getCastle()) && getCastle().getSiege().isInProgress()) {
                 if (_clan != null) {
                     // send warning to owners of headquarters that theirs base is under attack
                     _clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SIEGE_CAMP_IS_UNDER_ATTACK));

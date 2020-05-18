@@ -10,7 +10,6 @@ import org.l2j.gameserver.enums.DoorOpenType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -18,7 +17,6 @@ import org.l2j.gameserver.model.actor.stat.DoorStats;
 import org.l2j.gameserver.model.actor.status.DoorStatus;
 import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.instance.Item;
@@ -34,6 +32,7 @@ import java.util.concurrent.Future;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.falseIfNullOrElse;
 
 public final class Door extends Creature {
     boolean open;
@@ -194,7 +193,7 @@ public final class Door extends Creature {
     }
 
     public int getDamage() {
-        if ((getCastle() == null) && (getFort() == null)) {
+        if (getCastle() == null) {
             return 0;
         }
         final int dmg = 6 - (int) Math.ceil((getCurrentHp() / getMaxHp()) * 6);
@@ -211,17 +210,8 @@ public final class Door extends Creature {
         return CastleManager.getInstance().getCastle(this);
     }
 
-    public final Fort getFort() {
-        return FortDataManager.getInstance().getFort(this);
-    }
-
     public boolean isEnemy() {
-        if ((getCastle() != null) && (getCastle().getId() > 0) && getCastle().getZone().isActive() && getIsShowHp()) {
-            return true;
-        } else if ((getFort() != null) && (getFort().getId() > 0) && getFort().getZone().isActive() && getIsShowHp()) {
-            return true;
-        }
-        return false;
+        return (getCastle() != null) && (getCastle().getId() > 0) && getCastle().getZone().isActive() && getIsShowHp();
     }
 
     @Override
@@ -239,20 +229,14 @@ public final class Door extends Creature {
 
         // Attackable only during siege by everyone (not owner)
         final boolean isCastle = ((getCastle() != null) && (getCastle().getId() > 0) && getCastle().getZone().isActive());
-        final boolean isFort = ((getFort() != null) && (getFort().getId() > 0) && getFort().getZone().isActive());
 
-        if (isFort) {
-            final Clan clan = actingPlayer.getClan();
-            if ((clan != null) && (clan == getFort().getOwnerClan())) {
-                return false;
-            }
-        } else if (isCastle) {
+        if (isCastle) {
             final Clan clan = actingPlayer.getClan();
             if ((clan != null) && (clan.getId() == getCastle().getOwnerId())) {
                 return false;
             }
         }
-        return (isCastle || isFort);
+        return isCastle;
     }
 
     /**
@@ -290,7 +274,7 @@ public final class Door extends Creature {
     }
 
     private void sendUpdateToPlayer(Player player, StaticObject su, StaticObject targetableSu, DoorStatusUpdate dsu, OnEventTrigger oe) {
-        if (player.isGM() || (((getCastle() != null) && (getCastle().getId() > 0)) || ((getFort() != null) && (getFort().getId() > 0)))) {
+        if (player.isGM() ||  falseIfNullOrElse(getCastle(), c -> c.getId() > 0)) {
             player.sendPacket(targetableSu);
         } else {
             player.sendPacket(su);
@@ -440,10 +424,9 @@ public final class Door extends Creature {
             return false;
         }
 
-        final boolean isFort = ((getFort() != null) && (getFort().getId() > 0) && getFort().getSiege().isInProgress());
         final boolean isCastle = ((getCastle() != null) && (getCastle().getId() > 0) && getCastle().getSiege().isInProgress());
 
-        if (isFort || isCastle) {
+        if (isCastle) {
             broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));
         } else {
             openMe();

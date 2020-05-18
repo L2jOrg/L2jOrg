@@ -65,7 +65,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="566"/>
             <effect-range initial="-1"/>
@@ -95,7 +94,6 @@
             <hit-time initial="2500"/>
         </attributes>
         <consume>
-            <mana-init initial="55"/>
             <mana initial="272"/>
         </consume>
         <target type="TARGET" scope="PARTY" object="FRIEND" range="200"/>
@@ -167,7 +165,6 @@
         <icon initial="icon.blessed_feather_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="-2"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
 
             <element type="FIRE" value="20"/>
@@ -219,7 +216,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -230,7 +226,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -241,7 +236,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -252,7 +246,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -263,7 +256,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -274,7 +266,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -285,7 +276,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -296,7 +286,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -307,7 +296,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
@@ -375,7 +363,6 @@
         <icon initial="icon.skill7029"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -440,7 +427,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="4500"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -448,8 +434,6 @@
         </attributes>
         <consume>
             <mana initial="3"/>
-            <item initial="1458"/>
-            <item-count initial="8"/>
         </consume>
         <target/>
         <effects>
@@ -464,7 +448,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="4500"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -472,8 +455,6 @@
         </attributes>
         <consume>
             <mana initial="3"/>
-            <item initial="1458"/>
-            <item-count initial="8"/>
         </consume>
         <target/>
     </skill>
@@ -482,7 +463,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="4500"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -490,8 +470,6 @@
         </attributes>
         <consume>
             <mana initial="3"/>
-            <item initial="1458"/>
-            <item-count initial="8"/>
         </consume>
         <target/>
         <effects>
@@ -582,9 +560,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7042" name="Master's Blessing - Death Whisper" max-level="3" action="A2">
@@ -762,9 +740,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7048" name="Master's Blessing - Acumen" max-level="3" action="A2">
@@ -1047,9 +1025,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-8.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-4.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0"/>
             </stat-modify>
@@ -1173,7 +1151,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power initial="-10.0"/>
             </magic-cost>
         </effects>
@@ -1194,7 +1172,6 @@
             <hit-time initial="500"/>
         </attributes>
         <consume>
-            <mana-init initial="1"/>
             <mana initial="1"/>
         </consume>
         <target type="TARGET"/>
@@ -1234,7 +1211,7 @@
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0"/>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power initial="-5.0"/>
             </magic-cost>
         </effects>
@@ -1357,9 +1334,9 @@
             <resist-abnormal-by-category category="DEBUFF">
                 <power initial="10.0"/>
             </resist-abnormal-by-category>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="20.0"/>
             </vital-stat-modify>
@@ -1536,7 +1513,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="900"/>
@@ -1593,7 +1569,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="70"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -1608,7 +1583,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="75"/>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>
@@ -1685,7 +1659,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="38"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1699,7 +1672,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="38"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1714,7 +1686,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1732,7 +1703,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1773,7 +1743,6 @@
             <hit-time initial="500"/>
         </attributes>
         <consume>
-            <mana-init initial="1"/>
             <mana initial="1"/>
         </consume>
         <target type="TARGET"/>
@@ -1818,7 +1787,6 @@
             <hit-time initial="500"/>
         </attributes>
         <consume>
-            <mana-init initial="1"/>
             <mana initial="1"/>
         </consume>
         <target type="TARGET"/>
@@ -1863,7 +1831,6 @@
             <hit-time initial="500"/>
         </attributes>
         <consume>
-            <mana-init initial="1"/>
             <mana initial="1"/>
         </consume>
         <target type="TARGET"/>
@@ -1908,7 +1875,6 @@
             <hit-time initial="500"/>
         </attributes>
         <consume>
-            <mana-init initial="1"/>
             <mana initial="1"/>
         </consume>
         <target type="TARGET"/>
@@ -1932,9 +1898,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="35.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7092" name="Master's Blessing - Improve Shield Defense" max-level="3" action="A2">
@@ -1953,7 +1919,6 @@
             <hit-time initial="500"/>
         </attributes>
         <consume>
-            <mana-init initial="1"/>
             <mana initial="1"/>
         </consume>
         <target type="TARGET"/>
@@ -1998,7 +1963,6 @@
             <hit-time initial="500"/>
         </attributes>
         <consume>
-            <mana-init initial="1"/>
             <mana initial="1"/>
         </consume>
         <target type="TARGET"/>
@@ -2022,9 +1986,9 @@
             <speed>
                 <power initial="33.0"/>
             </speed>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7094" name="Master's Blessing - Sharpen Edge" max-level="3" action="A2">
@@ -2056,10 +2020,10 @@
                 <power initial="5.0"/>
                 <weapon-type>SWORD DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER</weapon-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
                 <weapon-type>SWORD DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="7095" name="Master's Blessing - Encase Armor" max-level="3" action="A2">
@@ -2125,7 +2089,6 @@
         <!-- none -->
         <icon initial="icon.skill01702"/>
         <attributes magic-critical-rate="-5.0" triggered="true" auto-use="ACTIVE">
-            <cast-range initial="-1"/>
             <effect-point initial="709"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2147,7 +2110,6 @@
         <icon initial="icon.skill1401"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-700"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>

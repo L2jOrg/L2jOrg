@@ -318,7 +318,6 @@
         <!-- Increases Speed. -->
         <icon initial="icon.skill1204"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="2"/>
             <effect-range initial="-1"/>
@@ -517,7 +516,6 @@
         <!-- You are in the Land of Chaos. You can feel Krogel's power around you. -->
         <icon initial="icon.skill0046"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -664,7 +662,6 @@
         <!-- Hides for a while. -->
         <icon initial="icon.skill10784"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="2"/>
             <effect-range initial="-1"/>
@@ -809,7 +806,6 @@
         <!-- Provokes target into attacking you by forcefully changing their target. -->
         <icon initial="icon.skill10027"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -858,7 +854,6 @@
         <!-- Powerful attack on the whole party and poison damage. -->
         <icon initial="icon.skill4035"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="7000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -925,7 +920,6 @@
         <!-- AoE P. Atk. On nearby enemies. -->
         <icon initial="icon.skill0036"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -941,7 +935,6 @@
         <!-- Disarms nearby enemies. -->
         <icon initial="icon.skill0485"/>
         <attributes property="PHYSIC" trait="DISARM">
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -957,7 +950,6 @@
         <!-- Aerial Yoke. -->
         <icon initial="icon.skill1042"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -989,7 +981,6 @@
         <!-- For 30 sec., reflects 50%% of received damage. -->
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="150000"/>
             <cool-time initial="500"/>
             <effect-point initial="379"/>
@@ -1023,7 +1014,6 @@
         <!-- Atk. Spd. +15%%. -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1178,7 +1168,6 @@
         <!-- Powerful attack on nearby enemies. -->
         <icon initial="icon.skill0922"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="200"/>
             <effect-point initial="-100"/>
@@ -1261,7 +1250,6 @@
         <!-- Afflicted with Fear and moving against own will. -->
         <icon initial="icon.skill4108"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-867"/>
             <effect-range initial="-1"/>
@@ -1274,7 +1262,6 @@
         <!-- Reflects a part of received damage. -->
         <icon initial="icon.skill4095"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <cool-time initial="1500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1300,7 +1287,6 @@
         <!-- Stomping on the ground when enraged. -->
         <icon initial="icon.skill0127"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-867"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1312,7 +1298,6 @@
         <!-- P. Atk. On nearby enemies. -->
         <icon initial="icon.skill0036"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-574"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1323,7 +1308,6 @@
         <!-- Lindvior takes off. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4200"/>
             <activate-rate initial="-1"/>
@@ -1334,7 +1318,6 @@
         <!-- Lindvior lands. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="5000"/>
             <activate-rate initial="-1"/>

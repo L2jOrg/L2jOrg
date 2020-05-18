@@ -165,9 +165,6 @@ public final class TeleportHolder {
             } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getReputation() < 0)) {
                 player.sendMessage("Go away, you're not welcome here.");
                 return;
-            } else if (player.isCombatFlagEquipped()) {
-                player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
-                return;
             }
         }
 
