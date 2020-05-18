@@ -177,7 +177,7 @@
         </attributes>
         <target/>
         <effects>
-            <trigger-skill-by-attack skill="45165">
+            <trigger-skill-by-attack skill="45165" target="ENEMY">
                 <power initial="1">
                     <value level="2">2</value>
                     <value level="3">3</value>
