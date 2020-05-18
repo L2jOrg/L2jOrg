@@ -30,6 +30,5 @@ public class Init {
         ServiceLoader.load(SkillConditionFactory.class, loader).forEach(SkillConditionHandler.getInstance()::registerFactory);
         ServiceLoader.load(SkillEffectFactory.class, loader).forEach(EffectHandler.getInstance()::registerFactory);
         ServiceLoader.load(ConditionFactory.class, loader).forEach(ConditionHandler.getInstance()::registerFactory);
-
     }
 }
