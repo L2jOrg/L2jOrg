@@ -268,7 +268,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1800"/>
@@ -308,7 +307,6 @@
         </icon>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -332,18 +330,18 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="83.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="4.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="33.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" start-level="2" stat="MAGIC_ATTACK">
                 <power initial="50.0"/>
             </stat-modify>
@@ -777,7 +775,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -802,7 +799,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1232,11 +1228,11 @@
                     <value level="2">-8.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-2.0">
                     <value level="2">-4.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="5.0">
                     <value level="2">8.0</value>
@@ -1471,12 +1467,12 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0">
                     <value level="2">25.0</value>
                     <value level="3">30.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="4360" name="Death Whisper" max-level="3" action="A2" type="MAGIC">
@@ -1736,7 +1732,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1756,7 +1751,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1779,7 +1773,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1802,7 +1795,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1825,7 +1817,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1848,7 +1839,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1871,7 +1861,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1894,7 +1883,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -1917,7 +1905,6 @@
         <icon initial="icon.skill11756"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="-1"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -2023,7 +2010,6 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="8000">
                 <value level="4">5000</value>
                 <value level="8">8000</value>
@@ -2171,7 +2157,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
 
@@ -2509,11 +2494,11 @@
                     <value level="2">-8.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="-2.0">
                     <value level="2">-4.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="5.0">
                     <value level="2">8.0</value>

@@ -272,7 +272,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -283,7 +282,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -294,7 +292,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -305,7 +302,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -316,7 +312,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -327,7 +322,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -338,7 +332,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -349,7 +342,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -360,7 +352,6 @@
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -371,7 +362,6 @@
         <!-- Dismiss a summoned Agathion. -->
         <icon initial="icon.etc_unsummon_aga_agit_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -444,7 +434,6 @@
             <value level="2">icon.sayhas_talisman_pvp_Lv2</value>
         </icon>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -571,7 +560,6 @@
         <icon initial="icon.elemental_bless_scrl_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -813,20 +801,19 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <effect name="ManaHeal">
                 <power initial="75.0">
                     <value level="2">150.0</value>
                     <value level="3">225.0</value>
                     <value level="4">300.0</value>
-                    <value level="5">600.0</value>                   
+                    <value level="5">600.0</value>
                 </power>
             </effect>
         </effects>
@@ -841,20 +828,19 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <effect name="Heal">
                 <power initial="100.0">
                     <value level="2">200.0</value>
                     <value level="3">300.0</value>
                     <value level="4">400.0</value>
-                    <value level="5">900.0</value>                   
+                    <value level="5">900.0</value>
                 </power>
             </effect>
         </effects>
@@ -865,13 +851,13 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<effects>		
-			<vital-stat-modify mode="PER" stat="MAX_HP">
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="3"/>
             </vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
+            <vital-stat-modify mode="PER" stat="MAX_MP">
                 <power initial="3"/>
-            </vital-stat-modify>           
+            </vital-stat-modify>
         </effects>
     </skill>
     <skill id="54039" name="Sayha's Cloak +1" max-level="10">
@@ -891,8 +877,8 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<effects>						
-			<vital-stat-modify mode="PER" stat="MAX_HP">
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="4">
                     <value level="2">5</value>
                     <value level="3">6</value>
@@ -905,7 +891,7 @@
                     <value level="10">15</value>
                 </power>
             </vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
+            <vital-stat-modify mode="PER" stat="MAX_MP">
                 <power initial="4">
                     <value level="2">5</value>
                     <value level="3">6</value>
@@ -931,7 +917,7 @@
                     <value level="10">30</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power>
                     <value level="4">2</value>
                     <value level="5">4</value>
@@ -943,46 +929,46 @@
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-                <power>                    
+                <power>
                     <value level="8">2</value>
                     <value level="9">4</value>
                     <value level="10">6</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
-                <power>                    
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power>
                     <value level="7">5</value>
                     <value level="8">7</value>
                     <value level="9">10</value>
                     <value level="10">15</value>
                 </power>
-            </stat-modify>          
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
-               <power>                    
+                <power>
                     <value level="7">5</value>
                     <value level="8">7</value>
                     <value level="9">10</value>
                     <value level="10">15</value>
                 </power>
-            </stat-modify>	
-			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
+            </stat-modify>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
                 <power>
                     <value level="9">5</value>
                     <value level="10">10</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE">
                 <power>
                     <value level="9">5</value>
                     <value level="10">10</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE_SKILL">
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE_SKILL">
                 <power>
                     <value level="9">5</value>
                     <value level="10">10</value>
                 </power>
-            </stat-modify>			
+            </stat-modify>
         </effects>
     </skill>
     <skill id="54040" name="Sayha's Blink" max-level="2" debuff="true" action="A1">
@@ -992,7 +978,6 @@
          -->
         <icon initial="icon.sayha2017_blink"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="120000">
                 <value level="2">60000</value>
             </reuse>
@@ -1024,7 +1009,6 @@
         <!-- For 2 minutes, nearby enemies' P. Skill/M. Skill Cooldown +100%. -->
         <icon initial="icon.accessory_necklace_of_frintessa_i05"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="120000"/>
             <effect-point initial="-666"/>
             <effect-range initial="-1"/>
@@ -1037,14 +1021,12 @@
         <!-- For 5 seconds, P. Def. +1000, M. Def. +1000, Movement Speed +50. -->
         <icon initial="icon.skill30008"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <hit-time initial="800"/>
-            <activate-rate initial="-1"/>
         </attributes>
-        <target/>		
-		<abnormal type="AVOID_UP_SPECIAL">
+        <target/>
+        <abnormal type="AVOID_UP_SPECIAL">
             <level initial="2"/>
             <time initial="5"/>
             <chance initial="-1"/>
@@ -1067,35 +1049,35 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-                <power initial="15"/>                 
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="15"/>
             </vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-                <power initial="15"/>                
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="15"/>
             </vital-stat-modify>
             <stat-modify mode="PER" stat="EXPSP_RATE">
                 <power initial="30"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="11"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="6"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
                 <power initial="15"/>
-            </stat-modify>          
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
-               <power initial="15"/>
+                <power initial="15"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
                 <power initial="10"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE">
                 <power initial="10"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE_SKILL">
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
         </effects>
@@ -1117,8 +1099,8 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<effects>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+        <effects>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
                 <power>
                     <value level="6">1</value>
                     <value level="7">2</value>
@@ -1127,7 +1109,7 @@
                     <value level="10">5</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
                 <power>
                     <value level="6">1</value>
                     <value level="7">2</value>
@@ -1136,7 +1118,7 @@
                     <value level="10">5</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
                 <power>
                     <value level="6">1</value>
                     <value level="7">2</value>
@@ -1145,7 +1127,7 @@
                     <value level="10">5</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
                 <power>
                     <value level="6">2</value>
                     <value level="7">3</value>
@@ -1154,7 +1136,7 @@
                     <value level="10">10</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
                 <power>
                     <value level="6">2</value>
                     <value level="7">3</value>
@@ -1163,7 +1145,7 @@
                     <value level="10">10</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
                 <power>
                     <value level="6">2</value>
                     <value level="7">3</value>
@@ -1172,7 +1154,7 @@
                     <value level="10">10</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
                 <power initial="10">
                     <value level="5">11</value>
                     <value level="8">12</value>
@@ -1180,7 +1162,7 @@
                     <value level="10">15</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE">
                 <power initial="10">
                     <value level="5">11</value>
                     <value level="8">12</value>
@@ -1188,7 +1170,7 @@
                     <value level="10">15</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE_SKILL">
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE_SKILL">
                 <power initial="10">
                     <value level="5">11</value>
                     <value level="8">12</value>
@@ -1196,7 +1178,7 @@
                     <value level="10">15</value>
                 </power>
             </stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
+            <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="15">
                     <value level="2">15</value>
                     <value level="3">17</value>
@@ -1209,7 +1191,7 @@
                     <value level="10">25</value>
                 </power>
             </vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
+            <vital-stat-modify mode="PER" stat="MAX_MP">
                 <power initial="15">
                     <value level="2">15</value>
                     <value level="3">17</value>
@@ -1225,7 +1207,7 @@
             <stat-modify mode="PER" stat="EXPSP_RATE">
                 <power initial="30"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="12">
                     <value level="2">13</value>
                     <value level="3">14</value>
@@ -1251,7 +1233,7 @@
                     <value level="10">25</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
                 <power initial="15">
                     <value level="2">15</value>
                     <value level="3">15</value>
@@ -1263,9 +1245,9 @@
                     <value level="9">18</value>
                     <value level="10">20</value>
                 </power>
-            </stat-modify>          
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
-               <power initial="16">
+                <power initial="16">
                     <value level="2">16</value>
                     <value level="3">17</value>
                     <value level="4">18</value>
@@ -1276,7 +1258,7 @@
                     <value level="9">21</value>
                     <value level="10">25</value>
                 </power>
-            </stat-modify>			
+            </stat-modify>
         </effects>
     </skill>
     <skill id="54046" name="Aden Talisman">
@@ -1286,7 +1268,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="54047" name="Aden Talisman"  max-level="10">
+    <skill id="54047" name="Aden Talisman" max-level="10">
         <!--
             level 1: A talisman for Aden warriors. P. Def. +5, M. Def. +5, Atk. Spd. +10, Casting Spd. +10, Max HP +100, Max MP +30
             level 2: A talisman for Aden warriors. P. Def. +10, M. Def. +10, Atk. Spd. +12, Casting Spd. +12, Max HP +120, Max MP +50
@@ -1399,7 +1381,6 @@
         <!-- Aden blesses you to fully restore Sayha's Grace. -->
         <icon initial="icon.skill19222"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="86400000">
                 <value level="2">82800000</value>
                 <value level="3">79200000</value>
@@ -1421,7 +1402,6 @@
         <!-- none -->
         <icon initial="icon.talisman_of_aden_fire"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1431,7 +1411,6 @@
         <!-- A magic scroll that teleports you to High Priest Orven in the Town of Aden. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1441,7 +1420,6 @@
         <!-- Magic Lamp recharge speed +20%% -->
         <icon initial="icon.etc_recall_potion2"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1452,7 +1430,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="200"/>
             <effect-range initial="-1"/>
@@ -1465,7 +1442,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1478,7 +1454,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1491,7 +1466,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1504,7 +1478,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1517,7 +1490,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1530,7 +1502,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1543,7 +1514,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1556,7 +1526,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1569,7 +1538,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1582,7 +1550,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1595,7 +1562,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1608,7 +1574,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1621,7 +1586,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1634,17 +1598,15 @@
         <!-- For 5 minutes, P. Atk./M. Atk. +150, P. Def./M. Def./Atk. Spd./Casting Spd. +100, Movement Speed +10, HP Recovery Bonus/MP Recovery Bonus +30%%. Changes appearance to Rudolph Outfit. The effect doesn't disappear upon death or restart. -->
         <icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="54067" name="Sayha's Storm Lv. 3 - 1-hour" action="A1">
-        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 1 hour. Cooldown 1 minute. -->
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 1 hour. Cooldown 1 minute.\nDeath protection. You can delete it yourself. -->
         <icon initial="icon.bm_sayha_storm"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1655,7 +1617,6 @@
         <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +300%% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
         <icon initial="icon.ev_magic_flame_game_wind2"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1666,7 +1627,6 @@
         <!-- Magic Lamp recharge speed +100%% -->
         <icon initial="icon.bm_soul_of_shilen"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1676,16 +1636,11 @@
     <skill id="54070" name="Sayha's Buff Scroll - Event" action="A2">
         <!-- A mysterious scroll that triggers various buffs -->
         <icon initial="icon.etc_ssq_i00"/>
-        <attributes magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
         </attributes>
-        <consume>
-            <item initial="91781"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <abnormal type="MULTI_BUFF">
             <level initial="1"/>
@@ -1751,15 +1706,10 @@
         <icon initial="icon.ev_charge_scroll"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
-        <consume>
-            <item initial="91780"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <abnormal type="MULTI_BUFF">
             <level initial="1"/>
@@ -1773,9 +1723,9 @@
             <stat-modify stat="MAGIC_ATTACK">
                 <power initial="350.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="30.0"/>
             </stat-modify>
@@ -1806,7 +1756,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1819,7 +1768,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1832,7 +1780,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1845,7 +1792,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1858,7 +1804,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1871,7 +1816,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1884,7 +1828,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1897,7 +1840,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1910,7 +1852,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1945,7 +1886,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1958,7 +1898,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1971,7 +1910,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1984,7 +1922,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1997,7 +1934,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -2010,7 +1946,6 @@
         <!-- none -->
         <icon initial="icon.special_cube_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2021,7 +1956,6 @@
         <!-- For 1 hour, Atk. Spd +100, Casting Spd. +100, Speed +20, XP/SP Gain +10%%. Does not disappear at death or when restarting. -->
         <icon initial="icon.accessory_pig_cap_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -2033,7 +1967,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -2047,7 +1980,6 @@
          -->
         <icon initial="icon.skill11540"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2058,7 +1990,6 @@
         <!-- none -->
         <icon initial="icon.special_cube_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2069,7 +2000,6 @@
         <!-- none -->
         <icon initial="icon.special_cube_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

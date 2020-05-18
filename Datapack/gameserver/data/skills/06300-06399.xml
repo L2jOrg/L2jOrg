@@ -5,7 +5,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0" suicide="true">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-574"/>
             <effect-range initial="-1"/>
             <hit-time initial="5000"/>
@@ -17,7 +16,7 @@
             <mana initial="123"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="350"/>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -36,12 +35,10 @@
         <icon initial="icon.skill6301"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="17"/>
             <mana initial="83"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="350"/>
@@ -52,7 +49,7 @@
             <time initial="10"/>
             <chance initial="-1"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <effect name="ManaHealOverTime" ticks="5">
@@ -67,7 +64,6 @@
         <icon initial="icon.skill6302"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="84"/>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -77,7 +73,7 @@
             <time initial="20"/>
             <chance initial="-1"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
         <effects>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
@@ -145,7 +141,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="83"/>
-            <cast-range initial="-1"/>
             <reuse initial="4000"/>
             <cool-time initial="500"/>
             <effect-point initial="-574"/>
@@ -210,7 +205,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="8"/>
             <mana initial="38"/>
         </consume>
         <target type="ENEMY_ONLY" range="180"/>
@@ -236,7 +230,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="8"/>
             <mana initial="38"/>
         </consume>
         <target type="ENEMY_ONLY" range="270"/>
@@ -262,7 +255,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY" range="180"/>
@@ -287,7 +279,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="15"/>
             <mana initial="74"/>
         </consume>
         <target type="ENEMY_ONLY"/>
@@ -352,7 +343,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="83"/>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -360,7 +350,6 @@
             <hit-time initial="5000"/>
         </attributes>
         <consume>
-            <mana-init initial="15"/>
             <mana initial="74"/>
         </consume>
         <target scope="POINT_BLANK" object="FRIEND" range="200"/>
@@ -391,7 +380,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RING_RANGE" object="NOT_FRIEND" range="270">
@@ -465,7 +453,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="180"/>
@@ -480,14 +467,12 @@
         <icon initial="icon.skill1040"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="84"/>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target scope="RANGE" object="FRIEND" range="200"/>
@@ -507,14 +492,12 @@
         <icon initial="icon.skill6319"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="84"/>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target scope="RANGE" object="FRIEND" range="200"/>
@@ -534,14 +517,12 @@
         <icon initial="icon.skill6320"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="84"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
@@ -575,7 +556,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="150"/>
@@ -601,7 +581,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="150"/>
@@ -738,7 +717,6 @@
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="270"/>
@@ -798,7 +776,6 @@
         <icon initial="icon.skill1206"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="84"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -820,7 +797,6 @@
         <icon initial="icon.skill1206"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="84"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1052,7 +1028,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="-574"/>
             <effect-range initial="-1"/>
@@ -1086,7 +1061,6 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="TARGET" scope="PARTY" range="1000"/>
@@ -1125,7 +1099,6 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="TARGET" scope="PARTY" range="1000"/>
@@ -1169,7 +1142,6 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="TARGET" scope="PARTY" range="1000"/>
@@ -1184,11 +1156,11 @@
                     <value level="2">10.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="4.0">
                     <value level="2">8.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="2.0">
                     <value level="2">4.0</value>
@@ -1211,7 +1183,6 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="TARGET"/>
@@ -1239,7 +1210,6 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="TARGET"/>
@@ -1267,7 +1237,6 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="22"/>
             <mana initial="110"/>
         </consume>
         <target type="TARGET"/>
@@ -1300,7 +1269,7 @@
             <time initial="30"/>
             <chance initial="-1"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
     </skill>
     <skill id="6371" name="Invincibility" action="A2">
@@ -1308,7 +1277,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1337,7 +1305,6 @@
         <icon initial="icon.skill0917"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1362,7 +1329,7 @@
             <time initial="60"/>
             <chance initial="-1"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
     </skill>
     <skill id="6373" name="Thunderbolt" debuff="true" action="A2" type="MAGIC">
@@ -1385,7 +1352,7 @@
             <time initial="30"/>
             <chance initial="-1"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
     </skill>
     <skill id="6374" name="Notification - Thunderbolts" debuff="true" action="A1" type="MAGIC">
@@ -1393,7 +1360,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1401,7 +1367,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
     </skill>
     <skill id="6375" name="Notification - Thunderbolts" debuff="true" action="A1" type="MAGIC">
@@ -1409,7 +1375,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1417,7 +1382,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
     </skill>
     <skill id="6376" name="Sonic Strike" max-level="9" debuff="true" action="A2" type="MAGIC">
@@ -1457,7 +1422,7 @@
             <time initial="300"/>
             <chance initial="-1"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
     </skill>
     <skill id="6377" name="Speed Up" max-level="10" action="A2" type="MAGIC">
@@ -1476,7 +1441,6 @@
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1501,7 +1465,7 @@
             <time initial="600"/>
             <chance initial="-1"/>
         </abnormal>
-        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
         </resist-abnormals>
     </skill>
     <skill id="6378" name="Earth Shift" debuff="true" action="A2" type="MAGIC">
@@ -1509,7 +1473,6 @@
         <icon initial="icon.skill0347"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -1553,7 +1516,6 @@
         <icon initial="icon.skill1336"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="2">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="-666"/>
             <effect-range initial="-1"/>
@@ -1607,7 +1569,6 @@
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-point initial="-574"/>
@@ -1743,7 +1704,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-point initial="-1000"/>

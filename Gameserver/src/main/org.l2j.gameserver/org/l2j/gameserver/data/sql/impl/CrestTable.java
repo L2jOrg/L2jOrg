@@ -55,7 +55,7 @@ public final class CrestTable {
 
     private synchronized int getNextId() {
         var id = nextId.get();
-        var next = crestIds.nextClearBit(id);
+        var next = crestIds.nextClearBit(id+1);
         if(next < 0) {
             next = crestIds.nextClearBit(1);
         }

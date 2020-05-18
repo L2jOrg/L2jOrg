@@ -5,8 +5,10 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.finalizers.*;
 import org.l2j.gameserver.util.MathUtil;
 
+import java.util.EnumSet;
 import java.util.Optional;
 import java.util.function.BiFunction;
+import java.util.stream.Stream;
 
 /**
  * Enum of basic stats.
@@ -85,8 +87,8 @@ public enum Stat {
     CRITICAL_DAMAGE_SKILL_ADD,
     MAGIC_CRITICAL_DAMAGE_ADD,
     SHIELD_DEFENCE_RATE(new ShieldDefenceRateFinalizer()),
-    CRITICAL_RATE(new PCriticalRateFinalizer(), MathUtil::add, MathUtil::add, null, 1d),
-    CRITICAL_RATE_SKILL(Stat::defaultValue, MathUtil::add, MathUtil::add, null, 1d),
+    CRITICAL_RATE(new PCriticalRateFinalizer()),
+    CRITICAL_RATE_SKILL,
     MAGIC_CRITICAL_RATE(new MCritRateFinalizer()),
     BLOW_RATE,
     DEFENCE_CRITICAL_RATE,
@@ -265,29 +267,31 @@ public enum Stat {
     ELEMENTAL_SPIRIT_CRITICAL_RATE,
     ELEMENTAL_SPIRIT_CRITICAL_DAMAGE;
 
+    private static final EnumSet<Stat> CACHE = EnumSet.allOf(Stat.class);
+
     private final IStatsFunction _valueFinalizer;
     private final BiFunction<Double, Double, Double> _addFunction;
     private final BiFunction<Double, Double, Double> _mulFunction;
-    private final Double _resetAddValue;
-    private final Double _resetMulValue;
     private boolean hasDefaultFinalizer ;
 
     Stat() {
-        this(Stat::defaultValue, MathUtil::add, MathUtil::mul, null, null);
+        this(Stat::defaultValue, MathUtil::add, MathUtil::add);
         hasDefaultFinalizer = true;
     }
 
     Stat(IStatsFunction valueFinalizer) {
-        this(valueFinalizer, MathUtil::add, MathUtil::mul, null, null);
+        this(valueFinalizer, MathUtil::add, MathUtil::add);
 
     }
 
-    Stat(IStatsFunction valueFinalizer, BiFunction<Double, Double, Double> addFunction, BiFunction<Double, Double, Double> mulFunction, Double resetAddValue, Double resetMulValue) {
+    Stat(IStatsFunction valueFinalizer, BiFunction<Double, Double, Double> addFunction, BiFunction<Double, Double, Double> mulFunction) {
         _valueFinalizer = valueFinalizer;
         _addFunction = addFunction;
         _mulFunction = mulFunction;
-        _resetAddValue = resetAddValue;
-        _resetMulValue = resetMulValue;
+    }
+
+    public static Stream<Stat> stream() {
+        return CACHE.stream();
     }
 
     public static double weaponBaseValue(Creature creature, Stat stat) {
@@ -310,7 +314,6 @@ public enum Stat {
         try {
             return _valueFinalizer.calc(creature, baseValue, this);
         } catch (Exception e) {
-            // LOGGER.warn("Exception during finalization for : " + creature + " stat: " + toString() + " : ", e);
             return defaultValue(creature, baseValue, this);
         }
     }
@@ -321,14 +324,6 @@ public enum Stat {
 
     public double functionMul(double oldValue, double value) {
         return _mulFunction.apply(oldValue, value);
-    }
-
-    public Double getResetAddValue() {
-        return _resetAddValue;
-    }
-
-    public Double getResetMulValue() {
-        return _resetMulValue;
     }
 
     public boolean hasDefaultFinalizer() {

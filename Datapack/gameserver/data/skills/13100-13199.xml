@@ -51,9 +51,9 @@
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
                 <power initial="10.0"/>
             </stat-modify>

@@ -53,7 +53,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10"/>
             </stat-modify>
-            <speed mode="DIFF">
+            <speed>
                 <power initial="10"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
@@ -96,7 +96,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15"/>
             </stat-modify>
-            <speed mode="DIFF">
+            <speed>
                 <power initial="20"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
@@ -117,7 +117,6 @@
     <skill id="59604" name="Shadow Master - Decoy" max-level="2" action="A2">
         <icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="100000">
                 <value level="2">60000</value>
             </reuse>
@@ -133,7 +132,6 @@
          -->
         <icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -142,7 +140,6 @@
     <skill id="59606" name="Shadow Master - Decoy Provocation" action="A2">
         <icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -182,7 +179,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10"/>
             </stat-modify>
-            <speed mode="DIFF">
+            <speed>
                 <power initial="10"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
@@ -239,7 +236,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15"/>
             </stat-modify>
-            <speed mode="DIFF">
+            <speed>
                 <power initial="20"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
@@ -275,7 +272,6 @@
         <!-- Recharging energy of the Navy Admiral. Attack/Defense buffs are not activated anymore. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="100000">
                 <value level="2">60000</value>
             </reuse>
@@ -288,7 +284,6 @@
         <!-- Recharging energy of the Navy Admiral. Attack/Defense buffs are not activated anymore. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="100000">
                 <value level="2">60000</value>
             </reuse>
@@ -383,7 +378,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10"/>
             </stat-modify>
-            <speed mode="DIFF">
+            <speed>
                 <power initial="10"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
@@ -426,7 +421,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15"/>
             </stat-modify>
-            <speed mode="DIFF">
+            <speed>
                 <power initial="20"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
@@ -501,7 +496,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15"/>
             </stat-modify>
-            <speed mode="DIFF">
+            <speed>
                 <power initial="20"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
@@ -523,7 +518,6 @@
         <!-- Borrows the power of the Devil and all damage is set to 1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="90000"/>
             <effect-point initial="20"/>
             <effect-range initial="-1"/>
@@ -535,7 +529,6 @@
         <!-- Inflicts 1000 real damage to all targets that attack you. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -544,7 +537,6 @@
     <skill id="59620" name="Devil - Inferno" action="A2">
         <icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -555,7 +547,6 @@
         <!-- none -->
         <icon initial="icon_bm_gold_lure_special_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -568,7 +559,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -581,7 +571,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -595,7 +584,6 @@
         <icon initial="icon.ev_charge_scroll"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -617,9 +605,9 @@
             <stat-modify stat="MAGIC_ATTACK">
                 <power initial="150.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="30.0"/>
             </stat-modify>
@@ -678,7 +666,6 @@
          -->
         <icon initial="icon.skill11876"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="180000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -694,7 +681,6 @@
         <!-- Opens the dimensional curtain to block enemy attack 10 times for 15 seconds. -->
         <icon initial="icon.skill11621"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -710,7 +696,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -723,7 +708,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -736,7 +720,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -749,7 +732,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -762,7 +744,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -775,7 +756,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -788,7 +768,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -801,7 +780,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -814,7 +792,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -827,7 +804,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -840,7 +816,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -853,7 +828,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -866,7 +840,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -879,7 +852,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -892,7 +864,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -905,7 +876,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -918,7 +888,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -931,7 +900,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -944,7 +912,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -957,7 +924,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -970,7 +936,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -983,7 +948,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -996,7 +960,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1009,7 +972,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1022,7 +984,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1035,7 +996,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1048,7 +1008,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1061,7 +1020,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1074,7 +1032,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1087,7 +1044,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1100,7 +1056,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1113,7 +1068,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1126,7 +1080,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1139,7 +1092,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1152,7 +1104,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1165,7 +1116,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1178,7 +1128,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1191,7 +1140,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1204,7 +1152,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1217,7 +1164,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1230,7 +1176,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1243,7 +1188,6 @@
         <!-- none -->
         <icon initial="icon.bm_pendant_pve_box"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1256,7 +1200,6 @@
         <!-- XP +20,000. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1267,7 +1210,6 @@
         <!-- XP +4,000,000. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1278,7 +1220,6 @@
         <!-- XP +100,000,000. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1289,7 +1230,6 @@
         <!-- XP +200,000,000. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1300,7 +1240,6 @@
         <!-- XP +250,000,000. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1311,7 +1250,6 @@
         <!-- XP +400,000,000. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1328,14 +1266,13 @@
     <skill id="59687" name="Storm's Energy" action="A1">
         <!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
         <icon initial="icon.power_of_storm"/>
-        <attributes property="PHYSIC" stay-after-death="true">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<abnormal> <!-- EXP_SP_I -->
+        <abnormal>
             <level initial="2"/>
             <time initial="7200"/>
             <chance initial="-1"/>

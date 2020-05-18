@@ -4,7 +4,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -90,7 +89,6 @@
             <value level="3">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
         </icon>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -151,7 +149,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>

@@ -40,13 +40,13 @@ public final class LoginFail extends AuthServerPacket {
 		// 9 — Access failed. Please try again later. .
 		// 10 — Access failed. Please try again later. .
 		// 11 — Access failed. Please try again later. .
-		REASON_MIN_AGE(12), //Lineage II game services may be used by individuals 15 years of age or older ...
+		REASON_MIN_AGE(12), // game services may be used by individuals 15 years of age or older ...
 		// 13 — Access failed. Please try again later. .
 		// 14 — Access failed. Please try again later. .
 		// 15 — Due to high server traffic, your login attempt has failed.  Please try again soon.
 		REASON_SERVER_MAINTENANCE(16), //Currently undergoing game server maintenance. Please log in again later
 		REASON_CHANGE_TEMP_PASS(17), //Please login after changing your temporary password.
-		REASON_USAGE_TEMP_EXPIRED(18), //Your usage term has expired. PlayNC website ...
+		REASON_USAGE_TEMP_EXPIRED(18), //Your usage term has expired. website ...
 		REASON_TIME_LEFT_EXPIRED(19), //There is no time left on this account.
 		REASON_SYS_ERR(20), //System Error.
 		REASON_ACCESS_FAILED(21), //Access Failed.

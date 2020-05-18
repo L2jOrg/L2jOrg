@@ -400,19 +400,19 @@
 	</item>
 
 	<item id="70860" name="Name Change Ticket" type="NONE" icon="icon.etc_exchange_ticket_i01">
-	<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com. -->
+	<!-- Put this item on the character that will receive the service, and send a support ticket on support. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70861" name="Gender Change Ticket" type="NONE" icon="icon.etc_exchange_ticket_i02">
-	<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com. -->
+	<!-- Put this item on the character that will receive the service, and send a support ticket on support. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70862" name="Clan Name Change Ticket" type="NONE" icon="icon.etc_exchange_ticket_i01">
-	<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com. Clan leaders only! -->
+	<!-- Put this item on the character that will receive the service, and send a support ticket on support. Clan leaders only! -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="CAPSULE"/>
 	</item>

@@ -657,7 +657,6 @@
         <icon initial="icon.etc_hot_spring_sulfur_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -673,7 +672,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -761,7 +759,6 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="77"/>
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>

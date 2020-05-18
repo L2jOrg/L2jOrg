@@ -4,7 +4,6 @@
         <!-- Christmas Party Herb. For 2 minutes XP and SP gain received through hunting +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10. Appearance changes to that of Santa Claus. Disappears after restart. -->
         <icon initial="BranchSys.icon.br_xmas_present_i00"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

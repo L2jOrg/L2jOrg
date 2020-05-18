@@ -61,7 +61,6 @@
         <icon initial="icon.skilltransform1"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="2700"/>
             <activate-rate initial="-1"/>
@@ -73,7 +72,6 @@
         <icon initial="icon.skilltransform2"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4800"/>
             <activate-rate initial="-1"/>
@@ -85,7 +83,6 @@
         <icon initial="icon.skilltransform3"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3200"/>
             <activate-rate initial="-1"/>
@@ -123,7 +120,6 @@
          -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -148,7 +144,6 @@
          -->
         <icon initial="icon.skill1085"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -164,7 +159,6 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -179,7 +173,6 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -194,7 +187,6 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -208,7 +200,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -550,7 +541,6 @@
         <!-- The GM is always by your side. Makes you invulnerable to Raid Debuffs for 5 min. -->
         <icon initial="icon.skill5662"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -562,7 +552,6 @@
         <!-- Defensive Shield cast by the Raid boss unto itself. Blocks additional damage for 1 h. -->
         <icon initial="icon.skill0110"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="100"/>
@@ -574,7 +563,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -584,7 +572,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -594,7 +581,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -604,7 +590,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -614,7 +599,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -624,7 +608,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -634,7 +617,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -644,7 +626,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -654,7 +635,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -664,7 +644,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -674,7 +653,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -684,7 +662,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -694,7 +671,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -704,7 +680,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -714,7 +689,6 @@
         <!-- Enchants Hair Accessory. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>

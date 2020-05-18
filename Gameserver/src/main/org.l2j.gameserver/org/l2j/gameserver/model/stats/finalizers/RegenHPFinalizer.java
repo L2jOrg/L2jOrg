@@ -4,14 +4,11 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.Fort;
-import org.l2j.gameserver.model.entity.Fort.FortFunction;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
@@ -23,7 +20,6 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.ClanHallZone;
-import org.l2j.gameserver.world.zone.type.FortZone;
 import org.l2j.gameserver.world.zone.type.MotherTreeZone;
 
 import java.util.Optional;
@@ -99,21 +95,6 @@ public class RegenHPFinalizer implements IStatsFunction {
                         var func = castle.getCastleFunction(Castle.FUNC_RESTORE_HP);
                         if (func != null) {
                             baseValue *= (func.getLevel() / 100f);
-                        }
-                    }
-                }
-            }
-
-            if (player.isInsideZone(ZoneType.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0)) {
-                final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
-                final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
-                final int fortIndex = player.getClan().getFortId();
-                if ((fortIndex > 0) && (fortIndex == posFortIndex)) {
-                    final Fort fort = FortDataManager.getInstance().getFortById(player.getClan().getCastleId());
-                    if (fort != null) {
-                        final FortFunction func = fort.getFortFunction(Fort.FUNC_RESTORE_HP);
-                        if (func != null) {
-                            baseValue *= (func.getLvl() / 100f);
                         }
                     }
                 }

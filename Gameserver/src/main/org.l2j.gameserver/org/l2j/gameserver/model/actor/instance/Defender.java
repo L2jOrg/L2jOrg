@@ -5,12 +5,10 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
@@ -18,9 +16,10 @@ import org.l2j.gameserver.world.World;
 
 import java.util.Comparator;
 
+import static java.util.Objects.nonNull;
+
 public class Defender extends Attackable {
     private Castle _castle = null; // the castle which the instance should defend
-    private Fort _fort = null; // the fortress which the instance should defend
 
     public Defender(NpcTemplate template) {
         super(template);
@@ -30,10 +29,7 @@ public class Defender extends Attackable {
     @Override
     public void addDamage(Creature attacker, int damage, Skill skill) {
         super.addDamage(attacker, damage, skill);
-        World.getInstance().forEachVisibleObjectInRange(this, Defender.class, 500, defender ->
-        {
-            defender.addDamageHate(attacker, 0, 10);
-        });
+        World.getInstance().forEachVisibleObjectInRange(this, Defender.class, 500, defender -> defender.addDamageHate(attacker, 0, 10));
     }
 
     /**
@@ -51,13 +47,11 @@ public class Defender extends Attackable {
         final Player player = attacker.getActingPlayer();
 
         // Check if siege is in progress
-        if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive())) {
-            final int activeSiegeId = (_fort != null) ? _fort.getId() : _castle.getId();
+        if (nonNull(_castle) && _castle.getZone().isActive()) {
+            final int activeSiegeId = _castle.getId();
 
             // Check if player is an enemy of this defender npc
-            if ((player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1)) || (player.getSiegeState() == 0))) {
-                return true;
-            }
+            return (player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1)) || (player.getSiegeState() == 0));
         }
         return false;
     }
@@ -92,10 +86,9 @@ public class Defender extends Attackable {
     public void onSpawn() {
         super.onSpawn();
 
-        _fort = FortDataManager.getInstance().getFort(getX(), getY(), getZ());
         _castle = CastleManager.getInstance().getCastle(this);
 
-        if ((_fort == null) && (_castle == null)) {
+        if (_castle == null) {
             LOGGER.warn("Defender spawned outside of Fortress or Castle zone!" + this);
         }
     }
@@ -169,8 +162,8 @@ public class Defender extends Attackable {
             if ((damage == 0) && (aggro <= 1) && (GameUtils.isPlayable(attacker))) {
                 final Player player = attacker.getActingPlayer();
                 // Check if siege is in progress
-                if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive())) {
-                    final int activeSiegeId = (_fort != null) ? _fort.getId() : _castle.getId();
+                if (nonNull(_castle) && _castle.getZone().isActive()) {
+                    final int activeSiegeId = _castle.getId();
                     if ((player != null) && (((player.getSiegeState() == 2) && player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1)))) {
                         return;
                     }

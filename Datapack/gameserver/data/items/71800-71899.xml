@@ -550,14 +550,14 @@
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
-	<item id="71881" name="Letter Gift Box - LINEAGEII" type="NONE" icon="BranchSys3.icon.g_cash_fortuna_box_r">
-	<!-- Double-click to obtain 1 letter set needed to combine letters into 'LINEAGEII'. -->
+	<item id="71881" name="Letter Gift Box" type="NONE" icon="BranchSys3.icon.g_cash_fortuna_box_r">
+	<!-- Double-click to obtain 1 letter set needed to combine letters. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71882" name="Letter Gift Box - NCSOFT" type="NONE" icon="BranchSys.icon.br_fortuna_box_s_i00">
-	<!-- Double-click to obtain 1 letter set needed to combine letters into 'NCSOFT'. -->
+	<item id="71882" name="Letter Gift Box" type="NONE" icon="BranchSys.icon.br_fortuna_box_s_i00">
+	<!-- Double-click to obtain 1 letter set needed to combine letters into. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>

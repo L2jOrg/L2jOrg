@@ -82,6 +82,7 @@ import static java.lang.Math.max;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.util.GameUtils.*;
@@ -2039,7 +2040,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
 
-        if ((changed == null) || changed.isEmpty()) {
+        if (isNullOrEmpty(changed)) {
             return;
         }
 

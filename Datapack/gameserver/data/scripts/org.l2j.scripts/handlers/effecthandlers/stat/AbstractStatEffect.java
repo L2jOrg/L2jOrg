@@ -55,7 +55,7 @@ public abstract class AbstractStatEffect extends AbstractEffect {
         if (conditions.isEmpty() || conditions.stream().allMatch(cond -> cond.test(effected, effected, skill))) {
             switch (mode) {
                 case DIFF -> effected.getStats().mergeAdd(addStat, power);
-                case PER -> effected.getStats().mergeMul(mulStat, power / 100 + 1);
+                case PER -> effected.getStats().mergeMul(mulStat, power);
             }
         }
     }

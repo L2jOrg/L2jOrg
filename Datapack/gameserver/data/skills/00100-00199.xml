@@ -22,7 +22,6 @@
         <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" auto-use="ACTIVE">
             <magic-level initial="18">
                 <value level="2">19</value>
-                <value level="2">19</value>
                 <value level="3">20</value>
                 <value level="4">22</value>
                 <value level="5">23</value>
@@ -83,7 +82,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT SPEAR DUAL</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF SPEAR DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -506,6 +505,11 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
+            <mana-init initial="5">
+                <value level="2">6</value>
+                <value level="4">7</value>
+                <value level="5">8</value>
+            </mana-init>
             <mana initial="22">
                 <value level="2">28</value>
                 <value level="3">29</value>
@@ -544,7 +548,6 @@
         <icon initial="icon.skill0104"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="46"/>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="438"/>
             <effect-range initial="-1"/>
@@ -661,11 +664,15 @@
         </attributes>
         <consume>
             <mana-init initial="6">
-                <value level="2">8</value>
-                <value level="8">10</value>
-                <value level="15">12</value>
-                <value level="20">14</value>
-                <value level="26">15</value>
+                <value level="2">7</value>
+                <value level="5">8</value>
+                <value level="8">9</value>
+                <value level="11">10</value>
+                <value level="15">11</value>
+                <value level="18">12</value>
+                <value level="20">13</value>
+                <value level="23">14</value>
+                <value level="25">15</value>
             </mana-init>
             <mana initial="30">
                 <value level="2">32</value>
@@ -800,7 +807,6 @@
                 <value level="10">76</value>
                 <value level="11">78</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-549">
                 <value level="2">-566</value>
@@ -851,7 +857,6 @@
         <icon initial="icon.skill0109"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="46"/>
-            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="438"/>
             <effect-range initial="-1"/>
@@ -898,7 +903,6 @@
             <magic-level initial="20">
                 <value level="2">46</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="204">
                 <value level="2">438</value>
@@ -946,7 +950,6 @@
             <magic-level initial="28">
                 <value level="2">55</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="268">
                 <value level="2">523</value>
@@ -973,11 +976,11 @@
                     <value level="2">40.0</value>
                 </power>
             </skill-evasion>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="20.0">
                     <value level="2">25.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <resist-dispel-by-category category="BUFF">
                 <power initial="80.0"/>
             </resist-dispel-by-category>
@@ -997,7 +1000,6 @@
                 <value level="3">43</value>
                 <value level="4">49</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="10">
                 <value level="2">20</value>
@@ -1107,7 +1109,7 @@
         </attributes>
         <consume>
             <mana-init initial="3">
-                <value level="3">4</value>
+                <value level="2">4</value>
                 <value level="5">5</value>
                 <value level="9">6</value>
                 <value level="13">7</value>
@@ -1169,7 +1171,6 @@
                 <value level="15">76</value>
                 <value level="16">78</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="-204">
                 <value level="2">-219</value>
@@ -1362,7 +1363,6 @@
                 <value level="5">64</value>
                 <value level="6">70</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="150000"/>
             <effect-point initial="268">
                 <value level="2">379</value>
@@ -1453,6 +1453,12 @@
             <hit-time initial="1200"/>
         </attributes>
         <consume>
+            <mana-init initial="4">
+                <value level="3">5</value>
+                <value level="7">6</value>
+                <value level="11">7</value>
+                <value level="16">8</value>
+            </mana-init>
             <mana initial="18">
                 <value level="2">19</value>
                 <value level="3">22</value>
@@ -1494,7 +1500,6 @@
                 <value level="2">49</value>
                 <value level="3">58</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="379">
                 <value level="2">467</value>
@@ -1592,9 +1597,7 @@
                 <value level="6">6</value>
                 <value level="10">7</value>
                 <value level="15">8</value>
-                <value level="17">9</value>
-                <value level="19">10</value>
-                <value level="21">11</value>
+                <value level="20">9</value>
             </mana-init>
             <mana initial="19">
                 <value level="2">22</value>
@@ -1702,7 +1705,6 @@
             <magic-level initial="46">
                 <value level="2">55</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="438">
                 <value level="2">523</value>
@@ -1748,7 +1750,6 @@
                 <value level="2">49</value>
                 <value level="3">58</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="379">
                 <value level="2">467</value>
@@ -1772,6 +1773,11 @@
             <time initial="300"/>
             <chance initial="-1"/>
         </abnormal>
+        <conditions>
+            <weapon>
+                <type>BOW</type>
+            </weapon>
+        </conditions>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
                 <power initial="2.0">
@@ -1821,13 +1827,13 @@
         </attributes>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0">
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
                     <value level="4">50.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="139" name="Guts" max-level="6" action="A2">
@@ -1848,7 +1854,6 @@
                 <value level="5">74</value>
                 <value level="6">79</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="341">
                 <value level="2">408</value>
@@ -1948,12 +1953,12 @@
                     <value level="5">14.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power>
                     <value level="4">3.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="10.0"/>
             </stat-modify>
@@ -2447,7 +2452,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" start-level="3">
+            <stat-modify start-level="3" stat="PHYSICAL_DEFENCE">
                 <power initial="81">
                     <value level="4">131</value>
                 </power>
@@ -2629,7 +2634,6 @@
                 <value level="5">74</value>
                 <value level="6">79</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="303">
                 <value level="2">438</value>
@@ -2739,7 +2743,6 @@
             <magic-level initial="55">
                 <value level="2">79</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="562">
                 <value level="2">565</value>
@@ -2960,7 +2963,7 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -3098,13 +3101,13 @@
         <icon initial="icon.skill0196"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="43"/>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
 
             <element type="HOLY"/>
         </attributes>
         <consume>
+            <mana-init initial="8"/>
             <mana initial="8"/>
         </consume>
         <target type="NONE"/>
@@ -3121,11 +3124,13 @@
             <magic-level initial="40">
                 <value level="2">46</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="7">
+                <value level="2">9</value>
+            </mana-init>
             <mana initial="7">
                 <value level="2">9</value>
             </mana>

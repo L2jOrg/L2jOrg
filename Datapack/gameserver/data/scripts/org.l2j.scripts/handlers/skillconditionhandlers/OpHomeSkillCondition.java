@@ -6,7 +6,6 @@ import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.enums.ResidenceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -34,8 +33,8 @@ public class OpHomeSkillCondition implements SkillCondition {
 			if (nonNull(clan)) {
 				return switch (type) {
 					case CASTLE -> nonNull(CastleManager.getInstance().getCastleByOwner(clan));
-					case FORTRESS -> nonNull(FortDataManager.getInstance().getFortByOwner(clan));
 					case CLANHALL -> nonNull(ClanHallManager.getInstance().getClanHallByClan(clan));
+					default -> false;
 				};
 			}
 		}

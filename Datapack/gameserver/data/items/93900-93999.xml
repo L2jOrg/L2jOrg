@@ -435,21 +435,21 @@
 	</item>
 
 	<weapon id="93994" name="16th Anniversary Pom Poms" type="DUAL" body-part="TWO_HAND" icon="icon.ev_12th_weapon">
-	<!-- Pom poms to celebrate the 16th anniversary of Lineage II. Can use the Firecracker skill when equipped.\nWhen used while equipping a sigil, the character won’t perform the cheering action. -->
+	<!-- Pom poms to celebrate the 16th anniversary. Can use the Firecracker skill when equipped.\nWhen used while equipping a sigil, the character won’t perform the cheering action. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
 	</weapon>
 
 	<weapon id="93995" name="16th Anniversary Instrument" type="HAMMER" body-part="RIGHT_HAND" icon="icon.bm_magmeld">
-	<!-- Instrument to celebrate the 16th anniversary of Lineage II. Use it to play music\nWhen used while equipping a sigil, the character won’t perform the performing action. -->
+	<!-- Instrument to celebrate the 16th anniversary. Use it to play music\nWhen used while equipping a sigil, the character won’t perform the performing action. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
 	</weapon>
 
 	<armor id="93996" name="16th Anniversary Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_party_hat_gold_i00">
-	<!-- Hair accessory to celebrate the 16th anniversary of Lineage II. Uses 2 hair accessory slots. -->
+	<!-- Hair accessory to celebrate the 16th anniversary. Uses 2 hair accessory slots. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" />
 		<crystal />

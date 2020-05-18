@@ -1,16 +1,16 @@
 package handlers.usercommandhandlers;
 
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+
+import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 /**
  * Unstuck user command.
@@ -39,7 +39,7 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		if (player.isCastingNow(SkillCaster::isAnyNormalType) || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.inObserverMode() || player.isCombatFlagEquipped())
+		if (player.isCastingNow(SkillCaster::isAnyNormalType) || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.inObserverMode())
 		{
 			return false;
 		}

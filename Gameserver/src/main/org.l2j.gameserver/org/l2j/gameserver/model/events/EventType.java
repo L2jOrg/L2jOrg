@@ -16,7 +16,9 @@ import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2j.gameserver.model.events.impl.server.OnPacketReceived;
 import org.l2j.gameserver.model.events.impl.server.OnPacketSent;
-import org.l2j.gameserver.model.events.impl.sieges.*;
+import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
+import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
+import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.model.events.returns.ChatFilterReturn;
 import org.l2j.gameserver.model.events.returns.DamageReturn;
 import org.l2j.gameserver.model.events.returns.LocationReturn;
@@ -57,10 +59,6 @@ public enum EventType {
     ON_CREATURE_TELEPORTED(OnCreatureTeleported.class, void.class),
     ON_CREATURE_ZONE_ENTER(OnCreatureZoneEnter.class, void.class),
     ON_CREATURE_ZONE_EXIT(OnCreatureZoneExit.class, void.class),
-
-    // Fortress events
-    ON_FORT_SIEGE_FINISH(OnFortSiegeFinish.class, void.class),
-    ON_FORT_SIEGE_START(OnFortSiegeStart.class, void.class),
 
     // Item events
     ON_ITEM_BYPASS_EVENT(OnItemBypassEvent.class, void.class),

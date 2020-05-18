@@ -536,12 +536,12 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="29986" name="LineageII Box" type="NONE" icon="icon.ev_10th_present2">
-	<!-- A reward box given for collecting all the letters of the word “Lineage II”. -->
+	<item id="29986" name="Box" type="NONE" icon="icon.ev_10th_present2">
+	<!-- A reward box given for collecting all the letters of the word “”. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="55319" value="-1"/>  <!-- Lineage II Chest -->
+			<skill id="55319" value="-1"/>  <!-- Chest -->
 		</skill-reducer>
 	</item>
 

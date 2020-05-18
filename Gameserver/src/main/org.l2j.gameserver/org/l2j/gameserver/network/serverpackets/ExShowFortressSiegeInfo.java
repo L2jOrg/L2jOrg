@@ -1,12 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.instancemanager.FortSiegeManager;
-import org.l2j.gameserver.model.FortSiegeSpawn;
-import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
-
-import java.util.Collection;
 
 /**
  * TODO: Rewrite!!!
@@ -14,25 +9,16 @@ import java.util.Collection;
  * @author KenM
  */
 public class ExShowFortressSiegeInfo extends ServerPacket {
-    private final int _fortId;
-    private final int _size;
-    private final int _csize;
-    private final int _csize2;
+    private final int _csize = 0;
+    private final int _csize2 = 0;
 
-    public ExShowFortressSiegeInfo(Fort fort) {
-        _fortId = fort.getId();
-        _size = fort.getFortSize();
-        final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortId);
-        _csize = ((commanders == null) ? 0 : commanders.size());
-        _csize2 = fort.getSiege().getCommanders().size();
-    }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_SHOW_FORTRESS_SIEGE_INFO);
 
-        writeInt(_fortId); // Fortress Id
-        writeInt(_size); // Total Barracks Count
+        writeInt(0); // Fortress Id
+        writeInt(0); // Total Barracks Count
         if (_csize > 0) {
             switch (_csize) {
                 case 3: {
@@ -85,7 +71,7 @@ public class ExShowFortressSiegeInfo extends ServerPacket {
                 }
             }
         } else {
-            for (int i = 0; i < _size; i++) {
+            for (int i = 0; i < 0; i++) {
                 writeInt(0x00);
             }
         }

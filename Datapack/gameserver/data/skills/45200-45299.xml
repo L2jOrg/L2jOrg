@@ -82,6 +82,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>DAGGER</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45201" name="Power Shot - Transcendence" max-level="24" action="A1">
         <!--
@@ -170,6 +175,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>BOW</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45202" name="Iron Punch - Transcendence" max-level="24" action="A1">
         <!--
@@ -253,6 +263,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>FIST</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45203" name="Double Sonic Slash - Transcendence" max-level="40" action="A1">
         <!--
@@ -377,6 +392,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>DUAL</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45204" name="Triple Sonic Slash - Transcendence" max-level="30" action="A1">
         <!--
@@ -475,6 +495,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>DUAL</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45205" name="Double Shot - Transcendence" max-level="45" action="A1">
         <!--
@@ -622,6 +647,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>BOW</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45206" name="Fatal Strike - Transcendence" max-level="45" action="A1">
         <!--
@@ -760,6 +790,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF SPEAR DUAL</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45207" name="Deadly Blow - Transcendence" max-level="45" action="A1">
         <!--
@@ -898,6 +933,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>DAGGER</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45208" name="Burning Fist - Transcendence" max-level="46" action="A1">
         <!--
@@ -1039,6 +1079,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>FIST</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45209" name="Hurricane Assault - Transcendence" max-level="48" action="A1">
         <!--
@@ -1185,6 +1230,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>FIST</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45210" name="Lethal Shot - Transcendence" max-level="9" action="A1">
         <!--
@@ -1228,6 +1278,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>BOW</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45211" name="Lethal Blow - Transcendence" max-level="2" action="A1">
         <!--
@@ -1250,6 +1305,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>DAGGER</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45212" name="Tribunal - Transcendence" max-level="20" debuff="true" action="A2">
         <!--
@@ -1326,6 +1386,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45213" name="Judgment - Transcendence" max-level="20" debuff="true" action="A2">
         <!--
@@ -1402,6 +1467,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45214" name="Cursed Pierce - Transcendence" max-level="5" action="A1">
         <!--
@@ -1433,6 +1503,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>SPEAR</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45215" name="Shield Strike - Transcendence" max-level="23" action="A1">
         <!--
@@ -1462,34 +1537,34 @@
          -->
         <icon initial="icon.skill0984"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-2200">
-				<value level="2">-2350</value>
-				<value level="3">-2500</value>
-				<value level="4">-2650</value>
-				<value level="5">-2800</value>
-				<value level="6">-2950</value>
-				<value level="7">-3100</value>
-				<value level="8">-3200</value>
-				<value level="9">-3300</value>
-				<value level="10">-3400</value>
-				<value level="11">-3500</value>
-				<value level="12">-3600</value>
-				<value level="13">-3700</value>
-				<value level="14">-3800</value>
-				<value level="15">-3900</value>
-				<value level="16">-4000</value>
-				<value level="17">-4050</value>
-				<value level="18">-4100</value>
-				<value level="19">-4200</value>
-				<value level="20">-4250</value>
-				<value level="21">-4300</value>
-				<value level="22">-4350</value>
-				<value level="23">-4400</value>
-			</effect-point>
-			<hit-time initial="1080"/>
+            <cast-range initial="40"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-2200">
+                <value level="2">-2350</value>
+                <value level="3">-2500</value>
+                <value level="4">-2650</value>
+                <value level="5">-2800</value>
+                <value level="6">-2950</value>
+                <value level="7">-3100</value>
+                <value level="8">-3200</value>
+                <value level="9">-3300</value>
+                <value level="10">-3400</value>
+                <value level="11">-3500</value>
+                <value level="12">-3600</value>
+                <value level="13">-3700</value>
+                <value level="14">-3800</value>
+                <value level="15">-3900</value>
+                <value level="16">-4000</value>
+                <value level="17">-4050</value>
+                <value level="18">-4100</value>
+                <value level="19">-4200</value>
+                <value level="20">-4250</value>
+                <value level="21">-4300</value>
+                <value level="22">-4350</value>
+                <value level="23">-4400</value>
+            </effect-point>
+            <hit-time initial="1080"/>
         </attributes>
         <consume>
             <mana initial="30">
@@ -1516,6 +1591,9 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <condition name="EquipShield"/>
+        </conditions>
     </skill>
     <skill id="45216" name="Deadly Beat - Transcendence" max-level="8" debuff="true" action="A2">
         <!--
@@ -1554,6 +1632,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45217" name="Guard Crush - Transcendence" max-level="5" action="A1">
         <!--
@@ -1585,6 +1668,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45218" name="Prominence - Transcendence" max-level="36" action="A1" type="MAGIC">
         <!--
@@ -1669,6 +1757,18 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="7">
+                <value level="3">8</value>
+                <value level="5">9</value>
+                <value level="8">10</value>
+                <value level="10">11</value>
+                <value level="15">12</value>
+                <value level="20">13</value>
+                <value level="25">14</value>
+                <value level="29">15</value>
+                <value level="32">16</value>
+                <value level="34">17</value>
+            </mana-init>
             <mana initial="28">
                 <value level="2">29</value>
                 <value level="3">32</value>
@@ -1786,6 +1886,18 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="7">
+                <value level="3">8</value>
+                <value level="5">9</value>
+                <value level="8">10</value>
+                <value level="10">11</value>
+                <value level="15">12</value>
+                <value level="20">13</value>
+                <value level="25">14</value>
+                <value level="29">15</value>
+                <value level="32">16</value>
+                <value level="34">17</value>
+            </mana-init>
             <mana initial="28">
                 <value level="2">29</value>
                 <value level="3">32</value>
@@ -1903,6 +2015,18 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="7">
+                <value level="3">8</value>
+                <value level="5">9</value>
+                <value level="8">10</value>
+                <value level="10">11</value>
+                <value level="15">12</value>
+                <value level="20">13</value>
+                <value level="25">14</value>
+                <value level="29">15</value>
+                <value level="32">16</value>
+                <value level="34">17</value>
+            </mana-init>
             <mana initial="28">
                 <value level="2">29</value>
                 <value level="3">32</value>
@@ -2016,6 +2140,19 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="4">
+                <value level="3">5</value>
+                <value level="6">6</value>
+                <value level="9">10</value>
+                <value level="12">11</value>
+                <value level="15">12</value>
+                <value level="18">13</value>
+                <value level="21">14</value>
+                <value level="24">15</value>
+                <value level="27">18</value>
+                <value level="30">19</value>
+                <value level="33">20</value>
+            </mana-init>
             <mana initial="18">
                 <value level="2">20</value>
                 <value level="3">22</value>
@@ -2132,6 +2269,19 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="4">
+                <value level="3">5</value>
+                <value level="6">6</value>
+                <value level="9">10</value>
+                <value level="12">11</value>
+                <value level="15">12</value>
+                <value level="18">13</value>
+                <value level="21">14</value>
+                <value level="24">15</value>
+                <value level="27">18</value>
+                <value level="30">19</value>
+                <value level="33">20</value>
+            </mana-init>
             <mana initial="18">
                 <value level="2">20</value>
                 <value level="3">22</value>
@@ -2248,6 +2398,19 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="4">
+                <value level="3">5</value>
+                <value level="6">6</value>
+                <value level="9">10</value>
+                <value level="12">11</value>
+                <value level="15">12</value>
+                <value level="18">13</value>
+                <value level="21">14</value>
+                <value level="24">15</value>
+                <value level="27">18</value>
+                <value level="30">19</value>
+                <value level="33">20</value>
+            </mana-init>
             <mana initial="18">
                 <value level="2">20</value>
                 <value level="3">22</value>
@@ -2348,6 +2511,18 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="7">
+                <value level="3">8</value>
+                <value level="5">9</value>
+                <value level="8">10</value>
+                <value level="10">11</value>
+                <value level="13">12</value>
+                <value level="15">13</value>
+                <value level="18">14</value>
+                <value level="20">15</value>
+                <value level="22">16</value>
+                <value level="24">17</value>
+            </mana-init>
             <mana initial="28">
                 <value level="2">29</value>
                 <value level="3">32</value>
@@ -2426,6 +2601,18 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="7">
+                <value level="2">8</value>
+                <value level="3">9</value>
+                <value level="4">10</value>
+                <value level="5">11</value>
+                <value level="8">12</value>
+                <value level="10">13</value>
+                <value level="13">14</value>
+                <value level="15">15</value>
+                <value level="17">16</value>
+                <value level="18">17</value>
+            </mana-init>
             <mana initial="35">
                 <value level="2">39</value>
                 <value level="3">44</value>
@@ -2494,6 +2681,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>TWO_HAND_SWORD DUAL_DAGGER</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45227" name="Soul Impact - Transcendence" max-level="8" action="A1">
         <!--
@@ -2534,6 +2726,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>TWO_HAND_SWORD DUAL_DAGGER</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45228" name="Soul Thrust - Transcendence" max-level="8" action="A1">
         <!--
@@ -2574,6 +2771,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>RAPIER</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45229" name="Soul Spark - Transcendence" max-level="8" action="A1" type="MAGIC">
         <!--
@@ -2602,6 +2804,15 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
+            <mana-init initial="6">
+                <value level="2">7</value>
+                <value level="3">8</value>
+                <value level="4">9</value>
+                <value level="5">10</value>
+                <value level="6">11</value>
+                <value level="7">12</value>
+                <value level="8">13</value>
+            </mana-init>
             <mana initial="24">
                 <value level="2">28</value>
                 <value level="3">32</value>
@@ -2613,6 +2824,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>RAPIER</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45230" name="Twin Shot - Transcendence" max-level="10" action="A1">
         <!--
@@ -2659,6 +2875,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>BOW</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45231" name="Death Spike - Transcendence" max-level="20" action="A1" type="MAGIC">
         <!--
@@ -2711,6 +2932,18 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="4">
+                <value level="2">5</value>
+                <value level="3">6</value>
+                <value level="4">7</value>
+                <value level="7">8</value>
+                <value level="10">9</value>
+                <value level="13">10</value>
+                <value level="14">11</value>
+                <value level="16">12</value>
+                <value level="17">13</value>
+                <value level="19">14</value>
+            </mana-init>
             <mana initial="23">
                 <value level="2">27</value>
                 <value level="3">30</value>
@@ -2732,6 +2965,8 @@
                 <value level="19">70</value>
                 <value level="20">73</value>
             </mana>
+            <item initial="2508"/>
+            <item-count initial="1"/>
         </consume>
         <target/>
     </skill>
@@ -2818,6 +3053,24 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="12">
+                <value level="2">13</value>
+                <value level="3">14</value>
+                <value level="5">15</value>
+                <value level="6">16</value>
+                <value level="7">17</value>
+                <value level="9">18</value>
+                <value level="10">19</value>
+                <value level="12">20</value>
+                <value level="15">21</value>
+                <value level="18">22</value>
+                <value level="21">23</value>
+                <value level="24">24</value>
+                <value level="27">25</value>
+                <value level="29">28</value>
+                <value level="32">31</value>
+                <value level="34">34</value>
+            </mana-init>
             <mana initial="60">
                 <value level="2">63</value>
                 <value level="3">67</value>
@@ -2916,6 +3169,11 @@
             </mana>
         </consume>
         <target/>
+        <conditions>
+            <weapon>
+                <type>DAGGER</type>
+            </weapon>
+        </conditions>
     </skill>
     <skill id="45234" name="Glory Expand Inventory">
         <!-- Inventory slots +10. -->
@@ -2923,7 +3181,7 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <enlarge-slot type="INVENTORY_NORMAL">
                 <power initial="10.0"/>
             </enlarge-slot>
@@ -2935,7 +3193,7 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
                 <power initial="10000.0"/>
             </stat-modify>

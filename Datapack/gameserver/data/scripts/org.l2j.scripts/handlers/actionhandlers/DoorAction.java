@@ -58,25 +58,6 @@ public class DoorAction implements IActionHandler
                     }
                 }
             }
-            else if ((activeChar.getClan() != null) && (((Door) target).getFort() != null) && (activeChar.getClan() == ((Door) target).getFort().getOwnerClan()) && ((Door) target).isOpenableBySkill() && !((Door) target).getFort().getSiege().isInProgress())
-            {
-                if (!isInsideRadius2D(target, activeChar, Npc.INTERACTION_DISTANCE))
-                {
-                    activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-                }
-                else
-                {
-                    activeChar.addScript(new DoorRequestHolder((Door) target));
-                    if (!((Door) target).isOpen())
-                    {
-                        activeChar.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_OPEN_THE_GATE));
-                    }
-                    else
-                    {
-                        activeChar.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_CLOSE_THE_GATE));
-                    }
-                }
-            }
         }
         return true;
     }

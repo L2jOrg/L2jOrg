@@ -4,7 +4,6 @@
         <!-- Concentrates on the ball to strike it with enough force for a home run. -->
         <icon initial="icon.homerun"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="400"/>
             <effect-point initial="687"/>
@@ -18,7 +17,6 @@
         <!-- Serves the ball with enough force to stop the batter from hitting it. -->
         <icon initial="icon.strikeout"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="400"/>
             <effect-point initial="687"/>

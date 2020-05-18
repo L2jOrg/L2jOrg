@@ -3,8 +3,8 @@ package org.l2j.gameserver.data.database.data;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.annotation.Transient;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.util.Collection;
@@ -15,7 +15,7 @@ import java.util.Collection;
 @Table("clan_subpledges")
 public class SubPledgeData {
 
-    @Transient
+    @NonUpdatable
     private final IntMap<Skill> skills = new CHashIntMap<>();
 
     @Column("clan_id")

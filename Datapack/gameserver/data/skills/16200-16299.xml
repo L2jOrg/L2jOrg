@@ -75,7 +75,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="1000"/>
             <effect-point initial="-100"/>
@@ -241,7 +240,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
@@ -258,7 +256,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-300">
@@ -281,7 +278,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
@@ -298,7 +294,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
@@ -315,7 +310,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
@@ -332,7 +326,6 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
@@ -468,7 +461,6 @@
         <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
@@ -515,7 +507,6 @@
         <!-- Attacks nearby enemies and stuns them for 10 seconds. -->
         <icon initial="icon.skill10265"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>

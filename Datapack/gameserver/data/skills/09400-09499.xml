@@ -5,16 +5,16 @@
         <icon initial="icon.skilltransform4"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="-3"/>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <item initial="35669"/>
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal> <!-- EXP_SP_G -->
+        <abnormal>
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>

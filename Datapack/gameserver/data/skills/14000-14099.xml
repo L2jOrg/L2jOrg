@@ -4,7 +4,6 @@
         <!-- Increases Atk. Spd. And P. Atk. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>

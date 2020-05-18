@@ -29,7 +29,7 @@ public class RequestCaptchaAnswer extends ClientPacket {
         if(nonNull(request)) {
             if(answer == request.getCaptcha().getCode()) {
                 player.sendPacket(ReceiveBotCaptchaResult.SUCCESS);
-                player.sendPacket(SystemMessageId.IDENTIFICATION_COMPLETED_HAVE_A_GOOD_TIME_WITH_LINEAGE_II_THANK_YOU);
+                player.sendPacket(SystemMessageId.IDENTIFICATION_COMPLETED_HAVE_A_GOOD_TIME_WITH_THANK_YOU);
                 request.cancelTimeout();
                 player.removeRequest(CaptchaRequest.class);
             } else {

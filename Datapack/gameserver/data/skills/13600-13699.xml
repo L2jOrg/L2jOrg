@@ -4,7 +4,6 @@
         <!-- A radiant light is emanating from the brooch. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i06"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -14,7 +13,6 @@
         <!-- The brooch's radiant light fades. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -25,7 +23,6 @@
         <!-- A radiant light is emanating from the brooch. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i05"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -35,7 +32,6 @@
         <!-- The brooch’s brilliant light fades. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -46,7 +42,6 @@
         <!-- A radiant light is emanating from the brooch. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -56,7 +51,6 @@
         <!-- The brooch’s brilliant light fades. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -67,7 +61,6 @@
         <!-- A radiant light is emanating from the brooch. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -77,7 +70,6 @@
         <!-- The brooch’s brilliant light fades. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

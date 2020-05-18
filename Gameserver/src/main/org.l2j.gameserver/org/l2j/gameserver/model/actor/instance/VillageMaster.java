@@ -9,8 +9,6 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
@@ -21,7 +19,6 @@ import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -106,19 +103,13 @@ public class VillageMaster extends Folk {
             player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_ENGAGED_IN_A_WAR);
             return;
         }
-        if ((clan.getCastleId() != 0) || (clan.getHideoutId() != 0) || (clan.getFortId() != 0)) {
+        if (clan.getCastleId() != 0 || clan.getHideoutId() != 0) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_OWNING_A_CLAN_HALL_OR_CASTLE);
             return;
         }
 
         for (Castle castle : CastleManager.getInstance().getCastles()) {
             if (SiegeManager.getInstance().checkIsRegistered(clan, castle.getId())) {
-                player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_DURING_A_SIEGE_OR_WHILE_PROTECTING_A_CASTLE);
-                return;
-            }
-        }
-        for (Fort fort : FortDataManager.getInstance().getForts()) {
-            if (FortSiegeManager.getInstance().checkIsRegistered(clan, fort.getId())) {
                 player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_DURING_A_SIEGE_OR_WHILE_PROTECTING_A_CASTLE);
                 return;
             }

@@ -2,7 +2,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.entity.Castle;
@@ -30,11 +29,6 @@ public final class RequestPetGetItem extends ClientPacket {
 
         final Castle castle = CastleManager.getInstance().getCastle(item);
         if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getId(), item.getId()) != null)) {
-            client.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        if (FortSiegeManager.getInstance().isCombat(item.getId())) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
