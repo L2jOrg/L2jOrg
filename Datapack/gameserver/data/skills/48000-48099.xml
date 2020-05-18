@@ -16,6 +16,7 @@
     <skill id="48002" name="Little Pig's Luck - Reward" action="A1">
         <icon initial="icon.skill_piggy_bless"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -26,6 +27,7 @@
         <!-- Respectfully greet the Wild Orc. -->
         <icon initial="icon.ev_greeting1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="5000"/>
@@ -37,6 +39,7 @@
         <!-- Flying away because of the impact. -->
         <icon initial="icon.skill4107"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -49,6 +52,7 @@
         <!-- Flying away because of the impact. -->
         <icon initial="icon.skill4107"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -60,6 +64,7 @@
         <!-- Flying away because of the impact. -->
         <icon initial="icon.skill3080"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -72,6 +77,7 @@
         <!-- Flying away because of the impact. -->
         <icon initial="icon.skill3080"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -83,6 +89,7 @@
         <!-- Presentation skill -->
         <icon initial="icon.skill5008_psycho"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="5000"/>
@@ -94,6 +101,7 @@
         <!-- Dancing against your will and cannot move. -->
         <icon initial="icon.skill5008_psycho"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -383,6 +391,7 @@
         <!-- Buff given to those who explore the Tower of Insolence. For 5 minutes, P. Atk. +10%%, P. Critical Rate +10, Melee Weapon Value +10. -->
         <icon initial="icon.skill5076_b"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>
             <activate-rate initial="-1"/>
@@ -393,6 +402,7 @@
         <!-- Buff given to those who explore the Tower of Insolence. For 5 minutes, M. Atk. +10%%, Ranged Weapon Value +10. -->
         <icon initial="icon.skill5076_c"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>
             <activate-rate initial="-1"/>
@@ -403,6 +413,7 @@
         <!-- Buff given to those who explore Heavenly Rift. Receive it from the Dimensional Vortex in Tower of Insolence: 1st Floor. -->
         <icon initial="icon.skill19222"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -412,6 +423,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="709"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -422,6 +434,7 @@
         <!-- A buff given to those who explore the Tower of Insolence. For 5 min, P. Atk. +10%%, M. Atk. +10%%, and P. Critical/M. Critical Rate +10. -->
         <icon initial="icon.skill5076_a"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>
             <activate-rate initial="-1"/>
@@ -487,8 +500,8 @@
         </consume>
         <target/>
     </skill>
-    <skill id="48049" name="Great Squash Blessing - Stage 1" max-level="5">
-        <!-- Inflicted great damage to the Great Squash. I have a good feeling. -->
+    <skill id="48049" name="Event Blessing - Stage 1" max-level="5">
+        <!-- Inflicted great damage in the event raid. I have a good feeling. -->
         <icon initial="icon.skill30530"/>
         <attributes property="PHYSIC">
         </attributes>
@@ -539,57 +552,6 @@
         <!-- Attack a special monster and for 30 seconds, XP/SP Gain +50%. -->
         <icon initial="icon.skill3238"/>
         <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="48086" name="Dimensional Door A">
-        <!-- Summons a dimensional door that moves the PC to the Dimensional Door B. -->
-        <icon initial="Icon.skill1050"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="48087" name="Dimensional Door B">
-        <!-- Summons a dimensional door that moves the PC to the Dimensional Door A. -->
-        <icon initial="Icon.skill1050"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="48088" name="Earthquake">
-        <!-- none -->
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="48089" name="Lightning" type="MAGIC">
-        <!-- none -->
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="48090" name="Baium's Gift">
-        <!-- none -->
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="48091" name="Evasion is weak." max-level="2">
-        <!--
-            level 1: P. Evasion/M. Evasion have weakened.
-            level 2: P. Evasion/M. Evasion have weakened greatly.
-         -->
-        <icon initial="icon.skill0078"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="48092" name="Limit Damage" max-level="10">
-        <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>

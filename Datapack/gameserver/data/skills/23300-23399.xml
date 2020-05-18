@@ -5,8 +5,9 @@
         <icon initial="icon.skill0773"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true">
             <magic-level initial="80"/>
-            <effect-point initial="-800"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
+
             <element type="DARK" value="20"/>
         </attributes>
         <target type="ENEMY"/>

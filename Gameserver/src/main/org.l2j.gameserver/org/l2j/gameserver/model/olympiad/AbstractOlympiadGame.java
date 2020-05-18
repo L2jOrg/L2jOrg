@@ -5,6 +5,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Party.MessageType;
@@ -135,6 +136,9 @@ public abstract class AbstractOlympiadGame {
                 player.getClan().removeSkillEffects(player);
                 if (player.getClan().getCastleId() > 0) {
                     CastleManager.getInstance().getCastleByOwner(player.getClan()).removeResidentialSkills(player);
+                }
+                if (player.getClan().getFortId() > 0) {
+                    FortDataManager.getInstance().getFortByOwner(player.getClan()).removeResidentialSkills(player);
                 }
             }
             // Abort casting if player casting
@@ -269,6 +273,9 @@ public abstract class AbstractOlympiadGame {
                 player.getClan().addSkillEffects(player);
                 if (player.getClan().getCastleId() > 0) {
                     CastleManager.getInstance().getCastleByOwner(player.getClan()).giveResidentialSkills(player);
+                }
+                if (player.getClan().getFortId() > 0) {
+                    FortDataManager.getInstance().getFortByOwner(player.getClan()).giveResidentialSkills(player);
                 }
                 player.sendSkillList();
             }

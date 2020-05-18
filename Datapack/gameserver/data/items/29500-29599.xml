@@ -659,7 +659,7 @@
 	</item>
 
 	<armor id="29579" name="Soaring Bird" type="NONE" body-part="HAIR" icon="icon.bm_soaring_bird">
-	<!-- Item to commemorate the opening for Server. Equip the Soaring Bird and use the skill that appears to teleport to the closest village. Cooldown 60 min. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
+	<!-- Item to commemorate the opening fo Lineage 2 Classic Server. Equip the Soaring Bird and use the skill that appears to teleport to the closest village. Cooldown 60 min. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
@@ -674,12 +674,12 @@
 		<attributes/>
 	</item>
 
-	<item id="29581" name="Game Box" type="NONE" icon="icon.ev_10th_present2">
-	<!-- Reward box for collecting all the letters. You can get weapon recipes and ingredients. -->
+	<item id="29581" name="LineageII Box" type="NONE" icon="icon.ev_10th_present2">
+	<!-- Reward box for collecting all the Lineage II letters. You can get weapon recipes and ingredients. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="55044" value="-1"/>  <!-- Game Box -->
+			<skill id="55044" value="-1"/>  <!-- LineageII Box -->
 		</skill-reducer>
 	</item>
 

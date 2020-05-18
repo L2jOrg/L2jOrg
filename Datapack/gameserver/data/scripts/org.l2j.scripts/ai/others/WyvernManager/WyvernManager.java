@@ -1,3 +1,19 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package ai.others.WyvernManager;
 
 import ai.AbstractNpcAI;
@@ -5,6 +21,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.entity.Fort;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,11 +30,13 @@ import java.util.Map;
  * Wyvern Manager
  * @author xban1x
  */
-public final class WyvernManager extends AbstractNpcAI {
-
-	private enum ManagerType {
+public final class WyvernManager extends AbstractNpcAI
+{
+	private enum ManagerType
+	{
 		CASTLE,
 		CLAN_HALL,
+		FORT,
 	}
 	
 	// Misc
@@ -96,6 +115,15 @@ public final class WyvernManager extends AbstractNpcAI {
 				}
 				return false;
 			}
+			case FORT:
+			{
+				final Fort fort = npc.getFort();
+				if ((player.getClan() != null) && (fort != null) && (fort.getOwnerClan() != null))
+				{
+					return (player.isClanLeader() && (player.getClanId() == npc.getFort().getOwnerClan().getId()));
+				}
+				return false;
+			}
 			default:
 			{
 				return false;
@@ -110,6 +138,10 @@ public final class WyvernManager extends AbstractNpcAI {
 			case CASTLE:
 			{
 				return npc.getCastle().getZone().isActive();
+			}
+			case FORT:
+			{
+				return npc.getFort().getZone().isActive();
 			}
 			default:
 			{
@@ -129,6 +161,10 @@ public final class WyvernManager extends AbstractNpcAI {
 			case CLAN_HALL:
 			{
 				return npc.getClanHall().getName();
+			}
+			case FORT:
+			{
+				return npc.getFort().getName();
 			}
 			default:
 			{

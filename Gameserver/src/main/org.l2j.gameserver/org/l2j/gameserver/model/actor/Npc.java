@@ -12,10 +12,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.instancemanager.RaidBossStatus;
-import org.l2j.gameserver.instancemanager.WalkingManager;
+import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.actor.stat.NpcStats;
@@ -23,6 +20,7 @@ import org.l2j.gameserver.model.actor.status.NpcStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.*;
@@ -466,6 +464,23 @@ public class Npc extends Creature {
      */
     public final Castle getCastle(long maxDistance) {
         return CastleManager.getInstance().findNearestCastle(this, maxDistance);
+    }
+
+    /**
+     * @return the nearest L2Fort this Folk belongs to. Otherwise null.
+     */
+    public final Fort getFort() {
+        return FortDataManager.getInstance().findNearestFort(this);
+    }
+
+    /**
+     * Return closest Fort in defined distance
+     *
+     * @param maxDistance long
+     * @return Fort
+     */
+    public final Fort getFort(long maxDistance) {
+        return FortDataManager.getInstance().findNearestFort(this, maxDistance);
     }
 
     /**

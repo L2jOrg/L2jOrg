@@ -191,7 +191,7 @@
         <xs:complexContent>
             <xs:extension base="Effect">
                 <xs:sequence>
-                    <xs:element name="chance" type="MappedLevelValue"/>
+					<xs:element name="chance" type="MappedLevelValue"/>
                     <xs:element name="types" type="SkillTypeList"/>
                 </xs:sequence>
                 <xs:attribute name="skill" type="xs:int" use="required"/>

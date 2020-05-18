@@ -14,8 +14,6 @@ import java.util.StringTokenizer;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
-import static org.l2j.gameserver.network.SystemMessageId.THE_ALLOWED_LENGTH_FOR_A_TITLE_EXCEEDED;
-import static org.l2j.gameserver.network.SystemMessageId.THE_ALLOWED_LENGTH_FOR_RECIPIENT_EXCEEDED;
 
 /**
  * @author Zoey76
@@ -102,16 +100,6 @@ public class MemoBoard implements IWriteBoardHandler {
 
 	@Override
 	public boolean writeCommunityBoardCommand(Player player, String id, String arg, String title, String text, String arg5) {
-		if(title.length() > 80) {
-			player.sendPacket(THE_ALLOWED_LENGTH_FOR_A_TITLE_EXCEEDED);
-			return false;
-		}
-
-		if(text.length() > 500) {
-			player.sendPacket(THE_ALLOWED_LENGTH_FOR_RECIPIENT_EXCEEDED);
-			return false;
-		}
-
 		final var memoId = Integer.parseInt(id);
 		if(memoId == 0) {
 			getDAO(CommunityDAO.class).saveMemo(player.getObjectId(), title, text);

@@ -384,7 +384,7 @@
             <stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
                 <power initial="40.0"/>
             </stat-modify>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power>
                     <value level="2">-5.0</value>
                 </power>
@@ -421,7 +421,7 @@
             <stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
                 <power initial="40.0"/>
             </stat-modify>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power>
                     <value level="2">-5.0</value>
                 </power>
@@ -458,7 +458,7 @@
             <stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
                 <power initial="40.0"/>
             </stat-modify>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power>
                     <value level="2">-5.0</value>
                 </power>
@@ -498,10 +498,10 @@
                 <power initial="14.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3613" name="Enchant Robe (D-grade)">
@@ -547,10 +547,10 @@
                 <power initial="20.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3616" name="Enchant Robe (C-grade)">
@@ -596,10 +596,10 @@
                 <power initial="24.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3619" name="Enchant Robe (B-grade)">
@@ -645,10 +645,10 @@
                 <power initial="27.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3622" name="Enchant Robe (A-grade)">
@@ -694,10 +694,10 @@
                 <power initial="33.0"/>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
                 <armor-type>LIGHT</armor-type>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3625" name="Enchant Robe (S-grade)" max-level="3">
@@ -888,6 +888,7 @@
         <icon initial="icon.skill3630"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="78"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -931,6 +932,7 @@
         <icon initial="icon.accessory_crown_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="10000"/>
@@ -959,6 +961,7 @@
         <icon initial="icon.accessory_pledge_cap1_i05"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-range initial="-1"/>
         </attributes>

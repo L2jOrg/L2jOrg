@@ -9,13 +9,13 @@
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal>
+         <abnormal> <!-- EXP_SP_H -->
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -45,6 +45,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
             <activate-rate initial="-1"/>
@@ -69,6 +70,7 @@
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -93,6 +95,7 @@
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -107,46 +110,46 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
+            <call-skill scope="SELF" skill="1040"> <!-- Shield -->
                 <power initial="3"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1068">
+            <call-skill scope="SELF" skill="1068"> <!-- Might -->
                 <power initial="3"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1085">
+            <call-skill scope="SELF" skill="1085"> <!-- Acumen -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1204">
+            <call-skill scope="SELF" skill="1204"> <!-- Wind Walk -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="4359">
+            <call-skill scope="SELF" skill="4359"> <!-- Focus -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1044">
+            <call-skill scope="SELF" skill="1044"> <!-- Regeneration -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1240">
+            <call-skill scope="SELF" skill="1240"> <!-- Guidance -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1242">
+            <call-skill scope="SELF" skill="1242"> <!-- Death Whisper -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1036">
+            <call-skill scope="SELF" skill="1036"> <!-- Magic Barrier -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1045">
+            <call-skill scope="SELF" skill="1045"> <!-- Blessed Body -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1048">
+            <call-skill scope="SELF" skill="1048"> <!-- Blessed Soul -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1086">
+            <call-skill scope="SELF" skill="1086"> <!-- Haste -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1087">
+            <call-skill scope="SELF" skill="1087"> <!-- Agility -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1059">
+            <call-skill scope="SELF" skill="1059"> <!-- Empower -->
                 <power initial="2"/>
             </call-skill>
         </effects>
@@ -155,6 +158,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -164,6 +168,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -173,6 +178,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -182,6 +188,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -191,6 +198,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -200,6 +208,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -209,6 +218,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -218,6 +228,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -227,6 +238,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
             <activate-rate initial="-1"/>
@@ -251,6 +263,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -270,6 +283,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -288,6 +302,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
             <activate-rate initial="-1"/>
@@ -295,49 +310,49 @@
         <target/>
     </skill>
     <skill id="55024" name="VIP Lv. 1">
-        <!-- Receives the VIP Level 1 Daily Box as a gift. XP/SP +5%%, Item Drop Rate +50%%, and World Chat +1. -->
+        <!-- The right to VIP 1st level chest. XP/SP gain +3%%, item drop rate +3%%. -->
         <icon initial="BranchIcon.Icon.g_skill_vip1"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>
-    <skill id="55025" name="VIP Level 2">
-        <!-- Receives the daily VIP Lv. 2 gift box. XP/SP Gain +10%%, Item Drop Rate +150%%, and World Chat Use +6. -->
+    <skill id="55025" name="VIP Lv. 2">
+        <!-- Receive the daily VIP Lv. 2 gift box. XP/SP Gain +7%%, Item Drop Rate +7%%, can use World Chat in all levels, and get an additional 3 times. -->
         <icon initial="BranchIcon.Icon.g_skill_vip2"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>
-    <skill id="55026" name="VIP Level 3">
-        <!-- Receives the daily VIP Lv. 3 gift box. XP/SP Gain +15%%, Item Drop Rate +200%%, World Chat Use +6, XP/Item Drop Rate Penalty at Death -10%%, PvE Damage +3%%. -->
+    <skill id="55026" name="VIP Lv. 3">
+        <!-- Receive the daily VIP Lv. 3 gift box. XP/SP Gain +15%%, Item Drop Rate +15%%, XP Reduction and Item Drop Rate at death -10%%, can use World Chat in all levels, and get an additional 3 times. -->
         <icon initial="BranchIcon.Icon.g_skill_vip3"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>
-    <skill id="55027" name="VIP Level 4">
-        <!-- Receives the daily VIP Lv. 4 gift box. XP/SP Gain +25%%, Item Drop Rate +250%%, World Chat Use +10, XP/Item Drop Rate Penalty at Death -20%%, PvE Damage +10%%, All Stats +1, P. Def./M. Def. +10. -->
+    <skill id="55027" name="VIP Lv. 4">
+        <!-- Receive the daily VIP Lv. 41 gift box. XP/SP Gain +25%%, Item Drop Rate +15%%, XP Reduction and Item Drop rate at death -15%%, can use World Chat in all levels, and get an additional 5 times. -->
         <icon initial="BranchIcon.Icon.g_skill_vip4"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>
-    <skill id="55028" name="VIP Level 5">
-        <!-- Receives the daily VIP Lv. 5 gift box. XP/SP Gain +30%%, Item Drop Rate +250%%, World Chat Use +20, XP/Item Drop Rate Penalty at Death -20%%, PvE Damage +12%%, All Stats +1, P. Def./M. Def. +15. -->
+    <skill id="55028" name="VIP Lv. 5">
+        <!-- Receive the daily VIP Lv. 5 gift box. XP/SP Gain +30%%, Item Drop Rate +30%%, XP Reduction and Item Drop rate at death -20%%, increased PvE Damage, can use World Chat in all levels, and get an additional 10 times. -->
         <icon initial="BranchIcon.Icon.g_skill_vip5"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>
-    <skill id="55029" name="VIP Level 6">
-        <!-- Receives the daily VIP Lv. 6 gift box. XP/SP Gain +35%%, Item Drop Rate +250%%, World Chat Use +20, XP/Item Drop Rate Penalty at Death -20%%, PvE Damage +15%%, All Stats +1, P. Def./M. Def. +20, PvP Damage +2.5%%. -->
+    <skill id="55029" name="VIP Lv. 6">
+        <!-- Receive the daily VIP Lv. 6 gift box. XP/SP Gain +30%%, Item Drop Rate +30%%, XP Reduction and Item Drop rate at death -20%%, increased PvE Damage, STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1, can use World Chat in all levels, and get an additional 10 times. -->
         <icon initial="BranchIcon.Icon.g_skill_vip6"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>
-    <skill id="55030" name="VIP Level 7">
-        <!-- Receives the daily VIP Lv. 7 gift box. XP/SP Gain +35%%, Item Drop Rate +250%%, World Chat Use +40, XP/Item Drop Rate Penalty at Death -20%%, PvE Damage +15%%, All Stats +2, P. Def./M. Def. +30, PvP Damage +10%%. -->
+    <skill id="55030" name="VIP Lv. 7">
+        <!-- Receive the daily VIP Lv. 7 gift box. XP/SP Gain +30%%, Item Drop Rate +30%%, XP Reduction and Item Drop rate at death -20%%, increased PvE/PvP Damage, STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2, can use World Chat in all levels, and get an additional 10 times. -->
         <icon initial="BranchIcon.Icon.g_skill_vip7"/>
         <attributes property="MAGIC">
         </attributes>
@@ -348,6 +363,7 @@
         <icon initial="icon.skill6038"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -403,6 +419,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
             <activate-rate initial="-1"/>
@@ -427,6 +444,7 @@
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -451,6 +469,7 @@
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -465,46 +484,46 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
+            <call-skill scope="SELF" skill="1040"> <!-- Shield -->
                 <power initial="3"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1068">
+            <call-skill scope="SELF" skill="1068"> <!-- Might -->
                 <power initial="3"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1085">
+            <call-skill scope="SELF" skill="1085"> <!-- Acumen -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1204">
+            <call-skill scope="SELF" skill="1204"> <!-- Wind Walk -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="4359">
+            <call-skill scope="SELF" skill="4359"> <!-- Focus -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1044">
+            <call-skill scope="SELF" skill="1044"> <!-- Regeneration -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1240">
+            <call-skill scope="SELF" skill="1240"> <!-- Guidance -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1242">
+            <call-skill scope="SELF" skill="1242"> <!-- Death Whisper -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1036">
+            <call-skill scope="SELF" skill="1036"> <!-- Magic Barrier -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1045">
+            <call-skill scope="SELF" skill="1045"> <!-- Blessed Body -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1048">
+            <call-skill scope="SELF" skill="1048"> <!-- Blessed Soul -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1086">
+            <call-skill scope="SELF" skill="1086"> <!-- Haste -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1087">
+            <call-skill scope="SELF" skill="1087"> <!-- Agility -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1059">
+            <call-skill scope="SELF" skill="1059"> <!-- Empower -->
                 <power initial="2"/>
             </call-skill>
         </effects>
@@ -514,6 +533,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -533,6 +553,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -551,6 +572,7 @@
         <!-- none -->
         <icon initial="icon.new_user_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -568,17 +590,17 @@
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
 		<consume>
             <item initial="29565"/>
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+        <abnormal> <!-- EXP_SP_I -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -598,6 +620,10 @@
         <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
         </attributes>
         <target/>
+        <!-- <abnormal type="EXP_SP_O"> -->
+            <!-- <level initial="1"/> -->
+            <!-- <time initial="3600"/> -->
+        <!-- </abnormal> -->
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="10.0"/>
@@ -612,6 +638,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -636,6 +663,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -705,6 +733,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -762,6 +791,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -822,6 +852,7 @@
         <icon initial="icon.accessory_archer_hat2_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="52"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="418"/>
             <effect-range initial="-1"/>
@@ -844,6 +875,7 @@
         <icon initial="icon.accessory_archer_hat2_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="30"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="219"/>
             <effect-range initial="-1"/>
@@ -865,6 +897,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -874,6 +907,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -888,6 +922,7 @@
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -915,6 +950,7 @@
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -927,28 +963,28 @@
             <time initial="1200"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
+            <call-skill scope="SELF" skill="1040"> <!-- Shield -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1068">
+            <call-skill scope="SELF" skill="1068"> <!-- Might -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1078">
+            <call-skill scope="SELF" skill="1078"> <!-- Concentration -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1085">
+            <call-skill scope="SELF" skill="1085"> <!-- Acumen -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1204">
+            <call-skill scope="SELF" skill="1204"> <!-- Wind Walk -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="4359">
+            <call-skill scope="SELF" skill="4359"> <!-- Focus -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1087">
+            <call-skill scope="SELF" skill="1087"> <!-- Agility -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1059">
+            <call-skill scope="SELF" skill="1059"> <!-- Empower -->
                 <power initial="1"/>
             </call-skill>
         </effects>
@@ -958,6 +994,7 @@
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -970,46 +1007,46 @@
             <time initial="1200"/>
         </abnormal>
         <effects>
-            <call-skill skill="1040">
+            <call-skill skill="1040"> <!-- Shield -->
                 <power initial="3"/>
             </call-skill>
-            <call-skill skill="1068">
+            <call-skill skill="1068"> <!-- Might -->
                 <power initial="3"/>
             </call-skill>
-            <call-skill skill="1085">
+            <call-skill skill="1085"> <!-- Acumen -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill skill="1204">
+            <call-skill skill="1204"> <!-- Wind Walk -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill skill="4359">
+            <call-skill skill="4359"> <!-- Focus -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill skill="1044">
+            <call-skill skill="1044"> <!-- Regeneration -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill skill="1240">
+            <call-skill skill="1240"> <!-- Guidance -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill skill="1242">
+            <call-skill skill="1242"> <!-- Death Whisper -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill skill="1036">
+            <call-skill skill="1036"> <!-- Magic Barrier -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill skill="1045">
+            <call-skill skill="1045"> <!-- Blessed Body -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill skill="1048">
+            <call-skill skill="1048"> <!-- Blessed Soul -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill skill="1086">
+            <call-skill skill="1086"> <!-- Haste -->
                 <power initial="1"/>
             </call-skill>
-            <call-skill skill="1087">
+            <call-skill skill="1087"> <!-- Agility -->
                 <power initial="2"/>
             </call-skill>
-            <call-skill skill="1059">
+            <call-skill skill="1059"> <!-- Empower -->
                 <power initial="2"/>
             </call-skill>
         </effects>
@@ -1042,6 +1079,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1068,17 +1106,17 @@
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
 		<consume>
             <item initial="29669"/>
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+        <abnormal> <!-- EXP_SP_H -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -1097,17 +1135,17 @@
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
 		<consume>
             <item initial="29670"/>
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+        <abnormal> <!-- EXP_SP_H -->
             <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -1126,6 +1164,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1145,6 +1184,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1164,7 +1204,7 @@
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <reuse initial="3000"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
             <activate-rate initial="-1"/>
@@ -1186,9 +1226,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-10.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="EVASION_RATE">
                 <power initial="-2.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5.0"/>
             </stat-modify>
@@ -1211,7 +1251,7 @@
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <reuse initial="3000"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
             <activate-rate initial="-1"/>
@@ -1237,6 +1277,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
             <activate-rate initial="-1"/>
@@ -1259,6 +1300,7 @@
         <icon initial="icon.skill1323"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <effect-point initial="100"/>
             <effect-range initial="900"/>
@@ -1338,6 +1380,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1407,6 +1450,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1464,6 +1508,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1673,6 +1718,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1692,6 +1738,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1711,6 +1758,7 @@
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -1735,6 +1783,7 @@
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -1758,6 +1807,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
@@ -1782,6 +1832,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1856,8 +1907,8 @@
             <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE">
-                <power initial="26.0"/>
+<stat-modify stat="CRITICAL_DAMAGE">
+     <power initial="26.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1920,9 +1971,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="26.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="55095" name="Lv. 3 Fire Dragon's Pendant Enchant Effect" max-level="10">
@@ -1969,7 +2020,7 @@
                     <value level="10">498.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="2.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -1981,7 +2032,7 @@
                     <value level="9">12.0</value>
                     <value level="10">15.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="55096" name="Lv. 4 Fire Dragon's Pendant Basic Effect">
@@ -1997,9 +2048,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="26.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="55097" name="Lv. 4 Fire Dragon's Pendant Enchant Effect" max-level="10">
@@ -2046,7 +2097,7 @@
                     <value level="10">498.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -2058,7 +2109,7 @@
                     <value level="9">12.0</value>
                     <value level="10">15.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="55098" name="Lv. 5 Fire Dragon's Pendant Basic Effect">
@@ -2074,9 +2125,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="26.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="55099" name="Lv. 5 Fire Dragon's Pendant Enchant Effect" max-level="10">
@@ -2132,7 +2183,7 @@
                     <value level="10">15.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -2144,7 +2195,7 @@
                     <value level="9">12.0</value>
                     <value level="10">15.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
 </list>

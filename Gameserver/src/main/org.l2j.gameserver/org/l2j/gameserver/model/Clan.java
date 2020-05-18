@@ -17,6 +17,7 @@ import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -126,6 +127,7 @@ public class Clan implements IIdentifiable, INamable {
 
     private ClanMember leader;
     private IntMap<SubPledgeData> subPledges = new CHashIntMap<>();
+    private int _fortId;
     private int _hideoutId;
     private int _rank = 0;
     private String notice;
@@ -367,8 +369,11 @@ public class Clan implements IIdentifiable, INamable {
             if (player.getClan().getCastleId() > 0) {
                 CastleManager.getInstance().getCastleByOwner(player.getClan()).removeResidentialSkills(player);
             }
-
+            if (player.getClan().getFortId() > 0) {
+                FortDataManager.getInstance().getFortByOwner(player.getClan()).removeResidentialSkills(player);
+            }
             player.sendSkillList();
+
             player.setClan(null);
 
             // players leaving from clan academy have no penalty
@@ -525,6 +530,20 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     /**
+     * @return the fort Id for this clan if owns a fort, zero otherwise.
+     */
+    public int getFortId() {
+        return _fortId;
+    }
+
+    /**
+     * @param fortId the fort Id to set.
+     */
+    public void setFortId(int fortId) {
+        _fortId = fortId;
+    }
+
+    /**
      * @return the hideout Id for this clan if owns a hideout, zero otherwise.
      */
     public int getHideoutId() {
@@ -581,6 +600,25 @@ public class Clan implements IIdentifiable, INamable {
      */
     public void resetBloodAllianceCount() {
         data.setBloodAllianceCount(0);
+    }
+
+
+    public int getBloodOathCount() {
+        return data.getBloodOathCount();
+    }
+
+    /**
+     * Increase Blood Oath count by config predefined count and updates the database.
+     */
+    public void increaseBloodOathCount() {
+        data.setBloodOathCount(data.getBloodOathCount() + Config.FS_BLOOD_OATH_COUNT);
+    }
+
+    /**
+     * Reset the Blood Oath count to zero and updates the database.
+     */
+    public void resetBloodOathCount() {
+        data.setBloodOathCount(0);
     }
 
     public void updateInDB() {

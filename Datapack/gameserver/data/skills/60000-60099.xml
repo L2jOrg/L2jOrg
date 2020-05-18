@@ -7,12 +7,11 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="60002" name="Einhasad's Observation" max-level="4" debuff="true" action="A2">
+    <skill id="60002" name="Einhasad's Observation" max-level="3" debuff="true" action="A2">
         <!--
             level 1: Being observed by Einhasad for having killed too much. P. Def./M. Def. -5%, Speed -5.
             level 2: Being observed by Einhasad for having killed too much. P. Def./M. Def. -10%, Speed -10.
             level 3: Being observed by Einhasad for having killed too much. P. Def./M. Def. -15%, Speed -30.
-            level 4: Being observed by Einhasad for having killed too much. P. Def./M. Def. -30%, Speed -35. Cannot use Escape skills and teleports.
          -->
         <icon initial="icon.karma"/>
         <attributes property="PHYSIC">
@@ -44,6 +43,7 @@
         <!-- Benefits applied to Server Level Ranking 1st.\nAll Stats +1, Warrior's HP Potion, Maliss's HP Potion Effect +50, Weight Limit +100000, P. Evasion +20. -->
         <icon initial="icon.server_ranking_1"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -84,6 +84,7 @@
         <!-- Benefits applied to Server Level Ranking 2nd-30th.\nCON +1 MEN +1, DEX +1, WIT +1, Weight Limit +10000. -->
         <icon initial="icon.server_ranking_2"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -112,6 +113,7 @@
         <!-- Benefits applied to Server Level Ranking 31st-100th.\nCON +1 MEN +1, Weight Limit +5000. -->
         <icon initial="icon.server_ranking_3"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -134,6 +136,7 @@
         <!-- Benefit applied to Human Level Ranking 1st.\nP. Critical Damage/M. Critical Damage +300. -->
         <icon initial="icon.race_ranking_1"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -153,6 +156,7 @@
         <!-- Benefit applied to Elf Level Ranking 1st.\nP. Atk./M. Atk. +300. -->
         <icon initial="icon.race_ranking_1"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -172,6 +176,7 @@
         <!-- Benefit applied to Dark Elf Level Ranking 1st.\nAtk. Spd./Casting Spd. +200. -->
         <icon initial="icon.race_ranking_1"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -191,6 +196,7 @@
         <!-- Benefit applied to Orc Level Ranking 1st.\nP. Critical Rate/M. Critical Rate +20. -->
         <icon initial="icon.race_ranking_1"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -210,6 +216,7 @@
         <!-- Benefit applied to Dwarf Level Ranking 1st.\nIncreases Enchant Success Rate. -->
         <icon initial="icon.race_ranking_1"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -226,6 +233,7 @@
         <!-- Benefit applied to Jin Kamael Level Ranking 1st.\nP. Accuracy, M. Accuracy, P. Evasion, M. Evasion +5. -->
         <icon initial="icon.race_ranking_1"/>
         <attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -269,7 +277,7 @@
         <target/>
     </skill>
     <skill id="60015" name="Race Ranking Benefit">
-        <!-- Benefits for Race Ranking 1st.\n\nHumans: Increases P. Critical Damage /M. Critical Damage\nElves: Increases P. Atk. / M. Atk.\nDark Elves: Increases Atk. Spd. / Casting Spd.\nOrcs: Increases P. Critical Rate / M. Critical Rate\nDwarves: Increases Enchant Success Rate\nJin Kamael: Increases P. Accuracy, M. Accuracy, P. Evasion, M. Evasion.\n\nBenefits for Race Ranking 1st-3rd.\n\nRanker Transformation Skill -->
+        <!-- Humans: Increases P. Critical Damage /M. Critical Damage\nElves: Increases P. Atk. / M. Atk.\nDark Elves: Increases Atk. Spd. / Casting Spd.\nOrcs: Increases P. Critical Rate / M. Critical Rate\nDwarves: Increases Enchant Success Rate\nJin Kamael: Increases P. Accuracy, M. Accuracy, P. Evasion, M. Evasion. -->
         <icon initial="icon.UI_race_ranking_1"/>
         <attributes property="MAGIC">
         </attributes>
@@ -279,6 +287,7 @@
         <!-- Used to play the Holy Artifact Animation. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3500"/>
             <activate-rate initial="-1"/>
@@ -289,6 +298,7 @@
         <!-- Used to play the Holy Artifact Animation. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3500"/>
             <activate-rate initial="-1"/>
@@ -298,7 +308,8 @@
     <skill id="60018" name="Teleport" action="A1">
         <!-- Teleport -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="0">
+            <cast-range initial="-1"/>
             <hit-time initial="2000"/>
         </attributes>
         <target/>

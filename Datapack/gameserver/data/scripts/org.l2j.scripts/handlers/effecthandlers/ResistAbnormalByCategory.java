@@ -1,11 +1,11 @@
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.DispelSlotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 
 /**
@@ -25,7 +25,7 @@ public class ResistAbnormalByCategory extends AbstractEffect {
 	public void pump(Creature effected, Skill skill) {
 		// Only this one is in use it seems
 		if (category == DispelSlotType.DEBUFF) {
-			effected.getStats().mergeMul(Stat.RESIST_ABNORMAL_DEBUFF, power);
+			effected.getStats().mergeMul(Stat.RESIST_ABNORMAL_DEBUFF, 1 + (power / 100));
 		}
 	}
 

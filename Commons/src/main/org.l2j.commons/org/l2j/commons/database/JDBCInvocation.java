@@ -5,9 +5,9 @@ import io.github.joealisson.primitive.IntKeyValue;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.annotation.Column;
-import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.commons.database.annotation.Transient;
 import org.l2j.commons.database.handler.TypeHandler;
 import org.l2j.commons.database.helpers.EntityBasedStrategy;
 import org.l2j.commons.database.helpers.QueryDescriptor;
@@ -36,10 +36,8 @@ import static org.l2j.commons.util.Util.*;
 class JDBCInvocation implements InvocationHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JDBCInvocation.class);
-    private static final Pattern PARAMETER_PATTERN = Pattern.compile(":(\\w+?):");
-    private static final String INSERT_TEMPLATE = "INSERT INTO %s %s VALUES %s ON DUPLICATE KEY UPDATE %s";
-    private static final String COLUMN_PATTERN = "(\\w+)";
-    private static final String DUPLICATE_UPDATE_PATTERN = "$1=VALUES($1)";
+    private static final Pattern PARAMETER_PATTERN = Pattern.compile(":(\\w*?):");
+    private static final String REPLACE_TEMPLATE = "REPLACE INTO %s %s VALUES %s";
 
     private static final Cache<Method, QueryDescriptor> descriptors = CacheFactory.getInstance().getCache("sql-descriptors");
     private static final Cache<Class<?>, QueryDescriptor> saveDescriptors = CacheFactory.getInstance().getCache("sql-save-descriptors");
@@ -154,14 +152,13 @@ class JDBCInvocation implements InvocationHandler {
         var fields = fieldsOf(clazz);
         Map<String, IntKeyValue<Class<?>>> parameterMap = new HashMap<>(fields.size());
 
-        var columns = fields.stream().filter(f -> !f.isAnnotationPresent(NonUpdatable.class) && !Modifier.isStatic(f.getModifiers()))
+        var columns = fields.stream().filter(f -> !f.isAnnotationPresent(Transient.class) && !Modifier.isStatic(f.getModifiers()))
                 .peek(f -> parameterMap.put(f.getName(), new IntKeyValue<>(parameterMap.size()+1, f.getType())))
-                .map(this::fieldToColumnName).collect(Collectors.joining(","));
-
+                .map(this::fieldToColumnName).collect(Collectors.joining(",", "(", ")"));
 
         var values = "?".repeat(parameterMap.size()).chars().mapToObj(Character::toString).collect(Collectors.joining(",", "(", ")"));
-        var update = columns.replaceAll(COLUMN_PATTERN, DUPLICATE_UPDATE_PATTERN);
-        var query = new QueryDescriptor(method, String.format(INSERT_TEMPLATE, table.value(), "(" + columns + ")", values, update), new EntityBasedStrategy(parameterMap));
+
+        var query = new QueryDescriptor(method, String.format(REPLACE_TEMPLATE, table.value(), columns, values), new EntityBasedStrategy(parameterMap));
 
         saveDescriptors.put(clazz, query);
         return query;

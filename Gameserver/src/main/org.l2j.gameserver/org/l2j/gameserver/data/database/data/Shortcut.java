@@ -1,8 +1,8 @@
 package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
-import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.commons.database.annotation.Transient;
 import org.l2j.gameserver.enums.ShortcutType;
 
 /**
@@ -45,22 +45,22 @@ public class Shortcut {
     /**
      * Slot from 0 to 11.
      */
-    @NonUpdatable
+    @Transient
     private int slot;
 
     /**
      * Page from 0 to 23.
      */
-    @NonUpdatable
+    @Transient
     private int page;
 
-    @NonUpdatable
+    @Transient
     private int sharedReuseGroup = -1;
 
     /**
      * Character type: 1 player, 2 summon.
      */
-    @NonUpdatable
+    @Transient
     private int characterType;
 
     /**

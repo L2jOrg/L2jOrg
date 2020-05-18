@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -11,6 +12,11 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
 
+/**
+ * This class ...
+ *
+ * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
+ */
 public final class RequestAnswerJoinPledge extends ClientPacket {
     private int _answer;
 
@@ -79,6 +85,9 @@ public final class RequestAnswerJoinPledge extends ClientPacket {
 
                 if (clan.getCastleId() > 0) {
                     CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(activeChar);
+                }
+                if (clan.getFortId() > 0) {
+                    FortDataManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
                 }
                 activeChar.sendSkillList();
 

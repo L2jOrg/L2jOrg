@@ -5,6 +5,7 @@
         <icon initial="icon.skill1800"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
             <magic-level initial="56"/>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -62,6 +63,7 @@
         <icon initial="icon.skill1801"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
             <magic-level initial="56"/>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -119,6 +121,7 @@
         <icon initial="icon.skill1802"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
             <magic-level initial="56"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -183,7 +186,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -209,7 +211,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -235,7 +236,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -253,13 +253,13 @@
         <!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
         <icon initial="Icon.skill1050"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="75000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -279,7 +279,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -288,9 +287,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="1815" name="Cadmus - Death Whisper" action="A2" type="MAGIC">
@@ -305,7 +304,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -331,7 +329,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -357,7 +354,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="11"/>
             <mana initial="52"/>
         </consume>
         <target type="TARGET"/>
@@ -379,7 +375,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -405,7 +400,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -431,7 +425,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -457,7 +450,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -483,7 +475,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -492,7 +483,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power initial="-10.0"/>
             </magic-cost>
         </effects>
@@ -509,7 +500,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -518,9 +508,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="1824" name="Cadmus - Lightness" action="A2" type="MAGIC">
@@ -535,7 +525,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target type="TARGET"/>
@@ -561,7 +550,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="20"/>
             <mana initial="98"/>
         </consume>
         <target type="TARGET"/>
@@ -583,7 +571,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="17"/>
             <mana initial="83"/>
         </consume>
         <target type="TARGET"/>
@@ -674,6 +661,7 @@
         <!-- Allows to mount a Golden Lion. -->
         <icon initial="icon.skill1833"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -695,6 +683,7 @@
         <!-- Allows to mount a Pegasus. -->
         <icon initial="icon.skill1834"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -716,6 +705,7 @@
         <!-- Allows to mount a Saber Tooth Cougar. -->
         <icon initial="icon.skill1835"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -737,6 +727,7 @@
         <!-- Mount Kukuru -->
         <icon initial="icon.skill1836"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -758,6 +749,7 @@
         <!-- Allows to mount a Black Bear. -->
         <icon initial="icon.skill1837"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -787,7 +779,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="15"/>
             <mana initial="72"/>
         </consume>
         <target/>
@@ -804,7 +795,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="15"/>
             <mana initial="72"/>
         </consume>
         <target/>
@@ -821,7 +811,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="15"/>
             <mana initial="72"/>
         </consume>
         <target/>
@@ -838,7 +827,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -855,7 +843,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -872,7 +859,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -881,13 +867,13 @@
         <!-- Teleports to a town. Cannot be used in a special locations such as the GM Consultation Service. PC-exclusive. -->
         <icon initial="Icon.skill1050"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="75000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -904,7 +890,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -921,7 +906,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -938,7 +922,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -955,7 +938,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="11"/>
             <mana initial="52"/>
         </consume>
         <target/>
@@ -972,7 +954,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -989,7 +970,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -1006,7 +986,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -1023,7 +1002,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -1040,7 +1018,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -1057,7 +1034,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -1074,7 +1050,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="2"/>
             <mana initial="12"/>
         </consume>
         <target/>
@@ -1091,7 +1066,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="20"/>
             <mana initial="98"/>
         </consume>
         <target/>
@@ -1108,7 +1082,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="17"/>
             <mana initial="83"/>
         </consume>
         <target/>
@@ -1125,7 +1098,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="11"/>
             <mana initial="52"/>
         </consume>
         <target/>
@@ -1142,7 +1114,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="11"/>
             <mana initial="52"/>
         </consume>
         <target/>
@@ -1159,7 +1130,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="7"/>
             <mana initial="35"/>
         </consume>
         <target/>
@@ -1176,7 +1146,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="10"/>
             <mana initial="49"/>
         </consume>
         <target/>
@@ -1193,7 +1162,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="12"/>
             <mana initial="58"/>
         </consume>
         <target/>
@@ -1210,7 +1178,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="5"/>
             <mana initial="24"/>
         </consume>
         <target/>
@@ -1227,7 +1194,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="10"/>
             <mana initial="48"/>
         </consume>
         <target/>
@@ -1313,7 +1279,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF SPEAR FIST DUAL</type>
+                <type>SWORD BLUNT SPEAR FIST DUAL TWO_HAND_SWORD DUAL_BLUNT</type>
             </weapon>
         </conditions>
         <effects>
@@ -1380,15 +1346,6 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
-            <mana-init initial="12">
-                <value level="2">15</value>
-                <value level="3">18</value>
-                <value level="4">21</value>
-                <value level="5">24</value>
-                <value level="7">27</value>
-                <value level="9">30</value>
-                <value level="11">33</value>
-            </mana-init>
             <mana initial="54">
                 <value level="2">72</value>
                 <value level="3">87</value>

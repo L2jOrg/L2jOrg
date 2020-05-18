@@ -4,6 +4,7 @@
         <!-- Snowman's present. Once debuffed, no more debuffs can be applied. -->
         <icon initial="icon.weapon_snowman_stick_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="-2"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -14,6 +15,7 @@
         <!-- Restores energy when in a peaceful zone. -->
         <icon initial="icon.weapon_snowman_stick_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -25,6 +27,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -59,6 +62,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
@@ -80,6 +84,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
@@ -100,15 +105,17 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="17154" name="Love Potion" action="A2">
-        <!-- The Love Potion increases P. Atk./M. Atk./P. Def./M. Def. by 15%%. -->
+    <skill id="17154" name="Elixir of Life" action="A2">
+        <!-- none -->
         <icon initial="icon.etc_whiteday_herb"/>
         <attributes property="PHYSIC" remove-abnormal-on-leave="true">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -139,6 +146,7 @@
         <!-- Change hair accessories. -->
         <icon initial="icon.skill0810"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="180000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>

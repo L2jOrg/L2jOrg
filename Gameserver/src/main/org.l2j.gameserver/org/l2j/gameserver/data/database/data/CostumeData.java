@@ -1,8 +1,8 @@
 package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
-import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.commons.database.annotation.Transient;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
@@ -16,7 +16,7 @@ public class CostumeData {
     private int id;
     private long amount;
     private boolean locked;
-    @NonUpdatable
+    @Transient
     private boolean isNew;
 
     public void increaseAmount() {

@@ -5,6 +5,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -15,6 +16,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -25,6 +27,7 @@
         <icon initial="icon.skill0922"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="-2"/>
+            <cast-range initial="-1"/>
             <effect-point initial="679"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -198,9 +201,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="6811" name="Arena Death Whisper" action="A2">
@@ -255,9 +258,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="-8.0"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
                 <power initial="-4.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0"/>
             </stat-modify>
@@ -279,6 +282,7 @@
                 <value level="7">70</value>
                 <value level="8">79</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -317,6 +321,7 @@
                 <value level="7">72</value>
                 <value level="8">79</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -378,6 +383,7 @@
                 <value level="15">98</value>
                 <value level="16">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -423,6 +429,7 @@
                 <value level="15">98</value>
                 <value level="16">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -453,6 +460,7 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -477,9 +485,9 @@
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="35.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="6819" name="Banshee's Curse" debuff="true" action="A2" type="MAGIC">
@@ -508,6 +516,7 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -568,6 +577,7 @@
         <!-- none -->
         <icon initial="icon.skill0086"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="4000"/>
             <effect-point initial="438"/>
             <effect-range initial="-1"/>
@@ -715,6 +725,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="84"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -753,6 +764,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="84"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -837,6 +849,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="84"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="5000"/>
             <activate-rate initial="-1"/>
@@ -851,6 +864,7 @@
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
@@ -879,6 +893,7 @@
         <!-- Atk. Spd. is increased by 33%%. -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
@@ -962,6 +977,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="81"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="546"/>
             <effect-range initial="-1"/>
@@ -978,6 +994,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="81"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="546"/>
             <effect-range initial="-1"/>
@@ -1181,6 +1198,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="81"/>
+            <cast-range initial="-1"/>
             <effect-point initial="546"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1316,6 +1334,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="81"/>
+            <cast-range initial="-1"/>
             <effect-point initial="546"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1393,6 +1412,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="83"/>
+            <cast-range initial="-1"/>
             <effect-point initial="546"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1811,12 +1831,12 @@
                     <value level="2">15.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="10.0">
                     <value level="2">30.0</value>
                     <value level="3">50.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="BONUS_EXP">
                 <power>
                     <value level="3">20.0</value>
@@ -1829,6 +1849,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -2079,6 +2100,7 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <cool-time initial="800"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>

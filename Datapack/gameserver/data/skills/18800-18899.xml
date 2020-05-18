@@ -31,6 +31,7 @@
     <skill id="18806" name="Magic Woodpile" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -43,6 +44,7 @@
     <skill id="18807" name="Large Magic Woodpile" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -56,6 +58,7 @@
         <!-- 1st Flame Games skill after a successful raid. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -66,6 +69,7 @@
         <!-- 2nd Magic Flame Festival skill after a successful raid. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -76,6 +80,7 @@
         <!-- The gust makes you dance a cheerful dance. -->
         <icon initial="icon.ev_magic_flame_game_wind3"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

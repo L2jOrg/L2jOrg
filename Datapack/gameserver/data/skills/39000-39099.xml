@@ -4,6 +4,7 @@
         <!-- Double-click to randomly obtain 1 to 1,000,000 Adena or a battle item. Available once a day. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -14,6 +15,7 @@
         <!-- Double-click to randomly obtain 1 to 10,000,000 Adena or a battle item. Available once a day. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -24,6 +26,7 @@
         <!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
         <icon initial="icon.etc_lesser_potion_red_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -33,6 +36,7 @@
         <!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
         <icon initial="icon.etc_potion_scarlet_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -42,6 +46,7 @@
         <!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -52,6 +57,7 @@
         <!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -62,6 +68,7 @@
         <!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -72,6 +79,7 @@
         <!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -82,6 +90,7 @@
         <!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -92,6 +101,7 @@
         <!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -102,6 +112,7 @@
         <!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -112,6 +123,7 @@
         <!-- Wrapped Pack containing either Facelifting Potion A, B, or C. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -121,6 +133,7 @@
         <!-- Wrapped Pack containing either Dye Potion A, B, C, or D. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -131,6 +144,7 @@
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -155,6 +169,7 @@
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -179,6 +194,7 @@
         <icon initial="icon.etc_scroll_white_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -203,6 +219,7 @@
         <icon initial="icon.bm_agathion_fury"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -224,6 +241,7 @@
         <icon initial="icon.bm_agathion_concentration"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="52"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -245,6 +263,7 @@
         <icon initial="icon.bm_agathion_wind"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="46"/>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -288,6 +307,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -312,6 +332,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -336,6 +357,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -360,6 +382,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -384,6 +407,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -408,6 +432,7 @@
         <icon initial="icon.bm_soaring_escape"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -425,6 +450,7 @@
         <!-- Ol Mahum Adena Pouch. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -434,6 +460,7 @@
         <!-- Turek Orc Adena Pouch. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -444,6 +471,7 @@
         <icon initial="icon.etc_potion_green_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -463,6 +491,7 @@
         <icon initial="icon.etc_spell_shot_white_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -473,6 +502,7 @@
         <icon initial="icon.etc_spell_shot_blue_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -483,6 +513,7 @@
         <icon initial="icon.etc_spell_shot_green_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -492,6 +523,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Soulshots. Pack randomly contains 100 to 10,000 Soulshots (No-grade). -->
         <icon initial="icon.etc_treasure_box_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -501,6 +533,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Soulshots. Open the pack to randomly obtain between 100 to 10,000 D-grade Soulshots. -->
         <icon initial="icon.etc_treasure_box_i01"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -510,6 +543,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Soulshots. Open the pack to randomly obtain between 50 to 5,000 C-grade Soulshots. -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -519,6 +553,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Spiritshots. Pack randomly contains 50 to 1,000 Spiritshots (No-grade). -->
         <icon initial="icon.etc_treasure_box_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -528,6 +563,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Spiritshots. Open the pack to randomly obtain between 80 to 3,000 D-grade Spiritshots. -->
         <icon initial="icon.etc_treasure_box_i01"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -537,6 +573,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Spiritshots. Open the pack to randomly obtain between 30 to 1,000 C-grade Spiritshots. -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -546,6 +583,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Blessed Spiritshots. Pack randomly contains 20 to 1,000 Blessed Spiritshots (No-grade). -->
         <icon initial="icon.etc_treasure_box_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -555,6 +593,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Blessed Spiritshots. Open the pack to randomly obtain between 20 to 1,000 D-grade Blessed Spiritshots. -->
         <icon initial="icon.etc_treasure_box_i01"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -564,6 +603,7 @@
         <!-- A lucky pack obtainable from Spirit Boom when exchanging Blessed Spiritshots. Open the pack to randomly obtain between 10 to 1,000 C-grade Blessed Spiritshots. -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -573,6 +613,7 @@
         <!-- For 20 minutes, XP/SP Gain +10%%,and Movement Speed +20. Cooldown is 10 minutes. Only the Quick Step buff will be applied when Wind Walk or Wind Walk Potion is used while Quick Step is in effect. Effect remains even after death. -->
         <icon initial="icon.stone_8_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -584,6 +625,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -595,6 +637,7 @@
         <icon initial="icon.skill2513"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -640,13 +683,14 @@
         <!-- For 20 minutes, XP/SP Gain +5%%. Effect remains even after death. -->
         <icon initial="icon.skill19226"/>
         <attributes property="PHYSIC" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal>
+        <abnormal> <!-- EXP_SP_M -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -664,6 +708,7 @@
         <!-- Appearance changes to that of Santa. For 1 hour, XP/SP Gain +10%%, Max HP/Max MP/+ 10%%, and Movement Speed +5. Cooldown is 30 minutes. Effect remains even after death. -->
         <icon initial="icon.shield_bread_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -680,6 +725,7 @@
         <icon initial="icon.fish_stew_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -709,6 +755,7 @@
         <icon initial="icon.fish_stew_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -737,6 +784,7 @@
         <icon initial="icon.fish_stew_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -766,6 +814,7 @@
         <icon initial="icon.fish_stew_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -795,6 +844,7 @@
         <icon initial="icon.fish_stew_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -819,6 +869,7 @@
         <!-- none -->
         <icon initial="icon.new_user_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -831,6 +882,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -851,6 +903,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -871,6 +924,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -891,6 +945,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -912,6 +967,10 @@
         <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
         </attributes>
         <target/>
+        <!-- <abnormal type="EXP_SP_P"> -->
+            <!-- <level initial="1"/> -->
+            <!-- <time initial="1200"/> -->
+        <!-- </abnormal> -->
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="20.0"/>
@@ -926,6 +985,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -950,6 +1010,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1009,6 +1070,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1018,6 +1080,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1027,6 +1090,7 @@
         <!-- Teleports to a village. Cooldown 2 hrs. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
@@ -1038,6 +1102,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_am_d"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1047,6 +1112,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_wp_d"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1056,6 +1122,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_am_c"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1065,6 +1132,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_wp_c"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1074,6 +1142,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_am_b"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1083,6 +1152,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_wp_b"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1093,6 +1163,7 @@
         <icon initial="icon.etc_reagent_white_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -1111,6 +1182,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i08"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1120,6 +1192,7 @@
         <!-- none -->
         <icon initial="icon.special_cube_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1131,6 +1204,7 @@
         <icon initial="icon.etc_raid_e_i01"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1166,6 +1240,7 @@
         <icon initial="icon.etc_raid_e_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1199,6 +1274,7 @@
         <icon initial="icon.skilltransform4"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="-3"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1207,7 +1283,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+        <abnormal> <!-- EXP_SP_G -->
             <level initial="1"/>
             <time initial="1800"/>
             <chance initial="-1"/>
@@ -1232,6 +1308,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
@@ -1255,6 +1332,7 @@
          -->
         <icon initial="icon.ev_invasion_buff_box"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1262,12 +1340,12 @@
         </attributes>
         <consume>
             <item initial="49501">
-				<value level="2">91391</value>
+				<value level="2">91391</value>                    
             </item>
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_F -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -1275,12 +1353,12 @@
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="10.0">
-                    <value level="2">30.0</value>
+					<value level="2">30.0</value>                    
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="10.0">
-                    <value level="2">30.0</value>
+					<value level="2">30.0</value>                    
                 </power>
             </stat-modify>
         </effects>
@@ -1290,6 +1368,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1314,6 +1393,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1354,6 +1434,7 @@
          -->
         <icon initial="icon.accessory_sheep_cap_white_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="-1000">
                 <value level="2">0</value>
             </reuse>
@@ -1367,6 +1448,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1389,6 +1471,7 @@
     <skill id="39083" name="Get Sheepish Gift" action="A1">
         <icon initial="icon.accessory_sheep_cap_white_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1399,16 +1482,18 @@
         <!-- none -->
         <icon initial="icon.freya_box_i01"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39085" name="Special Fruit Buff" action="A2">
-        <!-- For 20 minutes, Bonus XP/SP Gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of damage dealt to enemies as HP.\nDeath protection. You can delete it on your own. -->
+    <skill id="39085" name="Pirates' Special Fruit" action="A2">
+        <!-- For 20 minutes bonus XP/SP gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of physical damage dealt to enemies as HP. Effect remains even after death. -->
         <icon initial="icon.etc_codran_i09"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1418,7 +1503,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+        <abnormal> <!-- EXP_SP_K -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -1457,7 +1542,7 @@
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0"/>
             </stat-modify>
-            <vampiric-attack chance="30">
+			<vampiric-attack chance="30">
                 <power initial="3.0"/>
             </vampiric-attack>
         </effects>
@@ -1466,6 +1551,7 @@
         <!-- none -->
         <icon initial="icon.card_event_blue_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1477,6 +1563,7 @@
         <!-- none -->
         <icon initial="icon.card_event_black_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1500,6 +1587,7 @@
     <skill id="39089" name="Pirate's HP Potion" action="A1">
         <icon initial="icon.etc_bm_hero_red_potion"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1509,6 +1597,7 @@
         <!-- Teleport to the Town of Giran. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -1520,6 +1609,7 @@
         <!-- Teleport to the Town of Dion. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -1531,6 +1621,7 @@
         <!-- Teleport to the Town of Oren. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -1542,6 +1633,7 @@
         <!-- Teleport to the Town of Gludio. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -1549,7 +1641,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="39094" name="Agathion's Power" max-level="2">
+    <skill id="39094" name="Ares' Power" max-level="2">
         <!--
             level 1: STR/INT/CON/MEN  +1.
             level 2: Increases STR/INT/CON/MEN/DEX/WIT +1.
@@ -1559,7 +1651,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="39095" name="Blessed Agathion's Blessing" max-level="2">
+    <skill id="39095" name="Ares' Blessing" max-level="2">
         <!--
             level 1: MEN/Stun/Sleep/Paralysis Resistance +5%.
             level 2: MEN/Stun/Sleep/Paralysis Resistance +8%.
@@ -1573,6 +1665,7 @@
         <!-- Teleport to the Town of Giran. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -1584,6 +1677,7 @@
         <!-- Teleport to the Town of Gludio. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -1595,6 +1689,7 @@
         <!-- Teleport to the Town of Dion. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -1606,6 +1701,7 @@
         <!-- Teleport to the Town of Oren. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>

@@ -72,15 +72,15 @@
 		<attributes weight="3" price="56" immediate-effect="true" action="FISHINGSHOT"/>
 	</item>
 
-	<armor id="37725" name="Dinos Uniform" type="HEAVY" body-part="ALL_DRESS" icon="icon.london_olympic_bikini">
-	<!-- Dinos Uniform. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+	<armor id="37725" name="NC Dinos Uniform" type="HEAVY" body-part="ALL_DRESS" icon="icon.london_olympic_bikini">
+	<!-- NC Dinos Uniform. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="37726" name="Dinos Shortstop Cap" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_mining_cap_i00">
-	<!-- Dinos Defense Hat. -->
+	<armor id="37726" name="NC Dinos Shortstop Cap" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_mining_cap_i00">
+	<!-- NC Dinos Defense Hat. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />

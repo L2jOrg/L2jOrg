@@ -5,6 +5,7 @@
         <icon initial="icon.skill0913"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="77"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="679"/>
             <effect-range initial="-1"/>
@@ -30,6 +31,7 @@
         <icon initial="icon.skill0914"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="679"/>
             <effect-range initial="-1"/>
@@ -61,6 +63,7 @@
         <icon initial="icon.skill0915"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="679"/>
             <effect-range initial="-1"/>
@@ -87,9 +90,9 @@
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="-8.0"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
                 <power initial="-2.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="4.0"/>
             </stat-modify>
@@ -116,6 +119,7 @@
                 <value level="3">68</value>
                 <value level="4">72</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="45000"/>
             <effect-point initial="204"/>
             <effect-range initial="-1"/>
@@ -150,6 +154,7 @@
         <icon initial="icon.skill0917"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="79"/>
+            <cast-range initial="-1"/>
             <reuse initial="150000"/>
             <effect-point initial="597"/>
             <effect-range initial="-1"/>
@@ -178,6 +183,7 @@
         <icon initial="icon.skill0918"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="75000"/>
             <effect-point initial="150"/>
             <effect-range initial="-1"/>
@@ -204,6 +210,7 @@
         <icon initial="icon.skill0919"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="75000"/>
             <effect-point initial="150"/>
             <effect-range initial="-1"/>
@@ -266,6 +273,7 @@
                 <value level="2">61</value>
                 <value level="3">71</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="180000"/>
             <effect-point initial="679"/>
             <effect-range initial="-1"/>
@@ -932,6 +940,7 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
@@ -956,6 +965,7 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
@@ -980,6 +990,7 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
@@ -1004,12 +1015,14 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="5"/>
             <mana initial="24"/>
         </consume>
         <target/>
@@ -1029,11 +1042,13 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="679"/>
             <effect-range initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="5"/>
             <mana initial="24"/>
         </consume>
         <target/>
@@ -1069,6 +1084,7 @@
         <icon initial="icon.skill_transform_s_attack"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
@@ -1123,11 +1139,13 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="8"/>
             <mana initial="38"/>
         </consume>
         <target/>
@@ -1180,6 +1198,7 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
+            <mana-init initial="8"/>
             <mana initial="38"/>
         </consume>
         <target/>
@@ -1199,6 +1218,7 @@
         <icon initial="icon.skill0313"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="74"/>
+            <cast-range initial="-1"/>
             <reuse initial="75000"/>
             <effect-point initial="655"/>
             <effect-range initial="-1"/>
@@ -1227,10 +1247,10 @@
                 <power initial="200.0"/>
                 <weapon-type>BOW</weapon-type>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="20.0"/>
                 <weapon-type>BOW</weapon-type>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="973" name="Stun Attack" max-level="8" debuff="true" action="A2">
@@ -1392,6 +1412,7 @@
             <element type="WATER" value="20"/>
         </attributes>
         <consume>
+            <mana-init initial="15"/>
             <mana initial="73">
                 <value level="4">74</value>
                 <value level="6">75</value>
@@ -1448,6 +1469,7 @@
             <element type="WIND" value="25"/>
         </attributes>
         <consume>
+            <mana-init initial="15"/>
             <mana initial="73">
                 <value level="4">74</value>
                 <value level="6">75</value>
@@ -1501,6 +1523,7 @@
             <element type="WATER" value="25"/>
         </attributes>
         <consume>
+            <mana-init initial="15"/>
             <mana initial="73">
                 <value level="3">74</value>
                 <value level="5">75</value>
@@ -1632,6 +1655,7 @@
                 <value level="5">84</value>
                 <value level="6">85</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="40000"/>
             <effect-point initial="-7427">
                 <value level="2">-8137</value>
@@ -1686,6 +1710,7 @@
             <hit-time initial="10000"/>
         </attributes>
         <consume>
+            <mana-init initial="15"/>
             <mana initial="73">
                 <value level="3">74</value>
                 <value level="5">75</value>
@@ -1928,7 +1953,7 @@
                 <min-damage initial="1.0"/>
                 <weapons>SWORD BLUNT DUAL</weapons>
             </trigger-skill-by-attack>
-            <trigger-skill-by-attack critical="true" skill="6813">
+            <trigger-skill-by-attack skill="6813" critical="true">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
@@ -1942,6 +1967,7 @@
                 <min-damage initial="1.0"/>
                 <weapons>SWORD BLUNT DUAL</weapons>
             </trigger-skill-by-attack>
+
         </effects>
     </skill>
     <skill id="993" name="Force Mastery" max-level="8">

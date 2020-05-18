@@ -4,6 +4,7 @@
         <!-- Barrier HP 5 -->
         <icon initial="icon.skill11621"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>

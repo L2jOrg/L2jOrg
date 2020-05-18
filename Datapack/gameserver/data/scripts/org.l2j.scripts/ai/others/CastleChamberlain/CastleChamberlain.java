@@ -23,6 +23,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.PcCondOverride;
@@ -31,6 +32,7 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.Id;
@@ -46,8 +48,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 
-import java.util.Calendar;
-import java.util.StringTokenizer;
+import java.util.*;
 
 import static org.l2j.commons.util.Util.parseNextInt;
 
@@ -77,7 +78,21 @@ public final class CastleChamberlain extends AbstractNpcAI
 	private static final int CROWN = 6841;
 	private static final int LORD_CLOAK_OF_LIGHT = 34925;
 	private static final int LORD_CLOAK_OF_DARK = 34926;
-
+	// Fortress
+	private static final Map<Integer, List<Integer>> FORTRESS = new HashMap<>();
+	
+	static
+	{
+		FORTRESS.put(1, Arrays.asList(101, 102, 112, 113)); // Gludio Castle
+		FORTRESS.put(2, Arrays.asList(103, 112, 114, 115)); // Dion Castle
+		FORTRESS.put(3, Arrays.asList(104, 114, 116, 118, 119)); // Giran Castle
+		FORTRESS.put(4, Arrays.asList(105, 113, 115, 116, 117)); // Oren Castle
+		FORTRESS.put(5, Arrays.asList(106, 107, 117, 118)); // Aden Castle
+		FORTRESS.put(6, Arrays.asList(108, 119)); // Innadril Castle
+		FORTRESS.put(7, Arrays.asList(109, 117, 120)); // Goddard Castle
+		FORTRESS.put(8, Arrays.asList(110, 120, 121)); // Rune Castle
+		FORTRESS.put(9, Arrays.asList(111, 121)); // Schuttgart Castle
+	}
 	
 	// Buffs
 	private static final SkillHolder[] BUFFS =
@@ -349,6 +364,21 @@ public final class CastleChamberlain extends AbstractNpcAI
 		return price;
 	}
 	
+	// private final boolean isDomainFortressInContractStatus(int castleId)
+	// {
+	// final int numFort = ((castleId == 1) || (castleId == 5)) ? 2 : 1;
+	// final List<Integer> fortList = FORTRESS.get(castleId);
+	// for (int i = 0; i < numFort; i++)
+	// {
+	// final Fort fortress = FortDataManager.getInstance().getFortById(fortList.get(i));
+	// if (fortress.getFortState() == 2)
+	// {
+	// return true;
+	// }
+	// }
+	// return false;
+	// }
+	
 	private final boolean isOwner(Player player, Npc npc)
 	{
 		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
@@ -371,6 +401,53 @@ public final class CastleChamberlain extends AbstractNpcAI
 			case "manor-help-04.html":
 			{
 				htmltext = event;
+				break;
+			}
+			case "fort_status":
+			{
+				if (isMyLord)
+				{
+					final StringBuilder sb = new StringBuilder();
+					final List<Integer> fort = FORTRESS.get(castle.getId());
+					for (int id : fort)
+					{
+						final Fort fortress = FortDataManager.getInstance().getFortById(id);
+						if (fortress == null) {
+							continue;
+						}
+						final int fortId = fortress.getId();
+						final String fortType = (fortId < 112) ? "1300133" : "1300134";
+						final String fortStatus;
+						switch (fortress.getFortState())
+						{
+							case 1:
+							{
+								fortStatus = "1300122";
+								break;
+							}
+							case 2:
+							{
+								fortStatus = "1300124";
+								break;
+							}
+							default:
+							{
+								fortStatus = "1300123";
+								break;
+							}
+						}
+						sb.append("<fstring>1300" + fortId + "</fstring>");
+						sb.append(" (<fstring>" + fortType + "</fstring>)");
+						sb.append(" : <font color=\"00FFFF\"><fstring>" + fortStatus + "</fstring></font><br>");
+					}
+					final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-28.html");
+					html.replace("%list%", sb.toString());
+					player.sendPacket(html);
+				}
+				else
+				{
+					htmltext = "chamberlain-21.html";
+				}
 				break;
 			}
 			case "siege_functions":

@@ -15,6 +15,7 @@
         <!-- You can receive a Shabby Box when the Buff is no longer in effect. -->
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i02"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -24,6 +25,7 @@
     <skill id="55302" name="Shabby Box Acquisition Effect" action="A1">
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i02"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -45,6 +47,7 @@
         <!-- You can receive a Crude Box when the Buff is no longer in effect. -->
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i03"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -54,6 +57,7 @@
     <skill id="55305" name="Crude Box Acquisition Effect" action="A1">
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i03"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -75,6 +79,7 @@
         <!-- You can receive an Old Box when the Buff is no longer in effect. -->
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i04"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -84,6 +89,7 @@
     <skill id="55308" name="Old Box Acquisition Effect" action="A1">
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -126,13 +132,14 @@
         <!-- For 60 minutes, XP/SP gain +5%%. Will not be deleted upon death. -->
         <icon initial="icon.skill19226"/>
         <attributes property="PHYSIC" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_M -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -150,6 +157,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="82800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -160,6 +168,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="82800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -171,6 +180,7 @@
         <icon initial="icon.skill0763"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="-2"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -188,9 +198,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="15.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="33.0"/>
             </stat-modify>
@@ -209,6 +219,7 @@
         <!-- none -->
         <icon initial="icon.bm_pirate_king_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -220,6 +231,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="82800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -231,6 +243,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -287,6 +300,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -297,6 +311,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -366,6 +381,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -423,6 +439,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -482,6 +499,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -492,6 +510,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -502,6 +521,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -512,6 +532,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -522,6 +543,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -532,6 +554,7 @@
         <icon initial="icon.etc_whiteday_choco"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="-2"/>
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -567,6 +590,7 @@
         <!-- Event buff for PC Cafe only. XP/SP bonus +20%%. item drop rate +100%%. Cannot be used on servitors. -->
         <icon initial="icon.etc_pccafe_exp_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -578,6 +602,7 @@
         <icon initial="icon.etc_fruit_cocktail_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" remove-abnormal-on-leave="true" auto-use="BUFF">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -613,6 +638,7 @@
         <icon initial="icon.etc_fruit_cocktail_i03"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -645,6 +671,7 @@
         <icon initial="icon.etc_fruit_cocktail_i02"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -655,15 +682,15 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="3.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
                 <power initial="3.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15.0"/>
             </stat-modify>
@@ -679,6 +706,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
@@ -690,6 +718,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
@@ -701,6 +730,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
@@ -711,7 +741,7 @@
     <skill id="55335" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -719,7 +749,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -736,7 +766,7 @@
     <skill id="55336" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -744,7 +774,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -761,7 +791,7 @@
     <skill id="55337" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -769,7 +799,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -786,7 +816,7 @@
     <skill id="55338" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -794,7 +824,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -811,7 +841,7 @@
     <skill id="55339" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -819,7 +849,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -836,7 +866,7 @@
     <skill id="55340" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -844,7 +874,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -861,7 +891,7 @@
     <skill id="55341" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -869,7 +899,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!--  EXP_SP_E -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -886,7 +916,7 @@
     <skill id="55342" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -894,7 +924,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -911,7 +941,7 @@
     <skill id="55343" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -919,7 +949,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -936,7 +966,7 @@
     <skill id="55344" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -944,7 +974,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -961,7 +991,7 @@
     <skill id="55345" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -969,7 +999,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -986,7 +1016,7 @@
     <skill id="55346" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -994,7 +1024,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -1019,7 +1049,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -1036,7 +1066,7 @@
     <skill id="55348" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1044,7 +1074,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -1061,7 +1091,7 @@
     <skill id="55349" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1069,7 +1099,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -1086,7 +1116,7 @@
     <skill id="55350" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1094,7 +1124,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -1111,7 +1141,7 @@
     <skill id="55351" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1119,7 +1149,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -1136,7 +1166,7 @@
     <skill id="55352" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1144,7 +1174,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -1161,7 +1191,7 @@
     <skill id="55353" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1169,7 +1199,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -1186,7 +1216,7 @@
     <skill id="55354" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1194,7 +1224,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -1211,7 +1241,7 @@
     <skill id="55355" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1219,7 +1249,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -1236,7 +1266,7 @@
     <skill id="55356" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1244,7 +1274,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -1261,7 +1291,7 @@
     <skill id="55357" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1269,7 +1299,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -1286,7 +1316,7 @@
     <skill id="55358" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1294,7 +1324,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -1311,7 +1341,7 @@
     <skill id="55359" name="XP/SP Hourglass - 4 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
         </attributes>
 		<consume>
@@ -1319,7 +1349,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_E -->
             <level initial="1"/>
             <time initial="14400"/>
             <chance initial="-1"/>
@@ -1344,16 +1374,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="100.0">
-                    <value level="5">200.0</value>
-                </power>
+                    <value level="5">200.0</value>                   
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="100.0">
-                    <value level="5">200.0</value>
-                </power>
+                    <value level="5">200.0</value>                   
+				</power>
             </stat-modify>
         </effects>
     </skill>
@@ -1362,6 +1392,7 @@
         <icon initial="icon.etc_potion_red_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <consume>
@@ -1385,6 +1416,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
@@ -1406,6 +1438,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
@@ -1427,6 +1460,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
@@ -1447,6 +1481,7 @@
         <!-- none -->
         <icon initial="icon.card_event_blue_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1458,6 +1493,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1470,6 +1506,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1482,6 +1519,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1494,6 +1532,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1506,6 +1545,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1518,6 +1558,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1530,6 +1571,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1542,6 +1584,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1554,6 +1597,7 @@
         <!-- none -->
         <icon initial="icon.etc_box_of_adventure_1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1566,6 +1610,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1578,6 +1623,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1587,6 +1633,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1660,7 +1707,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="55381" name="Fate Power" max-level="7" action="A1">
+    <skill id="55381" name="Border Fate" max-level="7" action="A1">
         <!--
             level 1: P./ M. Atk. +1%%, P./ M. Critical Damage +3%%.
             level 2: P./ M. Atk. +2%%, P./ M. Critical Damage +5%%.
@@ -1672,6 +1719,7 @@
          -->
         <icon initial="icon.skill10030"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1682,6 +1730,7 @@
         <!-- Restores 100%% HP/ CP and 50%% MP when used. -->
         <icon initial="icon.skill10034"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <cool-time initial="200"/>
             <effect-point initial="100"/>
@@ -1695,6 +1744,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1705,6 +1755,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1715,6 +1766,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1725,6 +1777,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1735,6 +1788,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1745,6 +1799,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1759,6 +1814,7 @@
             <value level="2">icon.etc_fruit_juice_glass_bottle_i10</value>
         </icon>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1775,6 +1831,7 @@
             <value level="2">icon.etc_fruit_juice_glass_bottle_i11</value>
         </icon>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1791,6 +1848,7 @@
             <value level="2">icon.etc_fruit_juice_glass_bottle_i07</value>
         </icon>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1807,6 +1865,7 @@
             <value level="2">icon.etc_fruit_juice_glass_bottle_i03</value>
         </icon>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1823,6 +1882,7 @@
             <value level="2">icon.etc_fruit_juice_glass_bottle_i05</value>
         </icon>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1839,6 +1899,7 @@
             <value level="2">icon.etc_fruit_juice_glass_bottle_i04</value>
         </icon>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -1850,6 +1911,7 @@
         <!-- For 20 minutes, obtained XP/ SP +50%%. -->
         <icon initial="icon.exp_bottle"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="20000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1861,6 +1923,7 @@
         <!-- For 20 minutes, obtained XP/ SP +10%%, P./ M. Atk. +10%%, P./ M. Def. +5%%, Max. HP/ MP/ CP +15%%, HP/ MP Recovery Bonus +20%%, PvE damage +10%%. With a certain chance, converts 3%% of damage dealt into HP. -->
         <icon initial="icon.etc_cobol_i04"/>
         <attributes property="PHYSIC" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="20000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1871,56 +1934,68 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
-            <level initial="2"/>
+        <abnormal> <!-- EXP_SP_K -->
+            <level initial="2"/>			
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="10.0"/>
+                <power initial="10.0">
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
-                <power initial="10.0"/>
+                <power initial="10.0">
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="10.0"/>
+                <power initial="10.0">
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="10.0"/>
+                <power initial="10.0">
+				</power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-                <power initial="5.0"/>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="5.0">
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-                <power initial="5.0"/>
+                <power initial="5.0">
+				</power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAX_HP">
-                <power initial="15.0"/>
+			<stat-modify mode="PER" stat="MAX_HP">
+                <power initial="15.0">
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAX_MP">
-                <power initial="15.0"/>
+                <power initial="15.0">
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAX_CP">
-                <power initial="15.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
-                <power initial="20.0"/>
+                <power initial="15.0">
+				</power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="20.0">
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
-                <power initial="20.0"/>
+                <power initial="20.0">
+				</power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
+			<stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
                 <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
                 <power initial="10.0"/>
             </stat-modify>
             <vampiric-attack chance="30">
-                <power initial="3.0"/>
+                <power initial="3.0">
+				</power>
             </vampiric-attack>
         </effects>
     </skill>
@@ -1934,6 +2009,7 @@
     <skill id="55398" name="Olympiad Warrior's SP Scroll" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>

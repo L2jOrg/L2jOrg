@@ -5,14 +5,16 @@
         <icon initial="icon.skill11316"/>
         <attributes static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="10"/>
             <mana initial="10"/>
-            <item initial="1785"/>
+            <item initial="3031"/>
             <item-count initial="4"/>
         </consume>
         <target/>
@@ -27,6 +29,7 @@
         <!-- With a 100%% probability summons 300 Best Soulshots. Consumes 40 Soulstones. -->
         <icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -34,8 +37,6 @@
         </attributes>
         <consume>
             <mana initial="50"/>
-            <item initial="1785"/>
-            <item-count initial="40"/>
         </consume>
         <target/>
     </skill>
@@ -44,12 +45,14 @@
         <icon initial="icon.skill11316"/>
         <attributes static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
+            <mana-init initial="10"/>
             <mana initial="10"/>
             <item initial="3031"/>
             <item-count initial="4"/>
@@ -66,6 +69,7 @@
         <!-- With a 100%% probability summons 300 Best Spiritshots. Consumes 40 Spirit Ores. -->
         <icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -73,8 +77,6 @@
         </attributes>
         <consume>
             <mana initial="50"/>
-            <item initial="3031"/>
-            <item-count initial="40"/>
         </consume>
         <target/>
     </skill>

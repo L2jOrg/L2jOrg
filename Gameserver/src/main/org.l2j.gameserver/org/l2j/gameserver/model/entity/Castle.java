@@ -484,6 +484,11 @@ public final class Castle extends AbstractResidence {
         updateOwnerInDB(clan); // Update in database
         setShowNpcCrest(false);
 
+        // if clan have fortress, remove it TODO no fortress
+        /*if (nonNull(clan) && (clan.getFortId() > 0)) {
+            FortDataManager.getInstance().getFortByOwner(clan).removeOwner(true);
+        }
+*/
         if (getSiege().isInProgress()) {
             getSiege().midVictory(); // Mid victory phase of siege
         }

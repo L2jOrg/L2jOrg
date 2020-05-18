@@ -1013,6 +1013,7 @@ public final class Player extends Playable {
      * Skills queued because a skill is already in progress
      */
     private SkillUseHolder _queuedSkill;
+    private boolean combatFlagEquipped = false;
     private boolean _canRevive = true;
     private int _reviveRequested = 0;
     private double _revivePower = 0;
@@ -2494,6 +2495,9 @@ public final class Player extends Playable {
             if (_clan.getCastleId() > 0) {
                 CastleManager.getInstance().getCastleByOwner(getClan()).giveResidentialSkills(this);
             }
+            if (_clan.getFortId() > 0) {
+                FortDataManager.getInstance().getFortByOwner(getClan()).giveResidentialSkills(this);
+            }
         }
 
         // Reload passive skills from armors / jewels / weapons
@@ -3031,6 +3035,14 @@ public final class Player extends Playable {
             // If over capacity, drop the item
             if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != Item.MODIFIED))) {
                 dropItem("InvDrop", newitem, null, true, true);
+            }
+
+            // Combat Flag
+            else if (FortSiegeManager.getInstance().isCombat(item.getId())) {
+                if (FortSiegeManager.getInstance().activateCombatFlag(this, item)) {
+                    final Fort fort = FortDataManager.getInstance().getFort(this);
+                    fort.getSiege().announceToPlayer(getSystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG), getName());
+                }
             }
         }
     }
@@ -3993,6 +4005,13 @@ public final class Player extends Playable {
                 return;
             }
 
+            // You can pickup only 1 combat flag
+            if (FortSiegeManager.getInstance().isCombat(target.getId())) {
+                if (!FortSiegeManager.getInstance().checkIfCanPickup(this)) {
+                    return;
+                }
+            }
+
             if ((target.getItemLootShedule() != null) && ((target.getOwnerId() == getObjectId()) || isInLooterParty(target.getOwnerId()))) {
                 target.resetOwnerTimer();
             }
@@ -4013,6 +4032,9 @@ public final class Player extends Playable {
                 handler.useItem(this, target, false);
             }
             ItemEngine.getInstance().destroyItem("Consume", target, this, null);
+        }
+        else if (FortSiegeManager.getInstance().isCombat(target.getId())) {
+            addItem("Pickup", target, null, true);
         } else {
             // if item is instance of L2ArmorType or L2WeaponType broadcast an "Attention" system message
             if ((target.getItemType() instanceof ArmorType) || (target.getItemType() instanceof WeaponType)) {
@@ -4330,22 +4352,33 @@ public final class Player extends Playable {
             // Clear resurrect xp calculation
             model.setExpBeforeDeath(0);
 
-            final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
-            if ((pk == null)) {
-                onDieDropItem(killer); // Check if any item should be dropped
+            if (combatFlagEquipped) {
+                final Fort fort = FortDataManager.getInstance().getFort(this);
+                if (fort != null) {
+                    FortSiegeManager.getInstance().dropCombatFlag(this, fort.getId());
+                } else {
+                    var bodyPart = BodyPart.fromEquippedPaperdoll(inventory.getItemByItemId(9819));
+                    inventory.unEquipItemInBodySlot(bodyPart);
+                    destroyItem("CombatFlag", inventory.getItemByItemId(9819), null, true);
+                }
+            } else {
+                final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
+                if ((pk == null)) {
+                    onDieDropItem(killer); // Check if any item should be dropped
 
-                if (!insidePvpZone && (pk != null)) {
-                    final Clan pkClan = pk.getClan();
-                    if ((pkClan != null) && (_clan != null) && !isAcademyMember() && !(pk.isAcademyMember())) {
-                        final ClanWar clanWar = _clan.getWarWith(pkClan.getId());
-                        if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
-                            clanWar.onKill(pk, this);
+                    if (!insidePvpZone && (pk != null)) {
+                        final Clan pkClan = pk.getClan();
+                        if ((pkClan != null) && (_clan != null) && !isAcademyMember() && !(pk.isAcademyMember())) {
+                            final ClanWar clanWar = _clan.getWarWith(pkClan.getId());
+                            if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
+                                clanWar.onKill(pk, this);
+                            }
                         }
                     }
-                }
-                // If player is Lucky shouldn't get penalized.
-                if (!isLucky() && !insidePvpZone) {
-                    calculateDeathExpPenalty(killer);
+                    // If player is Lucky shouldn't get penalized.
+                    if (!isLucky() && !insidePvpZone) {
+                        calculateDeathExpPenalty(killer);
+                    }
                 }
             }
         }
@@ -5124,6 +5157,11 @@ public final class Player extends Playable {
         final Item wpn = inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
         if (wpn == null) {
             return true;
+        }
+
+        // Don't allow disarming a Combat Flag or Territory Ward.
+        if (combatFlagEquipped) {
+            return false;
         }
 
         var modified = inventory.unEquipItemInBodySlotAndRecord(wpn.getBodyPart());
@@ -8558,6 +8596,22 @@ public final class Player extends Playable {
             LOGGER.error("deleteMe()", e);
         }
 
+        // remove combat flag
+        try {
+            if (inventory.getItemByItemId(9819) != null) {
+                final Fort fort = FortDataManager.getInstance().getFort(this);
+                if (fort != null) {
+                    FortSiegeManager.getInstance().dropCombatFlag(this, fort.getId());
+                } else {
+                    var bodyPart = BodyPart.fromEquippedPaperdoll(inventory.getItemByItemId(9819));
+                    inventory.unEquipItemInBodySlot(bodyPart);
+                    destroyItem("CombatFlag", inventory.getItemByItemId(9819), null, true);
+                }
+            }
+        } catch (Exception e) {
+            LOGGER.error("deleteMe()", e);
+        }
+
         try {
             if (_matchingRoom != null) {
                 _matchingRoom.deleteMember(this, false);
@@ -8931,6 +8985,14 @@ public final class Player extends Playable {
 
     public void setPowerGrade(int power) {
         model.setPowerGrade(power);
+    }
+
+    public boolean isCombatFlagEquipped() {
+        return combatFlagEquipped;
+    }
+
+    public void setCombatFlagEquipped(boolean value) {
+        combatFlagEquipped = value;
     }
 
     public int getChargedSouls() {

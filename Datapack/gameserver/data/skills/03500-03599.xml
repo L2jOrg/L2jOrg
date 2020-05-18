@@ -147,9 +147,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <defence-trait start-level="2">
                 <trait type="BLEED">
                     <power initial="30"/>
@@ -435,12 +435,12 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
-            <stat-modify start-level="2" stat="CRITICAL_RATE">
+            </stat-hp-based>
+            <stat-hp-based hp-percent="0" start-level="2" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <defence-trait start-level="3">
                 <trait type="PARALYZE">
                     <power initial="30"/>
@@ -795,9 +795,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <base-stat type="CON">
                 <power initial="-1.0">
                     <value level="4">1.0</value>
@@ -1787,12 +1787,12 @@
                     </power>
                 </trait>
             </defence-trait>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE">
                 <power initial="1.0">
                     <value level="2">2.0</value>
@@ -1838,6 +1838,7 @@
             <magic-level initial="75">
                 <value level="2">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1938,6 +1939,7 @@
         <!-- For 5 minutes, returns 8% of damage received by the target back to the enemy. -->
         <icon initial="icon.skill0086"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -1996,6 +1998,7 @@
         <!-- For 2 minutes returns 10% of the received damage back to the enemy. Recovers 460 HP. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -2057,6 +2060,7 @@
         <!-- For 2 minutes makes you immune to debuffs 5 times. -->
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -2118,6 +2122,7 @@
         <!-- All Skill Cooldown -10% for 5 minutes. Does not apply to skills with fixed cooldowns. -->
         <icon initial="icon.skill3123"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -2158,9 +2163,9 @@
             <vital-stat-modify mode="PER" stat="MAX_CP">
                 <power initial="30.0"/>
             </vital-stat-modify>
-            <stat-modify stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="5.0"/>
             </stat-modify>
@@ -2212,6 +2217,7 @@
         <!-- For 5 minutes, Deadly Stab Rate +20%. -->
         <icon initial="icon.skill0410"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -2300,6 +2306,7 @@
         <!-- Movement Speed +15 and Max Range +100 for 5 minutes. -->
         <icon initial="icon.skill0431"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -2359,6 +2366,7 @@
         <!-- For 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
         <icon initial="icon.skill1268"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -2414,6 +2422,7 @@
         <!-- For 30 sec. magic skills don't consume MP. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>

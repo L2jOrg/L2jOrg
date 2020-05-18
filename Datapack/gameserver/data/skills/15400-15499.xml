@@ -4,6 +4,7 @@
         <!-- P. Def. greatly increases temporarily due to the power of darkness. -->
         <icon initial="icon.skill0110"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -36,6 +37,7 @@
         <icon initial="icon.skill11046"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="90"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="696"/>
             <effect-range initial="-1"/>
@@ -89,6 +91,7 @@
         <!-- Cannot target. -->
         <icon initial="icon.notargetting"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -106,6 +109,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -118,6 +122,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -130,6 +135,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -142,6 +148,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -154,6 +161,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -194,6 +202,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -309,6 +318,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -318,6 +328,7 @@
         <!-- none -->
         <icon initial="icon.skill11755"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -598,6 +609,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="97"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -831,6 +843,7 @@
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED">
             <magic-level initial="97"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -855,6 +868,7 @@
         <icon initial="icon.skill1164"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="97"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <hit-time initial="3300"/>
@@ -926,6 +940,7 @@
         <icon initial="icon.skill0223"/>
         <attributes magic-critical-rate="-5.0" hit-cancel-time="5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -944,6 +959,7 @@
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -965,6 +981,7 @@
         <!-- Defensive shield cast by the Memorable Raid boss unto itself. For 10 minutes, it only receives a certain amount of damage. -->
         <icon initial="icon.skill0110"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="100"/>
@@ -1009,6 +1026,7 @@
         <icon initial="icon.skill4036"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
             <magic-level initial="97"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1162,6 +1180,7 @@
         <icon initial="icon.skill1044"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -1183,6 +1202,7 @@
         <icon initial="icon.skill01703"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1434,6 +1454,7 @@
         <!-- Lindvior's Event Presentation Skill. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="10000"/>
             <activate-rate initial="-1"/>
@@ -1540,6 +1561,7 @@
         <!-- Increases P. Def. for 5 sec. -->
         <icon initial="icon.skill1040"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1615,6 +1637,7 @@
         <!-- Increases Atk. Spd. for 5 sec. -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1630,6 +1653,7 @@
         <!-- Increases P. Def. for 5 sec. -->
         <icon initial="icon.skill1040"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1661,6 +1685,7 @@
         <!-- Summons Royal Guard Member. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
@@ -1675,6 +1700,7 @@
         <!-- For 2 hr., Atk. Spd. +10%%, Casting Spd. +10%%, Max HP/MP +10%%, and Movement Speed +10. -->
         <icon initial="icon.skill4689"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>

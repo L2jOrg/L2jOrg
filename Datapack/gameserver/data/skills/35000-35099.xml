@@ -43,6 +43,7 @@
         <!-- For 15 sec., increases P. Def. by 3600, M. Def. by 3240, and Buff-canceling Attack Resistance by 80%%, and restricts movement. -->
         <icon initial="icon.bm_dragon_defence"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="438"/>
             <effect-range initial="-1"/>
@@ -161,11 +162,11 @@
                     <value level="10">60.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power>
                     <value level="8">5.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="8">5.0</value>
@@ -177,6 +178,7 @@
         <!-- Debuff Resistance +50%% for 5 seconds. -->
         <icon initial="icon.bm_salvation_dragon"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -196,6 +198,7 @@
         <icon initial="icon.accessory_archer_hat2_i00"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-range initial="900"/>
         </attributes>
         <target type="ENEMY_NOT"/>
@@ -215,6 +218,7 @@
         <icon initial="icon.skill0000"/>
         <attributes static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -239,6 +243,7 @@
         <!-- Teleports you to a close village. Cooldown: 2 hours -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -257,6 +262,7 @@
         <!-- Teleports you to a close village. Cooldown: 2 hours -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -268,6 +274,7 @@
         <!-- Removes all debuffs. Not available during Fear/Silence. -->
         <icon initial="icon.accessory_ring_of_core_i03"/>
         <attributes cast-disabled="true">
+            <cast-range initial="-1"/>
             <reuse initial="120000"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
@@ -416,13 +423,13 @@
                     <value level="7">20.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
                 <power>
                     <value level="6">10.0</value>
                     <value level="7">20.0</value>
                 </power>
-            </stat-modify>
-            <magic-cost>
+            </stat-hp-based>
+            <magic-cost type="MAGIC">
                 <power>
                     <value level="5">-2.0</value>
                     <value level="6">-4.0</value>
@@ -441,6 +448,7 @@
         <icon initial="icon.oman_tallisman_new_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -455,6 +463,7 @@
         <icon initial="icon.oman_tallisman_new_i01"/>
         <attributes magic-critical-rate="5.0" trait="HOLD">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -473,6 +482,7 @@
         <icon initial="icon.baium_talisman_new"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
@@ -487,6 +497,7 @@
         <icon initial="icon.baium_talisman_new"/>
         <attributes magic-critical-rate="5.0" trait="HOLD">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -511,6 +522,7 @@
         <!-- Teleports you to the nearest village. Cooldown is 2 hours. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -584,12 +596,12 @@
                     <value level="6">2.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="EVASION_RATE">
                 <power>
                     <value level="2">1.0</value>
                     <value level="6">2.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
             <vital-stat-modify stat="MAX_HP">
                 <power>
                     <value level="3">80.0</value>
@@ -719,6 +731,7 @@
         <!-- Restores 50%% HP/ MP/ CP. -->
         <icon initial="icon.skill10034"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <cool-time initial="200"/>
             <effect-point initial="100"/>
@@ -743,6 +756,7 @@
         <icon initial="icon.skill10030"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="55"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -829,7 +843,10 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
+		<!-- <abnormal type="EXP_SP_X"> -->
+            <!-- <level initial="2"/> -->
+        <!-- </abnormal> -->
+        <effects>			
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0">
                     <value level="3">5.0</value>
@@ -852,6 +869,7 @@
          -->
         <icon initial="icon.skill3123"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -862,7 +880,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="10"/>
             <mana initial="48"/>
         </consume>
         <target/>
@@ -875,6 +892,7 @@
          -->
         <icon initial="icon.skill3123"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -885,7 +903,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="10"/>
             <mana initial="48"/>
         </consume>
         <target/>
@@ -964,9 +981,9 @@
             <stat-modify mode="PER" stat="MAGIC_SUCCESS_RES">
                 <power initial="2.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="MAGIC_EVASION_RATE">
                 <power initial="4.0"/>
             </stat-modify>
@@ -1032,9 +1049,9 @@
             <stat-modify mode="PER" stat="MAGIC_SUCCESS_RES">
                 <power initial="2.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="MAGIC_EVASION_RATE">
                 <power initial="4.0"/>
             </stat-modify>
@@ -1185,6 +1202,7 @@
         <!-- Clears all abnormal states and debuffs. Cooldown: 10 min. -->
         <icon initial="icon.etc_talisman_i03"/>
         <attributes static-reuse="true" magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1274,9 +1292,9 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="REFLECT_DAMAGE_PERCENT">
                 <power initial="6.0"/>
             </stat-modify>

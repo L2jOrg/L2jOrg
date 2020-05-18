@@ -39,7 +39,6 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     private final Path destination;
     private final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
     private final Path sourcePath;
-    private final boolean forceCompile;
 
     private ScriptingFileManager scriptingFileManager;
     private ModuleLayer layer;
@@ -49,7 +48,6 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 
         sourcePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(requireNonNullElse(getProperty("source.path"), "data/scripts"));
         destination = Path.of(requireNonNullElse(getProperty("compiled.path"), "compiledScripts"));
-        forceCompile =  Boolean.parseBoolean(requireNonNullElse(getProperty("force.compile"), "true"));
 
         try {
             compileModuleInfo();
@@ -116,10 +114,6 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     private boolean needCompile(Path path) {
         if(!FilterUtil.javaFile(path)) {
             return false;
-        }
-
-        if(forceCompile) {
-            return true;
         }
 
         try {

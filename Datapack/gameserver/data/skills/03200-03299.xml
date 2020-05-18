@@ -8,6 +8,7 @@
                 <value level="2">64</value>
                 <value level="3">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -46,6 +47,7 @@
                 <value level="2">64</value>
                 <value level="3">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -84,6 +86,7 @@
                 <value level="2">64</value>
                 <value level="3">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -119,6 +122,7 @@
         <icon initial="icon.skill3123"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -138,6 +142,7 @@
                 <value level="2">64</value>
                 <value level="3">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="379">
                 <value level="2">438</value>
@@ -178,6 +183,7 @@
             <magic-level initial="48">
                 <value level="2">56</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000">
@@ -216,6 +222,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="12000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1141,9 +1148,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3248" name="Item Skill: Guidance" max-level="15">
@@ -1165,9 +1172,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3250" name="Item Skill: Wild Magic" max-level="10">
@@ -1252,7 +1259,7 @@
         </attributes>
         <target/>
         <effects>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power initial="-10.0">
                     <value level="2">-15.0</value>
                     <value level="3">-20.0</value>
@@ -1282,7 +1289,7 @@
         </attributes>
         <target/>
         <effects>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power initial="-4.0">
                     <value level="2">-10.0</value>
                 </power>
@@ -1334,6 +1341,9 @@
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <mana-init initial="17"/>
+        </consume>
         <target type="PC_BODY"/>
         <conditions>
             <condition name="OpResurrection"/>
@@ -1349,11 +1359,15 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <mana-init initial="31"/>
+        </consume>
         <target/>
         <conditions>
             <condition name="OpCanEscape"/>
@@ -1367,6 +1381,7 @@
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1380,10 +1395,14 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <mana-init initial="5"/>
+        </consume>
         <target/>
     </skill>
     <skill id="3267" name="Seal Agathion" action="A1">
@@ -1391,6 +1410,7 @@
         <icon initial="icon.etc_unsummon_aga_agit_i01"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="65"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1405,6 +1425,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="75"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1419,6 +1440,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="65"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1433,6 +1455,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="65"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1454,11 +1477,11 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="10.0">
                     <value level="2">20.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3272" name="Blue Talisman - P. Atk." max-level="3">
@@ -1519,12 +1542,12 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="10.0">
                     <value level="2">15.0</value>
                     <value level="3">18.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3275" name="Blue Talisman - M. Crit." max-level="2">
@@ -1661,6 +1684,7 @@
         <icon initial="icon.etc_talisman_i07"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="55"/>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>
@@ -1683,6 +1707,7 @@
         <icon initial="icon.etc_talisman_i07"/>
         <attributes magic-critical-rate="5.0" cast-disabled="true">
             <magic-level initial="55"/>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>
@@ -1701,6 +1726,7 @@
         <icon initial="icon.etc_talisman_i07"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <magic-level initial="55"/>
+            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>
@@ -1801,6 +1827,7 @@
         <icon initial="icon.etc_talisman_i02"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="55"/>
+            <cast-range initial="-1"/>
             <reuse initial="240000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>
@@ -1823,6 +1850,7 @@
         <icon initial="icon.etc_talisman_i02"/>
         <attributes magic-critical-rate="5.0" cast-disabled="true">
             <magic-level initial="55"/>
+            <cast-range initial="-1"/>
             <reuse initial="240000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>
@@ -1841,6 +1869,7 @@
         <icon initial="icon.etc_talisman_i02"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="55"/>
+            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>

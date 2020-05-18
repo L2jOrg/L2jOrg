@@ -5,6 +5,7 @@
         <icon initial="icon.skill19009"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" dispellable="false" irreplacable="true">
             <magic-level initial="-2"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -119,11 +120,11 @@
         <icon initial="icon.etc_pi_gift_box_i04"/>
         <attributes property="PHYSIC" static-reuse="true" stay-after-death="true" irreplacable="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal visual="VP_KEEP">
+        <abnormal visual="VP_KEEP"> <!-- EXP_SP_N -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -188,9 +189,9 @@
                     <power initial="3"/>
                 </trait>
             </defence-trait>
-            <stat-modify stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="10.0"/>
             </stat-modify>
@@ -247,9 +248,9 @@
                     <power initial="3"/>
                 </trait>
             </defence-trait>
-            <stat-modify stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
                 <power initial="10.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="10.0"/>
             </stat-modify>
@@ -263,6 +264,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="20000"/>
@@ -281,6 +283,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-range initial="-1"/>
             <hit-time initial="200"/>

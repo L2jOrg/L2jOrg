@@ -5,6 +5,7 @@
         <icon initial="icon.skill1068"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="300"/>
             <effect-point initial="1"/>
@@ -28,6 +29,7 @@
         <icon initial="icon.skill1040"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="300"/>
             <effect-point initial="1"/>
@@ -51,6 +53,7 @@
         <icon initial="icon.skill11065"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -67,6 +70,7 @@
         <icon initial="icon.skill11065"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -83,6 +87,7 @@
         <icon initial="icon.skill11065"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -99,6 +104,7 @@
         <icon initial="icon.skill11065"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -115,6 +121,7 @@
         <icon initial="icon.skill1492"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" stay-after-death="true" hit-cancel-time="10.0" irreplacable="true">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <reuse initial="120000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -133,6 +140,7 @@
         <icon initial="icon.skill0102"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" stay-after-death="true" hit-cancel-time="10.0" irreplacable="true">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <reuse initial="120000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -151,6 +159,7 @@
         <icon initial="icon.skill1216"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" hit-cancel-time="10.0" irreplacable="true">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <reuse initial="120000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -168,6 +177,7 @@
         <icon initial="icon.skill1389"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" hit-cancel-time="10.0" irreplacable="true">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <reuse initial="120000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -219,6 +229,7 @@
         <icon initial="icon.skill11507"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -234,6 +245,7 @@
         <icon initial="icon.skill11507"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -249,6 +261,7 @@
         <icon initial="icon.skill1540"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="2"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -273,6 +286,7 @@
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -310,6 +324,7 @@
         <icon initial="icon.skill0102"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" stay-after-death="true" irreplacable="true">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -326,6 +341,7 @@
         <!-- P. Def. and M. Def. increased. -->
         <icon initial="icon.skill1418"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" hit-cancel-time="4.5" irreplacable="true">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -343,6 +359,7 @@
         <icon initial="icon.skill0003"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <effect-range initial="-1"/>
@@ -516,6 +533,7 @@
         <icon initial="icon.skill10027"/>
         <attributes static-reuse="true" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -534,6 +552,7 @@
         <icon initial="icon.skill10027"/>
         <attributes static-reuse="true" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -552,6 +571,7 @@
         <icon initial="icon.skill10027"/>
         <attributes static-reuse="true" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -570,6 +590,7 @@
         <icon initial="icon.skill10012"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="30">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-point initial="-694"/>
@@ -598,6 +619,7 @@
         <icon initial="icon.skill10012"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="30">
             <magic-level initial="90"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-point initial="-694"/>
@@ -626,6 +648,7 @@
         <icon initial="icon.skill10012"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="30">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-point initial="-694"/>
@@ -870,6 +893,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="20000"/>
             <cool-time initial="500"/>
             <effect-point initial="-183"/>
@@ -884,6 +908,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="90"/>
+            <cast-range initial="-1"/>
             <reuse initial="20000"/>
             <cool-time initial="500"/>
             <effect-point initial="-183"/>
@@ -898,6 +923,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="20000"/>
             <cool-time initial="500"/>
             <effect-point initial="-183"/>

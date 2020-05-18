@@ -4,6 +4,7 @@
         <!-- Transforms into High Priest through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as High Priest there's a chance to recover party members' HP by 1000 and MP by 200. -->
         <icon initial="icon.bm2018_healer_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -14,6 +15,7 @@
         <!-- Transforms into Blood Noblesse through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Blood Noblesse there's a chance to inflict an additional 145 magic attack. -->
         <icon initial="icon.bm2018_rednoblesse_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -24,6 +26,7 @@
         <!-- Transforms into White Noblesse through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as White Noblesse there's a chance to reduce the enemy's M. Def. by 23%%. -->
         <icon initial="icon.bm2018_whitenoblesse_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -34,6 +37,7 @@
         <!-- Has gone berserk through the power of the armor. While in berserker mode, the equipper's P. Atk. +50%%, M. Atk. + 50%%, Atk. Spd. +50%%, Casting Spd. +50%%, and reflects 15%% of damage received to the enemy. -->
         <icon initial="icon.bm2018_dragon_i02"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="290000"/>
             <effect-point initial="20"/>
             <effect-range initial="-1"/>
@@ -92,6 +96,7 @@
         <!-- Party members' P./M. Atk. +10%%. -->
         <icon initial="icon.bm2018_pirate_i02"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="20"/>
             <effect-range initial="-1"/>
@@ -115,6 +120,7 @@
         <!-- Recovers party mebmers' HP by 1000 and MP by 200 with sacred power. -->
         <icon initial="icon.skill1506"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="20"/>
             <effect-range initial="-1"/>
@@ -150,6 +156,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -162,6 +169,7 @@
         <!-- Sealbook to learn Dragon Berserker transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -172,6 +180,7 @@
         <!-- Sealbook to learn Ninja Assassin transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -182,6 +191,7 @@
         <!-- Sealbook to learn Blue Musketeer transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -192,6 +202,7 @@
         <!-- Sealbook to learn Valkyrie transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -202,6 +213,7 @@
         <!-- Sealbook to learn Wild Wolf transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -212,6 +224,7 @@
         <!-- Sealbook to learn Caravan transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -222,6 +235,7 @@
         <!-- Sealbook to learn Purple Cowboy transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -232,6 +246,7 @@
         <!-- Sealbook to learn High Priest transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -242,6 +257,7 @@
         <!-- Sealbook to learn Blood Noblesse transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -252,6 +268,7 @@
         <!-- Sealbook to learn White Noblesse transformation skill. Disappears when used. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -265,6 +282,7 @@
          -->
         <icon initial="icon.fish_stew_buff"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -280,6 +298,7 @@
          -->
         <icon initial="icon.fish_stew_buff"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -291,6 +310,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -307,6 +327,7 @@
          -->
         <icon initial="icon.etc_leaf_green_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -318,6 +339,7 @@
         <!-- Momentum consumption speed while hunting +100%%, XP/SP gain +150%% for 10 minutes Buff does not disappear after death. Cooldown: 20 minutes -->
         <icon initial="icon.ev_magic_flame_game_wind1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -329,6 +351,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -344,6 +367,7 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -356,6 +380,7 @@
          -->
         <icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -365,6 +390,7 @@
         <!-- Beast Soulshot damage +20% -->
         <icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -387,6 +413,7 @@
         <!-- Spiritshot damage +20%. -->
         <icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -396,6 +423,7 @@
         <!-- Increases Beast Spiritshot Damage +20%. -->
         <icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -438,6 +466,7 @@
         <!-- none -->
         <icon initial="icon.bm_special_jewelbox_lv5"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -461,6 +490,7 @@
         <!-- For 5 minutes, P. Atk. +15%, M. Atk. +23%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, and HP Recovery Bonus/MP Recovery Bonus +30%. -->
         <icon initial="icon.bm_goblin_buff_herong"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -471,6 +501,7 @@
         <!-- A book that teaches Disarm. Removed after use. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -481,6 +512,7 @@
         <!-- A book that teaches Armor Breaker. Removed after use. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -491,6 +523,7 @@
         <!-- A book that teaches Spell Breaker. Removed after use. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -501,6 +534,7 @@
         <!-- A book that teaches Warp. Removed after use. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -511,6 +545,7 @@
         <!-- A book that teaches Flash. Removed after use. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -521,6 +556,7 @@
         <!-- A book that teaches Berserker. Removed after use. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -530,7 +566,7 @@
     <skill id="51247" name="Disarm" debuff="true" action="A2">
         <!-- Removes weapons of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
         <icon initial="icon.skill0485"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DISARM" level-bonus-rate="20" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5" trait="DISARM" level-bonus-rate="20" auto-use="ACTIVE">
             <magic-level initial="79"/>
             <cast-range initial="900"/>
             <reuse initial="60000"/>
@@ -538,12 +574,12 @@
             <effect-point initial="-341"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="41"/>
             <mana initial="205"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="6"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" affect-min="6" affect-random="6" range="200"/>
         <abnormal type="DISARM">
             <time initial="5"/>
             <chance initial="70"/>
@@ -575,12 +611,12 @@
             <effect-point initial="-341"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="41"/>
             <mana initial="205"/>
         </consume>
-        <target range="200" affect-min="6" affect-random="6"/>
+        <target affect-min="6" affect-random="6" range="200"/>
         <abnormal type="DISARM" visual="DOT_BLEEDING">
             <time initial="5"/>
             <chance initial="20"/>
@@ -613,7 +649,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="41"/>
             <mana initial="205"/>
         </consume>
         <target/>
@@ -622,6 +657,7 @@
         <!-- Gives Cancel Target to nearby enemies and Teleports them to the front. -->
         <icon initial="icon.skill11057"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="200"/>
             <effect-point initial="-1"/>
@@ -638,6 +674,7 @@
         <!-- Cancels targeting of nearby enemies, and makes them unable to target for 5 seconds. -->
         <icon initial="icon.skill1417"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="120000"/>
             <cool-time initial="200"/>
             <effect-point initial="-1"/>
@@ -653,11 +690,13 @@
     <skill id="51252" name="Berserker Mode" action="A2">
         <!-- Increases P. Atk./M. Atk./Atk. Spd./Casting Spd. +50%% for 20 seconds and reflects damaged received by 15%%. The effect does not stack with Berserker Soul which is the transformed state of Dragon Berserker. -->
         <icon initial="icon.skill10274"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5"  auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="20"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="200"/>
@@ -665,7 +704,6 @@
         <target/>
         <abnormal type="BERSERKER">
             <time initial="20"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
@@ -689,6 +727,7 @@
         <!-- 500,000 XP. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -699,6 +738,7 @@
         <!-- 20,000,000 XP. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -707,8 +747,9 @@
     </skill>
     <skill id="51255" name="Elmoreden Treasure Chest" action="A1">
         <!-- none -->
-        <icon initial="[icon.bm_elmoaden_box"/>
+        <icon initial="[icon.bm_elmoaden_box]"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -719,8 +760,9 @@
     </skill>
     <skill id="51256" name="Elmoreden Relic Pouch" action="A1">
         <!-- none -->
-        <icon initial="[icon.bm_elmoaden_pocket"/>
+        <icon initial="[icon.bm_elmoaden_pocket]"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -731,8 +773,9 @@
     </skill>
     <skill id="51257" name="Elmoreden Golden Box" action="A1">
         <!-- none -->
-        <icon initial="[icon.bm_elmoaden_gold_box"/>
+        <icon initial="[icon.bm_elmoaden_gold_box]"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -743,8 +786,9 @@
     </skill>
     <skill id="51258" name="Elmoreden Silver Box" action="A1">
         <!-- none -->
-        <icon initial="[icon.bm_elmoaden_silver_box"/>
+        <icon initial="[icon.bm_elmoaden_silver_box]"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -755,8 +799,9 @@
     </skill>
     <skill id="51259" name="+10 Sayha's Cloak Box - White" action="A1">
         <!-- none -->
-        <icon initial="[icon.etc_treasure_box_i00"/>
+        <icon initial="[icon.etc_treasure_box_i00]"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -767,8 +812,9 @@
     </skill>
     <skill id="51260" name="+10 Sayha's Cloak Box - Black" action="A1">
         <!-- none -->
-        <icon initial="[icon.etc_treasure_box_i00"/>
+        <icon initial="[icon.etc_treasure_box_i00]"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -779,8 +825,9 @@
     </skill>
     <skill id="51261" name="+10 Sayha's Cloak Box - Red" action="A1">
         <!-- none -->
-        <icon initial="[icon.etc_treasure_box_i00"/>
+        <icon initial="[icon.etc_treasure_box_i00]"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -793,6 +840,7 @@
         <!-- For 5 minutes, P. Atk. +15%, M. Atk. +23%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, and HP Recovery Bonus/MP Recovery Bonus +30%. -->
         <icon initial="BranchSys2.icon.br_soccer_ball_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -803,6 +851,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_wp_d"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -812,6 +861,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_am_d"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -821,6 +871,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_wp_c"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -830,6 +881,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_am_c"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -839,6 +891,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_wp_b"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -848,6 +901,7 @@
         <!-- none -->
         <icon initial="icon.giant_scrl_of_ench_am_b"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -857,6 +911,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -866,6 +921,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -881,6 +937,7 @@
          -->
         <icon initial="icon.skill50008"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -896,6 +953,7 @@
          -->
         <icon initial="icon.skill51272"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -905,6 +963,7 @@
         <!-- Increases Max. CP. -->
         <icon initial="icon.skill11755"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -920,6 +979,7 @@
          -->
         <icon initial="icon.skill19308"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -935,6 +995,7 @@
          -->
         <icon initial="icon.skill4447"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -950,6 +1011,7 @@
          -->
         <icon initial="icon.skill4443"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -965,6 +1027,7 @@
          -->
         <icon initial="icon.skill4445"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -980,6 +1043,7 @@
          -->
         <icon initial="icon.skill4442"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -995,6 +1059,7 @@
          -->
         <icon initial="icon.skill4448"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1010,6 +1075,7 @@
          -->
         <icon initial="icon.skill4444"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1025,6 +1091,7 @@
          -->
         <icon initial="icon.skill4446"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1034,6 +1101,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1046,6 +1114,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1058,6 +1127,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1070,6 +1140,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1082,6 +1153,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1094,6 +1166,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1106,6 +1179,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1118,6 +1192,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1130,6 +1205,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1143,6 +1219,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1153,6 +1230,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1162,6 +1240,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1171,6 +1250,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1180,6 +1260,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1189,16 +1270,16 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51297" name="Frintezza Doll's Spell" max-level="3">
+    <skill id="51297" name="Frintezza Doll's Spell" max-level="2">
         <!--
-            level 1: Effect for having Frintezza Doll.\n\nSTR +1, INT +1\nDEX +1, WIT +1\nCON +1, MEN +1\nStun Atk. Rate +10%%\nParalysis Atk. Rate +10%%
-            level 2: Effect for having Frintezza Doll.\n\nSTR +1, INT +1\nDEX +1, WIT +1\nCON +1, MEN +1\nMovement Speed +5\nStun Atk. Rate +20%%\nParalysis Atk. Rate +20%%
-            level 3: Effect for having Frintezza Doll.\n\nSTR +2, INT +2\nDEX +2, WIT +2\nCON +2, MEN +2\nMovement Speed +7\nStun Atk. Rate +30%%\nParalysis Atk. Rate +30%%
+            level 1: CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis attack rates +10%%.
+            level 2: CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis attack rates +20%% and Movement Speed +5.
          -->
         <icon initial="icon.bm_doll_frintessa_30d"/>
         <attributes property="MAGIC">
@@ -1209,6 +1290,7 @@
         <!-- Opens the dimensional curtain to block enemy attack 10 times for 15 seconds. -->
         <icon initial="icon.skill11621"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1216,7 +1298,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="200"/>
             <mana initial="200"/>
         </consume>
         <target/>
@@ -1236,6 +1317,7 @@
          -->
         <icon initial="icon.skill11876"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="180000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1243,7 +1325,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="100"/>
             <mana initial="100"/>
         </consume>
         <target/>

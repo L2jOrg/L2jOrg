@@ -13,6 +13,7 @@ import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.PcCafePointsManager;
 import org.l2j.gameserver.model.Location;
@@ -29,6 +30,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.events.annotations.*;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.impl.character.*;
@@ -2612,6 +2614,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             }
             case CASTLE: {
                 final Castle template = CastleManager.getInstance().getCastleById(id);
+                if (template != null) {
+                    listeners.add(template.addListener(action.apply(template)));
+                }
+                break;
+            }
+            case FORTRESS: {
+                final Fort template = FortDataManager.getInstance().getFortById(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }

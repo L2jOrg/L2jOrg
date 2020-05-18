@@ -25,6 +25,7 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -35,6 +36,7 @@
         <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -52,6 +54,7 @@
         <!-- Buff, given to the server, to which belongs a warrior, gained the greatest number of victories during the Tryout. XP/ SP +30%%. Cannot be stacked with Blessing of Light. -->
         <icon initial="icon.etc_trophy_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -80,6 +83,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -92,6 +96,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -104,6 +109,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -116,6 +122,7 @@
         <!-- Transformation to Pirate. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i03"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -126,6 +133,7 @@
         <!-- Transformation to Dark Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -136,6 +144,7 @@
         <!-- Transformation to White Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -146,6 +155,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -156,6 +166,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -170,6 +181,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -184,6 +196,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -198,6 +211,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -212,6 +226,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -226,6 +241,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -240,6 +256,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -254,6 +271,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -268,6 +286,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -282,6 +301,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -296,6 +316,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -310,6 +331,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -324,6 +346,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -338,6 +361,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -352,6 +376,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -366,6 +391,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -380,6 +406,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -394,6 +421,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -408,6 +436,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -422,6 +451,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -436,6 +466,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -450,6 +481,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -464,6 +496,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -478,6 +511,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -492,6 +526,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -506,6 +541,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -520,6 +556,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -534,6 +571,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -548,6 +586,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -562,6 +601,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -576,6 +616,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -590,6 +631,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -604,6 +646,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -618,6 +661,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -632,6 +676,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -646,6 +691,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -660,6 +706,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -674,6 +721,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -688,6 +736,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -702,6 +751,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -716,6 +766,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -730,6 +781,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -744,6 +796,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -758,6 +811,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -772,6 +826,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -786,6 +841,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -800,6 +856,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -814,6 +871,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -827,6 +885,7 @@
         <!-- For 20 min. Max HP/ MP +5%%, Paralysis Resistance +15, Mental Attack Resistance +10, XP/ SP +30%%. -->
         <icon initial="icon.general_energy_condense_i01"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -838,6 +897,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -849,6 +909,7 @@
         <!-- Brooch radiates bright light. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -858,6 +919,7 @@
         <!-- Bright light fades. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -953,24 +1015,24 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_U">
-            <level initial="1">
-                <value level="2">2</value>
-                <value level="3">3</value>
-                <value level="4">4</value>
-                <value level="5">5</value>
-                <value level="6">6</value>
-                <value level="7">7</value>
-                <value level="8">8</value>
-                <value level="9">9</value>
-                <value level="10">10</value>
-            </level>
-            <time initial="-1"/>
-        </abnormal>
-        <effects>
+		 <abnormal type="EXP_SP_U"> 
+			 <level initial="1"> 
+                 <value level="2">2</value> 
+                 <value level="3">3</value> 
+                 <value level="4">4</value> 
+                 <value level="5">5</value> 
+				 <value level="6">6</value> 
+                 <value level="7">7</value> 
+                 <value level="8">8</value> 
+                 <value level="9">9</value> 
+                 <value level="10">10</value> 
+             </level>
+             <time initial="-1"/>
+         </abnormal> 
+		<effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0">
-                    <value level="2">4.0</value>
+					<value level="2">4.0</value>
                     <value level="3">6.0</value>
                     <value level="4">8.0</value>
                     <value level="5">17.0</value>
@@ -983,7 +1045,7 @@
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="3.0">
-                    <value level="2">4.0</value>
+					<value level="2">4.0</value>
                     <value level="3">6.0</value>
                     <value level="4">8.0</value>
                     <value level="5">17.0</value>
@@ -994,7 +1056,7 @@
                     <value level="10">35.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="10" stat="ELEMENTAL_SPIRIT_BONUS_XP">
+			<stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP" start-level="10">
                 <power initial="30"/>
             </stat-modify>
         </effects>
@@ -1010,17 +1072,19 @@
          -->
         <icon initial="icon.etc_bm_jewel_vital"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_V">
+		<abnormal type="EXP_SP_V">
             <level initial="1">
-                <value level="2">2</value>
+				<value level="2">2</value>
                 <value level="3">3</value>
                 <value level="4">4</value>
                 <value level="5">5</value>
-                <value level="6">6</value>
+                <value level="6">6</value>                   
             </level>
             <time initial="15"/>
             <chance initial="-1"/>
@@ -1028,20 +1092,20 @@
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="50.0">
-                    <value level="2">70.0</value>
+					<value level="2">70.0</value>
                     <value level="3">100.0</value>
                     <value level="4">110.0</value>
                     <value level="5">120.0</value>
-                    <value level="6">150.0</value>
+                    <value level="6">150.0</value>                 
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="50.0">
-                    <value level="2">70.0</value>
+					<value level="2">70.0</value>
                     <value level="3">100.0</value>
                     <value level="4">110.0</value>
                     <value level="5">120.0</value>
-                    <value level="6">150.0</value>
+                    <value level="6">150.0</value>                 
                 </power>
             </stat-modify>
         </effects>
@@ -1135,7 +1199,7 @@
                     <value level="10">400</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="4" stat="DEFENCE_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" start-level="4">
                 <power initial="4">
                     <value level="5">10</value>
                     <value level="6">11</value>
@@ -1145,7 +1209,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="10" stat="DEFENCE_CRITICAL_RATE">
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" start-level="10">
                 <power initial="10"/>
             </stat-modify>
         </effects>
@@ -1183,7 +1247,7 @@
                     <value level="10">14</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="4" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" start-level="4">
                 <power initial="4">
                     <value level="5">10</value>
                     <value level="6">11</value>
@@ -1193,7 +1257,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="10" stat="DEFENCE_MAGIC_CRITICAL_RATE">
+            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_RATE" start-level="10">
                 <power initial="10"/>
             </stat-modify>
         </effects>
@@ -1214,7 +1278,8 @@
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="55478" name="Ruby" max-level="10" action="A1">
@@ -1233,7 +1298,8 @@
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="55479" name="Ruby" max-level="10" action="A1">
@@ -1252,7 +1318,8 @@
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="55481" name="Sapphire" max-level="10" action="A1">
@@ -1271,7 +1338,8 @@
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="55482" name="Sapphire" max-level="10" action="A1">
@@ -1290,7 +1358,8 @@
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="55483" name="Sapphire" max-level="10" action="A1">
@@ -1309,7 +1378,8 @@
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="55485" name="Garnet" max-level="10">
@@ -1389,6 +1459,7 @@
             <value level="3">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
         </icon>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1400,6 +1471,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1412,6 +1484,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1424,6 +1497,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1436,6 +1510,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1448,6 +1523,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>

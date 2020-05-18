@@ -49,6 +49,10 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
+        if (bodyPart == BodyPart.TWO_HAND && player.isCombatFlagEquipped()) {
+            return;
+        }
+
         // Prevent player from unequipping item in special conditions.
         if (player.hasBlockActions() || player.isAlikeDead()) {
             return;

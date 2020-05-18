@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="8522" name="Release Agathion's Seal - Nevit's Messenger Kanna" action="A1">
-        <!-- Unseals the Agathion. -->
+    <skill id="8522" name="Summon Agathion - Nevit's Herald Kanna" action="A1">
+        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>

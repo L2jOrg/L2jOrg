@@ -1,13 +1,31 @@
+/*
+ * This file is part of the L2J Mobius project.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.stats.BaseStats;
@@ -17,6 +35,7 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.ClanHallZone;
+import org.l2j.gameserver.world.zone.type.FortZone;
 import org.l2j.gameserver.world.zone.type.MotherTreeZone;
 
 import java.util.Optional;
@@ -65,6 +84,21 @@ public class RegenMPFinalizer implements IStatsFunction {
                         var func = castle.getCastleFunction(Castle.FUNC_RESTORE_MP);
                         if (func != null) {
                             baseValue *= (func.getLevel() / 100f);
+                        }
+                    }
+                }
+            }
+
+            if (player.isInsideZone(ZoneType.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0)) {
+                final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
+                final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
+                final int fortIndex = player.getClan().getFortId();
+                if ((fortIndex > 0) && (fortIndex == posFortIndex)) {
+                    final Fort fort = FortDataManager.getInstance().getFortById(player.getClan().getCastleId());
+                    if (fort != null) {
+                        final Fort.FortFunction func = fort.getFortFunction(Fort.FUNC_RESTORE_MP);
+                        if (func != null) {
+                            baseValue *= (func.getLvl() / 100f);
                         }
                     }
                 }

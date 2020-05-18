@@ -19769,8 +19769,8 @@ public final class NpcStringId {
     public static NpcStringId WE_JUST_LOCATED_LINDVIOR_THOSE_WHO_ARE_WILLING_TO_FIGHT_CAN_DO_SO_AT_ANY_TIME_NOW;
     @ClientString(id = 1802379, message = "You need to use a skill just right on the Generator to obtain a scale. Talk to Jenna about it.")
     public static NpcStringId YOU_NEED_TO_USE_A_SKILL_JUST_RIGHT_ON_THE_GENERATOR_TO_OBTAIN_A_SCALE_TALK_TO_JENNA_ABOUT_IT;
-    @ClientString(id = 1802380, message = "Write your wish for 2013 onto the Wish Tree!")
-    public static NpcStringId WRITE_YOUR_WISH_FOR_2013_ONTO_THE_WISH_TREE;
+    @ClientString(id = 1802380, message = "Write your wish for Lineage II in 2013 onto the Wish Tree!")
+    public static NpcStringId WRITE_YOUR_WISH_FOR_LINEAGE_II_IN_2013_ONTO_THE_WISH_TREE;
     @ClientString(id = 1802381, message = "Do you want to change into a Santa Outfit? Write a wish on the Wish Tree!")
     public static NpcStringId DO_YOU_WANT_TO_CHANGE_INTO_A_SANTA_OUTFIT_WRITE_A_WISH_ON_THE_WISH_TREE;
     @ClientString(id = 1802382, message = "Happy Holidays!")
@@ -21356,8 +21356,8 @@ public final class NpcStringId {
 	@ClientString(id = 1803738, message = "Wow! Today you've gained more points than anyone else: $s1! Congratulations!")
 	public static NpcStringId WOW_TODAY_YOU_VE_GAINED_MORE_POINTS_THAN_ANYONE_ELSE_S1_CONGRATULATIONS;
 
-	@ClientString(id = 1803739, message = "Come on! Let's celebrate the 15th anniversary!")
-	public static NpcStringId COME_ON_LET_S_CELEBRATE_THE_15TH_ANNIVERSARY;
+	@ClientString(id = 1803739, message = "Come on! Let's celebrate the Lineage 2 15th anniversary!")
+	public static NpcStringId COME_ON_LET_S_CELEBRATE_THE_LINEAGE_2_15TH_ANNIVERSARY;
 
 	@ClientString(id = 1803740, message = "Take out your forks!")
 	public static NpcStringId TAKE_OUT_YOUR_FORKS;
@@ -23536,8 +23536,8 @@ public final class NpcStringId {
     public static NpcStringId THANK_YOU_FOR_YOUR_UNWAVERING_FAITH_FOR_ALL_THIS_TIME;
     @ClientString(id = 3000132, message = "Thank you for your love.")
     public static NpcStringId THANK_YOU_FOR_YOUR_LOVE;
-    @ClientString(id = 3000133, message = "will always be by your side.")
-    public static NpcStringId WILL_ALWAYS_BE_BY_YOUR_SIDE;
+    @ClientString(id = 3000133, message = "Lineage 2 will always be by your side.")
+    public static NpcStringId LINEAGE_2_WILL_ALWAYS_BE_BY_YOUR_SIDE;
     @ClientString(id = 3000134, message = "Children, show your respect!")
 	public static NpcStringId CHILDREN_SHOW_YOUR_RESPECT_2;
 

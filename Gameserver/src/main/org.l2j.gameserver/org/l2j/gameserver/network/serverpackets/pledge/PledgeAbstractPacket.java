@@ -20,7 +20,7 @@ public abstract class PledgeAbstractPacket extends ServerPacket {
         writeInt(clan.getCastleId());
         writeInt(0x00);
         writeInt(clan.getHideoutId());
-        writeInt(0x00); // fort Id
+        writeInt(clan.getFortId());
         writeInt(clan.getRank());
         writeInt(clan.getReputationScore());
         writeInt(0x00); // 0

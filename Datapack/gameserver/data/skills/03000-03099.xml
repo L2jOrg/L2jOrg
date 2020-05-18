@@ -33,6 +33,7 @@
         <icon initial="icon.skill0223"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
@@ -97,7 +98,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="2.95">
                     <value level="2">2.82</value>
                     <value level="3">2.68</value>
@@ -107,7 +108,7 @@
                     <value level="7">7.5</value>
                     <value level="8">5.31</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3010" name="Special Ability: Focus" max-level="9">
@@ -117,7 +118,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="86.7">
                     <value level="2">82.2</value>
                     <value level="3">77.8</value>
@@ -125,7 +126,7 @@
                     <value level="5">68.9</value>
                     <value level="6">64.5</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3011" name="Special Ability: Focus" max-level="7">
@@ -135,7 +136,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="90.5">
                     <value level="2">85.9</value>
                     <value level="3">81.2</value>
@@ -143,7 +144,7 @@
                     <value level="5">71.9</value>
                     <value level="6">67.3</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3012" name="Special Ability: Anger" max-level="6">
@@ -228,6 +229,7 @@
                 <value level="5">58</value>
                 <value level="6">61</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="-92"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -256,6 +258,7 @@
          -->
         <icon initial="icon.skill1044"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="379">
                 <value level="3">457</value>
@@ -314,6 +317,7 @@
                 <value level="5">58</value>
                 <value level="6">61</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -348,6 +352,7 @@
                 <value level="5">58</value>
                 <value level="6">61</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -479,6 +484,7 @@
                 <value level="5">58</value>
                 <value level="6">61</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -938,7 +944,7 @@
             <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
                 <power/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
                 <power initial="53.6">
                     <value level="2">38.5</value>
                     <value level="3">50.4</value>
@@ -956,7 +962,7 @@
                     <value level="15">98.7</value>
                     <value level="16">92.4</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="3045" name="Special Ability: Haste" max-level="16">
@@ -1113,6 +1119,7 @@
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -1134,6 +1141,7 @@
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -1158,6 +1166,7 @@
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -1182,6 +1191,7 @@
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target type="NONE" scope="NONE"/>
@@ -1349,6 +1359,7 @@
                 <value level="3">70</value>
                 <value level="4">82</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1472,7 +1483,7 @@
                     <value level="6">139.41</value>
                 </power>
             </stat-modify>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power initial="15.0"/>
             </magic-cost>
         </effects>

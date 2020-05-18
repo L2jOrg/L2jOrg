@@ -55,6 +55,7 @@
         <!-- Retains target's buffs/debuffs upon death, except for Noblesse Grace and Lucky Charm. Consumes 1000 Spirit Ore. -->
         <icon initial="icon.skill1323"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>

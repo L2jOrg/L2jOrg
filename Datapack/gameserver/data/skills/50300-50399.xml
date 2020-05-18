@@ -13,9 +13,9 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
-            <enlarge-slot type="INVENTORY_NORMAL">
-                <power initial="2.0"/>
+		<effects>
+			<enlarge-slot type="INVENTORY_NORMAL">
+                <power initial="2.0"/>               
             </enlarge-slot>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
                 <power initial="1000.0"/>
@@ -28,7 +28,7 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="1.0"/>
             </vital-stat-modify>
@@ -43,7 +43,7 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="2.0"/>
             </vital-stat-modify>
@@ -58,16 +58,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
-            <base-stat type="STR">
+		<effects>
+			<base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-            <base-stat type="INT">
+			<base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
             <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="300.0"/>
-            </vital-stat-modify>
+            </vital-stat-modify>           
         </effects>
     </skill>
     <skill id="50305" name="Gloves of Silence">
@@ -76,22 +76,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
-            <base-stat type="STR">
+		<effects>
+			<base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-            <base-stat type="INT">
+			<base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
             <vital-stat-modify stat="MAX_HP">
                 <power initial="150.0"/>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="15.0"/>
-            </stat-modify>
+            </stat-modify>			
         </effects>
     </skill>
     <skill id="50306" name="Silence Gloves Enchantment Effect">
@@ -100,15 +100,15 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
-            <trigger-skill-by-attack skill="50308" target="ENEMY">
+		<effects>
+			<trigger-skill-by-attack skill="50308" target="ENEMY">
                 <power initial="1"/>
                 <chance initial="1.0"/>
                 <min-damage initial="1.0"/>
             </trigger-skill-by-attack>
-            <trigger-skill-by-magic skill="50308" target="ENEMY">
-                <power initial="1"/>
-                <chance initial="1.0"/>
+			<trigger-skill-by-magic skill="50308" target="ENEMY">
+                <power initial="1"/> 
+				<chance initial="1.0"/> 
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>
         </effects>
@@ -127,9 +127,9 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
-            <trigger-skill-by-magic skill="50308" target="ENEMY">
-                <power initial="1"/>
+		<effects>			
+			<trigger-skill-by-magic skill="50308" target="ENEMY">
+                <power initial="1"/>                  
                 <chance initial="1.0">
                     <value level="5">2.0</value>
                     <value level="6">3.0</value>
@@ -138,18 +138,18 @@
                     <value level="9">8.0</value>
                     <value level="10">10.0</value>
                 </chance>
-                <types>MAGIC PHYSIC STATIC</types>
+				<types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>
-            <trigger-skill-by-magic skill="50309" target="ENEMY">
-                <power>
-                    <value level="5">1.0</value>
+			<trigger-skill-by-magic skill="50309" target="ENEMY">
+                <power> 
+					<value level="5">1.0</value>
                     <value level="6">2.0</value>
                     <value level="7">3.0</value>
                     <value level="8">4.0</value>
                     <value level="9">5.0</value>
                     <value level="10">6.0</value>
                 </power>
-                <chance initial="1.0">
+                <chance initial="1.0">                   
                     <value level="5">2.0</value>
                     <value level="6">3.0</value>
                     <value level="7">4.0</value>
@@ -157,9 +157,9 @@
                     <value level="9">8.0</value>
                     <value level="10">10.0</value>
                 </chance>
-                <types>MAGIC PHYSIC STATIC</types>
+				<types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
                 <power>
                     <value level="5">2.0</value>
                     <value level="6">3.0</value>
@@ -185,8 +185,12 @@
         <!-- Can’t use any skills for 4 seconds. -->
         <icon initial="icon.armor_t94_g_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>
+            <effect-range initial="1400"/>
         </attributes>
-        <target type="ENEMY_ONLY"/>
+		<target type="ENEMY_ONLY"/>
         <abnormal type="SILENCE_ALL" visual="SILENCE">
             <level initial="2"/>
             <time initial="4"/>
@@ -208,25 +212,30 @@
          -->
         <icon initial="icon.armor_t94_g_i01"/>
         <attributes magic-critical-rate="5.0">
+			<magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>               
+            <effect-range initial="1400"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <effects>
+		<effects>
             <magical-attack>
                 <power initial="50.0">
                     <value level="2">70.0</value>
                     <value level="3">90.0</value>
                     <value level="4">110.0</value>
                     <value level="5">130.0</value>
-                    <value level="6">165.0</value>
+                    <value level="6">165.0</value>                
                 </power>
             </magical-attack>
-            <magical-attack-mp critical="true" critical-limit="7000">
+			<magical-attack-mp critical="true" critical-limit="7000">
                 <power initial="50.0">
                     <value level="2">70.0</value>
                     <value level="3">90.0</value>
                     <value level="4">110.0</value>
                     <value level="5">130.0</value>
-                    <value level="6">165.0</value>
+                    <value level="6">165.0</value>                
                 </power>
             </magical-attack-mp>
         </effects>
@@ -302,76 +311,6 @@
             level 10: <Cloak of Protection>\nMax HP +20%\n, Max MP +20%\nBow Resistance +15%\nXP Gain +30%\nSP Gain +30%\nP. Def. +15%\nM. Def. +15%\nP. Critical Damage +15%\nM. Skill Critical Damage +15%\nAll Critical Damage Receive Rate -10%\nAll Critical Damage Received -10%
          -->
         <icon initial="icon.bm_2018_sayha_cloak_back_i01"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50370" name="Sword of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_spinebone_sword_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50371" name="Dagger of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_knife_o'_silenus_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50372" name="Bow of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_gastraphetes_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50373" name="Blunt Weapon of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_war_pick_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50374" name="Two-handed Sword of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_flamberge_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50375" name="Two-handed Blunt Weapon of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_ghost_staff_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50376" name="Spear of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_dwarven_trident_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50377" name="Fist of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_baghnakh_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50378" name="Rapier of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_soldat_estoc_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="50379" name="Ancient Sword of Aden">
-        <!-- P. Atk. and M. Atk. increases according to the character’s level. -->
-        <icon initial="icon.weapon_schlaeger_i00"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>

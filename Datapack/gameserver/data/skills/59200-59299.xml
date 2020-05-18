@@ -2012,7 +2012,7 @@
     <skill id="59249" name="Dark Knight" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n P. Def/M. Def +25%% -->
         <icon initial="icon.dark_kninght"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
+        <attributes property="PHYSIC"  stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -3109,10 +3109,10 @@
     </skill>
     <skill id="59273" name="Sailor's Blessing" max-level="3" action="A2">
         <!--
-		level 1: Party member's P. Atk. and M. Atk. +10%
-		level 2: Party member's P. Atk. and M. Atk. +15%
-		level 3: Party member's P. Atk. and M. Atk. +20%
-	 -->
+            level 1: Party member's P. Atk. and M. Atk. +10%
+            level 2: Party member's P. Atk. and M. Atk. +15%
+            level 3: Party member's P. Atk. and M. Atk. +20%
+         -->
         <icon initial="icon.bm2018_pirate_i01"/>
         <attributes property="PHYSIC">
             <reuse initial="300000">
@@ -3124,7 +3124,7 @@
         </attributes>
         <target scope="PARTY"/>
         <abnormal>
-            <time initial="10"/>
+            <time initial="10"/> <!-- TODO check the time -->
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
@@ -3318,7 +3318,7 @@
         </attributes>
         <target type="TARGET"/>
         <effects>
-            <magical-attack>
+            <magical-attack >
                 <power initial="145">
                     <value level="2">220</value>
                     <value level="3">300</value>
@@ -3490,10 +3490,10 @@
     </skill>
     <skill id="59281" name="Barbarian Wolf - Hex" max-level="3" debuff="true" action="A2">
         <!--
-		level 1: P. Def. -23%.
-		level 2: P. Def. -30%.
-		level 3: P. Def. -40%.
-	 -->
+            level 1: P. Def. -23%.
+            level 2: P. Def. -30%.
+            level 3: P. Def. -40%.
+         -->
         <icon initial="icon.barbarian_chest_change_0"/>
         <attributes property="PHYSIC">
             <cast-range initial="900"/>
@@ -3866,12 +3866,13 @@
     </skill>
     <skill id="59289" name="Kelbim - Shadow Evasion" max-level="3" action="A2">
         <!--
-		level 1: Evades P./M. Skills for 3 seconds.
-		level 2: Evades P./M. Skills for 5 seconds.
-		level 3: Evades P./M. Skills for 7 seconds.
-	 -->
+            level 1: Evades P./M. Skills for 3 seconds.
+            level 2: Evades P./M. Skills for 5 seconds.
+            level 3: Evades P./M. Skills for 7 seconds.
+         -->
         <icon initial="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="180000">
                 <value level="2">100000</value>
                 <value level="3">60000</value>
@@ -4076,7 +4077,6 @@
                 <value level="2">30000</value>
             </reuse>
             <effect-point initial="-5"/>
-            <activate-rate initial="100"/>
         </attributes>
         <target/>
         <abnormal>
@@ -4253,12 +4253,13 @@
     </skill>
     <skill id="59298" name="High Priest - Blessing of Eva" max-level="3" action="A1">
         <!--
-		level 1: Recovers a party member's HP by 1000 and MP by 200 through Divine Power.
-		level 2: Recovers a party member's HP by 1500 and MP by 300 through Divine Power.
-		level 3: Recovers a party member's HP by 2000 and MP by 400 through Divine Power.
-	 -->
+            level 1: Recovers a party member's HP by 1000 and MP by 200 through Divine Power.
+            level 2: Recovers a party member's HP by 1500 and MP by 300 through Divine Power.
+            level 3: Recovers a party member's HP by 2000 and MP by 400 through Divine Power.
+         -->
         <icon initial="icon.bm2018_healer_i01"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="300000">
                 <value level="2">200000</value>
                 <value level="3">150000</value>

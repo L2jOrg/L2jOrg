@@ -30,7 +30,7 @@ public class GMViewPledgeInfo extends ServerPacket {
         writeInt(_clan.getLevel());
         writeInt(_clan.getCastleId());
         writeInt(_clan.getHideoutId());
-        writeInt(0x00); // fort id
+        writeInt(_clan.getFortId());
         writeInt(_clan.getRank());
         writeInt(_clan.getReputationScore());
         writeInt(0x00);

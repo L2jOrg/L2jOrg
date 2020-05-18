@@ -18,6 +18,7 @@
         <!-- For 10 sec., received damage - 50%%. -->
         <icon initial="icon.skill0340"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2400"/>
@@ -29,6 +30,7 @@
         <!-- Inflicts Fear on nearby enemies for 5 sec. -->
         <icon initial="icon.skill1169"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -67,6 +69,7 @@
         <!-- Sentence all nearby enemies to death. 150,000 damage. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -106,6 +109,7 @@
         <!-- Moving against your will due to Fear. -->
         <icon initial="icon.skill1381"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -120,6 +124,7 @@
          -->
         <icon initial="icon.skill4047"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -131,6 +136,7 @@
         <!-- Immobilized. -->
         <icon initial="icon.skill11050"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -142,6 +148,7 @@
         <!-- Immobilized. -->
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -153,6 +160,7 @@
         <!-- Immobilized. -->
         <icon initial="icon.skill4111"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -164,6 +172,7 @@
         <!-- Poisoned and losing 1000 HP/second. -->
         <icon initial="icon.skill4035"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -175,6 +184,7 @@
         <!-- Recover 10%% of Max HP and 30%% of Max MP of self and everyone within 200 grids. Cooldown is 10 seconds. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -190,6 +200,7 @@
          -->
         <icon initial="icon.skill1298"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -239,6 +250,7 @@
         <!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
         <icon initial="BranchSys.icon.br_xmas_present_fun_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="100"/>

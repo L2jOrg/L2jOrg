@@ -4,6 +4,7 @@
         <!-- Fantastical energy of the fishing dock. -->
         <icon initial="icon.etc_dragons_blood_i03"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -14,6 +15,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -28,6 +30,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -42,6 +45,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -55,6 +59,7 @@
         <!-- Watch the Agathion's Trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -64,6 +69,7 @@
     <skill id="17685" name="Uldie's Gift" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -90,6 +96,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -99,6 +106,7 @@
         <!-- A skill to summon a transparent NPC for the 10the anniversary event Summon Squash. -->
         <icon initial="icon.skill17695"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -111,6 +119,7 @@
         <!-- A skill to summon a transparent NPC for the 10the anniversary event Summon Squash. -->
         <icon initial="icon.skill17696"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>

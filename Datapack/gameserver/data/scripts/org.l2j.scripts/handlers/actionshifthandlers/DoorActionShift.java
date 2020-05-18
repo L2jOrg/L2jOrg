@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.HtmlUtil;
@@ -26,6 +27,7 @@ public class DoorActionShift implements IActionShiftHandler
 			activeChar.setTarget(target);
 			final Door door = (Door) target;
 			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByDoorId(door.getId());
+			final Fort fort = door.getFort();
 			final Castle castle = door.getCastle();
 			activeChar.sendPacket(new StaticObject(door, activeChar.isGM()));
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
@@ -44,6 +46,7 @@ public class DoorActionShift implements IActionShiftHandler
 			html.replace("%node3%", door.getX(2) + ", " + door.getY(2) + ", " + door.getZMax());
 			html.replace("%node4%", door.getX(3) + ", " + door.getY(3) + ", " + door.getZMax());
 			// Residence info
+			html.replace("%fortress%", fort != null ? fort.getName() : "None");
 			html.replace("%clanHall%", clanHall != null ? clanHall.getName() : "None");
 			html.replace("%castle%", castle != null ? castle.getName() + " Castle" : "None");
 			activeChar.sendPacket(html);

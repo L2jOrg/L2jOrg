@@ -26,6 +26,7 @@
          -->
         <icon initial="icon.skill_transform_s_attack"/>
         <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-183"/>
@@ -101,6 +102,7 @@
          -->
         <icon initial="icon.skill_transform_s_attack"/>
         <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-183"/>

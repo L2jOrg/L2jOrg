@@ -19,6 +19,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
+import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.PetLevelData;
@@ -381,6 +382,10 @@ public class Pet extends Summon {
 
         final boolean follow = getFollowStatus();
         final Item target = (Item) object;
+
+        if (FortSiegeManager.getInstance().isCombat(target.getId())) {
+            return;
+        }
 
         SystemMessage smsg = null;
         synchronized (target) {

@@ -17,12 +17,10 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.ClanHall;
-import org.l2j.gameserver.model.entity.Event;
-import org.l2j.gameserver.model.entity.Siege;
+import org.l2j.gameserver.model.entity.*;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
@@ -172,9 +170,27 @@ public class EnterWorld extends ClientPacket {
                 }
             }
 
+            for (FortSiege siege : FortSiegeManager.getInstance().getSieges()) {
+                if (!siege.isInProgress()) {
+                    continue;
+                }
+
+                if (siege.checkIsAttacker(clan)) {
+                    player.setSiegeState((byte) 1);
+                    player.setSiegeSide(siege.getFort().getId());
+                } else if (siege.checkIsDefender(clan)) {
+                    player.setSiegeState((byte) 2);
+                    player.setSiegeSide(siege.getFort().getId());
+                }
+            }
+
             // Residential skills support
             if (player.getClan().getCastleId() > 0) {
                 CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
+            }
+
+            if (player.getClan().getFortId() > 0) {
+                FortDataManager.getInstance().getFortByOwner(clan).giveResidentialSkills(player);
             }
 
             showClanNotice = clan.isNoticeEnabled();
@@ -237,7 +253,7 @@ public class EnterWorld extends ClientPacket {
         var world = World.getInstance();
         player.getFriendList().stream().mapToObj(world::findPlayer).filter(Objects::nonNull).forEach(sm::sendTo);
 
-        player.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD);
+        player.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 
         AnnouncementsManager.getInstance().showAnnouncements(player);
 
@@ -280,6 +296,18 @@ public class EnterWorld extends ClientPacket {
 
         if (player.getClanJoinExpiryTime() > System.currentTimeMillis()) {
             player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
+        }
+
+        // remove combat flag before teleporting
+        if (player.getInventory().getItemByItemId(9819) != null) {
+            final Fort fort = FortDataManager.getInstance().getFort(player);
+            if (fort != null) {
+                FortSiegeManager.getInstance().dropCombatFlag(player, fort.getId());
+            } else {
+                var bodyPart = BodyPart.fromEquippedPaperdoll(player.getInventory().getItemByItemId(9819));
+                player.getInventory().unEquipItemInBodySlot(bodyPart);
+                player.destroyItem("CombatFlag", player.getInventory().getItemByItemId(9819), null, true);
+            }
         }
 
         // Attacker or spectator logging in to a siege zone.

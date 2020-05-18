@@ -25,7 +25,6 @@ import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static java.lang.Math.round;
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
 import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStatType;
@@ -128,8 +127,8 @@ public class PlayerStats extends PlayableStats {
             addToSp *= ratioTakenByPlayer;
         }
 
-        final long finalExp = round(addToExp);
-        final long finalSp = round(addToSp);
+        final long finalExp = Math.round(addToExp);
+        final long finalSp = Math.round(addToSp);
         final boolean expAdded = addExp(finalExp);
         final boolean spAdded = addSp(finalSp);
 
@@ -143,9 +142,9 @@ public class PlayerStats extends PlayableStats {
         } else {
             sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
             sm.addLong(finalExp);
-            sm.addLong(round(addToExp - baseExp));
+            sm.addLong(Math.round(addToExp - baseExp));
             sm.addLong(finalSp);
-            sm.addLong(round(addToSp - baseSp));
+            sm.addLong(Math.round(addToSp - baseSp));
         }
         activeChar.sendPacket(sm);
     }
@@ -585,6 +584,6 @@ public class PlayerStats extends PlayableStats {
         if (player.hasAbnormalType(AbnormalType.ABILITY_CHANGE) && player.hasServitors()) {
             player.getServitors().values().forEach(servitor -> servitor.getStats().recalculateStats(broadcast));
         }
-        player.sendPacket(new ExUserBoostStat(BoostStatType.STAT, (short) (round(getExpBonusMultiplier() * 100) - 100)));
+        player.sendPacket(new ExUserBoostStat(BoostStatType.STAT, (short) (getExpBonusMultiplier() * 100 - 100)));
     }
 }

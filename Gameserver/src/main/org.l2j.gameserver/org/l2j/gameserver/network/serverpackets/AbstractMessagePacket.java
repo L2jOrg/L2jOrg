@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 import java.io.PrintStream;
 import java.util.Arrays;
 
+import static java.util.Objects.isNull;
+
 /**
  * @param <T>
  * @author UnAfraid
@@ -200,7 +202,12 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
     }
 
     public final T addSkillName(int id, int lvl, int subLvl) {
-        append(new SMParam(TYPE_SKILL_NAME, new int[] { id, lvl, subLvl }));
+        append(new SMParam(TYPE_SKILL_NAME, new int[]
+                {
+                        id,
+                        lvl,
+                        subLvl
+                }));
         return (T) this;
     }
 
@@ -283,10 +290,13 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 
     protected final void writeMe() {
         writeParamsSize(_params.length);
-        for (int i = 0; i < _paramIndex; i++) {
-            var param = _params[i];
-
+        for (SMParam param : _params) {
+            if(isNull(param)){
+                LOGGER.warn("Null param for system message {}", _smId);
+                continue;
+            }
             writeParamType(param.getType());
+
             switch (param.getType()) {
                 case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME, TYPE_ELEMENTAL_SPIRIT -> writeByte((byte) param.getIntValue());
                 case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> writeShort((short) param.getIntValue());

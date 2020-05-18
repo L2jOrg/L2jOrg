@@ -1,5 +1,5 @@
 @echo off
-title Auth Server
+title Lineage 2 Auth Server
 :start
 echo Starting Auth Server.
 echo.

@@ -7,6 +7,7 @@ import java.util.List;
 
 public class ShowBoard extends ServerPacket {
 
+    private static final int BOARD_MENU_SIZE = 20 * 8;
     private final String _content;
     private int _showBoard = 1; // 1 show, 0 hide
 
@@ -43,7 +44,7 @@ public class ShowBoard extends ServerPacket {
         writeString("bypass _bbsmemo"); // memo
         writeString("bypass _bbsmail"); // mail
         writeString("bypass _bbsfriends"); // friends
-        writeString("bypass _bbsgetfav add"); // add fav.
+        writeString("bypass bbs_add_fav"); // add fav.
         writeString(_content);
     }
 

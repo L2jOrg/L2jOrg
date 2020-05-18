@@ -51,6 +51,7 @@
         <icon initial="icon.skill_transform_buff"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="25000"/>
             <effect-point initial="689"/>
             <effect-range initial="-1"/>
@@ -91,9 +92,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="30.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
 </list>

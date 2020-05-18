@@ -4,6 +4,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -13,6 +14,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -22,6 +24,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -34,6 +37,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -46,6 +50,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -195,11 +200,11 @@
             level 4: Casting Spd. +5.
             level 5: Casting Spd. +10.
             level 6: Casting Spd. +15.
-            level 7: Cooldown of M. Skills and songs/ dances -2%, Casting Spd. +15. Casting Spd. increases, cooldown of M. Skills and songs/ dances decreases when Agathion is upgraded.
-            level 8: Cooldown of M. Skills and songs/ dances -4%, Casting Spd. +25.
-            level 9: Cooldown of M. Skills and songs/ dances -6%, Casting Spd. +35.
-            level 10: Cooldown of M. Skills and songs/ dances -8%, Casting Spd. +45.
-            level 11: Cooldown of M. Skills and songs/ dances -12%, Casting Spd. +60.
+            level 7: Cooldown of P. Skills and songs/ dances -2%, Casting Spd. +15. Casting Spd. increases, cooldown of P. Skills and songs/ dances decreases when Agathion is upgraded.
+            level 8: Cooldown of P. Skills and songs/ dances -4%, Casting Spd. +25.
+            level 9: Cooldown of P. Skills and songs/ dances -6%, Casting Spd. +35.
+            level 10: Cooldown of P. Skills and songs/ dances -8%, Casting Spd. +45.
+            level 11: Cooldown of P. Skills and songs/ dances -12%, Casting Spd. +60.
          -->
         <icon initial="icon.agathion_lib_star_1"/>
         <attributes property="MAGIC">
@@ -229,6 +234,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -239,6 +245,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -249,6 +256,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -259,6 +267,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -269,6 +278,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -279,6 +289,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -289,6 +300,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -299,6 +311,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -309,6 +322,7 @@
         <!-- Releases Agathion's Seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -319,6 +333,7 @@
         <!-- Dismiss a summoned Agathion. -->
         <icon initial="icon.etc_unsummon_aga_agit_i01"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -329,6 +344,7 @@
         <!-- none -->
         <icon initial="icon.star_agathion_cube"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -340,6 +356,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -350,6 +367,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -360,6 +378,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -370,6 +389,7 @@
         <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -380,6 +400,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -390,6 +411,7 @@
         <!-- Transforms into Kat the Cat. -->
         <icon initial="icon.skilltransform1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -401,6 +423,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -413,6 +436,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -425,6 +449,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -437,6 +462,7 @@
         <!-- Can only be used together with fishing weapons. Disappears after an unsuccessful Enchant. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -446,6 +472,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
@@ -457,6 +484,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
@@ -480,6 +508,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -489,6 +518,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -497,6 +527,7 @@
     <skill id="59140" name="Halloween Gift" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -508,6 +539,7 @@
         <!-- Lingering Halloween. XP/SP Gain when hunting +10%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -517,6 +549,7 @@
         <!-- Lingering Halloween. XP/SP Gain when hunting +20%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -526,6 +559,7 @@
         <!-- Lingering Halloween. XP/SP Gain when hunting +30%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -542,6 +576,7 @@
         <!-- Summons the Magic Warehouse. -->
         <icon initial="BranchIcon.icon.g_bm_shop_add_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -572,6 +607,7 @@
         <!-- See the summoned spirit perform cute tricks. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -582,6 +618,7 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -824,6 +861,7 @@
         <!-- Recovers 10%% of MP right away. -->
         <icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

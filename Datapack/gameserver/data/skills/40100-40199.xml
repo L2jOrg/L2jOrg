@@ -18,14 +18,14 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="40103" name="Sweet Blessing Star Candy - Event">
+    <skill id="40103" name="Blessing Star Candy">
         <icon initial="icon.skill0000"/>
         <attributes>
         </attributes>
         <target/>
     </skill>
     <skill id="40104" name="Sayha's Storm Lv. 3 - Event">
-        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute.\nDeath protection. You can delete it yourself. -->
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
         <icon initial="icon.bm_sayha_storm"/>
         <attributes property="PHYSIC">
         </attributes>
@@ -44,7 +44,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="40113" name="Sweet Grace Cookie">
+    <skill id="40113" name="Grace Cookie">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
@@ -107,8 +107,8 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="40141" name="Battleground Scroll">
-        <!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical/M. Critical Damage +10%%\nDeath protection. You can delete it yourself. -->
+    <skill id="40141" name="Battleground Scroll" type="MAGIC">
+        <!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical/M. Critical Damage +10%% -->
         <icon initial="icon.etc_ssq_i00"/>
         <attributes property="PHYSIC">
         </attributes>
@@ -257,217 +257,6 @@
     </skill>
     <skill id="40159" name="Thanksgiving Thank You Letter - Event">
         <!-- Letter to friends for Thanksgiving. Fireworks will be displayed above the character when used, and the Thanksgiving text will be displayed. -->
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40160" name="Scroll: Restore Equipment Appearance">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40161" name="Test Emerald Weapon Appearance Stone: One-handed Sword">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40162" name="Emerald Weapon Appearance Stone">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40163" name="Appearance Stone: Dark Assassin Suit">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40164" name="Spellbook: Glory Ability Lv. 1">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40166" name="Intermediate HP Potion - Event">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40167" name="Shining Scroll of Mood Melody - Event">
-        <!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
-        <icon initial="icon.bm_magmeld"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40168" name="Top-grade Stable Scroll: Enchant Weapon (S-grade)">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40169" name="Top-grade Stable Scroll: Enchant Armor (S-grade)">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40170" name="Super Strong Giant's Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
-        <icon initial="BranchSys.icon.br_frankenstein_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40171" name="Shriek Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
-        <icon initial="icon.ev_scream_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40172" name="Red Devil Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
-        <icon initial="icon.ev_doccabi_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40173" name="Mummy Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
-        <icon initial="icon.ev_mummy_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40174" name="Alien Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
-        <icon initial="icon.ev_alien_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40175" name="Golden Jack O'Lantern Mask">
-        <!-- For 20 min., XP/SP Gain +50%%. -->
-        <icon initial="icon.ev_golden_jack0_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40176" name="Pumpkin Ghost’s Great Candy - Event" max-level="25">
-        <!-- For 1 hour, STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. The buff is refreshed automatically every hour, and you’ll obtain a Halloween Candy Box each time it is refreshed\n<Note>\nCannot obtain the item if you are dead. -->
-        <icon initial="icon.ev_jack_ghost_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40177" name="Pumpkin Ghost’s Great Candy - Reward">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40178" name="Halloween Mask">
-        <!-- Appearance has transformed to a Halloween Mask. -->
-        <icon initial="icon.ev_golden_jack0_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40179" name="Halloween Candy - Event">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40180" name="Sweet Halloween Grace Cookie - Event">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40182" name="Lucky Vitality Card">
-        <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40183" name="Lucky Vitality - STR/INT +1">
-        <!-- For 20 min., STR/INT +1. -->
-        <icon initial="icon.card_devil_black"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40184" name="Lucky Vitality - DEX/WIT +1">
-        <!-- For 20 min., DEX/WIT +1. -->
-        <icon initial="icon.card_devil_black"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40185" name="Lucky Vitality - CON/MEN +1">
-        <!-- For 20 min., CON/MEN +1. -->
-        <icon initial="icon.card_devil_black"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40186" name="Lucky Vitality - XP">
-        <!-- For 20 min., XP/SP Gain +20%%. -->
-        <icon initial="icon.card_devil_black"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40187" name="Lucky Vitality - All Stats +1">
-        <!-- For 20 min., STR/INT/DEX/WIT/CON/MEN +1. -->
-        <icon initial="icon.card_dragon_gold"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40188" name="Lucky Vitality - XP/All Stats +1">
-        <!-- For 20 min., STR/INT/DEX/WIT/CON/MEN +1, and XP/SP Gain +20%%. -->
-        <icon initial="icon.card_hero_red"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40189" name="Lucky Vitality - XP/All Stats +2">
-        <!-- For 20 min., STR/INT/DEX/WIT/CON/MEN +2, and XP/SP Gain +30%%. -->
-        <icon initial="icon.card_hidden"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40197" name="Festival Participant’s Mark" max-level="5">
-        <!--
-            level 1: 1 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-            level 2: 2 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-            level 3: 3 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-            level 4: 4 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-            level 5: 5 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-         -->
-        <icon initial="icon.skill30530"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40198" name="Star Energy">
-        <!-- none -->
-        <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40199" name="Enchant Scroll: Talisman of Baium">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
         </attributes>

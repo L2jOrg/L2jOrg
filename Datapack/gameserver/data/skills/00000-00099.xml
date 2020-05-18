@@ -200,7 +200,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL</type>
+                <type>DUAL DUAL_BLUNT</type>
             </weapon>
         </conditions>
         <effects>
@@ -283,40 +283,16 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="5000"/>
-            <effect-point initial="-240">
-                <value level="2">-280</value>
-                <value level="3">-320</value>
-                <value level="4">-360</value>
-                <value level="5">-400</value>
-                <value level="6">-430</value>
-                <value level="7">-460</value>
-                <value level="8">-490</value>
-                <value level="9">-520</value>
-                <value level="10">-550</value>
-                <value level="11">-580</value>
-                <value level="12">-600</value>
-                <value level="13">-620</value>
-                <value level="14">-640</value>
-                <value level="15">-660</value>
-                <value level="16">-680</value>
-                <value level="17">-700</value>
-                <value level="18">-720</value>
-                <value level="19">-740</value>
-            </effect-point>
             <effect-range initial="1100"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init>
-                <value level="3">5</value>
-                <value level="4">7</value>
-                <value level="5">9</value>
-                <value level="6">11</value>
-                <value level="7">3</value>
-                <value level="10">4</value>
-                <value level="13">5</value>
-                <value level="17">6</value>
+            <mana-init initial="3">
+                <value level="4">4</value>
+                <value level="7">5</value>
+                <value level="11">6</value>
+                <value level="15">7</value>
             </mana-init>
             <mana initial="12">
                 <value level="2">13</value>
@@ -398,7 +374,7 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF SPEAR DUAL</type>
+                <type>SWORD BLUNT</type>
             </weapon>
         </conditions>
         <effects>
@@ -426,6 +402,7 @@
             <magic-level initial="20">
                 <value level="2">46</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="204">
                 <value level="2">438</value>
@@ -608,7 +585,7 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>DUAL</type>
+                <type>DUAL DUAL_BLUNT</type>
             </weapon>
         </conditions>
         <effects>
@@ -847,7 +824,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
+                <type>SWORD BLUNT DUAL DUAL_BLUNT</type>
             </weapon>
         </conditions>
         <effects>
@@ -1044,12 +1021,13 @@
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
+                <type>SWORD BLUNT DUAL DUAL_BLUNT</type>
             </weapon>
         </conditions>
         <effects>
             <energy-attack consume-charges="0" critical-chance="15" over-hit="true" physical-defense-mod="1.0">
                 <power initial="155">
+                    <value level="1">155</value>
                     <value level="2">163</value>
                     <value level="3">172</value>
                     <value level="4">181</value>
@@ -1106,6 +1084,7 @@
                 <value level="7">70</value>
                 <value level="8">79</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="200"/>
             <effect-range initial="-1"/>
             <hit-time initial="900"/>
@@ -1118,7 +1097,7 @@
         <target/>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
+                <type>SWORD BLUNT DUAL DUAL_BLUNT</type>
             </weapon>
             <energy-max on-level="1"/>
             <energy-max charges="2" on-level="2"/>
@@ -1304,14 +1283,14 @@
                 <value level="37">101</value>
             </mana>
             <item initial="5589"/>
-            <item-count initial="3"/>
+            <item-count initial="2"/>
         </consume>
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12">
             <fan-range start-angle="0" radius="200" angle="180"/>
         </target>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
+                <type>SWORD BLUNT DUAL DUAL_BLUNT</type>
             </weapon>
         </conditions>
         <effects>
@@ -1381,6 +1360,7 @@
                 <value level="12">82</value>
                 <value level="13">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="6000"/>
@@ -1415,11 +1395,12 @@
                 <value level="13">89</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="2">
-                <value level="3">3</value>
-                <value level="5">4</value>
-                <value level="7">5</value>
-                <value level="11">6</value>
+            <item-count initial="4">
+                <value level="2">5</value>
+                <value level="3">7</value>
+                <value level="5">8</value>
+                <value level="6">10</value>
+                <value level="7">11</value>
             </item-count>
         </consume>
         <target/>
@@ -1571,6 +1552,7 @@
         <icon initial="icon.skill0013"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="49"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="15000"/>
@@ -1710,61 +1692,6 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="15000"/>
-            <effect-point initial="-180">
-                <value level="2">-190</value>
-                <value level="3">-200</value>
-                <value level="4">-220</value>
-                <value level="5">-230</value>
-                <value level="6">-240</value>
-                <value level="7">-260</value>
-                <value level="8">-270</value>
-                <value level="9">-280</value>
-                <value level="10">-300</value>
-                <value level="11">-310</value>
-                <value level="12">-320</value>
-                <value level="13">-340</value>
-                <value level="14">-350</value>
-                <value level="15">-360</value>
-                <value level="16">-380</value>
-                <value level="17">-390</value>
-                <value level="18">-400</value>
-                <value level="19">-410</value>
-                <value level="20">-420</value>
-                <value level="21">-430</value>
-                <value level="22">-440</value>
-                <value level="23">-450</value>
-                <value level="24">-460</value>
-                <value level="25">-470</value>
-                <value level="26">-480</value>
-                <value level="27">-490</value>
-                <value level="28">-500</value>
-                <value level="29">-510</value>
-                <value level="30">-520</value>
-                <value level="31">-530</value>
-                <value level="32">-540</value>
-                <value level="33">-550</value>
-                <value level="34">-560</value>
-                <value level="35">-570</value>
-                <value level="36">-580</value>
-                <value level="37">-590</value>
-                <value level="38">-600</value>
-                <value level="39">-610</value>
-                <value level="40">-620</value>
-                <value level="41">-630</value>
-                <value level="42">-640</value>
-                <value level="43">-650</value>
-                <value level="44">-660</value>
-                <value level="45">-670</value>
-                <value level="46">-680</value>
-                <value level="47">-690</value>
-                <value level="48">-700</value>
-                <value level="49">-710</value>
-                <value level="50">-720</value>
-                <value level="51">-730</value>
-                <value level="52">-740</value>
-                <value level="53">-760</value>
-                <value level="54">-780</value>
-            </effect-point>
             <effect-range initial="1100"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -1774,9 +1701,14 @@
                 <value level="5">3</value>
                 <value level="15">4</value>
                 <value level="24">5</value>
+                <value level="25">4</value>
+                <value level="26">5</value>
                 <value level="34">6</value>
+                <value level="35">5</value>
+                <value level="36">6</value>
                 <value level="44">7</value>
-                <value level="53">8</value>
+                <value level="45">6</value>
+                <value level="46">7</value>
             </mana-init>
             <mana initial="10">
                 <value level="5">12</value>
@@ -2316,6 +2248,7 @@
                 <value level="44">83</value>
                 <value level="45">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="20000"/>
             <effect-point initial="-5920">
                 <value level="2">-6080</value>
@@ -2689,6 +2622,7 @@
                 <value level="2">40</value>
                 <value level="3">60</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="204">
                 <value level="2">379</value>
@@ -2744,6 +2678,7 @@
                 <value level="12">82</value>
                 <value level="13">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="6000"/>
@@ -2757,12 +2692,6 @@
                 <value level="5">12</value>
                 <value level="6">13</value>
                 <value level="7">14</value>
-                <value level="8">15</value>
-                <value level="9">16</value>
-                <value level="10">17</value>
-                <value level="11">18</value>
-                <value level="12">19</value>
-                <value level="13">20</value>
             </mana-init>
             <mana initial="38">
                 <value level="2">44</value>
@@ -2779,11 +2708,12 @@
                 <value level="13">85</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="2">
-                <value level="3">3</value>
-                <value level="4">4</value>
-                <value level="7">5</value>
-                <value level="11">6</value>
+            <item-count initial="5">
+                <value level="2">6</value>
+                <value level="3">7</value>
+                <value level="5">9</value>
+                <value level="6">10</value>
+                <value level="7">11</value>
             </item-count>
         </consume>
         <target/>
@@ -3061,6 +2991,7 @@
                 <value level="13">83</value>
                 <value level="14">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="15000"/>
@@ -3189,6 +3120,20 @@
                 <value level="13">63</value>
                 <value level="14">67</value>
             </mana>
+            <item initial="1661"/>
+            <item-count initial="2">
+                <value level="3">3</value>
+                <value level="5">4</value>
+                <value level="6">5</value>
+                <value level="7">6</value>
+                <value level="8">7</value>
+                <value level="9">8</value>
+                <value level="10">10</value>
+                <value level="11">11</value>
+                <value level="12">13</value>
+                <value level="13">15</value>
+                <value level="14">17</value>
+            </item-count>
         </consume>
         <target type="DOOR_TREASURE"/>
         <conditions>
@@ -3748,7 +3693,7 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>DAGGER</type>
+                <type>DAGGER DUAL_DAGGER</type>
             </weapon>
         </conditions>
         <effects>
@@ -3830,6 +3775,7 @@
                 <value level="12">82</value>
                 <value level="13">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="6000"/>
@@ -3843,11 +3789,6 @@
                 <value level="5">12</value>
                 <value level="6">13</value>
                 <value level="8">14</value>
-                <value level="9">15</value>
-                <value level="10">16</value>
-                <value level="11">17</value>
-                <value level="12">18</value>
-                <value level="13">19</value>
             </mana-init>
             <mana initial="35">
                 <value level="2">42</value>
@@ -3867,8 +3808,8 @@
             <item-count initial="2">
                 <value level="3">3</value>
                 <value level="5">4</value>
-                <value level="7">5</value>
-                <value level="11">6</value>
+                <value level="6">5</value>
+                <value level="8">6</value>
             </item-count>
         </consume>
         <target/>
@@ -3901,6 +3842,7 @@
                 <value level="2">46</value>
                 <value level="3">62</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="204">
                 <value level="2">438</value>
@@ -4193,6 +4135,7 @@
                 <value level="39">77</value>
                 <value level="40">78</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="4000"/>
             <cool-time initial="733"/>
             <effect-point initial="-92">
@@ -4368,6 +4311,7 @@
                 <value level="2">49</value>
                 <value level="3">62</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="379">
                 <value level="2">467</value>
@@ -4423,6 +4367,7 @@
                 <value level="8">35</value>
                 <value level="9">36</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="102">
                 <value level="2">107</value>
@@ -4517,10 +4462,9 @@
                 <value level="9">12</value>
                 <value level="11">13</value>
                 <value level="14">14</value>
-                <value level="16">15</value>
-                <value level="18">16</value>
-                <value level="20">17</value>
-                <value level="22">18</value>
+                <value level="17">15</value>
+                <value level="20">16</value>
+                <value level="23">17</value>
             </mana-init>
             <mana initial="35">
                 <value level="2">38</value>
@@ -4677,6 +4621,7 @@
                 <value level="44">90</value>
                 <value level="45">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="720"/>
             <effect-point initial="-92">
@@ -5014,6 +4959,7 @@
                 <value level="7">72</value>
                 <value level="8">79</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="150"/>
             <effect-range initial="-1"/>
             <hit-time initial="900"/>
@@ -5058,7 +5004,6 @@
             <magic-level initial="52"/>
             <cast-range initial="400"/>
             <reuse initial="3000"/>
-            <effect-point initial="-520"/>
             <effect-range initial="900"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -5644,6 +5589,7 @@
                 <value level="54">73</value>
                 <value level="55">74</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="50">
                 <value level="2">53</value>
@@ -5867,11 +5813,11 @@
         <icon initial="icon.skill0060"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="200"/>
             <mana initial="200"/>
         </consume>
         <target type="NONE"/>
@@ -5894,6 +5840,7 @@
                 <value level="2">46</value>
                 <value level="3">62</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="235">
                 <value level="2">438</value>
@@ -5977,6 +5924,7 @@
                 <value level="5">6</value>
                 <value level="9">7</value>
                 <value level="14">8</value>
+                <value level="16">9</value>
             </mana-init>
             <mana initial="22">
                 <value level="2">23</value>
@@ -6031,6 +5979,7 @@
                 <value level="12">82</value>
                 <value level="13">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="6000"/>
@@ -6044,12 +5993,6 @@
                 <value level="5">12</value>
                 <value level="6">13</value>
                 <value level="7">14</value>
-                <value level="8">15</value>
-                <value level="9">16</value>
-                <value level="10">17</value>
-                <value level="11">18</value>
-                <value level="12">19</value>
-                <value level="13">20</value>
             </mana-init>
             <mana initial="38">
                 <value level="2">44</value>
@@ -6066,11 +6009,12 @@
                 <value level="13">85</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="2">
-                <value level="3">3</value>
-                <value level="4">4</value>
-                <value level="7">5</value>
-                <value level="11">6</value>
+            <item-count initial="5">
+                <value level="2">6</value>
+                <value level="3">7</value>
+                <value level="5">9</value>
+                <value level="6">10</value>
+                <value level="7">11</value>
             </item-count>
         </consume>
         <target/>
@@ -6459,14 +6403,14 @@
         </attributes>
         <consume>
             <mana-init initial="3">
-                <value level="8">4</value>
-                <value level="14">5</value>
-                <value level="21">6</value>
-                <value level="28">7</value>
-                <value level="35">8</value>
-                <value level="42">9</value>
-                <value level="49">10</value>
-                <value level="54">11</value>
+                <value level="6">4</value>
+                <value level="13">5</value>
+                <value level="18">6</value>
+                <value level="25">7</value>
+                <value level="32">8</value>
+                <value level="38">9</value>
+                <value level="45">10</value>
+                <value level="52">11</value>
             </mana-init>
             <mana initial="12">
                 <value level="3">13</value>
@@ -6578,6 +6522,7 @@
                 <value level="2">49</value>
                 <value level="3">55</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="408">
                 <value level="2">467</value>
@@ -6618,6 +6563,7 @@
         <icon initial="icon.skill0075"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="32"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="303"/>
             <effect-range initial="-1"/>
@@ -6645,6 +6591,7 @@
         <icon initial="icon.skill0076"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="28"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="268"/>
             <effect-range initial="-1"/>
@@ -6693,6 +6640,7 @@
             <magic-level initial="10">
                 <value level="2">28</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="138">
                 <value level="2">268</value>
@@ -6738,6 +6686,7 @@
                 <value level="3">80</value>
                 <value level="4">83</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="204">
                 <value level="2">408</value>
@@ -6779,6 +6728,7 @@
         <icon initial="icon.skill0080"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="52"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
@@ -6857,6 +6807,7 @@
                 <value level="2">40</value>
                 <value level="3">58</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="204">
                 <value level="2">379</value>
@@ -6887,12 +6838,12 @@
                     <value level="3">15.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-2.0">
                     <value level="2">-4.0</value>
                     <value level="3">-6.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="83" name="Wolf Spirit Totem" action="A2">
@@ -6900,6 +6851,7 @@
         <icon initial="icon.skill0083"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="20"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="204"/>
             <effect-range initial="-1"/>
@@ -6949,6 +6901,7 @@
                 <value level="4">78</value>
                 <value level="5">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <cool-time initial="167"/>
             <effect-point initial="-262">
@@ -6981,7 +6934,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DUAL</type>
+                <type>DUAL DUAL_BLUNT</type>
             </weapon>
         </conditions>
         <effects>
@@ -7010,6 +6963,7 @@
                 <value level="2">46</value>
                 <value level="3">52</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="379">
                 <value level="2">438</value>
@@ -7050,6 +7004,7 @@
         <icon initial="icon.skill0087"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -7076,6 +7031,7 @@
         <icon initial="icon.skill0088"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="58"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="549"/>
             <effect-range initial="-1"/>
@@ -7108,6 +7064,7 @@
             <magic-level initial="5">
                 <value level="2">20</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="111">
                 <value level="2">204</value>
@@ -7403,6 +7360,7 @@
                 <value level="4">74</value>
                 <value level="5">85</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="235"/>
             <effect-range initial="-1"/>
@@ -7676,7 +7634,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>DAGGER</type>
+                <type>DAGGER DUAL_DAGGER</type>
             </weapon>
         </conditions>
         <effects>
@@ -7721,6 +7679,7 @@
                 <value level="12">76</value>
                 <value level="13">78</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="-495">
                 <value level="2">-523</value>
@@ -7845,6 +7804,7 @@
             <magic-level initial="32">
                 <value level="2">55</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="303">
                 <value level="2">549</value>
@@ -7853,6 +7813,9 @@
             <hit-time initial="1500"/>
         </attributes>
         <consume>
+            <mana-init initial="4">
+                <value level="2">5</value>
+            </mana-init>
             <mana initial="14">
                 <value level="2">25</value>
             </mana>

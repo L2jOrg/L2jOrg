@@ -4,6 +4,7 @@
         <!-- For 20 minutes, P. Def. +300 -->
         <icon initial="icon.skill1040"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -24,6 +25,7 @@
         <!-- For 20 minutes, M. Def. +350 -->
         <icon initial="icon.skill1036"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -45,16 +47,13 @@
         <icon initial="icon.white_knight_suit"/>
         <attributes property="PHYSIC" auto-use="BUFF">
         </attributes>
-        <consume>
-            <item initial="49543"/>
-            <item-count initial="5"/>
-        </consume>
         <target/>
     </skill>
     <skill id="54103" name="Sayha's Decrease Weight" action="A2" type="MAGIC">
         <!-- For 20 minutes, Weight Limit +9000 -->
         <icon initial="icon.skill1257"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -75,6 +74,7 @@
         <!-- For 20 minutes, P. Def. -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, Movement Speed +8. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -113,6 +113,7 @@
         <!-- For 20 minutes, Movement Speed +33 -->
         <icon initial="icon.skill1204"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -133,6 +134,7 @@
         <!-- For 20 minutes, P. Atk. +230 -->
         <icon initial="icon.skill1068"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -153,6 +155,7 @@
         <!-- For 20 minutes, P. Critical Rate +40 -->
         <icon initial="icon.skill1077"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -164,15 +167,16 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="40.0"/>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="54109" name="Sayha's Haste" action="A2" type="MAGIC">
         <!-- For 20 minutes, Atk. Spd. +33%% -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -193,6 +197,7 @@
         <!-- For 20 minutes, P. Critical Damage +35%% -->
         <icon initial="icon.skill1242"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -213,6 +218,7 @@
         <!-- For 20 minutes, M. Atk. +300 -->
         <icon initial="icon.skill1059"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -233,6 +239,7 @@
         <!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, Song/Dance Skill MP Consumption -20%% -->
         <icon initial="icon.skill1397"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -253,6 +260,7 @@
         <!-- For 20 minutes, M. Critical Rate +20 -->
         <icon initial="icon.skill1303"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -273,6 +281,7 @@
         <!-- For 20 minutes, Casting Spd. +30%% -->
         <icon initial="icon.skill1085"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -293,6 +302,7 @@
         <!-- For 20 minutes, Magic Cancel Damage -53 -->
         <icon initial="icon.skill1078"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -313,6 +323,7 @@
         <!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Critical Rate+20, P. Critical Damage/M. Critical Damage +10%% -->
         <icon initial="icon.skill5074"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -345,9 +356,9 @@
             <stat-modify stat="MAGIC_ATTACK_SPEED">
                 <power initial="60.0"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
                 <power initial="20.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="20.0"/>
             </stat-modify>
@@ -363,6 +374,7 @@
         <!-- Sayha's Power recovers HP over 20 minutes. -->
         <icon initial="icon.skill0211"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -383,6 +395,7 @@
         <!-- Sayha's Power recovers MP over 20 minutes. Cannot use Sayha's Buff Scroll while the skill is active. -->
         <icon initial="icon.skill0213"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -403,6 +416,7 @@
         <!-- HP Recovery Bonus/MP Recovery Bonus +20%, P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Atk./M. Atk. +15%, Atk. Spd./Casting Spd. +10%, P. Critical/M. Critical Rate +15%, P. Critical Damage/M. Critical Damage +15% for 3 hours with the help of a great spirit. Effect remains after death. -->
         <icon initial="icon.fish_stew_residence_cha"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -414,6 +428,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -426,6 +441,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -439,6 +455,7 @@
         <icon initial="icon.etc_fire_potion_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -460,6 +477,7 @@
         <icon initial="icon.etc_water_potion_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -481,6 +499,7 @@
         <icon initial="icon.etc_wind_potion_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -502,6 +521,7 @@
         <icon initial="icon.etc_earth_potion_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -522,6 +542,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>

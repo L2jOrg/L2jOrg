@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `clan_data` (
   `reputation_score` INT NOT NULL DEFAULT 0,
   `hasCastle` INT,
   `blood_alliance_count` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `blood_oath_count` smallint(5) unsigned NOT NULL DEFAULT 0,
   `ally_id` INT,
   `ally_name` varchar(45),
   `leader_id` INT,

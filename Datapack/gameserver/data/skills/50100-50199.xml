@@ -4,6 +4,7 @@
         <!-- Increases Long Distance Attack Resistance +100%%, drastically raises M. Def -->
         <icon initial="icon.skill30515"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -16,6 +17,7 @@
         <!-- Increases Short Distance Attack Resistance +100%%. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -28,6 +30,7 @@
         <!-- Increases Movement Speed +100%%. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -43,6 +46,7 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -128,6 +132,7 @@
         <!-- Attacks nearby enemies with 1876 Power. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -153,6 +158,7 @@
         <!-- Attacks enemies within a fan-shaped range before you with 2112 Power. -->
         <icon initial="icon.skill0096"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="800"/>
             <effect-point initial="-100"/>
@@ -166,6 +172,7 @@
         <!-- Attacks enemies within a fan-shaped range before you with 2112 Power. -->
         <icon initial="icon.skill0096"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="800"/>
             <effect-point initial="-100"/>
@@ -192,6 +199,7 @@
         <!-- For 30 seconds, P. Atk./M. Atk. +50%, P. Def./M. Def. +50% -->
         <icon initial="icon.skill11832"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -203,6 +211,7 @@
         <!-- Holy Water of the High Priest in the Town of Aden helps you tolerate evil energy of the Tomb of Ancient Pirates. You can receive it from Captain Anthony. -->
         <icon initial="icon.skill16871"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -253,6 +262,7 @@
         <!-- Certificate for explorers with permission to explore Primeval Isle. You can get it from Eagle Eye Explorer Kairen in the Town of Aden. -->
         <icon initial="icon.campaign_high_rank_reward"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -262,11 +272,13 @@
         <!-- P. Def. and M. Def. are increased for 5 minutes. -->
         <icon initial="icon.skill0110"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="100"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="PD_UP_SPECIAL" visual="ULTIMATE_DEFENCE">
+		<abnormal type="PD_UP_SPECIAL" visual="ULTIMATE_DEFENCE">
             <level initial="1"/>
             <time initial="300"/>
             <chance initial="-1"/>
@@ -277,13 +289,14 @@
             </stat-modify>
             <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="1800.0"/>
-            </stat-modify>
+            </stat-modify>        
         </effects>
     </skill>
     <skill id="50123" name="Blue Eagle's Grace" action="A2">
         <!-- Sayha's Grace Consumption Speed -50%%. -->
         <icon initial="icon.ev_10th_present1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -293,13 +306,14 @@
         <!-- Buff given to those who defeat Lord Ishka. Increases battle ability. -->
         <icon initial="icon.skill1042"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal>
-            <level initial="1"/>
+        <abnormal> <!-- ISHKA_EFFECT -->
+            <level initial="1"/>            
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -310,10 +324,10 @@
             <stat-modify stat="MAGIC_ATTACK">
                 <power initial="100.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
                 <power initial="1.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="1.0"/>
             </stat-modify>
         </effects>
@@ -322,6 +336,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -334,6 +349,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -346,6 +362,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -358,6 +375,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -370,6 +388,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -382,6 +401,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -390,13 +410,14 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="50131" name="Dragon’s Special Elixir" max-level="2" action="A1">
+    <skill id="50131" name="Dragon's Special Elixir" max-level="2" action="A1">
         <!--
-            level 1: For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP.\nDeath protection. You can delete it yourself.
-            level 2: For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP.\nDeath protection. You can delete it yourself.
+            level 1: For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death.
+            level 2: For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death.
          -->
         <icon initial="icon.bm_dragon_posion"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -406,6 +427,7 @@
     <skill id="50132" name="Intermediate HP Potion" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -414,6 +436,7 @@
     <skill id="50133" name="Advanced Scroll of Escape" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
@@ -421,11 +444,13 @@
         <target/>
     </skill>
     <skill id="50134" name="XP Boost Scroll - Event" action="A1">
-        <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute.\nDeath protection. You can delete it yourself. -->
+        <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes property="PHYSIC" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="EXP_SP_J">
@@ -443,9 +468,10 @@
         </effects>
     </skill>
     <skill id="50135" name="Einhasad's Protection" action="A1">
-        <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Protection. Cooldown 1 minute.\nDeath protection. You can delete it yourself. -->
+        <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
         <icon initial="icon.etc_dragons_blood_i03"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -456,6 +482,7 @@
     <skill id="50136" name="Warrior's HP Potion" action="A1">
         <icon initial="icon.etc_reagent_white_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -464,6 +491,7 @@
     <skill id="50137" name="Warrior's MP Potion" action="A1">
         <icon initial="icon.etc_reagent_white_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -473,6 +501,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -485,6 +514,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -494,6 +524,7 @@
         <!-- Magic Lamp 1st Place Reward - Recharges 100,000,000 XP and 2,700,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <icon initial="icon.etc_holy_grail_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -504,6 +535,7 @@
         <!-- Magic Lamp 2nd Place Reward - Recharges 30,000,000 XP and 810,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <icon initial="icon.etc_holy_grail_i01"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -514,6 +546,7 @@
         <!-- Magic Lamp 3rd Place Reward - Recharges 10,000,000 XP and 270,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <icon initial="icon.etc_holy_grail_i02"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -524,6 +557,7 @@
         <!-- Magic Lamp 4th Place Reward - Recharges 5,000,000 XP and 135,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <icon initial="icon.etc_holy_grail_i03"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -534,6 +568,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
@@ -545,6 +580,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -557,6 +593,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -573,6 +610,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -580,10 +618,11 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="50149" name="Enhanced Sayha's Blessing - Lv. 75 or lower" max-level="3" action="A1">
+    <skill id="50149" name="Sayha's Blessing - Event" max-level="3" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -592,7 +631,8 @@
     <skill id="50150" name="Sayha's Buff Scroll - Event" action="A1">
         <!-- A mysterious scroll that triggers various buffs -->
         <icon initial="icon.etc_ssq_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -603,6 +643,7 @@
         <icon initial="icon.skill0000"/>
         <attributes>
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -618,6 +659,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -640,6 +682,7 @@
         <!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -649,6 +692,7 @@
         <!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -658,6 +702,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -730,69 +775,69 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <enlarge-slot type="INVENTORY_NORMAL">
                 <power initial="5.0">
-                    <value level="2">10.0</value>
-                    <value level="3">15.0</value>
-                    <value level="4">20.0</value>
-                    <value level="5">25.0</value>
-                    <value level="6">30.0</value>
-                    <value level="7">35.0</value>
-                    <value level="8">40.0</value>
-                    <value level="9">45.0</value>
-                    <value level="10">50.0</value>
-                    <value level="11">55.0</value>
-                    <value level="12">60.0</value>
-                    <value level="13">65.0</value>
-                    <value level="14">70.0</value>
-                    <value level="15">75.0</value>
-                    <value level="16">80.0</value>
-                    <value level="17">85.0</value>
-                    <value level="18">90.0</value>
-                    <value level="19">95.0</value>
-                    <value level="20">100.0</value>
-                    <value level="21">105.0</value>
-                    <value level="22">110.0</value>
-                    <value level="23">115.0</value>
-                    <value level="24">120.0</value>
-                    <value level="25">125.0</value>
-                    <value level="26">130.0</value>
-                    <value level="27">135.0</value>
-                    <value level="28">140.0</value>
-                    <value level="29">145.0</value>
-                    <value level="30">150.0</value>
-                    <value level="31">155.0</value>
-                    <value level="32">160.0</value>
-                    <value level="33">165.0</value>
-                    <value level="34">170.0</value>
-                    <value level="35">175.0</value>
-                    <value level="36">180.0</value>
-                    <value level="37">185.0</value>
-                    <value level="38">190.0</value>
-                    <value level="39">195.0</value>
-                    <value level="40">200.0</value>
-                    <value level="41">205.0</value>
-                    <value level="42">210.0</value>
-                    <value level="43">215.0</value>
-                    <value level="44">220.0</value>
-                    <value level="45">225.0</value>
-                    <value level="46">230.0</value>
-                    <value level="47">235.0</value>
-                    <value level="48">240.0</value>
-                    <value level="49">245.0</value>
-                    <value level="50">250.0</value>
-                    <value level="51">255.0</value>
-                    <value level="52">260.0</value>
-                    <value level="53">265.0</value>
-                    <value level="54">270.0</value>
-                    <value level="55">275.0</value>
-                    <value level="56">280.0</value>
-                    <value level="57">285.0</value>
-                    <value level="58">290.0</value>
-                    <value level="59">295.0</value>
-                    <value level="60">300.0</value>
-                </power>
+					<value level="2">10.0</value>
+					<value level="3">15.0</value>
+					<value level="4">20.0</value>
+					<value level="5">25.0</value>
+					<value level="6">30.0</value>
+					<value level="7">35.0</value>
+					<value level="8">40.0</value>
+					<value level="9">45.0</value>
+					<value level="10">50.0</value>
+					<value level="11">55.0</value>
+					<value level="12">60.0</value>
+					<value level="13">65.0</value>
+					<value level="14">70.0</value>
+					<value level="15">75.0</value>
+					<value level="16">80.0</value>
+					<value level="17">85.0</value>
+					<value level="18">90.0</value>
+					<value level="19">95.0</value>
+					<value level="20">100.0</value>
+					<value level="21">105.0</value>
+					<value level="22">110.0</value>
+					<value level="23">115.0</value>
+					<value level="24">120.0</value>
+					<value level="25">125.0</value>
+					<value level="26">130.0</value>
+					<value level="27">135.0</value>
+					<value level="28">140.0</value>
+					<value level="29">145.0</value>
+					<value level="30">150.0</value>
+					<value level="31">155.0</value>
+					<value level="32">160.0</value>
+					<value level="33">165.0</value>
+					<value level="34">170.0</value>
+					<value level="35">175.0</value>
+					<value level="36">180.0</value>
+					<value level="37">185.0</value>
+					<value level="38">190.0</value>
+					<value level="39">195.0</value>
+					<value level="40">200.0</value>
+					<value level="41">205.0</value>
+					<value level="42">210.0</value>
+					<value level="43">215.0</value>
+					<value level="44">220.0</value>
+					<value level="45">225.0</value>
+					<value level="46">230.0</value>
+					<value level="47">235.0</value>
+					<value level="48">240.0</value>
+					<value level="49">245.0</value>
+					<value level="50">250.0</value>
+					<value level="51">255.0</value>
+					<value level="52">260.0</value>
+					<value level="53">265.0</value>
+					<value level="54">270.0</value>
+					<value level="55">275.0</value>
+					<value level="56">280.0</value>
+					<value level="57">285.0</value>
+					<value level="58">290.0</value>
+					<value level="59">295.0</value>
+					<value level="60">300.0</value>
+				</power>
             </enlarge-slot>
         </effects>
     </skill>
@@ -800,6 +845,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -829,6 +875,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -841,6 +888,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -853,6 +901,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -865,6 +914,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -873,10 +923,11 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="50163" name="Sweet Blessing Star Candy" action="A1">
+    <skill id="50163" name="Blessing Star Candy" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -889,6 +940,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -901,6 +953,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -913,6 +966,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -922,6 +976,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -931,6 +986,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -940,15 +996,17 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="50170" name="Dragon’s Special Elixir" action="A1">
-        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP.\nDeath protection. You can delete it yourself. -->
+    <skill id="50170" name="Dragon's Special Elixir" action="A1">
+        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death. -->
         <icon initial="icon.bm_dragon_posion"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -958,15 +1016,17 @@
     <skill id="50171" name="Healing Potion" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="50172" name="Battleground Scroll" action="A2">
-        <!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Critical Rate+20, P. Critical Damage/M. Critical Damage +10%%\nDeath protection. You can delete it yourself. -->
+    <skill id="50172" name="Battleground Scroll" action="A2" type="MAGIC">
+        <!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Critical Rate+20, P. Critical Damage/M. Critical Damage +10%% -->
         <icon initial="icon.etc_ssq_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -978,6 +1038,7 @@
         <!-- Increases Paralysis Attack Resistance by 10% for 20 min. -->
         <icon initial="icon.scroll_of_verification_i08"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -989,6 +1050,7 @@
         <!-- Increases Mental Attack Resistance by 10% for 20 min. -->
         <icon initial="icon.scroll_of_verification_i08"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1000,6 +1062,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1012,6 +1075,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1024,6 +1088,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1053,6 +1118,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1065,6 +1131,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1077,6 +1144,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1089,6 +1157,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1125,6 +1194,7 @@
         <!-- Unseals the Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -1204,7 +1274,7 @@
         <target/>
         <effects>
             <defence-trait>
-                <trait type="SHOCK">
+                <trait type="SHOCK" >
                     <power initial="1.0">
                         <value level="2">2.0</value>
                         <value level="3">3.0</value>
@@ -1219,7 +1289,7 @@
                     </power>
                 </trait>
             </defence-trait>
-            <vital-stat-modify start-level="6" stat="MAX_MP">
+            <vital-stat-modify stat="MAX_MP" start-level="6">
                 <power initial="100">
                     <value level="7">150.0</value>
                     <value level="8">200.0</value>
@@ -1228,7 +1298,7 @@
                     <value level="11">1000.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify start-level="6" stat="PHYSICAL_ATTACK_SPEED">
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED" start-level="6">
                 <power initial="5">
                     <value level="7">7.0</value>
                     <value level="8">10.0</value>
@@ -1237,7 +1307,7 @@
                     <value level="11">150.0</value>
                 </power>
             </stat-modify>
-            <stat-modify start-level="6" stat="MAGIC_ATTACK_SPEED">
+            <stat-modify stat="MAGIC_ATTACK_SPEED" start-level="6">
                 <power initial="5">
                     <value level="7">7.0</value>
                     <value level="8">10.0</value>
@@ -1246,7 +1316,7 @@
                     <value level="11">150.0</value>
                 </power>
             </stat-modify>
-            <base-stat start-level="8" type="MEN">
+            <base-stat type="MEN" start-level="8">
                 <power initial="1">
                     <value level="10">2.0</value>
                     <value level="11">5.0</value>
@@ -1306,6 +1376,7 @@
          -->
         <icon initial="icon.etc_bm_jewel_opal_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1346,6 +1417,7 @@
          -->
         <icon initial="icon.etc_bm_jewel_onyx_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1366,6 +1438,7 @@
          -->
         <icon initial="icon.etc_bm_jewel_onyx_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>

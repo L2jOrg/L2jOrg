@@ -32,7 +32,7 @@ dependencies {
     implementation 'io.github.joealisson:async-mmocore:3.1.0-SNAPSHOT'
 
     runtimeOnly 'org.ehcache:ehcache:3.8.1'
-    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.13.3'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.13.1'
 }
 
 task createVersionFile(dependsOn: processResources) {

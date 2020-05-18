@@ -794,6 +794,7 @@
          -->
         <icon initial="BranchIcon.Icon.g_bm_costume_zaken"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="100000">
                 <value level="2">60000</value>
             </reuse>
@@ -1088,6 +1089,7 @@
          -->
         <icon initial="BranchIcon.Icon.g_bm_costume_lilith"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="100000">
                 <value level="2">60000</value>
             </reuse>
@@ -1100,7 +1102,6 @@
             <time initial="5">
                 <value level="2">10</value>
             </time>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
@@ -1253,7 +1254,7 @@
         </attributes>
         <target type="ENEMY"/>
         <effects>
-            <dispel-by-category category="BUFF" max="1">
+            <dispel-by-category max="1" category="BUFF">
                 <power initial="60"/>
             </dispel-by-category>
         </effects>
@@ -1262,6 +1263,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1274,6 +1276,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1298,6 +1301,7 @@
         <!-- Max CP +80 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1307,6 +1311,7 @@
         <!-- Max HP +80 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1316,6 +1321,7 @@
         <!-- P. Atk./M. Atk. +10 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1325,6 +1331,7 @@
         <!-- Increases Max HP/CP/MP +200 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1334,6 +1341,7 @@
         <!-- P. Atk. +50 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1343,6 +1351,7 @@
         <!-- M. Atk. +50 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1352,6 +1361,7 @@
         <!-- P. Atk./M. Atk. +100 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1361,6 +1371,7 @@
         <!-- Activates the Collector Power that creates a barrier which absorbs up to 1500 damage for 10 seconds -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1370,6 +1381,7 @@
         <!-- Activates the Collector Power that ignores CP in PvP and inflicts a fixed damage of 1350 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1379,6 +1391,7 @@
         <!-- Activates the Collector Power that cancels nearby enemies' targets and teleports the caster to the rear -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1388,6 +1401,7 @@
         <!-- Increases Max HP/CP/MP +200 and P. Atk./M. Atk. +250 -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1397,6 +1411,7 @@
         <!-- Activates the Collector Power that fully recovers HP/CP/MP and makes you invincible for 10 seconds -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1406,6 +1421,7 @@
         <!-- Creates a barrier that absorbs up to 1500 damage for 10 seconds. -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="90000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1431,6 +1447,7 @@
         <!-- Cancels nearby enemies' targets and teleports the caster to the rear. -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="200"/>
             <effect-point initial="-687"/>
@@ -1447,6 +1464,7 @@
          -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000">
                 <value level="2">0</value>
             </reuse>
@@ -1470,6 +1488,7 @@
          -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_bonus_reuse"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1486,6 +1505,7 @@
          -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_bonus_timeup"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1499,6 +1519,7 @@
          -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_bonus_elemental_exp"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1512,6 +1533,7 @@
          -->
         <icon initial="BranchIcon.Icon.s_g_bm_collection_bonus_elemental_dmg"/>
         <attributes property="MAGIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>

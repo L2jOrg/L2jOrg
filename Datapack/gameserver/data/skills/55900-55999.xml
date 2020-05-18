@@ -4,6 +4,7 @@
         <!-- For 20 min., P./ M. Atk. +12%%, P./ M. Def +15%%, Max HP/ MP/ CP +25%%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%%, HP/ MP Recovery Bonus +30%%. At a certain chance absorbs 5%% of the melee damage inflicted on target as HP. -->
         <icon initial="icon.etc_candle_white_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -55,6 +56,7 @@
         <!-- For 15 sec., P. Def. +1800 and M. Def. +1620. -->
         <icon initial="icon.etc_talisman_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>
@@ -70,6 +72,7 @@
         <!-- For 15 sec., defends against debuffs 5 times. -->
         <icon initial="icon.etc_talisman_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="532"/>
             <effect-range initial="-1"/>
@@ -113,6 +116,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -123,6 +127,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -133,6 +138,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -143,6 +149,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -153,6 +160,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
@@ -163,6 +171,7 @@
         <!-- For 1 hr., transforms into One-eyed ParaPara Cat. -->
         <icon initial="icon.skilltransform1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -174,6 +183,7 @@
         <!-- For 1 hr., transforms into Smiling ParaPara Cat. -->
         <icon initial="icon.skilltransform1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -185,6 +195,7 @@
         <!-- For 1 hr., transforms into Charming ParaPara Cat. -->
         <icon initial="icon.skilltransform1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -196,6 +207,7 @@
         <!-- For 1 hr., transforms into Ferocious ParaPara Cat. -->
         <icon initial="icon.skilltransform1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -207,6 +219,7 @@
         <!-- For 1 hr., transforms into Merchant ParaPara Cat. -->
         <icon initial="icon.skilltransform1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -222,6 +235,7 @@
          -->
         <icon initial="icon.event_orc_memo"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -233,6 +247,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -267,7 +282,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal>
+		<abnormal> <!-- EXP_SP_W -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -298,6 +313,7 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -315,6 +331,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -324,6 +341,7 @@
         <!-- Double click to obtain +10 Talisman of Fate - Lv. 5. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -334,6 +352,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -345,6 +364,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -356,6 +376,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -367,6 +388,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -378,6 +400,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -389,6 +412,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -399,6 +423,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -409,6 +434,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -419,16 +445,17 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="55989" name="Lara's Full Buff" max-level="2" action="A1">
+    <skill id="55989" name="Uldie's Full Buff" max-level="2" action="A1">
         <!--
-            level 1: Ultimate buff from Lara. For 2 hours XP/ SP gain +10%, P. Atk./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%.
-            level 2: Ultimate buff from Lara. For 2 hours XP/ SP gain +10%, P. Atk./ M. Atk. +5%, Atk. Spd./ Casting Spd. +7%. PvE damage +5%. A chance to receive an Elite Gift from Lara when removing the Buff. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory.
+            level 1: Ultimate buff from Uldie. For 2 hours XP/ SP gain +10%, P. Atk./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%.
+            level 2: Ultimate buff from Uldie. For 2 hours XP/ SP gain +10%, P. Atk./ M. Atk. +5%, Atk. Spd./ Casting Spd. +7%. PvE damage +5%. A chance to receive an Elite Gift from the Captain of Lara's Team when removing the Buff. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory.
          -->
         <icon initial="BranchSys.icon.br_sevenlove_girlpresent_i00"/>
         <attributes property="PHYSIC">
@@ -495,6 +522,7 @@
             <value level="2">icon.sayhas_talisman_pvp_Lv2</value>
         </icon>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -505,6 +533,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -527,6 +556,7 @@
         <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -537,6 +567,7 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -547,6 +578,7 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -557,6 +589,7 @@
         <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -567,6 +600,7 @@
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>

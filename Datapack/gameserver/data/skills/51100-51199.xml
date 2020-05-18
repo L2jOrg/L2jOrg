@@ -12,6 +12,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -26,6 +27,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -40,6 +42,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -54,6 +57,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
@@ -67,6 +71,7 @@
         <!-- For 2 hours Fishing XP/SP +200%%. Effect remains after death. -->
         <icon initial="icon.fishing_zone_ticket"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -78,6 +83,7 @@
         <!-- For 4 hours Fishing XP/SP +200%%. Effect remains after death. -->
         <icon initial="icon.fishing_zone_ticket"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -89,6 +95,7 @@
         <!-- For 8 hours Fishing XP/SP +200%%. Effect remains after death. -->
         <icon initial="icon.fishing_zone_ticket"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -100,6 +107,7 @@
         <!-- Sayha's Grace recovers all, for 1 hour XP/SP +100%%. Armor changes to NC Dinos Uniform. -->
         <icon initial="BranchIcon.icon.g_ev_goldenball"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -110,6 +118,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -122,6 +131,7 @@
         <!-- For 24 hours Fishing XP/SP +50%%. Effect remains after death. -->
         <icon initial="icon.fishing_zone_ticket_1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -133,15 +143,17 @@
         <!-- You've got a big head. -->
         <icon initial="icon.ev_kr_traditional_dress"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51112" name="Soaring Fireworks" action="A1">
-        <!-- Shoots beautiful fireworks into the sky. -->
+    <skill id="51112" name="Moon Fireworks" action="A1">
+        <!-- Shoots beautiful fireworks into the Harvest sky. -->
         <icon initial="icon.ev_kr_traditional_dress"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -152,6 +164,7 @@
         <!-- For 5 minutes, XP/SP Gain +10%%, P. Atk./M. Atk. +15%%, P. Def./M. Def +15%%, Atk. Spd./Casting Spd. +10%%, and Movement Speed +10. Sayha's Grace Consumption Rate -30%%. Changes appearance to Hanbok. The effects disappear upon restart. -->
         <icon initial="BranchSys.icon.br_taiwan_newyear_food_d_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -162,6 +175,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -174,6 +188,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -186,6 +201,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -198,6 +214,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -210,6 +227,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -222,6 +240,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -234,6 +253,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -246,6 +266,7 @@
         <!-- Can use Sibis' Black Samurai Long Sword. -->
         <icon initial="icon.yogi_scroll_of_enchant_weapon_grade_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -255,6 +276,7 @@
         <!-- Maphr's Blessing increases Enchant Chance for 10 seconds. Cannot be applied to partial enchantment. -->
         <icon initial="icon.etc_instant_lucky_potion_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -265,6 +287,7 @@
         <!-- Maphr's Blessing increases Enchant Chance for 10 seconds. Cannot be applied to partial enchantment. -->
         <icon initial="icon.etc_instant_lucky_potion_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -283,6 +306,7 @@
         <icon initial="icon.etc_potion_blue_i00"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -298,6 +322,7 @@
         <icon initial="icon.elemental_bless_scrl_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -318,6 +343,7 @@
         <icon initial="icon.elemental_bless_scrl_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -337,6 +363,7 @@
         <!-- none -->
         <icon initial="icon.ev_charge_scroll"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -346,6 +373,7 @@
         <!-- none -->
         <icon initial="icon.ev_charge_scroll"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -356,6 +384,7 @@
         <icon initial="icon.etc_fire_potion_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -377,6 +406,7 @@
         <icon initial="icon.etc_water_potion_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -398,6 +428,7 @@
         <icon initial="icon.etc_wind_potion_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -419,6 +450,7 @@
         <icon initial="icon.etc_earth_potion_i00"/>
         <attributes property="PHYSIC" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -438,6 +470,7 @@
     <skill id="51134" name="Scroll of Escape: Forge of the Gods" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="10000"/>
             <activate-rate initial="-1"/>
@@ -447,6 +480,7 @@
     <skill id="51135" name="Scroll of Escape: Garden of Eva" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="10000"/>
             <activate-rate initial="-1"/>
@@ -456,6 +490,7 @@
     <skill id="51136" name="Escape - Wind Plateau" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="10000"/>
             <activate-rate initial="-1"/>
@@ -465,6 +500,7 @@
     <skill id="51137" name="Scroll of Escape: Wall of Argos" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="10000"/>
             <activate-rate initial="-1"/>
@@ -475,6 +511,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -487,6 +524,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -499,6 +537,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -511,6 +550,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -523,6 +563,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -532,6 +573,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -541,6 +583,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -550,6 +593,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -562,6 +606,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -574,6 +619,7 @@
         <!-- Transforms to Panda. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
         <icon initial="icon.sayha2017_panda"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -585,6 +631,7 @@
         <!-- Transforms to Cat. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
         <icon initial="icon.sayha2017_cat"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -596,6 +643,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -608,6 +656,7 @@
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -618,6 +667,7 @@
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -631,6 +681,7 @@
          -->
         <icon initial="BranchSys.Icon.Br_santa_gift_click_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -641,6 +692,7 @@
         <!-- Skill that rewards Santa Girl's gift pouch. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -651,6 +703,7 @@
         <!-- Skill that casts Santa Girl's gift buff which is activated when the magic box is used -->
         <icon initial="BranchSys.icon.br_valentine_agathion_pack_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -661,6 +714,7 @@
         <!-- Recovers all party members' HP by 5000 and MP by 1500. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -671,6 +725,7 @@
         <!-- Skill that rewards an item when the gift pouch is used -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -685,6 +740,9 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<!-- <abnormal type="EXP_SP_R"> -->
+            <!-- <level initial="1"/> -->
+        <!-- </abnormal> -->
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="20.0"/>
@@ -692,7 +750,7 @@
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
+			<stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
                 <power initial="20.0"/>
             </stat-modify>
         </effects>
@@ -701,6 +759,7 @@
         <!-- For 5 minutes, P. Atk./M. Atk. +15%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP Recovery Bonus/MP Recovery Bonus +30%, and Movement Speed +10. The effects disappear upon restart. -->
         <icon initial="icon.christmas_card_box2"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -711,6 +770,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -720,6 +780,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -728,6 +789,7 @@
     <skill id="51161" name="Top-grade HP Potion" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -738,6 +800,7 @@
         <icon initial="icon.etc_potion_blue_i00"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -752,6 +815,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -764,6 +828,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -776,6 +841,7 @@
         <!-- For 5 minutes, P. Atk./M. Atk. +15%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP Recovery Bonus/MP Recovery Bonus +30%, and Movement Speed +10. The effects disappear upon restart. -->
         <icon initial="icon.etc_red_rose_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -786,6 +852,7 @@
         <!-- Increases P. Def. of all party members by 25%% for 5 minutes. Increases MP Consumption when singing while sing/dance effect lasts. -->
         <icon initial="icon.skill0264"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <effect-range initial="-1"/>
@@ -801,6 +868,7 @@
         <!-- Increases Speed of all party members by 20 for 5 minutes. Increases MP Consumption when singing while sing/dance effect lasts. -->
         <icon initial="icon.skill0268"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="438"/>
             <effect-range initial="-1"/>
@@ -816,6 +884,7 @@
         <!-- Increases P. Critical Rate of all party members +100%% for 5 minutes. Also increases MP Consumption when singing while song/dance is in effect. -->
         <icon initial="icon.skill0269"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="467"/>
             <effect-range initial="-1"/>
@@ -831,6 +900,7 @@
         <!-- Increases Max HP of all party members by 30%% for 5 minutes. Additionally increases MP Consumption when singing while sing/dance is in effect. -->
         <icon initial="icon.skill0304"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="611"/>
             <effect-range initial="-1"/>
@@ -846,6 +916,7 @@
         <!-- Increases P. Atk. of all party members by 12%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0271"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <effect-range initial="-1"/>
@@ -861,6 +932,7 @@
         <!-- Increases P. Critical Damage of all party members +35%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
         <icon initial="icon.skill0274"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -876,6 +948,7 @@
         <!-- Increases Atk. Spd. of all party members by 15%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0275"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="549"/>
             <effect-range initial="-1"/>
@@ -891,6 +964,7 @@
         <!-- Decreases all party members' magic cancel damage -40 and increases Casting Spd. +30%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
         <icon initial="icon.skill0276"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
@@ -906,6 +980,7 @@
         <!-- Transforms into Swordsinger. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
         <icon initial="icon.ev_13th_paper_inzone"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -917,6 +992,7 @@
         <!-- Transforms into Blade Dancer. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
         <icon initial="icon.ev_13th_paper_field"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -928,6 +1004,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -940,6 +1017,7 @@
         <!-- Transforms into Song Dance. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
         <icon initial="icon.etc_roll_of_paper_black_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -951,6 +1029,7 @@
         <!-- Increases P. Atk. of all party members by 12%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0271"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <effect-range initial="-1"/>
@@ -966,6 +1045,7 @@
         <!-- Increases P. Critical Damage of all party members +35%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
         <icon initial="icon.skill0274"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="379"/>
             <effect-range initial="-1"/>
@@ -981,6 +1061,7 @@
         <!-- Increases Atk. Spd. of all party members by 15%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0275"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="549"/>
             <effect-range initial="-1"/>
@@ -996,6 +1077,7 @@
         <!-- Decreases all party members' magic cancel damage -40 and increases Casting Spd. +30%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
         <icon initial="icon.skill0276"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="495"/>
             <effect-range initial="-1"/>
@@ -1011,6 +1093,7 @@
         <!-- For 5 minutes, decreases all party members' Speed by 50%% and prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0366"/>
         <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="666"/>
             <effect-range initial="-1"/>
@@ -1026,6 +1109,7 @@
         <!-- Transforms into Dragon Berserker. For 20 minutes, XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical/M. Critical Damage +10%%. Cooldown is 2 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or using skills transformed as Dragon Berserker, there's a chance to cast Berserker Soul buff on self that increases P./M. Atk. +50%%, Atk. Spd./Casting Spd. +50%%, Reflects 15%% of received damage to the enemy. -->
         <icon initial="icon.bm2018_dragon_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1036,6 +1120,7 @@
         <!-- Transforms into Ninja Assassin. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Ninja Assassin there's a 100%% chance to cancel enemy's target. -->
         <icon initial="icon.bm2018_ninja_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1046,6 +1131,7 @@
         <!-- Transforms into Blue Musketeer. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Blue Musketeer there's a chance to stun the enemy for 5 seconds. -->
         <icon initial="icon.bm2018_bluemusketeer_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1056,6 +1142,7 @@
         <!-- Transforms into Valkyrie. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Valkyrie there's a chance to paralyze the enemy for 5 seconds. -->
         <icon initial="icon.bm2018_valkyrie_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1066,6 +1153,7 @@
         <!-- Transforms into Wild Wolf. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Wild Wolf there's a chance to reduce the enemy's P. Def. by 23%%. -->
         <icon initial="icon.bm2018_barbarian_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1076,6 +1164,7 @@
         <!-- Transforms into Caravan. For 20 minutes, XP +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage /M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Caravan there's a chance cast the Caravan Buff that increases party members' P./M. Atk. +10%%. -->
         <icon initial="icon.bm2018_pirate_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1086,6 +1175,7 @@
         <!-- Transforms into Purple Cowboy. For 20 minutes, XP +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Purple Cowboy there's a chance to inflict an additional 3939 physical attack. -->
         <icon initial="icon.bm2018_cowboy_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1096,6 +1186,7 @@
         <!-- Transforms into High Priest. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as High Priest there's a chance to recover party members' HP by 1000 and MP by 200. -->
         <icon initial="icon.bm2018_healer_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1106,6 +1197,7 @@
         <!-- Transforms into Blood Noblesse. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Blood Noblesse there's a chance to inflict an additional 145 magic attack. -->
         <icon initial="icon.bm2018_rednoblesse_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1116,6 +1208,7 @@
         <!-- Transforms into White Noblesse. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as White Noblesse there's a chance to reduce the enemy's M. Def. by 23%%. -->
         <icon initial="icon.bm2018_whitenoblesse_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1126,6 +1219,7 @@
         <!-- Transforms into Dragon Berserker through the scroll. For 20 min., XP Gain +20%%, P. Atk. +10%%, M. Atk. + 10%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or using skills transformed as Dragon Berserker, there's a chance to cast Berserker Soul buff on self that increases P./M. Atk. +50%%, Atk. Spd./Casting Spd. +50%%, Reflects 15%% of received damage to enemy. -->
         <icon initial="icon.bm2018_dragon_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1136,6 +1230,7 @@
         <!-- Transforms into Ninja Assassin through the scroll.. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Ninja Assassin there's a 100%% chance to cancel enemy's target. -->
         <icon initial="icon.bm2018_ninja_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1146,6 +1241,7 @@
         <!-- Transforms into Blue Musketeer through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\nSpecial Ability>\nWhen attacking or casting skills while transformed as Blue Musketeer there's a chance to stun the enemy for 5 seconds. -->
         <icon initial="icon.bm2018_bluemusketeer_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1156,6 +1252,7 @@
         <!-- Transforms into Valkyrie through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Valkyrie there's a chance to paralyze the enemy for 5 seconds. -->
         <icon initial="icon.bm2018_valkyrie_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1166,6 +1263,7 @@
         <!-- Transforms into Wild Wolf through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Wild Wolf there's a chance to reduce the enemy's P. Def. by 23%%. -->
         <icon initial="icon.bm2018_barbarian_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1176,6 +1274,7 @@
         <!-- Transforms into Caravan through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\nSpecial Ability>\nWhen attacking or casting skills while transformed as Caravan there's a chance cast the Caravan Buff that increases party members' P./M. Atk. by 10%%. -->
         <icon initial="icon.bm2018_pirate_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1186,6 +1285,7 @@
         <!-- Transforms into Purple Cowboy through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Purple Cowboy there's a chance to inflict an additional 3939 physical attack. -->
         <icon initial="icon.bm2018_cowboy_i01"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="1300" name="Servitor Cure" max-level="3" action="A1" type="MAGIC">
         <!--
-		level 1: Cures servitor of minor bleeding or poisoning.
-		level 2: Cures servitor of moderate bleeding or poisoning.
-		level 3: Cures servitor of severe bleeding or poisoning.
-	 -->
+            level 1: Cures servitor of minor bleeding or poisoning.
+            level 2: Cures servitor of moderate bleeding or poisoning.
+            level 3: Cures servitor of severe bleeding or poisoning.
+         -->
         <icon initial="icon.skill1300"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="40">
@@ -89,9 +89,9 @@
     </skill>
     <skill id="1303" name="Wild Magic" max-level="2" action="A2" type="MAGIC">
         <!--
-		level 1: For 20 minutes, M. Critical Rate +10.
-		level 2: For 20 minutes, M. Critical Rate +20.
-	 -->
+            level 1: For 20 minutes, M. Critical Rate +10.
+            level 2: For 20 minutes, M. Critical Rate +20.
+         -->
         <icon initial="icon.skill1303"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="62">
@@ -131,12 +131,12 @@
     </skill>
     <skill id="1304" name="Advanced Block" max-level="5" action="A2" type="MAGIC">
         <!--
-		level 1: Increases Shield Defense by 10% for 20 minutes.
-		level 2: Increases Shield Defense by 20% for 20 minutes.
-		level 3: Increases Shield Defense by 30% for 20 minutes.
-		level 4: Increases Shield Defense by 40% for 20 minutes.
-		level 5: Increases Shield Defense by 50% for 20 minutes.
-	 -->
+            level 1: Increases Shield Defense by 10% for 20 minutes.
+            level 2: Increases Shield Defense by 20% for 20 minutes.
+            level 3: Increases Shield Defense by 30% for 20 minutes.
+            level 4: Increases Shield Defense by 40% for 20 minutes.
+            level 5: Increases Shield Defense by 50% for 20 minutes.
+         -->
         <icon initial="icon.skill1304"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="42">
@@ -157,11 +157,10 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="9">
-                <value level="2">10</value>
-                <value level="3">11</value>
-                <value level="4">13</value>
-                <value level="5">14</value>
+            <mana-init initial="11">
+                <value level="2">13</value>
+                <value level="3">14</value>
+                <value level="5">15</value>
             </mana-init>
             <mana initial="44">
                 <value level="2">49</value>
@@ -194,25 +193,25 @@
     </skill>
     <skill id="1305" name="Pa'agrio's Honor" max-level="18" action="A1" type="MAGIC">
         <!--
-		level 1: Restores nearby clan members' CP by 501 Power.
-		level 2: Restores nearby clan members' CP by 526 Power.
-		level 3: Restores nearby clan members' CP by 550 Power.
-		level 4: Restores nearby clan members' CP by 573 Power.
-		level 5: Restores nearby clan members' CP by 595 Power.
-		level 6: Restores nearby clan members' CP by 616 Power.
-		level 7: Restores nearby clan members' CP by 636 Power.
-		level 8: Restores nearby clan members' CP by 654 Power.
-		level 9: Restores nearby clan members' CP by 671 Power.
-		level 10: Restores nearby clan members' CP by 687 Power.
-		level 11: Restores nearby clan members' CP by 690 Power.
-		level 12: Restores nearby clan members' CP by 702 Power.
-		level 13: Restores nearby clan members' CP by 714 Power.
-		level 14: Restores nearby clan members' CP by 727 Power.
-		level 15: Restores nearby clan members' CP by 740 Power.
-		level 16: Restores nearby clan members' CP by 753 Power.
-		level 17: Restores nearby clan members' CP by 766 Power.
-		level 18: Restores nearby clan members' CP by 780 Power.
-	 -->
+            level 1: Restores nearby clan members' CP by 501 Power.
+            level 2: Restores nearby clan members' CP by 526 Power.
+            level 3: Restores nearby clan members' CP by 550 Power.
+            level 4: Restores nearby clan members' CP by 573 Power.
+            level 5: Restores nearby clan members' CP by 595 Power.
+            level 6: Restores nearby clan members' CP by 616 Power.
+            level 7: Restores nearby clan members' CP by 636 Power.
+            level 8: Restores nearby clan members' CP by 654 Power.
+            level 9: Restores nearby clan members' CP by 671 Power.
+            level 10: Restores nearby clan members' CP by 687 Power.
+            level 11: Restores nearby clan members' CP by 690 Power.
+            level 12: Restores nearby clan members' CP by 702 Power.
+            level 13: Restores nearby clan members' CP by 714 Power.
+            level 14: Restores nearby clan members' CP by 727 Power.
+            level 15: Restores nearby clan members' CP by 740 Power.
+            level 16: Restores nearby clan members' CP by 753 Power.
+            level 17: Restores nearby clan members' CP by 766 Power.
+            level 18: Restores nearby clan members' CP by 780 Power.
+         -->
         <icon initial="icon.skill1305"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="56">
@@ -234,6 +233,7 @@
                 <value level="17">83</value>
                 <value level="18">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="439">
                 <value level="2">499</value>
@@ -262,20 +262,14 @@
             <mana-init initial="37">
                 <value level="2">38</value>
                 <value level="3">39</value>
-                <value level="4">40</value>
+                <value level="4">41</value>
                 <value level="5">42</value>
                 <value level="6">43</value>
                 <value level="7">45</value>
                 <value level="8">46</value>
                 <value level="9">47</value>
                 <value level="10">48</value>
-                <value level="11">53</value>
-                <value level="13">54</value>
-                <value level="14">55</value>
-                <value level="15">56</value>
-                <value level="16">57</value>
-                <value level="17">58</value>
-                <value level="18">59</value>
+                <value level="12">49</value>
             </mana-init>
             <mana initial="184">
                 <value level="2">189</value>
@@ -324,25 +318,25 @@
     </skill>
     <skill id="1306" name="Ritual of Life" max-level="18" action="A1" type="MAGIC">
         <!--
-		level 1: Recovers CP with 497 Power.
-		level 2: Recovers CP with 563 Power.
-		level 3: Recovers CP with 627 Power.
-		level 4: Recovers CP with 689 Power.
-		level 5: Recovers CP with 745 Power.
-		level 6: Recovers CP with 770 Power.
-		level 7: Recovers CP with 795 Power.
-		level 8: Recovers CP with 817 Power.
-		level 9: Recovers CP with 839 Power.
-		level 10: Recovers CP with 858 Power.
-		level 11: Recovers CP with 863 Power.
-		level 12: Recovers CP with 871 Power.
-		level 13: Recovers CP with 880 Power.
-		level 14: Recovers CP with 888 Power.
-		level 15: Recovers CP with 897 Power.
-		level 16: Recovers CP with 905 Power.
-		level 17: Recovers CP with 913 Power.
-		level 18: Recovers CP with 920 Power.
-	 -->
+            level 1: Recovers CP with 497 Power.
+            level 2: Recovers CP with 563 Power.
+            level 3: Recovers CP with 627 Power.
+            level 4: Recovers CP with 689 Power.
+            level 5: Recovers CP with 745 Power.
+            level 6: Recovers CP with 770 Power.
+            level 7: Recovers CP with 795 Power.
+            level 8: Recovers CP with 817 Power.
+            level 9: Recovers CP with 839 Power.
+            level 10: Recovers CP with 858 Power.
+            level 11: Recovers CP with 863 Power.
+            level 12: Recovers CP with 871 Power.
+            level 13: Recovers CP with 880 Power.
+            level 14: Recovers CP with 888 Power.
+            level 15: Recovers CP with 897 Power.
+            level 16: Recovers CP with 905 Power.
+            level 17: Recovers CP with 913 Power.
+            level 18: Recovers CP with 920 Power.
+         -->
         <icon initial="icon.skill11775"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="48">
@@ -390,20 +384,13 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="18">
-                <value level="2">19</value>
-                <value level="4">20</value>
-                <value level="5">21</value>
+            <mana-init initial="19">
+                <value level="2">20</value>
+                <value level="4">21</value>
                 <value level="6">22</value>
                 <value level="7">23</value>
                 <value level="9">24</value>
-                <value level="11">26</value>
-                <value level="13">27</value>
-                <value level="14">28</value>
-                <value level="15">29</value>
-                <value level="16">30</value>
-                <value level="17">31</value>
-                <value level="18">32</value>
+                <value level="11">25</value>
             </mana-init>
             <mana initial="88">
                 <value level="2">92</value>
@@ -452,16 +439,17 @@
     </skill>
     <skill id="1308" name="Chant of Predator" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: For 20 minutes, all party members' P. Critical Rate +20%.
-		level 2: For 20 minutes, all party members' P. Critical Rate +25%.
-		level 3: For 20 minutes, all party members' P. Critical Rate +30%.
-	 -->
+            level 1: For 20 minutes, all party members' P. Critical Rate +20%.
+            level 2: For 20 minutes, all party members' P. Critical Rate +25%.
+            level 3: For 20 minutes, all party members' P. Critical Rate +30%.
+         -->
         <icon initial="icon.skill1308"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="48">
                 <value level="2">60</value>
                 <value level="3">68</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="457">
                 <value level="2">566</value>
@@ -490,26 +478,27 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0">
                     <value level="2">25.0</value>
                     <value level="3">30.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
         </effects>
     </skill>
     <skill id="1309" name="Chant of Eagle" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: For 20 minutes, all party members' P. Accuracy +2.
-		level 2: For 20 minutes, all party members' P. Accuracy +3.
-		level 3: For 20 minutes, all party members' P. Accuracy +4.
-	 -->
+            level 1: For 20 minutes, all party members' P. Accuracy +2.
+            level 2: For 20 minutes, all party members' P. Accuracy +3.
+            level 3: For 20 minutes, all party members' P. Accuracy +4.
+         -->
         <icon initial="icon.skill1309"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="48">
                 <value level="2">58</value>
                 <value level="3">64</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="457">
                 <value level="2">549</value>
@@ -548,11 +537,11 @@
     </skill>
     <skill id="1310" name="Chant of Vampire" max-level="4" action="A2" type="MAGIC">
         <!--
-		level 1: For 20 minutes, has a chance of giving all party members the ability to recover as HP 6% of any damage inflicted on the enemy.
-		level 2: For 20 minutes, has a chance of giving all party members the ability to recover as HP 7% of any damage inflicted on the enemy.
-		level 3: For 20 minutes, has a chance of giving all party members the ability to recover as HP 8% of any damage inflicted on the enemy.
-		level 4: For 20 minutes, has a chance of giving all party members the ability to recover as HP 9% of any damage inflicted on the enemy.
-	 -->
+            level 1: For 20 minutes, has a chance of giving all party members the ability to recover as HP 6% of any damage inflicted on the enemy.
+            level 2: For 20 minutes, has a chance of giving all party members the ability to recover as HP 7% of any damage inflicted on the enemy.
+            level 3: For 20 minutes, has a chance of giving all party members the ability to recover as HP 8% of any damage inflicted on the enemy.
+            level 4: For 20 minutes, has a chance of giving all party members the ability to recover as HP 9% of any damage inflicted on the enemy.
+         -->
         <icon initial="icon.skill1310"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="44">
@@ -560,6 +549,7 @@
                 <value level="3">66</value>
                 <value level="4">74</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="418">
                 <value level="2">549</value>
@@ -603,13 +593,13 @@
     </skill>
     <skill id="1311" name="Body of Avatar" max-level="6" action="A2" type="MAGIC">
         <!--
-		level 1: Restores HP of all party members by 10% and increases Max HP by 10% for 20 minutes.
-		level 2: Restores HP of all party members by 15% and increases Max HP by 15% for 20 minutes.
-		level 3: Restores HP of all party members by 20% and increases Max HP by 20% for 20 minutes.
-		level 4: Restores HP of all party members by 25% and increases Max HP by 25% for 20 minutes.
-		level 5: Restores HP of all party members by 30% and increases Max HP by 30% for 20 minutes.
-		level 6: Restores HP of all party members by 35% and increases Max HP by 35% for 20 minutes.
-	 -->
+            level 1: Restores HP of all party members by 10% and increases Max HP by 10% for 20 minutes.
+            level 2: Restores HP of all party members by 15% and increases Max HP by 15% for 20 minutes.
+            level 3: Restores HP of all party members by 20% and increases Max HP by 20% for 20 minutes.
+            level 4: Restores HP of all party members by 25% and increases Max HP by 25% for 20 minutes.
+            level 5: Restores HP of all party members by 30% and increases Max HP by 30% for 20 minutes.
+            level 6: Restores HP of all party members by 35% and increases Max HP by 35% for 20 minutes.
+         -->
         <icon initial="icon.skill1311"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="48">
@@ -619,6 +609,7 @@
                 <value level="5">68</value>
                 <value level="6">72</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="150000"/>
             <effect-point initial="457">
                 <value level="2">532</value>
@@ -703,6 +694,7 @@
         <icon initial="icon.skill0172"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -716,6 +708,7 @@
         <icon initial="icon.skill0172"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -726,10 +719,10 @@
     </skill>
     <skill id="1331" name="Summon Feline Queen" max-level="6" action="A1" type="MAGIC">
         <!--
-		level 1: Summons Servitor Feline Queen. Consumes 12 Spirit Ore when summoned.
-		level 3: Summons Servitor Feline Queen. Consumes 14 Spirit Ore when summoned.
-		level 5: Summons Servitor Feline Queen. Consumes 16 Spirit Ore when summoned.
-	 -->
+            level 1: Summons Servitor Feline Queen. Consumes 12 Spirit Ore when summoned.
+            level 3: Summons Servitor Feline Queen. Consumes 14 Spirit Ore when summoned.
+            level 5: Summons Servitor Feline Queen. Consumes 16 Spirit Ore when summoned.
+         -->
         <icon initial="icon.skill1331"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="56">
@@ -739,17 +732,19 @@
                 <value level="5">64</value>
                 <value level="6">66</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="6000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="29">
-                <value level="2">32</value>
-                <value level="4">33</value>
-                <value level="5">34</value>
-                <value level="6">35</value>
+            <mana-init initial="14">
+                <value level="2">16</value>
+                <value level="3">18</value>
+                <value level="4">19</value>
+                <value level="5">21</value>
+                <value level="6">22</value>
             </mana-init>
             <mana initial="144">
                 <value level="2">159</value>
@@ -759,9 +754,10 @@
                 <value level="6">175</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="12">
-                <value level="3">14</value>
-                <value level="5">16</value>
+            <item-count initial="1">
+                <value level="3">2</value>
+                <value level="5">4</value>
+                <value level="6">1</value>
             </item-count>
         </consume>
         <target/>
@@ -785,10 +781,10 @@
     </skill>
     <skill id="1332" name="Summon Seraphim the Unicorn" max-level="6" action="A1" type="MAGIC">
         <!--
-		level 1: Summons Servitor Seraphim the Unicorn. Consumes 12 Spirit Ore when summoned.
-		level 3: Summons Servitor Seraphim the Unicorn. Consumes 14 Spirit Ore when summoned.
-		level 5: Summons Servitor Seraphim the Unicorn. Consumes 16 Spirit Ore when summoned.
-	 -->
+            level 1: Summons Servitor Seraphim the Unicorn. Consumes 12 Spirit Ore when summoned.
+            level 3: Summons Servitor Seraphim the Unicorn. Consumes 14 Spirit Ore when summoned.
+            level 5: Summons Servitor Seraphim the Unicorn. Consumes 16 Spirit Ore when summoned.
+         -->
         <icon initial="icon.skill1332"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="56">
@@ -798,17 +794,19 @@
                 <value level="5">64</value>
                 <value level="6">66</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="6000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="29">
-                <value level="2">32</value>
-                <value level="4">33</value>
-                <value level="5">34</value>
-                <value level="6">35</value>
+            <mana-init initial="14">
+                <value level="2">16</value>
+                <value level="3">18</value>
+                <value level="4">19</value>
+                <value level="5">21</value>
+                <value level="6">22</value>
             </mana-init>
             <mana initial="144">
                 <value level="2">159</value>
@@ -818,9 +816,10 @@
                 <value level="6">175</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="12">
-                <value level="3">14</value>
-                <value level="5">16</value>
+            <item-count initial="1">
+                <value level="3">2</value>
+                <value level="5">4</value>
+                <value level="6">1</value>
             </item-count>
         </consume>
         <target/>
@@ -844,10 +843,10 @@
     </skill>
     <skill id="1333" name="Summon Nightshade" max-level="6" action="A1" type="MAGIC">
         <!--
-		level 1: Summons Servitor Nightshade. Consumes 12 Spirit Ore when summoned.
-		level 3: Summons Servitor Nightshade. Consumes 14 Spirit Ore when summoned.
-		level 5: Summons Servitor Nightshade. Consumes 16 Spirit Ore when summoned.
-	 -->
+            level 1: Summons Servitor Nightshade. Consumes 12 Spirit Ore when summoned.
+            level 3: Summons Servitor Nightshade. Consumes 14 Spirit Ore when summoned.
+            level 5: Summons Servitor Nightshade. Consumes 16 Spirit Ore when summoned.
+         -->
         <icon initial="icon.skill1333"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="56">
@@ -857,17 +856,19 @@
                 <value level="5">64</value>
                 <value level="6">66</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="6000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="29">
-                <value level="2">32</value>
-                <value level="4">33</value>
-                <value level="5">34</value>
-                <value level="6">35</value>
+            <mana-init initial="14">
+                <value level="2">16</value>
+                <value level="3">18</value>
+                <value level="4">19</value>
+                <value level="5">21</value>
+                <value level="6">22</value>
             </mana-init>
             <mana initial="144">
                 <value level="2">159</value>
@@ -877,9 +878,10 @@
                 <value level="6">175</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="12">
-                <value level="3">14</value>
-                <value level="5">16</value>
+            <item-count initial="1">
+                <value level="3">2</value>
+                <value level="5">4</value>
+                <value level="6">1</value>
             </item-count>
         </consume>
         <target/>
@@ -903,14 +905,15 @@
     </skill>
     <skill id="1334" name="Summon Cursed Man" max-level="2" action="A1" type="MAGIC">
         <!--
-		level 1: Summons Servitor Cursed Man. Consumes 12 Spirit Ore when summoned.
-		level 2: Summons Servitor Cursed Man. Consumes 14 Spirit Ore when summoned.
-	 -->
+            level 1: Summons Servitor Cursed Man. Consumes 12 Spirit Ore when summoned.
+            level 2: Summons Servitor Cursed Man. Consumes 14 Spirit Ore when summoned.
+         -->
         <icon initial="icon.skill1334"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="79">
                 <value level="2">83</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-range initial="400"/>
@@ -918,9 +921,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="31">
-                <value level="2">34</value>
-            </mana-init>
             <mana initial="151">
                 <value level="2">157</value>
             </mana>
@@ -947,6 +947,7 @@
         <icon initial="icon.skill1335"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="76"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="398"/>
             <effect-range initial="-1"/>
@@ -989,7 +990,7 @@
         </effects>
     </skill>
     <skill id="1337" name="Curse of Abyss" debuff="true" action="A2" type="MAGIC">
-        <!-- For 30 seconds, enemy's Movement Speed -10%%, P. Def. -30%%, P. Evasion -6, M. Atk. -30%%, Casting Spd. -20%% and M. Critical Rate -30%%. -->
+        <!-- For 30 seconds, enemy's Movement Speed -10%%, P. Def. -30%%, P. Evasion -6, M. Atk. -30%%, Casting Spd. -20%% and Critical Rate of damage magic -30%%. -->
         <icon initial="icon.skill1337"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DEATH" level-bonus-rate="30" auto-use="ACTIVE">
             <magic-level initial="78"/>
@@ -1016,9 +1017,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
                 <power initial="-30.0"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="-6.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="-30.0"/>
             </stat-modify>
@@ -1061,17 +1062,17 @@
             <resist-abnormal-by-category category="DEBUFF">
                 <power initial="-30.0"/>
             </resist-abnormal-by-category>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power initial="30.0"/>
             </magic-cost>
         </effects>
     </skill>
     <skill id="1339" name="Fire Vortex" max-level="3" debuff="true" action="A2" type="MAGIC">
         <!--
-		level 1: Creates a vortex connected to the dimension of fire and inflicts damage on the enemy with bonus 126 M. Atk. Power. For 30 seconds, Movement Speed -10%, Atk. Spd. -10%, and Casting Spd. -10%. Consumes 12 MP per second. Over-hit.
-		level 2: Creates a vortex connected to the dimension of fire and inflicts damage on the enemy with bonus 140 M. Atk. Power. For 30 seconds, Movement Speed -10%, Atk. Spd. -10%, and Casting Spd. -10%. Consumes 16 MP per second. Over-hit.
-		level 3: Creates a vortex connected to the dimension of fire and inflicts damage on the enemy with bonus 155 M. Atk. Power. For 30 seconds, Movement Speed -10%, Atk. Spd. -10%, and Casting Spd. -10%. Consumes 20 MP per second. Over-hit.
-	 -->
+            level 1: Creates a vortex connected to the dimension of fire and inflicts damage on the enemy with bonus 126 M. Atk. Power. For 30 seconds, Movement Speed -10%, Atk. Spd. -10%, and Casting Spd. -10%. Consumes 12 MP per second. Over-hit.
+            level 2: Creates a vortex connected to the dimension of fire and inflicts damage on the enemy with bonus 140 M. Atk. Power. For 30 seconds, Movement Speed -10%, Atk. Spd. -10%, and Casting Spd. -10%. Consumes 16 MP per second. Over-hit.
+            level 3: Creates a vortex connected to the dimension of fire and inflicts damage on the enemy with bonus 155 M. Atk. Power. For 30 seconds, Movement Speed -10%, Atk. Spd. -10%, and Casting Spd. -10%. Consumes 20 MP per second. Over-hit.
+         -->
         <icon initial="icon.skill1339"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="2" auto-use="ACTIVE">
             <magic-level initial="76">
@@ -1090,10 +1091,7 @@
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="23">
-                <value level="2">26</value>
-                <value level="3">29</value>
-            </mana-init>
+            <mana-init initial="21"/>
             <mana initial="116">
                 <value level="2">122</value>
                 <value level="3">128</value>
@@ -1131,10 +1129,10 @@
     </skill>
     <skill id="1340" name="Ice Vortex" max-level="3" debuff="true" action="A2" type="MAGIC">
         <!--
-		level 1: Creates a vortex connected to the dimension of water and inflicts damage on the enemy with bonus 126 M. Atk. Power. For 30 seconds, Movement Speed -20%. Consumes 12 MP per second. Over-hit.
-		level 2: Creates a vortex connected to the dimension of water and inflicts damage on the enemy with bonus 140 M. Atk. Power. For 30 seconds, Movement Speed -20%. Consumes 16 MP per second. Over-hit.
-		level 3: Creates a vortex connected to the dimension of water and inflicts damage on the enemy with bonus 155 M. Atk. Power. For 30 seconds, Movement Speed -20%. Consumes 20 MP per second. Over-hit.
-	 -->
+            level 1: Creates a vortex connected to the dimension of water and inflicts damage on the enemy with bonus 126 M. Atk. Power. For 30 seconds, Movement Speed -20%. Consumes 12 MP per second. Over-hit.
+            level 2: Creates a vortex connected to the dimension of water and inflicts damage on the enemy with bonus 140 M. Atk. Power. For 30 seconds, Movement Speed -20%. Consumes 16 MP per second. Over-hit.
+            level 3: Creates a vortex connected to the dimension of water and inflicts damage on the enemy with bonus 155 M. Atk. Power. For 30 seconds, Movement Speed -20%. Consumes 20 MP per second. Over-hit.
+         -->
         <icon initial="icon.skill1340"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="2" auto-use="ACTIVE">
             <magic-level initial="76">
@@ -1153,10 +1151,7 @@
             <element type="WATER" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="23">
-                <value level="2">26</value>
-                <value level="3">29</value>
-            </mana-init>
+            <mana-init initial="21"/>
             <mana initial="116">
                 <value level="2">122</value>
                 <value level="3">128</value>
@@ -1188,10 +1183,10 @@
     </skill>
     <skill id="1341" name="Wind Vortex" max-level="3" debuff="true" action="A2" type="MAGIC">
         <!--
-		level 1: Creates a vortex connected to the dimension of wind and inflicts damage on the enemy with bonus 126 M. Atk. Power. For 30 seconds, Atk. Spd. -15% and Casting Spd. -15%. Consumes 12 MP per second. Over-hit.
-		level 2: Creates a vortex connected to the dimension of wind and inflicts damage on the enemy with bonus 140 M. Atk. Power. For 30 seconds, Atk. Spd. -15% and Casting Spd. -15%. Consumes 16 MP per second. Over-hit.
-		level 3: Creates a vortex connected to the dimension of wind and inflicts damage on the enemy with bonus 155 M. Atk. Power. For 30 seconds, Atk. Spd. -15% and Casting Spd. -15%. Consumes 20 MP per second. Over-hit.
-	 -->
+            level 1: Creates a vortex connected to the dimension of wind and inflicts damage on the enemy with bonus 126 M. Atk. Power. For 30 seconds, Atk. Spd. -15% and Casting Spd. -15%. Consumes 12 MP per second. Over-hit.
+            level 2: Creates a vortex connected to the dimension of wind and inflicts damage on the enemy with bonus 140 M. Atk. Power. For 30 seconds, Atk. Spd. -15% and Casting Spd. -15%. Consumes 16 MP per second. Over-hit.
+            level 3: Creates a vortex connected to the dimension of wind and inflicts damage on the enemy with bonus 155 M. Atk. Power. For 30 seconds, Atk. Spd. -15% and Casting Spd. -15%. Consumes 20 MP per second. Over-hit.
+         -->
         <icon initial="icon.skill1341"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="2" auto-use="ACTIVE">
             <magic-level initial="76">
@@ -1210,10 +1205,7 @@
             <element type="WIND" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="23">
-                <value level="2">26</value>
-                <value level="3">29</value>
-            </mana-init>
+            <mana-init initial="21"/>
             <mana initial="116">
                 <value level="2">122</value>
                 <value level="3">128</value>
@@ -1248,10 +1240,10 @@
     </skill>
     <skill id="1343" name="Dark Vortex" max-level="3" debuff="true" action="A2" type="MAGIC">
         <!--
-		level 1: Creates a vortex connected to the dimension of darkness and inflicts damage on the enemy with bonus 126 M. Atk. Power, and absorbs 15% of the damage as HP. For 30 seconds, P. Critical Rate/M. Critical Rate -10%. Consumes 12 MP per second.
-		level 2: Creates a vortex connected to the dimension of darkness and inflicts damage on the enemy with bonus 140 M. Atk. Power, and absorbs 20% of the damage as HP. For 30 seconds, P. Critical Rate/M. Critical Rate -10%. Consumes 16 MP per second.
-		level 3: Creates a vortex connected to the dimension of darkness and inflicts damage on the enemy with bonus 155 M. Atk. Power, and absorbs 25% of the damage as HP. For 30 seconds, P. Critical Rate/M. Critical Rate -10%. Consumes 20 MP per second.
-	 -->
+            level 1: Creates a vortex connected to the dimension of darkness and inflicts damage on the enemy with bonus 126 M. Atk. Power, and absorbs 15% of the damage as HP. For 30 seconds, P. Critical Rate/M. Critical Rate -10%. Consumes 12 MP per second.
+            level 2: Creates a vortex connected to the dimension of darkness and inflicts damage on the enemy with bonus 140 M. Atk. Power, and absorbs 20% of the damage as HP. For 30 seconds, P. Critical Rate/M. Critical Rate -10%. Consumes 16 MP per second.
+            level 3: Creates a vortex connected to the dimension of darkness and inflicts damage on the enemy with bonus 155 M. Atk. Power, and absorbs 25% of the damage as HP. For 30 seconds, P. Critical Rate/M. Critical Rate -10%. Consumes 20 MP per second.
+         -->
         <icon initial="icon.skill1343"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="2" auto-use="ACTIVE">
             <magic-level initial="76">
@@ -1270,10 +1262,7 @@
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="23">
-                <value level="2">26</value>
-                <value level="3">29</value>
-            </mana-init>
+            <mana-init initial="21"/>
             <mana initial="116">
                 <value level="2">122</value>
                 <value level="3">128</value>
@@ -1301,9 +1290,9 @@
                     <value level="3">20.0</value>
                 </power>
             </effect>
-            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="-10.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
                 <power initial="-10.0"/>
             </stat-modify>
@@ -1421,10 +1410,10 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="EVASION_RATE">
+            <stat-modify  stat="EVASION_RATE">
                 <power initial="4"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_EVASION_RATE">
+            <stat-modify  stat="MAGIC_EVASION_RATE">
                 <power initial="4"/>
             </stat-modify>
             <stat-modify stat="ACCURACY">
@@ -1442,7 +1431,7 @@
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
                 <power initial="25"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" >
                 <power initial="25"/>
             </stat-modify>
             <speed mode="PER">
@@ -1489,9 +1478,9 @@
             <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="4.0"/>
             </stat-modify>
@@ -1513,7 +1502,7 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-modify  mode="PER" stat="CRITICAL_RATE">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
@@ -1552,12 +1541,7 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="14">
-                <value level="2">15</value>
-                <value level="3">16</value>
-                <value level="4">17</value>
-                <value level="5">18</value>
-            </mana-init>
+            <mana-init initial="14"/>
             <mana initial="70">
                 <value level="2">73</value>
                 <value level="3">76</value>
@@ -1607,12 +1591,7 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="14">
-                <value level="2">15</value>
-                <value level="3">16</value>
-                <value level="4">17</value>
-                <value level="5">18</value>
-            </mana-init>
+            <mana-init initial="14"/>
             <mana initial="70">
                 <value level="2">73</value>
                 <value level="3">76</value>
@@ -1642,9 +1621,9 @@
     </skill>
     <skill id="1355" name="Prophecy of Water" max-level="2" action="A2" type="MAGIC">
         <!--
-		level 1: A party member's MP Recovery bonus +10%, M. Atk. +10%, M. Def +10%, Casting Spd. +5%, Debuff Resistance +10%, and Skill MP Consumption -3% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore.
-		level 2: A party member's MP Recovery bonus +20%, M. Atk. +15%, M. Def +15%, Casting Spd. +10%, Debuff Resistance +10%, and Skill MP Consumption -5% for 10 minutes with the help of a great spirit. Consumes 20 Spirit Ore.
-	 -->
+            level 1: A party member's MP Recovery bonus +10%, M. Atk. +10%, M. Def +10%, Casting Spd. +5%, Debuff Resistance +10%, and Skill MP Consumption -3% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore.
+            level 2: A party member's MP Recovery bonus +20%, M. Atk. +15%, M. Def +15%, Casting Spd. +10%, Debuff Resistance +10%, and Skill MP Consumption -5% for 10 minutes with the help of a great spirit. Consumes 20 Spirit Ore.
+         -->
         <icon initial="icon.skill1355"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="76">
@@ -1659,9 +1638,7 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="15">
-                <value level="2">20</value>
-            </mana-init>
+            <mana-init initial="15"/>
             <mana initial="72">
                 <value level="2">94</value>
             </mana>
@@ -1705,7 +1682,7 @@
             <resist-abnormal-by-category category="DEBUFF">
                 <power initial="10.0"/>
             </resist-abnormal-by-category>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power initial="-3.0">
                     <value level="2">-5.0</value>
                 </power>
@@ -1714,9 +1691,9 @@
     </skill>
     <skill id="1356" name="Prophecy of Fire" max-level="2" action="A2" type="MAGIC">
         <!--
-		level 1: A party member's Max HP +10%, HP Recovery Bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, and Debuff Resistance +10% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore.
-		level 2: A party member's Max HP +15%, HP Recovery Bonus +20%, P. Atk. +15%, P. Def. +15%, Atk. Spd. +10%, and Debuff Resistance +10% for 10 minutes with the help of a great spirit. Consumes 20 Spirit Ore.
-	 -->
+            level 1: A party member's Max HP +10%, HP Recovery Bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, and Debuff Resistance +10% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore.
+            level 2: A party member's Max HP +15%, HP Recovery Bonus +20%, P. Atk. +15%, P. Def. +15%, Atk. Spd. +10%, and Debuff Resistance +10% for 10 minutes with the help of a great spirit. Consumes 20 Spirit Ore.
+         -->
         <icon initial="icon.skill1356"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="76">
@@ -1731,9 +1708,7 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="15">
-                <value level="2">20</value>
-            </mana-init>
+            <mana-init initial="15"/>
             <mana initial="72">
                 <value level="2">94</value>
             </mana>
@@ -1786,9 +1761,9 @@
     </skill>
     <skill id="1357" name="Prophecy of Wind" max-level="2" action="A2" type="MAGIC">
         <!--
-		level 1: A party member's P. Accuracy/M. Accuracy +3, P. Evasion/M. Evasion +3, P. Critical/M. Critical Rate +10%, P. Critical Damage/M. Critical Damage +15%, Movement Speed +10%, Debuff Resistance +10%, and P. Atk. against Raid Boss +15% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore.
-		level 2: A party member's P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Critical/M. Critical Rate +15%, P. Critical Damage/M. Critical Damage +20%, Movement Speed +15%, Debuff Resistance +10%, and P. Atk. against Raid Boss +20% for 10 minutes with the help of a great spirit. Consumes 20 Spirit Ore.
-	 -->
+            level 1: A party member's P. Accuracy/M. Accuracy +3, P. Evasion/M. Evasion +3, P. Critical/M. Critical Rate +10%, P. Critical Damage/M. Critical Damage +15%, Movement Speed +10%, Debuff Resistance +10%, and P. Atk. against Raid Boss +15% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore.
+            level 2: A party member's P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Critical/M. Critical Rate +15%, P. Critical Damage/M. Critical Damage +20%, Movement Speed +15%, Debuff Resistance +10%, and P. Atk. against Raid Boss +20% for 10 minutes with the help of a great spirit. Consumes 20 Spirit Ore.
+         -->
         <icon initial="icon.skill1357"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="76">
@@ -1803,9 +1778,7 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="15">
-                <value level="2">20</value>
-            </mana-init>
+            <mana-init initial="15"/>
             <mana initial="72">
                 <value level="2">94</value>
             </mana>
@@ -1846,12 +1819,12 @@
                     <value level="2">4.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-modify  mode="PER" stat="CRITICAL_RATE">
                 <power initial="10.0">
                     <value level="2">15.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify  mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10.0">
                     <value level="2">15.0</value>
                 </power>
@@ -1947,6 +1920,7 @@
         <icon initial="icon.skill1362"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="77"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="666"/>
             <effect-range initial="-1"/>
@@ -1973,14 +1947,15 @@
     </skill>
     <skill id="1363" name="Chant of Victory" max-level="2" action="A2" type="MAGIC">
         <!--
-		level 1: A party member's HP Recovery Bonus/MP Recovery Bonus +20%, P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Atk./M. Atk. +15%, Atk. Spd./Casting Spd. +10%, P. Critical/M. Critical Rate +15%, P. Critical Damage/M. Critical Damage +15% for 10 minutes with the help of a great spirit. Consumes 30 Spirit Ore.
-		level 2: A party member's HP Recovery Bonus/MP Recovery Bonus +40%, P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Atk./M. Atk. +20%, Atk. Spd./Casting Spd. +10%, P. Critical/M. Critical Rate +20%, P. Critical Damage/M. Critical Damage +15% for 10 minutes with the help of a great spirit. Consumes 40 Spirit Ore.
-	 -->
+            level 1: A party member's HP Recovery Bonus/MP Recovery Bonus +20%, P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Atk./M. Atk. +15%, Atk. Spd./Casting Spd. +10%, P. Critical/M. Critical Rate +15%, P. Critical Damage/M. Critical Damage +15% for 10 minutes with the help of a great spirit. Consumes 30 Spirit Ore.
+            level 2: A party member's HP Recovery Bonus/MP Recovery Bonus +40%, P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Atk./M. Atk. +20%, Atk. Spd./Casting Spd. +10%, P. Critical/M. Critical Rate +20%, P. Critical Damage/M. Critical Damage +15% for 10 minutes with the help of a great spirit. Consumes 40 Spirit Ore.
+         -->
         <icon initial="icon.skill1363"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="76">
                 <value level="2">82</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="666">
                 <value level="2">675</value>
@@ -1989,9 +1964,7 @@
             <hit-time initial="2500"/>
         </attributes>
         <consume>
-            <mana-init initial="57">
-                <value level="2">63</value>
-            </mana-init>
+            <mana-init initial="57"/>
             <mana initial="284">
                 <value level="2">313</value>
             </mana>
@@ -2023,9 +1996,9 @@
             <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
                 <power initial="4.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="4.0"/>
             </stat-modify>
@@ -2045,11 +2018,11 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="15.0">
                     <value level="2">20.0</value>
                 </power>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="15.0">
                     <value level="2">20.0</value>
@@ -2074,6 +2047,7 @@
                 <value level="5">83</value>
                 <value level="6">84</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="-669">
                 <value level="2">-675</value>
@@ -2086,10 +2060,7 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="22">
-                <value level="3">23</value>
-                <value level="5">24</value>
-            </mana-init>
+            <mana-init initial="22"/>
             <mana initial="107">
                 <value level="2">110</value>
                 <value level="3">113</value>
@@ -2117,9 +2088,9 @@
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="-10.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
                 <power initial="-30.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="-30.0"/>
             </stat-modify>
@@ -2263,6 +2234,7 @@
         <icon initial="icon.skill1374"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" hit-cancel-time="2.0" blocked-on-olympiad="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="676"/>
             <effect-range initial="-1"/>
@@ -2297,6 +2269,7 @@
         <icon initial="icon.skill1375"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" hit-cancel-time="2.0" level-bonus-rate="30" blocked-on-olympiad="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="-676"/>
             <effect-range initial="-1"/>
@@ -2321,9 +2294,9 @@
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="-50.0"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE">
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
                 <power initial="-16.0"/>
-            </stat-modify>
+            </stat-hp-based>
             <stat-modify mode="PER" stat="SHIELD_DEFENCE_RATE">
                 <power initial="-50.0"/>
             </stat-modify>
@@ -2339,6 +2312,7 @@
         <icon initial="icon.skill1376"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" hit-cancel-time="2.0" level-bonus-rate="30" blocked-on-olympiad="true">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="-676"/>
             <effect-range initial="-1"/>
@@ -2366,12 +2340,12 @@
     </skill>
     <skill id="1378" name="Soul Link" max-level="5">
         <!--
-		level 1: M. Atk. increases by 30% of P. Atk.
-		level 2: M. Atk. increases by 40% of P. Atk.
-		level 3: M. Atk. increases by 50% of P. Atk.
-		level 4: M. Atk. increases by 60% of P. Atk.
-		level 5: M. Atk. increases by 80% of P. Atk.
-	 -->
+            level 1: M. Atk. increases by 30% of P. Atk.
+            level 2: M. Atk. increases by 40% of P. Atk.
+            level 3: M. Atk. increases by 50% of P. Atk.
+            level 4: M. Atk. increases by 60% of P. Atk.
+            level 5: M. Atk. increases by 80% of P. Atk.
+         -->
         <icon initial="icon.skill11820"/>
         <attributes property="MAGIC">
         </attributes>
@@ -2389,12 +2363,12 @@
     </skill>
     <skill id="1379" name="Soul Sense" max-level="5">
         <!--
-		level 1: M. Critical Rate increases by 20% P. Critical Rate.
-		level 2: M. Critical Rate increases by 30% P. Critical Rate.
-		level 3: M. Critical Rate increases by 40% P. Critical Rate.
-		level 4: M. Critical Rate increases by 50% P. Critical Rate.
-		level 5: M. Critical Rate increases by 70% P. Critical Rate.
-	 -->
+            level 1: M. Critical Rate increases by 20% P. Critical Rate.
+            level 2: M. Critical Rate increases by 30% P. Critical Rate.
+            level 3: M. Critical Rate increases by 40% P. Critical Rate.
+            level 4: M. Critical Rate increases by 50% P. Critical Rate.
+            level 5: M. Critical Rate increases by 70% P. Critical Rate.
+         -->
         <icon initial="icon.skill11821"/>
         <attributes property="MAGIC">
         </attributes>
@@ -2446,16 +2420,6 @@
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
-            <mana-init initial="27">
-                <value level="2">29</value>
-                <value level="3">31</value>
-                <value level="4">33</value>
-                <value level="5">34</value>
-                <value level="6">37</value>
-                <value level="7">39</value>
-                <value level="8">40</value>
-                <value level="10">41</value>
-            </mana-init>
             <mana initial="133">
                 <value level="2">144</value>
                 <value level="3">153</value>
@@ -2483,10 +2447,10 @@
     </skill>
     <skill id="1388" name="Greater Might" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: Increases P. Atk. by 4% for 20 minutes. Consumes 1 Spirit Ore.
-		level 2: Increases P. Atk. by 7% for 20 minutes. Consumes 2 Spirit Ore.
-		level 3: Increases P. Atk. by 10% for 20 minutes. Consumes 3 Spirit Ore.
-	 -->
+            level 1: Increases P. Atk. by 4% for 20 minutes. Consumes 1 Spirit Ore.
+            level 2: Increases P. Atk. by 7% for 20 minutes. Consumes 2 Spirit Ore.
+            level 3: Increases P. Atk. by 10% for 20 minutes. Consumes 3 Spirit Ore.
+         -->
         <icon initial="icon.skill1388"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
@@ -2503,10 +2467,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="11">
-                <value level="2">13</value>
-                <value level="3">14</value>
-            </mana-init>
             <mana initial="54">
                 <value level="2">62</value>
                 <value level="3">69</value>
@@ -2537,10 +2497,10 @@
     </skill>
     <skill id="1389" name="Greater Shield" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: Increases P. Def. by 5% for 20 minutes. Consumes 1 Spirit Ore.
-		level 2: Increases P. Def. by 10% for 20 minutes. Consumes 2 Spirit Ore.
-		level 3: Increases P. Def. by 15% for 20 minutes. Consumes 3 Spirit Ore.
-	 -->
+            level 1: Increases P. Def. by 5% for 20 minutes. Consumes 1 Spirit Ore.
+            level 2: Increases P. Def. by 10% for 20 minutes. Consumes 2 Spirit Ore.
+            level 3: Increases P. Def. by 15% for 20 minutes. Consumes 3 Spirit Ore.
+         -->
         <icon initial="icon.skill1389"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
@@ -2557,10 +2517,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="11">
-                <value level="2">13</value>
-                <value level="3">14</value>
-            </mana-init>
             <mana initial="54">
                 <value level="2">62</value>
                 <value level="3">69</value>
@@ -2591,16 +2547,17 @@
     </skill>
     <skill id="1390" name="War Chant" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: Increases all party members' P. Atk. by 4% for 20 minutes. Consumes 4 Spirit Ore.
-		level 2: Increases all party members' P. Atk. by 7% for 20 minutes. Consumes 8 Spirit Ore.
-		level 3: Increases all party members' P. Atk. by 10% for 20 minutes. Consumes 12 Spirit Ore.
-	 -->
+            level 1: Increases all party members' P. Atk. by 4% for 20 minutes. Consumes 4 Spirit Ore.
+            level 2: Increases all party members' P. Atk. by 7% for 20 minutes. Consumes 8 Spirit Ore.
+            level 3: Increases all party members' P. Atk. by 10% for 20 minutes. Consumes 12 Spirit Ore.
+         -->
         <icon initial="icon.skill1390"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
                 <value level="2">66</value>
                 <value level="3">74</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -2610,10 +2567,6 @@
             <hit-time initial="2500"/>
         </attributes>
         <consume>
-            <mana-init initial="43">
-                <value level="2">49</value>
-                <value level="3">55</value>
-            </mana-init>
             <mana initial="213">
                 <value level="2">244</value>
                 <value level="3">272</value>
@@ -2644,16 +2597,17 @@
     </skill>
     <skill id="1391" name="Chant of Earth" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: Increases all party members' P. Def. by 5% for 20 minutes. Consumes 4 Spirit Ore.
-		level 2: Increases all party members' P. Def. by 10% for 20 minutes. Consumes 8 Spirit Ore.
-		level 3: Increases all party members' P. Def. by 15% for 20 minutes. Consumes 12 Spirit Ore.
-	 -->
+            level 1: Increases all party members' P. Def. by 5% for 20 minutes. Consumes 4 Spirit Ore.
+            level 2: Increases all party members' P. Def. by 10% for 20 minutes. Consumes 8 Spirit Ore.
+            level 3: Increases all party members' P. Def. by 15% for 20 minutes. Consumes 12 Spirit Ore.
+         -->
         <icon initial="icon.skill1391"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
                 <value level="2">66</value>
                 <value level="3">74</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -2663,10 +2617,6 @@
             <hit-time initial="2500"/>
         </attributes>
         <consume>
-            <mana-init initial="43">
-                <value level="2">49</value>
-                <value level="3">55</value>
-            </mana-init>
             <mana initial="213">
                 <value level="2">244</value>
                 <value level="3">272</value>
@@ -2697,10 +2647,10 @@
     </skill>
     <skill id="1392" name="Holy Attack Resistance" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: Increases Holy Attack Resistance by 15 for 20 minutes.
-		level 2: Increases Holy Attack Resistance by 23 for 20 minutes.
-		level 3: Increases Holy Attack Resistance by 30 for 20 minutes.
-	 -->
+            level 1: Increases Holy Attack Resistance by 15 for 20 minutes.
+            level 2: Increases Holy Attack Resistance by 23 for 20 minutes.
+            level 3: Increases Holy Attack Resistance by 30 for 20 minutes.
+         -->
         <icon initial="icon.skill1392"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
@@ -2717,10 +2667,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="11">
-                <value level="2">13</value>
-                <value level="3">14</value>
-            </mana-init>
             <mana initial="54">
                 <value level="2">62</value>
                 <value level="3">69</value>
@@ -2746,10 +2692,10 @@
     </skill>
     <skill id="1393" name="Dark Attack Resistance" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: Increases Dark Attack Resistance by 15 for 20 minutes.
-		level 2: Increases Dark Attack Resistance by 23 for 20 minutes.
-		level 3: Increases Dark Attack Resistance by 30 for 20 minutes.
-	 -->
+            level 1: Increases Dark Attack Resistance by 15 for 20 minutes.
+            level 2: Increases Dark Attack Resistance by 23 for 20 minutes.
+            level 3: Increases Dark Attack Resistance by 30 for 20 minutes.
+         -->
         <icon initial="icon.skill1393"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
@@ -2766,10 +2712,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="11">
-                <value level="2">13</value>
-                <value level="3">14</value>
-            </mana-init>
             <mana initial="54">
                 <value level="2">62</value>
                 <value level="3">69</value>
@@ -2825,6 +2767,9 @@
             <hit-time initial="3000"/>
         </attributes>
         <consume>
+            <mana-init initial="6">
+                <value level="6">7</value>
+            </mana-init>
             <mana initial="27">
                 <value level="2">28</value>
                 <value level="4">29</value>
@@ -2902,13 +2847,7 @@
                 <value level="4">12</value>
                 <value level="6">13</value>
                 <value level="9">14</value>
-                <value level="11">15</value>
-                <value level="13">16</value>
-                <value level="14">17</value>
-                <value level="15">18</value>
-                <value level="16">19</value>
-                <value level="17">20</value>
-                <value level="18">21</value>
+                <value level="12">15</value>
             </mana-init>
             <mana initial="52">
                 <value level="2">54</value>
@@ -2937,17 +2876,17 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power initial="200.0"/>
             </magic-cost>
         </effects>
     </skill>
     <skill id="1397" name="Clarity" max-level="3" action="A2" type="MAGIC">
         <!--
-		level 1: For 20 minutes, P. Skill MP Consumption -10%, M. Skill MP Consumption -4%, and Song/Dance Skill MP Consumption -10%. Consumes 1 Spirit Ore.
-		level 2: For 20 minutes, P. Skill MP Consumption -15%, M. Skill MP Consumption -7%, and Song/Dance Skill MP Consumption -15%. Consumes 2 Spirit Ore.
-		level 3: For 20 minutes, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20%. Consumes 3 Spirit Ore.
-	 -->
+            level 1: For 20 minutes, P. Skill MP Consumption -10%, M. Skill MP Consumption -4%, and Song/Dance Skill MP Consumption -10%. Consumes 1 Spirit Ore.
+            level 2: For 20 minutes, P. Skill MP Consumption -15%, M. Skill MP Consumption -7%, and Song/Dance Skill MP Consumption -15%. Consumes 2 Spirit Ore.
+            level 3: For 20 minutes, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20%. Consumes 3 Spirit Ore.
+         -->
         <icon initial="icon.skill1397"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
@@ -2964,10 +2903,6 @@
             <hit-time initial="4000"/>
         </attributes>
         <consume>
-            <mana-init initial="11">
-                <value level="2">13</value>
-                <value level="3">14</value>
-            </mana-init>
             <mana initial="54">
                 <value level="2">62</value>
                 <value level="3">69</value>
@@ -2988,7 +2923,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <magic-cost>
+            <magic-cost type="MAGIC">
                 <power initial="-4.0">
                     <value level="2">-15.0</value>
                     <value level="3">-20.0</value>
@@ -2998,17 +2933,17 @@
     </skill>
     <skill id="1398" name="Mana Burn" max-level="10" action="A1" type="MAGIC">
         <!--
-		level 1: Burns the enemy's MP with bonus 117 M. Atk. Power.
-		level 2: Burns the enemy's MP with bonus 123 M. Atk. Power.
-		level 3: Burns the enemy's MP with bonus 128 M. Atk. Power.
-		level 4: Burns the enemy's MP with bonus 133 M. Atk. Power.
-		level 5: Burns the enemy's MP with bonus 138 M. Atk. Power.
-		level 6: Burns the enemy's MP with bonus 143 M. Atk. Power.
-		level 7: Burns the enemy's MP with bonus 148 M. Atk. Power.
-		level 8: Burns the enemy's MP with bonus 153 M. Atk. Power.
-		level 9: Burns the enemy's MP with bonus 157 M. Atk. Power.
-		level 10: Burns the enemy's MP with bonus 162 M. Atk. Power.
-	 -->
+            level 1: Burns the enemy's MP with bonus 117 M. Atk. Power.
+            level 2: Burns the enemy's MP with bonus 123 M. Atk. Power.
+            level 3: Burns the enemy's MP with bonus 128 M. Atk. Power.
+            level 4: Burns the enemy's MP with bonus 133 M. Atk. Power.
+            level 5: Burns the enemy's MP with bonus 138 M. Atk. Power.
+            level 6: Burns the enemy's MP with bonus 143 M. Atk. Power.
+            level 7: Burns the enemy's MP with bonus 148 M. Atk. Power.
+            level 8: Burns the enemy's MP with bonus 153 M. Atk. Power.
+            level 9: Burns the enemy's MP with bonus 157 M. Atk. Power.
+            level 10: Burns the enemy's MP with bonus 162 M. Atk. Power.
+         -->
         <icon initial="icon.skill1398"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="76">
@@ -3040,13 +2975,6 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <mana-init initial="16">
-                <value level="3">17</value>
-                <value level="4">18</value>
-                <value level="6">19</value>
-                <value level="8">20</value>
-                <value level="10">21</value>
-            </mana-init>
             <mana initial="77">
                 <value level="2">80</value>
                 <value level="3">83</value>

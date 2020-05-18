@@ -330,7 +330,7 @@
 	</item>
 
 	<item id="91136" name="Dandy's Golden Ball" type="SCROLL" icon="BranchIcon.icon.g_ev_goldenball">
-	<!-- Golden Ball gifted by Dandy that crossed dimensions. Double-click to increase 1-hour XP and SP 100% and recharge Sayha's Grace max. Flanchard changes to appearance of Dinos Uniform. -->
+	<!-- Golden Ball gifted by Dandy that crossed dimensions. Double-click to increase 1-hour XP and SP 100% and recharge Sayha's Grace max. Flanchard changes to appearance of NC Dinos Uniform. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
@@ -535,7 +535,7 @@
 	</armor>
 
 	<weapon id="91162" name="Golden Pom Poms" type="DUAL" body-part="TWO_HAND" icon="icon.ev_14th_weapon">
-	<!-- Tool to cheer you on in celebration of 15th anniversary. If you cherish dreams, one day they will come true. Can use Firework Skill when equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account using Dimensional Merchant. -->
+	<!-- Tool to cheer you on in celebration of Lineage 2's 15th anniversary. If you cherish dreams, one day they will come true. Can use Firework Skill when equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account using Dimensional Merchant. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />

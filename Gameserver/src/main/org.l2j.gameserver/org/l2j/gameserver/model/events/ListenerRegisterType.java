@@ -8,6 +8,7 @@ public enum ListenerRegisterType {
     ZONE,
     ITEM,
     CASTLE,
+    FORTRESS,
     OLYMPIAD,
     INSTANCE,
     GLOBAL,

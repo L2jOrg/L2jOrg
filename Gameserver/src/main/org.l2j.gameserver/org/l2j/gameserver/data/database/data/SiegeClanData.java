@@ -1,8 +1,8 @@
 package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
-import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.commons.database.annotation.Transient;
 import org.l2j.gameserver.enums.SiegeClanType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.SiegeFlag;
@@ -18,7 +18,7 @@ import static java.util.Objects.isNull;
 @Table("siege_clans")
 public class SiegeClanData {
 
-    @NonUpdatable
+    @Transient
     private final Set<Npc> flags = ConcurrentHashMap.newKeySet();
 
     @Column("castle_id")

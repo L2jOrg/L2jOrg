@@ -42,7 +42,7 @@ public final class AuctionDateGenerator {
     public AuctionDateGenerator(StatsSet config) throws IllegalArgumentException {
         _calendar = Calendar.getInstance();
         _interval = config.getInt(FIELD_INTERVAL, -1);
-        // week start in Monday.
+        // NC week start in Monday.
         final int fixedDayWeek = config.getInt(FIELD_DAY_OF_WEEK, -1) + 1;
         _day_of_week = (fixedDayWeek > 7) ? 1 : fixedDayWeek;
         _hour_of_day = config.getInt(FIELD_HOUR_OF_DAY, -1);

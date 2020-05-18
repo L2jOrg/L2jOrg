@@ -7,7 +7,6 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.EffectList;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -22,17 +21,15 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.l2j.commons.util.Util.falseIfNullOrElse;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 public class CreatureStats {
-    private final Creature creature;
+    private final Creature _activeChar;
     private final Map<Stat, Double> statsAdd = new EnumMap<>(Stat.class);
-    private final Map<Stat, Double> statsMul = new EnumMap<>(Stat.class);
+    private final Map<Stat, Double> _statsMul = new EnumMap<>(Stat.class);
     private final Map<Stat, Map<MoveType, Double>> _moveTypeStats = new ConcurrentHashMap<>();
     private final Map<SkillType, Double> reuseStat = Collections.synchronizedMap(new EnumMap<>(SkillType.class));
     private final Map<SkillType, Double> mpConsumeStat = Collections.synchronizedMap(new EnumMap<>(SkillType.class));
@@ -64,7 +61,7 @@ public class CreatureStats {
     private double _mAttackSpeedMultiplier = 1;
 
     public CreatureStats(Creature activeChar) {
-        creature = activeChar;
+        _activeChar = activeChar;
         for (int i = 0; i < TraitType.values().length; i++)
         {
             _attackTraitValues[i] = 1;
@@ -87,7 +84,7 @@ public class CreatureStats {
     }
 
     public Creature getCreature() {
-        return creature;
+        return _activeChar;
     }
 
     /**
@@ -176,7 +173,7 @@ public class CreatureStats {
             return (int) getValue(Stat.MAGIC_ATTACK_RANGE, skill.getCastRange());
         }
 
-        return creature.getTemplate().getBaseAttackRange();
+        return _activeChar.getTemplate().getBaseAttackRange();
     }
 
     public int getMaxCp() {
@@ -245,10 +242,10 @@ public class CreatureStats {
 
     public double getMovementSpeedMultiplier() {
         double baseSpeed;
-        if (creature.isInsideZone(ZoneType.WATER)) {
-            baseSpeed = creature.getTemplate().getBaseValue(creature.isRunning() ? Stat.SWIM_RUN_SPEED : Stat.SWIM_WALK_SPEED, 1);
+        if (_activeChar.isInsideZone(ZoneType.WATER)) {
+            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stat.SWIM_RUN_SPEED : Stat.SWIM_WALK_SPEED, 1);
         } else {
-            baseSpeed = creature.getTemplate().getBaseValue(creature.isRunning() ? Stat.RUN_SPEED : Stat.WALK_SPEED, 1);
+            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stat.RUN_SPEED : Stat.WALK_SPEED, 1);
         }
         return getMoveSpeed() * (1. / baseSpeed);
     }
@@ -257,14 +254,14 @@ public class CreatureStats {
      * @return the RunSpeed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
      */
     public double getRunSpeed() {
-        return getValue(creature.isInsideZone(ZoneType.WATER) ? Stat.SWIM_RUN_SPEED : Stat.RUN_SPEED);
+        return getValue(_activeChar.isInsideZone(ZoneType.WATER) ? Stat.SWIM_RUN_SPEED : Stat.RUN_SPEED);
     }
 
     /**
      * @return the WalkSpeed (base+modifier) of the Creature.
      */
     public double getWalkSpeed() {
-        return getValue(creature.isInsideZone(ZoneType.WATER) ? Stat.SWIM_WALK_SPEED : Stat.WALK_SPEED);
+        return getValue(_activeChar.isInsideZone(ZoneType.WATER) ? Stat.SWIM_WALK_SPEED : Stat.WALK_SPEED);
     }
 
     /**
@@ -285,10 +282,10 @@ public class CreatureStats {
      * @return the RunSpeed (base+modifier) or WalkSpeed (base+modifier) of the Creature in function of the movement type.
      */
     public double getMoveSpeed() {
-        if (creature.isInsideZone(ZoneType.WATER)) {
-            return creature.isRunning() ? getSwimRunSpeed() : getSwimWalkSpeed();
+        if (_activeChar.isInsideZone(ZoneType.WATER)) {
+            return _activeChar.isRunning() ? getSwimRunSpeed() : getSwimWalkSpeed();
         }
-        return creature.isRunning() ? getRunSpeed() : getWalkSpeed();
+        return _activeChar.isRunning() ? getRunSpeed() : getWalkSpeed();
     }
 
     /**
@@ -374,8 +371,8 @@ public class CreatureStats {
         double mpConsume = skill.getMpConsume();
         final double nextDanceMpCost = Math.ceil(skill.getMpConsume() / 2.);
         if (skill.isDance()) {
-            if (Config.DANCE_CONSUME_ADDITIONAL_MP && (creature != null) && (creature.getDanceCount() > 0)) {
-                mpConsume += creature.getDanceCount() * nextDanceMpCost;
+            if (Config.DANCE_CONSUME_ADDITIONAL_MP && (_activeChar != null) && (_activeChar.getDanceCount() > 0)) {
+                mpConsume += _activeChar.getDanceCount() * nextDanceMpCost;
             }
         }
 
@@ -395,7 +392,7 @@ public class CreatureStats {
     }
 
     public AttributeType getAttackElement() {
-        final Item weaponInstance = creature.getActiveWeaponInstance();
+        final Item weaponInstance = _activeChar.getActiveWeaponInstance();
         // 1st order - weapon element
         if ((weaponInstance != null) && (weaponInstance.getAttackAttributeType() != AttributeType.NONE)) {
             return weaponInstance.getAttackAttributeType();
@@ -663,7 +660,7 @@ public class CreatureStats {
      * @param val
      */
     public void mergeMul(Stat stat, double val) {
-        statsMul.merge(stat, val, stat::functionMul);
+        _statsMul.merge(stat, val, stat::functionMul);
     }
 
     /**
@@ -704,10 +701,7 @@ public class CreatureStats {
     public double getMul(Stat stat, double defaultValue) {
         _lock.readLock().lock();
         try {
-            if(statsMul.containsKey(stat)) {
-                return statsMul.get(stat) / 100 + 1;
-            }
-            return defaultValue;
+            return _statsMul.getOrDefault(stat, defaultValue);
         } finally {
             _lock.readLock().unlock();
         }
@@ -720,7 +714,7 @@ public class CreatureStats {
      */
     public double getValue(Stat stat, double baseValue) {
         final Double fixedValue = _fixedValue.get(stat);
-        return fixedValue != null ? fixedValue : stat.finalize(creature, Optional.of(baseValue));
+        return fixedValue != null ? fixedValue : stat.finalize(_activeChar, Optional.of(baseValue));
     }
 
     /**
@@ -729,13 +723,23 @@ public class CreatureStats {
      */
     public double getValue(Stat stat) {
         final Double fixedValue = _fixedValue.get(stat);
-        return fixedValue != null ? fixedValue : stat.finalize(creature, Optional.empty());
+        return fixedValue != null ? fixedValue : stat.finalize(_activeChar, Optional.empty());
     }
 
     protected void resetStats() {
         statsAdd.clear();
-        statsMul.clear();
+        _statsMul.clear();
         _vampiricSum = 0;
+
+        // Initialize default values
+        for (Stat stat : Stat.values()) {
+            if (stat.getResetAddValue() != null) {
+                statsAdd.put(stat, stat.getResetAddValue());
+            }
+            if (stat.getResetMulValue() != null) {
+                _statsMul.put(stat, stat.getResetMulValue());
+            }
+        }
     }
 
     /**
@@ -745,8 +749,8 @@ public class CreatureStats {
      */
     public final void recalculateStats(boolean broadcast) {
         // Copy old data before wiping it out
-        final Map<Stat, Double> oldAdds = !broadcast ? Collections.emptyMap() : new EnumMap<>(statsAdd);
-        final Map<Stat, Double> oldMuls = !broadcast ? Collections.emptyMap() : new EnumMap<>(statsMul);
+        final Map<Stat, Double> adds = !broadcast ? Collections.emptyMap() : new EnumMap<>(statsAdd);
+        final Map<Stat, Double> muls = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsMul);
 
         _lock.writeLock().lock();
         try {
@@ -754,64 +758,70 @@ public class CreatureStats {
             resetStats();
 
             // Collect all necessary effects
-            final EffectList effectList = creature.getEffectList();
-            final Stream<BuffInfo> passives = effectList.getPassives().stream().filter(BuffInfo::isInUse).filter(info -> info.getSkill().checkConditions(SkillConditionScope.PASSIVE, creature, creature));
+            final EffectList effectList = _activeChar.getEffectList();
+            final Stream<BuffInfo> passives = effectList.getPassives().stream().filter(BuffInfo::isInUse).filter(info -> info.getSkill().checkConditions(SkillConditionScope.PASSIVE, _activeChar, _activeChar));
             final Stream<BuffInfo> options = effectList.getOptions().stream().filter(BuffInfo::isInUse);
             final Stream<BuffInfo> effectsStream = Stream.concat(effectList.getEffects().stream().filter(BuffInfo::isInUse), Stream.concat(passives, options));
 
             // Call pump to each effect
             //@formatter:off
             effectsStream.forEach(info -> info.getEffects().stream()
-                    .filter(effect -> canActivate(info, effect))
+                    .filter(effect -> effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
+                    .filter(effect -> effect.canPump(info.getEffector(), info.getEffected(), info.getSkill()))
                     .forEach(effect -> effect.pump(info.getEffected(), info.getSkill())));
             //@formatter:on
 
-            if (isSummon(creature) && falseIfNullOrElse(creature.getActingPlayer(), player -> player.hasAbnormalType(AbnormalType.ABILITY_CHANGE))) {
+            if (isSummon(_activeChar) && (_activeChar.getActingPlayer() != null) && _activeChar.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
                 //@formatter:off
-                creature.getActingPlayer().getEffectList().getEffects().stream().filter(BuffInfo::isInUse)
+                _activeChar.getActingPlayer().getEffectList().getEffects().stream()
+                        .filter(BuffInfo::isInUse)
                         .filter(info -> info.isAbnormalType(AbnormalType.ABILITY_CHANGE))
                         .forEach(info -> info.getEffects().stream()
-                                .filter(effect -> canActivate(info, effect))
-                                .forEach(effect -> effect.pump(creature, info.getSkill())));
+                                .filter(effect -> effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
+                                .filter(effect -> effect.canPump(_activeChar, _activeChar, info.getSkill()))
+                                .forEach(effect -> effect.pump(_activeChar, info.getSkill())));
                 //@formatter:on
             }
 
             // Merge with additional stats
-            _additionalAdd.stream().filter(holder -> holder.verifyCondition(creature)).forEach(holder -> mergeAdd(holder.getStat(), holder.getValue()));
-            _additionalMul.stream().filter(holder -> holder.verifyCondition(creature)).forEach(holder -> mergeMul(holder.getStat(), holder.getValue()));
+            _additionalAdd.stream().filter(holder -> holder.verifyCondition(_activeChar)).forEach(holder -> mergeAdd(holder.getStat(), holder.getValue()));
+            _additionalMul.stream().filter(holder -> holder.verifyCondition(_activeChar)).forEach(holder -> mergeMul(holder.getStat(), holder.getValue()));
 
-            _attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(creature);
-            _mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(creature);
+            _attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(_activeChar);
+            _mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(_activeChar);
         } finally {
             _lock.writeLock().unlock();
         }
 
+        // Notify recalculation to child classes
         onRecalculateStats(broadcast);
 
         if (broadcast) {
-            final var modified = Stat.stream().filter(stat -> isStatChanged(oldAdds, oldMuls, stat)).collect(Collectors.toSet());
-            creature.broadcastModifiedStats(modified);
+            // Calculate the difference between old and new stats
+            final Set<Stat> changed = new HashSet<>();
+            for (Stat stat : Stat.values()) {
+                Double value;
+                if ( ( value = statsAdd.getOrDefault(stat, stat.getResetAddValue()) ) != null && !value.equals(adds.getOrDefault(stat, stat.getResetAddValue()))) {
+                    changed.add(stat);
+                } else if ( (value = _statsMul.getOrDefault(stat, stat.getResetMulValue())) != null && !value.equals(muls.getOrDefault(stat, stat.getResetMulValue()))) {
+                    changed.add(stat);
+                }
+            }
+
+            _activeChar.broadcastModifiedStats(changed);
         }
-    }
-
-    protected boolean isStatChanged(Map<Stat, Double> oldAdds, Map<Stat, Double> oldMuls, Stat stat) {
-        return !( Objects.equals( statsAdd.get(stat), oldAdds.get(stat) ) && Objects.equals( statsMul.get(stat), oldMuls.get(stat) ));
-    }
-
-    private boolean canActivate(BuffInfo info, AbstractEffect effect) {
-        return effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()) && effect.canPump(info.getEffector(), info.getEffected(), info.getSkill());
     }
 
     protected void onRecalculateStats(boolean broadcast) {
         // Check if Max HP/MP/CP is lower than current due to new stats.
-        if (creature.getCurrentCp() > getMaxCp()) {
-            creature.setCurrentCp(getMaxCp());
+        if (_activeChar.getCurrentCp() > getMaxCp()) {
+            _activeChar.setCurrentCp(getMaxCp());
         }
-        if (creature.getCurrentHp() > getMaxHp()) {
-            creature.setCurrentHp(getMaxHp());
+        if (_activeChar.getCurrentHp() > getMaxHp()) {
+            _activeChar.setCurrentHp(getMaxHp());
         }
-        if (creature.getCurrentMp() > getMaxMp()) {
-            creature.setCurrentMp(getMaxMp());
+        if (_activeChar.getCurrentMp() > getMaxMp()) {
+            _activeChar.setCurrentMp(getMaxMp());
         }
     }
 

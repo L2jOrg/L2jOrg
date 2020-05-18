@@ -5,6 +5,7 @@
         <icon initial="icon.skill0274"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <hit-time initial="2500"/>
@@ -30,6 +31,7 @@
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
@@ -48,6 +50,7 @@
         <icon initial="icon.etc_leash_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -64,6 +67,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -73,6 +77,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -111,7 +116,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="6" stat="PHYSICAL_SKILL_POWER">
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="6">
                 <power initial="1">
                     <value level="7">2</value>
                     <value level="8">3</value>
@@ -157,7 +162,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="6" stat="MAGICAL_SKILL_POWER">
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" start-level="6">
                 <power initial="1">
                     <value level="7">2</value>
                     <value level="8">3</value>
@@ -174,6 +179,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -186,6 +192,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -198,6 +205,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -221,6 +229,7 @@
         <!-- The bright light fades. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -262,6 +271,7 @@
         <!-- none -->
         <icon initial="icon.card_event_blue_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -274,6 +284,7 @@
         <icon initial="BranchSys.icon.br_silver_box_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -297,8 +308,8 @@
     <skill id="55716" name="Letter Collector Spell" action="A2">
         <!-- Grants the power of the Letter Collector. For 1 hour Max. HP +5%%, Max. MP +5%%, Max. CP +5%%, Speed +10, P. Atk. +8%%, M. Atk. +10%%. -->
         <icon initial="icon.etc_candle_yellow_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" block-action-skill="true">
-            <effect-point initial="1"/>
+        <attributes property="PHYSIC" blocked-on-olympiad="true" irreplacable="true" block-action-skill="true">
+            <reuse initial="3600000"/>
         </attributes>
         <target/>
         <abnormal type="BR_EVENT_BUF1">
@@ -330,6 +341,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -343,10 +355,10 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_D">
-            <level initial="1"/>
-            <time initial="-1"/>
-        </abnormal>
+		 <abnormal type="EXP_SP_D">
+			 <level initial="1"/>
+             <time initial="-1"/>
+         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="50.0"/>
@@ -372,6 +384,8 @@
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
         <attributes property="PHYSIC" blocked-on-olympiad="true" auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="7200000"/>
             <effect-range initial="1000"/>
         </attributes>
         <target scope="PARTY" object="FRIEND"/>
@@ -391,9 +405,11 @@
     <skill id="55721" name="Storm Power" action="A2">
         <!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
         <icon initial="icon.power_of_storm"/>
-        <attributes property="PHYSIC" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+        <attributes property="PHYSIC" blocked-on-olympiad="true" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <target scope="PARTY" object="FRIEND"/>
         <abnormal type="EXP_SP_I" visual="VP_UP">
@@ -417,6 +433,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -427,6 +444,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -437,6 +455,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -447,6 +466,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -457,6 +477,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -467,6 +488,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -477,6 +499,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -487,6 +510,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -497,6 +521,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -507,6 +532,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -517,6 +543,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -527,6 +554,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -537,6 +565,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -547,6 +576,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
@@ -634,10 +664,10 @@
                     <value level="20">5.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="5" stat="MAGICAL_DEFENCE">
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE" start-level="5">
                 <power initial="3"/>
             </stat-modify>
-            <trigger-skill-by-magic skill="55748" start-level="7" target="ENEMY">
+            <trigger-skill-by-magic skill="55748" target="ENEMY" start-level="7">
                 <power initial="1">
                     <value level="11">2</value>
                     <value level="15">3</value>
@@ -646,7 +676,7 @@
                 <chance initial="20"/>
                 <types>PHYSIC MAGIC</types>
             </trigger-skill-by-magic>
-            <trigger-skill-by-magic skill="55749" start-level="12" target="ENEMY">
+            <trigger-skill-by-magic skill="55749" target="ENEMY" start-level="12">
                 <power initial="1">
                     <value level="13">2</value>
                     <value level="14">3</value>
@@ -660,7 +690,7 @@
                 <chance initial="20"/>
                 <types>PHYSIC MAGIC</types>
             </trigger-skill-by-magic>
-            <stat-modify mode="PER" start-level="18" stat="DAMAGE_IMMOBILIZED">
+            <stat-modify mode="PER" stat="DAMAGE_IMMOBILIZED" start-level="18">
                 <power initial="10">
                     <value level="19">20</value>
                     <value level="20">30</value>
@@ -726,10 +756,10 @@
                     <value level="20">5.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="3" stat="MAGIC_ATTACK">
+            <stat-modify mode="PER" stat="MAGIC_ATTACK" start-level="3">
                 <power initial="3"/>
             </stat-modify>
-            <trigger-skill-by-magic skill="55750" start-level="7" target="SELF">
+            <trigger-skill-by-magic skill="55750" target="SELF" start-level="7">
                 <power initial="1">
                     <value level="8">2</value>
                     <value level="9">3</value>
@@ -746,7 +776,7 @@
                 <chance initial="20"/>
                 <types>MAGIC PHYSIC</types>
             </trigger-skill-by-magic>
-            <stat-modify mode="PER" start-level="12" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" start-level="12">
                 <power initial="1">
                     <value level="13">2</value>
                     <value level="14">3</value>
@@ -841,10 +871,10 @@
                     <value level="20">5.0</value>
                 </power>
             </stat-modify>
-            <stat-modify start-level="5" stat="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK" start-level="5">
                 <power initial="3"/>
             </stat-modify>
-            <trigger-skill-by-magic skill="55751" start-level="7" target="SELF">
+            <trigger-skill-by-magic skill="55751" target="SELF" start-level="7">
                 <power initial="1">
                     <value level="8">2</value>
                     <value level="9">3</value>
@@ -861,7 +891,7 @@
                 <chance initial="20"/>
                 <types>PHYSIC MAGIC</types>
             </trigger-skill-by-magic>
-            <stat-modify mode="PER" start-level="12" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" start-level="12">
                 <power initial="1">
                     <value level="13">2</value>
                     <value level="14">3</value>
@@ -896,14 +926,14 @@
             level 10: Damage Received -10%, Damage Received when Immobilized -11%. P. Def. +3%%.
             level 11: Damage Received -11%, Damage Received when Immobilized -13%. P. Def. +3%%.
             level 12: Damage Received -12%, Damage Received when Immobilized -15%, CP +10% when hit. P. Def. +3%%.
-            level 13: Damage Received -13%, Damage Received when Immobilized -17%, CP +15% when hit. P. Def. +3%%.
-            level 14: Damage Received -14%, Damage Received when Immobilized -18%, CP +20% when hit. P. Def. +3%%.
-            level 15: Damage Received -15%, Damage Received when Immobilized -20%, CP +25% when hit. P. Def. +3%%.
-            level 16: Damage Received -16%, Damage Received when Immobilized -22%, CP +30% when hit. P. Def. +3%%.
-            level 17: Damage Received -17%, Damage Received when Immobilized -24%, CP +35% when hit. P. Def. +3%%.
-            level 18: Damage Received -18%, Damage Received when Immobilized -26%, CP +40% when hit, P./ M. Attack +1800 for party members at certain rate when hit. P. Def. +3%%.
-            level 19: Damage Received -19%, Damage Received when Immobilized -28%, CP +45% when hit, P./ M. Attack +2700 for party members at certain rate when hit. P. Def. +3%%.
-            level 20: Damage Received -20%, Damage Received when Immobilized -30%, CP +50% when hit, P./ M. Attack +3600 for party members at certain rate when hit. P. Def. +3%%.
+            level 13: Damage Received -13%, Damage Received when Immobilized -17%, CP +10% when hit. P. Def. +3%%.
+            level 14: Damage Received -14%, Damage Received when Immobilized -18%, CP +10% when hit. P. Def. +3%%.
+            level 15: Damage Received -15%, Damage Received when Immobilized -20%, CP +10% when hit. P. Def. +3%%.
+            level 16: Damage Received -16%, Damage Received when Immobilized -22%, CP +10% when hit. P. Def. +3%%.
+            level 17: Damage Received -17%, Damage Received when Immobilized -24%, CP +10% when hit. P. Def. +3%%.
+            level 18: Damage Received -18%, Damage Received when Immobilized -26%, CP +10% when hit, P./ M. Attack +1800 for party members at certain rate when hit. P. Def. +3%%.
+            level 19: Damage Received -19%, Damage Received when Immobilized -28%, CP +10% when hit, P./ M. Attack +2700 for party members at certain rate when hit. P. Def. +3%%.
+            level 20: Damage Received -20%, Damage Received when Immobilized -30%, CP +10% when hit, P./ M. Attack +3600 for party members at certain rate when hit. P. Def. +3%%.
          -->
         <icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
@@ -933,10 +963,10 @@
                     <value level="20">-20.0</value>
                 </power>
             </damage-by-attack>
-            <stat-modify mode="PER" start-level="5" stat="PHYSICAL_DEFENCE">
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" start-level="5">
                 <power initial="3"/>
             </stat-modify>
-            <stat-modify mode="PER" start-level="7" stat="DAMAGE_TAKEN_IMMOBILIZED">
+            <stat-modify mode="PER" stat="DAMAGE_TAKEN_IMMOBILIZED" start-level="7">
                 <power initial="-5">
                     <value level="8">-7</value>
                     <value level="9">-9</value>
@@ -978,8 +1008,9 @@
     <skill id="55744" name="Blessing of Elmoreden" action="A2">
         <!-- Makes you invincible for 10 sec and increases Speed by 100. -->
         <icon initial="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true">
+        <attributes property="PHYSIC" magic-critical-rate="5" remove-on-action="true">
             <reuse initial="600000"/>
+            <cool-time initial="500"/>
             <effect-point initial="867"/>
             <hit-time initial="500"/>
         </attributes>
@@ -997,11 +1028,11 @@
         </effects>
     </skill>
     <skill id="55745" name="Spirit of Aden" action="A2">
-        <!-- For 5 minutes, PvE Damage increases by 5 minutes when dealing magic attack. -->
+        <!-- Increases PvE Damage by 100% when dealing magic attack. -->
         <icon initial="BranchIcon.icon.g_bm_aden_cloak_normal"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes property="PHYSIC" magic-critical-rate="5">
             <reuse initial="1200000"/>
-            <cool-time initial="300"/>
+            <cool-time initial="500"/>
             <effect-point initial="867"/>
             <hit-time initial="500"/>
         </attributes>
@@ -1017,11 +1048,11 @@
         </effects>
     </skill>
     <skill id="55746" name="Spirit of Elmore" action="A2">
-        <!-- For 5 minutes, PvE Damage increases by 5 minutes when dealing physical attack. -->
+        <!-- Increases PvE Damage by 100% when dealing physical attack. -->
         <icon initial="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes property="PHYSIC" magic-critical-rate="5">
             <reuse initial="1200000"/>
-            <cool-time initial="300"/>
+            <cool-time initial="500"/>
             <effect-point initial="867"/>
             <hit-time initial="500"/>
         </attributes>
@@ -1042,8 +1073,9 @@
     <skill id="55747" name="Blessing of Ferios" action="A2">
         <!-- Makes you invincible for 20 sec. -->
         <icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true">
+        <attributes property="PHYSIC" remove-on-action="true" magic-critical-rate="5">
             <reuse initial="600000"/>
+            <cool-time initial="500"/>
             <effect-point initial="867"/>
             <hit-time initial="500"/>
         </attributes>
@@ -1053,7 +1085,7 @@
             <time initial="20"/>
         </abnormal>
         <effects>
-            <damage-block block-hp="true" block-mp="true"/>
+            <damage-block block-mp="true" block-hp="true"/>
             <effect name="DebuffBlock"/>
         </effects>
     </skill>
@@ -1098,7 +1130,7 @@
             level 9: Decreases target's CP by 50%.
          -->
         <icon initial="icon.skill0049"/>
-        <attributes magic-critical-rate="5.0" triggered="true">
+        <attributes triggered="true" magic-critical-rate="5">
             <cast-range initial="600"/>
             <reuse initial="180000"/>
             <cool-time initial="500"/>
@@ -1139,8 +1171,9 @@
             level 12: For 2 min, PvE Damage +100% when dealing magic attacks.
          -->
         <icon initial="BranchIcon.icon.g_bm_aden_cloak_normal"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" triggered="true">
+        <attributes property="PHYSIC" triggered="true" magic-critical-rate="5">
             <reuse initial="600000"/>
+            <cool-time initial="500"/>
             <effect-point initial="867"/>
             <hit-time initial="500"/>
         </attributes>
@@ -1183,8 +1216,9 @@
             level 12: For 2 min, PvE Damage +100% when dealing physical attacks.
          -->
         <icon initial="icon.skill0917"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" triggered="true">
+        <attributes property="PHYSIC" triggered="true" magic-critical-rate="5">
             <reuse initial="600000"/>
+            <cool-time initial="500"/>
             <effect-point initial="867"/>
             <hit-time initial="500"/>
         </attributes>
@@ -1228,18 +1262,18 @@
     </skill>
     <skill id="55752" name="Recovery of Ferios" max-level="9" action="A1">
         <!--
-            level 1: CP +10%.
-            level 2: CP +15%.
-            level 3: CP +20%.
-            level 4: CP +25%.
-            level 5: CP +30%.
-            level 6: CP +35%.
-            level 7: CP +40%.
-            level 8: CP +45%.
-            level 9: CP +50%.
+            level 1: CP +30%.
+            level 2: CP +35%.
+            level 3: CP +40%.
+            level 4: CP +45%.
+            level 5: CP +50%.
+            level 6: CP +55%.
+            level 7: CP +60%.
+            level 8: CP +65%.
+            level 9: CP +70%.
          -->
         <icon initial="icon.etc_bm_jewel_tanzanite"/>
-        <attributes magic-critical-rate="5.0" triggered="true">
+        <attributes triggered="true" magic-critical-rate="5">
             <reuse initial="180000"/>
             <cool-time initial="500"/>
             <effect-point initial="867"/>
@@ -1269,17 +1303,18 @@
          -->
         <icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
         <attributes property="PHYSIC" triggered="true">
+            <cast-range initial="1200"/>
             <reuse initial="600000"/>
             <cool-time initial="500"/>
             <effect-point initial="689"/>
             <effect-range initial="1400"/>
             <hit-time initial="300"/>
+            <activate-rate initial="-1"/>
         </attributes>
         <target scope="PARTY" object="FRIEND" range="1400"/>
         <abnormal type="SUB_TRIGGER_DEFENCE" visual="ULTIMATE_DEFENCE">
             <level initial="1"/>
             <time initial="20"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE">
@@ -1308,7 +1343,7 @@
             level 8: CP +70%.
          -->
         <icon initial="icon.skill0049"/>
-        <attributes magic-critical-rate="5.0" triggered="true">
+        <attributes triggered="true" magic-critical-rate="5">
             <reuse initial="120000"/>
             <cool-time initial="500"/>
             <effect-point initial="689"/>

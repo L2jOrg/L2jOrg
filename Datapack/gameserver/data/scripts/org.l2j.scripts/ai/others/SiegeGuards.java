@@ -8,15 +8,14 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.item.type.WeaponType;
-import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
-
-import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
 /**
  * @author Mobius
@@ -113,7 +112,9 @@ public class SiegeGuards extends AbstractNpcAI
         {
             npc.setIsImmobilized(true);
         }
-        npc.setScriptValue(zeroIfNullOrElse(npc.getCastle(), AbstractResidence::getId));
+        final Castle castle = npc.getCastle();
+        final Fort fortress = npc.getFort();
+        npc.setScriptValue(fortress != null ? fortress.getId() : (castle != null ? castle.getId() : 0));
         SPAWNED_GUARDS.add(npc);
         return super.onSpawn(npc);
     }

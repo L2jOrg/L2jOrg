@@ -4,6 +4,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -14,38 +15,36 @@
         <!-- Increases number of Unoccupied Teleport Devices by 1. -->
         <icon initial="icon.bookmark_book_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39302" name="Baium Doll's Spell" max-level="3">
+    <skill id="39302" name="Baium's Doll Spell" max-level="2">
         <!--
-            level 1: Effect for having Baium Doll.\n\nSkill Cooldown -3%\nP. Def. ++12%\nM. Def. ++12%\nMental Attack Resistance ++40%\nParalysis Resistance ++20%\nKnock Down Resistance ++20%\nPull Resistance ++20%
-            level 2: Effect for having Baium Doll.\n\nSkill Cooldown -4%\nP. Def. ++15%\nM. Def. ++15%\nMental Attack Resistance ++45%\nParalysis Resistance ++25%\nKnock Down Resistance ++25%\nPull Resistance ++25%
-            level 3: Effect for having Baium Doll.\n\nSkill Cooldown -5%\nP. Def. ++20%\nM. Def. ++20%\nMental Attack Resistance ++50%\nParalysis Resistance ++30%\nKnock Down Resistance ++30%\nPull Resistance ++30%
+            level 1: MEN Resistance +40%, Paralysis/Knock Down/Pull Resistance +20%, P. Def./M. Def +12%, and Skill Cooldown -3%.
+            level 2: MEN Resistance +45%, Paralysis/Knock Down/Pull Resistance +25%, P. Def./M. Def +15%, and Skill Cooldown -4%.
          -->
         <icon initial="icon.bm_baium_doll_30d"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>
-    <skill id="39303" name="Queen Ant's Doll Spell" max-level="3">
+    <skill id="39303" name="Queen Ant's Doll Spell" max-level="2">
         <!--
-            level 1: Effect for having Queen Ant Doll.\n\nP. Atk. ++8%\nP. Critical Damage ++8%\nMax HP ++12%.
-            level 2: Effect for having Queen Ant Doll.\n\nP. Atk. ++12%\nP. Critical Damage ++10%\nMax HP ++15%.
-            level 3: Effect for having Queen Ant Doll.\n\nP. Atk. ++15%\nP. Critical Damage ++13%\nMax HP ++20%.
+            level 1: P. Atk. +8%, P. Critical Damage +8%, and Max HP +12%.
+            level 2: P. Atk. +12%, P. Critical Damage +10%, and Max HP +15%.
          -->
         <icon initial="icon.bm_queen_ant_doll_30d"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
     </skill>
-    <skill id="39304" name="Orfen Doll's Spell" max-level="3">
+    <skill id="39304" name="Orfen's Doll Spell" max-level="2">
         <!--
-            level 1: Effect for having Orfen Doll.\n\nM. Atk. ++8%\nM. Critical Damage ++8%\nMax MP ++12%.
-            level 2: Effect for having Orfen Doll.\n\nM. Atk. ++15%\nM. Critical Damage ++10%\nMax MP ++15%.
-            level 3: Effect for having Orfen Doll.\n\nM. Atk. ++20%\nM. Critical Damage ++15%\nMax MP ++20%.
+            level 1: M. Atk. +8%, M. Critical Damage +8%, and Max MP +12%.
+            level 2: M. Atk. +15%, M. Critical Damage +10%, and Max MP +15%.
          -->
         <icon initial="icon.bm_orfen_doll_30d"/>
         <attributes property="MAGIC">
@@ -60,6 +59,7 @@
          -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -71,10 +71,12 @@
         <!-- Transformed into a White Assassin. For 20 minutes, Max HP/Max MP +7%%, P. Accuracy/M. Accuracy +2, P. Atk./M. Atk. +3%%, P. Def./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, and Movement Speed +5. Effect remains even after death. -->
         <icon initial="icon.scroll_of_verification_i06"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-        </attributes>
+            <activate-rate initial="-1"/>
+        </attributes>      
         <target/>
         <abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
             <level initial="1"/>
@@ -128,6 +130,7 @@
         <!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
         <icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -138,7 +141,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+        <abnormal> <!-- EXP_SP_G -->
             <level initial="2"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -150,11 +153,11 @@
             <vital-stat-modify mode="PER" stat="MAX_MP">
                 <power initial="5.0"/>
             </vital-stat-modify>
-            <defence-trait>
+			<defence-trait>               
                 <trait type="PARALYZE">
                     <power initial="15"/>
                 </trait>
-                <trait type="DERANGEMENT">
+				<trait type="DERANGEMENT">
                     <power initial="15"/>
                 </trait>
             </defence-trait>
@@ -170,6 +173,7 @@
         <!-- To Enchant Hair Accessory. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -179,6 +183,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -191,6 +196,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -318,6 +324,7 @@
         <!-- HP Recovery +5000, MP Recovery +2000, CP Recovery +3000. -->
         <icon initial="icon.skill10106"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -329,6 +336,7 @@
         <!-- For 2 minutes, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed +8. -->
         <icon initial="icon.skill10106"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -341,6 +349,7 @@
         <!-- For 10 sec., becomes invincible. The effect disappears when character attacks. -->
         <icon initial="icon.skill10106"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -353,6 +362,7 @@
         <!-- For 10 sec., makes you immune to all debuffs. -->
         <icon initial="icon.skill10106"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -365,6 +375,7 @@
         <!-- For 10 seconds, P. Def. +3000 and M. Def. +2100. -->
         <icon initial="icon.skill10106"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -421,6 +432,7 @@
         <!-- For 5 minutes, PvE Damage +10%%. -->
         <icon initial="icon.skill10106"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -433,6 +445,7 @@
         <!-- For 5 minutes, a party member's HP Recovery Bonus/MP Recovery Bonus +20%%, P. Accuracy +4, P. Evasion +4, P. Atk./M. Atk. +15%%, Atk. Spd./Casting Spd. +10%%, P. Critical/M. Critical Rate +15%%, and P. Critical Damage/M. Critical Damage +15%%. -->
         <icon initial="icon.Accessary_middle_ages_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="669"/>
             <effect-range initial="-1"/>
@@ -445,6 +458,7 @@
         <!-- Restores 20%% HP of all party members. Max HP +20%%, M. Critical Rate +2, P. Critical Damage +20%%, P. Atk. +10%%, P. Def. +20%%, Atk. Spd. +20%%, M. Atk. +20%%, M. Def. +20%%, Casting Spd. +20%%, Debuff Resistance +10%%, P. Accuracy +4, and Movement Speed -20%% for 5 minutes with the help of a great spirit. -->
         <icon initial="icon.Accessary_middle_ages_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="669"/>
             <effect-range initial="-1"/>
@@ -824,6 +838,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -836,6 +851,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -852,6 +868,7 @@
          -->
         <icon initial="icon.fishing_zone_ticket"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -863,6 +880,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -875,6 +893,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -887,6 +906,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -899,6 +919,7 @@
         <!-- Can only be used on fishing weapons. The item is not destroyed and will retain the current enchant value even if enchantment fails. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -908,6 +929,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -917,6 +939,7 @@
         <!-- Transformed into a Teddy Bear. Max HP/Max MP +20%% and Hunting XP/SP Gain +20%% during Sayha's Grace. Effect remains even after death. -->
         <icon initial="icon.gomdori_chest_change"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -929,6 +952,7 @@
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -985,6 +1009,7 @@
         <!-- Transformed into a White Knight. For 15 minutes, Max HP/Max MP +10%%, Stun/Paralysis/MEN Resistance +5%%, PvE P. Atk. +5%%, and Received Damage -5%%. Does not disappear at death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>

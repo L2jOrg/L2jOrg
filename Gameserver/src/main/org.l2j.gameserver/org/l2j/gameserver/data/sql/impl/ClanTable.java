@@ -8,6 +8,8 @@ import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
+import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
@@ -15,6 +17,8 @@ import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.model.entity.Fort;
+import org.l2j.gameserver.model.entity.FortSiege;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanCreate;
@@ -175,6 +179,13 @@ public class ClanTable {
             }
         }
 
+        final int fortId = clan.getFortId();
+        if (fortId == 0) {
+            for (FortSiege siege : FortSiegeManager.getInstance().getSieges()) {
+                siege.removeAttacker(clan);
+            }
+        }
+
         final ClanHall hall = ClanHallManager.getInstance().getClanHallByClan(clan);
         if (hall != null) {
             hall.setOwner(null);
@@ -196,6 +207,16 @@ public class ClanTable {
         IdFactory.getInstance().releaseId(clanId);
         getDAO(ClanDAO.class).deleteClan(clanId);
         CrestTable.getInstance().removeCrests(clan);
+
+        if (fortId != 0) {
+            final Fort fort = FortDataManager.getInstance().getFortById(fortId);
+            if (fort != null) {
+                final Clan owner = fort.getOwnerClan();
+                if (clan == owner) {
+                    fort.removeOwner(true);
+                }
+            }
+        }
 
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanDestroy(leaderMember, clan));

@@ -1,11 +1,11 @@
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ReduceDropType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 
 /**
@@ -38,8 +38,8 @@ public class ReduceDropPenalty extends AbstractEffect {
     }
 
     private void reduce(Creature effected, Stat statExp, Stat statPenalty) {
-        effected.getStats().mergeMul(statExp, exp);
-        effected.getStats().mergeMul(statPenalty, deathPenalty);
+        effected.getStats().mergeMul(statExp, (exp / 100) + 1);
+        effected.getStats().mergeMul(statPenalty, (deathPenalty / 100) + 1);
     }
 
     public static class Factory implements SkillEffectFactory {

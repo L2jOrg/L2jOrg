@@ -130,6 +130,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-300">
@@ -256,6 +257,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-1000"/>
             <effect-range initial="-1"/>
@@ -268,6 +270,7 @@
         <!-- Damage + 20%% toward normal monsters. -->
         <icon initial="icon.skill6367_1"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="650"/>
             <effect-range initial="-1"/>
@@ -283,6 +286,7 @@
         <!-- Damage + 30%% toward normal monsters. -->
         <icon initial="icon.skill6367_2"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="650"/>
             <effect-range initial="-1"/>
@@ -425,6 +429,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
@@ -532,6 +537,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <cool-time initial="800"/>
             <effect-point initial="-1000"/>
@@ -548,6 +554,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <cool-time initial="800"/>
             <effect-point initial="-1000"/>
@@ -564,6 +571,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="800"/>
             <effect-point initial="-1000"/>
@@ -580,6 +588,7 @@
         <!-- Researching the Heroes' Power. -->
         <icon initial="icon.etc_deco_star_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -592,6 +601,7 @@
         <!-- Hero's powers give you x  2 the rewards. Disappears upon death or expiration. -->
         <icon initial="icon.etc_deco_star_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -604,6 +614,7 @@
         <!-- Hero's powers give you x  4 the rewards. Disappears upon death or expiration. -->
         <icon initial="icon.etc_deco_star_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -616,6 +627,7 @@
         <!-- Hero's powers give you x  8 the rewards. Disappears upon death or expiration. -->
         <icon initial="icon.etc_deco_star_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -628,6 +640,7 @@
         <!-- Hero's powers give you x  16 the rewards. Disappears upon death or expiration. -->
         <icon initial="icon.etc_deco_star_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -640,6 +653,7 @@
         <!-- Hero's powers give you x  32 the rewards. Disappears upon death or expiration. -->
         <icon initial="icon.etc_deco_star_i00"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -863,6 +877,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="800"/>
             <effect-point initial="-1000"/>
@@ -935,6 +950,7 @@
         <!-- Deals powerful fire damage to nearby enemies. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="800"/>
             <effect-point initial="-1500"/>
@@ -951,6 +967,7 @@
         <!-- Powerful flames burn off HP. -->
         <icon initial="icon.skill1101"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <cool-time initial="800"/>
             <effect-point initial="-100"/>
@@ -967,6 +984,7 @@
         <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <cool-time initial="800"/>
             <effect-point initial="-100"/>
@@ -983,6 +1001,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <cool-time initial="800"/>
             <effect-point initial="-1500"/>
@@ -999,6 +1018,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <cool-time initial="800"/>
             <effect-point initial="-1500"/>
@@ -1032,6 +1052,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <cool-time initial="800"/>
             <effect-point initial="-1500"/>
@@ -1052,6 +1073,7 @@
          -->
         <icon initial="icon.skill0078"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="5000">
                 <value level="2">120000</value>
             </reuse>
@@ -1099,6 +1121,7 @@
     <skill id="16171" name="Summon Poison Zone" debuff="true" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-707"/>
             <effect-range initial="-1"/>
@@ -1114,6 +1137,7 @@
         <!-- HP drops by 75 per second due to a poisonous fog. -->
         <icon initial="icon.skill1167"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="-707"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1127,6 +1151,7 @@
         <!-- Invincible. -->
         <icon initial="icon.skill1418"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1136,6 +1161,7 @@
         <!-- Hellbound's mysterious powers give you 10 min of SP/XP gain + 50%% through hunting. Entire party. -->
         <icon initial="BranchSys2.icon.g_giant_gem"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -1206,6 +1232,7 @@
         <!-- Cast Petrify on an enemy that has used a skill. -->
         <icon initial="icon.skill1062"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="5000"/>

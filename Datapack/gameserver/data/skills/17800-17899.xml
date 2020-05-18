@@ -9,6 +9,7 @@
          -->
         <icon initial="icon.etc_bm_jewel_ruby_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -19,6 +20,7 @@
          -->
         <icon initial="icon.etc_bm_jewel_ruby_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -29,6 +31,7 @@
          -->
         <icon initial="icon.etc_bm_jewel_ruby_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -49,6 +52,7 @@
             <value level="3">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -61,6 +65,7 @@
          -->
         <icon initial="icon.etc_bm_jewel_sapphire_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -68,6 +73,7 @@
         <!-- Spiritshot damage +5%. -->
         <icon initial="icon.etc_bm_jewel_sapphire_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -75,6 +81,7 @@
         <!-- Spiritshot damage +8%. -->
         <icon initial="icon.etc_bm_jewel_sapphire_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -90,6 +97,7 @@
             <value level="3">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -114,6 +122,7 @@
             <value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
         </icon>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -124,6 +133,7 @@
         <!-- Recovers 10%% MP upon using a skill. -->
         <icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -137,6 +147,7 @@
          -->
         <icon initial="icon.etc_bm_jewel_ruby_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -146,14 +157,16 @@
         <!-- Beast Soulshot damage +5% -->
         <icon initial="icon.etc_bm_jewel_ruby_i00"/>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="17890" name="Ruby" action="A1">
         <!-- Beast Soulshot damage +8% -->
         <icon initial="icon.etc_bm_jewel_ruby_i00"/>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="17891" name="Ruby" max-level="5" action="A1">
@@ -168,7 +181,8 @@
             <value level="2">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="17896" name="Aquamarine - Mana Drain">

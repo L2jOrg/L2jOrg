@@ -55,6 +55,7 @@
         <!-- Recharge possible. -->
         <icon initial="icon.skill0005"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="25000"/>
@@ -132,6 +133,7 @@
         <!-- Powerful attack on nearby enemies. -->
         <icon initial="icon.skill0922"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -156,6 +158,7 @@
         <!-- Powerful attack on nearby enemies. -->
         <icon initial="icon.skill0922"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -180,6 +183,7 @@
         <!-- Stuns for 2 seconds. -->
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-167"/>
             <effect-range initial="-1"/>
@@ -209,6 +213,7 @@
         <!-- Decreases M. Def. by 20%. -->
         <icon initial="icon.skill1422"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -221,6 +226,7 @@
         <!-- P. Atk./ M. Atk. + 10%. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -331,6 +337,7 @@
         <!-- Monster Heal. -->
         <icon initial="icon.skill1401"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="403"/>
             <effect-range initial="-1"/>
@@ -436,6 +443,7 @@
         <!-- You are in the Dimensional Space. You can either restart the game or go through Mermoden in the village to return. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -453,6 +461,7 @@
         <!-- In Fear. -->
         <icon initial="icon.skill1169"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="-240"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -464,6 +473,7 @@
         <!-- Antharas' rage has reached its limit, distorting even the very land Antharas is standing on. -->
         <icon initial="icon.skill5086"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -473,6 +483,7 @@
         <!-- Valakas' rage has reached its limit, distorting even the very land Valakas is standing on. -->
         <icon initial="icon.skill5086"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -482,6 +493,7 @@
         <!-- The GM is always by your side. Increases P. Atk. toward monsters by 100%% for 5 minutes. -->
         <icon initial="icon.skill5661"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -493,6 +505,7 @@
         <!-- The GM is always by your side. Becomes invincible for 5 minutes. -->
         <icon initial="icon.skill5662"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
@@ -530,6 +543,7 @@
         <!-- Powerful attack on nearby enemies. -->
         <icon initial="icon.skill0922"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -542,6 +556,7 @@
         <!-- Powerful attack on nearby enemies. -->
         <icon initial="icon.skill0922"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -554,6 +569,7 @@
         <!-- Stuns for 2 sec. -->
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-167"/>
             <effect-range initial="-1"/>
@@ -579,6 +595,7 @@
         <!-- M. Def. -20%%. -->
         <icon initial="icon.skill1422"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
             <effect-range initial="-1"/>
@@ -591,6 +608,7 @@
         <!-- P. Atk. and M. Atk. + 10%%. -->
         <icon initial="icon.skill0000"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -603,6 +621,7 @@
         <!-- Floats the target into the air and stops him from moving for awhile. -->
         <icon initial="icon.skill11050"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="-692"/>
@@ -632,6 +651,7 @@
          -->
         <icon initial="icon.skill1045"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -647,6 +667,7 @@
          -->
         <icon initial="icon.skill1068"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -662,6 +683,7 @@
          -->
         <icon initial="icon.skill1059"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -677,6 +699,7 @@
          -->
         <icon initial="icon.skill1040"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -692,6 +715,7 @@
          -->
         <icon initial="icon.skill1010"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -707,6 +731,7 @@
          -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -722,6 +747,7 @@
          -->
         <icon initial="icon.skill1086"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -737,6 +763,7 @@
          -->
         <icon initial="icon.skill1608"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="2"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
@@ -751,6 +778,7 @@
         <!-- Provokes nearby enemies and inflicts Hold for 10 seconds. -->
         <icon initial="icon.skill0404"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <cool-time initial="470"/>
             <effect-point initial="-1098"/>
@@ -808,6 +836,7 @@
     <skill id="15677" name="Bloody Attack" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes auto-use="ACTIVE">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -860,6 +889,7 @@
         <!-- none -->
         <icon initial="icon.skill1045"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -869,6 +899,7 @@
         <!-- Pulls the target into your reach. -->
         <icon initial="icon.skill10015"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <effect-point initial="-150"/>
@@ -953,6 +984,7 @@
          -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="2500">
                 <value level="2">3500</value>
                 <value level="3">4000</value>
@@ -968,6 +1000,7 @@
         <!-- Wrath caused by the death of an ally. Restores 50%% of HP and MP. P. Atk. and M. Atk., Atk. Spd. and Casting Spd. +30%% for 5 minutes -->
         <icon initial="icon.skill1346"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -1048,6 +1081,7 @@
         <!-- Inflicts heavy physical damage on enemies surrounding your character. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="40000"/>
             <cool-time initial="500"/>
             <effect-point initial="-273"/>
@@ -1064,6 +1098,7 @@
         <!-- Knocks Down enemies in the working range. -->
         <icon initial="icon.skill10262"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="1000"/>
             <effect-point initial="-200"/>
@@ -1080,6 +1115,7 @@
         <!-- Stuns enemies in the working range. -->
         <icon initial="icon.skill10265"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <cool-time initial="1000"/>
             <effect-point initial="-200"/>
@@ -1111,6 +1147,7 @@
         <!-- Stunned and temporarily rendered immobile. -->
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <cool-time initial="800"/>
             <effect-point initial="-100"/>
@@ -1127,6 +1164,7 @@
         <!-- Knocks Down enemies in the working range. -->
         <icon initial="icon.skill10262"/>
         <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="1000"/>
             <effect-point initial="-200"/>
