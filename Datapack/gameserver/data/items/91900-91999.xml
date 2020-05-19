@@ -672,7 +672,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
-			<skill id="50178"/>
+			<skill id="50178"/> <!-- Tomb of Ancient Pirates Time Recharge Stone -->
 		</skill-reducer>
 	</item>
 

@@ -171,6 +171,75 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="STR">
+                <power initial="2.0"/>
+            </base-stat>
+            <base-stat type="DEX">
+                <power initial="2.0"/>
+            </base-stat>
+            <base-stat type="INT">
+                <power initial="2.0"/>
+            </base-stat>
+            <base-stat type="WIT">
+                <power initial="2.0"/>
+            </base-stat>
+            <base-stat type="MEN">
+                <power initial="2.0"/>
+            </base-stat>
+            <base-stat type="CON">
+                <power initial="2.0"/>
+            </base-stat>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="35.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="35.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_DROP_RATE">
+                <power initial="300.0"/>
+            </stat-modify>
+            <reduce-drop-penalty>
+                <experience initial="-30.0"/>
+                <death-penalty initial="-30.0"/>
+            </reduce-drop-penalty>
+            <stat-modify stat="WORLD_CHAT_POINTS">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="12.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="12.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="12.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
+                <power initial="20.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="100"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="100"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="59724" name="VIP Level 9">
         <!-- Receives the daily VIP Lv. 9 gift box. XP/SP Gain +40%%, Item Drop Rate +300%%, World Chat Use +50, XP/Item Drop Rate Penalty at Death -40%%, PvE Damage +15%%, All Stats +3, P. Def./M. Def. +80, PvP Damage +13%%, Skill Cooldown -3%%, Max HP/MP +200. -->
@@ -178,6 +247,75 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="STR">
+                <power initial="3.0"/>
+            </base-stat>
+            <base-stat type="DEX">
+                <power initial="3.0"/>
+            </base-stat>
+            <base-stat type="INT">
+                <power initial="3.0"/>
+            </base-stat>
+            <base-stat type="WIT">
+                <power initial="3.0"/>
+            </base-stat>
+            <base-stat type="MEN">
+                <power initial="3.0"/>
+            </base-stat>
+            <base-stat type="CON">
+                <power initial="3.0"/>
+            </base-stat>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="40.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="40.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_DROP_RATE">
+                <power initial="300.0"/>
+            </stat-modify>
+            <reduce-drop-penalty>
+                <experience initial="-40.0"/>
+                <death-penalty initial="-40.0"/>
+            </reduce-drop-penalty>
+            <stat-modify stat="WORLD_CHAT_POINTS">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="13.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="13.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="13.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="80.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="80.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
+                <power initial="20.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="200"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="200"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="59725" name="VIP Level 10">
         <!-- Receives the daily VIP Lv. 10 gift box. XP/SP Gain +50%%, Item Drop Rate +300%%, World Chat Use +50, XP/Item Drop Rate Penalty at Death -50%%, PvE Damage +15%%, All Stats +4, P. Def./M. Def. +100, PvP Damage +15%%, Skill Cooldown -5%%, Max HP/MP +500. -->
@@ -185,6 +323,75 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="STR">
+                <power initial="4.0"/>
+            </base-stat>
+            <base-stat type="DEX">
+                <power initial="4.0"/>
+            </base-stat>
+            <base-stat type="INT">
+                <power initial="4.0"/>
+            </base-stat>
+            <base-stat type="WIT">
+                <power initial="4.0"/>
+            </base-stat>
+            <base-stat type="MEN">
+                <power initial="4.0"/>
+            </base-stat>
+            <base-stat type="CON">
+                <power initial="4.0"/>
+            </base-stat>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_DROP_RATE">
+                <power initial="300.0"/>
+            </stat-modify>
+            <reduce-drop-penalty>
+                <experience initial="-50.0"/>
+                <death-penalty initial="-50.0"/>
+            </reduce-drop-penalty>
+            <stat-modify stat="WORLD_CHAT_POINTS">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
+                <power initial="20.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="500"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="500"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="59726" name="VIP Battle Scroll">
         <!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. -->

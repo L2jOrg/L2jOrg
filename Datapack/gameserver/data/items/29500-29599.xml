@@ -78,10 +78,13 @@
 	<item id="29510" name="Beginner's Package - Stage 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1667 Soulshots, 335 Blessed Spiritshot, 30 XP/SP Boost Scrolls (30%), Eva's Mark, Agathion - Singer & Dancer Pack (30-day), 50 Healing Potions, 30 Scrolls of Escape, 30 Wind Walk Potions, 30 Haste Potions, and a Beginner's Package - Stage 2. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+            <player level-min="5"/>
+        </condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="34603" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious No-grade Soulshot -->
-			<item id="34610" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
+			<item id="91927" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious No-grade Soulshot -->
+			<item id="91928" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
 			<item id="29648" min-count="30" max-count="30" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="49032" chance="100000000"/>  <!-- Eva's Mark -->
 			<item id="49000" chance="100000000"/>  <!-- Agathion - Singer &amp; Dancer  -->
@@ -96,6 +99,9 @@
 	<item id="29511" name="Beginner's Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 30 Full Buff Scrolls and a Beginner's Pack - Stage 3. Lv. 10 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+            <player level-min="10"/>
+        </condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29512" chance="100000000"/>  <!-- Beginner's Pack - Stage 3 -->
@@ -106,11 +112,14 @@
 	<item id="29512" name="Beginner's Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Saber*Elven Sword (30-day), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 4. Lv. 20 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+            <player level-min="20"/>
+        </condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29527" chance="100000000"/>  <!-- Saber*Elven Sword -->
-			<item id="34604" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="91927" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="91930" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29513" chance="100000000"/>  <!-- Beginner's Pack - Stage 4 -->
 		</extract>
 	</item>
@@ -118,11 +127,14 @@
 	<item id="29513" name="Beginner's Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Magic Necklace Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 5. Lv. 25 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+            <player level-min="25"/>
+        </condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29529" chance="100000000"/>  <!-- Magic Necklace Crafting Pack -->
-			<item id="34604" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="91927" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="91930" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29514" chance="100000000"/>  <!-- Beginner's Pack - Stage 5 -->
 		</extract>
 	</item>
@@ -130,11 +142,14 @@
 	<item id="29514" name="Beginner's Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Elven Ring Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 6. Lv. 30 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+            <player level-min="30"/>
+        </condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29530" chance="100000000"/>  <!-- Tiger's Eye Crafting Pack -->
-			<item id="34604" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="91927" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="91930" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29515" chance="100000000"/>  <!-- Beginner's Pack - Stage 6 -->
 		</extract>
 	</item>
@@ -142,11 +157,14 @@
 	<item id="29515" name="Beginner's Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (40%), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 7. Lv. 35 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+            <player level-min="35"/>
+        </condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29649" min-count="10" max-count="10" chance="100000000"/>  <!-- Scroll: Mid-grade XP/SP Boost -->
-			<item id="34604" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="91927" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="91930" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29516" chance="100000000"/>  <!-- Beginner's Pack - Stage 7 -->
 		</extract>
 	</item>
@@ -154,6 +172,9 @@
 	<item id="29516" name="Beginner's Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Get a Black Samurai Long Sword (30-day). Lv. 40 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+            <player level-min="40"/>
+        </condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="49573" chance="100000000"/>  <!-- Samurai Black Long Sword -->
@@ -192,7 +213,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29023" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
+			<item id="91927" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
 		</extract>
 	</item>
 
@@ -201,7 +222,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29024" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
+			<item id="91930" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
 		</extract>
 	</item>
 
@@ -210,7 +231,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29025" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="91927" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
 		</extract>
 	</item>
 
@@ -219,7 +240,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29026" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="91930" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
 		</extract>
 	</item>
 
@@ -228,7 +249,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29027" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (C-grade) -->
+			<item id="91927" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (C-grade) -->
 		</extract>
 	</item>
 
@@ -237,7 +258,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29028" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
+			<item id="91930" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
 		</extract>
 	</item>
 
@@ -296,7 +317,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29023" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
+			<item id="91927" min-count="1667" max-count="1667" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
 			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
@@ -307,7 +328,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29024" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
+			<item id="91930" min-count="335" max-count="335" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
 			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
@@ -318,7 +339,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29025" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="91927" min-count="2500" max-count="2500" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
 			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
@@ -329,7 +350,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29026" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="91930" min-count="500" max-count="500" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
 			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
@@ -340,7 +361,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29027" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious Soulshot (C-grade) -->
+			<item id="91927" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious Soulshot (C-grade) -->
 			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
@@ -351,7 +372,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29028" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
+			<item id="91930" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
 			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>

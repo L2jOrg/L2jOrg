@@ -1993,9 +1993,6 @@
             <effect name="TargetMeProbability">
                 <power initial="40.0"/>
             </effect>
-            <effect name="TargetMeProbability" scope="SELF">
-                <power initial="40.0"/>
-            </effect>
             <stat-modify scope="SELF" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power initial="4050.0"/>
             </stat-modify>

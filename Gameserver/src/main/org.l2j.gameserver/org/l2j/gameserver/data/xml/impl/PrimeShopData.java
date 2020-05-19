@@ -34,7 +34,7 @@ public class PrimeShopData extends GameXmlReader {
     private static final int VIP_GIFT_BASE_ID = 100000;
 
     private final IntMap<PrimeShopProduct> primeItems = new HashIntMap<>(140);
-    private final IntMap<PrimeShopProduct> vipGifts = new HashIntMap<>(7);
+    private final IntMap<PrimeShopProduct> vipGifts = new HashIntMap<>(10);
 
     private PrimeShopData() {
         load();
@@ -139,7 +139,7 @@ public class PrimeShopData extends GameXmlReader {
     }
 
     public boolean canReceiveVipGift(Player player) {
-        return player.getVipTier() > 0 && !getDAO(PrimeShopDAO.class).hasBougthAnyItemInRangeToday(player.getObjectId(), VIP_GIFT_BASE_ID+1, VIP_GIFT_BASE_ID+7);
+        return player.getVipTier() > 0 && !getDAO(PrimeShopDAO.class).hasBougthAnyItemInRangeToday(player.getObjectId(), VIP_GIFT_BASE_ID+1, VIP_GIFT_BASE_ID+10);
     }
 
     private static class Singleton {

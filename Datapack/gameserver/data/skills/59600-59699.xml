@@ -298,7 +298,14 @@
             level 2: Borrows the power of the Navy Admiral and for 15 seconds, P./M. Atk. +200%.
          -->
         <icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-        <attributes property="PHYSIC"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="100000">
+                <value level="2">60000</value>
+            </reuse>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
         <target/>
         <abnormal>
             <time initial="10">
@@ -324,7 +331,14 @@
             level 2: Borrows the power of the Navy Admiral and for 15 seconds, P./M. Def. +200%.
          -->
         <icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-        <attributes property="PHYSIC"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="100000">
+                <value level="2">60000</value>
+            </reuse>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
         <target/>
         <abnormal>
             <time initial="10">
