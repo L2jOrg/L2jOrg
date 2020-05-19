@@ -7,6 +7,6 @@ public class ExBloodyCoinCount extends ServerPacket {
     @Override
     protected void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_BLOODY_COIN_COUNT);
-        writeLong(client.getPlayer().getL2Coins());
+        writeLong(client.getPlayer().getLCoins());
     }
 }

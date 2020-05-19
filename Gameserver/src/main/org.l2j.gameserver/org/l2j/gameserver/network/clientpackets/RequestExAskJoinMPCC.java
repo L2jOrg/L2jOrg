@@ -23,8 +23,8 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player requestor = client.getPlayer();
+        if (requestor == null) {
             return;
         }
 
@@ -33,18 +33,18 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
             return;
         }
         // invite yourself? ;)
-        if (activeChar.isInParty() && player.isInParty() && activeChar.getParty().equals(player.getParty())) {
+        if (requestor.isInParty() && player.isInParty() && requestor.getParty().equals(player.getParty())) {
             return;
         }
 
         SystemMessage sm;
         // activeChar is in a Party?
-        if (activeChar.isInParty()) {
-            final Party activeParty = activeChar.getParty();
+        if (requestor.isInParty()) {
+            final Party activeParty = requestor.getParty();
             // activeChar is PartyLeader? && activeChars Party is already in a CommandChannel?
-            if (activeParty.getLeader().equals(activeChar)) {
+            if (activeParty.getLeader().equals(requestor)) {
                 // if activeChars Party is in CC, is activeChar CCLeader?
-                if (activeParty.isInCommandChannel() && activeParty.getCommandChannel().getLeader().equals(activeChar)) {
+                if (activeParty.isInCommandChannel() && activeParty.getCommandChannel().getLeader().equals(requestor)) {
                     // in CC and the CCLeader
                     // target in a party?
                     if (player.isInParty()) {
@@ -52,20 +52,20 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
                         if (player.getParty().isInCommandChannel()) {
                             sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL);
                             sm.addString(player.getName());
-                            activeChar.sendPacket(sm);
+                            requestor.sendPacket(sm);
                         } else {
                             // ready to open a new CC
                             // send request to targets Party's PartyLeader
-                            askJoinMPCC(activeChar, player);
+                            askJoinMPCC(requestor, player);
                         }
                     } else {
-                        activeChar.sendMessage(player.getName() + " doesn't have party and cannot be invited to Command Channel.");
+                        requestor.sendMessage(player.getName() + " doesn't have party and cannot be invited to Command Channel.");
                     }
 
-                } else if (activeParty.isInCommandChannel() && !activeParty.getCommandChannel().getLeader().equals(activeChar)) {
+                } else if (activeParty.isInCommandChannel() && !activeParty.getCommandChannel().getLeader().equals(requestor)) {
                     // in CC, but not the CCLeader
                     sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
-                    activeChar.sendPacket(sm);
+                    requestor.sendPacket(sm);
                 } else {
                     // target in a party?
                     if (player.isInParty()) {
@@ -73,18 +73,18 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
                         if (player.getParty().isInCommandChannel()) {
                             sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL);
                             sm.addString(player.getName());
-                            activeChar.sendPacket(sm);
+                            requestor.sendPacket(sm);
                         } else {
                             // ready to open a new CC
                             // send request to targets Party's PartyLeader
-                            askJoinMPCC(activeChar, player);
+                            askJoinMPCC(requestor, player);
                         }
                     } else {
-                        activeChar.sendMessage(player.getName() + " doesn't have party and cannot be invited to Command Channel.");
+                        requestor.sendMessage(player.getName() + " doesn't have party and cannot be invited to Command Channel.");
                     }
                 }
             } else {
-                activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
+                requestor.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
             }
         }
     }

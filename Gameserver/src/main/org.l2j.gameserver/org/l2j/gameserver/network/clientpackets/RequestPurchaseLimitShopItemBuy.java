@@ -25,13 +25,13 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
         var product = LCoinShopData.getInstance().getProductInfo(productId);
         var productItem = product.getProduction();
 
-        if (player.hasItemRequest() || player.hasRequest(LCoinShopRequest.class) || player.getL2Coins() < product.getIngredients().get(0).getCount()) {
+        if (player.hasItemRequest() || player.hasRequest(LCoinShopRequest.class) || player.getLCoins() < product.getIngredients().get(0).getCount()) {
             player.sendPacket(new ExPurchaseLimitShopItemBuy(LCoinShopData.getInstance().getProductInfo(productId), true));
             return;
         }
 
         player.addRequest(new LCoinShopRequest(player));
-        player.addL2Coins(-product.getIngredients().get(0).getCount());
+        player.addLCoins(-product.getIngredients().get(0).getCount());
         player.addItem("LCoinShop", productItem.getId(), productItem.getCount() * amount, player, true);
         player.removeRequest(LCoinShopRequest.class);
     }

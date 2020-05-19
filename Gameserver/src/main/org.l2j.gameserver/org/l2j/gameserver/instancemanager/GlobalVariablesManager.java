@@ -21,6 +21,7 @@ public final class GlobalVariablesManager extends AbstractVariables {
     public static final String COC_TOP_MEMBER = "COC_TOP_MEMBER";
     public static final String COC_TRUE_HERO = "COC_TRUE_HERO";
     public static final String COC_TRUE_HERO_REWARDED = "COC_TRUE_HERO_REWARDED";
+    public static final String MONSTER_ARENA_VARIABLE = "MA_C";
     // SQL Queries.
     private static final String SELECT_QUERY = "SELECT * FROM global_variables";
     private static final String DELETE_QUERY = "DELETE FROM global_variables";
@@ -88,6 +89,15 @@ public final class GlobalVariablesManager extends AbstractVariables {
             return false;
         }
         return true;
+    }
+
+    public void resetRaidBonus() {
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
+             Statement st = con.createStatement()) {
+            st.execute("DELETE FROM global_variables WHERE var like MA_C%");
+        } catch (SQLException t) {
+            LOGGER.warn(t.getMessage(), t);
+        }
     }
 
     public static void init() {

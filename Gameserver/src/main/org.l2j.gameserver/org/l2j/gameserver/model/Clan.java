@@ -11,12 +11,14 @@ import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -35,9 +37,7 @@ import org.l2j.gameserver.model.variables.ClanVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
-import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeBonusMarkReset;
-import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
-import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
+import org.l2j.gameserver.network.serverpackets.pledge.*;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.EnumIntBitmask;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -60,11 +60,15 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
+import static org.l2j.gameserver.instancemanager.GlobalVariablesManager.MONSTER_ARENA_VARIABLE;
 
 /**
  * @author JoeAlisson
  */
 public class Clan implements IIdentifiable, INamable {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Clan.class);
+
     /**
      * Clan leaved ally
      */
@@ -112,7 +116,6 @@ public class Clan implements IIdentifiable, INamable {
      * Clan subunit type of Order of Knights B-2
      */
     public static final int SUBUNIT_KNIGHT4 = 2002;
-    private static final Logger LOGGER = LoggerFactory.getLogger(Clan.class);
 
     private static final int MAX_NOTICE_LENGTH = 8192;
     private final IntMap<ClanMember> members = new CHashIntMap<>();
@@ -177,6 +180,7 @@ public class Clan implements IIdentifiable, INamable {
         restoreRankPrivs();
         restoreSkills();
         restoreNotice();
+        ClanRewardManager.getInstance().checkArenaProgress(this);
     }
 
 
@@ -630,7 +634,7 @@ public class Clan implements IIdentifiable, INamable {
 
         this.notice = notice;
         noticeEnabled = enabled;
-            getDAO(ClanDAO.class).saveNotice(data.getId(), notice, enabled);
+        getDAO(ClanDAO.class).saveNotice(data.getId(), notice, enabled);
     }
 
     public boolean isNoticeEnabled() {
@@ -680,17 +684,6 @@ public class Clan implements IIdentifiable, INamable {
         return _skills;
     }
 
-    public Skill addSkill(Skill newSkill) {
-        Skill oldSkill = null;
-
-        if (newSkill != null) {
-            // Replace oldSkill by newSkill or Add the newSkill
-            oldSkill = _skills.put(newSkill.getId(), newSkill);
-        }
-
-        return oldSkill;
-    }
-
     public Skill addNewSkill(Skill newSkill) {
         return addNewSkill(newSkill, -2);
     }
@@ -733,7 +726,7 @@ public class Clan implements IIdentifiable, INamable {
                 if ((temp != null) && (temp.getPlayerInstance() != null) && temp.isOnline()) {
                     if (subType == -2) {
                         temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-                        temp.getPlayerInstance().sendPacket(new PledgeSkillListAdd(newSkill.getId(), newSkill.getLevel()));
+                        temp.getPlayerInstance().sendPacket(new PledgeSkillAdd(newSkill.getId(), newSkill.getLevel()));
                         temp.getPlayerInstance().sendPacket(sm);
                         temp.getPlayerInstance().sendSkillList();
                     } else if (temp.getPledgeType() == subType) {
@@ -747,6 +740,19 @@ public class Clan implements IIdentifiable, INamable {
         }
 
         return oldSkill;
+    }
+
+    public void removeSkill(int skillId) {
+        if(_skills.containsKey(skillId)) {
+            final var oldSkill = _skills.remove(skillId);
+            getDAO(ClanDAO.class).removeSkill(getId(), skillId);
+            final var skillDelete = new PledgeSkillDelete(oldSkill);
+            forEachOnlineMember(player -> {
+                player.removeSkill(oldSkill, false);
+                player.sendPacket(skillDelete);
+            });
+        }
+
     }
 
     public void addSkillEffects(Player player) {
@@ -1832,6 +1838,10 @@ public class Clan implements IIdentifiable, INamable {
         if (vars != null) {
             vars.storeMe();
         }
+    }
+
+    public int getArenaProgress() {
+        return GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + getId(), 0);
     }
 
     public static class RankPrivs {

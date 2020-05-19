@@ -2,6 +2,7 @@ package org.l2j.gameserver.network.clientpackets.pledgebonus;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.ExPledgeClassicRaidInfo;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeBonusOpen;
 
 /**
@@ -20,5 +21,6 @@ public class RequestPledgeBonusOpen extends ClientPacket {
         }
 
         player.sendPacket(new ExPledgeBonusOpen(player));
+        player.sendPacket(new ExPledgeClassicRaidInfo());
     }
 }

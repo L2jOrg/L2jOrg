@@ -18,17 +18,17 @@ import org.slf4j.LoggerFactory;
 public class ExPledgeBonusOpen extends ServerPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExPledgeBonusOpen.class);
 
-    private final Player _player;
+    private final Player player;
 
     public ExPledgeBonusOpen(Player player) {
-        _player = player;
+        this.player = player;
     }
 
     @Override
     public void writeImpl(GameClient client) throws InvalidDataPacketException {
-        final Clan clan = _player.getClan();
+        final Clan clan = player.getClan();
         if (clan == null) {
-            LOGGER.warn("Player: {} attempting to write to a null clan!", _player);
+            LOGGER.warn("Player: {} attempting to write to a null clan!", player);
             throw new InvalidDataPacketException();
         }
 
@@ -36,6 +36,7 @@ public class ExPledgeBonusOpen extends ServerPacket {
         final ClanRewardBonus highestHuntingBonus = ClanRewardManager.getInstance().getHighestReward(ClanRewardType.HUNTING_MONSTERS);
         final ClanRewardBonus membersOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(clan);
         final ClanRewardBonus huntingBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(clan);
+
         if (highestMembersOnlineBonus == null) {
             LOGGER.warn("Couldn't find highest available clan members online bonus!!");
             throw new InvalidDataPacketException();
@@ -56,18 +57,18 @@ public class ExPledgeBonusOpen extends ServerPacket {
         // Members online bonus
         writeInt(highestMembersOnlineBonus.getRequiredAmount());
         writeInt(clan.getMaxOnlineMembers());
-        writeByte((byte) 0x00); // 140
+        writeByte( 0x00); // progress ?
         writeInt(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0x00);
-        writeByte((byte) (membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00));
-        writeByte((byte) (membersOnlineBonus != null ? 0x01 : 0x00));
+        writeByte((membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00));
+        writeByte((membersOnlineBonus != null ? 0x01 : 0x00));
 
         // Hunting bonus
         writeInt(highestHuntingBonus.getRequiredAmount());
         writeInt(clan.getHuntingPoints());
-        writeByte((byte) 0x00); // 140
+        writeByte(0x00); // progress
         writeInt(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
-        writeByte((byte) (huntingBonus != null ? huntingBonus.getLevel() : 0x00));
-        writeByte((byte) (huntingBonus != null ? 0x01 : 0x00));
+        writeByte((huntingBonus != null ? huntingBonus.getLevel() : 0x00));
+        writeByte((huntingBonus != null ? 0x01 : 0x00));
     }
 
 }

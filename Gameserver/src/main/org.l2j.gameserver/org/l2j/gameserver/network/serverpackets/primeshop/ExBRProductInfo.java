@@ -18,7 +18,7 @@ public class ExBRProductInfo extends ServerPacket {
 
     public ExBRProductInfo(PrimeShopProduct item, Player player) {
         this.item = item;
-        points = player.getNCCoins();
+        points = player.getNCoins();
         adenas = player.getAdena();
         coins = player.getInventory().getInventoryItemCount(23805, -1);
     }

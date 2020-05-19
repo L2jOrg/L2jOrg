@@ -116,13 +116,13 @@ public abstract class RequestBuyProduct extends ClientPacket {
                 return false;
             }
         } else {
-            if (activeChar.getNCCoins() < price) {
+            if (activeChar.getNCoins() < price) {
                 activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
                 return false;
             }
             if(price > 0) {
-                activeChar.updateNCCoins(-price);
-                activeChar.updateVipPoints((int) (price * 0.07));
+                activeChar.updateNCoins(-price);
+                activeChar.updateVipPoints(price);
             }
         }
         return true;

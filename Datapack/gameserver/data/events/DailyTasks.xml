@@ -19,14 +19,14 @@
             </schedule>
 
             <!-- Schedule the clan leader apply task every WEDNESDAY at 6:30 -->
-            <schedule name="clanLeaderApply" hour="06" minute="30" dayOfWeek="3">
-                <event name="#onClanLeaderApply"/>
+            <schedule name="clanTasks" hour="06" minute="30" dayOfWeek="3">
+                <event name="#onClansTask"/>
             </schedule>
 
             <!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
             <conditionalSchedule>
                 <run name="reset" if="HAVENT_RUN"/>
-                <run name="clanLeaderApply" if="HAVENT_RUN"/>
+                <run name="clanTasks" if="HAVENT_RUN"/>
             </conditionalSchedule>
         </scheduler>
     </event>

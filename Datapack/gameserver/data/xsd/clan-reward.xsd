@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="common.xsd"/>
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="members-online" type="MembersOnline"/>
+                <xs:element name="hunting-bonus" type="HuntingBonus"/>
+                <xs:element name="raid-bonus" type="RaidBonus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="MembersOnline">
+        <xs:sequence>
+            <xs:element name="players" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="skill" type="SkillInfo"/>
+                    </xs:sequence>
+                    <xs:attribute type="xs:positiveInteger" name="size" use="required"/>
+                    <xs:attribute type="xs:byte" name="level" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HuntingBonus">
+        <xs:sequence>
+            <xs:element name="hunting" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="item" type="ItemInfo"/>
+                    </xs:sequence>
+                    <xs:attribute type="xs:positiveInteger" name="points" use="required"/>
+                    <xs:attribute type="xs:positiveInteger" name="level" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RaidBonus">
+        <xs:sequence>
+            <xs:element name="raid" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="skill" type="SkillInfo"/>
+                    </xs:sequence>
+                    <xs:attribute name="progress" type="xs:unsignedByte" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

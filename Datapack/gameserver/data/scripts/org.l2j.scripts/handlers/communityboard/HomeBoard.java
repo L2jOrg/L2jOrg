@@ -266,10 +266,10 @@ public final class HomeBoard implements IParseBoardHandler {
 
                 if (activeChar.getVipTier() >= 5) {
                     activeChar.sendMessage("Max VIP already reached!");
-                } else if (activeChar.getL2Coins() <= buypassL2Coins) {
+                } else if (activeChar.getLCoins() <= buypassL2Coins) {
                     activeChar.sendMessage("Not enough currency!");
                 } else {
-                    activeChar.addL2Coins(-buypassL2Coins);
+                    activeChar.addLCoins(-buypassL2Coins);
                     activeChar.updateVipPoints(buypassVIPPoints);
                 }
             }

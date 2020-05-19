@@ -4,20 +4,22 @@ import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 
-import java.util.function.Function;
+import java.util.function.ToIntFunction;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public enum ClanRewardType {
     MEMBERS_ONLINE(0, Clan::getPreviousMaxOnlinePlayers),
-    HUNTING_MONSTERS(1, Clan::getPreviousHuntingPoints);
+    HUNTING_MONSTERS(1, Clan::getPreviousHuntingPoints),
+    ARENA(-1, Clan::getArenaProgress);
 
     final int _clientId;
     final int _mask;
-    final Function<Clan, Integer> _pointsFunction;
+    final ToIntFunction<Clan> _pointsFunction;
 
-    ClanRewardType(int clientId, Function<Clan, Integer> pointsFunction) {
+    ClanRewardType(int clientId, ToIntFunction<Clan> pointsFunction) {
         _clientId = clientId;
         _mask = 1 << clientId;
         _pointsFunction = pointsFunction;
@@ -42,7 +44,7 @@ public enum ClanRewardType {
     public ClanRewardBonus getAvailableBonus(Clan clan) {
         ClanRewardBonus availableBonus = null;
         for (ClanRewardBonus bonus : ClanRewardManager.getInstance().getClanRewardBonuses(this)) {
-            if (bonus.getRequiredAmount() <= _pointsFunction.apply(clan)) {
+            if (bonus.getRequiredAmount() <= _pointsFunction.applyAsInt(clan)) {
                 if ((availableBonus == null) || (availableBonus.getLevel() < bonus.getLevel())) {
                     availableBonus = bonus;
                 }

@@ -15,7 +15,7 @@ public class ShowMiniMap extends ServerPacket {
         writeId(ServerPacketId.SHOW_MINIMAP);
 
         writeInt(_mapId);
-        writeByte((byte) 0x00); // Seven Signs state
+        writeByte(0x00); // Seven Signs state
     }
 
 }
