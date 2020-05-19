@@ -2,7 +2,6 @@ package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -609,10 +608,6 @@ public class SkillCaster implements Runnable {
         final WorldObject target = _target.get();
 
         if ((caster == null) || (target == null)) {
-            return false;
-        }
-
-        if (Util.isNullOrEmpty(_targets)) {
             return false;
         }
 
