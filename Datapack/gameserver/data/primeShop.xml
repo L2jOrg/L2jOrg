@@ -2,254 +2,142 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://la2j.org"
       xsi:schemaLocation="http://la2j.org xsd/primeShop.xsd">
 
-    <product id="100001" category="13" price="0" vipTier="1" isVipGift="true"  restrictionDay="1"> <!-- VIP 1 Gift Box -->
+    <product id="01" category="13" price="0" vipTier="1" isVipGift="true"  restrictionDay="1"> <!-- VIP 1 Gift Box -->
         <item id="29001"/>
     </product>
 
-    <product id="100002" category="13" price="0" vipTier="2" isVipGift="true" restrictionDay="1"><!-- VIP 2 Gift Box -->
+    <product id="02" category="13" price="0" vipTier="2" isVipGift="true" restrictionDay="1"><!-- VIP 2 Gift Box -->
         <item id="29002"/>
     </product>
 
-    <product id="100003" category="13" price="0" vipTier="3" isVipGift="true" restrictionDay="1"> <!-- VIP 3 Gift Box -->
+    <product id="03" category="13" price="0" vipTier="3" isVipGift="true" restrictionDay="1"> <!-- VIP 3 Gift Box -->
         <item id="29003"/>
     </product>
 
-    <product id="100004" category="13" price="0" vipTier="4" isVipGift="true" restrictionDay="1"> <!-- VIP 4 Gift Box -->
+    <product id="04" category="13" price="0" vipTier="4" isVipGift="true" restrictionDay="1"> <!-- VIP 4 Gift Box -->
         <item id="29004"/>
     </product>
 
-    <product id="100005" category="13" price="0" vipTier="5" isVipGift="true" restrictionDay="1"> <!-- VIP 5 Gift Box -->
+    <product id="05" category="13" price="0" vipTier="5" isVipGift="true" restrictionDay="1"> <!-- VIP 5 Gift Box -->
         <item id="29005"/>
     </product>
 
-    <product id="100006" category="13" price="0" vipTier="6" isVipGift="true" restrictionDay="1"> <!-- VIP 6 Gift Box -->
+    <product id="06" category="13" price="0" vipTier="6" isVipGift="true" restrictionDay="1"> <!-- VIP 6 Gift Box -->
         <item id="29006"/>
     </product>
 
-    <product id="100007" category="13" price="0" vipTier="7" isVipGift="true" restrictionDay="1"> <!-- VIP 7 Gift Box -->
+    <product id="07" category="13" price="0" vipTier="7" isVipGift="true" restrictionDay="1"> <!-- VIP 7 Gift Box -->
         <item id="29007"/>
     </product>
-
-    <product id="100101" category="11" price="120">
-        <item id="29008"/> <!--Scroll: Regular XP/SP 30% Boost-->
+	
+	<product id="08" category="13" price="0" vipTier="8" isVipGift="true" restrictionDay="1"> <!-- VIP 8 Gift Box -->
+        <item id="71963"/>
+    </product>
+	
+	 <product id="09" category="13" price="0" vipTier="9" isVipGift="true" restrictionDay="1"> <!-- VIP 9 Gift Box -->
+        <item id="71964"/>
+    </product>
+	
+	 <product id="10" category="13" price="0" vipTier="10" isVipGift="true" restrictionDay="1"> <!-- VIP 10 Gift Box -->
+        <item id="71965"/>
+    </product>
+	
+	 <product id="11" category="11" price="150"> <!-- Fighter Hunter Pack Lv. 1 -->
+        <item id="29531"/>
+    </product>
+	
+	 <product id="12" category="11" price="150"> <!-- Wizard Hunter Pack Lv. 1 -->
+        <item id="29532"/>
+    </product>
+	
+	 <product id="13" category="11" price="250"> <!-- Fighter Hunter Pack Lv. 2 -->
+        <item id="29533"/>
+    </product>
+	
+	 <product id="14" category="11" price="250"> <!-- Wizard Hunter Pack Lv. 2 -->
+        <item id="29534"/>
     </product>
 
-    <product id="100102" category="13" price="100" vipTier="4">
-        <item id="29009"/> <!--Scroll: Regular XP/SP  40% Boost-->
+	<product id="15" category="11" price="500"> <!-- Fighter Hunter Pack Lv. 3 -->
+        <item id="29535"/>
+    </product>
+	
+	 <product id="16" category="11" price="500"> <!-- Wizard Hunter Pack Lv. 3 -->
+        <item id="29536"/>
+    </product>
+    
+	 <product id="17" category="11" price="1000"> <!-- Fighter Hunter Pack Lv. 4 -->
+        <item id="29537"/>
+    </product>
+	
+	 <product id="18" category="11" price="1000"> <!-- Wizard Hunter Pack Lv. 4 -->
+        <item id="29538"/>
+    </product>
+	
+	 <product id="19" category="11" price="150"> <!-- Fighter Hunter Pack Lv. 1 -->
+        <item id="70205"/>
+    </product>
+	
+	 <product id="20" category="11" price="150"> <!-- Wizard Hunter Pack Lv. 1 -->
+        <item id="70206"/>
+    </product>
+	
+	 <product id="21" category="11" price="250"> <!-- Fighter Hunter Pack Lv. 2 -->
+        <item id="70207"/>
+    </product>
+	
+	 <product id="22" category="11" price="250"> <!-- Wizard Hunter Pack Lv. 2 -->
+        <item id="70208"/>
     </product>
 
-    <product id="100201" category="11" price="120" restrictionDay="1">
-        <item id="29654" count="10"/> <!-- 1st Class Transfer Effect Scroll -->
+	<product id="23" category="11" price="500"> <!-- Fighter Hunter Pack Lv. 3 -->
+        <item id="70209"/>
+    </product>
+	
+	 <product id="24" category="11" price="500"> <!-- Wizard Hunter Pack Lv. 3 -->
+        <item id="70210"/>
+    </product>
+    
+	<product id="25" category="11" price="500"> <!-- Xp BOX -->
+        <item id="70215"/>
+    </product>
+	
+	
+	<product id="70" category="11" price="100"> <!--  -->
+        <item id="71685" count="100"/>
+    </product>
+	
+	<product id="71" category="11" price="100"> <!--  -->
+        <item id="93628"/>
+    </product>
+	
+	<product id="72" category="11" price="800"> <!--  -->
+        <item id="93629"/>
+    </product>
+	
+	<product id="73" category="11" price="50"> <!--  -->
+        <item id="93676"/>
+    </product>
+	
+	<product id="74" category="11" price="300"> <!--  -->
+        <item id="93477"/>
+    </product>
+	
+	<product id="75" category="11" price="300"> <!--  -->
+        <item id="93482"/>
+    </product>
+	
+	<product id="76" category="11" price="150"> <!--  -->
+        <item id="29510"/>
+    </product>
+	
+	<product id="77" category="11" price="10"> <!--  -->
+        <item id="71684" count="100"/>
+    </product>
+	
+	<product id="80" category="11" price="500" minLevel="60"> <!--  -->
+        <item id="93478"/>
     </product>
 
-    <product id="100202" category="13" price="120" restrictionDay="1" vipTier="4">
-        <item id="29655" count="5"/> <!-- 2nd Class Transfer Effect Scroll -->
-    </product>
-
-    <product id="100301" category="14" price="60">
-        <item id="34072"/> <!-- Scroll: Enchant Weapon (D-grade) -->
-    </product>
-
-    <product id="100302" category="14" price="50">
-        <item id="29548"/> <!-- Scroll: Enchant Armor (D-grade) -->
-    </product>
-
-    <product id="100303" category="14" price="130">
-        <item id="6575"/> <!-- Scroll: Blessed Enchant Weapon (D-grade) -->
-    </product>
-
-    <product id="100304" category="14" price="120">
-        <item id="6576"/> <!-- Scroll: Blessed Enchant Armor (D-grade) -->
-    </product>
-
-    <product id="100305" category="14" price="90">
-        <item id="29549"/> <!-- Scroll: Enchant Weapon (C-grade) -->
-    </product>
-
-    <product id="100306" category="14" price="80">
-        <item id="29550"/> <!-- Scroll: Enchant Armor (C-grade) -->
-    </product>
-
-    <product id="100313" category="14" price="180">
-        <item id="29021"/> <!-- Scroll: Blessed Enchant Weapon (C-grade) -->
-    </product>
-
-    <product id="100314" category="14" price="170">
-        <item id="29022"/> <!-- Scroll: Blessed Enchant Armor (C-grade) -->
-    </product>
-
-    <product id="100401" category="11" price="30">
-        <item id="29557"/> <!-- No-Grade Mysterious Soulshot bundle, 100 pcs -->
-    </product>
-
-    <product id="100402" category="11" price="50">
-        <item id="29558"/> <!-- No-Grade Mysterious Blessed Spiritshot bundle, 100 pcs -->
-    </product>
-
-    <product id="100403" category="11" price="50">
-        <item id="29559"/> <!-- D-Grade Mysterious Soulshot bundle, 100 pcs -->
-    </product>
-
-    <product id="100404" category="11" price="70">
-        <item id="29560"/> <!-- D-Grade Mysterious Blessed Spiritshot bundle, 100 pcs -->
-    </product>
-
-    <product id="100405" category="11" price="70">
-        <item id="29561"/> <!-- C-Grade Mysterious Soulshot bundle, 100 pcs -->
-    </product>
-
-    <product id="100406" category="11" price="90">
-        <item id="29562"/> <!-- C-Grade Mysterious Blessed Spiritshot bundle, 100 pcs -->
-    </product>
-
-    <product id="100407" category="11" price="90">
-        <item id="29748"/> <!-- B-Grade Mysterious Soulshot bundle, 100 pcs -->
-    </product>
-
-    <product id="100408" category="11" price="110">
-        <item id="29749"/> <!-- B-Grade Mysterious Blessed Spiritshot bundle, 100 pcs -->
-    </product>
-
-    <product id="100501" category="11" price="400">
-        <item id="70205"/> <!-- Bundle of sniper consumables (below 20 lvl)-->
-    </product>
-
-    <product id="100502" category="11" price="400">
-        <item id="70206"/> <!-- Bundle of magic consumables (below 20 lvl)-->
-    </product>
-
-    <product id="100503" category="11" price="500">
-        <item id="70207"/> <!-- Bundle of sniper consumables (lvl 20~40)-->
-    </product>
-
-    <product id="100504" category="11" price="500">
-        <item id="70208"/> <!-- Bundle of magic consumables (lvl 20~40)-->
-    </product>
-
-    <product id="100505" category="11" price="600">
-        <item id="70209"/> <!-- Bundle of sniper consumables (lvl 40 and higher)-->
-    </product>
-
-    <product id="100506" category="11" price="600">
-        <item id="70210"/> <!-- Bundle of magic consumables (lvl 40 and higher)-->
-    </product>
-
-    <product id="100507" category="11" price="700">
-        <item id="29750"/> <!-- Bundle of sniper consumables (lvl 52 and higher)-->
-    </product>
-
-    <product id="100508" category="11" price="700">
-        <item id="29751"/> <!-- Bundle of magic consumables (lvl 52 and higher)-->
-    </product>
-
-    <product id="100601" category="11" price="60">
-        <item id="29031" count="50"/> <!-- Magic potion that instantly restores HP-->
-    </product>
-
-    <product id="100602" category="13" price="60" vipTier="4" >
-        <item id="29032" count="50"/> <!-- Magic potion that instantly restores great amount of HP-->
-    </product>
-
-    <product id="100701" category="13" price="120" vipTier="1" >
-        <item id="70399"/> <!-- Nice Red Romantic Chapeau -->
-    </product>
-
-    <product id="100702" category="13" price="120" vipTier="4" >
-        <item id="29049"/> <!-- Refined Angel Ring -->
-    </product>
-
-    <product id="100703" category="13" price="120" vipTier="4" >
-        <item id="29038"/> <!-- Refined Wizard Hat -->
-    </product>
-
-    <product id="100704" category="13" price="120" vipTier="4" >
-        <item id="29039"/> <!-- Laborer Hat -->
-    </product>
-
-    <product id="100705" category="13" price="120" vipTier="4" >
-        <item id="29040"/> <!-- Top Hat -->
-    </product>
-
-    <product id="100706" category="13" price="120" vipTier="4" >
-        <item id="29041"/> <!-- Vigilante Hat -->
-    </product>
-
-    <product id="100801" category="11" price="25" >
-        <item id="10649" count="5"/> <!-- Allows to resurrect right in the place of death -->
-    </product>
-
-    <product id="100802" category="11" price="20" >
-        <item id="1538" count="10"/> <!--Escape -->
-    </product>
-
-    <product id="100803" category="11" price="40" >
-        <item id="3936" count="5"/> <!-- Resurrects a dead character and restores his or her XP completely -->
-    </product>
-
-    <product id="100901" category="11" price="15" >
-        <item id="7117" count="5"/> <!-- Teleports to Talking Island Village -->
-    </product>
-
-    <product id="100902" category="11" price="15" >
-        <item id="7118" count="5"/> <!-- Teleports to Elven Village -->
-    </product>
-
-    <product id="100903" category="11" price="15" >
-        <item id="7119" count="5"/> <!-- Teleports to Elven Village -->
-    </product>
-
-    <product id="100904" category="11" price="15" >
-        <item id="7120" count="5"/> <!-- Teleports to Orc Village -->
-    </product>
-
-    <product id="100905" category="11" price="15" >
-        <item id="7121" count="5"/> <!-- Teleports to Dwarven Village -->
-    </product>
-
-    <product id="100906" category="11" price="15" >
-        <item id="7122" count="5"/> <!-- Teleports to Gludin Village -->
-    </product>
-
-    <product id="100907" category="11" price="15" >
-        <item id="7123" count="5"/> <!-- Teleports to Gludio Village -->
-    </product>
-
-    <product id="101001" category="11" price="0" >
-        <item id="29656" count="5"/> <!-- Gift paid each particular level--> <!-- TODO confirm -->
-    </product>
-
-    <product id="101002" category="13" price="50" vipTier="1" >
-        <item id="29551"/> <!-- Material used to enchant Ring of Heir -->
-    </product>
-
-    <product id="101005" category="11" price="50" >
-        <item id="29656"/> <!-- Gift paid each particular level  --> <!-- TODO confirm -->
-    </product>
-
-    <product id="101006" category="14" price="150">
-        <item id="29817" count="10"/> <!--  Special Pirate Fruits -->
-        <item id="70231"/> <!-- King Pirate's Treasure Chests -->
-    </product>
-
-    <product id="101007" category="14" price="800">
-        <item id="29817" count="100"/> <!--  Special Pirate Fruits -->
-        <item id="70231" count="10"/> <!-- King Pirate's Treasure Chests -->
-    </product>
-
-    <product id="101008" category="14" price="20">
-        <item id="70430" /> <!-- Shafts with Antharas treasure -->
-    </product>
-
-    <product id="101009" category="14" price="250">
-        <item id="70430" count="20" /> <!-- Shafts with Antharas treasure -->
-    </product>
-
-    <product id="101010" category="14" price="40">
-        <item id="49583"/> <!-- Golden Mermaid's Fishing Supplies Chests -->
-    </product>
-
-    <product id="101011" category="14" price="350">
-        <item id="49583" count="10" /> <!-- Golden Mermaid's Fishing Supplies Chests -->
-    </product>
 
 </list>
