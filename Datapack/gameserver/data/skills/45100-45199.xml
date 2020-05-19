@@ -2418,17 +2418,17 @@
             <trigger-skill-by-attacking chance="30" skill="45180">
                 <power initial="1"/>
             </trigger-skill-by-attacking>
-            <trigger-skill-by-magic skill="45180" target="ENEMY_ONLY">
+            <trigger-skill-by-magic skill="45180" target="SELF">
                 <power initial="2"/>
                 <chance initial="30.0"/>
-                <types>PHYSIC MAGIC STATIC</types>
+                <types>PHYSIC MAGIC</types>
             </trigger-skill-by-magic>
             <trigger-skill-by-attack skill="45180">
                 <power initial="3"/>
                 <chance initial="30"/>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
-            <trigger-skill-by-change-exp chance="1.0E2" skill="45180">
+            <trigger-skill-by-change-exp skill="45180">
                 <power initial="4"/>
             </trigger-skill-by-change-exp>
         </effects>
@@ -2446,17 +2446,17 @@
             <trigger-skill-by-attacking chance="10" skill="45181">
                 <power initial="1"/>
             </trigger-skill-by-attacking>
-            <trigger-skill-by-magic skill="45181" target="ENEMY_ONLY">
+            <trigger-skill-by-magic skill="45181" target="SELF">
                 <power initial="2"/>
                 <chance initial="15"/>
-                <types>PHYSIC MAGIC STATIC</types>
+                <types>PHYSIC MAGIC</types>
             </trigger-skill-by-magic>
             <trigger-skill-by-attack skill="45181">
                 <power initial="3"/>
                 <chance initial="10"/>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
-            <trigger-skill-by-avoid chance="20" skill="45181">
+            <trigger-skill-by-avoid chance="20" skill="45181" target="SELF">
                 <power initial="4"/>
             </trigger-skill-by-avoid>
         </effects>
@@ -2490,7 +2490,7 @@
             level 4: Triggered when evading.
          -->
         <icon initial="icon.skill0000"/>
-        <attributes auto-use="ACTIVE">
+        <attributes triggered="true" auto-use="ACTIVE">
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
