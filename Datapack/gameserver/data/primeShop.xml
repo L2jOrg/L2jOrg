@@ -2,142 +2,817 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://la2j.org"
       xsi:schemaLocation="http://la2j.org xsd/primeShop.xsd">
 
-    <product id="01" category="13" price="0" vipTier="1" isVipGift="true"  restrictionDay="1"> <!-- VIP 1 Gift Box -->
+    <product id="100001" category="13" price="0" vipTier="1" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 1 -->
         <item id="29001"/>
     </product>
 
-    <product id="02" category="13" price="0" vipTier="2" isVipGift="true" restrictionDay="1"><!-- VIP 2 Gift Box -->
+    <product id="100002" category="13" price="0" vipTier="2" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 2 -->
         <item id="29002"/>
     </product>
 
-    <product id="03" category="13" price="0" vipTier="3" isVipGift="true" restrictionDay="1"> <!-- VIP 3 Gift Box -->
+    <product id="100003" category="13" price="0" vipTier="3" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 3 -->
         <item id="29003"/>
     </product>
 
-    <product id="04" category="13" price="0" vipTier="4" isVipGift="true" restrictionDay="1"> <!-- VIP 4 Gift Box -->
+    <product id="100004" category="13" price="0" vipTier="4" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 4 -->
         <item id="29004"/>
     </product>
 
-    <product id="05" category="13" price="0" vipTier="5" isVipGift="true" restrictionDay="1"> <!-- VIP 5 Gift Box -->
+    <product id="100005" category="13" price="0" vipTier="5" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 5 -->
         <item id="29005"/>
     </product>
 
-    <product id="06" category="13" price="0" vipTier="6" isVipGift="true" restrictionDay="1"> <!-- VIP 6 Gift Box -->
+    <product id="100006" category="13" price="0" vipTier="6" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 6 -->
         <item id="29006"/>
     </product>
 
-    <product id="07" category="13" price="0" vipTier="7" isVipGift="true" restrictionDay="1"> <!-- VIP 7 Gift Box -->
+    <product id="100007" category="13" price="0" vipTier="7" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 7 -->
         <item id="29007"/>
     </product>
-	
-	<product id="08" category="13" price="0" vipTier="8" isVipGift="true" restrictionDay="1"> <!-- VIP 8 Gift Box -->
+
+    <product id="100008" category="13" price="0" vipTier="8" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 8 -->
         <item id="71963"/>
     </product>
-	
-	 <product id="09" category="13" price="0" vipTier="9" isVipGift="true" restrictionDay="1"> <!-- VIP 9 Gift Box -->
+
+    <product id="100009" category="13" price="0" vipTier="9" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 9 -->
         <item id="71964"/>
     </product>
-	
-	 <product id="10" category="13" price="0" vipTier="10" isVipGift="true" restrictionDay="1"> <!-- VIP 10 Gift Box -->
+
+    <product id="100010" category="13" price="0" vipTier="10" isVipGift="true" restrictionDay="1"> <!-- Daily Gift - VIP 10 -->
         <item id="71965"/>
     </product>
-	
-	 <product id="11" category="11" price="150"> <!-- Fighter Hunter Pack Lv. 1 -->
-        <item id="29531"/>
-    </product>
-	
-	 <product id="12" category="11" price="150"> <!-- Wizard Hunter Pack Lv. 1 -->
-        <item id="29532"/>
-    </product>
-	
-	 <product id="13" category="11" price="250"> <!-- Fighter Hunter Pack Lv. 2 -->
-        <item id="29533"/>
-    </product>
-	
-	 <product id="14" category="11" price="250"> <!-- Wizard Hunter Pack Lv. 2 -->
-        <item id="29534"/>
-    </product>
 
-	<product id="15" category="11" price="500"> <!-- Fighter Hunter Pack Lv. 3 -->
-        <item id="29535"/>
-    </product>
-	
-	 <product id="16" category="11" price="500"> <!-- Wizard Hunter Pack Lv. 3 -->
-        <item id="29536"/>
+    <product id="100015" category="12" price="80">  <!-- Color Title -->
+        <item id="13307"/>
     </product>
     
-	 <product id="17" category="11" price="1000"> <!-- Fighter Hunter Pack Lv. 4 -->
-        <item id="29537"/>
-    </product>
-	
-	 <product id="18" category="11" price="1000"> <!-- Wizard Hunter Pack Lv. 4 -->
-        <item id="29538"/>
-    </product>
-	
-	 <product id="19" category="11" price="150"> <!-- Fighter Hunter Pack Lv. 1 -->
-        <item id="70205"/>
-    </product>
-	
-	 <product id="20" category="11" price="150"> <!-- Wizard Hunter Pack Lv. 1 -->
-        <item id="70206"/>
-    </product>
-	
-	 <product id="21" category="11" price="250"> <!-- Fighter Hunter Pack Lv. 2 -->
-        <item id="70207"/>
-    </product>
-	
-	 <product id="22" category="11" price="250"> <!-- Wizard Hunter Pack Lv. 2 -->
-        <item id="70208"/>
+    <product id="100020" category="12" price="800">  <!-- Agathion Box: Dryad -->
+        <item id="71251"/>
     </product>
 
-	<product id="23" category="11" price="500"> <!-- Fighter Hunter Pack Lv. 3 -->
-        <item id="70209"/>
-    </product>
-	
-	 <product id="24" category="11" price="500"> <!-- Wizard Hunter Pack Lv. 3 -->
-        <item id="70210"/>
+    <product id="100022" category="14" price="2400"> <!-- Name Change Ticket Pack -->
+        <item id="71264"/>
     </product>
     
-	<product id="25" category="11" price="500"> <!-- Xp BOX -->
-        <item id="70215"/>
-    </product>
-	
-	
-	<product id="70" category="11" price="100"> <!--  -->
-        <item id="71685" count="100"/>
-    </product>
-	
-	<product id="71" category="11" price="100"> <!--  -->
-        <item id="93628"/>
-    </product>
-	
-	<product id="72" category="11" price="800"> <!--  -->
-        <item id="93629"/>
-    </product>
-	
-	<product id="73" category="11" price="50"> <!--  -->
-        <item id="93676"/>
-    </product>
-	
-	<product id="74" category="11" price="300"> <!--  -->
-        <item id="93477"/>
-    </product>
-	
-	<product id="75" category="11" price="300"> <!--  -->
-        <item id="93482"/>
-    </product>
-	
-	<product id="76" category="11" price="150"> <!--  -->
-        <item id="29510"/>
-    </product>
-	
-	<product id="77" category="11" price="10"> <!--  -->
-        <item id="71684" count="100"/>
-    </product>
-	
-	<product id="80" category="11" price="500" minLevel="60"> <!--  -->
-        <item id="93478"/>
+    <product id="100023" category="14" price="2400"> <!-- Gender Change Ticket Pack -->
+        <item id="71265"/>
     </product>
 
+    <product id="100024" category="14" price="2400">  <!-- Clan Name Change Ticket Pack -->
+        <item id="71266"/>
+    </product>
+    
+    <product id="100033" category="13" price="33" vipTier="2"> <!-- Scroll: Mid-grade XP/SP Boost -->
+        <item id="29649"/>
+    </product>
+    
+    <product id="100039" category="13" price="400" vipTier="4"> <!-- Agathion Box: Griffin -->
+        <item id="71253"/>
+    </product>
+    
+    <product id="100046" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Stem -->
+        <item id="1864" count="100"/>
+    </product>
+    
+    <product id="100047" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Varnish -->
+        <item id="1865" count="50"/>
+    </product>
+    
+    <product id="100048" category="15" paymentType="3" price="0" silverCoin="150"> <!-- Suede -->
+        <item id="1866" count="50"/>
+    </product>
+    
+    <product id="100049" category="15" paymentType="3" price="0" silverCoin="150"> <!-- Animal Skin -->
+        <item id="1867" count="100"/>
+    </product>
+    
+    <product id="100050" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Thread -->
+        <item id="1868" count="100"/>
+    </product>
+    
+    <product id="100051" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Iron Ore -->
+        <item id="1869" count="50"/>
+    </product>
+    
+    <product id="100052" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Coal -->
+        <item id="1870" count="50"/>
+    </product>
+    
+    <product id="100053" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Charcoal -->
+        <item id="1871" count="50"/>
+    </product>
+    
+    <product id="100054" category="15" paymentType="3" price="0" silverCoin="150"> <!-- Animal Bone Fragment -->
+        <item id="1872" count="100"/>
+    </product>
+    
+    <product id="100055" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Silver Nugget -->
+        <item id="1873" count="20"/>
+    </product>
+    
+    <product id="100056" category="15" paymentType="3" price="0" silverCoin="300"> <!-- Oriharukon Ore -->
+        <item id="1874" count="10"/>
+    </product>
+    
+    <product id="100057" category="15" paymentType="3" price="0" silverCoin="300">  <!-- Stone of Purity -->
+        <item id="1875" count="10"/>
+    </product>
+    
+    <product id="100058" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Mithril Ore -->
+        <item id="1876" count="10"/>
+    </product>
+    
+    <product id="100059" category="15" paymentType="3" price="0" silverCoin="100">  <!-- Adamantite Nugget -->
+        <item id="1877" count="2"/>
+    </product>
+    
+    <product id="100060" category="15" paymentType="3" price="0" silverCoin="100"> <!-- Durable Braid -->
+        <item id="1878" count="20"/>
+    </product>
+    
+    <product id="100061" category="15" paymentType="3" price="0" silverCoin="120"> <!-- Cokes -->
+        <item id="1879" count="10"/>
+    </product>
+    
+    <product id="100062" category="15" paymentType="3" price="0" silverCoin="200">  <!-- Steel -->
+        <item id="1880" count="10"/>
+    </product>
+    
+    <product id="100063" category="15" paymentType="3" price="0" silverCoin="150">  <!-- Coarse Bone Powder -->
+        <item id="1881" count="10"/>
+    </product>
+    
+    <product id="100064" category="15" paymentType="3" price="0" silverCoin="180"> <!-- Leather -->
+        <item id="1882" count="20"/>
+    </product>
+    
+    <product id="100065" category="15" paymentType="3" price="0" silverCoin="450"> <!-- Steel Mold -->
+        <item id="1883" count="10"/>
+    </product>
+    
+    <product id="100066" category="15" paymentType="3" price="0" silverCoin="98"> <!-- Cord -->
+        <item id="1884" count="30"/>
+    </product>
+    
+    <product id="100067" category="15" paymentType="3" price="0" silverCoin="240">  <!-- High-grade Suede -->
+        <item id="1885" count="10"/>
+    </product>
+    
+    <product id="100068" category="15" paymentType="3" price="0" silverCoin="700"> <!-- Silver Mold -->
+        <item id="1886" count="5"/>
+    </product>
+    
+    <product id="100069" category="15" paymentType="3" price="0" silverCoin="405"> <!-- Varnish of Purity -->
+        <item id="1887" count="5"/>
+    </product>
+    
+    <product id="100070" category="15" paymentType="3" price="0" silverCoin="330"> <!-- Synthetic Cokes -->
+        <item id="1888" count="5"/>
+    </product>
+    
+    <product id="100071" category="15" paymentType="3" price="0" silverCoin="300">  <!-- Synthetic Braid -->
+        <item id="1889" count="10"/>
+    </product>
+    
+    <product id="100072" category="15" paymentType="3" price="0" silverCoin="655">  <!-- Mithril Alloy -->
+        <item id="1890" count="5"/>
+    </product>
+    
+    <product id="100073" category="15" paymentType="3" price="0" silverCoin="1000"> <!-- Artisan's Frame -->
+        <item id="1891"/>
+    </product>
+    
+    <product id="100074" category="15" paymentType="3" price="0" silverCoin="640">  <!-- Blacksmith' Frame -->
+        <item id="1892"/>
+    </product>
+    
+    <product id="100075" category="15" paymentType="3" price="0" silverCoin="246"> <!-- Oriharukon -->
+        <item id="1893"/>
+    </product>
+    
+    <product id="100076" category="15" paymentType="3" price="0" silverCoin="570"> <!-- Quality Leather -->
+        <item id="1894" count="10"/>
+    </product>
+    
+    <product id="100077" category="15" paymentType="3" price="0" silverCoin="280"> <!-- Metallic Fiber -->
+        <item id="1895" count="40"/>
+    </product>
+    
+    <product id="100078" category="15" paymentType="3" price="0" silverCoin="600"> <!-- Mold Glue -->
+        <item id="4039" count="10"/>
+    </product>
+    
+    <product id="100079" category="15" paymentType="3" price="0" silverCoin="100">  <!-- Mold Lubricant -->
+        <item id="4040"/>
+    </product>
+    
+    <product id="100080" category="15" paymentType="3" price="0" silverCoin="1150"> <!-- Mold Hardener -->
+        <item id="4041" count="5"/>
+    </product>
+    
+    <product id="100081" category="15" paymentType="3" price="0" silverCoin="120"> <!-- Enria -->
+        <item id="4042"/>
+    </product>
+    
+    <product id="100082" category="15" paymentType="3" price="0" silverCoin="600">  <!-- Asofe -->
+        <item id="4043" count="10"/>
+    </product>
+    
+    <product id="100083" category="15" paymentType="3" price="0" silverCoin="600"> <!-- Thons -->
+        <item id="4044" count="10"/>
+    </product>
+    
+    <product id="100084" category="15" paymentType="3" price="0" silverCoin="4110"> <!-- Maestro Holder -->
+        <item id="4045"/>
+    </product>
+    
+    <product id="100085" category="15" paymentType="3" price="0" silverCoin="1000"> <!-- Maestro Anvil Lock -->
+        <item id="4046"/>
+    </product>
+    
+    <product id="100086" category="15" paymentType="3" price="0" silverCoin="7100"> <!-- Craftsman Mold -->
+        <item id="4047"/>
+    </product>
+    
+    <product id="100087" category="15" paymentType="3" price="0" silverCoin="1540"> <!-- Maestro Mold -->
+        <item id="4048"/>
+    </product>
+    
+    <product id="100088" category="15" paymentType="3" price="0" silverCoin="15000"> <!-- Ruthless Tribe Mask -->
+        <item id="71111"/>
+    </product>
+    
+    <product id="100090" category="15" paymentType="3" price="0" silverCoin="50000"> <!-- Agathion - Mr. Lucky -->
+        <item id="70970"/>
+    </product>
+    
+    <product id="100091" category="11" price="25"> <!-- Scroll: Regular XP/SP Boost -->
+        <item id="29648"/>
+    </product>
+    
+    <product id="100184" category="13" price="1200" panelType="6" vipTier="3"> <!-- Agathion - Zaken's Spirit Swords -->
+        <item id="70967"/>
+    </product>
+    
+    <product id="100185" category="13" price="680" vipTier="2">  <!-- Agation - Uthanka -->
+        <item id="70935"/>
+    </product>
+    
+    <product id="100186" category="12" price="800">  <!-- Agathion - Flower Fairy Spirit -->
+        <item id="70977"/>
+    </product>
+    
+    <product id="100187" category="12" price="400"> <!-- Agathion - Bugbear -->
+        <item id="71252"/>
+    </product>
+    
+    <product id="100188" category="11" price="80"> <!-- Scroll: High-Grade XP/SP Boost (100%) -->
+        <item id="29650"/>
+    </product>
+    
+    <product id="100206" category="15" paymentType="3" price="0" silverCoin="500">  <!-- Sealed Rune - Stage 1 -->
+        <item id="1"/>
+    </product>
+    
+    <product id="100214" category="12" price="400"> <!-- Mount - Elk (30-day) -->
+        <item id="30"/>
+    </product>
+    
+    <product id="100215" category="12" price="800"> <!-- Agathion - Joriya -->
+        <item id="70985"/>
+    </product>
+    
+    <product id="100216" category="12" price="800"> <!-- Agathion - Dulcinel -->
+        <item id="70981"/>
+    </product>
+    
+    <product id="100217" category="13" price="680" vipTier="2"> <!-- Agathion - Chimeros -->
+        <item id="70982"/>
+    </product>
+    
+    <product id="100218" category="12" price="800"> <!-- Agathion - Lancet -->
+        <item id="70978"/>
+    </product>
+    
+    <product id="100219" category="12" price="800"> <!-- Agathion - Ralmak -->
+        <item id="70986"/>
+    </product>
+    
+    <product id="100224" category="12" price="800"> <!-- Agathion - Liposa -->
+        <item id="70979"/>
+    </product>
+    
+    <product id="100225" category="12" price="800"> <!-- Agathion - Velarin -->
+        <item id="70980"/>
+    </product>
+    
+    <product id="100226" category="12" price="800"> <!-- Agathion - Niveri -->
+        <item id="70983"/>
+    </product>
+    
+    <product id="100227" category="13" price="600" vipTier="2"> <!-- Agathion - Hamell -->
+        <item id="70984"/>
+    </product>
+    
+    <product id="100228" category="12" price="800"> <!-- Agathion - Goras -->
+        <item id="70987"/>
+    </product>
+    
+    <product id="100251" category="13" price="0" vipTier="2"> <!-- Fishing Rod Chest (1-day) -->
+        <item id="71416"/>
+    </product>
+    
+    <product id="100252" category="13" price="0" vipTier="3"> <!-- High Quality Bait (x50) -->
+        <item id="70046" count="50"/>
+    </product>
+    
+    <product id="100257" category="12" price="800">  <!-- Formal Wear -->
+        <item id="6408"/>
+    </product>
+    
+    <product id="100259" category="11" price="15"> <!-- Scroll of Invisibility -->
+        <item id="70068"/>
+    </product>
+    
+    <product id="100265" category="13" price="0" vipTier="2"> <!-- Scroll of Escape: Giran -->
+        <item id="7126"/>
+    </product>
+    
+    <product id="100266" category="15" paymentType="3" price="0" silverCoin="20000"> <!-- Warrior's Helmet -->
+        <item id="70359"/>
+    </product>
+    
+    <product id="100267" category="15" paymentType="3" price="0" silverCoin="25000"> <!-- Wizard's Hat -->
+        <item id="8563"/>
+    </product>
+    
+    <product id="100268" category="11" price="240"> <!-- Dandy's Home Run Ball -->
+        <item id="46254"/>
+    </product>
+    
+    <product id="100281" category="11" price="1"> <!-- My Teleport Scroll -->
+        <item id="13016"/>
+    </product>
+    
+    <product id="100282" category="11" price="50"> <!-- My Teleport Scroll (x100) -->
+        <item id="13016" count="100"/>
+    </product>
+    
+    <product id="100283" category="11" price="2"> <!-- My Teleport Flag -->
+        <item id="20033"/>
+    </product>
+    
+    <product id="100284" category="11" price="80"> <!-- My Teleport Book -->
+        <item id="13015"/>
+    </product>
+    
+    <product id="100285" category="13" price="0" vipTier="1"> <!-- My Teleport Book -->
+        <item id="90404"/>
+    </product>
+    
+    <product id="100292" category="12" price="800"> <!-- Agathion - Pegasus -->
+        <item id="70968"/>
+    </product>
+    
+    <product id="100304" category="11" price="50"> <!-- Sayha's Buff Scroll -->
+        <item id="91911"/>
+    </product>
+    
+    <product id="100305" category="11" price="40"> <!-- Chef's Fish Stew - Victory (x5) -->
+        <item id="90407" count="5"/>
+    </product>
+    
+    <product id="100306" category="11" price="30"> <!-- Battle Scroll -->
+        <item id="91780"/>
+    </product>
+    
+    <product id="100308" category="11" price="8"> <!-- Soulshot Ticket -->
+        <item id="90907"/>
+    </product>
+    
+    <product id="100309" category="11" price="200"> <!-- Soulshot Ticket (x50) -->
+        <item id="90907" count="50"/>
+    </product>
+    
+    <product id="100310" category="11" price="200"> <!-- Inventory Expansion Ticket Lv. 1 -->
+        <item id="92004"/>
+    </product>
+    
+    <product id="100311" category="11" price="200"> <!-- Inventory Expansion Ticket Lv. 2 -->
+        <item id="92005"/>
+    </product>
+    
+    <product id="100312" category="11" price="800"> <!-- Inventory Expansion Ticket Lv. 3 -->
+        <item id="92006"/>
+    </product>
+    
+    <product id="100313" category="11" price="800"> <!-- Inventory Expansion Ticket Lv. 4 -->
+        <item id="92007"/>
+    </product>
+    
+    <product id="100315" category="11" price="400"> <!-- Magic Warehouse Summoning Scroll (30-day) -->
+        <item id="71341"/>
+    </product>
+    
+    <product id="100316" category="11" price="25"> <!-- Party Member Scroll of Escape (x50) -->
+        <item id="71342" count="50"/>
+    </product>
+    
+    <product id="100317" category="14" price="80"> <!-- Starter Pack -->
+        <item id="71853"/>
+    </product>
+    
+    <product id="100318" category="14" price="400" vipTier="1"> <!-- High-grade Starter Pack -->
+        <item id="71854"/>
+    </product>
+    
+    <product id="100352" category="11" price="70"> <!-- Tomb of Ancient Pirates Time Recharge Stone -->
+        <item id="91939"/>
+    </product>
+    
+    <product id="100386" category="11" price="50"> <!--  Life Control Tower's Scroll of Blessing -->
+        <item id="49765"/>
+    </product>
+    
+    <product id="100387" category="11" price="200"> <!-- Magic Trumpet (30-day) Pack -->
+        <item id="71347"/>
+    </product>
+    
+    <product id="100388" category="11" price="50"> <!--  XP/SP Rune 50% (1-hour) Pack -->
+        <item id="50"/>
+    </product>
+    
+    <product id="100389" category="11" price="2500"> <!--  XP/SP Rune 50% (30-day) Pack -->
+        <item id="50"/>
+    </product>
+    
+    <product id="100390" category="11" price="83"> <!--  XP/SP Rune - 100% (1-hour) Pack -->
+        <item id="100"/>
+    </product>
+    
+    <product id="100391" category="13" price="1328" vipTier="7"> <!-- XP/SP Rune - 100% (7-day) Pack -->
+        <item id="100"/>
+    </product>
+    
+    <product id="100392" category="11" price="2000">  <!--  XP/SP Rune - 100% (7-day) Pack -->
+        <item id="100"/>
+    </product>
+    
+    <product id="100393" category="11" price="240" panelType="6"> <!-- XP/SP Hourglass (100%) - 1 Hour -->
+        <item id="90143"/>
+    </product>
+    
+    <product id="100394" category="11" price="54" panelType="5"> <!-- Golden Fruit Buff -->
+        <item id="90499"/>
+    </product>
+    
+    <product id="100397" category="11" price="80" panelType="5">  <!-- Scroll: PK -->
+        <item id="91772"/>
+    </product>
+    
+    <product id="100424" category="14" price="860" panelType="5"> <!-- XP/SP Hourglass (100%) - 1 Hour (x10) -->
+        <item id="90143" count="10"/>
+    </product>
+    
+    <product id="100425" category="14" price="80" panelType="6"> <!-- L2 Coin - 250 Pack -->
+        <item id="91663" count="250"/>
+    </product>
+    
+    <product id="100426" category="14" price="2000" panelType="6"> <!-- L2 Coin - 6260 Pack -->
+        <item id="91663" count="6260"/>
+    </product>
+    
+    <product id="100427" category="14" price="8000" panelType="6"> <!-- L2 Coin - 25040 Pack -->
+        <item id="91663" count="25040"/>
+    </product>
+    
+    <product id="100428" category="13" price="0" panelType="6" vipTier="2"> <!-- Chronicle Heir Earring Lv. 1 -->
+        <item id="1"/>
+    </product>
+    
+    <product id="100429" category="13" price="0" panelType="6" vipTier="8"> <!-- VIP Battle Scroll (x30) -->
+        <item id="71951" count="30"/>
+    </product>
+    
+    <product id="100430" category="13" price="0" panelType="6" vipTier="9"> <!-- Scroll: VIP XP/SP Boost (x30) -->
+        <item id="71952" count="30"/>
+    </product>
+    
+    <product id="100431" category="13" price="0" panelType="6" vipTier="9">  <!-- VIP Agathion Bracelet - 30 Day -->
+        <item id="71953"/>
+    </product>
+    
+    <product id="100432" category="13" price="0" panelType="6" vipTier="9">  <!-- VIP Talisman Bracelet - 30 Day -->
+        <item id="71954"/>
+    </product>
+    
+    <product id="100433" category="13" price="0" panelType="6" vipTier="10"> <!-- Transformation Sealbook: Navy Admiral -->
+        <item id="71726"/>
+    </product>
+    
+    <product id="100434" category="11" price="0" panelType="6"> <!-- Starter Package (Lv. 1-39) -->
+        <item id="71833"/>
+    </product>
+    
+    <product id="100436" category="14" price="100" panelType="6"> <!-- Shiny Jewelry Box -->
+        <item id="70486"/>
+    </product>
+    
+    <product id="100437" category="14" price="900" panelType="6">  <!-- Shiny Jewelry Box (x10) -->
+        <item id="70486" count="10"/>
+    </product>
+    
+    <product id="100438" category="14" price="3750" panelType="6"> <!-- Shiny Jewelry Box (x50) -->
+        <item id="70486" count="50"/>
+    </product>
+    
+    <product id="100439" category="14" price="0" panelType="5"> <!-- Lv. 5 Jade (3-day)  -->
+        <item id="5"/>
+    </product>
+    
+    <product id="100440" category="14" price="0" panelType="5"> <!-- Lv. 5 Vital Stone (3-day) -->
+        <item id="5"/>
+    </product>
+
+
+<!--
+100021 Agathion Box: Bugbear
+ 100016 Refined Romantic Chapeau: Red
+ 100017 Refined Angel Ring
+ 100018 Gatekeeper Hat
+ 100019 Wedding Veil
+ 100011 Mysterious Blessed Spiritshot (No-grade) Pack
+ 100012 Mysterious Blessed Spiritshot (D-grade) Pack
+ 100013 Mysterious Blessed Spiritshot (C-grade) Pack
+ 100014 Special Fruit Buff
+ 100089 Formal Wear
+ 100093 2nd Class Transfer Buff Scroll
+ 100094 Uniform Hat
+ 100095 Maid Hair Accessory
+ 100096 Gold Skeleton Circlet
+ 100097 Black Skeleton Circlet
+ 100098 Agathion - One-eyed Bat Drove
+ 100099 Starter Pack
+ 100100 Tracker Pack
+ 100101 Hunter Pack
+ 100102 XP/SP Rune Bundle (7-day)
+ 100103 XP/SP Rune - 50% (30-day) Pack
+ 100104 Mysterious Soulshot (C-grade) Pack
+ 100105 Mysterious Blessed Spiritshot (C-grade) Pack
+ 100106 Black Friday Fishing Pack (1-day)
+ 100107 Black Friday Fishing Pack (30-day)
+ 100108 Black Friday Rune Pack
+ 100109 Black Friday Boost Pack
+ 100110 Scroll: PK (No-grade)
+ 100111 Scroll: PK (D-grade)
+ 100112 Scroll: PK (C-grade)
+ 100113 Scroll: PK (B-grade)
+ 100114 Scroll: PK (A-grade)
+ 100115 Scroll of Escape: Elven Village (x10)
+ 100116 Scroll of Escape: Dark Elf Village (x10)
+ 100117 Scroll of Escape: Orc Village (x10)
+ 100118 Scroll of Escape: Dwarven Village (x10)
+ 100119 Scroll of Escape: Talking Island Village (x10)
+ 100120 Scroll of Escape: Gludin Village (x10)
+ 100121 Scroll of Escape: Town of Gludio (x10)
+ 100122 Wizard Hat
+ 100123 Demon Horns
+ 100124 Coronet
+ 100125 Stylish Straw Hat
+ 100126 Gold-rimmed Glasses
+ 100127 Agathion: Phoenix
+ 100128 Color Title
+ 100129 Refined Romantic Chapeau: Red
+ 100130 Refined Angel Ring
+ 100131 Gatekeeper Hat
+ 100133 Wedding Veil
+ 100138 Uniform Hat
+ 100139 Wedding Veil
+ 100140 Agathion Box: Dryad
+ 100141 Agathion Box: Bugbear
+ 100142 Agathion Bracelet - Lv. 1 Box (7-day)
+ 100143 Assassin's Bamboo Hat
+ 100144 Maid Hair Accessory
+ 100145 Valkyrie Circlet
+ 100146 Artisan's Goggles
+ 100147 Top Hat
+ 100148 Agathion Box: Griffin
+ 100149 Holiday Joy Box
+ 100150 Holiday Joy Box (x10)
+ 100151 Holiday Joy Box (x50)
+ 100152 Monkey Bait (x480)
+ 100153 Monkey Bait (x2,880)
+ 100154 Monkey Bait (x20,160)
+ 100155 Chef Monkey's Gift
+ 100156 Fishing Rod Chest (1-day)
+ 100157 Fishing Rod Chest (7-day)
+ 100158 Fishing Rod Chest (30-day)
+ 100159 Agathion - Love (7-day) Pack
+ 100160 Red Party Mask
+ 100161 Black Phantom Mask
+ 100162 Ribbon Hairband
+ 100163 Piggy Hat
+ 100164 Demon Circlet
+ 100165 Little Angel Wing
+ 100166 Scroll: PK (No-grade)
+ 100167 Scroll: PK (D-grade)
+ 100168 Scroll: PK (C-grade)
+ 100169 Scroll: PK (B-grade)
+ 100170 Scroll: PK (A-grade)
+ 100171 Scroll of Escape: Aden
+ 100172 Scroll of Escape: Giran
+ 100173 Scroll of Escape: Floran
+ 100174 Scroll of Escape: Dion
+ 100175 Magic Warehouse Summoning Scroll (30-day) Pack
+ 100176 Outlaw Eyepatch
+ 100177 Laborer Hat
+ 100178 First Mate Hat
+ 100179 Refined Brown Turban
+ 100180 Refined Yellow Turban
+ 100181 Chapeau
+ 100182 Refined Carnival Circlet (purple)
+ 100183 Refined Carnival Circlet (white)
+ 100189 Fire Dragon's Pendant Box
+ 100190 Earth Dragon's Pendant Box
+ 100191 Wind Dragon's Pendant Box
+ 100192 Water Dragon's Pendant Box
+ 100193 Fire Dragon's Pendant Special Box
+ 100194 Earth Dragon's Pendant Special Box
+ 100195 Wind Dragon's Pendant Special Box
+ 100196 Water Dragon's Pendant Special Box
+ 100197 Fire Dragon's Shining Pendant Varnish Package
+ 100198 Earth Dragon's Shining Pendant Varnish Package
+ 100199 Wind Dragon's Shining Pendant Varnish Package
+ 100200 Water Dragon's Shining Pendant Varnish Package
+ 100201 Pendant Polish (x5)
+ 100202 Fire Dragon's Pendant
+ 100203 Water Dragon's Pendant
+ 100204 Wind Dragon's Pendant
+ 100205 Earth Dragon's Pendant
+ 100207 XP/SP Rune - 100% (7-day) Pack
+ 100208 XP/SP Rune - 100% (7-day) Pack
+ 100209 XP/SP Rune - 100% (1-hour) Pack
+ 100210 XP/SP Rune - 50% (30-day) Pack
+ 100211 XP/SP Rune - 50% (7-day) Pack
+ 100212 XP/SP Rune - 50% (1-hour) Pack
+ 100213 Golden Fruit Buff
+ 100220 Monocle
+ 100221 Party Member Scroll of Escape
+ 100222 Jester Hat
+ 100223 Squeaking Shoes
+ 100229 Cat Ears
+ 100230 Fairy Antennae
+ 100231 Dapper Cap
+ 100232 Vigilante Hat
+ 100233 Newbie Pack
+ 100234 Hunting Support Pack
+ 100235 Royal Equipment Pack
+ 100236 Baium's Mystery Box
+ 100237 Baium's Mystery Box (x15)
+ 100238 Baium's Mystery Box (x50)
+ 100239 Mysterious Soulshot (A-grade) Pack
+ 100240 Mysterious Blessed Spiritshot (A-grade) Pack
+ 100241 Mysterious Soulshot (B-grade) Pack
+ 100242 Mysterious Blessed Spiritshot (B-grade) Pack
+ 100243 Mysterious Soulshot (C-grade) Pack
+ 100244 Mysterious Blessed Spiritshot (C-grade) Pack
+ 100245 Mysterious Soulshot (D-grade) Pack
+ 100246 Mysterious Blessed Spiritshot (D-grade) Pack
+ 100247 Mysterious Soulshot (No-grade) Pack
+ 100248 Mysterious Blessed Spiritshot (No-grade) Pack
+ 100249 Flaming Rice Cake of Fighting Spirit
+ 100250 Life Control Tower's Scroll of Blessing
+ 100253 Fishing XP Growth Amulet Pack (7-day)
+ 100254 Fishing XP Growth Amulet Pack (30-day)
+ 100255 High-grade Fishing XP Growth Amulet Pack (7-day)
+ 100256 High-grade Fishing XP Growth Amulet Pack (30-day)
+ 100258 Golden Mermaid's Fishing Rod Pack (30-day)
+ 100260 Scroll of Escape: Dion
+ 100261 Scroll of Escape: Gludin Village
+ 100262 Scroll of Escape: Town of Gludio
+ 100263 Scroll of Escape: Aden
+ 100264 Scroll of Escape: Oren
+ 100270 Festival Ticket (x50)
+ 100271 Festival Ticket (VIP)
+ 100272 15th Anniversary Talisman
+ 100273 Chronicle Cube
+ 100274 15th Anniversary Gift Box (x2)
+ 100275 Talisman of Fate Box
+ 100276 Talisman of Fate Box (x10)
+ 100277 Forbidden Fate Special Pack
+ 100278 Talisman of Fate +1
+ 100279 Bracelet of Fate (30-day)
+ 100280 Warrior Experience Amulet (7-day)
+ 100286 Fairy Antennae
+ 100287 Refined Romantic Chapeau: Blue
+ 100288 Refined Romantic Chapeau: Yellow
+ 100289 Refined Romantic Chapeau: Gold
+ 100290 Refined Romantic Chapeau: Green
+ 100291 Refined Romantic Chapeau
+ 100293 Brilliant Beach Sun Cap
+ 100294 Stylish Straw Hat
+ 100295 Magic Trumpet (30-day) Pack
+ 100296 Transformation Sealbook: Charming ParaPara Cat
+ 100297 Transformation Sealbook: Ferocious ParaPara Cat
+ 100298 Transformation Sealbook: Merchant ParaPara Cat
+ 100299 Transformation Sealbook: One-eyed ParaPara Cat
+ 100300 Transformation Sealbook: Smiling ParaPara Cat
+ 100301 Hardin's Magic Bag
+ 100302 Hardin's Magic Bag (x15)
+ 100303 Hardin's Magic Bag (x50)
+ 100307 Scroll: PK
+ 100319 Eva's Hair Accessory Ticket
+ 100320 Eva's Hair Accessory Ticket (x50)
+ 100321 Letter Gift Box - NCSOFT
+ 100322 Letter Gift Box - LINEAGEII
+ 100323 Letter Gift Box - TOGETHER
+ 100324 Aden Talisman Enchant Package
+ 100325 Aden Talisman
+ 100326 Feather of Blessing
+ 100327 Frintezza's Music Box
+ 100328 Frintezza's Music Box (x25)
+ 100329 Frintezza's Music Box (x100)
+ 100330 Elmoreden's Cloak (PvP Attack)
+ 100331 Aden's Cloak (Magic PvE)
+ 100332 Elmore's Cloak (Physical PvE)
+ 100333 Ferios' Cloak (Defense)
+ 100334 Cloak Enchant Scroll Pack x1
+ 100335 Cloak Enchant Scroll Pack x10
+ 100336 Cloak Enchant Scroll Pack x50
+ 100337 Legendary Cloak Enchant Scroll Pack x1
+ 100338 Legendary Cloak Enchant Scroll Pack x10
+ 100339 Legendary Cloak Enchant Scroll Pack x50
+ 100340 Life Stone - Ancient Kingdom
+ 100341 Life Stone - Elmoreden
+ 100342 Life Stone - Aden
+ 100343 Life Stone - Elmore
+ 100344 Life Stone - Ferios
+ 100345 Legendary Scroll x1
+ 100346 Legendary Scroll (High-grade) x1
+ 100348 Legendary Scroll x1
+ 100349 Ancient Cloak Enchant Scroll - Legendary x2
+ 100350 Agathion - Minion Eye
+ 100351 Transformation Sealbook: Halloween (Normal)
+ 100353 Refined Wizard Hat
+ 100354 Red Skeleton Circlet
+ 100355 Silver Skeleton Circlet
+ 100356 Agathion - One-eyed Bat Drove
+ 100357 Black Skeleton Circlet
+ 100358 Gold Skeleton Circlet
+ 100359 Mysterious Soulshot (No-grade) Pack
+ 100360 Mysterious Soulshot (D-grade) Pack
+ 100361 Mysterious Soulshot (C-grade) Pack
+ 100362 Matte Pendant Varnish
+ 100363 Black Friday Special - Shining Pendant Varnish - 50% off
+ 100364 Fire Dragon's Pendant Special Box
+ 100365 Earth Dragon's Pendant Special Box
+ 100366 Wind Dragon's Pendant Special Box
+ 100367 Water Dragon's Pendant Special Box
+ 100368 Fire Dragon's Pendant
+ 100369 Earth Dragon's Pendant
+ 100370 Wind Dragon's Pendant
+ 100371 Water Dragon's Pendant
+ 100372 Pendant Polish (x5)
+ 100373 Black Friday Rune Pack
+ 100374 Black Friday Boost Pack
+ 100375 XP/SP Hourglass 100% - 1 Hour (x10)
+ 100376 Blizzard Chill Box
+ 100377 Blizzard Chill Box (x25)
+ 100378 Blizzard Chill Box (x100)
+ 100379 Transformation Sealbook: Santa Normal
+ 100380 Transformation Sealbook: Santa Advanced
+ 100381 Agathion: Rudolph (7-day)
+ 100382 Agathion: Rudolph (30-day)
+ 100383 Santa's Cloak
+ 100384 Santa's Hat Set
+ 100385 Agathion Exchange Ticket
+ 100395 Scroll: PK
+ 100396 Agathion Exchange Ticket (x25)
+ 100398 Heartthrob Box
+ 100399 Heartthrob Box (x25)
+ 100400 Heartthrob Box (x100)
+ 100401 Talisman of Fate - Lv1
+ 100402 Talisman of Fate Box
+ 100403 Talisman of Fate Box (x10)
+ 100404 Forbidden Fate Special Pack
+ 100410 Cloak Enchant Scroll Pack (x10)
+ 100406 Aden's Cloak (Magic PvE)
+ 100407 Elmore's Cloak (Physical PvE)
+ 100408 Ferios' Cloak (Resistances)
+ 100409 Cloak Enchant Scroll Pack (x1)
+ 100411 Cloak Enchant Scroll Pack (x50)
+ 100412 Legendary Cloak Enchant Scroll Pack (x1)
+ 100413 Legendary Cloak Enchant Scroll Pack (x10)
+ 100414 Legendary Cloak Enchant Scroll Pack (x50)
+ 100415 Life Stone - Ancient Kingdom
+ 100416 Life Stone - Elmoreden
+ 100417 Life Stone - Aden
+ 100418 Life Stone - Elmore
+ 100419 Life Stone - Ferios
+ 100420 Legendary Scroll (x1)
+ 100421 High-grade Legendary Scroll (x1)
+ 100422 Legendary Scroll (VIP)
+ 100423 Ancient Cloak Enchant Scroll - Legendary (x2)
+ 100435 VIP Scroll - Tier 1 -->
 
 </list>
