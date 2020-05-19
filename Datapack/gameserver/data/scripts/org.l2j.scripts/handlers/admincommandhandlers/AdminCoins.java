@@ -2,11 +2,11 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.World;
 
 import java.util.StringTokenizer;
 
@@ -46,13 +46,13 @@ public final class AdminCoins implements IAdminCommandHandler
 				
 				switch (action) {
 					case "set": {
-						target.setL2Coins(value);
+						target.setNCoins(value);
 						target.sendMessage("Admin set your Coins to " + value + "!");
 						BuilderUtil.sendSysMessage(activeChar, "You set " + value + " Coin to player " + target.getName());
 						break;
 					}
 					case "increase": {
-						if (target.getNCCoins() == Integer.MAX_VALUE) {
+						if (target.getNCoins() == Integer.MAX_VALUE) {
 							showMenuHtml(activeChar);
 							activeChar.sendMessage(target.getName() + " already have max count of Coins!");
 							return false;
@@ -63,13 +63,13 @@ public final class AdminCoins implements IAdminCommandHandler
 						break;
 					}
 					case "decrease": {
-						if (target.getNCCoins() == 0) {
+						if (target.getNCoins() == 0) {
 							showMenuHtml(activeChar);
 							activeChar.sendMessage(target.getName() + " already have min count of Coins!");
 							return false;
 						}
 
-						target.updateNCCoins(-value);
+						target.updateNCoins(-value);
 						target.sendMessage("Admin decreased your Coins by " + value + "!");
 						BuilderUtil.sendSysMessage(activeChar, "You decreased Coins of " + target.getName() + " by " + value);
 						break;
@@ -101,11 +101,11 @@ public final class AdminCoins implements IAdminCommandHandler
 	}
 
 	private boolean canReceiveCoin(Player player) {
-		return player.isOnlineInt() == 1 && player.getNCCoins() < Integer.MAX_VALUE;
+		return player.isOnlineInt() == 1 && player.getNCoins() < Integer.MAX_VALUE;
 	}
 
 	private void updateCoin(Player player, int coinCount) {
-		player.updateNCCoins(coinCount);
+		player.updateNCoins(coinCount);
 		player.sendMessage("Admin increase your Coins by " + coinCount + "!");
 	}
 
@@ -117,7 +117,7 @@ public final class AdminCoins implements IAdminCommandHandler
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		final Player target = getTarget(activeChar);
 		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/coins.htm"));
-		html.replace("%coins%", GameUtils.formatAdena(target.getNCCoins()));
+		html.replace("%coins%", GameUtils.formatAdena(target.getNCoins()));
 		html.replace("%targetName%", target.getName());
 		activeChar.sendPacket(html);
 	}

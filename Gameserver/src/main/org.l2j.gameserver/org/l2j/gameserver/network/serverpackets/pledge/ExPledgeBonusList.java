@@ -16,10 +16,10 @@ public class ExPledgeBonusList extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_PLEDGE_BONUS_LIST);
-        writeByte((byte) 0x00); // 140
+        writeByte(0x00); // 140
         ClanRewardManager.getInstance().getClanRewardBonuses(ClanRewardType.MEMBERS_ONLINE).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
                 writeInt(bonus.getSkillReward().getSkillId()));
-        writeByte((byte) 0x01); // 140
+        writeByte(0x01); // 140
         ClanRewardManager.getInstance().getClanRewardBonuses(ClanRewardType.HUNTING_MONSTERS).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
                 writeInt(bonus.getItemReward().getId()));
     }

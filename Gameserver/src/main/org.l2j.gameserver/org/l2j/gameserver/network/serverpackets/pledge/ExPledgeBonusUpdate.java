@@ -20,7 +20,7 @@ public class ExPledgeBonusUpdate extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_PLEDGE_BONUS_UPDATE);
-        writeByte((byte) _type.getClientId());
+        writeByte(_type.getClientId());
         writeInt(_value);
     }
 

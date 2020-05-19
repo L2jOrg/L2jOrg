@@ -5,6 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.model.Clan;
@@ -71,7 +72,21 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         }
     }
 
+
+
     @ScheduleTarget
+    private void onClansTask(){
+        onClanLeaderApply();
+        GlobalVariablesManager.getInstance().resetRaidBonus();
+        onClanResetRaids();
+    }
+
+    private void onClanResetRaids() {
+        ClanTable.getInstance().forEachClan(clan ->{
+            ClanRewardManager.getInstance().checkArenaProgress(clan);
+        });
+    }
+
     private void onClanLeaderApply() {
         for (Clan clan : ClanTable.getInstance().getClans()) {
             if (clan.getNewLeaderId() != 0) {

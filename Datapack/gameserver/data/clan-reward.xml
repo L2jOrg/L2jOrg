@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/clan-reward.xsd" >
+	<members-online>
+		<players size="10" level="1">
+			<skill id="55168"/> <!-- Clan Unity - Lv. 1 -->
+		</players>
+		<players size="20" level="2">
+			<skill id="55169"/> <!-- Clan Unity - Lv. 2 -->
+		</players>
+		<players size="30" level="3">
+			<skill id="55170"/> <!-- Clan Unity - Lv. 3 -->
+		</players>
+		<players size="40" level="4">
+			<skill id="55171"/> <!-- Clan Unity - Lv. 4 -->
+		</players>
+	</members-online>
+
+	<hunting-bonus>
+		<hunting points="28800000" level="1">
+			<item id="70020"/> <!-- Clan's Supplies - Low Grade -->
+		</hunting>
+		<hunting points="57600000" level="2">
+			<item id="70021"/> <!-- Clan's Supplies - Medium Grade -->
+		</hunting>
+		<hunting points="86400000" level="3">
+			<item id="70022"/> <!-- Clan's Supplies - High Grade -->
+		</hunting>
+		<hunting points="115200000" level="4">
+			<item id="70023"/> <!-- Clan's Supplies - Highest Grade -->
+		</hunting>
+	</hunting-bonus>
+
+	<raid-bonus>
+		<raid progress="5">
+			<skill id="55887"/> <!-- Clan Exuberance -->
+		</raid>
+		<raid progress="10">
+			<skill id="55887" level="2"/>
+		</raid>
+		<raid progress="15">
+			<skill id="55887" level="3"/>
+		</raid>
+		<raid progress="20">
+			<skill id="55887" level="4"/>
+		</raid>
+		<raid progress="25">
+			<skill id="55887" level="5"/>
+		</raid>
+	</raid-bonus>
+</list>

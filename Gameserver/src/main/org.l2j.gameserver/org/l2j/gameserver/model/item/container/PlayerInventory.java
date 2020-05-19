@@ -884,11 +884,11 @@ public class PlayerInventory extends Inventory {
         return nonNull(silverCoin) ? silverCoin.getCount() : 0;
     }
 
-    public long getL2Coin() {
+    public long getLCoin() {
         return nonNull(l2Coin) ? l2Coin.getCount() : 0;
     }
 
-    public void addL2Coin(long count) {
-        l2Coin.setCount(getL2Coin() + count);
+    public void addLCoin(long count) {
+        l2Coin.setCount(getLCoin() + count);
     }
 }

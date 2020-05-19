@@ -328,15 +328,15 @@ public final class Player extends Playable {
         getClient().updateVipPoints(points);
     }
 
-    public int getNCCoins() {
-        return getClient().getCoin();
-    }
-
-    public void setL2Coins(int coins) {
+    public void setNCoins(int coins) {
         getClient().setCoin(coins);
     }
 
-    public void updateNCCoins(int coins) {
+    public int getNCoins() {
+        return getClient().getCoin();
+    }
+
+    public void updateNCoins(int coins) {
         getClient().updateCoin(coins);
     }
 
@@ -356,9 +356,9 @@ public final class Player extends Playable {
         getClient().setVipTierExpiration(expiration);
     }
 
-    public long getL2Coins() { return inventory.getL2Coin(); }
+    public long getLCoins() { return inventory.getLCoin(); }
 
-    public void addL2Coins(long count) { inventory.addL2Coin(count); }
+    public void addLCoins(long count) { inventory.addLCoin(count); }
 
     public boolean isInBattle() {
         return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);

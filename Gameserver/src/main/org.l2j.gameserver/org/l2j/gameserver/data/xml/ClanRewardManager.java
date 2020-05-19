@@ -2,9 +2,11 @@ package org.l2j.gameserver.data.xml;
 
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.enums.ClanRewardType;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,33 +16,35 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.*;
+import java.util.function.Consumer;
+
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.enums.ClanRewardType.ARENA;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class ClanRewardManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanRewardManager.class);
 
-    private final Map<ClanRewardType, List<ClanRewardBonus>> clanRewards = new ConcurrentHashMap<>();
+    private final Map<ClanRewardType, List<ClanRewardBonus>> clanRewards = new EnumMap<>(ClanRewardType.class);
+    private int minRaidBonus;
 
     private ClanRewardManager() {
     }
 
     @Override
     protected Path getSchemaFilePath() {
-        return Path.of("config/xsd/clan-reward.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/clan-reward.xsd");
     }
 
     @Override
     public void load() {
-        parseFile(new File("config/clan-reward.xml"));
-        for (ClanRewardType type : ClanRewardType.values()) {
-            LOGGER.info("Loaded {} rewards for {}", (clanRewards.containsKey(type) ? clanRewards.get(type).size() : 0), type);
-        }
+        parseDatapackFile("data/clan-reward.xml");
+        clanRewards.forEach((type, rewards) -> LOGGER.info("Loaded {} rewards for {}",  nonNull(rewards) ? rewards.size() : 0, type));
         releaseResources();
     }
 
@@ -50,53 +54,53 @@ public class ClanRewardManager extends GameXmlReader {
             switch (listNode.getNodeName()) {
                 case "members-online" -> parseMembersOnline(listNode);
                 case "hunting-bonus" -> parseHuntingBonus(listNode);
+                case "raid-bonus" -> parseRaidBonus(listNode);
             }
+        });
+    }
+
+    private void parseRaidBonus(Node node) {
+        forEach(node, "raid", raidNode -> {
+            final var progress = parseInt(raidNode.getAttributes(), "progress");
+            if(minRaidBonus == 0 || progress < minRaidBonus) {
+                minRaidBonus = progress;
+            }
+            final var bonus = new ClanRewardBonus(ARENA, progress , progress);
+
+            forEach(raidNode, "skill", skillNode -> {
+                final NamedNodeMap skillAttr = skillNode.getAttributes();
+                bonus.setSkillReward(new SkillHolder(parseInt(skillAttr, "id"), parseInt(skillAttr, "level")));
+            });
+
+            clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);
         });
     }
 
     private void parseMembersOnline(Node node) {
-        forEach(node, XmlReader::isNode, memberNode -> {
-            if ("players".equalsIgnoreCase(memberNode.getNodeName())) {
+        forEach(node, "players", memberNode -> {
+            final var attrs = memberNode.getAttributes();
+            final var bonus = new ClanRewardBonus(ClanRewardType.MEMBERS_ONLINE, parseInt(attrs, "level"), parseInt(attrs, "size"));
 
-                final NamedNodeMap attrs = memberNode.getAttributes();
-                final int requiredAmount = parseInteger(attrs, "size");
-                final int level = parseInteger(attrs, "level");
-                final ClanRewardBonus bonus = new ClanRewardBonus(ClanRewardType.MEMBERS_ONLINE, level, requiredAmount);
+            forEach(memberNode, "skill", skillNode -> {
+                final NamedNodeMap skillAttr = skillNode.getAttributes();
+                bonus.setSkillReward(new SkillHolder(parseInt(skillAttr, "id"), parseInt(skillAttr, "level")));
+            });
 
-                forEach(memberNode, XmlReader::isNode, skillNode -> {
-                    if ("skill".equalsIgnoreCase(skillNode.getNodeName())) {
-                        final NamedNodeMap skillAttr = skillNode.getAttributes();
-                        final int skillId = parseInteger(skillAttr, "id");
-                        final int skillLevel = parseInteger(skillAttr, "level");
-                        bonus.setSkillReward(new SkillHolder(skillId, skillLevel));
-                    }
-                });
-
-                clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);
-            }
+            clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);
         });
     }
 
     private void parseHuntingBonus(Node node) {
-        forEach(node, XmlReader::isNode, memberNode -> {
+        forEach(node, "hunting", hunting -> {
+            final var attrs = hunting.getAttributes();
+            final var bonus = new ClanRewardBonus(ClanRewardType.HUNTING_MONSTERS, parseInt(attrs, "level"), parseInt(attrs, "points"));
 
-            if ("hunting".equalsIgnoreCase(memberNode.getNodeName())) {
-                final NamedNodeMap attrs = memberNode.getAttributes();
-                final int requiredAmount = parseInteger(attrs, "points");
-                final int level = parseInteger(attrs, "level");
-                final ClanRewardBonus bonus = new ClanRewardBonus(ClanRewardType.HUNTING_MONSTERS, level, requiredAmount);
+            forEach(hunting, "item", itemsNode -> {
+                final NamedNodeMap itemsAttr = itemsNode.getAttributes();
+                bonus.setItemReward(new ItemHolder(parseInt(itemsAttr, "id"), parselong(itemsAttr, "count")));
+            });
 
-                forEach(memberNode, XmlReader::isNode, itemsNode -> {
-                    if ("item".equalsIgnoreCase(itemsNode.getNodeName())) {
-                        final NamedNodeMap itemsAttr = itemsNode.getAttributes();
-                        final int id = parseInteger(itemsAttr, "id");
-                        final int count = parseInteger(itemsAttr, "count");
-                        bonus.setItemReward(new ItemHolder(id, count));
-                    }
-                });
-
-                clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);
-            }
+            clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);
         });
     }
 
@@ -105,13 +109,25 @@ public class ClanRewardManager extends GameXmlReader {
     }
 
     public ClanRewardBonus getHighestReward(ClanRewardType type) {
-        ClanRewardBonus selectedBonus = null;
-        for (ClanRewardBonus currentBonus : clanRewards.get(type)) {
-            if ((selectedBonus == null) || (selectedBonus.getLevel() < currentBonus.getLevel())) {
-                selectedBonus = currentBonus;
+        return clanRewards.getOrDefault(type, Collections.emptyList()).stream().max(Comparator.comparingInt(ClanRewardBonus::getLevel)).orElse(null);
+    }
+
+    public void forEachReward(ClanRewardType type, Consumer<ClanRewardBonus> action) {
+        clanRewards.getOrDefault(type, Collections.emptyList()).forEach(action);
+    }
+
+    public void checkArenaProgress(Clan clan) {
+        final var arenaRewards = clanRewards.get(ARENA);
+        final var anyReward = arenaRewards.get(0);
+        clan.removeSkill(anyReward.getSkillReward().getSkillId());
+
+        final var progress = clan.getArenaProgress();
+        if(progress >= minRaidBonus) {
+            final var reward = arenaRewards.stream().filter(r -> r.getLevel() < progress).max(Comparator.comparingInt(ClanRewardBonus::getLevel)).orElse(null);
+            if (nonNull(reward)) {
+                clan.addNewSkill(reward.getSkillReward().getSkill());
             }
         }
-        return selectedBonus;
     }
 
     public static void init() {

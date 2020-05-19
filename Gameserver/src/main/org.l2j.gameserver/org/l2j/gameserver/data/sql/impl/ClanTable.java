@@ -32,6 +32,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -242,6 +243,10 @@ public class ClanTable {
             }
         }
         return clanAllies;
+    }
+
+    public void forEachClan(Consumer<Clan> action) {
+
     }
 
     public void shutdown() {

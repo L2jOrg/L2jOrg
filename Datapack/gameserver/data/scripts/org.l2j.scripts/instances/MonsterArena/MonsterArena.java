@@ -2,6 +2,7 @@ package instances.MonsterArena;
 
 import instances.AbstractInstance;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.actor.Npc;
@@ -12,6 +13,9 @@ import org.l2j.gameserver.network.serverpackets.ExSendUIEvent;
 
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.commons.util.Util.doIfNonNull;
+import static org.l2j.gameserver.instancemanager.GlobalVariablesManager.MONSTER_ARENA_VARIABLE;
 
 /**
  * @author Mobius
@@ -56,7 +60,6 @@ public class MonsterArena extends AbstractInstance
 	private static final int TICKET_H = 90947;
 	// Misc
 	private static final Collection<Player> REWARDED_PLAYERS = ConcurrentHashMap.newKeySet();
-	private static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	private static final int TEMPLATE_ID = 192;
 
 	private MonsterArena()
@@ -267,6 +270,7 @@ public class MonsterArena extends AbstractInstance
 
 			// Save progress to global variables.
 			GlobalVariablesManager.getInstance().increaseInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
+			doIfNonNull(player.getClan(), clan -> ClanRewardManager.getInstance().checkArenaProgress(clan));
 
 			// Spawn reward chests.
 			world.spawnGroup("supplies");
