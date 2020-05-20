@@ -1305,15 +1305,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             setCurrentHp(0);
             _isDead = true;
         }
+
+        stopMove(null);
+        calculateRewards(killer);
+
         // Notify Creature AI
         if (hasAI()) {
             getAI().notifyEvent(CtrlEvent.EVT_DEAD);
         }
 
         EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), killer);
-
-        stopMove(null);
-        calculateRewards(killer);
 
         // Stop HP/MP/CP Regeneration task
         _status.stopHpMpRegeneration();
