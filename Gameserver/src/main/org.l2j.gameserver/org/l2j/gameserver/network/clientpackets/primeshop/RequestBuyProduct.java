@@ -122,7 +122,7 @@ public abstract class RequestBuyProduct extends ClientPacket {
             }
             if(price > 0) {
                 activeChar.updateNCoins(-price);
-                activeChar.updateVipPoints((int) (price * 0.15));
+                activeChar.updateVipPoints(price);
             }
         }
         return true;

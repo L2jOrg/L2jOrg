@@ -21,7 +21,7 @@ public class ReceiveVipProductList extends ServerPacket {
         writeLong(player.getAdena());
         writeLong(player.getRustyCoin()); // Rusty Coin Amount
         writeLong(player.getSilverCoin()); // Silver Coin Amount
-        writeByte((byte) 1); // Show Reward tab
+        writeByte(1); // Show Reward tab
 
         if(nonNull(gift)) {
             writeInt(products.size() + 1);
@@ -43,9 +43,9 @@ public class ReceiveVipProductList extends ServerPacket {
         writeInt(product.getSilverCoin());
         writeByte(product.getPanelType()); // NEW - 6; HOT - 5 ... Unk
         writeByte(product.getVipTier());
-        writeByte((byte) 7); // Unk
+        writeByte(7); // Unk
 
-        writeByte((byte) product.getItems().size());
+        writeByte(product.getItems().size());
 
         for (PrimeShopItem item : product.getItems()) {
             writeInt(item.getId());
