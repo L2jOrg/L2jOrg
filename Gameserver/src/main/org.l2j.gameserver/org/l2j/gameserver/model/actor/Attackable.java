@@ -845,25 +845,23 @@ public class Attackable extends Npc {
         }
 
         final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropType.DROP, this, player);
-        if (deathItems != null) {
-            for (ItemHolder drop : deathItems) {
-                final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
-                // Check if the autoLoot mode is active
-                var characterSettings = getSettings(CharacterSettings.class);
-                if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot()) || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS)) {
-                    player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
-                } else {
-                    dropItem(player, drop); // drop the item on the ground
-                }
+        for (ItemHolder drop : deathItems) {
+            final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
+            // Check if the autoLoot mode is active
+            var characterSettings = getSettings(CharacterSettings.class);
+            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot()) || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS)) {
+                player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
+            } else {
+                dropItem(player, drop); // drop the item on the ground
+            }
 
-                // Broadcast message if RaidBoss was defeated
-                if (_isRaid && !_isRaidMinion) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S);
-                    sm.addString(getName());
-                    sm.addItemName(item);
-                    sm.addLong(drop.getCount());
-                    broadcastPacket(sm);
-                }
+            // Broadcast message if RaidBoss was defeated
+            if (_isRaid && !_isRaidMinion) {
+                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S);
+                sm.addString(getName());
+                sm.addItemName(item);
+                sm.addLong(drop.getCount());
+                broadcastPacket(sm);
             }
         }
     }

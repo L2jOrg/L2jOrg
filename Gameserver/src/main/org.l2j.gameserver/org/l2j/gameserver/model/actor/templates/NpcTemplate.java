@@ -30,6 +30,8 @@ import static java.util.Objects.nonNull;
  */
 public final class NpcTemplate extends CreatureTemplate implements IIdentifiable {
 
+    private final List<DropHolder> _dropListDeath = new ArrayList<>();
+    private final List<DropHolder> _dropListSpoil = new ArrayList<>();
     private int _id;
     private int _displayId;
     private byte _level;
@@ -83,8 +85,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private Map<AISkillScope, List<Skill>> _aiSkillLists;
     private Set<Integer> _clans;
     private Set<Integer> _ignoreClanNpcIds;
-    private final List<DropHolder> _dropListDeath = new ArrayList<>();
-    private final List<DropHolder> _dropListSpoil = new ArrayList<>();
     private double _collisionRadiusGrown;
     private double _collisionHeightGrown;
     private int _mpRewardValue;
@@ -347,8 +347,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     }
 
 
-
-
     public double getRaidPoints() {
         return _raidPoints;
     }
@@ -602,10 +600,10 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     }
 
     public List<DropHolder> getDropList(DropType dropType) {
-return switch (dropType) {
-    case DROP, LUCKY -> _dropListDeath;
-    case SPOIL -> _dropListSpoil;
-};
+        return switch (dropType) {
+            case DROP, LUCKY -> _dropListDeath;
+            case SPOIL -> _dropListSpoil;
+        };
     }
 
     private double calculateLevelGapChanceToDrop(DropHolder dropItem, int levelDifference) {
@@ -620,8 +618,8 @@ return switch (dropType) {
         return levelGapChanceToDrop;
     }
 
-    private void processDropList(Collection<ItemHolder> itemsToDrop, Creature victim, Creature killer) {
-        var list = getDropList(DropType.DROP);
+    private void processDropList(DropType dropType, Collection<ItemHolder> itemsToDrop, Creature victim, Creature killer) {
+        var list = getDropList(dropType);
         if (isNull(list)) {
             return;
         }
@@ -651,14 +649,11 @@ return switch (dropType) {
             itemsToDrop.add(drop);
         }
 
-        if (victim.isChampion())
-        {
-            if ((victim.getLevel() < killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
-            {
+        if (victim.isChampion()) {
+            if ((victim.getLevel() < killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE)) {
                 return;
             }
-            if ((victim.getLevel() > killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
-            {
+            if ((victim.getLevel() > killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE)) {
                 return;
             }
 
@@ -671,13 +666,13 @@ return switch (dropType) {
         if (nonNull(killer.getActingPlayer())) {
             float silverCoinChance = VipEngine.getInstance().getSilverCoinDropChance(killer.getActingPlayer());
             float rustyCoinChance = VipEngine.getInstance().getRustyCoinDropChance(killer.getActingPlayer());
-            float l2CoinDropChance = (float)killer.getStats().getValue(Stat.BONUS_L2COIN_DROP_RATE) + Config.L2_COIN_DROP_RATE;
+            float l2CoinDropChance = (float) killer.getStats().getValue(Stat.BONUS_L2COIN_DROP_RATE) + Config.L2_COIN_DROP_RATE;
 
-            if(silverCoinChance > 0 ) {
+            if (silverCoinChance > 0) {
                 dropList.add(new DropHolder(DropType.DROP, CommonItem.SILVER_COIN, 2, 5, silverCoinChance));
             }
 
-            if(rustyCoinChance > 0) {
+            if (rustyCoinChance > 0) {
                 dropList.add(new DropHolder(DropType.DROP, CommonItem.RUSTY_COIN, 2, 5, rustyCoinChance));
             }
 
@@ -712,7 +707,7 @@ return switch (dropType) {
             proccessEtcDrop(calculatedDrops, victim, killer);
         }
 
-        processDropList(calculatedDrops, victim, killer);
+        processDropList(dropType, calculatedDrops, victim, killer);
 
         return calculatedDrops;
     }
@@ -737,8 +732,7 @@ return switch (dropType) {
                 double rateChance = 1;
                 if (Config.RATE_DROP_CHANCE_BY_ID.get(itemId) != null) {
                     rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
-                    if (champion && (itemId == CommonItem.ADENA))
-                    {
+                    if (champion && (itemId == CommonItem.ADENA)) {
                         rateChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
                     }
                 } else if (item.hasExImmediateEffect()) {
@@ -756,11 +750,9 @@ return switch (dropType) {
                 if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {
                     // amount is calculated after chance returned success
                     double rateAmount = 1;
-                    if (Config.RATE_DROP_AMOUNT_BY_ID.get(itemId) != null)
-                    {
+                    if (Config.RATE_DROP_AMOUNT_BY_ID.get(itemId) != null) {
                         rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(itemId);
-                        if (champion && (itemId == CommonItem.ADENA))
-                        {
+                        if (champion && (itemId == CommonItem.ADENA)) {
                             rateAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
                         }
                     } else if (item.hasExImmediateEffect()) {
