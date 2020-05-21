@@ -137,5 +137,22 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="ATTACK_DAMAGE" mode="PER">
+                <power initial="130.0"/>
+            </stat-modify>
+            <stat-modify stat="PVE_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+                <power initial="130.0"/>
+            </stat-modify>
+            <stat-modify stat="PVE_PHYSICAL_SKILL_DAMAGE" mode="PER">
+                <power initial="130.0"/>
+            </stat-modify>
+            <stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+                <power initial="130.0"/>
+            </stat-modify>
+            <stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
+                <power initial="130.0"/>
+            </stat-modify>
+        </effects>
     </skill>
 </list>

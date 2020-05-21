@@ -289,6 +289,9 @@
 	<!-- A mark awarded only to those adventurers who complete Adventurer's Journey Mission. It increases HP Recovery Bonus by 25% and MP Recovery Bonus by 25% when stored in the inventory. Double-click to see recommended hunting grounds for each level. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
+		<skill-reducer>
+			<skill id="51387" level="5" value="-1"/>
+		</skill-reducer>
 	</item>
 
 	<armor id="91932" name="Adventurer's Brooch" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i00">

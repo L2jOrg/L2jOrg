@@ -43,7 +43,7 @@ public class ReceiveVipProductList extends ServerPacket {
         writeInt(product.getSilverCoin());
         writeByte(product.getPanelType()); // NEW - 6; HOT - 5 ... Unk
         writeByte(product.getVipTier());
-        writeByte(7); // Unk
+        writeByte(10); // Unk
 
         writeByte(product.getItems().size());
 

@@ -1165,6 +1165,20 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <effect name="TalismanSlot">
+                <power initial="4.0"/>
+            </effect>
+            <vital-stat-modify stat="MAX_HP" mode="PER">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP" mode="PER">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_CP" mode="PER">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="55593" name="Returning Hero's Talisman">
         <!-- P. Def. +22, M. Def. +11, P./M. Evasion +1, Max. HP/MP/CP +80, Atk./Casting Spd. +9, Movement Speed +4. -->
@@ -1172,6 +1186,38 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="22"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="11"/>
+            </stat-modify>
+            <stat-modify stat="EVASION_RATE">
+                <power initial="1"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_EVASION_RATE">
+                <power initial="1"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="80"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_CP">
+                <power initial="80"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="80"/>
+            </vital-stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="9.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="9.0"/>
+            </stat-modify>
+            <stat-modify stat="SPEED">
+                <power initial="4"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55594" name="Expertise Rune (C-grade)">
         <!-- When possessed, you get Expertise C skill -->

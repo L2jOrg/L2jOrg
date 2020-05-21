@@ -9,11 +9,17 @@
 	<armor id="49801" name="Dandy Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="120" enchant-enabled="false" />
+		<attributes duration="120"  enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
-		</stats>
+			<stats>
+				<stat type="PHYSICAL_ATTACK" value="60.0"/>
+				<stat type="MAGIC_ATTACK" value="60.0"/>
+				<stat type="MAGICAL_DEFENCE" value="21.0"/>
+				<stat type="BONUS_EXP" value="30.0"/>
+				<stat type="BONUS_SP" value="30.0"/>
+				<stat type="CRITICAL_DAMAGE" value="5.0"/>
+				<stat type="MAGIC_CRITICAL_DAMAGE" value="5.0"/>
+			</stats>
 	</armor>
 
 	<armor id="49802" name="Dandy Shining Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
@@ -22,7 +28,13 @@
 		<attributes duration="120" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="PHYSICAL_DEFENCE" value="52.0"/>
+			<stat type="PHYSICAL_ATTACK" value="60.0"/>
+			<stat type="MAGIC_ATTACK" value="60.0"/>
+			<stat type="MAGICAL_DEFENCE" value="21.0"/>
+			<stat type="BONUS_EXP" value="30.0"/>
+			<stat type="BONUS_SP" value="30.0"/>
+			<stat type="CRITICAL_DAMAGE" value="5.0"/>
+			<stat type="MAGIC_CRITICAL_DAMAGE" value="5.0"/>
 		</stats>
 	</armor>
 

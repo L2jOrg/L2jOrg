@@ -567,6 +567,9 @@
 	<!-- SP +20000. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="40144" value="-1"/>  <!-- Scroll: 20,000 SP -->
+		</skill-reducer>
 	</item>
 
 	<item id="49765" name="Life Control Tower's Scroll of Blessing - Exchangeable" type="SCROLL" icon="icon.etc_aidcharm_cancel_valbreath_i00">

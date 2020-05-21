@@ -1148,23 +1148,43 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="51396" name="Scroll: 10,000 SP" action="A1">
+	<skill id="51396" name="Scroll: 10,000 SP" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91664"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<effects>
+            <effect name="GiveSp">
+                <power initial="10000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="51397" name="Scroll: 100,000 SP" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91665"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<effects>
+            <effect name="GiveSp">
+                <power initial="100000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="51398" name="Sayha's Storm Lv. 1 - Event" action="A1">
         <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +100%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute.\nDeath protection. You can delete it yourself. -->
