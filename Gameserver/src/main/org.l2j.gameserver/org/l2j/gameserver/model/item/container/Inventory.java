@@ -435,7 +435,7 @@ public abstract class Inventory extends ItemContainer {
             case BROOCH_JEWEL -> equipBroochJewel(item);
             case AGATHION -> equipAgathion(item);
             case ARTIFACT -> equipArtifact(item);
-            case NECK, CHEST, UNDERWEAR, BACK, LEFT_BRACELET, RIGHT_BRACELET, BELT, BROOCH, ARTIFACT_BOOK -> setPaperdollItem(bodyPart.slot(), item);
+            case NECK, CHEST, PENDANT, BACK, LEFT_BRACELET, RIGHT_BRACELET, BELT, BROOCH, ARTIFACT_BOOK -> setPaperdollItem(bodyPart.slot(), item);
             default -> LOGGER.warn("Unknown body slot {} for Item ID: {}", bodyPart, item.getId());
         }
     }

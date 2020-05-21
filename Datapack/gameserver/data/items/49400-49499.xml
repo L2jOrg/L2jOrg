@@ -728,7 +728,7 @@
 		</skill-reducer>
 	</item>
 
-	<armor id="49467" name="Fire Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="49467" name="Fire Dragon Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- Pendant holding the sealed power of Fire Dragon. Can be enchanted up to +10 using Pendant Polish/ Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
@@ -738,7 +738,7 @@
 		</stats>
 	</armor>
 
-	<armor id="49468" name="Earth Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pvp">
+	<armor id="49468" name="Earth Dragon Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pvp">
 	<!-- Pendant holding the sealed power of Earth Dragon. Can be enchanted up to +10 using Pendant Polish/ Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />

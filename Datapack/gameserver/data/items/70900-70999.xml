@@ -84,7 +84,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="70913" name="Fire Dragon Pendant - Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
+	<armor id="70913" name="Fire Dragon Pendant - Lv. 5" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pve">
 	<!-- A pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +5 Fire Dragon Pendant - Lv. 5.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
@@ -94,7 +94,7 @@
 		</stats>
 	</armor>
 
-	<armor id="70914" name="Water Dragon Pendant - Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
+	<armor id="70914" name="Water Dragon Pendant - Lv. 5" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
 	<!-- A pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +5 Water Dragon Pendant - Lv. 5.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
@@ -158,7 +158,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="70922" name="Bracelet of Duty Lv. 6" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.Icon.g_pledge_bracelet_05">
+	<armor id="70922" name="Bracelet of Duty Lv. 6" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.g_pledge_bracelet_05">
 	<!-- Opens up four Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />

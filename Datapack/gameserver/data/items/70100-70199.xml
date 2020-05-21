@@ -77,7 +77,7 @@
 		</skill-reducer>
 	</item>
 
-	<armor id="70108" name="Fire Dragon Pendant Lv. 3" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
+	<armor id="70108" name="Fire Dragon Pendant Lv. 3" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pve">
 	<!-- A 7-day item. For Adventurer. Provides the effect of Fire Dragon Pendant Lv. 3 enchanted to Lv. +3. Further enchanting or combining is not possible. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
@@ -90,7 +90,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70109" name="Water Dragon Pendant Lv. 3" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
+	<armor id="70109" name="Water Dragon Pendant Lv. 3" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
 	<!-- A 7-day item. For Adventurer. Provides the effect of Water Dragon Pendant Lv. 3 enchanted to Lv. +3. Further enchanting or combining is not possible. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />

@@ -84,7 +84,7 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<armor id="91414" name="+5 Dragon Pendant Lv. 2 " type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<armor id="91414" name="+5 Dragon Pendant Lv. 2 " type="NONE" body-part="PENDANT" icon="icon.bm_pendant_dragon_i00">
 	<!-- A 30-day item. M. Def +25, P./M. Damage Received -15%, Atk. Spd./Casting Spd. +3%, P./M. Critical Damage +5%, XP/SP gain +20%.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
@@ -254,7 +254,7 @@
 		<crystal />
 	</armor>
 
-	<armor id="91436" name="Blessed Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i01">
+	<armor id="91436" name="Blessed Dragon Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_dragon_i01">
 	<!-- A 30-day item. Pendant imbued with Dragon's power. When equipped, M. Def. +50, XP/SP +30%, P. Atk./M. Atk. Spd. 10%, P./M. Critical Damage +15%, P. Atk./M. Atk. +20%, Damage Reflect Resistance +20%, P. Atk./M. Atk. Damage -30%. Enables Dragon Invocation, Dragon Barrier, Dragon Evasion skills.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />

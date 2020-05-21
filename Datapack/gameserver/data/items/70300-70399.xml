@@ -199,7 +199,7 @@
 		<crystal />
 	</armor>
 
-	<armor id="70330" name="Commemorative Olympiad Bracelet" type="NONE" body-part="UNDERWEAR" icon="icon.dimension_bracelet_i05">
+	<armor id="70330" name="Commemorative Olympiad Bracelet" type="NONE" body-part="PENDANT" icon="icon.dimension_bracelet_i05">
 	<!-- Bracelet, given to those warriors who have showen the best results during the Tryout. Activates 2 Talisman slots, Max. HP/MP/CP +3%.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -223,7 +223,7 @@
 		</stats>
 	</armor>
 
-	<armor id="70333" name="Agathion - Cheerleader Mae" type="NONE" body-part="UNDERWEAR" icon="BranchSys.icon.br_aga_local2009_g_i00">
+	<armor id="70333" name="Agathion - Cheerleader Mae" type="NONE" body-part="PENDANT" icon="BranchSys.icon.br_aga_local2009_g_i00">
 	<!-- Bracelet that summons Agathion - Cheerleader Mae. \n\n<Agathion's Effect>\n1. Cheerleader Mae's Support: P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage ++3%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
