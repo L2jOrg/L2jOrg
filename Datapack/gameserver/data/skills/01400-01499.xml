@@ -1364,45 +1364,4 @@
             </stat-modify>
         </effects>
     </skill>
-	 <skill id="1499" name=" Improve Combat"  max-level="3" action="A2">
-       <!-- Combines P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 min., increases P. Atk. by 15% and P. Def. by 15%. -->
-		<icon initial="icon.skill1499"/>
-        <attributes display-id="7088" property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="70"/>
-            <cast-range initial="900"/>
-            <reuse initial="1000"/>
-            <effect-point initial="1"/>
-            <effect-range initial="1500"/>
-            <hit-time initial="500"/>
-        </attributes>
-        <consume>
-            <mana-init initial="15"/>
-            <mana initial="75"/>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="IMPROVE_PA_PD_UP">
-            <level initial="2"/>
-            <time initial="3600"/>
-            <chance initial="-1"/>
-        </abnormal>
-        <effects>
-            <dispel>
-                <abnormal type="PD_UP">
-                    <power initial="9.0"/>
-                </abnormal>
-                <abnormal type="PA_UP">
-                    <power initial="9.0"/>
-                </abnormal>
-            </dispel>
-            <block-abnormal>
-                <abnormals>PD_UP PA_UP</abnormals>
-            </block-abnormal>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="15.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-                <power initial="15.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
 </list>

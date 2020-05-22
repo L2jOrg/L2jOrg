@@ -32,31 +32,26 @@
             <stat-modify mode="PER" start-level="4" stat="REGENERATE_MP_RATE">
                 <power initial="7">
                     <value level="5">15</value>
-                    <value level="6">15</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" start-level="4" stat="REGENERATE_HP_RATE">
                 <power initial="7">
                     <value level="5">15</value>
-                    <value level="6">15</value>
                 </power>
             </stat-modify>
             <stat-modify start-level="4" stat="ACCURACY">
                 <power initial="1">
                     <value level="5">2</value>
-                    <value level="6">2</value>
                 </power>
             </stat-modify>
             <stat-modify start-level="4" stat="ACCURACY_MAGIC">
                 <power initial="1">
                     <value level="5">2</value>
-                    <value level="6">2</value>
                 </power>
             </stat-modify>
             <stat-modify start-level="4" stat="WEIGHT_LIMIT">
                 <power initial="7000">
                     <value level="5">10000</value>
-                    <value level="6">10000</value>
                 </power>
             </stat-modify>
         </effects>
