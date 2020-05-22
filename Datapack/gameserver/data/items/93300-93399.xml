@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<armor id="93300" name="Einhasad Pendant Lv. 5" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.Icon.bm_pendant_pve_white">
+	<armor id="93300" name="Einhasad Pendant Lv. 5" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pve_white">
 	<!-- <Einhasad’s Pendant>\n\n<Invocation>\nFor 15 seconds, Speed increases and HP/MP continuously recovers\n\nM. Def. +45\nXP/SP Gain +35%\nDamage Received -25%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Critical Damage +10%\nM. Critical Damage +10%\nP. Atk. +15%\nM. Atk. +15%. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />

@@ -241,7 +241,7 @@
 		</skill-reducer>
 	</item>
 
-	<armor id="70029" name="Yellow Talisman - P. Atk." type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70029" name="Yellow Talisman - P. Atk." type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases P. Atk. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -251,7 +251,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70030" name="Yellow Talisman - Atk. Spd." type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70030" name="Yellow Talisman - Atk. Spd." type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases Atk. Spd. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -261,7 +261,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70031" name="Yellow Talisman - M. Def." type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70031" name="Yellow Talisman - M. Def." type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases M. Def. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -271,7 +271,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70032" name="Yellow Talisman - M. Atk." type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70032" name="Yellow Talisman - M. Atk." type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases M. Atk. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -281,7 +281,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70033" name="Yellow Talisman - Casting Spd." type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70033" name="Yellow Talisman - Casting Spd." type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases Casting Spd. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -291,7 +291,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70034" name="Yellow Talisman - Accuracy" type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70034" name="Yellow Talisman - Accuracy" type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases Accuracy. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -301,7 +301,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70035" name="Yellow Talisman - P. Def." type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70035" name="Yellow Talisman - P. Def." type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases P. Def. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -311,7 +311,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70036" name="Yellow Talisman - Speed" type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70036" name="Yellow Talisman - Speed" type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases Movement Speed. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -321,7 +321,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70037" name="Yellow Talisman - Evasion" type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70037" name="Yellow Talisman - Evasion" type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases Evasion. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -331,7 +331,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70038" name="Yellow Talisman - Healing Power" type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i02">
+	<armor id="70038" name="Yellow Talisman - Healing Power" type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i02">
 	<!-- A Shadow Item that increases HP Recovery magic power. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -341,7 +341,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70039" name="Blue Talisman - Invisibility" type="NONE" body-part="UNDERWEAR" icon="icon.etc_talisman_i01">
+	<armor id="70039" name="Blue Talisman - Invisibility" type="NONE" body-part="PENDANT" icon="icon.etc_talisman_i01">
 	<!-- A Shadow Item that makes the character invisible to monsters. Effects do not stack when a Talisman of a similar type is used. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />

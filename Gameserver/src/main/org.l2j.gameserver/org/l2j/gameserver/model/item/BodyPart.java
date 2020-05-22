@@ -17,7 +17,7 @@ public enum BodyPart {
     HATCHLING(-0x65, null),
     WOLF(-0x64, null),
     NONE(0x00, null),
-    UNDERWEAR(0x01, InventorySlot.PENDANT),
+    PENDANT(0x01, InventorySlot.PENDANT),
     RIGHT_EAR(0x02, InventorySlot.RIGHT_EAR),
     LEFT_EAR(0x04, InventorySlot.LEFT_EAR),
     EAR(RIGHT_EAR.id | LEFT_EAR.id, InventorySlot.LEFT_EAR),

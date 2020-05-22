@@ -499,7 +499,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="90969" name="Blessed Fire Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="90969" name="Blessed Fire Dragon Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- When equipped, M. Def. +24, XP/SP +30%, P./M. Atk. +80, P./M. Critical Damage +10%, Damage Reflect Resistance +10%. Activates Fire Dragon's Blessing and Fire Dragon's Protection skills.   -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
@@ -509,7 +509,7 @@
 		</stats>
 	</armor>
 
-	<armor id="90970" name="Blessed Earth Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pvp">
+	<armor id="90970" name="Blessed Earth Dragon Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pvp">
 	<!-- P./ M. Def. +24, HP +600, MP +300, CP +600, Speed +7, Received Damage -20%, Reflect Damage Resistance +10%, when equipped. Allows using the Earth Dragon's Breath and Earth Dragon's Protection skills.   -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />

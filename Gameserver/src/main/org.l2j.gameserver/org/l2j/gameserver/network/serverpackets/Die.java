@@ -14,6 +14,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid, Nos, Mobius
+ * @author JoeAlisson
  */
 public class Die extends ServerPacket {
     private final int objectId;
@@ -50,10 +51,14 @@ public class Die extends ServerPacket {
         writeId(ServerPacketId.DIE);
 
         writeInt(objectId);
-        writeByte(flags);
+        writeInt(flags);
+        writeInt(1);
+        writeInt(isSweepable);
+        writeInt(0);
+        writeInt(0);
+        writeInt(0);
+        writeInt(0);
         writeByte(0);
-        writeByte(isSweepable);
-        writeByte(0); // resurrection during siege.
     }
 
 }

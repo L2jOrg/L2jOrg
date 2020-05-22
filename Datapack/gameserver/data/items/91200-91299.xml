@@ -283,7 +283,7 @@
 		</stats>
 	</armor>
 
-	<armor id="91244" name="Dragon Pendant Lv1" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<armor id="91244" name="Dragon Pendant Lv1" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_dragon_i00">
 	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish max. +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv2 through Head Blacksmith Ferris in the Town of Aden.  \nUpgrade Materials: Crystal (C-grade) 200, 2,000,000 Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
@@ -293,7 +293,7 @@
 		</stats>
 	</armor>
 
-	<armor id="91245" name="Dragon Pendant Lv2" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<armor id="91245" name="Dragon Pendant Lv2" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_dragon_i00">
 	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish max. +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv3 through Head Blacksmith Ferris in the Town of Aden.  \nUpgrade Materials: Crystal (B-grade) 1,500, 10,000,000 Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
@@ -303,7 +303,7 @@
 		</stats>
 	</armor>
 
-	<armor id="91246" name="Dragon Pendant Lv3" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<armor id="91246" name="Dragon Pendant Lv3" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_dragon_i00">
 	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish max. +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv4 through Head Blacksmith Ferris in the Town of Aden.  \nUpgrade Materials: Crystal (B-grade) x5,000, 50,000,000 Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
@@ -313,7 +313,7 @@
 		</stats>
 	</armor>
 
-	<armor id="91247" name="Dragon Pendant Lv4" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<armor id="91247" name="Dragon Pendant Lv4" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_dragon_i00">
 	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish max. +5. When enhanced each effect is supplemented, at +5 can upgrade to Blessed Dragon Pendant through Veruti in the Town of Giran. \nUpgrade Materials: 1 Blessed Earth Dragon Pendant or Blessed Fire Dragon Pendant. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
@@ -323,7 +323,7 @@
 		</stats>
 	</armor>
 
-	<armor id="91248" name="Blessed Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i01">
+	<armor id="91248" name="Blessed Dragon Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_dragon_i01">
 	<!-- <Options>\nP. Atk. +20%\nM. Atk. +20%\nP. Critical Damage +15%\nM. Skill Critical Damage +15%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Critical Damage Received -30%\nM. Critical Damage Received -30%\nM. Def. +50\nXP/SP Gain +30%\nDamage Reflect Resistance +20%\n\n<Dragon Invocation>\nIncreases HP/MP Recovery and Speed for its duration when used.\n\n<Dragon Barrier>\nBecomes invincible to normal attacks, skills, and debuff attacks for its duration when used.\n\n<Dragon Evasion>\nNot targeted for its duration when used.\n\nPendant containing the power of dragons. Cannot be enchanted. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />

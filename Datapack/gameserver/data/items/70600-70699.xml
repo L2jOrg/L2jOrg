@@ -569,7 +569,7 @@
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
-	<armor id="70673" name="Hero's Bracelet" type="NONE" body-part="UNDERWEAR" icon="icon.dimension_bracelet_i05">
+	<armor id="70673" name="Hero's Bracelet" type="NONE" body-part="PENDANT" icon="icon.dimension_bracelet_i05">
 	<!-- Special Bracelet for Returning Heroes. Activates 4 Talisman slots. HP/MP/CP +5%.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />

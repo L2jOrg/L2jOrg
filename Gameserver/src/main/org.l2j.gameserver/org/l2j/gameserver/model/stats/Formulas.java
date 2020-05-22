@@ -160,7 +160,7 @@ public final class Formulas {
         if (skill != null) {
             // Magic Critical Rate
             if (skill.isMagic()) {
-                rate = activeChar.getStats().getValue(Stat.MAGIC_CRITICAL_RATE);
+                rate += activeChar.getStats().getValue(Stat.MAGIC_CRITICAL_RATE);
                 if ((target == null) || !skill.isBad()) {
                     return Math.min(rate, 320) > Rnd.get(1000);
                 }
@@ -265,7 +265,7 @@ public final class Formulas {
             defenceCriticalDamage = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
         }
 
-        return 2 * criticalDamage * defenceCriticalDamage;
+        return 2.5 + ( 2 * criticalDamage / defenceCriticalDamage * 1.5) / (77 + defenceCriticalDamage - criticalDamage);
     }
 
     /**

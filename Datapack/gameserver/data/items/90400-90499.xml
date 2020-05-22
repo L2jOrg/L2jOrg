@@ -12,7 +12,7 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<armor id="90402" name="Fire Dragon Pendant +6" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="90402" name="Fire Dragon Pendant +6" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +16, XP/SP gain +10%, P./M. Atk. +20. Duration: 15 days.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="21600" enchant-enabled="false" />

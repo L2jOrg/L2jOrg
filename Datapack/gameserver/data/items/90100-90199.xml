@@ -430,7 +430,7 @@
 		</skills>
 	</armor>
 
-	<armor id="90158" name="Fire Dragon Pendant +6" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="90158" name="Fire Dragon Pendant +6" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +16, XP/SP gain +10%, P./M. Atk. +20.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
@@ -667,7 +667,7 @@
 		<attributes/>
 	</item>
 
-	<armor id="90190" name="Dandy Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="90190" name="Dandy Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
@@ -677,7 +677,7 @@
 		</stats>
 	</armor>
 
-	<armor id="90191" name="Dandy Shining Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="90191" name="Dandy Shining Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
@@ -711,7 +711,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="90196" name="Dandy Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="90196" name="Dandy Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="120" enchant-enabled="false" />
@@ -721,7 +721,7 @@
 		</stats>
 	</armor>
 
-	<armor id="90197" name="Dandy Shining Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="90197" name="Dandy Shining Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="120" enchant-enabled="false" />

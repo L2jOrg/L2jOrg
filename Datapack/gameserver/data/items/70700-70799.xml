@@ -653,7 +653,7 @@
 		</skills>
 	</armor>
 
-	<armor id="70771" name="Fire Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
+	<armor id="70771" name="Fire Dragon Pendant Lv. 5" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pve">
 	<!-- A Pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +10 Fire Dragon Pendant - Lv. 5. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
@@ -663,7 +663,7 @@
 		</stats>
 	</armor>
 
-	<armor id="70772" name="Water Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
+	<armor id="70772" name="Water Dragon Pendant Lv. 5" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
 	<!-- A Pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +10 Water Dragon Pendant - Lv. 5. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />

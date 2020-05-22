@@ -209,26 +209,32 @@ public final class AutoPlayEngine {
         }
 
         private void tryUseAutoShortcut(Player player) {
-            final var shortcut = player.nextAutoShortcut();
-            if(nonNull(shortcut)) {
-                useShortcut(player, shortcut);
-            } else {
-                autoUseAction(player, DEFAULT_ACTION);
+            var nextShortcut = player.nextAutoShortcut();
+            if(nonNull(nextShortcut)) {
+                var  shortcut = nextShortcut;
+                do {
+                    if(useShortcut(player, shortcut)) {
+                        return;
+                    }
+                    shortcut = player.nextAutoShortcut();
+                } while (!nextShortcut.equals(shortcut));
             }
+            autoUseAction(player, DEFAULT_ACTION);
         }
 
-        private void useShortcut(Player player, Shortcut shortcut) {
-            switch (shortcut.getType()) {
+        private boolean useShortcut(Player player, Shortcut shortcut) {
+            return switch (shortcut.getType()) {
                 case SKILL -> autoUseSkill(player, shortcut);
                 case ITEM -> autoUseItem(player, shortcut);
                 case ACTION -> autoUseAction(player, shortcut.getShortcutId());
-            }
+                default -> false;
+            };
         }
 
-        private void autoUseAction(Player player, int actionId) {
+        private boolean autoUseAction(Player player, int actionId) {
             final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
             if (Arrays.binarySearch(allowedActions, actionId)  < 0) {
-                return;
+                return false;
             }
 
             var action = ActionManager.getInstance().getActionData(actionId);
@@ -237,33 +243,37 @@ public final class AutoPlayEngine {
                 if (nonNull(handler)) {
                     handler.useAction(player, action, false, false);
                     player.onActionRequest();
+                    return true;
                 }
             }
+            return false;
         }
 
-        private void autoUseItem(Player player, Shortcut shortcut) {
+        private boolean autoUseItem(Player player, Shortcut shortcut) {
             var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
             if(nonNull(item) && item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> player.getBuffRemainTimeBySkillOrAbormalType(s.getSkill()) <= 3)) {
                 useItem(player, item);
+                return true;
             }
+            return false;
         }
 
-        private void autoUseSkill(Player player, Shortcut shortcut) {
+        private boolean autoUseSkill(Player player, Shortcut shortcut) {
             var skill = player.getKnownSkill(shortcut.getShortcutId());
 
             if (skill.isBlockActionUseSkill()) {
-                return;
+                return false;
             }
 
             if(skill.isAutoTransformation() && player.isTransformed()) {
-                return;
+                return false;
             }
             if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3) {
-                return;
+                return false;
             }
 
             player.onActionRequest();
-            player.useMagic(skill, null, false, false);
+            return player.useMagic(skill, null, false, false);
         }
     }
 

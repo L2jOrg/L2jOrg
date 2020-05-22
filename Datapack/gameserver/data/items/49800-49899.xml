@@ -6,7 +6,7 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<armor id="49801" name="Dandy Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="49801" name="Dandy Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="120" enchant-enabled="false" />
@@ -16,7 +16,7 @@
 		</stats>
 	</armor>
 
-	<armor id="49802" name="Dandy Shining Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<armor id="49802" name="Dandy Shining Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="120" enchant-enabled="false" />
