@@ -370,24 +370,36 @@
 	<!-- A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 5% and MP Recovery Bonus by 10% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
+		<skill-reducer>
+			<skill id="51387" value="-1"/>
+		</skill-reducer>
 	</item>
 
 	<item id="91655" name="Mark of Journey Lv. 2" type="NONE" icon="icon.etc_crest_blue_i00">
 	<!-- A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 10% and MP Recovery Bonus by 15% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
+		<skill-reducer>
+			<skill id="51387" level="2" value="-1"/>
+		</skill-reducer>
 	</item>
 
 	<item id="91656" name="Mark of Journey Lv. 3" type="NONE" icon="icon.etc_crest_blue_i00">
 	<!-- A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 20% and MP Recovery Bonus by 15% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
+		<skill-reducer>
+			<skill id="51387" level="3" value="-1"/>
+		</skill-reducer>
 	</item>
 
 	<item id="91657" name="Mark of Journey Lv. 4" type="NONE" icon="icon.etc_crest_blue_i00">
 	<!-- A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 20% and MP Recovery Bonus by 25% when stored in the inventory. Double-click to see recommended hunting grounds for each level. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
+		<skill-reducer>
+			<skill id="51387" level="4" value="-1"/>
+		</skill-reducer>
 	</item>
 
 	<item id="91658" name="Chicken Lucky Box" type="NONE" icon="icon.ev_chicken_box_i01">
@@ -439,12 +451,18 @@
 	<!-- A scroll that recharges 10,000 SP. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="51396" value="-1"/>  <!-- Scroll: 50 SP -->
+		</skill-reducer>
 	</item>
 
 	<item id="91665" name="Scroll: 100,000 SP" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- A scroll that recharges 100,000 SP. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="51397" value="-1"/>  <!-- Scroll: 50 SP -->
+		</skill-reducer>
 	</item>
 
 	<item id="91666" name="Sayha's Storm Lv. 1" type="NONE" icon="icon.bm_sayha_storm">

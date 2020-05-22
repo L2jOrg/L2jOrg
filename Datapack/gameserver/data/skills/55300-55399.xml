@@ -1930,6 +1930,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="BONUS_EXP" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="BONUS_SP" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55398" name="Olympiad Warrior's SP Scroll" action="A1">
         <icon initial="icon.skill0000"/>
@@ -1939,7 +1947,16 @@
             <hit-time initial="200"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="70328"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <effects>
+            <effect name="GiveSp">
+            <power initial="500000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="55399" name="Tryout Glorious Cloak">
         <!-- P./ M. Def. +3%%, Speed +10. -->
@@ -1947,5 +1964,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="SPEED" stat-add="SPEED">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
     </skill>
 </list>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="1505" name="Sublime Self-Sacrifice" action="A2" type="MAGIC">
+	
+	<skill id="1505" name="Sublime Self-Sacrifice" action="A2" type="MAGIC">
         <!-- Sacrifices yourself to allow all other allies to fully recover their HP/MP/CP and become invincible for 15 seconds. -->
         <icon initial="icon.skill1505"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true">

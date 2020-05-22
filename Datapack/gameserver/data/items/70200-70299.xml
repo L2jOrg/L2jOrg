@@ -300,18 +300,27 @@
 	<!-- When used, adds 50 SP. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="40143" value="-1"/>  <!-- Scroll: 50 SP -->
+		</skill-reducer>
 	</item>
 
 	<item id="70237" name="Scroll: 100 SP" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- When used, adds 100 SP. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="40143" level="2" value="-1"/>  <!-- Scroll: 100 SP -->
+		</skill-reducer>
 	</item>
 
 	<item id="70238" name="Scroll: 1,000 SP" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- When used, adds 1,000 SP. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="40143" level="3" value="-1"/>  <!-- Scroll: 1,000 SP -->
+		</skill-reducer>
 	</item>
 
 	<item id="70239" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">

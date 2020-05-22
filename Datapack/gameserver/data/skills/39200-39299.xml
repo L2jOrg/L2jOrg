@@ -153,6 +153,10 @@
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+		  <consume>
+            <item initial="90136"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
         <conditions>
             <encumbered slots="10" weight="20"/>

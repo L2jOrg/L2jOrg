@@ -125,15 +125,45 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
         </attributes>
+         <consume>
+            <item initial="70236">
+			<value level="2">70237</value>
+			<value level="3">70238</value>
+			</item>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<effects>
+            <effect name="GiveSp">
+                <power initial="50.0">
+				<value level="2">100.0</value>
+				<value level="3">1000.0</value>
+				</power>
+            </effect>
+        </effects>
     </skill>
-    <skill id="40144" name="SP Scroll: 2,000">
+    <skill id="40144" name="SP Scroll: 20,000">
         <!-- none -->
-        <icon initial="icon.etc_sp_scroll1_i00"/>
-        <attributes>
+        <icon initial="icon.etc_sp_scroll3_i00"/>
+         <attributes>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="49764"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<effects>
+            <effect name="GiveSp">
+                <power initial="20000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="40145" name="Scroll of Escape: Gludin Harbor">
         <!-- Teleports you to Gludin Harbor. -->

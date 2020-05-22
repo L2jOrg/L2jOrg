@@ -2015,11 +2015,9 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <conditions>
+       <conditions>
             <check-range min="200"/>
         </conditions>
-        <effects>
-            <effect name="TeleportToTarget"/>
         </effects>
     </skill>
 </list>

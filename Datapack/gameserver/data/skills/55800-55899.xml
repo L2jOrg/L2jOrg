@@ -1779,6 +1779,21 @@
             <effect name="TalismanSlot">
                 <power initial="4.0"/>
             </effect>
+            <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>

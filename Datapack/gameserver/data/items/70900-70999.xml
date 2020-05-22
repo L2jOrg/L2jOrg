@@ -158,7 +158,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="70922" name="Bracelet of Duty Lv. 6" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.g_pledge_bracelet_05">
+	<armor id="70922" name="Bracelet of Duty Lv. 6" type="NONE" body-part="RIGHT_BRACELET" icon="BranchIcon.Icon.g_pledge_bracelet_05">
 	<!-- Opens up four Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />

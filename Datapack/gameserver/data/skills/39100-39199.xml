@@ -248,7 +248,16 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+       <consume>
+            <item initial="49595"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<effects>
+            <effect name="GiveSp">
+                <power initial="2000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="39119" name="10,000 SP Scroll" action="A1">
         <!-- none -->
@@ -258,7 +267,16 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="49596"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<effects>
+            <effect name="GiveSp">
+                <power initial="10000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="39120" name="Teleport: Giral Harbor" action="A1">
         <!-- Teleport to Giran Harbor. -->

@@ -1063,7 +1063,7 @@
             <weapon>
                 <type>ANCIENT_SWORD SWORD BLUNT SPEAR FIST DUAL_BLUNT DUAL</type>
             </weapon>
-            <check-range min="200"/>
+              <check-range min="200"/>
         </conditions>
         <effects>
             <physical-attack>
@@ -2534,9 +2534,9 @@
         </consume>
         <target type="ENEMY"/>
         <conditions>
-            <check-range min="100"/>
+             <check-range min="100"/>
         </conditions>
-    </skill>
+        </skill>
     <skill id="45184" name="Potion Mastery" max-level="3">
         <!--
             level 1: HP Potion Recovery Rate +10%.

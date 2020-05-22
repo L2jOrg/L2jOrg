@@ -6,6 +6,20 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <effect name="TalismanSlot">
+                <power initial="2.0"/>
+            </effect>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="3.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="3.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="3.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="55401" name="Olympiad Warrior's Talisman">
         <!-- P./ M. Skill Critical Damage +7%%. -->
@@ -13,6 +27,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" mode="PER">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="PER">
+                <power initial="7.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55402" name="Olympiad Warrior's Belt">
         <!-- P. Def. +15, weight limit +2000. -->
@@ -20,6 +42,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="WEIGHT_LIMIT">
+                <power initial="2000.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55403" name="Summon Agathion - Cheerleader Mae" action="A1">
         <!-- Summons Agathion. -->

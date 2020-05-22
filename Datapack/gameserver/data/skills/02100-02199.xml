@@ -725,6 +725,23 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="ATTACK_DAMAGE" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="PVE_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="PVE_PHYSICAL_SKILL_DAMAGE" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="2155" name="Spiritshot (D-grade)" action="A1">
         <!-- none -->
@@ -775,6 +792,17 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="40.0"/>
+            </stat-modify>
+            <stat-modify stat="PVE_MAGICAL_SKILL_DAMAGE" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="2160" name="Blessed Spiritshot (D-grade)" action="A1">
         <!-- none -->
@@ -825,6 +853,17 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="40.0"/>
+            </stat-modify>
+            <stat-modify stat="PVE_MAGICAL_SKILL_DAMAGE" mode="PER">
+                <power initial="300.0"/>
+            </stat-modify>
+            <stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
+                <power initial="300.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="2165" name="Momentum Stone" action="A1">
         <!-- none -->
