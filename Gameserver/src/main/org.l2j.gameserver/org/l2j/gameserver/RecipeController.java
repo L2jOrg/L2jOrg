@@ -320,7 +320,7 @@ public class RecipeController {
             if (_items == null) {
                 // handle possible cheaters here
                 // (they click craft then try to get rid of items in order to get free craft)
-            } else if (Rnd.get(100) < _recipeList.getSuccessRate()) {
+            } else if (Rnd.get(100) < _recipeList.getSuccessRate()) { // TODO: modify depending on skill level
                 rewardPlayer(); // and immediately puts created item in its place
                 updateMakeInfo(true);
             } else {
