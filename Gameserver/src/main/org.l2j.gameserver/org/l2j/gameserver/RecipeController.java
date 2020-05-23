@@ -525,6 +525,8 @@ public class RecipeController {
             int itemId = _recipeList.getItemId();
             int itemCount = _recipeList.getCount();
 
+            final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
+
             // TODO: This test should be moved after code below if applicable on rare production items (@Pearlbear)
             // TODO: How Modifier +10 % should affect the successRate ? successRate + Modifier (5% + 10% = 15%) or successRate * Modifier (5% * 110% = 5.5%) (@Pearlbear)
             if (Rnd.get(100) < getCraftCriticalRate()) {
