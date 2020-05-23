@@ -654,6 +654,8 @@
             <xs:enumeration value="ELEMENTAL_SPIRIT_CRITICAL_RATE"/>
             <xs:enumeration value="ELEMENTAL_SPIRIT_CRITICAL_DAMAGE"/>
             <xs:enumeration value="ENCHANT_RATE_BONUS"/>
+            <xs:enumeration value="CRAFT_RATE_MASTER"/>
+            <xs:enumeration value="CRAFT_RATE_CRITICAL"/>
         </xs:restriction>
     </xs:simpleType>
 

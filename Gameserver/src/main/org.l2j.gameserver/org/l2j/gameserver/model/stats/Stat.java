@@ -196,6 +196,8 @@ public enum Stat {
     TRADE_BUY,
     RECIPE_DWARVEN,
     RECIPE_COMMON,
+    CRAFT_RATE_MASTER,
+    CRAFT_RATE_CRITICAL,
 
     // Skill mastery
     SKILL_CRITICAL,
