@@ -14,9 +14,12 @@ public interface ItemDAO extends DAO<Object> {
     @Query("DELETE FROM items WHERE items.owner_id = -1 AND loc LIKE 'MAIL' AND loc_data NOT IN (SELECT messageId FROM messages WHERE senderId = -1)")
     int deleteFromEmailWithoutMessage();
 
-    @Query("UPDATE items SET loc='INVENTORY' WHERE owner_id=:objectId:")
-    void updateToInventory(int objectId);
+    @Query("UPDATE items SET loc='INVENTORY' WHERE owner_id=:owner:")
+    void updateToInventory(int owner);
 
     @Query("DELETE FROM items WHERE item_id= :itemId:")
     void deleteAllItemsById(int itemId);
+
+    @Query("DELETE FROM items WHERE item_id = :itemId: AND  owner_id = :owner:")
+    void deleteByIdAndOwner(int itemId, int owner);
 }

@@ -2,8 +2,8 @@ package org.l2j.gameserver.engine.item;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
@@ -37,13 +37,12 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.Collection;
 import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.*;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.util.GameUtils.isGM;
 
 /**
@@ -458,18 +457,7 @@ public final class ItemEngine extends GameXmlReader {
             }
 
             auditGM(process, item.getId(), item.getCount(), actor, reference, item);
-
-            // if it's a pet control item, delete the pet as well TODO remove connection direct access
-            if (item.getTemplate().isPetItem()) {
-                try (Connection con = DatabaseFactory.getInstance().getConnection();
-                     PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?")) {
-                    // Delete the pet in db
-                    statement.setInt(1, item.getObjectId());
-                    statement.execute();
-                } catch (Exception e) {
-                    LOGGER.warn("Could not delete pet objectid:", e);
-                }
-            }
+            getDAO(PetDAO.class).deleteByItem(item.getObjectId());
         }
     }
 

@@ -7,10 +7,11 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
+import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.data.database.data.CastleFunctionData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.DoorDataManager;
-import org.l2j.gameserver.data.xml.impl.CastleData;
+import org.l2j.gameserver.data.xml.impl.CastleDataManager;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.MountType;
@@ -82,24 +83,25 @@ public final class Castle extends AbstractResidence {
     private ResidenceTeleportZone teleZone;
     private Clan formerOwner = null;
 
-    private org.l2j.gameserver.data.database.data.CastleData data;
+    private final CastleData data;
 
-    public Castle(int castleId) {
-        super(castleId);
+    public Castle(CastleData data){
+        super(data.getId());
+        setName(data.getName()); // tempfix
+
+        this.data = data;
         load();
         initResidenceZone();
         spawnSideNpcs();
-        if (ownerId != 0) {
-            loadFunctions();
-            loadDoorUpgrade();
-        }
     }
 
     @Override
     protected void load() {
-        data = getDAO(CastleDAO.class).findById(getId());
-        setName(data.getName());
         ownerId = getDAO(ClanDAO.class).findOwnerClanIdByCastle(getId());
+        if (ownerId != 0) {
+            loadFunctions();
+            loadDoorUpgrade();
+        }
     }
 
     @Override
@@ -619,7 +621,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public List<CastleSpawnHolder> getSideSpawns() {
-        return CastleData.getInstance().getSpawnsForSide(getId(), getSide());
+        return CastleDataManager.getInstance().getSpawnsForSide(getId(), getSide());
     }
 
     public CastleSide getSide() {
@@ -652,7 +654,7 @@ public final class Castle extends AbstractResidence {
 
     public class CastleFunction {
 
-        private CastleFunctionData functionData;
+        private final CastleFunctionData functionData;
         public boolean cwh;
         private final int tempFee;
 

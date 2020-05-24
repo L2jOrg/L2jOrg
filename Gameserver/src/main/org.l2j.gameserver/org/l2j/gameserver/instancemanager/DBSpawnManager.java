@@ -47,7 +47,7 @@ public class DBSpawnManager {
     private DBSpawnManager() {
     }
 
-    public void load() {
+    private void load() {
         if (Config.ALT_DEV_NO_SPAWNS) {
             return;
         }

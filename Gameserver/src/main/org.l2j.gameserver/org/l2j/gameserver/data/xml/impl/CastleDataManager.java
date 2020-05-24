@@ -20,11 +20,11 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author St3eT
  */
-public final class CastleData extends GameXmlReader {
+public final class CastleDataManager extends GameXmlReader {
     private static final Map<Integer, List<SiegeGuardHolder>> _siegeGuards = new HashMap<>();
     private final Map<Integer, List<CastleSpawnHolder>> _spawns = new HashMap<>();
 
-    private CastleData() {
+    private CastleDataManager() {
         load();
     }
 
@@ -98,11 +98,11 @@ public final class CastleData extends GameXmlReader {
         return _siegeGuards.getOrDefault(castleId, Collections.emptyList());
     }
 
-    public static CastleData getInstance() {
+    public static CastleDataManager getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        protected static final CastleData INSTANCE = new CastleData();
+        protected static final CastleDataManager INSTANCE = new CastleDataManager();
     }
 }

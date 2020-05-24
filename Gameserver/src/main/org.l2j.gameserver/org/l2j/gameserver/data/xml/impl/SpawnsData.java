@@ -83,10 +83,6 @@ public class SpawnsData extends GameXmlReader {
         return spawns;
     }
 
-    public List<SpawnTemplate> getSpawns(Predicate<SpawnTemplate> condition) {
-        return spawns.stream().filter(condition).collect(Collectors.toList());
-    }
-
     public List<NpcSpawnTemplate> getNpcSpawns(Predicate<NpcSpawnTemplate> condition) {
         return spawns.stream().flatMap(template -> template.getGroups().stream()).flatMap(group -> group.getSpawns().stream()).filter(condition).collect(Collectors.toList());
     }
