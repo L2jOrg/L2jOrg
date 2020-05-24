@@ -1218,7 +1218,16 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71821"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="20000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="59681" name="XP Scroll - Lv. 2" action="A1">
         <!-- XP +4,000,000. -->
@@ -1228,7 +1237,16 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+         <consume>
+            <item initial="71822"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="4000000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="59682" name="XP Scroll - Lv. 3" action="A1">
         <!-- XP +100,000,000. -->
@@ -1238,7 +1256,16 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71823"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="100000000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="59683" name="XP Scroll - Lv. 4" action="A1">
         <!-- XP +200,000,000. -->
@@ -1248,7 +1275,16 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71824"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="200000000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="59684" name="XP Scroll - Lv. 5" action="A1">
         <!-- XP +250,000,000. -->
@@ -1258,7 +1294,16 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+         <consume>
+            <item initial="71825"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="250000000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="59685" name="XP Scroll - Lv. 6" action="A1">
         <!-- XP +400,000,000. -->
@@ -1268,7 +1313,16 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71826"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="400000000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="59686" name="Hardin's Magic Bag">
         <!-- none -->

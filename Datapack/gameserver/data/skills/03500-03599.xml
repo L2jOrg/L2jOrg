@@ -745,6 +745,9 @@
             <base-stat start-level="4" type="STR">
                 <power initial="-2.0"/>
             </base-stat>
+            <base-stat start-level="4" type="CON">
+                <power initial="2"/>
+            </base-stat>
             <vital-stat-modify start-level="4" stat="MAX_HP">
                 <power initial="238.0"/>
             </vital-stat-modify>
@@ -778,6 +781,9 @@
             <base-stat start-level="3" type="STR">
                 <power initial="2.0"/>
             </base-stat>
+            <base-stat start-level="3" type="CON">
+                <power initial="-2.0"/>
+            </base-stat>
             <stat-modify mode="PER" start-level="3" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0"/>
             </stat-modify>
@@ -798,13 +804,13 @@
             <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
             </stat-modify>
-            <base-stat type="CON">
-                <power initial="-1.0">
-                    <value level="4">1.0</value>
-                    <value level="4">-1.0</value>
-                </power>
+            <base-stat start-level="4" type="CON">
+                <power initial="-1.0"/>
             </base-stat>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+            <base-stat start-level="4" type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" start-level="4">
                 <power initial="4.0"/>
             </stat-modify>
             <stat-modify start-level="2" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -839,6 +845,9 @@
             </vital-stat-modify>
             <base-stat start-level="3" type="MEN">
                 <power initial="2.0"/>
+            </base-stat>
+            <base-stat start-level="3" type="WIT">
+                <power initial="-2.0"/>
             </base-stat>
             <defence-trait start-level="3">
                 <trait type="BLEED">
@@ -879,6 +888,9 @@
             <base-stat start-level="4" type="INT">
                 <power initial="-2.0"/>
             </base-stat>
+            <base-stat start-level="4" type="WIT">
+                <power initial="2.0"/>
+            </base-stat>
             <stat-modify mode="PER" start-level="4" stat="MAGIC_ATTACK_SPEED">
                 <power initial="15.0"/>
             </stat-modify>
@@ -912,6 +924,9 @@
             <base-stat start-level="3" type="WIT">
                 <power initial="2.0"/>
             </base-stat>
+            <base-stat start-level="3" type="MEN">
+                <power initial="-2.0"/>
+            </base-stat>
             <stat-modify mode="PER" start-level="3" stat="MAGIC_ATTACK_SPEED">
                 <power initial="15.0"/>
             </stat-modify>
@@ -942,6 +957,9 @@
             </stat-modify>
             <base-stat start-level="3" type="CON">
                 <power initial="2.0"/>
+            </base-stat>
+            <base-stat start-level="3" type="DEX">
+                <power initial="-2.0"/>
             </base-stat>
             <defence-trait start-level="3">
                 <trait type="HOLD">
@@ -979,6 +997,9 @@
             <base-stat start-level="3" type="STR">
                 <power initial="2.0"/>
             </base-stat>
+            <base-stat start-level="3" type="CON">
+                <power initial="-2.0"/>
+            </base-stat>
             <defence-trait start-level="3">
                 <trait type="SHOCK">
                     <power initial="50"/>
@@ -1008,6 +1029,9 @@
             </stat-modify>
             <base-stat start-level="3" type="DEX">
                 <power initial="1.0"/>
+            </base-stat>
+            <base-stat start-level="3" type="CON">
+                <power initial="-1.0"/>
             </base-stat>
             <defence-trait start-level="3">
                 <trait type="HOLD">
@@ -1046,6 +1070,9 @@
             <base-stat start-level="3" type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat start-level="3" type="CON">
+                <power initial="-1.0"/>
+            </base-stat>
             <defence-trait start-level="3">
                 <trait type="SHOCK">
                     <power initial="50"/>
@@ -1081,6 +1108,9 @@
             <base-stat start-level="3" type="INT">
                 <power initial="2.0"/>
             </base-stat>
+            <base-stat start-level="3" type="WIT">
+                <power initial="-2.0"/>
+            </base-stat>
             <stat-modify mode="PER" start-level="3" stat="MAGIC_ATTACK">
                 <power initial="8.0"/>
             </stat-modify>
@@ -1101,9 +1131,10 @@
                 <power initial="8.0"/>
             </stat-modify>
             <base-stat start-level="2" type="MEN">
-                <power initial="1.0">
-                    <value level="3">-1.0</value>
-                </power>
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat start-level="2" type="INT">
+                <power initial="-1.0"/>
             </base-stat>
             <vital-stat-modify start-level="2" stat="MAX_MP" stat-add="MAX_MP">
                 <power initial="240.0"/>
@@ -1273,6 +1304,9 @@
             <base-stat start-level="4" type="STR">
                 <power initial="4.0"/>
             </base-stat>
+            <base-stat start-level="4" type="DEX">
+                <power initial="-1.0"/>
+            </base-stat>
             <vital-stat-modify start-level="4" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="445.0"/>
             </vital-stat-modify>
@@ -1316,6 +1350,9 @@
             <base-stat start-level="3" type="STR">
                 <power initial="2.0"/>
             </base-stat>
+            <base-stat start-level="3" type="DEX">
+                <power initial="2.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3556" name="Set Effect - Major Arcana Robe, 2-piece" max-level="3">
@@ -1345,6 +1382,12 @@
             </defence-trait>
             <base-stat start-level="3" type="WIT">
                 <power initial="2.0"/>
+            </base-stat>
+            <base-stat start-level="3" type="INT">
+                <power initial="2.0"/>
+            </base-stat>
+            <base-stat start-level="3" type="MEN">
+                <power initial="-1.0"/>
             </base-stat>
         </effects>
     </skill>

@@ -123,28 +123,29 @@
 	<armor id="91719" name="Sayha's Supreme Cloak - Black" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i02">
 	<!-- A cloak imbued with Supreme Sayha's Energy. Can be enchanted only by Sayha’s Supreme Scroll: Enchant Cloak. Various options are added to the cloak depending on enchant level. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 	</armor>
 
 	<armor id="91720" name="Sayha's Supreme Cloak - White" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i01">
 	<!-- A cloak imbued with Supreme Sayha's Energy. Can be enchanted only by Sayha’s Supreme Scroll: Enchant Cloak. Various options are added to the cloak depending on enchant level. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 	</armor>
 
 	<armor id="91721" name="Sayha's Supreme Cloak - Red" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i03">
 	<!-- A cloak imbued with Supreme Sayha's Energy. Can be enchanted only by Sayha’s Supreme Scroll: Enchant Cloak. Various options are added to the cloak depending on enchant level. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 	</armor>
 
-	<item id="91722" name="Sayha's Supreme Scroll: Enchant Cloak" type="SOLID_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
+	<item id="91722" name="Sayha's Supreme Scroll: Enchant Cloak" type="IMPROVED_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- A varnish that enhances Sayha's Supreme Cloak. Can be used only on Sayha's Supreme Cloak. Even if enchantment fails, Sayha's Cloak will not disappear and will retain its enchant level. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="91723" name="Talisman Bracelet Lv. 1" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i00">

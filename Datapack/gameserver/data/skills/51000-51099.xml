@@ -600,7 +600,7 @@
         <target/>
         <effects>
             <effect name="GiveXp">
-                <power initial="1.0"/>
+                <power initial="10000000.0"/>
             </effect>
         </effects>
     </skill>
@@ -620,7 +620,7 @@
         <target/>
         <effects>
             <effect name="GiveXp">
-                <power initial="5.0"/>
+                <power initial="50000000.0"/>
             </effect>
         </effects>
     </skill>
@@ -640,7 +640,7 @@
         <target/>
         <effects>
             <effect name="GiveXp">
-                <power initial="1.0"/>
+                <power initial="100000000.0"/>
             </effect>
         </effects>
     </skill>

@@ -504,7 +504,7 @@
 	<armor id="70877" name="Elmoreden Cloak" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_elmoreden_cloak_normal">
 	<!-- Cloak with the crest of the ancient Elmoreden Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
@@ -514,7 +514,7 @@
 	<armor id="70878" name="Aden Cloak" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_aden_cloak_normal">
 	<!-- Cloak with the crest of the ancient Aden Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
@@ -524,7 +524,7 @@
 	<armor id="70879" name="Elmore Cloak" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_elmore_cloak_normal">
 	<!-- Cloak with the crest of the ancient Elmore Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
@@ -534,7 +534,7 @@
 	<armor id="70880" name="Ferios Cloak" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_perios_cloak_normal">
 	<!-- Cloak with the crest of the ancient Ferios Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\nUse Life Stone - Ancient Empire at +10 to bestow an additional effect. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
@@ -544,7 +544,7 @@
 	<armor id="70881" name="Elmoreden Cloak - Legendary" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_elmoreden_cloak_normal">
 	<!-- Legendary cloak with the crest of the ancient Elmoreden Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Elmoreden at +15 to add a second effect. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="20.0"/>
@@ -555,7 +555,7 @@
 	<armor id="70882" name="Aden Cloak - Legendary" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_aden_cloak_normal">
 	<!-- Legendary cloak with the crest of the ancient Aden Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Aden at +15 to add a second effect. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="20.0"/>
@@ -566,7 +566,7 @@
 	<armor id="70883" name="Elmore Cloak - Legendary" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_elmore_cloak_normal">
 	<!-- Legendary cloak with the crest of the ancient Elmore Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Elmore at +15 to add a second effect. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="20.0"/>
@@ -577,7 +577,7 @@
 	<armor id="70884" name="Ferios Cloak - Legendary" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_perios_cloak_normal">
 	<!-- Legendary cloak with the crest of the ancient Ferios Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Ferios at +15 to add a second effect. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="20.0"/>
@@ -585,22 +585,25 @@
 		</stats>
 	</armor>
 
-	<item id="70885" name="Scroll: Enchant Cloak" type="SOLID_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal">
+	<item id="70885" name="Scroll: Enchant Cloak" type="IMPROVED_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted up to +10. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="70886" name="Scroll: Enchant Cloak - Legendary" type="SOLID_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
+	<item id="70886" name="Scroll: Enchant Cloak - Legendary" type="IMPROVED_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +10, up to +20. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="70887" name="Scroll: Ancient Cloak - Legendary" type="SOLID_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
+	<item id="70887" name="Scroll: Ancient Cloak - Legendary" type="IMPROVED_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +7, up to +20. Success rate is 10% better than normal Cloak Scrolls. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70888" name="Legendary Scroll" type="NONE" icon="BranchIcon.icon.g_bm_cloak_legend_scroll">

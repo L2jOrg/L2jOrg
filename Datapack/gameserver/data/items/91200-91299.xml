@@ -63,21 +63,21 @@
 	<armor id="91210" name="Sayha's Cloak - Black" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 	</armor>
 
 	<armor id="91211" name="Sayha's Cloak - White" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i03">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 	</armor>
 
 	<armor id="91212" name="Sayha's Cloak - Red" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i02">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220" enchant-enabled="false" />
+		<attributes weight="220" enchant-enabled="true" />
 		<crystal />
 	</armor>
 
@@ -85,18 +85,21 @@
 	<!-- Varnish enhances Sayha's Cloak. Can Enhance to max. +10.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91214" name="Brilliant Sayha's Cloak - Enchant Scroll" type="SOLID_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
+	<item id="91214" name="Brilliant Sayha's Cloak - Enchant Scroll" type="IMPROVED_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- Varnish enhances Sayha's Cloak. Can Enhance up to max. +9. If Enhance fails, Sayha's Cloak does not disappear and conserves existing Enchant level.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91215" name="Shining Sayha's Cloak - Enchant Scroll" type="SOLID_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
+	<item id="91215" name="Shining Sayha's Cloak - Enchant Scroll" type="IMPROVED_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- Varnish enhances Sayha's Cloak. Can Enhance up to max. +7. If Enhance fails, Sayha's Cloak does not disappear and conserves existing Enchant level.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91216" name="+16 B-grade Weapon Pack" type="NONE" icon="icon.etc_treasure_box_i04">

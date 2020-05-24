@@ -142,14 +142,13 @@
                 <power initial="140.0"/>
             </vital-stat-modify>
             <stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
-                <power initial="4.0">
-                    <value level="2">6.0</value>
-                </power>
+                <power initial="4.0"/>
             </stat-by-move-type>
-            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-                <power>
-                    <value level="2">47.0</value>
-                </power>
+            <stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
+                <power initial="6.0"/>
+            </stat-by-move-type>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" start-level="2">
+                <power initial="47"/>
             </stat-modify>
             <stat-modify stat="MAGICAL_DEFENCE">
                 <power>

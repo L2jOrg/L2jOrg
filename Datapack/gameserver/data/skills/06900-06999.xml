@@ -567,6 +567,11 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="ENCHANT_RATE_BONUS" mode="PER">
+                <power initial="10"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="6951" name="Lucky Enchant Stone: Save Armor (C-grade)" action="A1">
         <!-- none -->
