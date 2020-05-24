@@ -1,6 +1,7 @@
 package handlers.itemhandlers;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.RecipeList;
@@ -46,7 +47,8 @@ public class Recipes implements IItemHandler
 		
 		if (activeChar.hasRecipeList(rp.getId()))
 		{
-//			activeChar.sendPacket(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED);
+			activeChar.sendPacket(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED);
+			RecipeController.getInstance().requestBookOpen(activeChar, true);
 			return false;
 		}
 		
@@ -99,6 +101,7 @@ public class Recipes implements IItemHandler
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED);
 		sm.addItemName(item);
 		activeChar.sendPacket(sm);
+		RecipeController.getInstance().requestBookOpen(activeChar, true);
 		return true;
 	}
 }
