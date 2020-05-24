@@ -102,7 +102,7 @@
             <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="3">
                 <power initial="7"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER">
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
                 <power>
                     <value level="3">7.0</value>
                 </power>
