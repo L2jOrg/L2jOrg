@@ -19,7 +19,9 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import static java.util.Objects.isNull;
@@ -37,6 +39,14 @@ public class Q10990_PoisonExtraction extends Quest
 	// Monsters
 	private static final int HUNTER_TARANTULA = 20403;
 	private static final int PLUNDER_TARANTULA = 20508;
+	private static final int TARANTULA = 91653;
+	private static final Map<Integer, Integer> MONSTER_DROP_CHANCES = new HashMap<>();
+	static
+	{
+		MONSTER_DROP_CHANCES.put(20403, 100);
+		MONSTER_DROP_CHANCES.put(20508, 100);
+
+	}
 	// Items
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
@@ -66,7 +76,8 @@ public class Q10990_PoisonExtraction extends Quest
 		super(10990);
 		addStartNpc(GERALD);
 		addTalkId(GERALD, CAPTAIN_BATHIS);
-		addKillId(HUNTER_TARANTULA, PLUNDER_TARANTULA);
+		addKillId(MONSTER_DROP_CHANCES.keySet());
+		registerQuestItems(TARANTULA);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_POISON_EXTRACTION);
 	}
@@ -207,16 +218,17 @@ public class Q10990_PoisonExtraction extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			
-		 if (killCount < 30)
-			{
+			if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getId())) {
+				giveItems(killer, TARANTULA, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+			if (killCount < 30) {
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				sendNpcLogList(killer);
-				
+
 			}
-			else
-			{
+			else {
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
 				killer.sendPacket(new ExShowScreenMessage("You hunted all monsters.#Use the Scroll of Escape in you inventory to go to Captain Bathis in the Town of Gludio.", 5000));

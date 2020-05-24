@@ -13,13 +13,16 @@ import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.NpcLogListHolder;
+import org.l2j.gameserver.model.holders.QuestItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import static java.util.Objects.isNull;
@@ -38,6 +41,15 @@ public class Q10984_CollectSpiderweb extends Quest
 	private static final int HOOK_SPIDER = 20308;
 	private static final int CRIMSON_SPIDER = 20460;
 	private static final int PINCER_SPIDER = 20466;
+	private static final int BIGSPIDERWEB = 91652;
+	private static final Map<Integer, Integer> MONSTER_DROP_CHANCES = new HashMap<>();
+	static
+	{
+		MONSTER_DROP_CHANCES.put(20308, 100);
+		MONSTER_DROP_CHANCES.put(20460, 100);
+		MONSTER_DROP_CHANCES.put(20466, 100);
+
+	}
 	// Items
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
@@ -67,7 +79,8 @@ public class Q10984_CollectSpiderweb extends Quest
 		super(10984);
 		addStartNpc(HERBIEL);
 		addTalkId(HERBIEL, CAPTAIN_BATHIS);
-		addKillId(HOOK_SPIDER, CRIMSON_SPIDER, PINCER_SPIDER);
+		addKillId(MONSTER_DROP_CHANCES.keySet());
+		registerQuestItems(BIGSPIDERWEB);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_SPIDER_WEB);
 	}
@@ -208,6 +221,11 @@ public class Q10984_CollectSpiderweb extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
+			if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getId()))
+			{
+				giveItems(killer, BIGSPIDERWEB, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
 			if (killCount < 30)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
