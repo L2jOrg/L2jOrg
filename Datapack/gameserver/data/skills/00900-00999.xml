@@ -165,7 +165,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
                 <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">

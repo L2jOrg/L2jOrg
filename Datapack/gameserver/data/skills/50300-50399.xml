@@ -159,9 +159,8 @@
                 </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
-                <power>
-                    <value level="5">2.0</value>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" start-level="5">
+                <power initial="2">
                     <value level="6">3.0</value>
                     <value level="7">5.0</value>
                     <value level="8">7.0</value>
@@ -169,9 +168,8 @@
                     <value level="10">15.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
-                <power>
-                    <value level="5">2.0</value>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="5">
+                <power initial="2">
                     <value level="6">3.0</value>
                     <value level="7">5.0</value>
                     <value level="8">7.0</value>

@@ -1667,16 +1667,18 @@
                     <value level="3">4.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
-                <power initial="2.0">
-                    <value level="2">4.0</value>
-                    <value level="3">6.0</value>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" start-level="12">
+                <power initial="3">
+                    <value level="13">6</value>
+                    <value level="14">10</value>
+                    <value level="15">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
-                <power initial="2.0">
-                    <value level="2">4.0</value>
-                    <value level="3">6.0</value>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="12">
+                <power initial="3">
+                    <value level="13">6</value>
+                    <value level="14">10</value>
+                    <value level="15">20</value>
                 </power>
             </stat-modify>
             <stat-modify start-level="3" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">

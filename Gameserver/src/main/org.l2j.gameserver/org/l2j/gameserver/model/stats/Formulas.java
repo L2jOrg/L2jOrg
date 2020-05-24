@@ -114,7 +114,7 @@ public final class Formulas {
         final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
 
         // MDAM Formula.
-        double damage = ((77 * (power + attacker.getStats().getValue(Stat.SKILL_POWER_ADD, 0)) * Math.sqrt(mAtk)) / mDef) * shotsBonus;
+        double damage = ( (77 *  attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, power)  * Math.sqrt(mAtk) ) / mDef) * shotsBonus;
 
         // Failure calculation
         if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
@@ -142,8 +142,7 @@ public final class Formulas {
             }
         }
 
-        damage = damage * critMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
-        return damage * attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, 1);
+        return damage * critMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
     }
 
     /**
@@ -265,7 +264,7 @@ public final class Formulas {
             defenceCriticalDamage = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
         }
 
-        return 2.5 + ( 2 * criticalDamage / defenceCriticalDamage * 1.5) / (77 + defenceCriticalDamage - criticalDamage);
+        return Math.max(1, 2 + (criticalDamage - defenceCriticalDamage) / (75 + Math.min(defenceCriticalDamage, criticalDamage)));
     }
 
     /**

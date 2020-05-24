@@ -331,9 +331,15 @@
                     <value level="7">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
-                <power>
-                    <value level="3">1.0</value>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="3">
+                <power initial="1">
+                    <value level="4">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="7">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" start-level="3">
+                <power initial="1">
                     <value level="4">2.0</value>
                     <value level="6">3.0</value>
                     <value level="7">5.0</value>
@@ -928,10 +934,10 @@
             <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
                 <power initial="2.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
                 <power initial="2.0"/>
             </stat-modify>
             <stat-modify stat="ACCURACY">
@@ -1002,7 +1008,10 @@
             <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
                 <power initial="2.0"/>
             </stat-modify>
             <stat-modify stat="ACCURACY">

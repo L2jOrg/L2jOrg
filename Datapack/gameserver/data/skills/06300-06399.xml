@@ -359,7 +359,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
                 <power initial="100.0"/>
             </stat-modify>
         </effects>
