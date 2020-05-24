@@ -315,12 +315,11 @@ public class RecipeController {
                     return;
                 }
             }
-
             _items = listItems(true); // this line actually takes materials from inventory
             if (_items == null) {
                 // handle possible cheaters here
                 // (they click craft then try to get rid of items in order to get free craft)
-            } else if (Rnd.get(100) < getCraftChanceRate()) { // TODO: How Modifier +10 % should affect the successRate ? successRate + Modifier (60% + 10% = 70%) or successRate * Modifier (60% * 110% = 66%) (@Pearlbear)
+            } else if (Rnd.get(100) < getCraftChanceRate()) {
                 rewardPlayer(); // and immediately puts created item in its place
                 updateMakeInfo(true);
             } else {
@@ -353,7 +352,7 @@ public class RecipeController {
         }
 
         private double getCraftCriticalRate() {
-            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, 5); // TODO: Find default value for Critical Craft (@Pearlbear)
+            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, 2);
         }
 
         private void updateMakeInfo(boolean success) {
@@ -528,7 +527,6 @@ public class RecipeController {
             final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
 
             // TODO: This test should be moved after code below if applicable on rare production items (@Pearlbear)
-            // TODO: How Modifier +10 % should affect the successRate ? successRate + Modifier (5% + 10% = 15%) or successRate * Modifier (5% * 110% = 5.5%) (@Pearlbear)
             if (Rnd.get(100) < getCraftCriticalRate()) {
                 itemCount *= 2;
                 // TODO: Send message for critical craft or not ? (@Pearlbear)
