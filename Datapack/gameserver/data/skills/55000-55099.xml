@@ -67,7 +67,7 @@
     <skill id="55003" name="1st Class Transfer Buff Scroll" action="A2">
         <!-- For 20 minutes, grants an effect equal to Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -83,15 +83,36 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
-                <power initial="2.0"/>
+            <call-skill skill="1040">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1068">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1078">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1085">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1204">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1077">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1087">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1059">
+                <power initial="1"/>
             </call-skill>
         </effects>
     </skill>
     <skill id="55004" name="2nd Class Transfer Buff Scroll" max-level="2" action="A2">
         <!-- For 20 minutes, grants an effect equal to Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -107,46 +128,46 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
+            <call-skill skill="1040">
                 <power initial="3"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1068">
+            <call-skill skill="1068">
                 <power initial="3"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1085">
+            <call-skill skill="1085">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1204">
+            <call-skill skill="1204">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="4359">
+            <call-skill skill="4359">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1044">
+            <call-skill skill="1044">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1240">
+            <call-skill skill="1240">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1242">
+            <call-skill skill="1242">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1036">
+            <call-skill skill="1036">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1045">
+            <call-skill skill="1045">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1048">
+            <call-skill skill="1048">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1086">
+            <call-skill skill="1086">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1087">
+            <call-skill skill="1087">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1059">
+            <call-skill skill="1059">
                 <power initial="2"/>
             </call-skill>
         </effects>
@@ -425,7 +446,7 @@
     <skill id="55035" name="1st Class Transfer Buff Scroll" action="A2">
         <!-- For 20 minutes, grants an effect equal to Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -441,15 +462,36 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
-                <power initial="2.0"/>
+            <call-skill skill="1040">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1068">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1078">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1085">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1204">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1077">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1087">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1059">
+                <power initial="1"/>
             </call-skill>
         </effects>
     </skill>
     <skill id="55036" name="2nd Class Transfer Buff Scroll" max-level="2" action="A2">
         <!-- For 20 minutes, grants an effect equal to Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -465,46 +507,46 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
+            <call-skill skill="1040">
                 <power initial="3"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1068">
+            <call-skill skill="1068">
                 <power initial="3"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1085">
+            <call-skill skill="1085">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1204">
+            <call-skill skill="1204">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="4359">
+            <call-skill skill="4359">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1044">
+            <call-skill skill="1044">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1240">
+            <call-skill skill="1240">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1242">
+            <call-skill skill="1242">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1036">
+            <call-skill skill="1036">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1045">
+            <call-skill skill="1045">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1048">
+            <call-skill skill="1048">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1086">
+            <call-skill skill="1086">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1087">
+            <call-skill skill="1087">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1059">
+            <call-skill skill="1059">
                 <power initial="2"/>
             </call-skill>
         </effects>
@@ -913,7 +955,7 @@
     <skill id="55055" name="1st Class Transfer Buff Scroll" action="A2">
         <!-- For 20 minutes, grants an effect equal to Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -927,28 +969,28 @@
             <time initial="1200"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
+            <call-skill skill="1040">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1068">
+            <call-skill skill="1068">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1078">
+            <call-skill skill="1078">
                 <power initial="2"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1085">
+            <call-skill skill="1085">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1204">
+            <call-skill skill="1204">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="4359">
+            <call-skill skill="4359">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1087">
+            <call-skill skill="1087">
                 <power initial="1"/>
             </call-skill>
-            <call-skill scope="SELF" skill="1059">
+            <call-skill skill="1059">
                 <power initial="1"/>
             </call-skill>
         </effects>
@@ -956,7 +998,7 @@
     <skill id="55056" name="2nd Class Transfer Buff Scroll" max-level="2" action="A2">
         <!-- For 20 minutes, grants an effect equal to Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -1519,7 +1561,7 @@
             </random-restoration>
         </effects>
     </skill>
-    <skill id="55075" name="Shield" max-level="5" action="A1" type="MAGIC">
+    <skill id="55075" name="Shield" max-level="5" action="A2" type="MAGIC">
         <!--
             level 1: For 20 minutes, P. Def. +12%%.
             level 5: For 20 min., P. Def. +12%%.
@@ -1529,14 +1571,21 @@
             <cast-range initial="400"/>
             <reuse initial="2000"/>
             <effect-point initial="243"/>
-            <effect-range initial="-1"/>
             <hit-time initial="4000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="23"/>
         </consume>
         <target/>
+        <abnormal type="PD_UP">
+            <level initial="2"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="12"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55076" name="Might" max-level="5" action="A1" type="MAGIC">
         <!--
@@ -1709,7 +1758,7 @@
     <skill id="55085" name="1st Class Transfer Buff Scroll" action="A2">
         <!-- For 10 minutes, grants an effect equal to Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -1725,15 +1774,36 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
-                <power initial="2.0"/>
+            <call-skill skill="1040">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1068">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1078">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1085">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1204">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1077">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1087">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1059">
+                <power initial="1"/>
             </call-skill>
         </effects>
     </skill>
     <skill id="55086" name="2nd Class Transfer Buff Scroll" max-level="2" action="A2">
         <!-- For 10 minutes, grants an effect equal to Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
@@ -1749,8 +1819,47 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
-                <power initial="2.0"/>
+            <call-skill skill="1040">
+                <power initial="3"/>
+            </call-skill>
+            <call-skill skill="1068">
+                <power initial="3"/>
+            </call-skill>
+            <call-skill skill="1085">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1204">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="4359">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1044">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1240">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1242">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1036">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1045">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1048">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1086">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1087">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1059">
+                <power initial="2"/>
             </call-skill>
         </effects>
     </skill>
