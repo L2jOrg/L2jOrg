@@ -99,12 +99,10 @@
                     <value level="3">4.0</value>
                 </power>
             </speed>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
-                <power>
-                    <value level="3">7.0</value>
-                </power>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="3">
+                <power initial="7"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
                 <power>
                     <value level="3">7.0</value>
                 </power>

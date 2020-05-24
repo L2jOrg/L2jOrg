@@ -1779,7 +1779,7 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
                 <power initial="2.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>

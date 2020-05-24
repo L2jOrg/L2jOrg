@@ -65,12 +65,6 @@ import java.util.function.Consumer;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-
-/**
- * This class manages items.
- *
- * @version $Revision: 1.4.2.1.2.11 $ $Date: 2005/03/31 16:07:50 $
- */
 public final class Item extends WorldObject {
 
     public static final int ADDED = 1;
@@ -80,9 +74,7 @@ public final class Item extends WorldObject {
     public static final int[] DEFAULT_ENCHANT_OPTIONS = new int[]{0, 0, 0};
     private static final Logger LOGGER = LoggerFactory.getLogger(Item.class);
     private static final Logger LOG_ITEMS = LoggerFactory.getLogger("item");
-    /**
-     * ID of the item
-     */
+
     private final int itemId;
     private final ItemTemplate template;
     private final ReentrantLock _dbLock = new ReentrantLock();

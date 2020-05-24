@@ -4388,6 +4388,7 @@ public final class Player extends Playable {
             final int newRep = getReputation() - (getReputation() / 4);
             setReputation(newRep < -20 ? newRep : 0);
         }
+        AutoPlayEngine.getInstance().stopTasks(this);
 
         return true;
     }

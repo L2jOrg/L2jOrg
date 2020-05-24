@@ -104,7 +104,7 @@ public final class PhysicalSoulAttack extends AbstractEffect {
 
             // Skill specific mods.
             final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
-            final double power = this.power + effector.getStats().getValue(Stat.SKILL_POWER_ADD, 0);
+            final double power = effector.getStats().getValue(Stat.PHYSICAL_SKILL_POWER, this.power);
             final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
             final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
             double ssmod = skill.useSoulShot() ?  effector.chargedShotBonus(ShotType.SOULSHOTS) : 1;
@@ -116,7 +116,6 @@ public final class PhysicalSoulAttack extends AbstractEffect {
             // ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
             damage = baseMod * soulsMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
-            damage *= effector.getStats().getValue(Stat.PHYSICAL_SKILL_POWER, 1);
         }
 
         effector.doAttack(damage, effected, skill, false, false, critical, false);

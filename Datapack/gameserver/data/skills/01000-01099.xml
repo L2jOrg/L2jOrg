@@ -83,15 +83,8 @@
                     <value level="12">14.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
-                <power>
-                    <value level="8">5.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
-                <power>
-                    <value level="8">5.0</value>
-                </power>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="8">
+                <power initial="5"/>
             </stat-modify>
         </effects>
     </skill>
@@ -3386,7 +3379,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
                 <power initial="5.0">
                     <value level="2">10.0</value>
                 </power>
