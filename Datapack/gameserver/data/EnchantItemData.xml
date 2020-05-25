@@ -52,25 +52,259 @@
 	<scroll id="33813" grade="C" max-enchant="16" />
 	<scroll id="33812" grade="D" max-enchant="16" />
 
-	<!-- Talisman of Aden -->
+	<!-- Aden Talisman Enchant Scroll -->
 	<scroll id="91756" grade="NONE" max-enchant="10">
-		<item id="91745" />
+		<item id="91745" /> <!-- Talisman of Aden -->
+	</scroll>
+	
+	<!-- Enchant Scroll: Talisman - Speed -->
+	<scroll id="92402" grade="NONE" max-enchant="10">
+		<item id="92403" /> <!-- Talisman - Speed -->
 	</scroll>
 
-	<!-- Talisman of Eva -->
+	<!-- Enchant Scroll: Eva's Talisman -->
 	<scroll id="92017" grade="NONE" max-enchant="11">
-		<item id="92018" />
+		<item id="92018" /> <!-- Eva's Talisman -->
+	</scroll>
+	
+	<!-- Enchant Scroll: Talisman of Baium -->
+	<scroll id="99002" grade="NONE" max-enchant="5">
+		<item id="49683" /> <!-- Talisman of Baium -->
 	</scroll>
 
-	<!-- Dragon valley earing -->
+	<!-- Enchant Scroll: Dragon Valley Earring -->
 	<scroll id="91967" grade="NONE" max-enchant="10">
-		<item id="91953" />
+		<item id="91953" /> <!-- Dragon Valley Earring -->
 	</scroll>
-
-
+	
+	<!-- Enchant Scroll: Dragon's Belt -->
+	<scroll id="91863" grade="NONE" max-enchant="10">
+		<item id="91862" /> <!-- Dragon's Belt -->
+	</scroll>
+	
+	<!-- Enchant Scroll: Adventurer’s Belt -->
+	<scroll id="93046" grade="NONE" max-enchant="1">
+		<item id="93042" /> <!-- Adventurer’s Belt -->		
+	</scroll>
+	
+	<!-- Spirit Varnish -->
+	<scroll id="91187" grade="NONE" max-enchant="10">
+		<item id="91117" /> <!-- Nebula Necklace -->
+		<item id="91119" /> <!-- Ignis Necklace -->
+		<item id="91121" /> <!-- Procella Necklace -->
+		<item id="91123" /> <!-- Petram Necklace -->		
+	</scroll>
+	
+	<!-- Blessed Spirit Varnish -->
+	<scroll id="91188" grade="NONE" max-enchant="10">
+		<item id="91117" /> <!-- Nebula Necklace -->
+		<item id="91119" /> <!-- Ignis Necklace -->
+		<item id="91121" /> <!-- Procella Necklace -->
+		<item id="91123" /> <!-- Petram Necklace -->		
+	</scroll>
+	
+	<!-- Balthus Knights Varnish -->
+	<scroll id="90995" grade="NONE" max-enchant="10">
+		<item id="90993" /> <!-- Damaged Antharas' Earring -->
+		<item id="90994" /> <!-- Damaged Baium's Ring -->
+		<item id="91006" /> <!-- Damaged Zaken's Earring -->		
+	</scroll>
+	
+	<!-- Balthus Knights Shining Varnish -->
+	<scroll id="90997" grade="NONE" max-enchant="8">
+		<item id="90993" /> <!-- Damaged Antharas' Earring -->
+		<item id="90994" /> <!-- Damaged Baium's Ring -->
+		<item id="91006" /> <!-- Damaged Zaken's Earring -->		
+	</scroll>
+	
+	<!-- Balthus Knights Glittering Varnish -->
+	<scroll id="90998" grade="NONE" max-enchant="9">
+		<item id="90993" /> <!-- Damaged Antharas' Earring -->
+		<item id="90994" /> <!-- Damaged Baium's Ring -->
+		<item id="91006" /> <!-- Damaged Zaken's Earring -->		
+	</scroll>
+	
+	<!-- Dragon Varnish -->
 	<scroll id="91249" grade="NONE" max-enchant="5">
-		<item id="71691" />
-		<item id="71692" />
+		<item id="71691" /> <!-- Dragon Pedant - Attack Type Lv. 1 -->
+		<item id="71692" /> <!-- Dragon Pedant - Attack Type Lv. 2 -->
+		<item id="71693" /> <!-- Dragon Pedant - Attack Type Lv. 3 -->
+		<item id="71694" /> <!-- Dragon Pedant - Attack Type Lv. 4 -->
+		<item id="71695" /> <!-- Dragon Pedant - Magic Type Lv. 1 -->
+		<item id="71696" /> <!-- Dragon Pedant - Magic Type Lv. 2 -->
+		<item id="71697" /> <!-- Dragon Pedant - Magic Type Lv. 3 -->
+		<item id="71698" /> <!-- Dragon Pedant - Magic Type Lv. 4 -->
+	</scroll>
+	
+	<!-- Brilliant Dragon Varnish -->
+	<scroll id="91250" grade="NONE" max-enchant="5">
+		<item id="71691" /> <!-- Dragon Pedant - Attack Type Lv. 1 -->
+		<item id="71692" /> <!-- Dragon Pedant - Attack Type Lv. 2 -->
+		<item id="71693" /> <!-- Dragon Pedant - Attack Type Lv. 3 -->
+		<item id="71694" /> <!-- Dragon Pedant - Attack Type Lv. 4 -->
+		<item id="71695" /> <!-- Dragon Pedant - Magic Type Lv. 1 -->
+		<item id="71696" /> <!-- Dragon Pedant - Magic Type Lv. 2 -->
+		<item id="71697" /> <!-- Dragon Pedant - Magic Type Lv. 3 -->
+		<item id="71698" /> <!-- Dragon Pedant - Magic Type Lv. 4 -->
+	</scroll>
+	
+	<!-- Enchant Scroll: Adventurer’s Cloak -->
+	<scroll id="93045" grade="NONE" max-enchant="1">
+		<item id="93041" /> <!-- Adventurer’s Cloak -->		
+	</scroll>
+	
+	<!-- Scroll: Enchant Cloak of Protection -->
+	<scroll id="93302" grade="NONE" max-enchant="10">
+		<item id="93301" /> <!-- Cloak of Protection -->		
+	</scroll>
+	
+	<!-- Scroll: Enchant Cloak -->
+	<scroll id="70885" grade="NONE" max-enchant="10">
+		<item id="70877" /> <!-- Elmoreden Cloak -->	
+		<item id="70878" /> <!-- Aden Cloak -->
+		<item id="70879" /> <!-- Elmore Cloak -->
+		<item id="70880" /> <!-- Ferios Cloak -->
+		<item id="70881" /> <!-- Elmoreden Cloak - Legendary -->
+		<item id="70882" /> <!-- Aden Cloak - Legendary -->
+		<item id="70883" /> <!-- Elmore Cloak - Legendary -->
+		<item id="70884" /> <!-- Ferios Cloak - Legendary -->
+	</scroll>
+	
+	<!-- Scroll: Enchant Cloak - Legendary -->
+	<scroll id="70886" grade="NONE" max-enchant="20">
+		<item id="70877" /> <!-- Elmoreden Cloak -->	
+		<item id="70878" /> <!-- Aden Cloak -->
+		<item id="70879" /> <!-- Elmore Cloak -->
+		<item id="70880" /> <!-- Ferios Cloak -->
+		<item id="70881" /> <!-- Elmoreden Cloak - Legendary -->
+		<item id="70882" /> <!-- Aden Cloak - Legendary -->
+		<item id="70883" /> <!-- Elmore Cloak - Legendary -->
+		<item id="70884" /> <!-- Ferios Cloak - Legendary -->
+	</scroll>
+	
+	<!-- Scroll: Ancient Cloak - Legendary -->
+	<scroll id="70887" grade="NONE" max-enchant="20">
+		<item id="70877" /> <!-- Elmoreden Cloak -->	
+		<item id="70878" /> <!-- Aden Cloak -->
+		<item id="70879" /> <!-- Elmore Cloak -->
+		<item id="70880" /> <!-- Ferios Cloak -->
+		<item id="70881" /> <!-- Elmoreden Cloak - Legendary -->
+		<item id="70882" /> <!-- Aden Cloak - Legendary -->
+		<item id="70883" /> <!-- Elmore Cloak - Legendary -->
+		<item id="70884" /> <!-- Ferios Cloak - Legendary -->
+	</scroll>
+	
+	<!-- Stable Cloak Enchantment Scroll - Legendary -->
+	<scroll id="70906" grade="NONE" max-enchant="15">
+		<item id="70877" /> <!-- Elmoreden Cloak -->	
+		<item id="70878" /> <!-- Aden Cloak -->
+		<item id="70879" /> <!-- Elmore Cloak -->
+		<item id="70880" /> <!-- Ferios Cloak -->
+		<item id="70881" /> <!-- Elmoreden Cloak - Legendary -->
+		<item id="70882" /> <!-- Aden Cloak - Legendary -->
+		<item id="70883" /> <!-- Elmore Cloak - Legendary -->
+		<item id="70884" /> <!-- Ferios Cloak - Legendary -->
+	</scroll>
+	
+	<!-- Sayha's Cloak - Enchant Scroll -->
+	<scroll id="91213" grade="NONE" max-enchant="10">
+		<item id="91719" /> <!-- Special Black Sayha's Cloak -->	
+		<item id="91720" /> <!-- Special White Sayha's Cloak -->
+		<item id="91721" /> <!-- Special Red Sayha's Cloak -->
+		<item id="91210" /> <!-- Black Sayha's Cloak -->
+		<item id="91211" /> <!-- White Sayha's Cloak -->
+		<item id="91212" /> <!-- Red Sayha's Cloak -->
+	</scroll>
+	
+	<!-- Brilliant Sayha's Cloak - Enchant Scroll -->
+	<scroll id="91214" grade="NONE" max-enchant="9">
+		<item id="91719" /> <!-- Special Black Sayha's Cloak -->	
+		<item id="91720" /> <!-- Special White Sayha's Cloak -->
+		<item id="91721" /> <!-- Special Red Sayha's Cloak -->
+		<item id="91210" /> <!-- Black Sayha's Cloak -->
+		<item id="91211" /> <!-- White Sayha's Cloak -->
+		<item id="91212" /> <!-- Red Sayha's Cloak -->
+	</scroll>
+	
+	<!-- Shining Sayha's Cloak - Enchant Scroll -->
+	<scroll id="91215" grade="NONE" max-enchant="7">
+		<item id="91719" /> <!-- Special Black Sayha's Cloak -->	
+		<item id="91720" /> <!-- Special White Sayha's Cloak -->
+		<item id="91721" /> <!-- Special Red Sayha's Cloak -->
+		<item id="91210" /> <!-- Black Sayha's Cloak -->
+		<item id="91211" /> <!-- White Sayha's Cloak -->
+		<item id="91212" /> <!-- Red Sayha's Cloak -->
+	</scroll>
+	
+	<!-- Sayha's Supreme Scroll: Enchant Cloak -->
+	<scroll id="91722" grade="NONE" max-enchant="10">
+		<item id="91719" /> <!-- Special Black Sayha's Cloak -->	
+		<item id="91720" /> <!-- Special White Sayha's Cloak -->
+		<item id="91721" /> <!-- Special Red Sayha's Cloak -->
+		<item id="91210" /> <!-- Black Sayha's Cloak -->
+		<item id="91211" /> <!-- White Sayha's Cloak -->
+		<item id="91212" /> <!-- Red Sayha's Cloak -->
+	</scroll>
+	
+	<!-- Enchant Scroll: Adventurer’s Hair Accessory -->
+	<scroll id="93043" grade="NONE" max-enchant="1">
+		<item id="93044" /> <!-- Adventurer’s Sheep Hat -->		
+	</scroll>
+	
+	<!-- Eva's Scroll: Enchant Hair Accessory -->
+	<scroll id="70753" grade="NONE" max-enchant="10">
+		<item id="70749" />  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
+		<item id="70748" />  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
+		<item id="70747" />  <!-- Chic Silver Chapeau <STR+1 INT+1> -->
+		<item id="70734" />  <!-- First Mate Hat <CON+1 MEN+1> -->
+		<item id="70733" />  <!-- First Mate Hat <DEX+1 WIT+1> -->
+		<item id="70732" />  <!-- First Mate Hat <STR+1 INT+1> -->
+		<item id="70740" />  <!-- Gold-rimmed Glasses <CON+1 MEN+1> -->
+		<item id="70739" />  <!-- Gold-rimmed Glasses <DEX+1 WIT+1> -->
+		<item id="70738" />  <!-- Gold-rimmed Glasses <STR+1 INT+1> -->
+		<item id="70743" />  <!-- Horn-rimmed Glasses <CON+1 MEN+1> -->
+		<item id="70742" />  <!-- Horn-rimmed Glasses <DEX+1 WIT+1> -->
+		<item id="70741" />  <!-- Horn-rimmed Glasses <STR+1 INT+1> -->
+		<item id="70737" />  <!-- Refined Romantic Chapeau: Blue <CON+1 MEN+1> -->
+		<item id="70736" />  <!-- Refined Romantic Chapeau: Blue <DEX+1 WIT+1> -->
+		<item id="70735" />  <!-- Refined Romantic Chapeau: Blue <STR+1 INT+1> -->
+		<item id="70746" />  <!-- Stylish Straw Hat <CON+1 MEN+1> -->
+		<item id="70745" />  <!-- Stylish Straw Hat <DEX+1 WIT+1> -->
+		<item id="70744" />  <!-- Stylish Straw Hat <STR+1 INT+1> -->
+		<item id="70731" />  <!-- Warrior's Helmet <CON+1 MEN+1> -->
+		<item id="70730" />  <!-- Warrior's Helmet <DEX+1 WIT+1> -->
+		<item id="70729" />  <!-- Warrior's Helmet <STR+1 INT+1> -->
+		<item id="70728" />  <!-- White Uniform Hat <CON+1 MEN+1> -->
+		<item id="70727" />  <!-- White Uniform Hat <DEX+1 WIT+1> -->
+		<item id="70726" />  <!-- White Uniform Hat <STR+1 INT+1> -->
+	</scroll>
+	
+	<!-- Stabilized Eva's Scroll: Enchant Hair Accessory -->
+	<scroll id="70754" grade="NONE" max-enchant="10">
+		<item id="70749" />  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
+		<item id="70748" />  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
+		<item id="70747" />  <!-- Chic Silver Chapeau <STR+1 INT+1> -->
+		<item id="70734" />  <!-- First Mate Hat <CON+1 MEN+1> -->
+		<item id="70733" />  <!-- First Mate Hat <DEX+1 WIT+1> -->
+		<item id="70732" />  <!-- First Mate Hat <STR+1 INT+1> -->
+		<item id="70740" />  <!-- Gold-rimmed Glasses <CON+1 MEN+1> -->
+		<item id="70739" />  <!-- Gold-rimmed Glasses <DEX+1 WIT+1> -->
+		<item id="70738" />  <!-- Gold-rimmed Glasses <STR+1 INT+1> -->
+		<item id="70743" />  <!-- Horn-rimmed Glasses <CON+1 MEN+1> -->
+		<item id="70742" />  <!-- Horn-rimmed Glasses <DEX+1 WIT+1> -->
+		<item id="70741" />  <!-- Horn-rimmed Glasses <STR+1 INT+1> -->
+		<item id="70737" />  <!-- Refined Romantic Chapeau: Blue <CON+1 MEN+1> -->
+		<item id="70736" />  <!-- Refined Romantic Chapeau: Blue <DEX+1 WIT+1> -->
+		<item id="70735" />  <!-- Refined Romantic Chapeau: Blue <STR+1 INT+1> -->
+		<item id="70746" />  <!-- Stylish Straw Hat <CON+1 MEN+1> -->
+		<item id="70745" />  <!-- Stylish Straw Hat <DEX+1 WIT+1> -->
+		<item id="70744" />  <!-- Stylish Straw Hat <STR+1 INT+1> -->
+		<item id="70731" />  <!-- Warrior's Helmet <CON+1 MEN+1> -->
+		<item id="70730" />  <!-- Warrior's Helmet <DEX+1 WIT+1> -->
+		<item id="70729" />  <!-- Warrior's Helmet <STR+1 INT+1> -->
+		<item id="70728" />  <!-- White Uniform Hat <CON+1 MEN+1> -->
+		<item id="70727" />  <!-- White Uniform Hat <DEX+1 WIT+1> -->
+		<item id="70726" />  <!-- White Uniform Hat <STR+1 INT+1> -->
 	</scroll>
 	<scroll id="70885" max-enchant="10">
 		<item id="70877"/>
