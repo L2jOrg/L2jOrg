@@ -73,4 +73,7 @@ public interface CastleDAO extends DAO<CastleData> {
 
     @Query("DELETE FROM siege_clans WHERE castle_id=:castleId: and clan_id=:clanId:")
     void deleteSiegeClanByCastle(int clanId, int castleId);
+
+    @Query("SELECT * FROM castle")
+    List<CastleData> findAll();
 }

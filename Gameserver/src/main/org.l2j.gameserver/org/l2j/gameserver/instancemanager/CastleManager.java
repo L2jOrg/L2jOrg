@@ -1,9 +1,11 @@
 package org.l2j.gameserver.instancemanager;
 
 import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.InstanceListManager;
+import org.l2j.gameserver.data.database.dao.CastleDAO;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
@@ -16,18 +18,17 @@ import org.l2j.gameserver.model.item.instance.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Collection;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author JoeAlisson
  */
 public final class CastleManager implements InstanceListManager {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(CastleManager.class);
 
     private static final int[] castleCirclets = {
@@ -43,7 +44,7 @@ public final class CastleManager implements InstanceListManager {
         8183
     };
 
-    private final IntMap<Castle> castles = new CHashIntMap<>();
+    private final IntMap<Castle> castles = new HashIntMap<>();
     private final IntMap<LocalDateTime> castleSiegesDate = new CHashIntMap<>();
 
     private CastleManager() {
@@ -141,31 +142,14 @@ public final class CastleManager implements InstanceListManager {
                     // continue removing offline
                 }
             }
-            // else offline-player circlet removal
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE owner_id = ? and item_id = ?")) {
-                ps.setInt(1, member.getObjectId());
-                ps.setInt(2, circletId);
-                ps.execute();
-            } catch (Exception e) {
-                LOGGER.warn(getClass().getSimpleName() + ": Failed to remove castle circlets offline for player " + member.getName() + ": ", e);
-            }
+            getDAO(ItemDAO.class).deleteByIdAndOwner(circletId, member.getObjectId());
         }
     }
 
     @Override
     public void loadInstances() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement s = con.createStatement();
-             ResultSet rs = s.executeQuery("SELECT id FROM castle ORDER BY id")) {
-            while (rs.next()) {
-                final int castleId = rs.getInt("id");
-                castles.put(castleId, new Castle(castleId));
-            }
-            LOGGER.info("Loaded: {} castles.", castles.size());
-        } catch (Exception e) {
-            LOGGER.error( e.getMessage(), e);
-        }
+        getDAO(CastleDAO.class).findAll().stream().map(Castle::new).forEach(c -> castles.put(c.getId(), c));
+        LOGGER.info("Loaded {} castles", castles.size());
     }
 
     @Override

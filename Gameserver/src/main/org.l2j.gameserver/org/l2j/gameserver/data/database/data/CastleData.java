@@ -29,6 +29,10 @@ public class CastleData {
     @Column("ticket_buy_count")
     private int ticketBuyCount;
 
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.data.xml.impl.CastleData;
+import org.l2j.gameserver.data.xml.impl.CastleDataManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.Spawn;
@@ -78,7 +78,7 @@ public final class SiegeGuardManager {
      * @return the {@code SiegeGuardHolder} for this castle ID and item ID if any, otherwise {@code null}
      */
     public SiegeGuardHolder getSiegeGuardByItem(int castleId, int itemId) {
-        return CastleData.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getItemId() == itemId)).findFirst().orElse(null);
+        return CastleDataManager.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getItemId() == itemId)).findFirst().orElse(null);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class SiegeGuardManager {
      * @return the {@code SiegeGuardHolder} for this castle ID and npc ID if any, otherwise {@code null}
      */
     public SiegeGuardHolder getSiegeGuardByNpc(int castleId, int npcId) {
-        return CastleData.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getNpcId() == npcId)).findFirst().orElse(null);
+        return CastleDataManager.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getNpcId() == npcId)).findFirst().orElse(null);
     }
 
     /**
