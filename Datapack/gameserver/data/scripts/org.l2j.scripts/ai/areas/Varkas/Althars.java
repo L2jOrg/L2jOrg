@@ -1,55 +1,83 @@
 package ai.areas.Varkas;
 
 import ai.AbstractNpcAI;
-import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
 
-public class Althars extends AbstractNpcAI{
+import java.io.File;
+import java.nio.file.Path;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
+
+public class Althars extends AbstractNpcAI {
     private static Logger LOGGER = LoggerFactory.getLogger(Althars.class);
 
-    private final int DELAY = 30000;
-    private final int SHAMAN = 21874;
-    private final int ESCORT = 21869;
-    private final int ALTHARS = 18926;
-
-    private boolean ACTIVATED = false;
+    private final int _DELAY = 30000;
+    private boolean _ACTIVATED = false;
 
 
     private Althars() {
-        ThreadPool.scheduleAtFixedDelay(new AltharsThread(), DELAY, DELAY);
+        var altharsDatas = new AltharsData();
+        altharsDatas.load();
+        startQuestTimer("ALTHARS_TIMER", _DELAY, null,null);
     }
 
-    private class AltharsThread implements Runnable{
-        @Override
-        public void run() {
-            manageTask();
+    @Override
+    public String onAdvEvent(String event, Npc npc, Player player) {
+        if("ALTHARS_TIMER".equals(event)) {
+            _ACTIVATED = !_ACTIVATED;
+
+            if (_ACTIVATED) {
+                spawnMonsters();
+            }
+            if (!_ACTIVATED) {
+                unSpawnMonsters();
+            }
+
+            startQuestTimer("ALTHARS_TIMER", _DELAY, null,null);
         }
 
+        return super.onAdvEvent(event, npc, player);
     }
 
-    private void manageTask() {
-        ACTIVATED = !ACTIVATED;
-
-        if (ACTIVATED) {
-            spawnMonsters();
-        }
-        if (!ACTIVATED) {
-            unSpawnMonsters();
-        }
+    private void spawnMonsters() {
+        //TODO: activate the glow of althars
+        //TODO: spawn monsters
     }
 
-    private void spawnMonsters(){
-        //TODO find the glow of althars
-        //TODO spawns monsters
+    private void unSpawnMonsters() {
+        //TODO: deactivate the glow of althars
+        //TODO: unspawn monsters
     }
 
-    private void unSpawnMonsters(){
-    }
-
-    public static AbstractNpcAI provider()
-    {
+    public static AbstractNpcAI provider() {
         return new Althars();
+    }
+
+    private class AltharsData extends GameXmlReader {
+
+        @Override
+        protected Path getSchemaFilePath() {
+            //TODO: Create file althars.xsd
+            return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/althars.xsd");
+        }
+
+        @Override
+        public void load() {
+            //TODO: Create file Althars.xml
+            parseDatapackFile("data/Althars.xml");
+            LOGGER.info("Loaded Althars data.");
+        }
+
+        @Override
+        protected void parseDocument(Document doc, File f) {
+            //TODO: Parse file
+        }
     }
 
 }
