@@ -2741,11 +2741,6 @@
         </dropLists>
     </npc>
     <npc id="20051" level="20" type="Monster" name="Skeleton Bowman">
-        <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="100"/>
-            <param name="MoveAroundSocial2" value="100"/>
-        </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <acquire exp="877" sp="26"/>
@@ -2773,11 +2768,6 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-            <clanList>
-                <clan>SKELETON</clan>
-            </clanList>
-        </ai>
         <collision>
             <radius normal="11"/>
             <height normal="27"/>
@@ -2918,14 +2908,10 @@
     </npc>
     <npc id="20054" level="21" type="Monster" name="Ruin Spartoi">
         <parameters>
-            <param name="MoveAroundSocial" value="110"/>
-            <param name="MoveAroundSocial1" value="110"/>
-            <param name="MoveAroundSocial2" value="110"/>
             <param name="SoulShot" value="200"/>
             <param name="SoulShotRate" value="5"/>
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
-            <param name="LongRangeGuardRate" value="10"/>
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
@@ -2955,11 +2941,6 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450">
-            <clanList>
-                <clan>SKELETON</clan>
-            </clanList>
-        </ai>
         <collision>
             <radius normal="11" grown="13"/>
             <height normal="27" grown="34"/>
@@ -3322,14 +3303,10 @@
     </npc>
     <npc id="20060" level="22" type="Monster" name="Raging Spartoi">
         <parameters>
-            <param name="MoveAroundSocial" value="110"/>
-            <param name="MoveAroundSocial1" value="110"/>
-            <param name="MoveAroundSocial2" value="110"/>
             <param name="SoulShot" value="200"/>
             <param name="SoulShotRate" value="5"/>
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
-            <param name="LongRangeGuardRate" value="10"/>
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
@@ -3359,11 +3336,6 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-            <clanList>
-                <clan>SKELETON</clan>
-            </clanList>
-        </ai>
         <collision>
             <radius normal="11" grown="13"/>
             <height normal="27" grown="34"/>
@@ -3458,14 +3430,10 @@
     </npc>
     <npc id="20062" level="23" type="Monster" name="Tumran Bugbear">
         <parameters>
-            <param name="MoveAroundSocial" value="124"/>
-            <param name="MoveAroundSocial1" value="124"/>
-            <param name="MoveAroundSocial2" value="124"/>
             <param name="SoulShot" value="200"/>
             <param name="SoulShotRate" value="5"/>
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
-            <param name="LongRangeGuardRate" value="10"/>
         </parameters>
         <race>GIANT</race>
         <sex>MALE</sex>
@@ -3492,11 +3460,6 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450">
-            <clanList>
-                <clan>BUGBEAR</clan>
-            </clanList>
-        </ai>
         <collision>
             <radius normal="17"/>
             <height normal="35"/>
@@ -3591,14 +3554,10 @@
     <npc id="20064" level="24" type="Monster" name="Tumran Bugbear Warrior">
         <!-- L2wiki: https://l2wiki.com/classic/Tumran_Bugbear_Warrior -->
         <parameters>
-            <param name="MoveAroundSocial" value="124"/>
-            <param name="MoveAroundSocial1" value="124"/>
-            <param name="MoveAroundSocial2" value="124"/>
             <param name="SoulShot" value="200"/>
             <param name="SoulShotRate" value="5"/>
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
-            <param name="LongRangeGuardRate" value="10"/>
         </parameters>
         <race>GIANT</race>
         <sex>MALE</sex>
@@ -3624,11 +3583,6 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai aggroRange="1000" clanHelpRange="300">
-            <clanList>
-                <clan>BUGBEAR</clan>
-            </clanList>
-        </ai>
         <collision>
             <radius normal="17"/>
             <height normal="35"/>

@@ -588,6 +588,10 @@
             <magic-level initial="1"/>
             <reuse initial="60000"/>
         </attributes>
+        <consume>
+            <item initial="49674"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
         <abnormal type="VOTE">
             <level initial="1"/>

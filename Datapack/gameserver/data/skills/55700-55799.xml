@@ -923,7 +923,7 @@
         </attributes>
         <target/>
         <effects>
-            <damage-by-attack type="ENEMY_ALL">
+            <damage-by-attack type="ANY">
                 <power initial="-1.0">
                     <value level="2">-2.0</value>
                     <value level="3">-3.0</value>
