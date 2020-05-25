@@ -427,6 +427,10 @@
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="49081"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
         <abnormal type="EXP_SP_J">
             <level initial="2"/>

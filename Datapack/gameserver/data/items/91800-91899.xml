@@ -419,9 +419,6 @@
 	<!-- After instant 100 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="1" price="2000" action="SKILL_REDUCE" auto-use="HEALING"/>
-		<skill-reducer>
-			<skill id="50134" value="-1"/>  <!-- XP Boost Scroll - Event -->
-		</skill-reducer>
 	</item>
 
 	<item id="91858" name="Activated Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
