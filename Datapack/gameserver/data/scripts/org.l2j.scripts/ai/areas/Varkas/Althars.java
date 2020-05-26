@@ -1,37 +1,30 @@
 package ai.areas.Varkas;
 
 import ai.AbstractNpcAI;
+import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.Document;
-
-import java.io.File;
-import java.nio.file.Path;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class Althars extends AbstractNpcAI {
     private static Logger LOGGER = LoggerFactory.getLogger(Althars.class);
 
-    private final int _DELAY = 30000;
+    private final int _DELAY = 10000;
     private boolean _ACTIVATED = false;
 
 
     private Althars() {
-        var altharsDatas = new AltharsData();
-        altharsDatas.load();
         startQuestTimer("ALTHARS_TIMER", _DELAY, null,null);
     }
 
     @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
+        LOGGER.info("running task {}", event);
         if("ALTHARS_TIMER".equals(event)) {
-            _ACTIVATED = !_ACTIVATED;
 
+            _ACTIVATED = !_ACTIVATED;
+            LOGGER.info("running spawn {}", _ACTIVATED);
             if (_ACTIVATED) {
                 spawnMonsters();
             }
@@ -46,11 +39,15 @@ public class Althars extends AbstractNpcAI {
     }
 
     private void spawnMonsters() {
+        LOGGER.info("spawning mobs");
+        SpawnsData.getInstance().spawnByName("althar_1");
         //TODO: activate the glow of althars
         //TODO: spawn monsters
     }
 
     private void unSpawnMonsters() {
+        LOGGER.info("despawning mobs");
+        SpawnsData.getInstance().deSpawnByName("althar_1");
         //TODO: deactivate the glow of althars
         //TODO: unspawn monsters
     }
@@ -58,26 +55,4 @@ public class Althars extends AbstractNpcAI {
     public static AbstractNpcAI provider() {
         return new Althars();
     }
-
-    private class AltharsData extends GameXmlReader {
-
-        @Override
-        protected Path getSchemaFilePath() {
-            //TODO: Create file althars.xsd
-            return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/althars.xsd");
-        }
-
-        @Override
-        public void load() {
-            //TODO: Create file Althars.xml
-            parseDatapackFile("data/Althars.xml");
-            LOGGER.info("Loaded Althars data.");
-        }
-
-        @Override
-        protected void parseDocument(Document doc, File f) {
-            //TODO: Parse file
-        }
-    }
-
 }

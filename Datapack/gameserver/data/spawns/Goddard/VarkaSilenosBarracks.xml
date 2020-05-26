@@ -737,4 +737,17 @@
         <npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
+    <spawn name="althar_1" spawnByDefault="false">
+        <territories>
+            <territory name="althar1" minZ="-3496" maxZ="-2996">
+                <node x="122884" y="-44060"/>
+                <node x="124656" y="-44584"/>
+                <node x="125040" y="-43924"/>
+                <node x="124752" y="-43580"/>
+                <node x="124780" y="-42768"/>
+                <node x="124132" y="-42400"/>
+            </territory>
+        </territories>
+        <npc id="20432" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+    </spawn>
 </list>
