@@ -39,7 +39,18 @@ public class RecipeItemMakeInfo extends ServerPacket {
             writeInt(_activeChar.getMaxMp());
             writeInt(_success ? 1 : 0); // item creation success/failed
             writeByte((byte) 0x00);
-            writeLong(0x00);
+            //writeLong(0x00);
+
+            writeInt(5);
+
+            writeByte((byte) 0x00);
+            writeByte((byte) 0x00);
+            writeByte((byte) 0x00);
+            writeByte((byte) 0x00);
+            writeByte((byte) 0x00);
+            writeByte((byte) 0x00);
+            writeByte((byte) 0x00);
+
         } else {
             LOGGER.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
             throw new InvalidDataPacketException();
