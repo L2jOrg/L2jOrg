@@ -166,6 +166,7 @@ public final class Config {
     public static boolean FAME_FOR_DEAD_PLAYERS;
     public static boolean IS_CRAFTING_ENABLED;
     public static boolean CRAFT_MASTERWORK;
+    public static int BASE_CRITICAL_CRAFT_RATE;
     public static int DWARF_RECIPE_LIMIT;
     public static int COMMON_RECIPE_LIMIT;
     public static boolean ALT_GAME_CREATION;
@@ -1087,6 +1088,7 @@ public final class Config {
         FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);
         IS_CRAFTING_ENABLED = Character.getBoolean("CraftingEnabled", true);
         CRAFT_MASTERWORK = Character.getBoolean("CraftMasterwork", true);
+        BASE_CRITICAL_CRAFT_RATE = Character.getInt("BaseCriticalCraftRate", 3);
         DWARF_RECIPE_LIMIT = Character.getInt("DwarfRecipeLimit", 50);
         COMMON_RECIPE_LIMIT = Character.getInt("CommonRecipeLimit", 50);
         ALT_GAME_CREATION = Character.getBoolean("AltGameCreation", false);
