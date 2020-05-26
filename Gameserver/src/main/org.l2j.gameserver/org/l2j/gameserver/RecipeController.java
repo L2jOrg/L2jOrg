@@ -352,7 +352,8 @@ public class RecipeController {
         }
 
         private double getCraftCriticalRate() {
-            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, 2);
+            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, 3);
+            //TODO create a config for base value rate
         }
 
         private void updateMakeInfo(boolean success) {
