@@ -4,8 +4,10 @@ import ai.AbstractNpcAI;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -76,6 +78,8 @@ public class Althars extends AbstractNpcAI {
 
     private void spawnMonsters(int altharIndex) {
         //TODO: activate the glow of althars
+        // Creature npc = null;
+        // npc.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
         LOGGER.info("spawning mobs for althars_{}", altharIndex);
         SpawnsData.getInstance().spawnByName("althar_" + altharIndex);
         althars[altharIndex] = true;
@@ -83,6 +87,8 @@ public class Althars extends AbstractNpcAI {
 
     private void unSpawnMonsters(int altharIndex) {
         //TODO: deactivate the glow of althars
+        // Creature npc = null;
+        // npc.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
         LOGGER.info("unspawning mobs for althars_{}", altharIndex);
         SpawnsData.getInstance().deSpawnByName("althar_" + altharIndex);
         althars[altharIndex] = false;
