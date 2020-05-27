@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
-    <spawn>
+    <spawn >
         <territories>
             <territory name="godard28_2316_01" minZ="-4104" maxZ="-3604">
                 <node x="119096" y="-40316"/>
@@ -8,7 +8,7 @@
                 <node x="119224" y="-38608"/>
             </territory>
         </territories>
-        <npc id="21869" count="8" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="8" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="6" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="8" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
         <npc id="21888" count="2" respawnTime="103sec"
@@ -23,7 +23,7 @@
                 <node x="117708" y="-35732"/>
             </territory>
         </territories>
-        <npc id="21869" count="6" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="6" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="6" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
     </spawn>
@@ -38,7 +38,7 @@
                 <node x="124660" y="-37804"/>
             </territory>
         </territories>
-        <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
     </spawn>
@@ -52,7 +52,7 @@
                 <node x="126932" y="-37804"/>
             </territory>
         </territories>
-        <npc id="21869" count="8" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="8" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="6" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="8" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=8	respawn=109sec	respawn_rand=70sec -->
         <npc id="21888" count="2" respawnTime="103sec"
@@ -68,7 +68,7 @@
                 <node x="127848" y="-45932"/>
             </territory>
         </territories>
-        <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
     </spawn>
@@ -81,7 +81,7 @@
                 <node x="129500" y="-40288"/>
             </territory>
         </territories>
-        <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="6" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=6	respawn=109sec	respawn_rand=70sec -->
     </spawn>
@@ -133,7 +133,6 @@
         </territories>
         <npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-        <npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
     <spawn>
@@ -148,7 +147,6 @@
         </territories>
         <npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-        <npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
     <spawn>
@@ -163,7 +161,6 @@
         </territories>
         <npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-        <npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
     <spawn>
@@ -179,7 +176,6 @@
         </territories>
         <npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21873" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_hunter]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
-        <npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21888" count="2" respawnTime="103sec"
              respawnRandom="30sec"/>    <!-- [varka_silenos_general]	pos=anywhere	total=2	respawn=103sec	respawn_rand=30sec	Privates=[varka_elite_guard:varka_elite_guard:1:0sec;varka_elite_guard:varka_elite_guard:1:0sec] -->
@@ -197,7 +193,6 @@
         </territories>
         <npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-        <npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
     <spawn>
@@ -289,7 +284,6 @@
         </territories>
         <npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-        <npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
     <spawn>
@@ -303,7 +297,6 @@
         </territories>
         <npc id="21872" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_scout]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21873" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_hunter]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
-        <npc id="21874" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_shaman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21875" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_nephentes]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
     <spawn>
@@ -694,7 +687,7 @@
                 <node x="114484" y="-35584"/>
             </territory>
         </territories>
-        <npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
@@ -707,7 +700,7 @@
                 <node x="112408" y="-36592"/>
             </territory>
         </territories>
-        <npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
@@ -720,7 +713,7 @@
                 <node x="111612" y="-39068"/>
             </territory>
         </territories>
-        <npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
@@ -733,13 +726,27 @@
                 <node x="111792" y="-40592"/>
             </territory>
         </territories>
-        <npc id="21869" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
         <npc id="21870" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
         <npc id="21871" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
     </spawn>
-    <spawn name="althar_1" spawnByDefault="false">
+    <spawn>
         <territories>
-            <territory name="althar1" minZ="-3496" maxZ="-2996">
+            <territory name="godard29" minZ="-2000" maxZ="-1700">
+                <node x="103951" y="-40582"/>
+                <node x="105160" y="-43653"/>
+                <node x="106958" y="-42152"/>
+                <node x="107906" y="-41247"/>
+                <node x="106327" y="-40867"/>
+            </territory>
+        </territories>
+        <npc id="21884" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_grunt]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21885" count="4" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [varka_silenos_footman]	pos=anywhere	total=4	respawn=109sec	respawn_rand=70sec -->
+        <npc id="21887" count="2" respawnTime="109sec" respawnRandom="70sec"/>    <!-- [grazing_antelope]	pos=anywhere	total=2	respawn=109sec	respawn_rand=70sec -->
+    </spawn>
+    <spawn name="althar_1">
+        <territories>
+            <territory minZ="-3496" maxZ="-2996">
                 <node x="122884" y="-44060"/>
                 <node x="124656" y="-44584"/>
                 <node x="125040" y="-43924"/>
@@ -748,6 +755,210 @@
                 <node x="124132" y="-42400"/>
             </territory>
         </territories>
-        <npc id="20432" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        <group name="althar_1" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+           <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="124809" y="-43595" z="-3221"/>
+        </group>
+    </spawn>
+    <spawn name="althar_2">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_2" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="119008" y="-42127" z="-3213"/>
+        </group>
+    </spawn>
+    <spawn name="althar_3">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_3" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="123355" y="-47015" z="-2867"/>
+        </group>
+    </spawn>
+    <spawn name="althar_4">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_4" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="119906" y="-45557" z="-2805"/>
+        </group>
+    </spawn>
+    <spawn name="althar_5">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_5" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="124543" y="-52061" z="-2456"/>
+        </group>
+    </spawn>
+    <spawn name="althar_6">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_6" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="121611" y="-57169" z="-2174"/>
+        </group>
+    </spawn>
+    <spawn name="althar_7">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_7" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="114120" y="-46272" z="-2582"/>
+        </group>
+    </spawn>
+    <spawn name="althar_8">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_8" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="106936" y="-47288" z="-1888"/>
+        </group>
+    </spawn>
+    <spawn name="althar_9">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_9" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="112536" y="-55496" z="-2832"/>
+        </group>
+    </spawn>
+    <spawn name="althar_10">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="117804" y="-43304"/>
+                <node x="118784" y="-43980"/>
+                <node x="119572" y="-43060"/>
+                <node x="119308" y="-42008"/>
+                <node x="117912" y="-42408"/>
+            </territory>
+        </territories>
+        <group name="althar_10" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="115256" y="-39144" z="-2488"/>
+        </group>
+    </spawn>
+    <spawn name="althar_11">
+        <territories>
+            <territory minZ="-3288" maxZ="-1797">
+                <node x="103951" y="-40582"/>
+                <node x="105160" y="-43653"/>
+                <node x="106958" y="-42152"/>
+                <node x="107906" y="-41247"/>
+                <node x="106327" y="-40867"/>
+            </territory>
+        </territories>
+        <group name="althar_11" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="105736" y="-41768" z="-1776"/>
+        </group>
+    </spawn>
+    <spawn name="althar_12">
+        <territories>
+            <territory minZ="-3288" maxZ="-2788">
+                <node x="103951" y="-40582"/>
+                <node x="105160" y="-43653"/>
+                <node x="106958" y="-42152"/>
+                <node x="107906" y="-41247"/>
+                <node x="106327" y="-40867"/>
+            </territory>
+        </territories>
+        <group name="althar_12" spawnByDefault="false">
+            <npc id="21874" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+            <npc id="21869" count="4" respawnTime="109sec" respawnRandom="70sec"/>
+        </group>
+        <group>
+            <npc id="18926" count="1" respawnTime="109sec" respawnRandom="70sec" x="109176" y="-36024" z="-896"/>
+        </group>
     </spawn>
 </list>
