@@ -47,6 +47,9 @@ public class EnchantResult extends ServerPacket {
         writeInt(0x00);
         writeInt(0x00);
         writeInt(enchantLevel);
+        writeInt(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
     }
 
 }

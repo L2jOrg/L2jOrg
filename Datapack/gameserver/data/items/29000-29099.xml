@@ -147,48 +147,56 @@
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="29016" name="Scroll: Enchant Armor (D-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00">
 	<!-- Increases P. Def. by 1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="29017" name="Scroll: Enchant Weapon (C-grade) - Exchangeable" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="29018" name="Scroll: Enchant Armor (C-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00">
 	<!-- Increases P. Def. by 1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="29019" name="Protection Scroll: Enchant Weapon (D-grade) - Exchangeable" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_d_i01">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="29020" name="Protection Scroll: Enchant Armor (D-grade) - Exchangeable" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_d_i01">
 	<!-- P. Def. +1 for D-grade armor and accessories. Starting at +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="29021" name="Protection Scroll: Enchant Weapon (C-grade) - Exchangeable" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_c_i02">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="29022" name="Protection Scroll: Enchant Armor (C-grade) - Exchangeable" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_c_i02">
 	<!-- P. Def. +1 for C-grade armor and accessories. Starting at +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="29023" name="Mysterious Soulshot (No-grade)" type="NONE" icon="BranchIcon.Icon.g_etc_soulshot_i01">

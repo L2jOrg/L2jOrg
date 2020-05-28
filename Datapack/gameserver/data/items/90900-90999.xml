@@ -705,6 +705,7 @@
 	<!-- Enhances characteristics of damaged rare accessories. The maximum level of enchantment is +10, from +3 level chance of enchantig is 100%. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="90996" name="Balthus Knights Matte Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
@@ -717,12 +718,14 @@
 	<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +8. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="90998" name="Balthus Knights Glittering Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
 	<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +9. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="90999" name="Rash's Supplies - Antharas" type="NONE" icon="icon.bm_special_pendant_abradant_box">

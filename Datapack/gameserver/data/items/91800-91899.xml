@@ -462,6 +462,7 @@
 	<!-- Enchant scroll for Dragon's Belt. Can enchant up to +10. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91864" name="Dragon's Belt Box" type="NONE" icon="icon.etc_readybox_bronze">

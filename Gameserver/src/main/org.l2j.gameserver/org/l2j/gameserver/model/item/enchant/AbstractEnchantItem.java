@@ -89,7 +89,7 @@ public abstract class AbstractEnchantItem {
     /**
      * @return {@code true} if scroll is for weapon, {@code false} for armor
      */
-    public abstract boolean isWeapon();
+    public abstract boolean isForWeapon();
 
     /**
      * @return the maximum enchant level that this scroll/item can be used with
@@ -102,19 +102,16 @@ public abstract class AbstractEnchantItem {
      * @param itemToEnchant the item to be enchanted
      * @return {@code true} if this support item can be used with the item to be enchanted, {@code false} otherwise
      */
-    public boolean isValid(Item itemToEnchant) {
-        if (itemToEnchant == null) {
+    public boolean canEnchant(Item itemToEnchant) {
+        if (itemToEnchant == null || !itemToEnchant.isEnchantable()) {
             return false;
-        } else if (!itemToEnchant.isEnchantable()) {
+        }  else if (!isValidItemType(itemToEnchant.getType2())) {
             return false;
-        } else if (!isValidItemType(itemToEnchant.getTemplate().getType2())) {
-            return false;
-        } else if ((maxEnchant != 0) && (itemToEnchant.getEnchantLevel() >= maxEnchant)) {
-            return false;
-        } else if (grade != itemToEnchant.getTemplate().getCrystalType()) {
+        } else if (maxEnchant != 0 && itemToEnchant.getEnchantLevel() >= maxEnchant) {
             return false;
         }
-        return true;
+        return grade == itemToEnchant.getCrystalType();
+
     }
 
     /**
@@ -123,9 +120,9 @@ public abstract class AbstractEnchantItem {
      */
     private boolean isValidItemType(int type2) {
         if (type2 == ItemTemplate.TYPE2_WEAPON) {
-            return isWeapon();
+            return isForWeapon();
         } else if ((type2 == ItemTemplate.TYPE2_SHIELD_ARMOR) || (type2 == ItemTemplate.TYPE2_ACCESSORY)) {
-            return !isWeapon();
+            return !isForWeapon();
         }
         return false;
     }

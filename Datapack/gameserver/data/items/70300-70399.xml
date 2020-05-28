@@ -399,6 +399,7 @@
 	<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="70357" name="Straw Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_straw_hat_i00">

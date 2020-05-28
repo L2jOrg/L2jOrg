@@ -112,12 +112,14 @@
 	<!-- Upon enchantment, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. From +4, P. Atk./M. Atk. bonus effect quadruples. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. It can be used only on +7 to +15 enchanted items. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91718" name="Advanced Stable Scroll: Enchant Armor (S-grade) - Exchangeable" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_s">
 	<!-- Upon enchantment, P. Def. +2 for S-grade armor or accessory. From +4, P. Def. +8. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. From +4, the enchanted armor's HP also increases according to the enchant level. It can be used only on +6 to +9 enchanted items. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="91719" name="Sayha's Supreme Cloak - Black" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i02">
@@ -145,6 +147,7 @@
 	<!-- A varnish that enhances Sayha's Supreme Cloak. Can be used only on Sayha's Supreme Cloak. Even if enchantment fails, Sayha's Cloak will not disappear and will retain its enchant level. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="91723" name="Talisman Bracelet Lv. 1" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i00">

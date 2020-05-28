@@ -524,6 +524,7 @@
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +16-+18. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71982" name="Letter Pouch" type="NONE" icon="icon.etc_crystal_spice_blessed_i00">

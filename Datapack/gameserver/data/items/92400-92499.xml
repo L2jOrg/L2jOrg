@@ -16,6 +16,7 @@
 	<!-- A scroll used to enchant Talisman - Speed. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="92403" name="Talisman - Speed" type="NONE" body-part="TALISMAN" icon="icon.tallisman_rapid">
