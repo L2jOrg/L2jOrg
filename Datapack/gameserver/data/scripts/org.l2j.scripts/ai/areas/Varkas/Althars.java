@@ -4,7 +4,6 @@ import ai.AbstractNpcAI;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
@@ -62,22 +61,20 @@ public class Althars extends AbstractNpcAI {
 
     @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
-        LOGGER.info("running task {}", event);
         if("ALTHARS_TIMER".equals(event)) {
             for(int i = 0; i < Config.ALTHARS_MAX_ACTIVE - getAltharsActiveCount() ; i++) {
                 if (Rnd.get(100) < Config.ALTHARS_ACTIVATE_CHANCE_RATE) {
                     int altharsRndIndex = Rnd.get(12 - getAltharsActiveCount());
-                    LOGGER.info("Picking althars virtual index {}", altharsRndIndex);
                     int altharsIndex = getAltharsIndex(altharsRndIndex);
                     spawnMonsters(altharsIndex);
                     int AltharsDurationCycle = Rnd.get(Config.ALTHARS_MIN_DURATION_CYCLE, Config.ALTHARS_MAX_DURATION_CYCLE);
-                    LOGGER.info("starting althars_" + (altharsIndex + 1) + " for {} sec", AltharsDurationCycle);
                     startQuestTimer("STOP_ALTHARS_" + (altharsIndex + 1), AltharsDurationCycle, null,null);
                 }
             }
             startQuestTimer("ALTHARS_TIMER", _DELAY, null,null);
         } else if(event.startsWith("STOP_ALTHARS_")) {
-            unSpawnMonsters(Integer.parseInt(event.substring(event.length() - 1)) - 1);
+            String[] token = event.split("_");
+            unSpawnMonsters(Integer.parseInt(token[2]) - 1);
         }
 
         return super.onAdvEvent(event, npc, player);
@@ -111,14 +108,12 @@ public class Althars extends AbstractNpcAI {
     }
 
     private void spawnMonsters(int altharIndex) {
-        LOGGER.info("spawning mobs for althars_{}", (altharIndex + 1));
         althars.get("althar_" + (altharIndex + 1)).getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
         SpawnsData.getInstance().spawnByName("althar_" + (altharIndex + 1));
         althars_state[altharIndex] = true;
     }
 
     private void unSpawnMonsters(int altharIndex) {
-        LOGGER.info("unspawning mobs for althars_{}", (altharIndex + 1));
         althars.get("althar_" + (altharIndex + 1)).getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
         SpawnsData.getInstance().deSpawnByName("althar_" + (altharIndex + 1));
         althars_state[altharIndex] = false;

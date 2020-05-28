@@ -23,7 +23,7 @@ public class ExRaidBossSpawnInfo extends ServerPacket {
         writeInt(_bossIds.size()); // alive count
         for(Map.Entry<Integer, Integer> boss : _bossIds.entrySet()) {
             writeInt(boss.getKey()); // boss id
-            writeInt(boss.getValue()); // boss state: 1 -> alive : 0 -> dead
+            writeInt(boss.getValue()); // boss state: 1 -> alive : 0 -> dead : 2 -> in battle
             writeInt(0); // unknown
         }
     }

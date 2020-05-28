@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author Mobius
+ * @author THOSS
  */
 public class RequestRaidBossSpawnInfo extends ClientPacket {
     private Map<Integer, Integer> _bossIds = new HashMap<Integer, Integer>();
@@ -19,6 +19,8 @@ public class RequestRaidBossSpawnInfo extends ClientPacket {
         final int count = readInt();
         for (int i = 0; i < count; i++) {
             final int bossId = readInt();
+            // boss state: 1 -> alive : 0 -> dead : 2 -> in battle
+            // TODO: how to check if a boss is in combat
             if (GrandBossManager.getInstance().getBossStatus(bossId) > -1) {
                 _bossIds.put(bossId, GrandBossManager.getInstance().getBossStatus(bossId));
             } else {
