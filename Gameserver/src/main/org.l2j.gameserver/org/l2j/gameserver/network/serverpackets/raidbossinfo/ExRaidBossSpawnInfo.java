@@ -4,15 +4,15 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.util.List;
+import java.util.Map;
 
 /**
  * @author Mobius
  */
 public class ExRaidBossSpawnInfo extends ServerPacket {
-    private final List<Integer> _bossIds;
+    private final Map<Integer, Integer> _bossIds;
 
-    public ExRaidBossSpawnInfo(List<Integer> bossIds) {
+    public ExRaidBossSpawnInfo(Map<Integer, Integer> bossIds) {
         _bossIds = bossIds;
     }
 
@@ -21,7 +21,11 @@ public class ExRaidBossSpawnInfo extends ServerPacket {
         writeId(ServerExPacketId.EX_RAID_BOSS_SPAWN_INFO);
 
         writeInt(_bossIds.size()); // alive count
-        _bossIds.forEach(this::writeInt);  // alive ids
+        for(Map.Entry<Integer, Integer> boss : _bossIds.entrySet()) {
+            writeInt(boss.getKey()); // boss id
+            writeInt(boss.getValue()); // boss state: 1 -> alive : 0 -> dead
+            writeInt(0); // unknown
+        }
     }
 
 }
