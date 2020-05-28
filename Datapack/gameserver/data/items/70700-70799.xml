@@ -534,12 +534,14 @@
 	<!-- Hair Accessory M./ P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3.   -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70754" name="Stabilized Eva's Scroll: Enchant Hair Accessory" type="SOLID_ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_d">
 	<!-- Hair Accessory M./P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. From +6, enchantment level stays the same in case of a failed enchantment. Can only be used on a +6 accessory or higher. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70755" name="Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_mid">
@@ -603,6 +605,7 @@
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70765" name="Shining Pendant Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
@@ -615,6 +618,7 @@
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Randomly enchanted from +1 to +3. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70767" name="Golden Fruit Buff" type="SCROLL" icon="icon.bm_dragon_fruit">

@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -145,10 +146,8 @@ public final class UseItem extends ClientPacket {
         } else {
             final EtcItem etcItem = item.getEtcItem();
             final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
-            if (handler == null) {
-                if ((etcItem != null) && (etcItem.getHandlerName() != null)) {
-                    LOGGER.warn("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + itemId + "!");
-                }
+            if (isNull(handler) &&  nonNull(etcItem) && Util.isNotEmpty(etcItem.getHandlerName())) {
+                LOGGER.warn("Unmanaged Item handler: {} for Item Id: {}!", etcItem.getHandlerName(), itemId);
             } else if (handler.useItem(player, item, ctrlPressed)) {
                 // Item reuse time should be added if the item is successfully used.
                 // Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;

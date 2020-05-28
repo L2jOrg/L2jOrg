@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.WarehouseType;
 import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.item.type.ActionType;
+import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.ItemType;
 import org.l2j.gameserver.model.options.EnchantOptions;
@@ -1755,6 +1756,10 @@ public final class Item extends WorldObject {
 
     public boolean isSelfResurrection() {
         return template instanceof EtcItem etcTemplate && etcTemplate.isSelfResurrection();
+    }
+
+    public CrystalType getCrystalType() {
+        return template.getCrystalType();
     }
 
     static class ScheduleLifeTimeTask implements Runnable {

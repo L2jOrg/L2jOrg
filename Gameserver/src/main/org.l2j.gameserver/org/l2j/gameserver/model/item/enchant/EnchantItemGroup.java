@@ -46,10 +46,10 @@ public final class EnchantItemGroup {
                     return holder.getChance();
                 }
             }
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't match proper chance for item group: " + _name, new IllegalStateException());
+            LOGGER.warn("Couldn't match proper chance for item group: {}", _name);
             return _chances.get(_chances.size() - 1).getChance();
         }
-        LOGGER.warn(": item group: " + _name + " doesn't have any chances!");
+        LOGGER.warn("item group: {} doesn't have any chances!", _name);
         return -1;
     }
 

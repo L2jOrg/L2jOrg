@@ -255,6 +255,7 @@
 	<!-- Adventurer’s Sheep Hat Enchant Scroll. M. Def. +2 each time the Adventurer’s Sheep Hat is enchanted. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="93044" name="Adventurer’s Sheep Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_sheep_cap_white_i00">
@@ -268,12 +269,14 @@
 	<!-- Scroll to enchant the Adventurer’s Cloak. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93046" name="Enchant Scroll: Adventurer’s Belt" type="ENCHANT_ARMOR" icon="icon.etc_training_scroll_kalie_i00">
 	<!-- Scroll to enchant the Adventurer’s Belt. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<weapon id="93047" name="Samurai Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_samurai_old_longsword_i00">

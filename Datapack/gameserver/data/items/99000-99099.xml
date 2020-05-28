@@ -11,6 +11,7 @@
 	<!-- Enchant scroll for Talisman of Baium. Can enchant up to +5. Item disappears if enchantment fails. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="99003" name="Talisman of Baium Enchant Package" type="NONE" icon="icon.bm_freya_gift_box">

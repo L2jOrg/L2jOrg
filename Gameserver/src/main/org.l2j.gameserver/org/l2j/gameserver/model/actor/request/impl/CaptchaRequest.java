@@ -56,7 +56,7 @@ public class CaptchaRequest extends AbstractRequest {
 
     @Override
     public void onTimeout() {
-        ReportTable.getInstance().punishBotDueUnsolvedCaptcha(getActiveChar());
+        ReportTable.getInstance().punishBotDueUnsolvedCaptcha(getPlayer());
     }
 
     public int maxAttemps() {

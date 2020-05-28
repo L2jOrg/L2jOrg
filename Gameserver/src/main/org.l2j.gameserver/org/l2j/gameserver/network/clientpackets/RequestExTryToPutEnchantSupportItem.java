@@ -48,7 +48,7 @@ public class RequestExTryToPutEnchantSupportItem extends ClientPacket {
         }
 
         final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-        if ((scrollTemplate == null) || !scrollTemplate.isValid(item)) {
+        if ((scrollTemplate == null) || !scrollTemplate.canEnchant(item)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
             request.setSupportItem(Player.ID_NONE);

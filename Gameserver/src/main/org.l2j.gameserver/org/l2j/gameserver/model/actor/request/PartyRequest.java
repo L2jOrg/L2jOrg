@@ -52,7 +52,7 @@ public class PartyRequest extends AbstractRequest {
     @Override
     public void onTimeout() {
         super.onTimeout();
-        getActiveChar().removeRequest(getClass());
+        getPlayer().removeRequest(getClass());
         _targetPlayer.removeRequest(getClass());
     }
 }

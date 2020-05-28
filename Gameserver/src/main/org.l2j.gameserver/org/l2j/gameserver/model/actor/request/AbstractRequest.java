@@ -12,48 +12,48 @@ import static java.util.Objects.nonNull;
  * @author UnAfraid
  */
 public abstract class AbstractRequest {
-    private final Player player;
-    private volatile long _timestamp = 0;
-    private volatile boolean _isProcessing;
-    private ScheduledFuture<?> _timeOutTask;
+    private volatile long timestamp = 0;
+    private volatile boolean isProcessing;
+    protected final Player player;
+    private ScheduledFuture<?> timeOutTask;
 
     public AbstractRequest(Player player) {
         Objects.requireNonNull(player);
         this.player = player;
     }
 
-    public Player getActiveChar() {
+    public Player getPlayer() {
         return player;
     }
 
     public long getTimestamp() {
-        return _timestamp;
+        return timestamp;
     }
 
     public void setTimestamp(long timestamp) {
-        _timestamp = timestamp;
+        this.timestamp = timestamp;
     }
 
     public void scheduleTimeout(long delay) {
-        _timeOutTask = ThreadPool.schedule(this::onTimeout, delay);
+        timeOutTask = ThreadPool.schedule(this::onTimeout, delay);
     }
 
     public boolean isTimeout() {
-        return (_timeOutTask != null) && !_timeOutTask.isDone();
+        return (timeOutTask != null) && !timeOutTask.isDone();
     }
 
     public void cancelTimeout() {
-        if(nonNull(_timeOutTask)) {
-            _timeOutTask.cancel(false);
+        if(nonNull(timeOutTask)) {
+            timeOutTask.cancel(false);
         }
     }
 
     public boolean isProcessing() {
-        return _isProcessing;
+        return isProcessing;
     }
 
-    public boolean setProcessing(boolean isProcessing) {
-        return _isProcessing = isProcessing;
+    public void setProcessing(boolean isProcessing) {
+        this.isProcessing = isProcessing;
     }
 
     public boolean canWorkWith(AbstractRequest request) {

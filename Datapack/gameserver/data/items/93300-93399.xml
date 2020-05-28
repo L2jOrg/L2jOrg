@@ -18,6 +18,7 @@
 	<!-- Enchant scroll for Cloak of Protection. Can enchant up to +10. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93303" name="Cloak of Protection Pack" type="NONE" icon="icon.bm_2018_sayha_cloak_back_i01">

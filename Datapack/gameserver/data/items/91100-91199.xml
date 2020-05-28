@@ -767,12 +767,14 @@
 	<!-- Varnish that enhances Spirits accessory's power. By type various special options apply from level +1. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91188" name="Blessed Spirit Varnish" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_ev_draco_karma_down">
 	<!-- Varnish that enhances Spirits accessory's power. If Enchant fails or item does not crystallize base Enchant becomes 0. Applied by type of various special options from level +1.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91189" name="Fire Attack Potion" type="POTION" icon="icon.etc_fire_potion_i00">

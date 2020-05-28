@@ -46,6 +46,7 @@
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +11-+15. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70907" name="Ancient Cloak (Legendary) Scroll Pack" type="SCROLL" icon="icon.bm_freya_gift_box">

@@ -347,6 +347,7 @@
 	<!-- Varnish that enhances Dragon Pendant's power. Enhance to max. +5. If failed Enchant level remains.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91251" name="Top-grade HP Potion" type="POTION" icon="icon.etc_potion_red_i00">
