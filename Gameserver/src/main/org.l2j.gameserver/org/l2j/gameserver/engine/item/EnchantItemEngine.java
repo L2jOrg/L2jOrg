@@ -1,4 +1,4 @@
-package org.l2j.gameserver.data.xml.impl;
+package org.l2j.gameserver.engine.item;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
@@ -22,12 +22,12 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author UnAfraid
  * @author JoeAlisson
  */
-public class EnchantItemData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemData.class);
+public class EnchantItemEngine extends GameXmlReader {
+    private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemEngine.class);
 
     private final IntMap<EnchantScroll> scrolls = new HashIntMap<>();
 
-    private EnchantItemData() {
+    private EnchantItemEngine() {
     }
 
     @Override
@@ -81,11 +81,11 @@ public class EnchantItemData extends GameXmlReader {
         getInstance().load();
     }
 
-    public static EnchantItemData getInstance() {
+    public static EnchantItemEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        protected static final EnchantItemData INSTANCE = new EnchantItemData();
+        protected static final EnchantItemEngine INSTANCE = new EnchantItemEngine();
     }
 }

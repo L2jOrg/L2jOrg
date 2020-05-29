@@ -9,6 +9,7 @@
 		<enchant from="16" until="19" chance="33" />
 		<enchant from="20" until="29" chance="20" />
 		<enchant from="30" until="35" chance="15" />
+		<enchant from="36" chance="5"/>
 	</enchantRateGroup>
 
 	<!-- General full armor enchant group. -->
@@ -18,6 +19,7 @@
 		<enchant from="16" until="19" chance="33" />
 		<enchant from="20" until="29" chance="20" />
 		<enchant from="30" until="35" chance="15" />
+		<enchant from="36" chance="5"/>
 	</enchantRateGroup>
 
 	<!-- General fighter weapon enchant group. -->
@@ -36,6 +38,7 @@
 		<enchant from="16" until="19" chance="33" />
 		<enchant from="20" until="29" chance="20" />
 		<enchant from="30" until="35" chance="15" />
+		<enchant from="36" chance="5"/>
 	</enchantRateGroup>
 
 	<!-- Default scrolls enchanting route line. -->
@@ -61,7 +64,7 @@
 			<item slot="HAIR_ALL" /> <!-- Hair Accessories -->
 			<item slot="TALISMAN" /> <!-- Talisman -->
 		</enchantRate>
-		<!-- Bind only full armor group to to full armor slot items. -->
+		<!-- Bind only full armor group to full armor slot items. -->
 		<enchantRate group="FULL_ARMOR_GROUP">
 			<item slot="FULL_ARMOR" /> <!-- Full Armor: Full armor pants are included. -->
 		</enchantRate>
