@@ -937,13 +937,12 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+            <stat-modify stat="HEAL_RECEIVE" mode="PER">
                 <power initial="1">
                     <value level="2">2</value>
                     <value level="3">3</value>
                     <value level="4">4</value>
                     <value level="5">5</value>
-                    <value level="6">5</value>
                     <value level="7">7</value>
                     <value level="8">9</value>
                     <value level="9">12</value>
@@ -952,11 +951,7 @@
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK" mode="PER">
                 <power initial="1">
-                    <value level="2">1</value>
-                    <value level="3">1</value>
                     <value level="4">2</value>
-                    <value level="5">2</value>
-                    <value level="6">2</value>
                     <value level="7">5</value>
                     <value level="8">8</value>
                     <value level="9">11</value>
@@ -1047,17 +1042,7 @@
             level 9: Max HP/Max MP +12%, XP/SP Gain +30%, P. Def. +10%, M. Def. +4%, P. Critical Damage/M. Critical Damage +10%,  and P. Critical Damage Received -5%.
             level 10: Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +10%, M. Def. +6%, P. Critical Damage/M. Critical Damage +15%,  and P. Critical Damage Received -10%.
          -->
-        <icon initial="BranchSys2.br_wing_of_sylphide_i00">
-		 <value level="2">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="3">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="4">BranchSys2.br_wing_of_sylphide_i00</value>
-			 <value level="5">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="6">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="7">BranchSys2.br_wing_of_sylphide_i00</value>
-			 <value level="8">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="9">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="10">BranchSys2.br_wing_of_sylphide_i00</value>
-		</icon>
+        <icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
@@ -1279,17 +1264,7 @@
             level 9: Max HP/Max MP +22%, XP/SP Gain +30%, P. Def. +20%, M. Def. +20%, P. Critical Damage +18%, M. Critical Damage +21%, PVE Damage +7%, PVP Damage +4%, Critical Damage Taken -13%.
             level 10: Max HP/Max MP +25%, XP/SP Gain +30%, P. Def. +25%, M. Def. +25%, P. Critical Damage +20%, M. Critical Damage +25%, PVE Damage +10%, PVP Damage +5%, Critical Damage Taken -15%.
          -->
-        <icon initial="BranchSys2.br_wing_of_sylphide_i00">
-            <value level="2">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="3">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="4">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="5">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="6">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="7">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="8">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="9">BranchSys2.br_wing_of_sylphide_i00</value>
-            <value level="10">BranchSys2.br_wing_of_sylphide_i00</value>
-        </icon>
+        <icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>

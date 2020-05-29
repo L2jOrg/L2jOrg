@@ -143,7 +143,7 @@
 		<crystal />
 	</armor>
 
-	<item id="91722" name="Sayha's Supreme Scroll: Enchant Cloak" type="IMPROVED_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
+	<item id="91722" name="Sayha's Supreme Scroll: Enchant Cloak" type="SOLID_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- A varnish that enhances Sayha's Supreme Cloak. Can be used only on Sayha's Supreme Cloak. Even if enchantment fails, Sayha's Cloak will not disappear and will retain its enchant level. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
