@@ -3,7 +3,7 @@
 	<armor id="70700" name="Gatekeeper Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
 	<!-- Gatekeeper Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55618" value="-1"/>  <!-- Gatekeeper Hat (DEX +1 WIT +1) -->
@@ -13,7 +13,7 @@
 	<armor id="70701" name="Gatekeeper Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
 	<!-- Gatekeeper Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55619" value="-1"/>  <!-- Gatekeeper Hat (CON+1 MEN+1) -->
@@ -23,7 +23,7 @@
 	<armor id="70702" name="Wedding Veil (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_wedding_vail_i00">
 	<!-- Pure white wedding veil. STR+1, INT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55620" value="-1"/>  <!-- Wedding Veil (STR+1 INT+1) -->
@@ -33,7 +33,7 @@
 	<armor id="70703" name="Wedding Veil (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_wedding_vail_i00">
 	<!-- Pure white wedding veil. DEX+1, WIT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55621" value="-1"/>  <!-- Wedding Veil (DEX +1 WIT +1) -->
@@ -43,7 +43,7 @@
 	<armor id="70704" name="Wedding Veil (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_wedding_vail_i00">
 	<!-- Pure white wedding veil. CON+1, MEN+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55622" value="-1"/>  <!-- Wedding Veil (CON+1 MEN+1) -->
@@ -53,7 +53,7 @@
 	<armor id="70705" name="Maid Hair Accessory (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_cutie_maid_hair">
 	<!-- Maid Hair Accessory. STR+1, INT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55623" value="-1"/>  <!-- Maid Hair Accessory (STR+1 INT+1) -->
@@ -63,7 +63,7 @@
 	<armor id="70706" name="Maid Hair Accessory (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_cutie_maid_hair">
 	<!-- Maid Hair Accessory. DEX+1, WIT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55624" value="-1"/>  <!-- Maid Hair Accessory (DEX +1 WIT +1) -->
@@ -73,7 +73,7 @@
 	<armor id="70707" name="Maid Hair Accessory (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_cutie_maid_hair">
 	<!-- Maid Hair Accessory. CON+1, MEN+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55625" value="-1"/>  <!-- Maid Hair Accessory (CON+1 MEN+1) -->
@@ -83,7 +83,7 @@
 	<armor id="70708" name="Refined Romantic Chapeau: Red (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_red">
 	<!-- Refined Romantic Chapeau: Red. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55626" value="-1"/>  <!-- Refined Romantic Chapeau: Red (STR+1 INT+1) -->
@@ -93,7 +93,7 @@
 	<armor id="70709" name="Refined Romantic Chapeau: Red (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_red">
 	<!-- Refined Romantic Chapeau: Red. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55627" value="-1"/>  <!-- Refined Romantic Chapeau: Red (DEX+1 WIT+1) -->
@@ -103,7 +103,7 @@
 	<armor id="70710" name="Refined Romantic Chapeau: Red (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_red">
 	<!-- Refined Romantic Chapeau: Red. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55628" value="-1"/>  <!-- Refined Romantic Chapeau: Red (CON+1 MEN+1) -->
@@ -113,7 +113,7 @@
 	<armor id="70711" name="Refined Angel Ring (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_angel_ring_i00">
 	<!-- Refined Angel Ring. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55629" value="-1"/>  <!-- Refined Angel Ring (STR+1 INT+1) -->
@@ -123,7 +123,7 @@
 	<armor id="70712" name="Refined Angel Ring (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_angel_ring_i00">
 	<!-- Refined Angel Ring. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55630" value="-1"/>  <!-- Refined Angel Ring (DEX +1 WIT +1) -->
@@ -133,7 +133,7 @@
 	<armor id="70713" name="Refined Angel Ring (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_angel_ring_i00">
 	<!-- Refined Angel Ring. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55631" value="-1"/>  <!-- Refined Angel Ring (CON+1 MEN+1) -->
@@ -143,7 +143,7 @@
 	<armor id="70714" name="Refined Wizard Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magician_cap2_i00">
 	<!-- Refined Wizard Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55632" value="-1"/>  <!-- Refined Wizard Hat (STR+1 INT+1) -->
@@ -153,7 +153,7 @@
 	<armor id="70715" name="Refined Wizard Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magician_cap2_i00">
 	<!-- Refined Wizard Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55633" value="-1"/>  <!-- Refined Wizard Hat (DEX +1 WIT +1) -->
@@ -163,7 +163,7 @@
 	<armor id="70716" name="Refined Wizard Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magician_cap2_i00">
 	<!-- Refined Wizard Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55634" value="-1"/>  <!-- Refined Wizard Hat (CON+1 MEN+1) -->
@@ -173,7 +173,7 @@
 	<armor id="70717" name="Laborer Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_people_cap_i00">
 	<!-- Laborer Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55635" value="-1"/>  <!-- Laborer Hat (STR+1 INT+1) -->
@@ -183,7 +183,7 @@
 	<armor id="70718" name="Laborer Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_people_cap_i00">
 	<!-- Laborer Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55636" value="-1"/>  <!-- Laborer Hat (DEX +1 WIT +1) -->
@@ -193,7 +193,7 @@
 	<armor id="70719" name="Laborer Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_people_cap_i00">
 	<!-- Laborer Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55637" value="-1"/>  <!-- Laborer Hat (CON+1 MEN+1) -->
@@ -203,7 +203,7 @@
 	<armor id="70720" name="Top Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magicial_cap_i00">
 	<!-- Magical-looking hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55638" value="-1"/>  <!-- Top Hat (STR+1 INT+1) -->
@@ -213,7 +213,7 @@
 	<armor id="70721" name="Top Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magicial_cap_i00">
 	<!-- Magical-looking hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55639" value="-1"/>  <!-- Top Hat (DEX +1 WIT +1) -->
@@ -223,7 +223,7 @@
 	<armor id="70722" name="Top Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magicial_cap_i00">
 	<!-- Magical-looking hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55640" value="-1"/>  <!-- Wizard Hat (CON+1 MEN+1) -->
@@ -233,7 +233,7 @@
 	<armor id="70723" name="Vigilante Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.zorocap">
 	<!-- Vigilante Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55641" value="-1"/>  <!-- Vigilante Hat (STR+1 INT+1) -->
@@ -243,7 +243,7 @@
 	<armor id="70724" name="Vigilante Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.zorocap">
 	<!-- Vigilante Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55642" value="-1"/>  <!-- Vigilante Hat (DEX +1 WIT +1) -->
@@ -253,7 +253,7 @@
 	<armor id="70725" name="Vigilante Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.zorocap">
 	<!-- Vigilante Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55643" value="-1"/>  <!-- Vigilante Hat (CON+1 MEN+1) -->
@@ -263,7 +263,7 @@
 	<armor id="70726" name="White Uniform Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_navy_cap">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55644" value="-1"/>  <!-- White Uniform Hat (STR+1 INT+1) -->
@@ -273,7 +273,7 @@
 	<armor id="70727" name="White Uniform Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_navy_cap">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55645" value="-1"/>  <!-- White Uniform Hat (DEX +1 WIT +1) -->
@@ -283,7 +283,7 @@
 	<armor id="70728" name="White Uniform Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_navy_cap">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55646" value="-1"/>  <!-- White Uniform Hat (CON+1 MEN+1) -->
@@ -293,7 +293,7 @@
 	<armor id="70729" name="Warrior's Helmet (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55647" value="-1"/>  <!-- Warrior's Helmet (STR+1 INT+1) -->
@@ -303,7 +303,7 @@
 	<armor id="70730" name="Warrior's Helmet (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10"enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55648" value="-1"/>  <!-- Warrior's Helmet (DEX +1 WIT +1) -->
@@ -313,7 +313,7 @@
 	<armor id="70731" name="Warrior's Helmet (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55649" value="-1"/>  <!-- Warrior's Helmet (CON+1 MEN+1) -->
@@ -323,7 +323,7 @@
 	<armor id="70732" name="First Mate Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55650" value="-1"/>  <!-- First Mate Hat (STR+1 INT+1) -->
@@ -333,7 +333,7 @@
 	<armor id="70733" name="First Mate Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55651" value="-1"/>  <!-- First Mate Hat (DEX +1 WIT +1) -->
@@ -343,7 +343,7 @@
 	<armor id="70734" name="First Mate Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55652" value="-1"/>  <!-- First Mate Hat (CON+1 MEN+1) -->
@@ -353,7 +353,7 @@
 	<armor id="70735" name="Refined Romantic Chapeau: Blue (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_blue">
 	<!-- Refined Romantic Chapeau: Blue. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55653" value="-1"/>  <!-- Refined Romantic Chapeau: Blue (STR+1 INT+1) -->
@@ -363,7 +363,7 @@
 	<armor id="70736" name="Refined Romantic Chapeau: Blue (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_blue">
 	<!-- Refined Romantic Chapeau: Blue. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55654" value="-1"/>  <!-- Refined Romantic Chapeau: Blue (DEX+1 WIT+1) -->
@@ -373,7 +373,7 @@
 	<armor id="70737" name="Refined Romantic Chapeau: Blue (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_blue">
 	<!-- Refined Romantic Chapeau: Blue. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55655" value="-1"/>  <!-- Refined Romantic Chapeau: Blue (CON+1 MEN+1) -->
@@ -383,7 +383,7 @@
 	<armor id="70738" name="Gold-rimmed Glasses (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_gold_eyeglass_i00">
 	<!-- Expensive-looking gold-rimmed glasses. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55656" value="-1"/>  <!-- Gold-rimmed Glasses (STR+1 INT+1) -->
@@ -393,7 +393,7 @@
 	<armor id="70739" name="Gold-rimmed Glasses (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_gold_eyeglass_i00">
 	<!-- Expensive-looking gold-rimmed glasses. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55657" value="-1"/>  <!-- Gold-rimmed Glasses (DEX+1 WIT+1) -->
@@ -403,7 +403,7 @@
 	<armor id="70740" name="Gold-rimmed Glasses (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_gold_eyeglass_i00">
 	<!-- Expensive-looking gold-rimmed glasses. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55658" value="-1"/>  <!-- Gold-rimmed Glasses (CON+1 MEN+1) -->
@@ -413,7 +413,7 @@
 	<armor id="70741" name="Horn-rimmed Glasses (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Eye_Glasses_i00">
 	<!-- Magic Horn-rimmed Glasses. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55659" value="-1"/>  <!-- Horn-rimmed Glasses (STR+1 INT+1) -->
@@ -423,7 +423,7 @@
 	<armor id="70742" name="Horn-rimmed Glasses (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Eye_Glasses_i00">
 	<!-- Magic Horn-rimmed Glasses. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55660" value="-1"/>  <!-- Horn-rimmed Glasses (DEX+1 WIT+1) -->
@@ -433,7 +433,7 @@
 	<armor id="70743" name="Horn-rimmed Glasses (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Eye_Glasses_i00">
 	<!-- Magic Horn-rimmed Glasses. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55661" value="-1"/>  <!-- Horn-rimmed Glasses (CON+1 MEN+1) -->
@@ -443,7 +443,7 @@
 	<armor id="70744" name="Stylish Straw Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon.g_straw_hat">
 	<!-- Straw Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55662" value="-1"/>  <!-- Stylish Straw Hat (STR+1 INT+1) -->
@@ -453,7 +453,7 @@
 	<armor id="70745" name="Stylish Straw Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon.g_straw_hat">
 	<!-- Straw Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55663" value="-1"/>  <!-- Stylish Straw Hat (DEX +1 WIT +1) -->
@@ -463,7 +463,7 @@
 	<armor id="70746" name="Stylish Straw Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon.g_straw_hat">
 	<!-- Straw Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55664" value="-1"/>  <!-- Stylish Straw Hat (CON+1 MEN+1) -->
@@ -473,7 +473,7 @@
 	<armor id="70747" name="Chic Silver Chapeau (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- Chic Silver Chapeau. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55665" value="-1"/>  <!-- Chic Silver Chapeau (STR+1 INT+1) -->
@@ -483,7 +483,7 @@
 	<armor id="70748" name="Chic Silver Chapeau (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- Chic Silver Chapeau. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55666" value="-1"/>  <!-- Chic Silver Chapeau (DEX +1 WIT +1) -->
@@ -493,7 +493,7 @@
 	<armor id="70749" name="Chic Silver Chapeau (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- Chic Silver Chapeau. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55667" value="-1"/>  <!-- Chic Silver Chapeau (CON+1 MEN+1) -->
@@ -503,7 +503,7 @@
 	<armor id="70750" name="Afro Hair (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Afro_hair_i00">
 	<!-- Afro style hair. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55668" value="-1"/>  <!-- Afro Hair (STR+1 INT+1) -->
@@ -513,7 +513,7 @@
 	<armor id="70751" name="Afro Hair (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Afro_hair_i00">
 	<!-- Afro style hair. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55669" value="-1"/>  <!-- Afro Hair (DEX +1 WIT +1) -->
@@ -523,7 +523,7 @@
 	<armor id="70752" name="Afro Hair (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Afro_hair_i00">
 	<!-- Afro style hair. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55670" value="-1"/>  <!-- Afro Hair (CON+1 MEN+1) -->
@@ -660,7 +660,7 @@
 	<armor id="70771" name="Fire Dragon Pendant Lv. 5" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pve">
 	<!-- A Pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +10 Fire Dragon Pendant - Lv. 5. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="10080" enchant-enabled="false" />
+		<attributes duration="10080" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
@@ -670,7 +670,7 @@
 	<armor id="70772" name="Water Dragon Pendant Lv. 5" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
 	<!-- A Pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +10 Water Dragon Pendant - Lv. 5. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="10080" enchant-enabled="false" />
+		<attributes duration="10080" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
@@ -680,7 +680,7 @@
 	<armor id="70773" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
 	<!-- MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, MEN Resistance and Atk. Rate +15% Healing Effects +10%, HP Recovery Bonus +20%, Vampiric Rage Effect +8%, Skill MP Cost Rate -4%. When two identical earrings are equipped, the effect of only one earring will be applied. \nCannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<attributes weight="150" duration="21600" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="80.0"/>
@@ -694,7 +694,7 @@
 	<armor id="70774" name="Baium's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i03">
 	<!-- MP +27, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, P. Atk./M. Accuracy. +4, Atk. Spd./Casting Spd. +5%, P./M/ Skill Power +10%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<attributes weight="150" duration="21600" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="48.0"/>
@@ -708,7 +708,7 @@
 	<armor id="70775" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i03">
 	<!-- MP +21, Poison Atk. and Resistance +20%, P./M. Accuracy +3, P./M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +5%. The effect does not stack if two identical rings are equipped.\nCannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<attributes weight="150" duration="21600" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="48.0"/>
@@ -722,7 +722,7 @@
 	<armor id="70776" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i03">
 	<!-- When equipped, grants MP ++21, MEN Atk. Resistance/Chance +20%, P./ M. Evasion +3, decreases received damage by -6%. Enables debuff removal skills. The effect does not stack if two identical rings are equipped.\nCannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<attributes weight="150" duration="21600" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="48.0"/>
@@ -737,7 +737,7 @@
 	<armor id="70777" name="Orfen's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i03">
 	<!-- MP +31, MEN Attack Resistance/Chance +15%, Hold Atk. and Resistance +20%, Heal Received +6%, Skill MP Consumption -5%. MP Drain Effect. The effect does not stack if two identical earrings are equipped.\nCannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<attributes weight="150" duration="21600" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="71.0"/>
