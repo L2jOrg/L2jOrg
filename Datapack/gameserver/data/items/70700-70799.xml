@@ -3,7 +3,7 @@
 	<armor id="70700" name="Gatekeeper Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
 	<!-- Gatekeeper Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55618" value="-1"/>  <!-- Gatekeeper Hat (DEX +1 WIT +1) -->
