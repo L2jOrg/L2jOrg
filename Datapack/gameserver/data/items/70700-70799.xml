@@ -303,7 +303,7 @@
 	<armor id="70730" name="Warrior's Helmet (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10"enchant-enabled="true" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55648" value="-1"/>  <!-- Warrior's Helmet (DEX +1 WIT +1) -->
