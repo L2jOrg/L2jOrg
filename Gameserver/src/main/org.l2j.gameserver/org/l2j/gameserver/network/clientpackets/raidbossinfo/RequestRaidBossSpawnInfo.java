@@ -3,6 +3,7 @@ package org.l2j.gameserver.network.clientpackets.raidbossinfo;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.RaidBossStatus;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpawnInfo;
 import java.util.HashMap;
@@ -20,11 +21,18 @@ public class RequestRaidBossSpawnInfo extends ClientPacket {
         for (int i = 0; i < count; i++) {
             final int bossId = readInt();
             // boss state: 1 -> alive : 0 -> dead : 2 -> in battle
-            // TODO: how to check if a boss is in combat
             if (GrandBossManager.getInstance().getBossStatus(bossId) > -1) {
-                _bossIds.put(bossId, GrandBossManager.getInstance().getBossStatus(bossId));
+                if(GrandBossManager.getInstance().getBoss(bossId) != null && GrandBossManager.getInstance().getBoss(bossId).getAggroList().size() > 0) {
+                    _bossIds.put(bossId, 2);
+                } else {
+                    _bossIds.put(bossId, GrandBossManager.getInstance().getBossStatus(bossId));
+                }
             } else {
-                _bossIds.put(bossId, DBSpawnManager.getInstance().getNpcStatusId(bossId) == RaidBossStatus.ALIVE ? 1 : 0);
+                if(DBSpawnManager.getInstance().isDefined(bossId) && DBSpawnManager.getInstance().getNpcs().get(bossId) != null && ((Attackable) DBSpawnManager.getInstance().getNpcs().get(bossId)).getAggroList().size() > 0) {
+                    _bossIds.put(bossId, 2);
+                } else {
+                    _bossIds.put(bossId, DBSpawnManager.getInstance().getNpcStatusId(bossId) == RaidBossStatus.ALIVE ? 1 : 0);
+                }
             }
         }
     }
