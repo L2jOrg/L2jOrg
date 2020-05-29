@@ -5,6 +5,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.engine.item.EnchantItemGroupsData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -127,7 +128,7 @@ public class AdminReload implements IAdminCommandHandler {
                 }
                 case "enchant" -> {
                     EnchantItemGroupsData.getInstance().load();
-                    EnchantItemData.getInstance().load();
+                    EnchantItemEngine.getInstance().load();
                     AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item enchanting data.");
                 }
                 case "transform" -> {

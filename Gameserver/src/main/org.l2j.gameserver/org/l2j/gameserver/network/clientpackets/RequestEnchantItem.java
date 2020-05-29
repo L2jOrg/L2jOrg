@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.EnchantItemData;
+import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.UserInfoType;
@@ -73,7 +73,7 @@ public final class RequestEnchantItem extends ClientPacket {
             return;
         }
 
-        final var scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
+        final var scrollTemplate = EnchantItemEngine.getInstance().getEnchantScroll(scroll);
         if (isNull(scrollTemplate)) {
             player.removeRequest(EnchantItemRequest.class);
             return;

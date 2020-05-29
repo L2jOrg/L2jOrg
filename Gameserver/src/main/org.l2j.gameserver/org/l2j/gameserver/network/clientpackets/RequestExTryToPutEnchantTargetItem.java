@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.EnchantItemData;
+import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
@@ -39,7 +39,7 @@ public class RequestExTryToPutEnchantTargetItem extends ClientPacket {
             return;
         }
 
-        final var scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
+        final var scrollTemplate = EnchantItemEngine.getInstance().getEnchantScroll(scroll);
 
         if (isNull(scrollTemplate) || !scrollTemplate.canEnchant(item)) {
             client.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);

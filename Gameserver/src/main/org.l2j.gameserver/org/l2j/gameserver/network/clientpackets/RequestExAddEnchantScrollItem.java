@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.EnchantItemData;
+import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.item.enchant.EnchantScroll;
@@ -47,7 +47,7 @@ public class RequestExAddEnchantScrollItem extends ClientPacket {
             return;
         }
 
-        final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
+        final EnchantScroll scrollTemplate = EnchantItemEngine.getInstance().getEnchantScroll(scroll);
         if ((scrollTemplate == null)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/EnchantItemData.xsd">
-	<!-- Scrolls: Enchant Weapon -->
+<enchantment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xmlns="http://l2j.org"
+			 xsi:schemaLocation="http://l2j.org xsd/enchantment.xsd">
+
+	<!-- Scrolls: Enchant Weapon 19 -->
 	<scroll id="959" grade="S"/>
 	<scroll id="729" grade="A"/>
 	<scroll id="947" grade="B"/>
@@ -422,4 +425,7 @@
 		<item id="97120"/>
 		<item id="91721"/>
 	</scroll>
+
 </list>
+</enchantment>
+
