@@ -493,7 +493,7 @@
 	<armor id="70749" name="Chic Silver Chapeau (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- Chic Silver Chapeau. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="true" />
 		<crystal />
 		<skills>
 			<skill id="55667" value="-1"/>  <!-- Chic Silver Chapeau (CON+1 MEN+1) -->

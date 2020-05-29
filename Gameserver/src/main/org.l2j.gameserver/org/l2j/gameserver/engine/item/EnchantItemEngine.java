@@ -45,7 +45,7 @@ public class EnchantItemEngine extends GameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc, "list", listNode -> forEach(listNode, "scroll", enchant -> {
+        forEach(doc, "enchantment", listNode -> forEach(listNode, "scroll", enchant -> {
             var attr = enchant.getAttributes();
             var id = parseInt(attr, "id");
             var grade = parseEnum(attr, CrystalType.class, "grade");
