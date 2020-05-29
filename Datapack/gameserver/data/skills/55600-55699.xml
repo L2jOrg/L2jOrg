@@ -60,6 +60,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55606" name="Artisan's Goggles (DEX +1 WIT +1)">
@@ -70,6 +73,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -84,6 +90,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55608" name="Uniform Hat (STR+1 INT+1)">
@@ -94,6 +103,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -108,6 +120,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55610" name="Uniform Hat (CON+1 MEN+1)">
@@ -118,6 +133,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -132,6 +150,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55612" name="Assassin's Bamboo Hat (DEX +1 WIT +1)">
@@ -142,6 +163,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -156,6 +180,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55614" name="Valkyrie Hat (STR+1 INT+1)">
@@ -166,6 +193,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -180,6 +210,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55616" name="Valkyrie Hat (CON+1 MEN+1)">
@@ -190,6 +223,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -204,6 +240,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55618" name="Gatekeeper Hat (DEX +1 WIT +1)">
@@ -214,6 +253,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -228,6 +270,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55620" name="Wedding Veil (STR+1 INT+1)">
@@ -238,6 +283,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -252,6 +300,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55622" name="Wedding Veil (CON+1 MEN+1)">
@@ -262,6 +313,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -276,6 +330,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55624" name="Maid Hair Accessory (DEX +1 WIT +1)">
@@ -286,6 +343,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -300,6 +360,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55626" name="Refined Romantic Chapeau: Red (STR+1 INT+1)">
@@ -310,6 +373,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -324,6 +390,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55628" name="Refined Romantic Chapeau: Red (CON+1 MEN+1)">
@@ -334,6 +403,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -348,6 +420,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55630" name="Refined Angel Ring (DEX +1 WIT +1)">
@@ -358,6 +433,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -372,6 +450,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55632" name="Refined Wizard Hat (STR+1 INT+1)">
@@ -382,6 +463,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -396,6 +480,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55634" name="Refined Wizard Hat (CON+1 MEN+1)">
@@ -406,6 +493,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -420,6 +510,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55636" name="Laborer Hat (DEX +1 WIT +1)">
@@ -430,6 +523,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -444,6 +540,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55638" name="Top Hat (STR+1 INT+1)">
@@ -454,6 +553,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -468,6 +570,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55640" name="Wizard Hat (CON+1 MEN+1)">
@@ -478,6 +583,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -492,6 +600,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55642" name="Vigilante Hat (DEX +1 WIT +1)">
@@ -502,6 +613,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -516,6 +630,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55644" name="White Uniform Hat (STR+1 INT+1)">
@@ -526,6 +643,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -540,6 +660,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55646" name="White Uniform Hat (CON+1 MEN+1)">
@@ -550,6 +673,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -564,6 +690,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55648" name="Warrior's Helmet (DEX +1 WIT +1)">
@@ -574,6 +703,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -588,6 +720,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55650" name="First Mate Hat (STR+1 INT+1)">
@@ -598,6 +733,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -612,6 +750,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55652" name="First Mate Hat (CON+1 MEN+1)">
@@ -622,6 +763,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -636,6 +780,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55654" name="Refined Romantic Chapeau: Blue (DEX+1 WIT+1)">
@@ -646,6 +793,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -660,6 +810,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55656" name="Gold-rimmed Glasses (STR+1 INT+1)">
@@ -670,6 +823,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -684,6 +840,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55658" name="Gold-rimmed Glasses (CON+1 MEN+1)">
@@ -694,6 +853,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -708,6 +870,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55660" name="Horn-rimmed Glasses (DEX+1 WIT+1)">
@@ -718,6 +883,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -732,6 +900,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55662" name="Stylish Straw Hat (STR+1 INT+1)">
@@ -742,6 +913,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -756,6 +930,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55664" name="Stylish Straw Hat (CON+1 MEN+1)">
@@ -766,6 +943,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -780,6 +960,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55666" name="Chic Silver Chapeau (DEX +1 WIT +1)">
@@ -790,6 +973,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -804,6 +990,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55668" name="Afro Hair (STR+1 INT+1)">
@@ -814,6 +1003,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -828,6 +1020,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55670" name="Afro Hair (CON+1 MEN+1)">
@@ -838,6 +1033,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
