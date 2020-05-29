@@ -42,7 +42,7 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  */
 public final class HomeBoard implements IParseBoardHandler {
 
-    private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/navigation.html";
+    private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/new/navigation.html";
 
     private static final String[] COMMANDS = {
             "_bbshome",
