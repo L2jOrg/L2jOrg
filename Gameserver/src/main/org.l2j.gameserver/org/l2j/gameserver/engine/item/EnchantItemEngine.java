@@ -32,13 +32,13 @@ public class EnchantItemEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/EnchantItemData.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/enchantment.xsd");
     }
 
     @Override
     public synchronized void load() {
         scrolls.clear();
-        parseDatapackFile("data/EnchantItemData.xml");
+        parseDatapackFile("data/enchantment.xml");
         LOGGER.info("Loaded {} Enchant Scrolls.", scrolls.size());
         releaseResources();
     }
