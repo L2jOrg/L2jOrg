@@ -315,12 +315,11 @@ public class RecipeController {
                     return;
                 }
             }
-
             _items = listItems(true); // this line actually takes materials from inventory
             if (_items == null) {
                 // handle possible cheaters here
                 // (they click craft then try to get rid of items in order to get free craft)
-            } else if (Rnd.get(100) < _recipeList.getSuccessRate()) {
+            } else if (Rnd.get(100) < getCraftChanceRate()) {
                 rewardPlayer(); // and immediately puts created item in its place
                 updateMakeInfo(true);
             } else {
@@ -346,6 +345,14 @@ public class RecipeController {
             _activeMakers.remove(_player.getObjectId());
             _player.setIsCrafting(false);
             _target.sendItemList();
+        }
+
+        private double getCraftChanceRate() {
+            return _player.getStats().getValue(Stat.CRAFT_RATE_MASTER, _recipeList.getSuccessRate());
+        }
+
+        private double getCraftCriticalRate() {
+            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, Config.BASE_CRITICAL_CRAFT_RATE);
         }
 
         private void updateMakeInfo(boolean success) {
@@ -516,7 +523,14 @@ public class RecipeController {
             final int rareProdId = _recipeList.getRareItemId();
             int itemId = _recipeList.getItemId();
             int itemCount = _recipeList.getCount();
+
             final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
+
+            // TODO: This test should be moved after code below if applicable on rare production items (@Pearlbear)
+            if (Rnd.get(100) < getCraftCriticalRate()) {
+                itemCount *= 2;
+                // TODO: Send message for critical craft or not ? (@Pearlbear)
+            }
 
             // check that the current recipe has a rare production or not
             if ((rareProdId != -1) && ((rareProdId == itemId) || Config.CRAFT_MASTERWORK)) {

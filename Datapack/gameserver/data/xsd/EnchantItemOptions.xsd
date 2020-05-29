@@ -22,6 +22,7 @@
 									<xs:attribute name="option1" type="xs:unsignedInt" use="required"/>
 									<xs:attribute name="option2" type="xs:unsignedInt" default="0"/>
 									<xs:attribute name="option3" type="xs:unsignedInt" default="0"/>
+									<xs:attribute name="option4" type="xs:unsignedInt" default="0"/>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>

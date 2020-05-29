@@ -701,7 +701,7 @@
     <skill id="1321" name="Dwarven Craft" action="A1">
         <!-- Can read Dwarven recipe books. -->
         <icon initial="icon.skill0172"/>
-        <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

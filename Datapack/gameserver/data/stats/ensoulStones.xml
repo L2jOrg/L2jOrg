@@ -41,6 +41,14 @@
         <remove itemId="2133" count="5"/>    <!-- Gemstone (A-grade) -->
         <remove itemId="57" count="3500000"/>    <!-- Adena -->
     </fee>
+    <fee crystalType="S">
+        <first itemId="2134" count="124"/> <!-- Gemstone (S-grade) -->
+        <secondary itemId="2134" count="486"/> <!-- Gemstone (S-grade) -->
+        <reNormal itemId="2134" count="40"/>    <!-- Gemstone (S-grade) -->
+        <reSecondary itemId="2134" count="40"/>    <!-- Gemstone (S-grade) -->
+        <remove itemId="2134" count="207"/>    <!-- Gemstone (S-grade) -->
+        <remove itemId="57" count="2000000"/>    <!-- Adena -->
+    </fee>
 	
 	<!-- Installing Rune in weapons (245p - all) -->
     <stone id="29818" slotType="1">

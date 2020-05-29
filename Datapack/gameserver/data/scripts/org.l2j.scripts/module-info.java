@@ -336,6 +336,7 @@ open module org.l2j.scripts {
             ai.areas.PlainsOfDion,
             ai.areas.ImperialTomb.FourSepulchers.FourSepulchers,
             ai.areas.CallOfTheSpirits.CallOfTheSpirits,
+            ai.areas.Varkas.Althars,
 
             ai.bosses.Antharas.Antharas,
             ai.bosses.Baium.Baium,

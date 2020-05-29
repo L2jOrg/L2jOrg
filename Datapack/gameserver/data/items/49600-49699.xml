@@ -495,7 +495,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="49674" name="XP Boost Scroll" type="NONE" icon="icon.etc_recall_exp_scroll">
+	<item id="49674" name="XP Boost Scroll" type="SCROLL" icon="icon.etc_recall_exp_scroll">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>

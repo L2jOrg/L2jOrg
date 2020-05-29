@@ -57,6 +57,7 @@ public final class Config {
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
+    private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
     private static final String SERVER_CONFIG_FILE = "config/server.properties";
     private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
@@ -166,6 +167,7 @@ public final class Config {
     public static boolean FAME_FOR_DEAD_PLAYERS;
     public static boolean IS_CRAFTING_ENABLED;
     public static boolean CRAFT_MASTERWORK;
+    public static int BASE_CRITICAL_CRAFT_RATE;
     public static int DWARF_RECIPE_LIMIT;
     public static int COMMON_RECIPE_LIMIT;
     public static boolean ALT_GAME_CREATION;
@@ -828,6 +830,15 @@ public final class Config {
     public static long TIME_LIMITED_ZONE_RESET_DELAY;
     public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
     public static float L2_COIN_DROP_RATE;
+
+    // --------------------------------------------------
+    // ALTHARS ZONE
+    // --------------------------------------------------
+    public static int ALTHARS_ACTIVATE_CHANCE_RATE;
+    public static int ALTHARS_MAX_ACTIVE;
+    public static int ALTHARS_MIN_DURATION_CYCLE;
+    public static int ALTHARS_MAX_DURATION_CYCLE;
+
     /**
      * This class initializes all global variables for configuration.<br>
      * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
@@ -1087,6 +1098,7 @@ public final class Config {
         FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);
         IS_CRAFTING_ENABLED = Character.getBoolean("CraftingEnabled", true);
         CRAFT_MASTERWORK = Character.getBoolean("CraftMasterwork", true);
+        BASE_CRITICAL_CRAFT_RATE = Character.getInt("BaseCriticalCraftRate", 3);
         DWARF_RECIPE_LIMIT = Character.getInt("DwarfRecipeLimit", 50);
         COMMON_RECIPE_LIMIT = Character.getInt("CommonRecipeLimit", 50);
         ALT_GAME_CREATION = Character.getBoolean("AltGameCreation", false);
@@ -1911,6 +1923,15 @@ public final class Config {
         TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
         TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
         TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
+
+
+        // Load althars config
+        final PropertiesParser althars = new PropertiesParser(ALTHARS_CONFIG_FILE);
+
+        ALTHARS_ACTIVATE_CHANCE_RATE = althars.getInt("althars_activation_chance_rate", 70);
+        ALTHARS_MAX_ACTIVE = althars.getInt("althars_max_active", 3);
+        ALTHARS_MIN_DURATION_CYCLE = althars.getInt("althars_min_duration_cycle", 240000);
+        ALTHARS_MAX_DURATION_CYCLE = althars.getInt("althars_max_duration_cycle", 480000);
     }
 
     /**

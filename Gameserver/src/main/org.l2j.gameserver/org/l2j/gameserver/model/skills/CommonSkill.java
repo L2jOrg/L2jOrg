@@ -11,6 +11,8 @@ import org.l2j.gameserver.model.holders.SkillHolder;
  */
 public enum CommonSkill {
     CREATE_DWARVEN(172, 1),
+    CREATE_CRITICAL(53001,1),
+    CREATE_MASTER(53002,1),
     LUCKY(194, 1),
     EXPERTISE(239, 1),
     SEAL_OF_RULER(246, 1),

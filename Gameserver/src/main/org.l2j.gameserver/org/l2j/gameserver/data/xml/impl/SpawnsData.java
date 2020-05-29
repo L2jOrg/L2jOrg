@@ -47,6 +47,20 @@ public class SpawnsData extends GameXmlReader {
         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/spawns.xsd");
     }
 
+    public void spawnByName(String spawnName) {
+        spawns.parallelStream().filter(spawnTemplate -> spawnTemplate.getName() != null && spawnTemplate.getName().equals(spawnName)).forEach(template -> {
+            template.spawn(spawnTemplate -> spawnTemplate.getName() != null && spawnTemplate.getName().equals(spawnName),null);
+            template.notifyActivate();
+        });
+    }
+
+    public void deSpawnByName(String spawnName) {
+        spawns.parallelStream().filter(spawnTemplate -> spawnTemplate.getName() != null && spawnTemplate.getName().equals(spawnName)).forEach(template -> {
+            template.despawn(spawnTemplate -> spawnTemplate.getName() != null && spawnTemplate.getName().equals(spawnName));
+            template.notifyActivate();
+        });
+    }
+
     public void spawnAll() {
         if (Config.ALT_DEV_NO_SPAWNS) {
             return;

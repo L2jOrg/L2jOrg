@@ -290,7 +290,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="71741" name="Battle Scroll" type="NONE" icon="icon.ev_charge_scroll">
+	<item id="71741" name="Battle Scroll" type="SCROLL" icon="icon.ev_charge_scroll">
 	<!-- For 20 minutes, P. Atk./M. Atk. +150, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>

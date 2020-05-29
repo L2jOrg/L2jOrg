@@ -131,36 +131,54 @@
 	<!-- XP +20,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="59680" value="-1"/>  <!-- Scroll: 20,000 XP -->
+		</skill-reducer>
 	</item>
 
 	<item id="71822" name="XP Scroll - Lv. 2" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +4,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="59681" value="-1"/>  <!-- Scroll: 4,000,000 XP -->
+		</skill-reducer>
 	</item>
 
 	<item id="71823" name="XP Scroll - Lv. 3" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +100,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="59682" value="-1"/>  <!-- Scroll: 100,000,000 XP -->
+		</skill-reducer>
 	</item>
 
 	<item id="71824" name="XP Scroll - Lv. 4" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +200,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="59683" value="-1"/>  <!-- Scroll: 200,000,000 XP -->
+		</skill-reducer>
 	</item>
 
 	<item id="71825" name="XP Scroll - Lv. 5" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +250,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="59684" value="-1"/>  <!-- Scroll: 250,000,000 XP -->
+		</skill-reducer>
 	</item>
 
 	<item id="71826" name="XP Scroll - Lv. 6" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +400,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="59685" value="-1"/>  <!-- Scroll: 400,000,000 XP -->
+		</skill-reducer>
 	</item>
 
 	<item id="71827" name="Hardin's Magic Bag" type="NONE" icon="BranchSys.icon.br_lucky_bag_i00">
@@ -386,12 +404,28 @@
 	<!-- Double-click to obtain all of the following items.\n\n<Items Obtained>\nScroll: Regular XP/SP Boost x5\nTimed Weapon Exchange Coupon (C-grade) x1\nSoulshot Ticket x50\nPirate's Special Fruit x5\nSayha's Buff Scroll x5\nXP/SP Rune - 50% (7-day) Pack x1\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<extract>
+			<item id="49674" min-count="5" max-count="5" chance="100"/>
+			<item id="29609" min-count="1" max-count="1" chance="100"/>
+			<item id="90907" min-count="50" max-count="50" chance="100"/>
+			<item id="49518" min-count="5" max-count="5" chance="100"/>
+			<item id="91781" min-count="5" max-count="5" chance="100"/>
+			<item id="71244" min-count="1" max-count="1" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="71854" name="High-grade Starter Pack" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain all of the following items.\n\n<Items Obtained>\nScroll: High-grade XP/SP Boost x30\nHero's Weapon Exchange Ticket - Lv. 54 x2\nSoulshot Ticket x500\nGolden Fruit Buff x30\nSayha's Buff Scroll x30\nXP/SP Rune - 50% (30-day) Pack x1\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<extract>
+			<item id="49674" min-count="30" max-count="30" chance="100"/>
+			<item id="29609" min-count="1" max-count="1" chance="100"/>
+			<item id="90907" min-count="500" max-count="050" chance="100"/>
+			<item id="49518" min-count="30" max-count="30" chance="100"/>
+			<item id="91781" min-count="30" max-count="30" chance="100"/>
+			<item id="71245" min-count="1" max-count="1" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="71855" name="Agathion's Soul Box" type="NONE" icon="icon.etc_treasure_box_i08">

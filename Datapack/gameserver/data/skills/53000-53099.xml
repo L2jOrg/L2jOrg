@@ -10,6 +10,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="DIFF" stat="CRAFT_RATE_CRITICAL">
+                <power initial="3">
+                    <value level="2">5</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="53002" name="Create Master" max-level="3">
         <!--
@@ -21,6 +29,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="DIFF" stat="CRAFT_RATE_MASTER">
+                <power initial="5">
+                    <value level="2">10</value>
+                    <value level="3">20</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="53003" name="Mass Chain Strike" max-level="3" debuff="true" action="A2">
         <!-- Pulls the targeted enemy and nearby enemies to your position, making them attack you. -->
