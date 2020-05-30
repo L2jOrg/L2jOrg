@@ -743,35 +743,35 @@
 	<armor id="70294" name="Talisman of Fate Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
 	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes />
 		<crystal />
 	</armor>
 
 	<armor id="70295" name="Talisman of Fate Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
 	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes />
 		<crystal />
 	</armor>
 
 	<armor id="70296" name="Talisman of Fate Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
 	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes />
 		<crystal />
 	</armor>
 
 	<armor id="70297" name="Talisman of Fate Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
 	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes  />
 		<crystal />
 	</armor>
 
 	<armor id="70298" name="Talisman of Fate Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
 	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes />
 		<crystal />
 	</armor>
 
@@ -779,6 +779,7 @@
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. The maximum level of enchantment is +10; with each level, special effects are added. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 </list>

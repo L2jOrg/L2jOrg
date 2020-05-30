@@ -389,6 +389,7 @@
 	<!-- Hair Accessory M./ P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3.  From +6, enchantment level stays the same in case of failed enchantment.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="90856" name="Eva's Life Stone - Hair Accessory" type="NONE" icon="icon.trace_of_wind">
@@ -628,6 +629,7 @@
 	<!-- Increases M. Def of hair accessory by 2. Upon enchantment, additional effect and HP/MP/CP increases starting from +5. Can be safely enchanted up to +5.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="90883" name="Talisman of Fate - Lv. 10" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">

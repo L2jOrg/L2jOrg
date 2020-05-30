@@ -430,6 +430,7 @@
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. Can be applied to Talisman enchanted up to +9. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71068" name="Highest Grade Talisman of Fate Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">

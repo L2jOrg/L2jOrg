@@ -578,7 +578,7 @@
 	<weapon id="91574" name="Sacred Sword Excalibur" type="TWO_HAND_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_plenitas_i00">
 	<!-- Sacred Sword Excalibur. Enchant the sword and give it to the Excalibur Expeditionary Force Leader to receive various rewards.  -->
 		<restriction freightable="false"/>
-		<attributes weight="100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="100" commission-type="OTHER_ITEM"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -595,6 +595,7 @@
 	<!-- A weapon enchant scroll that can be used on the Sacred Sword Excalibur. Up to enchant level +3, P. Atk. +5 and M. Atk. +3. Starting at +4, P. Atk./M. Atk. bonus doubles. Can only be used up to +20.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91576" name="Gemstone Box" type="NONE" icon="icon.etc_treasure_box_i00">

@@ -233,6 +233,7 @@
 	<!-- Varnish that enhances Spirits accessories. Can only be used up to Enchant +9. If Enhance fails, item does not disappear and conserves existing Enchant level. By type from +1 various special options apply. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91125" name="Breath of Ignis" type="MATERIAL" icon="icon.fire_agathion_breath">
@@ -473,7 +474,7 @@
 	<weapon id="91154" name="Sibis' Black Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- Sibis' Black Samurai Long Sword. Take to Sibis when enhanced with Enchant to receive various Rewards.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="100" commission-type="OTHER_ITEM"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -490,6 +491,7 @@
 	<!-- Weapon Enchant Scroll that can be used with Sibis' Black Samurai Long Sword. Up to level +3 Weapon Attack Power +5/Magic Power +3. From level +4 Attack/Magic Power +200%. Can only be used up to level +23. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91156" name="Fisher's Blessing (24-hour)" type="MATERIAL" icon="icon.fishing_zone_ticket_1">

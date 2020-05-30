@@ -111,7 +111,7 @@
 	<armor id="71818" name="Talisman of Fate Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
 	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using a Fate Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes />
 		<crystal />
 	</armor>
 

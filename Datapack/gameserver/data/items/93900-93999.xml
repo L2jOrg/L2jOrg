@@ -192,12 +192,14 @@
 	<!-- <Death Knight Fire Sword Enchant Scroll>\n\nWhen enchanted, the weapon’s P. Atk. +5, M. Atk. +3.\nStarting from +4, the weapon’s P. Atk. +10, M. Atk. +6.\n<Note>\nThe Death Knight Fire Sword is destroyed when enchantment fails. -->
 		<restriction stackable="true" depositable="false"/>
 		<attributes price="1800000"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93932" name="Enchant Scroll: Death Knight Fire Sword - Unexchangeable" type="ENCHANT_WEAPON" icon="icon.scrl_of_ench_firesword">
 	<!-- <Death Knight Fire Sword Enchant Scroll>\n\nWhen enchanted, the weapon’s P. Atk. +5, M. Atk. +3.\nStarting from +4, the weapon’s P. Atk. +10, M. Atk. +6.\n<Note>\nThe Death Knight Fire Sword is destroyed when enchantment fails. -->
 		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes price="1800000"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93933" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.bm_gold_lure_special_box">

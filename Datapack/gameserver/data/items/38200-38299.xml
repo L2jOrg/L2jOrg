@@ -125,7 +125,7 @@
 
 	<weapon id="38221" name="Blue Mackerel: Dualsword" type="DUAL" body-part="TWO_HAND" icon="icon.wp_fishing11">
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="2530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="2530" commission-type="OTHER_ITEM"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>

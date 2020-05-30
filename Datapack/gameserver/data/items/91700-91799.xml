@@ -594,7 +594,7 @@
 	<armor id="91788" name="Dragon's Belt" type="LIGHT" body-part="BELT" icon="icon.r2_belt_i01">
 	<!-- Ornament imbued with the Dragon's power. Can enchant up to +10 with Dragon's Belt Ornament. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
@@ -605,6 +605,7 @@
 	<!-- Belt ornament to enchant Dragon's Belt. Can enchant up to +10. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91790" name="Dragon's Belt Box" type="NONE" icon="icon.etc_readybox_bronze">

@@ -822,6 +822,7 @@
 	<!-- Hair Accessory M. Def. +2. Starting from +5, an additional effect is activated and HP/MP/CP are increased. Can be safely enchanted up to +3.   -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="90495" name="Scroll of Mood Melody - Exchangeable" type="SCROLL" icon="icon.bm_magmeld">

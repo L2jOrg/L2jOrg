@@ -448,7 +448,7 @@
 	<armor id="91862" name="Dragon's Belt" type="LIGHT" body-part="BELT" icon="icon.r2_belt_i01">
 	<!-- Belt imbued with the Dragon's power. Can enchant up to +10 with Enchant Scroll: Dragon's Belt. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
@@ -481,7 +481,7 @@
 	<weapon id="91866" name="PC Cafe Event Excalibur" type="TWO_HAND_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_plenitas_i00">
 	<!-- Enchant with the PC Cafe Event Excalibur and get the best enchantment! -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="100" commission-type="OTHER_ITEM"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -498,12 +498,14 @@
 	<!-- An enchant scroll you can use on PC Cafe Event Excalibur. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91868" name="PC Cafe Event Special Enchant Scroll" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
 	<!-- An enchant scroll you can use on PC Cafe Event Excalibur. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. Cannot use on weapons above +7. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91869" name="Castle Siege Event Support Box" type="NONE" icon="icon.bm_pirate_battle_box">
