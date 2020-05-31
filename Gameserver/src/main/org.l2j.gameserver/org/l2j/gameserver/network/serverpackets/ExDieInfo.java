@@ -14,20 +14,27 @@ public class ExDieInfo extends ServerPacket {
         writeId(ServerExPacketId.EX_DIE_INFO);
 
         writeShort(0);
-        writeShort(0); // Nb damages
-        writeShort(1); // Activate damage list button ?
+        writeShort(9); // Nb damages
 
-        for (int i = 0 ; i < 10; i++) { // Loop over all damages received by player
-            writeInt(0); // Attacker id
+
+        for (int i = 0 ; i < 7; i++) { // Loop over all damages received by player
+            writeShort(1); // Start damage ?
+            writeInt(20120); // Attacker id
             writeShort(0); // unknown
-            writeShort(0); // unknown
-            writeShort(0); // unknown
-            writeDouble(0); // Damages / 10 ?? wtf
-            writeShort(1); // unknown
+            writeInt(0); // Skill ID
+            writeDouble(30); // Damages / 10 ?? wtf
             writeShort(1); // unknown
         }
 
-        writeShort(1); // unknown but can take several values , during test got 1 and 4
+        for (int i = 0 ; i < 2; i++) { // Loop over all damages received by player
+            writeShort(2); // Start damage ?
+            writeString("LoropetikA"); // Attacker name
+            writeShort(0); // unknown
+            writeInt(1177); // Skill ID
+            writeDouble(116); // Damages / 10 ?? wtf
+            writeShort(4); // unknown
+        }
+
     }
 
 }
