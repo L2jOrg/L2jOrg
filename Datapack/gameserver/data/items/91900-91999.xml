@@ -455,12 +455,13 @@
 	<!-- Enchant scroll for Talisman of Baium. Can enchant up to +5. Item disappears if enchantment fails. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="91952" name="Ring of Insolence" type="NONE" body-part="FINGER" icon="icon.ring_of_oman">
 	<!-- Has increased Sleep Resistance. When two identical rings are equipped, only one effect is applied. -->
 		<restriction freightable="false" sellable="false"/>
-		<attributes weight="150" price="616000" enchant-enabled="false" />
+		<attributes weight="150" price="616000" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="40.0"/>
@@ -553,6 +554,7 @@
 	<!-- Enchant scroll for Ring of Insolence. Can enchant up to +10. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91967" name="Enchant Scroll: Dragon Valley Earring" type="ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i00">

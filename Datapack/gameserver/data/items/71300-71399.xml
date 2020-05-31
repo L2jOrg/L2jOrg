@@ -194,6 +194,7 @@
 	<!-- Scroll for enchanting Event weapon Blue Mackerel: Dual Sword, than can be obtained through the Fishermen's Guild. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71329" name="Pumpkin Seed" type="NONE" icon="icon.etc_gourd_i00">

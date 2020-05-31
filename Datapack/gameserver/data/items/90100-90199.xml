@@ -233,12 +233,14 @@
 	<!-- Matte varnish to enchant pendants. Can be used on Dragon Pendants up to + 6, and keeps the pendant upgrade level and the existing enchant level intact even if the enchant fails. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="90138" name="Pendant Glittering Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
 	<!-- Varnish that enhances effects of a Pendant. For a Pendant enchanted up to +9. If an enchantment is failed, the pendant doesn't disappear and has the previous level of enchantment.   -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="90139" name="Silver Bait" type="LURE" icon="icon.bm_silver_lure">
@@ -318,6 +320,7 @@
 	<!-- Only for Savior's weapons. The item is not destroyed and will retain the current enchant value even if enchantment fails.   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<weapon id="90150" name="Savior’s Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">

@@ -185,6 +185,7 @@
 	<!-- A scroll used to enchant Talisman of Power. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93330" name="Talisman of Power Enchant Package" type="NONE" icon="icon.bm_silver_lure_box">

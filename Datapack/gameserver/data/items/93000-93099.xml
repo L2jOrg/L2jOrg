@@ -223,6 +223,7 @@
 	<!-- When enchanted, P. Atk. +4 for Sword (one-handed), Blunt Weapon (one-handed), Dagger, Spear, other weapons of Aden. P. Atk. +5 for Sword (two-handed), Blunt Weapon (two-handed), Dualsword, Fist (two-handed). P. Atk. +8 for Bows. M. Atk. +3 for all weapons. Starting from +4, P./M. Atk. double.\n<Warning>\nCan only be used on weapons of Aden, and cannot be enchanted above +4. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="93039" name="Race Ranker Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">

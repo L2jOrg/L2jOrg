@@ -752,12 +752,14 @@
 	<!-- Polish that enhances characteristics of a Pendant. Maximum Enchant Level is +10. If the enchant fails, pendant disappears. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49470" name="Shining Pendant Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
 	<!-- Shining varnish to enchant pendants. Can be used on Dragon Pendants up to + 8, and keeps the pendant upgrade level and the existing enchant level intact even if the enchant fails. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49471" name="Valakas' Pendant Box" type="NONE" icon="icon.bm_pendant_pve_box">
