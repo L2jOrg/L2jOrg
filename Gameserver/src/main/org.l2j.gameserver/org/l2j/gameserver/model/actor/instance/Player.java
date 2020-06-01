@@ -3392,25 +3392,20 @@ public final class Player extends Playable {
             if (sendMessage) {
                 sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
-
             return false;
         }
 
         item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
-
-        if ((getSettings(GeneralSettings.class).autoDestroyItemTime() > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
-            if (!item.isEquipable() || Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
+        final var generalSettings = getSettings(GeneralSettings.class);
+        if ((generalSettings.autoDestroyItemTime() > 0) && generalSettings.destroyPlayerDroppedItem() && !generalSettings.isProtectedItem(item.getId())) {
+            if (!item.isEquipable() || generalSettings.destroyEquipableItem()) {
                 ItemsAutoDestroy.getInstance().addItem(item);
             }
         }
 
         // protection against auto destroy dropped item
-        if (Config.DESTROY_DROPPED_PLAYER_ITEM) {
-            if (!item.isEquipable() || Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
-                item.setProtected(false);
-            } else {
-                item.setProtected(true);
-            }
+        if (generalSettings.destroyPlayerDroppedItem()) {
+            item.setProtected(item.isEquipable() && !generalSettings.destroyEquipableItem());
         } else {
             item.setProtected(true);
         }
@@ -3456,6 +3451,8 @@ public final class Player extends Playable {
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @param protectItem
      * @return Item corresponding to the new item or the updated item in inventory
+     *
+     * TODO extract method and remove duplication
      */
     public Item dropItem(String process, int objectId, long count, int x, int y, int z, WorldObject reference, boolean sendMessage, boolean protectItem) {
         final Item invitem = inventory.getItemByObjectId(objectId);
@@ -3471,17 +3468,14 @@ public final class Player extends Playable {
 
         item.dropMe(this, x, y, z);
 
-        if ((getSettings(GeneralSettings.class).autoDestroyItemTime() > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
-            if (!item.isEquipable() || Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
+        final var generalSettings = getSettings(GeneralSettings.class);
+        if ((generalSettings.autoDestroyItemTime() > 0) && generalSettings.destroyPlayerDroppedItem() && !generalSettings.isProtectedItem(item.getId())) {
+            if (!item.isEquipable() || generalSettings.destroyEquipableItem()) {
                 ItemsAutoDestroy.getInstance().addItem(item);
             }
         }
-        if (Config.DESTROY_DROPPED_PLAYER_ITEM) {
-            if (!item.isEquipable() || Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
-                item.setProtected(false);
-            } else {
-                item.setProtected(true);
-            }
+        if (generalSettings.destroyPlayerDroppedItem()) {
+            item.setProtected(item.isEquipable() && !generalSettings.destroyEquipableItem());
         } else {
             item.setProtected(true);
         }

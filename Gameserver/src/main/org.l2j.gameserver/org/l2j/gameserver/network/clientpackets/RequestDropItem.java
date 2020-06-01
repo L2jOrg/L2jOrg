@@ -19,11 +19,6 @@ import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/02 21:25:21 $
- */
 public final class RequestDropItem extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestDropItem.class);
@@ -140,8 +135,6 @@ public final class RequestDropItem extends ClientPacket {
         }
 
         final Item dropedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
-
-        // activeChar.broadcastUserInfo();
 
         if (player.isGM()) {
             final String target = (player.getTarget() != null ? player.getTarget().getName() : "no-target");

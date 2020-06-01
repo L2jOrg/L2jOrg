@@ -6,6 +6,7 @@ import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.settings.GeneralSettings;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,7 +17,7 @@ public final class ItemsAutoDestroy {
     private final List<Item> _items = new LinkedList<>();
 
     private ItemsAutoDestroy() {
-        ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
+        ThreadPool.scheduleAtFixedRate(this::removeItems, ChronoUnit.MINUTES.getDuration(), ChronoUnit.MINUTES.getDuration());
     }
 
     public synchronized void addItem(Item item) {

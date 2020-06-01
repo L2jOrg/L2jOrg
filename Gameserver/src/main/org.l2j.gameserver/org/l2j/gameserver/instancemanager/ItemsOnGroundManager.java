@@ -2,7 +2,6 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -11,46 +10,47 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.*;
+import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-
 /**
  * This class manage all items on ground.
  *
  * @author Enforcer
+ * @author JoeAlisson
  */
 public final class ItemsOnGroundManager implements Runnable {
     private static final Logger LOGGER = LoggerFactory.getLogger(ItemsOnGroundManager.class);
 
-    private final Set<Item> _items = ConcurrentHashMap.newKeySet();
+    private final Set<Item> items = ConcurrentHashMap.newKeySet();
 
     private ItemsOnGroundManager() {
-        if (Config.SAVE_DROPPED_ITEM_INTERVAL > 0) {
-            ThreadPool.scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
+        final var saveDropItemInterval = getSettings(GeneralSettings.class).saveDroppedItemInterval();
+        if(saveDropItemInterval.compareTo(Duration.ZERO) > 0) {
+            ThreadPool.scheduleAtFixedRate(this, saveDropItemInterval, saveDropItemInterval);
         }
-        load();
     }
 
     private void load() {
         // If SaveDroppedItem is false, may want to delete all items previously stored to avoid add old items on reactivate
         var generalSettings = getSettings(GeneralSettings.class);
         if (!generalSettings.saveDroppedItems()) {
-            if (Config.CLEAR_DROPPED_ITEM_TABLE) {
+            if(generalSettings.clearDroppedItems()) {
                 emptyTable();
             }
             return;
         }
 
         // if DestroyPlayerDroppedItem was previously false, items currently protected will be added to ItemsAutoDestroy
-        if (Config.DESTROY_DROPPED_PLAYER_ITEM) {
-            String str = null;
-            if (!Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
+        if (generalSettings.destroyPlayerDroppedItem()) {
+            String str;
+            if (!generalSettings.destroyEquipableItem()) {
                 // Recycle misc. items only
                 str = "UPDATE itemsonground SET drop_time = ? WHERE drop_time = -1 AND equipable = 0";
-            } else if (Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
+            } else {
                 // Recycle all items including equip-able
                 str = "UPDATE itemsonground SET drop_time = ? WHERE drop_time = -1";
             }
@@ -89,10 +89,10 @@ public final class ItemsOnGroundManager implements Runnable {
                     item.setProtected(dropTime == -1);
                     item.setSpawned(true);
                     World.getInstance().addVisibleObject(item, item.getWorldRegion());
-                    _items.add(item);
+                    items.add(item);
                     count++;
                     // add to ItemsAutoDestroy only items not protected
-                    if (!Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
+                    if (!generalSettings.isProtectedItem(item.getId())) {
                         if (dropTime > -1) {
                             if ((generalSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (generalSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
                                 ItemsAutoDestroy.getInstance().addItem(item);
@@ -101,25 +101,25 @@ public final class ItemsOnGroundManager implements Runnable {
                     }
                 }
             }
-            LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " items.");
+            LOGGER.info("Loaded {} items.", count);
         } catch (Exception e) {
-            LOGGER.error(getClass().getSimpleName() + ": Error while loading ItemsOnGround " + e.getMessage(), e);
+            LOGGER.error("Error while loading ItemsOnGround", e);
         }
 
-        if (Config.EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD) {
+        if (generalSettings.clearDroppedItemsAfterLoad()) {
             emptyTable();
         }
     }
 
     public void save(Item item) {
         if (getSettings(GeneralSettings.class).saveDroppedItems()) {
-            _items.add(item);
+            items.add(item);
         }
     }
 
     public void removeObject(Item item) {
         if (getSettings(GeneralSettings.class).saveDroppedItems()) {
-            _items.remove(item);
+            items.remove(item);
         }
     }
 
@@ -128,7 +128,7 @@ public final class ItemsOnGroundManager implements Runnable {
     }
 
     public void cleanUp() {
-        _items.clear();
+        items.clear();
     }
 
     public void emptyTable() {
@@ -148,13 +148,13 @@ public final class ItemsOnGroundManager implements Runnable {
 
         emptyTable();
 
-        if (_items.isEmpty()) {
+        if (items.isEmpty()) {
             return;
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)")) {
-            for (Item item : _items) {
+            for (Item item : items) {
                 if (item == null) {
                     continue;
                 }
@@ -178,6 +178,10 @@ public final class ItemsOnGroundManager implements Runnable {
         } catch (SQLException e) {
             LOGGER.error(getClass().getSimpleName() + ": SQL error while storing items on ground: " + e.getMessage(), e);
         }
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static ItemsOnGroundManager getInstance() {

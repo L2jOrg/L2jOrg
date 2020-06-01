@@ -64,6 +64,10 @@ public class ThreadPool {
         return getInstance().scheduledExecutor.schedule(r, delay, unit);
     }
 
+    public static ScheduledFuture<?> scheduleAtFixedRate(Runnable r, Duration initial, Duration delay) {
+        return scheduleAtFixedRate(r, initial.toMillis(), delay.toMillis());
+    }
+
     public static ScheduledFuture<?> scheduleAtFixedRate(Runnable r, long initial, long delay) {
         initial = validate(initial);
         if(initial == -1)
