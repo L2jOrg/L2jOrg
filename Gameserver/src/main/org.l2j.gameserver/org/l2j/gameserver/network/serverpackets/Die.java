@@ -59,7 +59,5 @@ public class Die extends ServerPacket {
         writeInt(0);
         writeInt(0);
         writeByte(0);
-
-        client.sendPacket(new ExDieInfo());
     }
 }
