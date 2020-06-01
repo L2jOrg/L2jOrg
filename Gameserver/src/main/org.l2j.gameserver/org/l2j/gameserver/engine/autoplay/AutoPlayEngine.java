@@ -113,16 +113,16 @@ public final class AutoPlayEngine {
     }
 
     public void stopAutoPlay(Player player) {
-        players.remove(player);
-        synchronized (autoPlayTaskLocker) {
-            if (players.isEmpty() && nonNull(autoPlayTask)) {
-                autoPlayTask.cancel(false);
-                autoPlayTask = null;
+        if(players.remove(player)) {
+            synchronized (autoPlayTaskLocker) {
+                if (players.isEmpty() && nonNull(autoPlayTask)) {
+                    autoPlayTask.cancel(false);
+                    autoPlayTask = null;
+                }
             }
+            player.getAutoPlaySettings().setActive(false);
+            player.sendPacket(new ExAutoPlaySettingResponse());
         }
-        player.resetNextAutoShortcut();
-        player.getAutoPlaySettings().setActive(false);
-        player.sendPacket(new ExAutoPlaySettingResponse());
     }
 
     public void startAutoPotion(Player player) {
