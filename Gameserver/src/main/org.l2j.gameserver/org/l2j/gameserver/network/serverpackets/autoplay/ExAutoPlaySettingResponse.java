@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.serverpackets.autoplay;
 
-import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -10,22 +9,18 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  */
 public class ExAutoPlaySettingResponse extends ServerPacket {
 
-    private final AutoPlaySettings setting;
-
-    public ExAutoPlaySettingResponse(AutoPlaySettings setting) {
-        this.setting = setting;
-    }
-
     @Override
     protected void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_AUTOPLAY_SETTING);
-        writeShort(setting.getSize());
-        writeByte(setting.isActive());
-        writeByte(setting.isAutoPickUpOn());
-        writeShort(setting.getNextTargetMode());
-        writeByte(setting.isNearTarget());
-        writeInt(setting.getUsableHpPotionPercent());
-        writeInt(setting.getUsableHpPetPotionPercent());
-        writeByte(setting.isRespectfulMode());
+
+        final var settings = client.getPlayer().getAutoPlaySettings();
+        writeShort(settings.getSize());
+        writeByte(settings.isActive());
+        writeByte(settings.isAutoPickUpOn());
+        writeShort(settings.getNextTargetMode());
+        writeByte(settings.isNearTarget());
+        writeInt(settings.getUsableHpPotionPercent());
+        writeInt(settings.getUsableHpPetPotionPercent());
+        writeByte(settings.isRespectfulMode());
     }
 }

@@ -35,7 +35,7 @@ public class FolkStatus extends NpcStatus {
     }
 
     @Override
-    public Folk getActiveChar() {
-        return (Folk) super.getActiveChar();
+    public Folk getOwner() {
+        return (Folk) super.getOwner();
     }
 }

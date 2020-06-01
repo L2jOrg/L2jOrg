@@ -2,13 +2,13 @@ package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.model.actor.Playable;
 
-public class PlayableStatus extends CharStatus {
-    public PlayableStatus(Playable activeChar) {
-        super(activeChar);
+public class PlayableStatus extends CreatureStatus {
+    public PlayableStatus(Playable playable) {
+        super(playable);
     }
 
     @Override
-    public Playable getActiveChar() {
-        return (Playable) super.getActiveChar();
+    public Playable getOwner() {
+        return (Playable) super.getOwner();
     }
 }

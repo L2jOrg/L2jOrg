@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.ControllableMob;
@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.World;
 
 import java.util.StringTokenizer;
 
@@ -134,11 +135,11 @@ public class AdminKill implements IAdminCommandHandler
 			{
 				target.stopAllEffects(); // e.g. invincibility effect
 			}
-			target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1, activeChar, null);
+			target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
 		}
 		else if (Config.CHAMPION_ENABLE && target.isChampion())
 		{
-			target.reduceCurrentHp((target.getMaxHp() * Config.CHAMPION_HP) + 1, activeChar, null);
+			target.reduceCurrentHp((target.getMaxHp() * Config.CHAMPION_HP) + 1, activeChar, null, DamageInfo.DamageType.OTHER);
 		}
 		else
 		{
@@ -149,7 +150,7 @@ public class AdminKill implements IAdminCommandHandler
 				target.setIsInvul(false);
 			}
 			
-			target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null);
+			target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
 			
 			if (targetIsInvul)
 			{

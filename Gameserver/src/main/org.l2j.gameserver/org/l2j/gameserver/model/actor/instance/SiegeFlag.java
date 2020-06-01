@@ -6,6 +6,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.status.SiegeFlagStatus;
@@ -109,8 +110,8 @@ public class SiegeFlag extends Npc {
     }
 
     @Override
-    public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
-        super.reduceCurrentHp(damage, attacker, skill);
+    public void reduceCurrentHp(double damage, Creature attacker, Skill skill, DamageType damageType) {
+        super.reduceCurrentHp(damage, attacker, skill, damageType);
         if (canTalk()) {
             if (nonNull(getCastle()) && getCastle().getSiege().isInProgress()) {
                 if (_clan != null) {

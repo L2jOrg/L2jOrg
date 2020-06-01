@@ -31,7 +31,7 @@ public class SiegeFlagStatus extends NpcStatus {
 
     @Override
     public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
-        if (getActiveChar().isAdvancedHeadquarter()) {
+        if (getOwner().isAdvancedHeadquarter()) {
             value /= 2.;
         }
 
@@ -39,7 +39,7 @@ public class SiegeFlagStatus extends NpcStatus {
     }
 
     @Override
-    public SiegeFlag getActiveChar() {
-        return (SiegeFlag) super.getActiveChar();
+    public SiegeFlag getOwner() {
+        return (SiegeFlag) super.getOwner();
     }
 }

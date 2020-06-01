@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Duel;
 
-public class NpcStatus extends CharStatus {
+public class NpcStatus extends CreatureStatus {
     public NpcStatus(Npc activeChar) {
         super(activeChar);
     }
@@ -17,7 +17,7 @@ public class NpcStatus extends CharStatus {
 
     @Override
     public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
-        if (getActiveChar().isDead()) {
+        if (getOwner().isDead()) {
             return;
         }
 
@@ -28,14 +28,14 @@ public class NpcStatus extends CharStatus {
             }
 
             // Add attackers to npc's attacker list
-            getActiveChar().addAttackerToAttackByList(attacker);
+            getOwner().addAttackerToAttackByList(attacker);
         }
 
         super.reduceHp(value, attacker, awake, isDOT, isHpConsumption);
     }
 
     @Override
-    public Npc getActiveChar() {
-        return (Npc) super.getActiveChar();
+    public Npc getOwner() {
+        return (Npc) super.getOwner();
     }
 }

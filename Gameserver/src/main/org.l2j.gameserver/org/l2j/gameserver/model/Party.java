@@ -808,6 +808,10 @@ public class Party extends AbstractPlayerGroup {
         return members;
     }
 
+    public boolean contains(Player player) {
+        return members.contains(player);
+    }
+
     /**
      * The message type send to the party members.
      */

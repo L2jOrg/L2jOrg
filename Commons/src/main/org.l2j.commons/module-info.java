@@ -11,6 +11,7 @@ module org.l2j.commons {
     requires io.github.joealisson.primitive;
 
     exports org.l2j.commons.util;
+    exports org.l2j.commons.util.collection;
     exports org.l2j.commons.xml;
     exports org.l2j.commons.crypt;
     exports org.l2j.commons.database;

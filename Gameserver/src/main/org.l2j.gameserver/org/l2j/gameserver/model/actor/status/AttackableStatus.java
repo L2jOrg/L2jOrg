@@ -15,25 +15,25 @@ public class AttackableStatus extends NpcStatus {
 
     @Override
     public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
-        if (getActiveChar().isDead()) {
+        if (getOwner().isDead()) {
             return;
         }
 
         if (value > 0) {
-            if (getActiveChar().isOverhit()) {
-                getActiveChar().setOverhitValues(attacker, value);
+            if (getOwner().isOverhit()) {
+                getOwner().setOverhitValues(attacker, value);
             } else {
-                getActiveChar().overhitEnabled(false);
+                getOwner().overhitEnabled(false);
             }
         } else {
-            getActiveChar().overhitEnabled(false);
+            getOwner().overhitEnabled(false);
         }
 
         super.reduceHp(value, attacker, awake, isDOT, isHpConsumption);
 
-        if (!getActiveChar().isDead()) {
+        if (!getOwner().isDead()) {
             // And the attacker's hit didn't kill the mob, clear the over-hit flag
-            getActiveChar().overhitEnabled(false);
+            getOwner().overhitEnabled(false);
         }
     }
 
@@ -43,7 +43,7 @@ public class AttackableStatus extends NpcStatus {
     }
 
     @Override
-    public Attackable getActiveChar() {
-        return (Attackable) super.getActiveChar();
+    public Attackable getOwner() {
+        return (Attackable) super.getOwner();
     }
 }

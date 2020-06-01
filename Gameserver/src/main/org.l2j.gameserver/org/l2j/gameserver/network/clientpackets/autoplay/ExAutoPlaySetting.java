@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets.autoplay;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
 
 import static java.util.Objects.isNull;
 
@@ -55,6 +54,5 @@ public class ExAutoPlaySetting extends ClientPacket {
         } else {
             AutoPlayEngine.getInstance().stopAutoPlay(client.getPlayer());
         }
-        client.sendPacket(new ExAutoPlaySettingResponse(settings));
     }
 }

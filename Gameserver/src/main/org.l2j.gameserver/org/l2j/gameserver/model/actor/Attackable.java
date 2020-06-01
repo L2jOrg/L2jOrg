@@ -164,13 +164,13 @@ public class Attackable extends Npc {
 
     /**
      * Reduce the current HP of the Attackable, update its _aggroList and launch the doDie Task if necessary.
-     *
-     * @param attacker The Creature who attacks
-     * @param isDOT
+     *  @param attacker The Creature who attacks
      * @param skill
+     * @param isDOT
+     * @param drown
      */
     @Override
-    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect, DamageInfo.DamageType drown) {
         if (_isRaid && !isMinion() && (attacker != null) && (attacker.getParty() != null) && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this)) {
             if (_firstCommandChannelAttacked == null) // looting right isn't set
             {
@@ -220,7 +220,7 @@ public class Attackable extends Npc {
             }
         }
         // Reduce the current HP of the Attackable and launch the doDie Task if necessary
-        super.reduceCurrentHp(value, attacker, skill, isDOT, directlyToHp, critical, reflect);
+        super.reduceCurrentHp(value, attacker, skill, isDOT, directlyToHp, critical, reflect, drown);
     }
 
     public synchronized void setMustRewardExpSp(boolean value) {

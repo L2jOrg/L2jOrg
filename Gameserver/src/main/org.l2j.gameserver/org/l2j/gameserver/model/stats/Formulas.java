@@ -9,6 +9,7 @@ import org.l2j.gameserver.data.xml.impl.KarmaData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.*;
+import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -807,7 +808,7 @@ public final class Formulas {
             counterdmg *= calcGeneralTraitBonus(attacker, target, skill.getTrait(), true);
             counterdmg *= calcAttributeBonus(attacker, target, skill);
 
-            attacker.reduceCurrentHp(counterdmg, target, skill);
+            attacker.reduceCurrentHp(counterdmg, target, skill, DamageType.ATTACK);
         }
     }
 
@@ -1215,8 +1216,7 @@ public final class Formulas {
     }
 
     public static boolean calcRealTargetBreak() {
-        // Real Target breaks at 3% (Rnd > 3.0 doesn't break) probability.
-        return Rnd.get(100) <= 3;
+        return Rnd.chance(3);
     }
 
     /**

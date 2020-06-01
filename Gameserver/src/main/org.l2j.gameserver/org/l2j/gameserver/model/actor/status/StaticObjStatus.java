@@ -18,13 +18,13 @@ package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 
-public class StaticObjStatus extends CharStatus {
+public class StaticObjStatus extends CreatureStatus {
     public StaticObjStatus(StaticWorldObject activeChar) {
         super(activeChar);
     }
 
     @Override
-    public StaticWorldObject getActiveChar() {
-        return (StaticWorldObject) super.getActiveChar();
+    public StaticWorldObject getOwner() {
+        return (StaticWorldObject) super.getOwner();
     }
 }

@@ -14,6 +14,7 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 
 import static java.util.Objects.nonNull;
 import static java.util.Objects.requireNonNullElseGet;
+import static org.l2j.gameserver.model.DamageInfo.DamageType;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -132,9 +133,8 @@ public class DamageZone extends Zone {
 
         private void doDamage(Creature creature) {
             final double multiplier = 1 + (creature.getStats().getValue(Stat.DAMAGE_ZONE_VULN, 0) / 100);
-
             if (damageHPPerSec != 0) {
-                creature.reduceCurrentHp(damageHPPerSec * multiplier, creature, null);
+                creature.reduceCurrentHp(damageHPPerSec * multiplier, null, null, DamageType.ZONE);
             }
             if (damageMPPerSec != 0) {
                 creature.reduceCurrentMp(damageMPPerSec * multiplier);

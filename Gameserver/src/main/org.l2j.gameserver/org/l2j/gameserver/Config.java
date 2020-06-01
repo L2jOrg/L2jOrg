@@ -705,7 +705,7 @@ public final class Config {
     public static boolean OFFLINE_TRADE_ENABLE;
     public static boolean OFFLINE_CRAFT_ENABLE;
     public static boolean OFFLINE_MODE_IN_PEACE_ZONE;
-    public static boolean OFFLINE_MODE_NO_DAMAGE;
+
     public static boolean RESTORE_OFFLINERS;
     public static int OFFLINE_MAX_DAYS;
     public static boolean OFFLINE_DISCONNECT_FINISHED;
@@ -1747,7 +1747,7 @@ public final class Config {
         OFFLINE_TRADE_ENABLE = OfflineTrade.getBoolean("OfflineTradeEnable", false);
         OFFLINE_CRAFT_ENABLE = OfflineTrade.getBoolean("OfflineCraftEnable", false);
         OFFLINE_MODE_IN_PEACE_ZONE = OfflineTrade.getBoolean("OfflineModeInPeaceZone", false);
-        OFFLINE_MODE_NO_DAMAGE = OfflineTrade.getBoolean("OfflineModeNoDamage", false);
+
         OFFLINE_SET_NAME_COLOR = OfflineTrade.getBoolean("OfflineSetNameColor", false);
         OFFLINE_NAME_COLOR = Integer.decode("0x" + OfflineTrade.getString("OfflineNameColor", "808080"));
         OFFLINE_FAME = OfflineTrade.getBoolean("OfflineFame", true);

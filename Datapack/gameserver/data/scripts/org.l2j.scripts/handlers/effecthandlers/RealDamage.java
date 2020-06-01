@@ -2,6 +2,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -33,7 +34,7 @@ public class RealDamage extends AbstractEffect {
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
         final double damage = power - (power * (Math.min(effected.getStats().getValue(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
 
-        effected.reduceCurrentHp(damage, effector, skill, false, true, false, false);
+        effected.reduceCurrentHp(damage, effector, skill, false, true, false, false, DamageInfo.DamageType.OTHER);
         if (isPlayer(effector)) {
             effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
         }

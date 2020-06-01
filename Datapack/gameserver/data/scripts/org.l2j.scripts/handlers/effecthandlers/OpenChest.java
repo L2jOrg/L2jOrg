@@ -3,6 +3,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Chest;
@@ -43,7 +44,7 @@ public final class OpenChest extends AbstractEffect {
             player.broadcastSocialAction(3);
             chest.setSpecialDrop();
             chest.setMustRewardExpSp(false);
-            chest.reduceCurrentHp(chest.getMaxHp(), player, skill);
+            chest.reduceCurrentHp(chest.getMaxHp(), player, skill, DamageInfo.DamageType.OTHER);
         } else {
             player.broadcastSocialAction(13);
             chest.addDamageHate(player, 0, 1);

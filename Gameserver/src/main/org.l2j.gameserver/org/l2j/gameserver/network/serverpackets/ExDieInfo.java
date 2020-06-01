@@ -1,39 +1,73 @@
 package org.l2j.gameserver.network.serverpackets;
-
+import org.l2j.gameserver.model.DamageInfo;
+import org.l2j.gameserver.model.DamageInfo.NpcDamage;
+import org.l2j.gameserver.model.DamageInfo.PlayerDamage;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
+import java.util.Collection;
+
+/**
+ * @author JoeAlisson
+ */
 public class ExDieInfo extends ServerPacket {
 
-    public ExDieInfo() {
+    private final Collection<DamageInfo> damages;
+    private final Collection<Item> drop;
+
+    public ExDieInfo(Collection<DamageInfo> damages, Collection<Item> drop) {
+        this.damages = damages;
+        this.drop = drop;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
+    protected void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_DIE_INFO);
 
-        writeShort(0);
-        writeShort(9); // Nb damages
+        writeShort(drop.size());
+        drop.forEach(this::writeDrop);
 
-
-        for (int i = 0 ; i < 7; i++) { // Loop over all damages received by player
-            writeShort(1); // Start damage ?
-            writeInt(20120); // Attacker id
-            writeShort(0); // FALL DAMAGES if 1 or + and bug all value
-            writeInt(0); // Skill ID
-            writeDouble(30); // Damages
-            writeShort(5); // 0 = other damages 1 = normal attack 2 = fall damages 3 = water damages 4+ = other damages
-        }
-
-        for (int i = 0 ; i < 2; i++) { // Loop over all damages received by player
-            writeShort(2); // Start damage ?
-            writeString("LoropetikA"); // Attacker name
-            writeShort(0); // unknown
-            writeInt(1177); // Skill ID
-            writeDouble(116); // Damages
-            writeShort(4); // unknown
-        }
-
+        writeShort(damages.size());
+        damages.forEach(this::writeDamage);
     }
 
+    private void writeDrop(Item item) {
+        writeInt(item.getId());
+        writeInt(item.getEnchantLevel());
+        writeInt((int) item.getCount());
+    }
+
+    private void writeDamage(DamageInfo damageInfo) {
+        writeShort(damageInfo.attackerType());
+
+        if(damageInfo instanceof PlayerDamage playerDamage) {
+            writePlayerDamage(playerDamage);
+        } else if(damageInfo instanceof NpcDamage npcDamage) {
+            writeNpcDamage(npcDamage);
+        } else {
+            writeOthersDamage(damageInfo);
+        }
+
+        writeDouble(damageInfo.damage());
+        writeShort(damageInfo.damageType());
+    }
+
+    private void writeNpcDamage(NpcDamage npcDamage) {
+        writeInt(npcDamage.attackerId());
+        writeShort(0);
+        writeInt(npcDamage.skillId());
+    }
+
+    private void writePlayerDamage(PlayerDamage playerDamage) {
+        writeString(playerDamage.attackerName());
+        writeString(playerDamage.clanName());
+        writeInt(playerDamage.skillId());
+    }
+
+    private void writeOthersDamage(DamageInfo damageInfo) {
+        writeInt(0);
+        writeInt(0);
+    }
 }
+

@@ -20,13 +20,14 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Event.EventState;
-import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.Broadcast;
+import org.l2j.gameserver.world.World;
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -275,7 +276,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				{
 					for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
 					{
-						player.reduceCurrentHp(player.getMaxHp() + player.getMaxCp() + 1, activeChar, null);
+						player.reduceCurrentHp(player.getMaxHp() + player.getMaxCp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
 					}
 				}
 				showEventControl(activeChar);

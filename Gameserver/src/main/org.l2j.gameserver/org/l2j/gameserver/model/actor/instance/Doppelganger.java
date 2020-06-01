@@ -22,6 +22,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.DoppelgangerAI;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.Team;
+import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -141,8 +142,8 @@ public class Doppelganger extends Npc {
     }
 
     @Override
-    public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
-        super.reduceCurrentHp(damage, attacker, skill);
+    public void reduceCurrentHp(double damage, Creature attacker, Skill skill, DamageType damageType) {
+        super.reduceCurrentHp(damage, attacker, skill, damageType);
 
         if (GameUtils.isPlayer(getSummoner()) && (attacker != null) && !isDead() && !isHpBlocked()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);

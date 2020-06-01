@@ -94,7 +94,7 @@ public class Rnd
 	 * Translated by Google.
 	 */
 	public static boolean chance(int chance) {
-		return chance >= 1 && (chance > 99 || rnd().nextInt(99) + 1 <= chance);
+		return chance >= 1 && (chance > 99 || rnd().nextInt(100) <= chance);
 	}
 
 	/**

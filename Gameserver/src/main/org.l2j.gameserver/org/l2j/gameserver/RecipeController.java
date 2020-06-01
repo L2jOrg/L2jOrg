@@ -27,6 +27,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.model.DamageInfo.DamageType;
+
 
 public class RecipeController {
     private static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
@@ -442,7 +444,7 @@ public class RecipeController {
                         }
                         ret = false;
                     } else if (isReduce) {
-                        _player.reduceCurrentHp(modifiedValue, _player, _skill);
+                        _player.reduceCurrentHp(modifiedValue, _player, _skill, DamageType.OTHER);
                     }
                 } else if (statUse.getType() == StatType.MP) {
                     if (_player.getCurrentMp() < modifiedValue) {
