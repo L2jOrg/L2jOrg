@@ -3,6 +3,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.StatModifierType;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -38,7 +39,7 @@ public final class DamOverTime extends AbstractEffect {
 					damage = effected.getCurrentHp() - 1;
 				}
 				
-				effected.reduceCurrentHp(damage, effector, skill, true, false, true, false);
+				effected.reduceCurrentHp(damage, effector, skill, true, false, true, false, DamageInfo.DamageType.OTHER);
 			}
 		}
 	}
@@ -71,7 +72,7 @@ public final class DamOverTime extends AbstractEffect {
 				damage = effected.getCurrentHp() - 1;
 			}
 		}
-		
+		//DamageInfo.DamageType.POISON
 		effector.doAttack(damage, effected, skill, true, false, false, false);
 		return skill.isToggle();
 	}

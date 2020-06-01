@@ -18,13 +18,13 @@ package org.l2j.gameserver.model.actor.status;
 
 import org.l2j.gameserver.model.actor.instance.Door;
 
-public class DoorStatus extends CharStatus {
+public class DoorStatus extends CreatureStatus {
     public DoorStatus(Door activeChar) {
         super(activeChar);
     }
 
     @Override
-    public Door getActiveChar() {
-        return (Door) super.getActiveChar();
+    public Door getOwner() {
+        return (Door) super.getOwner();
     }
 }

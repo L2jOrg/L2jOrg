@@ -20,6 +20,7 @@ import instances.AbstractInstance;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
@@ -747,7 +748,7 @@ public class LastImperialTomb extends AbstractInstance
 			{
 				monster.setRunning();
 				// monster.moveToLocation(-87959, -141247, -9168, 0);
-				monster.reduceCurrentHp(1, killer, null); // TODO: Find better way for attack
+				monster.reduceCurrentHp(1, killer, null, DamageType.ATTACK); // TODO: Find better way for attack
 			}
 		}
 		else if (npc.getId() == SCARLET2)
@@ -809,7 +810,7 @@ public class LastImperialTomb extends AbstractInstance
 						{
 							monster.setRunning();
 							// monster.moveToLocation(-87935, -147062, -9184, 0);
-							monster.reduceCurrentHp(1, killer, null); // TODO: Find better way for attack
+							monster.reduceCurrentHp(1, killer, null, DamageType.ATTACK); // TODO: Find better way for attack
 						}
 						break;
 					}

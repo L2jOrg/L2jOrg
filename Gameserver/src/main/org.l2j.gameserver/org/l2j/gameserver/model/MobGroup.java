@@ -205,7 +205,7 @@ public final class MobGroup {
             }
 
             if (!mobInst.isDead()) {
-                mobInst.reduceCurrentHp(mobInst.getMaxHp() + 1, activeChar, null);
+                mobInst.reduceCurrentHp(mobInst.getMaxHp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
             }
 
             SpawnTable.getInstance().deleteSpawn(mobInst.getSpawn(), false);

@@ -11,6 +11,7 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.AggroInfo;
+import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.WorldObject;
@@ -595,8 +596,8 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
-        super.reduceCurrentHp(damage, attacker, skill);
+    public void reduceCurrentHp(double damage, Creature attacker, Skill skill, DamageType damageType) {
+        super.reduceCurrentHp(damage, attacker, skill, damageType);
 
         if (!isDead() && !isHpBlocked() && (_owner != null) && (attacker != null) && (!_owner.isAffected(EffectFlag.DUELIST_FURY) || attacker.isAffected(EffectFlag.FACEOFF))) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);

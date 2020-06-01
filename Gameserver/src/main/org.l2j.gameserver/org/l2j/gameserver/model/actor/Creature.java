@@ -20,12 +20,13 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.TimersManager;
 import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.actor.stat.CreatureStats;
-import org.l2j.gameserver.model.actor.status.CharStatus;
+import org.l2j.gameserver.model.actor.status.CreatureStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
@@ -151,7 +152,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private boolean _blockActions = false;
     private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills = new ConcurrentHashMap<>();
     private CreatureStats stats;
-    private CharStatus _status;
+    private CreatureStatus _status;
     private CreatureTemplate _template; // The link on the CreatureTemplate object containing generic and static properties of this Creature type (ex : Max HP, Speed...)
     private String _title;
     private double _hpUpdateIncCheck = .0;
@@ -1779,11 +1780,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         stats = new CreatureStats(this);
     }
 
-    public CharStatus getStatus() {
+    public CreatureStatus getStatus() {
         return _status;
     }
 
-    public final void setStatus(CharStatus value) {
+    public final void setStatus(CreatureStatus value) {
         _status = value;
     }
 
@@ -1792,7 +1793,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Removes the need for instanceof checks.
      */
     public void initCharStatus() {
-        _status = new CharStatus(this);
+        _status = new CreatureStatus(this);
     }
 
     public CreatureTemplate getTemplate() {
@@ -3573,7 +3574,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
                 // Shield Deflect Magic: Reflect all damage on caster.
                 if (skill.isMagic() && (target.getStats().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100))) {
-                    reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true);
+                    reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true, DamageType.REFLECT);
                     return;
                 }
             }
@@ -3585,7 +3586,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // Target receives the damage.
-        target.reduceCurrentHp(damage, this, skill, isDOT, directlyToHp, critical, reflect);
+        target.reduceCurrentHp(damage, this, skill, isDOT, directlyToHp, critical, reflect, DamageType.ATTACK);
 
         // Check if damage should be reflected or absorbed. When killing blow is made, the target doesn't reflect (vamp too?).
         if (!reflect && !isDOT && !target.isDead()) {
@@ -3655,29 +3656,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    public void reduceCurrentHp(double value, Creature attacker, Skill skill) {
-        reduceCurrentHp(value, attacker, skill, false, false, false, false);
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, DamageType damageType) {
+        reduceCurrentHp(value, attacker, skill, false, false, false, false, damageType);
     }
 
-    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
-        // Notify of this attack only if there is an attacking creature.
-        if (attacker != null) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnCreatureDamageDealt(attacker, this, value, skill, critical, isDOT, reflect), attacker);
-        }
-
-        final DamageReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, value, skill, critical, isDOT, reflect), this, DamageReturn.class);
-        if (term != null) {
-            if (term.terminate()) {
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect, DamageType damageType) {
+        final var damageReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, value, skill, critical, isDOT, reflect), this, DamageReturn.class);
+        if (damageReturn != null) {
+            if (damageReturn.terminate()) {
                 return;
-            } else if (term.override()) {
-                value = term.getDamage();
+            } else if (damageReturn.override()) {
+                value = damageReturn.getDamage();
             }
         }
 
         double elementalDamage = 0;
 
         // Calculate PvP/PvE damage received. It is a post-attack stat.
-        if (attacker != null) {
+        if (nonNull(attacker)) {
 
             if (GameUtils.isPlayable(attacker) && GameUtils.isPlayable(this)) {
                 value *= (100 + max(stats.getValue(Stat.PVP_DAMAGE_TAKEN), -80)) / 100;
@@ -3693,11 +3689,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             value *= (100 + max(stats.getValue(Stat.DAMAGE_TAKEN), -80)) / 100;
 
-            if(!reflect) {
+            if(!reflect && !isDOT) {
                 elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, value);
             }
 
             value += elementalDamage;
+        }
+
+        if(Config.CHAMPION_ENABLE && isChampion() && Config.CHAMPION_HP > 0) {
+            value /= Config.CHAMPION_HP;
         }
 
         final double damageCap = stats.getValue(Stat.DAMAGE_LIMIT);
@@ -3706,18 +3706,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         value = max(0, value);
-
-        if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0)) {
-            _status.reduceHp(value / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
-        } else if (isPlayer(this)) {
-            getActingPlayer().getStatus().reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false, directlyToHp);
+        onReceiveDamage(attacker, skill, value, damageType);
+        if (isPlayer(this)) {
+            getActingPlayer().getStatus().reduceHp(value, attacker, isNull(skill) || !skill.isToggle(), isDOT, false, directlyToHp);
         } else {
-            _status.reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
+            _status.reduceHp(value, attacker, isNull(skill) || !skill.isToggle(), isDOT, false);
         }
 
-        if (attacker != null) {
+        if (nonNull(attacker)) {
             attacker.sendDamageMessage(this, skill, (int) value, elementalDamage, critical, false);
+            EventDispatcher.getInstance().notifyEventAsync(new OnCreatureDamageDealt(attacker, this, value, skill, critical, isDOT, reflect), attacker);
         }
+    }
+
+    protected void onReceiveDamage(Creature attacker, Skill skill, double value, DamageType damageType) {
+
     }
 
     public void reduceCurrentMp(double i) {

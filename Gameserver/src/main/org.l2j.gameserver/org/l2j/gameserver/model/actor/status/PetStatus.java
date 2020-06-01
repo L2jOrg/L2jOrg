@@ -36,20 +36,20 @@ public class PetStatus extends SummonStatus {
 
     @Override
     public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
-        if (getActiveChar().isDead()) {
+        if (getOwner().isDead()) {
             return;
         }
 
         super.reduceHp(value, attacker, awake, isDOT, isHpConsumption);
 
         if (attacker != null) {
-            if (!isDOT && (getActiveChar().getOwner() != null)) {
+            if (!isDOT && (getOwner().getOwner() != null)) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_BY_C1);
                 sm.addString(attacker.getName());
                 sm.addInt((int) value);
-                getActiveChar().sendPacket(sm);
+                getOwner().sendPacket(sm);
             }
-            getActiveChar().getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
+            getOwner().getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
         }
     }
 
@@ -62,7 +62,7 @@ public class PetStatus extends SummonStatus {
     }
 
     @Override
-    public Pet getActiveChar() {
-        return (Pet) super.getActiveChar();
+    public Pet getOwner() {
+        return (Pet) super.getOwner();
     }
 }

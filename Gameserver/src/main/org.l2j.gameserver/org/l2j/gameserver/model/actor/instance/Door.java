@@ -11,6 +11,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.DoorStats;
@@ -404,7 +405,7 @@ public final class Door extends Creature {
     }
 
     @Override
-    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect, DamageInfo.DamageType damageType) {
         if (isWall() && !isInInstance()) {
             if (!attacker.isServitor()) {
                 return;
@@ -415,7 +416,7 @@ public final class Door extends Creature {
                 return;
             }
         }
-        super.reduceCurrentHp(value, attacker, skill, isDOT, directlyToHp, critical, reflect);
+        super.reduceCurrentHp(value, attacker, skill, isDOT, directlyToHp, critical, reflect, damageType);
     }
 
     @Override

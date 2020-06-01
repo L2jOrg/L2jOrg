@@ -20,14 +20,15 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -236,16 +237,16 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			if (isPlayer(target))
 			{
-				target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1, activeChar, null);
+				target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
 				filename = "charmanage.htm";
 			}
 			else if (Config.CHAMPION_ENABLE && target.isChampion())
 			{
-				target.reduceCurrentHp((target.getMaxHp() * Config.CHAMPION_HP) + 1, activeChar, null);
+				target.reduceCurrentHp((target.getMaxHp() * Config.CHAMPION_HP) + 1, activeChar, null, DamageInfo.DamageType.OTHER);
 			}
 			else
 			{
-				target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null);
+				target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
 			}
 		}
 		else

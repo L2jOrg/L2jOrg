@@ -3,6 +3,7 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.StatModifierType;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -68,7 +69,7 @@ public final class Hp extends AbstractEffect {
 			effected.sendPacket(sm);
 		} else {
 			final double damage = -amount;
-			effected.reduceCurrentHp(damage, effector, skill, false, false, false, false);
+			effected.reduceCurrentHp(damage, effector, skill, false, false, false, false, DamageInfo.DamageType.OTHER);
 			effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
 		}
 	}

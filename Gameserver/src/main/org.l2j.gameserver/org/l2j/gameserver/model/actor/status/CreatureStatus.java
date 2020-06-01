@@ -16,12 +16,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 
-public class CharStatus {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(CharStatus.class);
+public class CreatureStatus {
+    protected static final Logger LOGGER = LoggerFactory.getLogger(CreatureStatus.class);
+
     protected static final byte REGEN_FLAG_CP = 4;
     private static final byte REGEN_FLAG_HP = 1;
     private static final byte REGEN_FLAG_MP = 2;
-    private final Creature _activeChar;
+
+    private final Creature owner;
     protected byte _flagsRegenActive = 0;
     private double _currentHp = 0; // Current HP of the Creature
     private double _currentMp = 0; // Current MP of the Creature
@@ -31,8 +33,8 @@ public class CharStatus {
     private Set<Creature> _StatusListener;
     private Future<?> _regTask;
 
-    public CharStatus(Creature activeChar) {
-        _activeChar = activeChar;
+    public CreatureStatus(Creature owner) {
+        this.owner = owner;
     }
 
     /**
@@ -49,7 +51,7 @@ public class CharStatus {
      * @param object Creature to add to the listener
      */
     public final void addStatusListener(Creature object) {
-        if (object == _activeChar) {
+        if (object == owner) {
             return;
         }
 
@@ -108,7 +110,7 @@ public class CharStatus {
     }
 
     public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption) {
-        final Creature activeChar = _activeChar;
+        final Creature activeChar = owner;
         if (activeChar.isDead()) {
             return;
         }
@@ -133,7 +135,7 @@ public class CharStatus {
                 activeChar.stopStunning(true);
             }
             if (Formulas.calcRealTargetBreak()) {
-                _activeChar.getEffectList().stopEffects(AbnormalType.REAL_TARGET);
+                owner.getEffectList().stopEffects(AbnormalType.REAL_TARGET);
             }
         }
 
@@ -160,9 +162,9 @@ public class CharStatus {
      * </ul>
      */
     public final synchronized void startHpMpRegeneration() {
-        if ((_regTask == null) && !_activeChar.isDead()) {
+        if ((_regTask == null) && !owner.isDead()) {
             // Get the Regeneration period
-            final int period = Formulas.getRegeneratePeriod(_activeChar);
+            final int period = Formulas.getRegeneratePeriod(owner);
 
             // Create the HP/MP/CP Regeneration task
             _regTask = ThreadPool.scheduleAtFixedRate(this::doRegeneration, period, period);
@@ -219,10 +221,10 @@ public class CharStatus {
     public boolean setCurrentHp(double newHp, boolean broadcastPacket) {
         // Get the Max HP of the Creature
         final int oldHp = (int) _currentHp;
-        final double maxHp = _activeChar.getStats().getMaxHp();
+        final double maxHp = owner.getStats().getMaxHp();
 
         synchronized (this) {
-            if (_activeChar.isDead()) {
+            if (owner.isDead()) {
                 return false;
             }
 
@@ -250,9 +252,9 @@ public class CharStatus {
         // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         if (hpWasChanged) {
             if (broadcastPacket) {
-                _activeChar.broadcastStatusUpdate();
+                owner.broadcastStatusUpdate();
             }
-            EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(getActiveChar(), oldHp, _currentHp), getActiveChar());
+            EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(getOwner(), oldHp, _currentHp), getOwner());
         }
 
         return hpWasChanged;
@@ -262,7 +264,7 @@ public class CharStatus {
         boolean hpOrMpWasChanged = setCurrentHp(newHp, false);
         hpOrMpWasChanged |= setCurrentMp(newMp, false);
         if (hpOrMpWasChanged) {
-            _activeChar.broadcastStatusUpdate();
+            owner.broadcastStatusUpdate();
         }
     }
 
@@ -284,10 +286,10 @@ public class CharStatus {
     public final boolean setCurrentMp(double newMp, boolean broadcastPacket) {
         // Get the Max MP of the Creature
         final int currentMp = (int) _currentMp;
-        final int maxMp = _activeChar.getStats().getMaxMp();
+        final int maxMp = owner.getStats().getMaxMp();
 
         synchronized (this) {
-            if (_activeChar.isDead()) {
+            if (owner.isDead()) {
                 return false;
             }
 
@@ -314,7 +316,7 @@ public class CharStatus {
 
         // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         if (mpWasChanged && broadcastPacket) {
-            _activeChar.broadcastStatusUpdate();
+            owner.broadcastStatusUpdate();
         }
 
         return mpWasChanged;
@@ -322,16 +324,16 @@ public class CharStatus {
 
     protected void doRegeneration() {
         // Modify the current HP/MP of the Creature and broadcast Server->Client packet StatusUpdate
-        if (!_activeChar.isDead() && ((_currentHp < _activeChar.getMaxRecoverableHp()) || (_currentMp < _activeChar.getMaxRecoverableMp()))) {
-            final double newHp = _currentHp + _activeChar.getStats().getValue(Stat.REGENERATE_HP_RATE);
-            final double newMp = _currentMp + _activeChar.getStats().getValue(Stat.REGENERATE_MP_RATE);
+        if (!owner.isDead() && ((_currentHp < owner.getMaxRecoverableHp()) || (_currentMp < owner.getMaxRecoverableMp()))) {
+            final double newHp = _currentHp + owner.getStats().getValue(Stat.REGENERATE_HP_RATE);
+            final double newMp = _currentMp + owner.getStats().getValue(Stat.REGENERATE_MP_RATE);
             setCurrentHpMp(newHp, newMp);
         } else {
             stopHpMpRegeneration();
         }
     }
 
-    public Creature getActiveChar() {
-        return _activeChar;
+    public Creature getOwner() {
+        return owner;
     }
 }

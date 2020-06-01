@@ -7,6 +7,7 @@ import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.gameserver.model.DamageInfo.DamageType.TRANSFERED_DAMAGE;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 public class SummonStatus extends PlayableStatus {
@@ -21,19 +22,19 @@ public class SummonStatus extends PlayableStatus {
 
     @Override
     public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption) {
-        if ((attacker == null) || getActiveChar().isDead()) {
+        if ((attacker == null) || getOwner().isDead()) {
             return;
         }
 
         final Player attackerPlayer = attacker.getActingPlayer();
-        if ((attackerPlayer != null) && ((getActiveChar().getOwner() == null) || (getActiveChar().getOwner().getDuelId() != attackerPlayer.getDuelId()))) {
+        if ((attackerPlayer != null) && ((getOwner().getOwner() == null) || (getOwner().getOwner().getDuelId() != attackerPlayer.getDuelId()))) {
             attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
         }
 
-        final Player caster = getActiveChar().getTransferingDamageTo();
-        if (getActiveChar().getOwner().getParty() != null) {
-            if ((caster != null) && GameUtils.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && getActiveChar().getParty().getMembers().contains(caster)) {
-                int transferDmg = ((int) value * (int) getActiveChar().getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
+        final Player caster = getOwner().getTransferingDamageTo();
+        if (getOwner().getOwner().getParty() != null) {
+            if ((caster != null) && GameUtils.checkIfInRange(1000, getOwner(), caster, true) && !caster.isDead() && getOwner().getParty().getMembers().contains(caster)) {
+                double transferDmg = value * getOwner().getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0) / 100;
                 transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
                 if (transferDmg > 0) {
                     int membersInRange = 0;
@@ -42,23 +43,15 @@ public class SummonStatus extends PlayableStatus {
                             membersInRange++;
                         }
                     }
-                    if (isPlayable(attacker) && (caster.getCurrentCp() > 0)) {
-                        if (caster.getCurrentCp() > transferDmg) {
-                            caster.getStatus().reduceCp(transferDmg);
-                        } else {
-                            transferDmg = (int) (transferDmg - caster.getCurrentCp());
-                            caster.getStatus().reduceCp((int) caster.getCurrentCp());
-                        }
-                    }
                     if (membersInRange > 0) {
-                        caster.reduceCurrentHp(transferDmg / membersInRange, attacker, null);
+                        caster.reduceCurrentHp(transferDmg / membersInRange, attacker, null, false, false, false, false, TRANSFERED_DAMAGE);
                         value -= transferDmg;
                     }
                 }
             }
-        } else if ((caster != null) && (caster == getActiveChar().getOwner()) && GameUtils.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead()) // when no party, transfer only to owner (caster)
+        } else if ((caster != null) && (caster == getOwner().getOwner()) && GameUtils.checkIfInRange(1000, getOwner(), caster, true) && !caster.isDead()) // when no party, transfer only to owner (caster)
         {
-            int transferDmg = ((int) value * (int) getActiveChar().getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
+            int transferDmg = ((int) value * (int) getOwner().getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
             transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
             if (transferDmg > 0) {
                 if (isPlayable(attacker) && (caster.getCurrentCp() > 0)) {
@@ -70,7 +63,7 @@ public class SummonStatus extends PlayableStatus {
                     }
                 }
 
-                caster.reduceCurrentHp(transferDmg, attacker, null);
+                caster.reduceCurrentHp(transferDmg, attacker, null, TRANSFERED_DAMAGE);
                 value -= transferDmg;
             }
         }
@@ -78,7 +71,7 @@ public class SummonStatus extends PlayableStatus {
     }
 
     @Override
-    public Summon getActiveChar() {
-        return (Summon) super.getActiveChar();
+    public Summon getOwner() {
+        return (Summon) super.getOwner();
     }
 }

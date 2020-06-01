@@ -52,7 +52,7 @@ public class Die extends ServerPacket {
 
         writeInt(objectId);
         writeInt(flags);
-        writeInt(1);
+        writeInt(0);
         writeInt(isSweepable);
         writeInt(0);
         writeInt(0);

@@ -18,6 +18,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
+import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -73,10 +74,10 @@ public final class Artefact extends Npc {
     }
 
     @Override
-    public void reduceCurrentHp(double damage, Creature attacker, Skill skill) {
+    public void reduceCurrentHp(double damage, Creature attacker, Skill skill, DamageInfo.DamageType zone) {
     }
 
     @Override
-    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
+    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect, DamageInfo.DamageType drown) {
     }
 }

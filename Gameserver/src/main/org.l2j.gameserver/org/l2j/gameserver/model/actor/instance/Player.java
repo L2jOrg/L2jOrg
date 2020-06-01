@@ -5,6 +5,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
+import org.l2j.commons.util.collection.LimitedQueue;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.RecipeController;
@@ -34,14 +35,15 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
-import org.l2j.gameserver.model.actor.status.PcStatus;
+import org.l2j.gameserver.model.actor.status.PlayerStatus;
 import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
@@ -144,30 +146,32 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  */
 public final class Player extends Playable {
 
-    private final PlayerData model;
+    private final PlayerData data;
     private final PlayerAppearance appearance;
     private final Map<ShotType, Integer> activeSoulShots = new EnumMap<>(ShotType.class);
+    private final LimitedQueue<DamageInfo> lastDamages = new LimitedQueue<>(30);
 
-    private byte vipTier;
     private ElementalSpirit[] spirits;
     private ElementalType activeElementalSpiritType;
     private AutoPlaySettings autoPlaySettings;
-    private int rank;
-    private int rankRace;
     private PlayerVariableData variables;
     private PlayerStatsData statsData;
-    private byte shineSouls;
-    private byte shadowSouls;
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
     private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
     private IntMap<CostumeCollectionData> costumesCollections  = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection = CostumeCollectionData.DEFAULT;
     private IntSet teleportFavorites;
+
+    private byte vipTier;
+    private int rank;
+    private int rankRace;
+    private byte shineSouls;
+    private byte shadowSouls;
     private int additionalSoulshot;
 
     private Player(PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
-        this.model = playerData;
+        this.data = playerData;
         setName(playerData.getName());
         setInstanceType(InstanceType.L2PcInstance);
         initCharStatusUpdateValues();
@@ -425,7 +429,7 @@ public final class Player extends Playable {
     }
 
     public LocalDate getCreateDate() {
-        return model.getCreateDate();
+        return data.getCreateDate();
     }
 
     public PlayerStatsData getStatsData() {
@@ -639,6 +643,17 @@ public final class Player extends Playable {
         return inventory.getDepositableItems(type);
     }
 
+    @Override
+    protected void onReceiveDamage(Creature attacker, Skill skill, double value, DamageType damageType) {
+        if (nonNull(tamedBeast)) {
+            for (TamedBeast tamedBeast : tamedBeast) {
+                tamedBeast.onOwnerGotAttacked(attacker);
+            }
+        }
+
+        lastDamages.add(DamageInfo.of(attacker == this ? null : attacker, skill, value, damageType));
+        super.onReceiveDamage(attacker, skill, value, damageType);
+    }
     public static Player create(PlayerData playerData, PlayerTemplate template) {
         final Player player = new Player(playerData, template);
         player.setRecomLeft(20);
@@ -941,7 +956,7 @@ public final class Player extends Playable {
     private int _agathionId = 0;
     // apparently, a Player CAN have both a summon AND a tamed beast at the same time!!
     // after Freya players can control more than one tamed beast
-    private volatile Set<TamedBeast> _tamedBeast = null;
+    private volatile Set<TamedBeast> tamedBeast = null;
 
     private MatchingRoom _matchingRoom;
     /**
@@ -1382,11 +1397,11 @@ public final class Player extends Playable {
     }
 
     public String getAccountName() {
-        return _client == null ? model.getAccountName(): _client.getAccountName();
+        return _client == null ? data.getAccountName(): _client.getAccountName();
     }
 
     public String getAccountNamePlayer() {
-        return model.getAccountName();
+        return data.getAccountName();
     }
 
     public Map<Integer, String> getAccountChars() {
@@ -1509,13 +1524,13 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final PcStatus getStatus() {
-        return (PcStatus) super.getStatus();
+    public final PlayerStatus getStatus() {
+        return (PlayerStatus) super.getStatus();
     }
 
     @Override
     public void initCharStatus() {
-        setStatus(new PcStatus(this));
+        setStatus(new PlayerStatus(this));
     }
 
     public final PlayerAppearance getAppearance() {
@@ -1531,7 +1546,7 @@ public final class Player extends Playable {
     }
 
     public final PlayerTemplate getBaseTemplate() {
-        return PlayerTemplateData.getInstance().getTemplate(model.getBaseClass());
+        return PlayerTemplateData.getInstance().getTemplate(data.getBaseClass());
     }
 
     /**
@@ -2303,16 +2318,16 @@ public final class Player extends Playable {
      * @return the Raidboss points of this PlayerInstance
      */
     public int getRaidbossPoints() {
-        return model.getRaidBossPoints();
+        return data.getRaidBossPoints();
     }
 
 
     public void setRaidbossPoints(int points) {
-        model.setRaidbossPoints(points);
+        data.setRaidbossPoints(points);
     }
 
     public void increaseRaidbossPoints(int increasePoints) {
-        setRaidbossPoints(model.getRaidBossPoints() + increasePoints);
+        setRaidbossPoints(data.getRaidBossPoints() + increasePoints);
     }
 
     /**
@@ -2566,7 +2581,7 @@ public final class Player extends Playable {
         if (!isSubClassActive()) {
             return getTemplate().getRace();
         }
-        return PlayerTemplateData.getInstance().getTemplate(model.getBaseClass()).getRace();
+        return PlayerTemplateData.getInstance().getTemplate(data.getBaseClass()).getRace();
     }
 
     public Radar getRadar() {
@@ -2641,19 +2656,19 @@ public final class Player extends Playable {
     }
 
     public long getClanJoinExpiryTime() {
-        return model.getClanJoinExpiryTime();
+        return data.getClanJoinExpiryTime();
     }
 
     public void setClanJoinExpiryTime(long time) {
-        model.setClanJoinExpiryTime(time);
+        data.setClanJoinExpiryTime(time);
     }
 
     public long getClanCreateExpiryTime() {
-        return model.getClanCreateExpiryTime();
+        return data.getClanCreateExpiryTime();
     }
 
     public void setClanCreateExpiryTime(long time) {
-        model.setClanCreateExpiryTime(time);
+        data.setClanCreateExpiryTime(time);
     }
 
     public void setOnlineTime(long time) {
@@ -4328,25 +4343,25 @@ public final class Player extends Playable {
             }
 
             // Clear resurrect xp calculation
-            model.setExpBeforeDeath(0);
+            data.setExpBeforeDeath(0);
+            Collection<Item> droppedItems = onDieDropItem(killer);
+            sendPacket(new ExDieInfo(lastDamages, droppedItems));
+            
 
             final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
-            if ((pk == null)) {
-                onDieDropItem(killer); // Check if any item should be dropped
 
-                if (!insidePvpZone && (pk != null)) {
-                    final Clan pkClan = pk.getClan();
-                    if ((pkClan != null) && (_clan != null) && !isAcademyMember() && !(pk.isAcademyMember())) {
-                        final ClanWar clanWar = _clan.getWarWith(pkClan.getId());
-                        if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
-                            clanWar.onKill(pk, this);
-                        }
+            if (!insidePvpZone && (pk != null)) {
+                final Clan pkClan = pk.getClan();
+                if ((pkClan != null) && (_clan != null) && !isAcademyMember() && !(pk.isAcademyMember())) {
+                    final ClanWar clanWar = _clan.getWarWith(pkClan.getId());
+                    if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
+                        clanWar.onKill(pk, this);
                     }
                 }
-                // If player is Lucky shouldn't get penalized.
-                if (!isLucky() && !insidePvpZone) {
-                    calculateDeathExpPenalty(killer);
-                }
+            }
+            // If player is Lucky shouldn't get penalized.
+            if (!isLucky() && !insidePvpZone) {
+                calculateDeathExpPenalty(killer);
             }
         }
 
@@ -4436,23 +4451,21 @@ public final class Player extends Playable {
         }
     }
 
-    private void onDieDropItem(Creature killer) {
+    private Collection<Item> onDieDropItem(Creature killer) {
         if (Event.isParticipant(this) || (killer == null)) {
-            return;
+            return Collections.emptyList();
         }
 
         final Player pk = killer.getActingPlayer();
-        if ((getReputation() >= 0) && (pk != null) && (pk.getClan() != null) && (getClan() != null) && (pk.getClan().isAtWarWith(clanId)
-                // || _clan.isAtWarWith(((Player)killer).getClanId())
-        )) {
-            return;
+        if (getReputation() >= 0 && nonNull(pk) && falseIfNullOrElse(pk.getClan(), c -> c.isAtWarWith(_clan))) {
+            return Collections.emptyList();
         }
 
-        if ((!isInsideZone(ZoneType.PVP) || (pk == null)) && (!isGM() || Config.KARMA_DROP_GM)) {
+        if ( (!isInsideZone(ZoneType.PVP) || isNull(pk)) && (!isGM() || Config.KARMA_DROP_GM)) {
             boolean isKarmaDrop = false;
             int dropEquip = 0;
             int dropEquipWeapon = 0;
-            int dropItem = 0;
+            int rateDropItem = 0;
             int dropLimit = 0;
             double dropPercent = 0;
 
@@ -4462,20 +4475,21 @@ public final class Player extends Playable {
                 dropPercent = Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
                 dropEquip = Config.KARMA_RATE_DROP_EQUIP;
                 dropEquipWeapon = Config.KARMA_RATE_DROP_EQUIP_WEAPON;
-                dropItem = Config.KARMA_RATE_DROP_ITEM;
+                rateDropItem = Config.KARMA_RATE_DROP_ITEM;
                 dropLimit = Config.KARMA_DROP_LIMIT;
             } else if (GameUtils.isNpc(killer)) {
                 dropPercent = Config.PLAYER_RATE_DROP * (killer.isRaid() ? getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_RAID, 1) : getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_MOB, 1));
                 dropEquip = Config.PLAYER_RATE_DROP_EQUIP;
                 dropEquipWeapon = Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
-                dropItem = Config.PLAYER_RATE_DROP_ITEM;
+                rateDropItem = Config.PLAYER_RATE_DROP_ITEM;
                 dropLimit = Config.PLAYER_DROP_LIMIT;
             }
 
 
-            if ((dropPercent > 0) && (Rnd.get(100) < dropPercent)) {
+            if (Rnd.chance(dropPercent)) {
                 int dropCount = 0;
-                int itemDropPercent = 0;
+                int itemDropPercent;
+                List<Item> droppedItems =  new ArrayList<>(dropLimit);
 
                 for (Item itemDrop : inventory.getItems()) {
                     // Don't drop
@@ -4494,17 +4508,17 @@ public final class Player extends Playable {
                         itemDropPercent = itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
                         inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
                     } else {
-                        itemDropPercent = dropItem; // Item in inventory
+                        itemDropPercent = rateDropItem; // Item in inventory
                     }
 
                     // NOTE: Each time an item is dropped, the chance of another item being dropped gets lesser (dropCount * 2)
-                    if (Rnd.get(100) < itemDropPercent) {
+                    if (Rnd.chance(itemDropPercent)) {
                         dropItem("DieDrop", itemDrop, killer, true);
-
+                        droppedItems.add(itemDrop);
                         if (isKarmaDrop) {
-                            LOGGER.warn(getName() + " has karma and dropped id = " + itemDrop.getId() + ", count = " + itemDrop.getCount());
+                            LOGGER.warn("{} has karma and dropped {} {}", this, itemDrop.getCount(), itemDrop);
                         } else {
-                            LOGGER.warn(getName() + " dropped id = " + itemDrop.getId() + ", count = " + itemDrop.getCount());
+                            LOGGER.warn("{} dropped {} {}", this, itemDrop.getCount(), itemDrop);
                         }
 
                         if (++dropCount >= dropLimit) {
@@ -4514,6 +4528,8 @@ public final class Player extends Playable {
                 }
             }
         }
+
+        return Collections.emptyList();
     }
 
     public void onPlayeableKill(Playable killedPlayable) {
@@ -4649,10 +4665,10 @@ public final class Player extends Playable {
      * @param restorePercent
      */
     public void restoreExp(double restorePercent) {
-        if (model.getExpBeforeDeath() > 0) {
+        if (data.getExpBeforeDeath() > 0) {
             // Restore the specified % of lost experience.
-            getStats().addExp(Math.round(((model.getExpBeforeDeath() - getExp()) * restorePercent) / 100));
-            model.setExpBeforeDeath(0);
+            getStats().addExp(Math.round(((data.getExpBeforeDeath() - getExp()) * restorePercent) / 100));
+            data.setExpBeforeDeath(0);
         }
     }
 
@@ -4701,7 +4717,7 @@ public final class Player extends Playable {
             lostExp /= 4.0;
         }
 
-        model.setExpBeforeDeath(getExp());
+        data.setExpBeforeDeath(getExp());
         getStats().removeExp(lostExp);
     }
 
@@ -4791,7 +4807,7 @@ public final class Player extends Playable {
      * @return the Summon of the Player or null.
      */
     public Set<TamedBeast> getTrainedBeasts() {
-        return _tamedBeast;
+        return tamedBeast;
     }
 
     /**
@@ -4800,14 +4816,14 @@ public final class Player extends Playable {
      * @param tamedBeast
      */
     public void addTrainedBeast(TamedBeast tamedBeast) {
-        if (_tamedBeast == null) {
+        if (this.tamedBeast == null) {
             synchronized (this) {
-                if (_tamedBeast == null) {
-                    _tamedBeast = ConcurrentHashMap.newKeySet();
+                if (this.tamedBeast == null) {
+                    this.tamedBeast = ConcurrentHashMap.newKeySet();
                 }
             }
         }
-        _tamedBeast.add(tamedBeast);
+        this.tamedBeast.add(tamedBeast);
     }
 
     /**
@@ -5518,7 +5534,7 @@ public final class Player extends Playable {
     private boolean createDb() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(INSERT_CHARACTER)) {
-            statement.setString(1, model.getAccountName());
+            statement.setString(1, data.getAccountName());
             statement.setInt(2, getObjectId());
             statement.setString(3, getName());
             statement.setInt(4, getLevel());
@@ -5541,18 +5557,18 @@ public final class Player extends Playable {
             statement.setInt(21, _pkKills);
             statement.setInt(22, clanId);
             statement.setInt(23, getRace().ordinal());
-            statement.setInt(24, model.getClassId());
+            statement.setInt(24, data.getClassId());
             statement.setInt(25, hasDwarvenCraft() ? 1 : 0);
             statement.setString(26, getTitle());
             statement.setInt(27, appearance.getTitleColor());
             statement.setInt(28, isOnlineInt());
             statement.setInt(29, _clanPrivileges.getBitmask());
             statement.setBoolean(30, wantsPeace());
-            statement.setInt(31, model.getBaseClass());
+            statement.setInt(31, data.getBaseClass());
             statement.setInt(32, isNoble() ? 1 : 0);
             statement.setLong(33, 0);
             statement.setInt(34, PlayerStats.MIN_VITALITY_POINTS);
-            statement.setObject(35, model.getCreateDate());
+            statement.setObject(35, data.getCreateDate());
             statement.executeUpdate();
         } catch (Exception e) {
             LOGGER.error("Could not insert char data: " + e.getMessage(), e);
@@ -5790,7 +5806,7 @@ public final class Player extends Playable {
             statement.setInt(14, _lastLoc != null ? _lastLoc.getY() : getY());
             statement.setInt(15, _lastLoc != null ? _lastLoc.getZ() : getZ());
             statement.setLong(16, exp);
-            statement.setLong(17, model.getExpBeforeDeath());
+            statement.setLong(17, data.getExpBeforeDeath());
             statement.setLong(18, sp);
             statement.setInt(19, getReputation());
             statement.setInt(20, _fame);
@@ -5805,7 +5821,7 @@ public final class Player extends Playable {
             statement.setInt(29, isOnlineInt());
             statement.setInt(30, _clanPrivileges.getBitmask());
             statement.setBoolean(31, wantsPeace());
-            statement.setInt(32, model.getBaseClass());
+            statement.setInt(32, data.getBaseClass());
 
             long totalOnlineTime = _onlineTime;
             if (_onlineBeginTime > 0) {
@@ -7142,27 +7158,27 @@ public final class Player extends Playable {
 
     @Override
     public int getPledgeType() {
-        return model.getSubPledge();
+        return data.getSubPledge();
     }
 
     public void setPledgeType(int typeId) {
-        model.setSubPledge(typeId);
+        data.setSubPledge(typeId);
     }
 
     public int getApprentice() {
-        return model.getApprentice();
+        return data.getApprentice();
     }
 
     public void setApprentice(int apprenticeId) {
-        model.setApprentice(apprenticeId);
+        data.setApprentice(apprenticeId);
     }
 
     public int getSponsor() {
-        return model.getSponsor();
+        return data.getSponsor();
     }
 
     public void setSponsor(int sponsorId) {
-        model.setSponsor(sponsorId);
+        data.setSponsor(sponsorId);
     }
 
     public int getBookMarkSlot() {
@@ -7394,7 +7410,7 @@ public final class Player extends Playable {
     }
 
     public void setHero(boolean hero) {
-        if (hero && (model.getBaseClass() == _activeClass)) {
+        if (hero && (data.getBaseClass() == _activeClass)) {
             for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
                 addSkill(skill, false); // Don't persist hero skills into database
             }
@@ -7529,11 +7545,11 @@ public final class Player extends Playable {
     }
 
     public int getLvlJoinedAcademy() {
-        return model.getLevelJoinedAcademy();
+        return data.getLevelJoinedAcademy();
     }
 
     public void setLvlJoinedAcademy(int lvl) {
-        model.setLevelJoinedAcademy(lvl);
+        data.setLevelJoinedAcademy(lvl);
     }
 
     @Override
@@ -7554,7 +7570,7 @@ public final class Player extends Playable {
     }
 
     public boolean wantsPeace() {
-        return model.wantsPeace();
+        return data.wantsPeace();
     }
 
     public void sendSkillList() {
@@ -7781,11 +7797,11 @@ public final class Player extends Playable {
     }
 
     public int getBaseClass() {
-        return model.getBaseClass();
+        return data.getBaseClass();
     }
 
     public void setBaseClass(int baseClass) {
-        model.setBaseClass(baseClass);
+        data.setBaseClass(baseClass);
     }
 
     public int getActiveClass() {
@@ -7865,7 +7881,7 @@ public final class Player extends Playable {
             }
 
             if (classIndex == 0) {
-                setClassTemplate(model.getBaseClass());
+                setClassTemplate(data.getBaseClass());
             } else {
                 try {
                     setClassTemplate(getSubClasses().get(classIndex).getClassId());
@@ -7932,7 +7948,7 @@ public final class Player extends Playable {
             broadcastUserInfo();
 
             // Clear resurrect xp calculation
-            model.setExpBeforeDeath(0);
+            data.setExpBeforeDeath(0);
 
             shortcuts.restoreMe();
             sendPacket(new ShortCutInit());
@@ -8081,7 +8097,7 @@ public final class Player extends Playable {
     }
 
     public long getLastAccess() {
-        return model.getLastAccess();
+        return data.getLastAccess();
     }
 
     @Override
@@ -8101,6 +8117,7 @@ public final class Player extends Playable {
         if (instance != null) {
             instance.doRevive(this);
         }
+        lastDamages.clear();
     }
 
     @Override
@@ -8136,7 +8153,7 @@ public final class Player extends Playable {
                 return;
             }
 
-            final long restoreExp = Math.round(((model.getExpBeforeDeath() - getExp()) * _revivePower) / 100);
+            final long restoreExp = Math.round(((data.getExpBeforeDeath() - getExp()) * _revivePower) / 100);
             final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT);
             dlg.addPcName(reviver);
             dlg.addLong(restoreExp);
@@ -8235,11 +8252,11 @@ public final class Player extends Playable {
         }
 
         // Trained beast is lost after teleport
-        if (_tamedBeast != null) {
-            for (TamedBeast tamedBeast : _tamedBeast) {
+        if (tamedBeast != null) {
+            for (TamedBeast tamedBeast : tamedBeast) {
                 tamedBeast.deleteMe();
             }
-            _tamedBeast.clear();
+            tamedBeast.clear();
         }
 
         // Modify the position of the pet if necessary
@@ -8317,18 +8334,6 @@ public final class Player extends Playable {
 
     public void removeExpAndSp(long removeExp, long removeSp) {
         getStats().removeExpAndSp(removeExp, removeSp, true);
-    }
-
-    @Override
-    public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
-        super.reduceCurrentHp(value, attacker, skill, isDOT, directlyToHp, critical, reflect);
-
-        // notify the tamed beast of attacks
-        if (_tamedBeast != null) {
-            for (TamedBeast tamedBeast : _tamedBeast) {
-                tamedBeast.onOwnerGotAttacked(attacker);
-            }
-        }
     }
 
     public void broadcastSnoop(ChatType type, String name, String _text) {
@@ -8927,11 +8932,11 @@ public final class Player extends Playable {
     }
 
     public int getPowerGrade() {
-        return model.getPowerGrade();
+        return data.getPowerGrade();
     }
 
     public void setPowerGrade(int power) {
-        model.setPowerGrade(power);
+        data.setPowerGrade(power);
     }
 
     public int getChargedSouls() {
@@ -9666,7 +9671,7 @@ public final class Player extends Playable {
     }
 
     public int getBirthdays() {
-        return (int) ChronoUnit.YEARS.between(model.getCreateDate(), LocalDate.now());
+        return (int) ChronoUnit.YEARS.between(data.getCreateDate(), LocalDate.now());
     }
 
     public IntSet getFriendList() {
@@ -9850,10 +9855,8 @@ public final class Player extends Playable {
         _fallingDamageTask = ThreadPool.schedule(() ->
         {
             if ((_fallingDamage > 0) && !isInvul()) {
-                reduceCurrentHp(min(_fallingDamage, getCurrentHp() - 1), this, null, false, true, false, false);
-                final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE);
-                sm.addInt(_fallingDamage);
-                sendPacket(sm);
+                reduceCurrentHp(min(_fallingDamage, getCurrentHp() - 1), this, null, false, true, false, false, DamageType.FALL);
+                sendPacket(getSystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE).addInt(_fallingDamage));
             }
             _fallingDamage = 0;
             _fallingDamageTask = null;
@@ -9945,11 +9948,11 @@ public final class Player extends Playable {
     }
 
     public int getPcCafePoints() {
-        return model.getPcCafePoints();
+        return data.getPcCafePoints();
     }
 
     public void setPcCafePoints(int count) {
-        model.setPcCafePoints(min(count, Config.PC_CAFE_MAX_POINTS));
+        data.setPcCafePoints(min(count, Config.PC_CAFE_MAX_POINTS));
     }
 
     /**
@@ -10363,7 +10366,7 @@ public final class Player extends Playable {
 
     @Override
     public int getId() {
-        return getClassId().getId();
+        return objectId;
     }
 
     public boolean isPartyBanned() {
