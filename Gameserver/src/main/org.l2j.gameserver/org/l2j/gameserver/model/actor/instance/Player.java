@@ -4403,8 +4403,9 @@ public final class Player extends Playable {
             final int newRep = getReputation() - (getReputation() / 4);
             setReputation(newRep < -20 ? newRep : 0);
         }
-        AutoPlayEngine.getInstance().stopTasks(this);
-
+        if(autoPlaySettings.isActive()) {
+            AutoPlayEngine.getInstance().stopAutoPlay(this);
+        }
         return true;
     }
 
@@ -8288,6 +8289,9 @@ public final class Player extends Playable {
         // show movie if available
         if (_movieHolder != null) {
             sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
+        }
+        if(autoPlaySettings.isActive()) {
+            AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
     }
 

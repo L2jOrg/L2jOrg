@@ -10,6 +10,7 @@ import org.l2j.gameserver.handler.PlayerActionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
+import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -107,6 +108,8 @@ public final class AutoPlayEngine {
                 autoPlayTask = ThreadPool.scheduleAtFixedDelay(doAutoPlayTask, AUTO_PLAY_INTERVAL, AUTO_PLAY_INTERVAL);
             }
         }
+        player.getAutoPlaySettings().setActive(true);
+        player.sendPacket(new ExAutoPlaySettingResponse());
     }
 
     public void stopAutoPlay(Player player) {
@@ -118,6 +121,8 @@ public final class AutoPlayEngine {
             }
         }
         player.resetNextAutoShortcut();
+        player.getAutoPlaySettings().setActive(false);
+        player.sendPacket(new ExAutoPlaySettingResponse());
     }
 
     public void startAutoPotion(Player player) {
