@@ -248,7 +248,7 @@ public class PlayerData {
         return accessLevel;
     }
 
-    public int getTitleColr() {
+    public int getTitleColor() {
         return titleColr;
     }
 

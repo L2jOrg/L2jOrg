@@ -3,6 +3,7 @@ package org.l2j.gameserver.model.item.instance;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
@@ -71,7 +72,7 @@ public final class Item extends WorldObject {
     public static final int ADDED = 1;
     public static final int REMOVED = 3;
     public static final int MODIFIED = 2;
-    //@formatter:off
+
     public static final int[] DEFAULT_ENCHANT_OPTIONS = new int[]{0, 0, 0};
     private static final Logger LOGGER = LoggerFactory.getLogger(Item.class);
     private static final Logger LOG_ITEMS = LoggerFactory.getLogger("item");
@@ -206,6 +207,17 @@ public final class Item extends WorldObject {
      */
     public Item(int itemId) {
         this(IdFactory.getInstance().getNextId(), itemId);
+    }
+
+    public Item(ItemOnGroundData data) {
+        this(data.getObjectId(), data.getItemId());
+        setCount(data.getCount());
+        setEnchantLevel(data.getEnchantLevel());
+        setDropTime(data.getDropTime());
+        setProtected(getDropTime() == -1);
+        setSpawned(true);
+        setXYZ(data.getX(), data.getY(), data.getZ());
+
     }
 
     /**

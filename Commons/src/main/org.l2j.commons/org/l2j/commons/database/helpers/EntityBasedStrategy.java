@@ -32,8 +32,8 @@ public class EntityBasedStrategy implements MapParameterStrategy {
     @SuppressWarnings("unchecked")
     @Override
     public void setParameters(PreparedStatement statement, Object entity) throws SQLException {
-        var clazz = entity.getClass();
         try {
+            var clazz = entity.getClass();
             for (var parameterInfo : parametersInfo.entrySet()) {
                 var field = clazz.getDeclaredField(parameterInfo.getKey());
                 if(field.trySetAccessible()) {

@@ -316,17 +316,11 @@ public final class Config {
 
     public static boolean ALLOW_DISCARDITEM;
 
-    public static List<Integer> LIST_PROTECTED_ITEMS;
     public static int CLAN_VARIABLES_STORE_INTERVAL;
     public static boolean LAZY_ITEMS_UPDATE;
     public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
-    public static boolean DESTROY_DROPPED_PLAYER_ITEM;
-    public static boolean DESTROY_EQUIPABLE_PLAYER_ITEM;
     public static boolean DESTROY_ALL_ITEMS;
 
-    public static boolean EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD;
-    public static int SAVE_DROPPED_ITEM_INTERVAL;
-    public static boolean CLEAR_DROPPED_ITEM_TABLE;
     public static boolean AUTODELETE_INVALID_QUEST_DATA;
     public static boolean ENABLE_STORY_QUEST_BUFF_REWARD;
     public static boolean MULTIPLE_ITEM_DROP;
@@ -1215,21 +1209,11 @@ public final class Config {
         ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
         ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
         ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
-        final String[] split = General.getString("ListOfProtectedItems", "0").split(",");
-        LIST_PROTECTED_ITEMS = new ArrayList<>(split.length);
-        for (String id : split) {
-            LIST_PROTECTED_ITEMS.add(Integer.parseInt(id));
-        }
 
         CLAN_VARIABLES_STORE_INTERVAL = General.getInt("ClanVariablesStoreInterval", 15) * 60 * 1000;
         LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
         UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
-        DESTROY_DROPPED_PLAYER_ITEM = General.getBoolean("DestroyPlayerDroppedItem", false);
-        DESTROY_EQUIPABLE_PLAYER_ITEM = General.getBoolean("DestroyEquipableItem", false);
         DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
-        EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD = General.getBoolean("EmptyDroppedItemTableAfterLoad", false);
-        SAVE_DROPPED_ITEM_INTERVAL = General.getInt("SaveDroppedItemInterval", 60) * 60000;
-        CLEAR_DROPPED_ITEM_TABLE = General.getBoolean("ClearDroppedItemTable", false);
         AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
         ENABLE_STORY_QUEST_BUFF_REWARD = General.getBoolean("StoryQuestRewardBuff", true);
         MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);

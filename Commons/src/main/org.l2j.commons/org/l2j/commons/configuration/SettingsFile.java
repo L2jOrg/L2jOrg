@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -27,7 +28,6 @@ public final class SettingsFile extends Properties {
     private static final long serialVersionUID = -4599023842346938325L;
     private static final Logger logger = LoggerFactory.getLogger(SettingsFile.class);
     private static final String DEFAULT_DELIMITER = "[,;]";
-
 
     SettingsFile(String filePath) {
         try (var reader = newBufferedReader(Paths.get(filePath))) {
@@ -211,7 +211,11 @@ public final class SettingsFile extends Properties {
         return result;
     }
 
-    public Duration getDuration(String key, int defaultValue) {
-        return Duration.of(getInteger(key, defaultValue), ChronoUnit.SECONDS);
+    public Duration getDuration(String key, long defaultValue) {
+        return getDuration(key, ChronoUnit.SECONDS, defaultValue);
+    }
+
+    public Duration getDuration(String key, TemporalUnit unit, long defaultValue) {
+        return Duration.of(getLong(key, defaultValue), unit);
     }
 }

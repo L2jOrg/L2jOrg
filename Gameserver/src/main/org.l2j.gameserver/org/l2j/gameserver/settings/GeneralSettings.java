@@ -1,8 +1,12 @@
 package org.l2j.gameserver.settings;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
+
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 
 /**
  * @author JoeAlisson
@@ -24,6 +28,12 @@ public class GeneralSettings implements Settings {
     private boolean disableChatInJail;
     private int defaultAccessLevel;
     private int autoSavePlayerTime;
+    private Duration saveDroppedItemInterval;
+    private boolean clearDroppedItems;
+    private boolean destroyPlayerDroppedItem;
+    private boolean destroyEquipableItem;
+    private IntSet protectedItems;
+    private boolean clearDroppedItemsAfterLoad;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -37,6 +47,12 @@ public class GeneralSettings implements Settings {
         saveDroppedItems = settingsFile.getBoolean("SaveDroppedItem", false);
         autoDestroyItemTime = settingsFile.getInteger("AutoDestroyDroppedItemAfter", 600) * 1000;
         autoDestroyHerbTime = settingsFile.getInteger("AutoDestroyHerbTime", 120) * 1000;
+        saveDroppedItemInterval = settingsFile.getDuration("SaveDroppedItemInterval", ChronoUnit.MINUTES,60);
+        clearDroppedItems = settingsFile.getBoolean("ClearDroppedItemTable", false);
+        destroyPlayerDroppedItem = settingsFile.getBoolean("DestroyPlayerDroppedItem", false);
+        destroyEquipableItem = settingsFile.getBoolean("DestroyEquipableItem", false);
+        protectedItems = settingsFile.getIntSet("ListOfProtectedItems", ",");
+        clearDroppedItemsAfterLoad = settingsFile.getBoolean("EmptyDroppedItemTableAfterLoad", false);
 
         allowMail = settingsFile.getBoolean("AllowMail", true);
 
@@ -63,6 +79,30 @@ public class GeneralSettings implements Settings {
 
     public boolean saveDroppedItems() {
         return saveDroppedItems;
+    }
+
+    public Duration saveDroppedItemInterval() {
+        return saveDroppedItemInterval;
+    }
+
+    public boolean clearDroppedItems() {
+        return clearDroppedItems;
+    }
+
+    public boolean destroyPlayerDroppedItem() {
+        return destroyPlayerDroppedItem;
+    }
+
+    public boolean destroyEquipableItem() {
+        return destroyEquipableItem;
+    }
+
+    public boolean isProtectedItem(int itemId) {
+        return protectedItems.contains(itemId);
+    }
+
+    public boolean clearDroppedItemsAfterLoad() {
+        return clearDroppedItemsAfterLoad;
     }
 
     public int autoDestroyItemTime() {

@@ -190,13 +190,9 @@ public class GameServer {
         SiegeGuardManager.getInstance();
         QuestManager.getInstance().report();
 
-        // No fortresses TODO remove: at some point these instances will be loaded
-        // FortDataManager.getInstance().loadInstances();
-        // FortDataManager.getInstance().activateInstances();
-
         var generalSettings = getSettings(GeneralSettings.class);
         if (generalSettings.saveDroppedItems()) {
-            ItemsOnGroundManager.getInstance();
+            ItemsOnGroundManager.init();
         }
 
         if (generalSettings.autoDestroyItemTime() > 0 || generalSettings.autoDestroyHerbTime() > 0) {
