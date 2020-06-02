@@ -1187,15 +1187,13 @@ public final class Player extends Playable {
 
         player.setTitle(character.getTitle());
 
-
-        if (character.getTitleColr() != PlayerAppearance.DEFAULT_TITLE_COLOR) {
-            player.getAppearance().setTitleColor(character.getTitleColr());
+        if (character.getTitleColor() != PlayerAppearance.DEFAULT_TITLE_COLOR) {
+            player.getAppearance().setTitleColor(character.getTitleColor());
         }
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
         player.setClassIndex(0);
-
 
         if (restoreSubClassData(player)) {
             if (character.getClassId() != player.getBaseClass()) {
@@ -1212,7 +1210,7 @@ public final class Player extends Playable {
             // a possible restart-while-modifysubclass cheat has been attempted.
             // Switching to use base class
             player.setClassId(player.getBaseClass());
-            LOGGER.warn("Player " + player.getName() + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
+            LOGGER.warn("Player {} reverted to base class. Possibly has tried a relogin exploit while subclassing.", player);
         } else {
             player._activeClass = character.getClassId();
         }
@@ -1223,6 +1221,7 @@ public final class Player extends Playable {
         player.setBookMarkSlot(character.getBookMarkSlot());
         player.setLang(character.getLanguage());
 
+        // TODO this info should stay on GameClient, since it was already loaded
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement stmt = con.prepareStatement("SELECT charId, char_name FROM characters WHERE account_name=? AND charId<>?")) {
             // Retrieve the Player from the characters table of the database

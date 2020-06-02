@@ -518,8 +518,7 @@ public final class World {
         }
         try {
             return regions[(object.getX() >> SHIFT_BY) + OFFSET_X][(object.getY() >> SHIFT_BY) + OFFSET_Y];
-        } catch (ArrayIndexOutOfBoundsException e) // Precaution. Moved at invalid region?
-        {
+        } catch (ArrayIndexOutOfBoundsException e) { // Precaution. Moved at invalid region?
             disposeOutOfBoundsObject(object);
             return null;
         }
