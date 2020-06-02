@@ -53,7 +53,7 @@ public class RequestNewEnchantPushTwo extends ClientPacket {
         }
 
         // Lets prevent using same item twice
-        if (itemOne.getObjectId() == itemTwo.getObjectId()) {
+        if (itemOne.getObjectId() == itemTwo.getObjectId() && itemOne.getCount() < 2) {
             client.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
             return;
         }
