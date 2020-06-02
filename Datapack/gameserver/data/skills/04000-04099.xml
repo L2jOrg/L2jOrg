@@ -3150,7 +3150,7 @@
     <skill id="4092" name="Spirit Puma" action="A2">
         <!-- Increases Atk. Spd. +30%% and P. evasion +4. Decreases P. Def. -20%%. -->
         <icon initial="icon.skill0282"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" auto-use="BUFF">
             <magic-level initial="40"/>
             <reuse initial="8000"/>
             <effect-point initial="-100"/>
