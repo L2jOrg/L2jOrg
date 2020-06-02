@@ -146,8 +146,10 @@ public final class UseItem extends ClientPacket {
         } else {
             final EtcItem etcItem = item.getEtcItem();
             final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
-            if (isNull(handler) &&  nonNull(etcItem) && Util.isNotEmpty(etcItem.getHandlerName())) {
-                LOGGER.warn("Unmanaged Item handler: {} for Item Id: {}!", etcItem.getHandlerName(), itemId);
+            if (isNull(handler)) {
+                if(nonNull(etcItem) && Util.isNotEmpty(etcItem.getHandlerName())) {
+                    LOGGER.warn("Unmanaged Item handler: {} for Item Id: {}!", etcItem.getHandlerName(), itemId);
+                }
             } else if (handler.useItem(player, item, ctrlPressed)) {
                 // Item reuse time should be added if the item is successfully used.
                 // Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
