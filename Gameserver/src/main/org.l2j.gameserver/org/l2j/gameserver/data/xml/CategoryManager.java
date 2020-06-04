@@ -3,6 +3,8 @@ package org.l2j.gameserver.data.xml;
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.enums.CategoryType;
+import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -69,6 +71,24 @@ public final class CategoryManager extends GameXmlReader {
      * @return {@code true} if id is in category, {@code false} if id is not in category or category was not found
      */
     public boolean isInCategory(CategoryType type, int id) {
+        final IntSet category = getCategoryByType(type);
+        if (isNull(category)) {
+            LOGGER.warn("Can't find category type: {}", type);
+            return false;
+        }
+        return category.contains(id);
+    }
+
+
+    /**
+     * Checks if ID is in category.
+     *
+     * @param type The category type
+     * @param creature  The creature to be checked
+     * @return {@code true} if id is in category, {@code false} if id is not in category or category was not found
+     */
+    public boolean isInCategory(CategoryType type, Creature creature) {
+        int id = creature instanceof Player player ? player.getClassId().getId() : creature.getId();
         final IntSet category = getCategoryByType(type);
         if (isNull(category)) {
             LOGGER.warn("Can't find category type: {}", type);
