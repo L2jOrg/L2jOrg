@@ -133,7 +133,7 @@ public final class HomeBoard implements IParseBoardHandler {
             }
         }
         String returnHtml = null;
-        returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/Scheme/main.html");
+        returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer.html");
         returnHtml = returnHtml.replace("%schemes%", sb.toString());
         returnHtml.replace("%max_schemes%", Integer.toString(Config.BUFFER_MAX_SCHEMES));
         CommunityBoardHandler.separateAndSend(returnHtml, player);
@@ -353,7 +353,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 if (canCreateScheme)
                 {
                     SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayList<>());
-                    // showBuffsWindow(player);
+                   // showBuffsWindow(activeChar);
                 }
             }
             catch (Exception e)
@@ -361,7 +361,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 activeChar.sendMessage(e.getMessage());
             }
 
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
         }
         else if (command.startsWith("_bbseditscheme"))
@@ -376,7 +376,7 @@ public final class HomeBoard implements IParseBoardHandler {
             final String schemeName = st.nextToken();
             final int page = Integer.parseInt(st.nextToken());
 
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/buffer/scheme.html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme");
 
             final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName);
             returnHtml = returnHtml.replace("%schemename%", schemeName);
@@ -509,6 +509,7 @@ public final class HomeBoard implements IParseBoardHandler {
                         sb.append("<td align=center><button value=\"Edit\" action=\"bypass _bbseditscheme;Buffs;" + scheme.getKey() + ";1\" width=64 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
                         sb.append("<td align=center><button value=\"X\" action=\"bypass _bbsdeletescheme;" + scheme.getKey() + ";1\" width=32 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
                     }
+
                 }
                 returnHtml = returnHtml.replace("%schemes%", sb.toString());
                 returnHtml = returnHtml.replace("%max_schemes%", Integer.toString(Config.BUFFER_MAX_SCHEMES));
