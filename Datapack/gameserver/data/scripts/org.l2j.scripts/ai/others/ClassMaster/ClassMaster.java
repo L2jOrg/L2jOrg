@@ -644,12 +644,12 @@ public final class ClassMaster extends AbstractNpcAI
 		{
 			return;
 		}
-		
+
 		//@formatter:off
-		if ((player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20)) ||
-			((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) ||
-			(player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76)) /*||
-			(player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85))*/)
+
+		if ((CategoryManager.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()) && (player.getLevel() >= 20)) ||
+				((CategoryManager.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()) || CategoryManager.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId())) && (player.getLevel() >= 40)) ||
+				(CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()) && (player.getLevel() >= 76)))
 		//@formatter:on
 		{
 			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET); // mark id was 1001 - used 2 for quest text

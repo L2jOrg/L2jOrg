@@ -18,6 +18,7 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.util.GameUtils;
@@ -182,8 +183,9 @@ public class PlayerStats extends PlayableStats {
             return false;
         }
 
-        Player player = getCreature();
 
+
+        Player player = getCreature();
         final boolean levelIncreased = super.addLevel(value);
         if (levelIncreased) {
             player.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
