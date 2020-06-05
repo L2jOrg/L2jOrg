@@ -355,28 +355,27 @@ public final class HomeBoard implements IParseBoardHandler {
                     SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayList<>());
                    // showBuffsWindow(activeChar);
                 }
+
+                returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1, returnHtml);
             }
             catch (Exception e)
             {
                 activeChar.sendMessage(e.getMessage());
             }
-
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
-
         }
         else if (command.startsWith("_bbseditscheme"))
         {
             // Simple hack to use createscheme bypass with a space.
-            command = command.replace("_bbseditscheme ", "_bbseditscheme;");
+            // command = command.replace("_bbseditscheme ", "_bbseditscheme;");
 
-            final StringTokenizer st = new StringTokenizer(command, ";");
+            final StringTokenizer st = new StringTokenizer(command, " ");
             final String currentCommand = st.nextToken();
 
             final String groupType = st.nextToken();
             final String schemeName = st.nextToken();
             final int page = Integer.parseInt(st.nextToken());
 
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
             final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName);
             returnHtml = returnHtml.replace("%schemename%", schemeName);
@@ -386,7 +385,7 @@ public final class HomeBoard implements IParseBoardHandler {
         }
         else if (command.startsWith("_bbsskill"))
         {
-            final StringTokenizer st = new StringTokenizer(command, ";");
+            final StringTokenizer st = new StringTokenizer(command, " ");
             final String currentCommand = st.nextToken();
 
             final String groupType = st.nextToken();
@@ -503,11 +502,11 @@ public final class HomeBoard implements IParseBoardHandler {
                     for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet())
                     {
                         final int cost = getFee(scheme.getValue());
-                        sb.append("<tr><td align=center><button value=\"" + scheme.getKey() + "\" action=\"bypass _bbsgivebuffs;" + scheme.getKey() + ";" + cost + "\" width=128 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-                        sb.append("<td align=center><button value=\"Pet\" action=\"bypass _bbsgivebuffs;" + scheme.getKey() + ";" + cost + ";pet\" width=92 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-                        sb.append("<td align=center><button value=\"Summon\" action=\"bypass _bbsgivebuffs;" + scheme.getKey() + ";" + cost + ";summon\" width=92 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-                        sb.append("<td align=center><button value=\"Edit\" action=\"bypass _bbseditscheme;Buffs;" + scheme.getKey() + ";1\" width=64 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-                        sb.append("<td align=center><button value=\"X\" action=\"bypass _bbsdeletescheme;" + scheme.getKey() + ";1\" width=32 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
+                        sb.append("<tr><td align=center><button value=\"" + scheme.getKey() + "\" action=\"bypass _bbsgivebuffs " + scheme.getKey() + ";" + cost + "\" width=128 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+                        sb.append("<td align=center><button value=\"Pet\" action=\"bypass _bbsgivebuffs " + scheme.getKey() + ";" + cost + ";pet\" width=92 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+                        sb.append("<td align=center><button value=\"Summon\" action=\"bypass _bbsgivebuffs " + scheme.getKey() + ";" + cost + ";summon\" width=92 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+                        sb.append("<td align=center><button value=\"Edit\" action=\"bypass _bbseditscheme Buffs;" + scheme.getKey() + ";1\" width=64 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+                        sb.append("<td align=center><button value=\"X\" action=\"bypass _bbsdeletescheme " + scheme.getKey() + ";1\" width=32 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
                     }
 
                 }
@@ -533,7 +532,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
     private String showEditSchemeWindow(Player player, String groupType, String schemeName, int page, String returnHtml)
     {
-        returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/buffer/scheme.html");
+        returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
         final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
@@ -590,7 +589,7 @@ public final class HomeBoard implements IParseBoardHandler {
             }
             else
             {
-                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect;" + groupType + ";" + schemeName + ";" + skillId + ";" + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
+                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
             }
 
             column++;
@@ -643,7 +642,7 @@ public final class HomeBoard implements IParseBoardHandler {
             }
             else
             {
-                sb.append("<td width=65><a action=\"bypass _bbseditschemes;" + type + ";" + schemeName + ";1\">" + type + "</a></td>");
+                sb.append("<td width=65><a action=\"bypass _bbseditscheme " + type + " " + schemeName + " 1\">" + type + "</a></td>");
             }
 
             count++;
