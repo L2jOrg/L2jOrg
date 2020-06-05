@@ -108,6 +108,43 @@
                 </optionCategory>
             </optionGroup>
         </variation>
+        <!-- Shining Life Stone -->
+        <variation mineralId="90016">
+            <optionGroup weaponType="warrior" order="0">
+                <optionCategory chance="100.0">
+                    <optionRange from="23975" to="23999" chance="1.37" />
+                </optionCategory>
+            </optionGroup>
+            <optionGroup weaponType="warrior" order="1">
+                <optionCategory chance="55.0">
+                    <optionRange from="24000" to="24065" chance="5.89" />
+                </optionCategory>
+                <optionCategory chance="35.0">
+                    <optionRange from="24521" to="24599" chance="0.94" />
+                </optionCategory>
+                <optionCategory chance="10.0">
+                    <optionRange from="24700" to="24702" chance="1.73" />
+                    <optionRange from="24600" to="24699" chance="1.72" />
+                </optionCategory>
+            </optionGroup>
+            <optionGroup weaponType="mage" order="0">
+                <optionCategory chance="100.0">
+                    <optionRange from="23975" to="23999" chance="1.37" />
+                </optionCategory>
+            </optionGroup>
+            <optionGroup weaponType="mage" order="1">
+                <optionCategory chance="55.0">
+                    <optionRange from="24000" to="24065" chance="5.88" />
+                </optionCategory>
+                <optionCategory chance="35.0">
+                    <optionRange from="24521" to="24599" chance="0.94" />
+                </optionCategory>
+                <optionCategory chance="10.0">
+                    <optionRange from="24700" to="24702" chance="1.73" />
+                    <optionRange from="24600" to="24699" chance="1.72" />
+                </optionCategory>
+            </optionGroup>
+        </variation>
     </variations>
     <itemGroups>
         <!-- Weapon D-Grade -->
