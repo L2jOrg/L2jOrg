@@ -60,5 +60,4 @@ public class Die extends ServerPacket {
         writeInt(0);
         writeByte(0);
     }
-
 }

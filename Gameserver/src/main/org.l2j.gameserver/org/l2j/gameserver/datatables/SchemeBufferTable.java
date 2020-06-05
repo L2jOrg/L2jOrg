@@ -141,6 +141,7 @@ public class SchemeBufferTable {
         }
 
         _schemesTable.get(playerId).put(schemeName, list);
+        saveSchemes();
     }
 
     /**

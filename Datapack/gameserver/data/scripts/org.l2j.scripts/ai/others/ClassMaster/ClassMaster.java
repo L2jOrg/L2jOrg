@@ -644,7 +644,7 @@ public final class ClassMaster extends AbstractNpcAI
 		{
 			return;
 		}
-		
+
 		//@formatter:off
 		if ((player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20)) ||
 			((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) ||

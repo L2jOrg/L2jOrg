@@ -1,5 +1,4 @@
 package org.l2j.gameserver.network.serverpackets;
-
 import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.DamageInfo.NpcDamage;
 import org.l2j.gameserver.model.DamageInfo.PlayerDamage;
@@ -71,3 +70,4 @@ public class ExDieInfo extends ServerPacket {
         writeInt(0);
     }
 }
+

@@ -9,6 +9,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerTransform;
 import org.l2j.gameserver.model.holders.AdditionalItemHolder;
@@ -21,6 +22,8 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -29,6 +32,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author UnAfraid
  */
 public final class Transform implements IIdentifiable {
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Transform.class);
     private final int _id;
     private final int _displayId;
     private final TransformType _type;
@@ -310,6 +314,7 @@ public final class Transform implements IIdentifiable {
 
                 player.getEffectList().stopEffects(AbnormalType.TRANSFORM);
                 player.getEffectList().stopEffects(AbnormalType.CHANGEBODY);
+                player.getEffectList().stopEffects(AbnormalType.SPECIAL_RIDE);
 
                 if (hasTransformSkills) {
                     player.sendSkillList();

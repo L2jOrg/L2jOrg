@@ -1,0 +1,94 @@
+<html noscrollbar>
+<title>Community Board</title>
+<body>
+	<br>
+	<center>
+	<table width="770">
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>
+							%navigation%
+							<br>
+						</td>
+						<td>
+							<table width="510" height="490" background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+								<tr><td height=4></td></tr>
+								<tr>
+									<td width=5></td>
+									<td>
+										<!--- buffer title --->
+										<center>
+										<table width=510>
+											<tr><td height=20></td></tr>
+											<tr>
+												<td align=center>
+													<font name="hs16">Create personal scheme</font>
+												</td>
+											</tr>
+										</table>
+										</center>
+										<!--- buffer title --->
+										<br>
+										<!--- buffer - content --->
+										<center>
+										<table width=510 height=150>
+											<tr>
+												<td>
+													<table background="L2EssenceCommunity.added_buffs_bg" width=547 height=140>
+														<tr><td height=20></td></tr>
+														<tr>
+															<td align=center>
+																<font name="hs12" color="LEVEL">Insert scheme name:</font>
+															</td>
+														</tr>
+														<tr>
+															<td align=center>
+																<font name="hs12" color="808080">Maximum length: 10. Only english caracters. Space (" ") is allowed.</font>
+															</td>
+														</tr>
+														<tr>
+															<td align=center>
+																<edit width=250 var="editName">
+															</td>
+														</tr>
+														<tr><td height=20></td></tr>
+													</table>
+												</td>
+											</tr>
+											<tr><td height=16></td></tr>
+										</table>
+
+										<table width=510>
+											<tr><td height=10></td></tr>
+											<tr>
+												<td align=center>
+													<button value="Create scheme" action="bypass _bbscreatescheme $editName" width=211 height=33 back="L2EssenceCommunity.create_scheme_btn_over" fore="L2EssenceCommunity.create_scheme_btn">
+												</td>
+											</tr>
+											<tr><td height=10></td></tr>
+										</table>
+										<table width=510>
+											<tr><td height=20></td></tr>
+											<tr>
+												<td align=center>
+													<button value="Back" action="bypass _bbshome" width=90 height=25 back="L2EssenceCommunity.btn_small_over" fore="L2EssenceCommunity.btn_small">
+												</td>
+											</tr>
+											<tr><td height=10></td></tr>
+										</table>
+										</center>
+										<!--- buffer - content  --->
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</center>
+</body>
+</html>

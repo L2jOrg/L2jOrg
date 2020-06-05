@@ -4043,7 +4043,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public final boolean isInCategory(CategoryType type) {
-        return CategoryManager.getInstance().isInCategory(type, getId());
+        return CategoryManager.getInstance().isInCategory(type, this);
     }
 
     public final boolean isInOneOfCategory(CategoryType... types) {
@@ -4052,7 +4052,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 return true;
             }
         }
-
         return false;
     }
 

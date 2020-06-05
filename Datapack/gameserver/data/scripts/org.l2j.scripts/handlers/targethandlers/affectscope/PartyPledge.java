@@ -2,6 +2,7 @@ package handlers.targethandlers.affectscope;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.handler.AffectObjectHandler;
+import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.WorldObject;
@@ -26,48 +27,59 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
 public class PartyPledge implements IAffectScopeHandler {
 
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
-		final var affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
+	{
+		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
 		final int affectLimit = skill.getAffectLimit();
-		
-		if (isPlayable(target)) {
-			final var playable = (Playable) target;
+
+		if (target.isTargetable())
+		{
+			final Playable playable = (Playable) target;
 			final Player player = playable.getActingPlayer();
 			final Party party = player.getParty();
-			
+			final int clanId = player.getClanId();
+
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
-			final Predicate<Playable> filter = plbl -> {
-
-				if ((affectLimit > 0) && (affected.get() >= affectLimit)) {
-					return false;
-				}
-				
-				final Player p = plbl.getActingPlayer();
-				if (isNull(p) || p.isDead()) {
+			final Predicate<Playable> filter = c ->
+			{
+				if ((affectLimit > 0) && (affected.get() >= affectLimit))
+				{
 					return false;
 				}
 
-				if (isNull(p.getParty()) || ( p.getClanId() != player.getClanId() && party != player.getParty())) {
+				final Player p = c.getActingPlayer();
+				if ((p == null) || p.isDead())
+				{
 					return false;
 				}
 
-				if (nonNull(affectObject) && !affectObject.checkAffectedObject(activeChar, p)) {
+				if ((p != player) && (p.getClanId() != clanId) && ((party == null) || (party != p.getParty())))
+				{
 					return false;
 				}
-				
+
+				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, p))
+				{
+					return false;
+				}
+
 				affected.incrementAndGet();
 				return true;
 			};
-			
+
 			// Add object of origin since its skipped in the forEachVisibleObjectInRange method.
-			if (filter.test(playable)) {
+			if (filter.test(playable))
+			{
 				action.accept(playable);
 			}
 
-			World.getInstance().forEachVisibleObjectInRange(playable, Playable.class, affectRange, c -> {
-				if (filter.test(c)) {
+			// Check and add targets.
+			World.getInstance().forEachVisibleObjectInRange(playable, Playable.class, affectRange, c ->
+			{
+				if (filter.test(c))
+				{
 					action.accept(c);
 				}
 			});

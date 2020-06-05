@@ -55,7 +55,7 @@ public class RequestNewEnchantTry extends ClientPacket {
         }
 
         // Lets prevent using same item twice
-        if (itemOne.getObjectId() == itemTwo.getObjectId()) {
+        if (itemOne.getObjectId() == itemTwo.getObjectId() && itemOne.getCount() < 2) {
             client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
             activeChar.removeRequest(request.getClass());
             return;
