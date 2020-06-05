@@ -10363,8 +10363,7 @@ public final class Player extends Playable {
 
     @Override
     public int getId() {
-        //return objectId;
-        return getClassId().getId();
+        return objectId;
     }
 
     public boolean isPartyBanned() {
