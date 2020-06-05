@@ -516,6 +516,32 @@
             <item id="91890"/>
                <item id="91905"/>
         </itemGroup>
+        <itemGroup id="6">
+            <item id="70749" />  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
+            <item id="70748" />  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
+            <item id="70747" />  <!-- Chic Silver Chapeau <STR+1 INT+1> -->
+            <item id="70734" />  <!-- First Mate Hat <CON+1 MEN+1> -->
+            <item id="70733" />  <!-- First Mate Hat <DEX+1 WIT+1> -->
+            <item id="70732" />  <!-- First Mate Hat <STR+1 INT+1> -->
+            <item id="70740" />  <!-- Gold-rimmed Glasses <CON+1 MEN+1> -->
+            <item id="70739" />  <!-- Gold-rimmed Glasses <DEX+1 WIT+1> -->
+            <item id="70738" />  <!-- Gold-rimmed Glasses <STR+1 INT+1> -->
+            <item id="70743" />  <!-- Horn-rimmed Glasses <CON+1 MEN+1> -->
+            <item id="70742" />  <!-- Horn-rimmed Glasses <DEX+1 WIT+1> -->
+            <item id="70741" />  <!-- Horn-rimmed Glasses <STR+1 INT+1> -->
+            <item id="70737" />  <!-- Refined Romantic Chapeau: Blue <CON+1 MEN+1> -->
+            <item id="70736" />  <!-- Refined Romantic Chapeau: Blue <DEX+1 WIT+1> -->
+            <item id="70735" />  <!-- Refined Romantic Chapeau: Blue <STR+1 INT+1> -->
+            <item id="70746" />  <!-- Stylish Straw Hat <CON+1 MEN+1> -->
+            <item id="70745" />  <!-- Stylish Straw Hat <DEX+1 WIT+1> -->
+            <item id="70744" />  <!-- Stylish Straw Hat <STR+1 INT+1> -->
+            <item id="70731" />  <!-- Warrior's Helmet <CON+1 MEN+1> -->
+            <item id="70730" />  <!-- Warrior's Helmet <DEX+1 WIT+1> -->
+            <item id="70729" />  <!-- Warrior's Helmet <STR+1 INT+1> -->
+            <item id="70728" />  <!-- White Uniform Hat <CON+1 MEN+1> -->
+            <item id="70727" />  <!-- White Uniform Hat <DEX+1 WIT+1> -->
+            <item id="70726" />  <!-- White Uniform Hat <STR+1 INT+1> -->
+        </itemGroup>
     </itemGroups>
     <fees>
         <!-- Gemstone (D-grade) Weapon D-grade -->
@@ -628,6 +654,11 @@
         <!-- Gemstone (S-grade) Weapon S-grade-->
         <fee itemGroup="5" itemId="2134" itemCount="200" cancelFee="720000">
             <mineral id="90016"/> <!-- Shining Life Stone-->
+        </fee>
+
+        <!-- Gemstone (C-grade) Hair accessory-->
+        <fee itemGroup="6" itemId="2131" itemCount="300" cancelFee="240000">
+            <mineral id="70755"/> <!-- Eva life stone-->
         </fee>
     </fees>
 </list>
