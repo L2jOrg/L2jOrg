@@ -777,14 +777,20 @@
 
 	<item id="49595" name="Scroll: 2,000 SP - Exchangeable" type="SCROLL" icon="icon.etc_sp_scroll1_i00">
 	<!-- Scroll that replenishes 2,000 SP. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="40143" value="-1"/>  <!-- Scroll: 50 SP -->
+		</skill-reducer>
 	</item>
 
 	<item id="49596" name="Scroll: 10,000 SP - Exchangeable" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- Scroll that replenishes 10,000 SP. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="40143" level="2" value="-1"/>  <!-- Scroll: 50 SP -->
+		</skill-reducer>
 	</item>
 
 	<item id="49597" name="Golden Boot" type="NONE" icon="icon.bm_gold_shose">
