@@ -1548,7 +1548,13 @@
                     <value level="15">20.0</value>
                 </power>
             </stat-modify>
-            <base-stat type="CON MEN">
+            <base-stat type="CON">
+                <power>
+                    <value level="14">1.0</value>
+                    <value level="15">2.0</value>
+                </power>
+            </base-stat>
+			<base-stat type="MEN">
                 <power>
                     <value level="14">1.0</value>
                     <value level="15">2.0</value>

@@ -550,8 +550,8 @@
 			<item id="70882" /> <!-- Aden Cloak - Legendary -->
 			<item id="70883" /> <!-- Elmore Cloak - Legendary -->
 			<item id="70884" /> <!-- Ferios Cloak - Legendary -->
-			</itemGroup>
-    </itemGroups>
+		</itemGroup>
+	</itemGroups>
     <fees>
         <!-- Gemstone (D-grade) Weapon D-grade -->
         <fee itemGroup="1" itemId="2130" itemCount="100" cancelFee="80000">
@@ -651,7 +651,7 @@
 		<!-- The cloak must be modified by +10, to insert the LS -->
 		<!-- You cannot undo an enchantment, but you can enchant anew. -->
 		<!-- Gemstone (B-grade) Hair accessory-->
-        <fee itemGroup="7" itemId="2132" itemCount="5">
+        <fee itemGroup="7" itemId="2132" itemCount="5" cancelFee="1">
             <mineral id="70889"/> <!-- Life Stone - Ancient Kingdom-->
         </fee>
     </fees>
