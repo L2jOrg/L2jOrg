@@ -1598,13 +1598,20 @@
                     </power>
                 </trait>
                 <trait type="SHOCK">
-                    <power initial="20">
-                        <value level="2">30</value>
+                    <power>
+                        <value level="8">3</value>
+                        <value level="10">5</value>
+                        <value level="13">10</value>
+                        <value level="14">15</value>
+                        <value level="15">20</value>
                     </power>
                 </trait>               
                 <trait type="DERANGEMENT">
-                    <power initial="20">
-                        <value level="2">30</value>
+                    <power>
+                        <value level="12">5</value>
+                        <value level="13">10</value>
+                        <value level="14">15</value>
+                        <value level="15">20</value>
                     </power>
                 </trait>
             </attack-trait>
@@ -1620,29 +1627,38 @@
                     </power>
                 </trait>
                 <trait type="SHOCK">
-                    <power initial="20">
-                        <value level="2">30</value>
+                    <power>
+                        <value level="8">3</value>
+                        <value level="10">5</value>
+                        <value level="13">10</value>
+                        <value level="14">15</value>
+                        <value level="15">20</value>
                     </power>
-                </trait>                
+                </trait>               
                 <trait type="DERANGEMENT">
-                    <power initial="20">
-                        <value level="2">30</value>
+                    <power>
+                        <value level="12">5</value>
+                        <value level="13">10</value>
+                        <value level="14">15</value>
+                        <value level="15">20</value>
                     </power>
                 </trait>
             </defence-trait>
-            <vampiric-attack chance="80">
-                <power initial="4.0"/>
+            <vampiric-attack chance="70">
+                <power>                   
+                    <value level="14">8.0</value>
+                    <value level="15">8.0</value>
+                </power>
             </vampiric-attack>
             <stat-modify mode="PER" stat="HEAL_RECEIVE">
-                <power initial="10.0">
-                    <value level="2">15.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="DARK_RES">
                 <power>
-                    <value level="2">15.0</value>
+                    <value level="9">1.0</value>
+                    <value level="12">4.0</value>
+                    <value level="13">6.0</value>
+                    <value level="14">10.0</value>
+                    <value level="15">15.0</value>
                 </power>
-            </stat-modify>
+            </stat-modify>            
         </effects>
     </skill>
     <skill id="3560" name="Orfen's Earring" max-level="4">
