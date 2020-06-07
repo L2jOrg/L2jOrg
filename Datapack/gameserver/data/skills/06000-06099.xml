@@ -1476,7 +1476,7 @@
         <abnormal type="PARALYZE" visual="PARALYZE">
             <level initial="1"/>
             <time initial="5"/>
-            <chance initial="-1"/>
+            <chance initial="100"/>
         </abnormal>
         <effects>
             <block-all-actions/>

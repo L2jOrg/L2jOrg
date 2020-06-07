@@ -4352,7 +4352,7 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016 35045</allowed-skills>
+                <allowed-skills>461 35016 35045</allowed-skills>
             </block-all-actions>
         </effects>
     </skill>
@@ -5699,7 +5699,7 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016 35045</allowed-skills>
+                <allowed-skills>461 35016 35045</allowed-skills>
             </block-all-actions>
             <defence-trait>
                 <trait type="PARALYZE">
@@ -6114,9 +6114,7 @@
                 <value level="45">-180</value>
             </effect-point>
             <effect-range initial="400"/>
-            <hit-time initial="1360">
-                <value level="21">1409</value>
-            </hit-time>
+            <hit-time initial="1800"/>             
         </attributes>
         <consume>
             <mana initial="35">
@@ -6226,7 +6224,7 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016 35045</allowed-skills>
+                <allowed-skills>461 35016 35045</allowed-skills>
             </block-all-actions>
         </effects>
     </skill>

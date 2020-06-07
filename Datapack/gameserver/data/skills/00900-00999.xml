@@ -45,7 +45,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <dispel-by-category category="DEBUFF" max="3">
+            <dispel-by-category category="DEBUFF" max="5">
                 <power initial="80.0"/>
             </dispel-by-category>
             <stat-modify mode="PER" stat="HEAL_RECEIVE">
