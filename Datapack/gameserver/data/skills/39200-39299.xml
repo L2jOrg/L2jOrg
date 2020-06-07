@@ -956,16 +956,69 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="39253" name="Chef's Fish Stew - Victory" action="A1">
+    <skill id="39253" name="Chef's Fish Stew - Victory" action="A2">
         <!-- For 20 minutes, HP Recovery Bonus +20%, P./M. Accuracy +4, P./M. Evasion +4, PvE Damage +15%, Atk. Spd./Casting Spd. +10%. P./M. Critical Rate +15%, P./M. Critical Damage +15% with the help of a great spirit. Effect remains even after death. -->
         <icon initial="icon.fish_stew_residence_cha"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="90183"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <abnormal type="MULTI_BUFF">
+            <level initial="1"/>
+            <time initial="600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify stat="EVASION_RATE">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_EVASION_RATE">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39254" name="Chef's Fish Stew - Fire" action="A1">
         <!-- For 20 minutes, Max HP +10%, HP Recovery Bonus +10%, P./M. Def. +10%, Atk. Spd./Casting Spd. +10%, PvE Damage +15%, P./M. Critical Rate +25%, Debuff Resistance +10% with the help of a great spirit. Effect remains even after death. -->
