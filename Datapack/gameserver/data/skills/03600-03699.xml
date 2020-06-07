@@ -94,7 +94,7 @@
         </attributes>
         <target/>
         <effects>
-            <vampiric-attack chance="80">
+            <vampiric-attack chance="70">
                 <power initial="22.0">
                     <value level="2">24.0</value>
                     <value level="3">26.0</value>
@@ -107,8 +107,21 @@
                     <value level="10">50.0</value>
                 </power>
             </vampiric-attack>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-                <power initial="220.0">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="420.0">
+                    <value level="2">442.0</value>
+                    <value level="3">466.0</value>
+                    <value level="4">492.0</value>
+                    <value level="5">522.0</value>
+                    <value level="6">554.0</value>
+                    <value level="7">589.0</value>
+                    <value level="8">628.0</value>
+                    <value level="9">671.0</value>
+                    <value level="10">718.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="600.0">
                     <value level="2">720.0</value>
                     <value level="3">864.0</value>
                     <value level="4">1036.0</value>
@@ -117,30 +130,33 @@
                     <value level="7">1791.0</value>
                     <value level="8">2149.0</value>
                     <value level="9">2579.0</value>
-                    <value level="10">518.0</value>
-                    <value level="10">3095.0</value>
+					<value level="10">3095.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="210.0">
                     <value level="2">220.0</value>
-                    <value level="2">720.0</value>
                     <value level="3">231.0</value>
-                    <value level="3">864.0</value>
                     <value level="4">243.0</value>
-                    <value level="4">1036.0</value>
                     <value level="5">255.0</value>
-                    <value level="5">1244.0</value>
                     <value level="6">268.0</value>
-                    <value level="6">1492.0</value>
                     <value level="7">281.0</value>
-                    <value level="7">1791.0</value>
                     <value level="8">295.0</value>
-                    <value level="8">2149.0</value>
                     <value level="9">310.0</value>
-                    <value level="9">2579.0</value>
                     <value level="10">325.0</value>
-                    <value level="10">3095.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="600.0">
+                    <value level="2">720.0</value>
+                    <value level="3">864.0</value>
+                    <value level="4">1036.0</value>
+                    <value level="5">1244.0</value>
+                    <value level="6">1492.0</value>
+                    <value level="7">1791.0</value>
+                    <value level="8">2149.0</value>
+                    <value level="9">2579.0</value>
+                   <value level="10">3095.0</value>
                 </power>
             </stat-modify>
             <speed>
@@ -159,44 +175,52 @@
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="206.0">
                     <value level="2">212.0</value>
-                    <value level="2">530.0</value>
                     <value level="3">218.0</value>
-                    <value level="3">546.0</value>
                     <value level="4">225.0</value>
-                    <value level="4">562.0</value>
                     <value level="5">231.0</value>
-                    <value level="5">579.0</value>
                     <value level="6">238.0</value>
-                    <value level="6">597.0</value>
                     <value level="7">245.0</value>
-                    <value level="7">614.0</value>
                     <value level="8">253.0</value>
-                    <value level="8">633.0</value>
                     <value level="9">260.0</value>
-                    <value level="9">652.0</value>
                     <value level="10">268.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="515.0">
+                    <value level="2">530.0</value>
+                    <value level="3">546.0</value>
+                    <value level="4">562.0</value>
+                    <value level="5">579.0</value>
+                    <value level="6">597.0</value>
+                    <value level="7">614.0</value>
+                    <value level="8">633.0</value>
+                    <value level="9">652.0</value>
                     <value level="10">671.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="204.0">
                     <value level="2">208.0</value>
-                    <value level="2">520.0</value>
                     <value level="3">212.0</value>
-                    <value level="3">530.0</value>
                     <value level="4">216.0</value>
-                    <value level="4">541.0</value>
                     <value level="5">220.0</value>
-                    <value level="5">552.0</value>
                     <value level="6">225.0</value>
-                    <value level="6">563.0</value>
                     <value level="7">229.0</value>
-                    <value level="7">574.0</value>
                     <value level="8">234.0</value>
-                    <value level="8">585.0</value>
                     <value level="9">239.0</value>
-                    <value level="9">597.0</value>
                     <value level="10">243.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="510.0">
+                    <value level="2">520.0</value>
+                    <value level="3">530.0</value>
+                    <value level="4">541.0</value>
+                    <value level="5">552.0</value>
+                    <value level="6">563.0</value>
+                    <value level="7">574.0</value>
+                    <value level="8">585.0</value>
+                    <value level="9">597.0</value>
                     <value level="10">609.0</value>
                 </power>
             </stat-modify>
@@ -213,7 +237,20 @@
                     <value level="10">100.0</value>
                 </power>
             </stat-modify>
-            <vital-stat-modify mode="PER" stat="MAX_CP">
+			<vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="550.0">
+                    <value level="2">602.0</value>
+                    <value level="3">657.0</value>
+                    <value level="4">715.0</value>
+                    <value level="5">776.0</value>
+                    <value level="6">840.0</value>
+                    <value level="7">907.0</value>
+                    <value level="8">977.0</value>
+                    <value level="9">1051.0</value>
+                    <value level="10">1128.0</value>
+                </power>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_CP">
                 <power initial="1050.0">
                     <value level="2">1690.0</value>
                     <value level="3">2197.0</value>
@@ -226,7 +263,7 @@
                     <value level="10">13785.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify stat="REGENERATE_CP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_CP_RATE">
                 <power initial="1100.0">
                     <value level="2">1210.0</value>
                     <value level="3">1331.0</value>

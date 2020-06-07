@@ -1593,7 +1593,7 @@
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <consume charge="3">
+        <consume charge="2">
             <mana initial="29">
                 <value level="2">33</value>
                 <value level="3">37</value>
@@ -1601,18 +1601,31 @@
         </consume>
         <target/>
         <conditions>
-            <energy-saved charges="3"/>
+            <energy-saved charges="2"/>
         </conditions>
         <effects>
-            <dispel>
-                <abnormal type="ROOT_PHYSICALLY">
-                    <power initial="3.0"/>
+            <dispel>  
+				<abnormal type="PARALYZE"> 
+                    <power initial="-1.0"/>
+                </abnormal>
+				<abnormal type="STUN"> 
+                    <power initial="-1.0"/>
                 </abnormal>
                 <abnormal type="SPEED_DOWN">
-                    <power initial="3.0"/>
+                    <power>
+						<value level="2">-1.0</value>
+						<value level="3">-1.0</value>
+					</power>
+                </abnormal>
+				<abnormal type="ROOT_PHYSICALLY">
+                    <power>
+						<value level="3">-1.0</value>
+					</power>
                 </abnormal>
                 <abnormal type="ROOT_MAGICALLY">
-                    <power initial="3.0"/>
+                    <power>
+						<value level="3">-1.0</value>
+					</power>
                 </abnormal>
             </dispel>
         </effects>

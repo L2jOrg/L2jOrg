@@ -127,7 +127,7 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016 35045</allowed-skills>
+                <allowed-skills>461 35016 35045</allowed-skills>
             </block-all-actions>
         </effects>
     </skill>
@@ -820,7 +820,7 @@
                 <power initial="25"/>
             </dispel-by-category>
             <block-all-actions>
-                <allowed-skills>35016 35045</allowed-skills>
+                <allowed-skills>461 35016 35045</allowed-skills>
             </block-all-actions>
         </effects>
     </skill>

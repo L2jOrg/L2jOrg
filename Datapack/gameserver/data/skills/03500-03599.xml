@@ -1458,60 +1458,100 @@
             <attack-trait>
                 <trait type="BLEED">
                     <power initial="1">
-                        <value level="5">5</value>
-                        <value level="6">7</value>
+                        <value level="5">6</value>
+                        <value level="6">8</value>
                         <value level="7">10</value>
                         <value level="13">20</value>
                         <value level="14">30</value>
+						<value level="15">40</value>
+                    </power>
+                </trait>
+				<trait type="SHOCK">
+                    <power>
+                        <value level="8">3</value>
+                        <value level="9">4</value>
+                        <value level="10">5</value>
+                        <value level="13">10</value>
+                        <value level="14">20</value>
+                        <value level="15">30</value>
+                    </power>
+                </trait>               
+                <trait type="DERANGEMENT">
+                    <power>
+                        <value level="12">5</value>
+                        <value level="13">10</value>
+                        <value level="14">20</value>
+                        <value level="15">30</value>
                     </power>
                 </trait>
             </attack-trait>
             <defence-trait>
                 <trait type="BLEED">
                     <power initial="1">
-                        <value level="5">5</value>
-                        <value level="6">7</value>
+                        <value level="5">6</value>
+                        <value level="6">8</value>
                         <value level="7">10</value>
                         <value level="13">20</value>
                         <value level="14">30</value>
+						<value level="15">40</value>
+                    </power>
+                </trait>
+				<trait type="SHOCK">
+                    <power>
+                        <value level="8">3</value>
+                        <value level="9">4</value>
+                        <value level="10">5</value>
+                        <value level="13">10</value>
+                        <value level="14">20</value>
+                        <value level="15">30</value>
+                    </power>
+                </trait>               
+                <trait type="DERANGEMENT">
+                    <power>
+                        <value level="12">5</value>
+                        <value level="13">10</value>
+                        <value level="14">20</value>
+                        <value level="15">30</value>
                     </power>
                 </trait>
             </defence-trait>
-            <vampiric-attack chance="80">
+            <vampiric-attack chance="70">
                 <power>
                     <value level="12">2.0</value>
                     <value level="13">3.0</value>
                     <value level="14">6.0</value>
+                    <value level="15">6.0</value>
                 </power>
             </vampiric-attack>
             <stat-modify mode="PER" stat="HEAL_RECEIVE">
                 <power>
-                    <value level="9">2.0</value>
+                    <value level="10">2.0</value>
                     <value level="12">6.0</value>
                     <value level="13">10.0</value>
                     <value level="14">15.0</value>
+                    <value level="15">20.0</value>
                 </power>
-            </stat-modify>
-            <stat-modify stat="EARTH_RES">
-                <power initial="15.0"/>
-            </stat-modify>
+            </stat-modify>          
             <magic-cost>
                 <power>
                     <value level="10">-1.0</value>
                     <value level="12">-3.0</value>
                     <value level="13">-4.0</value>
                     <value level="14">-6.0</value>
+                    <value level="15">-15.0</value>
                 </power>
             </magic-cost>
             <stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
                 <power>
                     <value level="13">7.0</value>
                     <value level="14">15.0</value>
+                    <value level="15">20.0</value>
                 </power>
             </stat-modify>
-            <base-stat type="CON">
+            <base-stat type="CON MEN">
                 <power>
                     <value level="14">1.0</value>
+                    <value level="15">2.0</value>
                 </power>
             </base-stat>
         </effects>
@@ -1541,14 +1581,21 @@
         <target/>
         <effects>
             <attack-trait>
+				<trait type="BLEED">
+                    <power initial="1">
+                        <value level="5">6</value>
+                        <value level="6">8</value>
+                        <value level="7">10</value>
+                        <value level="13">15</value>
+                        <value level="14">20</value>
+						<value level="15">30</value>
+                    </power>
+                </trait>
                 <trait type="SHOCK">
                     <power initial="20">
                         <value level="2">30</value>
                     </power>
-                </trait>
-                <trait type="BLEED">
-                    <power initial="30"/>
-                </trait>
+                </trait>               
                 <trait type="DERANGEMENT">
                     <power initial="20">
                         <value level="2">30</value>
@@ -1556,14 +1603,21 @@
                 </trait>
             </attack-trait>
             <defence-trait>
+				<trait type="BLEED">
+                    <power initial="1">
+                        <value level="5">6</value>
+                        <value level="6">8</value>
+                        <value level="7">10</value>
+                        <value level="13">15</value>
+                        <value level="14">20</value>
+						<value level="15">30</value>
+                    </power>
+                </trait>
                 <trait type="SHOCK">
                     <power initial="20">
                         <value level="2">30</value>
                     </power>
-                </trait>
-                <trait type="BLEED">
-                    <power initial="30"/>
-                </trait>
+                </trait>                
                 <trait type="DERANGEMENT">
                     <power initial="20">
                         <value level="2">30</value>
