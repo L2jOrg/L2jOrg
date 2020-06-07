@@ -651,7 +651,7 @@
 		<!-- The cloak must be modified by +10, to insert the LS -->
 		<!-- You cannot undo an enchantment, but you can enchant anew. -->
 		<!-- Gemstone (B-grade) Hair accessory-->
-        <fee itemGroup="7" itemId="2132" itemCount="5">
+        <fee itemGroup="7" itemId="2132" itemCount="5" cancelFee="240000">
             <mineral id="70889"/> <!-- Life Stone - Ancient Kingdom-->
         </fee>
     </fees>
