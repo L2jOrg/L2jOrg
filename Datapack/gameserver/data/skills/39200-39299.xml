@@ -1718,6 +1718,11 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="8.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39299" name="Cube of Forsaken Isle" action="A1">
         <!-- none -->
