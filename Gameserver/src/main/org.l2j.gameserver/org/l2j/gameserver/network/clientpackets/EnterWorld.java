@@ -216,8 +216,6 @@ public class EnterWorld extends ClientPacket {
         player.spawnMe();
         player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
 
-        player.getInventory().applyItemSkills();
-
         if (Event.isParticipant(player)) {
             Event.restorePlayerEventStatus(player);
         }
