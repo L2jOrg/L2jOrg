@@ -527,38 +527,41 @@ public final class HomeBoard implements IParseBoardHandler {
         return false;
     }
 
-    private String setHtmlSchemeBuffList(Player player, List<Integer> skills, String returnHtml) {
-        for(int i = 0 ; i < 24 ; i++) {
+    private String setHtmlSchemeBuffList(Player player, String groupType, String schemeName, List<Integer> skills, int page,  String returnHtml) {
+        int skillCount = 0;
+        int buffCount = 1;
+        int danceCount = 1;
+
+        // Feeding all Buffs / Dances buttons
+        // 36 equals number od buff + dance displayed in html (hard coded)
+        for(int i = 1 ; i <= 36 ; i++) {
             Skill skill = null;
 
-            if(i < skills.size()) {
-                skill = SkillEngine.getInstance().getSkill(skills.get(i), 1);
-                if (skill.isDance())
-                    continue;
-
-                returnHtml = returnHtml.replace("%icon" + (i + 1) + "%", skill.getIcon());
-                returnHtml = returnHtml.replace("%bypass" + (i + 1) + "%", "bypass _bbsskillunselect " + skills.get(i));
-            } else {
-                returnHtml = returnHtml.replace("%icon" + (i + 1) + "%", "L2EssenceCommunity.add_buffs_icon");
-                returnHtml = returnHtml.replace("%bypass" + (i + 1) + "%", "");
+            if(skillCount < skills.size()) {
+                skill = SkillEngine.getInstance().getSkill(skills.get(skillCount), 1);
+                if(!skill.isDance()) {
+                    returnHtml = replaceVars(buffCount, groupType, schemeName, skill.getIcon(), skills.get(skillCount), page, returnHtml);
+                    buffCount++;
+                } else {
+                    returnHtml = replaceVars(danceCount + 24, groupType, schemeName, skill.getIcon(), skills.get(skillCount), page, returnHtml);
+                    danceCount++;
+                }
+                skillCount++;
             }
         }
 
-        for(int i = 0 ; i < 24 ; i++) {
-            Skill skill = null;
+        // Feeding all unused buttons
+        for(int i = 1 ; i <= 36 ; i++)
+            returnHtml = replaceVars(i, groupType, schemeName, "L2EssenceCommunity.add_buffs_icon", -1, page, returnHtml);
 
-            if(i < skills.size()) {
-                skill = SkillEngine.getInstance().getSkill(skills.get(i), 1);
-                if (!skill.isDance())
-                    continue;
+        return returnHtml;
+    }
 
-                returnHtml = returnHtml.replace("%icon" + (i + 1 + 24) + "%", skill.getIcon());
-                returnHtml = returnHtml.replace("%bypass" + (i + 1 + 24) + "%", "bypass _bbsskillunselect " + skills.get(i));
-            } else {
-                returnHtml = returnHtml.replace("%icon" + (i + 1 + 24) + "%", "L2EssenceCommunity.add_buffs_icon");
-                returnHtml = returnHtml.replace("%bypass" + (i + 1 + 24) + "%", "");
-            }
-        }
+    private String replaceVars(int index, String groupType, String schemeName, String skillIcon, int skillID, int page, String returnHtml) {
+        String command = skillID > -1 ? "bypass _bbsskillunselect " + groupType  + " " + schemeName + " " + skillID + " " + page: "";
+
+        returnHtml = returnHtml.replace("%icon" + index + "%", skillIcon);
+        returnHtml = returnHtml.replace("%bypass" + index + "%", command);
 
         return returnHtml;
     }
@@ -568,7 +571,7 @@ public final class HomeBoard implements IParseBoardHandler {
         returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
         final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
-        returnHtml = setHtmlSchemeBuffList(player, schemeSkills, returnHtml);
+        returnHtml = setHtmlSchemeBuffList(player, groupType, schemeName, schemeSkills, page, returnHtml);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
         returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + Config.BUFFS_MAX_AMOUNT + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
         returnHtml = returnHtml.replace("%typesframe%", getTypesFrame(groupType, schemeName));
@@ -619,11 +622,11 @@ public final class HomeBoard implements IParseBoardHandler {
             final Skill skill = SkillEngine.getInstance().getSkill(skillId, 1);
             if (schemeSkills.contains(skillId))
             {
-                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillunselect;" + groupType + ";" + schemeName + ";" + skillId + ";" + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
+                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
             }
             else
             {
-                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
+                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CT1.TimeZoneWnd_PlusBtn_df\" fore=\"L2UI_CT1.TimeZoneWnd_PlusBtn_df\"></td>");
             }
 
             column++;

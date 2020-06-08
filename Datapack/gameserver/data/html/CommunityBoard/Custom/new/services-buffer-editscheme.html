@@ -13,7 +13,7 @@
 							<br>
 						</td>
 						<td>
-							<table width="570" height="490" background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+							<table width="570" height="200" background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
 								<tr><td height=4></td></tr>
 								<tr>
 									<td width=5></td>
@@ -33,10 +33,10 @@
 										<br>
 										<!--- buffer - content --->
 										<center>
-										<table width=550 height=150>
+										<table width=550 height=200>
 											<tr>
 												<td>
-													<table background="L2EssenceCommunity.added_buffs_bg" width=547 height=140>
+													<table background="L2UI_CT1.Windows_DF_TooltipBG" width=547 height=180>
 														<tr>
 															<td align=center>
 																<table width=510>
@@ -383,10 +383,10 @@
 											<tr><td height=2></td></tr>
 											<tr>
 												<td align=left width=40>
-													<font color="808080">Buffs left:</font> <font color="LEVEL">3</font>
+													<font color="808080">Buffs left:</font> <font color="LEVEL">%count%</font>
 												</td>
-												<td align=left width=60>
-													<font color="808080">Dance / Songs left:</font> <font color="LEVEL">12</font>
+												<td align= width=40>
+													<font color="808080">SchemeName:</font> <font color="LEVEL">%schemename%</font>
 												</td>
 												<td align=right width=160>
 													<a action="bypass -h npc_%objectId%_Quest GrandBossTeleporters"><font color="FF0000">Delete buff</font></a>
@@ -405,8 +405,7 @@
 											<tr><td height=10></td></tr>
 										</table>
 										</center>
-										%scheme%
-										%count%
+
 										%typesframe%
 										%skilllistframe%
 									</td>
