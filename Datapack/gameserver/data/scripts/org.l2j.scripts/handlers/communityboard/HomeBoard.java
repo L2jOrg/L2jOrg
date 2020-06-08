@@ -114,33 +114,78 @@ public final class HomeBoard implements IParseBoardHandler {
         return commands.stream().filter(Objects::nonNull).toArray(String[]::new);
     }
 
-    private void showBuffsWindow(Player player)
-    {
-        final StringBuilder sb = new StringBuilder(200);
+    private String getSchemesListAsHtml(Map<String, ArrayList<Integer>> schemes) {
+        String result = "<tr><td height=4></td></tr>";
+        int schemesCount = 0;
 
-        final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
         if ((schemes == null) || schemes.isEmpty())
         {
-            sb.append("<font color=\"LEVEL\">You haven't defined any scheme.</font>");
+            result += "<tr><td><center><font color=\"LEVEL\">You haven't defined any scheme.</font></center></td></tr>";
         }
         else
         {
-            for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet())
-            {
-                final int cost = Config.BUFFER_STATIC_BUFF_COST;
-                sb.append("<font color=\"LEVEL\">" + scheme.getKey() + " [" + scheme.getValue().size() + " skill(s)]" + ((cost > 0) ? " - cost: " + NumberFormat.getInstance(Locale.ENGLISH).format(cost) : "") + "</font><br1>");
-                sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs;" + scheme.getKey() + ";" + cost + "\">Use on Me</a>&nbsp;|&nbsp;");
-                sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs;" + scheme.getKey() + ";" + cost + ";pet\">Use on Pet</a>&nbsp;|&nbsp;");
-                sb.append("<a action=\"bypass -h npc_%objectId%_editschemes;Buffs;" + scheme.getKey() + ";1\">Edit</a>&nbsp;|&nbsp;");
-                sb.append("<a action=\"bypass -h npc_%objectId%_deletescheme;" + scheme.getKey() + "\">Delete</a><br>");
+            for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet()) {
+                if(schemesCount == 0 || schemesCount == 2)
+                    result += "<tr>";
+
+                result += getSchemeTD(scheme);
+
+                if(schemesCount == 1 || schemesCount == 3)
+                    result += "</tr><tr><td height=4></td></tr>";
+
+                schemesCount++;
             }
         }
-        String returnHtml = null;
-        returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer.html");
-        returnHtml = returnHtml.replace("%schemes%", sb.toString());
-        returnHtml.replace("%max_schemes%", Integer.toString(Config.BUFFER_MAX_SCHEMES));
-        CommunityBoardHandler.separateAndSend(returnHtml, player);
 
+        // Case of even number of schemes, need to close <TR> tag
+        if(schemesCount == 1 || schemesCount == 3)
+                result += "</tr>";
+
+        return result;
+    }
+
+    private String getSchemeTD(Map.Entry<String, ArrayList<Integer>> scheme) {
+        final int cost = getFee(scheme.getValue());
+
+        String result = "";
+
+        result += "<td>";
+        result += "<center>";
+        result += "<table width=260 height=85 background=\"L2UI_CT1.Windows_DF_TooltipBG\">";
+        result += "<tr><td height=4></td></tr>";
+        result += "<tr>";
+        result += "<td>";
+        result += "<table width=\"240\">";
+        result += "<tr>";
+        result += "<td align=center width=\"150\">";
+        result += "<font color=\"ADFF2F\">" + scheme.getKey() + "</font>";
+        result += "</td>";
+        result += "<td align=right>";
+        result += "<button value=\" \" action=\"bypass _bbseditscheme Buffs " + scheme.getKey() + " 1\" width=36 height=40 back=\"L2UI_CH3.MacroWnd.macro_edit\" fore=\"L2UI_CH3.MacroWnd.macro_edit\">";
+        result += "</td>";
+        result += "<td align=right>";
+        result += "<button value=\" \" action=\"bypass _bbsdeletescheme " + scheme.getKey()  + "\" width=36 height=40 back=\"L2UI_CH3.InventoryWnd.inventory_trash\" fore=\"L2UI_CH3.InventoryWnd.inventory_trash\">";
+        result += "</td>";
+        result += "</tr>";
+        result += "</table>";
+        result += "<table>";
+        result += "<tr>";
+        result += "<td>";
+        result += "<button value=\"Use on me\" action=\"bypass _bbsgivebuffs " + scheme.getKey()  + " " + cost + "\" width=120 height=33 back=\"L2EssenceCommunity.class_change_btn_over\" fore=\"L2EssenceCommunity.class_change_btn\">";
+        result += "</td>";
+        result += "<td>";
+        result += "<button value=\"Use on pet\" action=\"bypass _bbsgivebuffs " + scheme.getKey()  + " " + cost + " pet\" width=120 height=33 back=\"L2EssenceCommunity.class_change_btn_over\" fore=\"L2EssenceCommunity.class_change_btn\">";
+        result += "</td>";
+        result += "</tr>";
+        result += "</table>";
+        result += "</td>";
+        result += "</tr>";
+        result += "<tr><td height=6></td></tr>";
+        result += "</table>";
+        result += "</center>";
+        result += "</td>";
+
+        return result;
     }
 
     @Override
@@ -186,7 +231,7 @@ public final class HomeBoard implements IParseBoardHandler {
             if ((path.length() > 0) && path.endsWith(".html")) {
                 returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
             }
-            if (Config.CUSTOM_CB_ENABLED && (returnHtml != null)) {
+            /*if (Config.CUSTOM_CB_ENABLED && (returnHtml != null)) {
                 returnHtml = returnHtml.replaceAll("%name%", activeChar.getName());
                 returnHtml = returnHtml.replaceAll("%premium%", "Could not find acount setup");
                 returnHtml = returnHtml.replaceAll("%clan%", (activeChar.getClan() != null) ? activeChar.getClan().getName() : "No clan");
@@ -197,7 +242,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 returnHtml = returnHtml.replaceAll("%adena%", String.valueOf(activeChar.getAdena()));
                 returnHtml = returnHtml.replaceAll("%online%", String.valueOf(activeChar.getUptime()));
                 returnHtml = returnHtml.replaceAll("%onlinePlayers%", String.valueOf(World.getInstance().getPlayers().size()));
-            }
+            }*/
         } else if (command.startsWith("_bbsmultisell")) {
             final String fullBypass = command.replace("_bbsmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
@@ -356,10 +401,13 @@ public final class HomeBoard implements IParseBoardHandler {
                 if (canCreateScheme)
                 {
                     SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayList<>());
-                   // showBuffsWindow(activeChar);
+                    returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1, returnHtml);
+                }
+                else {
+                    returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
                 }
 
-                returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1, returnHtml);
+
             }
             catch (Exception e)
             {
@@ -426,7 +474,7 @@ public final class HomeBoard implements IParseBoardHandler {
         }
         else if (command.startsWith("_bbsgivebuffs"))
         {
-            final StringTokenizer st = new StringTokenizer(command, ";");
+            final StringTokenizer st = new StringTokenizer(command, " ");
             final String currentCommand = st.nextToken();
 
             final String schemeName = st.nextToken();
@@ -467,12 +515,12 @@ public final class HomeBoard implements IParseBoardHandler {
                 }
             }
 
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/buffer/main.html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
         }
         else if (command.startsWith("_bbsdeletescheme"))
         {
 
-            final StringTokenizer st = new StringTokenizer(command, ";");
+            final StringTokenizer st = new StringTokenizer(command, " ");
             final String currentCommand = st.nextToken();
 
             final String schemeName = st.nextToken();
@@ -482,32 +530,14 @@ public final class HomeBoard implements IParseBoardHandler {
                 schemes.remove(schemeName);
             }
 
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/buffer/main.html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
         }
 
         if (nonNull(returnHtml)) {
             if (Config.CUSTOM_CB_ENABLED) {
-                final StringBuilder sb = new StringBuilder(200);
-
                 final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
-                if ((schemes == null) || schemes.isEmpty())
-                {
-                    // sb.append("<tr><td align=center><font color=\"LEVEL\">0/4 schemes defined.</font></td></tr>");
-                }
-                else
-                {
-                    for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet())
-                    {
-                        final int cost = getFee(scheme.getValue());
-                        sb.append("<tr><td align=center><button value=\"" + scheme.getKey() + "\" action=\"bypass _bbsgivebuffs " + scheme.getKey() + ";" + cost + "\" width=128 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-                        sb.append("<td align=center><button value=\"Pet\" action=\"bypass _bbsgivebuffs " + scheme.getKey() + ";" + cost + ";pet\" width=92 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-                        sb.append("<td align=center><button value=\"Summon\" action=\"bypass _bbsgivebuffs " + scheme.getKey() + ";" + cost + ";summon\" width=92 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-                        sb.append("<td align=center><button value=\"Edit\" action=\"bypass _bbseditscheme Buffs;" + scheme.getKey() + ";1\" width=64 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-                        sb.append("<td align=center><button value=\"X\" action=\"bypass _bbsdeletescheme " + scheme.getKey() + ";1\" width=32 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
-                    }
 
-                }
-                returnHtml = returnHtml.replace("%schemes%", sb.toString());
+                returnHtml = returnHtml.replace("%schemes%", getSchemesListAsHtml(schemes));
                 returnHtml = returnHtml.replace("%max_schemes%", Integer.toString(Config.BUFFER_MAX_SCHEMES));
                 returnHtml = returnHtml.replace("%navigation%", navigation);
                 returnHtml = returnHtml.replaceAll("%name%", activeChar.getName());
