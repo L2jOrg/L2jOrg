@@ -531,7 +531,7 @@ public class Hero {
                 }
             }
 
-            if (!iu.getItems().isEmpty()) {
+            if (!iu.isEmpty()) {
                 player.sendInventoryUpdate(iu);
             }
 

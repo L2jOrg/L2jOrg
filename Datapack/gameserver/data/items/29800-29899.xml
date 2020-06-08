@@ -158,497 +158,497 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39085" value="-1"/>  <!-- Pirates' Special Fruit -->
+			<skill id="39085" value="-1"/>  <!-- Special Fruit Buff -->
 		</skill-reducer>
 	</item>
 
-	<item id="29818" name="Sigel’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<item id="29818" name="Sigel’s Rune - Stage 1" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29819" name="Sigel’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<item id="29819" name="Sigel’s Rune - Stage 2" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29820" name="Sigel’s Rune - Stage 3" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<item id="29820" name="Sigel’s Rune - Stage 3" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29821" name="Sigel’s Rune - Stage 4" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<item id="29821" name="Sigel’s Rune - Stage 4" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29822" name="Sigel’s Rune - Stage 5" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<item id="29822" name="Sigel’s Rune - Stage 5" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29823" name="Sigel’s Rune - Stage 6" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<item id="29823" name="Sigel’s Rune - Stage 6" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29824" name="Sigel’s Rune - Stage 7" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<item id="29824" name="Sigel’s Rune - Stage 7" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29825" name="Sigel’s Rune - Stage 8" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<item id="29825" name="Sigel’s Rune - Stage 8" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29826" name="Sigel’s Rune - Stage 9" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<item id="29826" name="Sigel’s Rune - Stage 9" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29827" name="Sigel’s Rune - Stage 10" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<item id="29827" name="Sigel’s Rune - Stage 10" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29828" name="Sigel’s Rune - Stage 11" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
+	<item id="29828" name="Sigel’s Rune - Stage 11" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29829" name="Sigel’s Rune - Stage 12" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
+	<item id="29829" name="Sigel’s Rune - Stage 12" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29830" name="Sigel’s Rune - Stage 13" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
+	<item id="29830" name="Sigel’s Rune - Stage 13" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29831" name="Sigel’s Rune - Stage 14" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29831" name="Sigel’s Rune - Stage 14" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29832" name="Sigel’s Rune - Stage 15" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29832" name="Sigel’s Rune - Stage 15" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29833" name="Sigel's Rune - Stage 16" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29833" name="Sigel's Rune - Stage 16" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29834" name="Sigel's Rune - Stage 17" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29834" name="Sigel's Rune - Stage 17" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29835" name="Sigel's Rune - Stage 18" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29835" name="Sigel's Rune - Stage 18" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29836" name="Sigel's Rune - Stage 19" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29836" name="Sigel's Rune - Stage 19" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29837" name="Sigel's Rune - Stage 20" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29837" name="Sigel's Rune - Stage 20" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29838" name="Tyrr’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<item id="29838" name="Tyrr’s Rune - Stage 1" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29839" name="Tyrr’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<item id="29839" name="Tyrr’s Rune - Stage 2" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29840" name="Tyrr’s Rune - Stage 3" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<item id="29840" name="Tyrr’s Rune - Stage 3" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29841" name="Tyrr’s Rune - Stage 4" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<item id="29841" name="Tyrr’s Rune - Stage 4" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29842" name="Tyrr’s Rune - Stage 5" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<item id="29842" name="Tyrr’s Rune - Stage 5" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv00">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29843" name="Tyrr’s Rune - Stage 6" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<item id="29843" name="Tyrr’s Rune - Stage 6" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29844" name="Tyrr’s Rune - Stage 7" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<item id="29844" name="Tyrr’s Rune - Stage 7" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29845" name="Tyrr’s Rune - Stage 8" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<item id="29845" name="Tyrr’s Rune - Stage 8" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29846" name="Tyrr’s Rune - Stage 9" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<item id="29846" name="Tyrr’s Rune - Stage 9" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29847" name="Tyrr’s Rune - Stage 10" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<item id="29847" name="Tyrr’s Rune - Stage 10" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29848" name="Tyrr’s Rune - Stage 11" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv02">
+	<item id="29848" name="Tyrr’s Rune - Stage 11" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29849" name="Tyrr’s Rune - Stage 12" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv02">
+	<item id="29849" name="Tyrr’s Rune - Stage 12" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29850" name="Tyrr’s Rune - Stage 13" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv02">
+	<item id="29850" name="Tyrr’s Rune - Stage 13" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_tir_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29851" name="Tyrr’s Rune - Stage 14" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29851" name="Tyrr’s Rune - Stage 14" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29852" name="Tyrr’s Rune - Stage 15" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29852" name="Tyrr’s Rune - Stage 15" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29853" name="Tyrr’s Rune - Stage 16" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29853" name="Tyrr’s Rune - Stage 16" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29854" name="Tyrr’s Rune - Stage 17" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29854" name="Tyrr’s Rune - Stage 17" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29855" name="Tyrr’s Rune - Stage 18" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29855" name="Tyrr’s Rune - Stage 18" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29856" name="Tyrr’s Rune - Stage 19" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29856" name="Tyrr’s Rune - Stage 19" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29857" name="Tyrr’s Rune - Stage 20" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29857" name="Tyrr’s Rune - Stage 20" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29858" name="Othell’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<item id="29858" name="Othell’s Rune - Stage 1" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29859" name="Othell’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<item id="29859" name="Othell’s Rune - Stage 2" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29860" name="Othell’s Rune - Stage 3" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<item id="29860" name="Othell’s Rune - Stage 3" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29861" name="Othell’s Rune - Stage 4" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<item id="29861" name="Othell’s Rune - Stage 4" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29862" name="Othell’s Rune - Stage 5" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<item id="29862" name="Othell’s Rune - Stage 5" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29863" name="Othell’s Rune - Stage 6" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<item id="29863" name="Othell’s Rune - Stage 6" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29864" name="Othell’s Rune - Stage 7" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<item id="29864" name="Othell’s Rune - Stage 7" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29865" name="Othell’s Rune - Stage 8" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<item id="29865" name="Othell’s Rune - Stage 8" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29866" name="Othell’s Rune - Stage 9" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<item id="29866" name="Othell’s Rune - Stage 9" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29867" name="Othell’s Rune - Stage 10" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<item id="29867" name="Othell’s Rune - Stage 10" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29868" name="Othell’s Rune - Stage 11" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv03">
+	<item id="29868" name="Othell’s Rune - Stage 11" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv03">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29869" name="Othell’s Rune - Stage 12" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv03">
+	<item id="29869" name="Othell’s Rune - Stage 12" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv03">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29870" name="Othell’s Rune - Stage 13" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv03">
+	<item id="29870" name="Othell’s Rune - Stage 13" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_othel_lv03">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29871" name="Othell’s Rune - Stage 14" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29871" name="Othell’s Rune - Stage 14" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29872" name="Othell’s Rune - Stage 15" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29872" name="Othell’s Rune - Stage 15" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29873" name="Othell’s Rune - Stage 16" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29873" name="Othell’s Rune - Stage 16" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29874" name="Othell’s Rune - Stage 17" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29874" name="Othell’s Rune - Stage 17" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29875" name="Othell’s Rune - Stage 18" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29875" name="Othell’s Rune - Stage 18" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29876" name="Othell’s Rune - Stage 19" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29876" name="Othell’s Rune - Stage 19" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29877" name="Othell’s Rune - Stage 20" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29877" name="Othell’s Rune - Stage 20" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29878" name="Yul’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<item id="29878" name="Yul’s Rune - Stage 1" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29879" name="Yul’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<item id="29879" name="Yul’s Rune - Stage 2" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29880" name="Yul’s Rune - Stage 3" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<item id="29880" name="Yul’s Rune - Stage 3" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29881" name="Yul’s Rune - Stage 4" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<item id="29881" name="Yul’s Rune - Stage 4" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29882" name="Yul’s Rune - Stage 5" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<item id="29882" name="Yul’s Rune - Stage 5" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29883" name="Yul’s Rune - Stage 6" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv02">
+	<item id="29883" name="Yul’s Rune - Stage 6" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29884" name="Yul’s Rune - Stage 7" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv02">
+	<item id="29884" name="Yul’s Rune - Stage 7" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29885" name="Yul’s Rune - Stage 8" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv02">
+	<item id="29885" name="Yul’s Rune - Stage 8" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29886" name="Yul’s Rune - Stage 9" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv02">
+	<item id="29886" name="Yul’s Rune - Stage 9" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29887" name="Yul’s Rune - Stage 10" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv02">
+	<item id="29887" name="Yul’s Rune - Stage 10" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv02">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29888" name="Yul’s Rune - Stage 11" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv03">
+	<item id="29888" name="Yul’s Rune - Stage 11" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv03">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29889" name="Yul’s Rune - Stage 12" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv03">
+	<item id="29889" name="Yul’s Rune - Stage 12" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv03">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29890" name="Yul’s Rune - Stage 13" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv03">
+	<item id="29890" name="Yul’s Rune - Stage 13" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_yr_lv03">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29891" name="Yul’s Rune - Stage 14" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29891" name="Yul’s Rune - Stage 14" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29892" name="Yul’s Rune - Stage 15" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29892" name="Yul’s Rune - Stage 15" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29893" name="Yul’s Rune - Stage 16" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29893" name="Yul’s Rune - Stage 16" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29894" name="Yul’s Rune - Stage 17" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29894" name="Yul’s Rune - Stage 17" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29895" name="Yul’s Rune - Stage 18" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29895" name="Yul’s Rune - Stage 18" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29896" name="Yul’s Rune - Stage 19" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29896" name="Yul’s Rune - Stage 19" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29897" name="Yul’s Rune - Stage 20" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<item id="29897" name="Yul’s Rune - Stage 20" type="ENSOUL_STONE" icon="icon.ensoul_big_p">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29898" name="Feoh’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_feoh_lv01">
+	<item id="29898" name="Feoh’s Rune - Stage 1" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_feoh_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29899" name="Feoh’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_feoh_lv01">
+	<item id="29899" name="Feoh’s Rune - Stage 2" type="ENSOUL_STONE" icon="BranchIcon.Icon.g_rune_feoh_lv01">
 	<!-- A stone engraved with the symbols of Ancient Giants. When inserted in the slot, the weapon is bestowed with special power of the rune. Can be inserted by Blacksmith in any major town. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="20" action="SKILL_REDUCE"/>

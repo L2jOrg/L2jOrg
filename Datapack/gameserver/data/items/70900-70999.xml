@@ -42,7 +42,7 @@
 		<crystal />
 	</armor>
 
-	<item id="70906" name="Stable Cloak Enchantment Scroll - Legendary" type="SOLID_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
+	<item id="70906" name="Stable Cloak Enchantment Scroll - Legendary" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +11-+15. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>

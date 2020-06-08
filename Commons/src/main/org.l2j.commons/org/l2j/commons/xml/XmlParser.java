@@ -17,6 +17,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isNotEmpty;
 
 /**
  * @author JoeAlisson
@@ -314,29 +315,26 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Float parseFloat(Node node, Float defaultValue)
-    {
-        return node != null ? Float.valueOf(node.getNodeValue()) : defaultValue;
+    protected float parseFloat(Node node, float defaultValue) {
+        return nonNull(node) ? Float.parseFloat(node.getNodeValue()) : defaultValue;
     }
 
     /**
      * Parses a float value.
      * @param node the node to parse
-     * @return if the node is not null, the value of the parsed node, otherwise null
+     * @return if the node is not null, the value of the parsed node, otherwise -1
      */
-    protected Float parseFloat(Node node)
-    {
-        return parseFloat(node, null);
+    protected float parseFloat(Node node) {
+        return parseFloat(node, -1);
     }
 
     /**
      * Parses a float value.
      * @param attrs the attributes
      * @param name the name of the attribute to parse
-     * @return if the node is not null, the value of the parsed node, otherwise null
+     * @return if the node is not null, the value of the parsed node, otherwise -1
      */
-    protected Float parseFloat(NamedNodeMap attrs, String name)
-    {
+    protected float parseFloat(NamedNodeMap attrs, String name) {
         return parseFloat(attrs.getNamedItem(name));
     }
 
@@ -501,18 +499,15 @@ public class XmlParser {
     }
 
     protected <T extends Enum<T>> EnumSet<T> parseEnumSet(NamedNodeMap attrs, Class<T> enumClass, String name) {
-        var items = attrs.getNamedItem(name);
+        return parseEnumSet(attrs.getNamedItem(name), enumClass);
+    }
 
-
-        if(nonNull(items) && Util.isNotEmpty(items.getNodeValue())) {
-            try {
-                return StreamUtil.collectToEnumSet(enumClass, Arrays.stream(items.getNodeValue().split(" ")).map(e -> Enum.valueOf(enumClass, e)));
-            } catch (Exception e) {
-                LOGGER.warn(e.getMessage(), e);
-            }
+    protected <T extends Enum<T>> EnumSet<T> parseEnumSet(Node node, Class<T> enumClass) {
+        if(nonNull(node)) {
+            var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
+            return StreamUtil.collectToEnumSet(enumClass, Arrays.stream(value.split("\\s")).map(e -> Enum.valueOf(enumClass, e)));
         }
         return EnumSet.noneOf(enumClass);
-
     }
 
     /**
@@ -534,7 +529,7 @@ public class XmlParser {
 
     protected IntSet parseIntSet(Node node) {
         if(nonNull(node)) {
-            var value = nonNull(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
+            var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
             return StreamUtil.collectToSet(Arrays.stream(value.split("\\s")).filter(Util::isInteger).mapToInt(Integer::parseInt));
         }
         return Containers.emptyIntSet();

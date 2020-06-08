@@ -63,21 +63,21 @@
 	<armor id="91210" name="Sayha's Cloak - Black" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220"/>
+		<attributes weight="220" />
 		<crystal />
 	</armor>
 
 	<armor id="91211" name="Sayha's Cloak - White" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i03">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220"/>
+		<attributes weight="220" />
 		<crystal />
 	</armor>
 
 	<armor id="91212" name="Sayha's Cloak - Red" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i02">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="220"/>
+		<attributes weight="220" />
 		<crystal />
 	</armor>
 
@@ -88,14 +88,14 @@
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91214" name="Brilliant Sayha's Cloak - Enchant Scroll" type="IMPROVED_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
+	<item id="91214" name="Brilliant Sayha's Cloak - Enchant Scroll" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- Varnish enhances Sayha's Cloak. Can Enhance up to max. +9. If Enhance fails, Sayha's Cloak does not disappear and conserves existing Enchant level.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91215" name="Shining Sayha's Cloak - Enchant Scroll" type="IMPROVED_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
+	<item id="91215" name="Shining Sayha's Cloak - Enchant Scroll" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- Varnish enhances Sayha's Cloak. Can Enhance up to max. +7. If Enhance fails, Sayha's Cloak does not disappear and conserves existing Enchant level.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -186,13 +186,13 @@
 		<attributes/>
 	</item>
 
-	<item id="91228" name="Chronicle Cube" type="COUPON" icon="icon.ev_libra_cube">
+	<item id="91228" name="Chronicle Cube" type="ELIXIR" icon="icon.ev_libra_cube">
 	<!-- A 30-day item. Double-click to obtain 3 Shining Scrolls of Mood Melody. Can also randomly obtain Dandy's Home Run Ball, XP Boost Scroll, or Savior Scroll: Enchant Weapon. (Can be used once a day). -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91229" name="Chronicle Cube" type="COUPON" icon="icon.ev_libra_cube">
+	<item id="91229" name="Chronicle Cube" type="ELIXIR" icon="icon.ev_libra_cube">
 	<!-- A 90-day item. Double-click to obtain 3 Shining Scrolls of Mood Melody. Can also randomly obtain Dandy's Home Run Ball, XP Boost Scroll, or Savior Scroll: Enchant Weapon. (Can be used once a day). -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="129600" action="SKILL_REDUCE"/>
@@ -240,7 +240,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91237" name="Santa Girl's Magic Box" type="COUPON" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
+	<item id="91237" name="Santa Girl's Magic Box" type="ELIXIR" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
 	<!-- Use to get Santa Girl's Gift Buff. (Can be used 1 time in 1 day.)  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -343,7 +343,7 @@
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91250" name="Brilliant Dragon Varnish" type="IMPROVED_ENCHANT_ARMOR" icon="icon.bm_pendant_dragon_scrl">
+	<item id="91250" name="Brilliant Dragon Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.bm_pendant_dragon_scrl">
 	<!-- Varnish that enhances Dragon Pendant's power. Enhance to max. +5. If failed Enchant level remains.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>

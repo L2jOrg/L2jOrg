@@ -44,13 +44,13 @@
 		<crystal />
 	</armor>
 
-	<item id="48046" name="Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
+	<item id="48046" name="Agathion Enchant Scroll" type="ENCHANT_AGATHION" icon="icon.star_scrl_of_ench_ag">
 	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3 and can be enchanted up to +10. Starting from +1 enchanting special abilities increases step by step. Item is destroyed upon enchant failure. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="48047" name="High-grade Agathion Enchant Scroll" type="QUALITY_AGATHION_ENCHANT" icon="icon.star_giantscrl_of_ench_ag">
+	<item id="48047" name="High-grade Agathion Enchant Scroll" type="MULTI_ENCHANT_AGATHION" icon="icon.star_giantscrl_of_ench_ag">
 	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3. Starting from +1 enchanting special abilities increases step by step. Enchant randomly from +1 to +3 on success. Item is destroyed upon enchant failure. Cannot use for items with enchant level more than +8. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>

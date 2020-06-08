@@ -777,6 +777,15 @@ public abstract class Inventory extends ItemContainer {
         }
     }
 
+    public void reloadEquippedItem(Item item) {
+        paperdoll.entrySet().stream()
+            .filter(entry -> entry.getValue()== item).findFirst()
+            .ifPresent(e -> listeners.forEach(l -> {
+                l.notifyUnequiped(e.getKey(), e.getValue(), this);
+                l.notifyEquiped(e.getKey(), e.getValue(), this);
+            }));
+    }
+
     public int getArmorMinEnchant() {
         if (!isPlayer(getOwner())) {
             return 0;

@@ -22,12 +22,12 @@
 		<attributes weight="50" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51028"/> <!-- Release Agathion's Seal - Pisces -->
-			<skill id="3267"/> <!-- Seal Agathion -->
-			<skill id="51030"/> <!-- Teleports to Gludio. -->
-			<skill id="51031"/> <!-- Teleports to Dion. -->
-			<skill id="51032"/> <!-- Teleports to Giran. -->
-			<skill id="51033"/> <!-- Teleports to Oren. -->
+			<skill id="51028"/>  <!-- Summon Pisces Agathion -->
+			<skill id="3267"/>  <!-- Seal Agathion -->
+			<skill id="51030"/>  <!-- Teleport: Gludio -->
+			<skill id="51031"/>  <!-- Teleport: Dion -->
+			<skill id="51032"/>  <!-- Teleport: Giran -->
+			<skill id="51033"/>  <!-- Teleport: Oren -->
 		</skills>
 	</armor>
 
@@ -37,12 +37,12 @@
 		<attributes weight="50" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51029"/> <!-- Release Agathion's Seal - Cancer -->
-			<skill id="3267"/> <!-- Seal Agathion -->
-			<skill id="51030"/> <!-- Teleports to Gludio. -->
-			<skill id="51031"/> <!-- Teleports to Dion. -->
-			<skill id="51032"/> <!-- Teleports to Giran. -->
-			<skill id="51033"/> <!-- Teleports to Oren. -->
+			<skill id="51029"/>  <!-- Summon Cancer Agathion -->
+			<skill id="3267"/>  <!-- Seal Agathion -->
+			<skill id="51030"/>  <!-- Teleport: Gludio -->
+			<skill id="51031"/>  <!-- Teleport: Dion -->
+			<skill id="51032"/>  <!-- Teleport: Giran -->
+			<skill id="51033"/>  <!-- Teleport: Oren -->
 		</skills>
 	</armor>
 
@@ -65,7 +65,7 @@
 	</item>
 
 	<item id="90907" name="Soulshot Ticket" type="NONE" icon="icon.etc_exchange_ticket_i03">
-	<!-- Using the Store Manager, you can exchange it for a Soulshot, Spiritshot, Blessed Spiritshot, Blessed Soulshot, Beast Soulshot, Beast Spiritshot. -->
+	<!-- Using the Dimensional Merchant, you can exchange the ticket for a Soulshot, Blessed Spiritshot, Beast Soulshot, or Beast Spiritshot. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -421,7 +421,7 @@
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="90959" name="Improved Scroll: Enchant Fishing Weapon" type="IMPROVED_ENCHANT_WEAPON" icon="icon.etc_pvppoint_scroll10">
+	<item id="90959" name="Improved Scroll: Enchant Fishing Weapon" type="MULTI_ENCHANT_WEAPON" icon="icon.etc_pvppoint_scroll10">
 	<!-- For Event weapon Blue Mackerel: Dual Sword. Enchants the weapon randomly from +1 to +3. Unable to enchant more than +17. Blue Mackerel: Dual Sword can be obtainned through the Fishermen's Guild. The item will be removed after the event is over. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -465,7 +465,7 @@
 		</skills>
 	</weapon>
 
-	<item id="90963" name="Solid Scroll: Enchant Agathion" type="SEVEN_SINS_AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
+	<item id="90963" name="Solid Scroll: Enchant Agathion" type="ANCIENT_CRYSTAL_ENCHANT_AGATHION" icon="icon.star_scrl_of_ench_ag">
 	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3 and can be enchanted up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchant level is maintained. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -624,7 +624,7 @@
 		</stats>
 	</armor>
 
-	<item id="90986" name="Lucky Cube of Growth" type="COUPON" icon="icon.etc_11th_event_group">
+	<item id="90986" name="Lucky Cube of Growth" type="ELIXIR" icon="icon.etc_11th_event_group">
 	<!-- A 30-day item. Double-click to obtain 900 Silver Bait and Savior's Scroll of Growth (can be used only once a day). Intended for level 20 or higher.   -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
@@ -633,7 +633,7 @@
 	<armor id="90987" name="Savior's Earring" type="NONE" body-part="EAR" icon="icon.r2_earring_i00">
 	<!-- XP and SP gain +2%, Max MP +20, when equipped. The effect does not stack if two identical earrings are equipped.  -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150"/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="60.0"/>
@@ -656,7 +656,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="90990" name="Scroll: Enchant Savior's Earring" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i00">
+	<item id="90990" name="Scroll: Enchant Savior's Earring" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i00">
 	<!-- Only for Savior's Earring. Increases M. Def. Can be safely strengthened up to +3 and can be enhanced up to +7. If enchanting fails, the enchant level is maintained.   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -704,27 +704,27 @@
 	</armor>
 
 	<item id="90995" name="Balthus Knights Varnish" type="ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
-	<!-- Enhances characteristics of damaged rare accessories. The maximum level of enchantment is +10, from +3 level chance of enchantig is 100%. Depending on the item type, activates special options from level +4 and higher. -->
+	<!-- Enhances characteristics of damaged rare accessories. The maximum level of enchantment is +10, from +0 to +3 level chance of enchanting is 100%. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="90996" name="Balthus Knights Matte Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
+	<item id="90996" name="Balthus Knights Matte Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
 	<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +6. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="90997" name="Balthus Knights Shining Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
+	<item id="90997" name="Balthus Knights Shining Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
 	<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +8. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="90998" name="Balthus Knights Glittering Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
+	<item id="90998" name="Balthus Knights Glittering Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
 	<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +9. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>

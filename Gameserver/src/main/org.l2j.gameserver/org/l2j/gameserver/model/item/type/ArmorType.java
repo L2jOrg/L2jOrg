@@ -8,7 +8,7 @@ public enum ArmorType implements ItemType {
     SIGIL,
 
     // L2J CUSTOM
-    SHIELD; // TODO move to Weapon
+    SHIELD;
 
     final int _mask;
 

@@ -505,7 +505,10 @@ public class PlayerInventory extends Inventory {
         }
 
         // Notify to scripts
-        if (item != null) {
+        if (nonNull(item)) {
+            if(item.isEquipped()) {
+                unEquipItemInBodySlot(item.getBodyPart());
+            }
             EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, item), item.getTemplate());
         }
         return item;

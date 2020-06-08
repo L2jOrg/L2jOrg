@@ -24,7 +24,7 @@ public class Rnd
 	 * @return A number from 0 to n-1
 	 */
 	public static int get(int n) {
-		return n < 2 ? 0 : rnd().nextInt(n);
+		return n < 1 ? 0 : rnd().nextInt(n);
 	}
 
 	public static long get(long n)

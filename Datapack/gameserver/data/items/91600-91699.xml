@@ -157,7 +157,7 @@
 		<crystal />
 	</armor>
 
-	<item id="91623" name="Advanced Stable Agathion Enchant Scroll" type="SEVEN_SINS_AGATHION_ENCHANT" icon="icon.guard_giantscrl_of_ench_ag">
+	<item id="91623" name="Advanced Stable Agathion Enchant Scroll" type="ANCIENT_CRYSTAL_ENCHANT_AGATHION" icon="icon.guard_giantscrl_of_ench_ag">
 	<!-- An enchant scroll exclusive to Advanced Zodiac Agathion. Enchanting Agathion increases M. Def. Can enchant up to +10. Increases unique abilities gradually from +1. Even if enchantment fails, Agathion will not be destroyed and will retain the current enchant value. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -272,7 +272,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39191" value="-1"/>  <!-- Sayha's Blessing -->
+			<skill id="39191" value="-1"/>  <!-- Enhanced Sayha's Blessing - Exchangeable -->
 		</skill-reducer>
 	</item>
 
@@ -371,7 +371,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
-			<skill id="51387" value="-1"/>
+			<skill id="51387" value="-1"/>  <!-- Mark of Journey -->
 		</skill-reducer>
 	</item>
 
@@ -380,7 +380,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
-			<skill id="51387" level="2" value="-1"/>
+			<skill id="51387" level="2" value="-1"/>  <!-- Mark of Journey -->
 		</skill-reducer>
 	</item>
 
@@ -389,7 +389,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
-			<skill id="51387" level="3" value="-1"/>
+			<skill id="51387" level="3" value="-1"/>  <!-- Mark of Journey -->
 		</skill-reducer>
 	</item>
 
@@ -398,7 +398,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
-			<skill id="51387" level="4" value="-1"/>
+			<skill id="51387" level="4" value="-1"/>  <!-- Mark of Journey -->
 		</skill-reducer>
 	</item>
 
@@ -419,7 +419,7 @@
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39298" value="-1"/>  <!-- Shining Mood Melody -->
+			<skill id="39298" value="-1"/>  <!-- Shining Moody’s Melody -->
 		</skill-reducer>
 	</item>
 
@@ -452,7 +452,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="51396" value="-1"/>  <!-- Scroll: 50 SP -->
+			<skill id="51396" value="-1"/>  <!-- Scroll: 10,000 SP -->
 		</skill-reducer>
 	</item>
 
@@ -461,7 +461,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="51397" value="-1"/>  <!-- Scroll: 50 SP -->
+			<skill id="51397" value="-1"/>  <!-- Scroll: 100,000 SP -->
 		</skill-reducer>
 	</item>
 
@@ -634,7 +634,7 @@
 	<weapon id="91680" name="Enchanted Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00" mana-consume="1">
 	<!-- Enchanted Compound Bow. Cannot be enchanted, augmented, or equipped with a rune. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
-		<attributes weight="1880" commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes weight="1880" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>

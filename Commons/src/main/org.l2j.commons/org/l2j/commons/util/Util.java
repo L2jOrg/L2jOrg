@@ -19,6 +19,9 @@ import java.util.stream.Stream;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class Util {
 
     public static final String STRING_EMPTY = "";

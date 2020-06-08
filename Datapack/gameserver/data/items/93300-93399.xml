@@ -418,13 +418,13 @@
 		<attributes/>
 	</item>
 
-	<item id="93368" name="Weapon Enchant Stone (A-grade) - Event" type="LUCKY_ENCHANT" icon="icon.ench_wp_stone_i00">
+	<item id="93368" name="Weapon Enchant Stone (A-grade) - Event" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_wp_stone_i00">
 	<!-- Enchant success rate +10% for standard weapon (A-grade) when using an Enchant Scroll. Only for items enchanted between +4 and +6. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93369" name="Armor Enchant Stone (A-grade) - Event" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
+	<item id="93369" name="Armor Enchant Stone (A-grade) - Event" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +4 and +6. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
@@ -574,13 +574,13 @@
 		<attributes/>
 	</item>
 
-	<item id="93394" name="Blessed Weapon Enchant Stone (A-grade) - Event" type="LUCKY_ENCHANT" icon="icon.bless_ench_wp_stone_i05">
+	<item id="93394" name="Blessed Weapon Enchant Stone (A-grade) - Event" type="INC_PROP_ENCHANT_ARMOR" icon="icon.bless_ench_wp_stone_i05">
 	<!-- Enchant success rate +10% for standard weapon (A-grade) when using a Blessed Enchant Scroll. Only for items enchanted between +4 and +6. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93395" name="Blessed Armor Enchant Stone (A-grade) - Event" type="LUCKY_ENCHANT" icon="icon.bless_ench_amr_stone_i05">
+	<item id="93395" name="Blessed Armor Enchant Stone (A-grade) - Event" type="INC_PROP_ENCHANT_ARMOR" icon="icon.bless_ench_amr_stone_i05">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using a Blessed Enchant Scroll. Only for items enchanted between +4 and +6. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>

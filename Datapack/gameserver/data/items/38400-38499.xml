@@ -99,7 +99,7 @@
 	<weapon id="38430" name="Monster Only: Tiger Bow" type="BOW" body-part="RIGHT_HAND" icon="icon.pailaka_invader_bow_wp_i00" mana-consume="2">
 	<!-- Monster weapon. Bow -->
 		<restriction dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="181" commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes weight="181" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>

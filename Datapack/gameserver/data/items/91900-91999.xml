@@ -191,7 +191,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="50152" value="-1"/>  <!-- Scroll of Escape: Adaptation Training -->
+			<skill id="50152" value="-1"/>  <!-- Escape: Adaptation Training -->
 		</skill-reducer>
 	</item>
 
@@ -251,7 +251,7 @@
 
 	<item id="91927" name="Soulshot" type="SOULSHOT" icon="icon.etc_spirit_bullet_gold_i00">
 	<!-- Weapon containing the light of Spirits; instantly inflicts a powerful attack on the enemy.\n\n<Use Effect>\nP. Atk. Bonus 100% -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="20" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
 			<skill id="2154" value="-1"/>  <!-- Soulshot (S-grade) -->
@@ -260,7 +260,7 @@
 
 	<item id="91928" name="Spiritshot" type="SOULSHOT" icon="icon.etc_spell_shot_gold_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase.\n\n<Use Effect>\nM. Atk. Bonus 100%\nHeal Power increased by a little\nCasting Spd. Bonus 40 -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="30" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2159" value="-1"/>  <!-- Spiritshot (S-grade) -->
@@ -269,7 +269,7 @@
 
 	<item id="91929" name="Blessed Soulshot" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_gold_i00">
 	<!-- Weapon containing the light of Spirits; instantly inflicts a very powerful attack on the enemy.\n\n<Use Effect>\nP. Atk. Bonus 130% -->
-		<restriction freightable="false" stackable="true" tradable="false"  dropable="false" sellable="false" private-sellable="false" clan-depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="50" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
 			<skill id="8920" value="-1"/>  <!-- Blessed Soulshot (S-grade) -->
@@ -278,7 +278,7 @@
 
 	<item id="91930" name="Blessed Spiritshot" type="SOULSHOT" icon="icon.etc_spell_shot_gold_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly.\n\n<Use Effect>\nM. Atk. Bonus 300%\nHeal Power greatly increased\nCasting Spd. Bonus 40 -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="75" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="2164" value="-1"/>  <!-- Blessed Spiritshot (S-grade) -->
@@ -290,7 +290,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
-			<skill id="51387" level="5" value="-1"/>
+			<skill id="51387" level="5" value="-1"/>  <!-- Mark of Journey -->
 		</skill-reducer>
 	</item>
 
@@ -317,7 +317,7 @@
 	<armor id="91934" name="Adventurer's Bracelet" type="NONE" body-part="RIGHT_BRACELET" icon="icon.etc_rbracelet_c_i00">
 	<!-- When equipped, opens up 1 Talisman slot. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
+		<attributes weight="150" price="1080000" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
 			<skill id="50912"/>  <!-- Talisman Bracelet -->
@@ -362,7 +362,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
-			<skill id="50158"/> <!-- Tomb of Ancient Pirates Time Recharge Stone -->
+			<skill id="50158"/>  <!-- Tomb of Ancient Pirates Time Recharge Stone -->
 		</skill-reducer>
 	</item>
 
@@ -471,7 +471,7 @@
 	<armor id="91953" name="Dragon Valley Earring" type="NONE" body-part="EAR" icon="icon.accessary_catseye_earing_i00">
 	<!-- Has increased Stun Resistance. When two identical rings are equipped, only one effect is applied. -->
 		<restriction freightable="false" sellable="false"/>
-		<attributes weight="150" price="924000" enchant-enabled="true" />
+		<attributes weight="150" price="924000" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="60.0"/>
@@ -559,7 +559,7 @@
 
 	<item id="91967" name="Enchant Scroll: Dragon Valley Earring" type="ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i00">
 	<!-- Enchant scroll for Dragon Valley Earring. Can enchant up to +10. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
@@ -587,7 +587,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="50163" value="-1"/>  <!-- Blessing Star Candy -->
+			<skill id="50163" value="-1"/>  <!-- Sweet Blessing Star Candy -->
 		</skill-reducer>
 	</item>
 
@@ -602,7 +602,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="50170" value="-1"/>  <!-- Dragon's Special Elixir -->
+			<skill id="50170" value="-1"/>  <!-- Dragon’s Special Elixir -->
 		</skill-reducer>
 	</item>
 
@@ -677,7 +677,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
-			<skill id="50178"/> <!-- Tomb of Ancient Pirates Time Recharge Stone -->
+			<skill id="50178"/>  <!-- Tomb of Ancient Pirates Time Recharge Stone -->
 		</skill-reducer>
 	</item>
 

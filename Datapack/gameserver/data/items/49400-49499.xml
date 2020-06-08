@@ -284,13 +284,13 @@
 		<attributes price="50000"/>
 	</item>
 
-	<item id="49418" name="Cube of Sayha " type="COUPON" icon="icon.sa_cube">
+	<item id="49418" name="Cube of Sayha " type="ELIXIR" icon="icon.sa_cube">
 	<!-- 30-day item. Double-click the Cube to receive 1 Scroll: Summon Storm and 1 Sayha's Treasure Chest. (Can be used only once per day.)  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49419" name="Cube of Sayha " type="COUPON" icon="icon.sa_cube">
+	<item id="49419" name="Cube of Sayha " type="ELIXIR" icon="icon.sa_cube">
 	<!-- 90-day item. Double-click the Cube to receive 1 Scroll: Summon Storm and 1 Sayha's Treasure Chest. (Can be used only once per day.)  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="129600" action="SKILL_REDUCE"/>
@@ -498,7 +498,7 @@
 	<weapon id="49442" name="Giant Crab: Bow" type="BOW" body-part="TWO_HAND" icon="icon.wp_fishing7" mana-consume="2">
 	<!-- 7-day item.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1820" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes weight="1820" commission-type="OTHER_ITEM" reuse-delay="1500" duration="10080" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -755,7 +755,7 @@
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="49470" name="Shining Pendant Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
+	<item id="49470" name="Shining Pendant Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
 	<!-- Shining varnish to enchant pendants. Can be used on Dragon Pendants up to + 8, and keeps the pendant upgrade level and the existing enchant level intact even if the enchant fails. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -834,50 +834,50 @@
 		<attributes price="3000"/>
 	</item>
 
-	<item id="49481" name="Stable Armor Enchant Scroll (D-grade) - Exchangeable" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_d">
+	<item id="49481" name="Stable Armor Enchant Scroll (D-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_d">
 	<!-- When enchanted, P. Def. +1 for D-grade armor and accessories. Starting at +4, P. Def. +3. From +4, the enchanted armor's HP also increases according to the enchant level. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on armor enchanted to +6 or above. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="49482" name="Stable Scroll: Enchant Weapon (D-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_d">
+	<item id="49482" name="Stable Scroll: Enchant Weapon (D-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_d">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Enchanting is safe. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on weapons enchanted to +7 or above. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="49483" name="Stable Armor Enchant Scroll (C-grade) - Exchangeable" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_c">
+	<item id="49483" name="Stable Armor Enchant Scroll (C-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_c">
 	<!-- When enchanted, P. Def. +1 for C-grade armor and accessories. Starting at +4, P. Def. +3. From +4, the enchanted armor's HP also increases according to the enchant level. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on armor enchanted to +6 or above. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="49484" name="Stable Scroll: Enchant Weapon (C-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_c">
+	<item id="49484" name="Stable Scroll: Enchant Weapon (C-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_c">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Enchanting is safe. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on weapons enchanted to +7 or above. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="49485" name="Stable Armor Enchant Scroll (B-grade) - Exchangeable" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_b">
+	<item id="49485" name="Stable Armor Enchant Scroll (B-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_b">
 	<!-- When enchanted, P. Def. +1 for B-grade armor and accessories. Starting at +4, P. Def. +3. From +4, the enchanted armor's HP also increases according to the enchant level. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on armor enchanted to +6 or above. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="49486" name="Stable Scroll: Enchant Weapon (B-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_b">
+	<item id="49486" name="Stable Scroll: Enchant Weapon (B-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_b">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Enchanting is safe. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on weapons enchanted to +7 or above. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="49487" name="Soulshot Ticket - Account Shareable" type="NONE" icon="icon.etc_exchange_ticket_i03">
-	<!-- Using the Store Manager, you can exchange it for a Soulshot, Spiritshot, Blessed Spiritshot, Blessed Soulshot, Beast Soulshot, Beast Spiritshot. -->
+	<item id="49487" name="Soulshot Ticket" type="NONE" icon="icon.etc_exchange_ticket_i03">
+	<!-- Using the Dimensional Merchant, you can exchange the ticket for a Soulshot, Blessed Spiritshot, Beast Soulshot, or Beast Spiritshot. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -950,7 +950,7 @@
 		</stats>
 	</weapon>
 
-	<item id="49496" name="Luck Cube" type="COUPON" icon="icon.special_cube_i00">
+	<item id="49496" name="Luck Cube" type="ELIXIR" icon="icon.special_cube_i00">
 	<!-- 7-day item. Available at level 20 or higher. Double-click the Cube to receive Soulshot Ticket, Buff Scrolls Chest, Major HP Potion, Angel Cat's Blessing, Improved Scroll of Escape, Parts of Enchantment Scrolls Chest, Fishing kit chest, My Teleport Package, Weapon Supply Box (D-grade), Weapon Supply Box (C-grade). (Can be used only once per day.)  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>

@@ -6,7 +6,7 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="90401" name="Melodys Luck Cube" type="COUPON" icon="icon.etc_dkbrown_crystal_cube_pc_i00">
+	<item id="90401" name="Melodys Luck Cube" type="ELIXIR" icon="icon.etc_dkbrown_crystal_cube_pc_i00">
 	<!-- 30-day item. Double-click to receive various rewards at random. (Can be used only once per day.)  For characters of level 20 or higher. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -477,8 +477,8 @@
 	</item>
 
 	<item id="90451" name="Fish Stew - Berserker Spirit Lv. 2 - Tradable" type="SCROLL" icon="icon.fish_stew_buff">
-	<!-- For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4; P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.  -->
-		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+	<!-- For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4; P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. 	 -->
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39264" level="2" value="-1"/>  <!-- Fish Stew - Berserker Spirit -->
@@ -734,85 +734,85 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="90480" name="Lucky Enchant Stone: Save Armor (D-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i03">
+	<item id="90480" name="Lucky Enchant Stone: Save Armor (D-grade)" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i03">
 	<!-- Enchant success rate +10% for standard armor (D-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90481" name="Lucky Enchant Stone: Save Armor (C-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i03">
+	<item id="90481" name="Lucky Enchant Stone: Save Armor (C-grade)" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i03">
 	<!-- Enchant success rate +10% for standard armor (C-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90482" name="Lucky Enchant Stone: Save Armor (B-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i03">
+	<item id="90482" name="Lucky Enchant Stone: Save Armor (B-grade)" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i03">
 	<!-- Enchant success rate +10% for standard armor (B-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90483" name="Lucky Enchant Stone: Save Armor (A-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i03">
+	<item id="90483" name="Lucky Enchant Stone: Save Armor (A-grade)" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i03">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90484" name="Lucky Enchant Stone: Protect Armor (D-grade) - Exchangeable" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i01">
+	<item id="90484" name="Lucky Enchant Stone: Protect Armor (D-grade) - Exchangeable" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i01">
 	<!-- Enchant success rate +10% for standard armor (D-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90485" name="Lucky Enchant Stone: Protect Armor (C-grade) - Exchangeable" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i01">
+	<item id="90485" name="Lucky Enchant Stone: Protect Armor (C-grade) - Exchangeable" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i01">
 	<!-- Enchant success rate +10% for standard armor (C-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90486" name="Lucky Enchant Stone: Protect Armor (B-grade) - Exchangeable" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i01">
+	<item id="90486" name="Lucky Enchant Stone: Protect Armor (B-grade) - Exchangeable" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i01">
 	<!-- Enchant success rate +10% for standard armor (B-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90487" name="Lucky Enchant Stone: Protect Armor (A-grade) - Exchangeable" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i01">
+	<item id="90487" name="Lucky Enchant Stone: Protect Armor (A-grade) - Exchangeable" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i01">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90488" name="Lucky Enchant Stone: Armor (D-grade) - Exchangeable" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
+	<item id="90488" name="Lucky Enchant Stone: Armor (D-grade) - Exchangeable" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (D-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90489" name="Lucky Enchant Stone: Armor (C-grade) - Exchangeable" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
+	<item id="90489" name="Lucky Enchant Stone: Armor (C-grade) - Exchangeable" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (C-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90490" name="Lucky Enchant Stone: Armor (B-grade) - Exchangeable" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
+	<item id="90490" name="Lucky Enchant Stone: Armor (B-grade) - Exchangeable" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (B-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90491" name="Lucky Enchant Stone: Armor (A-grade) - Exchangeable" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
+	<item id="90491" name="Lucky Enchant Stone: Armor (A-grade) - Exchangeable" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90492" name="Giant's Lucky Enchant Stone (A-grade)" type="GIANT_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
+	<item id="90492" name="Giant's Lucky Enchant Stone (A-grade)" type="MULTI_INC_PROB_ENCHANT_ARMOR" icon="icon.giant_ench_armor_stone_r_i02">
 	<!-- Improved Scroll: Enchant Armor chance +10% when enchanting A-grade armor. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="90493" name="Blessed Lucky Enchant Stone (A-grade)" type="BLESSED_LUCKY_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
+	<item id="90493" name="Blessed Lucky Enchant Stone (A-grade)" type="BLESS_INC_PROP_ENCHANT_ARMOR" icon="icon.giant_ench_armor_stone_r_i02">
 	<!-- Enchant success rate +10% for armor (A-grade) when using a Protection scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
@@ -830,7 +830,7 @@
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39164" value="-1"/>  <!-- Mood Melody -->
+			<skill id="39164" value="-1"/>  <!-- Moody's Melody -->
 		</skill-reducer>
 	</item>
 

@@ -1327,18 +1327,18 @@ public final class Formulas {
                     // Magical Skill PvE
                     pveAttack = attacker.getStats().getValue(Stat.PVE_MAGICAL_SKILL_DAMAGE, 1);
                     pveDefense = target.getStats().getValue(Stat.PVE_MAGICAL_SKILL_DEFENCE, 1);
-                    pveRaidDefense = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DEFENCE, 1) : 1;
+                    pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DEFENCE, 1) : 1;
                 } else {
                     // Physical Skill PvE
                     pveAttack = attacker.getStats().getValue(Stat.PVE_PHYSICAL_SKILL_DAMAGE, 1);
                     pveDefense = target.getStats().getValue(Stat.PVE_PHYSICAL_SKILL_DEFENCE, 1);
-                    pveRaidDefense = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DEFENCE, 1) : 1;
+                    pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DEFENCE, 1) : 1;
                 }
             } else {
                 // Autoattack PvE
                 pveAttack = attacker.getStats().getValue(Stat.PVE_PHYSICAL_ATTACK_DAMAGE, 1);
                 pveDefense = target.getStats().getValue(Stat.PVE_PHYSICAL_ATTACK_DEFENCE, 1);
-                pveRaidDefense = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
+                pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
             }
             return max(0.05, (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty);
         }

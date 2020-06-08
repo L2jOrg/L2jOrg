@@ -204,7 +204,7 @@
 		<crystal />
 	</armor>
 
-	<item id="93133" name="Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
+	<item id="93133" name="Agathion Enchant Scroll" type="ENCHANT_AGATHION" icon="icon.star_scrl_of_ench_ag">
 	<!-- An enchant scroll for Agathion. Increases the Agathion’s M. Def. Can enchant safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>

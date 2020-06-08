@@ -92,7 +92,7 @@
 
 	<weapon id="6715" name="Monster Only (Silenos Archer)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00" mana-consume="1">
 		<restriction freightable="false"/>
-		<attributes weight="1950" commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes weight="1950" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -174,7 +174,7 @@
 
 	<weapon id="6720" name="Monster Only (Halisha's Shadow)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00" mana-consume="1">
 		<restriction freightable="false"/>
-		<attributes weight="1950" commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes weight="1950" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>

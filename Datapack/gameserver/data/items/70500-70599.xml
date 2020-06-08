@@ -616,7 +616,7 @@
 
 	<weapon id="70584" name="Bow of Peril" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hazard_bow_i00" mana-consume="4">
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1700" commission-type="OTHER_ITEM" duration="21600" reuse-delay="1500"/>
+		<attributes weight="1700" commission-type="OTHER_ITEM" reuse-delay="1500" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
 		<stats>

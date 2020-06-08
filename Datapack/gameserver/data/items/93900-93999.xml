@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="93900" name="Legendary Card: Anakim" type="CARD" icon="icon.card_angel_anakim">
+	<item id="93900" name="Legendary Card: Anakim" type="CARD_EVENT" icon="icon.card_angel_anakim">
 	<!-- <> -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93901" name="Legendary Card: Frintezza" type="CARD" icon="icon.card_devil_frintessa">
+	<item id="93901" name="Legendary Card: Frintezza" type="CARD_EVENT" icon="icon.card_devil_frintessa">
 	<!-- <> -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93902" name="Hidden Card" type="CARD" icon="icon.card_hidden">
+	<item id="93902" name="Hidden Card" type="CARD_EVENT" icon="icon.card_hidden">
 	<!-- <> -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
@@ -90,7 +90,7 @@
 		<attributes/>
 	</item>
 
-	<item id="93915" name="Regular Card - Aspiring Orc Ruler of Aden" type="CARD" icon="icon.card_orc">
+	<item id="93915" name="Regular Card - Aspiring Orc Ruler of Aden" type="CARD_EVENT" icon="icon.card_orc">
 	<!-- <> -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>

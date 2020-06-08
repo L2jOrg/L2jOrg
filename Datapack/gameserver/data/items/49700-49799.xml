@@ -24,7 +24,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="50912" level="4" /> <!-- Talisman Bracelet Lv. 4 -->
+			<skill id="50912" level="4"/>  <!-- Talisman Bracelet -->
 		</skills>
 	</armor>
 
@@ -520,7 +520,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" price="110000" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39150" value="-1"/>  <!-- Sayha's Holy Water -->
+			<skill id="39150" value="-1"/>  <!-- Enhanced Sayha's Holy Water -->
 		</skill-reducer>
 	</item>
 
@@ -568,7 +568,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="40144" value="-1"/>  <!-- Scroll: 20,000 SP -->
+			<skill id="40144" value="-1"/>  <!-- SP Scroll: 20,000 -->
 		</skill-reducer>
 	</item>
 
@@ -610,7 +610,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39159" value="-1"/>  <!-- Sayha's Energy -->
+			<skill id="39159" value="-1"/>  <!-- Enhanced Sayha's Energy -->
 		</skill-reducer>
 	</item>
 
@@ -625,7 +625,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39164" value="-1"/>  <!-- Mood Melody -->
+			<skill id="39164" value="-1"/>  <!-- Moody's Melody -->
 		</skill-reducer>
 	</item>
 
@@ -634,7 +634,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39162" value="-1"/>  <!-- Special Fruit Buff - Attack -->
+			<skill id="39162" value="-1"/>  <!-- Fighter Pirate Fruit - Attack -->
 		</skill-reducer>
 	</item>
 
@@ -643,7 +643,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39163" value="-1"/>  <!-- Special Fruit Buff - Defense -->
+			<skill id="39163" value="-1"/>  <!-- Fighter Pirate Fruit - Defense -->
 		</skill-reducer>
 	</item>
 
@@ -704,7 +704,7 @@
 		</skill-reducer>
 	</item>
 
-	<item id="49782" name="Oriana's Lucky Draw Supply Item" type="COUPON" icon="icon.etc_ev_kalie_treasure_box">
+	<item id="49782" name="Oriana's Lucky Draw Supply Item" type="ELIXIR" icon="icon.etc_ev_kalie_treasure_box">
 	<!-- Double-click to receive 6 Oriana's Disguised Clothing. For characaters Lv. 60 or higher. (Can only be used once a day) -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes reuse-delay="86400000" action="SKILL_REDUCE"/>
