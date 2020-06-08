@@ -28,7 +28,7 @@ public class Scout extends AbstractNpcAI {
     {
         Npc spawnMonster = null;
         final Playable attacker = isSummon ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player;
-        //TODO fix the spawn 
+        //TODO fix the spawn
         if(((Attackable) npc).getAggroList().size() == 1) {
             switch (npc.getId()) {
                 case GAMLIN:
