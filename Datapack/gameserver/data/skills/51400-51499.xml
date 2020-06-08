@@ -170,12 +170,23 @@
     </skill>
     <skill id="51413" name="Advanced Scroll of Escape - Event" action="A1">
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <effect-range initial="-1"/>
-            <hit-time initial="1000"/>
+            <hit-time initial="20000"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91839"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <escape location="TOWN"/>
+        </effects>
     </skill>
     <skill id="51414" name="Special HP Potion" action="A1">
         <icon initial="icon.etc_bm_hero_red_potion"/>

@@ -568,7 +568,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="40144" value="-1"/>  <!-- Scroll: 20,000 SP -->
+			<skill id="40143" level="3" value="-1"/>  <!-- Scroll: 20,000 SP -->
 		</skill-reducer>
 	</item>
 

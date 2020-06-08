@@ -26,6 +26,8 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.NumberFormat;
 import java.util.*;
@@ -43,6 +45,7 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  * @author JoeAlisson
  */
 public final class HomeBoard implements IParseBoardHandler {
+    private static final Logger LOGGER = LoggerFactory.getLogger(HomeBoard.class);
 
     private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/new/navigation.html";
     private static final int PAGE_LIMIT = 6;
@@ -375,13 +378,7 @@ public final class HomeBoard implements IParseBoardHandler {
             final String schemeName = st.nextToken();
             final int page = Integer.parseInt(st.nextToken());
 
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
-
-            final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName);
-            returnHtml = returnHtml.replace("%schemename%", schemeName);
-            returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + activeChar.getBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
-            returnHtml = returnHtml.replace("%typesframe%", getTypesFrame(groupType, schemeName));
-            returnHtml = returnHtml.replace("%skilllistframe%", getGroupSkillList(activeChar, groupType, schemeName, page));
+            returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page, returnHtml);
         }
         else if (command.startsWith("_bbsskill"))
         {
@@ -410,7 +407,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 }
                 else
                 {
-                    if (getCountOf(skills, false) < activeChar.getBuffCount())
+                    if (getCountOf(skills, false) < Config.BUFFS_MAX_AMOUNT)
                     {
                         skills.add(skillId);
                     }
@@ -530,13 +527,50 @@ public final class HomeBoard implements IParseBoardHandler {
         return false;
     }
 
+    private String setHtmlSchemeBuffList(Player player, List<Integer> skills, String returnHtml) {
+        for(int i = 0 ; i < 24 ; i++) {
+            Skill skill = null;
+
+            if(i < skills.size()) {
+                skill = SkillEngine.getInstance().getSkill(skills.get(i), 1);
+                if (skill.isDance())
+                    continue;
+
+                returnHtml = returnHtml.replace("%icon" + (i + 1) + "%", skill.getIcon());
+                returnHtml = returnHtml.replace("%bypass" + (i + 1) + "%", "bypass _bbsskillunselect " + skills.get(i));
+            } else {
+                returnHtml = returnHtml.replace("%icon" + (i + 1) + "%", "L2EssenceCommunity.add_buffs_icon");
+                returnHtml = returnHtml.replace("%bypass" + (i + 1) + "%", "");
+            }
+        }
+
+        for(int i = 0 ; i < 24 ; i++) {
+            Skill skill = null;
+
+            if(i < skills.size()) {
+                skill = SkillEngine.getInstance().getSkill(skills.get(i), 1);
+                if (!skill.isDance())
+                    continue;
+
+                returnHtml = returnHtml.replace("%icon" + (i + 1 + 24) + "%", skill.getIcon());
+                returnHtml = returnHtml.replace("%bypass" + (i + 1 + 24) + "%", "bypass _bbsskillunselect " + skills.get(i));
+            } else {
+                returnHtml = returnHtml.replace("%icon" + (i + 1 + 24) + "%", "L2EssenceCommunity.add_buffs_icon");
+                returnHtml = returnHtml.replace("%bypass" + (i + 1 + 24) + "%", "");
+            }
+        }
+
+        return returnHtml;
+    }
+
     private String showEditSchemeWindow(Player player, String groupType, String schemeName, int page, String returnHtml)
     {
         returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
         final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
+        returnHtml = setHtmlSchemeBuffList(player, schemeSkills, returnHtml);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
-        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
+        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + Config.BUFFS_MAX_AMOUNT + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
         returnHtml = returnHtml.replace("%typesframe%", getTypesFrame(groupType, schemeName));
         returnHtml = returnHtml.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
         return returnHtml;

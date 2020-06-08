@@ -413,12 +413,23 @@
     </skill>
     <skill id="50133" name="Advanced Scroll of Escape" action="A1">
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <effect-range initial="-1"/>
-            <hit-time initial="1000"/>
+            <hit-time initial="20000"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91689"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <escape location="TOWN"/>
+        </effects>
     </skill>
     <skill id="50134" name="XP Boost Scroll - Event" action="A1">
         <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute.\nDeath protection. You can delete it yourself. -->

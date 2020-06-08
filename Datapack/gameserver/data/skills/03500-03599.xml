@@ -1548,18 +1548,11 @@
                     <value level="15">20.0</value>
                 </power>
             </stat-modify>
-            <base-stat type="CON">
-                <power>
-                    <value level="14">1.0</value>
-                    <value level="15">2.0</value>
+            <base-stats types="CON MEN" start-level="14">
+                <power initial="1">
+                    <value level="15">2</value>
                 </power>
-            </base-stat>
-			<base-stat type="MEN">
-                <power>
-                    <value level="14">1.0</value>
-                    <value level="15">2.0</value>
-                </power>
-            </base-stat>
+            </base-stats>
         </effects>
     </skill>
     <skill id="3559" name="Damaged Zaken's Earring" max-level="15">
