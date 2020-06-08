@@ -3256,7 +3256,13 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
+            <minions name="Privates">
+                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
+            </minions>
         </parameters>
+
         <race>BEAST</race>
         <sex>MALE</sex>
         <acquire exp="35787" sp="1073"/>
@@ -3327,6 +3333,11 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DeBuff" id="4037" level="2"/> <!-- Decrease P. Atk. -->
+            <minions name="Privates">
+                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
+            </minions>
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
