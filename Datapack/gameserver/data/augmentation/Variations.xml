@@ -247,14 +247,14 @@
             <item id="187"/> <!-- Atuba Hammer -->
             <item id="188"/> <!-- Ghost Staff -->
             <item id="190"/> <!-- Atuba Mace -->
-            <item id="91878" />
-            <item id="91879" />
-            <item id="91880" />
-            <item id="91881" />
-            <item id="91892"/>
-            <item id="91893"/>
-            <item id="91894"/>
-            <item id="91895"/>
+            <item id="91878"/> <!-- Katzbalger -->
+            <item id="91879"/> <!-- Field Sword -->
+            <item id="91880"/> <!-- Military Talwar -->
+            <item id="91881"/> <!-- Talwar -->
+            <item id="91892"/> <!-- Grand Épée -->
+            <item id="91893"/> <!-- Épée -->
+            <item id="91894"/> <!-- Estoc -->
+            <item id="91895"/> <!-- Fleuret -->
         </itemGroup>
         <!-- Weapon C-Grade -->
         <itemGroup id="2">
@@ -364,13 +364,13 @@
             <item id="2574"/> <!-- Shamshir*Spirit Sword -->
             <item id="2592"/> <!-- Spirit Sword*Raid Sword -->
             <item id="2591"/> <!-- Spirit Sword*Spirit Sword -->
-            <item id="91882"/>
-            <item id="91883"/>
-            <item id="91884"/>
-            <item id="91896"/>
-            <item id="91897"/>
-            <item id="91898"/>
-            <item id="91899"/>
+            <item id="91882"/> <!-- Saber Tooth -->
+            <item id="91883"/> <!-- Immortal Edge -->
+            <item id="91884"/> <!-- Schlager -->
+            <item id="91896"/> <!-- Admiral's Estoc -->
+            <item id="91897"/> <!-- Blinzlasher -->
+            <item id="91898"/> <!-- Chevalier Rapier -->
+            <item id="91899"/> <!-- Soldat Estoc -->
         </itemGroup>
         <!-- Weapon B-Grade -->
         <itemGroup id="3">
@@ -450,10 +450,10 @@
             <item id="2624"/> <!-- Tsurugi*Tsurugi -->
             <item id="2625"/> <!-- Tsurugi*Samurai Long Sword -->
             <item id="2626"/> <!-- Samurai Long Sword*Samurai Long Sword -->
-            <item id="91885"/>
-            <item id="91886"/>
-            <item id="91900"/>
-            <item id="91901"/>
+            <item id="91885"/> <!-- Dismantler -->
+            <item id="91886"/> <!-- Innominate Victory -->
+            <item id="91900"/> <!-- Colichemarde -->
+            <item id="91901"/> <!-- Military Fleuret -->
         </itemGroup>
         <!-- Weapon A-Grade -->
         <itemGroup id="4">
@@ -494,14 +494,15 @@
             <item id="5705"/> <!-- Keshanberk*Damascus -->
             <item id="5706"/> <!-- Damascus*Damascus -->
             <item id="8938"/> <!-- Tallum Blade*Damascus -->
-            <item id="91887"/>
-            <item id="91888"/>
-            <item id="91889"/>
-            <item id="91902"/>
-            <item id="91903"/>
-            <item id="91904"/>
+            <item id="91887"/> <!-- Durendal -->
+            <item id="91888"/> <!-- Undertaker -->
+            <item id="91889"/> <!-- Divine Pain -->
+            <item id="91902"/> <!-- Éclair Bijou -->
+            <item id="91903"/> <!-- Lacerator -->
+            <item id="91904"/> <!-- White Lightning -->
         </itemGroup>
-           <itemGroup id="5">
+		<!-- Weapon S-Grade -->
+        <itemGroup id="5">
             <item id="6364"/> <!-- Forgotten Blade -->
             <item id="6365"/> <!-- Basalt Battle hammer -->
             <item id="6366"/> <!-- Imperial Staff -->
@@ -513,9 +514,10 @@
             <item id="6579"/> <!-- Arcana Mace -->
             <item id="6580"/> <!-- Tallum Blade*Dark Legion's Edge -->
             <item id="7575"/> <!-- Draconic Bow -->
-            <item id="91890"/>
-               <item id="91905"/>
+            <item id="91890"/> <!-- Gram -->
+            <item id="91905"/> <!-- Laevateinn -->
         </itemGroup>
+		<!-- Head Accessories -->
         <itemGroup id="6">
             <item id="70749" />  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             <item id="70748" />  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -542,123 +544,115 @@
             <item id="70727" />  <!-- White Uniform Hat <DEX+1 WIT+1> -->
             <item id="70726" />  <!-- White Uniform Hat <STR+1 INT+1> -->
         </itemGroup>
-    </itemGroups>
+		<!-- Cloaks -->
+        <itemGroup id="7">           
+			<item id="70881" /> <!-- Elmoreden Cloak - Legendary -->
+			<item id="70882" /> <!-- Aden Cloak - Legendary -->
+			<item id="70883" /> <!-- Elmore Cloak - Legendary -->
+			<item id="70884" /> <!-- Ferios Cloak - Legendary -->
+		</itemGroup>
+	</itemGroups>
     <fees>
         <!-- Gemstone (D-grade) Weapon D-grade -->
-        <fee itemGroup="1" itemId="2130" itemCount="200" cancelFee="80000">
+        <fee itemGroup="1" itemId="2130" itemCount="100" cancelFee="80000">
             <mineral id="90012"/> <!-- Common Life Stone-->
         </fee>
         <!-- Gemstone (D-grade) Weapon C-grade -->
-        <fee itemGroup="2" itemId="2130" itemCount="200" cancelFee="80000">
+        <fee itemGroup="2" itemId="2130" itemCount="100" cancelFee="80000">
             <mineral id="90012"/> <!-- Common Life Stone-->
         </fee>
         <!-- Gemstone (D-grade) Weapon B-grade-->
-        <fee itemGroup="3" itemId="2130" itemCount="200" cancelFee="80000">
+        <fee itemGroup="3" itemId="2130" itemCount="100" cancelFee="80000">
             <mineral id="90012"/> <!-- Common Life Stone-->
         </fee>
         <!-- Gemstone (D-grade) Weapon A-grade-->
-        <fee itemGroup="4" itemId="2130" itemCount="200" cancelFee="80000">
+        <fee itemGroup="4" itemId="2130" itemCount="100" cancelFee="80000">
             <mineral id="90012"/> <!-- Common Life Stone-->
         </fee>
-
         <!-- Gemstone (D-grade) Weapon S-grade-->
-        <fee itemGroup="5" itemId="2130" itemCount="200" cancelFee="80000">
+        <fee itemGroup="5" itemId="2130" itemCount="100" cancelFee="80000">
             <mineral id="90012"/> <!-- Common Life Stone-->
         </fee>
 
         <!-- Gemstone (C-grade) Weapon D-grade -->
-        <fee itemGroup="1" itemId="2131" itemCount="300" cancelFee="240000">
+        <fee itemGroup="1" itemId="2131" itemCount="200" cancelFee="240000">
             <mineral id="90013"/> <!-- Mid-Grade Life Stone-->
         </fee>
         <!-- Gemstone (C-grade) Weapon C-grade -->
-        <fee itemGroup="2" itemId="2131" itemCount="300" cancelFee="240000">
+        <fee itemGroup="2" itemId="2131" itemCount="200" cancelFee="240000">
             <mineral id="90013"/> <!-- Mid-Grade Life Stone-->
         </fee>
         <!-- Gemstone (C-grade) Weapon B-grade-->
-        <fee itemGroup="3" itemId="2131" itemCount="300" cancelFee="240000">
+        <fee itemGroup="3" itemId="2131" itemCount="200" cancelFee="240000">
             <mineral id="90013"/> <!-- Mid-Grade Life Stone-->
         </fee>
         <!-- Gemstone (C-grade) Weapon A-grade-->
-        <fee itemGroup="4" itemId="2131" itemCount="300" cancelFee="240000">
+        <fee itemGroup="4" itemId="2131" itemCount="200" cancelFee="240000">
             <mineral id="90013"/> <!-- Mid-Grade Life Stone-->
         </fee>
-
         <!-- Gemstone (C-grade) Weapon S-grade-->
-        <fee itemGroup="5" itemId="2131" itemCount="300" cancelFee="240000">
+        <fee itemGroup="5" itemId="2131" itemCount="200" cancelFee="240000">
             <mineral id="90013"/> <!-- Mid-Grade Life Stone-->
         </fee>
 
         <!-- Gemstone (B-grade) Weapon D-grade -->
-        <fee itemGroup="1" itemId="2132" itemCount="400" cancelFee="720000">
+        <fee itemGroup="1" itemId="2132" itemCount="200" cancelFee="720000">
             <mineral id="90014"/> <!-- High-Grade Life Stone-->
         </fee>
         <!-- Gemstone (B-grade) Weapon C-grade -->
-        <fee itemGroup="2" itemId="2132" itemCount="400" cancelFee="720000">
+        <fee itemGroup="2" itemId="2132" itemCount="200" cancelFee="720000">
             <mineral id="90014"/> <!-- High-Grade Life Stone-->
         </fee>
         <!-- Gemstone (B-grade) Weapon B-grade-->
-        <fee itemGroup="3" itemId="2132" itemCount="400" cancelFee="720000">
+        <fee itemGroup="3" itemId="2132" itemCount="200" cancelFee="720000">
             <mineral id="90014"/> <!-- High-Grade Life Stone-->
         </fee>
         <!-- Gemstone (B-grade) Weapon A-grade-->
-        <fee itemGroup="4" itemId="2132" itemCount="400" cancelFee="720000">
+        <fee itemGroup="4" itemId="2132" itemCount="200" cancelFee="720000">
             <mineral id="90014"/> <!-- High-Grade Life Stone-->
         </fee>
-
-        <!-- TODO find the official value  -->
-
         <!-- Gemstone (B-grade) Weapon S-grade-->
-        <fee itemGroup="5" itemId="2132" itemCount="400" cancelFee="720000">
+        <fee itemGroup="5" itemId="2132" itemCount="200" cancelFee="720000">
             <mineral id="90014"/> <!-- High-Grade Life Stone-->
         </fee>
-
-        <!-- Gemstone (A-grade) Weapon D-grade -->
-        <fee itemGroup="1" itemId="2133" itemCount="200" cancelFee="1540000">
-            <mineral id="90015"/> <!-- Top-Grade Life Stone-->
-        </fee>
-        <!-- Gemstone (A-grade) Weapon C-grade -->
-        <fee itemGroup="2" itemId="2133" itemCount="200" cancelFee="1540000">
-            <mineral id="90015"/> <!-- Top-Grade Life Stone-->
-        </fee>
-        <!-- Gemstone (A-grade) Weapon B-grade-->
-        <fee itemGroup="3" itemId="2133" itemCount="200" cancelFee="1540000">
-            <mineral id="90015"/> <!-- Top-Grade Life Stone-->
-        </fee>
-        <!-- Gemstone (A-grade) Weapon A-grade-->
-        <fee itemGroup="4" itemId="2133" itemCount="200" cancelFee="1540000">
-            <mineral id="90015"/> <!-- Top-Grade Life Stone-->
-        </fee>
-
-        <!-- Gemstone (A-grade) Weapon S-grade-->
-        <fee itemGroup="5" itemId="2133" itemCount="200" cancelFee="1540000">
-            <mineral id="90015"/> <!-- Top-Grade Life Stone-->
-        </fee>
-
+		
+		<!-- No longer use 90015 -->
+		
         <!-- Gemstone (S-grade) Weapon D-grade -->
-        <fee itemGroup="1" itemId="2134" itemCount="200" cancelFee="2250000">
+        <fee itemGroup="1" itemId="2134" itemCount="200" cancelFee="720000">
             <mineral id="90016"/> <!-- Shining Life Stone-->
         </fee>
         <!-- Gemstone (S-grade) Weapon C-grade -->
-        <fee itemGroup="2" itemId="2134" itemCount="200" cancelFee="2250000">
+        <fee itemGroup="2" itemId="2134" itemCount="200" cancelFee="720000">
             <mineral id="90016"/> <!-- Shining Life Stone-->
         </fee>
         <!-- Gemstone (S-grade) Weapon B-grade-->
-        <fee itemGroup="3" itemId="2134" itemCount="200" cancelFee="2250000">
+        <fee itemGroup="3" itemId="2134" itemCount="200" cancelFee="720000">
             <mineral id="90016"/> <!-- Shining Life Stone-->
         </fee>
         <!-- Gemstone (S-grade) Weapon A-grade-->
         <fee itemGroup="4" itemId="2134" itemCount="200" cancelFee="720000">
             <mineral id="90016"/> <!-- Shining Life Stone-->
         </fee>
-
         <!-- Gemstone (S-grade) Weapon S-grade-->
         <fee itemGroup="5" itemId="2134" itemCount="200" cancelFee="720000">
             <mineral id="90016"/> <!-- Shining Life Stone-->
         </fee>
 
         <!-- Gemstone (C-grade) Hair accessory-->
-        <fee itemGroup="6" itemId="2131" itemCount="300" cancelFee="240000">
-            <mineral id="70755"/> <!-- Eva life stone-->
+        <fee itemGroup="6" itemId="2131" itemCount="200" cancelFee="240000">
+            <mineral id="70755"/> <!-- Eva's Life Stone - Hair Accessory-->
+        </fee>		
+		<!-- Gemstone (B-grade) Hair accessory-->
+        <fee itemGroup="6" itemId="2132" itemCount="200" cancelFee="240000">
+            <mineral id="70756"/> <!-- Shiny Eva's Life Stone - Hair Accessory-->
+        </fee>
+		
+		<!-- The cloak must be modified by +10, to insert the LS -->
+		<!-- You cannot undo an enchantment, but you can enchant anew. -->
+		<!-- Gemstone (B-grade) Hair accessory-->
+        <fee itemGroup="7" itemId="2132" itemCount="5" cancelFee="240000">
+            <mineral id="70889"/> <!-- Life Stone - Ancient Kingdom-->
         </fee>
     </fees>
 </list>

@@ -121,7 +121,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="40143" name="SP Scroll" max-level="3">
+    <skill id="40143" name="SP Scroll" max-level="3"  action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
@@ -130,18 +130,18 @@
             <activate-rate initial="-1"/>
         </attributes>
          <consume>
-            <item initial="70236">
-			<value level="2">70237</value>
-			<value level="3">70238</value>
+            <item initial="49595">
+			<value level="2">49596</value>
+			<value level="3">49764</value>
 			</item>
             <item-count initial="1"/>
         </consume>
         <target/>
 		<effects>
             <effect name="GiveSp">
-                <power initial="50.0">
-				<value level="2">100.0</value>
-				<value level="3">1000.0</value>
+                <power initial="2000.0">
+				<value level="2">10000.0</value>
+				<value level="3">20000.0</value>
 				</power>
             </effect>
         </effects>

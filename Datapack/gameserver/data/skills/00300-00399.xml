@@ -1394,7 +1394,7 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016 35045</allowed-skills>
+                <allowed-skills>461 35016 35045</allowed-skills>
             </block-all-actions>
             <effect name="TargetCancel">
                 <power initial="80"/>
@@ -1615,7 +1615,7 @@
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
             <time initial="3"/>
-            <chance initial="40"/>
+            <chance initial="85"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -1624,13 +1624,13 @@
         </conditions>
         <effects>
             <effect name="Bluff">
-                <power initial="80.0"/>
+                <power initial="60.0"/>
             </effect>
             <effect name="TargetCancel">
-                <power initial="80.0"/>
+                <power initial="60.0"/>
             </effect>
-            <effect name="DeleteHateOfMe">
-                <power initial="80.0"/>
+            <effect name="BlockControl">
+                <power initial="60.0"/>
             </effect>
             <block-all-actions>
                 <allowed-skills>35016 35045</allowed-skills>
@@ -1686,7 +1686,12 @@
                     <value level="3">2991.0</value>
                 </power>
             </physical-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>461 35016 35045</allowed-skills>
+            </block-all-actions>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="-30.0"/>
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power initial="-30.0"/>
             </stat-modify>
@@ -1773,9 +1778,12 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016 35045</allowed-skills>
+                <allowed-skills>461 35016 35045</allowed-skills>
             </block-all-actions>
-            <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="-30.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="-30.0"/>
             </stat-modify>
         </effects>

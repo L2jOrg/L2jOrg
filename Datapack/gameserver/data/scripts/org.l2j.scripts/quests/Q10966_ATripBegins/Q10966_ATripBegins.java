@@ -46,9 +46,9 @@ public class Q10966_ATripBegins extends Quest
 	private static final int BELLA = 30256;
 	// Items
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
-	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 10);// TODO: Replace with Advanced Scroll of Escape Event(s)
-	private static final ItemHolder TALISMAN_OF_ADEN = new ItemHolder(91745, 1);// TODO: Fix item
-	private static final ItemHolder SCROLL_OF_ENCHANT_TALISMAN_OF_ADEN = new ItemHolder(91756, 1);// TODO: Fix item
+	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 10);
+	private static final ItemHolder TALISMAN_OF_ADEN = new ItemHolder(91745, 1);
+	private static final ItemHolder SCROLL_OF_ENCHANT_TALISMAN_OF_ADEN = new ItemHolder(91756, 1);
 	private static final ItemHolder ADVENTURERS_BRACELET = new ItemHolder(91934, 1);
 	// Monsters
 	private static final int ARACHNID_PREDATOR = 20926;

@@ -1451,7 +1451,7 @@
             level 10: A talisman for Aden warriors. P. Atk. +270, M. Atk. +490, P. Def. +160, M. Def. +200, Atk. Spd. +100, Casting Spd. +125, Max HP +1120, Max MP +530, XP/SP Gain +50%
          -->
         <icon initial="icon.bm_aden_talisman"/>
-        <attributes property="MAGIC" check="false">
+        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
         </attributes>
         <target/>
         <effects>
