@@ -1,6 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		   targetNamespace="http://l2j.org"
-		   xmlns="http://l2j.org"
+		   xmlns:l2jorg="http://l2j.org"
 		   elementFormDefault="qualified">
 
 	<xs:include schemaLocation="common.xsd"/>
@@ -8,20 +8,77 @@
 	<xs:element name="enchantment">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="scroll" type="Scroll" maxOccurs="unbounded" minOccurs="0"/>
+				<xs:element name="chance-group" type="l2jorg:ChanceGroup" maxOccurs="unbounded"/>
+				<xs:element name="group" type="l2jorg:ScrollGroup" maxOccurs="unbounded"/>
+				<xs:element name="scroll" type="l2jorg:Scroll" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
+
+		<xs:keyref name="GroupIDRef" refer="l2jorg:GroupID">
+			<xs:selector xpath="l2jorg:scroll"/>
+			<xs:field xpath="@group"/>
+		</xs:keyref>
+		<xs:key name="GroupID">
+			<xs:selector xpath="l2jorg:group"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+
+		<xs:keyref name="ChanceGroupIDRef" refer="l2jorg:ChanceGroupID">
+			<xs:selector xpath="l2jorg:group/l2jorg:enchant-chance"/>
+			<xs:field xpath="@group"/>
+		</xs:keyref>
+		<xs:key name="ChanceGroupID">
+			<xs:selector xpath="l2jorg:chance-group"/>
+			<xs:field xpath="@name"/>
+		</xs:key>
 	</xs:element>
 
-	<xs:complexType name="Scroll">
-		<xs:sequence minOccurs="0">
-			<xs:element name="item" type="ItemInfo" maxOccurs="unbounded"/>
+	<xs:complexType name="ChanceGroup">
+		<xs:sequence>
+			<xs:element name="enchant" type="l2jorg:Enchant" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute type="xs:int" name="id" use="required"/>
-		<xs:attribute type="CrystalType" name="grade" default="NONE"/>
-		<xs:attribute type="xs:byte" name="group" default="0"/>
-		<xs:attribute type="xs:short" name="max-enchant" default="32767"/> <!-- enchant limit -->
-		<xs:attribute type="xs:short" name="min-enchant" default="0"/>
-		<xs:attribute type="xs:short" name="random" default="0"/>
+		<xs:attribute name="name" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="Enchant">
+		<xs:attribute name="from" type="xs:unsignedShort" default="0" />
+		<xs:attribute name="until" type="xs:unsignedShort" default="65535"/>
+		<xs:attribute name="chance" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:float">
+					<xs:minExclusive value="0"/>
+					<xs:maxInclusive value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="ScrollGroup">
+		<xs:sequence>
+			<xs:element name="enchant-chance" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="slots" type="l2jorg:BodyPartList" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="group" type="xs:string" use="required" />
+					<xs:attribute name="magic-weapon" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:byte"/>
+	</xs:complexType>
+
+	<xs:complexType name="Scroll">
+		<xs:sequence>
+			<xs:element name="items" type="l2jorg:intList" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" use="required"/>
+		<xs:attribute name="group" type="xs:byte" default="0"/>
+		<xs:attribute name="grade" type="l2jorg:CrystalType" default="NONE"/>
+		<xs:attribute name="max-enchant" type="xs:unsignedShort" default="65535"/>
+		<xs:attribute name="min-enchant" type="xs:unsignedShort" default="0"/>
+		<xs:attribute name="chance-percent-bonus" type="xs:float" default="0"/>
+		<xs:attribute name="random" type="xs:short" default="0"/>
+		<xs:attribute name="max-enchant-random" type="xs:int" default="6"/>
 	</xs:complexType>
 </xs:schema>

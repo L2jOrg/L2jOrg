@@ -229,13 +229,13 @@
 		<attributes weight="20"/>
 	</item>
 
-	<item id="90032" name="Elixir of Life" type="COUPON" icon="icon.etc_super_hp_potion_i00">
+	<item id="90032" name="Elixir of Life" type="ELIXIR" icon="icon.etc_super_hp_potion_i00">
 	<!-- Restores a large amount of HP. Cooldown: 3 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="90033" name="Elixir of Mind" type="COUPON" icon="icon.etc_super_mp_potion_i00">
+	<item id="90033" name="Elixir of Mind" type="ELIXIR" icon="icon.etc_super_mp_potion_i00">
 	<!-- Restores a large amount of MP. Cooldown: 3 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>

@@ -25,7 +25,7 @@ public abstract class ClientPacket extends ReadablePacket<GameClient> {
             LOGGER.warn("[{}] Invalid data packet {} from client {}", GameServer.fullVersion, this, client);
         } catch (Exception e) {
             LOGGER.error("[{}] Error while reading packet {} from client {}", GameServer.fullVersion, this, client);
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
         return false;
     }

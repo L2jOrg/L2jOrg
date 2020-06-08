@@ -388,7 +388,7 @@
 			<stat type="MAX_MP" value="22.0"/>
 		</stats>
 		<skills>
-			<skill id="3559" level="12" /> <!-- Zaken's Earring -->
+			<skill id="3559" level="12"/>  <!-- Damaged Zaken's Earring -->
 		</skills>
 	</armor>
 
@@ -402,7 +402,7 @@
 			<stat type="MAX_MP" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="3559" level="13" /> <!-- Enhanced Zaken's Earring -->
+			<skill id="3559" level="13"/>  <!-- Damaged Zaken's Earring -->
 		</skills>
 	</armor>
 
@@ -416,7 +416,7 @@
 			<stat type="MAX_MP" value="34.0"/>
 		</stats>
 		<skills>
-			<skill id="3559" level="14" /> <!-- Refined Zaken's Earring -->
+			<skill id="3559" level="14"/>  <!-- Damaged Zaken's Earring -->
 		</skills>
 	</armor>
 
@@ -646,7 +646,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39298" value="-1"/>  <!-- Shining Mood Melody -->
+			<skill id="39298" value="-1"/>  <!-- Shining Moody’s Melody -->
 		</skill-reducer>
 	</item>
 

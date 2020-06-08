@@ -259,7 +259,7 @@
 		</skill-reducer>
 	</item>
 
-	<item id="49534" name="Hero Cube" type="COUPON" icon="icon.special_cube_i00">
+	<item id="49534" name="Hero Cube" type="ELIXIR" icon="icon.special_cube_i00">
 	<!-- 7-day item. Available at level 20 or higher. Double-click the Cube to receive Soulshot Ticket, Buff Scrolls Chest, Major HP Potion, Warrior's Quick HP Potion, Warrior's Quick HP Potion, Angel Cat's Blessing, Improved Scroll of Resurrection, Parts of Enchantment Scrolls Chest, Fishing kit chest, My Teleport to the Base Package, Blade Spirit, Spellbook Box. (Can be used only once per day.)  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>

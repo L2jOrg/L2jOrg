@@ -50,10 +50,9 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
                 return;
             }
 
-            if (item.getEnchantLevel() >= holder.getValue()) {
-                player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
-                update.compareAndSet(false, true);
-            }
+            player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+            update.compareAndSet(false, true);
+
         });
 
         item.clearEnchantStats();

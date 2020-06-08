@@ -334,7 +334,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70114" chance="2147483647"/>  <!-- Agathion - Singer &amp; Dancer  -->
+			<item id="70114" chance="100000000"/>  <!-- Agathion - Singer &amp; Dancer  -->
 		</extract>
 	</item>
 
@@ -431,7 +431,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="18566"/> <!-- Garnet -->
+			<skill id="18566"/>  <!-- Garnet -->
 		</skills>
 	</armor>
 
@@ -441,7 +441,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="18566" level="2"/> <!-- Garnet -->
+			<skill id="18566" level="2"/>  <!-- Garnet -->
 		</skills>
 	</armor>
 
@@ -451,7 +451,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="18566" level="3"/> <!-- Garnet -->
+			<skill id="18566" level="3"/>  <!-- Garnet -->
 		</skills>
 	</armor>
 
@@ -461,7 +461,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="18566" level="4"/> <!-- Garnet -->
+			<skill id="18566" level="4"/>  <!-- Garnet -->
 		</skills>
 	</armor>
 
@@ -471,7 +471,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="18566" level="5"/> <!-- Garnet -->
+			<skill id="18566" level="5"/>  <!-- Garnet -->
 		</skills>
 	</armor>
 
@@ -481,7 +481,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17707"/> <!-- Jade -->
+			<skill id="17707"/>  <!-- Jade -->
 		</skills>
 	</armor>
 
@@ -491,7 +491,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17707" level="2"/> <!-- Jade -->
+			<skill id="17707" level="2"/>  <!-- Jade -->
 		</skills>
 	</armor>
 
@@ -501,7 +501,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17707" level="3"/> <!-- Jade -->
+			<skill id="17707" level="3"/>  <!-- Jade -->
 		</skills>
 	</armor>
 
@@ -511,7 +511,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17707" level="4"/> <!-- Jade -->
+			<skill id="17707" level="4"/>  <!-- Jade -->
 		</skills>
 	</armor>
 
@@ -521,7 +521,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17707" level="5"/> <!-- Jade -->
+			<skill id="17707" level="5"/>  <!-- Jade -->
 		</skills>
 	</armor>
 
@@ -631,7 +631,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17708"/> <!-- Diamond -->
+			<skill id="17708"/>  <!-- Diamond -->
 		</skills>
 	</armor>
 
@@ -641,7 +641,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17708" level="2"/> <!-- Diamond -->
+			<skill id="17708" level="2"/>  <!-- Diamond -->
 		</skills>
 	</armor>
 
@@ -651,7 +651,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17708" level="3"/> <!-- Diamond -->
+			<skill id="17708" level="3"/>  <!-- Diamond -->
 		</skills>
 	</armor>
 
@@ -661,7 +661,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17708" level="4"/> <!-- Diamond -->
+			<skill id="17708" level="4"/>  <!-- Diamond -->
 		</skills>
 	</armor>
 
@@ -671,7 +671,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17708" level="5"/> <!-- Diamond -->
+			<skill id="17708" level="5"/>  <!-- Diamond -->
 		</skills>
 	</armor>
 
@@ -681,7 +681,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17709"/> <!-- Pearl -->
+			<skill id="17709"/>  <!-- Pearl -->
 		</skills>
 	</armor>
 
@@ -691,7 +691,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17709" level="2"/> <!-- Pearl -->
+			<skill id="17709" level="2"/>  <!-- Pearl -->
 		</skills>
 	</armor>
 
@@ -701,7 +701,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17709" level="3"/> <!-- Pearl -->
+			<skill id="17709" level="3"/>  <!-- Pearl -->
 		</skills>
 	</armor>
 
@@ -711,7 +711,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17709" level="4"/> <!-- Pearl -->
+			<skill id="17709" level="4"/>  <!-- Pearl -->
 		</skills>
 	</armor>
 
@@ -721,7 +721,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17709" level="5"/> <!-- Pearl -->
+			<skill id="17709" level="5"/>  <!-- Pearl -->
 		</skills>
 	</armor>
 
@@ -731,7 +731,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706"/> <!-- Vital Stone -->
+			<skill id="17706"/>  <!-- Vital Stone -->
 		</skills>
 	</armor>
 
@@ -741,7 +741,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706" level="2"/> <!-- Vital Stone -->
+			<skill id="17706" level="2"/>  <!-- Vital Stone -->
 		</skills>
 	</armor>
 
@@ -751,7 +751,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706" level="3"/> <!-- Vital Stone -->
+			<skill id="17706" level="3"/>  <!-- Vital Stone -->
 		</skills>
 	</armor>
 
@@ -761,7 +761,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706" level="4"/> <!-- Vital Stone -->
+			<skill id="17706" level="4"/>  <!-- Vital Stone -->
 		</skills>
 	</armor>
 
@@ -771,7 +771,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706" level="5"/> <!-- Vital Stone -->
+			<skill id="17706" level="5"/>  <!-- Vital Stone -->
 		</skills>
 	</armor>
 

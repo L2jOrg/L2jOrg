@@ -500,7 +500,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29724" min-count="10" max-count="10" chance="2147483647"/>  <!-- Fire Dragon's Pendant Box -->
+			<item id="29724" min-count="10" max-count="10" chance="100000000"/>  <!-- Fire Dragon's Pendant Box -->
 		</extract>
 	</item>
 
@@ -527,8 +527,8 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29724" min-count="30" max-count="30" chance="2147483647"/>  <!-- Fire Dragon's Pendant Box -->
-			<item id="90138" chance="2147483647"/>  <!-- Pendant Glittering Varnish -->
+			<item id="29724" min-count="30" max-count="30" chance="100000000"/>  <!-- Fire Dragon's Pendant Box -->
+			<item id="90138" chance="100000000"/>  <!-- Pendant Glittering Varnish -->
 		</extract>
 	</item>
 
@@ -637,7 +637,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="91927" min-count="300" max-count="300" chance="100000000"/>  <!-- Mysterious Soulshot (B-grade) -->
+			<item id="91927" min-count="300" max-count="300" chance="100000000"/>  <!-- Soulshot -->
 		</extract>
 	</item>
 
@@ -646,7 +646,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="91930" min-count="300" max-count="300" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
+			<item id="91930" min-count="300" max-count="300" chance="100000000"/>  <!-- Blessed Spiritshot -->
 		</extract>
 	</item>
 
@@ -655,7 +655,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="91927" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (B-grade) -->
+			<item id="91927" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Soulshot -->
 			<item id="29648" min-count="12" max-count="12" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29012" min-count="15" max-count="15" chance="100000000"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</extract>
@@ -666,7 +666,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="91930" min-count="3000" max-count="3000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
+			<item id="91930" min-count="3000" max-count="3000" chance="100000000"/>  <!-- Blessed Spiritshot -->
 			<item id="29648" min-count="12" max-count="12" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="29012" min-count="15" max-count="15" chance="100000000"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</extract>

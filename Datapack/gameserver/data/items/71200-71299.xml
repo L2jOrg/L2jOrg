@@ -110,7 +110,7 @@
 		</skills>
 	</armor>
 
-	<item id="71211" name="Seven Deadly Sins Agathion Book of Growth" type="SEVEN_SINS_AGATHION_ENCHANT" icon="BranchIcon.icon.g_bm_7th_sins_enchant_jp">
+	<item id="71211" name="Seven Deadly Sins Agathion Book of Growth" type="ANCIENT_CRYSTAL_ENCHANT_AGATHION" icon="BranchIcon.icon.g_bm_7th_sins_enchant_jp">
 	<!-- Book of Growth for the Seven Deadly Sins Agathion Charms.\nThe enchant level remains the same even if enchantment fails. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -153,92 +153,92 @@
 		</skill-reducer>
 	</item>
 
-	<item id="71217" name="Seven Deadly Sins Card: Meliodas" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli">
+	<item id="71217" name="Seven Deadly Sins Card: Meliodas" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71218" name="Seven Deadly Sins Card: Meliodas 2" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_fish">
+	<item id="71218" name="Seven Deadly Sins Card: Meliodas 2" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_fish">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71219" name="Seven Deadly Sins Card: Diane" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_dian">
+	<item id="71219" name="Seven Deadly Sins Card: Diane" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_dian">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71220" name="Seven Deadly Sins Card: Ban" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_van">
+	<item id="71220" name="Seven Deadly Sins Card: Ban" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_van">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71221" name="Seven Deadly Sins Card: King" type="CARD" icon="BranchIcon.icon.icon_card_sin_king">
+	<item id="71221" name="Seven Deadly Sins Card: King" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_king">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71222" name="Seven Deadly Sins Card: Gowther" type="CARD" icon="BranchIcon.icon.icon_card_sin_go">
+	<item id="71222" name="Seven Deadly Sins Card: Gowther" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_go">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71223" name="Seven Deadly Sins Card: Merlin" type="CARD" icon="BranchIcon.icon.icon_card_sin_merlin">
+	<item id="71223" name="Seven Deadly Sins Card: Merlin" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_merlin">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71224" name="Seven Deadly Sins Card: Escanor" type="CARD" icon="BranchIcon.icon.icon_card_sin_esca">
+	<item id="71224" name="Seven Deadly Sins Card: Escanor" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_esca">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71225" name="Lioneth Kingdom Card: Elizabeth Lioneth" type="CARD" icon="BranchIcon.icon.icon_card_sin_eli">
+	<item id="71225" name="Lioneth Kingdom Card: Elizabeth Lioneth" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_eli">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71226" name="Dreyfus Card: Gil Sanda" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_gil">
+	<item id="71226" name="Dreyfus Card: Gil Sanda" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_gil">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71227" name="Dreyfus Card: Howzer" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_how">
+	<item id="71227" name="Dreyfus Card: Howzer" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_how">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71228" name="Handsen Card: Yurigo" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_yuri">
+	<item id="71228" name="Handsen Card: Yurigo" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_yuri">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71229" name="Ten Commandments Card: Jerudoris" type="CARD" icon="BranchIcon.icon.icon_card_sin_jeru">
+	<item id="71229" name="Ten Commandments Card: Jerudoris" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_jeru">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71230" name="Ten Commandments Card: Estarossa" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_rotsa">
+	<item id="71230" name="Ten Commandments Card: Estarossa" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_rotsa">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71231" name="Ten Commandments Card: Tung" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_tung">
+	<item id="71231" name="Ten Commandments Card: Tung" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_tung">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71232" name="Brittania" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_bri">
+	<item id="71232" name="Brittania" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_bri">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71233" name="Pet Card: Hawk" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_hawk">
+	<item id="71233" name="Pet Card: Hawk" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_hawk">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71234" name="Legendary Knights Card: Seven Deadly Sins" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_legend">
+	<item id="71234" name="Legendary Knights Card: Seven Deadly Sins" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_legend">
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
@@ -629,21 +629,21 @@
 		<crystal />
 	</armor>
 
-	<item id="71295" name="Artisan's Scroll: Enchant Weapon (A-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<item id="71295" name="Artisan's Scroll: Enchant Weapon (A-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Failure to enchant does not crystallize the item and the enchantment level is retained. Can be used on weapons enchanted up to +20. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="71296" name="Master's Scroll: Enchant Weapon (A-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<item id="71296" name="Master's Scroll: Enchant Weapon (A-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. If enchantment succeeds, it may increase +1 - +3. Failure to enchant does not crystallize the item and the enchantment level is retained. Can be used on weapons enchanted up to +20. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="71297" name="Holy Scroll: Enchant Weapon (A-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<item id="71297" name="Holy Scroll: Enchant Weapon (A-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Has 100% to succeed in enchantment if used. Can be used on weapons enchanted up to +12. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>

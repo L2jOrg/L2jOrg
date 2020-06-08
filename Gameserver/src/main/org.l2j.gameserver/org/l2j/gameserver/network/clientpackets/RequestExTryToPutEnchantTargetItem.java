@@ -4,16 +4,14 @@ import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
 
 /**
  * @author KenM
+ * @author JoeAlisson
  */
 public class RequestExTryToPutEnchantTargetItem extends ClientPacket {
-    private static final Logger LOGGER = LoggerFactory.getLogger(RequestExTryToPutEnchantTargetItem.class);
     private int objectId;
 
     @Override
@@ -39,15 +37,10 @@ public class RequestExTryToPutEnchantTargetItem extends ClientPacket {
             return;
         }
 
-        final var scrollTemplate = EnchantItemEngine.getInstance().getEnchantScroll(scroll);
-
-        if (isNull(scrollTemplate) || !scrollTemplate.canEnchant(item)) {
+        if (!EnchantItemEngine.getInstance().canEnchant(item, scroll)) {
             client.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
             player.removeRequest(EnchantItemRequest.class);
             client.sendPacket(new ExPutEnchantTargetItemResult(0));
-            if (scrollTemplate == null) {
-                LOGGER.warn("Undefined scroll have been used id: {}", scroll.getId());
-            }
         } else {
             request.setTimestamp(System.currentTimeMillis());
             client.sendPacket(new ExPutEnchantTargetItemResult(objectId));

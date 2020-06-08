@@ -180,7 +180,7 @@
 	<weapon id="29614" name="Elemental Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elemental_bow_i00" mana-consume="3">
 	<!-- 30-day weapon. Cannot be exchanged or dropped. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1770" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes weight="1770" commission-type="OTHER_ITEM" reuse-delay="1500" duration="43200" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -329,7 +329,7 @@
 	<weapon id="29623" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00" mana-consume="2">
 	<!-- 30-day weapon. Cannot be exchanged or dropped. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1820" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes weight="1820" commission-type="OTHER_ITEM" reuse-delay="1500" duration="43200" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>

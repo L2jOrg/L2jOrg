@@ -8032,7 +8032,6 @@ public final class Player extends Playable {
 
     public void onEnter() {
         startWarnUserTakeBreak();
-
         if (isGM() && !Config.GM_STARTUP_BUILDER_HIDE) {
             // Bleah, see L2J custom below.
             if (isInvul()) {
@@ -8046,7 +8045,7 @@ public final class Player extends Playable {
             }
         }
 
-        // Buff and status icons
+        inventory.applyItemSkills();
         if (Config.STORE_SKILL_COOLTIME) {
             restoreEffects();
         }

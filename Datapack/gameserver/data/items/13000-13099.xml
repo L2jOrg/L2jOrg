@@ -20,7 +20,7 @@
 		<attributes weight="5" immediate-effect="true"/>
 	</item>
 
-	<item id="13021" name="Color Title" type="COLOR_CHANGE" icon="icon.color_name_i00">
+	<item id="13021" name="Color Title" type="NICK_COLOR_OLD" icon="icon.color_name_i00">
 	<!-- An item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does. However, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="NICK_COLOR"/>

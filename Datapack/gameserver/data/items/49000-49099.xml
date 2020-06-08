@@ -31,7 +31,7 @@
 		<crystal />
 		<skills>
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
 			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->
@@ -60,13 +60,13 @@
 		<attributes/>
 	</item>
 
-	<item id="49006" name="Ol Mahum Adena Bank" type="COUPON" icon="icon.event_mahum_coinbox">
+	<item id="49006" name="Ol Mahum Adena Bank" type="ELIXIR" icon="icon.event_mahum_coinbox">
 	<!-- Shake and pour. Sometimes you get items, and sometimes you get money! Once a day only. 15-day.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49007" name="Turek Orc Adena Bank" type="COUPON" icon="icon.event_orc_coinbox">
+	<item id="49007" name="Turek Orc Adena Bank" type="ELIXIR" icon="icon.event_orc_coinbox">
 	<!-- Shake and pour. Sometimes you get items, but rumor has it that the Gracian army's funds, which amounts to 100 million Adena, are sealed in this. Once a day only. 30-day.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
@@ -254,13 +254,13 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="49034" name="Ol Mahum Adena Bank" type="COUPON" icon="icon.event_mahum_coinbox">
+	<item id="49034" name="Ol Mahum Adena Bank" type="ELIXIR" icon="icon.event_mahum_coinbox">
 	<!-- Shake and pour. Sometimes you get items, and sometimes you get money! One use only.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49035" name="Turek Orc Adena Bank" type="COUPON" icon="icon.event_orc_coinbox">
+	<item id="49035" name="Turek Orc Adena Bank" type="ELIXIR" icon="icon.event_orc_coinbox">
 	<!-- Shake and pour. Sometimes you get items, but rumor has it that the Gracian army's funds, which amounts to 100 million Adena, are sealed in this. One-time use.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -683,7 +683,7 @@
 		</skill-reducer>
 	</item>
 
-	<item id="49081" name="XP Boost Scroll - Exchangeable" type="SCROLL" icon="icon.etc_recall_exp_scroll">
+	<item id="49081" name="XP Boost Scroll - Exchangeable" type="NONE" icon="icon.etc_recall_exp_scroll">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>

@@ -229,14 +229,14 @@
 		</skill-reducer>
 	</item>
 
-	<item id="90137" name="Matte Pendant Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish">
+	<item id="90137" name="Matte Pendant Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish">
 	<!-- Matte varnish to enchant pendants. Can be used on Dragon Pendants up to + 6, and keeps the pendant upgrade level and the existing enchant level intact even if the enchant fails. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="90138" name="Pendant Glittering Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
+	<item id="90138" name="Pendant Glittering Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
 	<!-- Varnish that enhances effects of a Pendant. For a Pendant enchanted up to +9. If an enchantment is failed, the pendant doesn't disappear and has the previous level of enchantment.   -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -298,7 +298,7 @@
 		</stats>
 	</armor>
 
-	<item id="90146" name="Savior’s Cube" type="COUPON" icon="icon.crystal_cube_event_i00">
+	<item id="90146" name="Savior’s Cube" type="ELIXIR" icon="icon.crystal_cube_event_i00">
 	<!-- A 30-day item. Double-click to get one Enchant Savior’s Weapon Scroll and one Savior' Growth Scroll (can be used only once a day).  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
@@ -316,7 +316,7 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="90149" name="Savior Scroll: Enchant Weapon" type="SOLID_ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
+	<item id="90149" name="Savior Scroll: Enchant Weapon" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
 	<!-- Only for Savior's weapons. The item is not destroyed and will retain the current enchant value even if enchantment fails.   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -359,7 +359,7 @@
 	<weapon id="90152" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_crystallized_ice_bow_i00" mana-consume="3">
 	<!-- A 30-day item.\n<Soul Crystal Enhancement>\nP. Crit. Rate. +52.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1740" commission-type="OTHER_ITEM" duration="43200" reuse-delay="1500"/>
+		<attributes weight="1740" commission-type="OTHER_ITEM" reuse-delay="1500" duration="43200"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -490,7 +490,7 @@
 		</extract>
 	</item>
 
-	<item id="90164" name="Battle Cure" type="COUPON" icon="icon.super_elixir_potion">
+	<item id="90164" name="Battle Cure" type="ELIXIR" icon="icon.super_elixir_potion">
 	<!-- HP/MP +1. Cooldown: 10 minutes. Intended for use only at the Monster Arena.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" action="SKILL_REDUCE"/>

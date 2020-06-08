@@ -233,7 +233,7 @@
 		<crystal />
 	</armor>
 
-	<item id="93040" name="Adventurer’s Griffin Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag_2">
+	<item id="93040" name="Adventurer’s Griffin Agathion Enchant Scroll" type="ENCHANT_AGATHION" icon="icon.star_scrl_of_ench_ag_2">
 	<!-- Adventurer’s Griffin Agathion Enchant Scroll. M. Def. increases when enchanting Agathion.\n<Warning>\nCan only be used on Adventurer’s Griffin Agathion. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>

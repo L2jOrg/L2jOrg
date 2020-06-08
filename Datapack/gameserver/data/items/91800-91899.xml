@@ -295,7 +295,7 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91840" name="XP Boost Scroll - Event" type="SCROLL" icon="icon.etc_recall_exp_scroll">
+	<item id="91840" name="XP Boost Scroll - Event" type="NONE" icon="icon.etc_recall_exp_scroll">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
@@ -411,7 +411,7 @@
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="50170" value="-1"/>  <!-- Dragon's Special Elixir -->
+			<skill id="50170" value="-1"/>  <!-- Dragon’s Special Elixir -->
 		</skill-reducer>
 	</item>
 
@@ -466,9 +466,9 @@
 	<!-- Double-click to obtain 1 Dragon's Belt and 10 Enchant Scroll: Dragon's Belt.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="91788" min-count="1" max-count="1" chance="100" />
-			<item id="91863" min-count="10" max-count="10" chance="100" />
+		<extract >
+			<item id="91788" chance="100"/>  <!-- Dragon's Belt -->
+			<item id="91863" min-count="10" max-count="10" chance="100"/>  <!-- Enchant Scroll: Dragon's Belt -->
 		</extract>
 	</item>
 
@@ -501,7 +501,7 @@
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91868" name="PC Cafe Event Special Enchant Scroll" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
+	<item id="91868" name="PC Cafe Event Special Enchant Scroll" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
 	<!-- An enchant scroll you can use on PC Cafe Event Excalibur. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. Cannot use on weapons above +7. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>

@@ -180,7 +180,7 @@
 		<crystal />
 	</armor>
 
-	<item id="71124" name="Stable Cloak Enchantment Scroll - Legendary" type="SOLID_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal">
+	<item id="71124" name="Stable Cloak Enchantment Scroll - Legendary" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
@@ -248,7 +248,7 @@
 		<attributes/>
 	</item>
 
-	<item id="71135" name="Mermaid Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
+	<item id="71135" name="Mermaid Agathion Enchant Scroll" type="ENCHANT_AGATHION" icon="icon.star_scrl_of_ench_ag">
 	<!-- An enchant scroll for mermaid Agathion. Increases the Agathion's magic resistance and also adds a special ability from +4 enchantment. Can enchant a mermaid Agathion safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -426,82 +426,82 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="71161" name="Legendary Card: Antharas" type="CARD" icon="icon.card_dragon_anta">
+	<item id="71161" name="Legendary Card: Antharas" type="CARD_EVENT" icon="icon.card_dragon_anta">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71162" name="Legendary Card: Valakas" type="CARD" icon="icon.card_dragon_vala">
+	<item id="71162" name="Legendary Card: Valakas" type="CARD_EVENT" icon="icon.card_dragon_vala">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71163" name="Legendary Card: Lindvior" type="CARD" icon="icon.card_dragon_rind">
+	<item id="71163" name="Legendary Card: Lindvior" type="CARD_EVENT" icon="icon.card_dragon_rind">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71164" name="Legendary Card: Astair van Halter" type="CARD" icon="icon.card_hero_holter">
+	<item id="71164" name="Legendary Card: Astair van Halter" type="CARD_EVENT" icon="icon.card_hero_holter">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71165" name="Legendary Card: Amadeo Cadmus" type="CARD" icon="icon.card_hero_amadeose">
+	<item id="71165" name="Legendary Card: Amadeo Cadmus" type="CARD_EVENT" icon="icon.card_hero_amadeose">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71166" name="Legendary Card: Lionel Hunter" type="CARD" icon="icon.card_hero_hunter">
+	<item id="71166" name="Legendary Card: Lionel Hunter" type="CARD_EVENT" icon="icon.card_hero_hunter">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71167" name="Legendary Card: Sieghardt Ein" type="CARD" icon="icon.card_hero_zigharte">
+	<item id="71167" name="Legendary Card: Sieghardt Ein" type="CARD_EVENT" icon="icon.card_hero_zigharte">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71168" name="Legendary Card: Elcadia" type="CARD" icon="icon.card_hero_elcardia">
+	<item id="71168" name="Legendary Card: Elcadia" type="CARD_EVENT" icon="icon.card_hero_elcardia">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71169" name="Legendary Card: Baium" type="CARD" icon="icon.card_devil_baium">
+	<item id="71169" name="Legendary Card: Baium" type="CARD_EVENT" icon="icon.card_devil_baium">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71170" name="Legendary Card: Beleth" type="CARD" icon="icon.card_devil_verese">
+	<item id="71170" name="Legendary Card: Beleth" type="CARD_EVENT" icon="icon.card_devil_verese">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71171" name="Legendary Card: Tiat" type="CARD" icon="icon.card_devil_tiate">
+	<item id="71171" name="Legendary Card: Tiat" type="CARD_EVENT" icon="icon.card_devil_tiate">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71172" name="Legendary Card: Lilith" type="CARD" icon="icon.card_devil_lilith">
+	<item id="71172" name="Legendary Card: Lilith" type="CARD_EVENT" icon="icon.card_devil_lilith">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71173" name="Legendary Card: Paulina" type="CARD" icon="icon.card_angel_polline">
+	<item id="71173" name="Legendary Card: Paulina" type="CARD_EVENT" icon="icon.card_angel_polline">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71174" name="Legendary Card: Anakim" type="CARD" icon="icon.card_angel_anakim">
+	<item id="71174" name="Legendary Card: Anakim" type="CARD_EVENT" icon="icon.card_angel_anakim">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71175" name="Aspiring Orc Ruler of Aden" type="CARD" icon="icon.card_orc">
+	<item id="71175" name="Aspiring Orc Ruler of Aden" type="CARD_EVENT" icon="icon.card_orc">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="71176" name="Hidden Card" type="CARD" icon="icon.card_hidden">
+	<item id="71176" name="Hidden Card" type="CARD_EVENT" icon="icon.card_hidden">
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>

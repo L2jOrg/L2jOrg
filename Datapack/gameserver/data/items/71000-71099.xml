@@ -426,7 +426,7 @@
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="71067" name="Glittering Enchant Scroll of Fate" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_aidcharm_cancel_deathfire_i00">
+	<item id="71067" name="Glittering Enchant Scroll of Fate" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.etc_aidcharm_cancel_deathfire_i00">
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. Can be applied to Talisman enchanted up to +9. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -505,7 +505,7 @@
 		<attributes />
 		<crystal />
 		<skills>
-			<skill id="54020" value="-1"/>
+			<skill id="54020" value="-1"/>  <!-- Bracelet of Power -->
 		</skills>
 	</armor>
 
@@ -515,7 +515,7 @@
 		<attributes />
 		<crystal />
 		<skills>
-			<skill id="54021" value="-1"/>
+			<skill id="54021" value="-1"/>  <!-- Talisman of Power -->
 		</skills>
 	</armor>
 
@@ -525,7 +525,7 @@
 		<attributes />
 		<crystal />
 		<skills>
-			<skill id="54021" value="-1" level="2"/>
+			<skill id="54021" level="2" value="-1"/>  <!-- Talisman of Power -->
 		</skills>
 	</armor>
 
@@ -535,7 +535,7 @@
 		<attributes />
 		<crystal />
 		<skills>
-			<skill id="54021" value="-1" level="3"/>
+			<skill id="54021" level="3" value="-1"/>  <!-- Talisman of Power -->
 		</skills>
 	</armor>
 
@@ -545,7 +545,7 @@
 		<attributes />
 		<crystal />
 		<skills>
-			<skill id="54021" value="-1" level="4"/>
+			<skill id="54021" level="4" value="-1"/>  <!-- Talisman of Power -->
 		</skills>
 	</armor>
 
@@ -555,7 +555,7 @@
 		<attributes />
 		<crystal />
 		<skills>
-			<skill id="54021" value="-1" level="5"/>
+			<skill id="54021" level="5" value="-1"/>  <!-- Talisman of Power -->
 		</skills>
 	</armor>
 

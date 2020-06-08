@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="70300" name="Enchant Scroll of Forbidden Limit" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_aidcharm_cancel_deathfire_i00">
+	<item id="70300" name="Enchant Scroll of Forbidden Limit" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.etc_aidcharm_cancel_deathfire_i00">
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. Can be applied to Talisman enchanted up to +8. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -178,7 +178,7 @@
 	<item id="70326" name="Olympiad Warrior's Special Fruit" type="POTION" icon="icon.etc_cobol_i04">
 	<!-- For 20 minutes., obtained XP/SP ++10%, P./ M. Atk. +10%, P./ M. Def. +5%, Max. HP/MP/CP ++15%, HP/ MP Recovery +20%, PvE damage ++10%. With a certain chance, converts 3% of damage dealt into HP. Can be used with Special Fruit Buff.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="70327" name="Olympiad Commemorative Amulet - 100%" type="RUNE" icon="icon.skill19226">
@@ -186,7 +186,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="180" action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="55397" value="-1"/>
+			<skill id="55397" value="-1"/>  <!-- Olympiad Commemorative Amulet - 100% -->
 		</skill-reducer>
 	</item>
 
@@ -195,7 +195,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="55398" value="-1"/>  <!-- TODO Skill not found -->
+			<skill id="55398" value="-1"/>  <!-- Olympiad Warrior's SP Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -205,17 +205,17 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55399" value="-1"/>
+			<skill id="55399" value="-1"/>  <!-- Tryout Glorious Cloak -->
 		</skills>
 	</armor>
 
-	<armor id="70330" name="Commemorative Olympiad Bracelet" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i05">
+	<armor id="70330" name="Commemorative Olympiad Bracelet" type="NONE" body-part="PENDANT" icon="icon.dimension_bracelet_i05">
 	<!-- Bracelet, given to those warriors who have showen the best results during the Tryout. Activates 2 Talisman slots, Max. HP/MP/CP +3%.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55400" value="-1"/>
+			<skill id="55400" value="-1"/>  <!-- Commemorative Olympiad Bracelet -->
 		</skills>
 	</armor>
 
@@ -225,7 +225,7 @@
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55401" value="-1"/>
+			<skill id="55401" value="-1"/>  <!-- Olympiad Warrior's Talisman -->
 		</skills>
 	</armor>
 
@@ -238,11 +238,11 @@
 			<stat type="PHYSICAL_DEFENCE" value="15.0"/>
 		</stats>
 		<skills>
-			<skill id="55402" value="-1"/>
+			<skill id="55402" value="-1"/>  <!-- Olympiad Warrior's Belt -->
 		</skills>
 	</armor>
 
-	<armor id="70333" name="Agathion - Cheerleader Mae" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_g_i00">
+	<armor id="70333" name="Agathion - Cheerleader Mae" type="NONE" body-part="PENDANT" icon="BranchSys.icon.br_aga_local2009_g_i00">
 	<!-- Bracelet that summons Agathion - Cheerleader Mae. \n\n<Agathion's Effect>\n1. Cheerleader Mae's Support: P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage ++3%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />

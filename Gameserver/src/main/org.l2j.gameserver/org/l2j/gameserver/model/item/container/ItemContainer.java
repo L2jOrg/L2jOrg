@@ -412,6 +412,7 @@ public abstract class ItemContainer {
                 refreshWeight();
 
                 item.deleteMe();
+                item.setLastChange(Item.REMOVED);
             }
         }
         return item;

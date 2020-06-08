@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<armor id="72000" name="Advanced Taurus Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_tau_star_1">
+	<!-- Taurus Agathion imbued with an Agathion’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Def. and Stun Atk. Rate. PvP Damage increases starting from +6. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="72001" name="Advanced Leo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
+	<!-- Leo Agathion imbued with an Agathion’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Atk. and Paralysis Atk. Rate. PvP Damage increases starting from +6. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="72002" name="Advanced Scorpio Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
+	<!-- Scorpio Agathion imbued with an Agathion’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Critical Rate and decreases cooldown of physical, song, and dance skills. PvP Damage increases starting from +6. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="72003" name="Advanced Aquarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
+	<!-- Aquarius Agathion imbued with an Agathion’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases M. Atk. and Hold/Sleep Atk. Rate. PvP Damage increases starting from +6. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="72004" name="Advanced Sagittarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
+	<!-- Sagittarius Agathion imbued with an Agathion’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases Atk. Spd. and decreases MP Consumption of physical, song, and dance skills. PvP Damage increases starting from +6. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="72005" name="Advanced Gemini Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_gem_star_1">
+	<!-- Gemini Agathion imbued with Agathion’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases Max HP/MP and XP/SP Gain. Increases Max CP starting from +6. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<item id="72006" name="Agathion Soulstone" type="NONE" icon="icon.r99_soul_stone_i05">
+	<!-- Used to upgrade to an Advanced Zodiac Agathion. Can be used through NPC Pona. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="72007" name="Dragon's Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
+	<!-- Obtain the following items:\n\n<Guaranteed>\n- Dragon's Coin x3\n\n<Random>\n- Spellbook - Jin Death Knight Transformation x1\n- Talisman of Baium x1\n- Baium's Ring Lv. 1 x1\n- Baium Doll Lv. 1 Pack x1\n- Baium’s Thunder Breaker x1\n- Zaken’s Blood Sword x1\n- Core’s Plasma Bow x1\n- Queen Ant’s Stone Crasher x1\n- Orfen’s Poisonous Sword x1\nand other items -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="72008" name="Special Dragon's Fruit Lv. 2" type="SCROLL" icon="icon.bm_dragon_fruit">
+	<!-- For 20 minutes, P./M. Atk. +15%, P./M. Def. +20%, Max. HP/CP/MP +30%, P./M. Critical Rate +20, P./M. Critical Damage +7%, HP/MP Recovery Bonus +40%. At a certain chance absorbs 7% of the damage inflicted on target as HP. XP and SP gained through hunting +15%. Cooldown is 1 minute. Buff remains after death. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+</list>

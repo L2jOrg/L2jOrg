@@ -112,7 +112,7 @@
 	<armor id="92018" name="Eva's Talisman" type="NONE" body-part="TALISMAN" icon="icon.bm_eva_talisman">
 	<!-- A talisman imbued with Eva’s energy. Can be enchanted up to +10 with the Enchant Scroll: Eva's Talisman. Enchantment adds various effects and increases stats of these option effects. If +1 or higher level enchantment fails, the talisman will disappear. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" enchant-enabled="true" />
+		<attributes weight="120" />
 		<crystal />
 	</armor>
 
@@ -126,9 +126,9 @@
 	<!-- A package used to upgrade Eva's Talisman. Double-click to obtain 1 Eva's Talisman and 10 Enchant Scroll: Eva's Talisman -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="92018" min-count="1" max-count="1"/>
-			<item id="92017" min-count="10" max-count="10"/>
+		<extract >
+			<item id="92018" chance="100000"/>  <!-- Eva's Talisman -->
+			<item id="92017" min-count="10" max-count="10" chance="100000"/>  <!-- Enchant Scroll: Eva's Talisman -->
 		</extract>
 	</item>
 
@@ -198,7 +198,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="50912" level="5" /> <!-- Talisman Bracelet Lv. 5 -->
+			<skill id="50912" level="5"/>  <!-- Talisman Bracelet -->
 		</skills>
 	</armor>
 
@@ -208,7 +208,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="50912" level="6" /> <!-- Talisman Bracelet Lv. 6 -->
+			<skill id="50912" level="6"/>  <!-- Talisman Bracelet -->
 		</skills>
 	</armor>
 
@@ -222,14 +222,14 @@
 	<!-- Double-click to obtain one of the Amber, Opal, Coral, Onyx, Spinel, Zircon, and Moonstone Lv. 1 Jewelry Boxes. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="92176" min-count="1" max-count="1" chance="50" />
-			<item id="92186" min-count="1" max-count="1" chance="50" />
-			<item id="92196" min-count="1" max-count="1" chance="50" />
-			<item id="92206" min-count="1" max-count="1" chance="50" />
-			<item id="92216" min-count="1" max-count="1" chance="50" />
-			<item id="92226" min-count="1" max-count="1" chance="50" />
-			<item id="92236" min-count="1" max-count="1" chance="50" />
+		<extract >
+			<item id="92176" chance="50"/>  <!-- Amber Lv. 1 Jewelry Box -->
+			<item id="92186" chance="50"/>  <!-- Opal Lv. 1 Jewelry Box -->
+			<item id="92196" chance="50"/>  <!-- Coral Lv. 1 Jewelry Box -->
+			<item id="92206" chance="50"/>  <!-- Onyx Lv. 1 Jewelry Box -->
+			<item id="92216" chance="50"/>  <!-- Spinel Lv. 1 Jewelry Box -->
+			<item id="92226" chance="50"/>  <!-- Zircon Lv. 1 Jewelry Box -->
+			<item id="92236" chance="50"/>  <!-- Moonstone Lv. 1 Jewelry Box -->
 		</extract>
 	</item>
 

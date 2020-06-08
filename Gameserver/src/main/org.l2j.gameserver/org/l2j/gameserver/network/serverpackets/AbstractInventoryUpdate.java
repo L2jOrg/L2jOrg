@@ -53,8 +53,8 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
         items.put(item.getObjectId(), new ItemInfo(item, 3));
     }
 
-    public final Collection<ItemInfo> getItems() {
-        return items.values();
+    public final boolean isEmpty() {
+        return items.isEmpty();
     }
 
     protected final void writeItems() {

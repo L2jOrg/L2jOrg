@@ -115,7 +115,7 @@
 	<weapon id="37694" name="Valentine Bow" type="BOW" body-part="TWO_HAND" icon="icon.ev_hallowinday_candy_i00">
 	<!-- Modifies the appearance of a weapon to that of a Valentine Bow. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>

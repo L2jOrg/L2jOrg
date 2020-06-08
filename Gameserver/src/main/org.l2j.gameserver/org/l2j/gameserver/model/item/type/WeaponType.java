@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.stats.TraitType;
  * @author JoeAlisson
  */
 public enum WeaponType implements ItemType {
-    NONE(TraitType.NONE), // TODO should be Shields
+    NONE(TraitType.NONE),
     SWORD(TraitType.SWORD),
     TWO_HAND_SWORD(TraitType.TWO_HAND_SWORD),
     MAGIC_SWORD(TraitType.MAGIC_SWORD),
@@ -23,11 +23,14 @@ public enum WeaponType implements ItemType {
     BOW(TraitType.BOW),
     ETC(TraitType.ETC),
     DUAL(TraitType.DUAL),
+    DUAL_FIST(TraitType.DUALFIST),
     FISHING_ROD(TraitType.NONE),
-    CROSSBOW(TraitType.CROSSBOW),
     RAPIER(TraitType.RAPIER),
+    CROSSBOW(TraitType.CROSSBOW),
     ANCIENT_SWORD(TraitType.ANCIENT_SWORD),
+    FLAG(TraitType.NONE),
     DUAL_DAGGER(TraitType.DUAL_DAGGER),
+    OWN_THING(TraitType.NONE),
     TWO_HAND_CROSSBOW(TraitType.TWO_HAND_CROSSBOW),
     DUAL_BLUNT(TraitType.DUAL_BLUNT);
 

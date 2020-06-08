@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2j.gameserver.model.item.enchant.EnchantScroll;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
@@ -47,8 +46,7 @@ public class RequestExTryToPutEnchantSupportItem extends ClientPacket {
             return;
         }
 
-        final EnchantScroll scrollTemplate = EnchantItemEngine.getInstance().getEnchantScroll(scroll);
-        if ((scrollTemplate == null) || !scrollTemplate.canEnchant(item)) {
+        if (EnchantItemEngine.getInstance().canEnchant(item, scroll)) {
             // message may be custom
             activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
             request.setSupportItem(Player.ID_NONE);

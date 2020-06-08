@@ -9,17 +9,17 @@
 	<armor id="49801" name="Dandy Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="120"/>
+		<attributes duration="120" />
 		<crystal />
-			<stats>
-				<stat type="PHYSICAL_ATTACK" value="60.0"/>
-				<stat type="MAGIC_ATTACK" value="60.0"/>
-				<stat type="MAGICAL_DEFENCE" value="21.0"/>
-				<stat type="BONUS_EXP" value="30.0"/>
-				<stat type="BONUS_SP" value="30.0"/>
-				<stat type="CRITICAL_DAMAGE" value="5.0"/>
-				<stat type="MAGIC_CRITICAL_DAMAGE" value="5.0"/>
-			</stats>
+		<stats>
+			<stat type="PHYSICAL_ATTACK" value="60.0"/>
+			<stat type="MAGIC_ATTACK" value="60.0"/>
+			<stat type="MAGICAL_DEFENCE" value="21.0"/>
+			<stat type="BONUS_EXP" value="30.0"/>
+			<stat type="BONUS_SP" value="30.0"/>
+			<stat type="CRITICAL_DAMAGE" value="5.0"/>
+			<stat type="MAGIC_CRITICAL_DAMAGE" value="5.0"/>
+		</stats>
 	</armor>
 
 	<armor id="49802" name="Dandy Shining Pendant" type="NONE" body-part="PENDANT" icon="icon.bm_pendant_pve">
@@ -296,7 +296,7 @@
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39191" value="-1"/>  <!-- Sayha's Blessing -->
+			<skill id="39191" value="-1"/>  <!-- Enhanced Sayha's Blessing - Exchangeable -->
 		</skill-reducer>
 	</item>
 
@@ -305,7 +305,7 @@
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39192" value="-1"/>  <!-- Sayha's Silver Light Blessing -->
+			<skill id="39192" value="-1"/>  <!-- Enhanced Sayha's Silver Light Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -314,7 +314,7 @@
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39193" value="-1"/>  <!-- Sayha's Golden Light Blessing -->
+			<skill id="39193" value="-1"/>  <!-- Enhanced Sayha's Golden Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -347,7 +347,7 @@
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="39194" value="-1"/>  <!-- Sayha's Gust Lv. 1 -->
+			<skill id="39194" value="-1"/>  <!-- Sayha's Storm Lv. 1 -->
 		</skill-reducer>
 	</item>
 
@@ -402,7 +402,7 @@
 		<attributes/>
 	</item>
 
-	<item id="49860" name="Hero's Wondrous Cubic" type="COUPON" icon="icon.etc_pink_crystal_cube_pc_i00">
+	<item id="49860" name="Hero's Wondrous Cubic" type="ELIXIR" icon="icon.etc_pink_crystal_cube_pc_i00">
 	<!-- A 1-day item. Available at level 20 or higher. Double-click the Cube to receive one of the following items: Ticket for Soulshot, Scroll of Mood Melody, Warrior's Major HP Potion, Warrior's Quick HP Potion, Angel Cat's Blessing, Greater Scroll of Resurrection, Parts of Enchantment Scrolls Chest, Fishing Kit Box, Box of Scroll of Escape to the Base, Blade Spirit, or Weapon Exchange Coupon (can be used only once a day).  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>

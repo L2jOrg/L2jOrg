@@ -119,7 +119,7 @@ public final class Item extends WorldObject {
     /**
      * Level of enchantment of the item
      */
-    private int _enchantLevel;
+    private int enchantLevel;
     /**
      * Wear Item
      */
@@ -188,7 +188,7 @@ public final class Item extends WorldObject {
         _ownerId = rs.getInt("owner_id");
         loc = ItemLocation.valueOf(rs.getString("loc"));
         _locData = rs.getInt("loc_data");
-        _enchantLevel = rs.getInt("enchant_level");
+        enchantLevel = rs.getInt("enchant_level");
         _time = rs.getLong("time");
         _existsInDb = true;
         _storedInDb = true;
@@ -278,10 +278,10 @@ public final class Item extends WorldObject {
         var generalSettings = getSettings(GeneralSettings.class);
         if (generalSettings.logItems()) {
             if (!generalSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
-                if (_enchantLevel > 0) {
+                if (enchantLevel > 0) {
                     LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
-                            + ":+" + _enchantLevel //
+                            + ":+" + enchantLevel //
                             + " " + template.getName() //
                             + "(" + _count + "), " //
                             + String.valueOf(creator) + ", " // in case of null
@@ -433,10 +433,10 @@ public final class Item extends WorldObject {
         var generalSettings = getSettings(GeneralSettings.class);
         if (generalSettings.logItems() && (process != null)) {
             if (!generalSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
-                if (_enchantLevel > 0) {
+                if (enchantLevel > 0) {
                     LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
-                            + ":+" + _enchantLevel //
+                            + ":+" + enchantLevel //
                             + " " + template.getName() //
                             + "(" + _count + "), PrevCount(" //
                             + String.valueOf(old) + "), " // in case of null
@@ -607,7 +607,7 @@ public final class Item extends WorldObject {
      * @return the quantity of crystals for crystallization.
      */
     public final int getCrystalCount() {
-        return template.getCrystalCount(_enchantLevel);
+        return template.getCrystalCount(enchantLevel);
     }
 
     /**
@@ -775,18 +775,22 @@ public final class Item extends WorldObject {
      * @return int
      */
     public int getEnchantLevel() {
-        return _enchantLevel;
+        return enchantLevel;
+    }
+
+    public void updateEnchantLevel(int value) {
+        setEnchantLevel(enchantLevel + value);
     }
 
     /**
      * @param enchantLevel the enchant value to set
      */
     public void setEnchantLevel(int enchantLevel) {
-        if (_enchantLevel == enchantLevel) {
+        if (this.enchantLevel == enchantLevel) {
             return;
         }
         clearEnchantStats();
-        _enchantLevel = enchantLevel;
+        this.enchantLevel = enchantLevel;
         applyEnchantStats();
         _storedInDb = false;
     }
@@ -795,7 +799,7 @@ public final class Item extends WorldObject {
      * @return {@code true} if item is enchanted, {@code false} otherwise
      */
     public boolean isEnchanted() {
-        return _enchantLevel > 0;
+        return enchantLevel > 0;
     }
 
     /**
@@ -1130,7 +1134,7 @@ public final class Item extends WorldObject {
             ps.setLong(2, _count);
             ps.setString(3, loc.name());
             ps.setInt(4, _locData);
-            ps.setInt(5, _enchantLevel);
+            ps.setInt(5, enchantLevel);
             ps.setLong(6, _time);
             ps.setInt(7, getObjectId());
             ps.executeUpdate();
@@ -1166,7 +1170,7 @@ public final class Item extends WorldObject {
             ps.setLong(3, _count);
             ps.setString(4, loc.name());
             ps.setInt(5, _locData);
-            ps.setInt(6, _enchantLevel);
+            ps.setInt(6, enchantLevel);
             ps.setInt(7, getObjectId());
             ps.setLong(8, _time);
 
@@ -1414,7 +1418,7 @@ public final class Item extends WorldObject {
 
     public int getOlyEnchantLevel() {
         final Player player = getActingPlayer();
-        int enchant = _enchantLevel;
+        int enchant = enchantLevel;
 
         if (player == null) {
             return enchant;
@@ -1428,7 +1432,7 @@ public final class Item extends WorldObject {
     }
 
     public boolean hasPassiveSkills() {
-        return (template.getItemType() == EtcItemType.ENCHT_ATTR_RUNE) && (loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
+        return (template.getItemType() == EtcItemType.RUNE) && (loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
     }
 
     public void giveSkillsToOwner() {
@@ -1459,7 +1463,7 @@ public final class Item extends WorldObject {
             {
                 final Skill skill = holder.getSkill();
                 if (skill.isPassive()) {
-                    player.removeSkill(skill, false, skill.isPassive());
+                    player.removeSkill(skill, false, true);
                 }
             });
         }
@@ -1474,10 +1478,6 @@ public final class Item extends WorldObject {
         return template.getEquipReuseDelay();
     }
 
-    /**
-     * @param activeChar
-     * @param command
-     */
     public void onBypassFeedback(Player activeChar, String command) {
         if (command.startsWith("Quest")) {
             final String questName = command.substring(6);
@@ -1772,6 +1772,10 @@ public final class Item extends WorldObject {
 
     public CrystalType getCrystalType() {
         return template.getCrystalType();
+    }
+
+    public boolean isMagicWeapon() {
+        return template instanceof Weapon w && w.isMagicWeapon();
     }
 
     static class ScheduleLifeTimeTask implements Runnable {

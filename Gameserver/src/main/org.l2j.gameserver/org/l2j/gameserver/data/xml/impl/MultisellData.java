@@ -2,7 +2,6 @@ package org.l2j.gameserver.data.xml.impl;
 
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.gameserver.engine.item.EnchantItemGroupsData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.StatsSet;
@@ -10,11 +9,9 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.enchant.EnchantItemGroup;
 import org.l2j.gameserver.network.serverpackets.MultiSellList;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +27,6 @@ import java.util.Map;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.gameserver.model.item.BodyPart.FULL_ARMOR;
 
 public final class MultisellData extends GameXmlReader {
     public static final int PAGE_SIZE = 40;
@@ -61,14 +57,6 @@ public final class MultisellData extends GameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        final EnchantItemGroup magicWeaponGroup = EnchantItemGroupsData.getInstance().getItemGroup("MAGE_WEAPON_GROUP");
-        final int magicWeaponGroupMax = magicWeaponGroup != null ? magicWeaponGroup.getMaximumEnchant() : 0;
-        final EnchantItemGroup weapongroup = EnchantItemGroupsData.getInstance().getItemGroup("FIGHTER_WEAPON_GROUP");
-        final int weaponGroupMax = weapongroup != null ? weapongroup.getMaximumEnchant() : 0;
-        final EnchantItemGroup fullArmorGroup = EnchantItemGroupsData.getInstance().getItemGroup("FULL_ARMOR_GROUP");
-        final int fullArmorGroupMax = fullArmorGroup != null ? fullArmorGroup.getMaximumEnchant() : 0;
-        final EnchantItemGroup armorGroup = EnchantItemGroupsData.getInstance().getItemGroup("ARMOR_GROUP");
-        final int armorGroupMax = armorGroup != null ? armorGroup.getMaximumEnchant() : 0;
 
         try {
             forEach(doc, "list", listNode ->
@@ -103,17 +91,6 @@ public final class MultisellData extends GameXmlReader {
                                 final double chance = parseDouble(d.getAttributes(), "chance", Double.NaN);
                                 byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
 
-                                if (enchantmentLevel > 0) {
-
-                                    final ItemTemplate item = ItemEngine.getInstance().getTemplate(id);
-
-                                    if(GameUtils.isWeapon(item)) {
-                                        enchantmentLevel = (byte) Math.min(enchantmentLevel, item.isMagicWeapon() ? magicWeaponGroupMax : weaponGroupMax);
-                                    } else if(GameUtils.isArmor(item)) {
-                                        enchantmentLevel = (byte) Math.min(enchantmentLevel, item.getBodyPart() == FULL_ARMOR ? fullArmorGroupMax : armorGroupMax);
-                                    }
-
-                                }
 
                                 final ItemChanceHolder product = new ItemChanceHolder(id, chance, count, enchantmentLevel);
 
