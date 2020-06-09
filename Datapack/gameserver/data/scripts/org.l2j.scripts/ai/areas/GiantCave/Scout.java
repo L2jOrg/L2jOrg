@@ -10,6 +10,7 @@ import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.MinionHolder;
+import org.l2j.gameserver.model.quest.QuestState;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,12 +21,14 @@ public class Scout extends AbstractNpcAI {
 
 
     private static final int SPAWN_DELAY = 10000; // milliseconds
+    private static final int DESPAWN_MINION_DELAY = 300000; // milliseconds
     private static final int GAMLIN = 20651;
     private static final int LEOGUL = 20652;
 
     private Scout()
     {
         addAttackId(GAMLIN, LEOGUL);
+        addKillId(GAMLIN, LEOGUL);
     }
 
     @Override
@@ -34,9 +37,14 @@ public class Scout extends AbstractNpcAI {
             final Playable pAttacker = player.getServitors().size() > 0 ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player;
             final Monster monster = (Monster) npc;
 
-            if (monster != null && monster.isDead() && !monster.isTeleporting() && !monster.hasMinions())
-                for (MinionHolder is : npc.getParameters().getMinionList("Privates"))
-                    addAttackPlayerDesire(addMinion(monster, is.getId()), pAttacker);
+            if (monster != null && !monster.isDead() && !monster.isTeleporting() && !monster.hasMinions())
+                for (MinionHolder is : npc.getParameters().getMinionList("Privates")) {
+                    monster.getMinionList().spawnMinions(monster.getParameters().getMinionList("Privates"));
+                    monster.getMinionList().getSpawnedMinions().forEach(minion -> {
+                        minion.scheduleDespawn(DESPAWN_MINION_DELAY);
+                        addAttackPlayerDesire(minion, pAttacker);
+                    });
+                }
         }
 
         return super.onAdvEvent(event, npc, player);
@@ -49,11 +57,24 @@ public class Scout extends AbstractNpcAI {
         {
             final Monster monster = (Monster) npc;
 
+            // FIXME: If minion has been despawn by minion.scheduleDespawn(DESPAWN_MINION_DELAY); then monster.hasMinions() below is true.
+            // FIXME: Once the mob is killed monster.hasMinions() is false like it has to
             if (!monster.isTeleporting() && !monster.hasMinions() && getQuestTimer("GC_SCOUT_EVENT_AI", npc, attacker) == null)
                 startQuestTimer("GC_SCOUT_EVENT_AI", SPAWN_DELAY, npc, attacker);
+                LOGGER.info("SendTimer for {}", npc);
         }
 
         return super.onAttack(npc, attacker, damage, isSummon);
+    }
+
+    @Override
+    public String onKill(Npc npc, Player killer, boolean isSummon) {
+        if (isMonster(npc)) {
+            final Monster monster = (Monster) npc;
+            monster.setMinionList(null);
+        }
+
+        return super.onKill(npc, killer, isSummon);
     }
 
     public static AbstractNpcAI provider()

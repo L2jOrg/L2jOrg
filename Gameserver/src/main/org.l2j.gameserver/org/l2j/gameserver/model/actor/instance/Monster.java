@@ -156,6 +156,10 @@ public class Monster extends Attackable {
         return _minionList != null;
     }
 
+    public void setMinionList(MinionList minionList) {
+        _minionList = minionList;
+    }
+
     public MinionList getMinionList() {
         if (_minionList == null) {
             synchronized (this) {
