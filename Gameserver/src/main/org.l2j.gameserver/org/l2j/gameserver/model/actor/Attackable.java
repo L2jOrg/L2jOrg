@@ -55,6 +55,7 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.doIfIsCreature;
 
 public class Attackable extends Npc {
@@ -945,7 +946,7 @@ public class Attackable extends Npc {
      */
     @Override
     public boolean isSweepActive() {
-        return _sweepItems.get() != null;
+        return !isNullOrEmpty(_sweepItems.get());
     }
 
     /**

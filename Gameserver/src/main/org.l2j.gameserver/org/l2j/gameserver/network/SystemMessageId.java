@@ -11220,6 +11220,9 @@ public final class SystemMessageId {
     @ClientString(id = 5269, message = "Recovered $s1's XP ($s2%%). (Remaining free recovery count: $s3)")
     public static SystemMessageId RECOVERED_S1_S_XP_S2_REMAINING_FREE_RECOVERY_COUNT_S3;
 
+    @ClientString(id = 5270, message = "Only macros can be registered.")
+    public static SystemMessageId ONLY_MACROS_CAN_BE_REGISTERED;
+
     @ClientString(id = 5271, message = "Demonic Sword Zariche or Blood Sword Akamanah is required to use it.")
     public static SystemMessageId DEMONIC_SWORD_ZARICHE_OR_BLOOD_SWORD_AKAMANAH_IS_REQUIRED_TO_USE_IT;
 
@@ -17601,9 +17604,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 5211, message = "No Artifact Book equipped. You cannot equip $s1.")
     public static SystemMessageId NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1;
-
-    @ClientString(id = 5270, message = "Only macros can be registered.")
-    public static SystemMessageId ONLY_MACROS_CAN_BE_REGISTERED;
 
     @ClientString(id = 6004, message = "Enchant failed. The enchant skill for the corresponding item will be exactly retained.")
     public static SystemMessageId ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED;

@@ -1526,10 +1526,10 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
-                <power initial="5.0">
-                    <value level="2">7.0</value>
-                    <value level="3">10.0</value>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
                 </power>
             </stat-modify>
         </effects>

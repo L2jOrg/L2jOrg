@@ -13,6 +13,7 @@ import org.l2j.gameserver.model.item.instance.Item;
 
 import java.util.Collection;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -49,7 +50,7 @@ public final class Sweeper extends AbstractEffect {
         }
 
         final Collection<ItemHolder> items = monster.takeSweep();
-        if (items != null) {
+        if (nonNull(items)) {
             for (ItemHolder sweepedItem : items) {
                 final Party party = player.getParty();
                 if (party != null) {
