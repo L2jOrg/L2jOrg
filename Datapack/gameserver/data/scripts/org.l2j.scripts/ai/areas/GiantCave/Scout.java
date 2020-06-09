@@ -31,11 +31,12 @@ public class Scout extends AbstractNpcAI {
     @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
         if (event.equals("GC_SCOUT_EVENT_AI")) {
+            final Playable pAttacker = player.getServitors().size() > 0 ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player;
             final Monster monster = (Monster) npc;
 
             if (monster != null && monster.isDead() && !monster.isTeleporting() && !monster.hasMinions())
                 for (MinionHolder is : npc.getParameters().getMinionList("Privates"))
-                    addAttackPlayerDesire(addMinion(monster, is.getId()), player);
+                    addAttackPlayerDesire(addMinion(monster, is.getId()), pAttacker);
         }
 
         return super.onAdvEvent(event, npc, player);
@@ -44,8 +45,6 @@ public class Scout extends AbstractNpcAI {
     @Override
     public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
     {
-        final Playable pAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
-
         if (isMonster(npc))
         {
             final Monster monster = (Monster) npc;
