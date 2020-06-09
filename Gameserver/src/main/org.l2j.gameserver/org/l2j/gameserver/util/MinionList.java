@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author luisantonioa, DS, Mobius
  */
@@ -149,29 +151,24 @@ public class MinionList {
      * @param force - When true, force delete of the spawned minions. By default minions are deleted only for raidbosses.
      */
     public void onMasterDie(boolean force) {
-        if (_master.isRaid() || force || Config.FORCE_DELETE_MINIONS) {
-            if (!_spawnedMinions.isEmpty()) {
-                for (Monster minion : _spawnedMinions) {
-                    if (minion != null) {
-                        minion.setLeader(null);
-                        minion.deleteMe();
-                    }
+        _spawnedMinions.forEach(minion -> {
+            if(nonNull(minion)) {
+                minion.setLeader(null);
+                if(_master.isRaid() || force || Config.FORCE_DELETE_MINIONS) {
+                    minion.deleteMe();
                 }
-                _spawnedMinions.clear();
             }
+        });
+        _spawnedMinions.clear();
 
-			if (!_respawnTasks.isEmpty())
-			{
-				for (ScheduledFuture<?> task : _respawnTasks)
-				{
-					if ((task != null) && !task.isCancelled() && !task.isDone())
-					{
-						task.cancel(true);
-					}
+        _respawnTasks.forEach(task -> {
+            if(nonNull(task) && !task.isCancelled() && !task.isDone()) {
+                task.cancel(true);
             }
-                _respawnTasks.clear();
-            }
-		}
+        });
+        _respawnTasks.clear();
+
+        _master.setMinionList(null);
     }
 
     /**

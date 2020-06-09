@@ -28,7 +28,6 @@ public class Scout extends AbstractNpcAI {
     private Scout()
     {
         addAttackId(GAMLIN, LEOGUL);
-        addKillId(GAMLIN, LEOGUL);
     }
 
     @Override
@@ -57,23 +56,11 @@ public class Scout extends AbstractNpcAI {
         {
             final Monster monster = (Monster) npc;
 
-            // FIXME: If minion has been despawn by minion.scheduleDespawn(DESPAWN_MINION_DELAY); then monster.hasMinions() below is true.
-            // FIXME: Once the mob is killed monster.hasMinions() is false like it has to
             if (!monster.isTeleporting() && !monster.hasMinions() && getQuestTimer("GC_SCOUT_EVENT_AI", npc, attacker) == null)
                 startQuestTimer("GC_SCOUT_EVENT_AI", SPAWN_DELAY, npc, attacker);
         }
 
         return super.onAttack(npc, attacker, damage, isSummon);
-    }
-
-    @Override
-    public String onKill(Npc npc, Player killer, boolean isSummon) {
-        if (isMonster(npc)) {
-            final Monster monster = (Monster) npc;
-            monster.setMinionList(null);
-        }
-
-        return super.onKill(npc, killer, isSummon);
     }
 
     public static AbstractNpcAI provider()
