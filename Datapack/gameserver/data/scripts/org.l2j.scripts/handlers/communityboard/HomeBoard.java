@@ -665,8 +665,6 @@ public final class HomeBoard implements IParseBoardHandler {
 
             if (column == maxColumn)
             {
-                sb.append("<td height=10>");
-                sb.append("</td>");
                 sb.append("</tr>");
                 column = 0;
             }
