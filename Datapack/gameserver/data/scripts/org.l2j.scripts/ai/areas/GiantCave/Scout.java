@@ -61,7 +61,6 @@ public class Scout extends AbstractNpcAI {
             // FIXME: Once the mob is killed monster.hasMinions() is false like it has to
             if (!monster.isTeleporting() && !monster.hasMinions() && getQuestTimer("GC_SCOUT_EVENT_AI", npc, attacker) == null)
                 startQuestTimer("GC_SCOUT_EVENT_AI", SPAWN_DELAY, npc, attacker);
-                LOGGER.info("SendTimer for {}", npc);
         }
 
         return super.onAttack(npc, attacker, damage, isSummon);
