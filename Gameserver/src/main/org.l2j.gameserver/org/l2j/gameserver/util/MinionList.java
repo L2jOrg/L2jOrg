@@ -156,6 +156,8 @@ public class MinionList {
                 minion.setLeader(null);
                 if(_master.isRaid() || force || Config.FORCE_DELETE_MINIONS) {
                     minion.deleteMe();
+                } else {
+                    minion.scheduleDespawn(Config.DESPAWN_MINION_DELAY);
                 }
             }
         });
