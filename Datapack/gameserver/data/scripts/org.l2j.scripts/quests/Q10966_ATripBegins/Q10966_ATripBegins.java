@@ -140,8 +140,8 @@ public class Q10966_ATripBegins extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			
-			if (killCount < 300)
+			//last update of l2 classic is 15 items instead of 300
+			if (killCount < 15)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);

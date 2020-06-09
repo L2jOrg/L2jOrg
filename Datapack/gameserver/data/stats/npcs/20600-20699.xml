@@ -3256,10 +3256,9 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
+            <param name="SummonPrivateRate" value="0"/>
             <minions name="Privates">
-                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
-                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
-                <npc id="20656" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="20656" count="3" respawnTime="0" weightPoint="1"/>
             </minions>
         </parameters>
 

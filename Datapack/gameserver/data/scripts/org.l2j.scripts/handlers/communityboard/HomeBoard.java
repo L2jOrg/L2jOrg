@@ -638,8 +638,8 @@ public final class HomeBoard implements IParseBoardHandler {
         final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         final StringBuilder sb = new StringBuilder(skills.size() * 150);
         int column = 0;
-        int maxColumn = skills.size() <= 16 ? 4 : 5;
-        sb.append("<table>");
+        int maxColumn = skills.size() <= 16 ? 4 : 7;
+        sb.append("<table background=L2UI_CT1.Windows_DF_TooltipBG>");
 
         for (int skillId : skills)
         {
@@ -647,6 +647,8 @@ public final class HomeBoard implements IParseBoardHandler {
             if (column == 0)
             {
                 sb.append("<tr>");
+                sb.append("<td height=10>");
+                sb.append("</td>");
             }
 
             final Skill skill = SkillEngine.getInstance().getSkill(skillId, 1);
@@ -663,6 +665,8 @@ public final class HomeBoard implements IParseBoardHandler {
 
             if (column == maxColumn)
             {
+                sb.append("<td height=10>");
+                sb.append("</td>");
                 sb.append("</tr>");
                 column = 0;
             }

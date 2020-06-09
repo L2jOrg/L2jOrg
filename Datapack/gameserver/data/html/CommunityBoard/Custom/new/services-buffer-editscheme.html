@@ -16,18 +16,21 @@
 							<table width="570" height="200" background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
 								<tr><td height=4></td></tr>
 								<tr>
-									<td width=5></td>
 									<td>
 										<!--- buffer title --->
 										<center>
-										<table width=570>
-											<tr><td height=20></td></tr>
-											<tr>
-												<td align=center>
-													<font name="hs16">Setting personal scheme</font>
-												</td>
-											</tr>
-										</table>
+											<table width=570>
+												<tr>
+													<td align=left width=150>
+														<font color="808080" >Buffs left:</font> <font color="LEVEL">%count%</font>
+													</td>
+													<td width=150 align="right">
+														<font color="808080" name="hs16">Scheme name:</font> <font color="LEVEL">%schemename%</font>
+													</td>
+
+												</tr>
+												<tr><td height=2></td></tr>
+											</table>
 										</center>
 										<!--- buffer title --->
 										<br>
@@ -377,26 +380,16 @@
 													</table>
 												</td>
 											</tr>
-											<tr><td height=16></td></tr>
 										</table>
+
 										<table width=570>
-											<tr><td height=2></td></tr>
+											<tr><td height=20><font color="808080" name="hs16">Buffs you can add:</font></td></tr>
 											<tr>
-												<td align=left width=40>
-													<font color="808080">Buffs left:</font> <font color="LEVEL">%count%</font>
+												<td align="center">
+													%typesframe%
+													%skilllistframe%
 												</td>
-												<td align= width=40>
-													<font color="808080">SchemeName:</font> <font color="LEVEL">%schemename%</font>
-												</td>
-												<td align=right width=160>
-													<a action="bypass -h npc_%objectId%_Quest GrandBossTeleporters"><font color="FF0000">Delete buff</font></a>
-												</td>
-												<td width=20></td>
 											</tr>
-											<tr><td height=2></td></tr>
-										</table>
-										<table width=570>
-											<tr><td height=20></td></tr>
 											<tr>
 												<td align=center>
 													<button value="Back" action="bypass _bbstop new/services-buffer.html" width=90 height=25 back="L2EssenceCommunity.btn_small_over" fore="L2EssenceCommunity.btn_small">
@@ -406,8 +399,7 @@
 										</table>
 										</center>
 
-										%typesframe%
-										%skilllistframe%
+
 									</td>
 								</tr>
 							</table>
