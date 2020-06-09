@@ -607,7 +607,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     }
 
     private double calculateLevelGapChanceToDrop(DropHolder dropItem, int levelDifference) {
-        // check level gap that may prevent drop this item
         final double levelGapChanceToDrop;
         if (dropItem.getItemId() == CommonItem.ADENA) {
             levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
@@ -629,24 +628,19 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
         int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
         for (DropHolder dropItem : list) {
-            // check if maximum drop occurrences have been reached
-            // items that have 100% drop chance without server rate multipliers drop normally
-            if ((dropOccurrenceCounter == 0) && (dropItem.getChance() < 100)) {
+
+            if (dropOccurrenceCounter == 0 && dropItem.getChance() < 100) {
                 continue;
             }
 
-            // calculate chances
             final ItemHolder drop = calculateDropWithLevelGap(dropItem, victim, killer);
-            if (drop == null) {
-                continue;
-            }
+            if(nonNull(drop)) {
+                if (dropItem.getChance() < 100) {
+                    dropOccurrenceCounter--;
+                }
 
-            // finally
-            if (dropItem.getChance() < 100) {
-                dropOccurrenceCounter--;
+                itemsToDrop.add(drop);
             }
-
-            itemsToDrop.add(drop);
         }
 
         if (victim.isChampion()) {
@@ -694,7 +688,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private ItemHolder calculateDropWithLevelGap(DropHolder dropItem, Creature victim, Creature killer) {
         final int levelDifference = victim.getLevel() - killer.getLevel();
         double levelGapChanceToDrop = calculateLevelGapChanceToDrop(dropItem, levelDifference);
-        if ((Rnd.nextDouble() * 100) > levelGapChanceToDrop) {
+        if (!Rnd.chance(levelGapChanceToDrop)) {
             return null;
         }
 
@@ -728,7 +722,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                 final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                 final boolean champion = victim.isChampion();
 
-                // chance
                 double rateChance = 1;
                 if (Config.RATE_DROP_CHANCE_BY_ID.get(itemId) != null) {
                     rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
@@ -747,7 +740,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                 rateChance *= killer.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
 
                 // calculate if item will drop
-                if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {
+                if (Rnd.chance(dropItem.getChance() * rateChance)) {
                     // amount is calculated after chance returned success
                     double rateAmount = 1;
                     if (Config.RATE_DROP_AMOUNT_BY_ID.get(itemId) != null) {
@@ -779,7 +772,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                 rateChance *= killer.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
 
                 // calculate if item will be rewarded
-                if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {
+                if (Rnd.chance(dropItem.getChance() * rateChance)) {
                     // amount is calculated after chance returned success
                     double rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
 
