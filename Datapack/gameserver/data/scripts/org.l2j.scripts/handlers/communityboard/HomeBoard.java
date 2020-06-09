@@ -658,7 +658,7 @@ public final class HomeBoard implements IParseBoardHandler {
             }
             else
             {
-                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CT1.TimeZoneWnd_PlusBtn_df\" fore=\"L2UI_CT1.TimeZoneWnd_PlusBtn_df\"></td>");
+                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
             }
 
             column++;
