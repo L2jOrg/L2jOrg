@@ -2,18 +2,24 @@ package ai.areas.GiantCave;
 
 
 import ai.AbstractNpcAI;
+import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.holders.MinionHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.gameserver.util.GameUtils.isMonster;
 
 public class Scout extends AbstractNpcAI {
     private static Logger LOGGER = LoggerFactory.getLogger(Scout.class);
 
 
+    private static final int SPAWN_DELAY = 10000; // milliseconds
     private static final int GAMLIN = 20651;
     private static final int LEOGUL = 20652;
 
@@ -22,36 +28,33 @@ public class Scout extends AbstractNpcAI {
         addAttackId(GAMLIN, LEOGUL);
     }
 
-
     @Override
-    public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
-    {
-        Npc spawnMonster = null;
-        final Playable attacker = isSummon ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player;
-        //TODO fix the spawn
-        if(((Attackable) npc).getAggroList().size() == 1) {
-            switch (npc.getId()) {
-                case GAMLIN:
-                        spawnMonster = addSpawn(GAMLIN, npc, false, 300000);
-                        addAttackPlayerDesire(spawnMonster, attacker);
-                        spawnMonster = addSpawn(GAMLIN, npc, false, 300000);
-                        addAttackPlayerDesire(spawnMonster, attacker);
-                        spawnMonster = addSpawn(GAMLIN, npc, false, 300000);
-                        addAttackPlayerDesire(spawnMonster, attacker);
-                    break;
+    public String onAdvEvent(String event, Npc npc, Player player) {
+        if (event.equals("GC_SCOUT_EVENT_AI")) {
+            final Monster monster = (Monster) npc;
 
-                case LEOGUL:
-                        spawnMonster = addSpawn(LEOGUL, npc, false, 300000);
-                        addAttackPlayerDesire(spawnMonster, attacker);
-                        spawnMonster = addSpawn(LEOGUL, npc, false, 300000);
-                        addAttackPlayerDesire(spawnMonster, attacker);
-                        spawnMonster = addSpawn(LEOGUL, npc, false, 300000);
-                        addAttackPlayerDesire(spawnMonster, attacker);
-                    break;
-            };
+            if (monster != null && monster.isDead() && !monster.isTeleporting() && !monster.hasMinions())
+                for (MinionHolder is : npc.getParameters().getMinionList("Privates"))
+                    addAttackPlayerDesire(addMinion(monster, is.getId()), player);
         }
 
-        return super.onAttack(npc, player, damage, isSummon);
+        return super.onAdvEvent(event, npc, player);
+    }
+
+    @Override
+    public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
+    {
+        final Playable pAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
+
+        if (isMonster(npc))
+        {
+            final Monster monster = (Monster) npc;
+
+            if (!monster.isTeleporting() && !monster.hasMinions() && getQuestTimer("GC_SCOUT_EVENT_AI", npc, attacker) == null)
+                startQuestTimer("GC_SCOUT_EVENT_AI", SPAWN_DELAY, npc, attacker);
+        }
+
+        return super.onAttack(npc, attacker, damage, isSummon);
     }
 
     public static AbstractNpcAI provider()
