@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="48400" name="Items Seal Scroll" type="SEAL_SCROLL" icon="icon.scrl_item_lock">
 	<!-- Scroll used for sealing an item.\nThe sealed item cannot be used for any enchantment related systems and is restricted from functions such as exchange/drop/destroy/clan warehouse.\nThe item can be unsealed by using a ‘Item Unseal Scroll'. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="1000"/>
 	</item>
 
 	<item id="48401" name="Item Unseal Scroll" type="UNSEAL_SCROLL" icon="icon.scrl_item_unlock">
 	<!-- Use to unseal a sealed item. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="48411" name="Item Unseal Scroll (15-min) Box" type="NONE" icon="BranchSys3.g_ev_invite_fantasy_box">
 	<!-- Double-click to obtain 10 Item Unseal Scrolls (15-min). -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 

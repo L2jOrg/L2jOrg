@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="5200" name="Chest Key - Grade 5" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 30 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="10" price="1900" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2065" level="4" value="-1"/>  <!-- Box Key -->
@@ -11,7 +11,7 @@
 
 	<item id="5201" name="Chest Key - Grade 4" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 40 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="10" price="3200" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2065" level="5" value="-1"/>  <!-- Box Key -->
@@ -20,7 +20,7 @@
 
 	<item id="5202" name="Chest Key - Grade 3" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 50 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="10" price="5100" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2065" level="6" value="-1"/>  <!-- Box Key -->
@@ -29,7 +29,7 @@
 
 	<item id="5203" name="Chest Key - Grade 2" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 60 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="10" price="7400" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2065" level="7" value="-1"/>  <!-- Box Key -->
@@ -38,7 +38,7 @@
 
 	<item id="5204" name="Chest Key - Grade 1" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 70 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="10" price="10000" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2065" level="8" value="-1"/>  <!-- Box Key -->
@@ -47,118 +47,118 @@
 
 	<item id="5205" name="Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_sword_fix_i00">
 	<!-- Innadril/Sword/Stationary -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="50000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5206" name="Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_pole_fix_i00">
 	<!-- Innadril/Spear/Stationary -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5207" name="Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_bow_fix_i00">
 	<!-- Innadril/Bow/Stationary -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="70000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5208" name="Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_cleric_fix_i00">
 	<!-- Innadril/Cleric/Stationary -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="170000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5209" name="Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_wizard_fix_i00">
 	<!-- Innadril/Wizard/Stationary -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="170000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5210" name="Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_sword_move_i00">
 	<!-- Innadril/Sword/Mobile -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="50000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5211" name="Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_pole_move_i00">
 	<!-- Innadril/Spear/Mobile -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5212" name="Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_bow_move_i00">
 	<!-- Innadril/Bow/Mobile -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="70000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5213" name="Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_cleric_move_i00">
 	<!-- Innadril/Cleric/Mobile -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="170000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5214" name="Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_wizard_move_i00">
 	<!-- Innadril/Wizard/Mobile -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="170000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5215" name="Mercenary Posting Ticket (Teleporter1)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Innadril/Teleporter/Inner Castle, Guard -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5218" name="Mercenary Posting Ticket (Teleporter2)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Innadril/Teleporter/Outer Castle, Guardian -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5219" name="Mercenary Posting Ticket (Teleporter3)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Innadril/Teleporter/Inner Castle, Outer Castle -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="5220" name="Metal Hardener" type="MATERIAL" icon="icon.etc_plate_blue_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="5000" immediate-effect="true"/>
 	</item>
 
 	<item id="5230" name="Recipe: Mithril Arrow" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Mithril Arrows. Requires Create Item - Skill Lv. 4. The success rate is 100%.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5231" name="Recipe: Metal Hardener" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for a Metal Hardener. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="2800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5232" name="White Cloth" type="NONE" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Large piece of white cloth given by Magister Hanellin. Kill Guardian Angels and Seal Angels and soak the cloth with their blood. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
@@ -176,14 +176,11 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="17" type="ON_ENCHANT" value="-1"/>  <!-- TODO Skill not found -->
-		</skills>
 	</weapon>
 
 	<item id="5234" name="Mysterious Potion" type="POTION" icon="icon.etc_lesser_potion_clear_i00">
 	<!-- Legend says that if you drink this potion your head will grow larger! Believe it if you will! -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="10000" commission-type="SCROLL_OTHER" reuse-delay="500" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2103" value="-1"/>  <!-- Mysterious Potion -->
@@ -192,7 +189,7 @@
 
 	<item id="5235" name="Facelifting Potion - A - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2122" value="-1"/>  <!-- Facelifting Potion -->
@@ -201,7 +198,7 @@
 
 	<item id="5236" name="Facelifting Potion - B - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2123" value="-1"/>  <!-- Facelifting Potion -->
@@ -210,7 +207,7 @@
 
 	<item id="5237" name="Facelifting Potion - C - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2124" value="-1"/>  <!-- Facelifting Potion -->
@@ -219,7 +216,7 @@
 
 	<item id="5238" name="Dye Potion - A - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2125" value="-1"/>  <!-- Dye Potion -->
@@ -228,7 +225,7 @@
 
 	<item id="5239" name="Dye Potion - B - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2126" value="-1"/>  <!-- Dye Potion -->
@@ -237,7 +234,7 @@
 
 	<item id="5240" name="Dye Potion - C - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2127" value="-1"/>  <!-- Dye Potion -->
@@ -246,7 +243,7 @@
 
 	<item id="5241" name="Dye Potion - D - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type D. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2128" value="-1"/>  <!-- Dye Potion -->
@@ -255,7 +252,7 @@
 
 	<item id="5242" name="Hair Style Change Potion - A" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2129" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -264,7 +261,7 @@
 
 	<item id="5243" name="Hair Style Change Potion - B" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2130" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -273,7 +270,7 @@
 
 	<item id="5244" name="Hair Style Change Potion - C" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2131" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -282,7 +279,7 @@
 
 	<item id="5245" name="Hair Style Change Potion - D" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2132" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -291,7 +288,7 @@
 
 	<item id="5246" name="Hair Style Change Potion - E" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type E. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2133" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -300,7 +297,7 @@
 
 	<item id="5247" name="Hair Style Change Potion - F" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type F. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2134" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -309,7 +306,7 @@
 
 	<item id="5248" name="Hair Style Change Potion - G" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type G. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2135" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -318,7 +315,7 @@
 
 	<item id="5250" name="Greater Soulshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 No-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="600" price="7700" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2104" value="-1"/>  <!-- Greater Soulshot Compressed Package (No-grade) -->
@@ -327,7 +324,7 @@
 
 	<item id="5251" name="Greater Soulshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 D-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="450" price="11000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2105" value="-1"/>  <!-- Greater Soulshot Compressed Package (D-grade) -->
@@ -336,7 +333,7 @@
 
 	<item id="5252" name="Greater Soulshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 C-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="450" price="16500" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2106" value="-1"/>  <!-- Greater Soulshot Compressed Package (C-grade) -->
@@ -345,7 +342,7 @@
 
 	<item id="5253" name="Greater Soulshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 B-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="300" price="55000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2107" value="-1"/>  <!-- Greater Soulshot Compressed Package (B-grade) -->
@@ -354,7 +351,7 @@
 
 	<item id="5254" name="Greater Soulshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed Soulshots. Upon use, changes into a 1,000 A-grade Soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="300" price="88000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2108" value="-1"/>  <!-- Greater Soulshot Compressed Package (A-grade) -->
@@ -363,7 +360,7 @@
 
 	<item id="5256" name="Greater Spiritshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 No-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="750" price="16500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2110" value="-1"/>  <!-- Greater Spiritshot Compressed Package (No-grade) -->
@@ -372,7 +369,7 @@
 
 	<item id="5257" name="Greater Spiritshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 D-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="750" price="19800" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2111" value="-1"/>  <!-- Greater Spiritshot Compressed Package (D-grade) -->
@@ -381,7 +378,7 @@
 
 	<item id="5258" name="Greater Spiritshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 C-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="450" price="38500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2112" value="-1"/>  <!-- Greater Spiritshot Compressed Package (C-grade) -->
@@ -390,7 +387,7 @@
 
 	<item id="5259" name="Greater Spiritshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 B-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="450" price="110000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2113" value="-1"/>  <!-- Greater Spiritshot Compressed Package (B-grade) -->
@@ -399,7 +396,7 @@
 
 	<item id="5260" name="Greater Spiritshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 A-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="300" price="132000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2114" value="-1"/>  <!-- Greater Spiritshot Compressed Package (A-grade) -->
@@ -408,7 +405,7 @@
 
 	<item id="5262" name="Greater Blessed Spiritshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 No-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="750" price="38500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2116" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (No-grade) -->
@@ -417,7 +414,7 @@
 
 	<item id="5263" name="Greater Blessed Spiritshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 D-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="750" price="49500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2117" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (D-grade) -->
@@ -426,7 +423,7 @@
 
 	<item id="5264" name="Greater Blessed Spiritshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 C-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="450" price="99000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2118" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (C-grade) -->
@@ -435,7 +432,7 @@
 
 	<item id="5265" name="Greater Blessed Spiritshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 B-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="450" price="269500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2119" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (B-grade) -->
@@ -444,7 +441,7 @@
 
 	<item id="5266" name="Greater Blessed Spiritshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 A-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="300" price="319000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="2120" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (A-grade) -->
@@ -453,91 +450,91 @@
 
 	<item id="5268" name="Recipe: Greater Soulshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5269" name="Recipe: Greater Soulshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5270" name="Recipe: Greater Soulshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5271" name="Recipe: Greater Soulshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Greater Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5273" name="Recipe: Greater Spiritshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5274" name="Recipe: Greater Spiritshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5275" name="Recipe: Greater Spiritshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5276" name="Recipe: Greater Spiritshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Greater Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5278" name="Recipe: Greater Blessed Spiritshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5279" name="Recipe: Greater Blessed Spiritshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5280" name="Recipe: Greater Blessed Spiritshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5281" name="Recipe: Greater Blessed Spiritshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Blessed Spiritshot Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5283" name="Rice Cake" type="POTION" icon="icon.etc_mochi_i00">
 	<!-- Rice cake that restores one's HP and MP. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2136" value="-1"/>  <!-- Rice Cake -->

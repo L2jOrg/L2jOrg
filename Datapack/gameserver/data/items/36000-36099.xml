@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="36079" name="Yum Yum Candy" type="RUNE" icon="icon.etc_whiteday_candy_i05">
 	<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP/ SP +15%. Stacks with Nom Nom Candy. Temporary event item. -->
-		<restriction dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="36080" name="Nom Nom Candy" type="RUNE" icon="icon.etc_whiteday_candy_i06">
 	<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP/ SP +15%. Stacks with Yum Yum Candy. Temporary event item. -->
-		<restriction dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="36081" name="Yummy Gift Box" type="NONE" icon="icon.etc_candy_basket_i04_1">
 	<!-- You can get one box per account. Double-click to receive two Yum Yum Candies or two Nom Nom Candies. (The item will be removed after the event is over.) -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer>
 			<skill id="9620" value="-1"/>  <!-- Yummy Gift Box -->

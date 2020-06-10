@@ -2,301 +2,301 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="91500" name="Crafting Pack - Basalt Battlehammer" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Basalt Battlehammer (30%) and 25 Basalt Battlehammer Heads.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91501" name="Crafting Pack - Imperial Staff" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Imperial Staff (30%) and 25 Imperial Staff Heads. Cannot be dropped or sold at an NPC's store. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91502" name="Crafting Pack - Angel Slayer" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Angel Slayer (30%) and 25 Angel Slayer Blades.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91503" name="Crafting Pack - Dragon Hunter Axe" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Dragon Hunter Axe (30%) and 25 Dragon Hunter Axe Blades.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91504" name="Crafting Pack - Saint Spear" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Saint Spear (30%) and 25 Saint Spear Blades.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91505" name="Crafting Pack - Demon Splinter" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Demon Splinter (30%) and 25 Demon Splinter Blades.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91506" name="Crafting Pack - Heaven's Divider" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Heaven's Divider (30%) and 25 Heaven's Divider Edges.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91507" name="Crafting Pack - Arcana Mace" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Arcana Mace (30%) and 25 Arcana Mace Heads.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91508" name="Crafting Pack - Draconic Bow" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Draconic Bow (30%) and 25 Draconic Bow Shafts.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91509" name="Crafting Pack - Sealed Imperial Crusader Breastplate" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Breastplate (30%) and 35 Sealed Imperial Crusader Breastplate Parts.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91510" name="Crafting Pack - Sealed Imperial Crusader Gaiters" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Gaiters (30%) and 35 Sealed Imperial Crusader Gaiter Patterns.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91511" name="Crafting Pack - Sealed Imperial Crusader Gauntlets" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Gauntlets (30%) and 35 Sealed Imperial Crusader Gauntlet Designs.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91512" name="Crafting Pack - Sealed Imperial Crusader Boots" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Boots (30%) and 35 Sealed Imperial Crusader Boot Designs.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91513" name="Crafting Pack - Sealed Imperial Crusader Shield" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Shield (30%) and 35 Sealed Imperial Crusader Shield Fragments.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91514" name="Crafting Pack - Sealed Imperial Crusader Helmet" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Helmet (30%) and 35 Sealed Imperial Crusader Helmet Patterns.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91515" name="Crafting Pack - Sealed Draconic Leather Armor" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Draconic Leather Armor (30%) and 35 Sealed Draconic Leather Armor Parts.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91516" name="Crafting Pack - Sealed Draconic Leather Gloves" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Draconic Leather Gloves (30%) and 35 Sealed Draconic Leather Glove Fabric.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91517" name="Crafting Pack - Sealed Draconic Leather Boots" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Draconic Leather Boots (30%) and 35 Sealed Draconic Leather Boot Designs.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91518" name="Crafting Pack - Sealed Draconic Leather Helmet" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Draconic Leather Helmet (30%) and 35 Sealed Draconic Leather Helmet Patterns.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91519" name="Crafting Pack - Sealed Major Arcana Robe" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Major Arcana Robe (30%) and 35 Sealed Major Arcana Robe Parts.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91520" name="Crafting Pack - Sealed Major Arcana Gloves" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Major Arcana Gloves (30%) and 35 Sealed Major Arcana Glove Fabric.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91521" name="Crafting Pack - Sealed Major Arcana Boots" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Major Arcana Boots (30%) and 35 Sealed Major Arcana Boot Designs.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91522" name="Crafting Pack - Sealed Major Arcana Circlet" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Major Arcana Circlet (30%) and 35 Sealed Major Arcana Circlet Patterns.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91523" name="Crafting Pack - Sealed Tateossian Earring" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Tateossian Earring (30%) and 35 Sealed Tateossian Earring Parts.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91524" name="Crafting Pack - Sealed Tateossian Ring" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Tateossian Ring (30%) and 35 Sealed Tateossian Ring Gems.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91525" name="Crafting Pack - Sealed Tateossian Necklace" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Sealed Tateossian Necklace (30%) and 35 Sealed Tateossian Necklace Chains.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91526" name="Weapon Varnish (D-grade)" type="NONE" icon="icon.etc_earth_crystal_1_i00">
 	<!-- A varnish used to upgrade a low-level weapon (D-grade) to a top-grade weapon (D-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91527" name="High-grade Weapon Varnish (D-grade)" type="NONE" icon="icon.etc_fire_crystal_1_i00">
 	<!-- A varnish used to upgrade a top-grade weapon (D-grade) to a top-grade weapon (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91528" name="Weapon Varnish (C-grade)" type="NONE" icon="icon.etc_earth_crystal_1_i00">
 	<!-- A varnish used to upgrade a low-level weapon (C-grade) to a top-grade weapon (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91529" name="High-grade Weapon Varnish (C-grade)" type="NONE" icon="icon.etc_fire_crystal_1_i00">
 	<!-- A varnish used to upgrade a top-grade weapon (C-grade) to a top-grade weapon (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91530" name="Weapon Varnish (B-grade)" type="NONE" icon="icon.etc_earth_crystal_1_i00">
 	<!-- A varnish used to upgrade a low-level weapon (B-grade) to a top-grade weapon (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91531" name="High-grade Weapon Varnish (B-grade)" type="NONE" icon="icon.etc_fire_crystal_1_i00">
 	<!-- A varnish used to upgrade a top-grade weapon (B-grade) to a top-grade weapon (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91532" name="Weapon Varnish (A-grade)" type="NONE" icon="icon.etc_earth_crystal_1_i00">
 	<!-- A varnish used to upgrade a low-level weapon (A-grade) to a top-grade weapon (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91533" name="Armor Varnish (D-grade)" type="NONE" icon="icon.etc_water_crystal_1_i00">
 	<!-- A varnish used to upgrade low-level armor (D-grade) to top-grade armor (D-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91534" name="High-grade Armor Varnish (D-grade)" type="NONE" icon="icon.etc_unholy_crystal_1_i00">
 	<!-- A varnish used to upgrade top-grade armor (D-grade) to top-grade armor (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91535" name="Armor Varnish (C-grade)" type="NONE" icon="icon.etc_water_crystal_1_i00">
 	<!-- A varnish used to upgrade low-level armor (C-grade) to top-grade armor (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91536" name="High-grade Armor Varnish (C-grade)" type="NONE" icon="icon.etc_unholy_crystal_1_i00">
 	<!-- A varnish used to upgrade top-grade armor (C-grade) to top-grade armor (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91537" name="Armor Varnish (B-grade)" type="NONE" icon="icon.etc_water_crystal_1_i00">
 	<!-- A varnish used to upgrade low-level armor (B-grade) to top-grade armor (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91538" name="High-grade Armor Varnish (B-grade)" type="NONE" icon="icon.etc_unholy_crystal_1_i00">
 	<!-- A varnish used to upgrade top-grade armor (B-grade) to top-grade armor (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91539" name="Armor Varnish (A-grade)" type="NONE" icon="icon.etc_water_crystal_1_i00">
 	<!-- A varnish used to upgrade low-level armor (A-grade) to top-grade armor (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91540" name="Accessory Varnish (D-grade)" type="NONE" icon="icon.etc_holy_crystal_1_i00">
 	<!-- A varnish used to upgrade a low-level accessory (D-grade) to a top-grade accessory (D-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91541" name="High-grade Accessory Varnish (D-grade)" type="NONE" icon="icon.etc_wind_crystal_1_i00">
 	<!-- A varnish used to upgrade a top-grade accessory (D-grade) to a top-grade accessory (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91542" name="Accessory Varnish (C-grade)" type="NONE" icon="icon.etc_holy_crystal_1_i00">
 	<!-- A varnish used to upgrade a low-level accessory (C-grade) to a top-grade accessory (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91543" name="High-grade Accessory Varnish (C-grade)" type="NONE" icon="icon.etc_wind_crystal_1_i00">
 	<!-- A varnish used to upgrade a top-grade accessory (C-grade) to a top-grade accessory (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91544" name="Accessory Varnish (B-grade)" type="NONE" icon="icon.etc_holy_crystal_1_i00">
 	<!-- A varnish used to upgrade a low-level accessory (B-grade) to a top-grade accessory (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91545" name="High-grade Accessory Varnish (B-grade)" type="NONE" icon="icon.etc_wind_crystal_1_i00">
 	<!-- A varnish used to upgrade a top-grade accessory (B-grade) to a top-grade accessory (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91546" name="Accessory Varnish (A-grade)" type="NONE" icon="icon.etc_holy_crystal_1_i00">
 	<!-- A varnish used to upgrade a low-level accessory (A-grade) to a top-grade accessory (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91547" name="Special Weapon Varnish (A-grade)" type="NONE" icon="icon.etc_crystal_cave_crystal_i01">
 	<!-- A varnish used to upgrade an A-grade weapon to an S-grade weapon. Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91548" name="Special Armor Varnish (A-grade)" type="NONE" icon="icon.etc_crystal_cave_crystal_i00">
 	<!-- A varnish used to upgrade A-grade armor to S-grade armor. Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91549" name="Special Accessory Varnish (A-grade)" type="NONE" icon="icon.etc_crystal_cave_crystal_i0">
 	<!-- A varnish used to upgrade an A-grade accessory to an S-grade accessory. Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -346,13 +346,13 @@
 
 	<item id="91554" name="Frintezza Essence" type="NONE" icon="icon.frintessa_essence_i01">
 	<!-- Take the essence and a +10 to +12 Majestic Necklace to Head Blacksmith Ferris in the Town of Aden to obtain the Immortal Frintezza's Necklace Lv. 4 via upgrade. -->
-		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91555" name="Special Summer Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to randomly obtain 1 Anakim/Lilith Rune Stage 9, Earth Dragon Belt/Fire Dragon Belt - Venir's Blessing Lv. 4, or +10 Agathion Pack. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -593,62 +593,62 @@
 
 	<item id="91575" name="Scroll: Enchant Excalibur" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
 	<!-- A weapon enchant scroll that can be used on the Sacred Sword Excalibur. Up to enchant level +3, P. Atk. +5 and M. Atk. +3. Starting at +4, P. Atk./M. Atk. bonus doubles. Can only be used up to +20.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91576" name="Gemstone Box" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to randomly obtain 1 D- to S-grade Gemstone.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91577" name="Life Stone Pack" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click to randomly obtain 1 Standard, Intermediate, High-grade, or Top-grade Shining Life Stone.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91578" name="Stable Enchant Scroll Pack" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click to randomly obtain 1 Stable Scroll: Enchant Armor/Weapon (D- to S-grade).   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91579" name="Greater Enchant Scroll Pack" type="NONE" icon="icon.etc_treasure_box_i03">
 	<!-- Double-click to randomly obtain 1 Advanced Scroll: Enchant Armor/Weapon (D- to S-grade).   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91580" name="Armor/Accessory Varnish Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to randomly obtain 1 Armor/Accessory Varnish (D- to A-grade).   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91581" name="Weapon Varnish Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click to randomly obtain 1 Weapon Varnish (D- to A-grade).   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91582" name="High-grade Armor/Accessory Varnish Box" type="NONE" icon="icon.etc_treasure_box_i06">
 	<!-- Double-click to randomly obtain 1 High-grade Armor/Accessory Varnish (D- to B-grade).   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91583" name="High-grade Weapon Varnish Box" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Double-click to randomly obtain 1 High-Grade Weapon Varnish (D- to B-grade).   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91584" name="Special Varnish Box" type="NONE" icon="icon.etc_treasure_box_i08">
 	<!-- Double-click to randomly obtain 1 Special Armor/Weapon/Accessory Varnish (A-grade).   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -670,37 +670,37 @@
 
 	<item id="91586" name="Gran Kain's Treasure Chest" type="NONE" icon="icon.bm_gold_lure_special_box">
 	<!-- Double-click to obtain 1 Einhasad's Protection or Dragon's Miracle Potion. If you're lucky, you can also get 1 Gran Kain's Golden Box or Gran Kain's Silver Box.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91587" name="Gran Kain's Silver Box" type="NONE" icon="icon.bm_silver_lure_box">
 	<!-- Double-click to obtain a Refined Rare Accessory, Stable/Improved Scroll: Enchant Armor (A-/B-grade), or a consumable.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91588" name="Gran Kain's Golden Box" type="NONE" icon="icon.bm_gold_lure_box">
 	<!-- Double-click to obtain a Frintezza's Necklace, Codex Box, Stable/Improved Scroll: Enchant Weapon (A-/B-/C-grade) or other rare item.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91589" name="Gran Kain's Special Box" type="NONE" icon="icon.bm_gold_lure_box">
 	<!-- Double-click to obtain a high-grade item obtainable from Gran Kain's Golden/Silver Box, enhancement item, or consumable.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91590" name="Codex Box" type="NONE" icon="icon.etc_bm_lure_box_i00">
 	<!-- Double-click to obtain Codex Chapters 1 to 4.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91591" name="Dimensional Soul" type="NONE" icon="icon.bm_dimension_soul">
 	<!-- A material used to craft and upgrade Dimensional Talismans. Take it to Veruti in the Town of Giran to use it.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 

@@ -532,39 +532,39 @@
 
 	<item id="70753" name="Eva's Scroll: Enchant Hair Accessory" type="ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_d">
 	<!-- Hair Accessory M./ P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3.   -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70754" name="Stabilized Eva's Scroll: Enchant Hair Accessory" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_d">
 	<!-- Hair Accessory M./P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. From +6, enchantment level stays the same in case of a failed enchantment. Can only be used on a +6 accessory or higher. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70755" name="Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_mid">
 	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation.\n\nAugmentation requires C-grade Gemstones.  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70756" name="Shiny Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_high">
 	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation.\n\nAugmentation requires B-grade Gemstones.  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70757" name="Eva's Enhancement Pack - Hair Accessory" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Double-click to acquire one of the following items: 2 Eva's Scrolls, 1 Stabilized Eva's Scroll, 1 Eva's Life Stone, 1 Shiny Eva's Life Stone.  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70758" name="Eva's Hair Accessory Pack" type="NONE" icon="BranchSys.icon.br_silver_box_i00">
 	<!-- Double-click to acquire one of the Hair Accessories.  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="55674" value="-1"/>  <!-- Eva's Hair Accessory Pack -->
@@ -573,58 +573,58 @@
 
 	<item id="70759" name="Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_mid">
 	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation.\n\nAugmentation requires C-grade Gemstones.  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70760" name="Shiny Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_high">
 	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation.\n\nAugmentation requires B-grade Gemstones.  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70761" name="Eva's Enhancement Pack - Hair Accessory" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Double-click to acquire one of the following items: 2 Eva's Scrolls, 1 Stabilized Eva's Scroll, 1 Eva's Life Stone, 1 Shiny Eva's Life Stone.  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70762" name="Package: Eva's Hair Accessory" type="NONE" icon="BranchSys.icon.br_bright_gold_box_i00">
 	<!-- Double-click to acquire 8 Eva's Hair Accessories and 30 Eva's Scrolls: Enchant Hair Accessory.  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70763" name="Hero Experience Rune Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double click to receive 1 Hero Experience Rune(30-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70764" name="Scroll: Enchant Weapon (A-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70765" name="Shining Pendant Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
 	<!-- Shining varnish to enchant pendants. Can be used on Dragon Pendants up to + 8, and keeps the pendant upgrade level and the existing enchant level intact even if the enchant fails. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70766" name="Improved Scroll: Enchant Weapon (A-grade)" type="MULTI_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Randomly enchanted from +1 to +3. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70767" name="Golden Fruit Buff" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, HP/MP Recovery Bonus +30%. P./M. Critical Rate +10, P./M. Critical Damage +5%.Vampiric Rage Effect +5%. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="180" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="39269" value="-1"/>  <!-- Golden Fruit Buff -->
@@ -751,115 +751,115 @@
 
 	<item id="70778" name="Royal Tears" type="NONE" icon="BranchSys2.icon.g_illumination_skyblue">
 	<!-- The essence of Frintezza’s feelings. Gives a positive effect and modifies appearance of weapons for Valentine’s Day. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70779" name="Frintezza’s Amulet" type="MATERIAL" icon="icon.love_potion_party">
 	<!-- An amulet created by Frintezza to seal a part of his feelings. Carry it with you, and something good will definitely happen. Having the amulet in your inventory enables getting charming magic of confidence from Frintezza once a day. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70780" name="Red Candy of the Royal Family" type="RUNE" icon="icon.etc_whiteday_candy_i05">
 	<!-- The candy created with secret methods of Frintezza’s dynasty specially for Valentine’s Day. Acquired XP/ SP +25%. Stacks with the Blue Candy. Temporary event item. -->
-		<restriction dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70781" name="Blue Candy of the Royal Family" type="RUNE" icon="icon.etc_whiteday_candy_i06">
 	<!-- The candy created with secret methods of Frintezza’s dynasty specially for Valentine’s Day. Acquired XP/ SP +25%. Stacks with the Red Candy. Temporary event item. -->
-		<restriction dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70782" name="The Royal Confectionary Box" type="NONE" icon="icon.etc_candy_basket_i04_1">
 	<!-- You can get one box per account. Double-click to receive Frintezza’s Amulet and additionally two Red or two Blue Candies of the Royal Family. The item will be removed after the event is over. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70783" name="Pirates Treasure Chest" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to get one of Pirates Treasures случайное сокровище пиратов. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70784" name="Zaken's Earring Lv. 3 (7-day) Box" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive a Zaken's Earring Lv. 3 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70785" name="Newbie Gift - Heavy Armor" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Shining Heavy Armor Set (30-day)/ Hero's Shining Weapon Set (30-day), Newbie Gift - Lv. 10, Transformation Support Cube (7-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70786" name="Newbie Gift - Light Armor" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Shining Light Armor Set (30-day)/ Hero's Shining Weapon Set (30-day), Newbie Gift - Lv. 10, Transformation Support Cube (7-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70787" name="Newbie Gift - Magic Armor" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Shining Magic Armor Set (30-day)/ Hero's Shining Weapon Set (30-day), Newbie Gift - Lv. 10, Transformation Support Cube (7-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70788" name="Newbie Gift - Lv. 10" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click to acquire the following items: Newbie Amulet (5-day), Newbie Gift - Lv. 20, Soulshot Support Cube (7-day), Spiritshot Support Cube (7-day). Can be used by characters of lvl 10 and above.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70789" name="Newbie Gift - Lv. 20" type="NONE" icon="icon.npoint_valakas_30day_box">
 	<!-- Double-click to acquire the following items: Cadmus Transformation Bracelet - Prophet (30-day), Newbie Gift - Lv. 30, Buff Support Cube (7-day). Can be used by characters of Lv. 20 and above.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70790" name="Newbie Gift Lv. 30" type="NONE" icon="icon.npoint_earring_of_lind_30day_box">
 	<!-- Double-click to acquire the following items: Rare Core/Orfen/Queen Ant’s Accessory Lv. 1 (15-day), Newbie Gift - Lv. 40, Potion Support Cube - Lv. 1 (7-day). Can be used by characters of Lv. 30 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70791" name="Newbie Gift - Lv. 40" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click to acquire the following items: Growth Amulet (3-day), Newbie Gift - Lv. 50, Party Support Cube - Lv. 1 (7-day). Can be used by characters of Lv. 40 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70792" name="Newbie Gift - Lv. 50" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to acquire the following items: 3 Golden Mermaid's Tears (7-day), 10 XP Boost Scrolls, Newbie Gift - Lv. 54, Blessed Support Cube (7-day). Can be used by characters of level 50 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70793" name="Newbie Gift - Lv. 54" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to acquire the following items: Refined Rare Queen Ant's Ring/ Orfen/ Core (7-day), Newbie Gift - Lv. 56, Party Support Cube - Lv. 2 (7-day). Can be used by characters of Lv. 54 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70794" name="Newbie Gift - Lv. 56" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to acquire the following items: Growth Amulet (3-day), Newbie Gift - Lv. 56, Fishing Support Cube (7-day). Can be used by characters of lvl 56 and above.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70795" name="Newbie Gift - Lv. 58" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to acquire the following items: Cadmus Transformation Bracelet - Prophet (30-day), Newbie Gift - Lv. 60, Potion Support Cube - Lv. 2 (7-day). Can be used by characters of Lv. 58 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70796" name="Newbie Gift - Lv. 60" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Double-click to acquire the following items: Agathion - Cheerleader Mae (30-day), Hero's Bracelet (30-day), Newbie Talisman (30-day), Progression Support Cube (7-day). Can be used by characters of lvl 60 and above.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -872,7 +872,7 @@
 
 	<item id="70798" name="Transformation Scroll: Pirate" type="POTION" icon="icon.etc_charm_of_courage_i03">
 	<!-- Makes you armor look like Pirate one. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +2%, Max. HP/MP +3%, Speed +3, P./ M. Accuracy +1, M. Critical Rate +10. Duration: 60 minutes. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55690" value="-1"/>  <!-- Transformation Scroll: Pirate -->
@@ -881,7 +881,7 @@
 
 	<item id="70799" name="Transformation Scroll: Dark Assassin" type="POTION" icon="icon.etc_charm_of_courage_i05">
 	<!-- Transforms you into Dark Assassin for 30 minutes. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +10. The effect persists through death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55691" value="-1"/>  <!-- Transformation Scroll: Dark Assassin -->

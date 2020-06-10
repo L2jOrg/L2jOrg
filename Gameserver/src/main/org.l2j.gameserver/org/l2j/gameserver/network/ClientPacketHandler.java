@@ -12,6 +12,9 @@ import static java.lang.Integer.toHexString;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class ClientPacketHandler implements PacketHandler<GameClient> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientPacketHandler.class);

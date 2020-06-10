@@ -36,13 +36,13 @@
 
 	<item id="70204" name="Feather of Blessing" type="NONE" icon="icon.blessed_feather_i00">
 	<!-- Blessed feather that allows to resurrect right in the place of death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70205" name="Fighter Hunter Pack Lv. 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 834 Soulshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="91927" min-count="834" max-count="834" chance="100000000"/>  <!-- Soulshot -->
@@ -53,7 +53,7 @@
 
 	<item id="70206" name="Wizard Hunter Pack Lv. 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 167 Blessed Spiritshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="91930" min-count="167" max-count="167" chance="100000000"/>  <!-- Blessed Spiritshot -->
@@ -64,7 +64,7 @@
 
 	<item id="70207" name="Fighter Hunter Pack Lv. 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 1250 Soulshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="91927" min-count="1250" max-count="1250" chance="100000000"/>  <!-- Soulshot -->
@@ -75,7 +75,7 @@
 
 	<item id="70208" name="Wizard Hunter Pack Lv. 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 250 Blessed Spiritshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="91930" min-count="250" max-count="250" chance="100000000"/>  <!-- Blessed Spiritshot -->
@@ -86,7 +86,7 @@
 
 	<item id="70209" name="Fighter Hunter Pack Lv. 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 2500 Soulshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="91927" min-count="2500" max-count="2500" chance="100000000"/>  <!-- Soulshot -->
@@ -97,7 +97,7 @@
 
 	<item id="70210" name="Wizard Hunter Pack Lv. 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the item to receive 500 Blessed Spiritshots, 6 XP/SP Boost Scrolls (30%), 6 1st Class Transfer Effect Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="91930" min-count="500" max-count="500" chance="100000000"/>  <!-- Blessed Spiritshot -->
@@ -108,31 +108,31 @@
 
 	<item id="70211" name="Wondrous Cubic" type="NONE" icon="icon.etc_ore_cube_event_i00">
 	<!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70212" name="Wondrous Cubic" type="NONE" icon="icon.etc_ore_cube_event_i00">
 	<!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70213" name="Refined Romantic Gold Chapeau Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the package to get Refined Romantic Chapeau: Gold (100-day).  The item disappears after the event is over. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70214" name="Refined Romantic Yellow Chapeau Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click the package to get Refined Romantic Chapeau: Yellow (33-day).  The item disappears after the event is over. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70215" name="XP Rune Box - 100%" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Double-click to receive XP Rune - 100%.  -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="71966" min-count="5" max-count="5" chance="100000000"/>  <!-- XP Boosting Rune -->
@@ -141,19 +141,19 @@
 
 	<item id="70216" name="Chronicle Cube" type="NONE" icon="icon.etc_ore_cube_event_i00">
 	<!-- 21-day Cube. Can be used once a day. Allows obtaining a vast variety of items. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="30240" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70217" name="Rare Accessory Lv. 3 Coupon" type="MATERIAL" icon="icon.etc_lottery_card_i00">
 	<!-- Collect 4 to obtain a Chronicle Cube. Collect 500 to obtain a coupon exchangeable for a Rare Accessory Enhanced Pack Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="70218" name="Chronicle Chest" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Allows obtaining a vast variety of items. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55317" value="-1"/>  <!-- Chronicle Chest -->
@@ -162,7 +162,7 @@
 
 	<item id="70219" name="Rare Accessory Box Lv. 3" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 3 (7-day), Orfen's Earring Lv. 3 (7-day), or Ring of Core Lv. 3 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
@@ -211,67 +211,67 @@
 
 	<item id="70223" name="Queen Ant's Ring Lv. 3 Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to receive Queen Ant's Ring Lv. 3 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70224" name="Orfen's Earring Lv. 3 Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to receive Orfen's Earring Lv. 3 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70225" name="Ring of Core Lv 3 Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to receive Ring of Core Lv. 3 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70226" name="Chronicle Cube Box (21-day)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to receive Chronicle Cube (21-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70227" name="Queen Ant's Ring Lv. 3 Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to receive Queen Ant's Ring Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70228" name="Orfen's Earring Lv. 3 Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to receive Orfen's Earring Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70229" name="Ring of Core Lv 3 Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to receive Ring of Core Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70230" name="Rare Accessory Lv. 3 Exchange Ticket" type="MATERIAL" icon="icon.etc_lottery_card_i00">
 	<!-- Using the Store Manager, you can trade it for a Rare Accessory Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70231" name="King Pirate's Treasure Chest" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click on the chest to get one of the Pirates' treasures. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70232" name="Coco Brownie's Amulet of Love" type="MATERIAL" icon="icon.love_potion_party">
 	<!-- An amulet created by Coco Brownie to endow the Heroes of Aden with love. Carry it with you, and something good will definitely happen. Having the amulet in your inventory enables getting chocolate from Coco Brownie once a day. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70233" name="Strawberry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i01">
 	<!-- When used, activates Prophecy of Fire - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Mango Juice, Cherry Juice, or any of the Prophecies. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55329" value="-1"/>  <!-- Strawberry Juice -->
@@ -280,7 +280,7 @@
 
 	<item id="70234" name="Mango Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i03">
 	<!-- When used, activates Prophecy of Water - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55330" value="-1"/>  <!-- Mango Juice -->
@@ -289,7 +289,7 @@
 
 	<item id="70235" name="Cherry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i02">
 	<!-- When used, activates Prophecy of Wind - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55331" value="-1"/>  <!-- Cherry Juice -->
@@ -298,7 +298,7 @@
 
 	<item id="70236" name="Scroll: 50 SP" type="SCROLL" icon="icon.etc_sp_scroll1_i00">
 	<!-- When used, adds 50 SP. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="40143" value="-1"/>  <!-- SP Scroll -->
@@ -307,7 +307,7 @@
 
 	<item id="70237" name="Scroll: 100 SP" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- When used, adds 100 SP. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="40143" level="2" value="-1"/>  <!-- SP Scroll -->
@@ -316,7 +316,7 @@
 
 	<item id="70238" name="Scroll: 1,000 SP" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- When used, adds 1,000 SP. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="40143" level="3" value="-1"/>  <!-- SP Scroll -->
@@ -325,7 +325,7 @@
 
 	<item id="70239" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55335" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -334,7 +334,7 @@
 
 	<item id="70240" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55336" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
@@ -343,7 +343,7 @@
 
 	<item id="70241" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55337" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
@@ -352,7 +352,7 @@
 
 	<item id="70242" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55338" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -361,7 +361,7 @@
 
 	<item id="70243" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55339" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
@@ -370,7 +370,7 @@
 
 	<item id="70244" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55340" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
@@ -379,7 +379,7 @@
 
 	<item id="70245" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55341" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -388,7 +388,7 @@
 
 	<item id="70246" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55342" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
@@ -397,7 +397,7 @@
 
 	<item id="70247" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55343" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
@@ -406,7 +406,7 @@
 
 	<item id="70248" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55344" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -415,7 +415,7 @@
 
 	<item id="70249" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55345" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
@@ -424,7 +424,7 @@
 
 	<item id="70250" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55346" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
@@ -433,7 +433,7 @@
 
 	<item id="70251" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55347" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -442,7 +442,7 @@
 
 	<item id="70252" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55348" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
@@ -451,7 +451,7 @@
 
 	<item id="70253" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55349" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
@@ -460,7 +460,7 @@
 
 	<item id="70254" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55350" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -469,7 +469,7 @@
 
 	<item id="70255" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55351" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
@@ -478,7 +478,7 @@
 
 	<item id="70256" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55352" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
@@ -487,7 +487,7 @@
 
 	<item id="70257" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55353" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -496,7 +496,7 @@
 
 	<item id="70258" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55354" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
@@ -505,7 +505,7 @@
 
 	<item id="70259" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55355" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
@@ -514,7 +514,7 @@
 
 	<item id="70260" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- Increases XP/SP gain by 50% for 1 hour.\nIntended for Lv. 1~99.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55356" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -523,7 +523,7 @@
 
 	<item id="70261" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55357" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
@@ -532,7 +532,7 @@
 
 	<item id="70262" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55358" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
@@ -541,7 +541,7 @@
 
 	<item id="70263" name="XP/SP Hourglass - 4 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55359" value="-1"/>  <!-- XP/SP Hourglass - 4 Hours -->
@@ -550,103 +550,103 @@
 
 	<item id="70264" name="XP/SP Rune - 100% (1-hour)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When in inventory, your XP and SP gain is increased by 100%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="60"/>
 	</item>
 
 	<item id="70265" name="XP/SP Rune - 100% (3-hour)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When in inventory, your XP and SP gain is increased by 100%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="180"/>
 	</item>
 
 	<item id="70266" name="XP/SP Rune - 100% (5-hour)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When in inventory, your XP and SP gain is increased by 100%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="300"/>
 	</item>
 
 	<item id="70267" name="XP/SP Rune - 100% (7-day)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When in inventory, your XP and SP gain is increased by 100%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="70268" name="XP/SP Rune - 100% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- By double-clicking the item, you will receive XP/SP Rune - 100% (1-hour). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70269" name="XP/SP Rune - 100% (3-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- By double-clicking the item, you will receive XP/SP Rune - 100% (3-hour). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70270" name="XP/SP Rune - 100% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- By double-clicking the item, you will receive XP/SP Rune - 100% (5-hour). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70271" name="XP/SP Rune - 100% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- By double-clicking the item, you will receive XP/SP Rune - 100% (7-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70272" name="XP/SP Rune - 200% (1-hour)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When in inventory, your XP and SP gain is increased by 200%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="60"/>
 	</item>
 
 	<item id="70273" name="XP/SP Rune - 200% (3-hour)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When in inventory, your XP and SP gain is increased by 200%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="180"/>
 	</item>
 
 	<item id="70274" name="XP/SP Rune - 200% (5-hour)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When in inventory, your XP and SP gain is increased by 200%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="300"/>
 	</item>
 
 	<item id="70275" name="XP/SP Rune - 200% (7-day)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When in inventory, your XP and SP gain is increased by 200%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="70276" name="XP/SP Rune - 200% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- By double-clicking the item, you will receive XP/SP Rune - 200% (1-hour). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70277" name="XP/SP Rune - 200% (3-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- By double-clicking the item, you will receive XP/SP Rune - 200% (3-hour). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70278" name="XP/SP Rune - 200% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- By double-clicking the item, you will receive XP/SP Rune - 200% (5-hour). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70279" name="XP/SP Rune - 200% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- By double-clicking the item, you will receive XP/SP Rune - 200% (7-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70280" name="Clan Reputation Score - 10" type="NONE" icon="icon.etc_bloodpledge_point_i00">
 	<!-- Double-click to add 10 bonus points to your Clan Reputation. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55362" value="-1"/>  <!-- Clan Reputation Score - 10 -->
@@ -655,7 +655,7 @@
 
 	<item id="70281" name="Clan Reputation Score - 50" type="NONE" icon="icon.etc_bloodpledge_point_i00">
 	<!-- Double-click to add 50 bonus points to your Clan Reputation. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55363" value="-1"/>  <!-- Clan Reputation Score - 50 -->
@@ -664,7 +664,7 @@
 
 	<item id="70282" name="Clan Reputation Score - 150" type="NONE" icon="icon.etc_bloodpledge_point_i00">
 	<!-- Double-click to add 150 bonus points to your Clan Reputation. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55364" value="-1"/>  <!-- Clan Reputation Score - 150 -->
@@ -673,7 +673,7 @@
 
 	<item id="70283" name="Superspeed Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- Increases Speed to its maximum for 15 seconds. Cooldown is 3 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="20" price="1200" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55361" value="-1"/>  <!-- Superspeed Potion -->
@@ -682,61 +682,61 @@
 
 	<item id="70284" name="Weapon Pack (B-grade)" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a B-grade weapon. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70285" name="Weapon Pack (C-grade)" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a C-grade weapon. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70286" name="B-grade Armor Supply Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a B-grade armor. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70287" name="C-grade Armor Supply Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a C-grade armor. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70288" name="B-grade Weapons Ingredient Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a B-grade weapons ingredient box. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70289" name="C-grade Weapons Ingredient Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a C-grade weapons ingredient box. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70290" name="B-grade Armor Ingredient Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a B-grade armor ingredient box. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70291" name="C-grade Armor Ingredient Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a C-grade armor ingredient box. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70292" name="Baium Treasure Chest" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to get one of Baium’s treasures. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70293" name="Kusto's Support Box: Enhance Weapon" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to receive one Average, Improved, Solid, or Blessed Scroll: Enchant Weapon (C-A). -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -777,7 +777,7 @@
 
 	<item id="70299" name="Enchant Scroll of Fate" type="ENCHANT_ARMOR" icon="icon.etc_doom_capture">
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. The maximum level of enchantment is +10; with each level, special effects are added. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true"/>
 		<action handler="EnchantScrolls"/>
 	</item>

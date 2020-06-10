@@ -120,9 +120,9 @@ public final class AutoPlayEngine {
                     autoPlayTask = null;
                 }
             }
-            player.getAutoPlaySettings().setActive(false);
-            player.sendPacket(new ExAutoPlaySettingResponse());
         }
+        player.getAutoPlaySettings().setActive(false);
+        player.sendPacket(new ExAutoPlaySettingResponse());
     }
 
     public void startAutoPotion(Player player) {

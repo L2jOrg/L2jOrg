@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="91000" name="Rash's Supplies - Baium" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Reward for defeating Baium. Contains Damaged Baium's Ring. Can also randomly obtain a Balthus Knight's Varnish, Shining Balthus Knight's Varnish, or Brilliant Balthus Knight's Varnish.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91001" name="Box with 3 Jewels Lv. 3" type="NONE" icon="icon.etc_bm_jewelbox_shhadai">
 	<!-- Double-click to obtain 1 each of Pearl Lv. 3 (30-day), Diamond Lv. 3 (30-day), and Jade Lv. 3 (30-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91002" name="Box with 5 Jewels Lv. 4" type="NONE" icon="icon.etc_bm_jewelbox_shhadai">
 	<!-- Double-click to obtain 1 each of Pearl Lv. 4 (30-day), Diamond Lv. 4 (30-day), Jade Lv. 4 (30-day), Garnet Lv. 4 (30-day), and Vital Stone Lv. 4 (30-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -37,7 +37,7 @@
 
 	<item id="91005" name="Crumbs of Penitence" type="NONE" icon="icon.etc_powder_white_i00">
 	<!-- Evidence of the atonement obtained after the time of suffering for evil deeds. Take it to the Dark Judge to lower the PK count. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -53,133 +53,133 @@
 
 	<item id="91007" name="Rash's Supplies - Zaken" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Reward for defeating Zaken. Contains Damaged Zaken's Earring. Can also randomly obtain a Balthus Knight's Varnish, Shining Balthus Knight's Varnish, or Brilliant Balthus Knight's Varnish.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91008" name="Dragon's Relic Chest" type="NONE" icon="icon.card_event_blue_box">
 	<!-- Double-click to obtain a Special Dragon's Fruit. If you're lucky, you can also get 1 Fire Dragon's Relic Chest, Earth Dragon's Relic Chest, or Dragon Heart.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91009" name="Fire Dragon's Relic Chest" type="NONE" icon="icon.card_event_red_box">
 	<!-- Double-click to randomly obtain 1 Top-grade item or material (A-grade), Sealed Rune, or Enchant Scroll.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91010" name="Earth Dragon's Relic Chest" type="NONE" icon="icon.card_event_black_box">
 	<!-- Double-click to randomly obtain 1 Rare Accessory or Dragon's Dye Box.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91011" name="Dragon's Dye Box" type="NONE" icon="icon.card_event_gold_box">
 	<!-- Double-click to obtain 1 item for character after 3rd Class Transfer: Superior Dye of STR, Superior Dye of CON, Superior Dye of DEX, Superior Dye of INT, Superior Dye of MEN, Superior Dye of WIT.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91012" name="Weapon Supply Box (Best A-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to obtain 1 A-Grade Weapon best quality.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91013" name="Weapon Ingredient/Recipe Box (Best A-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to obtain Weapon Ingredient or Recipe A-Grade best quality.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91014" name="Weapon Recipe Box (Best A-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to obtain Weapon Recipe A-Grade best quality.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91015" name="Sirra's Blade Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Sirra's Blade Edges and Recipe: Sirra's Blade (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91016" name="Sword of Ipos Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Sword of Ipos Blades and Recipe: Sword of Ipos (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91017" name="Barakiel's Axe Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Barakiel's Axe Pieces and Recipe: Barakiel's Axe (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91018" name="Behemoth' Tuning Fork Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Behemoth' Tuning Fork Pieces and Recipe: Behemoth' Tuning Fork (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91019" name="Naga Storm Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Naga Storm Pieces and Recipe: Naga Storm (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91020" name="Tiphon's Spear Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Tiphon's Spear Edges and Recipe: Tiphon's Spear (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91021" name="Shyeed's Bow Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Shyeed's Bow Shafts and Recipe: Shyeed's Bow (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91022" name="Sobekk's Hurricane Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Sobekk's Hurricane Edges and Recipe: Sobekk's Hurricane (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91023" name="Themis' Tongue Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Themis' Tongue Pieces and Recipe: Themis' Tongue (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91024" name="Cabrio's Hand Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Cabrio's Hand Heads and Recipe: Cabrio's Hand (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91025" name="Daimon Crystal Ingredient/Recipe Box" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain 20 Daimon Crystal Fragments and Recipe: Daimon Crystal (60%).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91026" name="Dragon's Heart" type="NONE" icon="icon.etc_heart_gragon">
 	<!-- Ingredient used to make Dragon's Elixir. For a limited time can also be exchanged for various items.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91027" name="Dragon's Miracle Potion" type="SCROLL" icon="icon.bm_dragon_posion_brave">
 	<!-- For 20 minutes, recharges 20000 Sayha's Grace points, XP/SP +20%, P./M. Atk. +12%, P./M. Def. +15%, P./M. Critical Rate +20, P./M. Critical Damage +5%, HP/MP/CP +25%, HP/MP Recovery Bonus +30%, and Sayha's Grace Consumption Rate -10%. Has a chance to absorb 5% of physical damage dealt to enemies as HP. Can accumulate up to Stage 3. \nCannot be used if you have the Dragon's Special Elixir effect. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91028" name="Maliss's High-grade HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 1000 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="HEALING"/>
 		<skill-reducer>
 			<skill id="51083" value="-1"/>  <!-- Maliss's High-grade HP Potion -->
@@ -188,13 +188,13 @@
 
 	<item id="91029" name="Hidden Box" type="NONE" icon="icon.etc_exchange_box_i00">
 	<!-- Double-click to randomly obtain 1 Silver Bait, Dandy's Home Run Ball, Savior Scroll: Enchant Weapon/Earring, Shining Savior's Earring, or Zaken's Earring.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91030" name="Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +20% for 20 minutes when hunting attribute monsters.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54028" value="-1"/>  <!-- Spirit's Blessing -->
@@ -203,73 +203,73 @@
 
 	<item id="91031" name="Water Spirit Evolutionary Stone" type="MATERIAL" icon="icon.elemental_evol_stone_water_i00">
 	<!-- A Soulstone filled with the Water Spirits' power. Use to evolve Water Spirit. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91032" name="Fire Spirit Evolutionary Stone" type="MATERIAL" icon="icon.elemental_evol_stone_fire_i00">
 	<!-- A Soulstone filled with the Fire Spirits' power. Use to evolve Fire Spirit. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91033" name="Wind Spirit Evolutionary Stone" type="MATERIAL" icon="icon.elemental_evol_stone_wind_i00">
 	<!-- A Soulstone filled with the Wind Spirits' power. Use to evolve Wind Spirit. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91034" name="Earth Spirit Evolutionary Stone" type="MATERIAL" icon="icon.elemental_evol_stone_earth_i00">
 	<!-- An Soulstone filled with the Earth Spirits' power. Use to evolve Earth Spirit. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91035" name="Water Spirit Rough Jewel" type="MATERIAL" icon="icon.elemental_water_stone_i00">
 	<!-- Stone containing power Water Spirits favor. Water Attack XP 9300 is obtained when used by Water Spirits. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91036" name="Fire Spirit Rough Jewel" type="MATERIAL" icon="icon.elemental_fire_stone_i00">
 	<!-- Stone containing power Fire Spirits favor. Fire Attack XP 9300 is obtained when used by Fire Spirits. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91037" name="Wind Spirit Rough Jewel" type="MATERIAL" icon="icon.elemental_wind_stone_i00">
 	<!-- Stone containing power Wind Spirits favor. Wind Attack XP 9300 is obtained when used by Wind Spirits. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91038" name="Earth Spirit Rough Jewel" type="MATERIAL" icon="icon.elemental_earth_stone_i00">
 	<!-- Stone containing power Earth Spirits favor. Wind Attack XP 9300 is obtained when used by Wind Spirits. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91039" name="Water Star Particle" type="MATERIAL" icon="icon.elemental_star_water_i00">
 	<!-- Material extracted from condensed Water Spirits' power. Used to make Water Attack equipment.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91040" name="Fire Star Particle" type="MATERIAL" icon="icon.elemental_star_fire_i00">
 	<!-- Material extracted from condensed Fire Spirits' power. Used to make Fire Attack equipment.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91041" name="Wind Star Particle" type="MATERIAL" icon="icon.elemental_star_wind_i00">
 	<!-- Material extracted from condensed Wind Spirits' power. Used to make Wind Attack equipment.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91042" name="Earth Star Particle" type="MATERIAL" icon="icon.elemental_star_earth_i00">
 	<!-- Material extracted from condensed Earth Spirits' power. Used to make Earth Attack equipment.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -516,7 +516,7 @@
 
 	<item id="91059" name="Talisman of Power Piece" type="NONE" icon="icon.bm_ensoul_stone_PvE_empty">
 	<!-- Material used to synthesize Talisman of Power. If upgrade fails, lowers to applicable Talisman of Power Lv1. Can be bought from Pona in front of Giran Luxury Shop.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -634,7 +634,7 @@
 
 	<item id="91076" name="Venir's Talisman Piece" type="NONE" icon="icon.bm_ensoul_stone_PvP_empty">
 	<!-- Material used to synthesize Venir's Talisman. If upgrade fails, lowers to Venir's Talisman Lv1. Can be bought from Pona.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 

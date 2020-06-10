@@ -14,9 +14,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2601" name="Raid Sword*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -33,9 +30,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2602" name="Raid Sword*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -52,9 +46,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2603" name="Raid Sword*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -71,9 +62,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2604" name="Raid Sword*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -90,9 +78,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2605" name="Raid Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -109,9 +94,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="12" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2606" name="Caliburs*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -128,9 +110,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2607" name="Caliburs*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -147,9 +126,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2608" name="Caliburs*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -166,9 +142,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2609" name="Caliburs*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -356,9 +329,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2619" name="Sword of Delusion*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -375,9 +345,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2620" name="Sword of Delusion*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -394,9 +361,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="13" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2621" name="Sword of Nightmare*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -413,9 +377,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2622" name="Sword of Nightmare*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -432,9 +393,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2623" name="Sword of Nightmare*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -451,9 +409,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2624" name="Tsurugi*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -470,9 +425,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2625" name="Tsurugi*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -489,9 +441,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="13" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2626" name="Samurai Long Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -508,446 +457,443 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="14" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<item id="2627" name="Mark of Challenger" type="NONE" icon="icon.etc_jewel_silver_i00">
 	<!-- Mark given to those who have passed the Trial of the Challenger. Item for occupational change. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2628" name="Letter of Kash" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Kash's introduction letter. Take this letter to Martien in Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2629" name="Watcher's 1st Eye" type="NONE" icon="icon.etc_eyeball_i00">
 	<!-- Item obtained from the monster, Gorr. Take this to Martien in Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2630" name="Watcher's 2nd Eye" type="NONE" icon="icon.etc_eyeball_i00">
 	<!-- Item obtained from the monster Baraham. Show this to Raldo and... -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2631" name="Scroll of Shyslassys" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
 	<!-- Ancient scroll obtained by slaying Shyslassys. Take this to Kash in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2632" name="Broken Key" type="NONE" icon="icon.etc_mold_i00">
 	<!-- Key obtained by slaying Shyslassys. This key is needed in order to open the Chest of Shyslassys. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2633" name="Mark of Duty" type="NONE" icon="icon.accessary_necklace_of_holy_spirit_i00">
 	<!-- Mark given to those who have passed the Trial of Duty. Item for occupational change. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2634" name="Letter of Dustin" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Letter given by Dustin. Deliver the letter to Grand Master Hannavalt in Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2635" name="Knight's Tear" type="NONE" icon="icon.etc_crystal_ball_red_i00">
 	<!-- Obtained from the Spirit of Sir Herod. Take this to Sir Aaron Tanford who is waiting for you in a house near Ol Mahum Checkpoint, south of the Wastelands. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2636" name="Mirror of Orpic" type="NONE" icon="icon.etc_mirror_i00">
 	<!-- This is needed in order to speak with the Spirit Of Sir Talianus. Follow him to Execution Grounds and destroy the Hangman Tree. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2637" name="Tear of Confession" type="NONE" icon="icon.etc_crystal_ball_white_i00">
 	<!-- Obtained from the Spirit Of Sir Talianus. Take this to Sir Kiel Nighthawk of the Dark Elf Guild in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2638" name="Report Piece" type="NONE" icon="icon.etc_leather_gray_i00">
 	<!-- Report Scrap obtained from killing a Lesser Ghoul or a Lesser Strain in the Execution Grounds. Collect 10 pieces to get the full Report of Sir Talianus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2639" name="Talianus' Report" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- The completed report. After speaking with Sir Kiel Nighthawk of the Dark Elf Guild in the Town of Dion, deliver the report to the Spirit Of Sir Talianus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2640" name="Tear of Loyalty" type="NONE" icon="icon.etc_crystal_ball_silver_i00">
 	<!-- This item can be obtained from Isael Silvershadow in Hunters Village. Take it to Priest Dustin who can be found in the Temple of Einhasad in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2641" name="Militia's Article" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- You can receive this item when you catch a Leto Lizardman on the Plains of the Lizardmen. Collect 20 of them and take them to Isael Silvershadow in Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2642" name="Saint's Ash Urn" type="NONE" icon="icon.etc_oil_pot_white_i00">
 	<!-- Object received from Priest Dustin of the Temple of Einhasad in Giran. Deliver this to Sir Windawood who are waiting for you near the Obelisk of Victory on Talking Island. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2643" name="Athebaldt's Skull" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- Item from a Breka Orc Prefect obtained in Breka's Stronghold. Take it, along with ribs and shin, to Priest Dustin of the Temple of Einhasad in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2644" name="Athebaldt's Ribs" type="NONE" icon="icon.etc_rib_white_i00">
 	<!-- Item from a Breka Orc Prefect obtained in Breka's Stronghold. Take it, along with skull and shin, to Priest Dustin of the Temple of Einhasad in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2645" name="Athebaldt's Shin" type="NONE" icon="icon.etc_piece_bone_white_i00">
 	<!-- Item from a Breka Orc Prefect obtained in Breka's Stronghold. Take it, along with ribs and skull, to Priest Dustin of the Temple of Einhasad in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2646" name="Letter of Windawood" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Letter received from Sir Windawood near the Obelisk of Victory on Talking Island. Show it to Priest Dustin of the Temple of Einhasad in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2647" name="Dufner's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Letter sent by Master Genwitter from the Warrior Guild of Giran to Master Terry in Dion.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2648" name="Terry's 1st Order" type="NONE" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Investigate the Neer Ghoul Berserkers of the Execution Grounds.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2649" name="Terry's 2nd Order" type="NONE" icon="icon.etc_scroll_of_return_i00">
 	<!-- Investigate the Neer Ghoul Berserkers of the Execution Grounds.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2650" name="Terry's Letter" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Letter sent by Master Terry of the Warrior Guild of Dion to Weapon Merchant Viktor of Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2651" name="Viktor's Letter" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter sent by Trader Viktor to Master Terry in the Town of Dion. The letter Has Terry's seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2652" name="Hawkeye's Letter" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Letter sent by Hawkeye to Trader Viktor of the Hunter's Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2653" name="Mysterious Spirit Ore" type="NONE" icon="icon.etc_crystal_blue_i00">
 	<!-- Mysterious Spirit Ore obtained after slaying Neer Crawler Berserkers on the Execution Grounds. Take this to Master Terry. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2654" name="Ol Mahum Spirit Ore" type="NONE" icon="icon.etc_crystal_red_i00">
 	<!-- Mysterious Spirit Ore obtained after slaying the Ol Mahum Captain in Partisan's Hideaway. Take this to Master Terry of the Warrior Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2655" name="Turek Spirit Ore" type="NONE" icon="icon.etc_crystal_silver_i00">
 	<!-- Mysterious Spirit Ore obtained after slaying the Turek Orc Prefect in Orc Barracks. Take this to Master Terry of the Warrior Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2656" name="Ant Spirit Ore" type="NONE" icon="icon.etc_crystal_white_i00">
 	<!-- Mysterious Spirit Ore obtained after slaying the Ant Captain in the Wastelands. Take this to Master Terry of the Warrior Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2657" name="Turak Bugbear Spirit Ore" type="NONE" icon="icon.etc_crystal_gold_i00">
 	<!-- Mysterious Spirit Ore obtained after slaying the Turak Bugbear Warrior in the Gorgon Flower Garden. Take this to Master Terry of the Warrior Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2658" name="Terry's Box" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Chest containing the mysterious Spirit Ore. Take this to Weapon Merchant Viktor of the Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2659" name="Viktor's Request" type="NONE" icon="icon.etc_scroll_of_enchant_armor_i01">
 	<!-- Request issued by Trader Viktor. "Please kill Medusa in the Gorgon Flower Garden and gather 10 Medusa Scales." -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2660" name="Medusa Scales" type="NONE" icon="icon.etc_parasite_i00">
 	<!-- Medusa Scales obtained from killing Medusa in the Gorgon Flower Garden. Collect 10 such scales and take them to Trader Viktor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2661" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_green_i00">
 	<!-- Strange Spirit Ore obtained from the bodies of mutant species. They seem to be related to Shilen, the goddess of death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2662" name="Analysis Request" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Request letter sent to Magister Marina of the Ivory Tower from Weapon Merchant Viktor. The letter asks Marina to analyze the Abyss Spirit Ore. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2663" name="Marina's Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Letter sent by Magister Marina to Blacksmith Brunon of the Dwarven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2664" name="Experiment Tools" type="NONE" icon="icon.etc_squares_wood_i00">
 	<!-- ExperiMental tools crafted by Blacksmith Brunon. Deliver these to Magister Marina of the Ivory Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2665" name="Analysis Result" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Document where Magister Marina Has organized the analyzed results of the Abyss Spirit Ore. Deliver this to Master Terry in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2666" name="Terry's 3rd Order" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
 	<!-- Master Terry's orders. The orders give instructions to come back for the next task after reaching level 36. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2667" name="Host List" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- List of the Spirit Ore hosts. "Marsh Stakato Drone in Cruma Marshlands, Breka Orc Prefect, in Breka's Stronghold, Ant Warrior Captain in the Ant Nest, Leto Lizardman Warrior on the Plains of the Lizardmen". -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2668" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_blue_i00">
 	<!-- Spirit Ore retrieved from the body of a Marsh Stakato Drone in Cruma Marshlands. Take this to Master Terry of the Warrior Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2669" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_silver_i00">
 	<!-- The Spirit Ore retrieved from the body of the Breka Orc Prefect in Breka's Stronghold. Take this to Master Terry of the Warrior Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2670" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_white_i00">
 	<!-- The Spirit Ore retrieved from the body of the Ant Warrior Captain in the Ant Nest. Take this to Master Terry of the Warrior Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2671" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_green_i00">
 	<!-- The Spirit Ore retrieved from the body of the Leto Lizardman Warrior on the Plains of the Lizardmen. Take this to Master Terry of the Warrior Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2672" name="Terry's Report" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i00">
 	<!-- Report detailing information about the Spirit Ore incident. Take this to Master Dufner of the Warrior Guild of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2673" name="Mark of Seeker" type="NONE" icon="icon.etc_jewel_green_i00">
 	<!-- Mark given to those who have passed the Trial of the Seeker. Occupation change related item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2674" name="Mark of Scholar" type="NONE" icon="icon.etc_jewel_blue_i00">
 	<!-- Mark given to those who have passed the Trial of the Scholar. Occupation change related item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2675" name="Mirien's 1st Badge" type="NONE" icon="icon.shield_shield_of_mana_i00">
 	<!-- A badge given by Magister Mirien from Dion while giving orders to complete High Priest Sylvain's request. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2676" name="Mirien's 2nd Badge" type="NONE" icon="icon.shield_shield_of_pledge_i00">
 	<!-- A badge given by Magister Mirien from Dion while giving orders to complete Grand Magister Jurek's request. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2677" name="Mirien's 3rd Badge" type="NONE" icon="icon.shield_round_shield_i00">
 	<!-- A badge given by Magister Mirien from Dion when giving orders to complete Elder Cronos' request. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2678" name="Mirien's Instruction" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Note that contains instructions of Magister Mirien from Dion. The note gives instructions to come back for the next task after reaching level 36. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2679" name="Maria's Letter" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Letter sent by Maria from the Grocery Shop to Captain Lucas in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2680" name="Maria's Letter" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter sent by Maria from the Grocery Shop of Dion. Take it to Astrologer Creta of the village of Floran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2681" name="Lucas' Letter" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Letter sent by Captain Lucas in the Town of Dion to Maria from the Grocery Shop of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2682" name="Lucilla's Handbag" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- The handbag left by Lucilla, friend of Maria from the Grocery Shop of Dion, on the night of the theft. Take this to Astrologer Creta. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2683" name="Creta's 1st Letter" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Letter sent by the Astrologer Creta to Maria from the Grocery Shop in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2684" name="Creta's Painting 1" type="NONE" icon="icon.etc_scroll_of_enchant_armor_i00">
 	<!-- Painting by Astrologer Creta. It contains a shadow presumed to be that of the thief. Take this to Maria from the Grocery Shop of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2685" name="Creta's Painting 2" type="NONE" icon="icon.etc_scroll_of_resurrection_i00">
 	<!-- Painting by Astrologer Creta. It contains a shadow presumed to be that of the thief. Take this to Captain Lucas. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2686" name="Creta's Painting 3" type="NONE" icon="icon.etc_scroll_of_return_i00">
 	<!-- Painting painted by Astrologer Creta. The shadow in the painting is that of a Leto Lizardman warrior from the Plains of the Lizardmen. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2687" name="Brown Scroll Scrap" type="NONE" icon="icon.etc_map_piece_yellow_i00">
 	<!-- Scrap of a scroll that contains directions on how to create the Crystal of purity. Gather 5 of these and take them to Maria from the Grocery Shop of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2688" name="Crystal of Purity" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Crystal used to purify the earth. Take this to High Priest Sylvain in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2689" name="High Priest's Badge" type="NONE" icon="icon.shield_sages_shield_i01">
 	<!-- A badge received from High Priest Sylvain. Proof given to those who are carrying out the orders of the High Priest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2690" name="Grand Magister's Badge" type="NONE" icon="icon.shield_doom_shield_i00">
 	<!-- A badge received from Grand Magister Jurek. Proof given to those who are carrying out the orders of the Grand Magister. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2691" name="Crono's Badge" type="NONE" icon="icon.shield_another_worlds_shield_i01">
 	<!-- A badge received from Elder Cronos. This signifies proof that someone is carrying out orders from Elder Cronos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2692" name="Sylvain's Letter" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- High Priest Sylvain's letter. Take this to Maria from the Grocery Shop in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2693" name="Mark of Sylvain" type="NONE" icon="icon.etc_coins_blue_i00">
 	<!-- Mark given to those who have passed High Priest Sylvain's test. Take this to Magister Mirien in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2694" name="Jurek's List" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- The list of evil creatures that Grand Magister Jurek asked you to investigate. "Monster Eye Destroyer from the Plains of Dion, Breka Orc Shaman from Breka's Stronghold, Shackle from Ivory Tower Crater." -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2695" name="Monster Eye Destroyer's Skin" type="NONE" icon="icon.etc_leather_yellow_i00">
 	<!-- Skin of Monster Eye Destroyer from the Plains of Dion. Gather 5 of these and take them to Grand Magister Jurek of Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2696" name="Shaman's Necklace" type="NONE" icon="icon.etc_totem_necklace_red_i00">
 	<!-- A Breka Orc Shaman's Necklace from Breka's Stronghold. Gather 5 of these and take them to Grand Magister Jurek in Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2697" name="Shackle's Scalp" type="NONE" icon="icon.etc_leather_brown_i00">
 	<!-- Skin of the Shackle's head from Ivory Tower Crater. Gather 2 of these and take them to Grand Magister Jurek of Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2698" name="Mark of Jurek" type="NONE" icon="icon.etc_coins_gold_i00">
 	<!-- Mark given to those who have passed Grand Magister Jurek's test. Take this to Magister Mirien in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2699" name="Cronos Letter" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter sent by Elder Cronos to Magister Dieter in the Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

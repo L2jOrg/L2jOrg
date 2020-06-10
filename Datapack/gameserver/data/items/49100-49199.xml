@@ -2,67 +2,67 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="49100" name="Scroll of Escape: Floran" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Floran Village. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49101" name="Scroll of Escape: Giran" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Town of Giran. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49102" name="Scroll of Escape: Oren" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Town of Oren. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49103" name="Scroll of Escape: Ivory Tower" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Ivory Tower. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49104" name="Scroll of Escape: Hunter's Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Hunter's Village. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49105" name="Teleport: Entrance to Cruma Tower" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to the Entrance to Cruma Tower. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49106" name="Scroll of Escape: Entrance to Dragon Valley" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to the Entrance to Dragon Valley. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49107" name="Teleport: Dragon Valley Bridge" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Dragon Valley Bridge. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49108" name="Beauty Chest" type="NONE" icon="icon.etc_box_of_adventure_2_i00">
 	<!-- Double-click to get one of the following: Dye Potion Pack / Facelifting Potion Pack / Mysterious Potion. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49109" name="Buff Scrolls Chest" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to get one of the following: Scroll: Empower / Scroll: Might / Scroll: Shield. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49110" name="High-grade Dye Chest" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get one of the following: Greater STR Dye / Greater CON Dye / Greater DEX Dye / Greater INT Dye / Greater WIT Dye / Greater MEN Dye. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="32012" value="-1"/>  <!-- High-grade Dye Chest -->
@@ -71,7 +71,7 @@
 
 	<item id="49111" name="Dye Chest" type="NONE" icon="icon.etc_box_of_adventure_5_i00">
 	<!-- Double-click to get one of the following: STR Dye / CON Dye / DEX Dye / INT Dye / WIT Dye / MEN Dye. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="32013" value="-1"/>  <!-- Dye Chest -->
@@ -80,43 +80,43 @@
 
 	<item id="49112" name="Staff Chest" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click to get one of the following: Cursed Staff / Crystal Staff / Sage's Staff / Demon's Staff. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49113" name="Fist Weapon Chest" type="NONE" icon="icon.etc_treasure_box_i03">
 	<!-- Double-click to get one of the following: Knuckle Duster / Chakram / Fisted Blade / Great Pata. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49114" name="Spear Chest" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to get one of the following: Bec de Corbin / Orcish Glaive / Poleaxe / Orcish Poleaxe. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49115" name="Blunt Weapon Chest" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click to get one of the following: Dwarven War Hammer / Heavy Doom Hammer / War Axe / Yaksa Mace. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49116" name="Dagger Chest" type="NONE" icon="icon.etc_treasure_box_i06">
 	<!-- Double-click to get one of the following: Stiletto / Cursed Dagger / Dark Screamer / Crystal Dagger. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49117" name="One-handed Sword Chest" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Double-click to get one of the following: Katana / StormBringer / Sword of Delusion / Samurai Long Sword. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49118" name="Bow Chest" type="NONE" icon="icon.etc_treasure_box_i08">
 	<!-- Double-click to get one of the following: Elemental Bow / Crystallized Ice Bow / Akat Longbow / Eminence Bow. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -207,37 +207,37 @@
 
 	<item id="49128" name="Souvenir Box" type="NONE" icon="icon.new_user_box">
 	<!-- Reward for participating in the event. Double-click to receive one of the following: High-grade Dye Chest, Dye Chest, Beauty Chest, Buff Scrolls Chest, Greater HP  Potion.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49129" name="1st Anniversary Coin" type="NONE" icon="icon.etc_11th_token">
 	<!-- Coin used to purchase special items during the Holiday Fair.  Can be shared within account.   -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49130" name="Scroll: Summon Piero" type="NONE" icon="icon.etc_11th_event_solo">
 	<!-- Double-click the item to summon Piero. Summoned Piero names a random number from 1 to 6. If your number is bigger than Piero's, you can receive the Adena.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49131" name="Magic Number Cube" type="NONE" icon="icon.etc_11th_event_group">
 	<!-- A Magic Number Cube that will allow you to participate in the gift giveaway. Use it on Captive Tulio, which is summoned at 9 AM and 9 PM in the Elven Village and Dark Elf Village to participate in the gift giveaway.   -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49132" name="Membership Card " type="NONE" icon="icon.ev_buff_11th">
 	<!-- Membership Card given to VIP members of the 11th Sale. When in inventory, you can receive the 11th Anniversary buffs and coins from the 11th NPC.   -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49133" name="Venetian Fleece - Low Level" type="RUNE" icon="icon.skill19226">
 	<!-- A 15-day item. When in inventory, your XP and SP gain is increased by 22%. Can be used only by characters whose level is less than 40. This item will be removed after the event is over. -->
-		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="21600"/>
 	</item>
 
@@ -275,25 +275,25 @@
 
 	<item id="49136" name="Venetian Fleece - High Level" type="RUNE" icon="icon.skill19226">
 	<!-- 15-day item. When in inventory, your XP and SP gain is increased by 11%.   -->
-		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="21600"/>
 	</item>
 
 	<item id="49137" name="Venetian Fleece Chest (Low Level)" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click the chest to receive 1 15-day Venetian Fleece (Low Level). The Fleece can be used only by characters whose level is less than 40.   This item will be removed after the event is over. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49138" name="Venetian Fleece Chest (High Level)" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click the chest to receive 15-day Venetian Fleece Chest (High Level, 1 pc.).    -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49139" name="Dual Sword Gift Chest" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Double-click the chest to receive 15-day Dual Candle Sword.     -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 

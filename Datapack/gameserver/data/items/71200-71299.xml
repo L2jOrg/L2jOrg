@@ -112,13 +112,13 @@
 
 	<item id="71211" name="Seven Deadly Sins Agathion Book of Growth" type="ANCIENT_CRYSTAL_ENCHANT_AGATHION" icon="BranchIcon.icon.g_bm_7th_sins_enchant_jp">
 	<!-- Book of Growth for the Seven Deadly Sins Agathion Charms.\nThe enchant level remains the same even if enchantment fails. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71212" name="Seven Deadly Sins Agathion Upgrade Stone" type="MATERIAL" icon="BranchIcon.icon.g_bm_7th_sins_upgrade_jp">
 	<!-- Material needed to upgrade Seven Deadly Sins Agathions. Talk to Head Blacksmith Ferris of Aden to upgrade +7 Agathions of Stage 1 and Stage 2, and the amount of upgrade stones needed will depend on the type and level of the Agathion. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -134,19 +134,19 @@
 
 	<item id="71214" name="Merlin's Magic Bracelet (30-day) Pack" type="NONE" icon="icon.sayha2017_box_i03">
 	<!-- Double-click to obtain Merlin's Magic Bracelet (30-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71215" name="Seven Deadly Sins Special Pie" type="POTION" icon="BranchSys3.icon1.g_torun_gingerbread_pl">
 	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Might, Haste, Empower, Acument, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration, Blessed Body, Blessed Soul, Magic Barrier applied for 20 minutes.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71216" name="Seven Deadly Sins Special Beer" type="SCROLL" icon="BranchSys3.icon1.g_beerfestival_octoberfest_beer">
 	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Chant of Victory Lv. 1 applied for 20 minutes. \n<Warning>\n Cannot be used with Prophecy type effects. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="56089" value="-1"/>  <!-- Seven Deadly Sins Special Beer - Victory -->
@@ -154,104 +154,104 @@
 	</item>
 
 	<item id="71217" name="Seven Deadly Sins Card: Meliodas" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71218" name="Seven Deadly Sins Card: Meliodas 2" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_fish">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71219" name="Seven Deadly Sins Card: Diane" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_dian">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71220" name="Seven Deadly Sins Card: Ban" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_van">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71221" name="Seven Deadly Sins Card: King" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_king">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71222" name="Seven Deadly Sins Card: Gowther" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_go">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71223" name="Seven Deadly Sins Card: Merlin" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_merlin">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71224" name="Seven Deadly Sins Card: Escanor" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_esca">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71225" name="Lioneth Kingdom Card: Elizabeth Lioneth" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_eli">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71226" name="Dreyfus Card: Gil Sanda" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_gil">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71227" name="Dreyfus Card: Howzer" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_how">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71228" name="Handsen Card: Yurigo" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_yuri">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71229" name="Ten Commandments Card: Jerudoris" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_jeru">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71230" name="Ten Commandments Card: Estarossa" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_rotsa">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71231" name="Ten Commandments Card: Tung" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_tung">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71232" name="Brittania" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_bri">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71233" name="Pet Card: Hawk" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_hawk">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71234" name="Legendary Knights Card: Seven Deadly Sins" type="CARD_EVENT" icon="BranchIcon.icon.icon_card_sin_meli_legend">
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="71235" name="Seven Deadly Sins Card Pouch" type="NONE" icon="icon.card_event_dragon_pocket">
 	<!-- Card pouch filled with magic power. Double-click to obtain one of the 7 cards of the characters from Seven Deadly Sins. Must be level 45 or above.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="71236" name="Legendary Knights Card: Seven Deadly Sins (2-hr) Pack" type="NONE" icon="BranchIcon.icon.icon_card_sin_meli_legend">
 	<!-- Pack containing Legendary Knights Card: Seven Deadly Sins (2-hr). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -264,7 +264,7 @@
 
 	<item id="71238" name="+5 Hawk Agathion Lv. 3 (7-day) Box" type="NONE" icon="icon.sayha2017_box_i02">
 	<!-- Double-click to obtain a +5 Hawk Agathion - Lv. 3 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -277,187 +277,187 @@
 
 	<item id="71240" name="Merlin's Magic Bracelet (7-day) Pack" type="NONE" icon="icon.sayha2017_box_i04">
 	<!-- Double-click to obtain Merlin's Magic Bracelet (7-day).   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71241" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="60"/>
 	</item>
 
 	<item id="71242" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 5-hour item. When in inventory, your XP and SP gain is increased by 50%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="300"/>
 	</item>
 
 	<item id="71243" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 1-day item. When in inventory, your XP and SP gain is increased by 50%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440"/>
 	</item>
 
 	<item id="71244" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="71245" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 30-day item. When in inventory, your XP and SP gain is increased by 50%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="71246" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71247" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (5-hour). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71248" name="XP/SP Rune - 50% (1-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (1-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71249" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71250" name="XP/SP Rune - 50% (30-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71251" name="Agathion Box: Dryad" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click to obtain an Agathion - Dryad. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71252" name="Agathion Box: Bugbear" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to obtain an Agathion - Bugbear. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71253" name="Agathion Box: Griffin" type="NONE" icon="icon.npoint_valakas_30day_box">
 	<!-- Double-click to obtain an Agathion - Griffin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71254" name="Soulshot 335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
 	<!-- Double-click to obtain 335 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71255" name="Soulshot 500-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_d_i00">
 	<!-- Double-click to obtain 500 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71256" name="Soulshot 1000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_c_i00">
 	<!-- Double-click to obtain 1000 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71257" name="Soulshot 3000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
 	<!-- Double-click to obtain 3000 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71258" name="Soulshot 5000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
 	<!-- Double-click to obtain 5000 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71259" name="Blessed Spiritshot 335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00">
 	<!-- Double-click to obtain 335 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71260" name="Blessed Spiritshot 500-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_d_i00">
 	<!-- Double-click to obtain 500 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71261" name="Blessed Spiritshot 1000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_c_i00">
 	<!-- Double-click to obtain 1000 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71262" name="Blessed Spiritshot 3000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
 	<!-- Double-click to obtain 3000 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71263" name="Blessed Spiritshot 5000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_a_i00">
 	<!-- Double-click to obtain 5000 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71264" name="Name Change Ticket Pack" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Pack containing a Name Change Ticket. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71265" name="Gender Change Ticket Pack" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Pack containing a Gender Change Ticket. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71266" name="Clan Name Change Ticket Pack" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Pack containing a Clan Name Change Ticket. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71267" name="Hero's Weapon Exchange Ticket - Lv. 54" type="MATERIAL" icon="icon.etc_level_bustup_ticket_i00">
 	<!-- Take it to the Store Manager after reaching Lv. 54 to exchange for a +10 B-grade Weapon (15-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71268" name="VIP Scroll" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Recharges 27 VIP points.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71269" name="Greater VIP Scroll" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Recharges 273 VIP points.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71270" name="Venir's Talisman Fragment" type="NONE" icon="icon.bm_ensoul_stone_PvP_empty">
 	<!-- Material used to upgrade Venir's Talisman by combining. When upgrading fails, the level falls to Lv. 1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -631,34 +631,34 @@
 
 	<item id="71295" name="Artisan's Scroll: Enchant Weapon (A-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Failure to enchant does not crystallize the item and the enchantment level is retained. Can be used on weapons enchanted up to +20. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71296" name="Master's Scroll: Enchant Weapon (A-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. If enchantment succeeds, it may increase +1 - +3. Failure to enchant does not crystallize the item and the enchantment level is retained. Can be used on weapons enchanted up to +20. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71297" name="Holy Scroll: Enchant Weapon (A-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Has 100% to succeed in enchantment if used. Can be used on weapons enchanted up to +12. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71298" name="Brilliant Jewelry Box Lv. 4" type="NONE" icon="icon.bm_special_jewelbox_lv4">
 	<!-- Double-click to obtain 1 of the following: Vital Stone/Diamond/Pearl/Aquamarine/Sapphire/Ruby/Jade/Garnet/Topaz/Red Cat's Eye/Blue Cat's Eye Lv. 4 Jewelry Box. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71299" name="Brilliant Jewelry Box Lv. 5" type="NONE" icon="icon.bm_special_jewelbox_lv4">
 	<!-- Double-click to obtain 1 of the following: Vital Stone/Diamond/Pearl/Aquamarine/Sapphire/Ruby/Jade/Garnet/Topaz/Red Cat's Eye/Blue Cat's Eye Lv. 5 Jewelry Box. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 

@@ -134,6 +134,7 @@
         <xs:attribute name="tradable" type="xs:boolean" default="true"/>
         <xs:attribute name="depositable" type="xs:boolean" default="true"/>
         <xs:attribute name="clan-depositable" type="xs:boolean" default="true"/>
+        <xs:attribute name="castle-depositable" type="xs:boolean" default="true"/>
         <xs:attribute name="freightable" type="xs:boolean" default="true"/>
         <xs:attribute name="commissionable" type="xs:boolean" default="true"/>
         <xs:attribute name="mailable" type="xs:boolean" default="true"/>

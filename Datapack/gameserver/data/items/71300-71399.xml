@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="71300" name="Fortune Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_shhadai">
 	<!-- Double-click to obtain 1 of the following: Vital Stone / Diamond / Pearl / Aquamarine / Sapphire / Ruby / Jade / Garnet / Topaz / Red Cat's Eye / Blue Cat's Eye Chest of Good Fortune.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71301" name="VIP Gift Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain 1 VIP Scroll and 1 Premium Coin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71302" name="Greater VIP Gift Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain 1 Greater VIP Scroll and 11 Premium Coins. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -83,43 +83,43 @@
 
 	<item id="71312" name="Zodiac Agathion Box" type="NONE" icon="icon.star_agathion_cube">
 	<!-- Double-click to get a random Zodiac Agathion.\n -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71313" name="Shiny Coin" type="NONE" icon="icon.bm_nebit_coin">
 	<!-- Coins that can be exchanged with Pona for a special gift. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71314" name="VIP Scroll - 800" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Recharges 800 VIP points.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71315" name="VIP Scroll - 2400" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Recharges 2400 VIP points.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71316" name="VIP Scroll - 80" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Recharges 80 VIP points.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71317" name="VIP Scroll - 240" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Recharges 240 VIP points.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71318" name="Transformation Sealbook: Sales Part-timer" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill of transforming yourself into Kat the Cat -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -148,13 +148,13 @@
 
 	<item id="71321" name="Journey Pack" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click to obtain XP/SP Rune - 50% (5-hour) Pack x1, 1st Class Transfer Buff Scroll x10, Scroll: Regular XP/SP Boost x10, Major Healing Potion x100, Black Gem Mask x1. Can be transferred between characters on one account. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71322" name="Chronicle Pack" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to obtain XP/SP Rune -50% (30-day) Pack x1, 1st Class Transfer Buff Scroll x30, XP/SP Boost Scrolls x30, Major Healing Potion x300, Black Gem Mask x1, Chronicle Ring x1, Agathion Bracelet - Lv. 1 (180-day) x1, Agathion - Saerom x1, Cheer Pom Poms x1. Can be transferred between characters on one account. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -174,110 +174,110 @@
 
 	<item id="71325" name="Angler's Fishing Box" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- Double-click to obtain 30 Shining Golden Baits. If you are lucky, you will get Angler's Gold Box or Angler's Silver Box.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71326" name="Angler's Gold Box" type="NONE" icon="icon.etc_readybox_gold">
 	<!-- Double-click to obtain 1 rare item.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71327" name="Angler's Silver Box" type="NONE" icon="icon.etc_readybox_silver">
 	<!-- Double-click to obtain 1 random item: rare accessories, Enchantment Scroll of any type, Item Box A/B Grade, Scroll: Enchant Fishing Weapon, Angler's Blessing.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71328" name="Scroll: Enchant Fishing Weapon" type="ENCHANT_WEAPON" icon="icon.etc_pvppoint_scroll1">
 	<!-- Scroll for enchanting Event weapon Blue Mackerel: Dual Sword, than can be obtained through the Fishermen's Guild. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71329" name="Pumpkin Seed" type="NONE" icon="icon.etc_gourd_i00">
 	<!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little pumpkin. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71330" name="Honey Pumpkin Seed" type="NONE" icon="icon.etc_gourd_i01">
 	<!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little honey pumpkin. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71331" name="Monster Energy" type="NONE" icon="icon.etc_nectar_i00">
 	<!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little honey pumpkin. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71332" name="Halloween Gift" type="NONE" icon="icon.event_halloween_king_pumpkini00">
 	<!-- Double-click to obtain 1 of various items.    -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71333" name="Lingering Halloween Lv. 1" type="SCROLL" icon="icon.etc_holy_potion_i00">
 	<!-- Halloween buff. Cannot use this item when inflicted with Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. XP/SP Gain when hunting +10%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5% for 20 minutes.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71334" name="Lingering Halloween Lv. 2" type="SCROLL" icon="icon.etc_wind_potion_i00">
 	<!-- Halloween buff. Cannot use this item when inflicted with Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. XP/SP Gain when hunting +20%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5% for 20 minutes.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71335" name="Lingering Halloween Lv. 3" type="SCROLL" icon="icon.etc_water_potion_i00">
 	<!-- Halloween buff. Cannot use this item when inflicted with Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. XP/SP Gain when hunting +30%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5% for 20 minutes.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71336" name="Newbie Gift" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Shining Heavy Armor/Light Armor/Robe Set (30-day)/ Hero's Shining Dual Sword/Staff/Bow/Dagger/Spear (30-day)/ Expertise Rune (C-grade), Newbie Gift - Lv. 10, and 1 Transformation Support Cube - Lv. 1 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71337" name="Expertise Rune (C-grade)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When possessed, gives Expertise C Skill. \nDuration: 1 das. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440"/>
 	</item>
 
 	<item id="71338" name="Expertise Rune (C-grade) (1-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Pack containing 1 Expertise Rune (C-grade) (1-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71339" name="Magic Trumpet" type="RUNE" icon="icon.skill18578">
 	<!-- Have it in the inventory to have +20 World Chat. 30-day. Must be Level 40 or above to use. \n\nResets every day at 7:00 am. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="71340" name="Magic Warehouse Summoning Scroll" type="RUNE" icon="BranchIcon.icon.g_bm_shop_add_i00">
 	<!-- Expands inventory slots by 12 slots, and gives the skill to summon the Magic Warehouse. 30-day.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="71341" name="Magic Warehouse Summoning Scroll (30-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Pack containing 1 Magic Warehouse Summoning Scroll (30-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71342" name="Party Member Scroll of Escape" type="SCROLL" icon="icon.bookmark_scroll_i00">
 	<!-- Teleport to assigned party member when used. Cooldown 30 minutes. Cannot be used in zones where summoning and teleport are prohibited. Cannot be used by chaotic characters.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
@@ -323,7 +323,7 @@
 
 	<item id="71347" name="Magic Trumpet (30-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Pack containing 1 Magic Trumpet (30-day). Must be Level 40 or higher.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 

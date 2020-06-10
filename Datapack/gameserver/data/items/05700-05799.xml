@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="5703" name="Lucky Charm (No-grade)" type="SCROLL" icon="icon.etc_charm_of_luck_i00">
 	<!-- estows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 19 or below. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="10" price="100" reuse-delay="10000" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2168" value="-1"/>  <!-- Lucky Charm -->
@@ -23,9 +23,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" level="3" type="ON_ENCHANT" value="-1"/>  <!-- TODO Skill not found -->
-		</skills>
 	</weapon>
 
 	<weapon id="5706" name="Damascus*Damascus" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -42,20 +39,17 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="20" type="ON_ENCHANT" value="-1"/>  <!-- TODO Skill not found -->
-		</skills>
 	</weapon>
 
 	<item id="5707" name="Record of Seven Signs" type="NONE" icon="icon.etc_ssq_scroll_i00">
 	<!-- Item used for studying the current situation of the Seven Signs system. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes price="500" immediate-effect="true" action="SHOW_SSQ_STATUS"/>
 	</item>
 
 	<item id="5708" name="Lord's Certificate of Approval" type="TICKET_OF_LORD" icon="icon.etc_permit_card_i00">
 	<!-- When one possesses this item, although one does not belong to a castle owning clan, one can join the Lords of Dawn. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes immediate-effect="true"/>
 	</item>
 
@@ -493,7 +487,7 @@
 
 	<item id="5789" name="Soulshot (No-grade) (Novice)" type="NONE" icon="icon.etc_soulshot_none_for_rookie_i00">
 	<!-- A Soulshot (No-grade) for use by newbies. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="1" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
 			<skill id="2039" value="-1"/>  <!-- Soulshot (No-grade) -->
@@ -502,7 +496,7 @@
 
 	<item id="5790" name="Spiritshot (No-grade) (Novice)" type="NONE" icon="icon.etc_spiritshot_none_for_rookie_i00">
 	<!-- A Spiritshot (No-grade) for use by newbies.  Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="1" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2047" value="-1"/>  <!-- Spiritshot (No-grade) -->

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="6901" name="Recipe: Arrow of Light" type="RECIPE" icon="icon.etc_recipe_black_i00">
 	<!-- For Dwarves only. Recipe for an Arrow of Light. Create Item skill must be level 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="200000" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>

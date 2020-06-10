@@ -173,38 +173,38 @@
 
 	<item id="6317" name="Mixing Manual" type="NONE" icon="icon.etc_spellbook_red_i00">
 	<!-- Manual received from Magic Trader Wesley, with instructions for using the material mixing urn located in the basement of the Ivory Tower.  -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction dropable="false"/>
 		<attributes weight="20" price="1" immediate-effect="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="6318" name="Blood Fire" type="NONE" icon="icon.etc_potion_red_i00">
 	<!-- Dark flames from Purgatory. The only way to melt true gold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="50" price="500" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6319" name="Mimir's Elixir" type="NONE" icon="icon.etc_lesser_potion_yellow_i00">
 	<!-- Legendary elixir said to bestow ultimate wisdom. Take it to Magister Ladd. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6320" name="Pure Silver" type="NONE" icon="icon.etc_broken_crystal_silver_i00">
 	<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6321" name="True Gold" type="NONE" icon="icon.etc_broken_crystal_gold_i00">
 	<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6322" name="Philosopher's Stone" type="NONE" icon="icon.etc_bead_silver_i00">
 	<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Joan. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -270,121 +270,121 @@
 
 	<item id="6329" name="Recipe: Sealed Phoenix Necklace (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Necklace. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="34800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6330" name="Recipe: Sealed Phoenix Necklace (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Necklace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="34800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6331" name="Recipe: Sealed Phoenix Earring (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Earring. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="26200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6332" name="Recipe: Sealed Phoenix Earring (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Earring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="26200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6333" name="Recipe: Sealed Phoenix Ring (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Ring. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="17420" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6334" name="Recipe: Sealed Phoenix Ring (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Ring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="17420" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6335" name="Recipe: Sealed Majestic Necklace (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Necklace. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="52000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6336" name="Recipe: Sealed Majestic Necklace (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Necklace. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="52000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6337" name="Recipe: Sealed Majestic Earring (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Earring. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="39000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6338" name="Recipe: Sealed Majestic Earring (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Earring. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="39000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6339" name="Recipe: Sealed Majestic Ring (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Ring. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="26000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6340" name="Recipe: Sealed Majestic Ring (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Ring. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="26000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6341" name="Sealed Phoenix Earring Gemstone" type="MATERIAL" icon="icon.etc_gem_blue_i00">
 	<!-- An essential ingredient which is used to make Sealed Phoenix Necklace. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="7231" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="6342" name="Sealed Majestic Earring Gemstone" type="MATERIAL" icon="icon.etc_gem_blue_i00">
 	<!-- An essential ingredient which is used to make Sealed Majestic Earring. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="8829" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="6343" name="Sealed Phoenix Necklace Beads" type="MATERIAL" icon="BranchSys2.icon.etc_sealed_phoenixbeads_i00">
 	<!-- An essential ingredient which is used to make Sealed Phoenix Necklace. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="9354" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="6344" name="Sealed Majestic Necklace Beads" type="MATERIAL" icon="BranchSys2.icon.etc_sealed_majesticbeads_i00">
 	<!-- An essential ingredient which is used to make Sealed Majestic Necklace. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="13643" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="6345" name="Sealed Phoenix Ring Gemstone" type="MATERIAL" icon="icon.etc_gem_blue_i00">
 	<!-- An essential ingredient which is used to make Sealed Phoenix Ring. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5228" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="6346" name="Sealed Majestic Ring Gemstone" type="MATERIAL" icon="icon.etc_gem_blue_i00">
 	<!-- An essential ingredient which is used to make Sealed Majestic Ring. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6143" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
@@ -447,25 +447,25 @@
 
 	<item id="6350" name="Amulet: Pa'agrio's Honor" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Honor. Used by Overlords.\nRequired level: 56 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6351" name="Amulet: Ritual of Life" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Ritual of Life. Used by Overlords.\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6352" name="Spellbook: Prayer" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Prayer. Used by Bishops.\nRequired level: 66 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="8700" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6353" name="Blue Gemstone" type="NONE" icon="icon.etc_jewel_blue_i00">
 	<!-- Gemstone obtained from gremlins. Take it to a Newbie Helper. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
@@ -551,7 +551,7 @@
 
 	<item id="6363" name="Stolen Infernium Ore" type="NONE" icon="icon.etc_inf_ore_high_i00">
 	<!-- Infernium ore once owned by the Iron Gate Guild. Take it to Warehouse Keeper Romp of Town of Aden to play bingo. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="200" immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -820,13 +820,13 @@
 
 	<item id="6388" name="Lord's Certificate of Approval" type="NONE" icon="icon.etc_permit_card_i00">
 	<!-- This certificate allows the bearer to join the Lords of Dawn without belonging to a castle-owning clan. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="6389" name="Squash Seed" type="NONE" icon="icon.etc_gourd_i00">
 	<!-- Double-click to make a Young Squash appear. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2003" value="-1"/>  <!-- Squash Seed -->
@@ -835,7 +835,7 @@
 
 	<item id="6390" name="Large Squash Seed" type="NONE" icon="icon.etc_gourd_i01">
 	<!-- Double-click to make a Large Young Squash appear. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2004" value="-1"/>  <!-- Large Squash Seed -->
@@ -844,7 +844,7 @@
 
 	<item id="6391" name="Nectar" type="NONE" icon="icon.etc_nectar_i00">
 	<!-- Used to exchange with Puss the Cat for squash seeds or for growing squashes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2005" value="-1"/>  <!-- Nectar -->
@@ -853,13 +853,13 @@
 
 	<item id="6392" name="Event - Medal" type="NONE" icon="icon.etc_event_medal_i00">
 	<!-- L2 Medal Collection Event - If you take it to an Event Manager, he will trade it for a prize item of your choice. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="6393" name="Event - Glittering Medal" type="NONE" icon="icon.etc_event_glitter_medal_i00">
 	<!-- L2 Medal Collection Event - Used to raise the grade of a collector during the event. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
@@ -872,31 +872,31 @@
 
 	<item id="6395" name="Amulet: Chant of Predator" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Predator spell. Used by Warcryers.\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6396" name="Amulet: Chant of Eagle" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet needed to learn the Chant of Eagle incantation. Used by Warcryers.\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6397" name="Amulet: Chant of Vampire" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Vampire spell. Used by Warcryers.\nRequired level: 44 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6398" name="Spellbook: Body of Avatar" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Body of Avatar. Used by Bishops.\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6399" name="Rabbit Crest" type="NONE" icon="icon.etc_paper_black_i00">
 	<!-- The crest that indicates that its bearer's event collector is "rabbit." Without this badge, one cannot prove one's grade . -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

@@ -17,43 +17,43 @@
 
 	<item id="71101" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. \n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="60"/>
 	</item>
 
 	<item id="71102" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\nIntended for Lv. 1 - 75 characters. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71103" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 5-hour itemв. When in inventory, your XP and SP gain is increased by 50%. \nIntended for Lv. 1 - 75 characters.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="300"/>
 	</item>
 
 	<item id="71104" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\nIntended for Lv. 1 - 75 characters. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71105" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%.\nIntended for Lv. 1 - 75 characters.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="71106" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\nIntended for Lv. 1 - 75 characters. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71107" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55999" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -62,19 +62,19 @@
 
 	<item id="71108" name="Package: Irene' Hourglass (1 hour)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain Irene' Hourglass - 1 Hour.\nIntended for Lv. 1 - 75 characters.  -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71109" name="Golden Mermaid's Fishing Rod Pack (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Golden Mermaid's Fishing Rod (7 days). -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71110" name="Golden Mermaid's Fishing Rod Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Golden Mermaid's Fishing Rod (30 days). -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -155,7 +155,7 @@
 
 	<item id="71120" name="Sing Of Adventurer - Recovery" type="NONE" icon="BranchSys3.Icon.g_sing_of_adventurer_recovery">
 	<!-- Endowed with a mysterious power, the song allows resurrecting a character and restoring their lost experience at the death of an NPC. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -182,56 +182,56 @@
 
 	<item id="71124" name="Stable Cloak Enchantment Scroll - Legendary" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71125" name="Legendary Scroll (High-grade)" type="NONE" icon="BranchIcon.icon.g_bm_cloak_legend_scroll">
 	<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Store Manager. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71126" name="High-grade Life Stone - Ancient Kingdom" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_normal">
 	<!-- High-grade Life Stone for the Ancient Kingdom Cloak. Can augment all Ancient Kingdom Cloaks enchanted to +10 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +10 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71127" name="High-grade Life Stone - Elmoreden" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_elmoreden">
 	<!-- High-grade Life Stone for the Legendary Elmoreden Cloak. Can augment Legendary Elmoreden Cloaks enchanted to +15 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +15 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71128" name="High-grade Life Stone - Aden" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_aden">
 	<!-- High-grade Life Stone for the Legendary Aden Cloak. Can augment Legendary Aden Cloaks enchanted to +15 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +15 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71129" name="High-grade Life Stone - Elmore" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_elmore">
 	<!-- High-grade Life Stone for the Legendary Elmore Cloak. Can augment Legendary Elmore Cloaks enchanted to +15 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +15 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71130" name="High-grade Life Stone - Ferios" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_perios">
 	<!-- High-grade Life Stone for the Legendary Ferios Cloak. Can augment Legendary Ferios Cloaks enchanted to +15 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +15 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71131" name="High-grade Life Stone Pack - Legendary" type="SCROLL" icon="icon.bm_freya_2016_gift_box">
 	<!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71132" name="High-grade Life Stone Pack - Cloak" type="SCROLL" icon="icon.bm_freya_2016_gift_box">
 	<!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -244,49 +244,49 @@
 
 	<item id="71134" name="Master's Fishing Coin" type="NONE" icon="icon.etc_coins_blue_i00">
 	<!-- A coin obtainable from Master Fishing. Take the coin to the Store Manager to exchange for a Fishing XP Box. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71135" name="Mermaid Agathion Enchant Scroll" type="ENCHANT_AGATHION" icon="icon.star_scrl_of_ench_ag">
 	<!-- An enchant scroll for mermaid Agathion. Increases the Agathion's magic resistance and also adds a special ability from +4 enchantment. Can enchant a mermaid Agathion safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71136" name="Mermaid's Trace" type="NONE" icon="icon.etc_oren_fish_scale_i00">
 	<!-- Gather 20 Mermaid's Traces and take them to the Store Manager to get the Mermaid Agathion Charm. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71137" name="Master's Fishing Potion" type="SCROLL" icon="BranchIcon.etc_sign_agathion_feed_blue_i00">
 	<!-- Increases XP/SP gain for successful fishing by 50% for 1 hour when used.\nApplies to all bait.\nCan be used together with the Fishing Guild's Support Certificate. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71139" name="Fishing XP Box" type="SCROLL" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Contains a Scroll: Fishing XP. A chance to get a Shining Fishing Box additionally. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71140" name="Shining Fishing Box" type="SCROLL" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Shining Fishing Box. Use it to obtain an item. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71141" name="Scroll: Fishing XP" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- A fishing XP scroll rewarded for hard fishing. Cannot be used on chaotic characters. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71142" name="Full Load Support Pack" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Double-click to get one of the items in the Full Load Support Pack Box. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -306,19 +306,19 @@
 
 	<item id="71145" name="Greater Blessing of Castle Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Gives the Blessing of Castle effect to all party members. Buffs and debuffs do not disappear upon death, but Noblesse Blessing and Lucky Charm disappear. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71146" name="Castle Enchant Buff Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Bestows all party members with the effects of Might Lv. 2, Empower Lv. 2, Acumen Lv. 1, and Haste Lv. 1. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71147" name="Castle Wind Walk Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Speed of all party members by 33. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
@@ -377,25 +377,25 @@
 
 	<item id="71153" name="+7 Elmoreden Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +7 Elmoreden Cloak. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71154" name="+7 Aden Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +7 Aden Cloak. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71155" name="+7 Elmore Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +7 Elmore Cloak. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71156" name="+7 Ferios Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +7 Ferios Cloak. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -422,129 +422,129 @@
 
 	<item id="71160" name="Seven Signs Miracle Box" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain a random item. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71161" name="Legendary Card: Antharas" type="CARD_EVENT" icon="icon.card_dragon_anta">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71162" name="Legendary Card: Valakas" type="CARD_EVENT" icon="icon.card_dragon_vala">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71163" name="Legendary Card: Lindvior" type="CARD_EVENT" icon="icon.card_dragon_rind">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71164" name="Legendary Card: Astair van Halter" type="CARD_EVENT" icon="icon.card_hero_holter">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71165" name="Legendary Card: Amadeo Cadmus" type="CARD_EVENT" icon="icon.card_hero_amadeose">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71166" name="Legendary Card: Lionel Hunter" type="CARD_EVENT" icon="icon.card_hero_hunter">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71167" name="Legendary Card: Sieghardt Ein" type="CARD_EVENT" icon="icon.card_hero_zigharte">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71168" name="Legendary Card: Elcadia" type="CARD_EVENT" icon="icon.card_hero_elcardia">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71169" name="Legendary Card: Baium" type="CARD_EVENT" icon="icon.card_devil_baium">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71170" name="Legendary Card: Beleth" type="CARD_EVENT" icon="icon.card_devil_verese">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71171" name="Legendary Card: Tiat" type="CARD_EVENT" icon="icon.card_devil_tiate">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71172" name="Legendary Card: Lilith" type="CARD_EVENT" icon="icon.card_devil_lilith">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71173" name="Legendary Card: Paulina" type="CARD_EVENT" icon="icon.card_angel_polline">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71174" name="Legendary Card: Anakim" type="CARD_EVENT" icon="icon.card_angel_anakim">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71175" name="Aspiring Orc Ruler of Aden" type="CARD_EVENT" icon="icon.card_orc">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71176" name="Hidden Card" type="CARD_EVENT" icon="icon.card_hidden">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71177" name="Daily Gift - VIP 1" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i00">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 3 Healing Potions. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71178" name="Daily Gift - VIP 2" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i01">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 3 Healing Potions. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71179" name="Daily Gift - VIP 3" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 1 Scroll of Resurrection, 5 Healing Potions, 1 Soulshot Soulshot Ticket. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71180" name="Daily Gift - VIP 4" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i03">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 1 Scroll of Resurrection, 3 Greater Healing Potions, 3 Soulshot Tickets. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71181" name="Daily Gift - VIP 5" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain the following: 2 Scrolls of Escape, 2 Scrolls of Resurrection, 5 Greater Healing Potions, 5 Soulshot Tickets, and 1 Battle Scroll. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71182" name="Daily Gift - VIP 6" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i05">
 	<!-- Double-click to obtain the following: 3 Scrolls of Escape, 3 Scrolls of Resurrection, 6 Greater Healing Potions, 7 Soulshot Tickets, 1 Chef's Fish Stew - Victory. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71183" name="Daily Gift - VIP 7" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain the following: 5 Scrolls of Escape, 5 Scrolls of Resurrection, 7 Greater Healing Potions, 10 Soulshot Tickets, 2 Battle Scrolls, and 2 Chef's Fish Stew - Victory. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 

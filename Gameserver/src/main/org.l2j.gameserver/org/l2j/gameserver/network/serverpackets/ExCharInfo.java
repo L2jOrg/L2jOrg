@@ -63,7 +63,7 @@ public class ExCharInfo extends ServerPacket {
             writeInt(Util.zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
         }
 
-        writeByte(player.getInventory().getArmorMinEnchant());
+        writeByte(player.getInventory().getArmorMaxEnchant());
 
         writeShort(0x26); // slot item shape shift mask size
         writeInt(0x00); // right hand
@@ -99,9 +99,9 @@ public class ExCharInfo extends ServerPacket {
         writeFloat((float) player.getCollisionRadius());
         writeFloat((float) player.getCollisionHeight());
 
-        writeInt(player.getVisualFace());
         writeInt(player.getVisualHair());
         writeInt(player.getVisualHairColor());
+        writeInt(player.getVisualFace());
 
         writeSizedString(appearence.getVisibleTitle());
 

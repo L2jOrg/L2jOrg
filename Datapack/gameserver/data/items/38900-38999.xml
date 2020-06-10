@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="38923" name="Squash Seed" type="NONE" icon="icon.etc_gourd_i00">
 	<!-- For characters level 40 or higher. Double-click and a High Quality Squash or Defective Squash will appear. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="17111" value="-1"/>  <!-- Snowy Squash Seed -->
@@ -11,7 +11,7 @@
 
 	<item id="38924" name="Large Squash Seed" type="NONE" icon="icon.etc_gourd_i01">
 	<!-- For characters level 40 or higher. Double-click and a High Quality Large Squash or Defective Large Squash will appear. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="17112" value="-1"/>  <!-- Large Snowy Squash Seed -->

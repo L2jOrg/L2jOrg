@@ -28,6 +28,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.network.SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED;
@@ -968,22 +969,17 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private void showCharacterInfo(Player activeChar, Player player)
-	{
-		if (player == null)
-		{
+	private void showCharacterInfo(Player activeChar, Player player) {
+		if (isNull(player)) {
 			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && isPlayer(target))
-			{
+			if (isPlayer(target)) {
 				player = (Player) target;
 			}
-			else
-			{
+			else {
 				return;
 			}
 		}
-		else
-		{
+		else {
 			activeChar.setTarget(player);
 		}
 		gatherCharacterInfo(activeChar, player, "charinfo.htm");
@@ -999,23 +995,19 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		String ip = "N/A";
 		
-		if (player == null)
-		{
+		if (isNull(player)) {
 			BuilderUtil.sendSysMessage(activeChar, "Player is null.");
 			return;
 		}
 		
 		final GameClient client = player.getClient();
-		if (client == null)
-		{
+		if (isNull(client)) {
 			BuilderUtil.sendSysMessage(activeChar, "Client is null.");
 		}
-		else if (client.isDetached())
-		{
+		else if (client.isDetached()) {
 			BuilderUtil.sendSysMessage(activeChar, "Client is detached.");
 		}
-		else
-		{
+		else {
 			ip = client.getHostAddress();
 		}
 		

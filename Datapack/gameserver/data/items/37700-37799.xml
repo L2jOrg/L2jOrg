@@ -59,7 +59,7 @@
 
 	<item id="37704" name="Love Potion" type="NONE" icon="icon.etc_whiteday_herb">
 	<!-- Herb to change the appearance of a Valentine's Day weapon. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer>
 			<skill id="17154" value="-1"/>  <!-- Love Potion -->
@@ -68,7 +68,7 @@
 
 	<item id="37705" name="Gold Fishing Shot" type="SOULSHOT" icon="icon.etc_spirit_bullet_fish_i05">
 	<!-- Fishing consumables. Fishing success +100%. Cannot be sold in the grocery store. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="3" price="56" immediate-effect="true" action="FISHINGSHOT"/>
 	</item>
 

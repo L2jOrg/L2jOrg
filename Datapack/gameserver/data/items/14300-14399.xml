@@ -156,7 +156,7 @@
 	<weapon id="14338" name="Tallum Blade*Damascus" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- For NPC -->
 		<restriction freightable="false"/>
-		<attributes weight="1890" price="26968400" commission-type="OTHER_ITEM"/>
+		<attributes weight="1890" price="26968400" commission-type="DUALSWORD"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
 		<stats>

@@ -35,7 +35,7 @@
 
 	<item id="91803" name="Rare Accessory Lv. 4 Box" type="NONE" icon="icon.bm_gold_lure_special_box">
 	<!-- Double-click to obtain Immortal Queen Ant's Ring Lv. 4 (15-day), Immortal Orfen's Earring Lv. 4 (15-day), and Ring of Core Lv. 4 (15-day), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -63,31 +63,31 @@
 
 	<item id="91806" name="Vital Stone Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain 1 +5 Vital Stone (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91807" name="Jade Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain 1 +5 Jade (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91808" name="Ruby Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain 1 +5 Ruby (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91809" name="Sapphire Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain 1 +5 Sapphire (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91810" name="Agathion Bracelet Lv. 1 Box" type="NONE" icon="icon.etc_treasure_box_i09">
 	<!-- Double-click to obtain 1 Agathion Bracelet Lv. 1 (15-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -135,49 +135,49 @@
 
 	<item id="91817" name="+3 Sealed Agathion - Capricorn" type="NONE" icon="icon.agathion_capr_star_1">
 	<!-- Double-click to obtain +3 Enchanted Capricorn Agathion (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91818" name="+3 Sealed Agathion - Libra" type="NONE" icon="icon.agathion_lib_star_1">
 	<!-- Double-click to obtain +3 Enchanted Libra Agathion (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91819" name="+3 Sealed Agathion - Leo" type="NONE" icon="icon.agathion_leo_star_1">
 	<!-- Double-click to obtain +3 Enchanted Leo Agathion (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91820" name="+3 Sealed Agathion - Scorpio" type="NONE" icon="icon.agathion_sco_star_1">
 	<!-- Double-click to obtain +3 Enchanted Scorpio Agathion (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91821" name="+3 Sealed Agathion - Aquarius" type="NONE" icon="icon.agathion_aqu_star_1">
 	<!-- Double-click to obtain +3 Enchanted Aquarius Agathion (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91822" name="+3 Sealed Agathion - Sagittarius" type="NONE" icon="icon.agathion_sag_star_1">
 	<!-- Double-click to obtain +3 Enchanted Sagittarius Agathion (3-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91823" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.bm_gold_lure_special_box">
 	<!-- Double-click to obtain Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1 (15-day), Ring of Core Lv. 1 (15-day), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91824" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- When used, Prophecy of Victory Lv. 1 is applied for 3 hours. \n<Caution> Prophecy effects can only be applied one at a time. Effect remains even after death.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54119" value="-1"/>  <!-- Chef's Fish Stew - Victory -->
@@ -186,7 +186,7 @@
 
 	<item id="91825" name="Adventurer's High Priest Transformation Scroll" type="POTION" icon="icon.bm2018_healer_i01">
 	<!-- Transforms you into High Priest for 20 minutes. Effect remains even after death.\n\n<High Priest's Energy> P. Atk. +63, M. Atk. +70, XP/SP Gain when hunting +5%. Has a chance to recover party members' HP/MP when attacking or using skills. Cooldown 1 minute. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51457" value="-1"/>  <!-- Adventurer's High Priest Transformation Scroll -->
@@ -195,7 +195,7 @@
 
 	<item id="91826" name="Adventurer's Valkyrie Transformation Scroll" type="POTION" icon="icon.bm2018_valkyrie_i01">
 	<!-- Transforms you into Valkyrie for 20 minutes. Effect remains even after death.\n\n<Valkyrie's Energy> P. Atk. +63, M. Atk. +70, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +20, Speed +10, Sayha's Grace Consumption Speed -5%. Has a chance to inflict additional damage when attacking and using skills. Cooldown 1 minute. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51458" value="-1"/>  <!-- Adventurer's Valkyrie Transformation Scroll -->
@@ -204,7 +204,7 @@
 
 	<item id="91827" name="Adventurer’s Dragon Berserker Transformation Scroll" type="POTION" icon="icon.bm2018_dragon_i01">
 	<!-- Transforms you into Dragon Berserker for 20 minutes. Effect remains even after death.\n\n<Dragon Berserker’s Energy> P. Atk. +135, M. Atk. +150, Atk. Spd./Casting Spd. +100, P./M. Critical Rate +50, Speed +15, Sayha's Grace Consumption Speed -10%. When attacking and using skills there’s a chance for P. Atk. +300, M. Atk. +300, Atk. Spd +100, Casting Spd +100, P./M. Critical Damage +135, and returns 15% of received damage back to the enemy. Cooldown 1 minute. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51459" value="-1"/>  <!-- Adventurer's Dragon Berserker Transformation Scroll -->
@@ -213,19 +213,19 @@
 
 	<item id="91828" name="Adventurer's High Priest Transformation Box" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain 3 Adventurer's Priest Transformation Scroll, and have a certain chance to obtain 1 Adventurer's Dragon Berserker Transformation Scroll. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91829" name="Adventurer's Valkyrie Transformation Box" type="NONE" icon="icon.bm_sayha_present">
 	<!-- Double-click to obtain 3 Adventurer's Valkyrie Transformation Scroll, and have a certain chance to obtain 1 Adventurer's Dragon Berserker Transformation Scroll. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91830" name="Greater Fire Attack Potion" type="POTION" icon="icon.etc_fire_potion_i00">
 	<!-- Increases Fire Attack +80 for 20 min. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54122" value="-1"/>  <!-- Greater Fire Attack Potion -->
@@ -234,7 +234,7 @@
 
 	<item id="91831" name="Greater Water Attack Potion" type="POTION" icon="icon.etc_water_potion_i00">
 	<!-- Increases Water Attack +80 for 20 min. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54123" value="-1"/>  <!-- Greater Water Attack Potion -->
@@ -243,7 +243,7 @@
 
 	<item id="91832" name="Greater Wind Attack Potion" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Increases Wind Attack +80 for 20 min. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54124" value="-1"/>  <!-- Greater Wind Attack Potion -->
@@ -252,7 +252,7 @@
 
 	<item id="91833" name="Greater Earth Attack Potion" type="POTION" icon="icon.etc_earth_potion_i00">
 	<!-- Increases Earth Attack +80 for 20 min. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54125" value="-1"/>  <!-- Greater Earth Attack Potion -->
@@ -261,43 +261,43 @@
 
 	<item id="91834" name="Sayha's Grace Box" type="NONE" icon="icon.bm_2018_special_box">
 	<!-- Double-click to obtain 200 Sayha's Blessing and 30 Sayha's Storm Lv. 3. If you're lucky, you can also gain one of various items. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91835" name="Sayha's Blessing Box" type="NONE" icon="icon.freya_box_i01">
 	<!-- Double-click to obtain 10 Sayha's Blessing. If you are lucky, you can also gain one of various items. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91836" name="Sayha's Buff Box" type="NONE" icon="icon.present_of_destination_event">
 	<!-- Double-click to obtain 20 Sayha's Buff Scrolls. If you are lucky, you can also gain one of various items. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91837" name="Amulet: Chant of Clarity" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Clarity spell. Used by Overlords. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="100000"/>
 	</item>
 
 	<item id="91838" name="My Teleport Scroll" type="TELEPORT_BOOKMARK" icon="icon.bookmark_scroll_i00">
 	<!-- This consumable item allows you to magically transport yourself to a specific location. \n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91839" name="Advanced Scroll of Escape - Event" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- A magic scroll that quickly teleports you to the nearest village. \n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91840" name="XP Boost Scroll - Event" type="NONE" icon="icon.etc_recall_exp_scroll">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="50134"/>  <!-- XP Boost Scroll - Event -->
@@ -306,7 +306,7 @@
 
 	<item id="91841" name="White Assassin Transformation Scroll" type="POTION" icon="icon.scroll_of_verification_i06">
 	<!-- Transforms you into White Assassin for 20 min. Effect remains after death. \nWhite Assassin Transformation: Max HP/MP +7%, P../M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. \n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55414" value="-1"/>  <!-- White Assassin Transformation Scroll -->
@@ -315,7 +315,7 @@
 
 	<item id="91842" name="Einhasad's Protection" type="SCROLL" icon="icon.etc_dragons_blood_i03">
 	<!-- Increases XP/SP gain by 100% for 1 hour. Cooldown: 1 hour. The effect persists through death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="50135" value="-1"/>  <!-- Einhasad's Protection -->
@@ -324,7 +324,7 @@
 
 	<item id="91843" name="Hero’s HP Potion - Event" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="HEALING"/>
 		<skill-reducer>
 			<skill id="39103" value="-1"/>  <!-- Hero HP Potion -->
@@ -333,55 +333,55 @@
 
 	<item id="91844" name="Warrior's MP Potion - Event" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
 	<!-- A magic potion that recovers MP. \n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91845" name="Buying My House Guide 1" type="SCROLL" icon="icon.etc_book_building_01">
 	<!-- Guidebook that Little Pig has found to buy a house. Wild Orc spread them all over Aden. It's a set with Buying My House Guide 2 and Buying My House Unsupported Fight. Find them all and take them to Little Pig to receive a Pig Coin Bank. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91846" name="Buying My House Guide 2" type="SCROLL" icon="icon.etc_book_building_02">
 	<!-- Guidebook that Little Pig has found to buy a house. Wild Orc spread them all over Aden. It's a set with Buying My House Guide 1 and Buying My House Unsupported Fight. Find them all and take them to Little Pig to receive a Pig Coin Bank. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91847" name="Buying My House Unsupported Fight" type="SCROLL" icon="icon.etc_book_building_03">
 	<!-- Guidebook that Little Pig has found to buy a house. Wild Orc spread them all over Aden. It's a set with Buying My House Guide 1 and Buying My House Guide 2. Find them all and take them to Little Pig to receive a Pig Coin Bank. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91848" name="Pig Coin Bank" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig's precious coin bank. Receive an event reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91849" name="Golden Pig Coin Bank" type="NONE" icon="icon.etc_golden_piggy_bank">
 	<!-- Little Pig's special coin bank. Receive an event reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91850" name="Pig Coin Bank" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig's precious coin bank. Receive an event reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91851" name="Golden Pig Coin Bank" type="NONE" icon="icon.etc_golden_piggy_bank">
 	<!-- Little Pig's special coin bank. Receive an event reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91852" name="Little Pig Blessing Star Candy" type="POTION" icon="icon.etc_whiteday_candy_i03">
 	<!-- Recharges 120,000 Sayha's Grace Points. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="50127" value="-1"/>  <!-- Little Pig Blessing Star Candy -->
@@ -390,25 +390,25 @@
 
 	<item id="91853" name="Ancient Imperial Treasure Chest" type="NONE" icon="icon.bm_elmoaden_box">
 	<!-- Double-click to obtain 1 Special Dragon's Fruit and 1 Dragon's Special Elixir, and either an Ancient Imperial Gold Box or Silver Box. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91854" name="Ancient Imperial Gold Box" type="NONE" icon="icon.bm_elmoaden_gold_box">
 	<!-- Double-click to obtain one of the following: S-grade Weapon/Armor Pack, Stable Weapon/Armor Enchant Scroll (S-grade), Dimensional Soul, Armor Jewel. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91855" name="Ancient Imperial Silver Box" type="NONE" icon="icon.bm_elmoaden_silver_box">
 	<!-- Double-click to obtain 1 of the following: Rare Accessory Lv. 3, Sealed Rune Lv.11-13, Sayha's Silver Blessing, Sayha's Gold Blessing, Einhasad's Protection. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91856" name="Dragon's Special Elixir Lv. 1 - Exchangeable" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10, Sayha's Grace Consumption Speed -20% for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="50170" value="-1"/>  <!-- Dragon’s Special Elixir -->
@@ -417,31 +417,31 @@
 
 	<item id="91857" name="Intermediate HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 100 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="1" price="2000" action="SKILL_REDUCE" auto-use="HEALING"/>
 	</item>
 
 	<item id="91858" name="Activated Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
 	<!-- <Magic Lamp 1st Place Reward>\nActivated Arc. Recharges 100,000,000 XP and 2,700,000 SP.\nCan’t be shred with characters higher than your own level. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91859" name="Activated Purple Arc" type="SCROLL" icon="icon.r99_soul_stone_i05">
 	<!-- <Magic Lamp 2nd Place Reward>\nActivated Arc. Recharges 30,000,000 XP and 810,000 SP.\nCan’t be shred with characters higher than your own level. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91860" name="Activated Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
 	<!-- <Magic Lamp 3rd Place Reward>\nActivated Arc. Recharges 10,000,000 XP and 270,000 SP.\nCan’t be shred with characters higher than your own level. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91861" name="Activated Green Arc" type="SCROLL" icon="icon.r99_soul_stone_i04">
 	<!-- <Magic Lamp 4th Place Reward>\nActivated Arc. Recharges 5,000,000 XP and 135,000 SP.\nCan’t be shred with characters higher than your own level. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -457,14 +457,14 @@
 
 	<item id="91863" name="Enchant Scroll: Dragon's Belt" type="ENCHANT_ARMOR" icon="icon.etc_blesscharm_ward_val_i00">
 	<!-- Enchant scroll for Dragon's Belt. Can enchant up to +10. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91864" name="Dragon's Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- Double-click to obtain 1 Dragon's Belt and 10 Enchant Scroll: Dragon's Belt.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="91788" chance="100"/>  <!-- Dragon's Belt -->
@@ -474,7 +474,7 @@
 
 	<item id="91865" name="PC Cafe Event Pa'agrio's Summoning Stick" type="NONE" icon="icon.etc_imperial_scepter_i00">
 	<!-- Double-click to spawn one of the 2 types of Orc Monsters. Cooldown 5 seconds. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -496,51 +496,51 @@
 
 	<item id="91867" name="PC Cafe Event Enchant Scroll" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
 	<!-- An enchant scroll you can use on PC Cafe Event Excalibur. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91868" name="PC Cafe Event Special Enchant Scroll" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
 	<!-- An enchant scroll you can use on PC Cafe Event Excalibur. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. Cannot use on weapons above +7. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91869" name="Castle Siege Event Support Box" type="NONE" icon="icon.bm_pirate_battle_box">
 	<!-- A box containing support items for the Castle Siege event. -->
-		<restriction freightable="false" stackable="true" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91870" name="Castle Siege Event Gem Box" type="NONE" icon="icon.bm_special_jewelbox_lv5">
 	<!-- A box containing support items for the Castle Siege event. -->
-		<restriction freightable="false" stackable="true" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91871" name="Castle Siege Event Rare Accessory Pack" type="NONE" icon="icon.ev_charge_box">
 	<!-- A box containing support items for the Castle Siege event. -->
-		<restriction freightable="false" stackable="true" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91872" name="Castle Siege Event Weapon Support Box" type="NONE" icon="icon.sayha2017_box_i01">
 	<!-- A box containing support items for the Castle Siege event. -->
-		<restriction freightable="false" stackable="true" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91873" name="Castle Siege Event Armor Support Box" type="NONE" icon="icon.sayha2017_box_i02">
 	<!-- A box containing support items for the Castle Siege event. -->
-		<restriction freightable="false" stackable="true" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91874" name="Castle Siege Event Agathion Pack" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- A box containing support items for the Castle Siege event. -->
-		<restriction freightable="false" stackable="true" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 

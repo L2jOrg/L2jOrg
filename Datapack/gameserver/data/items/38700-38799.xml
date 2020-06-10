@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="38750" name="Lara's Card Key" type="MATERIAL" icon="icon.cardkey_raracat">
 	<!-- This Card Key you got from Lara, who became captain of the team, contains professional photos. You must have it in the inventory for receiving Buffs. The Card Key is required to receive a Buff from Lara. Cannot be exchanged, dropped, destroyed, or sold in a private store. Will be removed after the event is over. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="38751" name="Lara's Business Card" type="MATERIAL" icon="icon.namecard_raracat">
 	<!-- A Business card you got from Lara, who became captain of the team! With this card you can take part in a prize giveaway. This Business card can come in handy at any moment, so always have it with you. Cannot be exchanged, dropped, destroyed, or sold in a private store. Will be removed after the event is over. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="38753" name="Lara's Elite Gift" type="NONE" icon="BranchSys.icon.br_ghost_magicalbox_i00">
 	<!-- An elite Gift from Lara, who became captain of the team. Double-click to receive various items. Will be removed after the event is over. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 

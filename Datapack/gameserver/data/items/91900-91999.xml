@@ -92,31 +92,31 @@
 
 	<item id="91906" name="Rune of Vitality" type="RUNE" icon="icon.bm_freya_rune">
 	<!-- 30-day. Sayha's Grace is maintained if kept in the inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91907" name="+10 Advanced Agathion Box" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to obtain 1 of the +10 Advanced Agathions at random. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91908" name="+12 S-grade Weapon Pack" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to obtain 1 of the +12 S-grade weapons at random. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91909" name="Wind Treasure Chest" type="NONE" icon="icon.sayha2017_box_i01">
 	<!-- Double-click to obtain one of the following at random: +16 Weapon Pack (B-grade), Spirit Evolution Stone, Weapon / Armor Pack (B-grade, C-grade), Sayha's Buff Scroll, Battle Scroll, rare items. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91910" name="Enhanced Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Restricted to characters below level 75. Recharges 140,000 Sayha's Grace Points. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="15678" value="-1"/>  <!-- Sayha's Blessing -->
@@ -125,7 +125,7 @@
 
 	<item id="91911" name="Sayha's Buff Scroll - Event" type="NONE" icon="icon.etc_ssq_i00">
 	<!-- For 20 minutes, applies the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Victory, Sayha's Restore HP, Sayha's Restore MP. If Sayha's Restore MP is in effect, cannot use items right away. Cooldown 1 minute. Caution: Sayha’s Victory buff will not be applied while Battleground Scroll is in effect. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="50150" value="-1"/>  <!-- Sayha's Buff Scroll - Event -->
@@ -134,7 +134,7 @@
 
 	<item id="91912" name="HP Potion - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 50 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="1" price="30" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE" auto-use="HEALING"/>
 		<skill-reducer>
 			<skill id="50151" value="-1"/>  <!-- HP Potion -->
@@ -143,13 +143,13 @@
 
 	<item id="91913" name="Aden's Spellbook Box" type="NONE" icon="icon.bm_freya_sirr_box">
 	<!-- Double-click to obtain Spellbooks for races other than the Orcs to learn skills. \n <Spellbooks List> \n Spellbook: Empower, Spellbook: Focus, Spellbook: Wild Magic, Spellbook: Haste, Spellbook: Acumen, Spellbook: Death Whisper, Spellbook: Clarity, Spellbook: Berserker Spirit, one of each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91914" name="Aden's Amulet Box" type="NONE" icon="icon.bm_freya_2016_gift_box">
 	<!-- Double-click to obtain Amulets for races other than the Orcs to learn skills. \n <Amulets List> \nAmulet: Chant of Focus, Amulet: Chant of Wild Magic, Amulet: Chant of Empower, Amulet: Chant of Acumen, Amulet: Chant of Haste, Amulet: Chant of Clarity, Amulet: Chant of Death Whisper, Amulet: Chant of Berserker Spirit, one of each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -188,7 +188,7 @@
 
 	<item id="91917" name="Escape: Adaptation Training" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Leahen in Jin Kamael Village. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="50152" value="-1"/>  <!-- Escape: Adaptation Training -->
@@ -197,61 +197,61 @@
 
 	<item id="91918" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91919" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91920" name="Scroll: Magic Break" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Magic Break. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91921" name="Scroll: Disarm" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Disarm. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91922" name="Scroll: Lightning Barrier" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Lightning Barrier. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91923" name="Scroll: Lightning Shock" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Lightning Shock. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91924" name="Scroll: Soul Panic" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Soul Panic. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91925" name="Scroll: Soul Stigma" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Soul Stigma. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91926" name="+3 Dragon's Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- Double-click to obtain +3 Enchanted Dragon's Belt. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91927" name="Soulshot" type="SOULSHOT" icon="icon.etc_spirit_bullet_gold_i00">
 	<!-- Weapon containing the light of Spirits; instantly inflicts a powerful attack on the enemy.\n\n<Use Effect>\nP. Atk. Bonus 100% -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="20" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
 			<skill id="2154" value="-1"/>  <!-- Soulshot (S-grade) -->
@@ -260,7 +260,7 @@
 
 	<item id="91928" name="Spiritshot" type="SOULSHOT" icon="icon.etc_spell_shot_gold_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase.\n\n<Use Effect>\nM. Atk. Bonus 100%\nHeal Power increased by a little\nCasting Spd. Bonus 40 -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="30" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2159" value="-1"/>  <!-- Spiritshot (S-grade) -->
@@ -269,7 +269,7 @@
 
 	<item id="91929" name="Blessed Soulshot" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_gold_i00">
 	<!-- Weapon containing the light of Spirits; instantly inflicts a very powerful attack on the enemy.\n\n<Use Effect>\nP. Atk. Bonus 130% -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="50" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
 			<skill id="8920" value="-1"/>  <!-- Blessed Soulshot (S-grade) -->
@@ -278,7 +278,7 @@
 
 	<item id="91930" name="Blessed Spiritshot" type="SOULSHOT" icon="icon.etc_spell_shot_gold_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly.\n\n<Use Effect>\nM. Atk. Bonus 300%\nHeal Power greatly increased\nCasting Spd. Bonus 40 -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="75" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="2164" value="-1"/>  <!-- Blessed Spiritshot (S-grade) -->
@@ -287,7 +287,7 @@
 
 	<item id="91931" name="Mark of Journey Lv. 5" type="NONE" icon="icon.etc_crest_blue_i00">
 	<!-- A mark awarded only to those adventurers who complete Adventurer's Journey Mission. It increases HP Recovery Bonus by 25% and MP Recovery Bonus by 25% when stored in the inventory. Double-click to see recommended hunting grounds for each level. -->
-		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
 			<skill id="51387" level="5" value="-1"/>  <!-- Mark of Journey -->
@@ -353,13 +353,13 @@
 
 	<item id="91938" name="Primeval Isle Time Recharge Stone - Exchangeable" type="POTION" icon="icon.timezone_refill_1">
 	<!-- Adds 60 minutes to the duration of the Primeval Isle timed hunting zone. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91939" name="Tomb of Ancient Pirates Time Recharge Stone - Exchangeable" type="POTION" icon="icon.timezone_refill_2">
 	<!-- Adds 60 minutes to the duration of the Tomb of Ancient Pirates timed hunting zone. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="50158"/>  <!-- Tomb of Ancient Pirates Time Recharge Stone -->
@@ -368,55 +368,55 @@
 
 	<item id="91940" name="Heavenly Rift Time Recharge Stone" type="POTION" icon="icon.etc_scroll_of_return_i03">
 	<!-- Adds 60 minutes to the duration of the Heavenly Rift timed hunting zone. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91941" name="Box of Full Blessing" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to obtain 1 Sayha's Blessing. If you are lucky, you can also gain one of various items. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91942" name="Shine Crystal" type="NONE" icon="icon.high_energy_condense_i00">
 	<!-- Mysterious crystal containing the power of light. \nUse to learn Shine Soul Gathering Lv. 2. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91943" name="Shadow Crystal" type="NONE" icon="icon.high_energy_condense_i01">
 	<!-- Mysterious crystal containing the power of darkness. \nUse to learn Shadow Soul Gathering Lv. 2. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91944" name="Scroll of Purity" type="NONE" icon="icon.giant_book_i02">
 	<!-- Mysterious crystal containing the power of light. \nUse to learn Shine Mastery Lv. 2. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91945" name="Scroll of Darkness" type="NONE" icon="icon.giant_book_i00">
 	<!-- Mysterious book containing the power of darkness. \nUse to learn Shadow Mastery Lv. 2. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91946" name="Spellbook: Mount Griffin" type="NONE" icon="icon.etc_spellbook_red_i00">
 	<!-- Allows you to learn Mount Griffin. Required item for level 76 characters who have completed the 3rd class transfer to learn the skill. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91947" name="+7 Admiral's Estoc Pack" type="NONE" icon="icon.weapon_rapier_i00">
 	<!-- Double-click to obtain +7 Enchanted Admiral's Estoc. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91948" name="+7 Saber Tooth Pack" type="NONE" icon="icon.weapon_invincible_blade_i00">
 	<!-- Double-click to obtain +7 Enchanted Saber Tooth. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -453,7 +453,7 @@
 
 	<item id="91951" name="Enchant Scroll: Talisman of Baium" type="ENCHANT_ARMOR" icon="icon.baium_talisman_new_scroll">
 	<!-- Enchant scroll for Talisman of Baium. Can enchant up to +5. Item disappears if enchantment fails. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
@@ -480,111 +480,111 @@
 
 	<item id="91954" name="Scroll of Escape: Tower of Insolence 1st Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 1st Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91955" name="Scroll of Escape: Tower of Insolence 2nd Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 2nd Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91956" name="Scroll of Escape: Tower of Insolence 3rd Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 3rd Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91957" name="Scroll of Escape: Tower of Insolence 4th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 4th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91958" name="Scroll of Escape: Tower of Insolence 5th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 5th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91959" name="Scroll of Escape: Tower of Insolence 6th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 6th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91960" name="Scroll of Escape: Tower of Insolence 7th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 7th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91961" name="Scroll of Escape: Tower of Insolence 8th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 8th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91962" name="Scroll of Escape: Tower of Insolence 9th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 9th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91963" name="Scroll of Escape: Tower of Insolence 10th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 10th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91964" name="Scroll of Escape: Tower of Insolence 11th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 11th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91965" name="Scroll of Escape: Tower of Insolence 12th Floor" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Tower of Insolence 12th Floor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91966" name="Enchant Scroll: Ring of Insolence" type="ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i05">
 	<!-- Enchant scroll for Ring of Insolence. Can enchant up to +10. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91967" name="Enchant Scroll: Dragon Valley Earring" type="ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i00">
 	<!-- Enchant scroll for Dragon Valley Earring. Can enchant up to +10. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91968" name="Enchanted Fighter's Rapier Box" type="NONE" icon="icon.weapon_sealed_rapier_i00">
 	<!-- Double-click to obtain +16 Enchanted Fighter's Rapier. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91969" name="Enchanted Fighter's Ancient Sword Box" type="NONE" icon="icon.weapon_tulwar_i00">
 	<!-- Double-click to obtain +16 Enchanted Fighter's Ancient Sword. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91970" name="+7 Ecliptic Axe Pack" type="NONE" icon="icon.weapon_eclipse_axe_i00">
 	<!-- Double-click to obtain +7 Enchanted Ecliptic Axe. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91971" name="Sweet Blessing Star Candy" type="POTION" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
 	<!-- Recharges 40,000 Sayha's Grace Points. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="50163" value="-1"/>  <!-- Sweet Blessing Star Candy -->
@@ -593,13 +593,13 @@
 
 	<item id="91972" name="Heavenly Rift Entrance Pass " type="NONE" icon="icon.etc_ticket_red_i00">
 	<!-- Pass to enter Heavenly Rift through the Dimensional Vortex in the Tower of Insolence 1st Floor. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91973" name="Dragon's Special Elixir Lv. 1" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10, Sayha's Grace Consumption Speed -20% for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="50170" value="-1"/>  <!-- Dragon’s Special Elixir -->
@@ -608,7 +608,7 @@
 
 	<item id="91974" name="HP Potion - Event" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- Instantly restores HP by 50 and restores the rest as CP. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="1" price="30" action="SKILL_REDUCE" auto-use="HEALING"/>
 		<skill-reducer>
 			<skill id="50151" value="-1"/>  <!-- HP Potion -->
@@ -617,7 +617,7 @@
 
 	<item id="91975" name="Battleground Scroll" type="NONE" icon="icon.etc_ssq_i00">
 	<!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical Damage/M. Critical Damage +10% with the power of Sayha. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54116" value="-1"/>  <!-- Sayha's Victory -->
@@ -626,55 +626,55 @@
 
 	<item id="91976" name="Suspicious Stone" type="NONE" icon="icon.destiny_stone">
 	<!-- A stone that shines in a strange way. Investigate it to find out more about it. Double-click to obtain 1 of the following at random: Spirit Ore, Heavenly Rift Entrance Pass, HP Potion, Wind Spirits Evolutionary Stone, Tower of Insolence Paralysis Resistance Scroll. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91977" name="Tower of Insolence Paralysis Resistance Scroll" type="NONE" icon="icon.scroll_of_verification_i08">
 	<!-- Activates Resistance to Paralysis for 20 minutes. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="91978" name="Dragon Valley Mental Attack Resistance Scroll" type="NONE" icon="icon.scroll_of_verification_i08">
 	<!-- Activates Resistance to Fear for 20 minutes. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="91979" name="Giant's Shining Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain 1 Giant's Coin Pouch, and 1 from the following: Rare Accessory Lv. 3, Venir's Talisman Lv. 24, +10 Sayha's Supreme Cloak, Dragon Berserker Scroll, Feather of Blessing. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91980" name="Giant's Coin Pouch" type="NONE" icon="icon.pouch_i01">
 	<!-- Double-click to obtain a random amount of Giant's Coins. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91981" name="Giant's Coin" type="NONE" icon="icon.etc_magic_coin_gold_i01">
 	<!-- Coins used by the ancient Giants. Exchange for various items through the Store Manager. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91982" name="+10 Sayha's Supreme Cloak Box - White" type="NONE" icon="icon.bm_nebit_box">
 	<!-- Double-click to obtain 1 +10 Sayha's Supreme Cloak - White. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91983" name="Primeval Isle Time Recharge Stone" type="POTION" icon="icon.timezone_refill_1">
 	<!-- Adds 60 minutes to the duration of the Primeval Isle timed hunting zone. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91984" name="Tomb of Ancient Pirates Time Recharge Stone" type="POTION" icon="icon.timezone_refill_2">
 	<!-- Adds 60 minutes to the duration of the Tomb of Ancient Pirates timed hunting zone. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="50178"/>  <!-- Tomb of Ancient Pirates Time Recharge Stone -->
@@ -683,7 +683,7 @@
 
 	<item id="91985" name="Heavenly Rift Time Recharge Stone" type="POTION" icon="icon.etc_scroll_of_return_i03">
 	<!-- Adds 60 minutes to the duration of the Heavenly Rift timed hunting zone. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -705,79 +705,79 @@
 
 	<item id="91987" name="+8 Blue Wolf Heavy Armor Set" type="NONE" icon="icon.armor_t68_u_i00">
 	<!-- Double-click to obtain +8 Blue Wolf Breastplate, +8 Blue Wolf Gaiters, +8 Blue Wolf Helmet (Heavy Armor), +8 Blue Wolf Gloves (Heavy Armor), and +8 Blue Wolf Boots(Heavy Armor), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91988" name="+8 Blue Wolf Light Armor Set" type="NONE" icon="icon.armor_t69_ul_i00">
 	<!-- Double-click to obtain +8 Blue Wolf Leather Armor/ +8 Blue Wolf Helmet (Light Armor)/ +8 Blue Wolf Gloves (Light Armor)/ and +8 Blue Wolf Boots (Light Armor), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91989" name="+8 Blue Wolf Robe Set" type="NONE" icon="icon.armor_t70_u_i00">
 	<!-- Double-click to obtain +8 Blue Wolf Tunic, +8 Blue Wolf Stockings, +8 Blue Wolf Helmet (Robe), +8 Blue Wolf Gloves (Robe), and +8 Blue Wolf Boots (Robe), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91990" name="+8 Doom Heavy Armor Set" type="NONE" icon="icon.armor_t71_ul_i00">
 	<!-- Double-click to obtain +8 Doom Plate Armor/ +8 Doom Helmet (Heavy Armor)/ +8 Doom Gloves (Heavy Armor)/ +8 Doom Boots (Heavy Armor), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91991" name="+8 Doom Light Armor Set" type="NONE" icon="icon.armor_t72_ul_i00">
 	<!-- Double-click to obtain +8 Leather Armor of Doom/ +8 Doom Helmet (Light Armor)/ +8 Doom Gloves (Light Armor)/ +8 Doom Boots (Light Armor), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91992" name="+8 Doom Robe Set" type="NONE" icon="icon.armor_t73_u_i00">
 	<!-- Double-click to obtain +8 Tunic of Doom/ +8 Stockings of Doom/ +8 Doom Helmet (Robe)/ +8 Doom Gloves (Robe)/ +8 Doom Boots (Robe), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91993" name="+8 Avadon Robe Set" type="NONE" icon="icon.armor_t59_ul_i00">
 	<!-- Double-click to obtain +8 Avadon Robe/ +8 Avadon Circlet (Robe)/ +8 Avadon Gloves (Robe)/ +8 Avadon Boots (Robe), one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91994" name="+8 Plated Leather Set" type="NONE" icon="icon.armor_t47_u_i00">
 	<!-- Double-click to obtain +8 Plated Leather Armor, +8 Plated Leather Gaiters, and +8 Plated Leather Boots, one for each. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91995" name="Luxury A-grade Box" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain 3 Sayha's Blessing. If you are lucky, you can also gain one of various items. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91996" name="Scroll of Escape Box: Tower of Insolence" type="NONE" icon="icon.etc_exchange_box_i00">
 	<!-- Double-click to obtain one of the Scrolls of Escape: Tower of Insolence F1 to F7. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91997" name="Primeval Isle Time Recharge Stone Pack" type="NONE" icon="icon.timezone_refill_1">
 	<!-- Double-click to obtain 1 Primeval Isle Time Recharge Stone. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91998" name="Primeval Isle Time Recharge Stone Pack" type="NONE" icon="icon.timezone_refill_1">
 	<!-- Double-click to obtain 1 Primeval Isle Time Recharge Stone. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91999" name="Water Spirits Rough Jewel Fragment" type="MATERIAL" icon="icon.elemental_water_stone_i00">
 	<!-- Stone containing power Water Spirits favor. Water Attack XP 9300 is obtained when used by Water Spirits. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 

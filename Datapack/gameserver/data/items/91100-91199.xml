@@ -12,55 +12,55 @@
 
 	<item id="91101" name="Golden Fishery Fishing Supply Items" type="NONE" icon="icon.bm_freya_snowman_box">
 	<!-- Double-click to obtain 60 Golden Bait. If you're lucky, you can also get 1 Gold Big Catch Box, Silver Big Catch Box or Einhasad's Protection.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91102" name="Gold Big Catch Box" type="NONE" icon="icon.bm_gold_lure_box">
 	<!-- Double-click to randomly obtain 1 Top-grade item or material (A-grade), Sealed Rune, or Luxury Lucky Enchant Stone: Armor.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91103" name="Silver Big Catch Box" type="NONE" icon="icon.bm_silver_lure_box">
 	<!-- Double-click to randomly obtain 1 Rare Accessory or Sayha's Golden Blessing.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91104" name="Luxury Lucky Enchant Stone - A-grade - Exchangeable" type="MULTI_INC_PROB_ENCHANT_ARMOR" icon="icon.giant_ench_armor_stone_r_i02">
 	<!-- Improved Scroll: Enchant Armor chance +20% when enchanting A-grade armor. Only for items enchanted between +3 and +9. For full-body armor, enchant must be between +4 and +9. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91105" name="Luxury Lucky Enchant Stone - B-grade - Exchangeable" type="MULTI_INC_PROB_ENCHANT_ARMOR" icon="icon.giant_ench_armor_stone_r_i02">
 	<!-- Improved Scroll: Enchant Armor chance +20% when enchanting B-grade armor. Only for items enchanted between +3 and +9. For full-body armor, enchant must be between +4 and +9. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91106" name="Abundance Wind Cube" type="ELIXIR" icon="icon.sa_cube">
 	<!-- 30-day item. Double-click to get Dandy's Home Run Ball, XP Boost Scroll, Savior Scroll: Enchant Weapon. (Can be used 1 time in 1 day.) -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91107" name="Abundance Wind Cube" type="ELIXIR" icon="icon.sa_cube">
 	<!-- 90-day item. Double-click to get Dandy's Home Run Ball, XP Boost Scroll, Savior Scroll: Enchant Weapon. (Can be used 1 time in 1 day.) -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="129600" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91108" name="Wind Amulet" type="RUNE" icon="icon.bm_sayha_rune">
 	<!-- 90-day item. With inventory, CON/MEN/DEX/WIT/STR/INT +1. Hunting XP/SP +20%, Fishing XP/SP +50%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="129600"/>
 	</item>
 
 	<item id="91109" name="Blue Dynasty Scroll" type="POTION" icon="icon.scroll_of_verification_i01">
 	<!-- Transforms you into Blue Dynasty for 15 min. Effect remains after death. \n Blue Dynasty's Power: Max HP/MP +20%. When Sayha's Grace applies, XP/ SP gain +20%. Effect remains after death. \n<Warning>\n If used when Teddy Bear/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55693" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
@@ -69,7 +69,7 @@
 
 	<item id="91110" name="Cat the Cat Scroll" type="POTION" icon="icon.scroll_of_verification_i03">
 	<!-- Transforms you into Kat the Cat for 15 minutes. Effect remains even after death. Cannot be dropped or sold at an NCP's store. \nKat the Cat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \n<Warning>\nIf used during Teddy Bear/Blue Dynasty/Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51148" value="-1"/>  <!-- Cat Transformation -->
@@ -92,19 +92,19 @@
 
 	<item id="91113" name="Inventory Expansion Ticket - Lv. 1" type="NONE" icon="icon.etc_ticket_i00">
 	<!-- Old Inventory Expansion Ticket. It is too old to be used any more. Can be exchanged for a new Inventory Expansion Ticket Lv. 1 from a Fishing Guild Member. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91114" name="Inventory Expansion Ticket - Lv. 2" type="NONE" icon="icon.etc_ticket_i00">
 	<!-- Old Inventory Expansion Ticket. It is too old to be used any more. Can be exchanged for a new Inventory Expansion Ticket Lv. 2 from a Fishing Guild Member. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91115" name="Inventory Expansion Ticket - Lv. 3" type="NONE" icon="icon.etc_ticket_i00">
 	<!-- Old Inventory Expansion Ticket. It is too old to be used any more. Can be exchanged for a new Inventory Expansion Ticket Lv. 3 from a Fishing Guild Member. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -231,32 +231,32 @@
 
 	<item id="91124" name="Brilliant Spirit Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.etc_ev_draco_karma_down">
 	<!-- Varnish that enhances Spirits accessories. Can only be used up to Enchant +9. If Enhance fails, item does not disappear and conserves existing Enchant level. By type from +1 various special options apply. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91125" name="Breath of Ignis" type="MATERIAL" icon="icon.fire_agathion_breath">
 	<!-- Breath of Ignis can be exchanged for Ignis Agathion through Sven.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91126" name="Breath of Nebula" type="MATERIAL" icon="icon.water_agathion_breath">
 	<!-- Breath of Nebula can be exchanged for Nebula Agathion through Sven.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91127" name="Breath of Procella" type="MATERIAL" icon="icon.wind_agathion_breath">
 	<!-- Breath of Procella can be exchanged for Procella Agathion through Sven.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91128" name="Breath of Petram" type="MATERIAL" icon="icon.earth_agathion_breath">
 	<!-- Breath of Petram can be exchanged for Petram Agathion through Sven.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -314,25 +314,25 @@
 
 	<item id="91133" name="High-grade Angler's Blessing (2-hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 2 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91134" name="High-grade Angler's Blessing (4-hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 4 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91135" name="High-grade Angler's Blessing (8-hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 8 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91136" name="Dandy's Golden Ball" type="SCROLL" icon="BranchIcon.icon.g_ev_goldenball">
 	<!-- Golden Ball gifted by Dandy that crossed dimensions. Double-click to increase 1-hour XP and SP 100% and recharge Sayha's Grace max. Flanchard changes to appearance of NC Dinos Uniform. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51108" value="-1"/>  <!-- Dandy's Golden Ball -->
@@ -341,7 +341,7 @@
 
 	<item id="91137" name="Windstorm Box" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to receive various Rewards.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -437,37 +437,37 @@
 
 	<item id="91148" name="Jewel Box Lv. 5" type="NONE" icon="icon.bm_special_jewelbox_lv5">
 	<!-- Double-click to obtain one Jewelry Box Lv. 5 containing a Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz or Cat's Eye. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91149" name="+5 Agathion Box" type="NONE" icon="icon.star_agathion_cube">
 	<!-- Double-click to get 1 of +5 Virgo, Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91150" name="+10 Agathion Box" type="NONE" icon="icon.star_agathion_cube">
 	<!-- Double-click to get 1 of +10 Virgo, Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91151" name="Attribute Necklace Box" type="NONE" icon="icon.etc_treasure_box_i11">
 	<!-- Double-click to obtain one of Ignis, Nebula, Procella, or Petram Necklace.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91152" name="Blessed Pendant Box" type="NONE" icon="icon.etc_treasure_box_i09">
 	<!-- Double-click to get 1 Blessed Fire Dragon or Earth Dragon Pendant.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91153" name="+15 A-grade Top-grade Weapon Pack" type="NONE" icon="icon.bm_ensoulbox_PvP">
 	<!-- Double-click to get 1 of +15 Sirra's Blade, Sword of Ipos, Barakiel's Axe, Behemoth' Tuning Fork, Naga Storm, Tiphon's Spear, Shyeed's Bow, Sobekk's Hurricane, Themis' Tongue, Cabrio's Hand, Daimon Crystal, Tallum Blade, Tallum Blade*Damascus.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -489,38 +489,38 @@
 
 	<item id="91155" name="Sibis Weapon Enchant Scroll" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
 	<!-- Weapon Enchant Scroll that can be used with Sibis' Black Samurai Long Sword. Up to level +3 Weapon Attack Power +5/Magic Power +3. From level +4 Attack/Magic Power +200%. Can only be used up to level +23. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91156" name="Fisher's Blessing (24-hour)" type="MATERIAL" icon="icon.fishing_zone_ticket_1">
 	<!-- For 24-hours increases Fishing XP +50% and changes appearance to Hanbok. Cannot be used with Angler's Blessing. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91157" name="Maphr Potion" type="POTION" icon="icon.etc_instant_lucky_potion_i00">
 	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. \n\n<Warning>\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91158" name="Maphr Potion - Exchangeable" type="POTION" icon="icon.etc_instant_lucky_potion_i00">
 	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. Cannot be applied to partial enchantment. \n\n<Note>\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91159" name="Agathion Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_trade_ticket">
 	<!-- Can be exchanged for a Zodiac Agathion, Agathion Enchant Scroll Pack, or an Agathion Enchant Scroll through Pona. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91160" name="Agathion Enchant Scroll Pack" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click for a chance to receive one of the following items: Agathion Enchant Scroll, High-grade Agathion Enchant Scroll, Solid Scroll: Enchant Agathion, Agathion's Soul, or a Blessed Agathion's Soul. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -554,7 +554,7 @@
 
 	<item id="91163" name="Anakim Rune - Stage 1" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034"/>  <!-- Anakim Power -->
@@ -563,7 +563,7 @@
 
 	<item id="91164" name="Anakim Rune - Stage 2" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="2"/>  <!-- Anakim Power -->
@@ -572,7 +572,7 @@
 
 	<item id="91165" name="Anakim Rune - Stage 3" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="3"/>  <!-- Anakim Power -->
@@ -581,7 +581,7 @@
 
 	<item id="91166" name="Anakim Rune - Stage 4" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="4"/>  <!-- Anakim Power -->
@@ -590,7 +590,7 @@
 
 	<item id="91167" name="Anakim Rune - Stage 5" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="5"/>  <!-- Anakim Power -->
@@ -599,7 +599,7 @@
 
 	<item id="91168" name="Anakim Rune - Stage 6" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="6"/>  <!-- Anakim Power -->
@@ -608,7 +608,7 @@
 
 	<item id="91169" name="Anakim Rune - Stage 7" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="7"/>  <!-- Anakim Power -->
@@ -617,7 +617,7 @@
 
 	<item id="91170" name="Anakim Rune - Stage 8" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="8"/>  <!-- Anakim Power -->
@@ -626,7 +626,7 @@
 
 	<item id="91171" name="Anakim Rune - Stage 9" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="9"/>  <!-- Anakim Power -->
@@ -635,7 +635,7 @@
 
 	<item id="91172" name="Anakim Rune - Stage 10" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54034" level="10"/>  <!-- Anakim Power -->
@@ -644,7 +644,7 @@
 
 	<item id="91173" name="Lilith Rune - Stage 1" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035"/>  <!-- Lilith Power -->
@@ -653,7 +653,7 @@
 
 	<item id="91174" name="Lilith Rune - Stage 2" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="2"/>  <!-- Lilith Power -->
@@ -662,7 +662,7 @@
 
 	<item id="91175" name="Lilith Rune - Stage 3" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="3"/>  <!-- Lilith Power -->
@@ -671,7 +671,7 @@
 
 	<item id="91176" name="Lilith Rune - Stage 4" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="4"/>  <!-- Lilith Power -->
@@ -680,7 +680,7 @@
 
 	<item id="91177" name="Lilith Rune - Stage 5" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="5"/>  <!-- Lilith Power -->
@@ -689,7 +689,7 @@
 
 	<item id="91178" name="Lilith Rune - Stage 6" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="6"/>  <!-- Lilith Power -->
@@ -698,7 +698,7 @@
 
 	<item id="91179" name="Lilith Rune - Stage 7" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="7"/>  <!-- Lilith Power -->
@@ -707,7 +707,7 @@
 
 	<item id="91180" name="Lilith Rune - Stage 8" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="8"/>  <!-- Lilith Power -->
@@ -716,7 +716,7 @@
 
 	<item id="91181" name="Lilith Rune - Stage 9" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="9"/>  <!-- Lilith Power -->
@@ -725,7 +725,7 @@
 
 	<item id="91182" name="Lilith Rune - Stage 10" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 		<skill-reducer>
 			<skill id="54035" level="10"/>  <!-- Lilith Power -->
@@ -734,13 +734,13 @@
 
 	<item id="91183" name="Wind Treasure Chest" type="NONE" icon="icon.sayha2017_box_i01">
 	<!-- Double-click to obtain 1 Blessing of Wind Box and Sayha's Gust. If you're lucky, you can also get 1 Wind Gold/Silver Box or Panda/Cat Transformation Scroll.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91184" name="Quick MP Recovery Potion" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
 	<!-- Quick MP Recovery.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51125" value="-1"/>  <!-- Quick MP Potion -->
@@ -749,7 +749,7 @@
 
 	<item id="91185" name="Intermediate Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +30% for 20 minutes when hunting attribute monsters.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51126" value="-1"/>  <!-- Intermediate Spirit's Blessing -->
@@ -758,7 +758,7 @@
 
 	<item id="91186" name="High-grade Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +50% for 20 minutes when hunting attribute monsters.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51127" value="-1"/>  <!-- High-grade Spirit's Blessing -->
@@ -767,21 +767,21 @@
 
 	<item id="91187" name="Spirit Varnish" type="ENCHANT_ARMOR" icon="icon.etc_ev_draco_karma_down">
 	<!-- Varnish that enhances Spirits accessory's power. By type various special options apply from level +1. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91188" name="Blessed Spirit Varnish" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_ev_draco_karma_down">
 	<!-- Varnish that enhances Spirits accessory's power. If Enchant fails or item does not crystallize base Enchant becomes 0. Applied by type of various special options from level +1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91189" name="Fire Attack Potion" type="POTION" icon="icon.etc_fire_potion_i00">
 	<!-- Increases Fire Attack +50 for 20 min.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51130" value="-1"/>  <!-- Fire Attack Potion -->
@@ -790,7 +790,7 @@
 
 	<item id="91190" name="Water Attack Potion" type="POTION" icon="icon.etc_water_potion_i00">
 	<!-- Increases Water Attack +50 for 20 min.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51131" value="-1"/>  <!-- Water Attack Potion -->
@@ -799,7 +799,7 @@
 
 	<item id="91191" name="Wind Attack Potion" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Increases Wind Attack +50 for 20 min.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51132" value="-1"/>  <!-- Wind Attack Potion -->
@@ -808,7 +808,7 @@
 
 	<item id="91192" name="Earth Attack Potion" type="POTION" icon="icon.etc_earth_potion_i00">
 	<!-- Increases Earth Attack +50 for 20 min.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51133" value="-1"/>  <!-- Earth Attack Potion -->
@@ -817,7 +817,7 @@
 
 	<item id="91193" name="Wind Amulet" type="RUNE" icon="icon.bm_sayha_rune">
 	<!-- 30-day item. With inventory, CON, MEN, DEX, WIT, STR, INT +1 with Inventory. Hunting XP/SP +20% Fishing XP/SP +50%.  -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
@@ -844,19 +844,19 @@
 
 	<item id="91197" name="Scroll of Escape: Forge of the Gods" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Move to the Forge of the Gods with Magic Scroll.  \n\nNote: Can Move to the Forge of the Gods through Gatekeeper Tatiana in the Goddard Castle. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91198" name="Scroll of Escape: Garden of Eva" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Move to the Garden of Eva with Magic Scroll.  \n\nNote: Can Move to the Garden of Eva through Gatekeeper Clarissa in the Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91199" name="Escape - Wind Plateau" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Move to the Wind Plateau with Magic Scroll.  \n\nNote: Can Move to the Wind Plateau through Gatekeeper Clarissa in the Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
