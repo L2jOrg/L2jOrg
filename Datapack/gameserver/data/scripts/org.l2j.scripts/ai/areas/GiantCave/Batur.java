@@ -3,81 +3,75 @@ package ai.areas.GiantCave;
 import ai.AbstractNpcAI;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
+import org.l2j.gameserver.model.ChanceLocation;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 
+import java.util.List;
 import java.util.concurrent.Future;
 
+/**
+ * Giant's Cave - Lower Part
+ * Every 15 minutes in a random place of the zone Batur appears.
+ * Batur doesn't attack first, but if you attack Batur, you need to defeat it within a minute, or it will disappear.
+ * Batur has strong values of P. Atk., M. Atk. and M. Def, so it's pretty difficult to defeat it.
+ *
+ */
 public class Batur extends AbstractNpcAI
 {
-    private static final int TIME_TO_LIVE = 60000;
-    private final long TIME_TO_DIE = System.currentTimeMillis() + TIME_TO_LIVE;
-    private static final int BATUR = 24020;
-    private static final long RESPAWN_DELAY = 900000; // 15 min
-    private static final String[] SPAWN_GROUPS = {
-            "batur1",
-            "batur2",
-    };
+    private final int TIME_TO_LIVE = 10000;
+    private final int BATUR_ID = 24020;
+    private final long RESPAWN_DELAY = 30000; // 15 min
 
-    private int _currentSpawnedGroup = -1;
-    private Future<?> _respawnTask;
+    private static Npc BATUR;
 
     private Batur()
     {
-        addAttackId(BATUR);
+        addAttackId(BATUR_ID);
+        addKillId(BATUR_ID);
+        startQuestTimer("BATUR_SPAWN_THREAD", 30000, null, null);
     }
+
 
     @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
-        SpawnsData.getInstance().spawnByName("batur");
-        _respawnTask = ThreadPool.scheduleAtFixedRate(new RespawnTask(), RESPAWN_DELAY, RESPAWN_DELAY);
+        if (event.equals("BATUR_SPAWN_THREAD")) {
+            final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npcSpawnTemplate -> npcSpawnTemplate.getId() == BATUR_ID);
+            final List<ChanceLocation> locations = spawns.get(0).getLocation();
+            // FIXME: Getting NPE on picking location, so NPE keep going everywhere
+            final Location location = locations.get(Rnd.get(0, locations.size() - 1));
+            BATUR = addSpawn(BATUR_ID, location);
+        } else if (event.equals("BATUR_DESPAWN_THREAD")) {
+            BATUR.scheduleDespawn(0);
+            startQuestTimer("BATUR_SPAWN_THREAD", RESPAWN_DELAY, null, null);
+        }
         return super.onAdvEvent(event, npc, player);
     }
 
+
     @Override
-    public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
-    {
-
-        final Monster monster = (Monster) npc;
-        if(monster != null && System.currentTimeMillis() >= TIME_TO_DIE + 60000)
-        {
-            monster.deleteMe();
+    public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon) {
+        if(npc.getId() == BATUR_ID && getQuestTimer("BATUR_DESPAWN_THREAD", null, null) == null) {
+            startQuestTimer("BATUR_DESPAWN_THREAD", TIME_TO_LIVE, null, null);
         }
-
-       return super.onAttack(monster, attacker, damage, isSummon);
+        return super.onAttack(npc, attacker, damage, isSummon);
     }
 
-    private void stopRespawnTask()
-    {
-        if(_respawnTask != null)
-        {
-            _respawnTask.cancel(false);
-            _respawnTask = null;
+
+    @Override
+    public String onKill(Npc npc, Player killer, boolean isSummon) {
+        if(npc.getId() == BATUR_ID) {
+            startQuestTimer("BATUR_SPAWN_THREAD", RESPAWN_DELAY, null, null);
         }
+        return super.onKill(npc, killer, isSummon);
     }
-    private class RespawnTask implements Runnable
-    {
-        @Override
-        public void run()
-        {
-            int newSpawnGroup = 0;
-            newSpawnGroup = Rnd.get(SPAWN_GROUPS.length);
-            while(newSpawnGroup == _currentSpawnedGroup)
-            {
-                newSpawnGroup = Rnd.get(SPAWN_GROUPS.length);
-            }
 
-            String groupName = SPAWN_GROUPS[_currentSpawnedGroup];
-            SpawnsData.getInstance().deSpawnByName(groupName);
-
-
-            groupName = SPAWN_GROUPS[newSpawnGroup];
-            SpawnsData.getInstance().spawnByName(groupName);
-            _currentSpawnedGroup = newSpawnGroup;
-        }
-    }
 
     public static AbstractNpcAI provider()
     {
