@@ -1220,7 +1220,7 @@
             <effect-range initial="400"/>
             <hit-time initial="2500"/>
         </attributes>
-        <consume charge="7">
+        <consume charge="5">
             <mana initial="120">
                 <value level="2">130</value>
                 <value level="3">141</value>
@@ -1228,7 +1228,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SILENCE" visual="TORNADO_SLOW">
+        <abnormal type="SILENCE_ALL" visual="TORNADO_SLOW">
             <level initial="1"/>
             <time initial="10">
                 <value level="2">12</value>
@@ -1241,12 +1241,10 @@
             <weapon>
                 <type>DUAL</type>
             </weapon>
-            <energy-saved charges="7"/>
+            <energy-saved charges="5"/>
         </conditions>
         <effects>
-            <effect name="Mute"/>
             <effect name="PhysicalMute"/>
-            <effect name="BlockTarget"/>
             <effect name="BlockMove"/>
             <effect name="ReduceDamage">
                 <power initial="50.0">
