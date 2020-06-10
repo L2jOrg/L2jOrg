@@ -2,547 +2,547 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="1900" name="Necklace Chain of Magic" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Magic Necklace. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1828" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1901" name="Tiger's Eye Stone" type="MATERIAL" icon="icon.etc_jewel_gold_i00">
 	<!-- Key material that Dwarves use to make Tiger's Eye. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1448" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1902" name="Elven Earring Beads" type="MATERIAL" icon="BranchSys2.icon.etc_elvenearing_beads_i00">
 	<!-- Key material that Dwarves use to make the Elven Earring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1974" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1903" name="Elven Ring Piece" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Elven Ring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1199" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1904" name="Elven Necklace Beads" type="MATERIAL" icon="BranchSys2.icon.etc_elvennecklace_beads_i00">
 	<!-- Key material that Dwarves use to make the Elven Necklace. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2143" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1905" name="Onyx Beast's Eye Earring Gemstone" type="MATERIAL" icon="icon.etc_bead_silver_i00">
 	<!-- Key material that Dwarves use to make the Onyx Beast's Eye. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2056" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1906" name="Mithril Ring Wire" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Mithril Ring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1907" name="Necklace of Darkness Gem" type="MATERIAL" icon="icon.etc_gem_black_i00">
 	<!-- Key material that Dwarves need to make a Necklace of Darkness. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2875" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1908" name="Moonstone Earring Wire" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Moonstone Earring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2112" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1909" name="Aquastone Ring Wire" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Aquastone Ring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1481" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1910" name="Aquastone Necklace Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Aquastone Necklace. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2656" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1911" name="Earring of Protection Gemstone" type="MATERIAL" icon="icon.etc_gem_yellow_i00">
 	<!-- Key material that Dwarves use to make the Earring of Protection. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2689" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1912" name="Ring of Protection Gemstone" type="MATERIAL" icon="icon.etc_gem_yellow_i00">
 	<!-- Key material that Dwarves use to make the Ring of Protection. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1856" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1913" name="Necklace of Protection Gemstone" type="MATERIAL" icon="icon.etc_gem_yellow_i00">
 	<!-- Key material that Dwarves use to make the Necklace of Protection. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3289" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1914" name="Earring of Seal Gemstone" type="MATERIAL" icon="icon.etc_gem_clear_i00">
 	<!-- Key material that Dwarves use to make an Earring of Seal. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3560" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1915" name="Ring of Ages Gemstone" type="MATERIAL" icon="icon.etc_gem_clear_i00">
 	<!-- Key material that Dwarves use to make a Ring of Ages. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2270" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1916" name="Necklace of Mermaid Teardrop" type="MATERIAL" icon="icon.etc_reagent_white_i00">
 	<!-- Key material that Dwarves use to make the Necklace of Mermaid. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4700" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1917" name="Sage's Necklace Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Sage's Necklace. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5845" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1918" name="Nassen's Earring Gemstone" type="MATERIAL" icon="icon.etc_gem_red_i00">
 	<!-- Key material that Dwarves use to make Nassen's Earring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4618" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1919" name="Sage's Ring Gemstone" type="MATERIAL" icon="icon.etc_bead_silver_i00">
 	<!-- Key material that Dwarves use to make a Sage's Ring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3482" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1920" name="Necklace of Seal Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Necklace of Seal. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5845" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1921" name="Leather Shoe Texture" type="MATERIAL" icon="icon.etc_leather_yellow_i00">
 	<!-- Key material that Dwarves use to make Leather Shoes. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="310" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1922" name="Leather Tunic Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make a Leather Tunic. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="784" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1923" name="Leather Stocking Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make Leather Stockings. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="488" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1924" name="Leather Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make a Leather Helmet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="620" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1925" name="Leather Glove Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Leather Gloves. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="305" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1926" name="Piece Bone Breastplate Fragment" type="MATERIAL" icon="icon.etc_piece_bone_black_i00">
 	<!-- Key material that Dwarves use to make a Piece Bone Breastplate. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1980" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1927" name="Durable Leather Shirt Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make the Durable Leather Shirt. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2507" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1928" name="Piece Bone Gaiter Fragment" type="MATERIAL" icon="icon.etc_piece_bone_black_i00">
 	<!-- Key material that Dwarves use to make Piece Bone Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1373" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1929" name="Durable Leather Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Durable Leather Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1550" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1930" name="Boot Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Boots. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="780" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1931" name="Leather Boot Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Leather Boots. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1530" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1932" name="Bone Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make a Bone Helmet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1260" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1933" name="Dark Stocking Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Key material that Dwarves use to make Dark Stockings. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1700" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1934" name="Quality Leather Glove Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Quality Leather Gloves. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1530" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1935" name="Scale Mail Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make Scale Mail. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3580" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1936" name="White Tunic Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make a White Tunic. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2444" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1937" name="Scale Gaiter Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make Scale Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2328" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1938" name="Mithril Banded Mail Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Mithril Banded Mail. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2975" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1939" name="Mithril Banded Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Mithril Banded Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2277" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1940" name="Iron Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make Iron Boots. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1340" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1941" name="Brigandine Temper" type="MATERIAL" icon="icon.etc_plate_glay_i00">
 	<!-- Key material that Dwarves use to make Brigandine. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5029" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1942" name="Manticore Skin Shirt Texture" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make a Manticor Skin Shirt. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3921" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1943" name="Manticore Skin Gaiter Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make Manticor Skin Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2518" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1944" name="Mithril Tunic Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Key material that Dwarves use to make a Mithril Tunic. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3921" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1945" name="Mithril Stocking Design" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Mithril Stockings. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2518" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1946" name="Rip Gauntlet Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make Rip Gauntlets. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1480" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1947" name="Kite Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make a Kite Shield. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1389" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1948" name="Boots of Strength Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make the Boots of Strength. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1480" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1949" name="Mithril Glove Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make Mithril Gloves. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1792" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1950" name="Half Plate Temper" type="MATERIAL" icon="icon.etc_plate_glay_i00">
 	<!-- Key material that Dwarves use to make Half Plate. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6162" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1951" name="Plate Gaiter Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make Plate Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3962" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1952" name="Salamander Skin Mail Texture" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Salamander Skin Mail. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6244" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1953" name="Sage's Rag Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make a Sage's Rags. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6244" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1954" name="Karmian Stocking Design" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make Karmian Stockings. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3762" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1955" name="Chain Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make a Chain Helmet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2481" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1956" name="Square Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make a Square Shield. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1762" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1957" name="Assault Boot Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make Assault Boots. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1792" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1958" name="Reinforced Mithril Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make Reinforced Mithril Boots. This can be sold at shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2225" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1959" name="Chain Mail Shirt Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make a Chain Mail Shirt. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="7425" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1960" name="Chain Gaiter Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make Chain Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3650" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1961" name="Reinforced Mithril Shirt Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Key material that Dwarves use to make a Mithril Shirt. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6250" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1962" name="Karmian Tunic Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make a Karmian Tunic. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6250" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1963" name="Ogre Power Gauntlet Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make Ogre Power Gauntlets. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1792" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1964" name="Eldarake Temper" type="MATERIAL" icon="icon.etc_plate_glay_i00">
 	<!-- Key material that Dwarves use to make an Eldarake. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2475" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1965" name="Metal Plate Helmet Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make a metal Plate Helmet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2967" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1966" name="Plated Leather Armor Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make Plated Leather. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5478" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1967" name="Plated Leather Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Plated Leather Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3667" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1968" name="Dwarven Chain Mail Shirt Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make the Dwarven Chain Mail Shirt. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="8300" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1969" name="Dwarven Chain Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Dwarven Chain Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5233" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1970" name="Robe of Seal Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Key material that Dwarves use to make the Robe of Seal. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="8956" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1971" name="Great Helmet Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make the Great Helmet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3267" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1972" name="Knight's Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make a Knight's Shield. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2500" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1973" name="Pa'agrio Hand Design" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Pa'agrio Hand. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2378" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1974" name="Crimson Boot Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_red_i00">
 	<!-- Key material that Dwarves use to make Crimson Boots. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2378" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1975" name="Rind Leather Armor Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make Rind Leather Armor. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6089" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1976" name="Rind Leather Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Rind Leather Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3289" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1977" name="Compound Armor Temper" type="MATERIAL" icon="icon.etc_plate_glay_i00">
 	<!-- Key material that Dwarves use to make Compound Armor. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="13520" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1978" name="Tower Shield Fragment" type="MATERIAL" icon="icon.etc_plate_glay_i00">
 	<!-- Key material that Dwarves use to make the Tower Shield. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3120" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1979" name="Demon's Tunic Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Key material that Dwarves use to make a Demon's Tunic. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="8240" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1980" name="Demon's Stocking Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make Demon's Stockings. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4700" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1981" name="Mithril Gauntlet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Key material that Dwarves use to make Mithril Gauntlets. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1982" name="Forgotten Boot Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make Forgotten Boots. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1983" name="Shining Circlet Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make the Shining Circlet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4560" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1984" name="Theca Leather Armor Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make Theca Leather Armor. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="9330" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1985" name="Theca Leather Gaiter Pattern" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Theca Leather Gaiters. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5800" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1986" name="Full Plate Armor Temper" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Key material that Dwarves use to make Full Plate Armor. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="18927" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1987" name="Drake Leather Armor Texture" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Key material that Dwarves use to make Drake Leather Armor. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="13109" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1988" name="Divine Tunic Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Key material that Dwarves use to make the Divine Tunic. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="10409" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1989" name="Divine Stocking Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make Divine Stockings. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6636" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1990" name="Mithril Helmet Design" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Key material that Dwarves use to make the Mithril Helmet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5782" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 

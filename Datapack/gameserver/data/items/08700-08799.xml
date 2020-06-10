@@ -2,157 +2,157 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="8700" name="Recipe: Tiphon's Spear (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Tiphon's Spear. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8701" name="Recipe: Tiphon's Spear (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Tiphon's Spear. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8702" name="Recipe: Shyeed's Bow (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Shyeed's Bow. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8703" name="Recipe: Shyeed's Bow (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Shyeed's Bow. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8704" name="Recipe: Sobekk's Hurricane (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sobekk's Hurricane. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8705" name="Recipe: Sobekk's Hurricane (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sobekk's Hurricane. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8706" name="Recipe: Themis' Tongue (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Themis' Tongue. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8707" name="Recipe: Themis' Tongue (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Themis' Tongue. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8708" name="Recipe: Cabrio's Hand (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Cabrio's Hand. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8709" name="Recipe: Cabrio's Hand (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Cabrio's Hand. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8710" name="Recipe: Daimon Crystal (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Daimon Crystal. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8711" name="Recipe: Daimon Crystal (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Daimon Crystal. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8712" name="Sirra's Blade Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- An ingredient that Dwarves use to make Sirra's Blade. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8713" name="Sword of Ipos Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Key material that Dwarves use to make Sword of Ipos. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8714" name="Barakiel's Axe Piece" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- An ingredient that Dwarves use to make Barakiel's Axe. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8715" name="Behemoth' Tuning Fork Piece" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- An ingredient that Dwarves use to make Behemoth' Tuning Fork. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8716" name="Naga Storm Piece" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- An ingredient that Dwarves use to make Naga Storm. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8717" name="Tiphon's Spear Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Key material that Dwarves use to make Tiphon's Spear. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8718" name="Shyeed's Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
 	<!-- An ingredient that Dwarves use to make Shyeed's Bow. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8719" name="Sobekk's Hurricane Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- An ingredient that Dwarves use to make Sobekk's Hurricane. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8720" name="Themis' Tongue Piece" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- An ingredient that Dwarves use to make Themis' Tongue. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8721" name="Cabrio's Hand Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
 	<!-- An ingredient that Dwarves use to make Cabrio's Hand. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8722" name="Daimon Crystal Fragment" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- An ingredient that Dwarves use to make Daimon Crystal. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="82400" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="8765" name="Red Gem" type="NONE" icon="icon.ets_red_abead_i00">
 	<!-- Red gems which Warehouse Chief Klump collects in Aden. Bring 100 or more gems to him, and he will play a card game with you. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

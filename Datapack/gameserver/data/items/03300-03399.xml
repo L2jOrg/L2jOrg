@@ -2,601 +2,601 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="3300" name="Talisman - Kadesh" type="NONE" icon="icon.accessary_red_cresent_earing_i00">
 	<!-- Strange talisman obtained after slaying Kadesh. Take this to Sagittarius Hamil of the Village of Floran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3301" name="Snake Amulet" type="NONE" icon="icon.accessary_dragon_necklace_i00">
 	<!-- Charm that is related to a serpent totem spirit worshiped by Breka orcs. Take it to Prefect Vokian of the Orc Guild of Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3302" name="Mithril Clip" type="NONE" icon="icon.accessary_ring_of_knowledge_i00">
 	<!-- Key ingredient in restoring the Crescent Bow. Take this, along with the rest of the ingredients, to Magister Gauen of the Ivory Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3303" name="Stakato Chitin" type="NONE" icon="icon.etc_parasite_i00">
 	<!-- Key ingredient in restoring the Crescent Bow. Take this, along with the rest of the ingredients, to Magister Gauen of the Ivory Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3304" name="Reinforced Bowstring" type="NONE" icon="icon.etc_skein_white_i00">
 	<!-- Key ingredient in restoring the Crescent Bow. Take this, along with the rest of the ingredients, to Magister Gauen of the Ivory Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3305" name="Manashen's Horn" type="NONE" icon="icon.etc_horn_i00">
 	<!-- Key ingredient in restoring the Crescent Bow. Take this, along with the rest of the ingredients, to Magister Gauen of the Ivory Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3306" name="Lizardman's Blood" type="NONE" icon="icon.etc_reagent_green_i00">
 	<!-- The blood shed by Leto Lizardmen from the Plains of the Lizardmen. Kadesh appears when enough of this is gathered. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3307" name="Mark of Witchcraft" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- Mark given to those who have passed the Test of Witchcraft. Occupation change related item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3308" name="Orim's Diagram" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Diagram of relics, given by Shadow Orim in Death Pass. The 6 jewels needed for opening the Cube of Aklantoth are depicted here. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3309" name="Alexandria's Book" type="NONE" icon="icon.etc_spellbook_gray_i00">
 	<!-- Book that contains records on who purchased Aklantoth' Gems. "Magister Iker of the Mystic Guild of Giran, Magister Kaira from Giran, Grocer Lars from Dion" -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3310" name="Iker's List" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Procure 20 units of each of the following items: Dire Wyrm Fangs, obtained by slaying Dire Wyrm in the Sea of Spores; Leto Lizardman Amulets, obtained by slaying Leto Lizardman on the Plains of the Lizardmen; Reinforced Stone Golem Heartstones, obtained by slaying Reinforced Stone Golem in Ivory Tower Crater. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3311" name="Dire Wyrm Fang" type="NONE" icon="icon.etc_fang_gray_i00">
 	<!-- The fangs of a slain Dire Wyrm. Collect 20 of these and take them to Magister Iker of the Mystic Guild of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3312" name="Leto Lizardman Amulet" type="NONE" icon="icon.etc_totem_necklace_green_i00">
 	<!-- Totem obtained after slaying the Leto Lizardman. Collect 20 of these and take them to Magister Iker of the Mystic Guild of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3313" name="Reinforced Stone Golem Heartstone" type="NONE" icon="icon.etc_stone_black_i00">
 	<!-- Crystal found amongst the shattered fragments of a Reinforced Stone Golem. Collect 20 of these and take them to Magister Iker of the Mystic Guild of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3314" name="Lars' Memo" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- Sales records of Grocer Lars from Dion. It is recorded that a man named Ismel bought the jewel from Lars. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3315" name="Nestle's Memo" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Trader Nestle's purchase records. It is recorded that Leopold of the Black Lion brought the jewel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3316" name="Leopold's Journal" type="NONE" icon="icon.etc_spellbook_blue_i00">
 	<!-- Portion of Leopold's Diary. It is recorded that 3 deserters died and became undead while escaping to the Wastelands. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3317" name="Aklantoth 1st Gem" type="NONE" icon="icon.etc_bead_silver_i00">
 	<!-- Gem that can be obtained from Magister Iker. Find all 6 of Aklantoth gems and take them to Shadow Orim in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3318" name="Aklantoth 2nd Gem" type="NONE" icon="icon.etc_bead_red_i00">
 	<!-- Gem that can be obtained from Magister Kaira of Giran. Find all 6 of Aklantoth gems and take them to Shadow Orim in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3319" name="Aklantoth 3rd Gem" type="NONE" icon="icon.etc_bead_green_i00">
 	<!-- The gem that can be obtained by killing a Nameless Revenant. Find all 6 of Aklantoth gems and take them to Shadow Orim in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3320" name="Aklantoth 4th Gem" type="NONE" icon="icon.etc_bead_gold_i00">
 	<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Shadow Orim in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3321" name="Aklantoth 5th Gem" type="NONE" icon="icon.etc_bead_blue_i00">
 	<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Shadow Orim in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3322" name="Aklantoth 6th Gem" type="NONE" icon="icon.etc_crystal_ball_red_i00">
 	<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Shadow Orim in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3323" name="1st Brimstone" type="NONE" icon="icon.etc_powder_orange_i00">
 	<!-- Mark left behind by the Dre Vanul Prince Zeruel when escaping from his binds. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3324" name="Orim's Instructions" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Set of instructions written by Shadow Orim. The instructions are to bring back the Sword of Seal and Soul Trap Crystal from Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3325" name="Orim's 1st Letter" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter from Shadow Orim of Death Pass to Sir Karol Vasper of the Village of Gludin. The letter asks for the loan of the Sword of Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3326" name="Orim's 2nd Letter" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Letter from Shadow Orim of Death Pass to Magister Iker of Town of Giran. The letter asks for the loan of the Bound Crystal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3327" name="Sir Vasper's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter from Sir Klaus Vasper to Vadin of the Town of Oren. The letter gives permission for the use of the Sword of Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3328" name="Vadin's Crucifix" type="NONE" icon="icon.accessary_earing_of_wisdom_i00">
 	<!-- Holy crucifix of the order, given by Vadin. Take this and go hunt Tamlin Orcs in Timak Outpost. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3329" name="Tamlin Orc Amulet" type="NONE" icon="icon.etc_totem_necklace_red_i00">
 	<!-- Amulets that the Tamlin Orcs carry for sorcery purposes. Gather 20 of these and take them to Vadin in Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3330" name="Vadin's Sanctions" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Sanctions letter from Vadin allowing for the use of the Sword of Seal. Take this to Sir Klaus Vasper of the Town of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3331" name="Iker's Amulet" type="NONE" icon="icon.accessary_necklace_of_grace_i00">
 	<!-- Amulet given by Magister Iker. It is said to have powers of protection against evil... -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3332" name="Bound Crystal" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Crystal with the power to trap and seal the soul of a monster. Use this to seal the spirit of the Dre Vanul Zeruel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3333" name="Purgatory Key" type="NONE" icon="icon.etc_key_i00">
 	<!-- Key needed to close Aklantoth' Chest. Take this to Shadow Orim in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3334" name="Zeruel Bind Crystal" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Crystal that contains the trapped soul of the Dre Vanul Prince Zeruel. Take this to Shadow Orim in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3335" name="2nd Brimstone" type="NONE" icon="icon.etc_powder_orange_i00">
 	<!-- Mark left behind by the Dre Vanul Prince Zeruel while escaping from the body of Fisher Evert. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3336" name="Mark of Summoner" type="NONE" icon="icon.weapon_apprentices_rod_i01">
 	<!-- Mark given to those who have passed the Test of the Summoner. Occupation change related item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3337" name="Leto Lizardman Amulet" type="NONE" icon="icon.etc_totem_necklace_green_i00">
 	<!-- Amulet obtained after slaying the Leto Lizardman on the Plains of the Lizardmen. Collect 30 of these and take them to Trader Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3338" name="Red Spore Dust" type="NONE" icon="icon.etc_pouch_brown_i00">
 	<!-- Red spores obtained from the bodies of the Giant Fungus. Gather 30 of these and take them back to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3339" name="Karul Bugbear Totem" type="NONE" icon="icon.etc_totem_black_i00">
 	<!-- Totem obtained after slaying the Karul Bugbear. Gather 30 of these and take them back to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3340" name="Manashen Shard" type="NONE" icon="icon.etc_broken_crystal_silver_i00">
 	<!-- Shard of the shattered Manashen. Gather 30 of these and take them back to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3341" name="Breka Orc Totem" type="NONE" icon="icon.etc_totem_red_i00">
 	<!-- Totem that can be obtained after slaying a Breka Orc. Collect 30 of them and take them to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3342" name="Crimson Bloodstone" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Soul Stone embedded in the body of a fettered soul. Gather 30 of these and take them back to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3343" name="Tyrant's Talons" type="NONE" icon="icon.etc_claw_i00">
 	<!-- The talon of a slain Tyrant. Gather 30 of these and take them back to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3344" name="Noble Ant's Wings" type="NONE" icon="icon.etc_feather_black_i00">
 	<!-- Wings obtained after slaying Noble Ants at the Ant Nest. Gather 30 of these and take them back to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3345" name="Windsus Tusk" type="NONE" icon="icon.etc_horn_i00">
 	<!-- The tusks of a slain Windsus. Gather 30 of these and take them back to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3346" name="Wyrm's Fangs" type="NONE" icon="icon.etc_fang_red_i00">
 	<!-- Fangs of a Wyrm slain in the Gorgon Flower Garden. Collect 30 of these and take them to Grocer Lars in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3347" name="Lars' List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Collect 30 Leto Lizardman Amulets from the Plains of the Lizardmen and 30 units of Red Spore Dust from the Giant Fungus in the Sea of Spores. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3348" name="Lars' List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Collect 30 Karul Bugbear Totems from Hunters Valley and 30 Manashen Shards from the Crater of the Ivory Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3349" name="Lars' List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Collect 30 Breka Orc Totems from Breka's Stronghold and 30 Crimson Bloodstones of Fettered Soul from Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3350" name="Lars' List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Collect 30 Tyrant's Talons from the Wastelands and 30 Windsus Tusks from Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3351" name="Lars' List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Collect 30 Noble Ant Wings from the Ant Nest and 30 Wyrm Fangs from Gorgon's Flower Garden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3352" name="Galatea's Letter" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter from Head Summoner Galatea to Trader Lara in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3353" name="Beginner's Arcana" type="NONE" icon="icon.etc_ticket_blue_i00">
 	<!-- Arcana card used by apprentice Summoners. You must have this in order to participate in Summoner battles. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3354" name="Almors' Arcana" type="NONE" icon="icon.shield_dark_dragon_shield_i01">
 	<!-- Summoner Almors' Arcana. The proof of victory from a battle. Take this to Head Summoner Galatea at the Magic Shop of the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3355" name="Camoniell's Arcana" type="NONE" icon="icon.shield_dark_dragon_shield_i01">
 	<!-- Summoner Camoniell's Arcana. The proof of victory from a battle. Take this to Head Summoner Galatea at the Magic Shop of the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3356" name="Belthus' Arcana" type="NONE" icon="icon.shield_dark_dragon_shield_i01">
 	<!-- Summoner Belthus' Arcana. The proof of victory from a battle. Take this to Head Summoner Galatea at the Magic Shop of the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3357" name="Basillia's Arcana" type="NONE" icon="icon.shield_dark_dragon_shield_i01">
 	<!-- Summoner Basillia's Arcana. The proof of victory from a battle. Take this to Head Summoner Galatea at the Magic Shop of the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3358" name="Celestiel's Arcana" type="NONE" icon="icon.shield_dark_dragon_shield_i01">
 	<!-- Summoner Celestiel's Arcana. The proof of victory from a battle. Take this to Head Summoner Galatea at the Magic Shop of the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3359" name="Brynthea's Arcana" type="NONE" icon="icon.shield_dark_dragon_shield_i01">
 	<!-- Summoner Brynthea's Arcana. The proof of victory from a battle. Take this to Head Summoner Galatea at the Magic Shop of the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3360" name="1st Crystal of Starting" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Indication that a Summoner battle Has begun. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3361" name="1st Crystal of Inprogress" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Indication that a Summoner battle is in progress. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3362" name="1st Crystal of Foul" type="NONE" icon="icon.etc_gem_black_i00">
 	<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Almors. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3363" name="1st Crystal of Defeat" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Indication that the Summoner Has been defeated in battle. Take this to Summoner Almors. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3364" name="1st Crystal of Victory" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Almors. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3365" name="2nd Crystal of Starting" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Indication that a Summoner battle Has begun. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3366" name="2nd Crystal of Inprogress" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Indication that a Summoner battle is in progress. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3367" name="2nd Crystal of Foul" type="NONE" icon="icon.etc_gem_black_i00">
 	<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Camoniell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3368" name="2nd Crystal of Defeat" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Camoniell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3369" name="2nd Crystal of Victory" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Camoniell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3370" name="3rd Crystal of Starting" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Indication that a Summoner battle Has begun. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3371" name="3rd Crystal of Inprogress" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Indication that a Summoner battle is in progress. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3372" name="3rd Crystal of Foul" type="NONE" icon="icon.etc_gem_black_i00">
 	<!-- Indication that foul play was involved in a summoner battle. Take this to Summoner Belthus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3373" name="3rd Crystal of Defeat" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Belthus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3374" name="3rd Crystal of Victory" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Belthus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3375" name="4th Crystal of Starting" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Indication that a Summoner battle Has begun. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3376" name="4th Crystal of Inprogress" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Indication that a Summoner battle is in progress. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3377" name="4th Crystal of Foul" type="NONE" icon="icon.etc_gem_black_i00">
 	<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Basillia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3378" name="4th Crystal of Defeat" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Basillia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3379" name="4th Crystal of Victory" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Basillia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3380" name="5th Crystal of Starting" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Indication that a Summoner battle Has begun. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3381" name="5th Crystal of Inprogress" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Indication that a Summoner battle is in progress. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3382" name="5th Crystal of Foul" type="NONE" icon="icon.etc_gem_black_i00">
 	<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Celestiel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3383" name="5th Crystal of Defeat" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Celestiel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3384" name="5th Crystal of Victory" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Celestiel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3385" name="6th Crystal of Starting" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Indication that a Summoner battle Has begun. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3386" name="6th Crystal of Inprogress" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Indication that a Summoner battle is in progress. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3387" name="6th Crystal of Foul" type="NONE" icon="icon.etc_gem_black_i00">
 	<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Brynthea. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3388" name="6th Crystal of Defeat" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Indication that the Summoner Has been defeated in a Summoner battle. Take this to Summoner Brynthea. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3389" name="6th Crystal of Victory" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Indication that the Summoner Has been victorious in a Summoner battle. Take this to Summoner Brynthea. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3390" name="Mark of Lord" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Mark given to those who have passed the Test of the Lord. Item for occupational change. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3391" name="Ritual Necklace" type="NONE" icon="icon.accessary_another_worlds_necklace_i00">
 	<!-- Necklace given to those who are attempting the Test of the Lord. Go seek 5 Chiefs of different tribes and return with their approvals. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3392" name="Varkee's Charm" type="NONE" icon="icon.accessary_earing_of_black_ore_i00">
 	<!-- The Atuba Chief Varkees's charm. Return to him after completing this task. He is waiting for you near the House of the King in Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3393" name="Tantus' Charm" type="NONE" icon="icon.accessary_earing_of_blessing_i00">
 	<!-- The Neruga Chief Tantus' charm. Return to him after completing this task. He is waiting for you near the House of the King in Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3394" name="Hatos' Charm" type="NONE" icon="icon.accessary_coral_earing_i00">
 	<!-- The Urutu Chief Hatos' charm. Return to him after completing this task. He is waiting for you near the House of the King in Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3395" name="Takuna's Charm" type="NONE" icon="icon.accessary_another_worlds_earing_i00">
 	<!-- The Duda-Mara Chief Takuna's charm. Return to him after completing this task. He is waiting for you at the Orc Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3396" name="Chianta's Charm" type="NONE" icon="icon.accessary_cerberuss_earing_i00">
 	<!-- Gandi Chief Chianta's charm. Return to him after completing this task. He is waiting for you at the Orc Guild of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3397" name="Manakia's Orders" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Document containing orders of Priest Manakia of the Orc Guild of Giran. It tells you to kill Breka Orc Shamans and Breka Orc Overlords and bring back 20 Breka Orc fangs. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3398" name="Breka Orc Fang" type="NONE" icon="icon.etc_fang_ivory_i00">
 	<!-- A Breka Orc's fang. Collect 20 of them and take them to Priest Manakia at the Orc Guild of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3399" name="Manakia's Amulet" type="NONE" icon="icon.accessary_paradia_earing_i00">
 	<!-- Mark received after passing Manakia's test. Take this to Atuba Chief Varkees in Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

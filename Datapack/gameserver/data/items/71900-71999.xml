@@ -2,163 +2,163 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="71900" name="Limited Sayha's Blessing" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Double-click to have Limited Sayha effect applied for 1 day, and when you don’t have Sayha's Grace, XP/SP +200%, Adena Drop Rate +50%. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71901" name="Limited Sayha's Blessing" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Double-click to have Limited Sayha effect applied for 7 days, and when you don’t have Sayha's Grace, XP/SP +200%, Adena Drop Rate +30%. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71902" name="Sayha's Gift" type="NONE" icon="icon.freya_box_i01">
 	<!-- Double-click to obtain a rare item that might include an Anthara's Earring Lv. 2, +15 A-grade Top-grade Weapon Box amongst other items. Additionally obtain 1 Einhasad's Protection. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71903" name="Black Friday Rune Pack" type="NONE" icon="icon.sayha2017_box_i02">
 	<!-- Double-click to obtain the following: XP/SP Rune - 100% (7-day) Pack x2, Golden Fruit Buff x100, Life Control Tower's Scroll of Blessing x50, Maliss's HP Potion x100. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71904" name="Black Friday Boost Pack" type="NONE" icon="icon.sayha2017_box_i01">
 	<!-- Double-click to obtain Scroll: High-grade XP/SP Boost x5, Life Control Tower's Scroll of Blessing x10, and Maliss's HP Potion x50. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71905" name="Silver Armor Strider Mount Spellbook" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill to ride Silver Armor Strider. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71906" name="Black Armor Strider Mount Spellbook" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill to ride Black Armor Strider. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71907" name="Steel Armor Strider Mount Spellbook" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill to ride Steel Armor Strider. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71908" name="Blizzard Chill Box" type="NONE" icon="icon.bm_freya_sirr_box">
 	<!-- Double-click to obtain one random item. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71909" name="+10 Forgotten Blade" type="NONE" icon="icon.weapon_forgotten_blade_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71910" name="+10 Basalt Battlehammer" type="NONE" icon="icon.weapon_basalt_battlehammer_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71911" name="+10 Imperial Staff" type="NONE" icon="icon.weapon_imperial_staff_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71912" name="+10 Angel Slayer" type="NONE" icon="icon.weapon_angel_slayer_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71913" name="+10 Dragon Hunter Axe" type="NONE" icon="icon.weapon_dragon_hunter_axe_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71914" name="+10 Saint Spear" type="NONE" icon="icon.weapon_saint_spear_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71915" name="+10 Demon Splinter" type="NONE" icon="icon.weapon_demon_splinter_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71916" name="+10 Heaven's Divider" type="NONE" icon="icon.weapon_heavens_divider_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71917" name="+10 Arcana Mace" type="NONE" icon="icon.weapon_arcana_mace_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71918" name="+10 Tallum Blade*Dark Legion's Edge" type="NONE" icon="icon.weapon_dual_sword_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71919" name="+10 Draconic Bow" type="NONE" icon="icon.weapon_draconic_bow_i00">
 	<!-- Double-click to get a +10 enchanted S-grade weapon at random. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71920" name="+10 S-grade Weapon Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_sell_ticket">
 	<!-- Exchange for a +10 enchanted S-grade weapon through the Grocer. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71921" name="Black Ticket" type="NONE" icon="icon.bm_royal_black_ticket_all">
 	<!-- Luxurious black ticket. XP/SP Gain +20% for 20 minutes. Collect the tickets to exchange for various items through the Store Manager. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71922" name="Dragon's Special Elixir Lv. 2" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P/M. Critical Rate +40, P./M. Critical Damage +12%, Atk. Spd./Casting Spd. +70, HP +3000, MP +2000, CP +3000, HP/MP Recovery Bonus +12 for 20 minutes. Has a chance to recover 7% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71923" name="Ice Queen's Collection" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to obtain a valuable item such as Antharas' Earring Lv. 1. Exchange for a fixed reward through the Dimensional Merchant. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71924" name="Weapon Supply Box (A-grade)" type="NONE" icon="icon.weapon_group">
 	<!-- Obtain one of the A-grade weapons. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="71925" name="Armor Supply Box (A-grade)" type="NONE" icon="icon.armor_group">
 	<!-- Obtain one of the A-grade armor. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="71926" name="Agathion Exchange Ticket Pack" type="NONE" icon="icon.bm_gold_relic_box">
 	<!-- Double-click to obtain 25 Agathion Exchange Tickets and 1 Shiny Coin.\n\n<Note>\nAfter the maintenance on March 4, 2020, you will only get 25 Agathion Exchange Tickets and no Shiny Coins. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -227,103 +227,103 @@
 
 	<item id="71936" name="Spellbook: Ninja" type="POTION" icon="icon.si_phanteon_book">
 	<!-- Spellbook to transform into a Ninja.\nCannot be used by Jin Kamael and Death Knight classes. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes price="9300000"/>
 	</item>
 
 	<item id="71937" name="Spellbook: Cowboy" type="POTION" icon="icon.si_phanteon_book">
 	<!-- Spellbook to transform into a Cowboy.\nCannot be used by Jin Kamael and Death Knight classes. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes price="9300000"/>
 	</item>
 
 	<item id="71938" name="Spellbook: Steampunk" type="POTION" icon="icon.si_phanteon_book">
 	<!-- Spellbook to transform into a Steampunk.\nCannot be used by Jin Kamael and Death Knight classes. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes price="9300000"/>
 	</item>
 
 	<item id="71939" name="Spellbook: Chipao" type="POTION" icon="icon.si_phanteon_book">
 	<!-- Spellbook to transform into Chipao.\nCannot be used by Jin Kamael and Death Knight classes. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes price="9300000"/>
 	</item>
 
 	<item id="71940" name="Spellbook: Traditional Taiwanese Native Outfit" type="POTION" icon="icon.si_phanteon_book">
 	<!-- Spellbook to transform into a Traditional Taiwanese Native Outfit.\nCannot be used by Jin Kamael and Death Knight classes. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes price="9300000"/>
 	</item>
 
 	<item id="71941" name="Oren's Treasure Chest" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to randomly obtain 1 of the following rare items: Special Armor, Majestic Sigil, A-grade Weapon Exchange Ticket, A-grade Armor Exchange Ticket, Einhasad’s Pendant Pack Lv. 1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71942" name="Oren's Treasure Chest" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to randomly obtain 1 of the following rare items: Special Armor, Majestic Sigil, A-grade Weapon Exchange Ticket, A-grade Armor Exchange Ticket, Einhasad’s Pendant Pack Lv. 1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71943" name="Ancient Relic Box" type="NONE" icon="icon.bm_gold_relic_box">
 	<!-- Double-click to obtain one of various treasures. Additionally, obtain 2 Einhasad's Protection. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71944" name="Dragon's Coin" type="NONE" icon="icon.bm_goblin_coin">
 	<!-- Special coins that contain a dragon's power. Can be used through a Dimensional Merchant.  -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71945" name="Dragon's Coin Pouch" type="SCROLL" icon="icon.bm_dragon_present_poket">
 	<!-- Contains Dragon's Coins. Has a chance to obtain 1-15000 Dragon's Coins at random. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71946" name="Dragon's Treasure Chest" type="SCROLL" icon="icon.bm_dragon_present_4">
 	<!-- Use it to obtain Dragon' Special Elixir Lv. 2 x1, Golden Fruit Buff Lv. 2 x1, and 1 additional item. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71947" name="Heartthrob Box" type="SCROLL" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
 	<!-- Use it to obtain one of various items. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71948" name="XP Boost Energy" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71949" name="Dragon's Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
 	<!-- Obtain the following items:\n\n<Guaranteed>\n- Dragon's Coin x3\n\n<Random>\n- Spellbook - Jin Death Knight Transformation x1\n- Talisman of Baium x1\n- Baium's Ring Lv. 1 x1\n- Zaken's Earring Lv. 1 x1\n- Baium’s Thunder Breaker x1\n- Zaken’s Blood Sword x1\n- Core’s Plasma Bow x1\n- Queen Ant’s Stone Crasher x1\n- Orfen’s Poisonous Sword x1\nand other items -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71950" name="Dragon's Coin" type="NONE" icon="icon.etc_11th_token">
 	<!-- Exchange them for items through the Store\n<Exchange at the Store>\n- Anakim Soul Crystal Lv. 1\n- Lilith Soul Crystal Lv. 1\n- Ignis Agathion Pack\n- Nebula Agathion Pack\n- Procella Agathion Pack\n- Petram Agathion Pack\n- Shiny Agathion Pack\n- Majestic Majestic Sigil (Seal)\nand other items -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71951" name="VIP Battle Scroll" type="NONE" icon="icon.ev_charge_scroll">
 	<!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. Cooldown 1 minute. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71952" name="Scroll: VIP XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain +120%. Effect remains even after death. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" auto-use="SUPPLY"/>
 	</item>
 
@@ -402,31 +402,31 @@
 
 	<item id="71962" name="VIP XP Growth Amulet - 1-day" type="RUNE" icon="icon.skill19226">
 	<!-- 1-day item. When in inventory, your XP and SP gain is increased by 50%. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71963" name="Daily Gift - VIP 8" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i08">
 	<!-- Double-click to obtain the following: 3 Blessed Scroll of Escape, 3 Blessed Scroll of Resurrection, 10 Special HP Potions, 30 Soulshot Tickets, 6 VIP Battle Scrolls, 6 Scroll: VIP XP/SP Boost, and 300 VIP Coins. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10"/>
 	</item>
 
 	<item id="71964" name="Daily Gift - VIP 9" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i09">
 	<!-- Double-click to obtain the following: 5 Blessed Scroll of Escape, 5 Blessed Scroll of Resurrection, 30 Special HP Potions, 50 Soulshot Tickets, 9 VIP Battle Scrolls, 9 Scroll: VIP XP/SP Boost, and 500 VIP Coins. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10"/>
 	</item>
 
 	<item id="71965" name="Daily Gift - VIP 10" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i10">
 	<!-- Double-click to obtain the following: 10 Blessed Scroll of Escape, 10 Blessed Scroll of Resurrection, 50 Special HP Potions, 100 Soulshot Tickets, 15 VIP Battle Scrolls, 15 Scroll: VIP XP/SP Boost, 1 Aden Talisman Enchant Package, and 700 VIP Coins. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10"/>
 	</item>
 
 	<item id="71966" name="XP Boosting Rune" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_exp_i00">
 	<!-- Increases XP and SP acquired in hunt by 100%. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55000" value="-1"/>  <!-- XP/SP Boost -->
@@ -435,7 +435,7 @@
 
 	<item id="71967" name="XP Boosting Rune (7-day) Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a XP Boosting Rune (7-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="71831" min-count="2" max-count="2" chance="100000000"/>  <!-- XP/SP Rune - 50% (7-day) Pack -->
@@ -444,128 +444,128 @@
 
 	<item id="71968" name="Night Goblin Coin" type="NONE" icon="icon.bm_goblin_coin">
 	<!-- Special coins imbued with the Night Goblin's power. Can be used at the Store. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71969" name="Night Goblin Treasure Chest" type="NONE" icon="icon.etc_treasure_box_i10">
 	<!-- Double-click to obtain 1 item. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71970" name="Mysterious Treasure Chest" type="NONE" icon="icon.bm_2018_special_box">
 	<!-- A mysterious looking treasure chest. Double-click to obtain 1 Treasure Crystal Box and 1 random item. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71971" name="Treasure Crystal Box" type="NONE" icon="icon.bm_gold_lure_special_box">
 	<!-- Box containing Treasure Crystals. Get 1-15000 Treasure Crystals at random. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71972" name="Treasure Crystal" type="NONE" icon="icon.star_agathion_cube_peice">
 	<!-- Treasure Crystal. Use it through the Store. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71973" name="+3-+8 Talisman &amp; Belt Ticket Box" type="NONE" icon="icon.bm_gold_lure_box">
 	<!-- Double-click to obtain a +3-+8 Talisman & Belt Ticket, and have priority login privileges until the last day of the month when the item is used. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71974" name="Mystery Box Lv. 1" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Double-click to obtain one of the following: Mystery Box Lv. 2, Battleground Scroll, Random Crafting Recharge Stone, Ring of Core, or other items. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71975" name="Mystery Box Lv. 2" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to obtain one of the following: Mystery Box Lv. 3, XP Boost Scroll, Random Crafting Recharge Stone, Queen Ant's Ring, or other items. Unused boxes can be exchanged for various items through the Store Manager. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71976" name="Mystery Box Lv. 3" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click to obtain one of the following: Mystery Box Lv. 4, Sayha's Blessing, Random Crafting Recharge Stone, Zaken's Earring, or other items. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71977" name="Mystery Box Lv. 4" type="NONE" icon="icon.npoint_valakas_30day_box">
 	<!-- Double-click to obtain one of the following: Mystery Box Lv. 5, Einhasad's Blessing, Dragon's Belt, Baium's Ring, or other items. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71978" name="Mystery Box Lv. 5" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to obtain Spirit Evolutionary Stone, Equipment Exchange Ticket (A-grade), Talisman of Baium, or other items. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71979" name="Suspicious Vault" type="SCROLL" icon="icon.bm_strongbox">
 	<!-- A suspicious vault secretly being traded in Mystic Tavern. Chance to win a rare item when used. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71980" name="Shining Gold Bar" type="NONE" icon="icon.bm_gold_bar">
 	<!-- A highly expensive gold bar secretly being traded in Mystic Tavern. Take it to a Dimensional Merchant to exchange it for a useful item. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71981" name="Advanced Stable Scroll: Enchant Cloak - Legendary" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +16-+18. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71982" name="Letter Pouch" type="NONE" icon="icon.etc_crystal_spice_blessed_i00">
 	<!-- Collect one of various letters. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71983" name="Sealed Relic Box" type="NONE" icon="icon.etc_readybox_gold">
 	<!-- Obtain 1 of the following items:\n- Spellbook - Jin Death Knight Transformation x1\n- Talisman of Baium x1\n- Baium’s Thunder Breaker x1\n- Zaken’s Blood Sword x1\n- Core’s Plasma Bow x1\n- Queen Ant’s Stone Crasher x1\n- Orfen’s Poisonous Sword x1\n- Baium Doll Lv. 1 Pack x1\n- Queen Ant Doll Lv. 1 Pack x1\n- Orfen Doll Lv. 1 Pack: x1\n and other items. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71984" name="Emerald Lv. 5 Jewel Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain Emerald Lv. 5. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71985" name="Lv. 3 Jewel Box" type="NONE" icon="icon.bm_special_jewelbox_lv4">
 	<!-- Double-click to obtain 1 of the following: Vital Stone/Diamond/Pearl/Aquamarine/Sapphire/Ruby/Jade/Garnet/Topaz/Red Cat's Eye/Blue Cat's Eye/Emerald Lv. 3 Jewel Box. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71986" name="Lv. 4 Jewel Box" type="NONE" icon="icon.bm_special_jewelbox_lv4">
 	<!-- Double-click to obtain 1 of the following: Vital Stone/Diamond/Pearl/Aquamarine/Sapphire/Ruby/Jade/Garnet/Topaz/Red Cat's Eye/Blue Cat's Eye/Emerald Lv. 4 Jewel Box. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71987" name="Lv. 5 Jewel Box" type="NONE" icon="icon.bm_special_jewelbox_lv4">
 	<!-- Double-click to obtain 1 of the following: Vital Stone/Diamond/Pearl/Aquamarine/Sapphire/Ruby/Jade/Garnet/Topaz/Red Cat's Eye/Blue Cat's Eye/Emerald Lv. 5 Jewel Box. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71988" name="Dragon's Treasure Chest" type="SCROLL" icon="icon.bm_dragon_present_4">
 	<!-- Double-click to receive 1 Einhasad's Protection and 1 random item. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 

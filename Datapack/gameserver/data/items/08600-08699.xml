@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="8615" name="Summoning Crystal" type="MATERIAL" icon="icon.etc_recall_crystal_i00">
 	<!-- Crystal imbued with mystical power. Used for teleportation magic. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="35000"/>
 	</item>
 
 	<item id="8618" name="Buff Slot Expansion Ticket Lv. 1" type="NONE" icon="icon.etc_add_buffslot_i00">
 	<!-- Item needed to acquire Increase of Divinity Lv. 1. -->
-		<restriction freightable="false" sellable="false" depositable="false"/>
+		<restriction sellable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="1405" value="-1"/>  <!-- Divine Inspiration -->
@@ -17,7 +17,7 @@
 
 	<item id="8619" name="Buff Slot Expansion Ticket Lv. 2" type="NONE" icon="icon.etc_add_buffslot_i01">
 	<!-- Item needed to acquire Increase of Divinity Lv. 2. -->
-		<restriction freightable="false" sellable="false" depositable="false"/>
+		<restriction sellable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="1405" level="2" value="-1"/>  <!-- Divine Inspiration -->
@@ -26,7 +26,7 @@
 
 	<item id="8620" name="Buff Slot Expansion Ticket Lv. 3" type="NONE" icon="icon.etc_add_buffslot_i02">
 	<!-- Item needed to acquire Increase of Divinity Lv. 3. -->
-		<restriction freightable="false" sellable="false" depositable="false"/>
+		<restriction sellable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="1405" level="3" value="-1"/>  <!-- Divine Inspiration -->
@@ -35,7 +35,7 @@
 
 	<item id="8621" name="Buff Slot Expansion Ticket Lv. 4" type="NONE" icon="icon.etc_add_buffslot_i03">
 	<!-- Item needed to acquire Increase of Divinity Lv. 4. -->
-		<restriction freightable="false" sellable="false" depositable="false"/>
+		<restriction sellable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="1405" level="4" value="-1"/>  <!-- Divine Inspiration -->
@@ -220,70 +220,70 @@
 
 	<item id="8690" name="Recipe: Sirra's Blade (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8691" name="Recipe: Sirra's Blade (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8692" name="Recipe: Sword of Ipos (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8693" name="Recipe: Sword of Ipos (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8694" name="Recipe: Barakiel's Axe (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8695" name="Recipe: Barakiel's Axe (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8696" name="Recipe: Behemoth' Tuning Fork (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8697" name="Recipe: Behemoth' Tuning Fork (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8698" name="Recipe: Naga Storm (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8699" name="Recipe: Naga Storm (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>

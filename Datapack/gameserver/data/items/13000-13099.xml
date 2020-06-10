@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="13009" name="Inventory3" type="NONE" icon="None">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" ex-immediate-effect="true"/>
 	</item>
 
 	<item id="13015" name="My Teleport Book - Exchangeable" type="NONE" icon="icon.bookmark_book_i00">
 	<!-- Adds 3 slots to My Teleport, which can save specific locations. My Teleport can be expanded to up to 48 slots. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="CALL_SKILL"/>
 		<skill-reducer>
 			<skill id="2587" value="-1"/>  <!-- Increase number of teleport slots -->
@@ -16,13 +16,13 @@
 
 	<item id="13016" name="My Teleport Scroll" type="TELEPORT_BOOKMARK" icon="icon.bookmark_scroll_i00">
 	<!-- This consumable item allows you to magically transport yourself to a specific location. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" immediate-effect="true"/>
 	</item>
 
 	<item id="13021" name="Color Title" type="NICK_COLOR_OLD" icon="icon.color_name_i00">
 	<!-- An item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does. However, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" immediate-effect="true" action="NICK_COLOR"/>
 		<action handler="NicknameColor"/>
 	</item>

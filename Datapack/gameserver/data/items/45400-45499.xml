@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="45473" name="Blue Mackerel - Tradable" type="NONE" icon="icon.fish_normal_i04">
 	<!-- Exchange for various items through a Fishing Guild Member. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="45481" name="Fresh Blue Mackerel - Tradable" type="NONE" icon="icon.fish_normal_i12">
 	<!-- Exchange for various items through a Fishing Guild Member. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="45488" name="Golden Treasure Chest" type="NONE" icon="icon.etc_treasure_box_i08">
 	<!-- Double-click to get an item. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -36,7 +36,7 @@
 
 	<item id="45493" name="Fishing Rod Chest (1-day)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
 	<!-- Use it to obtain a 1-day Fishing Rod.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="100" price="20514" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="45492" chance="100000000"/>  <!-- Fishing Rod -->
@@ -45,7 +45,7 @@
 
 	<item id="45495" name="Normal Bait" type="LURE" icon="icon.etc_huge_lure">
 	<!-- Bait for fishing. Use to catch fish.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="7" immediate-effect="true" action="EQUIP"/>
 	</item>
 

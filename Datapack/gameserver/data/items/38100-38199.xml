@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="38154" name="Fishing Shot" type="SOULSHOT" icon="icon.etc_spirit_bullet_fish_i05">
 	<!-- Soulshot for fishing rods. Doubles the fishing success rate. Cannot be sold to an NPC. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="28" immediate-effect="true" action="FISHINGSHOT"/>
 		<skill-reducer type="FishShots">
 			<skill id="17386" value="-1"/>  <!-- Normal Fishing Shot -->

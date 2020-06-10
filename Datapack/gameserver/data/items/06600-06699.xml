@@ -209,7 +209,7 @@
 
 	<item id="6645" name="Beast Soulshot" type="SOULSHOT" icon="icon.etc_beast_soul_shot_i00">
 	<!-- The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor’s info window. (Used from the master’s inventory.)\n\n<Use Effect>\nServitor P. Atk. Bonus 100% -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="20" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SOULSHOT"/>
 		<skill-reducer type="BeastSoulShot">
 			<skill id="2033" value="-1"/>  <!-- Item - Beast Soul Shot -->
@@ -218,7 +218,7 @@
 
 	<item id="6646" name="Beast Spiritshot" type="SOULSHOT" icon="icon.etc_beast_spirit_shot_i00">
 	<!-- The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)\n\n<Use Effect>\nServitor M. Atk. Bonus 100%\nServitor Heal Power increased by a little\nServitor Casting Spd. Bonus 40 -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="50" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
 		<skill-reducer type="BeastSpiritShot">
 			<skill id="2008" value="-1"/>  <!-- Item - Beast Spirit Shot -->
@@ -227,7 +227,7 @@
 
 	<item id="6647" name="Blessed Beast Spiritshot" type="SOULSHOT" icon="icon.etc_blessed_beast_spirit_shot_i00">
 	<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="100" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
 		<skill-reducer type="BlessedBeastSpiritShot">
 			<skill id="2009" value="-1"/>  <!-- Item - Blessed Beast Spirit Shot -->
@@ -421,67 +421,67 @@
 
 	<item id="6688" name="Forgotten Blade Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Key material that Dwarves need to make a Forgotten Blade. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="92529"/>
 	</item>
 
 	<item id="6689" name="Basalt Battlehammer Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
 	<!-- Key material that Dwarves need to make a Basalt Battlehammer. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="94306"/>
 	</item>
 
 	<item id="6690" name="Imperial Staff Head" type="MATERIAL" icon="icon.etc_bark_blue_i00">
 	<!-- Key material that Dwarves need to make an Imperial Staff. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="92353"/>
 	</item>
 
 	<item id="6691" name="Angel Slayer Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Key material that Dwarves need to make an Angel Slayer. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="92529"/>
 	</item>
 
 	<item id="6693" name="Dragon Hunter Axe Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Key material that Dwarves need to make a Dragon Hunter Axe. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="90882"/>
 	</item>
 
 	<item id="6694" name="Saint Spear Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Key material that Dwarves need to make a Saint Spear. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="90882"/>
 	</item>
 
 	<item id="6695" name="Demon Splinter Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Key material that Dwarves need to make a Demon Splinter. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="94306"/>
 	</item>
 
 	<item id="6696" name="Heaven's Divider Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Key material that Dwarves need to make a Heaven's Divider. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="91082"/>
 	</item>
 
 	<item id="6697" name="Arcana Mace Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
 	<!-- Key material that Dwarves need to make an Arcana Mace. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="94306"/>
 	</item>
 
 	<item id="6698" name="Sealed Tateossian Earring Part" type="MATERIAL" icon="icon.etc_broken_crystal_silver_i00">
 	<!-- Key material that Dwarves need to make a Sealed Tateossian Earring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="10182"/>
 	</item>
 
 	<item id="6699" name="Sealed Tateossian Ring Gem" type="MATERIAL" icon="icon.etc_crystal_ball_gold_i00">
 	<!-- Key material that Dwarves need to make a Sealed Tateossian Ring. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="9176"/>
 	</item>
 

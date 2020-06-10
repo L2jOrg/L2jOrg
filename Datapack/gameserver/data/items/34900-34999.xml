@@ -22,7 +22,7 @@
 
 	<item id="34956" name="Letter - M" type="NONE" icon="icon.etc_alphabet_m_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 

@@ -146,13 +146,13 @@
 
 	<item id="94024" name="Little Pig Coin Bank Lv. 2" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig’s coin bank containing the Little Pig’s coins. Double-click to obtain 1 of the following: Talisman - Speed, Random Crafting 1 Time Recharge Stone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94025" name="Little Pig Coin Bank Lv. 3" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig’s precious coin bank. Double-click to obtain 1 of the following: Talisman - Speed, Random Crafting 1 Time Recharge Stone, Cloth Piece. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -250,24 +250,24 @@
 
 	<item id="94041" name="Scroll: Restore Equipment Appearance" type="ENCHANT_WEAPON" icon="icon.change_restore_i01">
 	<!-- Restore the original appearance of equipment (weapons and armor, no hair accessories) whose appearances have been modified. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="120" price="100000"/>
 	</item>
 
 	<item id="94042" name="Emerald Weapon Appearance Stone" type="ENCHANT_WEAPON" icon="icon.shape_shifting_dagger_i00">
 	<!-- Reward for reaching Lv. 90.\nTransforms your weapon into an Emerald weapon. Cannot use on shield and sigil.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="94043" name="Test Emerald Weapon Appearance Stone: One-handed Sword" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00">
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="94044" name="Appearance Stone: Dark Assassin Suit" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00">
 	<!-- Changes the appearance of your entire armor into that of a Dark Assassin Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120"/>
 	</item>
 
@@ -279,13 +279,13 @@
 
 	<item id="94046" name="Spellbook: Glory Ability Lv. 1" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook for reaching Lv. 90. Double-click to learn Glory Ability. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94047" name="Spellbook: Glory Ability" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Glory Ability. -->
-		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 

@@ -2,98 +2,98 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="7100" name="Importance of Strain" type="NONE" icon="icon.etc_spellbook_blue_i00">
 	<!-- Contains information on how to defeat an ancient Giant. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7101" name="Danger of Ice Spirit" type="NONE" icon="icon.etc_spellbook_blue_i00">
 	<!-- Contains spells that can be used to surround and defeat a Spirit. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7102" name="Guardian of Forbidden Knowledge - Part 1" type="NONE" icon="icon.etc_spellbook_gray_i00">
 	<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7103" name="Guardian of Forbidden Knowledge - Part 1" type="NONE" icon="icon.etc_spellbook_gray_i00">
 	<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7104" name="Guardian of Forbidden Knowledge - Part 1" type="NONE" icon="icon.etc_spellbook_gray_i00">
 	<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7105" name="Guardian of Forbidden Knowledge - Part 2" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7106" name="Guardian of Forbidden Knowledge - Part 2" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7107" name="Guardian of Forbidden Knowledge - Part 2" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7108" name="Guild's Secret Report" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- A document containing information about Grand Guardian Angel. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7109" name="Guild's Secret Report" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- A document containing information about Grand Guardian Angel. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7110" name="Research Report" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7111" name="Research Report" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7112" name="Research Report" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="7117" name="Scroll of Escape: Talking Island Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Talking Island.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -102,7 +102,7 @@
 
 	<item id="7118" name="Scroll of Escape: Elven Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to the Elven Village.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="2" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -111,7 +111,7 @@
 
 	<item id="7119" name="Scroll of Escape: Dark Elf Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Dark Elf Village.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="3" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -120,7 +120,7 @@
 
 	<item id="7120" name="Scroll of Escape: Orc Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Orc Village.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="4" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -129,7 +129,7 @@
 
 	<item id="7121" name="Scroll of Escape: Dwarven Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Dwarven Village.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="5" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -138,7 +138,7 @@
 
 	<item id="7122" name="Scroll of Escape: Gludin" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Gludin Village.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="6" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -147,7 +147,7 @@
 
 	<item id="7123" name="Scroll of Escape: Gludio" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to the Town of Gludio.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="7" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -156,7 +156,7 @@
 
 	<item id="7124" name="Scroll of Escape: Dion" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to the Town of Dion.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="8" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -165,7 +165,7 @@
 
 	<item id="7125" name="Scroll of Escape: Floran" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Floran Village.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="9" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -174,7 +174,7 @@
 
 	<item id="7126" name="Scroll of Escape: Giran" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to the Town of Giran.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="10" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -183,7 +183,7 @@
 
 	<item id="7127" name="Scroll of Escape: Hardin's Academy" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Hardin's Academy.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="11" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -192,7 +192,7 @@
 
 	<item id="7129" name="Scroll of Escape: Oren" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to the Town of Oren.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="13" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -201,7 +201,7 @@
 
 	<item id="7130" name="Scroll of Escape: Ivory Tower" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to the Ivory Tower.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="14" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -210,7 +210,7 @@
 
 	<item id="7131" name="Scroll of Escape: Hunter's Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Hunter’s Village.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2213" level="15" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
@@ -219,7 +219,7 @@
 
 	<item id="7139" name="Lizardman Bracelet" type="NONE" icon="icon.etc_leash_i00">
 	<!-- Leto Lizardman Bracelet. Take it to Guard Rath in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

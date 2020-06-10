@@ -44,19 +44,19 @@
 
 	<item id="72006" name="Agathion Soulstone" type="NONE" icon="icon.r99_soul_stone_i05">
 	<!-- Used to upgrade to an Advanced Zodiac Agathion. Can be used through NPC Pona. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="72007" name="Dragon's Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
 	<!-- Obtain the following items:\n\n<Guaranteed>\n- Dragon's Coin x3\n\n<Random>\n- Spellbook - Jin Death Knight Transformation x1\n- Talisman of Baium x1\n- Baium's Ring Lv. 1 x1\n- Baium Doll Lv. 1 Pack x1\n- Baium’s Thunder Breaker x1\n- Zaken’s Blood Sword x1\n- Core’s Plasma Bow x1\n- Queen Ant’s Stone Crasher x1\n- Orfen’s Poisonous Sword x1\nand other items -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="72008" name="Special Dragon's Fruit Lv. 2" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +15%, P./M. Def. +20%, Max. HP/CP/MP +30%, P./M. Critical Rate +20, P./M. Critical Damage +7%, HP/MP Recovery Bonus +40%. At a certain chance absorbs 7% of the damage inflicted on target as HP. XP and SP gained through hunting +15%. Cooldown is 1 minute. Buff remains after death. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 

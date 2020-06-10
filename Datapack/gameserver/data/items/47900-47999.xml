@@ -19,13 +19,13 @@
 
 	<item id="47928" name="Magic Woodpile" type="NONE" icon="icon.ev_firewood_seed_solo">
 	<!-- Double-click to use a Magic Woodpile for one player. If you have the Magic Fan equipped, you can use magic to set fire to the woodpile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="47929" name="Large Magic Woodpile" type="NONE" icon="icon.ev_firewood_seed_party">
 	<!-- Double-click to use a Large Magic Woodpile for party use. If you have the Magic Fan equipped, you can use magic to set fire to the woodpile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 

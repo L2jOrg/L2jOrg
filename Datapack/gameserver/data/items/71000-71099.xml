@@ -2,145 +2,145 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="71000" name="Agathion - Singer &amp; Dancer  Pack (7-day)" type="NONE" icon="icon.bm_ensoulbox_soul_of_undead">
 	<!-- Double-click to obtain Agathion - Singer & Dancer (7-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71001" name="Agathion - Singer &amp; Dancer  Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Agathion - Singer & Dancer (30-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71002" name="Agathion - Singer &amp; Dancer  Pack (90-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Agathion - Singer & Dancer (90-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71003" name="Agathion - Minion Eye Pack (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Minion Eye (7-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71004" name="Agathion - Minion Eye Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Minion Eye (30-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71005" name="Agathion - Matryoshka Pack (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Matryoshka (7-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71006" name="Agathion - Matryoshka Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Matryoshka (30-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71007" name="Agathion - Babayaga Pack (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Babayaga (7-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71008" name="Agathion - Babayaga Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Babayaga (30-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71009" name="Jack O'Lantern" type="MATERIAL" icon="icon.ev_wp_halloween">
 	<!-- Jack O'Lantern made with love. Go find NPC Rico with it in your inventory to receive the Halloween Blessing buff. \nCannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71010" name="Halloween Gift" type="NONE" icon="icon.event_halloween_king_pumpkini00">
 	<!-- Double-click to obtain one of the various items: Weapon Supply Box (B/C/D-grade), Armor Supply Box (B/C-grade), Scroll: Enchant Weapon (B/C/D-grade), Quick Healing Potion x20, Greater CP Potion x20, Warrior's MP Recovery Potion x20, Chef's Fish Stew Box, XP/SP Scroll - Normal/ Medium/ High, Special Dragon's Fruit, Rice Cake of Fighting Spirit, Rice Cake of Flaming Fighting Spirit, Golden Tears of Mermaid, Halloween Candy.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71011" name="Halloween Candy" type="NONE" icon="BranchSys.br_hallowinday_candy_i00">
 	<!-- Sweet candy from the Halloween Gift. Take it to Rico to exchange for a cosmetic item in the style of Halloween.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71012" name="Baium's Ring Lv. 3 (15 days) Box" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to obtain Baium's Ring Lv. 3 (15 days). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71013" name="Queen Ant's Ring Lv. 3 (15 days) Box" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to obtain Queen Ant's Ring Lv. 3 (15 days). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71014" name="Treasure Chest of Forgotten Island" type="NONE" icon="icon.bm_freya_snowman_box">
 	<!-- Double-click to obtain treasures of Forgotten Island. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71015" name="Agathion Bracelet - Lv. 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain Agathion Bracelet Lv. 1 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71016" name="Returning Hero's Reward" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Heavy Armor/Light Armor/Robe Set Box (30-day)/ Hero's Shining Weapon Set (30-day)/ Expertise Rune (C-grade)/ Party Support Cube - Lv. 1, Returning Hero's Reward - Lv. 30, and 1 Hero's Weapon Exchange Ticket - Lv. 54. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71017" name="Hero's Heavy Armor Set Box" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- You can obtain Hero's Shining Heavy Armor Set (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71018" name="Hero's Light Armor Set Box" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- You can obtain Hero's Shining Light Armor Set (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71019" name="Hero's Robe Set Box" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- You can obtain Hero's Shining Robe Set (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71020" name="Newbie Gift" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Shining Heavy Armor/Light Armor/Robe Set (30-day)/ Hero's Shining Dual Sword/Staff/Bow/Dagger/Spear (30-day)/ Expertise Rune (C-grade), Newbie Gift - Lv. 10, Transformation Support Cube - Lv. 1 (7-day), and 1 Hero's Weapon Exchange Ticket - Lv. 54. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71021" name="Dragon's Miracle Potion" type="SCROLL" icon="icon.bm_dragon_posion_brave">
 	<!-- Can be used after using Special Dragon's Fruit. For 20 min. XP and SP gain +50%, P./ M. Atk. +18%, P./ M. Def. +22%, Atk. Spd./ Casting Spd. +5%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%, HP/ MP/ CP +25%, HP/ MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Buff remains after death. If you use Special Dragon's Fruit or Special Fruit Buff during the effect, these items will dissapear without an effect.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71022" name="Balthus Knights Trophy Chest" type="NONE" icon="icon.bm_pirate_battle_box">
 	<!-- Double-click to obtain some Balthus Knights trophies. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71023" name="Transformation Scroll: Teddy Bear" type="POTION" icon="icon.gomdori_chest_change">
 	<!-- Changes the appearance to that of a teddy bear for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39367" value="-1"/>  <!-- Teddy Bear Transformation -->
@@ -149,7 +149,7 @@
 
 	<item id="71024" name="Transformation Scroll: Panda" type="POTION" icon="icon.sayha2017_panda">
 	<!-- Changes the appearance to that of a panda for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51147" value="-1"/>  <!-- Panda Transformation -->
@@ -158,7 +158,7 @@
 
 	<item id="71025" name="Transformation Scroll: Cat" type="POTION" icon="icon.sayha2017_cat">
 	<!-- Changes the appearance to that of a cat for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51148" value="-1"/>  <!-- Cat Transformation -->
@@ -167,61 +167,61 @@
 
 	<item id="71026" name="Matchstick" type="NONE" icon="BranchIcon.icon.g_event_match_body">
 	<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken the matches. Combine with match heads to fix them.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71027" name="Match Head" type="NONE" icon="BranchIcon.icon.g_event_match_head">
 	<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken the matches. Combine with matchsticks to fix them.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71028" name="Well-made Matchstick" type="NONE" icon="BranchIcon.icon.g_event_match">
 	<!-- A well-made matchstick. Take it to the Older Sister.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71029" name="Powerful Matchstick" type="NONE" icon="BranchIcon.icon.g_event_white_match">
 	<!-- A powerful matchstick. It's too strong to use regularly. Take it to the Younger Sister who will exchange it for a bonfire.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71030" name="Bonfire" type="NONE" icon="icon.etc_torchlight_i00">
 	<!-- Bonfire made with a powerful matchstick. Use to have a bonfire for 30 seconds. Use cooking ingredients on the bonfire to cook a Regular Dish or a Very Delicious Dish.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71031" name="Regular Dish" type="SCROLL" icon="icon.etc_food_dish_i00">
 	<!-- Regular dish. It looks edible. For 30 min., STR/ DEX/ CON/ INT/ WIT/ MEN +1. Additionally, acquired XP/SP +5%.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71032" name="Very Delicious Dish" type="NONE" icon="BranchIcon.icon.g_event_excellent_cuisine">
 	<!-- Very delicious dish. Take it to the Younger Sister.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71033" name="Match Girls' Gift" type="NONE" icon="icon.etc_pouch_red_i00">
 	<!-- A gift with various items from the Match Girls who are thankful for your help. Double-click to obtain Match Girls' Gratitude and a Regular Dish, and at a certain rate one of the following items:\nChristmas Talisman Pack​ (P. Skill Critical Damage/ M. Skill Critical Damage/ Ultimate Defense/ Debuff Resistance/ P. Atk./ M. Atk./ P. Def./ M. Def.), Santa's Hat (Permanent), Rudolph's Nose (Permanent), Santa's Cloak (Permanent), Santa's Suit (Permanent), Transformation Sealbook: Part-time Seller.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71034" name="Match Girls' Gratitude" type="SCROLL" icon="icon.etc_candle_white_i00">
 	<!-- For 20 min., P./M. Atk. +12%, P./M. Def +15%, Max HP/MP/CP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the melee damage inflicted on target as HP. \n\n<Note> When used simultaneously with Special Fruit Buff or Special Dragon's Fruit, effects do not stack.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71035" name="Cooking Ingredient" type="NONE" icon="icon.etc_meat_of_monstereye_i00">
 	<!-- Cooking ingredient of the Match Girls. Use it on the bonfire to cook food.\n\n<Note> If you use it on a bonfire made by someone else, the ingredient will disappear, and you will get nothing.  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -283,79 +283,79 @@
 
 	<item id="71044" name="Christmas Talisman Pack" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get a Christmas Talisman: P. Skill Critical Damage (1-hour).  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71045" name="Christmas Talisman Pack" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get a Christmas Talisman: M. Skill Critical Damage (1-hour).  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71046" name="Christmas Talisman Pack" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get a Christmas Talisman: Ultimate Defense (1-hour).  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71047" name="Christmas Talisman Pack" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get a Christmas Talisman: Debuff Resistance (1-hour).  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71048" name="Christmas Talisman Pack" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get a Christmas Talisman: P. Atk. (1-hour).  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71049" name="Christmas Talisman Pack" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get a Christmas Talisman: M. Atk. (1-hour).  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71050" name="Christmas Talisman Pack" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get a Christmas Talisman: P. Def. (1-hour).  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71051" name="Christmas Talisman Pack" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to get a Christmas Talisman: M. Def. (1-hour).  -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71052" name="Transformation Sealbook: Part-time Seller" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill of transforming yourself into an One-eyed ParaPara Cat. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71053" name="Transformation Sealbook: Part-time Seller" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill of transforming yourself into a Smiling ParaPara Cat. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71054" name="Transformation Sealbook: Part-time Seller" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill of transforming yourself into a Charming ParaPara Cat. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71055" name="Transformation Sealbook: Part-time Seller" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill of transforming yourself into a Ferocious ParaPara Cat. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71056" name="Transformation Sealbook: Part-time Seller" type="NONE" icon="icon.etc_transform_warrior_i00">
 	<!-- Sealbook for learning the skill of transforming yourself into a Merchant ParaPara Cat. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -378,25 +378,25 @@
 
 	<item id="71059" name="Fishermen's Guild Support Certificate Lv 1" type="MATERIAL" icon="icon.event_orc_memo">
 	<!-- Special certificate from Fishermen's Guild. For 1 hour, acquired XP/SP during fishing +20% when used. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71060" name="Fishermen's Guild Support Certificate Lv 2" type="MATERIAL" icon="icon.event_orc_memo">
 	<!-- Special certificate from Fishermen's Guild. For 3 hours, acquired XP/SP during fishing +30% when used. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71061" name="Fishermen's Guild Support Certificate Lv 3" type="MATERIAL" icon="icon.event_orc_memo">
 	<!-- Special certificate from Fishermen's Guild. For 6 hours, acquired XP/SP during fishing +50% when used. Effect remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71062" name="Christmas Surprise Sox" type="NONE" icon="BranchSys.icon.br_xmas_present_i00">
 	<!-- Double click to obtain a random item. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -416,86 +416,86 @@
 
 	<item id="71065" name="Agathion Rudolph Box (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion Rudolph (7-day).\n  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71066" name="Agathion Rudolph Box (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion Rudolph (30-day).\n  -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71067" name="Glittering Enchant Scroll of Fate" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="icon.etc_aidcharm_cancel_deathfire_i00">
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. Can be applied to Talisman enchanted up to +9. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="71068" name="Highest Grade Talisman of Fate Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
 	<!-- Sealed Case with +10 Talisman of Fate - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71069" name="Talisman of Fate Lucky Chest" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double click to obtain random Talisman of Fate Lv. 2 to 4. Additionally can be obtained Enchant Scroll of Fate. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71070" name="Fire Dragon Pendant Lucky Chest" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double click to obtain random Fire Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Fire Dragon Pendant Chest. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71071" name="Water Dragon Pendant Lucky Chest" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double click to obtain random Water Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Water Dragon Pendant Chest. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71072" name="Wind Dragon Pendant Lucky Chest" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double click to obtain random Wind Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Wind Dragon Pendant Chest. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71073" name="Earth Dragon Pendant Lucky Chest" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double click to obtain random Earth Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Earth Dragon Pendant Chest. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71074" name="Highest Grade Fire Dragon Pendant Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
 	<!-- Sealed Case with +10 Fire Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71075" name="Highest Grade Water Dragon Pendant Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
 	<!-- Sealed Case with +10 Water Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71076" name="Highest Grade Wind Dragon Pendant Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
 	<!-- Sealed Case with +10 Wind Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71077" name="Highest Grade Earth Dragon Pendant Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
 	<!-- Sealed Case with +10 Earth Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71078" name="Talisman of Power Fragment" type="NONE" icon="icon.bm_ensoul_stone_PvE_empty">
 	<!-- Material used to upgrade Talisman of Power. If an upgrade fails, Talisman`s level drops to Lv. 1. Talisman of Power can be obtained from Blacksmith Baggins.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -631,7 +631,7 @@
 
 	<item id="71095" name="Stable Talisman of Power Fragment" type="NONE" icon="icon.bm_ensoul_stone_PvE_empty">
 	<!-- The material used to upgrade Talismans of Power. If an upgrade fails, Talisman remains the same. Onle for Talismans of Noble Power.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -644,7 +644,7 @@
 
 	<item id="71097" name="Big Wedding Cake" type="NONE" icon="BranchSys2.Icon.br_big_wedding_cake_i00">
 	<!-- Summons Big Wedding Cake for wedding ceremony. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 

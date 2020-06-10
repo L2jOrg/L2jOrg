@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="3926" name="Scroll: Guidance" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Accuracy + 2 for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2050" value="-1"/>  <!-- Scroll: Guidance -->
@@ -11,7 +11,7 @@
 
 	<item id="3927" name="Scroll: Death Whisper" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Critical Damage + 25% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2051" value="-1"/>  <!-- Scroll: Death Whisper -->
@@ -20,7 +20,7 @@
 
 	<item id="3928" name="Scroll: Focus" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Critical Rate + 20% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2052" value="-1"/>  <!-- Scroll: Focus -->
@@ -29,7 +29,7 @@
 
 	<item id="3929" name="Scroll: Acumen" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Casting Spd. + 15% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2053" value="-1"/>  <!-- Scroll: Acumen -->
@@ -38,7 +38,7 @@
 
 	<item id="3930" name="Scroll: Haste" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Atk. Spd. + 15% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2054" value="-1"/>  <!-- Scroll: Haste -->
@@ -47,7 +47,7 @@
 
 	<item id="3931" name="Scroll: Agility" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Evasion. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2055" value="-1"/>  <!-- Scroll: Agility -->
@@ -56,7 +56,7 @@
 
 	<item id="3932" name="Scroll: Mystic Empower" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- M. Atk. + 55% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2056" value="-1"/>  <!-- Scroll: Empower -->
@@ -65,7 +65,7 @@
 
 	<item id="3933" name="Scroll: Might" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Atk. Increases. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2057" value="-1"/>  <!-- Scroll: Might -->
@@ -74,7 +74,7 @@
 
 	<item id="3934" name="Scroll: Wind Walk" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Speed + 20 for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2058" value="-1"/>  <!-- Scroll: Wind Walk -->
@@ -83,7 +83,7 @@
 
 	<item id="3935" name="Scroll: Shield" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Def. Increases. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2059" value="-1"/>  <!-- Scroll: Shield -->
@@ -92,7 +92,7 @@
 
 	<item id="3936" name="Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" price="400000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2049" value="-1"/>  <!-- Blessed Scroll of Resurrection -->
@@ -158,37 +158,37 @@
 
 	<item id="3940" name="Blueprint: Summon Siege Golem" type="NONE" icon="icon.etc_plan_i00">
 	<!-- Blueprint needed to learn the Summon Siege Golem technique.\nRequired level: 49 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3941" name="Spellbook: Mass Resurrection" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops.\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3942" name="Spellbook: Party Return" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Party Return. Used by Elven Elders.\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3943" name="Amulet: Pa'agrio's Heart" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords.\nRequired level: 44 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3944" name="Spellbook: Decrease Weight" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles.\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3947" name="Blessed Spiritshot (No-grade)" type="NONE" icon="icon.etc_spell_shot_white_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="4" price="35" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="2061" value="-1"/>  <!-- Blessed Spiritshot (No-grade) -->
@@ -197,7 +197,7 @@
 
 	<item id="3948" name="Blessed Spiritshot (D-grade)" type="NONE" icon="icon.etc_spell_shot_blue_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with D-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="4" price="45" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="2160" value="-1"/>  <!-- Blessed Spiritshot (D-grade) -->
@@ -206,7 +206,7 @@
 
 	<item id="3949" name="Blessed Spiritshot (C-grade)" type="NONE" icon="icon.etc_spell_shot_green_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with C-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="90" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="2161" value="-1"/>  <!-- Blessed Spiritshot (C-grade) -->
@@ -215,7 +215,7 @@
 
 	<item id="3950" name="Blessed Spiritshot (B-grade)" type="NONE" icon="icon.etc_spell_shot_red_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with B-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="245" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="2162" value="-1"/>  <!-- Blessed Spiritshot (B-grade) -->
@@ -224,7 +224,7 @@
 
 	<item id="3951" name="Blessed Spiritshot (A-grade)" type="NONE" icon="icon.etc_spell_shot_silver_i01">
 	<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="1" price="290" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="2163" value="-1"/>  <!-- Blessed Spiritshot (A-grade) -->
@@ -233,7 +233,7 @@
 
 	<item id="3952" name="Blessed Spiritshot (S-grade)" type="NONE" icon="icon.etc_spell_shot_gold_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, spontaneously increasing its M. Atk. significantly. Used with an S-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="1" price="350" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="2164" value="-1"/>  <!-- Blessed Spiritshot (S-grade) -->
@@ -242,42 +242,42 @@
 
 	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3954" name="Recipe: Blessed Spiritshot (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3955" name="Recipe: Blessed Spiritshot (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3956" name="Recipe: Blessed Spiritshot (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%.  Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3957" name="Recipe: Blessed Spiritshot (S-grade)" type="MATERIAL" icon="icon.etc_recipe_black_i00">
 	<!-- For Dwarves only. Recipe for a Blessed Spiritshot (S-grade). Create Item skill must be level 8. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="450000" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3958" name="Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that relocates user to the nearest village -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2036" level="2" value="-1"/>  <!-- Blessed Scroll of Escape -->
@@ -286,7 +286,7 @@
 
 	<item id="3959" name="Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2062" value="-1"/>  <!-- Blessed Scroll of Resurrection -->
@@ -295,280 +295,280 @@
 
 	<item id="3960" name="Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_sword_fix_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3961" name="Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_pole_fix_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3962" name="Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_bow_fix_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3963" name="Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_cleric_fix_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3964" name="Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_wizard_fix_i00">
 	<!-- Cannot be used. Can be sold at an NPC’s store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3965" name="Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_sword_move_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3966" name="Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_pole_move_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3967" name="Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_bow_move_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3968" name="Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_cleric_move_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3969" name="Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_wizard_move_i00">
 	<!-- Cannot be used. Can be sold at an NPC’s store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3970" name="Mercenary Posting Ticket (Teleporter1)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3971" name="Mercenary Posting Ticket (Teleporter2)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3972" name="Mercenary Posting Ticket (Teleporter3)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Cannot be used.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3973" name="Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_sword_fix_i00">
 	<!-- Dion/Sword/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3974" name="Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_pole_fix_i00">
 	<!-- Dion/Spear/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3975" name="Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_bow_fix_i00">
 	<!-- Dion/Bow/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3976" name="Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_cleric_fix_i00">
 	<!-- Dion/Cleric/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3977" name="Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_wizard_fix_i00">
 	<!-- Dion/Wizard/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3978" name="Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_sword_move_i00">
 	<!-- Dion/Sword/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3979" name="Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_pole_move_i00">
 	<!-- Dion/Spear/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3980" name="Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_bow_move_i00">
 	<!-- Dion/Bow/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3981" name="Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_cleric_move_i00">
 	<!-- Dion/Cleric/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3982" name="Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_wizard_move_i00">
 	<!-- Dion/Wizard/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3983" name="Mercenary Posting Ticket (Teleporter1)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3984" name="Mercenary Posting Ticket (Teleporter2)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3985" name="Mercenary Posting Ticket (Teleporter3)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3986" name="Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_sword_fix_i00">
 	<!-- Giran/Sword/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3987" name="Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_pole_fix_i00">
 	<!-- Giran/Spear/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3988" name="Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_bow_fix_i00">
 	<!-- Giran/Bow/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3989" name="Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_cleric_fix_i00">
 	<!-- Giran/Cleric/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3990" name="Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_wizard_fix_i00">
 	<!-- Giran/Wizard/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3991" name="Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_sword_move_i00">
 	<!-- Giran/Sword/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3992" name="Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_pole_move_i00">
 	<!-- Giran/Spear/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3993" name="Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_bow_move_i00">
 	<!-- Giran/Bow/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3994" name="Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_cleric_move_i00">
 	<!-- Giran/Cleric/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3995" name="Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_wizard_move_i00">
 	<!-- Giran/Wizard/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3996" name="Mercenary Posting Ticket (Teleporter1)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3997" name="Mercenary Posting Ticket (Teleporter2)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3998" name="Mercenary Posting Ticket (Teleporter3)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="3999" name="Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_sword_fix_i00">
 	<!-- Oren/Sword/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>

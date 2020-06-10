@@ -2,37 +2,37 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="1500" name="Totem of Hestui" type="NONE" icon="icon.etc_totem_black_i00">
 	<!-- The totem of the Hestui. Can be sold in any shop for a high price. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="11000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1501" name="Maraku Werewolf Totem" type="NONE" icon="icon.etc_totem_green_i00">
 	<!-- Maraku Wolfmen Totem. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="1200" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1502" name="Grandma's Pearl" type="NONE" icon="icon.etc_crystal_ball_silver_i00">
 	<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="10000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1503" name="Grandma's Mirror" type="NONE" icon="icon.etc_mirror_i00">
 	<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="1000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1504" name="Grandma's Necklace" type="NONE" icon="icon.accessary_aquastone_necklace_i00">
 	<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="600" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1505" name="Grandma's Hairpin" type="NONE" icon="icon.etc_jewel_white_i00">
 	<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="200" immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -111,163 +111,163 @@
 
 	<item id="1512" name="Spellbook: Confusion" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Confusion. Used by Palus Knights and Assassins.\nRequired level: 24 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1150" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1513" name="Spellbook: Charm" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Charm. Used by Elven Knights and Elven Scouts.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1514" name="Spellbook: Resurrection" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Resurrection. Used by Clerics, Elven Oracles, and Shillien Oracles.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1515" name="Spellbook: Eva's Kiss" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Eva's Kiss. Used by Clerics, Elven Oracles and Shillien Oracles.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1516" name="Spellbook: Corpse Life Drain" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Corpse Life Drain. Used by Human Wizards and Dark Wizards.\nRequired level: 30 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1517" name="Spellbook: Body To Mind" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Body To Mind. Used by Human Wizards, Elven Wizards, and Dark Wizards.\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1518" name="Amulet: Chant of Flame" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Flame spell. Used by Orc Shamans.\nRequired level: 30 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="26593" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1519" name="Amulet: Pa'agrio's Gift" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Gift spell. Used by Orc Shamans.\nRequired level: 30 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="26593" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1520" name="Amulet: Pa'agrio's Blessing" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Blessing spell. Used by Orc Shamans.\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1521" name="Amulet: Chant of Fire" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Fire spell. Used by Orc Shamans.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1522" name="Amulet: Chant of Battle" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Battle spell. Used by Orc Mystics.\nRequired level: 14 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1523" name="Amulet: Chant of Shielding" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Shielding spell. Used by Orc Shamans.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1524" name="Amulet: Soul Shield" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Soul Shield spell. Used by Orc Mystics.\nRequired level: 7 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1525" name="Amulet: Life Drain" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Life Drain spell. Used by Orc Mystics.\nRequired level: 7 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1526" name="Amulet: Fear" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Fear spell. Used by Orc Mystics.\nRequired level: 14 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1527" name="Amulet: Venom" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Venom spell. Used by Orc Mystics.\nRequired level: 7 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1528" name="Amulet: Seal of Chaos" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Chaos spell. Used by Orc Shamans.\nRequired level: 30 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1529" name="Amulet: Dreaming Spirit" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Spirit Dream spell. Used by Orc Mystics.\nRequired level: 7 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1530" name="Amulet: Seal of Slow" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Slow spell. Used by Orc Shamans.\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1531" name="Amulet: Chill Flame" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chill Flame spell. Used by Orc Mystics.\nRequired level: 7 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1532" name="Amulet: Blaze Quake" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Blaze Quake spell. Used by Orc Shamans.\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1533" name="Amulet: Aura Sink" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Aura Sink spell. Used by Orc Shamans.\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1534" name="Amulet: Madness" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Madness spell. Used by Orc Shamans.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1535" name="Amulet: Frost Flame" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Frost Flame spell. Used by Orc Shamans.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1536" name="Amulet: Seal of Binding" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Binding spell. Used by Orc Shamans.\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1537" name="Amulet: Seal of Poison" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Poison spell. Used by Orc Shamans.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1538" name="Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that relocates you to the nearest village -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" price="150000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2036" value="-1"/>  <!-- Blessed Scroll of Escape -->
@@ -276,7 +276,7 @@
 
 	<item id="1539" name="Top-grade HP Potion" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that quickly restores HP. Its effect lasts for 15 seconds. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="5" price="900" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2037" value="-1"/>  <!-- Major HP Potion -->
@@ -285,7 +285,7 @@
 
 	<item id="1540" name="High-grade HP Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- After instant 435 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="1" price="10000" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="HEALING"/>
 		<skill-reducer>
 			<skill id="2038" value="-1"/>  <!-- High-grade HP Potion -->
@@ -294,355 +294,355 @@
 
 	<item id="1541" name="Honey Khandar" type="NONE" icon="icon.etc_potion_gold_i00">
 	<!-- Miraculous medicine made of the mixture of honey and khandar extract. Take this to Centurion Nakusin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1542" name="Bear Fur Cloak" type="NONE" icon="icon.etc_piece_of_cloth_black_i00">
 	<!-- Cloak made of grizzly bear's fur. Excellent for keeping warm. Take this to Centurion Nakusin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1543" name="Bloody Axe" type="NONE" icon="icon.weapon_tomahawk_i00">
 	<!-- Axe that holds the blood of wild animals. It is said to strengthen its owner's life force. Take this to Centurion Nakusin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1544" name="Ancestor Skull" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- Skull of an ancestor of Urutus. It is said to strengthen its owner's life force. Take this to Centurion Nakusin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1545" name="Spider Dust" type="NONE" icon="icon.etc_powder_white_i00">
 	<!-- Grain of powder made of dried legs of poisonous spiders. Smelling it will make you feel refreshed. Take this to Centurion Nakusin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1546" name="Deep Sea Orb" type="NONE" icon="icon.etc_crystal_ball_silver_i00">
 	<!-- Pearl brought out of a deep sea. It is said to help predict the future. Take this to Centurion Nakusin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1547" name="Bolter's List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- The list of things that Bolter wants you to bring from the village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1548" name="Mining Boots" type="NONE" icon="icon.armor_apprentices_shoes_i00">
 	<!-- Pair of mining boots you got from Trader Garita. Take this to Miner Bolter. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1549" name="Miner's Pick" type="NONE" icon="icon.weapon_guard_spear_i00">
 	<!-- Miner's pick you got from Blacksmith Brunon. Take this to Miner Bolter. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1550" name="Boomboom Powder" type="NONE" icon="icon.etc_powder_black_i00">
 	<!-- Sack of boomboom powder you got from Trader Shari. Take this to Miner Bolter. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1551" name="Redstone Beer" type="NONE" icon="icon.etc_potion_scarlet_i00">
 	<!-- Delicious beer you got from Warehouse Chief Reed. Take this to Miner Bolter. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1552" name="Bolter's Smelly Socks" type="NONE" icon="icon.armor_cotton_shoes_i00">
 	<!-- Pair of socks that Miner Bolter gave you. For what...? -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1553" name="Hatos' 1st Order" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- The order to kill Baranka's messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1554" name="Hatos' 2nd Order" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- The order states that you must kill Baranka's messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1555" name="Hatos' 3rd Order" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- The order states that you must kill Baranka's messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1556" name="Secret Letter to Dark Elf" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- The secret letter that Baranka is sending to Dark Elven Magister Kaland. Take the letter to Urutu Chief Hatos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1557" name="Secret Letter to Human" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- The secret letter that Baranka is sending to Duke Van Halter. Take the letter to Urutu Chief Hatos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1558" name="Secret Letter to Elf" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- The secret letter that Baranka is sending to Elven Master Laria. Take the letter to Urutu Chief Hatos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1559" name="Gouph's Contract" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Collector Gouph drew up this contract when buying the star diamond from Trader Reep. Take this to Trader Reep. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1560" name="Reep's Contract" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Trader Reep drew up this contract when he requested the delivery of the star diamond. Take this to Carrier Torocco. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1561" name="Elven Wine" type="NONE" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Carrier Torocco bought this high quality wine to give it to his old friend, Maron, as a present. Take this to Miner Maron. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1562" name="Brunon's Dice" type="NONE" icon="icon.etc_squares_silver_i00">
 	<!-- These dice were specially made for gambling. Take these to Blacksmith Brunon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1563" name="Brunon's Contract" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- This contract says if Brunon gets the 20 stolen jewels back from goblins, he can get the star diamond back. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1564" name="Aquamarine" type="NONE" icon="icon.etc_jewel_green_i00">
 	<!-- This jewel is obtained by the goblin brigand leader. Take 10 aquamarines and 10 chrysoberyls to Blacksmith Brunon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1565" name="Chrysoberyl" type="NONE" icon="icon.etc_jewel_blue_i00">
 	<!-- This jewel is obtained by the goblin brigand leader. Take 10 aquamarines and 10 chrysoberyls to Blacksmith Brunon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1566" name="Jewel Box" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Blacksmith Brunon gives this Jewel Box. Take it to Collector Gouph. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1567" name="Coal Piece" type="NONE" icon="icon.etc_plate_black_i00">
 	<!-- This coal piece is in the Jewel Box. Take this to Blacksmith Brunon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1568" name="Brunon's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Blacksmith Brunon sends this letter to Warehouse Keeper Murdoc asking for the right box. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1569" name="Berry Tart" type="NONE" icon="icon.etc_pouch_brown_i00">
 	<!-- Sweet strawberry-flavored tart. Warehouse Keeper Murdoc sends this to Warehouse Keeper Airy as a present of apology. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1570" name="Bat Diagram" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- This diagram shows the blade bat in details. Take this and go hunt blade bats to obtain the star diamond. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1571" name="Star Diamond" type="NONE" icon="icon.etc_jewel_silver_i00">
 	<!-- Everyone is looking for this diamond. Take this to the real owner. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1572" name="Star Stone" type="NONE" icon="icon.etc_crystal_blue_i00">
 	<!-- Mineral collected from the destroyed greystone golem. Collect 20 of these and take them to Gatekeeper Tamil. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1573" name="Star Stone" type="NONE" icon="icon.etc_crystal_blue_i00">
 	<!-- Mineral obtained by defeated whinstone golems. Collect twenty and take them to Gatekeeper Wirphy. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1574" name="Mirien's Review" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1575" name="Mirien's Review" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this to Jonas. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1576" name="Mirien's Review" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this to Jonas. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1577" name="Mirien's Review" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this to Jonas. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1578" name="Green Blood" type="NONE" icon="icon.etc_reagent_green_i00">
 	<!-- Goblin's blood. If you have enough of this item, the Kuruka ratman leader appears. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1579" name="Goblin Dwelling Map" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Map showing goblins' dwelling. Take this and find the goblin tribes and destroy them. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1580" name="Kuruka Ratman Tooth" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Tooth obtained after killing Kuruka ratman leader. Collect ten of these to take to Prefect Karukia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1581" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1582" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1583" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1584" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1585" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1586" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1587" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1588" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1589" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1590" name="Betrayer's Report" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1591" name="Head of Betrayer" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- The head of a traitor orc. Collect 2 and take them to Prefect Kasman in Gludin Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1592" name="Badge of Raider" type="NONE" icon="icon.accessary_earing_of_black_ore_i00">
 	<!-- Necklace given to an Orc who has earned the qualification to become an Orc Raider. Take this to the high prefect to change your occupation to an Orc Raider. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1593" name="Pomegranate" type="NONE" icon="icon.etc_fruit_red_i00">
 	<!-- Red pomegranate fruit given by Gantaki. Take this and go to Khavatari Rosheek. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1594" name="1st Leather Pouch" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Leather pouch given by Khavatari Rosheek. Take this and hunt kasha bears and collect 5 of their claws. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1595" name="2nd Leather Pouch" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Leather pouch given by Khavatari Rosheek. Hunt kasha blade spiders with this and collect 5 talons. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1596" name="3rd Leather Pouch" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Leather pouch Khavatari Rosheek gave you. Take this while hunting scarlet salamanders to obtain 5 of their scales. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1597" name="1st Leather Pouch (Full)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- Pouch that contains 5 kasha bear claws. Take this to Khavatari Rosheek. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1598" name="2nd Leather Pouch (Full)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- Pouch that contains 5 pincers of kasha blade spider talon. Take this to Khavatari Rosheek. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1599" name="3rd Leather Pouch (Full)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- Pouch that contains 5 scales from the scarlet salamander. Take this to Khavatari Rosheek. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

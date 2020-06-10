@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="92400" name="Primeval Garden Time Recharge Stone" type="POTION" icon="icon.timezone_refill_3">
 	<!-- Adds 60 minutes to the duration of the Primeval Garden timed hunting zone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5"/>
 	</item>
 
 	<item id="92401" name="Spellbook: White Guardian" type="POTION" icon="icon.si_phanteon_book">
 	<!-- Spellbook to obtain the power of the White Guardian. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92402" name="Enchant Scroll: Talisman - Speed" type="ENCHANT_ARMOR" icon="icon.tallisman_rapid_scrl">
 	<!-- A scroll used to enchant Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
@@ -58,73 +58,73 @@
 
 	<item id="92409" name="Special Dragon's Fruit Lv. 2" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +15%, P./M. Def. +20%, Max. HP/CP/MP +30%, P./M. Critical Rate +20, P./M. Critical Damage +7%, HP/MP Recovery Bonus +40%. At a certain chance absorbs 7% of the damage inflicted on target as HP. XP and SP gained through hunting +15%. Cooldown is 1 minute. Buff remains after death. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92410" name="Dragon's Special Elixir Lv. 2" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P/M. Critical Rate +40, P./M. Critical Damage +12%, Atk. Spd./Casting Spd. +70, HP +3000, MP +2000, CP +3000, HP/MP Recovery Bonus +12, Sayha's Grace Consumption Speed -25% for 20 minutes. Has a chance to recover 7% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92411" name="Sealed Treasure Chest" type="NONE" icon="icon.etc_readybox_gold">
 	<!-- Double-click to obtain one of the rare items at random, such as Sealed Power Powder, Lilith Rune Lv. +10, Anakim Rune Lv. 10, or +10 Dragon’s Belt. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92412" name="Sealed Power Powder" type="NONE" icon="icon.etc_powder_orange_i00">
 	<!-- Collect Sealed Power Powder and other consumables and take them to the Store Manager to exchange for Special Dragon's Fruit Lv. 2, Dragon's Special Elixir Lv. 2. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92413" name="Mystery Box Lv. 1" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Double-click to obtain one of the following: Mystery Box Lv. 2, Sayha's Blessing, Dragon Pendant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92414" name="Mystery Box Lv. 2" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 3, Sayha's Blessing, Dragon Pendant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92415" name="Mystery Box Lv. 3" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 4, Sayha’s Blessing, XP Boost Scroll, Dragon Pendant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92416" name="Mystery Box Lv. 4" type="NONE" icon="icon.npoint_valakas_30day_box">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 5, Sayha's Blessing, Battle Scroll, Dragon’s Belt Box. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92417" name="Mystery Box Lv. 5" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 6, Sayha's Benefaction, Agathion Exchange Ticket. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92418" name="Mystery Box Lv. 6" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 7, Sayha's Storm, Magic Lamp Acceleration Potion, Lv. 3 Gem. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92419" name="Mystery Box Lv. 7" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 8, Magic Lamp Acceleration Potion, A-grade weapon. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92420" name="Mystery Box Lv. 8" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to obtain one of various items such as Antharas' Earring, Talisman of Baium, Brooch Lv. 4. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -136,468 +136,468 @@
 
 	<item id="92422" name="Tower of Insolence Stone of Memory: 1st Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 1st Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92423" name="Tower of Insolence Stone of Memory: 2nd Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 2nd Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92424" name="Tower of Insolence Stone of Memory: 3rd Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 3rd Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92425" name="Tower of Insolence Stone of Memory: 4th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 4th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92426" name="Tower of Insolence Stone of Memory: 5th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 5th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92427" name="Tower of Insolence Stone of Memory: 6th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 6th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92428" name="Tower of Insolence Stone of Memory: 7th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 7th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92429" name="Tower of Insolence Stone of Memory: 8th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 8th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92430" name="Tower of Insolence Stone of Memory: 9th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 9th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92431" name="Tower of Insolence Stone of Memory: 10th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 10th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92432" name="Tower of Insolence Stone of Memory: 11th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 11th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92433" name="Tower of Insolence Stone of Memory: 12th Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">
 	<!-- Takes you to the Tower of Insolence: 12th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92434" name="Mystery Talisman Box" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 1, Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92435" name="Mystery Talisman Pack Lv. 1" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i00">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 2, +1 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92436" name="Mystery Talisman Pack Lv. 2" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 3, +2 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92437" name="Mystery Talisman Pack Lv. 3" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i03">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 4, +3 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92438" name="Mystery Talisman Pack Lv. 4" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i01">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 5, +4 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92439" name="Mystery Talisman Pack Lv. 5" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 6, +5 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92440" name="Mystery Talisman Pack Lv. 6" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i05">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 7, +6 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92441" name="Mystery Talisman Pack Lv. 7" type="NONE" icon="icon.bm_sayha_silver_present">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 8, +7 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92442" name="Mystery Talisman Pack Lv. 8" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain one of various items such as Talisman of Baium, +8 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92443" name="+1 Aden Talisman Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain +1 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92444" name="+2 Aden Talisman Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain +2 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92445" name="+3 Aden Talisman Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain +3 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92446" name="+4 Aden Talisman Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain +4 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92447" name="+5 Aden Talisman Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain +5 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92448" name="+6 Aden Talisman Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain +6 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92449" name="+7 Aden Talisman Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain +7 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92450" name="+8 Aden Talisman Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain +8 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92451" name="+1 Eva’s Talisman Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain +1 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92452" name="+2 Eva’s Talisman Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain +2 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92453" name="+3 Eva’s Talisman Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain +3 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92454" name="+4 Eva’s Talisman Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain +4 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92455" name="+5 Eva’s Talisman Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain +5 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92456" name="+6 Eva’s Talisman Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain +6 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92457" name="+7 Eva’s Talisman Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain +7 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92458" name="+8 Eva’s Talisman Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain +8 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92459" name="Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92460" name="+1 Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a +1 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92461" name="+2 Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a +2 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92462" name="+3 Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a +3 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92463" name="+4 Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a +4 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92464" name="+5 Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a +5 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92465" name="+6 Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a +6 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92466" name="+7 Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a +7 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92467" name="+8 Speed Talisman Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain a +8 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92468" name="Venir's Talisman Lv. 1 Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Venir's Talisman Lv. 1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92469" name="Venir's Talisman Lv. 2 Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Venir's Talisman Lv. 2. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92470" name="Venir's Talisman Lv. 3 Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Venir's Talisman Lv. 3. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92471" name="Venir's Talisman Lv. 4 Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Venir's Talisman Lv. 4. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92472" name="Venir's Talisman Lv. 5 Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Venir's Talisman Lv. 5. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92473" name="Venir's Talisman Lv. 6 Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Venir's Talisman Lv. 6. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92474" name="Venir's Talisman Lv. 7 Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Venir's Talisman Lv. 7. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92475" name="Venir's Talisman Lv. 8 Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Venir's Talisman Lv. 8. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92476" name="Metal Ingot" type="MATERIAL" icon="icon.etc_lump_gray_i00">
 	<!-- Ingredient to craft a Dwarven item. Ingredient for swords (one-handed), blunt weapons (one-handed), daggers, dualswords, fist weapons (two-handed). -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1000"/>
 	</item>
 
 	<item id="92477" name="Wood" type="MATERIAL" icon="icon.etc_branch_gold_i00">
 	<!-- Ingredient to craft a Dwarven item. Ingredient for spears, swords (two-handed), blunt weapons (two-handed). -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1000"/>
 	</item>
 
 	<item id="92478" name="Varnish" type="MATERIAL" icon="icon.etc_pouch_yellow_i00">
 	<!-- Ingredient to craft a Dwarven item. Ingredient for accessories. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1000"/>
 	</item>
 
 	<item id="92479" name="Metallograph" type="MATERIAL" icon="icon.etc_suede_i00">
 	<!-- Ingredient to craft a Dwarven item. Ingredient for heavy armor. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1000"/>
 	</item>
 
 	<item id="92480" name="Leather" type="MATERIAL" icon="icon.etc_leather_brown_i00">
 	<!-- Ingredient to craft a Dwarven item. Ingredient for light armor. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1000"/>
 	</item>
 
 	<item id="92481" name="Cloth" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Ingredient to craft a Dwarven item. Ingredient for robes. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1000"/>
 	</item>
 
 	<item id="92482" name="Item Points" type="NONE" icon="icon.etc_pccafe_point_i00">
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100"/>
 	</item>
 
 	<item id="92483" name="Necklace of Anguish Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Necklace of Anguish. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="12500"/>
 	</item>
 
 	<item id="92484" name="Necklace of Wisdom Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Necklace of Wisdom. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="12500"/>
 	</item>
 
 	<item id="92485" name="Blue Diamond Necklace Gem" type="MATERIAL" icon="icon.etc_gem_blue_i00">
 	<!-- Key material that Dwarves use to make the Blue Diamond Necklace. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="12500"/>
 	</item>
 
 	<item id="92486" name="Necklace of Devotion Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Necklace of Devotion. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="54100"/>
 	</item>
 
 	<item id="92487" name="Necklace Chain of Magic" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Magic Necklace. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="54100"/>
 	</item>
 
 	<item id="92488" name="Tiger's Eye Stone" type="MATERIAL" icon="icon.etc_jewel_gold_i00">
 	<!-- Key material that Dwarves use to make Tiger's Eye. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="54100"/>
 	</item>
 
 	<item id="92489" name="Elven Earring Beads" type="MATERIAL" icon="BranchSys2.icon.etc_elvenearing_beads_i00">
 	<!-- Key material that Dwarves use to make the Elven Earring. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="136000"/>
 	</item>
 
 	<item id="92490" name="Elven Ring Piece" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Elven Ring. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="136000"/>
 	</item>
 
 	<item id="92491" name="Elven Necklace Beads" type="MATERIAL" icon="BranchSys2.icon.etc_elvennecklace_beads_i00">
 	<!-- Key material that Dwarves use to make the Elven Necklace. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="136000"/>
 	</item>
 
 	<item id="92492" name="Onyx Beast's Eye Earring Gemstone" type="MATERIAL" icon="icon.etc_bead_silver_i00">
 	<!-- Key material that Dwarves use to make the Onyx Beast's Eye. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2650"/>
 	</item>
 
 	<item id="92493" name="Mithril Ring Wire" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Mithril Ring. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="7960"/>
 	</item>
 
 	<item id="92494" name="Necklace of Darkness Gem" type="MATERIAL" icon="icon.etc_gem_black_i00">
 	<!-- Key material that Dwarves need to make a Necklace of Darkness. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4970"/>
 	</item>
 
 	<item id="92495" name="Moonstone Earring Wire" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make a Moonstone Earring. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="10200"/>
 	</item>
 
 	<item id="92496" name="Aquastone Ring Wire" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Aquastone Ring. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="6770"/>
 	</item>
 
 	<item id="92497" name="Aquastone Necklace Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Aquastone Necklace. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="31800"/>
 	</item>
 
 	<item id="92498" name="Earring of Protection Gemstone" type="MATERIAL" icon="icon.etc_gem_yellow_i00">
 	<!-- Key material that Dwarves use to make the Earring of Protection. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="19900"/>
 	</item>
 
 	<item id="92499" name="Ring of Protection Gemstone" type="MATERIAL" icon="icon.etc_gem_yellow_i00">
 	<!-- Key material that Dwarves use to make the Ring of Protection. Can be sold in any shop. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4680"/>
 	</item>
 

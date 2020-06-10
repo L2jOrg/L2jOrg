@@ -216,85 +216,85 @@
 
 	<item id="686" name="Chair" type="NONE" icon="icon.etc_branch_blue_i00">
 	<!-- Chair -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="100" price="1000" immediate-effect="true"/>
 	</item>
 
 	<item id="687" name="Darin's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- The love letter that Darin Has written to Roxxy. Darin Has asked you to deliver this letter to Gatekeeper Roxxy. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="688" name="Roxxy's Kerchief" type="NONE" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Roxxy's Kerchief. Roxxy handed this over as a reply to Darin's letter. It must be delivered to Darin. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="689" name="Poetry Book" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Poetry book treasured by Arujien. The book contains poems that he Has written. Take this to Greenis. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="690" name="Lyrics Book" type="NONE" icon="icon.item_normal06">
 	<!-- The lyrics book of Herbien -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="691" name="Romance Novel" type="NONE" icon="icon.item_normal07">
 	<!-- Romance novel -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="692" name="Arujien's Letter" type="NONE" icon="icon.item_canuse37">
 	<!-- Arujien's letter -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="693" name="Greenis' Letter" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Greenis' letter, refusing Arujien's love. Take this to Arujien. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="694" name="Ingredient List" type="NONE" icon="icon.item_normal37">
 	<!-- List of ingredients: 3 omen Animal Bloods, 2 mana seeker husks, 2 gargoyle horns -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="695" name="Onyx Beast's Blood" type="NONE" icon="icon.item_canuse48">
 	<!-- The blood of an Onyx Beast. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="696" name="Mana Seeker's Husk" type="NONE" icon="icon.item_normal30">
 	<!-- The husk of a mana seeker. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="697" name="Gargoyle's Horn" type="NONE" icon="icon.item_normal24">
 	<!-- The horn of a gargoyle. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="698" name="Gilbert's List" type="NONE" icon="icon.item_normal37">
 	<!-- List of things to eliminate: orcs, hobgoblins, walking fungus -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="699" name="Orc's Nose" type="NONE" icon="icon.item_canuse05">
 	<!-- The nose of an orc. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 

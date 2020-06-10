@@ -2,181 +2,181 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="92900" name="Behemoth' Tuning Fork Piece" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- Essential ingredient needed by a Dwarf to make Behemoth' Tuning Fork. It can be sold at a regular store. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2696840"/>
 	</item>
 
 	<item id="92901" name="Naga Storm Piece" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- Essential ingredient needed by a Dwarf to make Naga Storm. It can be sold at a regular store. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2696840"/>
 	</item>
 
 	<item id="92902" name="Tiphon's Spear Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Essential ingredient needed by a Dwarf to make Tiphon's Spear. It can be sold at a regular store. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2696840"/>
 	</item>
 
 	<item id="92903" name="Shyeed's Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
 	<!-- Essential ingredient needed by a Dwarf to make Shyeed's Bow. It can be sold at a regular store. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2696840"/>
 	</item>
 
 	<item id="92904" name="Sobekk's Hurricane Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
 	<!-- Essential ingredient needed by a Dwarf to make Sobekk's Hurricane. It can be sold at a regular store. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2696840"/>
 	</item>
 
 	<item id="92905" name="Themis' Tongue Piece" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- Essential ingredient needed by a Dwarf to make Themis' Tongue. It can be sold at a regular store. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2696840"/>
 	</item>
 
 	<item id="92906" name="Cabrio's Hand Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
 	<!-- Essential ingredient needed by a Dwarf to make Cabrio's Hand. It can be sold at a regular store. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2696840"/>
 	</item>
 
 	<item id="92907" name="Daimon Crystal Fragment" type="MATERIAL" icon="icon.etc_bark_gold_i00">
 	<!-- Essential ingredient needed by a Dwarf to make Daimon Crystal. It can be sold at a regular store. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="2696840"/>
 	</item>
 
 	<item id="92908" name="Crafting Herb: Crumbled Wooden Piece" type="NONE" icon="icon.etc_branch_gold_i00">
 	<!-- Item Gauge 100 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92909" name="Crafting Herb: Miscellaneous Pouch" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- Item Gauge 500 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92910" name="Crafting Herb: Old Fabric Piece" type="NONE" icon="icon.etc_suede_i00">
 	<!-- Item Gauge 1000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92911" name="Crafting Herb: Leather Piece" type="NONE" icon="icon.etc_leather_brown_i00">
 	<!-- Item Gauge 3000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92912" name="Crafting Herb: Soft Fabric Piece" type="NONE" icon="icon.etc_skein_white_i00">
 	<!-- Item Gauge 5000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92913" name="Crafting Herb: Unidentifiable Metal Piece" type="NONE" icon="icon.etc_lump_gray_i00">
 	<!-- Item Gauge 10000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92914" name="Crafting Herb: Parts Pouch" type="NONE" icon="icon.etc_coal_i00">
 	<!-- Item Gauge 30000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92915" name="Crafting Herb: Low-grade Crafting Pouch" type="NONE" icon="icon.etc_charcoal_i00">
 	<!-- Item Gauge 50000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92916" name="Crafting Herb: Energy of Animals" type="NONE" icon="icon.etc_piece_bone_white_i00">
 	<!-- Item Gauge 100000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92917" name="Crafting Herb: Metal Ingot " type="NONE" icon="icon.etc_silver_i00">
 	<!-- Item Gauge 300000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92918" name="Crafting Herb: Blacksmith’s Energy" type="NONE" icon="icon.etc_oriharukon_ore_i00">
 	<!-- Item Gauge 500000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92919" name="Crafting Herb: High-grade Blacksmith’s Energy" type="NONE" icon="icon.etc_crystal_ball_white_i00">
 	<!-- Item Gauge 1000000 Points -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92920" name="Lilith Soul Crystal Lv. 11" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith’s power. Can be synthesized to upgrade to higher level Soul Crystal. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- HP Recovery Bonus +11\n- P. Atk. +11%\n- Hit activates 900 HP recovery -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92921" name="Lilith Soul Crystal Lv. 12" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith’s power. Can be synthesized to upgrade to higher level Soul Crystal. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- HP Recovery Bonus +12\n- P. Atk. +11%\n- Hit activates 900 HP recovery\n- CON +1 -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92922" name="Lilith Soul Crystal Lv. 13" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith’s power. Can be synthesized to upgrade to higher level Soul Crystal. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- HP Recovery Bonus +13\n- P. Atk. +12%\n- Hit activates 900 HP recovery\n- CON +1 -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92923" name="Lilith Soul Crystal Lv. 14" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith’s power. Can be synthesized to upgrade to higher level Soul Crystal. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- HP Recovery Bonus +14\n- P. Atk. +12%\n- Hit activates 900 HP recovery\n- CON +2 -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92924" name="Lilith Soul Crystal Lv. 15" type="ENSOUL_STONE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith’s power. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- HP Recovery Bonus +15\n- P. Atk. +15%\n- Hit activates 900 HP recovery\n- CON +3 -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92925" name="Anakim Soul Crystal Lv. 11" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim’s power. Can be synthesized to upgrade to higher level Soul Crystal. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- MP Recovery Bonus +11\n- M. Atk. +11%\n- Hit activates 600 MP recovery -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92926" name="Anakim Soul Crystal Lv. 12" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim’s power. Can be synthesized to upgrade to higher level Soul Crystal. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- MP Recovery Bonus +12\n- M. Atk. +11%\n- Hit activates 600 MP recovery\n- MEN +1 -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92927" name="Anakim Soul Crystal Lv. 13" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim’s power. Can be synthesized to upgrade to higher level Soul Crystal. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- MP Recovery Bonus +13\n- M. Atk. +12%\n- Hit activates 600 MP recovery\n- MEN +1 -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92928" name="Anakim Soul Crystal Lv. 14" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim’s power. Can be synthesized to upgrade to higher level Soul Crystal. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- MP Recovery Bonus +14\n- M. Atk. +12%\n- Hit activates 600 MP recovery\n- MEN +2 -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
 	<item id="92929" name="Anakim Soul Crystal Lv. 15" type="ENSOUL_STONE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim’s power. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Soul Crystal’s imbued power.\n\n<Soul Crystal Option>\n- MP Recovery Bonus +15\n- M. Atk. +15%\n- Hit activates 600 MP recovery\n- MEN +3 -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20"/>
 	</item>
 
@@ -444,163 +444,163 @@
 
 	<item id="92973" name="Scroll of Escape Box: Tower of Insolence" type="NONE" icon="icon.etc_exchange_box_i00">
 	<!-- Double-click to obtain one of the Scrolls of Escape: Tower of Insolence 8th Floor to 12th Floor. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92974" name="Stone of Purity" type="MATERIAL" icon="icon.etc_crystal_ball_white_i00">
 	<!-- Stone containing great energy. Fills 1 crafting point when recharged. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="2000000"/>
 	</item>
 
 	<item id="92975" name="B-grade or higher Helmet Crafting" type="NONE" icon="icon.armor_helmet_i00">
 	<!-- Obtain a helmet B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92976" name="B-grade or higher Armor Crafting" type="NONE" icon="icon.armor_t74_u_i00">
 	<!-- Obtain an armor B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92977" name="B-grade or higher Full-body Crafting" type="NONE" icon="icon.armor_t83_ul_i00">
 	<!-- Obtain a full-body B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92978" name="B-grade or higher Gloves Crafting" type="NONE" icon="icon.armor_t15_g_i00">
 	<!-- Obtain a pair of gloves B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92979" name="B-grade or higher Boots Crafting" type="NONE" icon="icon.armor_t75_b_i00">
 	<!-- Obtain a pair of boots B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92980" name="B-grade or higher Accessory Crafting" type="NONE" icon="icon.accessary_phoenixs_necklace_i00">
 	<!-- Obtain an accessory B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92981" name="Dagger" type="NONE" icon="icon.weapon_soul_separator_i00">
 	<!-- Obtain a dagger B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92982" name="dualfist" type="NONE" icon="icon.weapon_dragon_grinder_i00">
 	<!-- Obtain a fist weapon B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92983" name="Bow" type="NONE" icon="icon.weapon_soul_bow_i00">
 	<!-- Obtain a bow B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92984" name="ancientsword" type="NONE" icon="icon.weapon_death_bringer_i00">
 	<!-- Obtain an Ancient Sword B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92985" name="Rapier" type="NONE" icon="icon.weapon_greed_stinger_i00">
 	<!-- Obtain a Rapier B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92986" name="Accessory: A-grade" type="NONE" icon="icon.accessory_group">
 	<!-- Obtain an accessory B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92987" name="Armor: A-grade" type="NONE" icon="icon.armor_group">
 	<!-- Obtain an armor B-grade or higher. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92988" name="Orc’s Treasure" type="NONE" icon="icon.bm_freya_snowman_box">
 	<!-- Treasure chest containing the legacy of the Orcs. Double-click to obtain one of various items such as Ziggo's Jewel, Evolution Stone, Gold Medal. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="581390"/>
 	</item>
 
 	<item id="92989" name="Spirit’s Treasure" type="NONE" icon="icon.bm_freya_2016_gift_box">
 	<!-- Treasure chest containing the legacy of the Spirits. Double-click to obtain one of various items such as Ziggo's Jewel, Evolution Stone, A-grade weapon. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="51597582"/>
 	</item>
 
 	<item id="92990" name="Boss Weapon Pack" type="NONE" icon="icon.zariche_box">
 	<!-- Use to obtain 1 of the following: Baium’s Thunder Breaker, Zaken’s Blood Sword, Core’s Plasma Bow, Queen Ant’s Stone Crasher, Orfen’s Poisonous Sword. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92991" name="Scroll: Einhasad's Blessing" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- When used, Hunting XP/SP Gain +50% for 20 minutes. Cooldown 1 minute. The effect remains active even after death.\n<Warning>When Einhasad's Protection, Dandy's Home Run Ball/Golden Ball is used while Scroll: Einhasad's Blessing is applied, only the higher effect will be applied. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92992" name="Full Buff Package" type="NONE" icon="BranchSys.icon.br_lucky_bag_box_i00">
 	<!-- Use to obtain Sayha's Buff Scroll x72, Battle Scroll x72, Sayha's Storm Lv. 3 x72, Scroll: Einhasad's Blessing x72, Mystery Talisman Box x2. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92993" name="Enria" type="MATERIAL" icon="icon.etc_gem_red_i00">
 	<!-- Stone containing great energy. Fills 500,000 crafting points when recharged. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="2" price="1000000"/>
 	</item>
 
 	<item id="92994" name="Asofe" type="MATERIAL" icon="icon.etc_gem_blue_i00">
 	<!-- Stone containing great energy. Fills 100,000 crafting points when recharged. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="2" price="200000"/>
 	</item>
 
 	<item id="92995" name="Thons" type="MATERIAL" icon="icon.etc_gem_clear_i00">
 	<!-- Stone containing great energy. Fills 10,000 crafting points when recharged. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="2" price="20000"/>
 	</item>
 
 	<item id="92996" name="Old Material" type="MATERIAL" icon="icon.etc_mold_i00">
 	<!-- A bunch of old materials. Fills 100 crafting points when recharged. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="2" price="200"/>
 	</item>
 
 	<item id="92997" name="Unknown Material" type="MATERIAL" icon="icon.etc_silver_mold_i00">
 	<!-- A bunch of unknown materials. Fills 500 crafting points when recharged. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="2" price="1000"/>
 	</item>
 
 	<item id="92998" name="Shiny Material" type="MATERIAL" icon="icon.etc_blacksmiths_frame_i00">
 	<!-- A bunch of well-maintained materials. Fills 1000 crafting points when recharged. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="2" price="2000"/>
 	</item>
 
 	<item id="92999" name="Advanced Material" type="MATERIAL" icon="icon.etc_artisans_frame_i00">
 	<!-- A bunch of high-quality materials. Fills 5000 crafting points when recharged. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="2" price="10000"/>
 	</item>
 

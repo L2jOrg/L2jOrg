@@ -2,25 +2,25 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="8543" name="Bead Parcel" type="NONE" icon="icon.accessary_mage_earing_i00">
 	<!-- Take this parcel of woven beads to Warehouse Chief Yasheni in the Town of Schuttgart. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="8544" name="Timora Orc's Head" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- Severed head of the cowardly Timora Orc who betrayed his own tribe and joined the Ragna Orcs. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="8545" name="Kasha Spider's Tooth" type="NONE" icon="icon.etc_claw_i00">
 	<!-- This crooked spider's tooth was pulled out by hand during close combat. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="8546" name="Horn of Baar Dre Vanul" type="NONE" icon="icon.etc_horn_i00">
 	<!-- This smooth, flawless horn comes from Baar Dre Vanul, who inhabits the Immortal Plateau's Southern Region. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 

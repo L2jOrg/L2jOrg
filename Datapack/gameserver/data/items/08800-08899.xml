@@ -396,31 +396,31 @@
 
 	<item id="8868" name="Ziggo's Jewel" type="NONE" icon="icon.etc_jewel_red_i00">
 	<!-- A gem shining brightly. Looks like you could get a lot of money for it in a store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="200000000" immediate-effect="true"/>
 	</item>
 
 	<item id="8871" name="Strategy Guide" type="NONE" icon="icon.etc_paper_black_i00">
 	<!-- This book contains information about the methods and strategies used to lead an alliance. Use it for alliance invitations. Available for levels 20 and above. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="20" price="10000" immediate-effect="true" action="CREATE_MPCC"/>
 	</item>
 
 	<item id="8872" name="Flash Gunpowder" type="NONE" icon="icon.etc_powder_gray_i00">
 	<!-- This specially processed gunpowder doesn't create smoke. It is consumed while using the Swoop Cannon skill. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="20" price="1500" immediate-effect="true"/>
 	</item>
 
 	<item id="8890" name="Spellbook - Summon Attractive Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Attractive Cubic. Used by Templars.\nRequired level: 62 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="200000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="8891" name="Spellbook: Aura Flash" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Aura Flash. Used by Sorcerers, Spellsingers, and Spellhowlers.\nRequired level: 58 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 

@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="91300" name="Spring Energy Lv. 3" type="NONE" icon="icon.etc_leaf_green_i00">
 	<!-- Max HP/MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./Casting Spd. +15%, P. Def/M. Def +15%, XP/SP gain +15%, Sayha's Grace Consumption Rate -15% for 20 minutes when used.  \n\n<Note>\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\n\n -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91301" name="Sayha's Spring Breeze" type="NONE" icon="icon.ev_magic_flame_game_wind1">
 	<!-- An item containing a fresh spring breeze. Sayha's Grace Consumption +100% and XP/SP gain +150% when hunting monsters. Remains active after death. Duration is 20 minutes. Cooldown is 20 minutes. Available only when there is at least 1 slot left for Sayha's Grace. \n\n<Note>\nCannot be used with Sayha's Storm or Sayha's Gust.\n\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51228" value="-1"/>  <!-- Sayha's Spring Breeze -->
@@ -17,7 +17,7 @@
 
 	<item id="91302" name="Spring's Blessing Box" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- A blessed box that Primavera prepared with great care. Double-click to obtain 1 item at random among Fire Dragon Belt, Earth Dragon Belt, Enchant Scroll Enchant Scroll by grade, and various supply items. \n\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -500,13 +500,13 @@
 
 	<item id="91355" name="Brilliant Jewelry Box" type="NONE" icon="icon.bm_2018_jewelbox_random">
 	<!-- Double-click to obtain 1 Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Cat's Eye, or Emerald (Lv. 1) Box.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91356" name="Gem Energy" type="NONE" icon="icon.bm_blessed_jewel">
 	<!-- Returns a higher-grade Gem when combined with a Greater Gem. Can be exchanged for a Glittering Rough Jewel through the Store Manager. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -582,67 +582,67 @@
 
 	<item id="91367" name="Emerald Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91368" name="Emerald Lv. 3 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 3.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91369" name="Emerald Lv. 4 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 4.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91370" name="Emerald Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 5.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91371" name="Brilliant Brooch Fragment" type="NONE" icon="icon.bm_2018_brooch_piece">
 	<!-- Take 1 Brooch Lv. 4 and 1 Brilliant Brooch Fragment to the Store Manager to exchange them for a Brooch Lv. 5. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91372" name="Bait of Grace" type="LURE" icon="icon.fishing_cube_lure">
 	<!-- Event fishing bait. Use it to obtain Blue Mackerels, Whales, or Coins of Grace.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="91373" name="Fishing Kit of Grace" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to obtain a box containing 85,000 Bait of Grace, 85,000 Normal Fishing Shots, and 1 Golden Mermaid's Fishing Rod (30-day) Pack.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91374" name="Coin of Grace" type="NONE" icon="icon.etc_magic_coin_blue_i00">
 	<!-- Coins that Cavalia saved to buy a present. Gather the coins that have been dropped in the water and take them to Cavalia at the Gludin Harbor or Giran Harbor to exchange them for useful items.   -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91375" name="Angler's Rune - Veteran" type="RUNE" icon="icon.fishing_zone_ticket_1">
 	<!-- A 7-day item. Only for characters level 76 and below. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="91376" name="Angler's Rune - Master" type="RUNE" icon="icon.fishing_zone_ticket_1">
 	<!-- A 7-day item. Only for characters level 77 to 80. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="91377" name="Angler's Rune - Supreme" type="RUNE" icon="icon.fishing_zone_ticket_1">
 	<!-- A 7-day item. Only for characters level 81 and above. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
@@ -714,37 +714,37 @@
 
 	<item id="91384" name="Queen Ant Essence" type="NONE" icon="icon.queen_ant_essence_i01">
 	<!-- Take the essence and a +10 to +12 Phoenix Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Queen Ant's Ring Lv. 4 through upgrade. -->
-		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91385" name="Orfen Essence" type="NONE" icon="icon.earring_of_orfen_essence_i01">
 	<!-- Take the essence and a +10 to +12 Black Ore Earring to Head Blacksmith Ferris in the Town of Aden to obtain a Orfen's Earring Lv. 4 via upgrade. -->
-		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91386" name="Core Essence" type="NONE" icon="icon.ring_of_core_essence_i01">
 	<!-- Take the essence and a +10 to +12 Black Ore Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Ring of Core Lv. 4 via upgrade. -->
-		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91387" name="Baium Essence" type="NONE" icon="icon.ring_of_baium_essence_i01">
 	<!-- Take the essence and a +10 to +12 Majestic Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Baium's Ring Lv. 4 via upgrade. -->
-		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91388" name="Zaken Essence" type="NONE" icon="icon.earring_of_zaken_essence_i01">
 	<!-- Take the essence and a +10 to +12 Phoenix Earring to Head Blacksmith Ferris in the Town of Aden to obtain a Zaken's Earring Lv. 4 via upgrade. -->
-		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91389" name="Antharas Essence" type="NONE" icon="icon.earring_of_antaras_essence_i01">
 	<!-- Take the essence and a +10 to +12 Majestic Earring to Head Blacksmith Ferris in the Town of Aden to obtain the an Antharas' Earring Lv. 4 via upgrade. -->
-		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false"/>
 		<attributes/>
 	</item>
 
@@ -757,7 +757,7 @@
 
 	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2 - Tradable" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- XP/SP gain +30% while hunting for 20 minutes when used. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39076" level="2" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
@@ -766,49 +766,49 @@
 
 	<item id="91392" name="Night Goblin Liquor" type="NONE" icon="icon.bm_goblin_buff_herong">
 	<!-- P. Atk. +15%, M. Atk. +23%, P./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP/MP Recovery Bonus +30% for 5 minutes. -->
-		<restriction freightable="false" destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91393" name="Forgotten Codex - Chapter 1" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="91394" name="Forgotten Codex - Chapter 2" type="NONE" icon="icon.etc_paper_red_i00">
 	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="91395" name="Forgotten Codex - Chapter 3" type="NONE" icon="icon.etc_paper_blue_i00">
 	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="91396" name="Forgotten Codex - Chapter 4" type="NONE" icon="icon.etc_paper_black_i00">
 	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="91397" name="Codex Piece - Chapter 1" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- A piece of the codex that contains the record of a forgotten skill. Gather 100 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the Forgotten Codex Chapter 1. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="91398" name="Codex Piece - Chapter 2" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- A piece of the codex that contains the record of a forgotten skill. Has a low chance to return the Forgotten Codex Chapter 2 when combined with the Tablet of Magic. When the combination fails, it returns 2 Codex Fragments. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="91399" name="Codex Fragment - Chapter 2" type="NONE" icon="icon.letter_piece">
 	<!-- Codex fragment. Gather 50 fragments and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the Forgotten Codex Chapter 2. The exchange costs 3 million Adena. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 

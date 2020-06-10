@@ -132,25 +132,25 @@
 
 	<item id="92313" name="Giran’s Treasure Chest" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to obtain one of the rare items at random: Ignis Necklace, Procella Necklace, Petram Necklace, or Brooch Lv. 3. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92314" name="Seal of Giran" type="NONE" icon="icon.etc_royal_seal_of_lord_i04">
 	<!-- Increases XP/SP by 20% for 20 min on use and can be exchanged for other Items through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92315" name="Luxury Augmentation Box" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to obtain one of the rare items at random, such as Lilith Rune Lv. 10, Anakim Rune Lv. 10, or +10 Dragon’s Belt.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92316" name="+10 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- Double-click to obtain +10 Enchanted Dragon’s Belt. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -245,7 +245,7 @@
 
 	<item id="92333" name="Infinite Steel Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00">
 	<!-- Quiver containing arrows made of steel. Used with a C-grade bow. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 		<crystal type="C"/>
 	</item>
@@ -315,145 +315,145 @@
 
 	<item id="92343" name="+16 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
 	<!-- Double-click to obtain +16 Enchanted Samurai Long Sword. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92344" name="+16 Ecliptic Axe Pack" type="NONE" icon="icon.weapon_eclipse_axe_i00">
 	<!-- Double-click to obtain +16 Enchanted Ecliptic Axe. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92345" name="+16 Eminence Bow Pack" type="NONE" icon="icon.weapon_eminence_bow_i00">
 	<!-- Double-click to obtain +16 Enchanted Eminence Bow, Infinite Steel Quiver. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92346" name="+16 Katana*Katana Pack" type="NONE" icon="icon.weapon_dual_sword_i00">
 	<!-- Double-click to obtain +16 Enchanted KatanaKatana. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92347" name="+16 Berserker Blade Pack" type="NONE" icon="icon.weapon_berserker_blade_i00">
 	<!-- Double-click to obtain +16 Enchanted Berserker Blade. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92348" name="+16 Admiral's Estoc Pack" type="NONE" icon="icon.weapon_rapier_i00">
 	<!-- Double-click to obtain +16 Enchanted Admiral's Estoc. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92349" name="+16 Demon's Staff Pack" type="NONE" icon="icon.weapon_demons_staff_i00">
 	<!-- Double-click to obtain +16 Enchanted Demon's Staff. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92350" name="+16 Crystal Dagger Pack" type="NONE" icon="icon.weapon_crystal_dagger_i00">
 	<!-- Double-click to obtain +16 Enchanted Crystal Dagger. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92351" name="+16 Orcish Poleaxe Pack" type="NONE" icon="icon.weapon_orcish_poleaxe_i00">
 	<!-- Double-click to obtain +16 Enchanted Orcish Poleaxe. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92352" name="+16 Yaksa Mace Pack" type="NONE" icon="icon.weapon_yaksa_mace_i00">
 	<!-- Double-click to obtain +16 Enchanted Yaksa Mace. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92353" name="+16 Great Pata Pack" type="NONE" icon="icon.weapon_great_pata_i00">
 	<!-- Double-click to obtain +16 Enchanted Great Pata. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92354" name="+16 Saber Tooth Pack" type="NONE" icon="icon.weapon_invincible_blade_i00">
 	<!-- Double-click to obtain +16 Enchanted Saber Tooth. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92355" name="+7 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
 	<!-- Double-click to obtain +7 Enchanted Samurai Long Sword. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92356" name="+7 Ecliptic Axe Pack" type="NONE" icon="icon.weapon_eclipse_axe_i00">
 	<!-- Double-click to obtain +7 Enchanted Ecliptic Axe. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92357" name="+7 Eminence Bow Pack" type="NONE" icon="icon.weapon_eminence_bow_i00">
 	<!-- Double-click to obtain +7 Enchanted Eminence Bow, Infinite Steel Quiver. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92358" name="+7 Katana*Katana Pack" type="NONE" icon="icon.weapon_dual_sword_i00">
 	<!-- Double-click to obtain +7 Enchanted Katana*Katana. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92359" name="+7 Berserker Blade Pack" type="NONE" icon="icon.weapon_berserker_blade_i00">
 	<!-- Double-click to obtain +7 Enchanted Berserker Blade. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92360" name="+7 Admiral's Estoc Pack" type="NONE" icon="icon.weapon_rapier_i00">
 	<!-- Double-click to obtain +7 Enchanted Admiral's Estoc. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92361" name="+7 Demon's Staff Pack" type="NONE" icon="icon.weapon_demons_staff_i00">
 	<!-- Double-click to obtain +7 Enchanted Demon's Staff. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92362" name="+7 Crystal Dagger Pack" type="NONE" icon="icon.weapon_crystal_dagger_i00">
 	<!-- Double-click to obtain +7 Enchanted Crystal Dagger. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92363" name="+7 Orcish Poleaxe Pack" type="NONE" icon="icon.weapon_orcish_poleaxe_i00">
 	<!-- Double-click to obtain +7 Enchanted Orcish Poleaxe. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92364" name="+7 Yaksa Mace Pack" type="NONE" icon="icon.weapon_yaksa_mace_i00">
 	<!-- Double-click to obtain +7 Enchanted Yaksa Mace. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92365" name="+7 Great Pata Pack" type="NONE" icon="icon.weapon_great_pata_i00">
 	<!-- Double-click to obtain +7 Enchanted Great Pata. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92366" name="+7 Saber Tooth Pack" type="NONE" icon="icon.weapon_invincible_blade_i00">
 	<!-- Double-click to obtain +7 Enchanted Saber Tooth. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -494,7 +494,7 @@
 
 	<item id="92372" name="+4 Blue Wolf Heavy Armor Set" type="NONE" icon="icon.armor_t68_u_i00">
 	<!-- Double-click to obtain +4 Blue Wolf Breastplate, +4 Blue Wolf Gaiters, +4 Blue Wolf Helmet (Heavy Armor), +4 Blue Wolf Gloves (Heavy Armor), and +4 Blue Wolf Boots(Heavy Armor), one for each. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -528,7 +528,7 @@
 
 	<item id="92377" name="+4 Blue Wolf Light Armor Set" type="NONE" icon="icon.armor_t69_ul_i00">
 	<!-- Double-click to obtain +4 Blue Wolf Leather Armor/ +4 Blue Wolf Helmet (Light Armor)/ +4 Blue Wolf Gloves (Light Armor)/ and +4 Blue Wolf Boots (Light Armor), one for each. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -569,7 +569,7 @@
 
 	<item id="92383" name="+4 Blue Wolf Robe Set" type="NONE" icon="icon.armor_t70_u_i00">
 	<!-- Double-click to obtain +4 Blue Wolf Tunic, +4 Blue Wolf Stockings, +4 Blue Wolf Helmet (Robe), +4 Blue Wolf Gloves (Robe), and +4 Blue Wolf Boots (Robe), one for each. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -596,7 +596,7 @@
 
 	<item id="92387" name="+4 Black Ore Accessory Set" type="NONE" icon="icon.accessary_necklace_of_black_ore_i00">
 	<!-- Double-click to obtain 2 +4 Black Ore Rings, 2 +4 Black Ore Earrings, and 1 +4 Black Ore Necklace. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -643,43 +643,43 @@
 
 	<item id="92393" name="Jewel Box Filled With Gratitude" type="NONE" icon="icon.bm_special_jewelbox_lv5">
 	<!-- Double-click to obtain one each of Lv. 4 Ruby, Sapphire, Diamond, Pearl, Vital Stone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92394" name="Sayha's Grace Package" type="NONE" icon="icon.bm_dragon_present">
 	<!-- Double-click to obtain Sayha's Blessing x250, Sayha's Buff Scroll x20, Sayha's Storm Lv. 3 x20, Ring of Insolence x1, Dragon Valley Earring x1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92395" name="Lucky Blessing Basket" type="NONE" icon="icon.etc_candy_basket_i04_1">
 	<!-- Double-click to obtain a random amount of Sayha's Blessing, and if you’re lucky, you can also gain one of various items. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92396" name="Sayha's Blessing 1000-unit Pack" type="NONE" icon="icon.event_oriental_park_i00">
 	<!-- Double-click to obtain Sayha's Blessing x1000. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92397" name="Enhanced Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Restricted to characters below level 75. Recharges 140,000 Sayha's Grace Points. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92398" name="Enhanced Sayha's Blessing - Event" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Recharges 140,000 Sayha's Grace Points. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92399" name="Primeval Garden Time Recharge Stone - Exchangeable" type="POTION" icon="icon.timezone_refill_3">
 	<!-- Adds 60 minutes to the duration of the Primeval Garden timed hunting zone. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5"/>
 	</item>
 
