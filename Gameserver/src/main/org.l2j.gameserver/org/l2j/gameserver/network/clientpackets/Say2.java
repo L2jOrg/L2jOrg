@@ -29,8 +29,8 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public final class Say2 extends ClientPacket {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(Say2.class);
-    private static Logger LOGGER_CHAT = LoggerFactory.getLogger("chat");
+    private static final Logger LOGGER = LoggerFactory.getLogger(Say2.class);
+    private static final Logger LOGGER_CHAT = LoggerFactory.getLogger("chat");
 
     private String text;
     private int type;
@@ -40,8 +40,8 @@ public final class Say2 extends ClientPacket {
     public void readImpl() {
         text = readString();
         type = readInt();
-
         if(type == ChatType.WHISPER.getClientId()) {
+            readByte();
             target = readString();
         }
     }
