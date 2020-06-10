@@ -786,7 +786,7 @@ public abstract class Inventory extends ItemContainer {
             }));
     }
 
-    public int getArmorMinEnchant() {
+    public int getArmorMaxEnchant() {
         if (!isPlayer(getOwner())) {
             return 0;
         }
