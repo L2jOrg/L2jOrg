@@ -23,9 +23,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" level="3" type="ON_ENCHANT" value="-1"/>  <!-- TODO Skill not found -->
-		</skills>
 	</weapon>
 
 	<weapon id="5706" name="Damascus*Damascus" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -42,9 +39,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="20" type="ON_ENCHANT" value="-1"/>  <!-- TODO Skill not found -->
-		</skills>
 	</weapon>
 
 	<item id="5707" name="Record of Seven Signs" type="NONE" icon="icon.etc_ssq_scroll_i00">

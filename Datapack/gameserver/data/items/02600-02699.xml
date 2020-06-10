@@ -14,9 +14,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2601" name="Raid Sword*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -33,9 +30,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2602" name="Raid Sword*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -52,9 +46,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2603" name="Raid Sword*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -71,9 +62,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2604" name="Raid Sword*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -90,9 +78,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2605" name="Raid Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -109,9 +94,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="12" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2606" name="Caliburs*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -128,9 +110,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2607" name="Caliburs*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -147,9 +126,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2608" name="Caliburs*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -166,9 +142,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2609" name="Caliburs*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -356,9 +329,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2619" name="Sword of Delusion*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -375,9 +345,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2620" name="Sword of Delusion*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -394,9 +361,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="13" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2621" name="Sword of Nightmare*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -413,9 +377,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2622" name="Sword of Nightmare*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -432,9 +393,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2623" name="Sword of Nightmare*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -451,9 +409,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2624" name="Tsurugi*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -470,9 +425,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2625" name="Tsurugi*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -489,9 +441,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="13" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2626" name="Samurai Long Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -508,9 +457,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="14" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<item id="2627" name="Mark of Challenger" type="NONE" icon="icon.etc_jewel_silver_i00">
