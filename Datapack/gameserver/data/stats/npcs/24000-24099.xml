@@ -571,13 +571,13 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>GIANT</race>
         <acquire exp="1051810" sp="31554"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="43" int="40" dex="55" wit="78" con="82" men="78">
             <vitals hp="2721.23288" hpRegen="8.5" mp="2574.465" mpRegen="3"/>
             <speed>
                 <walk ground="55"/>
                 <run ground="140"/>
             </speed>
-            <attack physical="38669.4" magical="2124.9" critical="4" attackSpeed="253" range="40"/>
+            <attack physical="3866.4" magical="2124.9" critical="4" attackSpeed="253" range="40"/>
             <defence physical="16572.6" magical="1180.5"/>
         </stats>
         <status attackable="true"/>

@@ -338,6 +338,7 @@ open module org.l2j.scripts {
             ai.areas.CallOfTheSpirits.CallOfTheSpirits,
             ai.areas.Varkas.Althars,
             ai.areas.GiantCave.Scout,
+            ai.areas.GiantCave.Batur,
 
             ai.bosses.Antharas.Antharas,
             ai.bosses.Baium.Baium,
