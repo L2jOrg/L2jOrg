@@ -304,7 +304,7 @@
 
 	<item id="70426" name="Energy of Protection" type="POTION" icon="icon.general_energy_condense_i01">
 	<!-- For 20 min. Max HP/ MP +5%, XP/ SP +30%. Provides Mental Attack/Paralysis Resistance.\n<Attention> Cannot be stacked with Life Control Tower's and  Angel Cat's Blessing. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55464" value="-1"/>  <!-- Energy of Protection -->
@@ -313,7 +313,7 @@
 
 	<item id="70427" name="Talisman of Fate Lv. 4 Pack" type="NONE" icon="icon.bm_ensoulbox_PvE">
 	<!-- Double-click to get Talisman of Fate Pack Lv. 4. Cannot be exchanged or dropped. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="70297" chance="100000000"/>  <!-- Talisman of Fate Lv. 4 -->
@@ -322,7 +322,7 @@
 
 	<item id="70428" name="Talisman of Fate Lv. 5 Pack" type="NONE" icon="icon.bm_ensoulbox_PvP">
 	<!-- Double-click to get Talisman of Fate Pack Lv. 5. Cannot be exchanged or dropped. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="70298" chance="100000000"/>  <!-- Talisman of Fate Lv. 5 -->
@@ -331,7 +331,7 @@
 
 	<item id="70429" name="Agathion - Singer &amp; Dancer Pack (7-day)" type="NONE" icon="icon.bm_ensoulbox_soul_of_undead">
 	<!-- Double-click to get Agathion - Singer & Dancer (7-day).   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="70114" chance="100000000"/>  <!-- Agathion - Singer &amp; Dancer  -->
@@ -340,7 +340,7 @@
 
 	<item id="70430" name="Antharas Treasure Pouch" type="NONE" icon="BranchIcon.Icon.g_bm_antaras_pocket_i00">
 	<!-- Double-click to get one of Antharas treasures. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
@@ -777,145 +777,145 @@
 
 	<item id="70476" name="Shiny Rough Jewel" type="NONE" icon="icon.etc_bm_jewel_piece">
 	<!-- You can exchange some amount of Ore for Lv. 1 Brooch, Lv. 3-5 jewels or Jewelry Box through the Store Manager. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70477" name="Fortune Brooch" type="NONE" icon="icon.etc_bm_jewelbox_shhadai">
 	<!-- Double-click to obtain Fortune Jewelry Chest.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70478" name="Topaz Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 1-5 Topaz. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70479" name="Garnet Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 1-5 Garnet. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70480" name="Jade Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 1-5 Jade. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70481" name="Ruby Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 1-5 Ruby. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70482" name="Sapphire Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 1-5 Sapphire. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70483" name="Diamond Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 1-5 Diamond. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70484" name="Pearl Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 1-5 Pearl. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70485" name="Vital Stone Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 1-5 Vital Stone. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70486" name="Shiny Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to obtain Shiny Jewelry Box.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70487" name="Topaz Chest" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 1 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70488" name="Garnet Chest" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 1 Garnet.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70489" name="Jade Chest" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 1 Jade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70490" name="Ruby Chest" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 1 Ruby.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70491" name="Sapphire Chest" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 1 Sapphire.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70492" name="Diamond Chest" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 1 Diamond.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70493" name="Pearl Chest" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 1 Pearl.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70494" name="Vital Stone Chest" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 1 Vital Stone.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70495" name="Lv. 3 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 3 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70496" name="Lv. 4 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 4 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70497" name="Lv. 5 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 5 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70498" name="Lv. 3 Garnet Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 3 Garnet.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70499" name="Lv. 4 Garnet Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 4 Garnet.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 

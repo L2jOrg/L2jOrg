@@ -104,19 +104,19 @@
 
 	<item id="71414" name="Gem Energy" type="NONE" icon="icon.bm_blessed_jewel">
 	<!-- Combine with a Greater Gem to obtain a higher level gem.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71415" name="Gem Energy Fragment" type="NONE" icon="BranchIcon.Icon.g_bm_jewel_energy_piece">
 	<!-- Take it to the Store Manager to exchange for Gem Energy. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71416" name="Fishing Rod Chest (1-day)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
 	<!-- Use it to obtain a 1-day Fishing Rod. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -138,7 +138,7 @@
 
 	<item id="71418" name="Fishing Rod Chest (7-day)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
 	<!-- Use it to obtain a 7-day Fishing Rod. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -160,115 +160,115 @@
 
 	<item id="71420" name="Fishing Rod Chest (30-day)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
 	<!-- Use it to obtain a 30-day Fishing Rod. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71421" name="Fishing XP Growth Amulet Pack (1-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to acquire Fishing XP Growth Amulet (1-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71422" name="Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
 	<!-- If stored in the inventory during fishing, for 7 days acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="71423" name="Fishing XP Growth Amulet Pack (7-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to acquire Fishing XP Growth Amulet (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71424" name="Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
 	<!-- If stored in the inventory during fishing, for 30 days acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="71425" name="Fishing XP Growth Amulet Pack (30-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to acquire Fishing XP Growth Amulet (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71426" name="High-grade Fishing XP Growth Amulet Pack (1-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to acquire High-grade Fishing XP Growth Amulet (1-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71427" name="High-grade Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
 	<!-- If stored in the inventory during fishing, acquired XP/ SP +50%.\n Duration: 7 days. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="71428" name="High-grade Fishing XP Growth Amulet Pack (7-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to acquire High-grade Fishing XP Growth Amulet (7-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71429" name="High-grade Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
 	<!-- If stored in the inventory during fishing, acquired XP/ SP +50%.\n Duration: 30 days. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="71430" name="High-grade Fishing XP Growth Amulet Pack (30-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to acquire High-grade Fishing XP Growth Amulet (30-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71431" name="Black Friday Fishing Pack (1-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to obtain 1 Fishing Rod Chest (1-day) and 1 High-grade Fishing XP Growth Amulet Pack (1-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71432" name="Black Friday Fishing Pack (30-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to obtain 1 Fishing Rod Chest (30-day) and 1 High-grade Fishing XP Growth Amulet Pack (30-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71433" name="Black Friday Rune Pack" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click to obtain 1 XP/SP Rune - 50% (30-day) Pack, 10 2nd Class Transfer Buff Scrolls, and 60 Major Warrior Healing Potion. \n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71434" name="Black Friday Boost Pack" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to obtain 20 XP/SP Boost Scrolls (Mid-grade), 20 2nd Class Transfer Buff Scrolls, 50 Major Warrior Healing Potions. \n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71435" name="Emerald Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain 1 Emerald Lv. 1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71436" name="Brilliant Jewelry Box" type="NONE" icon="BranchIcon.icon.bm_2018_jewelbox_random">
 	<!-- Double-click to select 1 of the following: Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Red/Blue Cat's Eye, Emerald Box (Lv. 1).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71437" name="Shining Jewel Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to get 1 of the following: Garnet, Jade, Ruby, Sapphire, Diamond, Pearl, Vital Stone.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71438" name="Jewel Coin" type="NONE" icon="BranchIcon.Icon.etc_premium_coin_i00">
 	<!-- Coin that gives you the power of jewels. Take it to Pona to exchange.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -547,154 +547,154 @@
 
 	<item id="71478" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a Standard Santa Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59349"/>
 	</item>
 
 	<item id="71479" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a High-grade Santa Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59350"/>
 	</item>
 
 	<item id="71480" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a Rare Santa Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59351"/>
 	</item>
 
 	<item id="71481" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a Legendary Santa Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59352"/>
 	</item>
 
 	<item id="71482" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a Mythic Santa Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59353"/>
 	</item>
 
 	<item id="71483" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a Standard School Uniform A Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59354"/>
 	</item>
 
 	<item id="71484" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a High-grade School Uniform A Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59355"/>
 	</item>
 
 	<item id="71485" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a Rare School Uniform A Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59356"/>
 	</item>
 
 	<item id="71486" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a Legendary School Uniform A Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59357"/>
 	</item>
 
 	<item id="71487" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a Mythic School Uniform A Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59358"/>
 	</item>
 
 	<item id="71488" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a Standard Beach Swimsuit Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59359"/>
 	</item>
 
 	<item id="71489" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a High-grade Beach Swimsuit Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59360"/>
 	</item>
 
 	<item id="71490" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a Rare Beach Swimsuit Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59361"/>
 	</item>
 
 	<item id="71491" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a Legendary Beach Swimsuit Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59362"/>
 	</item>
 
 	<item id="71492" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a Mythic Beach Swimsuit Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59363"/>
 	</item>
 
 	<item id="71493" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a Standard Teddy Bear Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59364"/>
 	</item>
 
 	<item id="71494" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a High-grade Teddy Bear Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59365"/>
 	</item>
 
 	<item id="71495" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a Rare Teddy Bear Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59366"/>
 	</item>
 
 	<item id="71496" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a Legendary Teddy Bear Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59367"/>
 	</item>
 
 	<item id="71497" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a Mythic Teddy Bear Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59368"/>
 	</item>
 
 	<item id="71498" name="Transformation Sealbook: Kitty Plushy" type="TRANSFORMATION_BOOK" icon="icon.sayha2017_cat">
 	<!-- Use it to obtain a Standard Kitty Plushy Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59369"/>
 	</item>
 
 	<item id="71499" name="Transformation Sealbook: Kitty Plushy" type="TRANSFORMATION_BOOK" icon="icon.sayha2017_cat">
 	<!-- Use it to obtain a High-grade Kitty Plushy Transformation.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59370"/>
 	</item>

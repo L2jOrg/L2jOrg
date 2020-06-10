@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="35741" name="Scroll: PK - Exchangeable" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 3. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="9504" value="-1"/>  <!-- Scroll: PK (Low-grade) -->
@@ -11,7 +11,7 @@
 
 	<item id="35752" name="Scroll: PK (Mid-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 3. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="9505" value="-1"/>  <!-- Scroll: PK (Mid-grade) -->
@@ -20,7 +20,7 @@
 
 	<item id="35753" name="Scroll: PK (High-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 5. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="9506" value="-1"/>  <!-- Scroll: PK (High-grade) -->
@@ -29,7 +29,7 @@
 
 	<item id="35754" name="Scroll: PK (Top-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 10. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
 		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="9507" value="-1"/>  <!-- Scroll: PK (Top-grade) -->

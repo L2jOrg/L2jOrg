@@ -44,48 +44,48 @@
 
 	<item id="70906" name="Stable Cloak Enchantment Scroll - Legendary" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +11-+15. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70907" name="Ancient Cloak (Legendary) Scroll Pack" type="SCROLL" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain 1 Scroll: Enchant Cloak - Legendary or a small chance to obtain 1 Stable Cloak Enchantment Scroll - Legendary. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70908" name="Ancient Kingdom's Coin" type="NONE" icon="icon.bm_nebit_coin">
 	<!-- A coin imbued with the mysterious power of the Ancient Kingdom. Exchange it for a special gift through the Store Manager. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70909" name="+10 Elmoreden Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70910" name="+10 Aden Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70911" name="+10 Elmore Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70912" name="+10 Ferios Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="70913" name="Fire Dragon Pendant - Lv. 5" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pve">
+	<armor id="70913" name="Fire Dragon Pendant - Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
 	<!-- A pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +5 Fire Dragon Pendant - Lv. 5.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
@@ -107,19 +107,19 @@
 
 	<item id="70915" name="Fire Dragon Pendant - Lv. 5 Chest +5" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain one +5 Fire Dragon Pendant - Lv. 5 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70916" name="Water Dragon Pendant - Lv. 5 Chest +5" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain one +5 Water Dragon Pendant - Lv. 5 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70917" name="Battle Box Lv. 1" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="51038" value="-1"/>  <!-- Battle Box Lv. 1 -->
@@ -128,7 +128,7 @@
 
 	<item id="70918" name="Battle Box Lv. 2" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="51039" value="-1"/>  <!-- Battle Box Lv. 2 -->
@@ -137,7 +137,7 @@
 
 	<item id="70919" name="Battle Box Lv. 3" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="51040" value="-1"/>  <!-- Battle Box Lv. 3 -->
@@ -146,7 +146,7 @@
 
 	<item id="70920" name="Battle Box Lv. 4" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="51041" value="-1"/>  <!-- Battle Box Lv. 4 -->
@@ -155,7 +155,7 @@
 
 	<item id="70921" name="Valor Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Reward for valor warriors. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -600,7 +600,7 @@
 
 	<item id="70999" name="Agathion - Love (7-day) Pack - Event" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Love (7-day) - Event.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 

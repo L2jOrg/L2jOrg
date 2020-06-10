@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="35669" name="Angel Cat's Blessing" type="POTION" icon="icon.skilltransform4">
 	<!-- For 60 minutes, Max. HP/MP + 5%, and XP/SP gain + 20% through hunting. Effect remains after death. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
-		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" reuse-delay="60000" duration="43200" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="9487" value="-1"/>  <!-- Angel Cat's Blessing -->

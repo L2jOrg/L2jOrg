@@ -2,189 +2,189 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="4000" name="Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_pole_fix_i00">
 	<!-- Oren/Spear/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4001" name="Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_bow_fix_i00">
 	<!-- Oren/Bow/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4002" name="Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_cleric_fix_i00">
 	<!-- Oren/Cleric/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4003" name="Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_wizard_fix_i00">
 	<!-- Oren/Wizard/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4004" name="Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_sword_move_i00">
 	<!-- Oren/Sword/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4005" name="Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_pole_move_i00">
 	<!-- Oren/Spear/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4006" name="Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_bow_move_i00">
 	<!-- Oren/Bow/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4007" name="Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_cleric_move_i00">
 	<!-- Oren/Cleric/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4008" name="Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_wizard_move_i00">
 	<!-- Oren/Wizard/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4009" name="Mercenary Posting Ticket (Teleporter1)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4010" name="Mercenary Posting Ticket (Teleporter2)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4011" name="Mercenary Posting Ticket (Teleporter3)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Oren, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4012" name="Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_sword_fix_i00">
 	<!-- Aden/Sword/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4013" name="Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_pole_fix_i00">
 	<!-- Aden/Spear/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4014" name="Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_bow_fix_i00">
 	<!-- Aden/Bow/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4015" name="Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_cleric_fix_i00">
 	<!-- Aden/Cleric/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4016" name="Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_wizard_fix_i00">
 	<!-- Aden/Wizard/Stationary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4017" name="Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_sword_move_i00">
 	<!-- Aden/Sword/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="20000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4018" name="Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_pole_move_i00">
 	<!-- Aden/Spear/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="30000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4019" name="Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_bow_move_i00">
 	<!-- Aden/Bow/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="40000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4020" name="Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_cleric_move_i00">
 	<!-- Aden/Cleric/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4021" name="Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_wizard_move_i00">
 	<!-- Aden/Wizard/Mobile. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4022" name="Mercenary Posting Ticket (Teleporter1)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the East or West Gate of the inner castle, the halls or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4023" name="Mercenary Posting Ticket (Teleporter2)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East Gate of the inner castle, the halls or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4024" name="Mercenary Posting Ticket (Teleporter3)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the West Gate of the inner castle, the halls or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4025" name="Mercenary Posting Ticket (Teleporter4)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East or West Gate of the inner castle, or the guardian's location. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="4026" name="Mercenary Posting Ticket (Teleporter5)" type="CASTLE_GUARD" icon="icon.mticket_teleporter_fix_i00">
 	<!-- Placed in Aden, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East or West Gate of the inner castle, or the halls. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="500000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
@@ -221,413 +221,413 @@
 	</weapon>
 
 	<item id="4029" name="Red Paper" type="NONE" icon="icon.etc_paper_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4030" name="Orange Paper" type="NONE" icon="icon.etc_paper_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4031" name="Yellow Paper" type="NONE" icon="icon.etc_paper_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4032" name="Green Paper" type="NONE" icon="icon.etc_paper_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4033" name="Blue Paper" type="NONE" icon="icon.etc_paper_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4034" name="Purple Paper" type="NONE" icon="icon.etc_paper_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4035" name="White Paper" type="NONE" icon="icon.etc_paper_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4036" name="Black Paper" type="NONE" icon="icon.etc_paper_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4037" name="Coin of Luck" type="NONE" icon="icon.etc_coins_gold_i00">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 
 	<item id="4039" name="Mold Glue" type="MATERIAL" icon="icon.etc_reagent_red_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="6000" immediate-effect="true"/>
 	</item>
 
 	<item id="4040" name="Mold Lubricant" type="MATERIAL" icon="icon.etc_reagent_gold_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="10000" immediate-effect="true"/>
 	</item>
 
 	<item id="4041" name="Mold Hardener" type="MATERIAL" icon="icon.etc_reagent_blue_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="23000" immediate-effect="true"/>
 	</item>
 
 	<item id="4042" name="Enria" type="MATERIAL" icon="icon.etc_gem_red_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="12000" immediate-effect="true"/>
 	</item>
 
 	<item id="4043" name="Asofe" type="MATERIAL" icon="icon.etc_gem_blue_i00">
 	<!-- Crystal representing life and protection. It is used for making elixirs. Can also be sold at a general store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="6000" immediate-effect="true"/>
 	</item>
 
 	<item id="4044" name="Thons" type="MATERIAL" icon="icon.etc_gem_clear_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="6000" immediate-effect="true"/>
 	</item>
 
 	<item id="4045" name="Maestro Holder" type="MATERIAL" icon="icon.etc_lump_yellow_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="411000" immediate-effect="true"/>
 	</item>
 
 	<item id="4046" name="Maestro Anvil Lock" type="MATERIAL" icon="icon.etc_lump_dark_gray_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="90400" immediate-effect="true"/>
 	</item>
 
 	<item id="4047" name="Craftsman Mold" type="MATERIAL" icon="icon.etc_mold_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="710000" immediate-effect="true"/>
 	</item>
 
 	<item id="4048" name="Maestro Mold" type="MATERIAL" icon="icon.etc_silver_mold_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="154000" immediate-effect="true"/>
 	</item>
 
 	<item id="4049" name="Adamantite Earring Gemstone" type="MATERIAL" icon="icon.etc_crystal_ball_gold_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make admantite earrings. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3813" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4050" name="Adamantite Ring Wire" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make admantite ring. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3228" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4051" name="Adamantite Necklace Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make admantite necklace. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5157" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4052" name="Black Ore Earring Piece" type="MATERIAL" icon="icon.etc_broken_crystal_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Black Ore Earring. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5649" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4053" name="Black Ore Ring Gemstone" type="MATERIAL" icon="icon.etc_gem_black_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Black Ore Ring. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4666" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4054" name="Black Ore Necklace Beads" type="MATERIAL" icon="BranchSys2.icon.etc_blackorenecklace_beads_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Black Ore Necklace. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="10154" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4055" name="Compound Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Compound Shield. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3120" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4056" name="Zubei's Breastplate Part" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Zubei's Breastplate. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="11050" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4057" name="Zubei's Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Zubei's Gaiters. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="7150" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4058" name="Implosion Boot Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Implosion Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4059" name="Boots of Silence Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make silent Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4060" name="Guardian's Boot Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make guardian Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4061" name="Paradia Boot Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Paradia Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4062" name="Elemental Boot Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Elemental Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4063" name="Boots of Grace Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make grace Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4064" name="Avadon Breastplate Part" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make an Avadon Breastplate. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="11050" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4065" name="Avadon Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Avadon Gaiters. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="7150" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4066" name="Zubei's Leather Shirt Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Zubei's Leather Shirt. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="8483" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4067" name="Zubei's Leather Gaiter Texture" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Zubei's Leather Gaiters. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5587" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4068" name="Avadon Leather Armor Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Avadon Leather Armor. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="11042" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4069" name="Tunic of Zubei Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Tunic of Zubei. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="8483" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4070" name="Stockings of Zubei Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Stockings of Zubei. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5587" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4071" name="Avadon Robe Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Avadon Robe. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="11042" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4072" name="Sealed Avadon Circlet Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Sealed Avadon Circlet. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4453" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4073" name="Sealed Avadon Glove Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Avadon Gloves. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4074" name="Chain Gloves of Silence Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Chain Gloves of Silence. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4075" name="Guardian's Glove Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Main ingredient definitely required for a Dwarf to Guardian's Gloves. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4076" name="Gloves of Blessing Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Gloves of Blessing. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4077" name="Doom Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Doom Shield. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4446" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4078" name="Blue Wolf Breastplate Part" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Breastplate. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="13692" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4079" name="Boots of Blessing Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Boots of Blessing. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4080" name="Blue Wolf Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Gaiters. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="9723" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4081" name="Doom Plate Armor Temper" type="MATERIAL" icon="icon.etc_lump_white_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Doom Plate Armor. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="20292" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4082" name="Blue Wolf Leather Armor Texture" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Leather Armor. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="17700" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4083" name="Leather Armor of Doom Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Leather Armor of Doom. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="17700" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4084" name="Blue Wolf Tunic Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Tunic. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="11508" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4085" name="Tunic of Doom Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Tunic of Doom. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="11508" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4086" name="Blue Wolf Stocking Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Stockings. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="8523" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4087" name="Stockings of Doom Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Stockings of Doom. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="8523" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4088" name="Sealed Blue Wolf Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Sealed Blue Wolf Helmet. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5292" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4089" name="Sealed Doom Helmet Design" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Sealed Doom Helmet. Can be sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="5292" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4090" name="Sealed Blue Wolf Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4091" name="Sealed Doom Glove Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Doom Gloves. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4092" name="Elemental Glove Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Elemental Gloves. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4093" name="Gloves of Grace Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Gloves of Grace. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4094" name="Implosion Gauntlet Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Implosion Gauntlets. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4095" name="Paradia Glove Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Paradia Gloves. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4096" name="Sealed Blue Wolf Glove Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Gloves. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4097" name="Sealed Zubei's Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Zubei's Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4098" name="Sealed Avadon Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Avadon Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="4099" name="Sealed Doom Boot Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
 	<!-- Main ingredient definitely required for a Dwarf to make Doom Boots. Can also be sold at ordinary shops. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="4455" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 

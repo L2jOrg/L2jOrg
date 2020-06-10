@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="8487" name="Recipe: Destroyer Hammer (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- This technology for manufacturing a Destroyer Hammer can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="73200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>

@@ -261,7 +261,7 @@
 
 	<item id="17" name="Wooden Arrow" type="ARROW" icon="icon.etc_wooden_quiver_i00">
 	<!-- Arrow made of wood. It is an arrow used for a No-grade bow. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="6" price="2" immediate-effect="true" action="EQUIP"/>
 		<crystal/>
 	</item>
@@ -579,7 +579,7 @@
 	</armor>
 
 	<item id="57" name="Adena" type="NONE" icon="icon.etc_adena_i00">
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 

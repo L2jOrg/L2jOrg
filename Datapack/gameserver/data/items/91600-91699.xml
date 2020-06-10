@@ -16,25 +16,25 @@
 
 	<item id="91602" name="Sealed Doll of Border - Frintezza" type="NONE" icon="icon.bm_doll_frintessa_30d">
 	<!-- Double-click to obtain Doll of Border - Frintezza (30-day). Can be upgraded to Lv. 1 through Veruti in the Town of Giran. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91603" name="Doll of Border - Frintezza" type="RUNE" icon="icon.bm_doll_frintessa_30d">
 	<!-- <Frintezza Doll's Spell>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nStun Atk. Rate +10%\nParalysis Atk. Rate +10%\n\n30-day. Boosts abilities with Frintezza Doll's Spell stored in the inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="91604" name="Frintezza Doll Lv. 1" type="RUNE" icon="icon.bm_doll_frintessa_30d">
 	<!-- <Frintezza Doll's Spell Lv. 1>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nStun Atk. Rate +10%\nParalysis Atk. Rate +10%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.\n\nCan be upgraded by combining. -->
-		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91605" name="Frintezza Doll Lv. 2" type="RUNE" icon="icon.bm_doll_frintessa_30d">
 	<!-- <Frintezza Doll's Spell Lv. 2>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nSpeed +5\nStun Atk. Rate +20%\nParalysis Atk. Rate +20%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.\n\nCan be upgraded by combining. -->
-		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -159,85 +159,85 @@
 
 	<item id="91623" name="Advanced Stable Agathion Enchant Scroll" type="ANCIENT_CRYSTAL_ENCHANT_AGATHION" icon="icon.guard_giantscrl_of_ench_ag">
 	<!-- An enchant scroll exclusive to Advanced Zodiac Agathion. Enchanting Agathion increases M. Def. Can enchant up to +10. Increases unique abilities gradually from +1. Even if enchantment fails, Agathion will not be destroyed and will retain the current enchant value. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91624" name="Agathion Gift Box" type="NONE" icon="icon.bm_gold_relic_box">
 	<!-- Double-click to obtain a S-grade item box, special item, consumable, Agathion enchantment material, or exchange coupon.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91625" name="S-grade Weapon Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain one of the S-grade weapons. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91626" name="S-grade Armor Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain one S-grade armor or accessory. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91627" name="+10 A-grade Armor Pack" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to obtain a +10 enchanted A-grade armor. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91628" name="+10 B-grade Armor Pack" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to obtain a +10 enchanted B-grade armor. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91629" name="+10 A-grade Accessory Pack" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click to obtain +10 enchanted A-grade accessory. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91630" name="+10 B-grade Accessory Pack" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click to obtain a +10 enchanted B-grade accessory. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91631" name="Material Coupon" type="NONE" icon="icon.etc_exchange_ticket_i02">
 	<!-- Can be exchanged to a high-grade material through the Store Manager.\n<Exchange Fee> Adena 2,500,000. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91632" name="Fire Dragon Soulstone" type="NONE" icon="icon.r99_soul_stone_i00">
 	<!-- Used to upgrade an Agathion to Advanced Zodiac Agathion imbued with Fire Dragon’s soul or to a Fire Dragon option. Can be used through NPC Pona in Town of Giran. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91633" name="Earth Dragon Soulstone" type="NONE" icon="icon.r99_soul_stone_i04">
 	<!-- Used to upgrade an Agathion to Advanced Zodiac Agathion imbued with Earth Dragon’s soul or to a Earth Dragon option. Can be used through NPC Pona in Town of Giran. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91634" name="Agathion Soulstone" type="NONE" icon="icon.r99_soul_stone_i05">
 	<!-- Used to upgrade Gemini Agathion to Advanced Zodiac Agathion. Can be used through NPC Pona in Town of Giran. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91635" name="Angler's Treasure Chest" type="NONE" icon="icon.etc_treasure_box_i08">
 	<!-- Double-click to obtain one of the following items at random: Fishing Shot, Soulshot Ticket, Weapon Exchange Ticket, and Shining Coin. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91636" name="Goldberg’s Room Key" type="NONE" icon="icon.etc_old_key_i02">
 	<!-- A shining key dropped by Goldberg’s steward. Take it to Sora in the Town of Aden to enter Goldberg’s Room. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
@@ -250,13 +250,13 @@
 
 	<item id="91638" name="Chronicle Cube" type="NONE" icon="icon.ev_15th_cube">
 	<!-- Can be used up to 15 times. Rewards 1 Gift when used. (Can be used only once a day) -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="91639" name="Rare Accessory Lv. 3 Box" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to obtain the following: Enhanced Queen Ant's Ring Lv. 3 (30-day), Enhanced Orfen's Earring Lv. 3 (30-day), Enhanced Ring of Core Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -269,7 +269,7 @@
 
 	<item id="91641" name="Enhanced Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Sayha's Grace Points +140,000. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39191" value="-1"/>  <!-- Enhanced Sayha's Blessing - Exchangeable -->
@@ -278,31 +278,31 @@
 
 	<item id="91642" name="15th Anniversary Gift Box" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to obtain one Codex Box, Dragon's Dye Box, Transformation Scroll (Song Dance), White Assassin Transformation Scroll, or Morale Bean Cake at random.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91643" name="Chronicle Box" type="NONE" icon="icon.new_user_box">
 	<!-- Double-click to obtain one consumable or refined rare accessory (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91644" name="Chronicle Cube’s Gift" type="NONE" icon="icon.etc_treasure_box_i11">
 	<!-- Double-click to obtain 1 Dandy's Home Run Ball and 1 Chronicle Box. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91645" name="15th Anniversary Mysterious Fork" type="NONE" icon="icon.ev_15th_foke">
 	<!-- Summons one number from 1 to 6 at random when used on the 15th Anniversary Cake. Used in the Cake Raid Events that take place everyday at 11:00 and 20:00.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91646" name="Escape - Loud Wolves" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Jackson in Talking Island Village. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51381" value="-1"/>  <!-- Scroll of Escape: Loud Wolves -->
@@ -311,7 +311,7 @@
 
 	<item id="91647" name="Escape - Troublemaker of Forest" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Herbiel in Elven Village. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51382" value="-1"/>  <!-- Scroll of Escape: Troublemaker of Forest -->
@@ -320,7 +320,7 @@
 
 	<item id="91648" name="Escape - Clean the Yard" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Vollodos in Dark Elf Village. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51383" value="-1"/>  <!-- Scroll of Escape: Clean the Yard -->
@@ -329,7 +329,7 @@
 
 	<item id="91649" name="Escape - Suspicious Men" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Uska in Orc Village. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51384" value="-1"/>  <!-- Scroll of Escape: Suspicious Men -->
@@ -338,7 +338,7 @@
 
 	<item id="91650" name="Escape - Disruptors" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Gerald in Dwarven Village. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51385" value="-1"/>  <!-- Scroll of Escape: Disruptors -->
@@ -347,7 +347,7 @@
 
 	<item id="91651" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51386" value="-1"/>  <!-- Scroll of Escape: Captain Bathis -->
@@ -356,19 +356,19 @@
 
 	<item id="91652" name="Big Spiderweb" type="NONE" icon="icon.etc_cobweb_i00">
 	<!-- Spiderweb made by big spiders. It is light and glossy. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="91653" name="Tarantula’s Venom Sac" type="NONE" icon="icon.etc_poison_pouch_i00">
 	<!-- Tarantula’s Venom Sac. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="91654" name="Mark of Journey Lv. 1" type="NONE" icon="icon.etc_crest_blue_i00">
 	<!-- A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 5% and MP Recovery Bonus by 10% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
-		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
 			<skill id="51387" value="-1"/>  <!-- Mark of Journey -->
@@ -377,7 +377,7 @@
 
 	<item id="91655" name="Mark of Journey Lv. 2" type="NONE" icon="icon.etc_crest_blue_i00">
 	<!-- A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 10% and MP Recovery Bonus by 15% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
-		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
 			<skill id="51387" level="2" value="-1"/>  <!-- Mark of Journey -->
@@ -386,7 +386,7 @@
 
 	<item id="91656" name="Mark of Journey Lv. 3" type="NONE" icon="icon.etc_crest_blue_i00">
 	<!-- A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 20% and MP Recovery Bonus by 15% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
-		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
 			<skill id="51387" level="3" value="-1"/>  <!-- Mark of Journey -->
@@ -395,7 +395,7 @@
 
 	<item id="91657" name="Mark of Journey Lv. 4" type="NONE" icon="icon.etc_crest_blue_i00">
 	<!-- A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 20% and MP Recovery Bonus by 25% when stored in the inventory. Double-click to see recommended hunting grounds for each level. -->
-		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 		<skill-reducer>
 			<skill id="51387" level="4" value="-1"/>  <!-- Mark of Journey -->
@@ -404,19 +404,19 @@
 
 	<item id="91658" name="Chicken Lucky Box" type="NONE" icon="icon.ev_chicken_box_i01">
 	<!-- Chicken Lucky Box that can be obtained only in the Mysterious Aden Server. Double-click to obtain Shining Scroll of Mood Melody or Delicious Chicken.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91659" name="Delicious Chicken" type="NONE" icon="icon.ev_chicken_ticket_i01">
 	<!-- Delicious Chicken obtained from Chicken Lucky Box. It is a gifticon that can be exchanged for real chicken when sold to GM Store. However, only first 1,000 are accepted. If you get a Delicious Chicken item, sell it to GM Store as quickly as possible. GM Store is open in the Monster Race Track until 1,000 Delicious Chickens are exchanged. Delicious Chicken can be also sold to NPC Store for Adena.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes price="600000"/>
 	</item>
 
 	<item id="91660" name="Shining Scroll of Mood Melody - 1-hour" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 1 hour. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39298" value="-1"/>  <!-- Shining Moody’s Melody -->
@@ -425,7 +425,7 @@
 
 	<item id="91661" name="Shining Scroll of Mood Melody - 4-hour" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 4 hours. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="240" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="32298" value="-1"/>  <!-- TODO Skill not found -->
@@ -434,7 +434,7 @@
 
 	<item id="91662" name="Shining Scroll of Mood Melody - 8-hour" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 8 hours. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="480" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="32298" value="-1"/>  <!-- TODO Skill not found -->
@@ -443,13 +443,13 @@
 
 	<item id="91663" name="L2 Coin" type="NONE" icon="icon.bm_lcoin_i00">
 	<!-- Used to buy various items at the L2 Coin Shop. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="1"/>
 	</item>
 
 	<item id="91664" name="Scroll: 10,000 SP" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- A scroll that recharges 10,000 SP. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51396" value="-1"/>  <!-- Scroll: 10,000 SP -->
@@ -458,7 +458,7 @@
 
 	<item id="91665" name="Scroll: 100,000 SP" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- A scroll that recharges 100,000 SP. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="51397" value="-1"/>  <!-- Scroll: 100,000 SP -->
@@ -467,7 +467,7 @@
 
 	<item id="91666" name="Sayha's Storm Lv. 1" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +100% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="51398" value="-1"/>  <!-- Sayha's Storm Lv. 1 - Event -->
@@ -483,31 +483,31 @@
 
 	<item id="91668" name="Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
 	<!-- <Magic Lamp 1st Place Reward>\nRecharges 100,000,000 XP and 2,700,000 SP. Take it to the Store Manager to exchange for a Red Arc that can be shared within the account. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91669" name="Purple Arc" type="SCROLL" icon="icon.r99_soul_stone_i05">
 	<!-- <Magic Lamp 2nd Place Reward>\nRecharges 30,000,000 XP and 810,000 SP. Take it to the Store Manager to exchange for a Purple Arc that can be shared within the account. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91670" name="Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
 	<!-- <Magic Lamp 3rd Place Reward>\nRecharges 10,000,000 XP and 270,000 SP. Take it to the Store Manager to exchange for a Blue Arc that can be shared within the account. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91671" name="Green Arc" type="SCROLL" icon="icon.r99_soul_stone_i04">
 	<!-- <Magic Lamp 4th Place Reward>\nRecharges 5,000,000 XP and 135,000 SP. Take it to the Store Manager to exchange for a Green Arc that can be shared within the account. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91672" name="Lucky Adena Box" type="NONE" icon="icon.bm_nebit_present">
 	<!-- Double-click to obtain a certain amount of Adena at random. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -650,61 +650,61 @@
 
 	<item id="91681" name="Great Spear Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
 	<!-- 30-day item. A charm imbued with Enchanted Great Spear Power.\n\n<Active Skill> Enchanted Great Spear Power: Double-click to obtain Top-grade +8 to +16 Enchanted Glaive (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91682" name="Falchion Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
 	<!-- 30-day item. A charm imbued with Enchanted Falchion Power.\n\n<Active Skill> Enchanted Falchion Power I: Double-click to obtain Top-grade +8 to +16 Enchanted Elven Long Sword (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\n Enchanted Falchion Power II: Double-click to obtain Top-grade +8 to +16 Enchanted Bastard*Crimson Sword (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91683" name="Iron Hammer Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
 	<!-- 30-day item. A charm imbued with Enchanted Iron Hammer Power.\n\n<Active Skill> Enchanted Iron Hammer Power: Double-click to obtain Top-grade +8 to +16 Enchanted Bonebreaker (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91684" name="Voodoo Doll Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
 	<!-- 30-day item. A charm imbued with Enchanted Voodoo Doll Power.\n\n<Active Skill> Enchanted Voodoo Doll Power: Double-click to obtain Top-grade +8 to +16 Enchanted Staff of Life (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91685" name="Flanged Mace Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
 	<!-- 30-day item. A charm imbued with Enchanted Flanged Mace Power.\n\n<Active Skill> Enchanted Flanged Mace Power: Double-click to obtain Top-grade +8 to +16 Enchanted Claymore (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91686" name="Sword Breaker Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
 	<!-- 30-day item. A charm imbued with Enchanted Sword Breaker Power.\n\n<Active Skill> Enchanted Sword Breaker Power: Double-click to obtain Top-grade +8 to +16 Enchanted Mithril Dagger (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91687" name="Viper Fang Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
 	<!-- 30-day item. A talisman imbued with Enchanted Viper Fang Power.\n\n<Active Skill> Enchanted Viper Fang Power: Double-click to obtain Top-grade +8 to +16 Enchanted Scallop Jamadhr (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91688" name="Compound Bow Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
 	<!-- 30-day item. A talisman imbued with Enchanted Compound Bow Power.\n\n<Active Skill> Enchanted Compound Bow Power: Double-click to obtain Top-grade +8 to +16 Enchanted Light Crossbow (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91689" name="Advanced Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- A magic scroll that quickly teleports you to the nearest village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91690" name="Special HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="HEALING"/>
 		<skill-reducer>
 			<skill id="39123" value="-1"/>  <!-- Special HP Potion -->
@@ -713,55 +713,55 @@
 
 	<item id="91691" name="Maliss's MP Recovery Potion" type="POTION" icon="icon.freya_potion">
 	<!-- An item that instantly recovers MP. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91692" name="Blessing of Abundance - 100% (Event)" type="RUNE" icon="icon.aden_bless_rune_i01">
 	<!-- 3-day item. L2 Coin Gain +100% during hunting. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91693" name="Blessing of Abundance - 100%" type="RUNE" icon="icon.aden_bless_rune_i02">
 	<!-- 1-day item. L2 Coin Gain +100% during hunting, XP/SP Gain +10%, Sayha's Grace Consumption -20%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91694" name="Blessing of Abundance - 100%" type="RUNE" icon="icon.aden_bless_rune_i02">
 	<!-- 30-day item. L2 Coin Gain +100% during hunting, XP/SP Gain +10%, Sayha's Grace Consumption -20%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91695" name="Aden Warrior's Mark" type="NONE" icon="icon.bm_royal_gold_ticket_all">
 	<!-- Aden Warrior's Mark. Take it to Store NPC to receive fund. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes price="1000000"/>
 	</item>
 
 	<item id="91696" name="Abundant Treasure Chest" type="NONE" icon="icon.bm_gold_lure_box">
 	<!-- Double-click to obtain one of the following items with a certain chance: enchant scrolls, consumables, or rare items, such as +16 B-grade Weapon Pack, Queen Ant's Ring, Orfen's Earring, Ring of Core, or Baium's Ring.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91697" name="+7 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
 	<!-- Double-click to obtain +7 Enchanted Samurai Long Sword. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91698" name="+7 Demon's Staff Pack" type="NONE" icon="icon.weapon_demons_staff_i00">
 	<!-- Double-click to obtain +7 Enchanted Demon's Staff. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91699" name="+7 Mace of Underworld Pack" type="NONE" icon="icon.weapon_mace_of_underworld_i00">
 	<!-- Double-click to obtain +7 Enchanted Mace of Underworld. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 

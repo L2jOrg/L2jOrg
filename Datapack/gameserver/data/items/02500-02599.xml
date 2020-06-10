@@ -96,13 +96,13 @@
 	</weapon>
 
 	<item id="2508" name="Cursed Bone" type="MATERIAL" icon="icon.etc_piece_bone_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="1" price="240" immediate-effect="true"/>
 	</item>
 
 	<item id="2509" name="Spiritshot (No-grade)" type="NONE" icon="icon.etc_spell_shot_white_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a No-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="4" price="15" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2047" value="-1"/>  <!-- Spiritshot (No-grade) -->
@@ -111,7 +111,7 @@
 
 	<item id="2510" name="Spiritshot (D-grade)" type="NONE" icon="icon.etc_spell_shot_blue_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="4" price="18" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2155" value="-1"/>  <!-- Spiritshot (D-grade) -->
@@ -120,7 +120,7 @@
 
 	<item id="2511" name="Spiritshot (C-grade)" type="NONE" icon="icon.etc_spell_shot_green_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="35" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2156" value="-1"/>  <!-- Spiritshot (C-grade) -->
@@ -129,7 +129,7 @@
 
 	<item id="2512" name="Spiritshot (B-grade)" type="NONE" icon="icon.etc_spell_shot_red_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="100" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2157" value="-1"/>  <!-- Spiritshot (B-grade) -->
@@ -138,7 +138,7 @@
 
 	<item id="2513" name="Spiritshot (A-grade)" type="NONE" icon="icon.etc_spell_shot_silver_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a A-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="1" price="120" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2158" value="-1"/>  <!-- Spiritshot (A-grade) -->
@@ -147,7 +147,7 @@
 
 	<item id="2514" name="Spiritshot (S-grade)" type="NONE" icon="icon.etc_spell_shot_gold_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to spontaneously increase. Used with an S-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="1" price="150" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2159" value="-1"/>  <!-- Spiritshot (S-grade) -->

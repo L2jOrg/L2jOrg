@@ -16,80 +16,80 @@
 
 	<item id="93302" name="Scroll: Enchant Cloak of Protection" type="ENCHANT_ARMOR" icon="icon.etc_kalie_hero_scroll">
 	<!-- Enchant scroll for Cloak of Protection. Can enchant up to +10. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93303" name="Cloak of Protection Pack" type="NONE" icon="icon.bm_2018_sayha_cloak_back_i01">
 	<!-- Double-click to obtain a +0 Cloak of Protection. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93304" name="Einhasad’s Pendant Pack Lv. 1" type="NONE" icon="BranchIcon.Icon.bm_pendant_pve_white">
 	<!-- Double-click to obtain Einhasad Pendant Lv. 1. The item obtained cannot be traded. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93305" name="Einhasad’s Pendant Pack Lv. 2" type="NONE" icon="BranchIcon.Icon.bm_pendant_pve_white">
 	<!-- Double-click to obtain 2 of Einhasad Pendant Lv. 2. The items obtained cannot be traded. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93306" name="Einhasad’s Pendant Pack Lv. 3" type="NONE" icon="BranchIcon.Icon.bm_pendant_pve_white">
 	<!-- Double-click to obtain 2 of Einhasad Pendant Lv. 3. The items obtained cannot be traded. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93307" name="Einhasad’s Pendant Pack Lv. 4" type="NONE" icon="BranchIcon.Icon.bm_pendant_pve_white">
 	<!-- Double-click to obtain 2 of Einhasad Pendant Lv. 4. The items obtained cannot be traded. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93308" name="Einhasad’s Pendant Pack Lv. 5" type="NONE" icon="BranchIcon.Icon.bm_pendant_pve_white">
 	<!-- Double-click to obtain 2 of Einhasad Pendant Lv. 5. The items obtained cannot be traded. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93309" name="Little Pig Coin Bank Lv. 1" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig’s coin bank. Double-click to obtain 1 of the following: Talisman - Speed, Primeval Garden Time Recharge Stone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93310" name="Little Pig Coin Bank Lv. 2" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig’s coin bank containing the Little Pig’s coins. Double-click to obtain 1 of the following: Talisman - Speed, Random Crafting 1 Time Recharge Stone, Cloth Piece. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93311" name="Little Pig Coin Bank Lv. 3" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig’s precious coin bank. Double-click to obtain 1 of the following: Talisman - Speed, Random Crafting 1 Time Recharge Stone, Cloth Piece. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93312" name="Little Pig Coin Bank Lv. 4" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig’s most valuable coin bank. Double-click to obtain 1 of the following: Talisman - Speed, Random Crafting 1 Time Recharge Stone, Cloth Piece. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93313" name="Little Pig Coin Bank Lv. 5" type="NONE" icon="icon.etc_piggy_bank">
 	<!-- Little Pig’s life, its coin bank. Double-click to obtain 1 of the following: Ziggo's Jewel, Talisman - Speed, Primeval Garden Time Recharge Stone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93314" name="Golden Pig Leaves" type="NONE" icon="icon.etc_leaf_gold_i00">
 	<!-- Leaves that fell from the Golden Pig. Sell it at the shop for a good amount. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="400"/>
 	</item>
 
@@ -123,74 +123,74 @@
 
 	<item id="93319" name="Escape - Quartermaster Mattehoren" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Quartermaster Mattehoren in the Death Knight Stronghold. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30"/>
 	</item>
 
 	<item id="93320" name="Ticket" type="MATERIAL" icon="icon.etc_blue_save_ticket">
 	<!-- Ticket that can be purchased from Judge LPD. The character with the most characters after the event will receive a reward. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="2"/>
 	</item>
 
 	<item id="93321" name="Rune of Vitality" type="RUNE" icon="icon.bm_freya_rune">
 	<!-- 1-day. Sayha's Grace is maintained if kept in the inventory. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93322" name="Pa’agrio's Treasure Chest" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Double-click to obtain 1 of the following: Venir's Talisman Lv. 24, Scroll of Purity, Scroll of Darkness, Gold Ticket, Black Ticket, Dragon's Special Elixir Lv. 1, Sayha's Blessing. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93323" name="Gold Ticket" type="MATERIAL" icon="icon.bm_royal_gold_ticket_all">
 	<!-- Golden shiny ticket. Collect the tickets to exchange for various items through the Store Manager. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93324" name="Black Ticket" type="MATERIAL" icon="icon.bm_royal_black_ticket_all">
 	<!-- Luxurious black ticket. Collect the tickets to exchange for various items through the Store Manager. -->
-		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93325" name="Seal of Giran Box" type="NONE" icon="icon.etc_treasure_box_i08">
 	<!-- Double-click to obtain 20 Seal of Giran. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93326" name="Blessed Scroll Box" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Blessed Scroll: Enchant Weapon and 1 Blessed Scroll: Enchant Armor. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93327" name="Freeze Armor Pack" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to obtain Freeze Breastplate or Freeze Gaiters. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93328" name="Goddard’s Treasure Chest" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to obtain 1-100 Seal of Giran. If you are lucky, you can also gain one of various items. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93329" name="Enchant Scroll: Talisman of Power" type="ENCHANT_ARMOR" icon="bm_power_talisman_scroll">
 	<!-- A scroll used to enchant Talisman of Power. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93330" name="Talisman of Power Enchant Package" type="NONE" icon="icon.bm_silver_lure_box">
 	<!-- A package used to upgrade Talisman of Power. Double-click to obtain 1 Talisman of Power and 10 Enchant Scroll: Talisman of Power. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -210,403 +210,403 @@
 
 	<item id="93333" name="+3 Talisman of Power" type="NONE" icon="icon.sayhas_talisman_new">
 	<!-- Double-click to obtain a +3 Talisman of Power. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93334" name="+4 Talisman of Power" type="NONE" icon="icon.sayhas_talisman_new">
 	<!-- Double-click to obtain a +4 Talisman of Power. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93335" name="Orc Barracks Special Teleport Scroll" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to special points inside the Orc Barracks. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5"/>
 	</item>
 
 	<item id="93336" name="Antharas' Lair Internal Teleport Scroll" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to various points inside Antharas' Lair. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5"/>
 	</item>
 
 	<item id="93337" name="Seal of Giran 100-unit Pack" type="NONE" icon="icon.bm_gold_lure_box">
 	<!-- Double-click to obtain 100 Seal of Giran. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93338" name="High-grade Red Arc" type="SCROLL" icon="icon.ensoul_big_pp">
 	<!-- <Greater Magic Lamp 1st Place Reward>\nRecharges 1,200,000,000 XP and 32,400,000 SP. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93339" name="High-grade Purple Arc" type="SCROLL" icon="icon.ensoul_big_pm">
 	<!-- <Greater Magic Lamp 2nd Place Reward>\nRecharges 360,000,000 XP and 9,720,000 SP. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93340" name="High-grade Blue Arc" type="SCROLL" icon="icon.ensoul_big_m">
 	<!-- <Greater Magic Lamp 3rd Place Reward>\nRecharges 120,000,000 XP and 3,240,000 SP. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93341" name="High-grade Green Arc" type="SCROLL" icon="icon.ensoul_big_ep">
 	<!-- <Greater Magic Lamp 4th Place Reward>\nRecharges 60,000,000 XP and 1,620,000 SP. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93342" name="Activated High-grade Red Arc" type="SCROLL" icon="icon.ensoul_big_pp">
 	<!-- <Greater Magic Lamp 1st Place Reward>\nActivated Arc. Recharges 1,200,000,000 XP and 32,400,000 SP.\nCan’t be shared with characters higher than your own level. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93343" name="Activated High-grade Purple Arc" type="SCROLL" icon="icon.ensoul_big_pm">
 	<!-- <Greater Magic Lamp 2nd Place Reward>\nActivated Arc. Recharges 360,000,000 XP and 9,720,000 SP.\nCan’t be shared with characters higher than your own level. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93344" name="Activated High-grade Blue Arc" type="SCROLL" icon="icon.ensoul_big_m">
 	<!-- <Greater Magic Lamp 3rd Place Reward>\nActivated Arc. Recharges 120,000,000 XP and 3,240,000 SP.\nCan’t be shared with characters higher than your own level. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93345" name="Activated High-grade Green Arc" type="SCROLL" icon="icon.ensoul_big_ep">
 	<!-- <Greater Magic Lamp 4th Place Reward>\nActivated Arc. Recharges 60,000,000 XP and 1,620,000 SP.\nCan’t be shared with characters higher than your own level. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93346" name="Deton’s Request Lv. 1" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Plains of the Lizardmen and Dragon Valley. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93347" name="Deton’s Request Lv. 2" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Plains of the Lizardmen and Dragon Valley. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93348" name="Deton’s Request Lv. 3" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Dragon Valley. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93349" name="Deton’s Request Lv. 4" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Dragon Valley and the Tower of Insolence. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93350" name="Deton’s Request Lv. 5" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Dragon Valley and the Tower of Insolence. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93351" name="Deton’s Request Lv. 6" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Tower of Insolence. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93352" name="Deton’s Request Lv. 7" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Tower of Insolence. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93353" name="Deton’s Request Lv. 8" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Tower of Insolence. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93354" name="Deton’s Request Lv. 9" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Tower of Insolence. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93355" name="Deton’s Request Lv. 10" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- A request to eliminate monsters in the Tower of Insolence. Characters of level 70 or higher can receive the request by double-clicking the item. -->
-		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" quest-item="true"/>
 	</item>
 
 	<item id="93356" name="Deton’s Box Lv. 1" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 2 Pack, Sayha's Blessing, Battle Scroll. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93357" name="Deton’s Box Lv. 2" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 3 Pack, Sayha's Blessing, Battle Scroll. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93358" name="Deton’s Box Lv. 3" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 4 Pack, Primeval Isle Time Recharge Stone, Sayha's Blessing. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93359" name="Deton’s Box Lv. 4" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 5 Pack, Primeval Garden Time Recharge Stone, Primeval Isle Time Recharge Stone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93360" name="Deton’s Box Lv. 5" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 6 Pack, Talisman - Speed, Venir's Talisman Lv. 2. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93361" name="Deton’s Box Lv. 6" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 7 Pack, +3 Speed Talisman Box, Venir's Talisman Lv. 3. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93362" name="Deton’s Box Lv. 7" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 8 Pack, +4 Speed Talisman Box, Venir's Talisman Lv. 4. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93363" name="Deton’s Box Lv. 8" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 9 Pack, +5 Speed Talisman Box, Venir's Talisman Lv. 6. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93364" name="Deton’s Box Lv. 9" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Deton’s Request Lv. 10 Pack, +6 Speed Talisman Box, Venir's Talisman Lv. 9. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93365" name="Deton’s Box Lv. 10" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain 1 of the following: Talisman of Baium, +7 Speed Talisman Box, Venir's Talisman Lv. 11. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93366" name="Summoning Stone" type="NONE" icon="icon.etc_earth_stone_i00">
 	<!-- Stone to summon Deton. Double-click to summon Deton. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93367" name="1000 Premium L2 Coin Box" type="NONE" icon="icon.bm_strongbox">
 	<!-- Double-click to obtain 1000 L2 Coins. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93368" name="Weapon Enchant Stone (A-grade) - Event" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_wp_stone_i00">
 	<!-- Enchant success rate +10% for standard weapon (A-grade) when using an Enchant Scroll. Only for items enchanted between +4 and +6. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93369" name="Armor Enchant Stone (A-grade) - Event" type="INC_PROP_ENCHANT_ARMOR" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +4 and +6. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93370" name="Scroll: Einhasad's Blessing - Event" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- When used, Hunting XP/SP Gain +50% for 20 minutes. Cooldown 1 minute. The effect remains active even after death.\n<Note> When Einhasad's Protection, Dandy's Home Run Ball/Golden Ball is used while Scroll: Einhasad's Blessing is applied, only the higher effect will be applied. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93371" name="Lv. 1 Lucky Buff Box" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain one of the following: Sayha's Buff Scroll, Soulshot Ticket, Battle Scroll, Scroll: Einhasad's Blessing. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93372" name="Lv. 2 Lucky Buff Box" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain one of the following: Sayha's Buff Scroll, Soulshot Ticket, Battle Scroll, Scroll: Einhasad's Blessing. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93373" name="Lv. 3 Lucky Buff Box" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain one of the following: A-grade Weapon Pack, Transcendence Dungeon Extra Pass, Primeval Garden Time Recharge Stone, Sayha's Buff Scroll, Soulshot Ticket, Battle Scroll, Scroll: Einhasad's Blessing. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93374" name="Cloak of Protection Package" type="NONE" icon="icon.bm_2018_sayha_cloak_back_i01">
 	<!-- Double-click to obtain 10 +0 Cloak of Protection.\n\nWhen enchanting the Cloak of Protection, depending on its level, Max HP/MP, XP/SP Gain, P. Def., M. Def., Critical Rate Reduction, Critical Damage Received Reduction, Bow Resistance, P./M. Critical Damage will increase. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93375" name="Ignis Agathion Package" type="NONE" icon="icon.agathion_fire_1">
 	<!-- Double-click to obtain 10 Ignis Agathions.\n\nWhen equipped with the Ignis Agathion, P. Atk. and M. Atk. increase, and starting from +5, Hold/Sleep/Paralysis Attack Rate increase. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93376" name="Nebula Agathion Package" type="NONE" icon="icon.agathion_water_1">
 	<!-- Double-click to obtain 10 Nebula Agathions.\n\nWhen equipped with the Nebula Agathion, P./M. Critical Rate increase, and starting from +5, Skill Cooldown decreases. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93377" name="Procella Agathion Package" type="NONE" icon="icon.agathion_wind_1">
 	<!-- Double-click to obtain 10 Procella Agathions.\n\nWhen equipped with the Procella Agathion, Atk. Spd and Casting Spd. increase, and starting from +5, MP Consumption decreases. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93378" name="Petram Agathion Package" type="NONE" icon="icon.agathion_earth_1">
 	<!-- Double-click to obtain 10 Petram Agathions.\n\nWhen equipped with the Petram Agathion, P. Def. and M. Def. increase, and starting from +5, Stun/Silence/Fear Attack Rate increase. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93379" name="Shiny Agathion Package" type="NONE" icon="icon.pleasure_agathion_i00">
 	<!-- Double-click to obtain 10 Shiny Agathions.\n\nWhen equipped with the Shiny Agathion, Sayha's Grace increases, and starting from +5, Max HP/MP/CP and XP/SP Gain increase. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93380" name="Dragon’s Belt Box 10-unit Package" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- Double-click to obtain 10 Dragon’s Belt Boxes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93381" name="Aden Talisman 10-unit Enchant Package" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain 10 Aden Talisman Enchant Packages. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93382" name="Eva's Talisman 10-unit Enchant Package" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain 10 Eva's Talisman Enchant Packages. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93383" name="Spellbook: Mount Nightmare" type="NONE" icon="icon.etc_spellbook_red_i00">
 	<!-- Allows you to learn Mount Nightmare. Required item for level 76 characters who have completed the 3rd class transfer to learn the skill. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93384" name="Spellbook: Burning Field" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Spellbook needed to learn Burning Field. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93385" name="Spellbook: Freezing Area" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!--  Spellbook needed to learn Freezing Area. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93386" name="Spellbook: Lightning Storm" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Spellbook needed to learn Lightning Storm. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93387" name="Spellbook - Jin Death Knight Transformation" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Spellbook needed to transform into Jin Death Knight. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93388" name="Spellbook: Death Guard" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!--  Spellbook needed to learn Death Guard. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93389" name="Spellbook: Call of Flames" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Call of Flames. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93390" name="Spellbook: Call of Freezing" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Call of Freezing. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93391" name="Spellbook: Call of Lightning" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Call of Lightning. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93392" name="Spellbook: Bone Prison" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Bone Prison. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93393" name="Strong Jewelry Box 10-unit Package" type="NONE" icon="icon.bm_2018_jewelbox_random">
 	<!-- Double-click to obtain 10 Strong Jewelry Boxes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93394" name="Blessed Weapon Enchant Stone (A-grade) - Event" type="INC_PROP_ENCHANT_ARMOR" icon="icon.bless_ench_wp_stone_i05">
 	<!-- Enchant success rate +10% for standard weapon (A-grade) when using a Blessed Enchant Scroll. Only for items enchanted between +4 and +6. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93395" name="Blessed Armor Enchant Stone (A-grade) - Event" type="INC_PROP_ENCHANT_ARMOR" icon="icon.bless_ench_amr_stone_i05">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using a Blessed Enchant Scroll. Only for items enchanted between +4 and +6. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93396" name="Deton’s Request Lv. 1 Pack" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- Double-click to obtain Deton’s Request Lv. 1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93397" name="Deton’s Request Lv. 2 Pack" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- Double-click to obtain Deton’s Request Lv. 2. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93398" name="Deton’s Request Lv. 3 Pack" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- Double-click to obtain Deton’s Request Lv. 3. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93399" name="Deton’s Request Lv. 4 Pack" type="NONE" icon="icon.alchemy_master_scroll">
 	<!-- Double-click to obtain Deton’s Request Lv. 4. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 

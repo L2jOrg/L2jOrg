@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="70800" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.etc_charm_of_courage_i00">
 	<!-- Transforms you into White Assassin for 30 minutes. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +20. The effect persists through death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55692" value="-1"/>  <!-- Transformation Scroll: White Assassin -->
@@ -11,7 +11,7 @@
 
 	<item id="70801" name="Blue Dynasty Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i01">
 	<!-- Makes you armor look like Blue Dynasty one. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +20. Duration: 60 minutes. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55693" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
@@ -20,7 +20,7 @@
 
 	<item id="70802" name="Red Zubei Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i04">
 	<!-- Makes you armor look like Red Zubei one. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +10. Duration: 60 minutes. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55694" value="-1"/>  <!-- Red Zubei Transformation Scroll -->
@@ -29,19 +29,19 @@
 
 	<item id="70803" name="Transformation Support Cube" type="ELIXIR" icon="icon.cube_upgrade">
 	<!-- Double-click to get one of the Transformation Scrolls that remain active for one hour: Transformation Scroll: Pirate, Transformation Scroll: White Assassin, Transformation Scroll: Dark Assassin, Blue Dynasty Transformation Scroll, Red Zubei Transformation Scroll.\n<Note:> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 a.m. Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70804" name="Newbie Charm" type="RUNE" icon="BranchSys2.lcon.br_life_rune_i00">
 	<!-- A 5-day item. Increases XP and SP gain by +50% if stored in the inventory while hunting. Only for characters of level 39 and below. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="50" duration="7200"/>
 	</item>
 
 	<item id="70805" name="Kusto Lucky Enchant Pack" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to randomly obtain Scroll: Enchant Armor or Kusto's Special Alloy. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -59,26 +59,26 @@
 
 	<item id="70807" name="Crumbs of Penitence" type="NONE" icon="icon.etc_powder_white_i00">
 	<!-- Item that drops from monster if it is killed during the Hour of Penitence. Bring it to Dark Judge and lower your PC count. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="70808" name="Giant's Treasure Chest" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to receive one of the Giant's Treasures. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70809" name="Protection Scroll: Enchant Weapon (A-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70810" name="Protection Scroll: Enchant Armor (A-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
 	<!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. Can be safely enchanted to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. From +4, the enchanted armor's HP also increases according to the enchant level. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
@@ -155,61 +155,61 @@
 
 	<item id="70821" name="Red Cat's Eye Chest" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 1 Red Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70822" name="Lv. 3 Red Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 3 Red Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70823" name="Lv. 4 Red Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 4 Red Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70824" name="Lv. 5 Red Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 5 Red Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70825" name="Blue Cat's Eye Chest" type="NONE" icon="icon.bm_jewelbox_blue_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 1 Blue Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70826" name="Lv. 3 Blue Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_blue_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 3 Blue Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70827" name="Lv. 4 Blue Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_blue_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 4 Blue Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70828" name="Lv. 5 Blue Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_blue_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 5 Blue Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70829" name="Shining Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i01">
 	<!-- Double-click to obtain a Lv. 1 chest with one of these items: Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Red/Blue Cat's Eye.  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70830" name="Shining Ore" type="NONE" icon="icon.bm_piece_of_ensoul_stone">
 	<!-- Can be used for enhancing a Brooch, sealing jewels, or exchanged for a Shining Jewelry Box. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -228,55 +228,55 @@
 
 	<item id="70832" name="Red Cat's Eye Fortune Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 1-5 Red Cat's Eye. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70833" name="Blue Cat's Eye Fortune Box" type="NONE" icon="icon.bm_jewelbox_blue_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 1-5 Blue Cat's Eye. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70834" name="Shining Golden Bait" type="LURE" icon="icon.bm_gold_lure">
 	<!-- Fishing bait. Can be used to catch a Glowing Whale with a low probability of getting a Shining Golden Boot.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="70835" name="Shining Golden Boot" type="NONE" icon="icon.bm_gold_shose">
 	<!-- Double-click on the Shining Golden Boot to get one of its treasures.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70836" name="Glowing Whale" type="SCROLL" icon="icon.fish_huge_i15">
 	<!-- Double-click to obtain a Fishing Coin. If you are lucky, you will also get a Shining Golden Boot.  -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70837" name="Shining Golden Chest of Mermaid's Fishing Supplies" type="NONE" icon="icon.etc_treasure_box_i08">
 	<!-- Double-click to obtain the following items: Shining Golden Bait (180 pcs), Fishing Shot (180 pcs), Scroll of Escape to Giran Harbor/Gludin Harbor (5 of each).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70838" name="Chef's Fish Stew Box" type="NONE" icon="icon.bm_silver_lure_box">
 	<!-- Double-click to randomly receive one of the following items: Chef's Fish Stew - Victory/ Fire/ Water/ Wind. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70839" name="Shilen's Treasure Chest" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to receive one of Shilen's treasures. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70840" name="Personal Pack with Jewels Lv. 4" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to obtain Jade Lv. 4 (30 days), Vital Stone Lv. 4 (30 days),Garnet Lv. 4 (30 days).  -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -303,79 +303,79 @@
 
 	<item id="70844" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters.  Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="60"/>
 	</item>
 
 	<item id="70845" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70846" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 5-hour itemв. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters. Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\n  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="300"/>
 	</item>
 
 	<item id="70847" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70848" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters. Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="70849" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70850" name="Package: Irene' Hourglass (1 hour)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain Irene' Hourglass - 1 Hour.\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70851" name="High-grade Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
 	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%, while fishing. The remaining time decreases even when not playing.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="70852" name="Package: High-grade Fishing XP Growth Amulet (7 days)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to obtain High-grade Fishing XP Growth Amulet (7 days). Can be shared within account through Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70853" name="Expertise Rune (C-grade)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- 7-day item. When in inventory, gives Expertise C Skill. The remaining time decreases even when not playing.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="70854" name="Package: Expertise Rune (C-grade)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain Expertise Rune (C-grade) for 7 days. Can be shared within account through Dimensional Merchant. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70855" name="Rune of Feather" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- 7-day item. If stored in the inventory, increases the weight limit by 20%. The remaining time decreases even when not playing.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="70856" name="Package: Rune of Feather (7 days)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain Rune of Feather (7 days). Can be shared within account through Dimensional Merchant. -->
-		<restriction stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -388,7 +388,7 @@
 
 	<item id="70858" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP and SP bonus for 1 hour while hunting.\nIntended for Lv. 1 - 60 characters. Can be combined with XP/SP Runeeffect. Effect remains after death.\n  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55720" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
@@ -397,109 +397,109 @@
 
 	<item id="70859" name="Scroll: Summon Storm" type="NONE" icon="icon.scrl_of_storm">
 	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Intended for Lv. 40 - 51 characters. Storm Energy does not disappear after character's death. Can be combined with Irene' Hourglass and XP/SP Runeeffect.\n -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="70860" name="Name Change Ticket" type="NONE" icon="icon.etc_exchange_ticket_i01">
 	<!-- Put this item on the character that will receive the service, and send a support ticket on support. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70861" name="Gender Change Ticket" type="NONE" icon="icon.etc_exchange_ticket_i02">
 	<!-- Put this item on the character that will receive the service, and send a support ticket on support. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70862" name="Clan Name Change Ticket" type="NONE" icon="icon.etc_exchange_ticket_i01">
 	<!-- Put this item on the character that will receive the service, and send a support ticket on support. Clan leaders only! -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70863" name="Facelifting Potion - A" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70864" name="Facelifting Potion - B" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70865" name="Facelifting Potion - C" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70866" name="Dye Potion - A" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70867" name="Dye Potion - B" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70868" name="Dye Potion - C" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70869" name="Dye Potion - D" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70870" name="Hair Style Change Potion - A" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70871" name="Hair Style Change Potion - B" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70872" name="Hair Style Change Potion - C" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70873" name="Hair Style Change Potion - D" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70874" name="Hair Style Change Potion - E" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type E. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70875" name="Hair Style Change Potion - F" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type F. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70876" name="Hair Style Change Potion - G" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type G. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
@@ -589,64 +589,64 @@
 
 	<item id="70885" name="Scroll: Enchant Cloak" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted up to +10. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70886" name="Scroll: Enchant Cloak - Legendary" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +10, up to +20. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70887" name="Scroll: Ancient Cloak - Legendary" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +7, up to +20. Success rate is 10% better than normal Cloak Scrolls. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="70888" name="Legendary Scroll" type="NONE" icon="BranchIcon.icon.g_bm_cloak_legend_scroll">
 	<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Store Manager. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70889" name="Life Stone - Ancient Kingdom" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_normal">
 	<!-- Life Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70890" name="Life Stone - Elmoreden" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_elmoreden">
 	<!-- Legendary Life Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70891" name="Life Stone - Aden" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_aden">
 	<!-- Legendary Life Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70892" name="Life Stone - Elmore" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_elmore">
 	<!-- Legendary Life Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70893" name="Life Stone - Ferios" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_perios">
 	<!-- Legendary Life Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70894" name="Life Stone Pack - Legendary" type="SCROLL" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain 1 Life Stone - Elmoreden/Aden/Elmore/Ferios randomly. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -666,7 +666,7 @@
 
 	<item id="70897" name="Iron Gate Guild Treasure Chest" type="NONE" icon="icon.bm_freya_snowman_box">
 	<!-- Double-click to obtain one Iron Gate Guild treasure item. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 

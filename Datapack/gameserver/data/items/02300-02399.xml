@@ -2,406 +2,406 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="2300" name="Recipe: Scythe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Scythe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2301" name="Recipe: Battle Axe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Battle Axe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2302" name="Recipe: Silver Axe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a War Pick. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2303" name="Recipe: Skull Graver" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Skull Graver. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2304" name="Recipe: Heavy Doom Hammer" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Heavy Doom Hammer. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2305" name="Recipe: Crystal Staff" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Crystal Staff. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2306" name="Recipe: Stick of Faith" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Stick of Faith. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2307" name="Recipe: Heavy Doom Axe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Heavy Doom Axe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2308" name="Recipe: Cursed Dagger" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Cursed Dagger. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2309" name="Recipe: Needle Wolverine" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Wolverine Needle. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2310" name="Recipe: Dark Elven Dagger" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Dark Elven Dagger. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2311" name="Recipe: Chakram" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Chakram. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2312" name="Recipe: Crystallized Ice Bow" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Crystallized Ice Bow. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2313" name="Recipe: Orcish Glaive" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for an Orcish Glaive. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2314" name="Recipe: Body Slasher" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Body Slasher. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="45800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2315" name="Recipe: Shamshir" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Shamshir. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2316" name="Recipe: Katana" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Kanata. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2317" name="Recipe: Bec de Corbin" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Bec de Corbin. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2318" name="Recipe: Spirit Sword" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a spirit's sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2319" name="Recipe: Raid Sword" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Raid Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2320" name="Recipe: Cursed Staff" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Cursed Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2321" name="Recipe: Stiletto" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Stiletto. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2322" name="Recipe: Soulfire Dirk" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Soulfire Dirk. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2323" name="Recipe: Elemental Bow" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for an Elemental Bow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2324" name="Recipe: Noble Elven Bow" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a noble Elven Bow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2326" name="Recipe: Horn of Glory" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Horn of Glory. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2327" name="Recipe: Caliburs" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Caliburs. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2328" name="Recipe: Sword of Delusion" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Sword of Delusion. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2329" name="Recipe: Tsurugi" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Tsurugi. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2330" name="Recipe: Homunkulus' Sword" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Homunkulus' Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2331" name="Recipe: Poleaxe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Poleaxe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2332" name="Recipe: Ultimate Sword" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Ultimate Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2333" name="Recipe: Sword of Nightmare" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Sword of Nightmare. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2334" name="Recipe: Sword of Whispering Death" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Sword of Whispering Death. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2335" name="Recipe: War Axe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a War Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2336" name="Recipe: Nirvana Axe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Nirvana Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2337" name="Recipe: Stick of Eternity" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Stick of Eternity. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2338" name="Recipe: Paradia Staff" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Paradia Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2339" name="Recipe: Inferno Staff" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for an Inferno Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2340" name="Recipe: Pa'agrio Hammer" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Pa'agrio Hammer. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2341" name="Recipe: Sage's Staff" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Sage's Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2342" name="Recipe: Club of Nature" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Club of Nature. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2343" name="Recipe: Mace of Underworld" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Mace of Underworld. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2344" name="Recipe: Grace Dagger" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Grace Dagger. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2345" name="Recipe: Dark Screamer" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Dark Screamer. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2346" name="Recipe: Fisted Blade" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Fisted Blade. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2347" name="Recipe: Akat Longbow" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Akat Longbow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="86000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2350" name="Recipe: Pa'agrio Axe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Pa'agrio Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="95600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2351" name="Recipe: Scorpion" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Scorpion. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="95600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2352" name="Recipe: Widow Maker" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Widow Maker. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="95600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2353" name="Recipe: Samurai Long Sword" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Samurai Long Sword. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2354" name="Recipe: Deadman's Staff" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Deadman's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2355" name="Recipe: Ghoul's Staff" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Ghoul's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2356" name="Recipe: Demon's Staff" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Demon's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2357" name="Recipe: Crystal Dagger" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Crystal Dagger. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2358" name="Recipe: Great Pata" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Great Pata. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2359" name="Recipe: Eminence Bow" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for an Eminence Bow. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="2360" name="Recipe: Orcish Poleaxe" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for an Orcish Poleaxe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>

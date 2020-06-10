@@ -12,7 +12,7 @@
 
 	<item id="29601" name="Beginner's Package - Stage 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1667 Soulshots, 335 Blessed Spiritshots, 30 XP/SP Boost Scrolls (30%), Event Hair Accessory (30-day), Agathion - Singer & Dancer Pack (30-day), 50 Healing Potions, 30 Scrolls of Escape, 30 Wind Walk Potions, 30 Haste Potions, and a Beginner's Package - Stage 2. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="34603" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious No-grade Soulshot -->
@@ -30,7 +30,7 @@
 
 	<item id="29602" name="Beginner's Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 30 Full Buff Scrolls and a Beginner's Pack - Stage 3. Lv. 10 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29603" chance="100000000"/>  <!-- Beginner's Pack - Stage 3 -->
@@ -40,7 +40,7 @@
 
 	<item id="29603" name="Beginner's Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Timed Weapon Exchange Coupon (D-grade), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 4. Lv. 20 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29604" chance="100000000"/>  <!-- Beginner's Pack - Stage 4 -->
@@ -52,7 +52,7 @@
 
 	<item id="29604" name="Beginner's Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Magic Necklace Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 5. Lv. 25 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29529" chance="100000000"/>  <!-- Magic Necklace Crafting Pack -->
@@ -64,7 +64,7 @@
 
 	<item id="29605" name="Beginner's Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Elven Ring Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 6. Lv. 30 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29530" chance="100000000"/>  <!-- Tiger's Eye Crafting Pack -->
@@ -76,7 +76,7 @@
 
 	<item id="29606" name="Beginner's Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (40%), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 7. Lv. 35 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29649" min-count="10" max-count="10" chance="100000000"/>  <!-- Scroll: Mid-grade XP/SP Boost -->
@@ -88,7 +88,7 @@
 
 	<item id="29607" name="Beginner's Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get a Timed Weapon Exchange Coupon (C-grade). Lv. 40 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29609" chance="100000000"/>  <!-- Timed Weapon Exchange Coupon (C-grade) -->
@@ -97,13 +97,13 @@
 
 	<item id="29608" name="Timed Weapon Exchange Coupon (D-grade)" type="MATERIAL" icon="icon.etc_lottery_card_i00">
 	<!-- Exchange for a 30-day D-grade weapon through the Store Manager. Exchanged weapons cannot be enchanted. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29609" name="Timed Weapon Exchange Coupon (C-grade)" type="MATERIAL" icon="icon.etc_lottery_card_i00">
 	<!-- Exchange for a 30-day C-grade weapon through the Store Manager. Exchanged weapons cannot be enchanted. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -482,7 +482,7 @@
 
 	<item id="29632" name="Daily Gift - VIP 6" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i05">
 	<!-- Double-click to obtain the following: 1 Blessed Feather, 5 Major Healing Potions, and 100 VIP Coins. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="10649" chance="100000000"/>  <!-- Feather of Blessing -->
@@ -493,7 +493,7 @@
 
 	<item id="29633" name="Daily Gift - VIP 7" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain the following: 1 Blessed Scroll of Escape, 1 Blessed Feather, 3 Major Healing Potions, and 150 VIP Coins. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="1538" chance="100000000"/>  <!-- Blessed Scroll of Escape -->
@@ -505,7 +505,7 @@
 
 	<item id="29634" name="Beginner's Pack - Stage 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1667 Soulshots, 335 Blessed Spiritshot, 30 XP/SP Boost Scrolls (30%), 50 Healing Potions, 30 Scrolls of Escape, 30 Wind Walk Potions, 30 Haste Potions, and a Beginner's Pack - Stage 2. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29653" min-count="30" max-count="30" chance="100000000"/>  <!-- Haste Potion (Novice) -->
@@ -521,7 +521,7 @@
 
 	<item id="29635" name="Beginner's Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 30 Full Buff Scrolls and a Beginner's Pack - Stage 3. Lv. 10 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29654" min-count="30" max-count="30" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
@@ -531,7 +531,7 @@
 
 	<item id="29636" name="Beginner's Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Saber*Elven Sword (30-day), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 4. Lv. 20 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
@@ -543,7 +543,7 @@
 
 	<item id="29637" name="Beginner's Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 5. Lv. 25 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
@@ -554,7 +554,7 @@
 
 	<item id="29638" name="Beginner's Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 6. Lv. 30 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
@@ -565,7 +565,7 @@
 
 	<item id="29639" name="Beginner's Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (40%), 4500 Soulshots, 1000 Spiritshots, and a Beginner's Pack - Stage 7. Lv. 35 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
@@ -577,7 +577,7 @@
 
 	<item id="29640" name="Beginner's Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get 1 Black Samurai Long Sword (30-day). Lv. 40 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="49573" chance="100000000"/>  <!-- Samurai Black Long Sword -->
@@ -586,43 +586,43 @@
 
 	<item id="29641" name="Mysterious Soulshot (No-grade)" type="NONE" icon="BranchIcon.Icon.g_etc_soulshot_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a No-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29642" name="Mysterious Blessed Spiritshot (No-grade)" type="NONE" icon="BranchIcon.Icon.g_etc_spiritshot_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="29643" name="Mysterious Soulshot (D-grade)" type="NONE" icon="br_cashtex.item.br_cash_soulshot_d_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with a D-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29644" name="Mysterious Blessed Spiritshot (D-grade)" type="NONE" icon="br_cashtex.item.br_cash_spiritshot_d_i00">
 	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with D-grade weapons. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="29645" name="Mysterious Soulshot (C-grade)" type="NONE" icon="br_cashtex.item.br_cash_soulshot_c_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a C-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29646" name="Mysterious Blessed Spiritshot (C-grade)" type="NONE" icon="br_cashtex.item.br_cash_spiritshot_c_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with a C-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="29647" name="Scroll: Low-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" value="-1"/>  <!-- XP/SP Boost -->
@@ -631,7 +631,7 @@
 
 	<item id="29648" name="Scroll: Regular XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" value="-1"/>  <!-- XP/SP Boost -->
@@ -640,7 +640,7 @@
 
 	<item id="29649" name="Scroll: Mid-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 40% when hunting. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" level="2" value="-1"/>  <!-- XP/SP Boost -->
@@ -649,7 +649,7 @@
 
 	<item id="29650" name="Scroll: High-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 100% when hunting. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" level="4" value="-1"/>  <!-- XP/SP Boost -->
@@ -658,7 +658,7 @@
 
 	<item id="29651" name="Healing Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2031" value="-1"/>  <!-- HP Potion -->
@@ -667,7 +667,7 @@
 
 	<item id="29652" name="Major Healing Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2032" value="-1"/>  <!-- Greater HP Potion -->
@@ -676,7 +676,7 @@
 
 	<item id="29653" name="Haste Potion (Novice)" type="POTION" icon="icon.etc_reagent_green_i00">
 	<!-- Magical potion that increases Atk. Spd. -->
-		<restriction freightable="false" coc-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction coc-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2012" value="-1"/>  <!-- Haste Potion -->
@@ -685,7 +685,7 @@
 
 	<item id="29654" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i00">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55055" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
@@ -694,7 +694,7 @@
 
 	<item id="29655" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i01">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55056" level="2" value="-1"/>  <!-- 2nd Class Transfer Buff Scroll -->
@@ -703,7 +703,7 @@
 
 	<item id="29656" name="Intermediate Pack - Stage 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 2500 Soulshots, 500 Blessed Spiritshots, 30 Regular XP/SP Boost Scrolls, 1 Event Hair Accessory (30-day), 50 Quick Healing Potions, 30 Scrolls of Escape, 30 Wind Walk Potions, 30 Haste Potions, and an Intermediate Pack - Stage 2. Lv. 24 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29025" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
@@ -720,7 +720,7 @@
 
 	<item id="29657" name="Intermediate Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Timed Weapon Exchange Coupon (D-grade), and an Intermediate Pack - Stage 3. Lv. 25 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29643" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
@@ -730,7 +730,7 @@
 
 	<item id="29658" name="Intermediate Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following:  30 1st Class Transfer Buff Scrolls, and an Intermediate Pack - Stage 4. Lv. 28 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29654" min-count="30" max-count="30" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
@@ -740,7 +740,7 @@
 
 	<item id="29659" name="Intermediate Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Chronicles Box, 2250 Soulshots, 500 Blessed Spiritshots, and an Intermediate Pack - Stage 5. Lv. 30 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29693" chance="100000000"/>  <!-- Chronicle Box -->
@@ -752,7 +752,7 @@
 
 	<item id="29660" name="Intermediate Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Chronicles Box, 2250 Soulshots, 500 Blessed Spiritshots, 30 Scrolls of Escape, and an Intermediate Pack - Stage 6. Lv. 32 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29693" chance="100000000"/>  <!-- Chronicle Box -->
@@ -765,7 +765,7 @@
 
 	<item id="29661" name="Intermediate Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Chronicles Box, 2250 Soulshots, 500 Blessed Spiritshots, 50 Healing Potions, and an Intermediate Pack - Stage 7. Lv. 35 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29693" chance="100000000"/>  <!-- Chronicle Box -->
@@ -778,7 +778,7 @@
 
 	<item id="29662" name="Intermediate Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (Mid-grade), 2250 Soulshots, 500 Blessed Spiritshots, and an Intermediate Pack - Stage 8. Lv. 38 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29649" min-count="20" max-count="20" chance="100000000"/>  <!-- Scroll: Mid-grade XP/SP Boost -->
@@ -790,7 +790,7 @@
 
 	<item id="29663" name="Intermediate Pack - Stage 8" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain the following items: 9000 Soulshots, 2000 Blessed Spiritshot , C-grade Timed Weapon Coupon (1), Traveler's Package - Lvl 9. For characters of Lvl 40 and above. Cannot be traded/dropped/sold in a private store. Can be stored in a warehouse. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29027" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (C-grade) -->
@@ -802,7 +802,7 @@
 
 	<item id="29664" name="Intermediate Pack - Stage 9" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following:  3 Quick Healing Potions, 20 XP/SP Boost Scrolls (Mid-grade), 1 Chronicles Box, and an Intermediate Pack - Stage 10. Lv. 42 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29695" min-count="3" max-count="3" chance="100000000"/>  <!-- Quick Healing Potion -->
@@ -814,7 +814,7 @@
 
 	<item id="29665" name="Intermediate Pack - Stage 10" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (Mid-grade), 9000  Soulshots, 2000 Blessed Spiritshots, and an Intermediate Pack - Stage 11. Lv. 45 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29649" min-count="20" max-count="20" chance="100000000"/>  <!-- Scroll: Mid-grade XP/SP Boost -->
@@ -826,7 +826,7 @@
 
 	<item id="29666" name="Intermediate Pack - Stage 11" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain an Agathion - Griffin (30-day). Lv. 49 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29667" chance="100000000"/>  <!-- Agathion - Griffin -->
@@ -847,13 +847,13 @@
 
 	<item id="29668" name="Castle Clan Coin" type="NONE" icon="icon.etc_11th_token">
 	<!-- A special coin only for clan members of clans who have acquired a castle. It can be exchanged for various items while they are occupying the castle. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29669" name="Castle Scroll: Regular XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 35%. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55061" level="2" value="-1"/>  <!-- TODO Skill not found -->
@@ -862,7 +862,7 @@
 
 	<item id="29670" name="Castle Scroll: Mid-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 45%. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55062" level="2" value="-1"/>  <!-- TODO Skill not found -->
@@ -871,7 +871,7 @@
 
 	<item id="29671" name="Castle Quick Healing Potion" type="POTION" icon="icon.etc_potion_gold_i00">
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55063" value="-1"/>  <!-- Castle Quick Healing Potion -->
@@ -880,7 +880,7 @@
 
 	<item id="29672" name="Castle Greater Quick Healing Potion" type="POTION" icon="icon.etc_potion_gold_i00">
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55064" value="-1"/>  <!-- Castle Greater Quick Healing Potion -->
@@ -889,7 +889,7 @@
 
 	<item id="29673" name="Castle Scroll: Berserker Spirit" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- For 20 min., P. Atk. + 5%, M. Atk. + 10%, Atk. Spd. + 5%, Casting Spd. + 5%, and Speed + 5. P. Def. - 5%, M. Def. - 10%, and Evasion - 2. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55065" value="-1"/>  <!-- Castle Scroll: Berserker Spirit -->
@@ -898,7 +898,7 @@
 
 	<item id="29674" name="Castle Scroll: Death Whisper" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Critical Damage + 25% for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55066" value="-1"/>  <!-- Castle Scroll: Death Whisper -->
@@ -907,7 +907,7 @@
 
 	<item id="29675" name="Castle Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that relocates user to the nearest village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55067" value="-1"/>  <!-- Castle Blessed Scroll of Escape -->
@@ -916,7 +916,7 @@
 
 	<item id="29676" name="Scroll: Blessing of Castle" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Maintain's target's buff/de-buff condition even following death. The Nobless Blessing and the Amulet of Luck disappear, however. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55068" value="-1"/>  <!-- Scroll: Blessing of Castle -->
@@ -1007,7 +1007,7 @@
 
 	<item id="29683" name="Castle Clan Coin Box" type="NONE" icon="icon.etc_treasure_box_i08">
 	<!-- Double-click to obtain Clan Coins. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29668" chance="100000000"/>  <!-- Castle Clan Coin -->
@@ -1016,7 +1016,7 @@
 
 	<item id="29684" name="Scroll: Shield" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases P. Def. by 12% for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39015" value="-1"/>  <!-- Scroll: Shield -->
@@ -1025,7 +1025,7 @@
 
 	<item id="29685" name="Scroll: Might" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases P. Atk. By 12% for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39014" value="-1"/>  <!-- Scroll: Might -->
@@ -1034,7 +1034,7 @@
 
 	<item id="29686" name="Scroll: Concentration" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Decreases damage that is cancelled by magic by 25 for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55077" value="-1"/>  <!-- Concentration -->
@@ -1043,7 +1043,7 @@
 
 	<item id="29687" name="Scroll: Agility" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Evasion rate by 2 for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2055" value="-1"/>  <!-- Scroll: Agility -->
@@ -1052,7 +1052,7 @@
 
 	<item id="29688" name="Scroll: Regeneration" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases HP Recovery Rate by 10% for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="1044" value="-1"/>  <!-- Regeneration -->
@@ -1061,7 +1061,7 @@
 
 	<item id="29689" name="Scroll: Magic Barrier" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases M. Def. by 23% for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55080" value="-1"/>  <!-- Magic Barrier -->
@@ -1070,7 +1070,7 @@
 
 	<item id="29690" name="Scroll: Blessed Body" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Max HP by 10% for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55081" value="-1"/>  <!-- Blessed Body -->
@@ -1079,7 +1079,7 @@
 
 	<item id="29691" name="Scroll: Blessed Soul" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Max MP by 10% for 20 minutes. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="4395" value="-1"/>  <!-- Blessed Soul -->
@@ -1087,8 +1087,8 @@
 	</item>
 
 	<item id="29692" name="Box" type="NONE" icon="icon.ev_10th_present2">
-	<!-- Reward box for collecting all the letters. You can get weapon recipes and ingredients. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+	<!-- Reward box for collecting all the  letters. You can get weapon recipes and ingredients. -->
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55072" value="-1"/>  <!-- Box -->
@@ -1097,7 +1097,7 @@
 
 	<item id="29693" name="Chronicle Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Reward box for collecting all the Chronicle letters. You can get armor recipes or ingredients. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55073" value="-1"/>  <!-- Chronicle Box -->
@@ -1106,7 +1106,7 @@
 
 	<item id="29694" name="Memories Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Reward box for collecting all the Memories letters. You can get Morale Bean Cake, XP Boost Scroll, Blessed Scroll of Escape, Blessed Scroll of Resurrection, Buff Scrolls, or crafting ingredients. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55074" value="-1"/>  <!-- Memories Box -->
@@ -1115,7 +1115,7 @@
 
 	<item id="29695" name="Quick Healing Potion" type="POTION" icon="icon.etc_potion_gold_i00">
 	<!-- Magic potion that instantly restores a little HP. Instant effect with no duration. Cannot be used when HP is full. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55083" value="-1"/>  <!-- Quick Healing Potion -->
@@ -1124,7 +1124,7 @@
 
 	<item id="29696" name="Greater Quick Healing Potion" type="POTION" icon="icon.etc_potion_gold_i00">
 	<!-- Magic potion that instantly restores a lot of HP. Instant effect with no duration. Cannot be used when HP is full. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55084" value="-1"/>  <!-- Greater Quick Healing Potion -->
@@ -1133,7 +1133,7 @@
 
 	<item id="29697" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i00">
 	<!-- Bestows the following effects for 10 min.: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55085" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
@@ -1142,7 +1142,7 @@
 
 	<item id="29698" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i01">
 	<!-- Bestows the following effects for 10 min.: Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55086" level="2" value="-1"/>  <!-- 2nd Class Transfer Buff Scroll -->
@@ -1151,7 +1151,7 @@
 
 	<item id="29699" name="A Little Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that relocates you to the nearest village. Short casting time. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 

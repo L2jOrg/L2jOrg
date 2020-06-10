@@ -2,185 +2,185 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="4600" name="Greater Dye of WIT (Wit +2 Men -2)" type="DYE" icon="icon.etc_wit_hena_i02">
 	<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="60000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4601" name="Greater Dye of STR (STR +3 CON -3)" type="DYE" icon="icon.etc_str_hena_i02">
 	<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4602" name="Greater Dye of STR (STR +3 DEX -3)" type="DYE" icon="icon.etc_str_hena_i02">
 	<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4603" name="Greater Dye of CON (Con +3 Str -3)" type="DYE" icon="icon.etc_con_hena_i02">
 	<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4604" name="Greater Dye of CON (Con +3 DEX -3)" type="DYE" icon="icon.etc_con_hena_i02">
 	<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4605" name="Greater Dye of DEX (Dex +3 Str -3)" type="DYE" icon="icon.etc_dex_hena_i02">
 	<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4606" name="Greater Dye of DEX (Dex +3 CON -3)" type="DYE" icon="icon.etc_dex_hena_i02">
 	<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4607" name="Greater Dye of INT (Int +3 Men -3)" type="DYE" icon="icon.etc_int_hena_i02">
 	<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4608" name="Greater Dye of INT (Int +3 Wit -3)" type="DYE" icon="icon.etc_int_hena_i02">
 	<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4609" name="Greater Dye of MEN (Men +3 Int -3)" type="DYE" icon="icon.etc_men_hena_i02">
 	<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4610" name="Greater Dye of MEN (Men +3 Wit -3)" type="DYE" icon="icon.etc_men_hena_i02">
 	<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4611" name="Greater Dye of WIT (Wit +3 Int -3)" type="DYE" icon="icon.etc_wit_hena_i02">
 	<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4612" name="Greater Dye of WIT (Wit +3 Men -3)" type="DYE" icon="icon.etc_wit_hena_i02">
 	<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="90000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4613" name="Greater Dye of STR (STR +4 CON -4)" type="DYE" icon="icon.etc_str_hena_i02">
 	<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4614" name="Greater Dye of STR (STR +4 DEX -4)" type="DYE" icon="icon.etc_str_hena_i02">
 	<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4615" name="Greater Dye of CON (Con +4 Str -4)" type="DYE" icon="icon.etc_con_hena_i02">
 	<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4616" name="Greater Dye of CON (Con +4 DEX -4)" type="DYE" icon="icon.etc_con_hena_i02">
 	<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4617" name="Greater Dye of DEX (Dex +4 Str -4)" type="DYE" icon="icon.etc_dex_hena_i02">
 	<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4618" name="Greater Dye of DEX (Dex +4 CON -4)" type="DYE" icon="icon.etc_dex_hena_i02">
 	<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4619" name="Greater Dye of INT (Int +4 Men -4)" type="DYE" icon="icon.etc_int_hena_i02">
 	<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4620" name="Greater Dye of INT (Int +4 Wit -4)" type="DYE" icon="icon.etc_int_hena_i02">
 	<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4621" name="Greater Dye of MEN (Men +4 Int -4)" type="DYE" icon="icon.etc_men_hena_i02">
 	<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4622" name="Greater Dye of MEN (Men +4 Wit -4)" type="DYE" icon="icon.etc_men_hena_i02">
 	<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4623" name="Greater Dye of WIT (Wit +4 Int -4)" type="DYE" icon="icon.etc_wit_hena_i02">
 	<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4624" name="Greater Dye of WIT (Wit +4 Men -4)" type="DYE" icon="icon.etc_wit_hena_i02">
 	<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="150" price="145000" commission-type="DYES" immediate-effect="true"/>
 	</item>
 
 	<item id="4625" name="Dice (Heart)" type="NONE" icon="icon.etc_dice_a_i00">
 	<!-- Simple game of chance! Roll 'em!  -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction dropable="false"/>
 		<attributes price="500" reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 
 	<item id="4626" name="Dice (Spade)" type="NONE" icon="icon.etc_dice_b_i00">
 	<!-- Simple game of chance! Roll 'em!  -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction dropable="false"/>
 		<attributes price="500" reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 
 	<item id="4627" name="Dice (Clover)" type="NONE" icon="icon.etc_dice_c_i00">
 	<!-- Simple game of chance! Roll 'em!  -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction dropable="false"/>
 		<attributes price="500" reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 
 	<item id="4628" name="Dice (Diamond)" type="NONE" icon="icon.etc_dice_d_i00">
 	<!-- Simple game of chance! Roll 'em!  -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction dropable="false"/>
 		<attributes price="500" reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 
 	<item id="4630" name="Red Soul Crystal - Stage 1" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -189,7 +189,7 @@
 
 	<item id="4631" name="Red Soul Crystal - Stage 2" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -198,7 +198,7 @@
 
 	<item id="4632" name="Red Soul Crystal - Stage 3" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -207,7 +207,7 @@
 
 	<item id="4633" name="Red Soul Crystal - Stage 4" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -216,7 +216,7 @@
 
 	<item id="4634" name="Red Soul Crystal - Stage 5" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -225,7 +225,7 @@
 
 	<item id="4635" name="Red Soul Crystal - Stage 6" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -234,7 +234,7 @@
 
 	<item id="4636" name="Red Soul Crystal - Stage 7" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -243,7 +243,7 @@
 
 	<item id="4637" name="Red Soul Crystal - Stage 8" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -252,7 +252,7 @@
 
 	<item id="4638" name="Red Soul Crystal - Stage 9" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -261,7 +261,7 @@
 
 	<item id="4639" name="Red Soul Crystal - Stage 10" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -270,7 +270,7 @@
 
 	<item id="4641" name="Green Soul Crystal - Stage 1" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -279,7 +279,7 @@
 
 	<item id="4642" name="Green Soul Crystal - Stage 2" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -288,7 +288,7 @@
 
 	<item id="4643" name="Green Soul Crystal - Stage 3" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -297,7 +297,7 @@
 
 	<item id="4644" name="Green Soul Crystal - Stage 4" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -306,7 +306,7 @@
 
 	<item id="4645" name="Green Soul Crystal - Stage 5" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -315,7 +315,7 @@
 
 	<item id="4646" name="Green Soul Crystal - Stage 6" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -324,7 +324,7 @@
 
 	<item id="4647" name="Green Soul Crystal - Stage 7" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -333,7 +333,7 @@
 
 	<item id="4648" name="Green Soul Crystal - Stage 8" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -342,7 +342,7 @@
 
 	<item id="4649" name="Green Soul Crystal - Stage 9" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -351,7 +351,7 @@
 
 	<item id="4650" name="Green Soul Crystal - Stage 10" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -360,7 +360,7 @@
 
 	<item id="4652" name="Blue Soul Crystal - Stage 1" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -369,7 +369,7 @@
 
 	<item id="4653" name="Blue Soul Crystal - Stage 2" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -378,7 +378,7 @@
 
 	<item id="4654" name="Blue Soul Crystal - Stage 3" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -387,7 +387,7 @@
 
 	<item id="4655" name="Blue Soul Crystal - Stage 4" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -396,7 +396,7 @@
 
 	<item id="4656" name="Blue Soul Crystal - Stage 5" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -405,7 +405,7 @@
 
 	<item id="4657" name="Blue Soul Crystal - Stage 6" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -414,7 +414,7 @@
 
 	<item id="4658" name="Blue Soul Crystal - Stage 7" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -423,7 +423,7 @@
 
 	<item id="4659" name="Blue Soul Crystal - Stage 8" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -432,7 +432,7 @@
 
 	<item id="4660" name="Blue Soul Crystal - Stage 9" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -441,7 +441,7 @@
 
 	<item id="4661" name="Blue Soul Crystal - Stage 10" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
@@ -449,23 +449,23 @@
 	</item>
 
 	<item id="4674" name="Medal of Glory" type="NONE" icon="icon.etc_magic_coin_gold_i00">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4675" name="Medal of Friendship" type="NONE" icon="icon.etc_magic_coin_silver_i00">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4676" name="Medal of Victory" type="NONE" icon="icon.etc_magic_coin_blood_i00">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4677" name="Potion of Critical Escape" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- Misdirects enemy attack, inhibits Speed of user. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" price="120" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2074" value="-1"/>  <!-- Potion of Critical Escape -->
@@ -474,7 +474,7 @@
 
 	<item id="4678" name="Scroll: Decrease Hate" type="POTION" icon="icon.etc_scroll_white_i00">
 	<!-- Decreases one's level of Aggression. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="180" price="5000" commission-type="SCROLL_OTHER" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2075" value="-1"/>  <!-- Scroll: Decrease Hate -->
@@ -483,7 +483,7 @@
 
 	<item id="4679" name="Eva's Blessing" type="POTION" icon="icon.etc_bless_of_eva_i00">
 	<!-- Allows one to breathe under water for extended periods. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="180" price="500" commission-type="SCROLL_OTHER" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2076" value="-1"/>  <!-- Eva's Blessing -->
@@ -492,7 +492,7 @@
 
 	<item id="4680" name="Potion of Revenge" type="POTION" icon="icon.etc_potion_blue_i00">
 	<!-- Reduces P. Def. and reflects damage back upon enemy. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="180" price="150" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2077" value="-1"/>  <!-- Potion of Revenge -->

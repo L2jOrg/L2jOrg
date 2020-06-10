@@ -46,13 +46,13 @@
 
 	<item id="48046" name="Agathion Enchant Scroll" type="ENCHANT_AGATHION" icon="icon.star_scrl_of_ench_ag">
 	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3 and can be enchanted up to +10. Starting from +1 enchanting special abilities increases step by step. Item is destroyed upon enchant failure. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="48047" name="High-grade Agathion Enchant Scroll" type="MULTI_ENCHANT_AGATHION" icon="icon.star_giantscrl_of_ench_ag">
 	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3. Starting from +1 enchanting special abilities increases step by step. Enchant randomly from +1 to +3 on success. Item is destroyed upon enchant failure. Cannot use for items with enchant level more than +8. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -121,7 +121,7 @@
 
 	<item id="48066" name="Zodiac Agathion Box" type="NONE" icon="icon.star_agathion_cube">
 	<!-- Double-click to get a random Zodiac Agathion.\n -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 

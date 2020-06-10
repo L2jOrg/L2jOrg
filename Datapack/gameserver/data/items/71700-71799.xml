@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="71700" name="Festival Ticket" type="NONE" icon="BranchSys2.Icon.br_weddin_ticket_i00">
 	<!-- Ticket to participate in the Festival. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -29,7 +29,7 @@
 	<armor id="71703" name="Wind Dragon Pendant Lv. 1" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pve_white">
 	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
@@ -39,7 +39,7 @@
 	<armor id="71704" name="Earth Dragon Pendant Lv. 1" type="NONE" body-part="PENDANT" icon="BranchIcon.Icon.bm_pendant_pvp">
 	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
@@ -104,195 +104,195 @@
 
 	<item id="71713" name="+16 No-grade Weapon Exchange Coupon" type="NONE" icon="BranchIcon.Icon.rp_necklace_of_einhasad_i00">
 	<!-- Exchange for a +16 No-grade weapon at the L2 Store. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71714" name="+7 C-Grade Weapon Exchange Coupon" type="NONE" icon="BranchIcon.Icon.rp_ring_of_maphr_i00">
 	<!-- Exchange for a +7 C-grade weapon at the L2 Store. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71715" name="Enhanced Compound Bow Box" type="NONE" icon="icon.weapon_composition_bow_i00">
 	<!-- Double-click to obtain a +16 Compound Bow and an Infinite Wooden Quiver. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71716" name="+7 Eminence Bow" type="NONE" icon="icon.weapon_eminence_bow_i00">
 	<!-- Double-click to obtain a +7 Eminence Bow and an Infinite Steel Quiver. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71717" name="ADEN Gacha Ticket" type="NONE" icon="icon.bm_jewel_ticket">
 	<!-- Obtain 300 L2 Coins through the Store Manager. Additionally, obtain 1 of various items. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71718" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain a Normal Shadow Master Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59582"/>
 	</item>
 
 	<item id="71719" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain an Advanced Shadow Master Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59583"/>
 	</item>
 
 	<item id="71720" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain a Rare Shadow Master Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59584"/>
 	</item>
 
 	<item id="71721" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain a Legendary Shadow Master Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59585"/>
 	</item>
 
 	<item id="71722" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain a Mythic Shadow Master Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59586"/>
 	</item>
 
 	<item id="71723" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain a Normal Navy Admiral Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59587"/>
 	</item>
 
 	<item id="71724" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain an Advanced Navy Admiral Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59588"/>
 	</item>
 
 	<item id="71725" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain a Rare Navy Admiral Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59589"/>
 	</item>
 
 	<item id="71726" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain a Legendary Navy Admiral Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59590"/>
 	</item>
 
 	<item id="71727" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain a Mythic Navy Admiral Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59591"/>
 	</item>
 
 	<item id="71728" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain a Normal Nymph Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59592"/>
 	</item>
 
 	<item id="71729" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain an Advanced Nymph Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59593"/>
 	</item>
 
 	<item id="71730" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain a Rare Nymph Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59594"/>
 	</item>
 
 	<item id="71731" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain a Legendary Nymph Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59595"/>
 	</item>
 
 	<item id="71732" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain a Mythic Nymph Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59596"/>
 	</item>
 
 	<item id="71733" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain a Normal Devil Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59597"/>
 	</item>
 
 	<item id="71734" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain an Advanced Devil Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59598"/>
 	</item>
 
 	<item id="71735" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain a Rare Devil Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59599"/>
 	</item>
 
 	<item id="71736" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain a Legendary Devil Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59600"/>
 	</item>
 
 	<item id="71737" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain a Mythic Devil Transformation. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 		<transformation-book skill="59601"/>
 	</item>
 
 	<item id="71738" name="Fire Dragon Pendant Chest +6" type="NONE" icon="icon.bm_pendant_pve_box">
 	<!-- Double-click to get Fire Dragon Pendant +6.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71739" name="+8 S-grade Weapon Pack" type="NONE" icon="icon.bm_gold_lure_special_box">
 	<!-- Double-click to get a +8 enchanted S-grade weapon at random. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71740" name="+5 Dragon Pendant Lv. 4 Pack" type="NONE" icon="icon.bm_pendant_pve_box">
 	<!-- Double-click to get a +5 enchanted Dragon Pendant Lv. 4 Attack or Magic type at random. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71741" name="Battle Scroll" type="SCROLL" icon="icon.ev_charge_scroll">
 	<!-- For 20 minutes, P. Atk./M. Atk. +150, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="59634" value="-1"/>  <!-- Dragon Scroll - Event -->
@@ -371,19 +371,19 @@
 
 	<item id="71752" name="Dimensional Soul" type="NONE" icon="icon.bm_dimension_soul">
 	<!-- Material to craft and upgrade Dimensional Talismans. Enchant a Dimensional Talisman through Veruti in the Town of Giran, or go to Ferris of Aden to upgrade a Talisman of Fate to a Dimensional Talisman. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71753" name="Talisman of Fate Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- The power of the Border is sealed within the box. Double-click to obtain a Talisman of Fate Lv. 1. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71754" name="Aden's Lucky Box" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to obtain 1 Sayha's Blessing and 1 random item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -457,7 +457,7 @@
 	<weapon id="71759" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
 	<!-- A special weapon to support the new beginning in the Aden Server. Cannot be enchanted or bestowed special abilities. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1720" commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
+		<attributes weight="1720" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -607,193 +607,193 @@
 
 	<item id="71768" name="Samurai Black Long Sword (30-day) Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a Samurai Black Long Sword (30-day). The Samurai Black Long Sword obtained from the box cannot be exchanged, dropped, or sold in a private store. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71769" name="B-grade Weapon Exchange Ticket" type="NONE" icon="icon.etc_exchange_ticket_i01">
 	<!-- Exchange for a B-grade weapon through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71770" name="Newbie Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Obtain Samurai Black Long Sword (30-day), Moon Armor Armor Set, 1670 Soulshots, and 15 Special Hero's Fruits. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71771" name="Hunting Support Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Obtain 10 Dandy's Home Run Balls, 10 Hero's XP/SP Scrolls, 1 Newbie Amulet (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71772" name="Equipment Package" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Obtain 2 B-grade Weapon Exchange Ticket, a Timed Warrior's Armor Set Pack, and a Timed Rare Accessory Pack Lv. 1. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71773" name="Newbie Amulet" type="RUNE" icon="BranchSys2.lcon.br_life_rune_i00">
 	<!-- 30-day. Increases XP and SP gain by +50% while hunting. Can only be used by characters Lv. 39 or below. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="50"/>
 	</item>
 
 	<item id="71774" name="Aden Supply Box" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to obtain one of the following: Talisman of Baium, Zaken's Earring, Queen Ant's Ring, Top-grade Jewel Box, XP Boost Scroll, Battle Scroll, Sayha's Buff Scroll. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71775" name="Golden Ticket" type="NONE" icon="icon.bm_royal_gold_ticket_all">
 	<!-- Reward that can be obtained by completing the missions during the Golden Week event period. Exchange for various items through the Store Manager. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71776" name="Jin Kamael's Gift" type="NONE" icon="icon.npoint_valakas_30day_box">
 	<!-- Double-click to obtain 1 random item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71777" name="Baium's Mystery Box" type="NONE" icon="icon.event_high_oriental_park_i00">
 	<!-- Obtain 1 reward item at random. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71778" name="Sealed Samurai Long Sword Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Samurai Long Sword. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71779" name="Sealed Mace of Underworld Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Mace of Underworld. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71780" name="Sealed Demon's Staff Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Demon's Staff. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71781" name="Sealed Crystal Dagger Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Crystal Dagger. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71782" name="Sealed Eminence Bow Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Eminence Bow. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71783" name="Sealed Orcish Poleaxe Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Orcish Poleaxe. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71784" name="Sealed Katana*Katana Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Katana*Katana. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71785" name="Sealed Yaksa Mace Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Yaksa Mace. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71786" name="Sealed Berserker Blade Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Berserker Blade. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71787" name="Sealed Great Pata Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Great Pata. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71788" name="Sealed Admiral's Estoc Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Admiral's Estoc. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71789" name="Sealed Saber Tooth Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain +4 Enchanted Sealed Saber Tooth. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71790" name="Sealed Samurai Long Sword Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Samurai Long Sword. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71791" name="Sealed Mace of Underworld Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Mace of Underworld. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71792" name="Sealed Demon's Staff Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Demon's Staff. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71793" name="Sealed Crystal Dagger Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Crystal Dagger. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71794" name="Sealed Eminence Bow Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Eminence Bow. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71795" name="Sealed Orcish Poleaxe Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Orcish Poleaxe. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71796" name="Sealed Katana*Katana Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Katana*Katana. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71797" name="Sealed Yaksa Mace Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Yaksa Mace. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71798" name="Sealed Berserker Blade Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Berserker Blade. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71799" name="Sealed Great Pata Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Great Pata. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 

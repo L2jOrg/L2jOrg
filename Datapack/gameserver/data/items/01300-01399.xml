@@ -424,252 +424,252 @@
 
 	<item id="1334" name="Predator's Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Collect 100 predator's fangs and take them to Pixy Murika. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1335" name="Goblin Club" type="NONE" icon="icon.weapon_club_i00">
 	<!-- Sturdy club made from thick tree branches and carried by goblins. Take this to Treant Bremac. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1336" name="Glass Shard" type="NONE" icon="icon.etc_crystal_ball_blue_i00">
 	<!-- Broken glass piece. Can be sold in any shop for a low price. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="80" price="200" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1337" name="Emerald" type="NONE" icon="icon.etc_jewel_green_i00">
 	<!-- Can be sold in any shop for a high price. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="80" price="10000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1338" name="Blue Onyx" type="NONE" icon="icon.etc_jewel_blue_i00">
 	<!-- Blue jewel. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="80" price="1000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1339" name="Onyx" type="NONE" icon="icon.etc_bead_red_i00">
 	<!-- Black jewel. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="80" price="600" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1340" name="Silvery Leaf" type="NONE" icon="icon.etc_feather_white_i00">
 	<!-- The leaf of a silvery mistletoe. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="3" price="20" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1341" name="Bone Arrow" type="ARROW" icon="icon.etc_bone_quiver_i00">
 	<!-- Arrow made from a piece of sharpened bone. It is used as an arrow for a D-grade bow. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="5" price="3" immediate-effect="true" action="EQUIP"/>
 		<crystal type="D"/>
 	</item>
 
 	<item id="1342" name="Steel Arrow" type="ARROW" icon="icon.etc_fine_steel_quiver_i00">
 	<!-- Powerful arrow made of steel. It is used as an arrow for a C-grade bow. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="4" price="5" immediate-effect="true" action="EQUIP"/>
 		<crystal type="C"/>
 	</item>
 
 	<item id="1343" name="Silver Arrow" type="ARROW" icon="icon.etc_silver_quiver_i00">
 	<!-- Steel arrow plated with silver. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="4" price="7" immediate-effect="true" action="EQUIP"/>
 		<crystal type="B"/>
 	</item>
 
 	<item id="1344" name="Mithril Arrow" type="ARROW" icon="icon.etc_mithril_quiver_i00">
 	<!-- Steel Arrow coated by mithril. For A-grade bows. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="3" price="8" immediate-effect="true" action="EQUIP"/>
 		<crystal type="A"/>
 	</item>
 
 	<item id="1345" name="Arrow of Light" type="ARROW" icon="icon.etc_shining_quiver_i00">
 	<!-- Arrows made of an unknown material. Used with an S-grade bow. Very light. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="3" price="10" immediate-effect="true" action="EQUIP"/>
 		<crystal type="S"/>
 	</item>
 
 	<item id="1346" name="Golem's Stoneheart" type="NONE" icon="icon.etc_squares_gray_i00">
 	<!-- Stone found within the remains of a destroyed golem. Take this to Trader Rorento. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1347" name="Monster Eye Meat" type="NONE" icon="icon.etc_bark_gold_i00">
 	<!-- The carcass of monster eye. Take this to Trader Sarien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1348" name="Basilisk's Gizzard" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- The digestive organ of a basilisk. Take this to Trader Sarien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1349" name="Anatomy Diagram" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Diagram designed by Avella physicians for human anatomy. Use this to perform Samed's request. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1350" name="Zombie Head" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- Head of zombie from ruins. Take this to Samed of the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1351" name="Zombie Heart" type="NONE" icon="icon.etc_bodypart_heart_i00">
 	<!-- Heart of zombie from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1352" name="Zombie Liver" type="NONE" icon="icon.etc_bodypart_liver_i00">
 	<!-- Liver of zombie from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1353" name="Deadman's Skull" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- Skull of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1354" name="Deadman's Rib Bone" type="NONE" icon="icon.etc_rib_white_i00">
 	<!-- Rib of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1355" name="Deadman's Spine" type="NONE" icon="icon.etc_piece_bone_red_i00">
 	<!-- Spine of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1356" name="Deadman's Arm Bone" type="NONE" icon="icon.etc_piece_bone_black_i00">
 	<!-- Arm bone of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1357" name="Deadman's Thigh Bone" type="NONE" icon="icon.etc_piece_bone_white_i00">
 	<!-- Thigh bone of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1358" name="Deadman's Complete Skeleton" type="NONE" icon="icon.etc_ashes_white_i00">
 	<!-- Complete skeleton put together with bone pieces by undertaker Varsak. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1359" name="Red Cross Badge" type="NONE" icon="icon.etc_jewel_red_i00">
 	<!-- Soldier badge of foreign troops. Take this to Leopold in Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1360" name="Blue Cross Badge" type="NONE" icon="icon.etc_jewel_blue_i00">
 	<!-- Badge of high ranking of Gracian foreign troops. Take this to Leopold in Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1361" name="Black Cross Badge" type="NONE" icon="icon.etc_jewel_gold_i00">
 	<!-- Badge of captain ranking of Gracian foreign troops. Take this to Leopold in Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1362" name="Spider's Carapace" type="NONE" icon="icon.item_normal72">
 	<!-- The hard carapace of a spider. Often used to coat a shield or a helmet. Take this to Trader Arodin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1363" name="Spider Silk" type="NONE" icon="icon.item_normal168">
 	<!-- Tough, stretchy spider web. Used to make bowstrings. Take this to Trader Arodin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1364" name="Spider's Poison Sac" type="NONE" icon="icon.item_canuse28">
 	<!-- Sac with a spider's deadly Poison in it. Can be sold to Trader Cullinas in Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1365" name="Broken Stoneheart" type="NONE" icon="icon.etc_plate_glay_i00">
 	<!-- Small pieces of stone found within the remains of a destroyed golem. Take this to Trader Rorento. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1366" name="Monster Eye's Lens" type="NONE" icon="icon.etc_crystal_ball_white_i00">
 	<!-- The transparent part of monster eye. Take this to Trader Sarien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1367" name="Wolf Claw" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Collect 50 wolf claws and take them to Trader Payne of the weapons and armor shop. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1368" name="Imp Shackles" type="NONE" icon="icon.accessary_cerberuss_earing_i00">
 	<!-- The metal shackles attached around the neck of the imp race. Take this to Sentry Kristin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1369" name="Black Lion Badge" type="NONE" icon="icon.etc_badge_black_i00">
 	<!-- A badge that indicates one is a member of the Black Lion troop. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1370" name="Spellbook: Aqua Swirl" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Aqua Swirl. Used by Elven Wizards.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1371" name="Spellbook: Twister" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Twister. Used by Dark Wizards.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1372" name="Spellbook: Blaze" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Blaze. Used by Human Wizards.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1373" name="Magic Gem" type="NONE" icon="icon.etc_crystal_ball_white_i00">
 	<!-- Ingredient needed for certain magic. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="80" price="600" immediate-effect="true"/>
 	</item>
 
 	<item id="1374" name="Greater Wind Walk Potion" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Magical potion that increases movement Speed dramatically for 5 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" price="3000" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2034" value="-1"/>  <!-- Greater Wind Walk Potion -->
@@ -678,7 +678,7 @@
 
 	<item id="1375" name="Greater Haste Potion" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Magical potion that increases Atk. Spd. Dramatically for 5 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" price="3400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2035" value="-1"/>  <!-- Greater Haste Potion -->
@@ -707,127 +707,127 @@
 
 	<item id="1377" name="Spellbook: Poison Recovery" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Poison Recovery. Used by Elven Knights and Elven Scouts.\nRequired level: Elven Knight - 20, Elven Scout - 24 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1378" name="Spellbook: Divine Heal" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Divine Heal. Used by Human Knights.\nRequired level: 26 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="16883" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1379" name="Spellbook: Cure Bleeding" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Cure Bleeding. Used by Elven Knights and Elven Scouts.\nRequired level: 24 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1150" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1380" name="Spellbook: Entangle" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Entangle. Used by Elven Knights and Elven Scouts.\nRequired level: 36 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="47865" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1381" name="Spellbook: Freezing Strike" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Freezing Strike. Used by Palus Knights and Assassins.\nRequired level: 34 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="39568" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1382" name="Spellbook: Power Break" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Power Break. Used by Palus Knights and Assassins.\nRequired level: 32 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="32612" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1383" name="Spellbook: Poison" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Poison. Used by Palus Knights and Assassins.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1384" name="Spellbook: Sprint" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Sprint. Used by Elven Knights and Elven Scouts.\nRequired level: 32 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="32612" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1385" name="Spellbook: Recharge" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Recharge. Used by Elven Oracles and Shillien Oracles.\nRequired level: 28 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="21437" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1386" name="Spellbook: Disrupt Undead" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Disrupt Undead. Used by Clerics, Elven Oracles and Shillien Oracles.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1387" name="Spellbook: Poison Resistance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Poison Resistance. Used by Oracles and Prophets.\nRequired level: Oracle - 35, Prophet - 60 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1388" name="Spellbook: Mental Shield" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Mental Shield. Used by Clerics, Elven Oracles and Shillien Oracles.\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1389" name="Spellbook: Holy Weapon" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Holy Weapon. Used by Clerics and Elven Oracles.\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1390" name="Spellbook: Regeneration" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Regeneration. Used by Clerics and Elven Oracles.\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1391" name="Spellbook: Empower" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Empower. Used by Shillien Oracles.\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1392" name="Spellbook: Berserker Spirit" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Berserker Spirit. Used by Clerics.\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1393" name="Spellbook: Quickness" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Quickness. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1394" name="Spellbook: Sleep" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Sleep. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles.\nRequired level: 23 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="10603" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1397" name="Spellbook: Peace" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Peace. Used by Clerics.\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1398" name="Spellbook: Focus" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Focus. Used by Clerics and Shillien Oracles.\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1399" name="Spellbook: Concentration" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Concentration. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 

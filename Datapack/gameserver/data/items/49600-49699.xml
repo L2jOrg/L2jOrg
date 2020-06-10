@@ -212,205 +212,205 @@
 
 	<item id="49630" name="Blue Talisman Box - Physical Critical" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Physical Critical (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49631" name="Blue Talisman Box - P. Atk." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - P. Atk. (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49632" name="Blue Talisman Box - P. Def." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - P. Def. (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49633" name="Blue Talisman Box - Physical Skill Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Physical Skill Evasion (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49634" name="Blue Talisman Box - Magic Critical" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Magic Critical (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49635" name="Blue Talisman Box - Magic Power" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Magic Power (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49636" name="Blue Talisman Box - M. Def." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Magic Resistance (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49637" name="Blue Talisman Box - Magic Skill Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Magic Skill Evasion (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49638" name="Blue Talisman Box - Increase HP" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Increase HP (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49639" name="Blue Talisman Box - Increase MP" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Increase MP (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49640" name="Grey Talisman Box - Protection" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Guardian (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49641" name="Grey Talisman Box - Debuff Clear" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Removal (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49642" name="Grey Talisman Box - Blessing of Protection" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Protection (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49643" name="Grey Talisman Box - Block" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Block (Short-term, 1-hour).\n\n <Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49644" name="Grey Talisman Box - Torpor" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Torpor (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49645" name="Grey Talisman Box - Shackles" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Shackles (Short-term, 1-hour).\n\n<Warning>\n Item obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49646" name="White Talisman Box - Physical Critical" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Physical Critical (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49647" name="White Talisman Box - P. Atk." type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - P. Atk. (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49648" name="White Talisman Box - P. Def." type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - P. Def. (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49649" name="White Talisman Box - Physical Skill Evasion" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Physical Skill Evasion (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49650" name="White Talisman Box - Magic Critical" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Magic Critical (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49651" name="White Talisman Box - Magic Power" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Magic Power (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49652" name="White Talisman Box - M. Def." type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Magic Resistance (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49653" name="White Talisman Box - Magic Skill Evasion" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Magic Skill Evasion (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49654" name="White Talisman Box - Increase HP" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Increase MP (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49655" name="White Talisman Box - Increase MP" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Increase MP (Short-term, 1-hour). \n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49656" name="Yellow Talisman Box - Protection" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Guardian (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49657" name="Yellow Talisman Box - Debuff Clear" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Removal (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49658" name="Yellow Talisman Box - Blessing of Protection" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Protection (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49659" name="Yellow Talisman Box - Block" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Block (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49660" name="Yellow Talisman Box - Torpor" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Torpor (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49661" name="Yellow Talisman Box - Shackles" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Shackles (Short-term, 1-hour).\n\n<Warning>\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49662" name="Stylish Color Title" type="NICK_COLOR_NEW" icon="icon.color_name_i00">
 	<!-- An item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does. However, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" immediate-effect="true"/>
 	</item>
 
 	<item id="49663" name="Special HP Potion - Exchangeable" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="HEALING"/>
 		<skill-reducer>
 			<skill id="39123" value="-1"/>  <!-- Special HP Potion -->
@@ -419,7 +419,7 @@
 
 	<item id="49664" name="Weapon Supply Box (B-grade)" type="NONE" icon="icon.etc_equip_item_box_i02">
 	<!-- Double-click to receive one of B-grade Weapons. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39125" value="-1"/>  <!-- Weapon Supply Box (B-grade) -->
@@ -428,7 +428,7 @@
 
 	<item id="49665" name="B-grade Armor Supply Box" type="NONE" icon="icon.etc_equip_item_box_i01">
 	<!-- Double-click to receive one of B-grade Armor. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39127" value="-1"/>  <!-- B-grade Armor Supply Box -->
@@ -437,7 +437,7 @@
 
 	<item id="49666" name="Ornament Supply Box (B-grade)" type="NONE" icon="icon.etc_box_of_adventure_2_i00">
 	<!-- Double-click to receive one of B-grade Accessories. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39129" value="-1"/>  <!-- Ornament Supply Box - B-grade -->
@@ -446,7 +446,7 @@
 
 	<item id="49667" name="Weapon Supply Box (C-grade)" type="NONE" icon="icon.etc_equip_item_box_i00">
 	<!-- Double-click to receive one of C-grade Weapons. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39124" value="-1"/>  <!-- Weapon Supply Box (C-grade) -->
@@ -455,7 +455,7 @@
 
 	<item id="49668" name="C-grade Armor Supply Box" type="NONE" icon="icon.etc_equip_item_box_i03">
 	<!-- Double-click to receive one of C-grade Armor. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39126" value="-1"/>  <!-- C-grade Armor Supply Box -->
@@ -464,7 +464,7 @@
 
 	<item id="49669" name="Ornament Supply Box (C-grade)" type="NONE" icon="icon.etc_box_of_adventure_5_i00">
 	<!-- Double-click to receive one of C-grade Accessories. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39128" value="-1"/>  <!-- Ornament Supply Box (C-grade) -->
@@ -473,31 +473,31 @@
 
 	<item id="49670" name="Weapon Ingredient Box (B-grade)" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to receive one of B-grade Weapon Ingredients. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49671" name="Armor/Ornament Ingredient Box - B-grade" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to receive one of B-grade Weapon Armor/Ornament Ingredients. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49672" name="Weapons Ingredient Box (C-grade)" type="NONE" icon="icon.etc_treasure_box_i06">
 	<!-- Double-click to receive one of C-grade Weapon Ingredients. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49673" name="Armor/Ornament Ingredient Box - C-grade" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to receive one of C-grade Weapon Armor/Ornament Ingredients. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49674" name="XP Boost Scroll" type="NONE" icon="icon.etc_recall_exp_scroll">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39134"/>  <!-- XP Boost Scroll -->
@@ -506,7 +506,7 @@
 
 	<item id="49675" name="Hero Cube Box" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Double-click to receive Hero Cube (7-day).  Can be stored in a private warehouse or transferred to another character on the same account using Dimensional Merchant.\n\n<Note>\nEven if you have several of these Cubes, you can only use one. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -574,7 +574,7 @@
 
 	<item id="49682" name="Baium’s Soul" type="NONE" icon="icon.high_energy_condense_i00">
 	<!-- Blacksmith Beggins in Giran will trade Baium’s Soul and Talisman of Insolence Lv. 6 for Talisman of Baium. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
@@ -592,13 +592,13 @@
 
 	<item id="49684" name="Talisman Crystal" type="NONE" icon="icon.low_energy_condense_i03">
 	<!-- Required to create the Talisman of Insolence. If you take the Crystal along with an Elemental Stone/ Energy of Insolence to Baggins in Giran, you will receive the Talisman of Insolence. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes price="200000"/>
 	</item>
 
 	<item id="49685" name="Energy of Insolence" type="NONE" icon="icon.ensoul_sommon">
 	<!-- Required to create the Talisman of Insolence. If you take the Crystal along with an Elemental Stone/ Talisman Crystal to Baggins in Giran, you will receive the Talisman of Insolence. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
@@ -618,25 +618,25 @@
 
 	<item id="49688" name="Refined Silver Chapeau Box" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to get Refined Silver Chapeau (30-day). -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49689" name="Chapeau Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click the box to get one of the following items: Refined Silver Chapeau (30-day)/ Refined Silver Chapeau/ Refined Romantic Chapeau. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49690" name="Blue Dynasty Transformation Potion" type="POTION" icon="icon.general_stone_i01">
 	<!-- Makes you armor look like it is of Blue Dynasty for one hour.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49691" name="Red Zubei Transformation Potion" type="POTION" icon="icon.general_stone_i00">
 	<!-- Makes you armor look like it is of Red Zubei for one hour.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
@@ -658,31 +658,31 @@
 
 	<item id="49693" name="Magical Potion of Leaping" type="SCROLL" icon="icon.etc_holy_potion_i00">
 	<!-- Provides 1,200,000 XP/40,000 SP. Intended for level 20 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49694" name="Magical Potion of Leaping" type="SCROLL" icon="icon.etc_wind_potion_i00">
 	<!-- Provides 7,800,000 XP/240,000 SP. Intended for level 30 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49695" name="Magical Potion of Leaping" type="SCROLL" icon="icon.etc_water_potion_i00">
 	<!-- Provides 34,200,000 XP/1,040,000 SP. Intended for level 40 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49696" name="Gift from a Returned Friend" type="SCROLL" icon="BranchSys.icon.br_lucky_bag_i00">
 	<!-- Provides 37 million XP/ 1.11 million SP. Intended for Lv. 45 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49697" name="Special Fruit Buff" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by +5%. Cooldown is 1 minute. Buff remains after death.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55160" value="-1"/>  <!-- Special Fruit Buff -->
@@ -691,13 +691,13 @@
 
 	<item id="49698" name="Class Transfer Coupon" type="NONE" icon="icon.return_user_item">
 	<!-- Take it to the Excalibur Expeditionary Force Leader for instant 2nd class transfer. Only for characters of at least level 40.   -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49699" name="Master's Book Skill" type="NONE" icon="icon.q10338_book_of_hades">
 	<!-- Take it to the Excalibur Expeditionary Force Leader to learn all the skills for your level and class. Only for level 45 to level 60 characters.   -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 

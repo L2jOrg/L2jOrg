@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="46504" name="Lionel's Soul Crystal - Stage 1" type="ENSOUL_STONE" icon="icon.ensoul_big_pm">
 	<!-- A crystal filled with a monster’s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 

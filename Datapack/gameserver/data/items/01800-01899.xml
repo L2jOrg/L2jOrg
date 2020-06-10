@@ -2,91 +2,91 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="1800" name="Recipe: Piece Bone Breastplate" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for a Piece Bone Breastplate. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="636" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1801" name="Recipe: Piece Bone Gaiters" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for Piece Bone Gaiters. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="397" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1802" name="Recipe: Necklace of Anguish" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for a Necklace of Anguish. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="93" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1803" name="Recipe: Necklace of Wisdom" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for a Necklace of Wisdom. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="238" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1804" name="Recipe: Soulshot (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for a soulshot-D-grade . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1805" name="Recipe: Soulshot (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a soulshot-C-grade . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1806" name="Recipe: Soulshot (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for a soulshot-B-grade. Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1807" name="Recipe: Soulshot (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for a soulshot-A-grade . Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1808" name="Recipe: Soulshot (S-grade)" type="MATERIAL" icon="icon.etc_recipe_black_i00">
 	<!-- For Dwarves only. Recipe for a Soulshot (S-grade). Create Item skill must be level 8. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="450000" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1814" name="Recipe: Leather" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for Leather. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="380" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1817" name="Recipe: Cord" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for Cord. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="1000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1825" name="Recipe: Oriharukon" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for Oriharukon. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="30" price="2800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1829" name="Scroll of Escape: Clan Hall" type="SCROLL" icon="icon.etc_scroll_of_return_agit_i00">
 	<!-- Scroll that relocates you to your clan hall. If you don't have a clan hall, it will relocate you to the nearest village. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2040" value="-1"/>  <!-- Scroll of Escape: Clan Hall -->
@@ -95,7 +95,7 @@
 
 	<item id="1830" name="Scroll of Escape: Castle" type="SCROLL" icon="icon.etc_scroll_of_return_castle_i00">
 	<!-- Scroll that relocates you to your castle. If you don't have a castle, it will relocate you to the nearest village. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="120" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2041" value="-1"/>  <!-- Scroll of Escape: Castle -->
@@ -104,7 +104,7 @@
 
 	<item id="1831" name="Antidote" type="POTION" icon="icon.etc_herb_green_i00">
 	<!-- Reagent that neutralizes Poison . -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" price="75" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2042" value="-1"/>  <!-- Antidote -->
@@ -113,7 +113,7 @@
 
 	<item id="1832" name="Greater Antidote" type="POTION" icon="icon.etc_reagent_green_i00">
 	<!-- High-quality reagent that neutralizes powerful Poison . -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" price="180" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2043" value="-1"/>  <!-- Greater Antidote -->
@@ -122,7 +122,7 @@
 
 	<item id="1833" name="Bandage" type="POTION" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Medical bandage that stops Bleeding when injured. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" price="75" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2044" value="-1"/>  <!-- Bandage -->
@@ -131,7 +131,7 @@
 
 	<item id="1834" name="Emergency Dressing" type="POTION" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Medical bandage that stops Bleeding fast when severely injured. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="20" price="180" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2045" value="-1"/>  <!-- Emergency Dressing -->
@@ -140,7 +140,7 @@
 
 	<item id="1835" name="Soulshot (No-grade)" type="NONE" icon="icon.etc_spirit_bullet_white_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="3" price="7" commission-type="SOULSHOT" for-npc="true" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
 			<skill id="2039" value="-1"/>  <!-- Soulshot (No-grade) -->
@@ -149,386 +149,386 @@
 
 	<item id="1836" name="Kendell's 1st Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Punish Kaboo Chief Uoph. He should be somewhere around the ruins over the hill, west of the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1837" name="Kendell's 2nd Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Punish Kaboo Chief Kracha. He should be somewhere around the Nine obelisk, southwest of the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1838" name="Kendell's 3rd Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Punish Kaboo Chief Batoh. He should be somewhere around the entrance of the underground fortress of the Elves. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1839" name="Kendell's 4th Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Punish Kaboo Chief Tanukia. He should be somewhere around the open-air theatre ruins, southwest of the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1840" name="Kendell's 5th Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Punish Kaboo Chief Turel. He should be somewhere around the seashore ruins, northwest of Lake Iris. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1841" name="Kendell's 6th Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Punish Kaboo Chief Roko. He should be somewhere around the seashore ruins, west of Lake Iris. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1842" name="Kendell's 7th Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Punish Kaboo Chief Kamut. He should be somewhere around the seashore ruins, south of Lake Iris. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1843" name="Kendell's 8th Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Punish Kaboo Chief Murtika. He should be somewhere around the seashore ruins, east of Lake Iris. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1844" name="Kaboo Chief's 1st Torque" type="NONE" icon="icon.accessary_necklace_of_black_ore_i00">
 	<!-- Necklace taken by killing the chief of Kaboo orcs. Take this to Sentinel Kendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1845" name="Kaboo Chief's 2nd Torque" type="NONE" icon="icon.accessary_necklace_of_black_ore_i00">
 	<!-- Necklace taken by killing the chief of Kaboo orcs. Take this to Sentinel Kendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1846" name="Turek Dog Tag" type="NONE" icon="icon.etc_totem_necklace_black_i00">
 	<!-- Military identification necklace of Turek orc fighters. Collect these and take them to Piotur for a reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1847" name="Turek Medallion" type="NONE" icon="icon.etc_totem_necklace_green_i00">
 	<!-- Military identification necklace of Turek orc officers. Collect these and take them to Piotur for a reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1848" name="Clay Urn Fragment" type="NONE" icon="icon.etc_broken_crystal_white_i00">
 	<!-- Relic of the Elmoreden empire. Piece of a broken clay urn. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="200" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1849" name="Brass Trinket Piece" type="NONE" icon="icon.etc_broken_crystal_gold_i00">
 	<!-- Relic of the Elmoreden empire. Part of a brass trinket. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="240" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1850" name="Bronze Mirror Piece" type="NONE" icon="icon.etc_broken_crystal_silver_i00">
 	<!-- Relic of the Elmoreden empire. Part of a bronze mirror. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="240" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1851" name="Jade Necklace Bead" type="NONE" icon="icon.etc_debris_i00">
 	<!-- Relic of the Elmoreden empire. Part of a jade necklace. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="280" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1852" name="Ancient Clay Urn" type="NONE" icon="icon.etc_oil_pot_white_i00">
 	<!-- Clay urn of the Elmoreden empire. Can be sold at a store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="1800" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1853" name="Ancient Brass Tiara" type="NONE" icon="icon.etc_ancient_crown_i03">
 	<!-- Relic of the Elmoreden empire. Formal brass tiara. Can be sold at a store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="2100" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1854" name="Ancient Bronze Mirror" type="NONE" icon="icon.etc_mirror_i00">
 	<!-- Relic of the Elmoreden empire. Bronze mirror. Can be sold at a store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="2100" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1855" name="Ancient Jade Necklace" type="NONE" icon="icon.etc_leash_i00">
 	<!-- Relic of the Elmoreden empire. Jade necklace. Can be sold at a store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="10" price="2550" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1856" name="Amulet: Chant of Life" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Life spell. Used by Orc Shamans.\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1857" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1858" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Magisters. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1859" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to any Mother Tree Guardian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1860" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to any Abyssal Celebrant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1861" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to the Priest of fire. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1862" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to the Miner. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1863" name="Map: Elmore" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Ancient, obsolete map. Can be purchased at any shop. -->
-		<restriction freightable="false" depositable="false"/>
+		<restriction/>
 		<attributes price="1000" immediate-effect="true"/>
 		<action handler="Maps"/>
 	</item>
 
 	<item id="1864" name="Stem" type="MATERIAL" icon="icon.etc_branch_gold_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="100" immediate-effect="true"/>
 	</item>
 
 	<item id="1865" name="Varnish" type="MATERIAL" icon="icon.etc_pouch_yellow_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="200" immediate-effect="true"/>
 	</item>
 
 	<item id="1866" name="Suede" type="MATERIAL" icon="icon.etc_suede_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="300" immediate-effect="true"/>
 	</item>
 
 	<item id="1867" name="Animal Skin" type="MATERIAL" icon="icon.etc_leather_brown_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="150" immediate-effect="true"/>
 	</item>
 
 	<item id="1868" name="Thread" type="MATERIAL" icon="icon.etc_skein_white_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="100" immediate-effect="true"/>
 	</item>
 
 	<item id="1869" name="Iron Ore" type="MATERIAL" icon="icon.etc_lump_gray_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="200" immediate-effect="true"/>
 	</item>
 
 	<item id="1870" name="Coal" type="MATERIAL" icon="icon.etc_coal_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="200" immediate-effect="true"/>
 	</item>
 
 	<item id="1871" name="Charcoal" type="MATERIAL" icon="icon.etc_charcoal_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="200" immediate-effect="true"/>
 	</item>
 
 	<item id="1872" name="Animal Bone Fragment" type="MATERIAL" icon="icon.etc_piece_bone_white_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="150" immediate-effect="true"/>
 	</item>
 
 	<item id="1873" name="Silver Nugget" type="MATERIAL" icon="icon.etc_silver_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="1874" name="Oriharukon Ore" type="MATERIAL" icon="icon.etc_oriharukon_ore_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="3000" immediate-effect="true"/>
 	</item>
 
 	<item id="1875" name="Stone of Purity" type="MATERIAL" icon="icon.etc_crystal_ball_white_i00">
 	<!--  Sell at a store or trade in for new materials at the Aden Reconstruction Society. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="3000" immediate-effect="true"/>
 	</item>
 
 	<item id="1876" name="Mithril Ore" type="MATERIAL" icon="icon.etc_mithril_ore_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1000" immediate-effect="true"/>
 	</item>
 
 	<item id="1877" name="Adamantite Nugget" type="MATERIAL" icon="icon.etc_adamantite_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="5000" immediate-effect="true"/>
 	</item>
 
 	<item id="1878" name="Durable Braid" type="MATERIAL" icon="icon.etc_braided_hemp_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="1879" name="Cokes" type="MATERIAL" icon="icon.etc_oil_pot_black_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1200" immediate-effect="true"/>
 	</item>
 
 	<item id="1880" name="Steel" type="MATERIAL" icon="icon.etc_lump_black_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="2000" immediate-effect="true"/>
 	</item>
 
 	<item id="1881" name="Coarse Bone Powder" type="MATERIAL" icon="icon.etc_powder_white_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="1500" immediate-effect="true"/>
 	</item>
 
 	<item id="1882" name="Leather" type="MATERIAL" icon="icon.etc_leather_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="900" immediate-effect="true"/>
 	</item>
 
 	<item id="1883" name="Steel Mold" type="MATERIAL" icon="icon.etc_mold_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="4500" immediate-effect="true"/>
 	</item>
 
 	<item id="1884" name="Cord" type="MATERIAL" icon="icon.etc_skein_gray_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="325" immediate-effect="true"/>
 	</item>
 
 	<item id="1885" name="High-grade Suede" type="MATERIAL" icon="icon.etc_pouch_yellow_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="2400" immediate-effect="true"/>
 	</item>
 
 	<item id="1886" name="Silver Mold" type="MATERIAL" icon="icon.etc_silver_mold_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="13500" immediate-effect="true"/>
 	</item>
 
 	<item id="1887" name="Varnish of Purity" type="MATERIAL" icon="icon.etc_potion_clear_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="8100" immediate-effect="true"/>
 	</item>
 
 	<item id="1888" name="Synthetic Cokes" type="MATERIAL" icon="icon.etc_synthetic_cokes_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="6600" immediate-effect="true"/>
 	</item>
 
 	<item id="1889" name="Synthetic Braid" type="MATERIAL" icon="icon.etc_compound_braid_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="3000" immediate-effect="true"/>
 	</item>
 
 	<item id="1890" name="Mithril Alloy" type="MATERIAL" icon="icon.etc_lump_white_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="13100" immediate-effect="true"/>
 	</item>
 
 	<item id="1891" name="Artisan's Frame" type="MATERIAL" icon="icon.etc_artisans_frame_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="95000" immediate-effect="true"/>
 	</item>
 
 	<item id="1892" name="Blacksmith' Frame" type="MATERIAL" icon="icon.etc_blacksmiths_frame_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="64000" immediate-effect="true"/>
 	</item>
 
 	<item id="1893" name="Oriharukon" type="MATERIAL" icon="icon.etc_oriharukon_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="24600" immediate-effect="true"/>
 	</item>
 
 	<item id="1894" name="Quality Leather" type="MATERIAL" icon="icon.etc_crafted_leather_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="5700" immediate-effect="true"/>
 	</item>
 
 	<item id="1895" name="Metallic Fiber" type="MATERIAL" icon="icon.etc_metallic_fiber_i00">
 	<!-- Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="2" price="700" immediate-effect="true"/>
 	</item>
 
 	<item id="1896" name="Necklace of Anguish Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Necklace of Anguish. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="472" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1897" name="Necklace of Wisdom Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Necklace of Wisdom. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="840" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1898" name="Blue Diamond Necklace Gem" type="MATERIAL" icon="icon.etc_gem_blue_i00">
 	<!-- Key material that Dwarves use to make the Blue Diamond Necklace. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1947" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 
 	<item id="1899" name="Necklace of Devotion Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
 	<!-- Key material that Dwarves use to make the Necklace of Devotion. Can be sold in any shop. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes weight="60" price="1280" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
 	</item>
 

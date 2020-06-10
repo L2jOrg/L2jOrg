@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="94142" name="Rice Cake Soup" type="NONE" icon="BranchSys.icon.br_taiwan_newyear_food_d_i00">
 	<!-- For 20 min., P. Atk./M. Atk. +150, P. Def./M. Def. +100, Max HP/MP +150, All Critical Rate +10%. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
@@ -15,55 +15,55 @@
 
 	<item id="94144" name="New Year Thank You Cube" type="ELIXIR" icon="icon.etc_11th_event_group">
 	<!-- Use to obtain the New Year Thank You Bundle. On the 7th day, you have a low chance to get a Hanbok. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94145" name="New Year Thank You Bundle (1-day)" type="NONE" icon="icon.christmas_card_box2">
 	<!-- Double-click to obtain the following: 10 Rice Cake Soup, 30 Soulshot Tickets, 300 Spirit Ores, 1 Regular Dice. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94146" name="New Year Thank You Bundle (2-day)" type="NONE" icon="icon.christmas_card_box2">
 	<!-- Double-click to obtain the following: 10 Rice Cake Soup, 50 Soulshot Tickets, 500 Spirit Ores, 1 Chapa Transformation Scroll - Song Dance, 5 Shining Scrolls of Mood Melody, 1 Regular Dice. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94147" name="New Year Thank You Bundle (3-day)" type="NONE" icon="icon.christmas_card_box2">
 	<!-- Double-click to obtain the following: 10 Rice Cake Soup, 50 Soulshot Tickets, 500 Spirit Ores, 1 Chapa Transformation Scroll - Song Dance, 5 Shining Scrolls of Mood Melody, 5 XP Boost Scrolls, 1 Regular Dice. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94148" name="New Year Thank You Bundle (4-day)" type="NONE" icon="icon.christmas_card_box2">
 	<!-- Double-click to obtain the following: 10 Rice Cake Soup, 80 Soulshot Tickets, 800 Spirit Ores, 1 Chapa Transformation Scroll - Song Dance, 5 Shining Scrolls of Mood Melody, 5 XP Boost Scrolls, 5 Dragon's Special Elixir Lv. 2, 1 Regular Dice. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94149" name="New Year Thank You Bundle (5-day)" type="NONE" icon="icon.christmas_card_box2">
 	<!-- Double-click to obtain the following: 10 Rice Cake Soup, 80 Soulshot Tickets, 800 Spirit Ores, 1 Chapa Transformation Scroll - Song Dance, 10 Shining Scrolls of Mood Melody, 10 XP Boost Scrolls, 5 Dragon's Special Elixir Lv. 2, 1 Regular Dice. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94150" name="New Year Thank You Bundle (6-day)" type="NONE" icon="icon.christmas_card_box2">
 	<!-- Double-click to obtain the following: 10 Rice Cake Soup, 200 Soulshot Tickets, 1000 Spirit Ores, 2 Chapa Transformation Scroll - Song Dance, 2 White Assassin Transformation Scrolls, 10 Shining Scrolls of Mood Melody, 10 XP Boost Scrolls, 10 Dragon's Special Elixir Lv. 2, 3 Regular Dice, 2 Greater Dice. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94151" name="New Year Thank You Bundle (7-day)" type="NONE" icon="icon.christmas_card_box2">
 	<!-- Double-click to obtain the following: Hanbok (7-day), 50 Rice Cake Soup, 1000 Soulshot Tickets, 5000 Spirit Ores, 2 Chapa Transformation Scroll - Song Dance, 2 White Assassin Transformation Scrolls, 10 Shining Scrolls of Mood Melody, 10 XP Boost Scrolls, 10 Dragon's Special Elixir Lv. 2, 3 Regular Dice, 2 Greater Dice. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="94152" name="New Year Thank You Hanbok Bundle (7-day)" type="NONE" icon="icon.christmas_card_box2">
 	<!-- Double-click to obtain the following: Hanbok, 50 Rice Cake Soup, 1000 Soulshot Tickets, 5000 Spirit Ores, 2 Chapa Transformation Scroll - Song Dance, 2 White Assassin Transformation Scrolls, 10 Shining Scrolls of Mood Melody, 10 XP Boost Scrolls, 10 Dragon's Special Elixir Lv. 2, 3 Regular Dice, 2 Greater Dice. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 

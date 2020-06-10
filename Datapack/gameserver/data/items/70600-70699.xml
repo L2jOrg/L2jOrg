@@ -2,91 +2,91 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="70600" name="Mysterious Blessed Soulshot (D-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_blue_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with a D-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="70601" name="Mysterious Blessed Soulshot (C-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_green_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with a C-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="70602" name="Mysterious Blessed Soulshot (B-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_red_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with a B-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="70603" name="Mysterious Blessed Soulshot (A-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_silver_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with an A-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="70604" name="Mysterious Blessed Spiritshot (A-grade)" type="SOULSHOT" icon="icon.etc_spell_shot_silver_i01">
 	<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. Exchange for a new Soulshot through the Store Manager. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="70605" name="Blessed Soulshot 3335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
 	<!-- Double-click to obtain 3335 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70606" name="Blessed Soulshot 5000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_d_i00">
 	<!-- Double-click to obtain 5000 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70607" name="Blessed Soulshot 10000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_c_i00">
 	<!-- Double-click to obtain 10000 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70608" name="Blessed Soulshot 30000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
 	<!-- Double-click to obtain 30000 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70609" name="Blessed Soulshot 50000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
 	<!-- Double-click to obtain 50000 Blessed Soulshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70610" name="Blessed Spiritshot 3335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00">
 	<!-- Double-click to obtain 3335 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70611" name="Blessed Spiritshot 5000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_d_i00">
 	<!-- Double-click to obtain 5000 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70612" name="Blessed Spiritshot 10000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_c_i00">
 	<!-- Double-click to obtain 10000 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70613" name="Blessed Spiritshot 30000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
 	<!-- Double-click to obtain 30000 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70614" name="Blessed Spiritshot 50000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_a_i00">
 	<!-- Double-click to obtain 50000 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -106,31 +106,31 @@
 
 	<item id="70617" name="Mount - Gold Maned Lion (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Mount - Gold Maned Lion Pack (7-day). -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70618" name="Mount - Princess Ant (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Mount - Princess Ant Pack (7-day).\n -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70619" name="Major Quick Recovery Potion" type="POTION" icon="icon.bm_freya_potion">
 	<!-- Instantly recovers HP. Provides HP +600 and uses the remaining points to recover CP. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="2" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70620" name="The Finest Quick Recovery Potion" type="POTION" icon="icon.bm_freya_potion">
 	<!-- Instantly recovers HP. Provides HP +1000 and uses the remaining points to recover CP. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="2" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70621" name="Einhasad's Protection" type="SCROLL" icon="BranchSys2.icon.br_soulavatar_regen_i00">
 	<!-- Einhasad's Protection maintains buffs and debuffs even after death. The item disappears if a character dies.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55576" value="-1"/>  <!-- Einhasad's Protection -->
@@ -139,7 +139,7 @@
 
 	<item id="70622" name="Einhasad's Salvation" type="SCROLL" icon="BranchSys2.icon.br_soulavatar_active_i00">
 	<!-- Einhasad's Salvation maintains buffs and debuffs even after death, allows to resurrect with full HP. The item disappears if a character dies.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55577" value="-1"/>  <!-- Einhasad's Salvation -->
@@ -148,67 +148,67 @@
 
 	<item id="70623" name="Lucky Charm" type="RUNE" icon="BranchSys.icon.br_four_leaf_clover_i00">
 	<!-- Chance of dropping items -$s1 when character dies if character has Lucky Charm in his inventory. Cannot be used by chaotic characters. \nDuration: 3 hours. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440"/>
 	</item>
 
 	<item id="70624" name="Lucky Charm Pack (3 hours)" type="NONE" icon="BranchSys.icon.br_silver_box_i00">
 	<!-- Double-click to acquire Lucky Charm (3 hours).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70625" name="XP Growth Amulet" type="RUNE" icon="icon.skill19226">
 	<!-- If stored in the inventory, acquired XP/ SP +40%. If used with High-grade XP Growth Amulet only the item with higher grade will take effect.\nDuration: 1 day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440"/>
 	</item>
 
 	<item id="70626" name="High-grade XP Growth Amulet" type="RUNE" icon="icon.skill19226">
 	<!-- If stored in the inventory, acquired XP/ SP +60%.\nDuration: 1 day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440"/>
 	</item>
 
 	<item id="70627" name="XP Growth Amulet Chest (1-day)" type="NONE" icon="BranchSys.icon.br_lucky_bag_box_i00">
 	<!-- Double-click to acquire Fishing XP Growth Amulet (1-day). -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70628" name="High-grade XP Growth Amulet Pack (1-day)" type="NONE" icon="BranchSys.icon.br_lucky_bag_box_i00">
 	<!-- Double-click to acquire High-grade XP Growth Amulet (1-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70629" name="Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
 	<!-- If stored in the inventory during fishing, for 1 day acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect.\n -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440"/>
 	</item>
 
 	<item id="70630" name="High-grade Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
 	<!-- If stored in the inventory during fishing, acquired XP/ SP +50%.\nDuration: 1 day. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="1440"/>
 	</item>
 
 	<item id="70631" name="Fishing XP Growth Amulet Pack (1-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to acquire Fishing XP Growth Amulet (1-day). -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70632" name="High-grade Fishing XP Growth Amulet Pack (1-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
 	<!-- Double-click to acquire High-grade Fishing XP Growth Amulet (1-day).\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70633" name="Blue Dynasty Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i01">
 	<!-- Transforms you into Blue Dynasty for 30 min. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +2. Effect remains after death -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55693" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
@@ -217,7 +217,7 @@
 
 	<item id="70634" name="Red Zubei Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i04">
 	<!-- Transforms you into Red Zubei for 30 minutes. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +1. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55694" value="-1"/>  <!-- Red Zubei Transformation Scroll -->
@@ -226,7 +226,7 @@
 
 	<item id="70635" name="Formal Wear Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i02">
 	<!-- Transforms you into Formal Wear for 30 min. Effect remains after death. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="55583" value="-1"/>  <!-- Formal Wear Appearance Scroll -->
@@ -235,43 +235,43 @@
 
 	<item id="70636" name="Party Buff Scroll - Lv. 1" type="SCROLL" icon="icon.etc_trans_4f_s_b_01">
 	<!-- For 20 min., character's and nearby party members' P./ M. Atk. +3%. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70637" name="Party Buff Scroll - Lv. 2" type="SCROLL" icon="icon.etc_trans_4f_s_b_01">
 	<!-- For 20 min., character's and nearby party members' P./ M. Atk./ Atk. Spd./ Casting Spd. +5%. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70638" name="Special Hero's Fruit" type="POTION" icon="icon.etc_cobol_i01">
 	<!-- For 20 min., P./ M. Atk. +8%, P./ M. Def. +15%, HP/MP/CP +18%, HP/MP Recovery +24%. Recovers as HP 3% of the physical damage inflicted on the enemy with a certain probability. Cannot be stacked with Special Fruit Buff.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70639" name="Hero's XP/SP Scroll" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- For 20 min. XP/ SP +50%.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="70640" name="Hero's Recovery Potion" type="POTION" icon="icon.etc_potion_scarlet_i00">
 	<!-- Immediately restores 200 HP. Cannot be used, when HP is full.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70641" name="Hero's Major Recovery Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- Immediately restores 500 HP. Cannot be used, when HP is full.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70642" name="Hero's MP Recovery Potion" type="POTION" icon="icon.etc_potion_blue_i00">
 	<!-- Immediately restores 60 MP.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="10" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="39258" value="-1"/>  <!-- Warrior MP Recovery Potion -->
@@ -280,13 +280,13 @@
 
 	<item id="70643" name="Golden Mermaid's Scale" type="SCROLL" icon="icon.etc_oren_fish_scale_i00">
 	<!-- For 3 hours, during fishing XP/ SP +10%.\nDuration: 7 days. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="50" duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70644" name="Growth Amulet" type="RUNE" icon="BranchSys3.lcon.g_rune_itemdrop_up">
 	<!-- If stored in the inventory, acquired XP/ SP +40%.\nDuration: 3 days. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="50" duration="4320"/>
 	</item>
 
@@ -511,61 +511,61 @@
 
 	<item id="70663" name="Party Support Cube - Lv. 1" type="ELIXIR" icon="icon.etc_clear_crystal_cube_pc_i00">
 	<!-- Double-click to get one of the following: from 1 to 3 Party Buff Scrolls - Lv. 1.\n<Note> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM. Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70664" name="Soulshot Support Cube" type="ELIXIR" icon="icon.etc_violet_crystal_cube_pc_i00">
 	<!-- Double-click to get one of the following: from 150 to 1500 Soulshots.\n<Note:> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70665" name="Spiritshot Support Cube" type="ELIXIR" icon="icon.etc_pink_crystal_cube_pc_i00">
 	<!-- Double-click to get one of the following: from 100 to 1000 Spiritshots.\n<Note:> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70666" name="Buff Support Cube" type="ELIXIR" icon="icon.etc_dkbrown_crystal_cube_pc_i00">
 	<!-- Double-click to get one of the following: from 1 to 3 Special Hero's Fruits or XP/SP Hero's Scroll.\n<Note:> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70667" name="Potion Support Cube - Lv. 1" type="ELIXIR" icon="icon.etc_black_crystal_cube_pc_i00">
 	<!-- Double-click to get one of the following: from 3 to 10 Hero's Recovery Potions or from 3 to 5 Hero's MP Recovery Potions.\n<Note> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM. Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70668" name="Blessed Support Cube" type="ELIXIR" icon="icon.etc_golden_ore_cube_pc_i00">
 	<!-- Double-click to get one of the following: 3 Blessed Scrolls of Escape/ 2 Blessed Scrolls of Resurrection/ Feather of Blessing.\n<Note:> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70669" name="Party Support Cube - Lv. 2" type="ELIXIR" icon="icon.etc_silver_ore_cube_pc_i00">
 	<!-- Double-click to get from 1 to 5 Party Buff Scrolls - Lv. 2.\n<Note> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM. Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70670" name="Fishing Support Cube" type="ELIXIR" icon="icon.etc_cupreous_ore_cube_pc_i00">
 	<!-- Double-click to get Golden Mermaid's Fishing Rod (1-day) and one of the following: Golden Mermaid's Scale (7-day)/ 20 Fishing Shots/ 20 Normal Baits.\n<Note:> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70671" name="Potion Support Cube - Lv. 2" type="ELIXIR" icon="icon.etc_earthen_ore_cube_pc_i00">
 	<!-- Double-click to get one of the following: 5 Hero's Major Recovery Potions/ from 5 to 10 Hero's Recovery Potions/ from 3 to 5 Hero's MP Recovery Potions.\n<Note> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM. Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70672" name="Progression Support Cube" type="ELIXIR" icon="icon.etc_clear_crystal_cube_pc_i00">
 	<!-- Double-click to get one of the following: 1 or 2 Golden Mermaid's Tears (7-day).\n<Note:> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
@@ -591,73 +591,73 @@
 
 	<item id="70675" name="Returning Hero's Reward - Heavy Armor" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to acquire Hero's Shining Heavy Armor Set (30-day)/ Hero's Shining Weapon Set (30-day)/ Expertise Rune (C-grade) (30-day) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70676" name="Returning Hero's Reward - Light Armor" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to acquire Hero's Shining Light Armor Set (30-day)/ Hero's Shining Weapon Set (30-day)/ Expertise Rune (C-grade) (30-day) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70677" name="Returning Hero's Reward - Robe" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to acquire Hero's Shining Robe Set (30-day)/ Hero's Shining Weapon Set (30-day)/ Expertise Rune (C-grade) (30-day) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70678" name="Expertise Rune (C-grade)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
 	<!-- When possessed, gives Expertise C Skill. \nDuration: 30 days. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70679" name="Returning Hero's Reward - Lv. 30" type="NONE" icon="icon.npoint_earring_of_lind_30day_box">
 	<!-- Double-click to acquire: Growth Amulet (3-day), Returning Hero's Reward - Lv. 40, Soulshot Support Cube (7-day), Spiritshot Support Cube (7-day). Can be used by characters with lvl 30 and above.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70680" name="Returning Hero's Reward - Lv. 40" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click to acquire: Cadmus Transformation Bracelet - Prophet (7-day), Returning Hero's Reward - Lv. 45, Buff Support Cube (7-day). Can be used by characters with lvl 40 and above.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70681" name="Returning Hero's Reward - Lv. 45" type="NONE" icon="icon.npoint_valakas_30day_box">
 	<!-- Double-click to acquire: Growth Amulet (3-day), Returning Hero's Reward - Lv. 50, Potion Support Cube - Lv. 1 (7-day). Can be used by characters Lv. 45 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70682" name="Returning Hero's Reward Lv. 50" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to acquire: Rare Core/Orfen/Queen Ant's Accessory Lv. 3 (7-day), Returning Hero's Reward - Lv. 54, Blessed Support Cube (7-day). Only for characters level 50 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70683" name="Returning Hero's Reward - Lv. 54" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to acquire: 5 Golden Necklaces of Mermaid (7-day), 10 XP Boost Scrolls, and Returning Hero's Reward - Lv. 56, Party Support Cube - Lv. 2 (7-day). Can be used by characters of level 54 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70684" name="Returning Hero's Reward - Lv. 56" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to acquire: Growth Amulet (3-day), Returning Hero's Reward - Lv. 58, Fishing Support Cube (7-day). Can be used by characters with lvl 56 and above.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70685" name="Returning Hero's Reward - Lv. 58" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to acquire the following items: Rare Core/Orfen/Queen Ant’s Accessory Lv. 1 (15-day), Newbie Gift - Lv. 40, Potion Support Cube - Lv. 1 (7-day). Can be used by characters of Lv. 30 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70686" name="Returning Hero's Reward - Lv. 60" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Double-click to acquire: Agathion Aries (60-day), Hero's Bracelet (30-day), Returning Hero's Talisman (30-day), Progression Support Cube (7-day). Can be used by characters with lvl 60 and above.\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 

@@ -67,53 +67,53 @@
 
 	<item id="1106" name="Norman's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- First half year financial summary of the Iron Gate guild: balance sheet and profit and loss statement of the Gludio region guild. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1107" name="Bone Fragment" type="NONE" icon="icon.etc_piece_bone_white_i00">
 	<!-- Bone fragments of the undead skeletons. Collect ten of these and go back to Magister Harne. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1112" name="Leaf of the Mother Tree" type="NONE" icon="icon.etc_leaf_green_i00">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1113" name="Blood of Mitraell" type="NONE" icon="icon.item_canuse48">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1114" name="Orc Amulet" type="NONE" icon="icon.etc_feather_gold_i00">
 	<!-- Amulet possessed by Kaboo Orcs for magic purposes. Take it to Sentinel Rayen. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1115" name="Orc's Necklace" type="NONE" icon="icon.accessary_necklace_of_anguish_i00">
 	<!-- Bone necklace possessed by Kaboo Orc fighters for magic purposes. Take it to Sentinel Rayen. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1116" name="Orc Amulet" type="NONE" icon="icon.etc_feather_gold_i00">
 	<!-- Amulet that the Balor Orcs possess for magical purposes. Take this to Sentry Kayleen. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1117" name="Orc's Necklace" type="NONE" icon="icon.accessary_necklace_of_anguish_i00">
 	<!-- Bone necklace that the Balor Orc fighters carry for magical purposes. Take this to Sentry Kayleen. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1118" name="Spore Sac" type="NONE" icon="icon.etc_pouch_brown_i00">
 	<!-- Sac containing spore pollen. Give 10 spore sacs to Herbiel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -218,73 +218,73 @@
 
 	<item id="1130" name="Cobendell's Medicine" type="NONE" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Fever medicine concocted by Master Cobendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1131" name="Cobendell's Medicine" type="NONE" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Fever medicine concocted by Master Cobendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1132" name="Cobendell's Medicine" type="NONE" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Fever medicine concocted by Master Cobendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1133" name="Cobendell's Medicine" type="NONE" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Fever medicine concocted by Master Cobendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1134" name="Cobendell's Medicine" type="NONE" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Fever medicine concocted by Master Cobendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1135" name="Spiritbound Wand" type="NONE" icon="icon.weapon_club_i01">
 	<!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into a the wand and take it to Grand Magister Gallint. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1136" name="Spiritbound Wand" type="NONE" icon="icon.weapon_club_i01">
 	<!-- The wand where the Spirit of Mirrors is bound to. Trap all three Spirits of Mirrors into a the wand and take it to Grand Magister Gallint. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1137" name="Spiritbound Wand" type="NONE" icon="icon.weapon_club_i01">
 	<!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into a the wand and take it to Grand Magister Gallint. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1138" name="Auron's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Letter written by Master Auron. Take this to Trader Simplon in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1139" name="Warrior Guild Badge" type="NONE" icon="icon.etc_badge_gold_i00">
 	<!-- A badge that shows that player is a member of the Warrior Guild. Take this to the Ruins of Agony and kill tracker skeletons. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1140" name="Rusted Bronze Sword" type="NONE" icon="icon.weapon_broad_sword_i00">
 	<!-- Old bronze sword used by tracker skeletons. Collect ten and give them to Trader Simplon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1141" name="Rusted Bronze Sword" type="NONE" icon="icon.weapon_broad_sword_i00">
 	<!-- Old and rusted bronze sword given by Trader Simplon, who said it was a 'Sword of Trial'. Take this to Master Auron. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -306,19 +306,19 @@
 
 	<item id="1143" name="Simplon's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter written by Trader Simplon. Take this to Master Auron. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1144" name="Giant Venomous Spider's Leg" type="NONE" icon="icon.etc_horn_i00">
 	<!-- Leg cut from a dead Venomous Spider or an Arachnid Tracker. Collect twenty of these and take to Master Auron. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1145" name="Medallion of Warrior" type="NONE" icon="icon.accessary_earing_of_protection_i00">
 	<!-- Take this medallion and go to the Grand Master of the Warrior's Guild to change your occupation to a Warrior. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -360,187 +360,187 @@
 
 	<item id="1150" name="Spellbook: Wind Strike" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Wind Strike. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="50" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1151" name="Spellbook: Self Heal" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Self Heal. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="50" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1152" name="Spellbook: Heal" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Heal. Used by Human Mystics, Elven Mystics and Dark Mystics.\nRequired level: 7 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction stackable="true"/>
 		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1153" name="Jenna's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Letter from Sentry Jenna to Master Harant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1154" name="Sentry Blade" type="NONE" icon="icon.weapon_bastard_sword_i00">
 	<!-- Adamantite sword newly issued to sentries. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1155" name="Sentry Blade" type="NONE" icon="icon.weapon_bastard_sword_i00">
 	<!-- Adamantite sword newly issued to sentries. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1156" name="Sentry Blade" type="NONE" icon="icon.weapon_bastard_sword_i00">
 	<!-- Adamantite sword newly issued to sentries. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1157" name="Old Bronze Sword" type="NONE" icon="icon.weapon_crimson_sword_i00">
 	<!-- Bronze sword used in the past by sentries. Recover this and take it to Sentry Jenna. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1158" name="Bone Fragment" type="NONE" icon="icon.etc_piece_bone_red_i00">
 	<!-- Bone fragment obtained from the undead skeletons. Gather 10 bone fragments and 3 Elf skulls, and take them to Unoren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1159" name="Elf Skull" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- The skull of an undead Elf. Gather 10 bone fragments and 3 Elf skulls, and take them to Unoren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1160" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_bead_gold_i00">
 	<!-- Gather 13 dark bezoars and take them to Sentry Nelsya. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1161" name="Ritual Sword" type="NONE" icon="icon.weapon_flamberge_i00">
 	<!-- Take this sword to the Grand Master of the Fighter Guild to change your occupation to a Knight. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1162" name="Coin of Lords" type="NONE" icon="icon.etc_coins_silver_i00">
 	<!-- Gold coin engraved with the Gludio Lord's Badge. Gather two or more of these to end the Apprentice Knight's Trial. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1163" name="Coin of Lords" type="NONE" icon="icon.etc_coins_silver_i00">
 	<!-- Gold coin engraved with the Gludio Lord's Badge. Gather two or more of these to end the Apprentice Knight's Trial. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1164" name="Coin of Lords" type="NONE" icon="icon.etc_coins_silver_i00">
 	<!-- Gold coin engraved with the Gludio Lord's Badge. Gather two or more of these to end the Apprentice Knight's Trial. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1165" name="Coin of Lords" type="NONE" icon="icon.etc_coins_silver_i00">
 	<!-- Gold coin engraved with the Gludio Lord's Badge. Gather two or more of these to end the Apprentice Knight's Trial. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1166" name="Coin of Lords" type="NONE" icon="icon.etc_coins_silver_i00">
 	<!-- Gold coin engraved with the Gludio Lord's Badge. Gather two or more of these to end the Apprentice Knight's Trial. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1167" name="Coin of Lords" type="NONE" icon="icon.etc_coins_silver_i00">
 	<!-- Gold coin engraved with the Gludio Lord's Badge. Gather two or more of these to end the Apprentice Knight's Trial. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1168" name="Gludio Guard's 1st Crest" type="NONE" icon="icon.etc_badge_silver_i00">
 	<!-- Crest that proves guard membership. As Captain Bathis requested, hunt Bugbear Raiders. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1169" name="Bugbear Necklace" type="NONE" icon="icon.etc_totem_necklace_red_i00">
 	<!-- Necklace worn by Bugbears for incantation purposes. Collect ten of these and visit Captain Bathis. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1170" name="Einhasad's 1st Temple Badge" type="NONE" icon="icon.accessary_earing_of_holy_spirit_i00">
 	<!-- As High Priest Raymond requested, go to the Ruins of Despair, defeat the departed spirits of priests, and collect 12 Einhasad's Crucifixes. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1171" name="Einhasad's Crucifix" type="NONE" icon="icon.accessary_necklace_of_knowledge_i00">
 	<!-- Holy symbol of Einhasad, the goddess of light. Collect 12 of these and go to High Priest Raymond. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1172" name="Gludio Guard's 2nd Crest" type="NONE" icon="icon.etc_badge_silver_i00">
 	<!-- Crest that distinguishes guard membership. As Captain Bezique requested, hunt giant spiders. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1173" name="Giant Venomous Spider's Leg" type="NONE" icon="icon.etc_horn_i00">
 	<!-- Severed leg of a dead Venomous Spider. Collect twenty of these and go to Captain Bezique. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1174" name="Einhasad's 2nd Temple Badge" type="NONE" icon="icon.accessary_earing_of_holy_spirit_i00">
 	<!-- As High Priest Levian requested, kill Langk lizardmen and collect the proof. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1175" name="Lizardman's Totem" type="NONE" icon="icon.etc_totem_green_i00">
 	<!-- Small sculpture Langk lizardmen carry with them. Collect twenty of these and take them to High Priestess Levian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1176" name="Gludio Guard's 3rd Crest" type="NONE" icon="icon.etc_badge_silver_i00">
 	<!-- Crest that proves guard membership. As Captain Gilbert requested, hunt giant spiders. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1177" name="Giant Spider's Husk" type="NONE" icon="icon.etc_leather_gray_i00">
 	<!-- The husk of a giant spider that you peeled off. Collect twenty of these and take them to Captain Gilbert. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1178" name="Einhasad's 3rd Temple Badge" type="NONE" icon="icon.accessary_earing_of_holy_spirit_i00">
 	<!-- As High Priest Biotin requested, hunt Silent Horrors in the Elven Ruins. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1179" name="Skull of Silent Horror" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- The skull of a long-dead Elf. Collect 10 and take them to High Priest Biotin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1180" name="Bezique's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Captain Bezique's letter to Neti. Find Neti in the Village of Gludin and give her the letter. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -580,103 +580,103 @@
 
 	<item id="1183" name="Spartoi's Bones" type="NONE" icon="icon.etc_piece_bone_black_i00">
 	<!-- Undead bone pieces. Collect 10 and take them to Neti. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1184" name="Horseshoe of Light" type="NONE" icon="icon.accessary_red_cresent_earing_i00">
 	<!-- Proof you received after passing Neti's test. You must take it to Captain Bezique. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1185" name="Most Wanted List" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- It is written that whoever does away with the Cat's Eye bandits and recovers the stolen goods will be rewarded. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1186" name="Stolen Jewelry" type="NONE" icon="icon.etc_jewel_red_i00">
 	<!-- Fair amount of jewelry the Cat's Eye bandits stole. You must take them to Captain Bezique. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1187" name="Stolen Tomes" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Rare tome the Cat's Eye bandits stole. You must take it to Captain Bezique. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1188" name="Stolen Ring" type="NONE" icon="icon.accessary_ring_of_grace_i00">
 	<!-- Expensive necklace that the Cat's Eye bandits have stolen. You must take it back to Captain Bezique. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1189" name="Stolen Necklace" type="NONE" icon="icon.accessary_necklace_of_blessing_i00">
 	<!-- Expensive necklace the Cat's Eye bandits stole. You must take it to Captain Bezique. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1190" name="Bezique's Recommendation" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Take this medallion to the Grand Masters of the Fighter Guild to change your occupation to a Rogue. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1191" name="1st Letter of Order" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Certificate of forbidden book collection given by Priest Zigaunt. Carry this around and collect all the forbidden books. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1192" name="2nd Letter of Order" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Certificate that proves that you represent the religious body. This certificate is given by Priest Zigaunt. Take this to Lionel for covenant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1193" name="Lionel's Book" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- The last book of Lioniel. Hand this book to Grand Magister Gallint in the Einhovant School of Magic. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1194" name="Book of Vivyan" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Forbidden book Simplon sold to Vivyan. Collect five forbidden books and take them to Priest Zigaunt. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1195" name="Book of Simplon" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- The rest of Simplon's forbidden books. Collect 5 forbidden books and take them to Priest Zigaunt. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1196" name="Book of Praga" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Forbidden book Simplon sold to Praga. Collect 5 forbidden books and take them to Priest Zigaunt. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1197" name="Gallint's Certificate" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Certificate that Gallint gives for safekeeping of forbidden books. Give to Lionel and receive covenant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1198" name="Pendant of Mother" type="NONE" icon="icon.accessary_blessed_earing_i00">
 	<!-- The pendant of his mother that Guard Praga lost in the ruins. Take this to Guard Praga and receive a forbidden book. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1199" name="Necklace of Mother" type="NONE" icon="icon.accessary_blessed_necklace_i00">
 	<!-- Necklace chain where a pendant used to hang. Recover the pendant from the zombies in the Ruins of Agony to make it complete. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

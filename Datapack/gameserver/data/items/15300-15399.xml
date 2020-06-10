@@ -116,7 +116,7 @@
 
 	<item id="15366" name="Watermelon seed" type="NONE" icon="icon.event_honey_watermelon_seed_i00">
 	<!-- Double-click to make a Growing Watermelon appear. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="9029" value="-1"/>  <!-- Watermelon Seed -->
@@ -125,7 +125,7 @@
 
 	<item id="15367" name="Honey Watermelon Seed" type="NONE" icon="icon.event_watermelon_seed_i00">
 	<!-- Double-click to make a Growing Honey Watermelon appear. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="9030" value="-1"/>  <!-- Honey Watermelon Seed -->
@@ -134,13 +134,13 @@
 
 	<item id="15368" name="Copied Watermelon Seed" type="NONE" icon="icon.event_honey_watermelon_seed_i00">
 	<!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="15369" name="Copied Honey Watermelon Seed" type="NONE" icon="icon.event_watermelon_seed_i00">
 	<!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
