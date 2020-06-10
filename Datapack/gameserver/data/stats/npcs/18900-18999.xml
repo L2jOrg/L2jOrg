@@ -65,7 +65,7 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
             <defence physical="405.85106382979" magical="297.0297029703"/>
         </stats>
-        <status attackable="false"/>
+        <status attackable="false" targetable="false"/>
         <collision>
             <radius normal="0.1"/>
             <height normal="30.5"/>
@@ -84,7 +84,7 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
             <defence physical="405.85106382979" magical="297.0297029703"/>
         </stats>
-        <status attackable="false"/>
+        <status attackable="false" targetable="false"/>
         <collision>
             <radius normal="32"/>
             <height normal="17.5"/>

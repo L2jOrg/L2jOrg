@@ -5,6 +5,7 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.configuration.Configurator;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -160,6 +161,29 @@ public final class ZoneManager extends GameXmlReader {
             LOGGER.warn("Zone ({}) from file: {} overrides previous definition.", zone, file);
         }
         registerIntoWorldRegion(zone);
+    }
+
+    public int addCylinderZone(Class<?> zoneClass,String zoneName, Location coords, int radius) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
+        var constructor = zoneClass.asSubclass(Zone.class).getConstructor(int.class);
+
+        int zoneId = lastDynamicId++;
+
+        ZoneArea area = new ZoneCylinderArea(coords.getX(), coords.getY(), coords.getZ() - 100, coords.getZ() + 100, radius);
+
+        var zone = constructor.newInstance(zoneId);
+        zone.setName(zoneName);
+        zone.setArea(area);
+
+        if(isNull(zone.getArea())) {
+            LOGGER.error("There is no defined area to Zone " + zone);
+        }
+
+        if(nonNull(addZone(zoneId, zone))) {
+            LOGGER.warn("Zone ({}) overrides previous definition.", zone);
+        }
+        registerIntoWorldRegion(zone);
+
+        return zoneId;
     }
 
     private void registerIntoWorldRegion(Zone zone) {
