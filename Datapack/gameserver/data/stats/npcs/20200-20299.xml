@@ -1116,6 +1116,7 @@
                 <item id="2939" min="2" max="6" chance="0.75"/> <!-- Plated Leather Boot Lining -->
                 <item id="2199" min="1" max="1" chance="0.75"/> <!-- Recipe: Karmian Stockings -->
                 <item id="3021" min="1" max="1" chance="0.075"/> <!-- Recipe: Dwarven War Hammer -->
+                <item id="1419" min="1" max="1" chance="15"/> <!-- Proof of blood -->
             </drop>
             <spoil>
                 <item id="1873" min="1" max="1" chance="75.88"/> <!-- Silver Nugget -->
@@ -1463,6 +1464,7 @@
                 <item id="4554" min="1" max="1" chance="0.03"/> <!-- Greater Dye of STR <STR +1 DEX -1> - 2nd Class Transfer -->
                 <item id="4557" min="1" max="1" chance="0.03"/> <!-- Greater Dye of DEX <Dex +1 Str -1> - 2nd Class Transfer -->
                 <item id="4558" min="1" max="1" chance="0.03"/> <!-- Greater Dye of DEX <Dex +1 CON -1> - 2nd Class Transfer -->
+                <item id="1419" min="1" max="1" chance="27"/>
             </drop>
             <spoil>
                 <item id="1876" min="1" max="1" chance="61.62"/> <!-- Mithril Ore -->
