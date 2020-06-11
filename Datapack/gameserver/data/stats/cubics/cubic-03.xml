@@ -133,19 +133,19 @@
             </skill>
         </skills>
     </cubic>
-    <cubic id="3" level="101" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
+    <cubic id="3" level="8" slot="3" duration="900" delay="13" maxCount="20" useUp="0" power="0.0" targetType="HEAL">
         <skills>
-            <skill id="4051" level="9" successRate="13"> <!-- Cubic Heal -->
+            <skill id="4051" level="8" successRate="13"> <!-- Cubic Heal -->
                 <conditions>
                     <healthPercent min="60" max="90"/>
                 </conditions>
             </skill>
-            <skill id="4051" level="9" successRate="33"> <!-- Cubic Heal -->
+            <skill id="4051" level="8" successRate="33"> <!-- Cubic Heal -->
                 <conditions>
                     <healthPercent min="30" max="60"/>
                 </conditions>
             </skill>
-            <skill id="4051" level="9" successRate="53"> <!-- Cubic Heal -->
+            <skill id="4051" level="8" successRate="53"> <!-- Cubic Heal -->
                 <conditions>
                     <healthPercent min="0" max="30"/>
                 </conditions>
