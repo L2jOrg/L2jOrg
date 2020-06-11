@@ -410,7 +410,7 @@ public class CreatureAI extends AbstractAI {
      * Do nothing.
      */
     @Override
-    protected void onEvtThink() {
+    public void onEvtThink() {
         // do nothing
     }
 
