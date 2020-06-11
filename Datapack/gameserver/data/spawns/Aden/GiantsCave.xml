@@ -189,13 +189,22 @@
         <npc id="20771" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="24015" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="24015" count="1" respawnTime="60sec" respawnRandom="20sec"/>
-        <npc id="24020" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="20658" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="20658" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="20657" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="20656" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="20656" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="20657" count="1" respawnTime="60sec" respawnRandom="20sec"/>
+        <group name="batur" spawnByDefault="false">
+            <npc id="24020" count="1" respawnTime="0sec" respawnRandom="0sec">
+                <locations>
+                    <location x="185517" y="62272" z="-5016" chance="25"/>
+                    <location x="189701" y="62241" z="-5016" chance="25"/>
+                    <location x="189694" y="62853" z="-5016" chance="25"/>
+                    <location x="185510" y="62915" z="-5016" chance="25"/>
+                </locations>
+            </npc>
+        </group>
     </spawn>
     <spawn>
         <territories>
@@ -306,7 +315,7 @@
         <npc id="24022" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="24021" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="24021" count="1" respawnTime="60sec" respawnRandom="20sec"/>
-        <npc id="24020" count="1" respawnTime="60sec" respawnRandom="20sec"/>
+        <!--<npc id="24020" count="1" respawnTime="60sec" respawnRandom="20sec"/>-->
         <npc id="20652" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="20652" count="1" respawnTime="60sec" respawnRandom="20sec"/>
         <npc id="20653" count="1" respawnTime="60sec" respawnRandom="20sec"/>
