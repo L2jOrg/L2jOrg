@@ -135,18 +135,21 @@ public final class AutoPlayEngine {
     }
 
     public void stopAutoPotion(Player player) {
-        autoPotionPlayers.remove(player);
-        synchronized (autoPotionTaskLocker) {
-            if(autoPotionPlayers.isEmpty()  && nonNull(autoPotionTask)) {
-                autoPotionTask.cancel(false);
-                autoPotionTask = null;
+        if(autoPotionPlayers.remove(player)) {
+            synchronized (autoPotionTaskLocker) {
+                if (autoPotionPlayers.isEmpty() && nonNull(autoPotionTask)) {
+                    autoPotionTask.cancel(false);
+                    autoPotionTask = null;
+                }
             }
         }
     }
 
     public void stopTasks(Player player) {
-        stopAutoPlay(player);
-        stopAutoPotion(player);
+        if(nonNull(player.getAutoPlaySettings())) {
+            stopAutoPlay(player);
+            stopAutoPotion(player);
+        }
     }
 
     public static AutoPlayEngine getInstance() {
