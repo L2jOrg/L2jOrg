@@ -603,14 +603,16 @@
                 <node x="115272" y="18452"/>
             </territory>
         </territories>
-        <npc id="20977" count="1">
-            <locations>
-                <location x="114972" y="17220" z="-676" chance="25"/>
-                <location x="115240" y="17088" z="-676" chance="25"/>
-                <location x="116504" y="17604" z="-676" chance="25"/>
-                <location x="115272" y="18452" z="-676" chance="25"/>
-            </locations>
-        </npc>
+        <group spawnByDefault="false">
+            <npc id="20977" count="1">
+                <locations>
+                    <location x="114972" y="17220" z="-676" chance="25"/>
+                    <location x="115240" y="17088" z="-676" chance="25"/>
+                    <location x="116504" y="17604" z="-676" chance="25"/>
+                    <location x="115272" y="18452" z="-676" chance="25"/>
+                </locations>
+            </npc>
+        </group>
     </spawn>
     <spawn>
         <territories>
@@ -621,14 +623,16 @@
                 <node x="114044" y="15016"/>
             </territory>
         </territories>
-        <npc id="20977" count="1">
-            <locations>
-                <location x="112844" y="14432" z="-684" chance="25"/>
-                <location x="114072" y="13680" z="-684" chance="25"/>
-                <location x="114348" y="14880" z="-684" chance="25"/>
-                <location x="114044" y="15016" z="-684" chance="25"/>
-            </locations>
-        </npc>
+        <group spawnByDefault="false">
+            <npc id="20977" count="1">
+                <locations>
+                    <location x="112844" y="14432" z="-684" chance="25"/>
+                    <location x="114072" y="13680" z="-684" chance="25"/>
+                    <location x="114348" y="14880" z="-684" chance="25"/>
+                    <location x="114044" y="15016" z="-684" chance="25"/>
+                </locations>
+            </npc>
+        </group>
     </spawn>
     <spawn>
         <territories>
