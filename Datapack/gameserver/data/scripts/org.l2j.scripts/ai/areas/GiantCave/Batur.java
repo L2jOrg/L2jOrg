@@ -39,7 +39,7 @@ public class Batur extends AbstractNpcAI
     }
 
 
-    @Override
+  /*  @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
         if (event.equals("BATUR_SPAWN_THREAD")) {
             final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npcSpawnTemplate -> npcSpawnTemplate.getId() == BATUR_ID);
@@ -52,7 +52,7 @@ public class Batur extends AbstractNpcAI
             startQuestTimer("BATUR_SPAWN_THREAD", RESPAWN_DELAY, null, null);
         }
         return super.onAdvEvent(event, npc, player);
-    }
+    }*/
 
 
     @Override
