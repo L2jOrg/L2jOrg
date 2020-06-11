@@ -1,4 +1,4 @@
-package ai.areas.TowerOfInsolence.Ateld;
+package ai.areas.TowerOfInsolence;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.ChatType;

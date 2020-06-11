@@ -3986,6 +3986,10 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DeBuff" id="4118" level="8"/> <!-- Paralysis -->
+            <minions name="Privates">
+                <npc id="21082" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="21083" count="1" respawnTime="0" weightPoint="1"/>
+            </minions>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
