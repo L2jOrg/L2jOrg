@@ -1519,7 +1519,9 @@
                 <node x="113553" y="18097"/>
             </territory>
         </territories>
-        <npc id="21081" count="1" respawnTime="300sec" respawnRandom="80sec"/>
+        <group name="EOI" spawnByDefault="false">
+            <npc id="21081" count="1"/>
+        </group>
     </spawn>
     <spawn>
         <territories>
@@ -1530,7 +1532,9 @@
                 <node x="112712" y="14844"/>
             </territory>
         </territories>
-        <npc id="21081" count="1" respawnTime="300sec" respawnRandom="80sec"/>
+        <group name="EOI" spawnByDefault="false">
+            <npc id="21081" count="1"/>
+        </group>
     </spawn>
     <spawn>
         <territories>
