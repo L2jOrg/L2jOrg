@@ -459,106 +459,43 @@ public class AttackableAI extends CreatureAI {
             return;
         }
 
-        if (Config.AGGRO_DISTANCE_CHECK_ENABLED && isMonster(npc) && !npc.isWalker())
-
-        {
-
+        if (Config.AGGRO_DISTANCE_CHECK_ENABLED && isMonster(npc) && !npc.isWalker()) {
             final Spawn spawn = npc.getSpawn();
-
-            if ((spawn != null) && (calculateDistance3D(npc, spawn.getLocation()) > Config.AGGRO_DISTANCE_CHECK_RANGE))
-
-            {
-
-                if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !npc.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || !npc.isInInstance()))
-
-                {
-
-                    if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE)
-
-                    {
-
+            if ((spawn != null) && (calculateDistance3D(npc, spawn.getLocation()) > Config.AGGRO_DISTANCE_CHECK_RANGE)) {
+                if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !npc.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || !npc.isInInstance())) {
+                    if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE) {
                         npc.setCurrentHp(npc.getMaxHp());
-
                         npc.setCurrentMp(npc.getMaxMp());
-
                     }
-
                     npc.abortAttack();
-
                     npc.clearAggroList();
-
                     npc.getAttackByList().clear();
-
-                    if (npc.hasAI())
-
-                    {
-
+                    if (npc.hasAI()) {
                         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, spawn.getLocation());
-
-                    }
-
-                    else
-
-                    {
-
+                    } else {
                         npc.teleToLocation(spawn.getLocation(), true);
-
                     }
-
-
 
                     // Minions should return as well.
-
-                    if (((Monster) actor).hasMinions())
-
-                    {
-
-                        for (Monster minion : ((Monster) actor).getMinionList().getSpawnedMinions())
-
-                        {
-
-                            if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE)
-
-                            {
-
+                    if (((Monster) actor).hasMinions()) {
+                        for (Monster minion : ((Monster) actor).getMinionList().getSpawnedMinions()) {
+                            if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE) {
                                 minion.setCurrentHp(minion.getMaxHp());
-
                                 minion.setCurrentMp(minion.getMaxMp());
-
                             }
-
                             minion.abortAttack();
-
                             minion.clearAggroList();
-
                             minion.getAttackByList().clear();
-
-                            if (minion.hasAI())
-
-                            {
-
+                            if (minion.hasAI()) {
                                 minion.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, spawn.getLocation());
-
-                            }
-
-                            else
-
-                            {
-
+                            } else {
                                 minion.teleToLocation(spawn.getLocation(), true);
-
                             }
-
                         }
-
                     }
-
                     return;
-
                 }
-
             }
-
         }
 
 
