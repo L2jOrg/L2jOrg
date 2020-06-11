@@ -9,6 +9,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -22,6 +23,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableHate;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
@@ -53,7 +55,7 @@ public class AttackableAI extends CreatureAI {
     /**
      * The Attackable AI task executed every 1s (call onEvtThink method).
      */
-    private Future<?> _aiTask;
+   // private Future<?> _aiTask;
     /**
      * The delay after which the attacked is stopped.
      */
@@ -154,17 +156,12 @@ public class AttackableAI extends CreatureAI {
 
     public void startAITask() {
         // If not idle - create an AI task (schedule onEvtThink repeatedly)
-        if (_aiTask == null) {
-            _aiTask = ThreadPool.scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
-        }
+        AttackableThinkTaskManager.getInstance().add(getActiveChar());
     }
 
     @Override
     public void stopAITask() {
-        if (_aiTask != null) {
-            _aiTask.cancel(false);
-            _aiTask = null;
-        }
+        AttackableThinkTaskManager.getInstance().remove(getActiveChar());
         super.stopAITask();
     }
 
@@ -461,6 +458,46 @@ public class AttackableAI extends CreatureAI {
         if ((npc == null) || npc.isCastingNow()) {
             return;
         }
+
+        if (Config.AGGRO_DISTANCE_CHECK_ENABLED && isMonster(npc) && !npc.isWalker()) {
+            final Spawn spawn = npc.getSpawn();
+            if ((spawn != null) && (calculateDistance3D(npc, spawn.getLocation()) > Config.AGGRO_DISTANCE_CHECK_RANGE)) {
+                if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !npc.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || !npc.isInInstance())) {
+                    if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE) {
+                        npc.setCurrentHp(npc.getMaxHp());
+                        npc.setCurrentMp(npc.getMaxMp());
+                    }
+                    npc.abortAttack();
+                    npc.clearAggroList();
+                    npc.getAttackByList().clear();
+                    if (npc.hasAI()) {
+                        npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, spawn.getLocation());
+                    } else {
+                        npc.teleToLocation(spawn.getLocation(), true);
+                    }
+
+                    // Minions should return as well.
+                    if (((Monster) actor).hasMinions()) {
+                        for (Monster minion : ((Monster) actor).getMinionList().getSpawnedMinions()) {
+                            if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE) {
+                                minion.setCurrentHp(minion.getMaxHp());
+                                minion.setCurrentMp(minion.getMaxMp());
+                            }
+                            minion.abortAttack();
+                            minion.clearAggroList();
+                            minion.getAttackByList().clear();
+                            if (minion.hasAI()) {
+                                minion.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, spawn.getLocation());
+                            } else {
+                                minion.teleToLocation(spawn.getLocation(), true);
+                            }
+                        }
+                    }
+                    return;
+                }
+            }
+        }
+
 
         Creature target = npc.getMostHated();
         if (getTarget() != target) {
@@ -868,7 +905,7 @@ public class AttackableAI extends CreatureAI {
      * Manage AI thinking actions of a Attackable.
      */
     @Override
-    protected void onEvtThink() {
+    public void onEvtThink() {
         // Check if the actor can't use skills and if a thinking action isn't already in progress
         if (_thinking || getActiveChar().isAllSkillsDisabled()) {
             return;

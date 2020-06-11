@@ -1432,7 +1432,7 @@ public final class Item extends WorldObject {
     }
 
     public boolean hasPassiveSkills() {
-        return (template.getItemType() == EtcItemType.RUNE) && (loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
+        return (template.getItemType() == EtcItemType.RUNE || template.getItemType() == EtcItemType.NONE) && (loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
     }
 
     public void giveSkillsToOwner() {

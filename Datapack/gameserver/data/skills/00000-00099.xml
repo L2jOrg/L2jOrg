@@ -1107,9 +1107,8 @@
                 <value level="8">79</value>
             </magic-level>
             <effect-point initial="200"/>
-            <effect-range initial="-1"/>
             <hit-time initial="900"/>
-            <activate-rate initial="-1"/>
+
         </attributes>
         <consume>
             <mana initial="5"/>
@@ -2799,7 +2798,6 @@
                     <value level="5">5.0</value>
                     <value level="6">6.0</value>
                     <value level="7">7.0</value>
-                    <value level="8">11.0</value>
                 </power>
             </summon-cubic>
         </effects>
@@ -6086,7 +6084,6 @@
                     <value level="5">5.0</value>
                     <value level="6">6.0</value>
                     <value level="7">7.0</value>
-                    <value level="8">11.0</value>
                 </power>
             </summon-cubic>
         </effects>

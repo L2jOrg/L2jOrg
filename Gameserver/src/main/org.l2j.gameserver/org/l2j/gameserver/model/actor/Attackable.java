@@ -612,6 +612,11 @@ public class Attackable extends Npc {
         final AggroInfo ai = _aggroList.computeIfAbsent(attacker, AggroInfo::new);
         ai.addDamage(damage);
 
+        if(targetPlayer != null && ai.getHate() == 0) {
+            // Notify to scripts
+            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAggroRangeEnter(this, targetPlayer, GameUtils.isSummon(attacker)), this);
+        }
+
         // traps does not cause aggro
         // making this hack because not possible to determine if damage made by trap
         // so just check for triggered trap here
@@ -626,9 +631,6 @@ public class Attackable extends Npc {
             if (getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) {
                 getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
             }
-
-            // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAggroRangeEnter(this, targetPlayer, GameUtils.isSummon(attacker)), this);
         } else if ((targetPlayer == null) && (aggro == 0)) {
             aggro = 1;
             ai.addHate(1);

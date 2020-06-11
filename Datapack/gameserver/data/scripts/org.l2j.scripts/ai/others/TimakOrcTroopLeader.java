@@ -36,7 +36,7 @@ public final class TimakOrcTroopLeader extends AbstractNpcAI
 		if (isMonster(npc))
 		{
 			final Monster monster = (Monster) npc;
-			if (!monster.isTeleporting())
+			if (!monster.isTeleporting() && !monster.hasMinions())
 			{
 				if (getRandom(1, 100) <= npc.getParameters().getInt("SummonPrivateRate", 0))
 				{

@@ -776,9 +776,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2555" name="Elven Sword*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -827,9 +824,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2558" name="Sword of Revolution*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -846,9 +840,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2559" name="Sword of Revolution*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -865,9 +856,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2560" name="Elven Long Sword*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -884,9 +872,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2561" name="Stormbringer*Stormbringer" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -903,9 +888,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2562" name="Stormbringer*Shamshir" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -922,9 +904,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2563" name="Stormbringer*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -941,9 +920,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2564" name="Stormbringer*Spirit Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -960,9 +936,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2565" name="Stormbringer*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -979,9 +952,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2566" name="Stormbringer*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -998,9 +968,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2567" name="Stormbringer*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1017,9 +984,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2568" name="Stormbringer*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1036,9 +1000,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2569" name="Stormbringer*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1055,9 +1016,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2570" name="Stormbringer*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1074,9 +1032,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2571" name="Stormbringer*Samurai Long sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1093,9 +1048,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="11" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2572" name="Shamshir*Shamshir" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1112,9 +1064,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2573" name="Shamshir*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1131,9 +1080,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2574" name="Shamshir*Spirit Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1150,9 +1096,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2575" name="Shamshir*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1169,9 +1112,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2576" name="Shamshir*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1188,9 +1128,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2577" name="Shamshir*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1207,9 +1144,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2578" name="Shamshir*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1226,9 +1160,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2579" name="Shamshir*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1245,9 +1176,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2580" name="Shamshir*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1264,9 +1192,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2581" name="Shamshir*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1283,9 +1208,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="12" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2582" name="Katana*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1302,9 +1224,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2583" name="Katana*Spirit Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1321,9 +1240,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2584" name="Katana*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1340,9 +1256,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2585" name="Katana*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1359,9 +1272,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2586" name="Katana*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1378,9 +1288,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2587" name="Katana*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1397,9 +1304,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2588" name="Katana*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1416,9 +1320,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2589" name="Katana*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1435,9 +1336,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2590" name="Katana*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1454,9 +1352,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="12" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2591" name="Spirit Sword*Spirit Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1473,9 +1368,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2592" name="Spirit Sword*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1492,9 +1384,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2593" name="Spirit Sword*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1511,9 +1400,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3046" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Guidance -->
-		</skills>
 	</weapon>
 
 	<weapon id="2594" name="Spirit Sword*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1530,9 +1416,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3042" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Critical Damage -->
-		</skills>
 	</weapon>
 
 	<weapon id="2595" name="Spirit Sword*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1549,9 +1432,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2596" name="Spirit Sword*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1568,9 +1448,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3044" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Focus -->
-		</skills>
 	</weapon>
 
 	<weapon id="2597" name="Spirit Sword*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1587,9 +1464,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 	<weapon id="2598" name="Spirit Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1606,9 +1480,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
-		</skills>
 	</weapon>
 
 	<weapon id="2599" name="Raid Sword*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -1625,9 +1496,6 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3045" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->
-		</skills>
 	</weapon>
 
 </list>

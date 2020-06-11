@@ -462,6 +462,11 @@ public final class Config {
     public static int DEFAULT_CORPSE_TIME;
     public static int SPOILED_CORPSE_EXTEND_TIME;
     public static int CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY;
+    public static boolean AGGRO_DISTANCE_CHECK_ENABLED;
+    public static int AGGRO_DISTANCE_CHECK_RANGE;
+    public static boolean AGGRO_DISTANCE_CHECK_RAIDS;
+    public static boolean AGGRO_DISTANCE_CHECK_INSTANCES;
+    public static boolean AGGRO_DISTANCE_CHECK_RESTORE_LIFE;
     public static boolean GUARD_ATTACK_AGGRO_MOB;
     public static double RAID_HP_REGEN_MULTIPLIER;
     public static double RAID_MP_REGEN_MULTIPLIER;
@@ -475,6 +480,7 @@ public final class Config {
     public static float RAID_MAX_RESPAWN_MULTIPLIER;
     public static boolean RAID_DISABLE_CURSE;
     public static boolean FORCE_DELETE_MINIONS;
+    public static long DESPAWN_MINION_DELAY;
     public static int RAID_CHAOS_TIME;
     public static int GRAND_CHAOS_TIME;
     public static int MINION_CHAOS_TIME;
@@ -1290,7 +1296,6 @@ public final class Config {
         ALT_MOB_AGRO_IN_PEACEZONE = NPC.getBoolean("AltMobAgroInPeaceZone", true);
         ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);
         ALT_GAME_VIEWNPC = NPC.getBoolean("AltGameViewNpc", false);
-        MAX_DRIFT_RANGE = NPC.getInt("MaxDriftRange", 300);
         SHOW_NPC_LVL = NPC.getBoolean("ShowNpcLevel", false);
         SHOW_CREST_WITHOUT_QUEST = NPC.getBoolean("ShowCrestWithoutQuest", false);
         ENABLE_RANDOM_ENCHANT_EFFECT = NPC.getBoolean("EnableRandomEnchantEffect", false);
@@ -1303,6 +1308,12 @@ public final class Config {
         DEFAULT_CORPSE_TIME = NPC.getInt("DefaultCorpseTime", 7);
         SPOILED_CORPSE_EXTEND_TIME = NPC.getInt("SpoiledCorpseExtendTime", 10);
         CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY = NPC.getInt("CorpseConsumeSkillAllowedTimeBeforeDecay", 2000);
+        MAX_DRIFT_RANGE = NPC.getInt("MaxDriftRange", 300);
+        AGGRO_DISTANCE_CHECK_ENABLED = NPC.getBoolean("AggroDistanceCheckEnabled", true);
+        AGGRO_DISTANCE_CHECK_RANGE = NPC.getInt("AggroDistanceCheckRange", 1500);
+        AGGRO_DISTANCE_CHECK_RAIDS = NPC.getBoolean("AggroDistanceCheckRaids", false);
+        AGGRO_DISTANCE_CHECK_INSTANCES = NPC.getBoolean("AggroDistanceCheckInstances", false);
+        AGGRO_DISTANCE_CHECK_RESTORE_LIFE = NPC.getBoolean("AggroDistanceCheckRestoreLife", true);
         GUARD_ATTACK_AGGRO_MOB = NPC.getBoolean("GuardAttackAggroMob", false);
         RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
         RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;
@@ -1330,6 +1341,7 @@ public final class Config {
             }
         }
         FORCE_DELETE_MINIONS = NPC.getBoolean("ForceDeleteMinions", false);
+        DESPAWN_MINION_DELAY = NPC.getLong("DespawnDelayMinions", 20000);
 
         RAID_DISABLE_CURSE = NPC.getBoolean("DisableRaidCurse", false);
         RAID_CHAOS_TIME = NPC.getInt("RaidChaosTime", 10);
