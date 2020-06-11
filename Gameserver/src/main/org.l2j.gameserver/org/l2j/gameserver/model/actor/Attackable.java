@@ -42,6 +42,7 @@ import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
@@ -1197,6 +1198,9 @@ public class Attackable extends Npc {
                 }
             }
         }
+
+        // Start a new AI task
+        AttackableThinkTaskManager.getInstance().add(this);
 
         // Reset the rest of NPC related states
         super.onRespawn();
