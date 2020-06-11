@@ -603,7 +603,14 @@
                 <node x="115272" y="18452"/>
             </territory>
         </territories>
-        <!--<npc id="20977" count="1" respawnTime="200sec" respawnRandom="40sec"/>-->
+        <npc id="20977" count="1">
+            <locations>
+                <location x="114972" y="17220" z="-676" chance="25"/>
+                <location x="115240" y="17088" z="-676" chance="25"/>
+                <location x="116504" y="17604" z="-676" chance="25"/>
+                <location x="115272" y="18452" z="-676" chance="25"/>
+            </locations>
+        </npc>
     </spawn>
     <spawn>
         <territories>
@@ -614,7 +621,14 @@
                 <node x="114044" y="15016"/>
             </territory>
         </territories>
-       <!-- <npc id="20977" count="1" respawnTime="200sec" respawnRandom="40sec"/>-->
+        <npc id="20977" count="1">
+            <locations>
+                <location x="112844" y="14432" z="-684" chance="25"/>
+                <location x="114072" y="13680" z="-684" chance="25"/>
+                <location x="114348" y="14880" z="-684" chance="25"/>
+                <location x="114044" y="15016" z="-684" chance="25"/>
+            </locations>
+        </npc>
     </spawn>
     <spawn>
         <territories>
@@ -1520,7 +1534,14 @@
             </territory>
         </territories>
         <group name="EOI" spawnByDefault="false">
-            <npc id="21081" count="1"/>
+            <npc id="21081" count="1">
+                <locations>
+                    <location x="114453" y="17147" z="6965" chance="25"/>
+                    <location x="115096" y="17795" z="6965" chance="25"/>
+                    <location x="114505" y="18378" z="6965" chance="25"/>
+                    <location x="113553" y="18097" z="6965" chance="25"/>
+                </locations>
+            </npc>
         </group>
     </spawn>
     <spawn>
@@ -1533,7 +1554,14 @@
             </territory>
         </territories>
         <group name="EOI" spawnByDefault="false">
-            <npc id="21081" count="1"/>
+            <npc id="21081" count="1">
+                <locations>
+                    <location x="113468" y="14144" z="6948" chance="25"/>
+                    <location x="114724" y="15352" z="6948" chance="25"/>
+                    <location x="113972" y="16116" z="6948" chance="25"/>
+                    <location x="112712" y="14844" z="6948" chance="25"/>
+                </locations>
+            </npc>
         </group>
     </spawn>
     <spawn>

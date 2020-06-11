@@ -84,10 +84,10 @@ public class TowerOfInsolence extends AbstractNpcAI {
     }
 
     private void spawnInvulNpc(int npcId) {
-        final List<NpcSpawnTemplate> elmoredenLadySpawns = SpawnsData.getInstance().getNpcSpawns(npcSpawnTemplate -> npcSpawnTemplate.getId() == npcId);
-        final Location location = elmoredenLadySpawns.get(0).getSpawnLocation();
-        final Npc elmoredenLady = addSpawn(npcId, location);
-        makeInvul(elmoredenLady);
+        final List<NpcSpawnTemplate> spawn = SpawnsData.getInstance().getNpcSpawns(npcSpawnTemplate -> npcSpawnTemplate.getId() == npcId);
+        final Location location = spawn.get(0).getSpawnLocation();
+        final Npc npc = addSpawn(npcId, location);
+        makeInvul(npc);
     }
 
     private void makeInvul(Npc npc) {
