@@ -610,26 +610,30 @@
                     <location x="115240" y="17088" z="-676" chance="25"/>
                     <location x="116504" y="17604" z="-676" chance="25"/>
                     <location x="115272" y="18452" z="-676" chance="25"/>
+                    <location x="112844" y="14432" z="-684" chance="25"/>
+                    <location x="114072" y="13680" z="-684" chance="25"/>
+                    <location x="114348" y="14880" z="-684" chance="25"/>
+                    <location x="114044" y="15016" z="-684" chance="25"/>
                 </locations>
             </npc>
         </group>
     </spawn>
     <spawn>
         <territories>
-            <territory name="aden36_2318_p10" minZ="-684" maxZ="-484">
-                <node x="112844" y="14432"/>
-                <node x="114072" y="13680"/>
-                <node x="114348" y="14880"/>
-                <node x="114044" y="15016"/>
+            <territory name="aden36_2318_p10" minZ="888" maxZ="1088">
+                <node x="115300" y="14424"/>
+                <node x="116260" y="15200"/>
+                <node x="116476" y="16280"/>
+                <node x="116296" y="16916"/>
             </territory>
         </territories>
         <group spawnByDefault="false">
             <npc id="20977" count="1">
                 <locations>
-                    <location x="112844" y="14432" z="-684" chance="25"/>
-                    <location x="114072" y="13680" z="-684" chance="25"/>
-                    <location x="114348" y="14880" z="-684" chance="25"/>
-                    <location x="114044" y="15016" z="-684" chance="25"/>
+                    <location x="115300" y="14424" z="888" chance="25"/>
+                    <location x="116260" y="15200" z="888" chance="25"/>
+                    <location x="116476" y="16280" z="888" chance="25"/>
+                    <location x="116296" y="16916" z="888" chance="25"/>
                 </locations>
             </npc>
         </group>
