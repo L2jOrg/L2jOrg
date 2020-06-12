@@ -1178,38 +1178,74 @@
     <skill id="50075" name="Physical Hot Spring" action="A1">
         <!-- Warmed by energy of Hot Springs Water. For 5 minutes P. Atk. +5%% and P. Atk. Spd. +5%%. -->
         <icon initial="icon.skill1062"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="75"/>
             <cast-range initial="600"/>
-            <reuse initial="1000"/>
+            <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+            <hit-time initial="1500"/>
         </attributes>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal>
+            <time initial="300"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+                <power initial="5"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="50076" name="Fatal Hot Spring" action="A1">
+    <skill id="50076" name="Fatal Hot Spring" action="A2">
         <!-- Warmed by energy of Hot Springs Water. For 5 minutes P. Critical Rate +30 and P. Accuracy +6. -->
         <icon initial="icon.skill1062"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="75"/>
             <cast-range initial="600"/>
-            <reuse initial="1000"/>
+            <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+            <hit-time initial="1500"/>
         </attributes>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal>
+            <time initial="300"/>
+        </abnormal>
+      <effects>
+             <stat-modify stat="CRITICAL_RATE">
+                 <power initial="30"/>
+             </stat-modify>
+              <stat-modify stat="ACCURACY">
+                  <power initial="6"/>
+              </stat-modify>
+      </effects>
     </skill>
     <skill id="50077" name="Magical Hot Spring" action="A1">
         <!-- Warmed by energy of Hot Springs Water. For 5 minutes M. Atk. +5%% and M. Atk. Spd. +5%%. -->
         <icon initial="icon.skill1062"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="75"/>
             <cast-range initial="600"/>
-            <reuse initial="1000"/>
+            <cool-time initial="500"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+            <hit-time initial="1500"/>
         </attributes>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal>
+            <time initial="300"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" mode="PER">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+                <power initial="5"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50078" name="Magic Weakness" debuff="true" action="A1" type="MAGIC">
         <!-- Inflicts damage with bonus 85 M. Atk. Power to surrounding enemies, and M. Atk. -20%%. -->

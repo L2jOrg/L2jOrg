@@ -344,6 +344,7 @@ open module org.l2j.scripts {
             ai.areas.GiantCave.GiantCave,
             ai.areas.TowerOfInsolence.TowerOfInsolence,
             ai.areas.AligatorIsland.Nos,
+            ai.areas.ForestOfTheMirrors.Mirrors,
 
 
             ai.bosses.Antharas.Antharas,
