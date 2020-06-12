@@ -3466,6 +3466,9 @@
             <param name="SpiritShotRate" value="10"/>
             <param name="LongRangeGuardRate" value="10"/>
             <skill name="Buff" id="4099" level="2"/>
+            <minions name="Privates">
+                <npc id="20793" count="2" respawnTime="10" weightPoint="1"/>
+            </minions>
         </parameters>
         <race>HUMANOID</race>
         <sex>MALE</sex>

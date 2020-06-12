@@ -9,8 +9,8 @@ public class GiantCave extends AbstractNpcAI{
     private final int MONSTER_SPAWN_CHANCE_SOLO = 10;	// 10%
     private final int MONSTER_SPAWN_CHANCE_PARTY = 30;	// 30%
 
-    private final int MONSTER_DESPAWN_DELAY_SOLO = 30 * 1000;
-    private final int MONSTER_DESPAWN_DELAY_PARTY = 10 * 60 * 1000;
+    private final int MONSTER_DESPAWN_DELAY_SOLO = 300000;
+    private final int MONSTER_DESPAWN_DELAY_PARTY = 300000;
 
     private final int[] MONSTER_NPC_IDS = {
             20646,

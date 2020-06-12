@@ -343,6 +343,7 @@ open module org.l2j.scripts {
             ai.areas.GiantCave.Batur,
             ai.areas.GiantCave.GiantCave,
             ai.areas.TowerOfInsolence.TowerOfInsolence,
+            ai.areas.AligatorIsland.Nos,
 
 
             ai.bosses.Antharas.Antharas,
