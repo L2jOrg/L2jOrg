@@ -620,7 +620,7 @@ public class Attackable extends Npc {
         final AggroInfo ai = _aggroList.computeIfAbsent(attacker, AggroInfo::new);
         ai.addDamage(damage);
 
-        if(targetPlayer != null && ai.getHate() == 0) {
+        if(targetPlayer != null && ai.getHate() == 0 && !targetPlayer.isInvisible()) {
             // Notify to scripts
             EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAggroRangeEnter(this, targetPlayer, GameUtils.isSummon(attacker)), this);
         }

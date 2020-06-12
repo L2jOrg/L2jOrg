@@ -22,7 +22,9 @@ public class Nos extends AbstractNpcAI {
 
     @Override
     public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon) {
-        if(Rnd.get(100) <= MONSTER_CHANCE_SPAWN){
+        if(Rnd.get(100) <= MONSTER_CHANCE_SPAWN) {
+            addSpawn(NOS, npc, false, MONSTER_DESPAWN_DELAY);
+            addSpawn(NOS, npc, false, MONSTER_DESPAWN_DELAY);
             addSpawn(NOS, npc, false, MONSTER_DESPAWN_DELAY);
         }
         return super.onAggroRangeEnter(npc, player, isSummon);

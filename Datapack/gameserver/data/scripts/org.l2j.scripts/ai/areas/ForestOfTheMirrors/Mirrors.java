@@ -13,7 +13,11 @@ public class Mirrors extends AbstractNpcAI {
     private final long DELAY = 1000L;
     private int _spawnStage = 0;
 
-
+    /*
+    * Mirror id=20639
+    After the death of the Mirror, 4 mirrors spawn and so 4 stages in a row from each mirror.
+    Only 4 waves of appearance of mirrors from each of the Mirrors.
+    * */
     private Mirrors()
     {
         addKillId(MIRROR_NPC_ID);
