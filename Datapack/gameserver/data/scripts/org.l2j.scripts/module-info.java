@@ -343,6 +343,7 @@ open module org.l2j.scripts {
             ai.areas.GiantCave.Batur,
             ai.areas.TowerOfInsolence.TowerOfInsolence,
 
+
             ai.bosses.Antharas.Antharas,
             ai.bosses.Baium.Baium,
             ai.bosses.Core.Core,

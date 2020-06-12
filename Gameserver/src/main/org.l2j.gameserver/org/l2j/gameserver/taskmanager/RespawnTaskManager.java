@@ -27,6 +27,8 @@ public class RespawnTaskManager {
 				final Spawn spawn = npc.getSpawn();
 				if (spawn != null) {
 					spawn.respawnNpc(npc);
+					if(isAttackable(npc))
+						AttackableThinkTaskManager.getInstance().add((Attackable) npc);
 					spawn._scheduledCount--;
 				}
 			}
