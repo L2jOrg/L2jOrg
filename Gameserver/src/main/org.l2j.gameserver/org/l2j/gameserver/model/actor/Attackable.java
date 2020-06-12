@@ -250,9 +250,16 @@ public class Attackable extends Npc {
             return false;
         }
 
+        Object payload = null;
+        if (GameUtils.isMonster(this)) {
+            final Monster mob = (Monster) this;
+            if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
+                payload = mob.getLeader();
+        }
+
         if (nonNull(killer.getActingPlayer())) {
             // Delayed notification
-            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, GameUtils.isSummon(killer)), this);
+            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, GameUtils.isSummon(killer), payload), this);
         }
 
         // Notify to minions if there are.
