@@ -341,6 +341,7 @@ open module org.l2j.scripts {
             ai.areas.Ketra.FireCamp,
             ai.areas.GiantCave.Scout,
             ai.areas.GiantCave.Batur,
+            ai.areas.GiantCave.GiantCave,
             ai.areas.TowerOfInsolence.TowerOfInsolence,
 
 
