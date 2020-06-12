@@ -10942,8 +10942,6 @@ public final class NpcStringId {
     public static NpcStringId THE_MOST_RECENT_WINNING_LOTTERY_NUMBERS;
     @ClientString(id = 1000179, message = "Your lucky numbers have been selected above.")
     public static NpcStringId YOUR_LUCKY_NUMBERS_HAVE_BEEN_SELECTED_ABOVE;
-    @ClientString(id = 1000180, message = "I wonder who it is that is lurking about..")
-    public static NpcStringId I_WONDER_WHO_IT_IS_THAT_IS_LURKING_ABOUT;
     @ClientString(id = 1000181, message = "Sacred magical research is conducted here.")
     public static NpcStringId SACRED_MAGICAL_RESEARCH_IS_CONDUCTED_HERE;
     @ClientString(id = 1000182, message = "Behold the awesome power of magic!")
@@ -10960,8 +10958,6 @@ public final class NpcStringId {
     public static NpcStringId YOU_ARE_MORE_POWERFUL_THAN_YOU_APPEAR_WE_LL_MEET_AGAIN;
     @ClientString(id = 1000188, message = "You filthy sorcerers disgust me!")
     public static NpcStringId YOU_FILTHY_SORCERERS_DISGUST_ME;
-    @ClientString(id = 1000189, message = "Why would you build a tower in our territory?")
-    public static NpcStringId WHY_WOULD_YOU_BUILD_A_TOWER_IN_OUR_TERRITORY;
     @ClientString(id = 1000190, message = "Are you part of that evil gang of sorcerers?")
     public static NpcStringId ARE_YOU_PART_OF_THAT_EVIL_GANG_OF_SORCERERS;
     @ClientString(id = 1000191, message = "That is why I don't bother with anyone below the level of sorcerer.")
@@ -20651,8 +20647,7 @@ public final class NpcStringId {
     public static NpcStringId SET_OFF_BOMBS_AND_GET_TREASURES;
     @ClientString(id = 1803289, message = "Protect the Central Tower from Divine Angels")
     public static NpcStringId PROTECT_THE_CENTRAL_TOWER_FROM_DIVINE_ANGELS;
-    @ClientString(id = 1803290, message = "My servants can keep me safe! I have nothing to fear!")
-    public static NpcStringId MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR;
+
     @ClientString(id = 1803291, message = "It's time to fight monsters!")
     public static NpcStringId IT_S_TIME_TO_FIGHT_MONSTERS;
     @ClientString(id = 1803292, message = "Today's brave warrior is named $s1!")
@@ -24126,8 +24121,7 @@ public final class NpcStringId {
     public static NpcStringId TRY_RIDING_A_KUKURI;
     @ClientString(id = 17178346, message = "Scared!! Let's run!")
     public static NpcStringId SCARED_LET_S_RUN;
-    @ClientString(id = 17178347, message = "Can't die in a place like this!!")
-    public static NpcStringId CAN_T_DIE_IN_A_PLACE_LIKE_THIS;
+
     @ClientString(id = 17178348, message = "Ahh...Save me!!")
     public static NpcStringId AHH_SAVE_ME;
     @ClientString(id = 17178349, message = "Urgh...")
@@ -24720,8 +24714,20 @@ public final class NpcStringId {
     @ClientString(id = 8060, message = "Keep pushing!")
     public static NpcStringId KEEP_PUSHING;
 
+    @ClientString(id = 1000180, message = "Who dared to enter here?")
+    public static NpcStringId WHO_DARED_TO_ENTER_HERE;
+
+    @ClientString(id = 1000189, message = "How dare you invade our land! I won’t leave it that easy!")
+    public static NpcStringId HOW_DARE_YOU_INVADE_OUR_LAND_I_WONT_LEAVE_IT_THAT_EASY;
+
     @ClientString(id = 1000502, message = "The monsters have spawned!")
     public static NpcStringId THE_MONSTERS_HAVE_SPAWNED;
+
+    @ClientString(id = 17178347, message = "Can't die in a place like this!!")
+    public static NpcStringId CAN_T_DIE_IN_A_PLACE_LIKE_THIS;
+
+    @ClientString(id = 1803290, message = "My servants can keep me safe! I have nothing to fear!")
+    public static NpcStringId MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR;
 
 
     private static IntMap<NpcStringId> VALUES = new HashIntMap<>();
