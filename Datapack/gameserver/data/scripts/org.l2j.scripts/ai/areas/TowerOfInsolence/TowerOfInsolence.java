@@ -4,15 +4,13 @@ import ai.AbstractNpcAI;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
+import org.l2j.gameserver.model.ChanceLocation;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2j.gameserver.util.GameUtils;
-import org.l2j.gameserver.util.MinionList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -85,7 +83,8 @@ public class TowerOfInsolence extends AbstractNpcAI {
 
     private void spawnInvulNpc(int npcId) {
         final List<NpcSpawnTemplate> spawn = SpawnsData.getInstance().getNpcSpawns(npcSpawnTemplate -> npcSpawnTemplate.getId() == npcId);
-        final Location location = spawn.get(0).getSpawnLocation();
+        final List<ChanceLocation> locations = spawn.get(0).getLocation();
+        final Location location = locations.get(Rnd.get(0, locations.size() - 1));
         final Npc npc = addSpawn(npcId, location);
         makeInvul(npc);
     }
@@ -101,7 +100,7 @@ public class TowerOfInsolence extends AbstractNpcAI {
     }
 
     @Override
-    public String onKill(Npc npc, Player killer, boolean isSummon) {
+    public String onKill(Npc npc, Player killer, boolean isSummon, Object payload) {
         if(Util.contains(UNIDENTIFIED_STONE_NPC_IDS, npc.getId())) {
             // We don't use droplist because we don't want several boosts to modify drop rate or count
             if((killer.getLevel() - npc.getLevel()) <= LEVEL_MAX_DIFF && Rnd.get(100) <= UNIDENTIFIED_STONE_DROP_RATE)
@@ -111,20 +110,17 @@ public class TowerOfInsolence extends AbstractNpcAI {
             if((killer.getLevel() - npc.getLevel()) <= LEVEL_MAX_DIFF && Rnd.get(100) <= ENERGY_OF_INSOLENCE_DROP_RATE)
                 npc.dropItem(killer, ENERGY_OF_INSOLENCE_ITEM_ID, ENERGY_OF_INSOLENCE_DROP_COUNT);
         } else if(Util.contains(ENERGY_OF_INSOLENCE_MINIONS, npc.getId())) {
-            if(GameUtils.isMonster(npc)) {
-                final Monster minion = (Monster) npc;
-                final Monster leader = minion.getLeader();
+            if(payload != null && payload instanceof Monster) {
+                final Monster leader = (Monster) payload;
 
-                if(leader == null)
-                    return super.onKill(npc, killer, isSummon);
-
-                if(minion.getLeader().getMinionList().getSpawnedMinions().size() == 0) {
+                // If all minions are dead, turn master to mortal mode
+                if(leader.getMinionList().getSpawnedMinions().size() == 0) {
                     makeMortal(leader);
                 }
             }
         }
 
-        return super.onKill(npc, killer, isSummon);
+        return super.onKill(npc, killer, isSummon, payload);
     }
 
     public static AbstractNpcAI provider()
