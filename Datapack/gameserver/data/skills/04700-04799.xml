@@ -55,7 +55,7 @@
                 <value level="13">242</value>
             </mana>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target scope="PARTY" object="FRIEND" type="OWNER_PET" range="1000"/>
         <abnormal type="QUEEN_OF_CAT_GIFT">
             <level initial="1">
                 <value level="2">2</value>
@@ -207,7 +207,7 @@
                 <value level="13">242</value>
             </mana>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target scope="PARTY" object="FRIEND" type="OWNER_PET" range="1000"/>
         <abnormal type="UNICORN_SERAPHIM_BLESS">
             <level initial="1">
                 <value level="2">2</value>
@@ -288,7 +288,7 @@
                 <value level="13">242</value>
             </mana>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target scope="PARTY" type="OWNER_PET" range="1000"/>
         <abnormal type="UNICORN_SERAPHIM_GIFT">
             <level initial="1">
                 <value level="2">2</value>
@@ -372,7 +372,7 @@
                 <value level="13">122</value>
             </mana>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target scope="PARTY" object="FRIEND" type="OWNER_PET" range="1000"/>
         <effects>
             <dispel-probability abnormals="SLEEP ROOT_MAGICALLY ROOT_PHYSICALLY STUN PARALYZE DERANGEMENT">
                 <power initial="40.0">
