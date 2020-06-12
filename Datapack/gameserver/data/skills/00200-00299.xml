@@ -1091,8 +1091,8 @@
         </consume>
         <target type="NONE"/>
         <effects>
-            <effect name="HealOverTime" ticks="2">
-                <power initial="-12.0"/>
+            <effect name="DamOverTime" ticks="2">
+                <power initial="12.0"/>
             </effect>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="15.0"/>
