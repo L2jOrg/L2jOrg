@@ -996,21 +996,79 @@
     <skill id="50293" name="Talisman - Speed" max-level="11">
         <!--
             level 1: P. Def./M. Def. +5.
-            level 2: P. Def./M. Def. +10, Max HP +30, Speed +1.
-            level 3: P. Def./M. Def. +20, Max HP +80, Speed +1.
-            level 4: P. Def./M. Def. +30, Max HP +150, Speed +1.
-            level 5: P. Def./M. Def. +40, Max HP +230, Speed +1.
-            level 6: P. Def./M. Def. +50, Max HP +300, Speed +1.
-            level 7: P. Def./M. Def. +60, Max HP +500, Speed +2.
-            level 8: P. Def./M. Def. +80, Max HP +1000, Speed +3.
-            level 9: P. Def./M. Def. +200, Max HP +1300, Speed +4.
+            level 2: P. Def./M. Def. +10, Max HP +30, Speed +    1
+            level 3: P. Def./M. Def. +20, Max HP +80, Speed +    1
+            level 4: P. Def./M. Def. +30, Max HP +150, Speed +   1
+            level 5: P. Def./M. Def. +40, Max HP +230, Speed +   1
+            level 6: P. Def./M. Def. +50, Max HP +300, Speed +   1
+            level 7: P. Def./M. Def. +60, Max HP +500, Speed +   2
+            level 8: P. Def./M. Def. +80, Max HP +1000, Speed    3
+            level 9: P. Def./M. Def. +200, Max HP +1300, Speed   4
             level 10: P. Def./M. Def. +250, Max HP +1800, Speed +6.
             level 11: P. Def./M. Def. +300, Max HP +2500, Speed +8.
          -->
         <icon initial="icon.tallisman_rapid"/>
-        <attributes property="MAGIC">
+        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="5">
+                    <value level="2">10</value>
+                    <value level="3">20</value>
+                    <value level="4">30</value>
+                    <value level="5">40</value>
+                    <value level="6">50</value>
+                    <value level="7">60</value>
+                    <value level="8">80</value>
+                    <value level="9">200</value>
+                    <value level="10">250</value>
+                    <value level="11">300</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="5">
+                    <value level="2">10</value>
+                    <value level="3">20</value>
+                    <value level="4">30</value>
+                    <value level="5">40</value>
+                    <value level="6">50</value>
+                    <value level="7">60</value>
+                    <value level="8">80</value>
+                    <value level="9">200</value>
+                    <value level="10">250</value>
+                    <value level="11">300</value>
+                </power>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="0">
+                    <value level="2">30</value>
+                    <value level="3">80</value>
+                    <value level="4">150</value>
+                    <value level="5">230</value>
+                    <value level="6">300</value>
+                    <value level="7">500</value>
+                    <value level="8">1000</value>
+                    <value level="9">1300</value>
+                    <value level="10">1800</value>
+                    <value level="11">2500</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify stat="SPEED">
+                <power initial="0.0">
+                    <value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">2</value>
+                    <value level="8">3</value>
+                    <value level="9">4</value>
+                    <value level="10">6</value>
+                    <value level="11">8</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50294" name="Energy of Speed" max-level="11">
         <!--
