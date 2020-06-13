@@ -38,6 +38,10 @@
         <enchant from="20" until="29" chance="12"/>
         <enchant from="30"  chance="5"/>
     </chance-group>
+
+    <chance-group name="CURSED_GROUP">
+        <enchant chance="100"/>
+    </chance-group>
     
     <fail-rewards>
         <weapon reward-id="91462"> <!-- Weapon Enhancement Stone -->
@@ -110,6 +114,12 @@
 
         <enchant-chance group="MAGE_WEAPON_GROUP" magic-weapon="true">
             <slots>RIGHT_HAND TWO_HAND</slots>
+        </enchant-chance>
+    </group>
+
+    <group id="1">
+        <enchant-chance group="CURSED_GROUP">
+            <slots>RIGHT_HAND TWO_HAND FULL_ARMOR LEFT_HAND HEAD CHEST LEGS FEET GLOVES NECK EAR FINGER</slots>
         </enchant-chance>
     </group>
 
@@ -389,7 +399,10 @@
     <scroll id="93255" grade="A"/>
 
     <!-- Cursed Scroll -->
-    <scroll id="93257" grade="A"/>
+    <scroll id="93257" grade="A" min-enchant="1" group="1"/>
+    <scroll id="93270" grade="A" min-enchant="1" group="1"/>
+    <scroll id="93271" grade="A" min-enchant="1" group="1"/>
+    <scroll id="93258" grade="A" min-enchant="1" group="1"/>
 
     <!-- Protection Scrolls: Enchant Armor -->
     <scroll id="6578" grade="S"/>

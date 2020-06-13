@@ -60,7 +60,7 @@
 		<xs:sequence>
 			<xs:element name="enchant" type="l2jorg:EnchantChance" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="name" type="xs:token" use="required"/>
 	</xs:complexType>
 
 	<xs:complexType name="EnchantChance">
@@ -88,7 +88,7 @@
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="id" type="xs:byte"/>
+		<xs:attribute name="id" type="xs:byte" use="required"/>
 	</xs:complexType>
 
 	<xs:complexType name="Scroll">
