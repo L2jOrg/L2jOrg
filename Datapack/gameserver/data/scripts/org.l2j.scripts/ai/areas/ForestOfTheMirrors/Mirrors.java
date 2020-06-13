@@ -1,53 +1,74 @@
 package ai.areas.ForestOfTheMirrors;
 
 import ai.AbstractNpcAI;
-import org.l2j.gameserver.ai.CtrlEvent;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * @author Thoss
+ */
+// FIXME: Dev in process
 public class Mirrors extends AbstractNpcAI {
-    private final int MIRROR_NPC_ID = 20639;	// Зекрало
-    private final int DESPAWN_TIME = 600000;
-    private final long DELAY = 1000L;
-    private int _spawnStage = 0;
+    private static final Logger LOGGER = LoggerFactory.getLogger(Mirrors.class);
 
-    /*
-    * Mirror id=20639
-    After the death of the Mirror, 4 mirrors spawn and so 4 stages in a row from each mirror.
-    Only 4 waves of appearance of mirrors from each of the Mirrors.
-    * */
+    private final int MIRROR_NPC_ID = 20639;
+    private final int DESPAWN_TIME = 600000;
+    private final int MIRROR_COUNT = 4;
+
+    private Map<Integer, Integer> _Leaders_Stages = new ConcurrentHashMap<>(); // <Leader ObjectID, Leader Stage>
+    private Map<Integer, List<Integer>> _Leader_Minions = new ConcurrentHashMap<>(); // <Leader ObjectID, Leader minions ObjectID>
+
     private Mirrors()
     {
         addKillId(MIRROR_NPC_ID);
-        startQuestTimer("MIRRORS_SPAWN_THREAD", DELAY, null, null);
     }
 
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
         if(npc.getId() == MIRROR_NPC_ID) {
-            if(_spawnStage < 4)
+            int leaderObjectId = getLeader(npc.getObjectId());
+
+            if(leaderObjectId == -1) {
+                leaderObjectId = npc.getObjectId();
+                _Leaders_Stages.putIfAbsent(leaderObjectId, 0);
+                _Leader_Minions.putIfAbsent(leaderObjectId, new ArrayList<>());
+            } else {
+                _Leader_Minions.get(leaderObjectId).add(npc.getObjectId());
+            }
+
+            switch (_Leaders_Stages.get(leaderObjectId))
             {
-                startQuestTimer("MIRRORS_SPAWN_THREAD", DELAY, null, null);
-                for(int i = 0; i < 2; i++)
-                {
-                    addSpawn(MIRROR_NPC_ID, npc, false, DESPAWN_TIME);
-                    if (npc.getAI() != null){
-                        setSpawnStage(_spawnStage + 1);
+                case 0, 1, 2, 3: {
+                    if(_Leader_Minions.get(leaderObjectId).size() % 4 == 0) {
+                        for (int i = 0; i < MIRROR_COUNT; i++) {
+                            Npc mirror = addSpawn(MIRROR_NPC_ID, npc, true, DESPAWN_TIME);
+                            addAttackPlayerDesire(mirror, killer);
+                        }
+                        _Leaders_Stages.replace(leaderObjectId, _Leaders_Stages.get(leaderObjectId) + 1);
                     }
-                   /* if(npc.getAI() instanceof Mirrors)
-                        ((Mirrors) npc.getAI()).setSpawnStage(_spawnStage + 1);*/
-                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 200);
+                }
+                case 4: {
+                    _Leaders_Stages.remove(leaderObjectId);
+                    _Leader_Minions.remove(leaderObjectId);
                 }
             }
         }
         return super.onKill(npc, killer, isSummon);
     }
 
-    public void setSpawnStage(int value)
-    {
-        _spawnStage = value;
+    private int getLeader(int npcObjectId) {
+        for(Map.Entry<Integer, List<Integer>> leader : _Leader_Minions.entrySet())
+            if(leader.getValue().contains(npcObjectId))
+                return leader.getKey();
+
+        return -1;
     }
 
     public static AbstractNpcAI provider()
