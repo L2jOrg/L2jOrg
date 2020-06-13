@@ -5,37 +5,38 @@
 
     <chance-group name="ARMOR_GROUP">
         <enchant until="3" chance="100"/>
-        <enchant from="4" until="15" chance="66.67"/>
-        <enchant from="16" until="19" chance="33"/>
-        <enchant from="20" until="29" chance="20"/>
-        <enchant from="30" until="35" chance="15"/>
-        <enchant from="36" chance="5"/>
+        <enchant from="4" until="7" chance="66.67"/>
+        <enchant from="7" until="16" chance="30"/>
+        <enchant from="16" until="19" chance="20"/>
+        <enchant from="20" until="29" chance="12"/>
+        <enchant from="30"  chance="5"/>
     </chance-group>
 
     <chance-group name="FULL_ARMOR_GROUP">
         <enchant until="4" chance="100"/>
-        <enchant from="5" until="15" chance="66.67"/>
-        <enchant from="16" until="19" chance="33"/>
-        <enchant from="20" until="29" chance="20"/>
-        <enchant from="30" until="35" chance="15"/>
-        <enchant from="36" chance="5"/>
+        <enchant from="4" until="7" chance="66.67"/>
+        <enchant from="7" until="16" chance="30"/>
+        <enchant from="16" until="19" chance="20"/>
+        <enchant from="20" until="29" chance="12"/>
+        <enchant from="30"  chance="5"/>
     </chance-group>
 
     <chance-group name="FIGHTER_WEAPON_GROUP">
         <enchant until="3" chance="100"/>
-        <enchant from="4" until="15" chance="66.67"/>
-        <enchant from="16" until="19" chance="33"/>
-        <enchant from="20" until="29" chance="20"/>
-        <enchant from="30" until="35" chance="15"/>
+        <enchant from="4" until="7" chance="66.67"/>
+        <enchant from="7" until="16" chance="30"/>
+        <enchant from="16" until="19" chance="20"/>
+        <enchant from="20" until="29" chance="12"/>
+        <enchant from="30"  chance="5"/>
     </chance-group>
 
     <chance-group name="MAGE_WEAPON_GROUP">
         <enchant until="3" chance="100"/>
-        <enchant from="4" until="15" chance="66.67"/>
-        <enchant from="16" until="19" chance="33"/>
-        <enchant from="20" until="29" chance="20"/>
-        <enchant from="30" until="35" chance="15"/>
-        <enchant from="36" chance="5"/>
+        <enchant from="4" until="7" chance="66.67"/>
+        <enchant from="7" until="16" chance="30"/>
+        <enchant from="16" until="19" chance="20"/>
+        <enchant from="20" until="29" chance="12"/>
+        <enchant from="30"  chance="5"/>
     </chance-group>
     
     <fail-rewards>

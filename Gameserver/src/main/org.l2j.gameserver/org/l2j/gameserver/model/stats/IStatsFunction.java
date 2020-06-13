@@ -8,10 +8,10 @@ import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.item.type.WeaponType;
 
 import java.util.Optional;
 
+import static java.lang.Math.max;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -21,90 +21,7 @@ import static org.l2j.gameserver.util.GameUtils.*;
 public interface IStatsFunction {
 
     static double calcEnchantDefBonus(Item item, int enchant) {
-        return enchant + (3 * Math.max(0, enchant - 3));
-    }
-
-    static double calcEnchantMatkBonus(Item item, int enchant) {
-        switch (item.getTemplate().getCrystalType()) {
-            case S: {
-                // M. Atk. increases by 4 for all weapons.
-                // Starting at +4, M. Atk. bonus double.
-                return (4 * enchant) + (8 * Math.max(0, enchant - 3));
-            }
-            case A:
-            case B:
-            case C: {
-                // M. Atk. increases by 3 for all weapons.
-                // Starting at +4, M. Atk. bonus double.
-                return (3 * enchant) + (6 * Math.max(0, enchant - 3));
-            }
-            default: {
-                // M. Atk. increases by 2 for all weapons. Starting at +4, M. Atk. bonus double.
-                // Starting at +4, M. Atk. bonus double.
-                return (2 * enchant) + (4 * Math.max(0, enchant - 3));
-            }
-        }
-    }
-
-    static double calcEnchantedPAtkBonus(Item item, int enchant) {
-        switch (item.getCrystalType()) {
-            case S: {
-                if (item.getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
-                    if (item.getWeaponItem().getItemType().isRanged()) {
-                        // P. Atk. increases by 10 for bows.
-                        // Starting at +4, P. Atk. bonus double.
-                        return (10 * enchant) + (20 * Math.max(0, enchant - 3));
-                    }
-                    // P. Atk. increases by 6 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-                    // Starting at +4, P. Atk. bonus double.
-                    return (6 * enchant) + (12 * Math.max(0, enchant - 3));
-                }
-                // P. Atk. increases by 5 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
-                // Starting at +4, P. Atk. bonus double.
-                return (5 * enchant) + (10 * Math.max(0, enchant - 3));
-            }
-            case A: {
-                if (item.getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
-                    if (item.getWeaponItem().getItemType().isRanged()) {
-                        // P. Atk. increases by 8 for bows.
-                        // Starting at +4, P. Atk. bonus double.
-                        return (8 * enchant) + (16 * Math.max(0, enchant - 3));
-                    }
-                    // P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-                    // Starting at +4, P. Atk. bonus double.
-                    return (5 * enchant) + (10 * Math.max(0, enchant - 3));
-                }
-                // P. Atk. increases by 4 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
-                // Starting at +4, P. Atk. bonus double.
-                return (4 * enchant) + (8 * Math.max(0, enchant - 3));
-            }
-            case B:
-            case C: {
-                if (item.getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
-                    if (item.getWeaponItem().getItemType().isRanged()) {
-                        // P. Atk. increases by 6 for bows.
-                        // Starting at +4, P. Atk. bonus double.
-                        return (6 * enchant) + (12 * Math.max(0, enchant - 3));
-                    }
-                    // P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-                    // Starting at +4, P. Atk. bonus double.
-                    return (4 * enchant) + (8 * Math.max(0, enchant - 3));
-                }
-                // P. Atk. increases by 3 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
-                // Starting at +4, P. Atk. bonus double.
-                return (3 * enchant) + (6 * Math.max(0, enchant - 3));
-            }
-            default: {
-                if (item.getWeaponItem().getItemType().isRanged()) {
-                    // Bows increase by 4.
-                    // Starting at +4, P. Atk. bonus double.
-                    return (4 * enchant) + (8 * Math.max(0, enchant - 3));
-                }
-                // P. Atk. increases by 2 for all weapons with the exception of bows.
-                // Starting at +4, P. Atk. bonus double.
-                return (2 * enchant) + (4 * Math.max(0, enchant - 3));
-            }
-        }
+        return enchant + (3 * max(0, enchant - 3));
     }
 
     default void throwIfPresent(Optional<Double> base) {
@@ -119,13 +36,13 @@ public interface IStatsFunction {
             final Item item = creature.getInventory().getItemByBodyPart(part);
             // TODO Confirm if the bonus is applied for any Grade
             if ((item != null) && (item.getEnchantLevel() >= 4)) {
-                value += calcEnchantBodyPartBonus(item.getEnchantLevel(), false);
+                value += calcEnchantBodyPartBonus(item.getEnchantLevel());
             }
         }
         return value;
     }
 
-    default double calcEnchantBodyPartBonus(int enchantLevel, boolean isBlessed) {
+    default double calcEnchantBodyPartBonus(int enchantLevel) {
         return 0;
     }
 
@@ -186,14 +103,10 @@ public interface IStatsFunction {
             enchant = Config.ALT_OLY_ENCHANT_LIMIT;
         }
 
-        if ((stat == Stat.MAGICAL_DEFENCE) || (stat == Stat.PHYSICAL_DEFENCE)) {
-            return calcEnchantDefBonus(item, enchant);
-        } else if (stat == Stat.MAGIC_ATTACK) {
-            return calcEnchantMatkBonus(item, enchant);
-        } else if ((stat == Stat.PHYSICAL_ATTACK) && item.isWeapon()) {
-            return calcEnchantedPAtkBonus(item, enchant);
-        }
-        return 0;
+        return switch (stat) {
+            case MAGICAL_DEFENCE, PHYSICAL_DEFENCE -> calcEnchantDefBonus(item, enchant);
+            default -> 0;
+        };
     }
 
     default double validateValue(Creature creature, double value, double minValue, double maxValue) {
@@ -201,7 +114,7 @@ public interface IStatsFunction {
             return maxValue;
         }
 
-        return Math.max(minValue, value);
+        return max(minValue, value);
     }
 
     double calc(Creature creature, Optional<Double> base, Stat stat);

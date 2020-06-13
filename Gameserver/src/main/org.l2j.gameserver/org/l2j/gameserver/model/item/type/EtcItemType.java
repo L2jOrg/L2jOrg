@@ -101,7 +101,7 @@ public enum EtcItemType implements ItemType {
 
     @Override
     public int mask() {
-        return ordinal();
+        return 0;
     }
 
     public boolean isEnchantment() {
