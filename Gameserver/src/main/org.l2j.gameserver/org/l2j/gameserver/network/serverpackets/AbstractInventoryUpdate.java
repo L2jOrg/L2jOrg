@@ -66,5 +66,4 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
             writeItem(item);
         }
     }
-
 }

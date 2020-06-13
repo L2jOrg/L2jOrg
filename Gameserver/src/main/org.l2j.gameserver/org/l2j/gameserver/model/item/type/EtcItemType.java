@@ -101,6 +101,41 @@ public enum EtcItemType implements ItemType {
 
     @Override
     public int mask() {
-        return ordinal();
+        return 0;
+    }
+
+    public boolean isEnchantment() {
+        return switch (this) {
+            case ENCHANT_WEAPON,
+                ENCHANT_ARMOR,
+                BLESSED_ENCHANT_WEAPON,
+                BLESSED_ENCHANT_ARMOR,
+                INC_PROP_ENCHANT_WEAPON,
+                INC_PROP_ENCHANT_ARMOR,
+                ENCHT_ATTR_CRYSTAL_ENCHANT_ARMOR,
+                ENCHT_ATTR_CRYSTAL_ENCHANT_WEAPON,
+                ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR,
+                ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON,
+                BLESS_INC_PROP_ENCHANT_WEAPON,
+                BLESS_INC_PROP_ENCHANT_ARMOR,
+                MULTI_ENCHANT_WEAPON,
+                MULTI_ENCHANT_ARMOR,
+                MULTI_INC_PROB_ENCHANT_WEAPON,
+                MULTI_INC_PROB_ENCHANT_ARMOR,
+                ENCHANT_AGATHION,
+                BLESS_ENCHANT_AGATHION,
+                MULTI_ENCHANT_AGATHION,
+                ANCIENT_CRYSTAL_ENCHANT_AGATHION,
+                INC_ENCHANT_PROP_AGATHION,
+                BLESS_INC_ENCHANT_PROP_AGATHION,
+                MULTI_INC_ENCHANT_PROB_AGATHION,
+                POLY_ENCHANT_WEAPON,
+                POLY_ENCHANT_ARMOR,
+                POLY_INC_ENCHANT_PROP_WEAPON,
+                POLY_INC_ENCHANT_ARMOR,
+                CURSED_ENCHANT_WEAPON,
+                CURSED_ENCHANT_ARMOR -> true;
+            default -> false;
+        };
     }
 }

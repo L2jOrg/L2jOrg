@@ -1746,10 +1746,6 @@ public final class Item extends WorldObject {
         return template.getStats(stat, defaultValue);
     }
 
-    public boolean isBlessed() {
-        return template.isBlessed();
-    }
-
     public boolean isAutoPotion() {
         return template instanceof EtcItem && ((EtcItem) template).isAutoPotion();
     }

@@ -5,38 +5,96 @@
 
     <chance-group name="ARMOR_GROUP">
         <enchant until="3" chance="100"/>
-        <enchant from="4" until="15" chance="66.67"/>
-        <enchant from="16" until="19" chance="33"/>
-        <enchant from="20" until="29" chance="20"/>
-        <enchant from="30" until="35" chance="15"/>
-        <enchant from="36" chance="5"/>
+        <enchant from="4" until="7" chance="66.67"/>
+        <enchant from="7" until="16" chance="30"/>
+        <enchant from="16" until="19" chance="20"/>
+        <enchant from="20" until="29" chance="12"/>
+        <enchant from="30"  chance="5"/>
     </chance-group>
 
     <chance-group name="FULL_ARMOR_GROUP">
         <enchant until="4" chance="100"/>
-        <enchant from="5" until="15" chance="66.67"/>
-        <enchant from="16" until="19" chance="33"/>
-        <enchant from="20" until="29" chance="20"/>
-        <enchant from="30" until="35" chance="15"/>
-        <enchant from="36" chance="5"/>
+        <enchant from="4" until="7" chance="66.67"/>
+        <enchant from="7" until="16" chance="30"/>
+        <enchant from="16" until="19" chance="20"/>
+        <enchant from="20" until="29" chance="12"/>
+        <enchant from="30"  chance="5"/>
     </chance-group>
 
     <chance-group name="FIGHTER_WEAPON_GROUP">
         <enchant until="3" chance="100"/>
-        <enchant from="4" until="15" chance="66.67"/>
-        <enchant from="16" until="19" chance="33"/>
-        <enchant from="20" until="29" chance="20"/>
-        <enchant from="30" until="35" chance="15"/>
+        <enchant from="4" until="7" chance="66.67"/>
+        <enchant from="7" until="16" chance="30"/>
+        <enchant from="16" until="19" chance="20"/>
+        <enchant from="20" until="29" chance="12"/>
+        <enchant from="30"  chance="5"/>
     </chance-group>
 
     <chance-group name="MAGE_WEAPON_GROUP">
         <enchant until="3" chance="100"/>
-        <enchant from="4" until="15" chance="66.67"/>
-        <enchant from="16" until="19" chance="33"/>
-        <enchant from="20" until="29" chance="20"/>
-        <enchant from="30" until="35" chance="15"/>
-        <enchant from="36" chance="5"/>
+        <enchant from="4" until="7" chance="66.67"/>
+        <enchant from="7" until="16" chance="30"/>
+        <enchant from="16" until="19" chance="20"/>
+        <enchant from="20" until="29" chance="12"/>
+        <enchant from="30"  chance="5"/>
     </chance-group>
+
+    <chance-group name="CURSED_GROUP">
+        <enchant chance="100"/>
+    </chance-group>
+    
+    <fail-rewards>
+        <weapon reward-id="91462"> <!-- Weapon Enhancement Stone -->
+            <reward grade="D" from="7" until="18" amount="1" bonus-per-level="1"/>
+            <reward grade="D" from="19" amount="14"/>
+
+            <reward grade="C" from="7" until="9" amount="2" bonus-per-level="1"/>
+            <reward grade="C" from="10" until="12" amount="7" bonus-per-level="1"/>
+            <reward grade="C" from="13" until="15" amount="12" bonus-per-level="1"/>
+            <reward grade="C" from="16" until="18" amount="17" bonus-per-level="1"/>
+            <reward grade="C" from="19" amount="25"/>
+
+            <reward grade="B" from="7" until="9" amount="3" bonus-per-level="1"/>
+            <reward grade="B" from="10" until="12" amount="8" bonus-per-level="1"/>
+            <reward grade="B" from="13" until="15" amount="13" bonus-per-level="1"/>
+            <reward grade="B" from="16" until="18" amount="18" bonus-per-level="1"/>
+            <reward grade="B" from="19" amount="28"/>
+
+            <reward grade="A" from="7" until="9" amount="5" bonus-per-level="1"/>
+            <reward grade="A" from="10" until="12" amount="12" bonus-per-level="1"/>
+            <reward grade="A" from="13" until="15" amount="19" bonus-per-level="1"/>
+            <reward grade="A" from="16" until="18" amount="26" bonus-per-level="1"/>
+            <reward grade="A" from="19" amount="38"/>
+
+            <reward grade="S" from="7" until="9" amount="15" bonus-per-level="3"/>
+            <reward grade="S" from="10" until="11" amount="25" bonus-per-level="3"/>
+            <reward grade="S" from="12" until="18" amount="29" bonus-per-level="1"/>
+            <reward grade="S" from="19" amount="46" bonus-per-level="1"/> <!-- TODO Confirm  correct value l2wiki (36) seems to be wrong since is less than A grade -->
+        </weapon>
+
+        <armor reward-id="91463"> <!-- Armor Enhancement Stone -->
+            <reward grade="D" from="6" until="8" amount="1" bonus-per-level="1"/>
+            <reward grade="D" from="9" until="11" amount="5" bonus-per-level="1"/>
+            <reward grade="D" from="12" amount="12"/>
+
+            <reward grade="C" from="6" until="8" amount="2" bonus-per-level="1"/>
+            <reward grade="C" from="9" until="11" amount="7" bonus-per-level="1"/>
+            <reward grade="C" from="12" amount="15"/>
+
+            <reward grade="B" from="6" until="8" amount="3" bonus-per-level="1"/>
+            <reward grade="B" from="9" until="11" amount="9" bonus-per-level="1"/>
+            <reward grade="B" from="12" amount="19"/>
+
+            <reward grade="A" from="6" until="8" amount="5" bonus-per-level="1"/>
+            <reward grade="A" from="9" until="10" amount="13" bonus-per-level="1"/>
+            <reward grade="A" from="11" until="11" amount="16"/>
+            <reward grade="A" from="12" amount="26"/>
+
+            <reward grade="S" from="6" until="9" amount="10" bonus-per-level="5"/>
+            <reward grade="S" from="10" until="11" amount="27" bonus-per-level="1"/>
+            <reward grade="A" from="12" amount="30"/>
+        </armor>
+    </fail-rewards>
 
     <group id="0">
         <enchant-chance group="ARMOR_GROUP">
@@ -59,8 +117,13 @@
         </enchant-chance>
     </group>
 
+    <group id="1">
+        <enchant-chance group="CURSED_GROUP">
+            <slots>RIGHT_HAND TWO_HAND FULL_ARMOR LEFT_HAND HEAD CHEST LEGS FEET GLOVES NECK EAR FINGER</slots>
+        </enchant-chance>
+    </group>
+
     <!-- Scrolls: Enchant Weapon -->
-    <scroll id="729" grade="A"/>
     <scroll id="729" grade="A"/>
     <scroll id="947" grade="B"/>
     <scroll id="951" grade="C"/>
@@ -196,7 +259,6 @@
             70726  <!-- White Uniform Hat <STR+1 INT+1> -->
         </items>
     </scroll>
-
 
     <!-- Balthus Knights Varnish -->
     <scroll id="90995" max-enchant="10">
@@ -337,7 +399,10 @@
     <scroll id="93255" grade="A"/>
 
     <!-- Cursed Scroll -->
-    <scroll id="93257" grade="A"/>
+    <scroll id="93257" grade="A" min-enchant="1" group="1"/>
+    <scroll id="93270" grade="A" min-enchant="1" group="1"/>
+    <scroll id="93271" grade="A" min-enchant="1" group="1"/>
+    <scroll id="93258" grade="A" min-enchant="1" group="1"/>
 
     <!-- Protection Scrolls: Enchant Armor -->
     <scroll id="6578" grade="S"/>
@@ -503,8 +568,8 @@
         </items>
     </scroll>
 
-    <!-- Scroll: Enchant Cloak TODO decrease one level on fail-->
-    <scroll id="70885" max-enchant="10">
+    <!-- Scroll: Enchant Cloak -->
+    <scroll id="70885" max-enchant="10" safe-fail-step="1">
         <items>
             70877 <!-- Elmoreden Cloak -->
             70878 <!-- Aden Cloak -->
@@ -517,8 +582,8 @@
         </items>
     </scroll>
 
-    <!-- Scroll: Enchant Cloak - Legendary TODO decrease one level-->
-    <scroll id="70886" min-enchant="10" max-enchant="21">
+    <!-- Scroll: Enchant Cloak - Legendary -->
+    <scroll id="70886" min-enchant="10" max-enchant="21" safe-fail-step="1">
         <items>
             70877 <!-- Elmoreden Cloak -->
             70878 <!-- Aden Cloak -->
@@ -531,8 +596,8 @@
         </items>
     </scroll>
 
-    <!-- Scroll: Ancient Cloak - Legendary TODO decrease one level on fail -->
-    <scroll id="70887" min-enchant="7" max-enchant="21" chance-percent-bonus="10">
+    <!-- Scroll: Ancient Cloak - Legendary -->
+    <scroll id="70887" min-enchant="7" max-enchant="21" chance-percent-bonus="10" safe-fail-step="1">
         <items>
             70877 <!-- Elmoreden Cloak -->
             70878 <!-- Aden Cloak -->

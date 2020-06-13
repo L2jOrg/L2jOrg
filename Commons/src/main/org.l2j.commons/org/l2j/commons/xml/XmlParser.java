@@ -322,17 +322,17 @@ public class XmlParser {
     /**
      * Parses a float value.
      * @param node the node to parse
-     * @return if the node is not null, the value of the parsed node, otherwise -1
+     * @return if the node is not null, the value of the parsed node, otherwise 0
      */
     protected float parseFloat(Node node) {
-        return parseFloat(node, -1);
+        return parseFloat(node, 0);
     }
 
     /**
      * Parses a float value.
      * @param attrs the attributes
      * @param name the name of the attribute to parse
-     * @return if the node is not null, the value of the parsed node, otherwise -1
+     * @return if the node is not null, the value of the parsed node, otherwise 0
      */
     protected float parseFloat(NamedNodeMap attrs, String name) {
         return parseFloat(attrs.getNamedItem(name));

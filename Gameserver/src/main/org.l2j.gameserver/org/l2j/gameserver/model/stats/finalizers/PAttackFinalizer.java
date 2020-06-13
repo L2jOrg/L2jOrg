@@ -1,34 +1,24 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class PAttackFinalizer implements IStatsFunction {
     @Override
@@ -36,11 +26,9 @@ public class PAttackFinalizer implements IStatsFunction {
         throwIfPresent(base);
 
         double baseValue = calcWeaponBaseValue(creature, stat);
-        baseValue += calcEnchantedItemBonus(creature, stat);
 
-        if (isPlayer(creature)) {
-            // Enchanted chest bonus
-            baseValue += calcEnchantBodyPart(creature, BodyPart.CHEST, BodyPart.FULL_ARMOR);
+        if (isPlayer(creature) && nonNull(creature.getActiveWeaponInstance())) {
+            baseValue += calcEnchantPAtkBonus(creature.getActiveWeaponInstance());
         }
 
         if (Config.CHAMPION_ENABLE && creature.isChampion()) {
@@ -54,12 +42,25 @@ public class PAttackFinalizer implements IStatsFunction {
         return Math.min(Stat.defaultValue(creature, stat, baseValue), Config.MAX_PATK);
     }
 
-    @Override
-    public double calcEnchantBodyPartBonus(int enchantLevel, boolean isBlessed) {
-        if (isBlessed) {
-            return (3 * Math.max(enchantLevel - 3, 0)) + (3 * Math.max(enchantLevel - 6, 0));
-        }
+    private double calcEnchantPAtkBonus(Item item) {
+        final var enchant = item.getEnchantLevel();
+        final var hasTwoHandBonus = item.getBodyPart() == BodyPart.TWO_HAND && item.getItemType() != WeaponType.SPEAR;
+        final var isRanged =  item.getItemType().isRanged();
+        return switch (item.getCrystalType()) {
+            case S -> calcEnchantPAtkCrystalS(enchant, hasTwoHandBonus, isRanged);
+            case A, B, C, D -> calcEnchantPAtkCrystalDefault(enchant, hasTwoHandBonus, isRanged);
+            default -> 0;
+        };
+    }
 
-        return (2 * Math.max(enchantLevel - 3, 0)) + (2 * Math.max(enchantLevel - 6, 0));
+    private int calcEnchantPAtkCrystalDefault(int enchant, boolean hasTwoHandBonus, boolean isRanged) {
+        final var bonus = isRanged ? 8 : hasTwoHandBonus ? 5 : 4;
+        return min(enchant, 3) * bonus + max(0, enchant -3) * 2 * bonus;
+    }
+
+    private int calcEnchantPAtkCrystalS(int enchant, boolean hasTwoHandBonus, boolean isRanged) {
+        final var bonus = isRanged ? 10 : hasTwoHandBonus ? 6 : 5;
+        final var secBonus = isRanged ? 126 : hasTwoHandBonus ? 77 : 43;
+        return ( min(enchant, 3) * bonus ) + ( min(max(0, enchant -3), 13) * 4 * bonus ) + ( max(0, enchant -16) * secBonus );
     }
 }

@@ -56,11 +56,7 @@ public class PAccuracyFinalizer implements IStatsFunction {
     }
 
     @Override
-    public double calcEnchantBodyPartBonus(int enchantLevel, boolean isBlessed) {
-        if (isBlessed) {
-            return (0.3 * Math.max(enchantLevel - 3, 0)) + (0.3 * Math.max(enchantLevel - 6, 0));
-        }
-
+    public double calcEnchantBodyPartBonus(int enchantLevel) {
         return (0.2 * Math.max(enchantLevel - 3, 0)) + (0.2 * Math.max(enchantLevel - 6, 0));
     }
 }

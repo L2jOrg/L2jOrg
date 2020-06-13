@@ -14,7 +14,7 @@ import static org.l2j.gameserver.model.item.type.EtcItemType.CURSED_ENCHANT_WEAP
 /**
  * @author JoeAlisson
  */
-public record EnchantScroll(ScrollGroup group, CrystalType grade, EtcItemType type, IntSet items, int minEnchant, int maxEnchant, float chanceBonus, int random, int maxEnchantRandom) {
+public record EnchantScroll(ScrollGroup group, CrystalType grade, EtcItemType type, IntSet items, int minEnchant, int maxEnchant, float chanceBonus, int random, int maxEnchantRandom, int safeFailStep) {
 
     /**
      * reduce 1 from enchantment level
@@ -80,13 +80,12 @@ public record EnchantScroll(ScrollGroup group, CrystalType grade, EtcItemType ty
     }
 
     public boolean canEnchant(Item item) {
-        return isBetween(item.getEnchantLevel(), minEnchant, maxEnchant) &&
-                (items.contains(item.getId()) || checkScrollRequirements(item));
+        return isBetween(item.getEnchantLevel(), minEnchant, maxEnchant) && checkScrollRequirements(item)
+                && (items.isEmpty() || items.contains(item.getId()));
     }
 
     private boolean checkScrollRequirements(Item item) {
-        return item.isEnchantable() && grade == item.getCrystalType() &&
-                checkItemType(item);
+        return item.isEnchantable() && grade == item.getCrystalType() && checkItemType(item);
     }
 
     private boolean checkItemType(Item item) {

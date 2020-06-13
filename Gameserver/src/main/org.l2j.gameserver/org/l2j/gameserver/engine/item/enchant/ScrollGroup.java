@@ -14,7 +14,7 @@ public record ScrollGroup(List<EnchantChance> enchantChances) {
                 .filter(enchantChance -> enchantChance.isValid(item))
                 .map(EnchantChance::group)
                 .flatMap(g -> g.chances().stream())
-                .filter(rangedChance -> rangedChance.isValid(item))
+                .filter(rangedChance -> rangedChance.isValid(item.getEnchantLevel()))
                 .mapToDouble(RangedChance::chance).findFirst().orElse(0);
     }
 }

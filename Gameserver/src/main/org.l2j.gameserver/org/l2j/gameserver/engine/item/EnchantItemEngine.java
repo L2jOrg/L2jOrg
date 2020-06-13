@@ -31,10 +31,7 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -50,6 +47,8 @@ public class EnchantItemEngine extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemEngine.class);
 
     private final IntMap<EnchantScroll> scrolls = new HashIntMap<>();
+    private final Map<CrystalType, EnchantFailReward> weaponRewards = new EnumMap<>(CrystalType.class);
+    private final Map<CrystalType, EnchantFailReward> armorRewards = new EnumMap<>(CrystalType.class);
 
     private EnchantItemEngine() {
     }
@@ -75,11 +74,35 @@ public class EnchantItemEngine extends GameXmlReader {
             for (var node = enchantment.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
                 switch (node.getNodeName()) {
                     case "chance-group" -> parseChanceGroup(node, chanceGroups);
+                    case "fail-rewards" -> parseFailRewards(node);
                     case "group" -> parseScrollGroup(node, chanceGroups, scrollGroups);
                     case "scroll" -> parseScroll(node, scrollGroups);
                 }
             }
         });
+    }
+
+    private void parseFailRewards(Node node) {
+        for(var child = node.getFirstChild(); nonNull(child); child = child.getFirstChild()) {
+            if(child.getNodeName().equalsIgnoreCase("weapon")) {
+                parseEnchantFailReward(child, weaponRewards);
+            } else {
+                parseEnchantFailReward(child, armorRewards);
+            }
+        }
+    }
+
+    private void parseEnchantFailReward(Node node, Map<CrystalType, EnchantFailReward> rewards) {
+        final var id = parseInt(node.getAttributes(), "reward-id");
+        for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
+            var attr = child.getAttributes();
+            var grade = parseEnum(attr, CrystalType.class, "grade");
+            var from = parseInt(attr, "from");
+            var until = parseInt(attr, "until");
+            var amount = parseInt(attr, "amount");
+            var bonusPerLevel = parseInt(attr, "bonus-per-level");
+            rewards.computeIfAbsent(grade, g -> new EnchantFailReward(id, new HashSet<>())).add(new RangedEnchantFailAmount(from, until, amount, bonusPerLevel));
+        }
     }
 
     private void parseScroll(Node node, IntMap<ScrollGroup> scrollGroups) {
@@ -101,12 +124,13 @@ public class EnchantItemEngine extends GameXmlReader {
         final var chanceBonus = 1 + parseFloat(attr, "chance-percent-bonus") / 100;
         final var random = parseInt(attr, "random");
         final var maxEnchantRandom = parseInt(attr, "max-enchant-random");
-        scrolls.put(id, new EnchantScroll(group, grade,type, items, minEnchant, maxEnchant, chanceBonus, random, maxEnchantRandom));
+        final var safeFailStep = parseInt(attr, "safe-fail-step");
+        scrolls.put(id, new EnchantScroll(group, grade,type, items, minEnchant, maxEnchant, chanceBonus, random, maxEnchantRandom, safeFailStep));
     }
 
     private boolean checkScroll(int id, ItemTemplate scrollTemplate) {
         if(isNull(scrollTemplate)) {
-            LOGGER.warn("No valid item to scroll {}", id);
+            LOGGER.warn("The item is not a valid scroll {}", id);
             return false;
         }
 
@@ -118,39 +142,7 @@ public class EnchantItemEngine extends GameXmlReader {
     }
 
     private boolean isEnchantmentItem(ItemTemplate item) {
-        return  item.getItemType() instanceof EtcItemType itemType &&
-        switch (itemType) {
-            case ENCHANT_WEAPON,
-                ENCHANT_ARMOR,
-                BLESSED_ENCHANT_WEAPON,
-                BLESSED_ENCHANT_ARMOR,
-                INC_PROP_ENCHANT_WEAPON,
-                INC_PROP_ENCHANT_ARMOR,
-                ENCHT_ATTR_CRYSTAL_ENCHANT_ARMOR,
-                ENCHT_ATTR_CRYSTAL_ENCHANT_WEAPON,
-                ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR,
-                ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON,
-                BLESS_INC_PROP_ENCHANT_WEAPON,
-                BLESS_INC_PROP_ENCHANT_ARMOR,
-                MULTI_ENCHANT_WEAPON,
-                MULTI_ENCHANT_ARMOR,
-                MULTI_INC_PROB_ENCHANT_WEAPON,
-                MULTI_INC_PROB_ENCHANT_ARMOR,
-                ENCHANT_AGATHION,
-                BLESS_ENCHANT_AGATHION,
-                MULTI_ENCHANT_AGATHION,
-                ANCIENT_CRYSTAL_ENCHANT_AGATHION,
-                INC_ENCHANT_PROP_AGATHION,
-                BLESS_INC_ENCHANT_PROP_AGATHION,
-                MULTI_INC_ENCHANT_PROB_AGATHION,
-                POLY_ENCHANT_WEAPON,
-                POLY_ENCHANT_ARMOR,
-                POLY_INC_ENCHANT_PROP_WEAPON,
-                POLY_INC_ENCHANT_ARMOR,
-                CURSED_ENCHANT_WEAPON,
-                CURSED_ENCHANT_ARMOR -> true;
-                default -> false;
-        };
+        return  item.getItemType() instanceof EtcItemType itemType && itemType.isEnchantment();
     }
 
     private void parseScrollGroup(Node node, Map<String, RangedChanceGroup> chanceGroups, final IntMap<ScrollGroup> scrollGroups) {
@@ -192,6 +184,7 @@ public class EnchantItemEngine extends GameXmlReader {
         final var scroll = scrolls.get(enchantmentItem.getId());
         if(isNull(scroll)) {
             LOGGER.warn("Undefined scroll have been used id: {}", enchantmentItem.getId());
+            return false;
         }
         return scroll.canEnchant(item);
     }
@@ -203,7 +196,7 @@ public class EnchantItemEngine extends GameXmlReader {
 
         try {
             if (!checkEnchantmentCondition(player, item, enchantmentItem, scroll)) {
-                player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+                player.sendPacket(EnchantResult.error());
                 player.removeRequest(EnchantItemRequest.class);
                 return;
             }
@@ -227,55 +220,68 @@ public class EnchantItemEngine extends GameXmlReader {
 
     private void onFailed(Player player, Item item, EnchantScroll scroll, InventoryUpdate inventoryUpdate) {
         if(scroll.isSafe()) {
-            player.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
-            player.sendPacket(new EnchantResult(EnchantResult.SAFE_FAIL, item));
+            EnchantResult result;
+            if(scroll.safeFailStep() > 0) {
+                item.updateEnchantLevel(-scroll.safeFailStep());
+                onEnchantEquippedItem(player, item);
+                inventoryUpdate.addModifiedItem(item);
+                result = EnchantResult.safeReduced(item);
+            } else {
+                result = EnchantResult.safe(item);
+            }
+
+            player.sendPacket(result);
 
             if (Config.LOG_ITEM_ENCHANTS) {
                 LOGGER.info("Safe Fail, Player: {}, +{} {}, {}", player, item.getEnchantLevel(), item, scroll);
             }
 
         } else if(scroll.isBlessed()) {
-            player.sendPacket(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);
             item.setEnchantLevel(0);
             item.updateDatabase();
-            player.sendPacket(new EnchantResult(EnchantResult.BLESSED_FAIL, 0, 0));
+            onEnchantEquippedItem(player, item);
 
-            if(item.isEquipped()) {
-                player.getInventory().reloadEquippedItem(item);
-                player.broadcastUserInfo();
-            }
             inventoryUpdate.addModifiedItem(item);
+            player.sendPacket(EnchantResult.blessed(item));
 
             if (Config.LOG_ITEM_ENCHANTS) {
                 LOGGER.info("Blessed Fail, Player: {}, +{} {}, {}", player, item.getEnchantLevel(), item, scroll);
             }
         } else {
             if (item.isEquipped()) {
-                if (item.getEnchantLevel() > 0) {
-                    player.sendPacket(getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(item.getEnchantLevel()).addItemName(item));
-                } else {
-                    player.sendPacket(getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED).addItemName(item));
-                }
-
-                player.getInventory().unEquipItemInBodySlot(item.getBodyPart());
-                player.broadcastUserInfo();
+                var modifiedItems = player.getInventory().unEquipItemInBodySlotAndRecord(item.getBodyPart());
+                player.sendInventoryUpdate(new InventoryUpdate(modifiedItems));
             }
 
             if(isNull(player.getInventory().destroyItem("Enchant", item, player, null))) {
                 LOGGER.warn("Unable to destroy, Player: {}, +{} {}, {}", player, item.getEnchantLevel(), item, scroll);
             }
             inventoryUpdate.addRemovedItem(item);
+
             final var crystalId = item.getCrystalType().getCrystalId();
             int count = item.getCrystalCount();
 
+            EnchantResult result;
             if(crystalId != 0 && count > 0) {
                 var crystal = player.getInventory().addItem("Enchant", crystalId, count, player, item);
                 player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(crystal).addLong(count));
-                player.sendPacket(new EnchantResult(EnchantResult.FAIL, crystalId, count));
                 inventoryUpdate.addItem(crystal);
+                result = EnchantResult.fail(crystalId, count);
             } else {
-                player.sendPacket(new EnchantResult(EnchantResult.NO_CRYSTAL, 0, 0));
+                result = EnchantResult.fail();
             }
+
+            doIfNonNull(item.isWeapon() ? weaponRewards.get(item.getCrystalType()) : armorRewards.get(item.getCrystalType()), failReward -> {
+                long rewardAmount = failReward.amount(item.getEnchantLevel());
+                if(rewardAmount > 0) {
+                    var reward = player.getInventory().addItem("Enchant",  failReward.id(), rewardAmount, player, item);
+                    player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(reward).addLong(rewardAmount));
+                    inventoryUpdate.addItem(reward);
+                    result.withStone(failReward.id(), rewardAmount);
+                }
+            });
+
+            player.sendPacket(result);
 
             if (Config.LOG_ITEM_ENCHANTS) {
                 LOGGER.info("Fail, Player: {}, +{} {}, {}", player, item.getEnchantLevel(), item, scroll);
@@ -283,21 +289,26 @@ public class EnchantItemEngine extends GameXmlReader {
         }
     }
 
+    private void onEnchantEquippedItem(Player player, Item item) {
+        if (item.isEquipped()) {
+            player.getInventory().reloadEquippedItem(item);
+            player.broadcastUserInfo();
+        }
+    }
+
     private void onSuccess(Player player, Item item, EnchantScroll scroll) {
         item.updateEnchantLevel(scroll.enchantStep(item));
         item.updateDatabase();
 
-        player.sendPacket(new EnchantResult(EnchantResult.SUCCESS, item));
+        player.sendPacket(EnchantResult.success(item));
+
 
         if (Config.LOG_ITEM_ENCHANTS) {
             LOGGER.info("Success, {} Enchant {} {}, with scroll {}", player, item.getEnchantLevel(), item, scroll);
         }
 
         announceEnchantment(player, item);
-        if(item.isEquipped()) {
-            player.getInventory().reloadEquippedItem(item);
-            player.broadcastUserInfo();
-        }
+        onEnchantEquippedItem(player, item);
     }
 
     private void announceEnchantment(Player player, Item item) {

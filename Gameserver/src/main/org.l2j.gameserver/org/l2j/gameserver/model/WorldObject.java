@@ -216,17 +216,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         return false;
     }
 
-
-    /**
-     * Verifies if the object is a walker NPC.
-     *
-     * @return {@code true} if object is a walker NPC, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isWalker() {
-        return false;
-    }
-
     /**
      * Verifies if this object is a vehicle.
      *

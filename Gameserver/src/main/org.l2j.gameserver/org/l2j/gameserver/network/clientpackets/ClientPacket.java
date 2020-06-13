@@ -36,7 +36,7 @@ public abstract class ClientPacket extends ReadablePacket<GameClient> {
             runImpl();
         } catch (Exception e) {
             LOGGER.error("[{}] Error while running packet {} from client {}", GameServer.fullVersion, this, client);
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 

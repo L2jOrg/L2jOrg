@@ -343,13 +343,13 @@
 		<attributes/>
 	</item>
 
-	<item id="93257" name="Cursed Scroll: Enchant Weapon (A-grade) - Exchangeable" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_cursed_scrl_of_ench_wp_a_i00">
+	<item id="93257" name="Cursed Scroll: Enchant Weapon (A-grade) - Exchangeable" type="CURSED_ENCHANT_WEAPON" icon="icon.etc_cursed_scrl_of_ench_wp_a_i00">
 	<!-- When used, the enchant level of an A-grade Weapon is reduced by 1. Can only be used on items enchanted +1 or more. -->
 		<restriction stackable="true"/>
 		<attributes/>
 	</item>
 
-	<item id="93258" name="Cursed Scroll: Enchant Armor (A-grade) - Exchangeable" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_cursed_scrl_of_ench_am_a_i00">
+	<item id="93258" name="Cursed Scroll: Enchant Armor (A-grade) - Exchangeable" type="CURSED_ENCHANT_ARMOR" icon="icon.etc_cursed_scrl_of_ench_am_a_i00">
 	<!-- When used, the enchant level of an A-grade Armor is reduced by 1. Can only be used on items enchanted +1 or more. -->
 		<restriction stackable="true"/>
 		<attributes/>

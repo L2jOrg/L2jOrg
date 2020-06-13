@@ -1,7 +1,6 @@
 package org.l2j.gameserver.ai;
 
 
-import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.geo.GeoEngine;
@@ -35,7 +34,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.Future;
 import java.util.stream.Stream;
 
 import static java.util.Objects.nonNull;
@@ -458,7 +456,7 @@ public class AttackableAI extends CreatureAI {
         if ((npc == null) || npc.isCastingNow()) {
             return;
         }
-        if (Config.AGGRO_DISTANCE_CHECK_ENABLED && isMonster(npc)) {
+        if (Config.AGGRO_DISTANCE_CHECK_ENABLED && isMonster(npc) && !isWalker(npc)) {
             final Spawn spawn = npc.getSpawn();
             if ((spawn != null) && (calculateDistance3D(npc, spawn.getLocation()) > Config.AGGRO_DISTANCE_CHECK_RANGE)) {
                 if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !npc.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || !npc.isInInstance())) {

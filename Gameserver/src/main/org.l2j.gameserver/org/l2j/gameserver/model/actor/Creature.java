@@ -2009,7 +2009,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Update active skills in progress (In Use and Not In Use because stacked) icons on client.<br>
      * <B><U>Concept</U>:</B><br>
      * All active skills effects in progress (In Use and Not In Use because stacked) are represented by an icon on the client.<br>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method ONLY UPDATE the client of the player and not clients of all players in the party.</B></FONT>
+     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This     method ONLY UPDATE the client of the player and not clients of all players in the party.</B></FONT>
      */
     public final void updateEffectIcons() {
         updateEffectIcons(false);
