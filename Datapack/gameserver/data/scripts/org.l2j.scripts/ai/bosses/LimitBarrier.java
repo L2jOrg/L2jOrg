@@ -19,6 +19,7 @@
 package ai.bosses;
 
 import ai.AbstractNpcAI;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -137,7 +138,7 @@ public final class LimitBarrier extends AbstractNpcAI {
     // Skill
     private static final SkillHolder LIMIT_BARRIER = new SkillHolder(32203, 1);
     // Misc
-    private static final int HIT_COUNT = 500;
+    private static final int HIT_COUNT = Config.RAIDBOSS_LIMIT_BARRIER;
     private static final Map<Npc, Integer> RAIDBOSS_HITS = new ConcurrentHashMap<>();
 
     private LimitBarrier()

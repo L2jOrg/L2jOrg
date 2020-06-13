@@ -704,6 +704,7 @@ public final class Config {
     public static double RAIDBOSS_MDEF_MULTIPLIER;
     public static double RAIDBOSS_AGRRO_RANGE_MULTIPLIER;
     public static double RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
+    public static int RAIDBOSS_LIMIT_BARRIER;
     public static double GUARD_HP_MULTIPLIER;
     public static double GUARD_MP_MULTIPLIER;
     public static double GUARD_PATK_MULTIPLIER;
@@ -1342,6 +1343,7 @@ public final class Config {
         RAID_MIN_RESPAWN_MULTIPLIER = NPC.getFloat("RaidMinRespawnMultiplier", 1.0f);
         RAID_MAX_RESPAWN_MULTIPLIER = NPC.getFloat("RaidMaxRespawnMultiplier", 1.0f);
         RAID_MINION_RESPAWN_TIMER = NPC.getInt("RaidMinionRespawnTime", 300000);
+        RAIDBOSS_LIMIT_BARRIER = NPC.getInt("LimitBarrier", 500);
         final String[] propertySplit = NPC.getString("CustomMinionsRespawnTime", "").split(";");
         MINIONS_RESPAWN_TIME = new HashMap<>(propertySplit.length);
         for (String prop : propertySplit) {
