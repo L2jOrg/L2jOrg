@@ -49,7 +49,7 @@ public final class RequestEnchantItem extends ClientPacket {
         if (request.getTimestamp() == 0 || (System.currentTimeMillis() - request.getTimestamp()) < 2000 ) {
             GameUtils.handleIllegalPlayerAction(player, player + " use auto enchant program");
             player.removeRequest(EnchantItemRequest.class);
-            client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+            client.sendPacket(EnchantResult.error());
             return;
         }
 

@@ -343,8 +343,8 @@ public class DBSpawnManager {
 
                 try {
                     statement.setLong(1, info.getLong("respawnTime"));
-                    statement.setDouble(2, info.getDouble("currentHP"));
-                    statement.setDouble(3, info.getDouble("currentMP"));
+                    statement.setDouble(2, npc.isDead() ? npc.getMaxHp() : info.getDouble("currentHP"));
+                    statement.setDouble(3, npc.isDead() ? npc.getMaxMp() : info.getDouble("currentMP"));
                     statement.setInt(4, npcId);
                     statement.executeUpdate();
                     statement.clearParameters();

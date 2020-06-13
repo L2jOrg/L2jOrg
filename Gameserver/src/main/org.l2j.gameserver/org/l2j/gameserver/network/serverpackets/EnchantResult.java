@@ -1,35 +1,31 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.engine.item.enchant.EnchantResultType;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+/**
+ * @author JoeAlisson
+ */
 public class EnchantResult extends ServerPacket {
-    public static int SUCCESS = 0;
-    public static int FAIL = 1;
-    public static int ERROR = 2;
-    public static int BLESSED_FAIL = 3;
-    public static int NO_CRYSTAL = 4;
-    public static int SAFE_FAIL = 5;
-    private final int result;
+    private final EnchantResultType result;
     private final int crystal;
-    private final int count;
+    private final long crystalCount;
     private final int enchantLevel;
     private final int[] enchantOptions;
+    private int stone;
+    private long stoneCount;
 
-    public EnchantResult(int result, int crystal, int count, int enchantLevel, int[] options) {
+    private EnchantResult(EnchantResultType result, int crystal, long crystalCount, int enchantLevel, int[] options) {
         this.result = result;
         this.crystal = crystal;
-        this.count = count;
+        this.crystalCount = crystalCount;
         this.enchantLevel = enchantLevel;
         enchantOptions = options;
     }
 
-    public EnchantResult(int result, int crystal, int count) {
-        this(result, crystal, count, 0, Item.DEFAULT_ENCHANT_OPTIONS);
-    }
-
-    public EnchantResult(int result, Item item) {
+    private EnchantResult(EnchantResultType result, Item item) {
         this(result, 0, 0, item.getEnchantLevel(), item.getEnchantOptions());
     }
 
@@ -37,19 +33,47 @@ public class EnchantResult extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.ENCHANT_RESULT);
 
-        writeInt(result);
+        writeInt(result.ordinal());
         writeInt(crystal);
-        writeLong(count);
-       /* for (int option : enchantOptions) {
-            writeInt(option);
-        }*/
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
+        writeLong(crystalCount);
+        writeInt(stone);
+        writeLong(stoneCount);
         writeInt(enchantLevel);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
+        for (int option : enchantOptions) {
+            writeInt(option);
+        }
     }
 
+    public void withStone(int stoneId, long stoneCount) {
+        this.stone = stoneId;
+        this.stoneCount = stoneCount;
+    }
+
+    public static EnchantResult success(Item item) {
+        return new EnchantResult(EnchantResultType.SUCCESS, item);
+    }
+
+    public static EnchantResult error() {
+        return new EnchantResult(EnchantResultType.ERROR, 0 , 0, 0, Item.DEFAULT_ENCHANT_OPTIONS);
+    }
+
+    public static EnchantResult fail() {
+        return new EnchantResult(EnchantResultType.NO_CRYSTAL, 0, 0, 0, Item.DEFAULT_ENCHANT_OPTIONS);
+    }
+
+    public static EnchantResult fail(int crystalId, int count) {
+        return new EnchantResult(EnchantResultType.FAIL, crystalId, count, 0, Item.DEFAULT_ENCHANT_OPTIONS);
+    }
+
+    public static EnchantResult safe(Item item) {
+        return new EnchantResult(EnchantResultType.SAFE_FAIL, item);
+    }
+
+    public static EnchantResult safeReduced(Item item) {
+        return new EnchantResult(EnchantResultType.SAFE_REDUCED, item);
+    }
+
+    public static EnchantResult blessed(Item item) {
+        return new EnchantResult(EnchantResultType.BLESSED_FAIL, item);
+    }
 }

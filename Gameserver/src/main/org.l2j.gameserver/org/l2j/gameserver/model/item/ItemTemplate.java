@@ -97,7 +97,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private int reuseGroup;
 
     private CommissionItemType commissionType;
-    private boolean _isBlessed;
 
     protected BodyPart bodyPart; // TODO should be on Weapon and Armor
 
@@ -617,14 +616,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
     public boolean isForNpc() {
         return forNpc;
-    }
-
-
-    /**
-     * @return {@code true} if the item is blessed, {@code false} otherwise.
-     */
-    public final boolean isBlessed() {
-        return _isBlessed;
     }
 
     /**

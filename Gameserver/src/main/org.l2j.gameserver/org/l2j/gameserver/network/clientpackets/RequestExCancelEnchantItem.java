@@ -20,7 +20,7 @@ public class RequestExCancelEnchantItem extends ClientPacket {
             return;
         }
 
-        client.sendPacket(new EnchantResult(2, 0, 0));
+        client.sendPacket(EnchantResult.error());
         activeChar.removeRequest(EnchantItemRequest.class);
     }
 }

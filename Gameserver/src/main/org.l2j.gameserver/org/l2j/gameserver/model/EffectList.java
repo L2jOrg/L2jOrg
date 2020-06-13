@@ -961,7 +961,7 @@ public final class EffectList {
      * @param aves the abnormal visual effects
      */
     public final void startAbnormalVisualEffect(AbnormalVisualEffect... aves) {
-            abnormalVisualEffects.addAll(Arrays.asList(aves));
+        abnormalVisualEffects.addAll(Arrays.asList(aves));
         owner.updateAbnormalVisualEffects();
     }
 

@@ -9,6 +9,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="chance-group" type="l2jorg:ChanceGroup" maxOccurs="unbounded"/>
+				<xs:element name="fail-rewards" type="l2jorg:FailRewards"/>
 				<xs:element name="group" type="l2jorg:ScrollGroup" maxOccurs="unbounded"/>
 				<xs:element name="scroll" type="l2jorg:Scroll" maxOccurs="unbounded" />
 			</xs:sequence>
@@ -33,14 +34,36 @@
 		</xs:key>
 	</xs:element>
 
+	<xs:complexType name="FailRewards">
+		<xs:sequence>
+			<xs:element name="weapon" type="l2jorg:FailRewardGroup"/>
+			<xs:element name="armor" type="l2jorg:FailRewardGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="FailRewardGroup">
+		<xs:sequence>
+			<xs:element name="reward" type="l2jorg:FailReward" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="reward-id" type="xs:int" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="FailReward">
+		<xs:attribute name="grade" type="l2jorg:CrystalType" use="required"/>
+		<xs:attribute name="from" type="xs:unsignedShort" default="0"/>
+		<xs:attribute name="until" type="xs:unsignedShort" default="65535"/>
+		<xs:attribute name="amount" type="xs:int" use="required"/>
+		<xs:attribute name="bonus-per-level" type="xs:int" default="0"/>
+	</xs:complexType>
+
 	<xs:complexType name="ChanceGroup">
 		<xs:sequence>
-			<xs:element name="enchant" type="l2jorg:Enchant" maxOccurs="unbounded"/>
+			<xs:element name="enchant" type="l2jorg:EnchantChance" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" />
 	</xs:complexType>
 
-	<xs:complexType name="Enchant">
+	<xs:complexType name="EnchantChance">
 		<xs:attribute name="from" type="xs:unsignedShort" default="0" />
 		<xs:attribute name="until" type="xs:unsignedShort" default="65535"/>
 		<xs:attribute name="chance" use="required">
@@ -80,5 +103,6 @@
 		<xs:attribute name="chance-percent-bonus" type="xs:float" default="0"/>
 		<xs:attribute name="random" type="xs:short" default="0"/>
 		<xs:attribute name="max-enchant-random" type="xs:int" default="6"/>
+		<xs:attribute name="safe-fail-step" type="xs:int" default="0"/>
 	</xs:complexType>
 </xs:schema>

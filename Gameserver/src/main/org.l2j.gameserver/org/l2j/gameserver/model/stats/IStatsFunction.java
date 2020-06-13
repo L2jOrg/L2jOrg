@@ -19,23 +19,12 @@ import static org.l2j.gameserver.util.GameUtils.*;
  */
 @FunctionalInterface
 public interface IStatsFunction {
-    /**
-     * @param item
-     * @param blessedBonus
-     * @param enchant
-     * @return
-     */
-    static double calcEnchantDefBonus(Item item, double blessedBonus, int enchant) {
+
+    static double calcEnchantDefBonus(Item item, int enchant) {
         return enchant + (3 * Math.max(0, enchant - 3));
     }
 
-    /**
-     * @param item
-     * @param blessedBonus
-     * @param enchant
-     * @return
-     */
-    static double calcEnchantMatkBonus(Item item, double blessedBonus, int enchant) {
+    static double calcEnchantMatkBonus(Item item, int enchant) {
         switch (item.getTemplate().getCrystalType()) {
             case S: {
                 // M. Atk. increases by 4 for all weapons.
@@ -57,14 +46,8 @@ public interface IStatsFunction {
         }
     }
 
-    /**
-     * @param item
-     * @param blessedBonus
-     * @param enchant
-     * @return
-     */
-    static double calcEnchantedPAtkBonus(Item item, double blessedBonus, int enchant) {
-        switch (item.getTemplate().getCrystalType()) {
+    static double calcEnchantedPAtkBonus(Item item, int enchant) {
+        switch (item.getCrystalType()) {
             case S: {
                 if (item.getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
@@ -136,7 +119,7 @@ public interface IStatsFunction {
             final Item item = creature.getInventory().getItemByBodyPart(part);
             // TODO Confirm if the bonus is applied for any Grade
             if ((item != null) && (item.getEnchantLevel() >= 4)) {
-                value += calcEnchantBodyPartBonus(item.getEnchantLevel(), item.getTemplate().isBlessed());
+                value += calcEnchantBodyPartBonus(item.getEnchantLevel(), false);
             }
         }
         return value;
@@ -197,7 +180,6 @@ public interface IStatsFunction {
             return 0;
         }
 
-        final double blessedBonus = item.isBlessed() ? 1.5 : 1;
         int enchant = item.getEnchantLevel();
 
         if (creature.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ENCHANT_LIMIT)) {
@@ -205,11 +187,11 @@ public interface IStatsFunction {
         }
 
         if ((stat == Stat.MAGICAL_DEFENCE) || (stat == Stat.PHYSICAL_DEFENCE)) {
-            return calcEnchantDefBonus(item, blessedBonus, enchant);
+            return calcEnchantDefBonus(item, enchant);
         } else if (stat == Stat.MAGIC_ATTACK) {
-            return calcEnchantMatkBonus(item, blessedBonus, enchant);
+            return calcEnchantMatkBonus(item, enchant);
         } else if ((stat == Stat.PHYSICAL_ATTACK) && item.isWeapon()) {
-            return calcEnchantedPAtkBonus(item, blessedBonus, enchant);
+            return calcEnchantedPAtkBonus(item, enchant);
         }
         return 0;
     }
