@@ -595,21 +595,13 @@
         <npc id="20821" count="1" respawnTime="165sec" respawnRandom="50sec"/>
     </spawn>
     <spawn>
-        <territories>
-            <territory name="aden36_2318_p05" minZ="-676" maxZ="-476">
-                <node x="114972" y="17220"/>
-                <node x="115240" y="17088"/>
-                <node x="116504" y="17604"/>
-                <node x="115272" y="18452"/>
-            </territory>
-            <territory name="aden36_2318_p10" minZ="888" maxZ="1088">
-                <node x="115300" y="14424"/>
-                <node x="116260" y="15200"/>
-                <node x="116476" y="16280"/>
-                <node x="116296" y="16916"/>
-            </territory>
-        </territories>
-        <npc id="20977" count="1" respawnTime="60sec"/>
+        <npc id="20977" count="1">
+            <locations>
+                <location x="115880" y="15608" z="920" chance="33"/>
+                <location x="115667" y="15480" z="920" chance="33"/>
+                <location x="115304" y="15384" z="920" chance="33"/>
+            </locations>
+        </npc>
     </spawn>
     <spawn>
         <territories>
@@ -1506,21 +1498,13 @@
         <npc id="21072" count="1" respawnTime="320sec" respawnRandom="120sec"/>
     </spawn>
     <spawn>
-        <territories>
-            <territory name="aden29_2318_p02" minZ="6965" maxZ="7165">
-                <node x="114453" y="17147"/>
-                <node x="115096" y="17795"/>
-                <node x="114505" y="18378"/>
-                <node x="113553" y="18097"/>
-            </territory>
-            <territory name="aden29_2318_p09" minZ="6948" maxZ="7148">
-                <node x="113468" y="14144"/>
-                <node x="114724" y="15352"/>
-                <node x="113972" y="16116"/>
-                <node x="112712" y="14844"/>
-            </territory>
-        </territories>
-        <npc id="21081" count="1" respawnTime="60sec"/>
+        <npc id="21081" count="1">
+            <locations>
+                <location x="115880" y="15608" z="920" chance="33"/>
+                <location x="115667" y="15480" z="920" chance="33"/>
+                <location x="115304" y="15384" z="920" chance="33"/>
+            </locations>
+        </npc>
     </spawn>
     <spawn>
         <territories>

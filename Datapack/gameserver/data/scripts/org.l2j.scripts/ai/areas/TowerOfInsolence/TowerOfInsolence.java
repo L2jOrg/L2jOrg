@@ -1,25 +1,32 @@
 package ai.areas.TowerOfInsolence;
 
 import ai.AbstractNpcAI;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.model.ChanceLocation;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.quest.QuestTimer;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.network.NpcStringId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+import java.util.concurrent.ScheduledFuture;
 
+// TODO: Make spawn in template, 10 locations min / floor for each monster 20977 & 21081 (@pearlbear)
 public class TowerOfInsolence extends AbstractNpcAI {
     private static final Logger LOGGER = LoggerFactory.getLogger(TowerOfInsolence.class);
 
     private final int LEVEL_MAX_DIFF = 9;
-    private final int TIME_UNTIL_MOVE = 60000;
+    private final int TIME_UNTIL_MOVE = 1800000;
 
     private final int ELMOREDEN_LADY = 20977;
     private final int POWER_ANGEL_AMON = 21081;
@@ -56,6 +63,9 @@ public class TowerOfInsolence extends AbstractNpcAI {
             21981
     };
 
+    private ScheduledFuture<?> _scheduleTaskElmoreden;
+    private ScheduledFuture<?> _scheduleTaskAmon;
+
 
     private TowerOfInsolence()
     {
@@ -65,37 +75,36 @@ public class TowerOfInsolence extends AbstractNpcAI {
         addKillId(ENERGY_OF_INSOLENCE_MINIONS);
     }
 
-    @Override
-    public String onAdvEvent(String event, Npc npc, Player player) {
-        if (event.equals("ENERGY_OF_INSOLENCE_AI_THREAD")) {
-            npc.deleteMe();
-            final Spawn spawn = npc.getSpawn();
-            spawn.respawnNpc(npc);
-        }
-        return super.onAdvEvent(event, npc, player);
-    }
-
     private void makeInvul(Npc npc) {
-        npc.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.ULTIMATE_DEFENCE);
+        npc.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
         npc.setIsInvul(true);
     }
 
     private void makeMortal(Npc npc) {
-        npc.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.ULTIMATE_DEFENCE);
+        npc.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
         npc.setIsInvul(false);
+    }
+
+    private void makeTalk(Npc npc, boolean spawning) {
+        NpcStringId npcStringId = null;
+        switch (npc.getId()) {
+            case ELMOREDEN_LADY -> npcStringId = spawning ? NpcStringId.MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR : NpcStringId.CAN_T_DIE_IN_A_PLACE_LIKE_THIS;
+            case POWER_ANGEL_AMON -> npcStringId = spawning ? NpcStringId.WHO_DARED_TO_ENTER_HERE : NpcStringId.HOW_DARE_YOU_INVADE_OUR_LAND_I_WONT_LEAVE_IT_THAT_EASY;
+        }
+        npc.broadcastSay(ChatType.NPC_SHOUT, npcStringId);
     }
 
     @Override
     public String onSpawn(Npc npc) {
         if(Util.contains(ENERGY_OF_INSOLENCE_NPC_IDS, npc.getId())) {
+            makeTalk(npc, true);
             switch (npc.getId()) {
                 case ELMOREDEN_LADY -> {
-                    npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR);
                     makeInvul(npc);
+                    _scheduleTaskElmoreden = ThreadPool.schedule(new ScheduleAITask(npc, ELMOREDEN_LADY), TIME_UNTIL_MOVE);
                 }
-                case POWER_ANGEL_AMON -> npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.WHO_DARED_TO_ENTER_HERE);
+                case POWER_ANGEL_AMON -> _scheduleTaskAmon = ThreadPool.schedule(new ScheduleAITask(npc, POWER_ANGEL_AMON), TIME_UNTIL_MOVE);
             }
-            startQuestTimer("ENERGY_OF_INSOLENCE_AI_THREAD", TIME_UNTIL_MOVE, npc, null);
         }
         return super.onSpawn(npc);
     }
@@ -109,14 +118,21 @@ public class TowerOfInsolence extends AbstractNpcAI {
         }
 
         if(Util.contains(ENERGY_OF_INSOLENCE_NPC_IDS, npc.getId())) {
-            switch (npc.getId()) {
-                case ELMOREDEN_LADY -> npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.CAN_T_DIE_IN_A_PLACE_LIKE_THIS);
+            makeTalk(npc, false);
 
-                case POWER_ANGEL_AMON -> npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.HOW_DARE_YOU_INVADE_OUR_LAND_I_WONT_LEAVE_IT_THAT_EASY);
+            switch (npc.getId()) {
+                case ELMOREDEN_LADY -> {
+                    _scheduleTaskElmoreden.cancel(true);
+                    _scheduleTaskElmoreden = null;
+                    _scheduleTaskElmoreden = ThreadPool.schedule(new ScheduleAITask(null, ELMOREDEN_LADY), TIME_UNTIL_MOVE);
+                }
+                case POWER_ANGEL_AMON -> {
+                    _scheduleTaskAmon.cancel(true);
+                    _scheduleTaskAmon = null;
+                    _scheduleTaskAmon = ThreadPool.schedule(new ScheduleAITask(null, POWER_ANGEL_AMON), TIME_UNTIL_MOVE);
+                }
             }
-            final QuestTimer questTimer = getQuestTimer("ENERGY_OF_INSOLENCE_AI_THREAD", npc, null);
-            if(questTimer != null)
-                removeQuestTimer(getQuestTimer("ENERGY_OF_INSOLENCE_AI_THREAD", npc, null));
+
             // We don't use droplist because we don't want several boosts to modify drop rate or count
             if((killer.getLevel() - npc.getLevel()) <= LEVEL_MAX_DIFF && Rnd.get(100) <= ENERGY_OF_INSOLENCE_DROP_RATE)
                 npc.dropItem(killer, ENERGY_OF_INSOLENCE_ITEM_ID, ENERGY_OF_INSOLENCE_DROP_COUNT);
@@ -127,13 +143,41 @@ public class TowerOfInsolence extends AbstractNpcAI {
                 final Monster leader = (Monster) payload;
 
                 // If all minions are dead, turn master to mortal mode
-                if(leader.getMinionList().getSpawnedMinions().size() == 0) {
+                if(leader.getMinionList().getSpawnedMinions().size() == 0 && !leader.isDead())
                     makeMortal(leader);
-                }
             }
         }
 
         return super.onKill(npc, killer, isSummon, payload);
+    }
+
+    public class ScheduleAITask implements Runnable {
+
+        private final Npc _npc;
+        private final int _npcId;
+
+        public ScheduleAITask(Npc npc, int npcId) {
+            _npc = npc;
+            _npcId = npcId;
+        }
+
+        @Override
+        public void run() {
+
+            if (_npc != null)
+                _npc.deleteMe();
+
+            try {
+                final Spawn spawn = new Spawn(_npcId);
+                final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npcSpawnTemplate -> npcSpawnTemplate.getId() == _npcId);
+                final List<ChanceLocation> locations = spawns.get(0).getLocation();
+                final Location location = locations.get(Rnd.get(0, locations.size() - 1));
+                spawn.setLocation(location);
+                spawn.doSpawn();
+            } catch (ClassNotFoundException | NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public static AbstractNpcAI provider()
