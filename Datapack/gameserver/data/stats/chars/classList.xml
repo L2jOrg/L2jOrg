@@ -1,69 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/classList.xsd">
-    <!-- Human -->
-    <class classId="0" name="Human Fighter"/>
-    <class classId="1" name="Warrior" parentClassId="0"/>
-    <class classId="2" name="Gladiator" parentClassId="1"/>
+    <!-- Start Classes -->
+	<class classId="0" name="Human Fighter"/>
+	<class classId="10" name="Human Mystic"/>
+	<class classId="18" name="Elven Fighter"/>
+	<class classId="25" name="Elven Mystic"/>
+	<class classId="31" name="Dark Fighter"/>
+	<class classId="38" name="Dark Mystic"/>
+	<class classId="44" name="Orc Fighter"/>
+	<class classId="49" name="Orc Mystic"/>
+	<class classId="53" name="Dwarf Fighter"/>
+	<class classId="192" name="Jin Kamael Soldier"/>
+	
+    <!-- 1-st Classes -->   
+    <class classId="1" name="Warrior" parentClassId="0"/>    
+    <class classId="4" name="Human Knight" parentClassId="0"/>    
+    <class classId="7" name="Rogue" parentClassId="0"/>       
+    <class classId="11" name="Human Wizard" parentClassId="10"/>    
+    <class classId="15" name="Cleric" parentClassId="10"/>        
+    <class classId="19" name="Elven Knight" parentClassId="18"/>
+    <class classId="22" name="Elven Scout" parentClassId="18"/>        
+    <class classId="26" name="Elven Wizard" parentClassId="25"/>
+    <class classId="29" name="Elven Oracle" parentClassId="25"/>        
+    <class classId="32" name="Palus Knight" parentClassId="31"/>    
+    <class classId="35" name="Assassin" parentClassId="31"/>       
+    <class classId="39" name="Dark Wizard" parentClassId="38"/>    
+    <class classId="42" name="Shillien Oracle" parentClassId="38"/>    
+    <class classId="45" name="Orc Raider" parentClassId="44"/>    
+    <class classId="47" name="Monk" parentClassId="44"/>    
+    <class classId="50" name="Orc Shaman" parentClassId="49"/>        
+    <class classId="54" name="Scavenger" parentClassId="53"/>
+    <class classId="56" name="Artisan" parentClassId="53"/>    
+    <class classId="125" name="Trooper" parentClassId="192"/>
+	<class classId="126" name="Warden" parentClassId="192"/>
+    <class classId="193" name="Soul Finder" parentClassId="192"/>   
+	
+    <!-- 2-st Classes -->
+	<class classId="2" name="Gladiator" parentClassId="1"/>
     <class classId="3" name="Warlord" parentClassId="1"/>
-    <class classId="4" name="Human Knight" parentClassId="0"/>
-    <class classId="5" name="Paladin" parentClassId="4"/>
+	<class classId="5" name="Paladin" parentClassId="4"/>
     <class classId="6" name="Dark Avenger" parentClassId="4"/>
-    <class classId="7" name="Rogue" parentClassId="0"/>
-    <class classId="8" name="Treasure Hunter" parentClassId="7"/>
+	<class classId="8" name="Treasure Hunter" parentClassId="7"/>
     <class classId="9" name="Hawkeye" parentClassId="7"/>
-    <class classId="10" name="Human Mystic"/>
-    <class classId="11" name="Human Wizard" parentClassId="10"/>
-    <class classId="12" name="Sorcerer" parentClassId="11"/>
+	<class classId="12" name="Sorcerer" parentClassId="11"/>
     <class classId="13" name="Necromancer" parentClassId="11"/>
     <class classId="14" name="Warlock" parentClassId="11"/>
-    <class classId="15" name="Cleric" parentClassId="10"/>
-    <class classId="16" name="Bishop" parentClassId="15"/>
+	<class classId="16" name="Bishop" parentClassId="15"/>
     <class classId="17" name="Prophet" parentClassId="15"/>
-    <!-- Elf -->
-    <class classId="18" name="Elven Fighter"/>
-    <class classId="19" name="Elven Knight" parentClassId="18"/>
-    <class classId="20" name="Temple Knight" parentClassId="19"/>
+	<class classId="20" name="Temple Knight" parentClassId="19"/>
     <class classId="21" name="Sword Singer" parentClassId="19"/>
-    <class classId="22" name="Elven Scout" parentClassId="18"/>
-    <class classId="23" name="Plains Walker" parentClassId="22"/>
+	<class classId="23" name="Plains Walker" parentClassId="22"/>
     <class classId="24" name="Silver Ranger" parentClassId="22"/>
-    <class classId="25" name="Elven Mystic"/>
-    <class classId="26" name="Elven Wizard" parentClassId="25"/>
-    <class classId="27" name="Spellsinger" parentClassId="26"/>
+	<class classId="27" name="Spellsinger" parentClassId="26"/>
     <class classId="28" name="Elemental Summoner" parentClassId="26"/>
-    <class classId="29" name="Elven Oracle" parentClassId="25"/>
-    <class classId="30" name="Elven Elder" parentClassId="29"/>
-    <!-- Dark elf -->
-    <class classId="31" name="Dark Fighter"/>
-    <class classId="32" name="Palus Knight" parentClassId="31"/>
-    <class classId="33" name="Shillien Knight" parentClassId="32"/>
+	<class classId="30" name="Elven Elder" parentClassId="29"/>
+	<class classId="33" name="Shillien Knight" parentClassId="32"/>
     <class classId="34" name="Bladedancer" parentClassId="32"/>
-    <class classId="35" name="Assassin" parentClassId="31"/>
-    <class classId="36" name="Abyss Walker" parentClassId="35"/>
+	<class classId="36" name="Abyss Walker" parentClassId="35"/>
     <class classId="37" name="Phantom Ranger" parentClassId="35"/>
-    <class classId="38" name="Dark Mystic"/>
-    <class classId="39" name="Dark Wizard" parentClassId="38"/>
-    <class classId="40" name="Spellhowler" parentClassId="39"/>
+	<class classId="40" name="Spellhowler" parentClassId="39"/>
     <class classId="41" name="Phantom Summoner" parentClassId="39"/>
-    <class classId="42" name="Shillien Oracle" parentClassId="38"/>
-    <class classId="43" name="Shillien Elder" parentClassId="42"/>
-    <!-- Orc -->
-    <class classId="44" name="Orc Fighter"/>
-    <class classId="45" name="Orc Raider" parentClassId="44"/>
-    <class classId="46" name="Destroyer" parentClassId="45"/>
-    <class classId="47" name="Monk" parentClassId="44"/>
-    <class classId="48" name="Tyrant" parentClassId="47"/>
-    <class classId="49" name="Orc Mystic"/>
-    <class classId="50" name="Orc Shaman" parentClassId="49"/>
-    <class classId="51" name="Overlord" parentClassId="50"/>
+	<class classId="43" name="Shillien Elder" parentClassId="42"/>
+	<class classId="46" name="Destroyer" parentClassId="45"/>
+	<class classId="48" name="Tyrant" parentClassId="47"/>
+	<class classId="51" name="Overlord" parentClassId="50"/>
     <class classId="52" name="Warcryer" parentClassId="50"/>
-    <!-- Dwarf -->
-    <class classId="53" name="Dwarf Fighter"/>
-    <class classId="54" name="Scavenger" parentClassId="53"/>
-    <class classId="55" name="Bounty Hunter" parentClassId="54"/>
-    <class classId="56" name="Artisan" parentClassId="53"/>
-    <class classId="57" name="Warsmith" parentClassId="56"/>
-    <!-- Third Classes -->
+	<class classId="55" name="Bounty Hunter" parentClassId="54"/>
+	<class classId="57" name="Warsmith" parentClassId="56"/>
+	<class classId="127" name="Beserker" parentClassId="125"/>
+	<class classId="130" name="Arbalester" parentClassId="126"/>
+    <class classId="194" name="Soul Breaker" parentClassId="193"/>
+	
+    <!-- 3-rd Classes -->
     <class classId="88" name="Duelist" parentClassId="2"/>
     <class classId="89" name="Dreadnought" parentClassId="3"/>
     <class classId="90" name="Phoenix Knight" parentClassId="5"/>
@@ -95,20 +103,13 @@
     <class classId="116" name="Doom Cryer" parentClassId="52"/>
     <class classId="117" name="Fortune Seeker" parentClassId="55"/>
     <class classId="118" name="Maestro" parentClassId="57"/>
+	<class classId="131" name="Doombringer" parentClassId="127"/>
+	<class classId="134" name="Trickster" parentClassId="130"/>
+    <class classId="195" name="Soul Hound" parentClassId="194"/>   
+	
     <!-- NPCs -->
     <class classId="119" name="World Trap"/>
     <class classId="120" name="Player Trap"/>
     <class classId="121" name="Double Ghost"/>
     <class classId="122" name="Siege Attacker"/>
-
-    <class classId="192" name="Jin Kamael Soldier"/>
-    <class classId="125" name="Trooper" parentClassId="192"/>
-    <class classId="193" name="Soul Finder" parentClassId="192"/>
-    <class classId="126" name="Warden" parentClassId="192"/>
-    <class classId="127" name="Beserker" parentClassId="125"/>
-    <class classId="194" name="Soul Breaker" parentClassId="193"/>
-    <class classId="130" name="Arbalester" parentClassId="126"/>
-    <class classId="131" name="Doombringer" parentClassId="127"/>
-    <class classId="195" name="Soul Hound" parentClassId="194"/>
-    <class classId="134" name="Trickster" parentClassId="130"/>
 </list>
