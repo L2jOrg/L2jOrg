@@ -54,7 +54,7 @@ public class Util {
     }
 
     public static boolean isNotEmpty(final String value) {
-        return nonNull(value) && !value.isEmpty();
+        return nonNull(value) && !value.isBlank();
     }
 
     public static boolean isNullOrEmpty(final Collection<?> collection) {

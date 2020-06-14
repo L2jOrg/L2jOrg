@@ -4463,9 +4463,6 @@ public final class SystemMessageId {
     @ClientString(id = 2285, message = "This skill cannot remove this trap.")
     public static SystemMessageId THIS_SKILL_CANNOT_REMOVE_THIS_TRAP;
 
-    @ClientString(id = 2286, message = "You cannot wear $s1 because you are not wearing a bracelet.")
-    public static SystemMessageId YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET;
-
     @ClientString(id = 2287, message = "You cannot equip $s1 because you do not have any available slots.")
     public static SystemMessageId YOU_CANNOT_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_ANY_AVAILABLE_SLOTS;
 
@@ -9440,9 +9437,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 4526, message = "Cannot summon any more Agathions.")
     public static SystemMessageId CANNOT_SUMMON_ANY_MORE_AGATHIONS;
-
-    @ClientString(id = 4527, message = "You cannot use the Agathion's power because you are not wearing the left bracelet.")
-    public static SystemMessageId YOU_CANNOT_USE_THE_AGATHION_S_POWER_BECAUSE_YOU_ARE_NOT_WEARING_THE_LEFT_BRACELET;
 
     @ClientString(id = 4528, message = "+$s1$s2 was summoned as a Primary Agathion.")
     public static SystemMessageId S1S2_WAS_SUMMONED_AS_A_PRIMARY_AGATHION;
@@ -16331,6 +16325,9 @@ public final class SystemMessageId {
     @ClientString(id = 2085, message = "Shout and trade chatting cannot be used while possessing a cursed weapon.")
     public static SystemMessageId SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON;
 
+    @ClientString(id = 2286, message = "You cannot wear $s1 because you are not wearing a bracelet.")
+    public static SystemMessageId YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET;
+
     @ClientString(id = 2089, message = "$s1 second(s) until the fortress battle starts.")
     public static SystemMessageId S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS;
 
@@ -17538,6 +17535,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 4476, message = "Failed because there's not enough Adena.")
     public static SystemMessageId FAILED_BECAUSE_THERE_S_NOT_ENOUGH_ADENA;
+
+    @ClientString(id = 4527, message = "You cannot use the Agathion's power because you are not wearing the left bracelet.")
+    public static SystemMessageId YOU_CANNOT_USE_THE_AGATHION_S_POWER_BECAUSE_YOU_ARE_NOT_WEARING_THE_LEFT_BRACELET;
 
     @ClientString(id = 4535, message = "Current location: $s1/$s2/$s3 (Balthus Knight Barracks)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_BALTHUS_KNIGHT_BARRACKS;

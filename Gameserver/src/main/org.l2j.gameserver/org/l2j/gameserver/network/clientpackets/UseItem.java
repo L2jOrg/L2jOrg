@@ -29,13 +29,13 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
+import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -49,6 +49,7 @@ import java.util.concurrent.TimeUnit;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isBetween;
+import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isItem;
 
@@ -85,7 +86,7 @@ public final class UseItem extends ClientPacket {
         }
 
         if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
-            player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+            player.sendPacket(WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -103,7 +104,7 @@ public final class UseItem extends ClientPacket {
         }
 
         if (item.isQuestItem())  {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
+            player.sendPacket(YOU_CANNOT_USE_QUEST_ITEMS);
             return;
         }
 
@@ -114,7 +115,7 @@ public final class UseItem extends ClientPacket {
 
         // Char cannot use item when dead
         if (player.isDead() || player.getInventory().isBlocked(item)) {
-            var sm = getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+            var sm = getSystemMessage(S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
             sm.addItemName(item);
             player.sendPacket(sm);
             return;
@@ -127,7 +128,7 @@ public final class UseItem extends ClientPacket {
         itemId = item.getId();
         if (player.isFishing() && !isBetween(itemId, 6535, 6540)) { // FIXME non existent ids
             // You cannot do anything else while fishing
-            player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
+            player.sendPacket(YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
             return;
         }
 
@@ -181,6 +182,7 @@ public final class UseItem extends ClientPacket {
 
     private void handleEquipable(Player player, Item item) {
         if (!checkCanUse(player, item)) {
+            player.sendPacket(YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
             return;
         }
 
@@ -203,44 +205,37 @@ public final class UseItem extends ClientPacket {
 
     private boolean checkCanUse(Player player, Item item) {
         var bodyPart = item.getBodyPart();
-
-        if (player.getInventory().isItemSlotBlocked(bodyPart)) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-            return false;
-        }
-
-        return CheckUnlockedSlot(player, item, bodyPart);
+        return checkUnlockedSlot(player, item, bodyPart) && (!item.isHeroItem() || player.isHero() || player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
+                &&  !player.getInventory().isItemSlotBlocked(bodyPart);
     }
 
-    private boolean CheckUnlockedSlot(Player player, Item item, BodyPart bodyPart) {
+    private boolean checkUnlockedSlot(Player player, Item item, BodyPart bodyPart) {
         switch (bodyPart) {
             case TWO_HAND, LEFT_HAND, RIGHT_HAND -> {
-                if (player.isMounted() || player.isDisarmed() ||  (nonNull(player.getActiveWeaponItem()) && player.getActiveWeaponItem().getId() == 9819)) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                if (player.isMounted() || player.isDisarmed()) {
                     return false;
                 }
             }
             case TALISMAN -> {
                 if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0)) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                    player.sendPacket(getSystemMessage(YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET).addItemName(item));
                     return false;
                 }
             }
             case BROOCH_JEWEL -> {
                 if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0)) {
-                    player.sendPacket(getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH).addItemName(item));
+                    player.sendPacket(getSystemMessage(YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH).addItemName(item));
                     return false;
                 }
             }
             case AGATHION -> {
                 if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0)) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return false;
                 }
             }
             case ARTIFACT -> {
                 if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0)) {
-                    player.sendPacket(getSystemMessage(SystemMessageId.NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1).addItemName(item));
+                    player.sendPacket(getSystemMessage(NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1).addItemName(item));
                     return false;
                 }
             }
@@ -254,16 +249,16 @@ public final class UseItem extends ClientPacket {
         final int seconds = (int) ((remainingTime / 1000) % 60);
         final SystemMessage sm;
         if (hours > 0) {
-            sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+            sm = getSystemMessage(THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
             sm.addItemName(item);
             sm.addInt(hours);
             sm.addInt(minutes);
         } else if (minutes > 0) {
-            sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+            sm = getSystemMessage(THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
             sm.addItemName(item);
             sm.addInt(minutes);
         } else {
-            sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+            sm = getSystemMessage(THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
             sm.addItemName(item);
         }
         sm.addInt(seconds);

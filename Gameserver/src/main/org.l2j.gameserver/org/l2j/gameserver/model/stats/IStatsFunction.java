@@ -38,7 +38,8 @@ import static org.l2j.gameserver.util.GameUtils.*;
 @FunctionalInterface
 public interface IStatsFunction {
 
-    static double calcEnchantDefBonus(Item item, int enchant) {
+    static double calcEnchantDefBonus(Item item) {
+        final var enchant = item.getEnchantLevel();
         return enchant + (3 * max(0, enchant - 3));
     }
 
@@ -122,7 +123,7 @@ public interface IStatsFunction {
         }
 
         return switch (stat) {
-            case MAGICAL_DEFENCE, PHYSICAL_DEFENCE -> calcEnchantDefBonus(item, enchant);
+            case MAGICAL_DEFENCE, PHYSICAL_DEFENCE -> calcEnchantDefBonus(item);
             default -> 0;
         };
     }

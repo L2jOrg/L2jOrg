@@ -40,21 +40,14 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author JoeAlisson
  */
 public final class Weapon extends ItemTemplate implements EquipableItem {
-    private WeaponType type;
+    private final WeaponType type;
     private boolean magic;
-    private int soulShot;
+    private int soulShot; // TODO Remove
     private int spiritShot;
     private int manaConsume;
     private int damageRadius;
-    private int attackangle;
+    private int attackAngle;
     private int changeWeapon;
-
-    private int _reducedSoulshot;
-    private int _reducedSoulshotChance;
-
-    private int _reducedMpConsume;
-    private int _reducedMpConsumeChance;
-
     private boolean isAttackWeapon;
     private boolean useWeaponSkillsOnly;
 
@@ -91,34 +84,6 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
     }
 
     /**
-     * @return the quantity of SoulShot used.
-     */
-    public int getSoulShot() {
-        return soulShot;
-    }
-
-    /**
-     * @return the quantity of SpiritShot used.
-     */
-    public int getSpiritShotCount() {
-        return spiritShot;
-    }
-
-    /**
-     * @return the reduced quantity of SoultShot used.
-     */
-    public int getReducedSoulShot() {
-        return _reducedSoulshot;
-    }
-
-    /**
-     * @return the chance to use Reduced SoultShot.
-     */
-    public int getReducedSoulShotChance() {
-        return _reducedSoulshotChance;
-    }
-
-    /**
      * @return the MP consumption with the weapon.
      */
     public int getMpConsume() {
@@ -130,21 +95,7 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
     }
 
     public int getBaseAttackAngle() {
-        return attackangle;
-    }
-
-    /**
-     * @return the reduced MP consumption with the weapon.
-     */
-    public int getReducedMpConsume() {
-        return _reducedMpConsume;
-    }
-
-    /**
-     * @return the chance to use getReducedMpConsume()
-     */
-    public int getReducedMpConsumeChance() {
-        return _reducedMpConsumeChance;
+        return attackAngle;
     }
 
     /**
@@ -246,7 +197,7 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
     }
 
     public void setDamageAngle(int angle) {
-        this.attackangle = angle;
+        this.attackAngle = angle;
     }
 
     public void setEnchantable(Boolean enchantable) {
@@ -286,7 +237,7 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
             };
 
         if(type == WeaponType.BOW) {
-            count ++;
+            count++;
         }
         return count;
     }

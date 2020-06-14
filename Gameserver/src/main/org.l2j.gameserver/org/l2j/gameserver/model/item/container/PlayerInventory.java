@@ -20,6 +20,7 @@ package org.l2j.gameserver.model.item.container;
 
 import io.github.joealisson.primitive.IntCollection;
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -37,7 +38,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemTransfe
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.item.type.EtcItemType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.slf4j.Logger;
@@ -51,6 +52,8 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.model.item.type.EtcItemType.ARROW;
+import static org.l2j.gameserver.model.item.type.EtcItemType.BOLT;
 
 /**
  * @author JoeAlisson
@@ -65,6 +68,7 @@ public class PlayerInventory extends Inventory {
     private Item silverCoin;
     private Item rustyCoin;
     private Item l2Coin;
+    private Item currentAmmunition;
 
     private IntCollection blockItems = null;
     private InventoryBlockType blockMode = InventoryBlockType.NONE;
@@ -818,28 +822,11 @@ public class PlayerInventory extends Inventory {
         }
     }
 
-    /**
-     * Reduce the number of arrows/bolts owned by the Player and send it Server->Client Packet InventoryUpdate or ItemList (to unequip if the last arrow was consumed).
-     */
-    @Override
-    public void reduceArrowCount(EtcItemType type) {
-        if ((type != EtcItemType.ARROW) && (type != EtcItemType.BOLT)) {
-            LOGGER.warn("{} which is not arrow type passed to PlayerInstance.reduceArrowCount()", type);
+    public void reduceAmmunitionCount() {
+        if(isNull(currentAmmunition) || currentAmmunition.isInfinite()) {
             return;
         }
-
-        final Item arrows = getPaperdollItem(InventorySlot.LEFT_HAND);
-
-        if ((arrows == null) || (arrows.getItemType() != type)) {
-            return;
-        }
-
-        if (arrows.getEtcItem().isInfinite()) // Null-safe due to type checks above
-        {
-            return;
-        }
-
-        updateItemCountNoDbUpdate(null, arrows, -1, owner, null);
+        updateItemCountNoDbUpdate(null, currentAmmunition, -1, owner, null);
     }
 
     /**
@@ -849,33 +836,20 @@ public class PlayerInventory extends Inventory {
      * @return Amount of items left.
      */
     public boolean updateItemCountNoDbUpdate(String process, Item item, long countDelta, Player creator, Object reference) {
-        final InventoryUpdate iu = new InventoryUpdate();
         final long left = item.getCount() + countDelta;
-        try {
-            if (left > 0) {
-                if ((process != null) && (process.length() > 0)) {
-                    item.changeCount(process, countDelta, creator, reference);
-                } else {
-                    item.changeCountWithoutTrace(-1, creator, reference);
-                }
-                item.setLastChange(Item.MODIFIED);
-                refreshWeight();
-                iu.addModifiedItem(item);
-                return true;
-            } else if (left == 0) {
-                iu.addRemovedItem(item);
-                destroyItem(process, item, owner, null);
-                return true;
+        if (left > 0) {
+            if (Util.isNotEmpty(process)) {
+                item.changeCount(process, countDelta, creator, reference);
             } else {
-                return false;
+                item.changeCountWithoutTrace(countDelta, creator, reference);
             }
-        } finally {
-            if (Config.FORCE_INVENTORY_UPDATE) {
-                owner.sendItemList();
-            } else {
-                owner.sendInventoryUpdate(iu);
-            }
+            item.setLastChange(Item.MODIFIED);
+            refreshWeight();
+        } else {
+            destroyItem(process, item, owner, null);
         }
+        owner.sendInventoryUpdate(new InventoryUpdate(item));
+        return true;
     }
 
     /**
@@ -911,5 +885,31 @@ public class PlayerInventory extends Inventory {
 
     public void addLCoin(long count) {
         l2Coin.setCount(getLCoin() + count);
+    }
+
+    public boolean findAmmunitionForCurrentWeapon() {
+        final var currentWeapon = getPaperdollItem(InventorySlot.RIGHT_HAND);
+
+        if(isNull(currentWeapon)) {
+            return false;
+        }
+
+        return matchesAmmunition(currentAmmunition, currentWeapon) || nonNull(currentAmmunition = findAmmunition(currentWeapon));
+    }
+
+    private Item findAmmunition(Item currentWeapon) {
+        return items.values().stream().filter(i -> matchesAmmunition(i, currentWeapon)).findFirst().orElse(null);
+    }
+
+    private boolean matchesAmmunition(Item ammunition, Item weapon) {
+            if(isNull(ammunition) || ammunition.getCrystalType() != weapon.getCrystalType() || ammunition.getCount() < 1
+                    || !items.containsKey(ammunition.getObjectId())) {
+            return false;
+        }
+
+        final var itemType = weapon.getItemType();
+
+        return (ammunition.getItemType() == ARROW && itemType == WeaponType.BOW) ||
+               (ammunition.getItemType() == BOLT && itemType == WeaponType.CROSSBOW || itemType == WeaponType.TWO_HAND_CROSSBOW);
     }
 }
