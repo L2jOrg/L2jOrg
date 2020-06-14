@@ -56,8 +56,9 @@ class JDBCInvocation implements InvocationHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(JDBCInvocation.class);
     private static final Pattern PARAMETER_PATTERN = Pattern.compile(":(\\w+?):");
     private static final String INSERT_TEMPLATE = "INSERT INTO %s %s VALUES %s ON DUPLICATE KEY UPDATE %s";
-    private static final String COLUMN_PATTERN = "(\\w+)";
+    private static final String COLUMN_PATTERN = "(`\\w+`)";
     private static final String DUPLICATE_UPDATE_PATTERN = "$1=VALUES($1)";
+    private static final String ESCAPE_KEYWORD = "`";
 
     private static final Cache<Method, QueryDescriptor> descriptors = CacheFactory.getInstance().getCache("sql-descriptors");
     private static final Cache<Class<?>, QueryDescriptor> saveDescriptors = CacheFactory.getInstance().getCache("sql-save-descriptors");
@@ -186,7 +187,7 @@ class JDBCInvocation implements InvocationHandler {
     }
 
     private String fieldToColumnName(Field field) {
-        return field.isAnnotationPresent(Column.class) ? field.getAnnotation(Column.class).value() : field.getName();
+        return ESCAPE_KEYWORD + (field.isAnnotationPresent(Column.class) ? field.getAnnotation(Column.class).value() : field.getName()) + ESCAPE_KEYWORD;
     }
 
     private QueryDescriptor buildQuery(final Method method)  {
