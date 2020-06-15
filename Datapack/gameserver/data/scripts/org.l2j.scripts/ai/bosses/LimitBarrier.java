@@ -138,8 +138,6 @@ public final class LimitBarrier extends AbstractNpcAI {
             };
     // Skill
     private static final SkillHolder LIMIT_BARRIER = new SkillHolder(32203, 1);
-    // Misc
-    private static final int HIT_COUNT = Config.RAIDBOSS_LIMIT_BARRIER;
     private static final Map<Npc, Integer> RAIDBOSS_HITS = new ConcurrentHashMap<>();
 
     private LimitBarrier()
@@ -156,20 +154,18 @@ public final class LimitBarrier extends AbstractNpcAI {
             case "RESTORE_FULL_HP":
             {
                 final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
-                LOGGER.info("hits count: {}", hits);
                 if(!npc.isDead()) {
-                    if (hits < HIT_COUNT) {
+                    if (hits < Config.RAIDBOSS_LIMIT_BARRIER) {
                         if (player != null)
                             npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_TO_DESTROY_THE_LIMIT_BARRIER_NTHE_RAID_BOSS_FULLY_RECOVERS_ITS_HEALTH, 2, 5000, true));
                         npc.setCurrentHp(npc.getStats().getMaxHp(), true);
-                    } else if (hits > HIT_COUNT) {
+                    } else if (hits > Config.RAIDBOSS_LIMIT_BARRIER) {
                         if (player != null)
                             npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_DESTROYED_THE_LIMIT_BARRIER, 2, 5000, true));
                     }
                     npc.stopSkillEffects(true, LIMIT_BARRIER.getSkillId());
                 }
-
-                RAIDBOSS_HITS.remove(npc);
+                RAIDBOSS_HITS.put(npc, 0);
                 break;
             }
         }
@@ -182,12 +178,10 @@ public final class LimitBarrier extends AbstractNpcAI {
         if (npc.isAffectedBySkill(LIMIT_BARRIER.getSkillId()))
         {
             final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
-            RAIDBOSS_HITS.putIfAbsent(npc, hits + 1);
+            RAIDBOSS_HITS.put(npc, hits + 1);
         }
-
         if (!npc.isAffectedBySkill(LIMIT_BARRIER.getSkillId()) && (getQuestTimers().get("RESTORE_FULL_HP") == null || getQuestTimers().get("RESTORE_FULL_HP").size() == 0))
             if (canCastBarrier(npc)) {
-                LOGGER.info("{} make {} triggering barrier", attacker, npc);
                 startQuestTimer("RESTORE_FULL_HP", 15000, npc, attacker);
                 npc.setTarget(npc);
                 npc.abortAttack();
