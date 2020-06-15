@@ -68,7 +68,7 @@ public enum BodyPart {
     ARTIFACT(0x40000000000L, InventorySlot.ARTIFACT1)
     ;
 
-    static LongMap<BodyPart> mapper = new HashLongMap<>();
+    private static final LongMap<BodyPart> mapper = new HashLongMap<>();
 
     static {
         for (BodyPart value : values()) {

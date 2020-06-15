@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
     <spawn name="TownOfGoddard">
-        <group>
-            <npc id="30767" x="149272" y="-55888" z="-2760" heading="48000" respawnTime="60sec"> <!-- Auctioneer -->
-                <parameters>
-                    <param name="fnAgitMap" value="godard"/>
-                </parameters>
-            </npc>
+        <group>            
             <npc id="35461" x="146416" y="-55568" z="-2760" heading="32000" respawnTime="60sec"/> <!-- Aida -->
             <npc id="35462" x="146488" y="-55432" z="-2776" heading="1000" respawnTime="60sec"/> <!-- Kalmer -->
             <npc id="35463" x="147134" y="-56576" z="-2760" heading="44000" respawnTime="60sec"/> <!-- Helga -->

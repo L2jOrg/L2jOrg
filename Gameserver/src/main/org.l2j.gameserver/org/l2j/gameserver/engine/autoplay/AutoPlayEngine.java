@@ -47,7 +47,7 @@ import static java.util.Objects.nonNull;
  */
 public final class AutoPlayEngine {
 
-    private static final int AUTO_PLAY_INTERVAL = 500;
+    private static final int AUTO_PLAY_INTERVAL = 1000;
     private static final int DEFAULT_ACTION = 2;
 
     private final ForkJoinPool autoPlayPool = new ForkJoinPool();
@@ -141,6 +141,7 @@ public final class AutoPlayEngine {
         }
         player.getAutoPlaySettings().setActive(false);
         player.sendPacket(new ExAutoPlaySettingResponse());
+        player.resetNextAutoShortcut();
     }
 
     public void startAutoPotion(Player player) {

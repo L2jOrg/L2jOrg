@@ -27,10 +27,7 @@ import org.l2j.commons.util.collection.LimitedQueue;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.RecipeController;
-import org.l2j.gameserver.ai.CreatureAI;
-import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.ai.PlayerAI;
-import org.l2j.gameserver.ai.SummonAI;
+import org.l2j.gameserver.ai.*;
 import org.l2j.gameserver.api.elemental.ElementalSpirit;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.WarehouseCacheManager;
@@ -62,6 +59,7 @@ import org.l2j.gameserver.model.actor.request.AbstractRequest;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.actor.status.PlayerStatus;
+import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
@@ -152,6 +150,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
+import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -672,6 +671,49 @@ public final class Player extends Playable {
         lastDamages.add(DamageInfo.of(attacker == this ? null : attacker, skill, value, damageType));
         super.onReceiveDamage(attacker, skill, value, damageType);
     }
+
+    @Override
+    protected boolean checkRangedAttackCondition(Weapon weapon, Creature target) {
+        if(!super.checkRangedAttackCondition(weapon, target)) {
+            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+            return false;
+        }
+
+        if (!inventory.findAmmunitionForCurrentWeapon()) {
+            getAI().setIntention(AI_INTENTION_ACTIVE);
+            sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+            return false;
+        }
+
+        if (target.isInsidePeaceZone(this)) {
+            getAI().setIntention(AI_INTENTION_ACTIVE);
+            sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
+            return false;
+        }
+
+        int mpConsume = isAffected(EffectFlag.CHEAPSHOT) ? 0 : weapon.getMpConsume();
+        if (getCurrentMp() < mpConsume) {
+            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+            sendPacket(SystemMessageId.NOT_ENOUGH_MP);
+            return false;
+        }
+
+        if (mpConsume > 0) {
+            reduceCurrentMp(mpConsume);
+        }
+        return true;
+    }
+
+    @Override
+    protected void onStartRangedAttack(boolean isCrossBow, int reuse) {
+        inventory.reduceAmmunitionCount();
+
+        if (isCrossBow) {
+            sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
+        }
+        sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, reuse));
+    }
+
     public static Player create(PlayerData playerData, PlayerTemplate template) {
         final Player player = new Player(playerData, template);
         player.setRecomLeft(20);
@@ -2240,13 +2282,11 @@ public final class Player extends Playable {
 
     public void useEquippableItem(Item item, boolean abortAttack) {
         Set<Item> modifiedItems;
-        final boolean isEquiped = item.isEquipped();
         final int oldInvLimit = getInventoryLimit();
         SystemMessage sm;
 
-        if (isEquiped) {
+        if (item.isEquipped()) {
             var bodyPart = BodyPart.fromEquippedPaperdoll(item);
-            // we can't unequip talisman by body slot
             if (bodyPart.isAnyOf(TALISMAN, BROOCH_JEWEL, AGATHION, ARTIFACT)) {
                 modifiedItems = inventory.unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
             } else {
@@ -2271,7 +2311,7 @@ public final class Player extends Playable {
                 sm.addItemName(item);
                 sendPacket(sm);
 
-                if ((item.getBodyPart().isAnyOf(RIGHT_HAND, TWO_HAND))) {
+                if (item.getBodyPart().isAnyOf(RIGHT_HAND, TWO_HAND)) {
                     rechargeShot(ShotType.SOULSHOTS);
                     rechargeShot(ShotType.SPIRITSHOTS);
                 }
@@ -2281,9 +2321,7 @@ public final class Player extends Playable {
         }
 
         broadcastUserInfo();
-
-        final InventoryUpdate iu = new InventoryUpdate(modifiedItems);
-        sendInventoryUpdate(iu);
+        sendInventoryUpdate(new InventoryUpdate(modifiedItems));
 
         if (abortAttack) {
             abortAttack();
@@ -4071,7 +4109,7 @@ public final class Player extends Playable {
                     if (etcItem != null) {
                         final EtcItemType itemType = etcItem.getItemType();
                         if (((weapon.getItemType() == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) || (((weapon.getItemType() == WeaponType.CROSSBOW) || (weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) && (itemType == EtcItemType.BOLT))) {
-                            checkAndEquipAmmunition(itemType);
+                            inventory.findAmmunitionForCurrentWeapon();
                         }
                     }
                 }
@@ -5114,33 +5152,6 @@ public final class Player extends Playable {
             return false;
         }
         return getObjectId() == _clan.getLeaderId();
-    }
-
-    /**
-     * Equip arrows needed in left hand and send a Server->Client packet ItemList to the Player then return True.
-     *
-     * @param type
-     */
-    @Override
-    protected boolean checkAndEquipAmmunition(EtcItemType type) {
-        Item arrows = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
-        if (arrows == null) {
-            final Weapon weapon = getActiveWeaponItem();
-            if (type == EtcItemType.ARROW) {
-                arrows = inventory.findArrowForBow(weapon);
-            } else if (type == EtcItemType.BOLT) {
-                arrows = inventory.findBoltForCrossBow(weapon);
-            }
-            if (arrows != null) {
-                // Equip arrows needed in left hand
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, arrows);
-                sendItemList();
-                return true;
-            }
-        } else {
-            return true;
-        }
-        return false;
     }
 
     /**

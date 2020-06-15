@@ -136,12 +136,7 @@
             <npc id="31688" x="147688" y="28527" z="-2264" heading="38406" respawnTime="60sec"/>
             <npc id="31690" x="147648" y="28599" z="-2264" heading="40508" respawnTime="60sec"/>
             <npc id="35233" x="147464" y="1532" z="-468" heading="16383" respawnTime="60sec"/>
-            <npc id="34053" x="147626" y="27368" z="-2206" heading="49449" respawnTime="60sec"/>
-            <npc id="30767" x="148009" y="28603" z="-2264" heading="52880" respawnTime="60sec"> <!-- Auctioneer -->
-                <parameters>
-                    <param name="fnAgitMap" value="aden"/>
-                </parameters>
-            </npc>
+            <npc id="34053" x="147626" y="27368" z="-2206" heading="49449" respawnTime="60sec"/>           
         </group>
     </spawn>
 </list>

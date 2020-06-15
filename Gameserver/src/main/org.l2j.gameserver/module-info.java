@@ -1,3 +1,5 @@
+import org.l2j.gameserver.engine.item.container.listener.BowCrossListener;
+
 module org.l2j.gameserver {
     requires transitive org.l2j.commons;
 
@@ -127,7 +129,7 @@ module org.l2j.gameserver {
             org.l2j.gameserver.engine.item.container.listener.ArmorSetListener,
             org.l2j.gameserver.engine.item.container.listener.AgathionBraceletListener,
             org.l2j.gameserver.engine.item.container.listener.ArtifactBookListener,
-            org.l2j.gameserver.engine.item.container.listener.BowCrossRodListener,
+                BowCrossListener,
             org.l2j.gameserver.engine.item.container.listener.BraceletListener,
             org.l2j.gameserver.engine.item.container.listener.BroochListener;
 

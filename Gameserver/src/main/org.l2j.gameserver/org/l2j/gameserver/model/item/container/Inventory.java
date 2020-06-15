@@ -30,10 +30,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.item.type.EtcItemType;
-import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -55,6 +52,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.model.item.CommonItem.WEDDING_BOUQUET;
+import static org.l2j.gameserver.model.item.type.ArmorType.SIGIL;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -328,11 +326,6 @@ public abstract class Inventory extends ItemContainer {
     /**
      * Unequips item in body slot and returns alterations.<BR>
      * <B>If you dont need return value use {@link Inventory#unEquipItemInBodySlot(BodyPart)} instead</B>
-     *
-     * @param slot : int designating the slot of the paperdoll
-     * @return Item[] : list of changes
-     *
-     * TODO use bodyPart instead of slot
      */
     public Set<Item> unEquipItemInBodySlotAndRecord(BodyPart slot) {
         final ChangeRecorder recorder = newRecorder();
@@ -358,9 +351,6 @@ public abstract class Inventory extends ItemContainer {
     /**
      * Unequips item in slot and returns alterations<BR>
      * <B>If you dont need return value use {@link Inventory#unEquipItemInSlot(InventorySlot)} instead</B>
-     *
-     * @param slot : int designating the slot
-     * @return Item[] : list of items altered
      */
     public Set<Item> unEquipItemInSlotAndRecord(InventorySlot slot) {
         final ChangeRecorder recorder = newRecorder();
@@ -400,8 +390,6 @@ public abstract class Inventory extends ItemContainer {
      * Equips item and returns list of alterations<BR>
      * <B>If you don't need return value use {@link Inventory#equipItem(Item)} instead</B>
      *
-     * @param item : Item corresponding to the item
-     * @return Item[] : list of alterations
      */
     public Set<Item> equipItemAndRecord(Item item) {
         final ChangeRecorder recorder = newRecorder();
@@ -420,13 +408,6 @@ public abstract class Inventory extends ItemContainer {
      * @param item : Item designating the item and slot used.
      */
     public void equipItem(Item item) {
-        if (isPlayer(getOwner())) {
-            final Player player = (Player) getOwner();
-            if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
-                return;
-            }
-        }
-
         var bodyPart = item.getBodyPart();
 
         if(bodyPart.isAnyOf(TWO_HAND, LEFT_HAND, RIGHT_HAND, LEGS, FEET, GLOVES, HEAD)) {
@@ -534,12 +515,10 @@ public abstract class Inventory extends ItemContainer {
     }
 
     private void equipLeftHand(Item item) {
-        var weapon = getPaperdollItem(InventorySlot.TWO_HAND);
-        if(nonNull(weapon) && !(isEquipArrow(weapon, item) || isEquipBolt(weapon, item) || isEquipLure(weapon, item))) {
+        if(item.getItemType() != SIGIL && nonNull(getPaperdollItem(InventorySlot.TWO_HAND))) {
             setPaperdollItem(InventorySlot.TWO_HAND, null);
             setPaperdollItem(InventorySlot.RIGHT_HAND, null);
         }
-
         checkEquippedDress();
         setPaperdollItem(InventorySlot.LEFT_HAND, item);
     }
@@ -551,21 +530,11 @@ public abstract class Inventory extends ItemContainer {
         }
     }
 
-    private boolean isEquipLure(Item rightHand, Item item) {
-        return rightHand.getItemType() == WeaponType.FISHING_ROD && item.getItemType() == EtcItemType.LURE;
-    }
-
-    private boolean isEquipBolt(Item rightHand, Item item) {
-        return (rightHand.getItemType() == WeaponType.CROSSBOW || rightHand.getItemType() == WeaponType.TWO_HAND_CROSSBOW) && item.getItemType() == EtcItemType.BOLT;
-    }
-
-    private boolean isEquipArrow(Item rightHand, Item item) {
-        return rightHand.getItemType() == WeaponType.BOW && item.getItemType() == EtcItemType.ARROW;
-    }
-
     private void equipTwoHand(Item item) {
         checkEquippedDress();
-        setPaperdollItem(InventorySlot.LEFT_HAND, null);
+        if(falseIfNullOrElse(getPaperdollItem(InventorySlot.LEFT_HAND), i -> i.getItemType() != SIGIL)) {
+            setPaperdollItem(InventorySlot.LEFT_HAND, null);
+        }
         setPaperdollItem(InventorySlot.RIGHT_HAND, item);
         paperdoll.put(InventorySlot.TWO_HAND, item);
     }
@@ -674,50 +643,6 @@ public abstract class Inventory extends ItemContainer {
      */
     public int getTotalWeight() {
         return _totalWeight;
-    }
-
-    /**
-     * Return the Item of the arrows needed for this bow.
-     *
-     * @param bow : ItemTemplate designating the bow
-     * @return Item pointing out arrows for bow
-     */
-    public Item findArrowForBow(ItemTemplate bow) {
-        if (isNull(bow)) {
-            return null;
-        }
-
-        Item arrow = null;
-
-        for (Item item : getItems()) {
-            if (item.isEtcItem() && (item.getTemplate().getCrystalType() == bow.getCrystalType()) && (item.getItemType() == EtcItemType.ARROW)) {
-                arrow = item;
-                break;
-            }
-        }
-
-        // Get the Item corresponding to the item identifier and return it
-        return arrow;
-    }
-
-    /**
-     * Return the Item of the bolts needed for this crossbow.
-     *
-     * @param crossbow : ItemTemplate designating the crossbow
-     * @return Item pointing out bolts for crossbow
-     */
-    public Item findBoltForCrossBow(ItemTemplate crossbow) {
-        Item bolt = null;
-
-        for (Item item : getItems()) {
-            if (item.isEtcItem() && (item.getTemplate().getCrystalType() == crossbow.getCrystalType()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT)) {
-                bolt = item;
-                break;
-            }
-        }
-
-        // Get the Item corresponding to the item identifier and return it
-        return bolt;
     }
 
     /**
@@ -854,17 +779,6 @@ public abstract class Inventory extends ItemContainer {
            var slot = part.getId();
            return (blockedItemSlotsMask & slot) == slot;
         });
-    }
-
-    /**
-     * Reduce the arrow number of the Creature.<br>
-     * <B><U> Overridden in </U> :</B>
-     * <li>Player</li>
-     *
-     * @param type
-     */
-    public void reduceArrowCount(EtcItemType type) {
-        // default is to do nothing
     }
 
     /**

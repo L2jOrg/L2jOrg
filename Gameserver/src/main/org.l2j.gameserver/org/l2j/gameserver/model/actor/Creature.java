@@ -68,7 +68,6 @@ import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;
@@ -216,7 +215,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private WorldObject _target;
     // set by the start of attack, in game ticks
     private volatile long _attackEndTime;
-    private volatile long _disableRangedAttackEndTime;
+    private volatile long disableRangedAttackEndTime;
     private volatile CreatureAI _ai = null;
     private volatile CreatureContainer _seenCreatures;
     /**
@@ -746,21 +745,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, teleportWhere), true, instance);
     }
 
-    /**
-     * Launch a physical attack against a target (Simple, Bow, Pole or Dual).<br>
-     * <B><U>Actions</U>:</B>
-     * <ul>
-     * <li>Get the active weapon (always equipped in the right hand)</li>
-     * <li>If weapon is a bow, check for arrows, MP and bow re-use delay (if necessary, equip the Player with arrows in left hand)</li>
-     * <li>If weapon is a bow, consume MP and set the new period of bow non re-use</li>
-     * <li>Get the Attack Speed of the Creature (delay (in milliseconds) before next attack)</li>
-     * <li>Select the type of attack to start (Simple, Bow, Pole or Dual) and verify if SoulShot are charged then start calculation</li>
-     * <li>If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack to the Creature AND to all Player in the _KnownPlayers of the Creature</li>
-     * <li>Notify AI with EVT_READY_TO_ACT</li>
-     * </ul>
-     *
-     * @param target The Creature targeted
-     */
     public void doAutoAttack(Creature target) {
         final long stamp = _attackLock.tryWriteLock();
         if (stamp == 0) {
@@ -772,16 +756,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             if (!isAlikeDead()) {
-                if ((GameUtils.isNpc(this) && target.isAlikeDead()) || !isInSurroundingRegion(target)) {
+                if ((GameUtils.isNpc(this) && target.isAlikeDead()) || !isInSurroundingRegion(target) || target.isDead()) {
                     getAI().setIntention(AI_INTENTION_ACTIVE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
-                } else if (isPlayer(this)) {
-                    if (target.isDead()) {
-                        getAI().setIntention(AI_INTENTION_ACTIVE);
-                        sendPacket(ActionFailed.STATIC_PACKET);
-                        return;
-                    }
                 }
 
                 if (checkTransformed(transform -> !transform.canAttack())) {
@@ -837,55 +815,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 }
 
                 // Ranged weapon checks.
-                if (weaponItem.getItemType().isRanged()) {
-                    // Check if bow delay is still active.
-                    if (_disableRangedAttackEndTime > System.nanoTime()) {
-                        if (isPlayer(this)) {
-                            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
-                            sendPacket(ActionFailed.STATIC_PACKET);
-                        }
-                        return;
-                    }
-
-                    // Check for arrows and MP
-                    if (isPlayer(this)) { // TODO move to Player
-                        // Check if there are arrows to use or else cancel the attack.
-                        if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW)) {
-                            // Cancel the action because the Player have no arrow
-                            getAI().setIntention(AI_INTENTION_ACTIVE);
-                            sendPacket(ActionFailed.STATIC_PACKET);
-                            sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
-                            return;
-                        }
-
-                        // Checking if target has moved to peace zone - only for player-bow attacks at the moment
-                        // Other melee is checked in movement code and for offensive spells a check is done every time
-                        if (target.isInsidePeaceZone(getActingPlayer())) {
-                            getAI().setIntention(AI_INTENTION_ACTIVE);
-                            sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
-                            sendPacket(ActionFailed.STATIC_PACKET);
-                            return;
-                        }
-
-                        // Check if player has enough MP to shoot.
-                        int mpConsume = weaponItem.getMpConsume();
-                        if ((weaponItem.getReducedMpConsume() > 0) && (Rnd.get(100) < weaponItem.getReducedMpConsumeChance())) {
-                            mpConsume = weaponItem.getReducedMpConsume();
-                        }
-                        mpConsume = isAffected(EffectFlag.CHEAPSHOT) ? 0 : mpConsume;
-                        if (_status.getCurrentMp() < mpConsume) {
-                            // If Player doesn't have enough MP, stop the attack
-                            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
-                            sendPacket(SystemMessageId.NOT_ENOUGH_MP);
-                            sendPacket(ActionFailed.STATIC_PACKET);
-                            return;
-                        }
-
-                        // If Player have enough MP, the bow consumes it
-                        if (mpConsume > 0) {
-                            _status.reduceMp(mpConsume);
-                        }
-                    }
+                if (weaponItem.getItemType().isRanged() && !checkRangedAttackCondition(weaponItem, target)) {
+                    sendPacket(ActionFailed.STATIC_PACKET);
+                    return;
                 }
             }
 
@@ -912,23 +844,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 }
                 case BOW: {
                     final int reuse = Formulas.calculateReuseTime(this, weaponItem);
-
-                    // Consume arrows
-                    final Inventory inventory = getInventory();
-                    if (inventory != null) {
-                        inventory.reduceArrowCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
-                    }
-
-                    // Check if the Creature is a Player
-                    if (isPlayer(this)) { // TODO move to Player
-                        if (crossbow) {
-                            sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
-                        }
-                        sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, reuse));
-                    }
-
-                    // Calculate and set the disable delay of the bow in function of the Attack Speed
-                    _disableRangedAttackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(reuse);
+                    onStartRangedAttack(crossbow, reuse);
                     _hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
                     break;
                 }
@@ -960,6 +876,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         } finally {
             _attackLock.unlockWrite(stamp);
         }
+    }
+
+    protected void onStartRangedAttack(boolean crossbow, int reuse) {
+        disableRangedAttackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(reuse);
+    }
+
+    protected boolean checkRangedAttackCondition(Weapon weaponItem, Creature target) {
+        return disableRangedAttackEndTime <= System.nanoTime();
     }
 
     private Attack generateAttackTargetData(Creature target, Weapon weapon, WeaponType weaponType) {
@@ -2949,17 +2873,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
-     * <B><U> Overridden in </U> :</B>
-     * <li>Player</li>
-     *
-     * @param type
-     * @return True if arrows are available.
-     */
-    protected boolean checkAndEquipAmmunition(EtcItemType type) {
-        return true;
-    }
-
-    /**
      * Add Exp and Sp to the Creature.<br>
      * <B><U> Overridden in </U> :</B>
      * <li>Player</li>
@@ -3415,8 +3328,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return _attackEndTime;
     }
 
-    public long getRangedAttackEndTime() {
-        return _disableRangedAttackEndTime;
+    protected long getRangedAttackEndTime() {
+        return disableRangedAttackEndTime;
     }
 
     /**

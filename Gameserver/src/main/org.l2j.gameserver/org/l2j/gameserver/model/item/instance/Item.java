@@ -486,8 +486,7 @@ public final class Item extends WorldObject {
         }
     }
 
-    // No logging (function designed for shots only)
-    public void changeCountWithoutTrace(int count, Player creator, Object reference) {
+    public void changeCountWithoutTrace(long count, Player creator, Object reference) {
         changeCount(null, count, creator, reference);
     }
 
@@ -1790,6 +1789,10 @@ public final class Item extends WorldObject {
 
     public boolean isMagicWeapon() {
         return template instanceof Weapon w && w.isMagicWeapon();
+    }
+
+    public boolean isInfinite() {
+        return template instanceof EtcItem etcItem && etcItem.isInfinite();
     }
 
     static class ScheduleLifeTimeTask implements Runnable {

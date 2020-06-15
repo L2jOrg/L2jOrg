@@ -150,7 +150,7 @@ public class AdminAnnouncements implements IAdminCommandHandler {
 
         final Announce announce = AnnouncementsManager.getInstance().getAnnounce(id);
 
-        if ( !(announce instanceof AnnounceData)) {
+        if ( !(announce instanceof AnnounceData announceData)) {
             BuilderUtil.sendSysMessage(gm, "Announcement does not exist!");
             return false;
         }
@@ -167,52 +167,36 @@ public class AdminAnnouncements implements IAdminCommandHandler {
             return false;
         }
 
-        var announceData = (AnnounceData) announce;
         var tokens = st.countTokens();
 
-        if(tokens < 1) {
-            BuilderUtil.sendSysMessage(gm, "Syntax: //announces edit <id> <type> <delay> <repeat> <text>");
+        if(tokens < 4) {
+            BuilderUtil.sendSysMessage(gm, "Syntax: //announces edit <id> <type> <initial_delay> <delay> <repeat> <text>");
             return  false;
         }
 
-        if(type.isAutoAnnounce()) {
-            if(tokens >= 3) {
-                var delay = st.nextToken();
-                var repeatToken = st.nextToken();
+        var initialDelay = st.nextToken();
+        var delay = st.nextToken();
+        var repeatToken = st.nextToken();
 
-                if(!isInteger(delay) || !isInteger(repeatToken) ) {
-                    BuilderUtil.sendSysMessage(gm, "Syntax: //announces edit <id> <type> <delay> <repeat> <text>");
-                    return false;
-                }
+        if(!isInteger(delay) || !isInteger(repeatToken) || !isInteger(initialDelay)) {
+            BuilderUtil.sendSysMessage(gm, "Syntax: //announces edit <id> <type> <initial_delay> <delay> <repeat> <text>");
+            return false;
+        }
 
-                var content = getContent(st);
-                var startTime = Integer.parseInt(delay) * 1000L;
-                var repeat = Integer.parseInt(repeatToken);
+        var content = getContent(st);
+        var repeat = Integer.parseInt(repeatToken);
 
-                if(repeat <= 0) {
-                    repeat = -1;
-                }
+        if(repeat <= 0) {
+            repeat = -1;
+        }
 
-                announceData.setAuthor(gm.getName());
-                announceData.setDelay(startTime);
-                announceData.setInitial(startTime);
-                announceData.setRepeat(repeat);
-                announceData.setType(type);
-                if(content.length() > 0) {
-                    announceData.setContent(content.toString());
-                }
-            } else {
-                BuilderUtil.sendSysMessage(gm, "Syntax: //announces edit <id> <type> <delay> <repeat> <text>");
-                return  false;
-            }
-        } else if(tokens > 1) {
-
-            announceData.setAuthor(gm.getName());
-            announceData.setType(type);
-            var content = getContent(st);
-            if(content.length() > 0) {
-                announceData.setContent(content.toString());
-            }
+        announceData.setAuthor(gm.getName());
+        announceData.setDelay(Integer.parseInt(delay) * 1000L);
+        announceData.setInitial(Integer.parseInt(initialDelay) * 1000L);
+        announceData.setRepeat(repeat);
+        announceData.setType(type);
+        if(content.length() > 0) {
+            announceData.setContent(content.toString());
         }
 
         AnnouncementsManager.getInstance().updateAnnouncement(announce);
@@ -229,8 +213,8 @@ public class AdminAnnouncements implements IAdminCommandHandler {
 
         int tokens = st.countTokens();
 
-        if(tokens >= 2)  {
-            Announce announce = tryCreateAnnounce(gm, st, tokens);
+        if(tokens >= 5)  {
+            Announce announce = tryCreateAnnounce(gm, st);
 
             if(nonNull(announce)) {
                 AnnouncementsManager.getInstance().addAnnouncement(announce);
@@ -238,37 +222,22 @@ public class AdminAnnouncements implements IAdminCommandHandler {
                 return useAdminCommand("admin_announces list", gm);
             }
         }
-
-        BuilderUtil.sendSysMessage(gm, "Syntax: //announces add <type> [<delay>] [<repeat>] <text>");
+        BuilderUtil.sendSysMessage(gm, "Syntax: //announces add <type> <initial_delay> <delay> <repeat> <text>");
         return false;
     }
 
-    private Announce tryCreateAnnounce(Player gm, StringTokenizer st, int tokens) {
-        Announce announce = null;
+    private Announce tryCreateAnnounce(Player gm, StringTokenizer st) {
         var type = AnnouncementType.findByName(st.nextToken());
-
-        if(type.isAutoAnnounce()) {
-            if(tokens >= 4) {
-                announce = tryCreateAutoAnnounce(gm, type, st);
-            }
-        } else {
-            StringBuilder contentBuilder = getContent(st);
-
-            announce = new AnnounceData(type, contentBuilder.toString(), gm.getName());
-        }
-        return announce;
-    }
-
-    private Announce tryCreateAutoAnnounce(Player gm, AnnouncementType type, StringTokenizer st) {
+        var initialDelay = st.nextToken();
         var delay = st.nextToken();
         var repeatToken = st.nextToken();
 
-        if(!isInteger(delay) || !isInteger(repeatToken)) {
-            BuilderUtil.sendSysMessage(gm, "Syntax: //announces add <type> <delay> <repeat> <text>");
+        if(!isInteger(delay) || !isInteger(repeatToken) || !isInteger(initialDelay)) {
+            BuilderUtil.sendSysMessage(gm, "Syntax: //announces add <type> <initial_delay> <delay> <repeat> <text>");
             return null;
         }
 
-        var timeToStart = Integer.parseInt(delay) * 1000L;
+        var timeToStart = Integer.parseInt(initialDelay) * 1000L;
 
         if(timeToStart < 10000) {
             BuilderUtil.sendSysMessage(gm, "Delay cannot be less then 10 seconds!");
@@ -280,8 +249,9 @@ public class AdminAnnouncements implements IAdminCommandHandler {
             repeat = -1;
         }
 
+
         StringBuilder contentBuilder = getContent(st);
-        return  new AnnounceData(type, contentBuilder.toString(), gm.getName(), timeToStart, timeToStart, repeat);
+        return new AnnounceData(type, contentBuilder.toString(), gm.getName(), timeToStart, Integer.parseInt(delay) * 1000L, repeat);
     }
 
     private StringBuilder getContent(StringTokenizer st) {
@@ -295,20 +265,20 @@ public class AdminAnnouncements implements IAdminCommandHandler {
     private void showAnnounce(Player gm, Announce announce, String htmlTemplate) {
         String content = HtmCache.getInstance().getHtm(gm, htmlTemplate);
         final String announcementType = announce.getType().name();
-        String announcementInital = "0";
+        String announcementInitial = "0";
         String announcementDelay = "0";
         String announcementRepeat = "0";
 
         if (AnnouncementType.isAutoAnnounce(announce)) {
             var autoAnnounce = (AnnounceData) announce;
-            announcementInital = Long.toString(autoAnnounce.getInitial() / 1000);
+            announcementInitial = Long.toString(autoAnnounce.getInitial() / 1000);
             announcementDelay = Long.toString(autoAnnounce.getDelay() / 1000);
             announcementRepeat = Integer.toString(autoAnnounce.getRepeat());
         }
 
         content = content.replaceAll("%id%", Integer.toString(announce.getId()))
                 .replaceAll("%type%", announcementType)
-                .replaceAll("%initial%", announcementInital)
+                .replaceAll("%initial%", announcementInitial)
                 .replaceAll("%delay%", announcementDelay)
                 .replaceAll("%repeat%", announcementRepeat)
                 .replaceAll("%author%", announce.getAuthor())
