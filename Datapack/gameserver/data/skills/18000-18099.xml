@@ -35,5 +35,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="CON">
+                <power initial="1">
+                    <value level="6">2</value>
+                    <value level="14">3</value>
+                    <value level="19">4</value>
+                    <value level="25">6</value>
+                    <value level="26">8</value>
+                </power>
+            </base-stat>
+            <base-stat type="MEN"></base-stat>
+            <base-stat type="WIT"></base-stat>
+            <base-stat type="DEX"></base-stat>
+            <base-stat type="STR"></base-stat>
+            <base-stat type="INT"></base-stat>
+        </effects>
     </skill>
 </list>

@@ -3,12 +3,14 @@
     <skill id="32203" name="Limit Barrier" action="A2">
         <!-- Barrier broken after 500 hits. If 500 hits are not made within 15 seconds, all of Raid Boss's HP recovers. -->
         <icon initial="icon.skill11621"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" cast-disabled="true" without-action="true" >
             <magic-level initial="40"/>
             <effect-range initial="-1"/>
+            <hit-time initial="0"/>
+            <activate-rate initial="100"/>
         </attributes>
         <target object="FRIEND"/>
-        <abnormal type="INVINCIBILITY_SPECIAL" visual="INFINITE_SHIELD4_AVE_2">
+        <abnormal type="INVINCIBILITY_SPECIAL" visual="INFINITE_SHIELD4_AVE_2" instant="true">
             <level initial="1"/>
             <time initial="-1"/>
             <chance initial="-1"/>
