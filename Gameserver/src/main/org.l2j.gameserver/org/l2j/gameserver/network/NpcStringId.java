@@ -20658,12 +20658,10 @@ public final class NpcStringId {
 	public static NpcStringId YOU_RECEIVE_AN_UNIDENTIFIED_ROCK;
 
 
-    @ClientString(id = 1803287, message = "Destroy weakened Divine Angels")
-    public static NpcStringId DESTROY_WEAKENED_DIVINE_ANGELS;
+
     @ClientString(id = 1803288, message = "Set off bombs and get treasures")
     public static NpcStringId SET_OFF_BOMBS_AND_GET_TREASURES;
-    @ClientString(id = 1803289, message = "Protect the Central Tower from Divine Angels")
-    public static NpcStringId PROTECT_THE_CENTRAL_TOWER_FROM_DIVINE_ANGELS;
+
 
     @ClientString(id = 1803291, message = "It's time to fight monsters!")
     public static NpcStringId IT_S_TIME_TO_FIGHT_MONSTERS;
@@ -24745,6 +24743,15 @@ public final class NpcStringId {
 
     @ClientString(id = 1803286, message = "Divine Angels are nowhere to be seen! I want to talk to the party leader!")
     public static NpcStringId DIVINE_ANGELS_ARE_NOWHERE_TO_BE_SEEN_I_WANT_TO_TALK_TO_THE_PARTY_LEADER;
+
+    @ClientString(id = 1803287, message = "Destroy weakened Divine Angels")
+    public static NpcStringId DESTROY_WEAKENED_DIVINE_ANGELS;
+
+    @ClientString(id = 1803288, message = "Set off bombs and get treasures")
+    public static NpcStringId SET_OFF_BOMBS_AND_GET_TREASURES;
+
+    @ClientString(id = 1803289, message = "Protect the Central Tower from Divine Angels")
+    public static NpcStringId PROTECT_THE_CENTRAL_TOWER_FROM_DIVINE_ANGELS;
 
     @ClientString(id = 1803290, message = "My servants can keep me safe! I have nothing to fear!")
     public static NpcStringId MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR;

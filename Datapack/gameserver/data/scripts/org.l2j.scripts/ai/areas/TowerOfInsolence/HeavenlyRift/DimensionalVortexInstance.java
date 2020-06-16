@@ -1,32 +1,30 @@
-package npc.model.heavenlyrift;
+package ai.areas.TowerOfInsolence.HeavenlyRift;
+
+import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
+import org.l2j.gameserver.model.Party;
+import org.l2j.gameserver.model.actor.instance.Folk;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
 
-import l2s.commons.collections.MultiValueSet;
-import l2s.gameserver.ThreadPoolManager;
-import l2s.gameserver.instancemanager.ServerVariables;
-import l2s.gameserver.model.Party;
-import l2s.gameserver.model.Player;
-import l2s.gameserver.model.instances.NpcInstance;
-import l2s.gameserver.network.l2.components.SystemMsg;
-import l2s.gameserver.network.l2.s2c.SystemMessagePacket;
-import l2s.gameserver.templates.npc.NpcTemplate;
-import l2s.gameserver.utils.ItemFunctions;
-
-import manager.HeavenlyRift.ClearZoneTask;
-
 /**
- * @reworked by Bonux
+ * @reworked by Thoss
  */
-public class DimensionalVortexInstance extends NpcInstance
+public class DimensionalVortexInstance extends Folk
 {
 	private static final long serialVersionUID = 1L;
 
 	private static final int ITEM_ID = 49759;
 
-	public DimensionalVortexInstance(int objectId, NpcTemplate template, MultiValueSet<String> set)
+	public DimensionalVortexInstance(NpcTemplate template)
 	{
-		super(objectId, template, set);
+		super(template);
 	}
 
 	@Override
@@ -36,11 +34,12 @@ public class DimensionalVortexInstance extends NpcInstance
 		String cmd = st.nextToken();
 		if(cmd.equals("tryenter"))
 		{
-			if(ItemFunctions.getItemCount(player, ITEM_ID) >= 1)
+			if(player.getInventory().getInventoryItemCount(ITEM_ID, -1) >= 1)
 			{
 				if(isBusy())
 				{
-					showBusyWindow(player);
+					//TODO: show busy window
+					//showBusyWindow(player);
 					return;
 				}
 
@@ -48,36 +47,36 @@ public class DimensionalVortexInstance extends NpcInstance
 				{
 					setBusy(true);
 
-					ItemFunctions.deleteItem(player, ITEM_ID, 1, true);
+					player.destroyItemByItemId("Rift", ITEM_ID, 1, this, false);
 
-					ServerVariables.set("heavenly_rift_complete", 0);
-					ServerVariables.set("heavenly_rift_level", 0);
+					GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
+					GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
 
 					player.teleToLocation(112685, 13362, 10966);
 
-					ThreadPoolManager.getInstance().schedule(new ClearZoneTask(this), 60000);
+					ThreadPool.schedule(new HeavenlyRift.ClearZoneTask(this), 60000);
 					return;
 				}
 				
 				if(!player.isInParty())
 				{
-					player.sendPacket(SystemMsg.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
+					player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 					return;
 				}
 
 				Party party = player.getParty();
 				if(!party.isLeader(player))
 				{
-					player.sendPacket(SystemMsg.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					return;
 				}
 				
-				for(Player partyMember : party.getPartyMembers())
+				for(Player partyMember : party.getMembers())
 				{
-					if(!player.isInRange(partyMember.getLoc(), 1000))
+					if(!GameUtils.checkIfInRange(1000, player, partyMember, false))
 					{
-						SystemMessagePacket sm = new SystemMessagePacket(SystemMsg.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
-						sm.addName(partyMember);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+						sm.addPcName(partyMember);
 						party.broadcastToPartyMembers(player, sm);
 						return;
 					}
@@ -85,27 +84,27 @@ public class DimensionalVortexInstance extends NpcInstance
 
 				setBusy(true);
 
-				ItemFunctions.deleteItem(player, ITEM_ID, 1, true);
+				player.destroyItemByItemId("Rift", ITEM_ID, 1, this, false);
 
-				ServerVariables.set("heavenly_rift_complete", 0);
-				ServerVariables.set("heavenly_rift_level", 0);
+				GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
+				GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
 
-				for(Player partyMember : party.getPartyMembers())
+				for(Player partyMember : party.getMembers())
 					partyMember.teleToLocation(112685, 13362, 10966);
 
-				ThreadPoolManager.getInstance().schedule(new ClearZoneTask(this), 20 * 60 * 1000);
+				ThreadPool.schedule(new HeavenlyRift.ClearZoneTask(this), 20 * 60 * 1000);
 			}
 			else
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-3.htm", false);
+				showChatWindow(player, "default/" + getId() + "-3.htm");
 			}
 		}	
 		else if(cmd.equals("exchange"))
 		{
-			long count_have = ItemFunctions.getItemCount(player, 49767);
+			long count_have = player.getInventory().getInventoryItemCount(49767, -1);
 			if(count_have < 10) //exchange ratio 10:1
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-2.htm", true);
+				showChatWindow(player, "default/" + getId() + "-2.htm");
 				return;	
 			}
 
@@ -114,8 +113,8 @@ public class DimensionalVortexInstance extends NpcInstance
 
 			long to_give = count_have / 10;
 
-			ItemFunctions.deleteItem(player, 49767, count_have); //will notify
-			ItemFunctions.addItem(player, 49759, to_give); //will notify
+			player.destroyItemByItemId("Rift", 49767, count_have, this, true);
+			player.addItem("Rift", 49759, to_give, this, true);
 		}
 		else
 			super.onBypassFeedback(player, command);

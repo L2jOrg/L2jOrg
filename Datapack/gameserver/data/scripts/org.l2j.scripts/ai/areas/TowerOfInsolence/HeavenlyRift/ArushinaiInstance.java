@@ -1,29 +1,30 @@
-package npc.model.heavenlyrift;
+package ai.areas.TowerOfInsolence.HeavenlyRift;
 
 import java.util.StringTokenizer;
+import java.util.concurrent.atomic.AtomicInteger;
 
-import l2s.commons.collections.MultiValueSet;
-import l2s.commons.util.Rnd;
-import l2s.gameserver.instancemanager.ServerVariables;
-import l2s.gameserver.model.Party;
-import l2s.gameserver.model.Player;
-import l2s.gameserver.model.instances.NpcInstance;
-import l2s.gameserver.network.l2.components.SystemMsg;
-import l2s.gameserver.network.l2.s2c.SystemMessagePacket;
-import l2s.gameserver.templates.npc.NpcTemplate;
-
-import manager.HeavenlyRift;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
+import org.l2j.gameserver.model.Party;
+import org.l2j.gameserver.model.actor.instance.Folk;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.World;
 
 /**
  * @reworked by Bonux
  */
-public class ArushinaiInstance extends NpcInstance
+public class ArushinaiInstance extends Folk
 {
 	private static final long serialVersionUID = 1L;
 
-	public ArushinaiInstance(int objectId, NpcTemplate template, MultiValueSet<String> set)
+	public ArushinaiInstance(NpcTemplate template)
 	{
-		super(objectId, template, set);
+		super(template);
 	}
 
 	@Override
@@ -48,11 +49,11 @@ public class ArushinaiInstance extends NpcInstance
 					return;
 				}
 			}
-			if(ServerVariables.getInt("heavenly_rift_complete", 0) == 0)
+			if(GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) == 0)
 			{
 				int riftLevel = Rnd.get(1, 3);
-				ServerVariables.set("heavenly_rift_level", riftLevel);
-				ServerVariables.set("heavenly_rift_complete", 4);
+				GlobalVariablesManager.getInstance().set("heavenly_rift_level", riftLevel);
+				GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 4);
 				switch(riftLevel) 
 				{
 					case 1:
@@ -68,8 +69,11 @@ public class ArushinaiInstance extends NpcInstance
 						break;
 				}
 			}	
-			else
-				showBusyWindow(player);
+			else {
+				// TODO: busy window
+				//showBusyWindow(player);
+			}
+
 		}
 		else if(cmd.equals("finish"))
 		{
@@ -78,20 +82,21 @@ public class ArushinaiInstance extends NpcInstance
 				Party party = player.getParty();
 				if(party.isLeader(player))
 				{
-					for(Player partyMember : party.getPartyMembers())
+					for(Player partyMember : party.getMembers())
 					{
-						if(!player.isInRange(partyMember.getLoc(), 1000))
+						if(!GameUtils.checkIfInRange(1000, player, partyMember, false))
 						{
-							SystemMessagePacket sm = new SystemMessagePacket(SystemMsg.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
-							sm.addName(partyMember);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+							sm.addPcName(partyMember);
+							player.sendPacket(sm);
 							party.broadcastToPartyMembers(player, sm);
 							return;
 						}
 					}
 
-					ServerVariables.set("heavenly_rift_reward", 0);
+					GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 0);
 					//ServerVariables.set("heavenly_rift_complete", 0);
-					for(Player partyMember : party.getPartyMembers())
+					for(Player partyMember : party.getMembers())
 						partyMember.teleToLocation(114264, 13352, -5104);
 				}
 				else
@@ -103,7 +108,7 @@ public class ArushinaiInstance extends NpcInstance
 			{
 				if(player.isGM())
 				{
-					ServerVariables.set("heavenly_rift_complete", 0);
+					GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
 					player.teleToLocation(114264, 13352, -5104);
 				}
 				else
@@ -117,15 +122,14 @@ public class ArushinaiInstance extends NpcInstance
 	}
 
 	@Override
-	public String getHtmlFilename(int val, Player player)
-	{
+	public String getHtmlPath(int npcId, int val) {
 		String filename = "";
 		if(val == 1)
-			filename = getNpcId() + "-1.htm";
-		else if(ServerVariables.getInt("heavenly_rift_complete", 0) > 0)
-			filename = getNpcId() + "-2.htm";
+			filename = getId() + "-1.htm";
+		else if(GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) > 0)
+			filename = getId() + "-2.htm";
 		else
-			filename = getNpcId() + ".htm";
+			filename = getId() + ".htm";
 		return filename;
 	}
 }
