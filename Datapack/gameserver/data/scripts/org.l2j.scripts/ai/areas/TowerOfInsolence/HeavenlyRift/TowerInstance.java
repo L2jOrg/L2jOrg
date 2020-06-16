@@ -1,26 +1,21 @@
-package npc.model.heavenlyrift;
+package ai.areas.TowerOfInsolence.HeavenlyRift;
+
+import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
+import org.l2j.gameserver.model.actor.instance.Folk;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 
 import java.util.StringTokenizer;
 
-import l2s.commons.collections.MultiValueSet;
-import l2s.gameserver.instancemanager.ServerVariables;
-import l2s.gameserver.model.Player;
-import l2s.gameserver.model.instances.DefenderInstance;
-import l2s.gameserver.templates.npc.NpcTemplate;
-import l2s.gameserver.utils.ItemFunctions;
-
 /**
- * @reworked by Bonux
+ * @reworked by Thoss
  */
-public class TowerInstance extends DefenderInstance
+public class TowerInstance extends Folk
 {
-	private static final long serialVersionUID = 1L;
-
 	private static int[] ITEM_REWARD = { 49764, 49765 };
 	
-	public TowerInstance(int objectId, NpcTemplate template, MultiValueSet<String> set)
-	{
-		super(objectId, template, set);
+	public TowerInstance(NpcTemplate template) {
+		super(template);
 	}
 
 	@Override
@@ -30,23 +25,23 @@ public class TowerInstance extends DefenderInstance
 		String cmd = st.nextToken();
 		if(cmd.equals("getreward"))
 		{
-			if(ServerVariables.getInt("heavenly_rift_reward", 0) == 1)
+			if(GlobalVariablesManager.getInstance().getInt("heavenly_rift_reward", 0) == 1)
 			{
-				ServerVariables.set("heavenly_rift_reward", 0);
+				GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 0);
 				if(player.isGM())
 				{
 					for(int r : ITEM_REWARD)
-						ItemFunctions.addItem(player, r, 1);					
+						player.addItem("TowerInstance", r, 1, this, true);
 				}
 				else
 				{
-					for(Player partyMember : player.getParty().getPartyMembers())
+					for(Player partyMember : player.getParty().getMembers())
 					{
 						for(int r : ITEM_REWARD)
-							ItemFunctions.addItem(partyMember, r, 1);
+							partyMember.addItem("TowerInstance", r, 1, this, true);
 					}
 				}	
-				showChatWindow(player, "default/" + getNpcId() + "-3.htm", false);
+				showChatWindow(player, "default/" + getId() + "-3.htm");
 			}	
 		}	
 		else
@@ -54,28 +49,30 @@ public class TowerInstance extends DefenderInstance
 	}
 
 	@Override
-	public String getHtmlFilename(int val, Player player)
+	public String getHtmlPath(int npcId, int val) {
 	{
 		String filename = "";
 
-		if(!player.isGM() && (!player.isInParty() || !player.getParty().isLeader(player)))
-			filename = getNpcId() + "-4.htm";
-		else if(!isDead() && ServerVariables.getInt("heavenly_rift_complete", 0) == 2)
+		if(!getActingPlayer().isGM() && (!getActingPlayer().isInParty() || !getActingPlayer().getParty().isLeader(getActingPlayer())))
+			filename = getId() + "-4.htm";
+		else if(!isDead() && GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) == 2)
 		{
-			if(ServerVariables.getInt("heavenly_rift_reward", 0) == 1)
-				filename = getNpcId() + ".htm";
+			if(GlobalVariablesManager.getInstance().getInt("heavenly_rift_reward", 0) == 1)
+				filename = getId() + ".htm";
 			else
-				filename = getNpcId() + "-2.htm";
+				filename = getId() + "-2.htm";
 		}
 		else
-			filename = getNpcId() + "-1.htm";
+			filename = getId() + "-1.htm";
 
 		return filename;
 	}
 
+	// TODO: think about that ...
+	/*
 	@Override
 	public boolean isDebuffImmune()
 	{
 		return false;
-	}
+	}*/
 }
