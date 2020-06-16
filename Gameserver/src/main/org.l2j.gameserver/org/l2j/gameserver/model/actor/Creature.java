@@ -941,7 +941,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        return new Hit(target, damage, miss, crit, shld, shotConsumed ? weapon.getItemGrade().ordinal() : -1);
+        return new Hit(target, damage, miss, crit, shld, shotConsumed ? nonNull(weapon) ? weapon.getItemGrade().ordinal() : 0 : -1);
     }
 
     public void doCast(Skill skill) {
