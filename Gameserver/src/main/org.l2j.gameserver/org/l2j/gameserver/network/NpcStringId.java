@@ -20657,8 +20657,7 @@ public final class NpcStringId {
 	@ClientString(id = 1803285, message = "You receive an Unidentified Rock.")
 	public static NpcStringId YOU_RECEIVE_AN_UNIDENTIFIED_ROCK;
 
-    @ClientString(id = 1803286, message = "Divine Angels are nowhere to be seen! I want to talk to the party leader!")
-    public static NpcStringId DIVINE_ANGELS_ARE_NOWHERE_TO_BE_SEEN_I_WANT_TO_TALK_TO_THE_PARTY_LEADER;
+
     @ClientString(id = 1803287, message = "Destroy weakened Divine Angels")
     public static NpcStringId DESTROY_WEAKENED_DIVINE_ANGELS;
     @ClientString(id = 1803288, message = "Set off bombs and get treasures")
@@ -24743,6 +24742,9 @@ public final class NpcStringId {
 
     @ClientString(id = 17178347, message = "Can't die in a place like this!!")
     public static NpcStringId CAN_T_DIE_IN_A_PLACE_LIKE_THIS;
+
+    @ClientString(id = 1803286, message = "Divine Angels are nowhere to be seen! I want to talk to the party leader!")
+    public static NpcStringId DIVINE_ANGELS_ARE_NOWHERE_TO_BE_SEEN_I_WANT_TO_TALK_TO_THE_PARTY_LEADER;
 
     @ClientString(id = 1803290, message = "My servants can keep me safe! I have nothing to fear!")
     public static NpcStringId MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR;

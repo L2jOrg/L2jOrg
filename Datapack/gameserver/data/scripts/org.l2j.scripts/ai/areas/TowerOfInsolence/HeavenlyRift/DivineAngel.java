@@ -1,34 +1,30 @@
 package ai.areas.TowerOfInsolence.HeavenlyRift;
 
 import ai.AbstractNpcAI;
+import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.util.exp4j.Functions;
 
 public class DivineAngel extends AbstractNpcAI {
-    public DivineAngel()
-    {
-
-    }
+    public DivineAngel(){ }
 
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
-        if(ServerVariables.getInt("heavenly_rift_level", 0) > 1)
+        if(GlobalVariablesManager.getInstance().getInt("heavenly_rift_level", 0) > 1)
         {
-            if(HeavenlyRift.getAliveNpcCount(getActor().getNpcId()) == 0)//Last
+            if(HeavenlyRift.getAliveNpcCount(npc.getId()) == 0)//Last
             {
-                ServerVariables.set("heavenly_rift_complete", ServerVariables.getInt("heavenly_rift_level", 0));
-                ServerVariables.set("heavenly_rift_level", 0);
-                ServerVariables.set("heavenly_rift_reward", 1);
-                for(Npc npc : HeavenlyRift.getZone().getInsideNpcs())
-                {
-                    if(npc.getNpcId() == 18004)
-                    {
-                        Functions.npcSay(npc, NpcString.DIVINE_ANGELS_ARE_NOWHERE);
-                        break;
-                    }
-                }
+                GlobalVariablesManager.getInstance().set("heavenly_rift_complete", GlobalVariablesManager.getInstance().getInt("heavenly_rift_level", 0));
+                GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
+                GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 1);
+                HeavenlyRift.getZone().forEachCreature(riftNpc -> {
+                    npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.DIVINE_ANGELS_ARE_NOWHERE_TO_BE_SEEN_I_WANT_TO_TALK_TO_THE_PARTY_LEADER);
+                }, riftNpc -> riftNpc.getId() == 18004);
+
             }
         }
         return super.onKill(npc, killer, isSummon);
