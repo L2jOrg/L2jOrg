@@ -183,6 +183,16 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="RESIST_DEBUFF">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="-1"/>
+        </abnormal>
+		<effects>            
+            <resist-abnormal-by-category category="DEBUFF">
+                <power initial="50.0"/>
+            </resist-abnormal-by-category>
+        </effects>
     </skill>
     <skill id="35009" name="Black Mask Power">
         <!-- STR +1 and INT +1 -->
@@ -190,25 +200,29 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+		</effects>
     </skill>
     <skill id="35010" name="Refined Romantic Chapeau" action="A2">
         <!-- STR +1 and INT +1 -->
         <icon initial="icon.accessory_archer_hat2_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-            <magic-level initial="60"/>
-            <effect-range initial="900"/>
+        <attributes property="MAGIC">
         </attributes>
-        <target type="ENEMY_NOT"/>
-        <abnormal type="MAX_HP_UP">
-            <level initial="7"/>
-            <time initial="3600"/>
-            <chance initial="-1"/>
-        </abnormal>
-        <effects>
-            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
-                <power initial="35.0"/>
-            </vital-stat-modify>
-        </effects>
+        <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+		</effects>
     </skill>
     <skill id="35011" name="Return of the Refined Romantic Chapeau" action="A1">
         <!-- Teleports you to a close village. Cooldown: 2 hours -->
@@ -234,6 +248,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+		</effects>
     </skill>
     <skill id="35013" name="Return of the Pirate King Hat" action="A1">
         <!-- Teleports you to a close village. Cooldown: 2 hours -->
@@ -245,6 +267,12 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <escape location="TOWN"/>
+        </effects>
     </skill>
     <skill id="35014" name="Demon's Circlet">
         <!-- STR +1 and INT +1 -->
@@ -252,6 +280,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+		</effects>
     </skill>
     <skill id="35015" name="Return of the Demon's Circlet" action="A1">
         <!-- Teleports you to a close village. Cooldown: 2 hours -->
@@ -263,6 +299,12 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <escape location="TOWN"/>
+        </effects>
     </skill>
     <skill id="35016" name="Ring of Core - Special Ability" action="A1">
         <!-- Removes all debuffs. Not available during Fear/Silence. -->
@@ -276,9 +318,10 @@
         <target/>
         <conditions>
             <condition name="NotFeared"/>
+            <condition name="NotPhysicalMute"/>
         </conditions>
         <effects>
-            <dispel-by-category category="DEBUFF" max="5">
+            <dispel-by-category category="DEBUFF" max="10">
                 <power initial="100.0"/>
             </dispel-by-category>
         </effects>
@@ -306,9 +349,9 @@
                     <value level="2">27.0</value>
                     <value level="3">41.0</value>
                     <value level="4">68.0</value>
-                    <value level="5">81.0</value>
-                    <value level="6">95.0</value>
-                    <value level="7">135.0</value>
+                    <value level="5">170.0</value>
+                    <value level="6">200.0</value>
+                    <value level="7">284.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_ATTACK">
@@ -316,9 +359,9 @@
                     <value level="2">44.0</value>
                     <value level="3">66.0</value>
                     <value level="4">109.0</value>
-                    <value level="5">131.0</value>
-                    <value level="6">153.0</value>
-                    <value level="7">218.0</value>
+                    <value level="5">235.0</value>
+                    <value level="6">275.0</value>
+                    <value level="7">392.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
@@ -332,14 +375,16 @@
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="3">
-                <power initial="1">
+                <power>
+                    <value level="3">1.0</value>
                     <value level="4">2.0</value>
                     <value level="6">3.0</value>
                     <value level="7">5.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" start-level="3">
-                <power initial="1">
+                <power>
+                    <value level="3">1.0</value>
                     <value level="4">2.0</value>
                     <value level="6">3.0</value>
                     <value level="7">5.0</value>
@@ -414,6 +459,41 @@
             <base-stat type="CON">
                 <power>
                     <value level="4">1.0</value>
+                    <value level="5">1.0</value>
+                    <value level="6">1.0</value>
+                    <value level="7">1.0</value>
+                </power>
+            </base-stat>
+			<base-stat type="MEN">
+                <power>
+                    <value level="4">1.0</value>
+                    <value level="5">1.0</value>
+                    <value level="6">1.0</value>
+                    <value level="7">1.0</value>
+                </power>
+            </base-stat>
+			<base-stat type="STR">
+                <power>
+                    <value level="5">1.0</value>
+                    <value level="6">1.0</value>
+                    <value level="7">1.0</value>
+                </power>
+            </base-stat>
+			<base-stat type="INT">
+                <power>
+                    <value level="5">1.0</value>
+                    <value level="6">1.0</value>
+                    <value level="7">1.0</value>
+                </power>
+            </base-stat>
+			<base-stat type="DEX">
+                <power>
+                    <value level="7">1.0</value>
+                </power>
+            </base-stat>
+			<base-stat type="WIT">
+                <power>
+                    <value level="7">1.0</value>
                 </power>
             </base-stat>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
@@ -512,17 +592,31 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+		</effects>
     </skill>
     <skill id="35023" name="Chic Silver Chapeau Teleport" action="A1">
         <!-- Teleports you to the nearest village. Cooldown is 2 hours. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <escape location="TOWN"/>
+        </effects>
     </skill>
     <skill id="35024" name="Talisman of Fate" max-level="21">
         <!--
@@ -568,6 +662,16 @@
                     <value level="9">38.0</value>
                     <value level="10">43.0</value>
                     <value level="11">48.0</value>
+                    <value level="12">25.0</value>
+                    <value level="13">30.0</value>
+                    <value level="14">35.0</value>
+                    <value level="15">40.0</value>
+                    <value level="16">45.0</value>
+                    <value level="17">50.0</value>
+                    <value level="18">70.0</value>
+                    <value level="19">80.0</value>
+                    <value level="20">90.0</value>
+                    <value level="21">100.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGICAL_DEFENCE">
@@ -582,18 +686,38 @@
                     <value level="9">38.0</value>
                     <value level="10">43.0</value>
                     <value level="11">48.0</value>
+                    <value level="12">25.0</value>
+                    <value level="13">30.0</value>
+                    <value level="14">35.0</value>
+                    <value level="15">40.0</value>
+                    <value level="16">45.0</value>
+                    <value level="17">50.0</value>
+                    <value level="18">70.0</value>
+                    <value level="19">80.0</value>
+                    <value level="20">90.0</value>
+                    <value level="21">100.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_EVASION_RATE">
                 <power>
                     <value level="2">1.0</value>
                     <value level="6">2.0</value>
+					<value level="12">1.0</value>
+					<value level="13">2.0</value>
+					<value level="16">3.0</value>
+					<value level="18">4.0</value>
+					<value level="21">5.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="EVASION_RATE">
                 <power>
                     <value level="2">1.0</value>
                     <value level="6">2.0</value>
+					<value level="12">1.0</value>
+					<value level="13">2.0</value>
+					<value level="16">3.0</value>
+					<value level="18">4.0</value>
+					<value level="21">5.0</value>
                 </power>
             </stat-modify>
             <vital-stat-modify stat="MAX_HP">
@@ -605,6 +729,16 @@
                     <value level="9">240.0</value>
                     <value level="10">280.0</value>
                     <value level="11">320.0</value>
+					<value level="12">150.0</value>
+                    <value level="13">200.0</value>
+                    <value level="14">250.0</value>
+                    <value level="15">300.0</value>
+                    <value level="16">400.0</value>
+                    <value level="17">500.0</value>
+                    <value level="18">1000.0</value>
+                    <value level="19">1300.0</value>
+                    <value level="20">1600.0</value>
+                    <value level="21">2000.0</value>
                 </power>
             </vital-stat-modify>
             <vital-stat-modify stat="MAX_MP">
@@ -616,6 +750,16 @@
                     <value level="9">240.0</value>
                     <value level="10">280.0</value>
                     <value level="11">320.0</value>
+					<value level="12">150.0</value>
+                    <value level="13">200.0</value>
+                    <value level="14">250.0</value>
+                    <value level="15">300.0</value>
+                    <value level="16">400.0</value>
+                    <value level="17">500.0</value>
+                    <value level="18">1000.0</value>
+                    <value level="19">1300.0</value>
+                    <value level="20">1600.0</value>
+                    <value level="21">2000.0</value>
                 </power>
             </vital-stat-modify>
             <vital-stat-modify stat="MAX_CP">
@@ -627,6 +771,16 @@
                     <value level="9">240.0</value>
                     <value level="10">280.0</value>
                     <value level="11">320.0</value>
+					<value level="12">150.0</value>
+                    <value level="13">200.0</value>
+                    <value level="14">250.0</value>
+                    <value level="15">300.0</value>
+                    <value level="16">400.0</value>
+                    <value level="17">500.0</value>
+                    <value level="18">1000.0</value>
+                    <value level="19">1300.0</value>
+                    <value level="20">1600.0</value>
+                    <value level="21">2000.0</value>
                 </power>
             </vital-stat-modify>
             <speed>
@@ -635,6 +789,11 @@
                     <value level="5">5.0</value>
                     <value level="7">7.0</value>
                     <value level="9">8.0</value>
+                    <value level="12">5.0</value>
+                    <value level="13">7.0</value>
+                    <value level="16">8.0</value>
+                    <value level="18">8.0</value>
+                    <value level="21">10.0</value>
                 </power>
             </speed>
             <stat-modify stat="PHYSICAL_ATTACK_SPEED">
@@ -644,6 +803,12 @@
                     <value level="6">15.0</value>
                     <value level="10">20.0</value>
                     <value level="11">30.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">15.0</value>
+                    <value level="16">20.0</value>
+                    <value level="17">30.0</value>
+                    <value level="18">40.0</value>
+                    <value level="20">50.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_ATTACK_SPEED">
@@ -653,6 +818,14 @@
                     <value level="6">15.0</value>
                     <value level="10">20.0</value>
                     <value level="11">30.0</value>
+					<value level="11">10.0</value>
+                    <value level="13">15.0</value>
+                    <value level="16">20.0</value>
+                    <value level="17">30.0</value>
+                    <value level="18">50.0</value>
+                    <value level="19">65.0</value>
+                    <value level="20">85.0</value>
+                    <value level="21">100.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="BONUS_EXP">
@@ -660,6 +833,16 @@
                     <value level="3">3.0</value>
                     <value level="5">4.0</value>
                     <value level="7">5.0</value>
+                    <value level="12">3.0</value>
+                    <value level="13">5.0</value>
+                    <value level="14">6.0</value>
+                    <value level="15">7.0</value>
+                    <value level="16">8.0</value>
+                    <value level="17">10.0</value>
+                    <value level="18">12.0</value>
+                    <value level="19">15.0</value>
+                    <value level="20">20.0</value>
+                    <value level="21">30.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
@@ -667,6 +850,16 @@
                     <value level="3">3.0</value>
                     <value level="5">4.0</value>
                     <value level="7">5.0</value>
+                    <value level="12">3.0</value>
+                    <value level="13">5.0</value>
+                    <value level="14">6.0</value>
+                    <value level="15">7.0</value>
+                    <value level="16">8.0</value>
+                    <value level="17">10.0</value>
+                    <value level="18">12.0</value>
+                    <value level="19">15.0</value>
+                    <value level="20">20.0</value>
+                    <value level="21">30.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="REFLECT_DAMAGE_PERCENT">
@@ -674,6 +867,13 @@
                     <value level="9">4.0</value>
                     <value level="10">6.0</value>
                     <value level="11">8.0</value>
+                    <value level="13">1.0</value>
+                    <value level="14">2.0</value>
+                    <value level="15">4.0</value>
+                    <value level="16">6.0</value>
+                    <value level="17">8.0</value>
+                    <value level="18">9.0</value>
+                    <value level="21">10.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="REFLECT_SKILL_PHYSIC">
@@ -681,6 +881,13 @@
                     <value level="9">4.0</value>
                     <value level="10">6.0</value>
                     <value level="11">8.0</value>
+                    <value level="13">1.0</value>
+                    <value level="14">2.0</value>
+                    <value level="15">4.0</value>
+                    <value level="16">6.0</value>
+                    <value level="17">8.0</value>
+                    <value level="18">9.0</value>
+                    <value level="21">10.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="VENGEANCE_SKILL_MAGIC_DAMAGE">
@@ -688,6 +895,13 @@
                     <value level="9">4.0</value>
                     <value level="10">6.0</value>
                     <value level="11">8.0</value>
+                    <value level="13">1.0</value>
+                    <value level="14">2.0</value>
+                    <value level="15">4.0</value>
+                    <value level="16">6.0</value>
+                    <value level="17">8.0</value>
+                    <value level="18">9.0</value>
+                    <value level="21">10.0</value>
                 </power>
             </stat-modify>
             <trigger-skill-by-damage attacker="Playable" skill="35027">
@@ -715,7 +929,13 @@
         <target type="TARGET"/>
         <effects>
             <dispel>
+				<abnormal type="PARALYZE">
+                    <power initial="1.0"/>
+                </abnormal>
                 <abnormal type="POISON">
+                    <power initial="9.0"/>
+                </abnormal>
+				<abnormal type="BLEED">
                     <power initial="9.0"/>
                 </abnormal>
             </dispel>
@@ -733,6 +953,17 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <effect name="CpHeal">
+                <power initial="2680.0"/>
+            </effect>
+            <effect name="HealPercent">
+                <power initial="50.0"/>
+            </effect>
+            <effect name="ManaHealPercent">
+                <power initial="50.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="35027" name="Dimensional Power of Fate" max-level="9" action="A2">
         <!--
@@ -748,23 +979,37 @@
          -->
         <icon initial="icon.skill10030"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
-            <magic-level initial="55"/>
+            <magic-level initial="1"/>
             <reuse initial="30000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
         <abnormal>
-            <level initial="1"/>
+            <level initial="1">
+				<value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">5</value>
+                <value level="6">6</value>
+                <value level="7">7</value>
+                <value level="8">8</value>
+                <value level="9">9</value>
+			<level/>
             <time initial="15"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="2.0">
                     <value level="2">5.0</value>
                     <value level="3">7.0</value>
                     <value level="4">10.0</value>
+                    <value level="5">11.0</value>
+                    <value level="6">13.0</value>
+                    <value level="7">15.0</value>
+                    <value level="8">17.0</value>
+                    <value level="9">20.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
@@ -772,18 +1017,39 @@
                     <value level="2">5.0</value>
                     <value level="3">7.0</value>
                     <value level="4">10.0</value>
+                    <value level="5">12.0</value>
+                    <value level="6">15.0</value>
+                    <value level="7">20.0</value>
+                    <value level="8">25.0</value>
+                    <value level="9">30.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
                 <power initial="10.0">
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+			 <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10.0">
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">5.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">5.0</value>
+                    <value level="9">10.0</value>
                 </power>
             </stat-modify>
         </effects>
