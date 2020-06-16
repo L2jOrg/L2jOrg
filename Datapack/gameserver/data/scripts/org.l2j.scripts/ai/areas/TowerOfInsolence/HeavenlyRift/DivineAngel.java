@@ -7,6 +7,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.exp4j.Functions;
 
 public class DivineAngel extends AbstractNpcAI {
@@ -23,7 +24,7 @@ public class DivineAngel extends AbstractNpcAI {
                 GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 1);
                 HeavenlyRift.getZone().forEachCreature(riftNpc -> {
                     npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.DIVINE_ANGELS_ARE_NOWHERE_TO_BE_SEEN_I_WANT_TO_TALK_TO_THE_PARTY_LEADER);
-                }, riftNpc -> riftNpc.getId() == 18004);
+                }, riftNpc -> GameUtils.isNpc(riftNpc) &&  riftNpc.getId() == 18004);
 
             }
         }
