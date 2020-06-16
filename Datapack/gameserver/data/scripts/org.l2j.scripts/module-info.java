@@ -1,4 +1,4 @@
-import ai.areas.TowerOfInsolence.Ateld;
+import ai.areas.GiantCave.EntranceRoom;
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
@@ -341,7 +341,7 @@ open module org.l2j.scripts {
             ai.areas.Ketra.FireCamp,
             ai.areas.GiantCave.Scout,
             ai.areas.GiantCave.Batur,
-            ai.areas.GiantCave.GiantCave,
+                EntranceRoom,
             ai.areas.TowerOfInsolence.TowerOfInsolence,
             ai.areas.AligatorIsland.Nos,
             ai.areas.ForestOfTheMirrors.Mirrors,

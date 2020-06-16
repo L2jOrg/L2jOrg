@@ -43,14 +43,14 @@ public class DimensionalVortexInstance extends Folk
 				{
 					setBusy(true);
 
-					player.destroyItemByItemId("Rift", ITEM_ID, 1, this, false);
+					player.destroyItemByItemId("Rift", ITEM_ID, 1, this, true);
 
 					GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
 					GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
 
 					player.teleToLocation(112685, 13362, 10966);
 
-					ThreadPool.schedule(new HeavenlyRift.ClearZoneTask(this), 60000);
+					ThreadPool.schedule(new HeavenlyRift.ClearZoneTask(this), 10000);
 					return;
 				}
 				
@@ -80,7 +80,7 @@ public class DimensionalVortexInstance extends Folk
 
 				setBusy(true);
 
-				player.destroyItemByItemId("Rift", ITEM_ID, 1, this, false);
+				player.destroyItemByItemId("Rift", ITEM_ID, 1, this, true);
 
 				GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
 				GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
@@ -92,7 +92,7 @@ public class DimensionalVortexInstance extends Folk
 			}
 			else
 			{
-				showChatWindow(player, "default/" + getId() + "-3.htm");
+				showChatWindow(player, "data/html/default/" + getId() + "-3.htm");
 			}
 		}	
 		else if(cmd.equals("exchange"))
@@ -100,7 +100,7 @@ public class DimensionalVortexInstance extends Folk
 			long count_have = player.getInventory().getInventoryItemCount(49767, -1);
 			if(count_have < 10) //exchange ratio 10:1
 			{
-				showChatWindow(player, "default/" + getId() + "-2.htm");
+				showChatWindow(player, "data/html/default/" + getId() + "-2.htm");
 				return;	
 			}
 

@@ -5,7 +5,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 
-public class GiantCave extends AbstractNpcAI{
+public class EntranceRoom extends AbstractNpcAI{
     private final int MONSTER_SPAWN_CHANCE_SOLO = 10;	// 10%
     private final int MONSTER_SPAWN_CHANCE_PARTY = 30;	// 30%
 
@@ -22,7 +22,7 @@ public class GiantCave extends AbstractNpcAI{
 
     private static final int SUMMON_MONSTER_NPC_ID_SOLO = 24017;
     private static final int SUMMON_MONSTER_NPC_ID_PARTY = 24023;
-    private GiantCave()
+    private EntranceRoom()
     {
         addKillId(MONSTER_NPC_IDS);
     }
@@ -46,6 +46,6 @@ public class GiantCave extends AbstractNpcAI{
 
     public static AbstractNpcAI provider()
     {
-        return new GiantCave();
+        return new EntranceRoom();
     }
 }

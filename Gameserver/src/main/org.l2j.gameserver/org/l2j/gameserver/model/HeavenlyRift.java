@@ -28,6 +28,9 @@ public class HeavenlyRift {
         @Override
         public void run()
         {
+            // for debug prupose
+            _npc.setBusy(false);
+
             HeavenlyRift.getZone().forEachCreature(creature -> {
                 if(GameUtils.isPlayer(creature))
                     ((Player) creature).teleToLocation(114298, 13343, -5104);
@@ -44,7 +47,7 @@ public class HeavenlyRift {
     public static Zone getZone()
     {
         if(_zone == null)
-            _zone = ZoneManager.getInstance().getZoneByName("[heavenly_rift]");
+            _zone = ZoneManager.getInstance().getZoneByName("[heavenly_rift]"); // TODO: _zone is null -> Datapack implementation missing ?
         return _zone;
     }
 
