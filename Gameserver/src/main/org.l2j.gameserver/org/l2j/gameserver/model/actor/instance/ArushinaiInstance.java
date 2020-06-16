@@ -1,27 +1,21 @@
-package ai.areas.TowerOfInsolence.HeavenlyRift;
-
-import java.util.StringTokenizer;
-import java.util.concurrent.atomic.AtomicInteger;
+package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
+import org.l2j.gameserver.model.HeavenlyRift;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.actor.instance.Folk;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
-import org.l2j.gameserver.world.World;
+
+import java.util.StringTokenizer;
 
 /**
  * @reworked by Bonux
  */
 public class ArushinaiInstance extends Folk
 {
-	private static final long serialVersionUID = 1L;
-
 	public ArushinaiInstance(NpcTemplate template)
 	{
 		super(template);

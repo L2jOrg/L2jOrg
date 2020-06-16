@@ -1,9 +1,6 @@
-package ai.areas.TowerOfInsolence.HeavenlyRift;
+package org.l2j.gameserver.model;
 
-import ai.AbstractNpcAI;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
@@ -14,7 +11,11 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class HeavenlyRift extends AbstractNpcAI {
+
+/**
+ * @reworked by Thoss
+ */
+public class HeavenlyRift {
     public static class ClearZoneTask implements Runnable
     {
         private Npc _npc;
@@ -62,7 +63,7 @@ public class HeavenlyRift extends AbstractNpcAI {
     {
         getZone().broadcastPacket(new ExShowScreenMessage(NpcStringId.SET_OFF_BOMBS_AND_GET_TREASURES, 10000, 5000));
 
-        addSpawn(18003, 113352, 12936, 10976, 0, false, 1800000);
+        /*addSpawn(18003, 113352, 12936, 10976, 0, false, 1800000);
         addSpawn(18003, 113592, 13272, 10976, 0, false, 1800000);
         addSpawn(18003, 113816, 13592, 10976, 0, false, 1800000);
         addSpawn(18003, 113080, 13192, 10976, 0, false, 1800000);
@@ -81,18 +82,18 @@ public class HeavenlyRift extends AbstractNpcAI {
         addSpawn(18003, 112120, 15288, 10976, 0, false, 1800000);
         addSpawn(18003, 111784, 15064, 10976, 0, false, 1800000);
         addSpawn(18003, 111480, 14824, 10976, 0, false, 1800000);
-        addSpawn(18003, 113144, 14216, 10976, 0, false, 1800000);
+        addSpawn(18003, 113144, 14216, 10976, 0, false, 1800000);*/
     }
 
     public static void startEventTower(Player player)
     {
         getZone().broadcastPacket(new ExShowScreenMessage(NpcStringId.PROTECT_THE_CENTRAL_TOWER_FROM_DIVINE_ANGELS, 10000, 5000));
-        addSpawn(18004, 112648, 14072, 10976, 0, false, 1800000);
+        //addSpawn(18004, 112648, 14072, 10976, 0, false, 1800000);
         ThreadPool.schedule(() ->
         {
             for(int i = 0 ; i < 40 ; i++)
             {
-                addSpawn(20139, new Location(112696, 13960, 10958), true, 1800000);
+                //addSpawn(20139, new Location(112696, 13960, 10958), true, 1800000);
             }
         }, 10000);
     }
@@ -100,7 +101,7 @@ public class HeavenlyRift extends AbstractNpcAI {
     public static void startEvent40Angels(Player player)
     {
         getZone().broadcastPacket(new ExShowScreenMessage(NpcStringId.DESTROY_WEAKENED_DIVINE_ANGELS, 10000, 5000));
-        for(int i = 0 ; i < 40 ; i++)
-            addSpawn(20139, new Location(112696, 13960, 10958), true, 1800000);
+        /*for(int i = 0 ; i < 40 ; i++)
+            addSpawn(20139, new Location(112696, 13960, 10958), true, 1800000);*/
     }
 }

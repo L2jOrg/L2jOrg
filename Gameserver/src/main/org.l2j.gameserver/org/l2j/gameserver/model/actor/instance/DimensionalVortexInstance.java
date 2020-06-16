@@ -1,11 +1,9 @@
-package ai.areas.TowerOfInsolence.HeavenlyRift;
+package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
+import org.l2j.gameserver.model.HeavenlyRift;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.actor.instance.Folk;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -18,8 +16,6 @@ import java.util.StringTokenizer;
  */
 public class DimensionalVortexInstance extends Folk
 {
-	private static final long serialVersionUID = 1L;
-
 	private static final int ITEM_ID = 49759;
 
 	public DimensionalVortexInstance(NpcTemplate template)
