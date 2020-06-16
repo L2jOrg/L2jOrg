@@ -19,14 +19,14 @@
 package org.l2j.gameserver.network.clientpackets.primeshop;
 
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
+import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
-import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PrimeShopRequest;
-import org.l2j.gameserver.model.entity.Message;
-import org.l2j.gameserver.model.item.container.Mail;
+import org.l2j.gameserver.model.item.container.Attachment;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
@@ -83,13 +83,14 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
                 client.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));
                 client.sendPacket(new ExBRGamePoint());
 
-                final Message mail = new Message(receiverId, _mailTitle, _mailBody, MailType.PRIME_SHOP_GIFT);
+                final var mail = MailData.of(receiverId, _mailTitle, _mailBody, MailType.PRIME_SHOP_GIFT);
 
-                final Mail attachement = mail.createAttachments();
+                final Attachment attachement = new Attachment(mail.getSender(), mail.getId());
                 for (PrimeShopItem subItem : item.getItems()) {
                     attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount() * count, activeChar, this);
                 }
-                MailManager.getInstance().sendMessage(mail);
+                mail.attach(attachement);
+                MailEngine.getInstance().sendMail(mail);
                 getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
                 if(item.isVipGift()) {
                     client.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);

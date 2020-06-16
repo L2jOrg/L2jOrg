@@ -40,12 +40,6 @@ public class AnnounceData implements Announce {
 
     }
 
-    public AnnounceData(AnnouncementType type, String content, String author) {
-        this.type = type;
-        this.content = content;
-        this.author = author;
-    }
-
     public AnnounceData(AnnouncementType type, String content, String author, long initDelay, long delay, int repeat) {
         this.type = type;
         this.content = content;

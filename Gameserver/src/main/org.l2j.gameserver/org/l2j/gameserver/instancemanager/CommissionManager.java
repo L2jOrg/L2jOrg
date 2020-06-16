@@ -20,15 +20,16 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.data.database.data.MailData;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.commission.CommissionItem;
-import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.container.Mail;
+import org.l2j.gameserver.model.item.container.Attachment;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.commission.*;
@@ -337,11 +338,12 @@ public final class CommissionManager {
 
         if (deleteItemFromDB(commissionId)) {
             final long saleFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * SALE_FEE_PER_DAY) * commissionItem.getDurationInDays());
-            final Message mail = new Message(itemInstance.getOwnerId(), itemInstance, MailType.COMMISSION_ITEM_SOLD);
+            final var mail = MailData.of(itemInstance.getOwnerId(), itemInstance, MailType.COMMISSION_ITEM_SOLD);
 
-            final Mail attachement = mail.createAttachments();
+            final Attachment attachement = new Attachment(mail.getSender(), mail.getId());
             attachement.addItem("Commission Item Sold", CommonItem.ADENA, totalPrice - saleFee, player, null);
-            MailManager.getInstance().sendMessage(mail);
+            mail.attach(attachement);
+            MailEngine.getInstance().sendMail(mail);
 
             player.sendPacket(new ExResponseCommissionBuyItem(commissionItem));
             player.getInventory().addItem("Commission Buy Item", commissionItem.getItemInstance(), player, null);
@@ -377,8 +379,8 @@ public final class CommissionManager {
      */
     private void expireSale(CommissionItem commissionItem) {
         if ((_commissionItems.remove(commissionItem.getCommissionId()) != null) && deleteItemFromDB(commissionItem.getCommissionId())) {
-            final Message mail = new Message(commissionItem.getItemInstance().getOwnerId(), commissionItem.getItemInstance(), MailType.COMMISSION_ITEM_RETURNED);
-            MailManager.getInstance().sendMessage(mail);
+            final var mail = MailData.of(commissionItem.getItemInstance().getOwnerId(), commissionItem.getItemInstance(), MailType.COMMISSION_ITEM_RETURNED);
+            MailEngine.getInstance().sendMail(mail);
         }
     }
 

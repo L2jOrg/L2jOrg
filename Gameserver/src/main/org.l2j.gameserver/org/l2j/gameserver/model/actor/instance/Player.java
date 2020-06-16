@@ -3562,7 +3562,7 @@ public final class Player extends Playable {
     public Item checkItemManipulation(int objectId, long count, String action) {
         // TODO: if we remove objects that are not visible from the World, we'll have to remove this check
         if (World.getInstance().findObject(objectId) == null) {
-            LOGGER.debug("player {] tried to {} item not available in World", this, action);
+            LOGGER.debug("player {} tried to {} item not available in World", this, action);
             return null;
         }
 

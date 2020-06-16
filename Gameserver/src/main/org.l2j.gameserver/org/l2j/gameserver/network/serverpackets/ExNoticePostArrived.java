@@ -40,8 +40,7 @@ public class ExNoticePostArrived extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_NOTICE_POST_ARRIVED);
-
-        writeInt(_showAnim ? 0x01 : 0x00);
+        writeInt(_showAnim);
     }
 
 }

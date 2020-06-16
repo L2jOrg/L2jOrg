@@ -16,23 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.database.dao;
-
-import io.github.joealisson.primitive.IntSet;
-import org.l2j.commons.database.DAO;
-import org.l2j.commons.database.annotation.Query;
+package org.l2j.gameserver.engine.mail;
 
 /**
  * @author JoeAlisson
  */
-public interface IdFactoryDAO extends DAO<Object> {
-
-    @Query("""
-            SELECT charId AS id FROM characters
-            UNION SELECT object_id AS id FROM items
-            UNION SELECT clan_id AS id FROM clan_data
-            UNION SELECT object_id AS id FROM itemsonground
-            UNION SELECT id FROM mail""")
-    IntSet findUsedObjectIds();
-
+public enum MailState {
+    DELETED,
+    RE_ADDED,
+    REJECTED
 }

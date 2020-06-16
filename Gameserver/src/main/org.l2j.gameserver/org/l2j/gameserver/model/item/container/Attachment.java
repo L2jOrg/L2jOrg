@@ -31,13 +31,13 @@ import java.sql.ResultSet;
 /**
  * @author DS
  */
-public class Mail extends ItemContainer {
+public class Attachment extends ItemContainer {
     private final int _ownerId;
-    private int _messageId;
+    private int mailId;
 
-    public Mail(int objectId, int messageId) {
+    public Attachment(int objectId, int mailId) {
         _ownerId = objectId;
-        _messageId = messageId;
+        this.mailId = mailId;
     }
 
     @Override
@@ -55,14 +55,10 @@ public class Mail extends ItemContainer {
         return ItemLocation.MAIL;
     }
 
-    public int getMessageId() {
-        return _messageId;
-    }
-
-    public void setNewMessageId(int messageId) {
-        _messageId = messageId;
+    public void setNewMailId(int mailId) {
+        this.mailId = mailId;
         for (Item item : items.values()) {
-            item.setItemLocation(getBaseLocation(), messageId);
+            item.setItemLocation(getBaseLocation(), mailId);
         }
 
         updateDatabase();
@@ -81,7 +77,7 @@ public class Mail extends ItemContainer {
     @Override
     protected void addItem(Item item) {
         super.addItem(item);
-        item.setItemLocation(getBaseLocation(), _messageId);
+        item.setItemLocation(getBaseLocation(), mailId);
         item.updateDatabase(true);
     }
 
@@ -101,7 +97,7 @@ public class Mail extends ItemContainer {
              PreparedStatement statement = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND loc=? AND loc_data=?")) {
             statement.setInt(1, _ownerId);
             statement.setString(2, getBaseLocation().name());
-            statement.setInt(3, _messageId);
+            statement.setInt(3, mailId);
             try (ResultSet inv = statement.executeQuery()) {
                 while (inv.next()) {
                     final Item item = new Item(inv);

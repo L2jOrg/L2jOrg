@@ -33,7 +33,7 @@ public interface ItemDAO extends DAO<Object> {
     @Query( "DELETE FROM items WHERE items.owner_id NOT IN (SELECT charId FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data) AND items.owner_id != -1")
     int deleteWithoutOwner();
 
-    @Query("DELETE FROM items WHERE items.owner_id = -1 AND loc LIKE 'MAIL' AND loc_data NOT IN (SELECT messageId FROM messages WHERE senderId = -1)")
+    @Query("DELETE FROM items WHERE items.owner_id = -1 AND loc LIKE 'MAIL' AND loc_data NOT IN (SELECT id FROM mail WHERE sender = -1)")
     int deleteFromEmailWithoutMessage();
 
     @Query("UPDATE items SET loc='INVENTORY' WHERE owner_id=:owner:")

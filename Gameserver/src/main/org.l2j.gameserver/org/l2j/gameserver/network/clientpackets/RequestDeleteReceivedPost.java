@@ -19,9 +19,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.instancemanager.MailManager;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
@@ -38,7 +37,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class RequestDeleteReceivedPost extends ClientPacket {
     private static final int BATCH_LENGTH = 4; // length of the one item
 
-    int[] _msgIds = null;
+    int[] mailIds = null;
 
     @Override
     public void readImpl() throws InvalidDataPacketException {
@@ -47,40 +46,40 @@ public final class RequestDeleteReceivedPost extends ClientPacket {
             throw new InvalidDataPacketException();
         }
 
-        _msgIds = new int[count];
+        mailIds = new int[count];
         for (int i = 0; i < count; i++) {
-            _msgIds[i] = readInt();
+            mailIds[i] = readInt();
         }
     }
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (isNull(activeChar) || isNull(_msgIds) || !getSettings(GeneralSettings.class).allowMail()) {
+        final Player player = client.getPlayer();
+        if (isNull(player) || isNull(mailIds) || !getSettings(GeneralSettings.class).allowMail()) {
             return;
         }
 
-        if (!activeChar.isInsideZone(ZoneType.PEACE)) {
+        if (!player.isInsideZone(ZoneType.PEACE)) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
             return;
         }
 
-        for (int msgId : _msgIds) {
-            final Message msg = MailManager.getInstance().getMessage(msgId);
-            if (msg == null) {
+        for (int mailId : mailIds) {
+            final var mail = MailEngine.getInstance().getMail(mailId);
+            if (mail == null) {
                 continue;
             }
-            if (msg.getReceiverId() != activeChar.getObjectId()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to delete not own post!");
+            if (mail.getReceiver() != player.getObjectId()) {
+                GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to delete not own post!");
                 return;
             }
 
-            if (msg.hasAttachments() || msg.isDeletedByReceiver()) {
+            if (mail.hasAttachments() || mail.isDeletedByReceiver()) {
                 return;
             }
 
-            msg.setDeletedByReceiver();
+            mail.setDeletedByReceiver();
         }
-        client.sendPacket(new ExChangePostState(true, _msgIds, Message.DELETED));
+        client.sendPacket(ExChangePostState.deleted(true, mailIds));
     }
 }

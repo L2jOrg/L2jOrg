@@ -18,21 +18,31 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
-import io.github.joealisson.primitive.IntSet;
+import io.github.joealisson.primitive.ConcurrentIntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.MailData;
 
 /**
  * @author JoeAlisson
  */
-public interface IdFactoryDAO extends DAO<Object> {
+public interface MailDAO extends DAO<MailData> {
 
-    @Query("""
-            SELECT charId AS id FROM characters
-            UNION SELECT object_id AS id FROM items
-            UNION SELECT clan_id AS id FROM clan_data
-            UNION SELECT object_id AS id FROM itemsonground
-            UNION SELECT id FROM mail""")
-    IntSet findUsedObjectIds();
+    @Query("SELECT * FROM mail")
+    ConcurrentIntMap<MailData> findAll();
 
+    @Query("UPDATE mail SET unread=FALSE WHERE id=:mailId:")
+    void markAsRead(int mailId);
+
+    @Query("UPDATE mail SET sender_deleted=TRUE WHERE id=:mailId:")
+    void markAsDeletedBySender(int mailId);
+
+    @Query("UPDATE mail SET receiver_deleted=TRUE WHERE id=:mailId:")
+    void markAsDeletedByReceiver(int mailId);
+
+    @Query("UPDATE mail SET has_attachment=FALSE WHERE id=:mailId:")
+    void deleteAttachment(int mailId);
+
+    @Query("DELETE FROM mail WHERE id=:mailId:")
+    void deleteById(int mailId);
 }

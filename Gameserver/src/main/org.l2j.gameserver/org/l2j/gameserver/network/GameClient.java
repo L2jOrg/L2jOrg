@@ -30,10 +30,10 @@ import org.l2j.gameserver.data.database.data.AccountData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.SecondaryAuthManager;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.CharacterDeleteFailType;
 import org.l2j.gameserver.instancemanager.CommissionManager;
-import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
@@ -358,7 +358,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             return CharacterDeleteFailType.MENTEE;
         } else if (CommissionManager.getInstance().hasCommissionItems(objectId)) {
             return CharacterDeleteFailType.COMMISSION;
-        } else if (MailManager.getInstance().getMailsInProgress(objectId) > 0) {
+        } else if (MailEngine.getInstance().hasMailInProgress(objectId)) {
             return CharacterDeleteFailType.MAIL;
         } else {
             final int clanId = PlayerNameTable.getInstance().getClassIdById(objectId);

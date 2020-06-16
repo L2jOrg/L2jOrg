@@ -19,58 +19,51 @@
  */
 package org.l2j.gameserver.instancemanager.tasks;
 
-import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Message;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.doIfNonNull;
+import static org.l2j.gameserver.network.SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * Message deletion task.
  *
  * @author xban1x
+ * @author JoeAlisson
  */
 public final class MessageDeletionTask implements Runnable {
-    private static final Logger LOGGER = LoggerFactory.getLogger(MessageDeletionTask.class);
 
-    final int _msgId;
+    final int mailId;
 
     public MessageDeletionTask(int msgId) {
-        _msgId = msgId;
+        mailId = msgId;
     }
 
     @Override
     public void run() {
-        final Message msg = MailManager.getInstance().getMessage(_msgId);
-        if (msg == null) {
+        final var mail = MailEngine.getInstance().getMail(mailId);
+        if (isNull(mail)) {
             return;
         }
 
-        if (msg.hasAttachments()) {
-            try {
-                final Player sender = World.getInstance().findPlayer(msg.getSenderId());
-                if (sender != null) {
-                    msg.getAttachments().returnToWh(sender.getWarehouse());
-                    sender.sendPacket(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME);
+        if (mail.hasAttachments()) {
+            doIfNonNull(mail.getAttachment(), attachment -> {
+                final var sender = World.getInstance().findPlayer(mail.getSender());
+                if(nonNull(sender)) {
+                    attachment.returnToWh(sender.getWarehouse());
+                    sender.sendPacket(THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME);
                 } else {
-                    msg.getAttachments().returnToWh(null);
+                    attachment.returnToWh(null);
                 }
+                attachment.deleteMe();
+            });
+            mail.removeAttachments();
 
-                msg.getAttachments().deleteMe();
-                msg.removeAttachments();
-
-                final Player receiver = World.getInstance().findPlayer(msg.getReceiverId());
-                if (receiver != null) {
-                    receiver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME));
-                }
-            } catch (Exception e) {
-                LOGGER.warn(getClass().getSimpleName() + ": Error returning items:" + e.getMessage(), e);
-            }
+            doIfNonNull(World.getInstance().findPlayer(mail.getReceiver()), receiver -> receiver.sendPacket(getSystemMessage(THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME)));
         }
-        MailManager.getInstance().deleteMessageInDb(msg.getId());
+        MailEngine.getInstance().deleteMailInDb(mail.getId());
     }
 }

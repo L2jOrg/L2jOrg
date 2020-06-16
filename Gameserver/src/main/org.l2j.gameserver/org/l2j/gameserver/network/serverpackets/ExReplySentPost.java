@@ -19,7 +19,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.entity.Message;
+import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.GameClient;
@@ -36,17 +36,17 @@ public class ExReplySentPost extends AbstractItemPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExReplySentPost.class);
 
-    private final Message _msg;
+    private final MailData _msg;
     private Collection<Item> _items = null;
 
-    public ExReplySentPost(Message msg) {
+    public ExReplySentPost(MailData msg) {
         _msg = msg;
         if (msg.hasAttachments()) {
-            final ItemContainer attachments = msg.getAttachments();
+            final ItemContainer attachments = msg.getAttachment();
             if ((attachments != null) && (attachments.getSize() > 0)) {
                 _items = attachments.getItems();
             } else {
-                LOGGER.warn("Message " + msg.getId() + " has attachments but itemcontainer is empty.");
+                LOGGER.warn("Message {} has attachments but itemcontainer is empty.",  msg.getId());
             }
         }
     }
@@ -71,7 +71,7 @@ public class ExReplySentPost extends AbstractItemPacket {
         } else {
             writeInt(0x00);
         }
-        writeLong(_msg.getReqAdena());
+        writeLong(_msg.getFee());
         writeInt(_msg.hasAttachments());
         writeInt(_msg.isReturned());
     }

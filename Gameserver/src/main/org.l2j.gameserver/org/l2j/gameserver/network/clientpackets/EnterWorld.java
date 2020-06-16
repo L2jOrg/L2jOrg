@@ -27,6 +27,7 @@ import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.enums.SubclassInfoType;
@@ -223,10 +224,6 @@ public class EnterWorld extends ClientPacket {
         });
         client.sendPacket(new ExDressRoomUiOpen());
 
-        if (MailManager.getInstance().hasUnreadPost(player)) {
-            player.sendPacket(new ExUnReadMailCount(player));
-        }
-
         if (Config.PLAYER_SPAWN_PROTECTION > 0) {
             player.setSpawnProtection(true);
         }
@@ -305,9 +302,7 @@ public class EnterWorld extends ClientPacket {
         }
 
         if (getSettings(GeneralSettings.class).allowMail()) {
-            if (MailManager.getInstance().hasUnreadPost(player)) {
-                client.sendPacket(ExNoticePostArrived.valueOf(false));
-            }
+            MailEngine.getInstance().sendUnreadCount(player);
         }
 
         if (Config.WELCOME_MESSAGE_ENABLED) {
