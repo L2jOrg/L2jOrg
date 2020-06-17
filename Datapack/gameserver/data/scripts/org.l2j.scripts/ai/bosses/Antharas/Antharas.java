@@ -59,12 +59,10 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 public final class Antharas extends AbstractNpcAI
 {
 	// NPC
-	private static final int ANTHARAS = 29068; // Antharas
+	/*private static final int ANTHARAS = 29068; // Antharas
 	private static final int BEHEMOTH = 29069; // Behemoth Dragon
 	private static final int TERASQUE = 29190; // Tarask Dragon
 	private static final int BOMBER = 29070; // Dragon Bomber
-	private static final int HEART = 13001; // Heart of Warding
-	private static final int CUBE = 31859; // Teleportation Cubic
 	private static final Map<Integer, Location> INVISIBLE_NPC = new HashMap<>();
 
 	static {
@@ -88,8 +86,7 @@ public final class Antharas extends AbstractNpcAI
 		INVISIBLE_NPC.put(29094, new Location(177855, 113282, -7735));
 	}
 	
-	// Item
-	private static final int STONE = 3865; // Portal Stone
+
 	// Skill
 	private static final SkillHolder ANTH_JUMP = new SkillHolder(4106, 1); // Antharas Stun
 	private static final SkillHolder ANTH_TAIL = new SkillHolder(4107, 1); // Antharas Stun
@@ -115,7 +112,6 @@ public final class Antharas extends AbstractNpcAI
 	private static final int IN_FIGHT = 2;
 	private static final int DEAD = 3;
 	// Misc
-	private static final int MAX_PEOPLE = 200; // Max allowed players
 	private GrandBoss _antharas = null;
 	private static long _lastAttack = 0;
 	private static int _minionCount = 0;
@@ -131,9 +127,6 @@ public final class Antharas extends AbstractNpcAI
 	
 	private Antharas()
 	{
-		addStartNpc(HEART, CUBE);
-		addTalkId(HEART, CUBE);
-		addFirstTalkId(HEART);
 		addSpawnId(INVISIBLE_NPC.keySet());
 		addSpawnId(ANTHARAS);
 		addMoveFinishedId(BOMBER);
@@ -155,14 +148,14 @@ public final class Antharas extends AbstractNpcAI
 		{
 			case ALIVE:
 			{
-				_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+				_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
 				break;
 			}
 			case WAITING:
 			{
-				_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+				_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
 				startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
@@ -639,7 +632,6 @@ public final class Antharas extends AbstractNpcAI
 				notifyEvent("DESPAWN_MINIONS", null, null);
 				zone.broadcastPacket(new SpecialCamera(npc, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
 				zone.broadcastPacket(new PlaySound("BS01_D"));
-				addSpawn(CUBE, 177615, 114941, -7709, 0, false, 900000);
 				final long respawnTime = (Config.ANTHARAS_SPAWN_INTERVAL + getRandom(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM)) * 3600000;
 				setRespawn(respawnTime);
 				startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
@@ -1011,7 +1003,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 		}
 	}
-	
+	*/
 	public static AbstractNpcAI provider()
 	{
 		return new Antharas();

@@ -1728,7 +1728,7 @@
             </speed>
             <hitTime>500</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+        <status undying="false" canBeSown="true" />
         <skillList>
             <skill id="4416" level="8"/> <!-- Angel -->
             <skill id="4408" level="16"/> <!-- HP Increase (8x) -->
@@ -1743,7 +1743,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai aggroRange="500" clanHelpRange="300" isAggressive="false"/>
+        <ai aggroRange="2000" clanHelpRange="300" isAggressive="true"/>
         <collision>
             <radius normal="13.5"/>
             <height normal="36.5"/>

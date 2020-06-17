@@ -95,7 +95,7 @@ public class HeavenlyRift {
         spawnMonster(18004, 112648, 14072, 10976, 1800000);
         ThreadPool.schedule(() ->
         {
-            for(int i = 0 ; i < 40 ; i++)
+            for(int i = 0 ; i < 20 ; i++)
             {
                 spawnMonster(20139, 112696, 13960, 10958, 1800000);
             }

@@ -15,7 +15,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class DivineAngel extends AbstractNpcAI {
     public DivineAngel() {
-        addNpcHateId(18004);
+        addNpcHateId(20139);
+        addKillId(20139);
     }
 
     @Override
@@ -39,7 +40,8 @@ public class DivineAngel extends AbstractNpcAI {
 
     @Override
     public boolean onNpcHate(Attackable mob, Player player, boolean isSummon) {
-        if (player == null)
+
+       if (player == null)
             return false;
 
         if (GameUtils.isPlayable(player)) {
@@ -52,5 +54,9 @@ public class DivineAngel extends AbstractNpcAI {
             return true;
 
         return super.onNpcHate(mob, player, isSummon);
+    }
+
+    public static AbstractNpcAI provider() {
+        return new DivineAngel();
     }
 }

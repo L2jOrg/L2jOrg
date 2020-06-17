@@ -341,10 +341,13 @@ open module org.l2j.scripts {
             ai.areas.Ketra.FireCamp,
             ai.areas.GiantCave.Scout,
             ai.areas.GiantCave.Batur,
-                EntranceRoom,
+            ai.areas.GiantCave.EntranceRoom,
             ai.areas.TowerOfInsolence.TowerOfInsolence,
             ai.areas.AligatorIsland.Nos,
             ai.areas.ForestOfTheMirrors.Mirrors,
+            ai.areas.TowerOfInsolence.HeavenlyRift.Bomb,
+            ai.areas.TowerOfInsolence.HeavenlyRift.DivineAngel,
+            ai.areas.TowerOfInsolence.HeavenlyRift.Tower,
 
 
             ai.bosses.Antharas.Antharas,

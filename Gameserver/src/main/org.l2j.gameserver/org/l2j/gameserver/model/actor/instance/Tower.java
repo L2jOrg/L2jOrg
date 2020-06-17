@@ -12,6 +12,7 @@ import java.util.StringTokenizer;
  */
 public class Tower extends Folk {
 	private static int[] ITEM_REWARD = {49764, 49765};
+	private Player talkingPlayer;
 
 	public Tower(NpcTemplate template) {
 		super(template);
@@ -40,22 +41,31 @@ public class Tower extends Folk {
 	}
 
 	@Override
+	public void showChatWindow(Player player) {
+		talkingPlayer = player;
+		super.showChatWindow(player);
+	}
+
+	@Override
+	public boolean canBeAttacked() {
+		return true;
+	}
+
+	@Override
 	public String getHtmlPath(int npcId, int val) {
-		{
-			String filename = "data/html/default";
+		String filename = "data/html/default/";
 
-			if (!getActingPlayer().isGM() && (!getActingPlayer().isInParty() || !getActingPlayer().getParty().isLeader(getActingPlayer())))
-				filename += npcId + "-4.htm";
-			else if (!isDead() && GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) == 2) {
-				if (GlobalVariablesManager.getInstance().getInt("heavenly_rift_reward", 0) == 1)
-					filename += npcId + ".htm";
-				else
-					filename += npcId + "-2.htm";
-			} else
-				filename += npcId + "-1.htm";
+		if (!talkingPlayer.isGM() && (!talkingPlayer.isInParty() || !talkingPlayer.getParty().isLeader(talkingPlayer)))
+			filename += npcId + "-4.htm";
+		else if (!isDead() && GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) == 2) {
+			if (GlobalVariablesManager.getInstance().getInt("heavenly_rift_reward", 0) == 1)
+				filename += npcId + ".htm";
+			else
+				filename += npcId + "-2.htm";
+		} else
+			filename += npcId + "-1.htm";
 
-			return filename;
-		}
+		return filename;
 	}
 
 	// TODO: think about that ...

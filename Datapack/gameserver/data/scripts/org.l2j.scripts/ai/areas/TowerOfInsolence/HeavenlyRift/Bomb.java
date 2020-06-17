@@ -18,7 +18,10 @@ public class Bomb extends AbstractNpcAI {
     private static final int[] ITEM_DROP_1 = { 49756, 49762, 49763 };
     private static final int[] ITEM_DROP_2 = { 49760, 49761 };
 
-    public Bomb() { }
+    public Bomb() {
+        addKillId(18003);
+        addSpawnId(18003);
+    }
 
     @Override
     public String onSpawn(Npc npc) {
@@ -29,23 +32,22 @@ public class Bomb extends AbstractNpcAI {
 
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
-        if(Rnd.chance(50))
-        {
-            World.getInstance().forEachVisibleObjectInRange(npc, Playable.class, 200, creature -> {
-                if(creature != null && !creature.isDead())
-                    creature.reduceCurrentHp(Rnd.get(300, 400), npc, null, DamageInfo.DamageType.ZONE);
-            });
-        }
         if(Rnd.chance(33))
         {
             addSpawn(20139, npc, false, 1800000);
         }
         else
         {
-            if(Rnd.chance(90))
-                npc.dropItem(killer.getActingPlayer(),  ITEM_DROP_1[Rnd.get(ITEM_DROP_1.length)], 1);
-            else
-                npc.dropItem(killer.getActingPlayer(),  ITEM_DROP_2[Rnd.get(ITEM_DROP_2.length)], 1);
+            World.getInstance().forEachVisibleObjectInRange(npc, Playable.class, 200, creature -> {
+                if(creature != null && !creature.isDead())
+                    creature.reduceCurrentHp(Rnd.get(300, 400), npc, null, DamageInfo.DamageType.ZONE);
+            });
+
+            if(Rnd.chance(50))
+                if(Rnd.chance(90))
+                    npc.dropItem(killer.getActingPlayer(),  ITEM_DROP_1[Rnd.get(ITEM_DROP_1.length)], 1);
+                else
+                    npc.dropItem(killer.getActingPlayer(),  ITEM_DROP_2[Rnd.get(ITEM_DROP_2.length)], 1);
         }
 
         if(HeavenlyRift.getAliveNpcCount(npc.getId()) == 0)//Last

@@ -45,7 +45,7 @@ public class Arushinai extends Folk
 			}
 			if(GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) == 0)
 			{
-				int riftLevel = Rnd.get(1, 3);
+				int riftLevel = Rnd.get(2, 2);
 				GlobalVariablesManager.getInstance().set("heavenly_rift_level", riftLevel);
 				GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 4);
 				switch(riftLevel) 
