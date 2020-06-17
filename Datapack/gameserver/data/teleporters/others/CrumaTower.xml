@@ -2,8 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../teleporterData.xsd">
 	<npc id="30483"> <!-- Carsus -->
 		<teleport type="OTHER">
-			<location x="17664" y="108288" z="-9056" /> <!-- 2nd floor -->
-			<location x="17726" y="114838" z="-11696" /> <!-- 3rd floor -->
+			<location x="17720" y="114856" z="-11731" /> <!-- 2nd floor -->
+			<location x="17736" y="108344" z="-9083" /> <!-- 3rd floor -->
 		</teleport>
 	</npc>
 	<npc id="30484"> <!-- Janssen -->
@@ -13,7 +13,7 @@
 	</npc>
 	<npc id="30485"> <!-- Belkadhi -->
 		<teleport type="OTHER">
-			<location x="17726" y="114838" z="-11696" /> <!-- 3rd floor -->
+			<location x="17736" y="108344" z="-9083" /> <!-- 3rd floor -->
 			<location x="17225" y="114173" z="-3440" /> <!-- entrance -->
 		</teleport>
 	</npc>
@@ -24,12 +24,12 @@
 	</npc>
 	<npc id="30487"> <!-- Rombel -->
 		<teleport type="OTHER">
-			<location x="17708" y="108308" z="-9056" /> <!-- 2nd floor -->
+			<location x="17720" y="114856" z="-11731" /> <!-- 2nd floor -->
 		</teleport>
 	</npc>
 	<npc id="31843"> <!-- Teleportation Cubic -->
 		<teleport type="OTHER">
-			<location x="17708" y="108308" z="-9056" /> <!-- 2nd floor -->
+			<location x="17720" y="114856" z="-11731" /> <!-- 2nd floor -->
 			<location x="17731" y="119465" z="-9067" /> <!-- The Core room -->
 		</teleport>
 	</npc>

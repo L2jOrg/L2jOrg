@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class DivineAngel extends AbstractNpcAI {
     public DivineAngel() {
-        addNpcHateId(000000000000000);
+        addNpcHateId(18004);
     }
 
     @Override
