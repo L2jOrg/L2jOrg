@@ -22,6 +22,7 @@ package org.l2j.gameserver.model.actor.status;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Folk;
+import org.l2j.gameserver.model.actor.instance.Tower;
 
 public class FolkStatus extends NpcStatus {
     public FolkStatus(Npc activeChar) {
@@ -35,6 +36,8 @@ public class FolkStatus extends NpcStatus {
 
     @Override
     public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
+        if (getOwner() instanceof Tower)
+            super.reduceHp(value, attacker, awake, isDOT, isHpConsumption);
     }
 
     @Override

@@ -161,6 +161,10 @@ public class AttackableAI extends CreatureAI {
             if (!me.isAggressive()) {
                 return false;
             }
+
+            if(target instanceof Tower) {
+                return true;
+            }
         }
 
         if (me.isChampion() && Config.CHAMPION_PASSIVE) {
@@ -323,6 +327,13 @@ public class AttackableAI extends CreatureAI {
                                 {
                                     guard.addDamageHate(t, 0, 10);
                                 });
+                            }
+                        } else if (t instanceof Tower) {
+                            // Get the hate level of the Attackable against this Creature target contained in _aggroList
+                            final int hating = npc.getHating(t);
+                            // Add the attacker to the Attackable _aggroList with 0 damage and 10 hate cause prior to Tower
+                            if (hating == 0) {
+                                npc.addDamageHate(t, 0, 10);
                             }
                         }
                     }

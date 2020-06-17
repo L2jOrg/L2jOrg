@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
-import org.l2j.gameserver.model.actor.instance.Folk;
-import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
 
@@ -16,6 +16,7 @@ public class Tower extends Folk {
 
 	public Tower(NpcTemplate template) {
 		super(template);
+		setIsInvul(false);
 	}
 
 	@Override
@@ -47,11 +48,6 @@ public class Tower extends Folk {
 	}
 
 	@Override
-	public boolean canBeAttacked() {
-		return true;
-	}
-
-	@Override
 	public String getHtmlPath(int npcId, int val) {
 		String filename = "data/html/default/";
 
@@ -68,11 +64,15 @@ public class Tower extends Folk {
 		return filename;
 	}
 
-	// TODO: think about that ...
-	/*
 	@Override
-	public boolean isDebuffImmune()
-	{
+	public boolean isAutoAttackable(Creature attacker) {
+		if(GameUtils.isPlayer(attacker) || GameUtils.isSummon(attacker) || GameUtils.isServitor(attacker))
+			return false;
+		return true;
+	}
+
+	@Override
+	public boolean isDebuffBlocked() {
 		return false;
-	}*/
+	}
 }
