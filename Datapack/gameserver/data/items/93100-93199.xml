@@ -58,72 +58,108 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="920" price="19350" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="4.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93110" name="Elven Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_pricklelotus_i01">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1350" price="35000" />
 		<crystal type="D"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="7.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93111" name="Chain Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.belleface_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1220" price="375000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93112" name="Demon’s Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1280" price="156000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="17.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93113" name="Blue Wolf Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.airtoil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="25.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93114" name="Avadon Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.dynasty_sigil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="21.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93115" name="Doom Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.elos_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1200" price="845000" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="23.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93116" name="Zubei Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_dynaksus_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="21.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93117" name="Dark Crystal Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1190" price="935000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="24.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93118" name="Tallum Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_tysandy_sigil_i01">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1190" price="935000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="24.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93119" name="Nightmare Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1180" price="1422000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="25.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93120" name="Majestic Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_karyen_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1180" price="1422000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
+		</stats>
 	</armor>
 
 	<item id="93121" name="Common Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_special_i00">
@@ -245,6 +281,9 @@
 		<restriction/>
 		<attributes weight="7700" price="3562000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="180.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93140" name="Freeze Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t94_l_i01">
@@ -252,6 +291,9 @@
 		<restriction/>
 		<attributes weight="3320" price="2226000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="130.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93141" name="Freeze Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t94_u_i01">
@@ -259,6 +301,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="7700" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="180.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93142" name="Freeze Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t94_l_i01">
@@ -266,6 +311,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="3320" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="130.0"/>
+		</stats>
 	</armor>
 
 	<item id="93143" name="Castle Siege Support Box - Goddard" type="NONE" icon="Branchsys2.icon2.g_alegra_box">

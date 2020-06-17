@@ -19,9 +19,6 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="MAX_MP" value="21.0"/>
-		</stats>
 	</armor>
 
 	<armor id="13521" name="Event - Shaggy Dog Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_sapsal_cap_i00">
@@ -29,9 +26,6 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="MAX_MP" value="42.0"/>
-		</stats>
 	</armor>
 
 </list>

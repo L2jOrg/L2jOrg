@@ -391,6 +391,10 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal />
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="83.0"/>
+			<stat type="MAX_MP" value="29.0"/>
+		</stats>
 	</armor>
 
 	<armor id="71961" name="Chronicle Successor’s Necklace - 30-day" type="NONE" body-part="NECK" icon="BranchIcon.Icon.accessary_vip_necklace_i00">
@@ -398,6 +402,10 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal />
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="83.0"/>
+			<stat type="MAX_MP" value="29.0"/>
+		</stats>
 	</armor>
 
 	<item id="71962" name="VIP XP Growth Amulet - 1-day" type="RUNE" icon="icon.skill19226">

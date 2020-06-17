@@ -269,12 +269,12 @@
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="96.0"/>
-			<stat type="MAGIC_ATTACK" value="47.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="96.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -638,7 +638,7 @@
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAGICAL_DEFENCE" value="47.0"/>
 			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
@@ -652,7 +652,7 @@
 		<attributes weight="150" commission-type="EARRING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="51.0"/>
+			<stat type="MAGICAL_DEFENCE" value="71.0"/>
 			<stat type="MAX_MP" value="19.0"/>
 		</stats>
 		<skills>
@@ -666,7 +666,7 @@
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAGICAL_DEFENCE" value="47.0"/>
 			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
@@ -786,12 +786,12 @@
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="155.0"/>
-			<stat type="MAGIC_ATTACK" value="70.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="70.0"/>
+			<stat type="PHYSICAL_ATTACK" value="155.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -802,12 +802,12 @@
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="155.0"/>
-			<stat type="MAGIC_ATTACK" value="70.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="70.0"/>
+			<stat type="PHYSICAL_ATTACK" value="155.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 

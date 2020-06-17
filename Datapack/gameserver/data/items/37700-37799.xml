@@ -7,13 +7,13 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="752.0"/>
-			<stat type="MAGIC_ATTACK" value="414.0"/>
-			<stat type="CRITICAL_RATE" value="12.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="414.0"/>
+			<stat type="PHYSICAL_ATTACK" value="752.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -24,13 +24,13 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="916.0"/>
-			<stat type="MAGIC_ATTACK" value="414.0"/>
-			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="414.0"/>
+			<stat type="PHYSICAL_ATTACK" value="916.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -41,8 +41,8 @@
 		<crystal />
 		<stats>
 			<stat type="EVASION_RATE" value="-8.0"/>
-			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 			<stat type="SHIELD_DEFENCE" value="546.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 		</stats>
 	</armor>
 
@@ -52,8 +52,8 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="PHYSICAL_DEFENCE" value="150.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="150.0"/>
 		</stats>
 	</armor>
 

@@ -108,6 +108,13 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93417" name="Chrono Unitus" type="FIST" body-part="TWO_HAND" icon="icon.weapon_chrono_tambourine_i00">
@@ -115,6 +122,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93418" name="Chrono Campana" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_chrono_campana_i00">
@@ -122,6 +137,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93419" name="Chrono Darbuka" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_chrono_darbuka_i00">
@@ -129,6 +152,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93420" name="Chrono Maracas" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_chrono_maracas_i00">
@@ -136,6 +167,13 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<armor id="93421" name="Valakas' Necklace" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_valakas_i00">
@@ -144,7 +182,6 @@
 		<attributes weight="150" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="62.0"/>
 			<stat type="MAX_MP" value="30.0"/>
 		</stats>
 		<skills>
@@ -156,48 +193,111 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1350" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="194.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93423" name="Lance" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_lancia_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1920" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="194.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93424" name="Deadman's Glory" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_deadmans_glory_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1600" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="194.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93425" name="Art of Battle Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_art_of_battle_axe_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1570" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="194.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93426" name="Staff of Evil Spirits" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_staff_of_evil_sprit_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="930" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="145.0"/>
+			<stat type="PHYSICAL_ATTACK" value="189.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93427" name="Demon's Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_demons_sword_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="970" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="170.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93428" name="Bellion Cestus " type="FIST" body-part="TWO_HAND" icon="icon.weapon_bellion_cestus_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1390" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="236.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93429" name="Bow of Peril" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hazard_bow_i00" mana-consume="4">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1700" price="13100000" reuse-delay="1500"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="400.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93430" name="Samurai Long Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -205,36 +305,81 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2080" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="236.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93431" name="Guardian's Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_guardians_sword_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1930" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="236.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93432" name="Wizard's Tear" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tears_of_wizard_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1350" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="132.0"/>
+			<stat type="PHYSICAL_ATTACK" value="155.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93433" name="Star Buster" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_star_buster_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1930" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="PHYSICAL_ATTACK" value="236.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93434" name="Dismantler" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_dismantler_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="111.0"/>
+			<stat type="PHYSICAL_ATTACK" value="214.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="15.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93435" name="Colichemarde" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_colichemarde_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300" price="13100000"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="135.0"/>
+			<stat type="PHYSICAL_ATTACK" value="185.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<item id="93436" name="+4 - +15 Random Weapon Pack - Samurai Long Sword" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">

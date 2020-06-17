@@ -7,13 +7,13 @@
 		<crystal />
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="MAGIC_ATTACK" value="1.0"/>
-			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 

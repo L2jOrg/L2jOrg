@@ -169,12 +169,12 @@
 		<crystal type="A" count="1128"/>
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="259.0"/>
-			<stat type="MAGIC_ATTACK" value="107.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="107.0"/>
+			<stat type="PHYSICAL_ATTACK" value="259.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -547,12 +547,12 @@
 		<crystal />
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="38.0"/>
-			<stat type="MAGIC_ATTACK" value="21.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="21.0"/>
+			<stat type="PHYSICAL_ATTACK" value="38.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -562,12 +562,12 @@
 		<crystal type="D" count="743"/>
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="49.0"/>
-			<stat type="MAGIC_ATTACK" value="26.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="26.0"/>
+			<stat type="PHYSICAL_ATTACK" value="49.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -577,12 +577,12 @@
 		<crystal type="C" count="2452"/>
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="190.0"/>
-			<stat type="MAGIC_ATTACK" value="83.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="83.0"/>
+			<stat type="PHYSICAL_ATTACK" value="190.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -643,8 +643,8 @@
 		<crystal type="A" count="75"/>
 		<stats>
 			<stat type="EVASION_RATE" value="-8.0"/>
-			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 			<stat type="SHIELD_DEFENCE" value="243.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 		</stats>
 	</armor>
 

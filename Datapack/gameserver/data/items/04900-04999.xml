@@ -7,13 +7,13 @@
 		<crystal type="B" count="1746"/>
 		<damage radius="46" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="189.0"/>
-			<stat type="MAGIC_ATTACK" value="145.0"/>
-			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="145.0"/>
+			<stat type="PHYSICAL_ATTACK" value="189.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="1077" level="3" type="ON_MAGIC_SKILL" chance="20" value="-1"/>  <!-- Focus -->
@@ -27,13 +27,13 @@
 		<crystal type="B" count="1746"/>
 		<damage radius="46" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="189.0"/>
-			<stat type="MAGIC_ATTACK" value="145.0"/>
-			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="145.0"/>
+			<stat type="PHYSICAL_ATTACK" value="189.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="1045" level="5" type="ON_MAGIC_SKILL" chance="20" value="-1"/>  <!-- Blessed Body -->
@@ -47,13 +47,13 @@
 		<crystal type="B" count="1746"/>
 		<damage radius="46" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="189.0"/>
-			<stat type="MAGIC_ATTACK" value="145.0"/>
-			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="145.0"/>
+			<stat type="PHYSICAL_ATTACK" value="189.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="1168" level="6" type="ON_MAGIC_SKILL" chance="6" value="-1"/>  <!-- Curse Poison -->

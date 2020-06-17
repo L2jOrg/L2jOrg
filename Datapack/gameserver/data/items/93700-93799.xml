@@ -202,24 +202,40 @@
 		<restriction sellable="false"/>
 		<attributes weight="1750" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="MAX_MP" value="409.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="132.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93734" name="Flaming Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t96_l_i03">
 		<restriction sellable="false"/>
 		<attributes weight="850" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="MAX_MP" value="256.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="82.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93735" name="Flaming Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t96_u_i03">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1750" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="MAX_MP" value="409.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="132.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93736" name="Flaming Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t96_l_i03">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="850" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="MAX_MP" value="256.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="82.0"/>
+		</stats>
 	</armor>
 
 	<item id="93737" name="Top-grade Stable Scroll: Enchant Weapon (S-grade) - Exchangeable" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_s">

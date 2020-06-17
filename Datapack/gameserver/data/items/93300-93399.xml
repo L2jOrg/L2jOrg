@@ -5,6 +5,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="75.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93301" name="Cloak of Protection" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i01">
@@ -98,6 +101,9 @@
 		<restriction dropable="false" sellable="false"/>
 		<attributes weight="4300" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="165.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93316" name="Thunder Leather Leggings" type="LIGHT" body-part="LEGS" icon="icon.armor_t101_l_i00">
@@ -105,6 +111,9 @@
 		<restriction dropable="false" sellable="false"/>
 		<attributes weight="1480" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="115.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93317" name="Thunder Leather Armor" type="LIGHT" body-part="CHEST" icon="icon.armor_t101_u_i00">
@@ -112,6 +121,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="4300" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="165.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93318" name="Thunder Leather Leggings" type="LIGHT" body-part="LEGS" icon="icon.armor_t101_l_i00">
@@ -119,6 +131,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1480" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="115.0"/>
+		</stats>
 	</armor>
 
 	<item id="93319" name="Escape - Quartermaster Mattehoren" type="NONE" icon="icon.etc_scroll_of_return_i04">
@@ -199,6 +214,9 @@
 		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500"/>
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93332" name="Combat Flag - Monster" type="NONE" body-part="TWO_HAND" icon="icon.weapon_fort_flag_i00">
@@ -206,6 +224,9 @@
 		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500"/>
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+		</stats>
 	</weapon>
 
 	<item id="93333" name="+3 Talisman of Power" type="NONE" icon="icon.sayhas_talisman_new">

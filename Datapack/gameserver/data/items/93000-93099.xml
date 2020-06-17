@@ -4,12 +4,27 @@
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1530"/>
 		<crystal />
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="21.0"/>
+			<stat type="PHYSICAL_ATTACK" value="31.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93001" name="Activation Type: One-handed Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_buzdygan_i00">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1800"/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="21.0"/>
+			<stat type="PHYSICAL_ATTACK" value="31.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<item id="93002" name="Sayha's Blessing Pouch" type="NONE" icon="icon.pouch_i01">
@@ -163,60 +178,138 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1450"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="79.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93029" name="Dagger of Aden" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_o'_silenus_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1070"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="69.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93030" name="Bow of Aden" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1820" reuse-delay="1500"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="51.0"/>
+			<stat type="PHYSICAL_ATTACK" value="179.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="227.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93031" name="Blunt Weapon of Aden" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_war_pick_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1730"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="79.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93032" name="Two-handed Sword of Aden" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_flamberge_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2020"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="96.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93033" name="Two-Handed Blunt Weapon of Aden" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_ghost_staff_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="69.0"/>
+			<stat type="PHYSICAL_ATTACK" value="77.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93034" name="Spear of Aden" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_trident_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2060"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="79.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93035" name="Fist of Aden" type="FIST" body-part="TWO_HAND" icon="icon.weapon_baghnakh_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1510"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="96.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93036" name="Rapier of Aden" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_soldat_estoc_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="76.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93037" name="Ancient Sword of Aden" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_schlaeger_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530"/>
 		<crystal type="D"/>
+		<stats>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="87.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="15.0"/>
+		</stats>
 	</weapon>
 
 	<item id="93038" name="Enchant Scroll: Weapon of Aden" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
@@ -250,6 +343,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
+		</stats>
 	</armor>
 
 	<item id="93043" name="Enchant Scroll: Adventurer’s Hair Accessory" type="ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_d">
@@ -284,36 +380,83 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="156.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93048" name="Demon's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_demons_staff_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="990" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="134.0"/>
+			<stat type="PHYSICAL_ATTACK" value="152.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93049" name="Ecliptic Axe" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eclipse_axe_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="122.0"/>
+			<stat type="PHYSICAL_ATTACK" value="125.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93050" name="Crystal Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_crystal_dagger_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="136.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93051" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1720" price="6130000" reuse-delay="1500"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="323.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93052" name="Orcish Poleaxe" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_orcish_poleaxe_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1950" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="156.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93053" name="Katana*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -321,36 +464,82 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2270" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="190.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93054" name="Yaksa Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_yaksa_mace_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="156.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93055" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="190.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93056" name="Great Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_great_pata_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1460" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="190.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93057" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_blink_slasher_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="110.0"/>
+			<stat type="PHYSICAL_ATTACK" value="149.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93058" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_invincible_blade_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530" price="6130000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="172.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="15.0"/>
+		</stats>
 	</weapon>
 
 	<item id="93059" name="Spellbook: Summon Winner’s Glory" type="NONE" icon="icon.etc_spellbook_red_i00">
@@ -456,6 +645,9 @@
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="540" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93076" name="Gloves of Silence" type="NONE" body-part="GLOVES" icon="icon.armor_t94_g_i01">
@@ -463,6 +655,9 @@
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="540" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
+		</stats>
 	</armor>
 
 	<item id="93077" name="Lucky Letter Box" type="NONE" icon="icon.bm_gold_relic_box">
@@ -505,72 +700,108 @@
 		<restriction/>
 		<attributes weight="920" price="19350" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="4.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93084" name="Elven Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_pricklelotus_i01">
 		<restriction/>
 		<attributes weight="1350" price="35000" />
 		<crystal type="D"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="7.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93085" name="Chain Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.belleface_i00">
 		<restriction/>
 		<attributes weight="1220" price="375000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93086" name="Demon’s Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
 		<restriction/>
 		<attributes weight="1280" price="156000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="17.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93087" name="Blue Wolf Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.airtoil_i00">
 		<restriction/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="25.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93088" name="Avadon Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.dynasty_sigil_i00">
 		<restriction/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="21.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93089" name="Doom Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.elos_i00">
 		<restriction/>
 		<attributes weight="1200" price="845000" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="23.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93090" name="Zubei Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_dynaksus_i00">
 		<restriction/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="21.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93091" name="Dark Crystal Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
 		<restriction/>
 		<attributes weight="1190" price="935000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="24.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93092" name="Tallum Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_tysandy_sigil_i01">
 		<restriction/>
 		<attributes weight="1190" price="935000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="24.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93093" name="Nightmare Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
 		<restriction/>
 		<attributes weight="1180" price="1422000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="25.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93094" name="Majestic Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_karyen_i00">
 		<restriction/>
 		<attributes weight="1180" price="1422000" />
 		<crystal type="A"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
+		</stats>
 	</armor>
 
 	<item id="93095" name="Quest Start" type="NONE" icon="icon.etc_crest_blue_i00">

@@ -34,6 +34,13 @@
 		<restriction tradable="false" private-sellable="false"/>
 		<attributes weight="1300"/>
 		<crystal type="A"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="137.0"/>
+			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<item id="93906" name="Zaken’s Crystal" type="MATERIAL" icon="icon.dragon_blood">
@@ -441,6 +448,13 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="12.0"/>
+			<stat type="PHYSICAL_ATTACK" value="12.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="93995" name="16th Anniversary Instrument" type="HAMMER" body-part="RIGHT_HAND" icon="icon.bm_magmeld">
@@ -448,6 +462,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<armor id="93996" name="16th Anniversary Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_party_hat_gold_i00">

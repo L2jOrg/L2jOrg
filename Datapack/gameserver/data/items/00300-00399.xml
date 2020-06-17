@@ -6,13 +6,13 @@
 		<crystal type="B" count="1157"/>
 		<damage radius="66" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="175.0"/>
-			<stat type="MAGIC_ATTACK" value="91.0"/>
-			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="175.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -25,13 +25,13 @@
 		<crystal type="C" count="1912"/>
 		<damage radius="66" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="144.0"/>
-			<stat type="MAGIC_ATTACK" value="78.0"/>
-			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="78.0"/>
+			<stat type="PHYSICAL_ATTACK" value="144.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -44,13 +44,13 @@
 		<crystal type="C" count="916"/>
 		<damage radius="66" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="107.0"/>
-			<stat type="MAGIC_ATTACK" value="61.0"/>
-			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="PHYSICAL_ATTACK" value="107.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -63,13 +63,13 @@
 		<crystal type="C" count="1912"/>
 		<damage radius="66" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="144.0"/>
-			<stat type="MAGIC_ATTACK" value="78.0"/>
-			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="78.0"/>
+			<stat type="PHYSICAL_ATTACK" value="144.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -82,13 +82,13 @@
 		<crystal type="A" count="1659"/>
 		<damage radius="66" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="232.0"/>
-			<stat type="MAGIC_ATTACK" value="114.0"/>
-			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="114.0"/>
+			<stat type="PHYSICAL_ATTACK" value="232.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -101,12 +101,12 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="6.0"/>
-			<stat type="MAGIC_ATTACK" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK" value="6.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -116,12 +116,12 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="19.0"/>
-			<stat type="MAGIC_ATTACK" value="22.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="22.0"/>
+			<stat type="PHYSICAL_ATTACK" value="19.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -131,12 +131,12 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="19.0"/>
-			<stat type="MAGIC_ATTACK" value="22.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="22.0"/>
+			<stat type="PHYSICAL_ATTACK" value="19.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -146,12 +146,12 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="25.0"/>
-			<stat type="MAGIC_ATTACK" value="28.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="28.0"/>
+			<stat type="PHYSICAL_ATTACK" value="25.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -161,12 +161,12 @@
 		<crystal type="D" count="743"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="32.0"/>
-			<stat type="MAGIC_ATTACK" value="35.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="35.0"/>
+			<stat type="PHYSICAL_ATTACK" value="32.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -176,12 +176,12 @@
 		<crystal type="D" count="743"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="32.0"/>
-			<stat type="MAGIC_ATTACK" value="35.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="35.0"/>
+			<stat type="PHYSICAL_ATTACK" value="32.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -191,12 +191,12 @@
 		<crystal type="D" count="743"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="32.0"/>
-			<stat type="MAGIC_ATTACK" value="35.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="35.0"/>
+			<stat type="PHYSICAL_ATTACK" value="32.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -206,12 +206,12 @@
 		<crystal type="D" count="1170"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="41.0"/>
-			<stat type="MAGIC_ATTACK" value="43.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="43.0"/>
+			<stat type="PHYSICAL_ATTACK" value="41.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -221,12 +221,12 @@
 		<crystal type="D" count="1758"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="51.0"/>
-			<stat type="MAGIC_ATTACK" value="52.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="52.0"/>
+			<stat type="PHYSICAL_ATTACK" value="51.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -236,12 +236,12 @@
 		<crystal type="D" count="1758"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="51.0"/>
-			<stat type="MAGIC_ATTACK" value="52.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="52.0"/>
+			<stat type="PHYSICAL_ATTACK" value="51.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -251,12 +251,12 @@
 		<crystal type="D" count="2545"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="63.0"/>
-			<stat type="MAGIC_ATTACK" value="63.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="63.0"/>
+			<stat type="PHYSICAL_ATTACK" value="63.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -266,12 +266,12 @@
 		<crystal type="D" count="2545"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="63.0"/>
-			<stat type="MAGIC_ATTACK" value="63.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="63.0"/>
+			<stat type="PHYSICAL_ATTACK" value="63.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -281,12 +281,12 @@
 		<crystal type="D" count="2763"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="67.0"/>
-			<stat type="MAGIC_ATTACK" value="66.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="66.0"/>
+			<stat type="PHYSICAL_ATTACK" value="67.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -296,12 +296,12 @@
 		<crystal type="D" count="2763"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="67.0"/>
-			<stat type="MAGIC_ATTACK" value="66.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="66.0"/>
+			<stat type="PHYSICAL_ATTACK" value="67.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -311,12 +311,12 @@
 		<crystal type="D" count="3272"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="74.0"/>
-			<stat type="MAGIC_ATTACK" value="72.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="72.0"/>
+			<stat type="PHYSICAL_ATTACK" value="74.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -326,12 +326,12 @@
 		<crystal type="D" count="3272"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="74.0"/>
-			<stat type="MAGIC_ATTACK" value="72.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="72.0"/>
+			<stat type="PHYSICAL_ATTACK" value="74.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -341,12 +341,12 @@
 		<crystal type="C" count="1148"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="98.0"/>
-			<stat type="MAGIC_ATTACK" value="91.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="98.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
