@@ -18,7 +18,6 @@
  */
 package handlers.actionshifthandlers;
 
-import handlers.bypasshandlers.NpcViewMod;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
@@ -41,25 +40,24 @@ import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import java.util.Set;
 
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
-import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 
 public class NpcActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(Player activeChar, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
-		// Check if the Player is a GM
-		if (activeChar.isGM())
+
+		if (player.isGM())
 		{
 			// Set the target of the Player activeChar
-			activeChar.setTarget(target);
+			player.setTarget(target);
 			
 			final Npc npc = (Npc) target;
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByNpcId(npc.getId());
-			html.setFile(activeChar, "data/html/admin/npcinfo.htm");
+			html.setFile(player, "data/html/admin/npcinfo.htm");
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
 			html.replace("%class%", target.getClass().getSimpleName());
@@ -101,8 +99,8 @@ public class NpcActionShift implements IActionShiftHandler
 			html.replace("%mpRewardTicks%", npc.getTemplate().getMpRewardTicks());
 			html.replace("%mpRewardType%", npc.getTemplate().getMpRewardType().name());
 			html.replace("%mpRewardAffectType%", npc.getTemplate().getMpRewardAffectType().name());
-			html.replace("%loc2d%", String.valueOf((int) calculateDistance2D(activeChar, npc)));
-			html.replace("%loc3d%", String.valueOf((int) calculateDistance3D(activeChar, npc)));
+			html.replace("%loc2d%", String.valueOf((int) calculateDistance2D(player, npc)));
+			html.replace("%loc3d%", String.valueOf((int) calculateDistance3D(player, npc)));
 			
 			final AttributeType attackAttribute = npc.getAttackElement();
 			html.replace("%ele_atk%", attackAttribute.name());
@@ -191,16 +189,7 @@ public class NpcActionShift implements IActionShiftHandler
 			{
 				html.replace("%route%", "");
 			}
-			activeChar.sendPacket(html);
-		}
-		else if (Config.ALT_GAME_VIEWNPC)
-		{
-			if (!isNpc(target))
-			{
-				return false;
-			}
-			activeChar.setTarget(target);
-			NpcViewMod.sendNpcView(activeChar, (Npc) target);
+			player.sendPacket(html);
 		}
 		return true;
 	}

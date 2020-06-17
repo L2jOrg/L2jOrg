@@ -509,6 +509,12 @@ public final class GameUtils {
         return object instanceof Npc;
     }
 
+    public static void doIfIsNpc(WorldObject object, Consumer<Npc> action) {
+        if(object instanceof Npc npc) {
+            action.accept(npc);
+        }
+    }
+
     public static boolean isPlayable(WorldObject object) {
         return object instanceof Playable;
     }
