@@ -33,13 +33,13 @@ public class Arushinai extends Folk
 				Party party = player.getParty();
 				if(party == null)
 				{
-					// TODO: Add message.
-					player.teleToLocation(114264, 13352, -5104);
+					player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
+					player.teleToLocation(114264, 13352, -5104); // Back to Dimensional Vortex
 					return;
 				}
 				if(!party.isLeader(player))
 				{
-					// TODO: Add message.
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					return;
 				}
 			}
@@ -89,13 +89,13 @@ public class Arushinai extends Folk
 					}
 
 					GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 0);
-					//ServerVariables.set("heavenly_rift_complete", 0);
+					GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
 					for(Player partyMember : party.getMembers())
 						partyMember.teleToLocation(114264, 13352, -5104);
 				}
 				else
 				{
-					// TODO: Add message.
+					player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_A_PARTY_LEADER);
 				}
 			}
 			else
