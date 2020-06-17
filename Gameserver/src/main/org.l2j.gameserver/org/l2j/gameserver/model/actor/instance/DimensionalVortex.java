@@ -50,7 +50,7 @@ public class DimensionalVortex extends Folk
 
 					player.teleToLocation(112685, 13362, 10966);
 
-					ThreadPool.schedule(new HeavenlyRift.ClearZoneTask(this), 10000);
+					ThreadPool.schedule(new HeavenlyRift.ClearZoneTask(this), 180000);
 					return;
 				}
 				

@@ -42,27 +42,27 @@ public class Tower extends Folk {
 	@Override
 	public String getHtmlPath(int npcId, int val) {
 		{
-			String filename = "";
+			String filename = "data/html/default";
 
 			if (!getActingPlayer().isGM() && (!getActingPlayer().isInParty() || !getActingPlayer().getParty().isLeader(getActingPlayer())))
-				filename = getId() + "-4.htm";
+				filename += npcId + "-4.htm";
 			else if (!isDead() && GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) == 2) {
 				if (GlobalVariablesManager.getInstance().getInt("heavenly_rift_reward", 0) == 1)
-					filename = getId() + ".htm";
+					filename += npcId + ".htm";
 				else
-					filename = getId() + "-2.htm";
+					filename += npcId + "-2.htm";
 			} else
-				filename = getId() + "-1.htm";
+				filename += npcId + "-1.htm";
 
 			return filename;
 		}
+	}
 
-		// TODO: think about that ...
+	// TODO: think about that ...
 	/*
 	@Override
 	public boolean isDebuffImmune()
 	{
 		return false;
 	}*/
-	}
 }

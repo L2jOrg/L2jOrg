@@ -89,7 +89,7 @@ public class Arushinai extends Folk
 					}
 
 					GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 0);
-					GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
+					// GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
 					for(Player partyMember : party.getMembers())
 						partyMember.teleToLocation(114264, 13352, -5104);
 				}
