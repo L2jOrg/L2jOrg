@@ -1075,9 +1075,12 @@
             </speed>
         </effects>
     </skill>
-    <skill id="222" name="Fury Fists" action="T">
+    <skill id="222" name="Fury Fists" max-level="4"  action="T">
         <!--
 		level 1: Atk. Spd. +15%. Consumes HP over time.
+		level 2: Increases Atk. Spd. By 15% and additionally increases Atk. Spd. by 5% when quipped with a fist weapon. Consumes HP over time.
+		level 3: Increases Atk. Spd. By 15% and additionally increases Atk. Spd. by 10% when quipped with a fist weapon. Consumes HP over time.
+		level 4: Increases Atk. Spd. By 15% and additionally increases Atk. Spd. by 15% when quipped with a fist weapon. Consumes HP over time.
 	 -->
         <icon initial="icon.skill0222"/>
         <attributes magic-critical-rate="5.0">
@@ -1096,6 +1099,13 @@
             </damage-over-time>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="15.0"/>
+            </stat-modify>
+             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" start-level="2">
+                <power initial="5">
+                    <value level="3">10.0</value>
+                    <value level="4">15.0</value>
+                </power>
+                <weapon-type>FIST</weapon-type>
             </stat-modify>
         </effects>
     </skill>
