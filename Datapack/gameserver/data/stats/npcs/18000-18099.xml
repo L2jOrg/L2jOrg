@@ -170,7 +170,7 @@
             <height normal="30"/>
         </collision>
     </npc>
-    <npc id="18004" level="49" type="Monster" name="Tower">
+    <npc id="18004" level="49" type="Tower" name="Tower">
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
         <acquire sp="1"/>
@@ -185,7 +185,7 @@
             <hitTime>520</hitTime>
             <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status undying="false"/>
+        <status undying="false" attackable="true"/>
         <skillList>
             <skill id="4273" level="3"/> <!-- Resist Daggers/Rapier Weapon -->
             <skill id="4274" level="1"/> <!-- Blunt Weapon Weak Point -->

@@ -735,9 +735,23 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param isSummon
      */
     public final void notifyKill(Npc npc, Player killer, boolean isSummon) {
+        notifyKill(npc, killer, isSummon, null);
+    }
+
+    /**
+     * @param npc
+     * @param killer
+     * @param isSummon
+     * @param payload
+     */
+    public final void notifyKill(Npc npc, Player killer, boolean isSummon, Object payload) {
         String res = null;
         try {
-            res = onKill(npc, killer, isSummon);
+            if(payload == null)
+                res = onKill(npc, killer, isSummon);
+            else
+                res = onKill(npc, killer, isSummon, payload);
+
         } catch (Exception e) {
             showError(killer, e);
             return;
@@ -1140,6 +1154,19 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @return the text returned by the event (may be {@code null}, a filename or just text)
      */
     public String onKill(Npc npc, Player killer, boolean isSummon) {
+        return onKill(npc, killer, isSummon, null);
+    }
+
+    /**
+     * This function is called whenever a player kills a NPC that is registered for the quest.
+     *
+     * @param npc      this parameter contains a reference to the exact instance of the NPC that got killed.
+     * @param killer   this parameter contains a reference to the exact instance of the player who killed the NPC.
+     * @param isSummon this parameter if it's {@code false} it denotes that the attacker was indeed the player, else it specifies that the killer was the player's pet.
+     * @param payload  this parameter contains a payload value for special cases, It may be {@code null} if no payload sent.
+     * @return the text returned by the event (may be {@code null}, a filename or just text)
+     */
+    public String onKill(Npc npc, Player killer, boolean isSummon, Object payload) {
         if (!getNpcLogList(killer).isEmpty()) {
             sendNpcLogList(killer);
         }
@@ -1589,7 +1616,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     public void addKillId(int npcId) {
-        setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon()), npcId);
+        setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon(), kill.getPayload()), npcId);
     }
 
     public void addAttackId(int npcId) {
@@ -1710,7 +1737,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npcIds
      */
     public void addKillId(int... npcIds) {
-        setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon()), npcIds);
+        setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon(), kill.getPayload()), npcIds);
     }
 
     /**
@@ -1719,7 +1746,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npcIds the collection of NPC IDs
      */
     public void addKillId(Collection<Integer> npcIds) {
-        setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon()), npcIds);
+        setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon(), kill.getPayload()), npcIds);
     }
 
     /**

@@ -595,26 +595,30 @@
         <npc id="20821" count="1" respawnTime="165sec" respawnRandom="50sec"/>
     </spawn>
     <spawn>
-        <territories>
-            <territory name="aden36_2318_p05" minZ="-676" maxZ="-476">
-                <node x="114972" y="17220"/>
-                <node x="115240" y="17088"/>
-                <node x="116504" y="17604"/>
-                <node x="115272" y="18452"/>
-            </territory>
-        </territories>
-        <npc id="20977" count="1" respawnTime="200sec" respawnRandom="40sec"/>
-    </spawn>
-    <spawn>
-        <territories>
-            <territory name="aden36_2318_p10" minZ="-684" maxZ="-484">
-                <node x="112844" y="14432"/>
-                <node x="114072" y="13680"/>
-                <node x="114348" y="14880"/>
-                <node x="114044" y="15016"/>
-            </territory>
-        </territories>
-        <npc id="20977" count="1" respawnTime="200sec" respawnRandom="40sec"/>
+        <npc id="20977" count="1">
+            <locations>
+                <location x="113134" y="14655" z="-5096" chance="50"/>
+                <location x="116030" y="14492" z="-5095" chance="50"/>
+                <location x="116072" y="17416" z="-5098" chance="50"/>
+                <location x="113575" y="17714" z="-5098" chance="50"/>
+                <location x="113317" y="14716" z="-3604" chance="50"/>
+                <location x="113785" y="17374" z="-3607" chance="50"/>
+                <location x="115811" y="14694" z="-3607" chance="50"/>
+                <location x="116314" y="17158" z="-3607" chance="50"/>
+                <location x="115768" y="17320" z="-2125" chance="50"/>
+                <location x="116111" y="14804" z="-2125" chance="50"/>
+                <location x="113224" y="15032" z="-2125" chance="50"/>
+                <location x="113942" y="17696" z="-643" chance="50"/>
+                <location x="113113" y="14983" z="-643" chance="50"/>
+                <location x="115328" y="14637" z="-643" chance="50"/>
+                <location x="116352" y="16656" z="-643" chance="50"/>
+                <location x="115800" y="15288" z="930" chance="50"/>
+                <location x="114709" y="16011" z="950" chance="50"/>
+                <location x="115656" y="16984" z="930" chance="50"/>
+                <location x="113486" y="16880" z="937" chance="50"/>
+                <location x="113752" y="15400" z="928" chance="50"/>
+            </locations>
+        </npc>
     </spawn>
     <spawn>
         <territories>
@@ -1511,26 +1515,35 @@
         <npc id="21072" count="1" respawnTime="320sec" respawnRandom="120sec"/>
     </spawn>
     <spawn>
-        <territories>
-            <territory name="aden29_2318_p02" minZ="6965" maxZ="7165">
-                <node x="114453" y="17147"/>
-                <node x="115096" y="17795"/>
-                <node x="114505" y="18378"/>
-                <node x="113553" y="18097"/>
-            </territory>
-        </territories>
-        <npc id="21081" count="1" respawnTime="300sec" respawnRandom="80sec"/>
-    </spawn>
-    <spawn>
-        <territories>
-            <territory name="aden29_2318_p09" minZ="6948" maxZ="7148">
-                <node x="113468" y="14144"/>
-                <node x="114724" y="15352"/>
-                <node x="113972" y="16116"/>
-                <node x="112712" y="14844"/>
-            </territory>
-        </territories>
-        <npc id="21081" count="1" respawnTime="300sec" respawnRandom="80sec"/>
+        <npc id="21081" count="1">
+            <locations>
+                <location x="114808" y="17400" z="1949" chance="50"/>
+                <location x="114888" y="16072" z="1949" chance="50"/>
+                <location x="115608" y="14792" z="1949" chance="50"/>
+                <location x="115192" y="16861" z="2967" chance="50"/>
+                <location x="113908" y="17112" z="2965" chance="50"/>
+                <location x="113210" y="16146" z="2965" chance="50"/>
+                <location x="114360" y="14648" z="2959" chance="50"/>
+                <location x="114267" y="15917" z="2992" chance="50"/>
+                <location x="115144" y="17112" z="3969" chance="50"/>
+                <location x="114690" y="16117" z="3969" chance="50"/>
+                <location x="114525" y="14629" z="3969" chance="50"/>
+                <location x="115903" y="15637" z="3969" chance="50"/>
+                <location x="115014" y="17222" z="4978" chance="50"/>
+                <location x="113442" y="16787" z="4977" chance="50"/>
+                <location x="114530" y="15332" z="4988" chance="50"/>
+                <location x="115816" y="15896" z="4979" chance="50"/>
+                <location x="114419" y="15989" z="5989" chance="50"/>
+                <location x="115016" y="13758" z="5993" chance="50"/>
+                <location x="114981" y="18289" z="5993" chance="50"/>
+                <location x="112248" y="17176" z="5989" chance="50"/>
+                <location x="114334" y="17844" z="6999" chance="50"/>
+                <location x="115308" y="15423" z="6999" chance="50"/>
+                <location x="114963" y="14436" z="6999" chance="50"/>
+                <location x="113516" y="15595" z="6992" chance="50"/>
+                <location x="113542" y="16885" z="7002" chance="50"/>
+            </locations>
+        </npc>
     </spawn>
     <spawn>
         <territories>
@@ -1638,6 +1651,11 @@
             <npc id="19133" x="115000" y="11309" z="-5120" heading="32767" respawnTime="60sec"/> <!-- Antharas -->
             <npc id="19133" x="115000" y="11409" z="-5120" heading="32767" respawnTime="60sec"/> <!-- Antharas -->
             <npc id="31714" x="114922" y="11230" z="-5130" heading="336" respawnTime="60sec"/> <!-- Ateld -->
+        </group>
+    </spawn>
+    <spawn>
+        <group>
+            <npc id="30401" x="112634" y="13364" z="10966" heading="8021" /><!--Arushinai-->
         </group>
     </spawn>
 </list>

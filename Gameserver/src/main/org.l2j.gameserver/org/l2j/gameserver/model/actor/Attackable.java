@@ -60,6 +60,7 @@ import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
@@ -267,9 +268,16 @@ public class Attackable extends Npc {
             return false;
         }
 
+        Object payload = null;
+        if (GameUtils.isMonster(this)) {
+            final Monster mob = (Monster) this;
+            if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
+                payload = mob.getLeader();
+        }
+
         if (nonNull(killer.getActingPlayer())) {
             // Delayed notification
-            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, GameUtils.isSummon(killer)), this);
+            EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, GameUtils.isSummon(killer), payload), this);
         }
 
         // Notify to minions if there are.
@@ -630,7 +638,7 @@ public class Attackable extends Npc {
         final AggroInfo ai = _aggroList.computeIfAbsent(attacker, AggroInfo::new);
         ai.addDamage(damage);
 
-        if(targetPlayer != null && ai.getHate() == 0) {
+        if(targetPlayer != null && ai.getHate() == 0 && !targetPlayer.isInvisible()) {
             // Notify to scripts
             EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAggroRangeEnter(this, targetPlayer, GameUtils.isSummon(attacker)), this);
         }
@@ -1215,6 +1223,9 @@ public class Attackable extends Npc {
                 }
             }
         }
+
+        // Start a new AI task
+        AttackableThinkTaskManager.getInstance().add(this);
 
         // Reset the rest of NPC related states
         super.onRespawn();

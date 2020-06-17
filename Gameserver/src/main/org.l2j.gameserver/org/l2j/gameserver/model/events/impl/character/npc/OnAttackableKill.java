@@ -33,11 +33,20 @@ public class OnAttackableKill implements IBaseEvent {
     private final Player _attacker;
     private final Attackable _target;
     private final boolean _isSummon;
+    private final Object _payload;
 
     public OnAttackableKill(Player attacker, Attackable target, boolean isSummon) {
         _attacker = attacker;
         _target = target;
         _isSummon = isSummon;
+        _payload = null;
+    }
+
+    public OnAttackableKill(Player attacker, Attackable target, boolean isSummon, Object payload) {
+        _attacker = attacker;
+        _target = target;
+        _isSummon = isSummon;
+        _payload = payload;
     }
 
     public final Player getAttacker() {
@@ -50,6 +59,10 @@ public class OnAttackableKill implements IBaseEvent {
 
     public final boolean isSummon() {
         return _isSummon;
+    }
+
+    public final Object getPayload() {
+        return _payload;
     }
 
     @Override

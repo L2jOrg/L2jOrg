@@ -12,11 +12,12 @@
         <property name="restartAllowedTime" value="600"/>
     </zone>
     <zone name="antaras_no_restart" id="70050" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
-        <polygon min-z="-8380" max-z="-4880">
-            <point x="173469" y="110431"/>
-            <point x="188081" y="110284"/>
-            <point x="188132" y="119249"/>
-            <point x="173386" y="119391"/>
+        <polygon min-z="-3952" max-z="-4880">
+            <point x="126812" y="120774"/>
+            <point x="129249" y="122309"/>
+            <point x="127227" y="126703"/>
+            <point x="123626" y="125916"/>
+            <point x="122237" y="123498"/>
         </polygon>
         <property name="restartTime" value="1800"/>
         <property name="restartAllowedTime" value="600"/>
@@ -436,5 +437,15 @@
         </polygon>
         <property name="restartTime" value="1800"/>
         <property name="restartAllowedTime" value="600"/>
+    </zone>
+    <zone name="[heavenly_rift]" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="10800" max-z="12000">
+            <point x="114169" y="13781"/>
+            <point x="112353" y="15581"/>
+            <point x="111219" y="15072"/>
+            <point x="111584" y="14238"/>
+            <point x="112815" y="12991"/>
+            <point x="113640" y="12642"/>
+        </polygon>
     </zone>
 </list>

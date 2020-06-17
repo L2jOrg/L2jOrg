@@ -40,6 +40,10 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/**
+ * @author Thoss
+ */
 public class FireCamp extends AbstractNpcAI {
     private static final Logger LOGGER = LoggerFactory.getLogger(FireCamp.class);
 

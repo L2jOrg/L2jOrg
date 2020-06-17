@@ -941,11 +941,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        return new Hit(target, damage, miss, crit, shld, shotConsumed ? weapon.getItemGrade().ordinal() : -1);
+        return new Hit(target, damage, miss, crit, shld, shotConsumed ? nonNull(weapon) ? weapon.getItemGrade().ordinal() : 0 : -1);
     }
 
     public void doCast(Skill skill) {
         doCast(skill, null, false, false);
+    }
+
+    public void doCast(Skill skill, SkillCastingType castingType) {
+        doCast(skill, null, false, false, castingType);
+    }
+
+    public synchronized void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {
+        // Get proper casting type.
+        SkillCastingType castingType = SkillCastingType.NORMAL;
+        doCast(skill, null, false, false, castingType);
     }
 
     /**
@@ -962,14 +972,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * </ul>
      *
      * @param skill        The L2Skill to use
-     * @param item         the referenced item of this skill cast
+     * @param item         The referenced item of this skill cast
      * @param ctrlPressed  if the player has pressed ctrl key during casting, aka force use.
      * @param shiftPressed if the player has pressed shift key during casting, aka dont move.
+     * @param castingType  The SkillCastingType of the skill.
      */
-    public synchronized void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {
-        // Get proper casting type.
-        SkillCastingType castingType = SkillCastingType.NORMAL;
-
+    public synchronized void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed, SkillCastingType castingType) {
         // Try casting the skill
         final SkillCaster skillCaster = SkillCaster.castSkill(this, _target, skill, item, castingType, ctrlPressed, shiftPressed);
         if ((skillCaster == null) && isPlayer(this)) {

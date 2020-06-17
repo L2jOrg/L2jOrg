@@ -3999,6 +3999,8 @@
             <param name="MoveAroundSocial2" value="0"/>
             <minions name="Privates">
                 <npc id="21073" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="21078" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="21079" count="1" respawnTime="0" weightPoint="1"/>
             </minions>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
@@ -5149,7 +5151,7 @@
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="3029.1819575" hpRegen="8.5" mp="3104.58" mpRegen="3"/>
             <attack physical="976.51936" magical="887.65356521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="2041.6032" magical="3402.672"/>
+            <defence physical="600" magical="500"/>
             <speed>
                 <walk ground="45"/>
                 <run ground="174"/>
@@ -5199,7 +5201,7 @@
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="3029.1819575" hpRegen="8.5" mp="3104.58" mpRegen="3"/>
             <attack physical="1004.88515" magical="914.34815217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="2103.00075" magical="3505.00125"/>
+            <defence physical="600" magical="500"/>
             <speed>
                 <walk ground="80"/>
                 <run ground="174"/>
@@ -5210,6 +5212,7 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4067" level="4"/> <!-- NPC Mortal Blow -->
+            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>

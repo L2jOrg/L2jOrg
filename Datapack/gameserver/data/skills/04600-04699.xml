@@ -4545,7 +4545,7 @@
                 <value level="13">242</value>
             </mana>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target scope="PARTY" object="FRIEND" type="OWNER_PET" range="1000"/>
         <abnormal type="QUEEN_OF_CAT_BLESS">
             <level initial="1">
                 <value level="2">2</value>

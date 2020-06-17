@@ -1,3 +1,4 @@
+import ai.areas.GiantCave.EntranceRoom;
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
@@ -332,7 +333,7 @@ open module org.l2j.scripts {
             ai.areas.DwarvenVillage.Toma.Toma,
             ai.areas.LairOfAntharas.Pytan,
             ai.areas.TalkingIsland.Roxxy,
-            ai.areas.TowerOfInsolence.Ateld.Ateld,
+            ai.areas.TowerOfInsolence.Ateld,
             ai.areas.PlainsOfDion,
             ai.areas.ImperialTomb.FourSepulchers.FourSepulchers,
             ai.areas.CallOfTheSpirits.CallOfTheSpirits,
@@ -340,6 +341,14 @@ open module org.l2j.scripts {
             ai.areas.Ketra.FireCamp,
             ai.areas.GiantCave.Scout,
             ai.areas.GiantCave.Batur,
+            ai.areas.GiantCave.EntranceRoom,
+            ai.areas.TowerOfInsolence.TowerOfInsolence,
+            ai.areas.AligatorIsland.Nos,
+            ai.areas.ForestOfTheMirrors.Mirrors,
+            ai.areas.TowerOfInsolence.HeavenlyRift.Bomb,
+            ai.areas.TowerOfInsolence.HeavenlyRift.DivineAngel,
+            ai.areas.TowerOfInsolence.HeavenlyRift.Tower,
+
 
             ai.bosses.Antharas.Antharas,
             ai.bosses.Baium.Baium,

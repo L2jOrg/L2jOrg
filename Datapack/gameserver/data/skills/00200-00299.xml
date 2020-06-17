@@ -1075,7 +1075,7 @@
             </speed>
         </effects>
     </skill>
-    <skill id="222" name="Fury Fists" max-level="4" action="T">
+    <skill id="222" name="Fury Fists" max-level="4"  action="T">
         <!--
 		level 1: Atk. Spd. +15%. Consumes HP over time.
 		level 2: Increases Atk. Spd. By 15% and additionally increases Atk. Spd. by 5% when quipped with a fist weapon. Consumes HP over time.
@@ -1092,17 +1092,16 @@
             <mana-init initial="8"/>
             <mana initial="8"/>
         </consume>
-        <target type="NONE"/>
+        <target type="SELF"/>
         <effects>
-            <effect name="HealOverTime" ticks="2">
-                <power initial="-12.0"/>
-            </effect>
+            <damage-over-time ticks="2">
+                <power initial="12.0"/>
+            </damage-over-time>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="15.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
-                <power>
-                    <value level="2">5.0</value>
+             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" start-level="2">
+                <power initial="5">
                     <value level="3">10.0</value>
                     <value level="4">15.0</value>
                 </power>
