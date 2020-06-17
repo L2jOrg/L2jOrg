@@ -7,9 +7,9 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="MAGIC_ATTACK" value="1.0"/>
 			<stat type="CRITICAL_RATE" value="1.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
@@ -97,9 +97,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="MAX_MP" value="22.0"/>
-		</stats>
 	</armor>
 
 	<armor id="71114" name="Assassin's Bamboo Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Bamboo_Hat_i00">
@@ -107,9 +104,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="MAX_MP" value="28.0"/>
-		</stats>
 	</armor>
 
 	<armor id="71115" name="Little Angel Wings" type="NONE" body-part="HAIR2" icon="icon.accessory_hair_ring_i00">
@@ -117,9 +111,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="MAX_MP" value="34.0"/>
-		</stats>
 	</armor>
 
 	<armor id="71116" name="Black Gem Mask" type="NONE" body-part="HAIR" icon="BranchSys.icon.br_black_gem_mask_i00">
@@ -127,9 +118,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="MAX_MP" value="22.0"/>
-		</stats>
 	</armor>
 
 	<armor id="71117" name="Circlet of Eva" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_circlet_of_eva_i00">

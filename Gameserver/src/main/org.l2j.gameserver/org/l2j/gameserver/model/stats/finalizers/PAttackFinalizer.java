@@ -73,12 +73,12 @@ public class PAttackFinalizer implements IStatsFunction {
 
     private int calcEnchantPAtkCrystalDefault(int enchant, boolean hasTwoHandBonus, boolean isRanged) {
         final var bonus = isRanged ? 8 : hasTwoHandBonus ? 5 : 4;
-        return min(enchant, 3) * bonus + max(0, enchant -3) * 2 * bonus;
+        return min(enchant, 3) * bonus + ((max(0, enchant - 3) * bonus) << 1);
     }
 
     private int calcEnchantPAtkCrystalS(int enchant, boolean hasTwoHandBonus, boolean isRanged) {
         final var bonus = isRanged ? 10 : hasTwoHandBonus ? 6 : 5;
         final var secBonus = isRanged ? 126 : hasTwoHandBonus ? 77 : 43;
-        return ( min(enchant, 3) * bonus ) + ( min(max(0, enchant -3), 13) * 4 * bonus ) + ( max(0, enchant -16) * secBonus );
+        return ( min(enchant, 3) * bonus ) + ((min(max(0, enchant - 3), 13) * bonus) << 2) + ( max(0, enchant -16) * secBonus );
     }
 }

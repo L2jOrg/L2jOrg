@@ -388,6 +388,13 @@
 		<restriction/>
 		<attributes weight="1300"/>
 		<crystal />
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="291.0"/>
+			<stat type="PHYSICAL_ATTACK" value="431.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<armor id="93865" name="Circlet of Glory" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_hero_cap_i00">

@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.entity.Message;
+import org.l2j.gameserver.data.database.data.MailData;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -27,12 +27,13 @@ import java.util.List;
 
 /**
  * @author Migi, DS
+ * @author JoeAlisson
  */
 public class ExShowSentPostList extends ServerPacket {
-    private final List<Message> _outbox;
+    private final List<MailData> outbox;
 
     public ExShowSentPostList(int objectId) {
-        _outbox = MailManager.getInstance().getOutbox(objectId);
+        outbox = MailEngine.getInstance().getOutbox(objectId);
     }
 
     @Override
@@ -40,22 +41,20 @@ public class ExShowSentPostList extends ServerPacket {
         writeId(ServerExPacketId.EX_SHOW_SENT_POST_LIST);
 
         writeInt((int) (System.currentTimeMillis() / 1000));
-        if ((_outbox != null) && (_outbox.size() > 0)) {
-            writeInt(_outbox.size());
-            for (Message msg : _outbox) {
-                writeInt(msg.getId());
-                writeString(msg.getSubject());
-                writeString(msg.getReceiverName());
-                writeInt(msg.isLocked() ? 0x01 : 0x00);
-                writeInt(msg.getExpirationSeconds());
-                writeInt(msg.isUnread() ? 0x01 : 0x00);
-                writeInt(0x01);
-                writeInt(msg.hasAttachments() ? 0x01 : 0x00);
-                writeInt(0x00);
-            }
-        } else {
-            writeInt(0x00);
-        }
+        writeInt(outbox.size());
+        outbox.forEach(this::writeMail);
+    }
+
+    private void writeMail(MailData mail) {
+        writeInt(mail.getId());
+        writeString(mail.getSubject());
+        writeString(mail.getReceiverName());
+        writeInt(mail.isLocked());
+        writeInt((int) (mail.getExpiration() / 1000));
+        writeInt(mail.isUnread());
+        writeInt(0x01);
+        writeInt(mail.hasAttachments());
+        writeInt(0x00);
     }
 
 }

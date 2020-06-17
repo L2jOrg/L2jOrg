@@ -112,12 +112,12 @@
 		<crystal />
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="MAGIC_ATTACK" value="1.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3045" level="14" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Haste -->

@@ -18,25 +18,26 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.data.database.data.MailData;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
-import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.SystemMessageId;
 
 import java.util.List;
 
+import static org.l2j.gameserver.network.SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD;
+import static org.l2j.gameserver.network.SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED;
+
 /**
  * @author Migi, DS
+ * @author JoeAlisson
  */
 public class ExShowReceivedPostList extends ServerPacket {
-    private static final int MESSAGE_FEE = 100;
-    private static final int MESSAGE_FEE_PER_SLOT = 1000;
-    private final List<Message> _inbox;
+    private final List<MailData> inbox;
 
     public ExShowReceivedPostList(int objectId) {
-        _inbox = MailManager.getInstance().getInbox(objectId);
+        inbox = MailEngine.getInstance().getInbox(objectId);
     }
 
     @Override
@@ -44,31 +45,31 @@ public class ExShowReceivedPostList extends ServerPacket {
         writeId(ServerExPacketId.EX_SHOW_RECEIVED_POST_LIST);
 
         writeInt((int) (System.currentTimeMillis() / 1000));
-        if ((_inbox != null) && (_inbox.size() > 0)) {
-            writeInt(_inbox.size());
-            for (Message msg : _inbox) {
-                writeInt(msg.getMailType().ordinal());
-                if (msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) {
-                    writeInt(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
-                } else if (msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED) {
-                    writeInt(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
-                }
-                writeInt(msg.getId());
-                writeString(msg.getSubject());
-                writeString(msg.getSenderName());
-                writeInt(msg.isLocked() ? 0x01 : 0x00);
-                writeInt(msg.getExpirationSeconds());
-                writeInt(msg.isUnread() ? 0x01 : 0x00);
-                writeInt(((msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) || (msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED)) ? 0 : 1);
-                writeInt(msg.hasAttachments() ? 0x01 : 0x00);
-                writeInt(msg.isReturned() ? 0x01 : 0x00);
-                writeInt(0x00); // SysString in some case it seems
-            }
-        } else {
-            writeInt(0x00);
+        writeInt(inbox.size());
+        inbox.forEach(this::writeMail);
+        writeInt(MailEngine.MAIL_FEE);
+        writeInt(MailEngine.MAIL_FEE_PER_SLOT);
+    }
+
+    private void writeMail(MailData mail) {
+        writeInt(mail.getType().ordinal());
+
+        if (mail.getType() == MailType.COMMISSION_ITEM_SOLD) {
+            writeInt(THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
+        } else if (mail.getType() == MailType.COMMISSION_ITEM_RETURNED) {
+            writeInt(THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
         }
-        writeInt(MESSAGE_FEE);
-        writeInt(MESSAGE_FEE_PER_SLOT);
+
+        writeInt(mail.getId());
+        writeString(mail.getSubject());
+        writeString(mail.getSenderName());
+        writeInt(mail.isLocked());
+        writeInt((int) (mail.getExpiration() / 1000));
+        writeInt(mail.isUnread());
+        writeInt(((mail.getType() == MailType.COMMISSION_ITEM_SOLD) || (mail.getType() == MailType.COMMISSION_ITEM_RETURNED)) ? 0 : 1);
+        writeInt(mail.hasAttachments());
+        writeInt(mail.isReturned());
+        writeInt(0x00); // SysString in some case it seems
     }
 
 }

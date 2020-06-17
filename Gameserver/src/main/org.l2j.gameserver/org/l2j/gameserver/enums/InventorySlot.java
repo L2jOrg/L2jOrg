@@ -89,7 +89,7 @@ public enum InventorySlot implements IUpdateTypeComponent {
     ARTIFACT21;
 
     private static final EnumSet<InventorySlot> accessories = EnumSet.of(LEFT_FINGER, RIGHT_FINGER, LEFT_EAR, RIGHT_EAR, NECK);
-    private static final EnumSet<InventorySlot> armors = EnumSet.of(CHEST, LEGS, HEAD, FEET, GLOVES, PENDANT, CLOAK, HAIR, LEFT_HAND);
+    private static final EnumSet<InventorySlot> armors = EnumSet.of(CHEST, LEGS, HEAD, FEET, GLOVES, LEFT_HAND, PENDANT, CLOAK, BELT, HAIR, HAIR2);
     private static final EnumSet<InventorySlot> balanceArtifacts = EnumSet.range(ARTIFACT1, ARTIFACT12);
     private static final EnumSet<InventorySlot> spiritArtifacts = EnumSet.range(ARTIFACT13, ARTIFACT15);
     private static final EnumSet<InventorySlot> protectionArtifacts = EnumSet.range(ARTIFACT16, ARTIFACT18);

@@ -2,17 +2,17 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="6611" name="Infinity Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_the_sword_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped.\nInfinity Power - Reflect: for 5 min. damage received +8%. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="301.0"/>
-			<stat type="MAGIC_ATTACK" value="166.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="PHYSICAL_ATTACK" value="301.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3578"/>  <!-- Special Ability: Infinity Sword -->
@@ -22,17 +22,17 @@
 
 	<weapon id="6612" name="Infinity Slasher" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_the_two_handed_sword_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Slasher. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped.\nInfinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="TWO_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="368.0"/>
-			<stat type="MAGIC_ATTACK" value="166.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="PHYSICAL_ATTACK" value="368.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3582" value="-1"/>  <!-- Special Ability: Infinity Slasher -->
@@ -42,18 +42,18 @@
 
 	<weapon id="6613" name="Infinity Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_the_axe_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Axe. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped.\nInfinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers НР. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="301.0"/>
-			<stat type="MAGIC_ATTACK" value="166.0"/>
-			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="PHYSICAL_ATTACK" value="301.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3580"/>  <!-- Special Ability: Infinity Axe -->
@@ -63,18 +63,18 @@
 
 	<weapon id="6614" name="Infinity Rod" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_the_mace_of_hero_i00" magic="true">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Rod. Max HP +10%, Max MP +25%, Max CP +30%, M. Critical Rate +20, Casting Spd. +5%, when equipped.\nInfinity Power - Mana Limit: for 30 sec. magic skills don't consume MP. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="255.0"/>
-			<stat type="MAGIC_ATTACK" value="204.0"/>
-			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="204.0"/>
+			<stat type="PHYSICAL_ATTACK" value="255.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3597"/>  <!-- Special Ability: Infinity Rod -->
@@ -84,18 +84,18 @@
 
 	<weapon id="6616" name="Infinity Scepter" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_the_staff_of_hero_i00" magic="true">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Scepter. Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, M. Critical Damage +10%, when equipped.\nInfinity Power - Vampiric Mana: for 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="295.0"/>
-			<stat type="MAGIC_ATTACK" value="219.0"/>
-			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="219.0"/>
+			<stat type="PHYSICAL_ATTACK" value="295.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3595"/>  <!-- Special Ability: Infinity Scepter -->
@@ -105,18 +105,18 @@
 
 	<weapon id="6617" name="Infinity Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_the_dagger_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Dagger. Max HP +15%, Max MP +25%, Max CP +30%, M. Critical Rate +20, P. Critical Damage +20%, when equipped.\nInfinity Power - Immortal: for 5 min. increases the chance of deadly attack. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="DAGGER" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="272.0"/>
-			<stat type="MAGIC_ATTACK" value="166.0"/>
-			<stat type="CRITICAL_RATE" value="12.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="PHYSICAL_ATTACK" value="272.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3589"/>  <!-- Special Ability: Infinity Dagger -->
@@ -126,18 +126,18 @@
 
 	<weapon id="6618" name="Infinity Fighter" type="FIST" body-part="TWO_HAND" icon="icon.weapon_the_fist_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Fighter. Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%, when equipped.\nInfinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="FIST_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="32" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="368.0"/>
-			<stat type="MAGIC_ATTACK" value="166.0"/>
-			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="PHYSICAL_ATTACK" value="368.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3587"/>  <!-- Special Ability: Infinity Fighter -->
@@ -147,18 +147,18 @@
 
 	<weapon id="6619" name="Infinity Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_the_bow_of_hero_i00" mana-consume="6">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Bow. Max HP +15%, Max MP +25%, Max CP +30%, MP Consumption -5%, Atk. Spd. +10%, when equipped.\nInfinity Power - Archery: for 5 min. increases Speed and the bow's range. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="BOW" reuse-delay="1398" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="10" angle="360"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="665.0"/>
-			<stat type="MAGIC_ATTACK" value="177.0"/>
-			<stat type="CRITICAL_RATE" value="12.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="177.0"/>
+			<stat type="PHYSICAL_ATTACK" value="665.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="500.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="500.0"/>
 		</stats>
 		<skills>
 			<skill id="3593"/>  <!-- Special Ability: Infinity Bow -->
@@ -168,17 +168,17 @@
 
 	<weapon id="6620" name="Infinity Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_the_dualsword_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Dual Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%, when equipped.\nInfinity Power - Refresh: for 5 min. decreases cooldown by 10%. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="DUALSWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="361.0"/>
-			<stat type="MAGIC_ATTACK" value="164.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="164.0"/>
+			<stat type="PHYSICAL_ATTACK" value="361.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3585"/>  <!-- Special Ability: Infinity Dualsword -->
@@ -188,18 +188,18 @@
 
 	<weapon id="6621" name="Infinity Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_the_pole_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Spear. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped.\nInfinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers НР. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" hero="true"/>
 		<attributes weight="1300" commission-type="SPEAR" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="301.0"/>
-			<stat type="MAGIC_ATTACK" value="166.0"/>
-			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="PHYSICAL_ATTACK" value="301.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3591"/>  <!-- Special Ability: Infinity Spear -->
@@ -240,8 +240,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="48.0"/>
-			<stat type="MAX_MP" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="47.0"/>
+			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
 			<skill id="3562" value="-1"/>  <!-- Queen Ant's Ring -->
@@ -254,7 +254,7 @@
 		<attributes weight="150" commission-type="EARRING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="51.0"/>
+			<stat type="MAGICAL_DEFENCE" value="71.0"/>
 			<stat type="MAX_MP" value="19.0"/>
 		</stats>
 		<skills>
@@ -268,7 +268,7 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAGICAL_DEFENCE" value="47.0"/>
 			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
@@ -323,8 +323,8 @@
 		<crystal type="S"/>
 		<stats>
 			<stat type="EVASION_RATE" value="-8.0"/>
-			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 			<stat type="SHIELD_DEFENCE" value="276.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 		</stats>
 	</armor>
 
@@ -384,8 +384,8 @@
 		<attributes weight="2300" price="15577000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="PHYSICAL_DEFENCE" value="157.0"/>
 			<stat type="MAX_MP" value="866.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="157.0"/>
 		</stats>
 	</armor>
 

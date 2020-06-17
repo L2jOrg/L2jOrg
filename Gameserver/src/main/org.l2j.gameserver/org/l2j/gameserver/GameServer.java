@@ -36,6 +36,7 @@ import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -222,7 +223,7 @@ public class GameServer {
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
 
         if (generalSettings.allowMail()) {
-            MailManager.getInstance();
+            MailEngine.init();
         }
 
         PunishmentManager.getInstance();

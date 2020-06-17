@@ -242,10 +242,10 @@
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="76.0"/>
-			<stat type="MAGIC_ATTACK" value="47.0"/>
-			<stat type="CRITICAL_RATE" value="10.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="76.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
 		</stats>
@@ -258,10 +258,10 @@
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="116.0"/>
-			<stat type="MAGIC_ATTACK" value="90.0"/>
-			<stat type="CRITICAL_RATE" value="10.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="90.0"/>
+			<stat type="PHYSICAL_ATTACK" value="116.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
 		</stats>
@@ -273,10 +273,10 @@
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="185.0"/>
-			<stat type="MAGIC_ATTACK" value="135.0"/>
-			<stat type="CRITICAL_RATE" value="10.0"/>
 			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="135.0"/>
+			<stat type="PHYSICAL_ATTACK" value="185.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
 		</stats>
@@ -289,13 +289,13 @@
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="87.0"/>
-			<stat type="MAGIC_ATTACK" value="47.0"/>
-			<stat type="CRITICAL_RATE" value="10.0"/>
 			<stat type="ACCURACY" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="PHYSICAL_ATTACK" value="87.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="15.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -306,13 +306,13 @@
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="135.0"/>
-			<stat type="MAGIC_ATTACK" value="67.0"/>
-			<stat type="CRITICAL_RATE" value="10.0"/>
 			<stat type="ACCURACY" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="67.0"/>
+			<stat type="PHYSICAL_ATTACK" value="135.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="15.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -322,13 +322,13 @@
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="214.0"/>
-			<stat type="MAGIC_ATTACK" value="111.0"/>
-			<stat type="CRITICAL_RATE" value="10.0"/>
 			<stat type="ACCURACY" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="111.0"/>
+			<stat type="PHYSICAL_ATTACK" value="214.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="15.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -349,6 +349,13 @@
 		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="12.0"/>
+			<stat type="PHYSICAL_ATTACK" value="12.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+		</stats>
 	</weapon>
 
 	<item id="71845" name="Ancient Imperial Treasure Chest" type="NONE" icon="icon.bm_elmoaden_box">

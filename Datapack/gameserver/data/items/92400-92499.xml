@@ -30,30 +30,68 @@
 		<restriction/>
 		<attributes weight="1300"/>
 		<crystal type="A"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="137.0"/>
+			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92405" name="Core’s Plasma Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_karupis_i00" mana-consume="5">
 		<restriction/>
 		<attributes weight="1640" reuse-delay="1500"/>
 		<crystal type="A"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="151.0"/>
+			<stat type="PHYSICAL_ATTACK" value="570.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="227.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92406" name="Queen Ant’s Stone Spear" type="SPEAR" body-part="TWO_HAND" icon="BranchSys3.Icon.g_melisa_stormer_i00">
 		<restriction/>
 		<attributes weight="1820"/>
 		<crystal type="A"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="137.0"/>
+			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92407" name="Orfen’s Poisonous Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_the_two_handed_sword_of_hero_i01">
 		<restriction/>
 		<attributes weight="1820"/>
 		<crystal type="A"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="137.0"/>
+			<stat type="PHYSICAL_ATTACK" value="305.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92408" name="Baium’s Thunder Breaker" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_terakan_i00">
 		<restriction/>
 		<attributes weight="930"/>
 		<crystal type="A"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="137.0"/>
+			<stat type="PHYSICAL_ATTACK" value="220.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<item id="92409" name="Special Dragon's Fruit Lv. 2" type="SCROLL" icon="icon.bm_dragon_fruit">
@@ -132,6 +170,14 @@
 		<restriction/>
 		<attributes weight="1550"/>
 		<crystal type="A"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="173.0"/>
+			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<item id="92422" name="Tower of Insolence Stone of Memory: 1st Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">

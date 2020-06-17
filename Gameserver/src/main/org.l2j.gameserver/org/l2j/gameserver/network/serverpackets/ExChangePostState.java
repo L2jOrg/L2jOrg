@@ -18,42 +18,47 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.engine.mail.MailState;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Migi
+ * @author JoeAlisson
  */
 public class ExChangePostState extends ServerPacket {
-    private final boolean _receivedBoard;
-    private final int[] _changedMsgIds;
-    private final int _changeId;
+    private final boolean receivedBoard;
+    private final int[] changedMailsId;
+    private final MailState state;
 
-    public ExChangePostState(boolean receivedBoard, int[] changedMsgIds, int changeId) {
-        _receivedBoard = receivedBoard;
-        _changedMsgIds = changedMsgIds;
-        _changeId = changeId;
-    }
-
-    public ExChangePostState(boolean receivedBoard, int changedMsgId, int changeId) {
-        _receivedBoard = receivedBoard;
-        _changedMsgIds = new int[]
-                {
-                        changedMsgId
-                };
-        _changeId = changeId;
+    private ExChangePostState(boolean receivedBoard, MailState state, int... mailIds) {
+        this.receivedBoard = receivedBoard;
+        this.changedMailsId = mailIds;
+        this.state = state;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_CHANGE_POST_STATE);
 
-        writeInt(_receivedBoard ? 1 : 0);
-        writeInt(_changedMsgIds.length);
-        for (int postId : _changedMsgIds) {
-            writeInt(postId); // postId
-            writeInt(_changeId); // state
+        writeInt(receivedBoard);
+        writeInt(changedMailsId.length);
+        for (int mailId : changedMailsId) {
+            writeInt(mailId);
+            writeInt(state.ordinal());
         }
+    }
+
+    public static ExChangePostState deleted(boolean receivedBoard, int... mailsId) {
+        return new ExChangePostState(receivedBoard, MailState.DELETED, mailsId);
+    }
+
+    public static ExChangePostState rejected(boolean receiveBoard, int mailId) {
+        return new ExChangePostState(receiveBoard, MailState.REJECTED, mailId);
+    }
+
+    public static ExChangePostState reAdded(boolean receiveBoard, int mailId) {
+        return new ExChangePostState(receiveBoard, MailState.RE_ADDED, mailId);
     }
 
 }

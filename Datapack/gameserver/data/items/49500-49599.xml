@@ -52,12 +52,12 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="MAGIC_ATTACK" value="1.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 	</weapon>
 
@@ -82,7 +82,7 @@
 		<attributes weight="150" commission-type="RING" duration="21600" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAGICAL_DEFENCE" value="47.0"/>
 			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
@@ -510,12 +510,12 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="155.0"/>
-			<stat type="MAGIC_ATTACK" value="70.0"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="70.0"/>
+			<stat type="PHYSICAL_ATTACK" value="155.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -525,7 +525,7 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="55.0"/>
 			<stat type="MAX_MP" value="15.0"/>
 		</stats>
 		<skills>
@@ -539,7 +539,7 @@
 		<attributes weight="150" commission-type="EARRING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="61.0"/>
+			<stat type="MAGICAL_DEFENCE" value="81.0"/>
 			<stat type="MAX_MP" value="25.0"/>
 		</stats>
 		<skills>
@@ -553,7 +553,7 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="55.0"/>
 			<stat type="MAX_MP" value="15.0"/>
 		</stats>
 		<skills>
@@ -567,7 +567,7 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAGICAL_DEFENCE" value="63.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
@@ -581,7 +581,7 @@
 		<attributes weight="150" commission-type="EARRING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="71.0"/>
+			<stat type="MAGICAL_DEFENCE" value="91.0"/>
 			<stat type="MAX_MP" value="31.0"/>
 		</stats>
 		<skills>
@@ -595,7 +595,7 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAGICAL_DEFENCE" value="63.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
@@ -610,8 +610,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="32.0"/>
-			<stat type="MAX_MP" value="9.0"/>
+			<stat type="MAGICAL_DEFENCE" value="59.0"/>
+			<stat type="MAX_MP" value="15.0"/>
 		</stats>
 		<skills>
 			<skill id="3561" value="-1"/>  <!-- Damaged Baium's Ring -->
@@ -624,8 +624,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="40.0"/>
-			<stat type="MAX_MP" value="15.0"/>
+			<stat type="MAGICAL_DEFENCE" value="67.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3561" level="2" value="-1"/>  <!-- Damaged Baium's Ring -->
@@ -638,8 +638,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="48.0"/>
-			<stat type="MAX_MP" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="75.0"/>
+			<stat type="MAX_MP" value="27.0"/>
 		</stats>
 		<skills>
 			<skill id="3561" level="3" value="-1"/>  <!-- Damaged Baium's Ring -->
@@ -683,12 +683,12 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="MAGIC_ATTACK" value="1.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 	</weapon>
 
@@ -699,12 +699,12 @@
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
-			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="MAGIC_ATTACK" value="1.0"/>
 			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 	</weapon>
 
@@ -732,7 +732,7 @@
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAGICAL_DEFENCE" value="63.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
@@ -746,7 +746,7 @@
 		<attributes weight="150" commission-type="EARRING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="71.0"/>
+			<stat type="MAGICAL_DEFENCE" value="91.0"/>
 			<stat type="MAX_MP" value="31.0"/>
 		</stats>
 		<skills>
@@ -760,7 +760,7 @@
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAGICAL_DEFENCE" value="63.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>

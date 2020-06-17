@@ -45,6 +45,7 @@ import java.util.function.Consumer;
 import java.util.function.DoubleBinaryOperator;
 import java.util.function.Predicate;
 import java.util.function.ToDoubleFunction;
+import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
@@ -793,7 +794,7 @@ public abstract class Inventory extends ItemContainer {
         for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
-        return new LinkedList<>(paperdoll.values());
+        return paperdoll.values().stream().filter(filter).collect(Collectors.toList());
     }
 
     public double calcForEachEquippedItem(ToDoubleFunction<Item> function, double identity, DoubleBinaryOperator accumulator) {

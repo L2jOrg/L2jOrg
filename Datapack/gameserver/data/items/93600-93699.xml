@@ -244,18 +244,27 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" price="536000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="58.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93640" name="Full Plate Boots" type="NONE" body-part="FEET" icon="icon.armor_t62_b_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1200" price="358000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93641" name="Full Plate Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t62_g_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" price="358000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93642" name="Full Plate Armor" type="HEAVY" body-part="FULL_ARMOR" icon="icon.armor_t62_ul_i00">
@@ -263,6 +272,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10480" price="2090000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="239.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93643" name="Drake Leather Armor" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t45_ul_i00">
@@ -270,42 +282,65 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5800" price="1570000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="179.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93644" name="Drake Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_t45_b_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" price="358000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93645" name="Drake Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t45_g_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" price="358000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93646" name="Karmian Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t53_u_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1980" price="379000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="MAX_MP" value="225.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="60.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93647" name="Karmian Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t53_l_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="970" price="237000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="MAX_MP" value="141.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="37.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93648" name="Karmian Boots" type="NONE" body-part="FEET" icon="icon.armor_t53_b_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1230" price="126000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
+		</stats>
 	</armor>
 
 	<armor id="93649" name="Karmian Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t53_g_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="620" price="126000" />
 		<crystal type="C"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
+		</stats>
 	</armor>
 
 	<item id="93650" name="+7 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">

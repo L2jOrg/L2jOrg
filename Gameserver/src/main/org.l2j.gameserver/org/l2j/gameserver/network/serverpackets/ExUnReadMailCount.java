@@ -18,8 +18,6 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -27,17 +25,16 @@ import org.l2j.gameserver.network.ServerExPacketId;
  * @author Sdw
  */
 public class ExUnReadMailCount extends ServerPacket {
-    private final int _mailUnreadCount;
+    private final int count;
 
-    public ExUnReadMailCount(Player player) {
-        _mailUnreadCount = (int) MailManager.getInstance().getUnreadCount(player);
+    public ExUnReadMailCount(int count) {
+        this.count = count;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_UNREAD_MAIL_COUNT);
-
-        writeInt(_mailUnreadCount);
+        writeInt(count);
     }
 
 }

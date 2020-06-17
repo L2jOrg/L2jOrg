@@ -206,6 +206,10 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal />
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="47.0"/>
+			<stat type="MAX_MP" value="9.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92328" name="Orfen's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i00">
@@ -213,6 +217,10 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal />
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="71.0"/>
+			<stat type="MAX_MP" value="19.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92329" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i00">
@@ -220,6 +228,10 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal />
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="47.0"/>
+			<stat type="MAX_MP" value="9.0"/>
+		</stats>
 	</armor>
 
 	<weapon id="92330" name="Samurai Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_samurai_old_longsword_i00">
@@ -227,6 +239,13 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="156.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92331" name="Ecliptic Axe" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eclipse_axe_i00" magic="true">
@@ -234,6 +253,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="122.0"/>
+			<stat type="PHYSICAL_ATTACK" value="125.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92332" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
@@ -241,6 +268,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1720" reuse-delay="1500"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="323.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<item id="92333" name="Infinite Steel Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00">
@@ -255,6 +290,13 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2270"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="190.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92335" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i00">
@@ -262,6 +304,13 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="190.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92336" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_blink_slasher_i00">
@@ -269,6 +318,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="110.0"/>
+			<stat type="PHYSICAL_ATTACK" value="149.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92337" name="Demon's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_demons_staff_i00" magic="true">
@@ -276,6 +333,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="990"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="134.0"/>
+			<stat type="PHYSICAL_ATTACK" value="152.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92338" name="Crystal Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_crystal_dagger_i00">
@@ -283,6 +348,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="136.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92339" name="Orcish Poleaxe" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_orcish_poleaxe_i00">
@@ -290,6 +363,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1950"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="156.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92340" name="Yaksa Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_yaksa_mace_i00">
@@ -297,6 +378,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="156.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92341" name="Great Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_great_pata_i00">
@@ -304,6 +393,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1460"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="190.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="92342" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_invincible_blade_i00">
@@ -311,6 +408,14 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530"/>
 		<crystal type="C"/>
+		<stats>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="172.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="15.0"/>
+		</stats>
 	</weapon>
 
 	<item id="92343" name="+16 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
@@ -462,6 +567,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="7820" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="166.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92368" name="Blue Wolf Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t68_l_i00">
@@ -469,6 +577,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="3370" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="104.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92369" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
@@ -476,6 +587,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="580" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="66.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92370" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t68_g_i00">
@@ -483,6 +597,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="590" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="44.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92371" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t68_b_i00">
@@ -490,6 +607,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1130" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="44.0"/>
+		</stats>
 	</armor>
 
 	<item id="92372" name="+4 Blue Wolf Heavy Armor Set" type="NONE" icon="icon.armor_t68_u_i00">
@@ -503,6 +623,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5500" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="202.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92374" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
@@ -510,6 +633,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="580" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="66.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92375" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t69_g_i00">
@@ -517,6 +643,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="590" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="44.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92376" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t69_b_i00">
@@ -524,6 +653,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1130" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="44.0"/>
+		</stats>
 	</armor>
 
 	<item id="92377" name="+4 Blue Wolf Light Armor Set" type="NONE" icon="icon.armor_t69_ul_i00">
@@ -537,6 +669,10 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1920" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="MAX_MP" value="377.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="83.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92379" name="Blue Wolf Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t70_l_i00">
@@ -544,6 +680,10 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="920" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="MAX_MP" value="236.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="52.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92380" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
@@ -551,6 +691,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="580" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="66.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92381" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t70_g_i00">
@@ -558,6 +701,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="590" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="44.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92382" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t70_b_i00">
@@ -565,6 +711,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1130" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="44.0"/>
+		</stats>
 	</armor>
 
 	<item id="92383" name="+4 Blue Wolf Robe Set" type="NONE" icon="icon.armor_t70_u_i00">
@@ -578,6 +727,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="60.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92385" name="Black Ore Ring" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_black_ore_i00">
@@ -585,6 +737,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="40.0"/>
+		</stats>
 	</armor>
 
 	<armor id="92386" name="Black Ore Necklace" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_black_ore_i00">
@@ -592,6 +747,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal type="B"/>
+		<stats>
+			<stat type="MAGICAL_DEFENCE" value="81.0"/>
+		</stats>
 	</armor>
 
 	<item id="92387" name="+4 Black Ore Accessory Set" type="NONE" icon="icon.accessary_necklace_of_black_ore_i00">

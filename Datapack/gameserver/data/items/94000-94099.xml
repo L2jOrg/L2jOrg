@@ -34,114 +34,184 @@
 		<restriction/>
 		<attributes weight="1300"/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="110.0"/>
+			<stat type="PHYSICAL_ATTACK" value="149.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94006" name="Character Creation Window Ancient Sword" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_infinity_sword_i00">
 		<restriction/>
 		<attributes weight="1530"/>
 		<crystal />
+		<stats>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="PHYSICAL_ATTACK" value="172.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="15.0"/>
+		</stats>
 	</weapon>
 
 	<armor id="94007" name="Character Creation Window Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94008" name="Character Creation Window Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t901_u_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="7700" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="171.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94009" name="Character Creation Window Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t901_l_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="3320" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="107.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94010" name="Character Creation Window Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t901_g_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="580" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94011" name="Character Creation Window Boots" type="NONE" body-part="FEET" icon="icon.armor_t901_b_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1110" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
+		</stats>
 	</armor>
 
 	<weapon id="94012" name="Character Creation Window Shield" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_r110_shield">
 		<restriction/>
 		<attributes weight="1190"/>
 		<crystal />
+		<stats>
+			<stat type="SHIELD_DEFENCE" value="256.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<armor id="94013" name="Character Creation Window Leather Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94014" name="Character Creation Window Leather Armor" type="LIGHT" body-part="CHEST" icon="icon.armor_t902_u_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="4300" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="128.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94015" name="Character Creation Window Leather Leggings" type="LIGHT" body-part="LEGS" icon="icon.armor_t902_l_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1480" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="80.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94016" name="Character Creation Window Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t902_g_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="580" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94017" name="Character Creation Window Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_t902_b_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1110" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94018" name="Character Creation Window Circlet" type="NONE" body-part="HEAD" icon="icon.armor_circlet_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94019" name="Character Creation Window Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t903_u_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1860" />
 		<crystal />
+		<stats>
+			<stat type="MAX_MP" value="409.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="86.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94020" name="Character Creation Window Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t903_l_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="920" />
 		<crystal />
+		<stats>
+			<stat type="MAX_MP" value="256.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="53.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94021" name="Character Creation Window Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t903_g_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="580" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94022" name="Character Creation Window Shoes" type="NONE" body-part="FEET" icon="icon.armor_t903_b_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1130" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
+		</stats>
 	</armor>
 
 	<armor id="94023" name="Character Creation Window Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
 		<restriction/>
 		<attributes weight="1180" />
 		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
+		</stats>
 	</armor>
 
 	<item id="94024" name="Little Pig Coin Bank Lv. 2" type="NONE" icon="icon.etc_piggy_bank">
@@ -160,36 +230,54 @@
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="144"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94027" name="Emerald Weapon: Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="BranchSys3.Icon.g_beam_sword">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="106"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94028" name="Emerald Weapon: Two-handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_twohand_sword">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="209"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94029" name="Emerald Weapon: Fist Weapon" type="FIST" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_dualfist">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="152"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94030" name="Emerald Weapon: Spear" type="SPEAR" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_pole">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="205"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94031" name="Emerald Weapon: Bow" type="BOW" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_bow" mana-consume="2">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="181" reuse-delay="1500"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94032" name="Emerald Weapon Appearance" type="CROSSBOW" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_shield">
@@ -197,48 +285,72 @@
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="181"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94033" name="Emerald Weapon: One-handed Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="BranchSys3.Icon.g_beam_blunt">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="172"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94034" name="Emerald Weapon: Two-handed Blunt Weapon" type="STAFF" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_twohand_blunt">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="101"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94035" name="Emerald Weapon: One-handed Staff" type="BLUNT" body-part="RIGHT_HAND" icon="BranchSys3.Icon.g_beam_magic_twohand_blunt">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="172"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94036" name="Emerald Weapon: Two-handed Staff" type="STAFF" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_magic_twohand_blunt">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="101"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94037" name="Emerald Weapon: Dualsword" type="DUAL" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_dual">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="247"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94038" name="Emerald Weapon: Dual Dagger" type="DUAL_DAGGER" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_dualdagger">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="205"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+		</stats>
 	</weapon>
 
 	<weapon id="94039" name="Emerald Weapon: Dual Blunt Weapon" type="DUAL_BLUNT" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_dualblunt">
 		<restriction sellable="false" private-sellable="false"/>
 		<attributes weight="250"/>
 		<crystal type="B"/>
+		<stats>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+		</stats>
 	</weapon>
 
 	<armor id="94040" name="Dark Assassin Suit" type="HEAVY" body-part="ALL_DRESS" icon="icon.dark_assassin">
