@@ -34,7 +34,6 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.HtmlUtil;
@@ -319,9 +318,6 @@ public class NpcViewMod implements IBypassHandler {
 
         int leftHeight = 0;
         int rightHeight = 0;
-        final double dropAmountEffectBonus = player.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
-        final double dropRateEffectBonus = player.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
-        final double spoilRateEffectBonus = player.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
         final StringBuilder leftSb = new StringBuilder();
         final StringBuilder rightSb = new StringBuilder();
         String limitReachedMsg = "";
@@ -340,9 +336,6 @@ public class NpcViewMod implements IBypassHandler {
             {
                 rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
                 rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
-
-                // bonus spoil rate effect
-                rateChance *= spoilRateEffectBonus;
             }
             else
             {
@@ -379,11 +372,6 @@ public class NpcViewMod implements IBypassHandler {
                 {
                     rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
                 }
-
-                // bonus drop amount effect
-                rateAmount *= dropAmountEffectBonus;
-                // bonus drop rate effect
-                rateChance *= dropRateEffectBonus;
             }
 
             sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
