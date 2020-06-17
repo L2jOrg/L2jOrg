@@ -47,6 +47,7 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
@@ -484,6 +485,10 @@ public final class GameUtils {
 
     public static boolean isPlayer(WorldObject object) {
         return object instanceof Player;
+    }
+
+    public static double calcIfIsPlayer(WorldObject object, ToDoubleFunction<Player> function) {
+        return object instanceof Player player ? function.applyAsDouble(player) : 0;
     }
 
     public static boolean isCreature(WorldObject object) {

@@ -22,26 +22,24 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.falseIfNullOrElse;
 import static org.l2j.gameserver.enums.InventorySlot.CHEST;
 import static org.l2j.gameserver.enums.InventorySlot.LEGS;
+import static org.l2j.gameserver.util.GameUtils.calcIfIsPlayer;
 import static org.l2j.gameserver.util.GameUtils.isPet;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
  * @author JoeAlisson
  */
-public class PDefenseFinalizer implements IStatsFunction {
+public class PDefenseFinalizer extends AbstractDefenseFinalizer {
 
     @Override
     public double calc(Creature creature, Optional<Double> base, Stat stat) {
@@ -53,26 +51,21 @@ public class PDefenseFinalizer implements IStatsFunction {
             baseValue = pet.getPetLevelData().getPetPDef();
         }
 
-        baseValue += calcEnchantedItemBonus(creature, stat);
-
         final Inventory inv = creature.getInventory();
 
         if (nonNull(inv)) {
-            for (Item item : inv.getPaperdollItems()) {
-                baseValue += item.getTemplate().getStats(stat, 0);
-            }
-
-            if (isPlayer(creature)) {
-                final Player player = creature.getActingPlayer();
-                for (var slot : InventorySlot.armors()) {
-                    if (!inv.isPaperdollSlotEmpty(slot) || //
-                            ((slot == LEGS) && !inv.isPaperdollSlotEmpty(CHEST) && (inv.getPaperdollItem(CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR))) {
-                        final int defaultStatValue = player.getTemplate().getBaseDefBySlot(slot);
-                        baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
-                    }
+            for (var slot : InventorySlot.armors()) {
+                var item = inv.getPaperdollItem(slot);
+                if(nonNull(item)) {
+                    baseValue += item.getStats(stat, 0);
+                    baseValue -= calcIfIsPlayer(creature, baseDefBySlot(slot));
+                    baseValue += calcIfIsPlayer(creature, player -> calcEnchantDefBonus(item));
+                } else if(slot == LEGS && falseIfNullOrElse(inv.getPaperdollItem(CHEST), chest -> chest.getBodyPart() == BodyPart.FULL_ARMOR)) {
+                    baseValue -= calcIfIsPlayer(creature, baseDefBySlot(slot));
                 }
             }
         }
+
         if (creature.isRaid()) {
             baseValue *= Config.RAID_PDEFENCE_MULTIPLIER;
         }
@@ -81,11 +74,5 @@ public class PDefenseFinalizer implements IStatsFunction {
         }
 
         return defaultValue(creature, stat, baseValue);
-    }
-
-    private double defaultValue(Creature creature, Stat stat, double baseValue) {
-        final double mul = Math.max(creature.getStats().getMul(stat), 0.5);
-        final double add = creature.getStats().getAdd(stat);
-        return (baseValue * mul) + add + creature.getStats().getMoveTypeValue(stat, creature.getMoveType());
     }
 }
