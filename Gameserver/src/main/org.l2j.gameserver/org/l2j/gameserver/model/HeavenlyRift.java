@@ -33,7 +33,7 @@ public class HeavenlyRift {
 
             HeavenlyRift.getZone().forEachCreature(creature -> {
                 if(GameUtils.isPlayer(creature))
-                    ((Player) creature).teleToLocation(114298, 13343, -5104);
+                    creature.teleToLocation(114298, 13343, -5104);
                 else if(GameUtils.isNpc(creature) && creature.getId() != 30401)
                     creature.decayMe();
             });

@@ -117,13 +117,13 @@ public class Arushinai extends Folk
 
 	@Override
 	public String getHtmlPath(int npcId, int val) {
-		String filename = "";
+		String filename = "data/html/default/";
 		if(val == 1)
-			filename = getId() + "-1.htm";
+			filename += npcId + "-1.htm";
 		else if(GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) > 0)
-			filename = getId() + "-2.htm";
+			filename += npcId + "-2.htm";
 		else
-			filename = getId() + ".htm";
+			filename += npcId + ".htm";
 		return filename;
 	}
 }
