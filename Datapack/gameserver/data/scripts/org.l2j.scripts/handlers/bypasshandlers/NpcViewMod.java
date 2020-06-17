@@ -19,6 +19,7 @@
 package handlers.bypasshandlers;
 
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -34,168 +35,94 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.HtmlUtil;
 import org.l2j.gameserver.world.World;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+import static java.util.Objects.isNull;
+import static org.l2j.commons.util.Util.SPACE;
+import static org.l2j.commons.util.Util.parseNextInt;
+import static org.l2j.gameserver.util.GameUtils.doIfIsNpc;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
  * @author NosBit
+ * @author JoeAlisson
  */
-public class NpcViewMod implements IBypassHandler
-{
-    private static final String[] COMMANDS =
-            {
-                    "NpcViewMod"
-            };
+public class NpcViewMod implements IBypassHandler {
 
-    private static final int DROP_LIST_ITEMS_PER_PAGE = 10;
+    private static final Logger LOGGER = LoggerFactory.getLogger(NpcViewMod.class);
+    private static final String[] COMMANDS = { "NpcViewMod" };
+
+    private static final int DROP_LIST_ITEMS_PER_PAGE = 8;
 
     public NpcViewMod() {
         BypassHandler.getInstance().registerHandler(this);
     }
 
     @Override
-    public boolean useBypass(String command, Player player, Creature bypassOrigin)
-    {
+    public boolean useBypass(String command, Player player, Creature bypassOrigin) {
         final StringTokenizer st = new StringTokenizer(command);
         st.nextToken();
 
-        if (!st.hasMoreTokens())
-        {
+        if (!st.hasMoreTokens()) {
             LOGGER.warn("Bypass[NpcViewMod] used without enough parameters.");
             return false;
         }
 
         final String actualCommand = st.nextToken();
-        switch (actualCommand.toLowerCase())
-        {
-            case "view":
-            {
-                final WorldObject target;
-                if (st.hasMoreElements())
-                {
-                    try
-                    {
-                        target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
-                    }
-                    catch (NumberFormatException e)
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    target = player.getTarget();
-                }
-
-                final Npc npc = target instanceof Npc ? (Npc) target : null;
-                if (npc == null)
-                {
-                    return false;
-                }
-
-                sendNpcView(player, npc);
+        switch (actualCommand.toLowerCase()) {
+            case "view": {
+                int objectId = parseNextInt(st, -1);
+                final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
+                doIfIsNpc(target, npc -> sendNpcView(player, npc));
                 break;
             }
-            case "droplist":
-            {
-                if (st.countTokens() < 2)
-                {
+            case "droplist": {
+                if (st.countTokens() < 2) {
                     LOGGER.warn("Bypass[NpcViewMod] used without enough parameters.");
                     return false;
                 }
 
                 final String dropListTypeString = st.nextToken();
-                try
-                {
+                try {
                     final DropType dropListType = Enum.valueOf(DropType.class, dropListTypeString);
                     final WorldObject target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
-                    final Npc npc = target instanceof Npc ? (Npc) target : null;
-                    if (npc == null)
-                    {
+
+                    if(!(target instanceof Npc npc)) {
                         return false;
                     }
-                    final int page = st.hasMoreElements() ? Integer.parseInt(st.nextToken()) : 0;
-                    sendNpcDropList(player, npc, dropListType, page);
+                    sendNpcDropList(player, npc, dropListType, Util.parseNextInt(st, 0));
                 }
-                catch (NumberFormatException e)
-                {
-                    return false;
-                }
-                catch (IllegalArgumentException e)
-                {
-                    LOGGER.warn("Bypass[NpcViewMod] unknown drop list scope: " + dropListTypeString);
+                catch (IllegalArgumentException e) {
+                    LOGGER.warn("Bypass[NpcViewMod] unknown drop list scope: {}", dropListTypeString);
                     return false;
                 }
                 break;
             }
-            case "skills":
-            {
-                final WorldObject target;
-                if (st.hasMoreElements())
-                {
-                    try
-                    {
-                        target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
-                    }
-                    catch (NumberFormatException e)
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    target = player.getTarget();
-                }
-
-                final Npc npc = target instanceof Npc ? (Npc) target : null;
-                if (npc == null)
-                {
-                    return false;
-                }
-
-                sendNpcSkillView(player, npc);
+            case "skills": {
+                final var objectId = parseNextInt(st, -1);
+                final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
+                doIfIsNpc(target, npc -> sendNpcSkillView(player, npc));
                 break;
             }
-            case "aggrolist":
-            {
-                final WorldObject target;
-                if (st.hasMoreElements())
-                {
-                    try
-                    {
-                        target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
-                    }
-                    catch (NumberFormatException e)
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    target = player.getTarget();
-                }
-
-                final Npc npc = target instanceof Npc ? (Npc) target : null;
-                if (npc == null)
-                {
-                    return false;
-                }
-
-                sendAggroListView(player, npc);
+            case "aggrolist": {
+                final var objectId = parseNextInt(st, -1);
+                final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
+                doIfIsNpc(target, npc -> sendAggroListView(player, npc));
                 break;
             }
         }
-
         return true;
     }
 
@@ -205,8 +132,7 @@ public class NpcViewMod implements IBypassHandler
         return COMMANDS;
     }
 
-    public static void sendNpcView(Player activeChar, Npc npc)
-    {
+    private void sendNpcView(Player activeChar, Npc npc) {
         final NpcHtmlMessage html = new NpcHtmlMessage();
         html.setFile(activeChar, "data/html/mods/NpcView/Info.htm");
         html.replace("%name%", npc.getName());
@@ -214,16 +140,14 @@ public class NpcViewMod implements IBypassHandler
         html.replace("%mpGauge%", HtmlUtil.getMpGauge(250, (long) npc.getCurrentMp(), npc.getMaxMp(), false));
 
         final Spawn npcSpawn = npc.getSpawn();
-        if ((npcSpawn == null) || (npcSpawn.getRespawnMinDelay() == 0))
-        {
+        if (isNull(npcSpawn) || (npcSpawn.getRespawnMinDelay() == 0)) {
             html.replace("%respawn%", "None");
         }
         else
         {
             TimeUnit timeUnit = TimeUnit.MILLISECONDS;
             long min = Long.MAX_VALUE;
-            for (TimeUnit tu : TimeUnit.values())
-            {
+            for (TimeUnit tu : TimeUnit.values()) {
                 final long minTimeFromMillis = tu.convert(npcSpawn.getRespawnMinDelay(), TimeUnit.MILLISECONDS);
                 final long maxTimeFromMillis = tu.convert(npcSpawn.getRespawnMaxDelay(), TimeUnit.MILLISECONDS);
                 if ((TimeUnit.MILLISECONDS.convert(minTimeFromMillis, tu) == npcSpawn.getRespawnMinDelay()) && (TimeUnit.MILLISECONDS.convert(maxTimeFromMillis, tu) == npcSpawn.getRespawnMaxDelay()))
@@ -280,7 +204,7 @@ public class NpcViewMod implements IBypassHandler
         activeChar.sendPacket(html);
     }
 
-    private static void sendNpcSkillView(Player activeChar, Npc npc)
+    private void sendNpcSkillView(Player activeChar, Npc npc)
     {
         final NpcHtmlMessage html = new NpcHtmlMessage();
         html.setFile(activeChar, "data/html/mods/NpcView/Skills.htm");
@@ -354,12 +278,12 @@ public class NpcViewMod implements IBypassHandler
             sb.append("<table width=275 cellpadding=0 cellspacing=0><tr>");
             if (dropListDeath != null)
             {
-                sb.append("<td align=center><button value=\"Show Drop\" width=100 height=25 action=\"bypass NpcViewMod dropList DROP " + npc.getObjectId() + "\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+                sb.append("<td align=center><button value=\"Show Drop\" width=100 height=25 action=\"bypass NpcViewMod dropList DROP ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
             }
 
             if (dropListSpoil != null)
             {
-                sb.append("<td align=center><button value=\"Show Spoil\" width=100 height=25 action=\"bypass NpcViewMod dropList SPOIL " + npc.getObjectId() + "\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+                sb.append("<td align=center><button value=\"Show Spoil\" width=100 height=25 action=\"bypass NpcViewMod dropList SPOIL ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
             }
 
             sb.append("</tr></table>");
@@ -367,57 +291,43 @@ public class NpcViewMod implements IBypassHandler
         return sb.toString();
     }
 
-    private static void sendNpcDropList(Player activeChar, Npc npc, DropType dropType, int page)
+    private void sendNpcDropList(Player player, Npc npc, DropType dropType, int page)
     {
-        final List<DropHolder> dropList = npc.getTemplate().getDropList(dropType);
-        if (dropList == null)
-        {
+        final var dropList = npc.getTemplate().getDropList(dropType);
+        if (isNull(dropList)) {
             return;
         }
 
-        int pages = dropList.size() / DROP_LIST_ITEMS_PER_PAGE;
-        if ((DROP_LIST_ITEMS_PER_PAGE * pages) < dropList.size())
-        {
-            pages++;
-        }
+        int pages = (int) Math.ceil(dropList.size() / (double) DROP_LIST_ITEMS_PER_PAGE);
+        page = max(0, min(page, pages - 1));
 
         final StringBuilder pagesSb = new StringBuilder();
-        if (pages > 1)
-        {
+
+        if (pages > 1) {
             pagesSb.append("<table><tr>");
-            for (int i = 0; i < pages; i++)
-            {
-                pagesSb.append("<td align=center><button value=\"" + (i + 1) + "\" width=20 height=20 action=\"bypass NpcViewMod dropList " + dropType + " " + npc.getObjectId() + " " + i + "\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+            for (int i = max(0, page-3); i <= min(pages-1, page+3); i++) {
+                if(i == page) {
+                    pagesSb.append("<td width=20 height=20 align=CENTER>").append(i + 1).append("</td>");
+                } else {
+                    pagesSb.append("<td><button value=\"").append(i + 1).append("\" width=20 height=20 action=\"bypass NpcViewMod dropList ").append(dropType).append(SPACE).append(npc.getObjectId()).append(SPACE).append(i).append("\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+                }
             }
             pagesSb.append("</tr></table>");
         }
 
-        if (page >= pages)
-        {
-            page = pages - 1;
-        }
-
         final int start = page > 0 ? page * DROP_LIST_ITEMS_PER_PAGE : 0;
-
-        int end = (page * DROP_LIST_ITEMS_PER_PAGE) + DROP_LIST_ITEMS_PER_PAGE;
-        if (end > dropList.size())
-        {
-            end = dropList.size();
-        }
+        int end = min(page * DROP_LIST_ITEMS_PER_PAGE + DROP_LIST_ITEMS_PER_PAGE, dropList.size());
 
         final DecimalFormat amountFormat = new DecimalFormat("#,###");
         final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
 
         int leftHeight = 0;
         int rightHeight = 0;
-        final double dropAmountEffectBonus = activeChar.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
-        final double dropRateEffectBonus = activeChar.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
-        final double spoilRateEffectBonus = activeChar.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
         final StringBuilder leftSb = new StringBuilder();
         final StringBuilder rightSb = new StringBuilder();
         String limitReachedMsg = "";
-        for (int i = start; i < end; i++)
-        {
+
+        for (int i = start; i < end; i++) {
             final StringBuilder sb = new StringBuilder();
 
             int height = 64;
@@ -431,9 +341,6 @@ public class NpcViewMod implements IBypassHandler
             {
                 rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
                 rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
-
-                // bonus spoil rate effect
-                rateChance *= spoilRateEffectBonus;
             }
             else
             {
@@ -470,21 +377,14 @@ public class NpcViewMod implements IBypassHandler
                 {
                     rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
                 }
-
-                // bonus drop amount effect
-                rateAmount *= dropAmountEffectBonus;
-                // bonus drop rate effect
-                rateChance *= dropRateEffectBonus;
             }
 
             sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
             sb.append("<tr><td width=32 valign=top>");
-            sb.append("<button width=\"32\" height=\"32\" back=\"" + (item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon()) + "\" fore=\"" + (item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon()) + "\" itemtooltip=\"" + dropItem.getItemId() + "\">");
-            sb.append("</td><td fixwidth=300 align=center><font name=\"hs9\" color=\"CD9000\">");
-            sb.append(item.getName());
-            sb.append("</font></td></tr><tr><td width=32></td><td width=300><table width=295 cellpadding=0 cellspacing=0>");
-            sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td>");
-            sb.append("<td width=247 align=center>");
+            sb.append("<button width=\"32\" height=\"32\" itemtooltip=\"").append(dropItem.getItemId()).append("\"></td>");
+            sb.append("<td><table width=295 cellpadding=0 cellspacing=4>");
+            sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount: </font></td>");
+            sb.append("<td>");
 
             final long min = (long) (dropItem.getMin() * rateAmount);
             final long max = (long) (dropItem.getMax() * rateAmount);
@@ -500,11 +400,11 @@ public class NpcViewMod implements IBypassHandler
             }
 
             sb.append("</td></tr><tr><td width=48 align=right valign=top><font color=\"LEVEL\">Chance:</font></td>");
-            sb.append("<td width=247 align=center>");
-            sb.append(chanceFormat.format(Math.min(dropItem.getChance() * rateChance, 100)));
+            sb.append("<td width=247>");
+            sb.append(chanceFormat.format(min(dropItem.getChance() * rateChance, 100)));
             sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");
 
-            if ((sb.length() + rightSb.length() + leftSb.length()) < 16000) // limit of 32766?
+            if ((sb.length() + rightSb.length() + leftSb.length()) < 12000) // limit of 32766?
             {
                 if (leftHeight >= (rightHeight + height))
                 {
@@ -520,28 +420,21 @@ public class NpcViewMod implements IBypassHandler
             else
             {
                 limitReachedMsg = "<br><center>Too many drops! Could not display them all!</center>";
+                break;
             }
         }
 
-        final StringBuilder bodySb = new StringBuilder();
-        bodySb.append("<table><tr>");
-        bodySb.append("<td>");
-        bodySb.append(leftSb.toString());
-        bodySb.append("</td><td>");
-        bodySb.append(rightSb.toString());
-        bodySb.append("</td>");
-        bodySb.append("</tr></table>");
-
-        String html = HtmCache.getInstance().getHtm(activeChar, "data/html/mods/NpcView/DropList.htm");
+        String html = HtmCache.getInstance().getHtm(player, "data/html/mods/NpcView/DropList.htm");
         if (html == null)
         {
-            LOGGER.warn(NpcViewMod.class.getSimpleName() + ": The html file data/html/mods/NpcView/DropList.htm could not be found.");
+            LOGGER.warn("The html file data/html/mods/NpcView/DropList.htm could not be found.");
             return;
         }
         html = html.replaceAll("%name%", npc.getName());
         html = html.replaceAll("%dropListButtons%", getDropListButtons(npc));
         html = html.replaceAll("%pages%", pagesSb.toString());
-        html = html.replaceAll("%items%", bodySb.toString() + limitReachedMsg);
-        GameUtils.sendCBHtml(activeChar, html);
+        String bodySb = "<table><tr><td>" + leftSb.toString() + "</td><td>" + rightSb.toString() + "</td></tr></table>";
+        html = html.replaceAll("%items%", bodySb + limitReachedMsg);
+        GameUtils.sendCBHtml(player, html);
     }
 }

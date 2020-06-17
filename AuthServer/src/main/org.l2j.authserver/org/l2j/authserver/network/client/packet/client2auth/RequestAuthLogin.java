@@ -88,7 +88,7 @@ public class RequestAuthLogin extends AuthClientPacket {
             password = new String(decAuthData, 0x5C, 0x1F).trim();
         } else {
             user = new String(decUserData, 0x5E, 0xE).trim().toLowerCase();
-            password = new String(decUserData, 0x6C, 0x1F).trim();
+            password = new String(decUserData, 0x6C, 0x14).trim();
         }
 
         AuthController.getInstance().authenticate(client, user, password);
