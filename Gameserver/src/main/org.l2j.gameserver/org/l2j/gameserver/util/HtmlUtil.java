@@ -161,29 +161,17 @@ public class HtmlUtil {
     private static String getGauge(int width, long current, long max, boolean displayAsPercentage, String backgroundImage, String image, long imageHeight, long top) {
         current = Math.min(current, max);
         final StringBuilder sb = new StringBuilder();
-        sb.append("<table width=");
-        sb.append(width);
-        sb.append(" cellpadding=0 cellspacing=0>");
-        sb.append("<tr>");
-        sb.append("<td background=\"");
-        sb.append(backgroundImage);
-        sb.append("\">");
-        sb.append("<img src=\"");
-        sb.append(image);
-        sb.append("\" width=");
-        sb.append((long) (((double) current / max) * width));
-        sb.append(" height=");
-        sb.append(imageHeight);
-        sb.append(">");
-        sb.append("</td>");
-        sb.append("</tr>");
+        sb.append("<table width=").append(width).append(" cellpadding=0 cellspacing=0>");
+
+        sb.append("<tr>").append("<td background=\"").append(backgroundImage).append("\">");
+        sb.append("<img src=\"").append(image).append("\" width=").append(current / max * width);
+        sb.append(" height=").append(imageHeight).append("></td></tr>");
+
         sb.append("<tr>");
         sb.append("<td align=center>");
-        sb.append("<table cellpadding=0 cellspacing=");
-        sb.append(top);
-        sb.append(">");
-        sb.append("<tr>");
-        sb.append("<td>");
+        sb.append("<table cellpadding=0 cellspacing=").append(top).append(">");
+
+        sb.append("<tr><td>");
         if (displayAsPercentage) {
             sb.append("<table cellpadding=0 cellspacing=2>");
             sb.append("<tr><td>");
@@ -194,26 +182,12 @@ public class HtmlUtil {
             final int tdWidth = (width - 10) / 2;
             sb.append("<table cellpadding=0 cellspacing=0>");
             sb.append("<tr>");
-            sb.append("<td width=");
-            sb.append(tdWidth);
-            sb.append(" align=right>");
-            sb.append(current);
-            sb.append("</td>");
+            sb.append("<td width=").append(tdWidth).append(" align=right>").append(current).append("</td>");
             sb.append("<td width=10 align=center>/</td>");
-            sb.append("<td width=");
-            sb.append(tdWidth);
-            sb.append(">");
-            sb.append(max);
-            sb.append("</td>");
-            sb.append("</tr>");
+            sb.append("<td width=").append(tdWidth).append(">").append(max).append("</td>").append("</tr>");
             sb.append("</table>");
         }
-        sb.append("</td>");
-        sb.append("</tr>");
-        sb.append("</table>");
-        sb.append("</td>");
-        sb.append("</tr>");
-        sb.append("</table>");
+        sb.append("</td></tr></table></td></tr></table>");
         return sb.toString();
     }
 }
