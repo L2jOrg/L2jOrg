@@ -1,4 +1,4 @@
-package ai.areas.TowerOfInsolence.HeavenlyRift;
+package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.actor.instance.Folk;
@@ -10,10 +10,10 @@ import java.util.StringTokenizer;
 /**
  * @reworked by Thoss
  */
-public class TowerInstance extends Folk {
+public class Tower extends Folk {
 	private static int[] ITEM_REWARD = {49764, 49765};
 
-	public TowerInstance(NpcTemplate template) {
+	public Tower(NpcTemplate template) {
 		super(template);
 	}
 
