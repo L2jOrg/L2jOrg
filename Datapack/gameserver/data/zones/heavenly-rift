@@ -1,0 +1,12 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <zone name="[heavenly_rift]" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="10800" max-z="12000">
+            <point x="114169" y="13781"/>
+            <point x="112353" y="15581"/>
+            <point x="111219" y="15072"/>
+            <point x="111584" y="14238"/>
+            <point x="112815" y="12991"/>
+            <point x="113640" y="12642"/>
+        </polygon>
+    </zone>
+</list>
