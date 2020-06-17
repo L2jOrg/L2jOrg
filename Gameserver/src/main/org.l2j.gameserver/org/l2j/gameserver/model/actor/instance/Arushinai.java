@@ -12,11 +12,11 @@ import org.l2j.gameserver.util.GameUtils;
 import java.util.StringTokenizer;
 
 /**
- * @reworked by Bonux
+ * @reworked by Thoss
  */
-public class ArushinaiInstance extends Folk
+public class Arushinai extends Folk
 {
-	public ArushinaiInstance(NpcTemplate template)
+	public Arushinai(NpcTemplate template)
 	{
 		super(template);
 	}

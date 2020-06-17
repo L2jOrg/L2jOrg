@@ -14,11 +14,11 @@ import java.util.StringTokenizer;
 /**
  * @reworked by Thoss
  */
-public class DimensionalVortexInstance extends Folk
+public class DimensionalVortex extends Folk
 {
 	private static final int ITEM_ID = 49759;
 
-	public DimensionalVortexInstance(NpcTemplate template)
+	public DimensionalVortex(NpcTemplate template)
 	{
 		super(template);
 	}
@@ -73,6 +73,7 @@ public class DimensionalVortexInstance extends Folk
 					{
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 						sm.addPcName(partyMember);
+						player.sendPacket(sm);
 						party.broadcastToPartyMembers(player, sm);
 						return;
 					}
