@@ -63,7 +63,7 @@ public final class MapRegionManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(MapRegionManager.class);
 
     private final Map<String, MapRegion> regions = new HashMap<>();
-    private final String defaultRespawn = "talking-island";
+    private final String defaultRespawn = "giran_castle_town";
 
     private MapRegionManager() {
     }
