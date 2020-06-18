@@ -47,8 +47,7 @@ public class DimensionalVortex extends Folk {
 		if(cmd.equals("tryenter")) {
 			if(player.getInventory().getInventoryItemCount(ITEM_ID, -1) >= 1) {
 				if(isBusy()) {
-					//TODO: show busy window
-					//showBusyWindow(player);
+					Arushinai.showBusyWindow(player, this);
 					return;
 				}
 

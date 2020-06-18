@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.network.NpcStringId;
+import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.util.GameUtils;
 
 
@@ -40,11 +42,8 @@ public class Tower extends AbstractNpcAI {
 
     @Override
     public void onCreatureKill(Creature creature, Creature killer) {
-
-        //TODO: Tower dies, so instance is failed. Send Message ?
-
+        HeavenlyRift.getZone().broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED, 2, 5000));
         HeavenlyRift.getZone().forEachCreature(riftMonster -> riftMonster.decayMe(), riftMonster -> GameUtils.isMonster(riftMonster) && riftMonster.getId() == 20139 && !riftMonster.isDead());
-
         GlobalVariablesManager.getInstance().set("heavenly_rift_complete", GlobalVariablesManager.getInstance().getInt("heavenly_rift_level", 0));
         GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
         GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 0);

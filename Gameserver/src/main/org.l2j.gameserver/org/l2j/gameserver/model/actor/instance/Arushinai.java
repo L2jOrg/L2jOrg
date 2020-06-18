@@ -22,9 +22,12 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.HeavenlyRift;
 import org.l2j.gameserver.model.Party;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
@@ -56,7 +59,7 @@ public class Arushinai extends Folk {
 				}
 			}
 			if(GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) == 0) {
-				int riftLevel = Rnd.get(2, 2);
+				int riftLevel = Rnd.get(1, 3);
 				GlobalVariablesManager.getInstance().set("heavenly_rift_level", riftLevel);
 				GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 4);
 				switch(riftLevel) {
@@ -74,8 +77,7 @@ public class Arushinai extends Folk {
 				}
 			}	
 			else {
-				// TODO: busy window
-				//showBusyWindow(player);
+				showBusyWindow(player, this);
 			}
 		} else if(cmd.equals("finish")) {
 			if(player.isInParty())
@@ -107,12 +109,18 @@ public class Arushinai extends Folk {
 					player.teleToLocation(114264, 13352, -5104);
 				}
 				else {
-					// TODO: Add message.
+					player.sendPacket(SystemMessageId.YOU_ARE_NOT_IN_A_PARTY);
+					return;
 				}
 			}
 		}		
 		else
 			super.onBypassFeedback(player, command);
+	}
+
+	public static void showBusyWindow(Player player, Npc npc) {
+		player.sendPacket(new NpcHtmlMessage("<html><body>" + npc.getName() + ":<br>Rift are already in progress! Come back later.</body></html>"));
+		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 
 	@Override

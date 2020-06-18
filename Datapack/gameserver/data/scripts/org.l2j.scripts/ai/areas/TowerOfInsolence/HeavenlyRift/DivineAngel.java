@@ -37,7 +37,7 @@ public class DivineAngel extends AbstractNpcAI {
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
         if (GlobalVariablesManager.getInstance().getInt("heavenly_rift_level", 0) > 1) {
-            if (HeavenlyRift.getAliveNpcCount(npc.getId()) == 0) { //Last
+            if (HeavenlyRift.getAliveNpcCount(npc.getId()) == 0) {
                 GlobalVariablesManager.getInstance().set("heavenly_rift_complete", GlobalVariablesManager.getInstance().getInt("heavenly_rift_level", 0));
                 GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
                 GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 1);
