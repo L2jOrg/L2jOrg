@@ -5503,7 +5503,7 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+            <stat-modify mode="DIFF" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
                 <power initial="40.0">
                     <value level="2">50.0</value>
                 </power>
