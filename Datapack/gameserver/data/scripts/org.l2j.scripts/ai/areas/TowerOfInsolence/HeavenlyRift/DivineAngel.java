@@ -30,7 +30,7 @@ import org.l2j.gameserver.util.GameUtils;
 
 public class DivineAngel extends AbstractNpcAI {
     public DivineAngel() {
-        addNpcHateId(20139);
+        addSpawnId(20139);
         addKillId(20139);
     }
 
