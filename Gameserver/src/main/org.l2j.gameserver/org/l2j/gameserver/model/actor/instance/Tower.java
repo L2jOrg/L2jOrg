@@ -21,7 +21,6 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;
@@ -29,17 +28,17 @@ import java.util.StringTokenizer;
 /**
  * @reworked by Thoss
  */
-public class Tower extends Folk {
+public class Tower extends FriendlyNpc {
 	private static int[] ITEM_REWARD = {49764, 49765};
-	private Player talkingPlayer;
+	private Player _talkingPlayer;
 
 	public Tower(NpcTemplate template) {
 		super(template);
-		setIsInvul(false);
 	}
 
 	@Override
 	public void onBypassFeedback(Player player, String command) {
+		_talkingPlayer = player;
 		StringTokenizer st = new StringTokenizer(command, "_");
 		String cmd = st.nextToken();
 		if (cmd.equals("getreward")) {
@@ -54,24 +53,28 @@ public class Tower extends Folk {
 							partyMember.addItem("TowerInstance", r, 1, this, true);
 					}
 				}
-				showChatWindow(player, "default/" + getId() + "-3.htm");
+				showChatWindow(player, "data/html/default/" + getId() + "-3.htm");
 			}
 		} else
 			super.onBypassFeedback(player, command);
 	}
 
 	@Override
-	public void showChatWindow(Player player) {
-		talkingPlayer = player;
-		super.showChatWindow(player);
+	public int getHateBaseAmount() {
+		return 1000;
 	}
 
 	@Override
+	public void showChatWindow(Player player, int val)  {
+		_talkingPlayer = player;
+		super.showChatWindow(player, val);
+	}
 
+	@Override
 	public String getHtmlPath(int npcId, int val) {
 		String filename = "data/html/default/";
 
-		if (!talkingPlayer.isGM() && (!talkingPlayer.isInParty() || !talkingPlayer.getParty().isLeader(talkingPlayer)))
+		if (!_talkingPlayer.isGM() && (!_talkingPlayer.isInParty() || !_talkingPlayer.getParty().isLeader(_talkingPlayer)))
 			filename += npcId + "-4.htm";
 		else if (!isDead() && GlobalVariablesManager.getInstance().getInt("heavenly_rift_complete", 0) == 2) {
 			if (GlobalVariablesManager.getInstance().getInt("heavenly_rift_reward", 0) == 1)
@@ -82,17 +85,5 @@ public class Tower extends Folk {
 			filename += npcId + "-1.htm";
 
 		return filename;
-	}
-
-	@Override
-	public boolean isAutoAttackable(Creature attacker) {
-		if(GameUtils.isPlayer(attacker) || GameUtils.isSummon(attacker) || GameUtils.isServitor(attacker))
-			return false;
-		return true;
-	}
-
-	@Override
-	public boolean isDebuffBlocked() {
-		return false;
 	}
 }

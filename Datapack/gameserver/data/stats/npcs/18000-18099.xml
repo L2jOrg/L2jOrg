@@ -185,7 +185,7 @@
             <hitTime>520</hitTime>
             <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status undying="false" attackable="true"/>
+        <status undying="false" attackable="true" canMove="false"/>
         <skillList>
             <skill id="4273" level="3"/> <!-- Resist Daggers/Rapier Weapon -->
             <skill id="4274" level="1"/> <!-- Blunt Weapon Weak Point -->
