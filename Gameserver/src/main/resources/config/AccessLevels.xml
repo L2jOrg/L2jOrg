@@ -33,7 +33,6 @@
 	<admin command="admin_set_mod" accessLevel="100" />
 	<admin command="admin_saveolymp" accessLevel="100" />
 	<admin command="admin_sethero" accessLevel="100" />
-	<admin command="admin_settruehero" accessLevel="100" />
 	<admin command="admin_givehero" accessLevel="100" confirmDlg="true" />
 	<admin command="admin_endolympiad" accessLevel="100" confirmDlg="true" />
 	<admin command="admin_setconfig" accessLevel="100" />

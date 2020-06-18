@@ -66,6 +66,7 @@ public class Tower extends Folk {
 	}
 
 	@Override
+
 	public String getHtmlPath(int npcId, int val) {
 		String filename = "data/html/default/";
 

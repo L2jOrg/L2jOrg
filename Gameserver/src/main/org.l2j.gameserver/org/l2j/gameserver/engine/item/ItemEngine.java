@@ -223,7 +223,6 @@ public final class ItemEngine extends GameXmlReader {
         var attr = node.getAttributes();
         item.setFreightable(parseBoolean(attr, "freightable"));
         item.setOlympiadRestricted(parseBoolean(attr, "olympiad-restricted"));
-        item.setCocRestricted(parseBoolean(attr, "coc-restricted"));
         item.setStackable(parseBoolean(attr, "stackable"));
         item.setDestroyable(parseBoolean(attr, "destroyable"));
         item.setTradable(parseBoolean(attr, "tradable"));

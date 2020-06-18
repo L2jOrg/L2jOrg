@@ -667,7 +667,7 @@
 
 	<item id="29652" name="Major Healing Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2032" value="-1"/>  <!-- Greater HP Potion -->
@@ -676,7 +676,7 @@
 
 	<item id="29653" name="Haste Potion (Novice)" type="POTION" icon="icon.etc_reagent_green_i00">
 	<!-- Magical potion that increases Atk. Spd. -->
-		<restriction coc-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2012" value="-1"/>  <!-- Haste Potion -->

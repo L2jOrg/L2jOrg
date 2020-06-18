@@ -340,7 +340,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeByte(0x01);
             writeInt(0x00);
             writeByte(0x00);
-            writeByte(player.isTrueHero() ? 100 : 0x00);
+            writeByte(0x00); // ceremony of chaos true hero
         }
 
         if (containsMask(UserInfoType.SPIRITS)) {

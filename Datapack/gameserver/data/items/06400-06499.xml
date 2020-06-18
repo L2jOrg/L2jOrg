@@ -41,7 +41,7 @@
 
 	<item id="6406" name="Firecracker" type="NONE" icon="icon.etc_small_ultra_bomb_i00">
 	<!-- Explosive device that brilliantly lights up the sky. -->
-		<restriction coc-restricted="true" stackable="true"/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2024" value="-1"/>  <!-- Firecracker -->
@@ -50,7 +50,7 @@
 
 	<item id="6407" name="Large Firecracker" type="NONE" icon="icon.etc_ultra_bomb_i00">
 	<!-- Large explosive device that ignites to light up the sky. -->
-		<restriction coc-restricted="true" stackable="true"/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2025" value="-1"/>  <!-- Large Firecracker -->

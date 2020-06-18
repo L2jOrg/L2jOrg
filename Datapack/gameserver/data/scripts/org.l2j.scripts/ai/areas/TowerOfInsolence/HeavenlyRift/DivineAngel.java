@@ -24,14 +24,13 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.HeavenlyRift;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.util.GameUtils;
 
 public class DivineAngel extends AbstractNpcAI {
     public DivineAngel() {
-        addSpawnId(20139);
+        addNpcHateId(20139);
         addKillId(20139);
     }
 

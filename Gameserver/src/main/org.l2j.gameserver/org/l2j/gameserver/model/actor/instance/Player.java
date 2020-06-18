@@ -65,7 +65,6 @@ import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SubClass;
-import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
@@ -88,7 +87,6 @@ import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
-import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -987,7 +985,6 @@ public final class Player extends Playable {
     private PreparedMultisellListHolder _currentMultiSell = null;
     private boolean _noble = false;
     private boolean _hero = false;
-    private boolean _trueHero = false;
 
 
     /**
@@ -1344,19 +1341,6 @@ public final class Player extends Playable {
                 for (Summon summon : player.getServitors().values()) {
                     summon.setOwner(player);
                 }
-            }
-
-            // CoC Monthly winner. (True Hero)
-            final int trueHeroId = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TRUE_HERO, 0);
-            if (trueHeroId == player.getObjectId()) {
-                if (!GlobalVariablesManager.getInstance().getBoolean(GlobalVariablesManager.COC_TRUE_HERO_REWARDED, true)) {
-                    GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TRUE_HERO_REWARDED, true);
-                    player.addItem("CoC-Hero", 35565, 1, player, true); // Mysterious Belt
-                    player.addItem("CoC-Hero", 35564, 1, player, true); // Ruler's Authority
-                    player.setFame(player.getFame() + 5000);
-                    player.sendMessage("You have been rewarded with 5.000 fame points.");
-                }
-                player.setTrueHero(true);
             }
 
             // Recalculate all stats
@@ -7524,7 +7508,7 @@ public final class Player extends Playable {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL;
             return false;
         }
-        if (_inOlympiadMode || isOnEvent(CeremonyOfChaosEvent.class)) {
+        if (_inOlympiadMode) {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS;
             return false;
         }
@@ -10557,18 +10541,6 @@ public final class Player extends Playable {
         getVariables().set(PlayerVariables.WORLD_CHAT_VARIABLE_NAME, timesUsed);
     }
 
-    public void prohibiteCeremonyOfChaos() {
-        if (!PunishmentManager.getInstance().hasPunishment(getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.COC_BAN)) {
-            PunishmentManager.getInstance().startPunishment(new PunishmentTask(getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.COC_BAN, 0, "", getClass().getSimpleName()));
-            final int penalties = getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES, 0);
-            getVariables().set(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES, penalties + 1);
-        }
-    }
-
-    public boolean isCeremonyOfChaosProhibited() {
-        return PunishmentManager.getInstance().hasPunishment(getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.COC_BAN) || (getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES, 0) >= 30);
-    }
-
     /**
      * @return Side of the player.
      */
@@ -10875,14 +10847,6 @@ public final class Player extends Playable {
 
     public GroupType getGroupType() {
         return isInParty() ? (_party.isInCommandChannel() ? GroupType.COMMAND_CHANNEL : GroupType.PARTY) : GroupType.NONE;
-    }
-
-    public boolean isTrueHero() {
-        return _trueHero;
-    }
-
-    public void setTrueHero(boolean val) {
-        _trueHero = val;
     }
 
     @Override

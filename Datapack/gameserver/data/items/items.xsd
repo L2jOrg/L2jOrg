@@ -139,7 +139,6 @@
         <xs:attribute name="commissionable" type="xs:boolean" default="true"/>
         <xs:attribute name="mailable" type="xs:boolean" default="true"/>
         <xs:attribute name="olympiad-restricted" type="xs:boolean" default="false"/>
-        <xs:attribute name="coc-restricted" type="xs:boolean" default="false"/>
         <xs:attribute name="hero" type="xs:boolean" default="false"/>
     </xs:complexType>
 

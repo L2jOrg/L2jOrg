@@ -127,8 +127,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
         //@formatter:on
     }
 
-    /* ********************** */
-
     public IEventState getState() {
         return _state.get();
     }
