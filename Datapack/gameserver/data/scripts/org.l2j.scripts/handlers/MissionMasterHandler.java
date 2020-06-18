@@ -37,7 +37,6 @@ public class MissionMasterHandler {
         engine.registerHandler("quest", QuestMissionHandler::new);
         engine.registerHandler("olympiad", OlympiadMissionHandler::new);
         engine.registerHandler("siege", SiegeMissionHandler::new);
-        engine.registerHandler("ceremonyofchaos", CeremonyOfChaosMissionHandler::new);
         engine.registerHandler("boss", BossMissionHandler::new);
         engine.registerHandler("fishing", FishingMissionHandler::new);
         engine.registerHandler("clan", ClanMissionHandler::new);

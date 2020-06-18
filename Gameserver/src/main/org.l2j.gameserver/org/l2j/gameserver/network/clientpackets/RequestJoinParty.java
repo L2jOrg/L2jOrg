@@ -24,7 +24,6 @@ import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
-import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AskJoinParty;
 import org.l2j.gameserver.world.World;
@@ -64,11 +63,6 @@ public final class RequestJoinParty extends ClientPacket {
 
         if (target.isPartyBanned()) {
             requestor.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_CANNOT_JOIN_A_PARTY).addString(name));
-            return;
-        }
-
-        if (requestor.isOnEvent(CeremonyOfChaosEvent.class)) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_INVITE_A_FRIEND_OR_PARTY_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
             return;
         }
 

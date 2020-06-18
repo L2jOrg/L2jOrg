@@ -85,12 +85,9 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.luckygame;
     exports org.l2j.gameserver.world.zone.form;
     exports org.l2j.gameserver.model.matching;
-    exports org.l2j.gameserver.model.events.impl.ceremonyofchaos;
-    exports org.l2j.gameserver.model.ceremonyofchaos;
     exports org.l2j.gameserver.network.serverpackets.fishing;
     exports org.l2j.gameserver.model.cubic;
     exports org.l2j.gameserver.model.actor.request;
-    exports org.l2j.gameserver.network.serverpackets.appearance;
     exports org.l2j.gameserver.network.serverpackets.attributechange;
     exports org.l2j.gameserver.model.actor.tasks.player;
     exports org.l2j.gameserver.model.variables;

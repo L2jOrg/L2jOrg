@@ -884,7 +884,7 @@
 
 	<item id="49488" name="Major Warrior Healing Potion" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magic potion that quickly restores HP. Duration: 15 sec.  -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" reuse-delay="10000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="39069" value="-1"/>  <!-- Warrior's Major HP Potion -->

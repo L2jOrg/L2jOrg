@@ -23,7 +23,6 @@ import org.l2j.gameserver.handler.ChatHandler;
 import org.l2j.gameserver.handler.IChatHandler;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerChat;
@@ -107,11 +106,6 @@ public final class Say2 extends ClientPacket {
 
         if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player)) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
-            return;
-        }
-
-        if (player.isOnEvent(CeremonyOfChaosEvent.class)) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_IN_THE_CEREMONY_OF_CHAOS);
             return;
         }
 

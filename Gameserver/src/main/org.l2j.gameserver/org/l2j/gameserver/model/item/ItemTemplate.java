@@ -25,7 +25,6 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.events.ListenersContainer;
@@ -569,11 +568,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
             return false;
         }
 
-        if (cocRestricted && (isPlayer(activeChar) && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class)))) {
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ITEM_IN_THE_TOURNAMENT);
-            return false;
-        }
-
         if (!isConditionAttached()) {
             return true;
         }
@@ -623,13 +617,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
     public boolean isOlyRestrictedItem() {
         return olympiadRestricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(id);
-    }
-
-    /**
-     * @return {@code true} if item cannot be used in Ceremony of Chaos games.
-     */
-    public boolean isCocRestrictedItem() {
-        return cocRestricted;
     }
 
     public boolean isForNpc() {
@@ -732,10 +719,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
     public void setOlympiadRestricted(boolean olympiadRestricted) {
         this.olympiadRestricted = olympiadRestricted;
-    }
-
-    public void setCocRestricted(Boolean cocRestricted) {
-        this.cocRestricted = cocRestricted;
     }
 
     public void setStackable(boolean stackable) {

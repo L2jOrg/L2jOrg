@@ -409,7 +409,7 @@
 
 	<item id="5591" name="CP Potion" type="POTION" icon="icon.etc_cp_potion_i00">
 	<!-- Restores CP by 50. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="25" price="200" commission-type="POTION" reuse-delay="500" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2166" value="-1"/>  <!-- CP Potion -->
@@ -418,7 +418,7 @@
 
 	<item id="5592" name="Greater CP Potion" type="POTION" icon="icon.etc_cp_potion_i01">
 	<!-- Restores CP by 200. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="100" price="500" commission-type="POTION" reuse-delay="500" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2166" level="2" value="-1"/>  <!-- CP Potion -->

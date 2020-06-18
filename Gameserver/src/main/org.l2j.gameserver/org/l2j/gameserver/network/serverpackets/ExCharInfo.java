@@ -25,14 +25,12 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.enums.InventorySlot.*;
 
@@ -182,8 +180,7 @@ public class ExCharInfo extends ServerPacket {
         writeInt(abnormalVisualEffects.size());
         abnormalVisualEffects.forEach(effect -> writeShort(effect.getClientId()));
 
-        var member = computeIfNonNull(player.getEvent(CeremonyOfChaosEvent.class), ev -> ev.getMember(player.getObjectId()));
-        writeByte(nonNull(member) ? member.getPosition() : player.isTrueHero() ? 100 : 0);
+        writeByte(0); // ceremony of chaos position
         writeByte(player.isHairAccessoryEnabled());
         writeByte(player.getAbilityPointsUsed());
         writeInt(0x00); // cursed weapon equipped id

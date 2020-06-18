@@ -22,7 +22,6 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -52,9 +51,6 @@ public class ConditionPlayerCanSwitchSubclass extends Condition {
             canSwitchSub = false;
         } else if (player.getWeightPenalty() >= 2) {
             player.sendPacket(SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_WHILE_YOU_ARE_OVER_YOUR_WEIGHT_LIMIT);
-            canSwitchSub = false;
-        } else if (player.isOnEvent(CeremonyOfChaosEvent.class)) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERING_FOR_THE_CEREMONY_OF_CHAOS);
             canSwitchSub = false;
         } else if (player.isOnEvent()) {
             player.sendMessage("You cannot change your subclass while registered in an event.");

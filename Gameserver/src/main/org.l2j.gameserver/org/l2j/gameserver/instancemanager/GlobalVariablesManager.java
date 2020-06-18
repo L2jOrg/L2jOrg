@@ -34,13 +34,9 @@ import java.util.Map.Entry;
 public final class GlobalVariablesManager extends AbstractVariables {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GlobalVariablesManager.class);
-    // Public variable names
-    public static final String COC_TOP_MARKS = "COC_TOP_MARKS";
-    public static final String COC_TOP_MEMBER = "COC_TOP_MEMBER";
-    public static final String COC_TRUE_HERO = "COC_TRUE_HERO";
-    public static final String COC_TRUE_HERO_REWARDED = "COC_TRUE_HERO_REWARDED";
+
     public static final String MONSTER_ARENA_VARIABLE = "MA_C";
-    // SQL Queries.
+
     private static final String SELECT_QUERY = "SELECT * FROM global_variables";
     private static final String DELETE_QUERY = "DELETE FROM global_variables";
     private static final String INSERT_QUERY = "INSERT INTO global_variables (var, value) VALUES (?, ?)";

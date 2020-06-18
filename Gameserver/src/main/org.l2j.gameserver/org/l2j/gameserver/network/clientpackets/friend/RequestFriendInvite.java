@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -64,12 +63,6 @@ public final class RequestFriendInvite extends ClientPacket {
         // Target is in olympiad.
         if (player.isInOlympiadMode() || friend.isInOlympiadMode()) {
             player.sendPacket(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS);
-            return;
-        }
-
-        // Cannot request friendship in Ceremony of Chaos event.
-        if (player.isOnEvent(CeremonyOfChaosEvent.class)) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_INVITE_A_FRIEND_OR_PARTY_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
             return;
         }
 

@@ -180,7 +180,7 @@
 
 	<item id="5234" name="Mysterious Potion" type="POTION" icon="icon.etc_lesser_potion_clear_i00">
 	<!-- Legend says that if you drink this potion your head will grow larger! Believe it if you will! -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="10000" commission-type="SCROLL_OTHER" reuse-delay="500" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2103" value="-1"/>  <!-- Mysterious Potion -->
@@ -189,7 +189,7 @@
 
 	<item id="5235" name="Facelifting Potion - A - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2122" value="-1"/>  <!-- Facelifting Potion -->
@@ -198,7 +198,7 @@
 
 	<item id="5236" name="Facelifting Potion - B - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2123" value="-1"/>  <!-- Facelifting Potion -->
@@ -207,7 +207,7 @@
 
 	<item id="5237" name="Facelifting Potion - C - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2124" value="-1"/>  <!-- Facelifting Potion -->
@@ -216,7 +216,7 @@
 
 	<item id="5238" name="Dye Potion - A - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2125" value="-1"/>  <!-- Dye Potion -->
@@ -225,7 +225,7 @@
 
 	<item id="5239" name="Dye Potion - B - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2126" value="-1"/>  <!-- Dye Potion -->
@@ -234,7 +234,7 @@
 
 	<item id="5240" name="Dye Potion - C - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2127" value="-1"/>  <!-- Dye Potion -->
@@ -243,7 +243,7 @@
 
 	<item id="5241" name="Dye Potion - D - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type D. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2128" value="-1"/>  <!-- Dye Potion -->
@@ -252,7 +252,7 @@
 
 	<item id="5242" name="Hair Style Change Potion - A" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2129" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -261,7 +261,7 @@
 
 	<item id="5243" name="Hair Style Change Potion - B" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2130" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -270,7 +270,7 @@
 
 	<item id="5244" name="Hair Style Change Potion - C" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2131" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -279,7 +279,7 @@
 
 	<item id="5245" name="Hair Style Change Potion - D" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2132" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -288,7 +288,7 @@
 
 	<item id="5246" name="Hair Style Change Potion - E" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type E. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2133" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -297,7 +297,7 @@
 
 	<item id="5247" name="Hair Style Change Potion - F" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type F. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2134" value="-1"/>  <!-- Hair Style Change Potion -->
@@ -306,7 +306,7 @@
 
 	<item id="5248" name="Hair Style Change Potion - G" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Beauty potion that changes one's hair style to Type G. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
-		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true" stackable="true"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2135" value="-1"/>  <!-- Hair Style Change Potion -->

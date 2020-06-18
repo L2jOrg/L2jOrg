@@ -269,9 +269,6 @@ public class Shutdown extends Thread {
         Olympiad.getInstance().saveOlympiadStatus();
         LOGGER.info("Olympiad System: Data saved.");
 
-        CeremonyOfChaosManager.getInstance().stopScheduler();
-        LOGGER.info("CeremonyOfChaosManager: Scheduler stopped.");
-
         Hero.getInstance().shutdown();
         LOGGER.info("Hero System: Data saved.");
 
