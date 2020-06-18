@@ -32,9 +32,6 @@ public final class AllyLeave extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
 
         if (player.getClan() == null) {
             player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);

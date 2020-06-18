@@ -44,9 +44,7 @@ public final class CannotMoveAnymoreInVehicle extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
+
         if (player.isInBoat()) {
             if (player.getBoat().getObjectId() == _boatId) {
                 player.setInVehiclePosition(new Location(_x, _y, _z));

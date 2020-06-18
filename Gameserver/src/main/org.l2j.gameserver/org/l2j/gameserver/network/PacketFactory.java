@@ -21,6 +21,7 @@ package org.l2j.gameserver.network;
 import io.github.joealisson.mmocore.PacketBuffer;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
+import java.util.EnumSet;
 import java.util.function.Supplier;
 
 interface PacketFactory {
@@ -36,7 +37,7 @@ interface PacketFactory {
 
     ClientPacket newIncomingPacket();
 
-    default ConnectionState[] getConnectionStates() {
+    default EnumSet<ConnectionState> getConnectionStates() {
         return ConnectionState.EMPTY;
     }
 
