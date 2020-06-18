@@ -19039,8 +19039,7 @@ public final class NpcStringId {
     public static NpcStringId DESTROY_THE_REPAIR_ROBOT_ATTACKING_THE_BROKEN_TOAD_CANNON;
     @ClientString(id = 1802033, message = "Repair the Repair Robot repairing the Broken Toad Cannon!")
     public static NpcStringId REPAIR_THE_REPAIR_ROBOT_REPAIRING_THE_BROKEN_TOAD_CANNON;
-    @ClientString(id = 1802034, message = "You have failed.")
-    public static NpcStringId YOU_HAVE_FAILED;
+
     @ClientString(id = 1802035, message = "The Dark Raider is attacking the Stone Gathering Robot(s)!")
     public static NpcStringId THE_DARK_RAIDER_IS_ATTACKING_THE_STONE_GATHERING_ROBOT_S;
     @ClientString(id = 1802036, message = "Use the Multi Hammer Skill to repair the Stone Gathering Robot(s)!")
@@ -24740,6 +24739,9 @@ public final class NpcStringId {
 
     @ClientString(id = 17178347, message = "Can't die in a place like this!!")
     public static NpcStringId CAN_T_DIE_IN_A_PLACE_LIKE_THIS;
+
+    @ClientString(id = 1802034, message = "You have failed.")
+    public static NpcStringId YOU_HAVE_FAILED;
 
     @ClientString(id = 1803286, message = "Divine Angels are nowhere to be seen! I want to talk to the party leader!")
     public static NpcStringId DIVINE_ANGELS_ARE_NOWHERE_TO_BE_SEEN_I_WANT_TO_TALK_TO_THE_PARTY_LEADER;

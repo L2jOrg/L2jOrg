@@ -100,10 +100,11 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
         var functionId = function.getId();
         getDAO(ResidenceDAO.class).saveFunction(functionId, function.getLevel(), function.getExpiration(), id);
 
-        functions.computeIfPresent(functionId, (id, old) -> {
+        final ResidenceFunctionData old = functions.remove(functionId);
+        if (old != null)
             removeFunction(old);
-            return function;
-        });
+
+        functions.put(functionId, function);
     }
 
     public void removeFunction(ResidenceFunctionData function) {

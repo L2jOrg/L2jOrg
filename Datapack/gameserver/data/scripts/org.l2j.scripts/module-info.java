@@ -518,7 +518,7 @@ open module org.l2j.scripts {
             handlers.admincommandhandlers.AdminZones;
 
     provides org.l2j.gameserver.handler.IBypassHandler
-        with  handlers.bypasshandlers.NpcViewMod,
+        with handlers.bypasshandlers.NpcViewMod,
             handlers.bypasshandlers.Augment,
             handlers.bypasshandlers.Buy,
             handlers.bypasshandlers.ChatLink,

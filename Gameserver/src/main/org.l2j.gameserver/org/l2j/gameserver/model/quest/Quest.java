@@ -1174,6 +1174,14 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     /**
+     * This function is called whenever a Creature that is registered for the quest is killed.
+     *
+     * @param creature this parameter contains a reference to the exact instance of the Creature that got killed.
+     * @param killer   this parameter contains a reference to the exact instance of the Creature who killed the Creature.
+     */
+    public void onCreatureKill(Creature creature, Creature killer) {}
+
+    /**
      * This function is called whenever a player clicks to the "Quest" link of an NPC that is registered for the quest.
      *
      * @param npc       this parameter contains a reference to the exact instance of the NPC that the player is talking with.
@@ -1617,6 +1625,10 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
     public void addKillId(int npcId) {
         setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon(), kill.getPayload()), npcId);
+    }
+
+    public void addDeathId(int npcId) {
+        setCreatureKillId(kill -> onCreatureKill(kill.getTarget(), kill.getAttacker()), npcId);
     }
 
     public void addAttackId(int npcId) {

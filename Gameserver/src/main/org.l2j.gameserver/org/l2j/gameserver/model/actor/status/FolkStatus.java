@@ -34,8 +34,7 @@ public class FolkStatus extends NpcStatus {
     }
 
     @Override
-    public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {
-    }
+    public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption) {}
 
     @Override
     public Folk getOwner() {

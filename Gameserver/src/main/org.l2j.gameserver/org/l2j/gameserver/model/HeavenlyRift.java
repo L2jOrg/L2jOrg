@@ -19,18 +19,14 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
 
-import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
@@ -38,8 +34,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @reworked by Thoss
  */
 public class HeavenlyRift {
-    public static class ClearZoneTask implements Runnable
-    {
+    public static class ClearZoneTask implements Runnable {
         private Npc _npc;
 
         public ClearZoneTask(Npc npc)
@@ -48,8 +43,7 @@ public class HeavenlyRift {
         }
 
         @Override
-        public void run()
-        {
+        public void run() {
             HeavenlyRift.getZone().forEachCreature(creature -> {
                 if(GameUtils.isPlayer(creature))
                     creature.teleToLocation(114264, 13352, -5104);
@@ -63,15 +57,13 @@ public class HeavenlyRift {
 
     private static Zone _zone = null;
 
-    public static Zone getZone()
-    {
+    public static Zone getZone() {
         if(_zone == null)
             _zone = ZoneManager.getInstance().getZoneByName("[heavenly_rift]");
         return _zone;
     }
 
-    public static int getAliveNpcCount(int npcId)
-    {
+    public static int getAliveNpcCount(int npcId) {
         AtomicInteger res = new AtomicInteger();
 
         getZone().forEachCreature(creature -> {
@@ -81,8 +73,7 @@ public class HeavenlyRift {
         return res.get();
     }
 
-    public static void startEvent20Bomb(Player player)
-    {
+    public static void startEvent20Bomb(Player player) {
         getZone().broadcastPacket(new ExShowScreenMessage(NpcStringId.SET_OFF_BOMBS_AND_GET_TREASURES, 2, 5000));
 
         spawnMonster(18003, 113352, 12936, 10976, 1800000);
@@ -107,21 +98,17 @@ public class HeavenlyRift {
         spawnMonster(18003, 113144, 14216, 10976, 1800000);
     }
 
-    public static void startEventTower(Player player)
-    {
+    public static void startEventTower(Player player) {
         getZone().broadcastPacket(new ExShowScreenMessage(NpcStringId.PROTECT_THE_CENTRAL_TOWER_FROM_DIVINE_ANGELS, 2, 5000));
         spawnMonster(18004, 112648, 14072, 10976, 1800000);
-        ThreadPool.schedule(() ->
-        {
-            for(int i = 0 ; i < 20 ; i++)
-            {
+        ThreadPool.schedule(() -> {
+            for(int i = 0 ; i < 20 ; i++) {
                 spawnMonster(20139, 112696, 13960, 10958, 1800000);
             }
         }, 10000);
     }
 
-    public static void startEvent40Angels(Player player)
-    {
+    public static void startEvent40Angels(Player player) {
         getZone().broadcastPacket(new ExShowScreenMessage(NpcStringId.DESTROY_WEAKENED_DIVINE_ANGELS, 2, 5000));
         for(int i = 0 ; i < 40 ; i++)
             spawnMonster(20139, 112696, 13960, 10958, 1800000);

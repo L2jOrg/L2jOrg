@@ -324,6 +324,13 @@ public class AttackableAI extends CreatureAI {
                                     guard.addDamageHate(t, 0, 10);
                                 });
                             }
+                        } else if (t instanceof FriendlyNpc) {
+                            // Get the hate level of the Attackable against this Creature target contained in _aggroList
+                            final int hating = npc.getHating(t);
+                            // Add the attacker to the Attackable _aggroList with 0 damage and base amount hate cause prior to FriendlyNpc
+                            if (hating == 0) {
+                                npc.addDamageHate(t, 0, ((FriendlyNpc) t).getHateBaseAmount());
+                            }
                         }
                     }
                 });
