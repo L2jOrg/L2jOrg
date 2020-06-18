@@ -25,7 +25,6 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.DropType;
-import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
@@ -65,10 +64,6 @@ public class NpcViewMod implements IBypassHandler {
     private static final String[] COMMANDS = { "NpcViewMod" };
 
     private static final int DROP_LIST_ITEMS_PER_PAGE = 8;
-
-    public NpcViewMod() {
-        BypassHandler.getInstance().registerHandler(this);
-    }
 
     @Override
     public boolean useBypass(String command, Player player, Creature bypassOrigin) {
