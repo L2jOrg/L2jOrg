@@ -22,8 +22,11 @@ import ai.AbstractNpcAI;
 import ai.areas.TowerOfInsolence.TowerOfInsolence;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.HeavenlyRift;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.spawns.SpawnGroup;
+import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.util.GameUtils;
 
 
@@ -32,21 +35,19 @@ import org.l2j.gameserver.util.GameUtils;
  */
 public class Tower extends AbstractNpcAI {
     public Tower() {
-        addKillId(18004);
+        addDeathId(18004);
     }
 
     @Override
-    public String onKill(Npc npc, Player killer, boolean isSummon) {
+    public void onCreatureKill(Creature creature, Creature killer) {
 
-        HeavenlyRift.getZone().forEachCreature(riftNpc -> {
-            npc.decayMe();
-        }, riftNpc -> GameUtils.isNpc(riftNpc) && riftNpc.getId() == 20139 && !npc.isDead());
+        //TODO: Tower dies, so instance is failed. Send Message ?
 
+        HeavenlyRift.getZone().forEachCreature(riftMonster -> riftMonster.decayMe(), riftMonster -> GameUtils.isMonster(riftMonster) && riftMonster.getId() == 20139 && !riftMonster.isDead());
 
         GlobalVariablesManager.getInstance().set("heavenly_rift_complete", GlobalVariablesManager.getInstance().getInt("heavenly_rift_level", 0));
         GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
         GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 0);
-        return super.onKill(npc, killer, isSummon);
     }
 
     public static AbstractNpcAI provider() {
