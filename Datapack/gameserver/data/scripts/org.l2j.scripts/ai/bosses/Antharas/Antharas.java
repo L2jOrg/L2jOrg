@@ -59,7 +59,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 public final class Antharas extends AbstractNpcAI
 {
 	// NPC
-	/*private static final int ANTHARAS = 29068; // Antharas
+	private static final int ANTHARAS = 29068; // Antharas
 	private static final int BEHEMOTH = 29069; // Behemoth Dragon
 	private static final int TERASQUE = 29190; // Tarask Dragon
 	private static final int BOMBER = 29070; // Dragon Bomber
@@ -194,75 +194,6 @@ public final class Antharas extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "enter":
-			{
-				String htmltext = null;
-				if (getStatus() == DEAD)
-				{
-					htmltext = "13001-01.html";
-				}
-				else if (getStatus() == IN_FIGHT)
-				{
-					htmltext = "13001-02.html";
-				}
-				else if (zone.getPlayersInsideCount() >= MAX_PEOPLE)
-				{
-					htmltext = "13001-04.html";
-				}
-				else if (player.isInParty())
-				{
-					final Party party = player.getParty();
-					final boolean isInCC = party.isInCommandChannel();
-					final List<Player> members = isInCC ? party.getCommandChannel().getMembers() : party.getMembers();
-					final boolean isPartyLeader = isInCC ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
-					if (!isPartyLeader)
-					{
-						htmltext = "13001-05.html";
-					}
-					else if (!hasQuestItems(player, STONE))
-					{
-						htmltext = "13001-03.html";
-					}
-					else if (members.size() > (MAX_PEOPLE - zone.getPlayersInsideCount()))
-					{
-						htmltext = "13001-04.html";
-					}
-					else
-					{
-						for (Player member : members)
-						{
-							if (isInsideRadius3D(member, npc, 1000))
-							{
-								member.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
-							}
-						}
-						if (getStatus() != WAITING)
-						{
-							setStatus(WAITING);
-							startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
-						}
-					}
-				}
-				else if (!hasQuestItems(player, STONE))
-				{
-					htmltext = "13001-03.html";
-				}
-				else
-				{
-					player.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
-					if (getStatus() != WAITING)
-					{
-						setStatus(WAITING);
-						startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
-					}
-				}
-				return htmltext;
-			}
-			case "teleportOut":
-			{
-				player.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
-				break;
-			}
 			case "SPAWN_ANTHARAS":
 			{
 				_antharas.teleToLocation(181323, 114850, -7623, 32542);
@@ -1003,7 +934,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 		}
 	}
-	*/
+
 	public static AbstractNpcAI provider()
 	{
 		return new Antharas();

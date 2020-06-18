@@ -6241,7 +6241,7 @@
             <mana initial="70"/>
         </consume>
         <target/>
-        <abnormal type="POSSESSION">
+        <abnormal type="POSSESSION_SPECIAL">
             <level initial="1"/>
             <time initial="300"/>
             <chance initial="-1"/>
@@ -7424,7 +7424,7 @@
             <mana initial="110"/>
         </consume>
         <target/>
-        <abnormal type="POSSESSION">
+        <abnormal type="POSSESSION_SPECIAL">
             <level initial="1"/>
             <time initial="300"/>
             <chance initial="-1"/>
