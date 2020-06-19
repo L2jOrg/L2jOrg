@@ -1063,22 +1063,22 @@
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39155" name="Life Control Tower's Scroll of Blessing" action="A1">
+    <skill id="39155" name="Life Control Tower's Scroll of Blessing" action="A2">
         <!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
         <icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
-		<consume>
+        <consume>
             <item initial="49765"/>
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
-            <level initial="2"/>
+        <abnormal type="MULTI_BUFF">
+            <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
         </abnormal>
