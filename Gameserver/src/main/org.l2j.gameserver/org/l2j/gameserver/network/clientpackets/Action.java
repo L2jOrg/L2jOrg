@@ -40,7 +40,7 @@ import static org.l2j.gameserver.util.GameUtils.isNpc;
 public final class Action extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Action.class);
-
+    
     private int objectId;
     private int actionId;
 

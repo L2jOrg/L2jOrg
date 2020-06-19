@@ -684,9 +684,6 @@ public class Npc extends Creature {
         html.replace("%npcname%", getName());
         html.replace("%objectId%", String.valueOf(getObjectId()));
         player.sendPacket(html);
-
-        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
-        player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
     /**
