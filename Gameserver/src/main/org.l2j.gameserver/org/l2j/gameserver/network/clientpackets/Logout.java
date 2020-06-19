@@ -25,12 +25,6 @@ import org.l2j.gameserver.util.OfflineTradeUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
-/**
- * This class ...
- *
- * @version $Revision: 1.9.4.3 $ $Date: 2005/03/27 15:29:30 $
- */
 public final class Logout extends ClientPacket {
     protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 

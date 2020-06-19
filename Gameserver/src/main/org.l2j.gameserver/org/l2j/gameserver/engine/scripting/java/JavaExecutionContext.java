@@ -208,7 +208,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
         final Class<?> javaClass = classLoader.loadClass(scriptFileInfo.getJavaName());
         Method mainMethod = javaClass.getMethod("main", String[].class);
 
-        if (nonNull(mainMethod) && Modifier.isStatic(mainMethod.getModifiers()) && !javaClass.isAnnotationPresent(Disabled.class)) {
+        if (Modifier.isStatic(mainMethod.getModifiers()) && !javaClass.isAnnotationPresent(Disabled.class)) {
             mainMethod.invoke(null, (Object) new String[] { scriptFileInfo.getSourcePath().toString() });
         }
     }
