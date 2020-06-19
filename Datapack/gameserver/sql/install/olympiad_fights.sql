@@ -10,4 +10,4 @@ CREATE TABLE IF NOT EXISTS `olympiad_fights` (
   `classed` tinyint(1) unsigned NOT NULL DEFAULT '0',
   KEY `charOneId` (`charOneId`),
   KEY `charTwoId` (`charTwoId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

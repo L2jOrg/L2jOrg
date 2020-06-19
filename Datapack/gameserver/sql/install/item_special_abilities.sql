@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `item_special_abilities` (
   `optionId` int(10) unsigned NOT NULL,
   `position` tinyint(1) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`objectId`,`optionId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

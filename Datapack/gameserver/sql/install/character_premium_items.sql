@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `character_premium_items` (
   KEY `charId` (`charId`),
   KEY `itemNum` (`itemNum`),
   KEY `itemId` (`itemId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

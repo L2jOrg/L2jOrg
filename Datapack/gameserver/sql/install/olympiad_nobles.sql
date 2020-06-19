@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS `olympiad_nobles` (
   `competitions_done_week_non_classed` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `competitions_done_week_team` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

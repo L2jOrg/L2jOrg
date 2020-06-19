@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `castle_doorupgrade` (
   `ratio` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `castleId` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`doorId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

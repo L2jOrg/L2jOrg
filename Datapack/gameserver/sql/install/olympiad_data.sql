@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `olympiad_data` (
   `validation_end` bigint(13) unsigned NOT NULL DEFAULT '0',
   `next_weekly_change` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

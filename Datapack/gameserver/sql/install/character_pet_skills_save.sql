@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `character_pet_skills_save` (
   `remaining_time` INT NOT NULL DEFAULT 0,
   `buff_index` INT(2) NOT NULL DEFAULT 0,
   PRIMARY KEY (`petObjItemId`,`skill_id`,`skill_level`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

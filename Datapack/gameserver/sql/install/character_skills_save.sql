@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS `character_skills_save` (
 
   PRIMARY KEY (`charId`,`skill_id`,`skill_level`,`class_index`),
   FOREIGN KEY FK_CHARACTER_SKILL_SAVE (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

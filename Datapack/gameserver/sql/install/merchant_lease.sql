@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `merchant_lease` (
   `type` int(11) NOT NULL DEFAULT 0,
   `player_name` varchar(35),
   PRIMARY KEY (`merchant_id`,`player_id`,`type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

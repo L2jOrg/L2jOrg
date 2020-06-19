@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `commission_items` (
 	`start_time` TIMESTAMP NOT NULL,
 	`duration_in_days` TINYINT NOT NULL,
 	PRIMARY KEY (`commission_id`)
-) ENGINE=InnoDB;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

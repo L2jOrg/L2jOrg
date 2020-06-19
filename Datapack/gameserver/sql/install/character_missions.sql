@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS character_missions (
   PRIMARY KEY (`char_id`, `mission_id`),
   INDEX IDX_MISSION (`mission_id`),
   FOREIGN KEY FK_MISSION_CHARACTER (`char_id`) REFERENCES characters (`charId`) ON DELETE CASCADE
-);
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

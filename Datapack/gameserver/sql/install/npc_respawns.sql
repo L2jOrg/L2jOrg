@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `npc_respawns` (
   `currentHp` double unsigned NOT NULL,
   `currentMp` double unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

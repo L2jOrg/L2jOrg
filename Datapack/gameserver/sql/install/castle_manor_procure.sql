@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `castle_manor_procure` (
  `reward_type` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0',
  `next_period` TINYINT(1) UNSIGNED NOT NULL DEFAULT '1',
   PRIMARY KEY (`castle_id`,`crop_id`,`next_period`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
