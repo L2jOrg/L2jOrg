@@ -34,8 +34,6 @@ import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.enums.InventorySlot.*;
 
 /**
- * This class handles following admin commands: - enchant_armor
- * @version $Revision: 1.3.2.1.2.10 $ $Date: 2005/08/24 21:06:06 $
  * @author JoeAlisson
  */
 public class AdminEnchant implements IAdminCommandHandler {
@@ -84,8 +82,8 @@ public class AdminEnchant implements IAdminCommandHandler {
 
 			if (nonNull(itemSlot) && tokens.hasMoreTokens()) {
 				var enchant = Util.parseNextInt(tokens, -1);
-				if (enchant < 0 || enchant > Byte.MAX_VALUE) {
-					BuilderUtil.sendSysMessage(player, "You must set the enchant level to be between 0 and 127.");
+				if (enchant < 0 || enchant > Short.MAX_VALUE) {
+					BuilderUtil.sendSysMessage(player, "You must set the enchant level to be between 0 and 32767.");
 				} else {
 					setEnchant(player, enchant, itemSlot);
 				}

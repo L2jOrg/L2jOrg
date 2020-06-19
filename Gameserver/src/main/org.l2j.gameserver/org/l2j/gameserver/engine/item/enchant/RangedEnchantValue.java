@@ -23,7 +23,7 @@ import org.l2j.commons.util.Util;
 /**
  * @author JoeAlisson
  */
-public record RangedEnchantFailAmount(int from, int until, int value, int bonusPerEnchant) {
+public record RangedEnchantValue(int from, int until, int value, int bonusPerEnchant) {
 
     public boolean isValid(int value) {
         return Util.isBetween(value, from, until);

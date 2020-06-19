@@ -68,6 +68,11 @@ public class ClientPacketHandler implements PacketHandler<GameClient> {
             LOGGER.warn("Client {} sent packet {} at invalid state {} Required States: {} - [{}]: {}", client, packetFactory, connectionState, packetFactory.getConnectionStates(), toHexString(opcode), CommonUtil.printData(buffer.expose()));
             return null;
         }
+        if(ConnectionState.JOINING_GAME_AND_IN_GAME.contains(connectionState) && isNull(client.getPlayer())) {
+            LOGGER.warn("Client {} sent IN_GAME packet {} without a player", client, packetFactory);
+            return null;
+        }
+
         return packet;
     }
 

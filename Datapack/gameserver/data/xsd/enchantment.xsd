@@ -10,6 +10,7 @@
 			<xs:sequence>
 				<xs:element name="chance-group" type="l2jorg:ChanceGroup" maxOccurs="unbounded"/>
 				<xs:element name="fail-rewards" type="l2jorg:FailRewards"/>
+				<xs:element name="armor-hp-bonus" type="l2jorg:ArmorHpBonus"/>
 				<xs:element name="group" type="l2jorg:ScrollGroup" maxOccurs="unbounded"/>
 				<xs:element name="scroll" type="l2jorg:Scroll" maxOccurs="unbounded" />
 			</xs:sequence>
@@ -43,13 +44,42 @@
 
 	<xs:complexType name="FailRewardGroup">
 		<xs:sequence>
-			<xs:element name="reward" type="l2jorg:FailReward" maxOccurs="unbounded"/>
+			<xs:element name="reward" type="l2jorg:GradeEnchantValue" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="reward-id" type="xs:int" use="required"/>
 	</xs:complexType>
 
 	<xs:complexType name="FailReward">
 		<xs:attribute name="grade" type="l2jorg:CrystalType" use="required"/>
+		<xs:attribute name="from" type="xs:unsignedShort" default="0"/>
+		<xs:attribute name="until" type="xs:unsignedShort" default="65535"/>
+		<xs:attribute name="amount" type="xs:int" use="required"/>
+		<xs:attribute name="bonus-per-level" type="xs:int" default="0"/>
+	</xs:complexType>
+
+	<xs:complexType name="ArmorHpBonus">
+		<xs:sequence>
+			<xs:element name="bonus" type="l2jorg:HPBonusEnchantValue" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="full-armor-multiplier" type="xs:float" default="1.5"/>
+	</xs:complexType>
+
+	<xs:complexType name="HPBonusEnchantValue">
+		<xs:complexContent>
+			<xs:extension base="l2jorg:GradeEnchantValue">
+				<xs:attribute name="full-armor-max" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="GradeEnchantValue">
+		<xs:sequence>
+			<xs:element name="enchant" type="l2jorg:EnchantValue" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="grade" type="l2jorg:CrystalType" default="NONE"/>
+	</xs:complexType>
+
+	<xs:complexType name="EnchantValue">
 		<xs:attribute name="from" type="xs:unsignedShort" default="0"/>
 		<xs:attribute name="until" type="xs:unsignedShort" default="65535"/>
 		<xs:attribute name="amount" type="xs:int" use="required"/>

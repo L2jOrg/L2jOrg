@@ -49,9 +49,6 @@ public final class AddTradeItem extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (isNull(player)) {
-            return;
-        }
 
         final TradeList trade = player.getActiveTradeList();
         if (isNull(trade)) {

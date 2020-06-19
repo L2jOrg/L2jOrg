@@ -18,14 +18,14 @@
  */
 package org.l2j.gameserver.engine.item.enchant;
 
-import java.util.Collection;
+import java.util.Set;
 
 /**
  * @author JoeAlisson
  */
-public record EnchantFailReward(int id, Collection<RangedEnchantValue> values) {
+public record ArmorHpBonus(int fullArmorMaxBonus, Set<RangedEnchantValue> values) {
 
-    public long amount(int enchantLevel) {
+    public int get(int enchantLevel) {
         return values.stream().filter(v -> v.isValid(enchantLevel)).findFirst().map(v -> v.amount(enchantLevel)).orElse(0);
     }
 }

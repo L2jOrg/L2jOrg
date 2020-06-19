@@ -31,30 +31,30 @@ public class ExOlympiadRecord extends ServerPacket {
     protected void writeImpl(GameClient client)  {
         writeId(ServerExPacketId.EX_OLYMPIAD_RECORD);
 
-        writeInt(10); // points
-        writeInt(3); // win count
+        writeInt(0); // points
+        writeInt(0); // win count
         writeInt(0); // lose count
-        writeInt(3); // match left (MAX 5)
+        writeInt(5); // match left (MAX 5)
 
         // From olympiad history
-        writeInt(client.getPlayer().getClassId().getId()); // prev class type
+        writeInt(0); // prev class type
 
-        writeInt(4);  // prev rank (non classed all servers)
-        writeInt(100); // prev rank count
+        writeInt(0);  // prev rank (non classed all servers)
+        writeInt(0); // prev rank count
 
-        writeInt(2); // prev class rank
-        writeInt(30); // prev class rank count
+        writeInt(0); // prev class rank
+        writeInt(0); // prev class rank count
 
-        writeInt(2); // prev class rank by server
-        writeInt(15); // prev class rank by server count
+        writeInt(0); // prev class rank by server
+        writeInt(0); // prev class rank by server count
 
-        writeInt(110); // prev point
-        writeInt(12); // prev win count
-        writeInt(3); // prev lose count
+        writeInt(0); // prev point
+        writeInt(0); // prev win count
+        writeInt(0); // prev lose count
 
-        writeInt(1); // prev grade
+        writeInt(0); // prev grade
         writeInt(2020); // season year
-        writeInt(3); // season month
+        writeInt(6); // season month
         writeByte(false); // match open
         writeInt(1); // season
         writeByte(false); // registered

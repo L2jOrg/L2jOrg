@@ -480,7 +480,6 @@ public final class ItemEngine extends GameXmlReader {
 
     public void reload() {
         load();
-        EnchantItemHPBonusData.getInstance().load();
     }
 
     public Collection<ItemTemplate> getAllItems() {

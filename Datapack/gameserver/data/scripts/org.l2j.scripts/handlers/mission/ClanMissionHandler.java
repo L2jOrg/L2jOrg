@@ -34,11 +34,8 @@ import static java.util.Objects.nonNull;
 
 public class ClanMissionHandler extends AbstractMissionHandler {
 
-    private final MissionKind kind;
-
     public ClanMissionHandler(MissionDataHolder holder) {
         super(holder);
-        kind = holder.getParams().getEnum("kind", MissionKind.class, MissionKind.JOIN);
     }
 
     @Override
@@ -49,7 +46,7 @@ public class ClanMissionHandler extends AbstractMissionHandler {
 
     @Override
     public void init() {
-        if(MissionKind.JOIN == kind) {
+        if(MissionKind.JOIN == getHolder().getParams().getEnum("kind", MissionKind.class, MissionKind.JOIN)) {
             Listeners.Global().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_CLAN_JOIN, (Consumer<OnPlayerClanJoin>) this::onPlayerJoinClan, this));
         }
     }

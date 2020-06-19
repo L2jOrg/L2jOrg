@@ -21,16 +21,23 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
-import java.time.OffsetDateTime;
-import java.time.ZoneId;
+import java.time.Instant;
+import java.time.ZoneOffset;
 
+/**
+ * @author JoeAlisson
+ */
 public class ExEnterWorld extends ServerPacket {
     private final int zoneIdOffsetSeconds;
     private final int epochInSeconds;
+    private final int daylight;
 
     public ExEnterWorld() {
-        zoneIdOffsetSeconds = OffsetDateTime.now(ZoneId.systemDefault()).getOffset().getTotalSeconds();
-        epochInSeconds = (int)((System.currentTimeMillis() / 1000) + zoneIdOffsetSeconds);
+        var now = Instant.now();
+        epochInSeconds = (int) now.getEpochSecond();
+        var rules = ZoneOffset.systemDefault().getRules();
+        zoneIdOffsetSeconds = rules.getStandardOffset(now).getTotalSeconds();
+        daylight = (int) rules.getDaylightSavings(now).toSeconds();
     }
 
     @Override
@@ -38,7 +45,7 @@ public class ExEnterWorld extends ServerPacket {
         writeId(ServerExPacketId.EX_ENTER_WORLD);
         writeInt(epochInSeconds);
         writeInt(-zoneIdOffsetSeconds);
+        writeInt(daylight);
         writeInt(0);
-        writeInt(40);
     }
 }

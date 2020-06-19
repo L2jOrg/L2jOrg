@@ -18,8 +18,11 @@
  */
 package org.l2j.gameserver.network;
 
+import java.util.EnumSet;
+
 /**
  * @author Nos
+ * @author JoeAlisson
  */
 public enum ConnectionState {
     CONNECTED,
@@ -29,12 +32,14 @@ public enum ConnectionState {
     JOINING_GAME,
     IN_GAME;
 
-    public static final ConnectionState[] EMPTY = new ConnectionState[0];
-
-    public static final ConnectionState[] JOINING_GAME_AND_IN_GAME = new ConnectionState[]{
-        ConnectionState.JOINING_GAME,
-        ConnectionState.IN_GAME
-    };
+    static final EnumSet<ConnectionState> IN_GAME_STATES = EnumSet.of(IN_GAME);
+    static final EnumSet<ConnectionState> AUTHENTICATED_STATES = EnumSet.of(AUTHENTICATED);
+    static final EnumSet<ConnectionState> CONNECTED_STATES = EnumSet.of(CONNECTED);
+    static final EnumSet<ConnectionState> JOINING_GAME_STATES = EnumSet.of(JOINING_GAME);
+    static final EnumSet<ConnectionState> AUTHENTICATED_AND_IN_GAME = EnumSet.of(AUTHENTICATED, IN_GAME);
+    static final EnumSet<ConnectionState> JOINING_GAME_AND_IN_GAME = EnumSet.of(JOINING_GAME, IN_GAME);
+    static final EnumSet<ConnectionState> ALL = EnumSet.allOf(ConnectionState.class);
+    static final EnumSet<ConnectionState> EMPTY = EnumSet.noneOf(ConnectionState.class);
 }
 
 
