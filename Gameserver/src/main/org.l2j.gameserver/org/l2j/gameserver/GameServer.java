@@ -122,7 +122,6 @@ public class GameServer {
         printSection("Server Data");
         GlobalVariablesManager.init();
         ActionManager.init();
-        EnchantItemHPBonusData.getInstance();
         BuyListData.init();
         MultisellData.getInstance();
         RecipeData.getInstance();

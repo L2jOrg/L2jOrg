@@ -51,6 +51,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
 
+import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -67,6 +68,8 @@ public class EnchantItemEngine extends GameXmlReader {
     private final IntMap<EnchantScroll> scrolls = new HashIntMap<>();
     private final Map<CrystalType, EnchantFailReward> weaponRewards = new EnumMap<>(CrystalType.class);
     private final Map<CrystalType, EnchantFailReward> armorRewards = new EnumMap<>(CrystalType.class);
+    private final Map<CrystalType, ArmorHpBonus> armorHpBonuses = new EnumMap<>(CrystalType.class);
+    private float fullArmorHpBonusMult = 1f;
 
     private EnchantItemEngine() {
     }
@@ -93,6 +96,7 @@ public class EnchantItemEngine extends GameXmlReader {
                 switch (node.getNodeName()) {
                     case "chance-group" -> parseChanceGroup(node, chanceGroups);
                     case "fail-rewards" -> parseFailRewards(node);
+                    case "armor-hp-bonus" -> parseArmorHpBonus(node);
                     case "group" -> parseScrollGroup(node, chanceGroups, scrollGroups);
                     case "scroll" -> parseScroll(node, scrollGroups);
                 }
@@ -100,8 +104,19 @@ public class EnchantItemEngine extends GameXmlReader {
         });
     }
 
+    private void parseArmorHpBonus(Node node) {
+        fullArmorHpBonusMult = parseFloat(node.getAttributes(), "full-armor-multiplier");
+        for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
+            var attr = child.getAttributes();
+            var grade = parseEnum(attr, CrystalType.class, "grade");
+            var fullArmorMaxBonus = parseInt(attr, "full-armor-max");
+            var set = parseChildEnchantValues(child);
+            armorHpBonuses.put(grade, new ArmorHpBonus(fullArmorMaxBonus, set));
+        }
+    }
+
     private void parseFailRewards(Node node) {
-        for(var child = node.getFirstChild(); nonNull(child); child = child.getFirstChild()) {
+        for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             if(child.getNodeName().equalsIgnoreCase("weapon")) {
                 parseEnchantFailReward(child, weaponRewards);
             } else {
@@ -113,14 +128,28 @@ public class EnchantItemEngine extends GameXmlReader {
     private void parseEnchantFailReward(Node node, Map<CrystalType, EnchantFailReward> rewards) {
         final var id = parseInt(node.getAttributes(), "reward-id");
         for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
+            var grade = parseEnum(child.getAttributes(), CrystalType.class, "grade");
+            Set<RangedEnchantValue> values = parseChildEnchantValues(child);
+            rewards.put(grade, new EnchantFailReward(id, values));
+        }
+    }
+
+    private Set<RangedEnchantValue> parseChildEnchantValues(Node node) {
+        final var length =  node.getChildNodes().getLength();
+        if(length == 0) {
+            return Collections.emptySet();
+        }
+
+        Set<RangedEnchantValue> set = new HashSet<>(length);
+        for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             var attr = child.getAttributes();
-            var grade = parseEnum(attr, CrystalType.class, "grade");
             var from = parseInt(attr, "from");
             var until = parseInt(attr, "until");
             var amount = parseInt(attr, "amount");
             var bonusPerLevel = parseInt(attr, "bonus-per-level");
-            rewards.computeIfAbsent(grade, g -> new EnchantFailReward(id, new HashSet<>())).add(new RangedEnchantFailAmount(from, until, amount, bonusPerLevel));
+            set.add(new RangedEnchantValue(from, until, amount, bonusPerLevel));
         }
+        return set;
     }
 
     private void parseScroll(Node node, IntMap<ScrollGroup> scrollGroups) {
@@ -188,7 +217,7 @@ public class EnchantItemEngine extends GameXmlReader {
             var until = parseInt(attr, "until");
             chances.add(new RangedChance(from, until, parseFloat(attr, "chance")));
 
-            min = Math.min(from, min);
+            min = min(from, min);
             max = Math.max(until, max);
         }
         chanceGroups.put(parseString(node.getAttributes(), "name"), new RangedChanceGroup(min, max, chances));
@@ -353,6 +382,20 @@ public class EnchantItemEngine extends GameXmlReader {
             return false;
         }
         return true;
+    }
+
+    public int getArmorHpBonus(Item item) {
+        if(item.isArmor()) {
+            var armorHpBonus = armorHpBonuses.get(item.getCrystalType());
+            if(nonNull(armorHpBonus)) {
+                var bonus = armorHpBonus.get(item.getEnchantLevel());
+                if(item.getBodyPart() == BodyPart.FULL_ARMOR) {
+                    bonus = min((int) (bonus * fullArmorHpBonusMult), armorHpBonus.fullArmorMaxBonus());
+                }
+                return bonus;
+            }
+        }
+        return 0;
     }
 
     public static void init() {

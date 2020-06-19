@@ -45,56 +45,109 @@
     
     <fail-rewards>
         <weapon reward-id="91462"> <!-- Weapon Enhancement Stone -->
-            <reward grade="D" from="7" until="18" amount="1" bonus-per-level="1"/>
-            <reward grade="D" from="19" amount="14"/>
+            <reward grade="D">
+                <enchant from="7" until="18" amount="1" bonus-per-level="1"/>
+                <enchant from="19" amount="14"/>
+            </reward>
 
-            <reward grade="C" from="7" until="9" amount="2" bonus-per-level="1"/>
-            <reward grade="C" from="10" until="12" amount="7" bonus-per-level="1"/>
-            <reward grade="C" from="13" until="15" amount="12" bonus-per-level="1"/>
-            <reward grade="C" from="16" until="18" amount="17" bonus-per-level="1"/>
-            <reward grade="C" from="19" amount="25"/>
+            <reward grade="C">
+                <enchant from="7" until="9" amount="2" bonus-per-level="1"/>
+                <enchant from="10" until="12" amount="7" bonus-per-level="1"/>
+                <enchant from="13" until="15" amount="12" bonus-per-level="1"/>
+                <enchant from="16" until="18" amount="17" bonus-per-level="1"/>
+                <enchant from="19" amount="25"/>
+            </reward>
 
-            <reward grade="B" from="7" until="9" amount="3" bonus-per-level="1"/>
-            <reward grade="B" from="10" until="12" amount="8" bonus-per-level="1"/>
-            <reward grade="B" from="13" until="15" amount="13" bonus-per-level="1"/>
-            <reward grade="B" from="16" until="18" amount="18" bonus-per-level="1"/>
-            <reward grade="B" from="19" amount="28"/>
+            <reward grade="B">
+                <enchant from="7" until="9" amount="3" bonus-per-level="1"/>
+                <enchant from="10" until="12" amount="8" bonus-per-level="1"/>
+                <enchant from="13" until="15" amount="13" bonus-per-level="1"/>
+                <enchant from="16" until="18" amount="18" bonus-per-level="1"/>
+                <enchant from="19" amount="28"/>
+            </reward>
 
-            <reward grade="A" from="7" until="9" amount="5" bonus-per-level="1"/>
-            <reward grade="A" from="10" until="12" amount="12" bonus-per-level="1"/>
-            <reward grade="A" from="13" until="15" amount="19" bonus-per-level="1"/>
-            <reward grade="A" from="16" until="18" amount="26" bonus-per-level="1"/>
-            <reward grade="A" from="19" amount="38"/>
+            <reward grade="A">
+                <enchant from="7" until="9" amount="5" bonus-per-level="1"/>
+                <enchant from="10" until="12" amount="12" bonus-per-level="1"/>
+                <enchant from="13" until="15" amount="19" bonus-per-level="1"/>
+                <enchant from="16" until="18" amount="26" bonus-per-level="1"/>
+                <enchant from="19" amount="38"/>
+            </reward>
 
-            <reward grade="S" from="7" until="9" amount="15" bonus-per-level="3"/>
-            <reward grade="S" from="10" until="11" amount="25" bonus-per-level="3"/>
-            <reward grade="S" from="12" until="18" amount="29" bonus-per-level="1"/>
-            <reward grade="S" from="19" amount="46" bonus-per-level="1"/> <!-- TODO Confirm  correct value l2wiki (36) seems to be wrong since is less than A grade -->
+            <reward grade="S">
+                <enchant from="7" until="9" amount="15" bonus-per-level="3"/>
+                <enchant from="10" until="11" amount="25" bonus-per-level="3"/>
+                <enchant from="12" until="18" amount="29" bonus-per-level="1"/>
+                <enchant from="19" amount="46" bonus-per-level="1"/> <!-- TODO Confirm  correct value l2wiki (36) seems to be wrong since is less than A grade -->
+            </reward>
         </weapon>
 
         <armor reward-id="91463"> <!-- Armor Enhancement Stone -->
-            <reward grade="D" from="6" until="8" amount="1" bonus-per-level="1"/>
-            <reward grade="D" from="9" until="11" amount="5" bonus-per-level="1"/>
-            <reward grade="D" from="12" amount="12"/>
+            <reward grade="D">
+                <enchant from="6" until="8" amount="1" bonus-per-level="1"/>
+                <enchant from="9" until="11" amount="5" bonus-per-level="1"/>
+                <enchant from="12" amount="12"/>
+            </reward>
 
-            <reward grade="C" from="6" until="8" amount="2" bonus-per-level="1"/>
-            <reward grade="C" from="9" until="11" amount="7" bonus-per-level="1"/>
-            <reward grade="C" from="12" amount="15"/>
+            <reward grade="C">
+                <enchant from="6" until="8" amount="2" bonus-per-level="1"/>
+                <enchant from="9" until="11" amount="7" bonus-per-level="1"/>
+                <enchant from="12" amount="15"/>
+            </reward>
 
-            <reward grade="B" from="6" until="8" amount="3" bonus-per-level="1"/>
-            <reward grade="B" from="9" until="11" amount="9" bonus-per-level="1"/>
-            <reward grade="B" from="12" amount="19"/>
+            <reward grade="B">
+                <enchant from="6" until="8" amount="3" bonus-per-level="1"/>
+                <enchant from="9" until="11" amount="9" bonus-per-level="1"/>
+                <enchant from="12" amount="19"/>
+            </reward>
 
-            <reward grade="A" from="6" until="8" amount="5" bonus-per-level="1"/>
-            <reward grade="A" from="9" until="10" amount="13" bonus-per-level="1"/>
-            <reward grade="A" from="11" until="11" amount="16"/>
-            <reward grade="A" from="12" amount="26"/>
+            <reward grade="A">
+                <enchant from="6" until="8" amount="5" bonus-per-level="1"/>
+                <enchant from="9" until="10" amount="13" bonus-per-level="1"/>
+                <enchant from="11" until="11" amount="16"/>
+                <enchant from="12" amount="26"/>
+            </reward>
 
-            <reward grade="S" from="6" until="9" amount="10" bonus-per-level="5"/>
-            <reward grade="S" from="10" until="11" amount="27" bonus-per-level="1"/>
-            <reward grade="A" from="12" amount="30"/>
+            <reward grade="S">
+                <enchant from="6" until="9" amount="10" bonus-per-level="5"/>
+                <enchant from="10" until="11" amount="27" bonus-per-level="1"/>
+                <enchant from="12" amount="30"/>
+            </reward>
         </armor>
     </fail-rewards>
+
+    <armor-hp-bonus>
+        <bonus grade="D" full-armor-max="78">
+            <enchant from="4" until="5" amount="9" bonus-per-level="17"/>
+            <enchant from="6" until="12" amount="52" bonus-per-level="2"/>
+            <enchant from="13" amount="64"/>
+        </bonus>
+
+        <bonus grade="C" full-armor-max="106">
+            <enchant from="4" until="5" amount="12" bonus-per-level="24"/>
+            <enchant from="6" until="12" amount="71" bonus-per-level="2"/>
+            <enchant from="13" amount="83"/>
+        </bonus>
+
+        <bonus grade="B" full-armor-max="126">
+            <enchant from="4" until="5" amount="14" bonus-per-level="28"/>
+            <enchant from="6" until="12" amount="84" bonus-per-level="2"/>
+            <enchant from="13" amount="96"/>
+        </bonus>
+
+        <bonus grade="A" full-armor-max="141">
+            <enchant from="4" until="5" amount="16" bonus-per-level="31"/>
+            <enchant from="6" until="12" amount="94" bonus-per-level="2"/>
+            <enchant from="13" amount="106"/>
+        </bonus>
+
+        <bonus grade="S" full-armor-max="500">
+            <enchant from="1" until="4" amount="10" bonus-per-level="10"/>
+            <enchant from="5" until="6" amount="80" bonus-per-level="80"/>
+            <enchant from="7" until="12" amount="200" bonus-per-level="50"/>
+            <enchant from="13" amount="500"/>
+        </bonus>
+    </armor-hp-bonus>
 
     <group id="0">
         <enchant-chance group="ARMOR_GROUP">
