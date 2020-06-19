@@ -877,22 +877,59 @@
     <skill id="39151" name="A-grade Armor Supply Box" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
-        <attributes>
-            <cool-time initial="500"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <effect-range initial="-1"/>
-            <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="49760"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="3.448275862068966" id="5317"/>
+                <item chance="3.448275862068966" id="5287"/>
+                <item chance="3.448275862068966" id="5329"/>
+                <item chance="3.448275862068966" id="5326"/>
+                <item chance="3.448275862068966" id="5308"/>
+                <item chance="3.448275862068966" id="5304"/>
+                <item chance="3.448275862068966" id="5288"/>
+                <item chance="3.448275862068966" id="5290"/>
+                <item chance="3.448275862068966" id="5295"/>
+                <item chance="3.448275862068966" id="5298"/>
+                <item chance="3.448275862068966" id="5318"/>
+                <item chance="3.448275862068966" id="5313"/>
+                <item chance="3.448275862068966" id="5319"/>
+                <item chance="3.448275862068966" id="5314"/>
+                <item chance="3.448275862068966" id="5291"/>
+                <item chance="3.448275862068966" id="5296"/>
+                <item chance="3.448275862068966" id="5305"/>
+                <item chance="3.448275862068966" id="5311"/>
+                <item chance="3.448275862068966" id="5323"/>
+                <item chance="3.448275862068966" id="5320"/>
+                <item chance="3.448275862068966" id="5297"/>
+                <item chance="3.448275862068966" id="5301"/>
+                <item chance="3.448275862068966" id="5316"/>
+                <item chance="3.448275862068966" id="5293"/>
+                <item chance="3.448275862068966" id="5312"/>
+                <item chance="3.448275862068966" id="5289"/>
+                <item chance="3.448275862068966" id="5284"/>
+                <item chance="3.448275862068966" id="5315"/>
+                <item chance="3.448275862068966" id="5292"/>
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="39152" name="Ornament Supply Box (A-grade)" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i02"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cool-time initial="500"/>
             <effect-range initial="-1"/>
-            <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
@@ -917,24 +954,114 @@
     <skill id="39153" name="Armor Ingredient Box - A-grade" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i05"/>
-        <attributes>
-            <cool-time initial="500"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <effect-range initial="-1"/>
-            <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="49762"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                    <item id="5420" chance="1.724137931034483"/>
+                    <item id="5380" chance="1.724137931034483"/>
+                    <item id="5368" chance="1.724137931034483"/>
+                    <item id="5416" chance="1.724137931034483"/>
+                    <item id="5424" chance="1.724137931034483"/>
+                    <item id="5392" chance="1.724137931034483"/>
+                    <item id="5426" chance="1.724137931034483"/>
+                    <item id="5332" chance="1.724137931034483"/>
+                    <item id="5340" chance="1.724137931034483"/>
+                    <item id="5348" chance="1.724137931034483"/>
+                    <item id="5364" chance="1.724137931034483"/>
+                    <item id="5404" chance="1.724137931034483"/>
+                    <item id="5430" chance="1.724137931034483"/>
+                    <item id="5336" chance="1.724137931034483"/>
+                    <item id="5382" chance="1.724137931034483"/>
+                    <item id="5432" chance="1.724137931034483"/>
+                    <item id="5406" chance="1.724137931034483"/>
+                    <item id="5338" chance="1.724137931034483"/>
+                    <item id="5422" chance="1.724137931034483"/>
+                    <item id="5352" chance="1.724137931034483"/>
+                    <item id="5350" chance="1.724137931034483"/>
+                    <item id="5366" chance="1.724137931034483"/>
+                    <item id="5370" chance="1.724137931034483"/>
+                    <item id="5394" chance="1.724137931034483"/>
+                    <item id="5428" chance="1.724137931034483"/>
+                    <item id="5334" chance="1.724137931034483"/>
+                    <item id="5418" chance="1.724137931034483"/>
+                    <item id="5354" chance="1.724137931034483"/>
+                    <item id="5346" chance="1.724137931034483"/>
+                    <item id="5522" chance="1.724137931034483"/>
+                    <item id="5502" chance="1.724137931034483"/>
+                    <item id="5496" chance="1.724137931034483"/>
+                    <item id="5520" chance="1.724137931034483"/>
+                    <item id="5524" chance="1.724137931034483"/>
+                    <item id="5508" chance="1.724137931034483"/>
+                    <item id="5525" chance="1.724137931034483"/>
+                    <item id="5478" chance="1.724137931034483"/>
+                    <item id="5482" chance="1.724137931034483"/>
+                    <item id="5486" chance="1.724137931034483"/>
+                    <item id="5494" chance="1.724137931034483"/>
+                    <item id="5514" chance="1.724137931034483"/>
+                    <item id="5527" chance="1.724137931034483"/>
+                    <item id="5480" chance="1.724137931034483"/>
+                    <item id="5503" chance="1.724137931034483"/>
+                    <item id="5528" chance="1.724137931034483"/>
+                    <item id="5515" chance="1.724137931034483"/>
+                    <item id="5481" chance="1.724137931034483"/>
+                    <item id="5523" chance="1.724137931034483"/>
+                    <item id="5488" chance="1.724137931034483"/>
+                    <item id="5487" chance="1.724137931034483"/>
+                    <item id="5495" chance="1.724137931034483"/>
+                    <item id="5497" chance="1.724137931034483"/>
+                    <item id="5509" chance="1.724137931034483"/>
+                    <item id="5526" chance="1.724137931034483"/>
+                    <item id="5479" chance="1.724137931034483"/>
+                    <item id="5521" chance="1.724137931034483"/>
+                    <item id="5489" chance="1.724137931034483"/>
+                    <item id="5485" chance="1.724137931034483"/>
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="39154" name="Ornament Ingredient Box - A-grade" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i05"/>
-        <attributes>
-            <cool-time initial="500"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <effect-range initial="-1"/>
-            <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="49763"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="8.333333333333333" id="6344"/>
+                <item chance="8.333333333333333" id="6343"/>
+                <item chance="8.333333333333333" id="6337"/>
+                <item chance="8.333333333333333" id="6331"/>
+                <item chance="8.333333333333333" id="6339"/>
+                <item chance="8.333333333333333" id="6333"/>
+                <item chance="8.333333333333333" id="6335"/>
+                <item chance="8.333333333333333" id="6329"/>
+                <item chance="8.333333333333333" id="6346"/>
+                <item chance="8.333333333333333" id="6345"/>
+                <item chance="8.333333333333333" id="6342"/>
+                <item chance="8.333333333333333" id="6341"/>
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="39155" name="Life Control Tower's Scroll of Blessing" action="A1">
         <!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->

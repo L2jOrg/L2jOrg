@@ -539,28 +539,38 @@
 	<item id="49760" name="A-grade Armor Supply Box" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to receive an A-grade Armor. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="39151" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="49761" name="Ornament Supply Box (A-grade)" type="NONE" icon="icon.etc_box_of_adventure_2_i00">
 	<!-- Double-click to receive an A-grade Ornament. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="39152" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
 		</skill-reducer>
+
 	</item>
 
 	<item id="49762" name="Armor Ingredient Box - A-grade" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to receive one of A-grade Armor Ingredients. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="39153" value="-1"/>  <!-- Armor ingredient Supply Box (A-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="49763" name="Ornament Ingredient Box - A-grade" type="NONE" icon="icon.etc_box_of_adventure_2_i00">
 	<!-- Double-click to receive one of A-grade Ornament Ingredients. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="39154" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="49764" name="Scroll: 20,000 SP" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
