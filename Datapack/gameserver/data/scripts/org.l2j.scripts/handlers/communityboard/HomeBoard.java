@@ -188,10 +188,10 @@ public final class HomeBoard implements IParseBoardHandler {
         result += "<table>";
         result += "<tr>";
         result += "<td>";
-        result += "<button value=\"Use on me\" action=\"bypass _bbsgivebuffs " + scheme.getKey()  + " " + cost + "\" width=120 height=33 back=\"L2EssenceCommunity.class_change_btn_over\" fore=\"L2EssenceCommunity.class_change_btn\">";
+        result += "<button value=\"Use on me\" action=\"bypass _bbsgivebuffs " + scheme.getKey()  + " " + cost + "\" width=120 height=33 back=\"L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button\" fore=\"L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button\">";
         result += "</td>";
         result += "<td>";
-        result += "<button value=\"Use on pet\" action=\"bypass _bbsgivebuffs " + scheme.getKey()  + " " + cost + " pet\" width=120 height=33 back=\"L2EssenceCommunity.class_change_btn_over\" fore=\"L2EssenceCommunity.class_change_btn\">";
+        result += "<button value=\"Use on pet\" action=\"bypass _bbsgivebuffs " + scheme.getKey()  + " " + cost + " pet\" width=120 height=33 back=\"L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button\" fore=\"L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button\">";
         result += "</td>";
         result += "</tr>";
         result += "</table>";
@@ -599,7 +599,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
         // Feeding all unused buttons
         for(int i = 1 ; i <= 36 ; i++)
-            returnHtml = replaceVars(i, groupType, schemeName, "L2EssenceCommunity.add_buffs_icon", -1, page, returnHtml);
+            returnHtml = replaceVars(i, groupType, schemeName, "L2UI_NewTex.SideBar.SideBar_EventBtn_Normal", -1, page, returnHtml);
 
         return returnHtml;
     }
@@ -671,11 +671,11 @@ public final class HomeBoard implements IParseBoardHandler {
             final Skill skill = SkillEngine.getInstance().getSkill(skillId, 1);
             if (schemeSkills.contains(skillId))
             {
-                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
+                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_NewTex.SideBar.SideBar_Btn_Reduce_n\" fore=\"L2UI_NewTex.SideBar.SideBar_Btn_Reduce_n\"></td>");
             }
             else
             {
-                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
+                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_NewTex.Button.BTN_Plus_Normal\" fore=\"L2UI_NewTex.Button.BTN_Plus_Normal\"></td>");
             }
 
             column++;
