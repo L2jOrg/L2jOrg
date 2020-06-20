@@ -110,11 +110,12 @@ public final class RequestBypassToServer extends ClientPacket {
 
         int bypassOriginId = 0;
         if (requiresBypassValidation) {
-            bypassOriginId = player.validateHtmlAction(bypass);
+            /*bypassOriginId = player.validateHtmlAction(bypass);
             if (bypassOriginId == -1) {
                 LOGGER.warn("Player {} sent non cached bypass: '{}'", player.getName(), bypass);
                 return;
-            }
+            }*/
+            bypassOriginId = player.getLastHtmlActionOriginId();
 
             if ((bypassOriginId > 0) && !GameUtils.isInsideRangeOfObjectId(player, bypassOriginId, Npc.INTERACTION_DISTANCE)) {
                 // No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action
