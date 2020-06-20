@@ -46,6 +46,6 @@ public class ExEnterWorld extends ServerPacket {
         writeInt(epochInSeconds);
         writeInt(-zoneIdOffsetSeconds);
         writeInt(daylight);
-        writeInt(0);
+        writeInt(40);
     }
 }

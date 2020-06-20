@@ -58,4 +58,13 @@ public interface ItemDAO extends DAO<Object> {
     List<ItemOnGroundData> findAllItemsOnGround();
 
     void save(Collection<ItemOnGroundData> datas);
+
+    @Query("DELETE FROM item_variations WHERE itemId IN (SELECT object_id FROM items WHERE items.owner_id=:playerId:)")
+    void deleteVariationsByOwner(int playerId);
+
+    @Query("DELETE FROM item_special_abilities WHERE objectId IN (SELECT object_id FROM items WHERE items.owner_id=:playerId:)")
+    void deleteSpecialAbilitiesByOwner(int playerId);
+
+    @Query("DELETE FROM items WHERE owner_id=:playerId:")
+    void deleteByOwner(int playerId);
 }
