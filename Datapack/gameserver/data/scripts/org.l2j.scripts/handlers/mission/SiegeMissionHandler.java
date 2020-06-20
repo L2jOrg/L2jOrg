@@ -21,9 +21,10 @@ package handlers.mission;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
@@ -39,8 +40,8 @@ import static java.util.Objects.nonNull;
  * @author UnAfraid
  */
 public class SiegeMissionHandler extends AbstractMissionHandler {
-	public SiegeMissionHandler(MissionDataHolder holder)
-	{
+
+	private SiegeMissionHandler(MissionDataHolder holder) {
 		super(holder);
 	}
 	
@@ -72,6 +73,19 @@ public class SiegeMissionHandler extends AbstractMissionHandler {
 				notifyAvailablesReward(player);
 				storePlayerEntry(entry);
 			});
+		}
+	}
+
+	public static class Factory implements MissionHandlerFactory {
+
+		@Override
+		public AbstractMissionHandler create(MissionDataHolder data) {
+			return new SiegeMissionHandler(data);
+		}
+
+		@Override
+		public String handlerName() {
+			return "siege";
 		}
 	}
 }

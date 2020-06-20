@@ -19,9 +19,10 @@
 package handlers.mission;
 
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.OnElementalSpiritUpgrade;
@@ -30,11 +31,14 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 
 import java.util.function.Consumer;
 
+/**
+ * @author JoeAlisson
+ */
 public class SpiritMissionHandler extends AbstractMissionHandler {
 
     private final ElementalType type;
 
-    public SpiritMissionHandler(MissionDataHolder holder) {
+    private SpiritMissionHandler(MissionDataHolder holder) {
         super(holder);
         type = getHolder().getParams().getEnum("element", ElementalType.class, ElementalType.NONE);
     }
@@ -78,5 +82,18 @@ public class SpiritMissionHandler extends AbstractMissionHandler {
     private enum MissionKind {
         LEARN,
         EVOLVE
+    }
+
+    public static class Factory implements MissionHandlerFactory {
+
+        @Override
+        public AbstractMissionHandler create(MissionDataHolder data) {
+            return new SpiritMissionHandler(data);
+        }
+
+        @Override
+        public String handlerName() {
+            return "spirit";
+        }
     }
 }

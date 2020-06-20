@@ -263,14 +263,14 @@
         <reward id="91128"/> <!-- Petram's Breath -->
     </mission>
 
-    <mission id="1126" name="Daily Hunting II (Lv. 20 or lower)" required-completion="50">
+    <mission id="1126" name="Daily Hunting II (Lv. 20 or lower)" requires-mission="1001" required-completion="50">
         <handler name="hunt">
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1127" name="Daily Hunting II (Lv. 21-40)" required-completion="60">
+    <mission id="1127" name="Daily Hunting II (Lv. 21-40)" requires-mission="1002" required-completion="60">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -280,7 +280,7 @@
         <reward id="49595"/> <!-- Scroll: 2000 SP -->
     </mission>
 
-    <mission id="1128" name="Daily Hunting II (Lv. 41-50)" required-completion="80">
+    <mission id="1128" name="Daily Hunting II (Lv. 41-50)" requires-mission="1003" required-completion="80">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -288,7 +288,7 @@
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1129" name="Daily Hunting II (Lv. 51-60)" required-completion="100">
+    <mission id="1129" name="Daily Hunting II (Lv. 51-60)" requires-mission="1004" required-completion="100">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -296,7 +296,7 @@
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1130" name="Daily Hunting II (Lv. 61-70)" required-completion="120">
+    <mission id="1130" name="Daily Hunting II (Lv. 61-70)" requires-mission="1005" required-completion="120">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -304,7 +304,7 @@
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1131" name="Daily Hunting II (Lv. 71-75)" required-completion="150">
+    <mission id="1131" name="Daily Hunting II (Lv. 71-75)" requires-mission="1006" required-completion="150">
         <handler name="hunt">
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
@@ -312,21 +312,21 @@
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1132" name="Daily Hunting II (Lv. 76 or higher)" required-completion="200">
+    <mission id="1132" name="Daily Hunting II (Lv. 76 or higher)" requires-mission="1007" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1133" name="Daily Hunting III (Lv. 20 or lower)" required-completion="80">
+    <mission id="1133" name="Daily Hunting III (Lv. 20 or lower)" requires-mission="1126" required-completion="80">
         <handler name="hunt">
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1134" name="Daily Hunting III (Lv. 21-40)" required-completion="100">
+    <mission id="1134" name="Daily Hunting III (Lv. 21-40)" requires-mission="1227" required-completion="100">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -336,7 +336,7 @@
         <reward id="49595"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1135" name="Daily Hunting III (Lv. 41-50)" required-completion="120">
+    <mission id="1135" name="Daily Hunting III (Lv. 41-50)" requires-mission="1128" required-completion="120">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -344,7 +344,7 @@
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1136" name="Daily Hunting III (Lv. 51-60)" required-completion="150">
+    <mission id="1136" name="Daily Hunting III (Lv. 51-60)" requires-mission="1129" required-completion="150">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -352,7 +352,7 @@
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1137" name="Daily Hunting III (Lv. 61-70)" required-completion="180">
+    <mission id="1137" name="Daily Hunting III (Lv. 61-70)" requires-mission="1130" required-completion="180">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -360,7 +360,7 @@
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1138" name="Daily Hunting III (Lv. 71-75)" required-completion="200">
+    <mission id="1138" name="Daily Hunting III (Lv. 71-75)" requires-mission="1131" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
@@ -368,7 +368,7 @@
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1139" name="Daily Hunting III (Lv. 76+)" required-completion="300">
+    <mission id="1139" name="Daily Hunting III (Lv. 76+)" requires-mission="1132" required-completion="300">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>
@@ -427,14 +427,14 @@
         <reward id="91931"/> <!-- Adventurer's Mark Lv. 5-->
     </mission>
 
-    <mission id="1146" name="Daily Hunting IV (Lv. 20 or lower)" required-completion="100">
+    <mission id="1146" name="Daily Hunting IV (Lv. 20 or lower)" requires-mission="1133" required-completion="100">
         <handler name="hunt">
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1147" name="Daily Hunting IV (Lv. 21-40)" required-completion="130">
+    <mission id="1147" name="Daily Hunting IV (Lv. 21-40)" requires-mission="1134" required-completion="130">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -444,7 +444,7 @@
         <reward id="49595"/> <!-- Scroll: 2000 SP -->
     </mission>
 
-    <mission id="1148" name="Daily Hunting IV (Lv. 41-50)" required-completion="160">
+    <mission id="1148" name="Daily Hunting IV (Lv. 41-50)" requires-mission="1135" required-completion="160">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -452,7 +452,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1149" name="Daily Hunting IV (Lv. 51-60)" required-completion="200">
+    <mission id="1149" name="Daily Hunting IV (Lv. 51-60)" requires-mission="1136" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -460,7 +460,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1150" name="Daily Hunting IV (Lv. 61-70)" required-completion="240">
+    <mission id="1150" name="Daily Hunting IV (Lv. 61-70)" requires-mission="1137" required-completion="240">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -468,7 +468,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1151" name="Daily Hunting IV (Lv. 71-75)" required-completion="300">
+    <mission id="1151" name="Daily Hunting IV (Lv. 71-75)" requires-mission="1138" required-completion="300">
         <handler name="hunt">
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
@@ -476,21 +476,21 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1152" name="Daily Hunting IV (Lv. 76 or higher)" required-completion="400">
+    <mission id="1152" name="Daily Hunting IV (Lv. 76 or higher)" requires-mission="1139" required-completion="400">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1153" name="Daily Hunting V (Lv. 20 or lower)" required-completion="130">
+    <mission id="1153" name="Daily Hunting V (Lv. 20 or lower)" requires-mission="1146" required-completion="130">
         <handler name="hunt">
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1154" name="Daily Hunting V (Lv. 21-40)" required-completion="160">
+    <mission id="1154" name="Daily Hunting V (Lv. 21-40)" requires-mission="1147" required-completion="160">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -500,7 +500,7 @@
         <reward id="49595"/> <!-- Scroll: 2000 SP -->
     </mission>
 
-    <mission id="1155" name="Daily Hunting V (Lv. 41-50)" required-completion="200">
+    <mission id="1155" name="Daily Hunting V (Lv. 41-50)" requires-mission="1148" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -508,7 +508,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1156" name="Daily Hunting V (Lv. 51-60)" required-completion="250">
+    <mission id="1156" name="Daily Hunting V (Lv. 51-60)" requires-mission="1149" required-completion="250">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -516,7 +516,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1157" name="Daily Hunting V (Lv. 61-70)" required-completion="300">
+    <mission id="1157" name="Daily Hunting V (Lv. 61-70)" requires-mission="1150" required-completion="300">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -524,7 +524,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1158" name="Daily Hunting V (Lv. 71-75)" required-completion="400">
+    <mission id="1158" name="Daily Hunting V (Lv. 71-75)" requires-mission="1151" required-completion="400">
         <handler name="hunt">
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
@@ -532,7 +532,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1159" name="Daily Hunting V (Lv. 76 or higher)" required-completion="500">
+    <mission id="1159" name="Daily Hunting V (Lv. 76 or higher)" requires-mission="1152" required-completion="500">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>

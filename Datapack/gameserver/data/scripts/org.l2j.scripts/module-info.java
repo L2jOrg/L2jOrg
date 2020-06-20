@@ -1,4 +1,3 @@
-import ai.areas.GiantCave.EntranceRoom;
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
@@ -49,6 +48,7 @@ open module org.l2j.scripts {
     uses org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
     uses org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
     uses org.l2j.gameserver.model.conditions.ConditionFactory;
+    uses org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 
     provides org.l2j.gameserver.model.conditions.ConditionFactory
             with NpcLevelCondition.Factory,
@@ -772,5 +772,18 @@ open module org.l2j.scripts {
              quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
              quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction,
              quests.Q00620_FourGoblets.Q00620_FourGoblets;
+
+
+    provides org.l2j.gameserver.engine.mission.MissionHandlerFactory
+        with handlers.mission.LevelMissionHandler.Factory,
+            handlers.mission.BossMissionHandler.Factory,
+            handlers.mission.ClanMissionHandler.Factory,
+            handlers.mission.FishingMissionHandler.Factory,
+            handlers.mission.HuntMissionHandler.Factory,
+            handlers.mission.LoginMissionHandler.Factory,
+            handlers.mission.OlympiadMissionHandler.Factory,
+            handlers.mission.QuestMissionHandler.Factory,
+            handlers.mission.SiegeMissionHandler.Factory,
+            handlers.mission.SpiritMissionHandler.Factory;
 
 }

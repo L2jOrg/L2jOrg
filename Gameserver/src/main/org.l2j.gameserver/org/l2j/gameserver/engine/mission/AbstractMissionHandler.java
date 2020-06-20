@@ -16,13 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.handler;
+package org.l2j.gameserver.engine.mission;
 
 import org.l2j.gameserver.data.database.dao.MissionDAO;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
-import org.l2j.gameserver.engine.mission.MissionData;
-import org.l2j.gameserver.engine.mission.MissionDataHolder;
-import org.l2j.gameserver.engine.mission.MissionStatus;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;

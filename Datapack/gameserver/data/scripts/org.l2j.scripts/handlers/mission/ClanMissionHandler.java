@@ -19,9 +19,10 @@
 package handlers.mission;
 
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
+import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
@@ -32,9 +33,12 @@ import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class ClanMissionHandler extends AbstractMissionHandler {
 
-    public ClanMissionHandler(MissionDataHolder holder) {
+    private ClanMissionHandler(MissionDataHolder holder) {
         super(holder);
     }
 
@@ -67,5 +71,18 @@ public class ClanMissionHandler extends AbstractMissionHandler {
     enum MissionKind {
         JOIN,
         ARENA
+    }
+
+    public static class Factory implements MissionHandlerFactory {
+
+        @Override
+        public AbstractMissionHandler create(MissionDataHolder data) {
+            return new ClanMissionHandler(data);
+        }
+
+        @Override
+        public String handlerName() {
+            return "clan";
+        }
     }
 }

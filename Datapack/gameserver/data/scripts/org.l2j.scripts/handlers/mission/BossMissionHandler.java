@@ -20,9 +20,10 @@ package handlers.mission;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
+import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -34,15 +35,17 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class BossMissionHandler extends AbstractMissionHandler
 {
 	private final int _amount;
 	
-	public BossMissionHandler(MissionDataHolder holder)
+	private BossMissionHandler(MissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();
@@ -51,7 +54,7 @@ public class BossMissionHandler extends AbstractMissionHandler
 	@Override
 	public void init()
 	{
-		Listeners.Monsters().addListener(new ConsumerEventListener(this, EventType.ON_ATTACKABLE_KILL, (OnAttackableKill event) -> onAttackableKill(event), this));
+		Listeners.Monsters().addListener(new ConsumerEventListener(this, EventType.ON_ATTACKABLE_KILL, (Consumer<OnAttackableKill>) this::onAttackableKill, this));
 	}
 
 	
@@ -85,6 +88,19 @@ public class BossMissionHandler extends AbstractMissionHandler
 				entry.setStatus(MissionStatus.AVAILABLE);
 			}
 			storePlayerEntry(entry);
+		}
+	}
+
+	public static class Factory implements MissionHandlerFactory {
+
+		@Override
+		public AbstractMissionHandler create(MissionDataHolder data) {
+			return new BossMissionHandler(data);
+		}
+
+		@Override
+		public String handlerName() {
+			return "boss";
 		}
 	}
 }

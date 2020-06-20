@@ -18,6 +18,8 @@
  */
 package handlers;
 
+import org.l2j.gameserver.engine.mission.MissionEngine;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.handler.*;
@@ -48,5 +50,6 @@ public class Init {
         ServiceLoader.load(SkillConditionFactory.class, loader).forEach(SkillConditionHandler.getInstance()::registerFactory);
         ServiceLoader.load(SkillEffectFactory.class, loader).forEach(EffectHandler.getInstance()::registerFactory);
         ServiceLoader.load(ConditionFactory.class, loader).forEach(ConditionHandler.getInstance()::registerFactory);
+        ServiceLoader.load(MissionHandlerFactory.class, loader).forEach(MissionEngine.getInstance()::registerHandler);
     }
 }

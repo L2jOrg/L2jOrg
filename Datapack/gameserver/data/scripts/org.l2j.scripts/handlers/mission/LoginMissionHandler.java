@@ -18,11 +18,11 @@
  */
 package handlers.mission;
 
-
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
+import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
@@ -34,11 +34,14 @@ import java.util.function.Consumer;
 
 import static org.l2j.commons.util.Util.isInteger;
 
+/**
+ * @author JoeAlisson
+ */
 public class LoginMissionHandler extends AbstractMissionHandler {
 
     private byte days = 0;
 
-    public LoginMissionHandler(MissionDataHolder holder) {
+    private LoginMissionHandler(MissionDataHolder holder) {
         super(holder);
         var days = holder.getParams().getString("days", "");
         for (String day : days.split(" ")) {
@@ -73,6 +76,19 @@ public class LoginMissionHandler extends AbstractMissionHandler {
             entry.setProgress(1);
             entry.setStatus(MissionStatus.AVAILABLE);
             notifyAvailablesReward(event.getPlayer());
+        }
+    }
+
+    public static class Factory implements MissionHandlerFactory {
+
+        @Override
+        public AbstractMissionHandler create(MissionDataHolder data) {
+            return new LoginMissionHandler(data);
+        }
+
+        @Override
+        public String handlerName() {
+            return "login";
         }
     }
 }
