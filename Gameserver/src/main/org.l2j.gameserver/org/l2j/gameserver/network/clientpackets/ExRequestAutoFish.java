@@ -18,30 +18,25 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
-
 /**
  * @author St3eT
  */
 public final class ExRequestAutoFish extends ClientPacket {
-    private boolean _start;
+    private boolean start;
 
     @Override
     public void readImpl() {
-        _start = readByte() != 0;
+        start = readBoolean();
     }
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
-            return;
-        }
+        final var player = client.getPlayer();
 
-        if (_start) {
-            activeChar.getFishing().startFishing();
+        if (start) {
+            player.getFishing().startFishing();
         } else {
-            activeChar.getFishing().stopFishing();
+            player.getFishing().stopFishing();
         }
     }
 }
