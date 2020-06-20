@@ -42,6 +42,13 @@
     <chance-group name="CURSED_GROUP">
         <enchant chance="100"/>
     </chance-group>
+
+    <chance-group name="TALISMAN_GROUP">
+        <enchant until="1" chance="100"/>
+        <enchant from="2" until="4" chance="50"/>
+        <enchant from="5" until="8" chance="25"/>
+        <enchant from="9" until="10" chance="10"/>
+    </chance-group>
     
     <fail-rewards>
         <weapon reward-id="91462"> <!-- Weapon Enhancement Stone -->
@@ -153,7 +160,7 @@
         <enchant-chance group="ARMOR_GROUP">
             <slots>
                 LEFT_HAND HEAD CHEST LEGS FEET GLOVES NECK EAR FINGER BELT BACK
-                TALISMAN AGATHION PENDANT HAIR HAIR2 HAIR_ALL TALISMAN
+                AGATHION PENDANT HAIR HAIR2 HAIR_ALL
             </slots>
         </enchant-chance>
 
@@ -167,6 +174,10 @@
 
         <enchant-chance group="MAGE_WEAPON_GROUP" magic-weapon="true">
             <slots>RIGHT_HAND TWO_HAND</slots>
+        </enchant-chance>
+
+        <enchant-chance group="TALISMAN_GROUP">
+            <slots>TALISMAN</slots>
         </enchant-chance>
     </group>
 

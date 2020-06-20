@@ -24,6 +24,7 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.enchant.*;
 import org.l2j.gameserver.enums.InventoryBlockType;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.item.BodyPart;
@@ -296,7 +297,7 @@ public class EnchantItemEngine extends GameXmlReader {
             }
         } else {
             if (item.isEquipped()) {
-                var modifiedItems = player.getInventory().unEquipItemInBodySlotAndRecord(item.getBodyPart());
+                var modifiedItems = player.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
                 player.sendInventoryUpdate(new InventoryUpdate(modifiedItems));
             }
 
