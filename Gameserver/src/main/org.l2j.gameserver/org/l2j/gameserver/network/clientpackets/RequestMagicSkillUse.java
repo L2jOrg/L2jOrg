@@ -43,10 +43,6 @@ public final class RequestMagicSkillUse extends ClientPacket {
     public void runImpl() {
         // Get the current Player of the player
         final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
-
         // Get the level of the used skill
         Skill skill = player.getKnownSkill(_magicId);
         if (skill == null) {

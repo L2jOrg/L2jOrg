@@ -148,7 +148,6 @@ public final class GameClient extends Client<Connection<GameClient>> {
         LOGGER_ACCOUNTING.debug("Client Connected: {}", this);
     }
 
-
     public void closeNow() {
         super.close(null);
     }

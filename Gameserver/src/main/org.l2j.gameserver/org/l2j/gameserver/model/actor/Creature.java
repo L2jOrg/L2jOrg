@@ -945,17 +945,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void doCast(Skill skill) {
-        doCast(skill, null, false, false);
+        doCast(skill, null, false, false, SkillCastingType.NORMAL);
     }
 
     public void doCast(Skill skill, SkillCastingType castingType) {
         doCast(skill, null, false, false, castingType);
     }
 
-    public synchronized void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {
-        // Get proper casting type.
-        SkillCastingType castingType = SkillCastingType.NORMAL;
-        doCast(skill, null, false, false, castingType);
+    public void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {
+        doCast(skill, item, ctrlPressed, shiftPressed, SkillCastingType.NORMAL);
     }
 
     /**
