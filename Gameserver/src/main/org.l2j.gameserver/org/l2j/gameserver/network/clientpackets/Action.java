@@ -79,7 +79,6 @@ public final class Action extends ClientPacket {
             obj = player.getTarget();
         } else {
             obj = World.getInstance().findObject(objectId);
-            player.setLastHtmlActionOriginId(objectId);
         }
 
         // If object requested does not exist, add warn msg into logs
