@@ -86,7 +86,8 @@ public final class HomeBoard implements IParseBoardHandler {
             Config.COMMUNITYBOARD_ENABLE_BUFFS ? "_bbsskillunselect" : null,
             Config.COMMUNITYBOARD_ENABLE_BUFFS ? "_bbsgivebuffs" : null,
             Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null,
-            Config.COMMUNITYBOARD_ENABLE_PREMIUM ? "_bbspremium" : null
+            Config.COMMUNITYBOARD_ENABLE_PREMIUM ? "_bbspremium" : null,
+            Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null
     };
 
     private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {
@@ -223,43 +224,13 @@ public final class HomeBoard implements IParseBoardHandler {
         if (command.equals("_bbshome") || command.equals("_bbstop")) {
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
-
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
-            if (!Config.CUSTOM_CB_ENABLED) {
-                returnHtml = returnHtml.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
-                returnHtml = returnHtml.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));
-                returnHtml = returnHtml.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
-            }
-            if (Config.CUSTOM_CB_ENABLED) {
-                returnHtml = returnHtml.replaceAll("%name%", activeChar.getName());
-                returnHtml = returnHtml.replaceAll("%premium%", "Could not find acount setup");
-                returnHtml = returnHtml.replaceAll("%clan%", (activeChar.getClan() != null) ? activeChar.getClan().getName() : "No clan");
-                returnHtml = returnHtml.replaceAll("%alliance%", "Could not find it");
-                returnHtml = returnHtml.replaceAll("%country%", "Could not found it");
-                returnHtml = returnHtml.replaceAll("%class%", activeChar.getBaseTemplate().getClassId().name().replace("_", " "));
-                returnHtml = returnHtml.replaceAll("%exp%", String.valueOf(activeChar.getExp()));
-                returnHtml = returnHtml.replaceAll("%adena%", String.valueOf(activeChar.getAdena()));
-                returnHtml = returnHtml.replaceAll("%online%", String.valueOf(activeChar.getUptime()));
-                returnHtml = returnHtml.replaceAll("%onlinePlayers%", String.valueOf(World.getInstance().getPlayers().size()));
-            }
         } else if (command.startsWith("_bbstop")) {
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
             final String path = command.replace("_bbstop ", "");
             if ((path.length() > 0) && path.endsWith(".html")) {
                 returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
             }
-            /*if (Config.CUSTOM_CB_ENABLED && (returnHtml != null)) {
-                returnHtml = returnHtml.replaceAll("%name%", activeChar.getName());
-                returnHtml = returnHtml.replaceAll("%premium%", "Could not find acount setup");
-                returnHtml = returnHtml.replaceAll("%clan%", (activeChar.getClan() != null) ? activeChar.getClan().getName() : "No clan");
-                returnHtml = returnHtml.replaceAll("%alliance%", "Could not find it");
-                returnHtml = returnHtml.replaceAll("%country%", "Could not found it");
-                returnHtml = returnHtml.replaceAll("%class%", activeChar.getBaseTemplate().getClassId().name().replace("_", " "));
-                returnHtml = returnHtml.replaceAll("%exp%", String.valueOf(activeChar.getExp()));
-                returnHtml = returnHtml.replaceAll("%adena%", String.valueOf(activeChar.getAdena()));
-                returnHtml = returnHtml.replaceAll("%online%", String.valueOf(activeChar.getUptime()));
-                returnHtml = returnHtml.replaceAll("%onlinePlayers%", String.valueOf(World.getInstance().getPlayers().size()));
-            }*/
         } else if (command.startsWith("_bbsmultisell")) {
             final String fullBypass = command.replace("_bbsmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
@@ -314,8 +285,7 @@ public final class HomeBoard implements IParseBoardHandler {
                     if (!Config.COMMUNITY_AVAILABLE_BUFFS.contains(skill.getId())) {
                         continue;
                     }
-                    targets.stream().filter(target -> !isSummon(target) || !skill.isSharedWithSummon()).forEach(target ->
-                    {
+                    targets.stream().filter(target -> !isSummon(target) || !skill.isSharedWithSummon()).forEach(target -> {
                         skill.applyEffects(activeChar, target);
                         if (Config.COMMUNITYBOARD_CAST_ANIMATIONS) {
                             activeChar.sendPacket(new MagicSkillUse(activeChar, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
@@ -376,63 +346,49 @@ public final class HomeBoard implements IParseBoardHandler {
                     activeChar.addLCoins(-buypassL2Coins);
                     activeChar.updateVipPoints(buypassVIPPoints);
                 }
-        } else if (command.startsWith("_bbscreatescheme"))
-        {
+        } else if (command.startsWith("_bbscreatescheme")) {
             // Simple hack to use _bbscreatescheme bypass with a space.
             command = command.replace("_bbscreatescheme ", "");
-
             boolean canCreateScheme = true;
 
-            try
-            {
+            try {
                 // Check if more then 14 chars
                 final String schemeName = command.trim();
-                if (schemeName.length() > 14)
-                {
+                if (schemeName.length() > 14) {
                     activeChar.sendMessage("Scheme's name must contain up to 14 chars.");
                     canCreateScheme = false;
                 }
 
                 // Simple hack to use spaces, dots, commas, minus, plus, exclamations or question marks.
-                if (!Util.isAlphaNumeric(schemeName.replace(" ", "").replace(".", "").replace(",", "").replace("-", "").replace("+", "").replace("!", "").replace("?", "")))
-                {
+                if (!Util.isAlphaNumeric(schemeName.replace(" ", "").replace(".", "").replace(",", "").replace("-", "").replace("+", "").replace("!", "").replace("?", ""))) {
                     activeChar.sendMessage("Please use plain alphanumeric characters.");
                     canCreateScheme = false;
                 }
 
                 final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
-                if (schemes != null)
-                {
-                    if (schemes.size() == Config.BUFFER_MAX_SCHEMES)
-                    {
+                if (schemes != null) {
+                    if (schemes.size() == Config.BUFFER_MAX_SCHEMES) {
                         activeChar.sendMessage("Maximum schemes amount is already reached.");
                         canCreateScheme = false;
                     }
-                    if (schemes.containsKey(schemeName))
-                    {
+
+                    if (schemes.containsKey(schemeName)) {
                         activeChar.sendMessage("The scheme name already exists.");
                         canCreateScheme = false;
                     }
                 }
 
-                if (canCreateScheme)
-                {
+                if (canCreateScheme) {
                     SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayList<>());
                     returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1, returnHtml);
-                }
-                else {
+                } else {
                     returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
                 }
-
-
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 activeChar.sendMessage(e.getMessage());
             }
-        }
-        else if (command.startsWith("_bbseditscheme"))
-        {
+        } else if (command.startsWith("_bbseditscheme")) {
             // Simple hack to use createscheme bypass with a space.
             // command = command.replace("_bbseditscheme ", "_bbseditscheme;");
 
@@ -444,9 +400,7 @@ public final class HomeBoard implements IParseBoardHandler {
             final int page = Integer.parseInt(st.nextToken());
 
             returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page, returnHtml);
-        }
-        else if (command.startsWith("_bbsskill"))
-        {
+        } else if (command.startsWith("_bbsskill")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
             final String currentCommand = st.nextToken();
 
@@ -456,98 +410,73 @@ public final class HomeBoard implements IParseBoardHandler {
             final int page = Integer.parseInt(st.nextToken());
             final List<Integer> skills = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName);
 
-            if (currentCommand.startsWith("_bbsskillselect") && !schemeName.equalsIgnoreCase("none"))
-            {
+            if (currentCommand.startsWith("_bbsskillselect") && !schemeName.equalsIgnoreCase("none")) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
-                if (skill.isDance())
-                {
-                    if (getCountOf(skills, true) < Config.DANCES_MAX_AMOUNT)
-                    {
+                if (skill.isDance()) {
+                    if (getCountOf(skills, true) < Config.DANCES_MAX_AMOUNT) {
                         skills.add(skillId);
-                    }
-                    else
-                    {
+                    } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of dances/songs.");
                     }
-                }
-                else
-                {
-                    if (getCountOf(skills, false) < Config.BUFFS_MAX_AMOUNT)
-                    {
+                } else {
+                    if (getCountOf(skills, false) < Config.BUFFS_MAX_AMOUNT) {
                         skills.add(skillId);
-                    }
-                    else
-                    {
+                    } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of buffs.");
                     }
                 }
-            }
-            else if (currentCommand.startsWith("_bbsskillunselect"))
-            {
+            } else if (currentCommand.startsWith("_bbsskillunselect")) {
                 skills.remove(Integer.valueOf(skillId));
             }
 
             returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page, returnHtml);
         }
-        else if (command.startsWith("_bbsgivebuffs"))
-        {
+        else if (command.startsWith("_bbsgivebuffs")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
             final String currentCommand = st.nextToken();
 
             final String schemeName = st.nextToken();
             final long cost = Integer.parseInt(st.nextToken());
             Creature target = null;
-            if (st.hasMoreTokens())
-            {
+            if (st.hasMoreTokens()) {
                 final String targetType = st.nextToken();
-                if ((targetType != null) && targetType.equalsIgnoreCase("pet"))
-                {
+                if ((targetType != null) && targetType.equalsIgnoreCase("pet")) {
                     target = activeChar.getPet();
-                }
-                else if ((targetType != null) && targetType.equalsIgnoreCase("summon"))
-                {
-                    for (Summon summon : activeChar.getServitorsAndPets())
-                    {
-                        if (summon.isServitor())
-                        {
+                } else if ((targetType != null) && targetType.equalsIgnoreCase("summon")) {
+                    for (Summon summon : activeChar.getServitorsAndPets()) {
+                        if (summon.isServitor()) {
                             target = summon;
                         }
                     }
                 }
             }
-            else
-            {
+            else {
                 target = activeChar;
             }
 
-            if (target == null)
-            {
+            if (target == null) {
                 activeChar.sendMessage("You don't have a pet.");
             }
-            else if ((cost == 0) || activeChar.reduceAdena("Community Board Buffer", cost, target, true))
-            {
-                for (int skillId : SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName))
-                {
+            else if ((cost == 0) || activeChar.reduceAdena("Community Board Buffer", cost, target, true)) {
+                for (int skillId : SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName)) {
                     SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId)).applyEffects(target, target);
                 }
             }
 
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
-        }
-        else if (command.startsWith("_bbsdeletescheme"))
-        {
-
+        } else if (command.startsWith("_bbsdeletescheme")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
             final String currentCommand = st.nextToken();
 
             final String schemeName = st.nextToken();
             final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
-            if ((schemes != null) && schemes.containsKey(schemeName))
-            {
+            if ((schemes != null) && schemes.containsKey(schemeName)) {
                 schemes.remove(schemeName);
             }
 
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
+        } else if (command.startsWith("_bbsautohpmpcp")) {
+            returnHtml = AutoHpMpCp.tryParseCommand(activeChar, command, returnHtml);
         }
 
         if (nonNull(returnHtml)) {
@@ -567,6 +496,10 @@ public final class HomeBoard implements IParseBoardHandler {
                 returnHtml = returnHtml.replaceAll("%adena%", String.valueOf(activeChar.getAdena()));
                 returnHtml = returnHtml.replaceAll("%online%", String.valueOf(activeChar.getUptime()));
                 returnHtml = returnHtml.replaceAll("%onlinePlayers%", String.valueOf(World.getInstance().getPlayers().size()));
+            } else {
+                returnHtml = returnHtml.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
+                returnHtml = returnHtml.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));
+                returnHtml = returnHtml.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
             }
             CommunityBoardHandler.separateAndSend(returnHtml, activeChar);
         }

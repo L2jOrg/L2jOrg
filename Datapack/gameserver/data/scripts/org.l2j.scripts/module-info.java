@@ -316,6 +316,8 @@ open module org.l2j.scripts {
             events.TotalRecall.TotalRecall,
             events.WatermelonNinja.WatermelonNinja,
 
+            handlers.communityboard.AutoHpMpCp,
+
             // custom
             custom.events.Elpies.Elpies,
             custom.events.Rabbits.Rabbits,
