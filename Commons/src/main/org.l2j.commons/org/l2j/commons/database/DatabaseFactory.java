@@ -62,7 +62,7 @@ public class DatabaseFactory {
         try {
             return dataSource.getConnection();
         } catch (SQLException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
         return null;
     }

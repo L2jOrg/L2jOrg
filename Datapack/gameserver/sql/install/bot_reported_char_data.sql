@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `bot_reported_char_data` (
 
 	PRIMARY KEY (`bot_id`, `reporter_id`, `type`),
     FOREIGN KEY FK_BOT_CHARACTER (`bot_id`) REFERENCES characters (`charId`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

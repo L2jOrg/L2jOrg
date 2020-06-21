@@ -197,14 +197,20 @@
 
 	<item id="91918" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="50153" value="-1"/>  <!-- Scroll of Escape: Captain Bathis -->
+		</skill-reducer>
 	</item>
 
 	<item id="91919" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="50154" value="-1"/>  <!-- Scroll of Escape: Captain Bathis -->
+		</skill-reducer>
 	</item>
 
 	<item id="91920" name="Scroll: Magic Break" type="NONE" icon="icon.etc_magic_book_black_i00">

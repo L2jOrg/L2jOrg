@@ -6,5 +6,6 @@ CREATE TABLE IF NOT EXISTS `heroes` (
   `played` decimal(1,0) NOT NULL DEFAULT 0,
   `claimed` ENUM('true','false') NOT NULL DEFAULT 'false',
   `message` varchar(300) NOT NULL DEFAULT '',
-  PRIMARY KEY (`charId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`charId`),
+  FOREIGN KEY (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

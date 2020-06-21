@@ -37,4 +37,7 @@ public interface PetDAO extends DAO<PetData> {
 
     @Query("DELETE FROM pets WHERE item_obj_id=:itemId:")
     void deleteByItem(int itemId);
+
+    @Query("DELETE FROM pets WHERE item_obj_id IN (SELECT object_id FROM items WHERE items.owner_id=:playerId:)")
+    void deleteByOwner(int playerId);
 }

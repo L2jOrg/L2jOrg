@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- Immortal: This is information from NetPro from NA! -->
+	<npcs>
+		<npc>31817</npc> <!-- Veruti -->
+	</npcs>
+	<item>
+		<ingredient id="70294" count="1"/> <!-- Receivable: Talisman of Border Lv. 1 --> 
+		<ingredient id="70294" count="1"/> <!-- Receivable: Talisman of Border Lv. 1 --> 
+		<production id="70295" count="1" chance="0"/> <!-- Receivable: Talisman of Border Lv. 2 -->
+		<production id="70295" count="1" chance="50"/> <!-- Receivable: Talisman of Border Lv. 2 -->
+		<production id="70294" count="1" chance="50"/> <!-- Receivable: Talisman of Border Lv. 1 -->
+	</item>
+	
+	<item>
+		<ingredient id="70294" count="1"/> <!-- Receivable: Talisman of Border Lv. 1 --> 
+		<ingredient id="71818" count="1"/> <!-- Consumable: Talisman of Border Lv. 1, Event --> 
+		<production id="70295" count="1" chance="0"/> <!-- Receivable: Talisman of Border Lv. 2 -->
+		<production id="70295" count="1" chance="50"/> <!-- Receivable: Talisman of Border Lv. 2 -->
+		<production id="70294" count="1" chance="50"/> <!-- Receivable: Talisman of Border Lv. 1 -->
+	</item>
+	
+	<item>
+		<ingredient id="70295" count="1"/> <!-- Consumable: Talisman of Border Lv. 2 --> 
+		<ingredient id="70295" count="1"/> <!-- Consumable: Talisman of Border Lv. 2 --> 
+		<production id="70296" count="1" chance="0"/> <!-- Receivable: Talisman of Border Lv. 3 -->
+		<production id="70296" count="1" chance="40"/> <!-- Receivable: Talisman of Border Lv. 3 -->
+		<production id="70295" count="1" chance="60"/> <!-- Receivable: Talisman of Border Lv. 2 -->
+	</item>
+	
+	<item>
+		<ingredient id="70296" count="1"/> <!-- Consumable: Talisman of Border Lv. 3 --> 
+		<ingredient id="70296" count="1"/> <!-- Consumable: Talisman of Border Lv. 3 --> 
+		<production id="70297" count="1" chance="0"/> <!-- Receivable: Talisman of Border Lv. 4 -->
+		<production id="70297" count="1" chance="20"/> <!-- Receivable: Talisman of Border Lv. 4 -->
+		<production id="70296" count="1" chance="80"/> <!-- Receivable: Talisman of Border Lv. 3 -->
+	</item>
+	
+	<item>
+		<ingredient id="70297" count="1"/> <!-- Consumable: Talisman of Border Lv. 4 --> 
+		<ingredient id="70297" count="1"/> <!-- Consumable: Talisman of Border Lv. 4 --> 
+		<production id="70298" count="1" chance="0"/> <!-- Receivable: Talisman of Border Lv. 5 -->
+		<production id="70298" count="1" chance="10"/> <!-- Receivable: Talisman of Border Lv. 5 -->
+		<production id="70297" count="1" chance="90"/> <!-- Receivable: Talisman of Border Lv. 4 -->
+	</item>
+</list>

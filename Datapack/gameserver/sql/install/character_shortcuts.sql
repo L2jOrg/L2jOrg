@@ -11,4 +11,4 @@ CREATE TABLE `character_shortcuts` (
 
   PRIMARY KEY (`player_id`, `class_index`, `client_id`),
   FOREIGN KEY FK_SHORTCUTS_CHARACTERS (`player_id`) REFERENCES characters (`charId`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

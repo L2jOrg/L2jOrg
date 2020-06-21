@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `petition_feedback` (
   `rate` TINYINT(1) UNSIGNED NOT NULL DEFAULT 2,
   `message` text NOT NULL,
   `date` bigint(13) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

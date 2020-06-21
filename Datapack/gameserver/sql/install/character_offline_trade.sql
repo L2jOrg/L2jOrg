@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `character_offline_trade` (
   `type` tinyint(4) NOT NULL DEFAULT '0',
   `title` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`charId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

@@ -26,6 +26,7 @@
 		<xs:attribute type="xs:short" name="required-completion" default="1"/>
 		<xs:attribute type="Cycle" name="cycle" default="DAILY"/>
 		<xs:attribute type="xs:boolean" name="display-not-available" />
+		<xs:attribute type="xs:int" name="requires-mission" default="0"/>
 	</xs:complexType>
 
 	<xs:complexType name="handlerType">

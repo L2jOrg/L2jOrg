@@ -4928,8 +4928,6 @@
             <effect-range initial="900"/>
             <hit-time initial="1200"/>
             <activate-rate initial="-1"/>
-
-            <element type="HOLY" value="20"/>
         </attributes>
         <consume>
             <mana-init initial="4">
@@ -4960,32 +4958,32 @@
         </conditions>
         <effects>
             <magical-attack>
-                <power initial="47.0">
-                    <value level="2">49.0</value>
-                    <value level="3">51.0</value>
-                    <value level="4">53.0</value>
-                    <value level="5">55.0</value>
-                    <value level="6">57.0</value>
-                    <value level="7">59.0</value>
-                    <value level="8">61.0</value>
-                    <value level="9">63.0</value>
-                    <value level="10">66.0</value>
-                    <value level="11">67.0</value>
-                    <value level="12">68.0</value>
-                    <value level="13">70.0</value>
-                    <value level="14">71.0</value>
-                    <value level="15">72.0</value>
-                    <value level="16">74.0</value>
-                    <value level="17">75.0</value>
-                    <value level="18">77.0</value>
-                    <value level="19">78.0</value>
-                    <value level="20">79.0</value>
-                    <value level="21">80.0</value>
-                    <value level="22">82.0</value>
-                    <value level="23">83.0</value>
-                    <value level="24">84.0</value>
-                    <value level="25">85.0</value>
-                    <value level="26">87.0</value>
+                <power initial="922.0">
+                    <value level="2">932.0</value>
+                    <value level="3">1035.0</value>
+                    <value level="4">1092.0</value>
+                    <value level="5">1206.0</value>
+                    <value level="6">1268.0</value>
+                    <value level="7">1360.0</value>
+                    <value level="8">1458.0</value>
+                    <value level="9">1578.0</value>
+                    <value level="10">1666.0</value>
+                    <value level="11">1770.0</value>
+                    <value level="12">1809.0</value>
+                    <value level="13">1860.0</value>
+                    <value level="14">1960.0</value>
+                    <value level="15">2020.0</value>
+                    <value level="16">2114.0</value>
+                    <value level="17">2178.0</value>
+                    <value level="18">2270.0</value>
+                    <value level="19">2403.0</value>
+                    <value level="20">2430.0</value>
+                    <value level="21">2511.0</value>
+                    <value level="22">2591.0</value>
+                    <value level="23">2671.0</value>
+                    <value level="24">2751.0</value>
+                    <value level="25">2827.0</value>
+                    <value level="26">2910.0</value>
                 </power>
             </magical-attack>
         </effects>

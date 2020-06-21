@@ -123,7 +123,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal visual="VP_KEEP">
+        <abnormal type="EXP_SP_N" visual="VP_KEEP">
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>

@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `clan_notices` (
   `notice` TEXT NOT NULL,
   PRIMARY KEY  (`clan_id`),
   FOREIGN KEY (`clan_id`) REFERENCES clan_data(clan_id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

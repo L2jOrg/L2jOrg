@@ -135,6 +135,11 @@ public class MissionData extends GameXmlReader {
         //@formatter:on
     }
 
+    public boolean isCompleted(Player player, int missionId) {
+        var mission = missions.get(missionId);
+        return nonNull(mission) && mission.stream().anyMatch(data -> data.isCompleted(player));
+    }
+
     public int getAvailableMissionCount(Player player) {
         return (int) missions.values().stream().flatMap(List::stream).filter(mission -> mission.isAvailable(player)).count();
     }

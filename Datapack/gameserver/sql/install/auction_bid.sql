@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `auction_bid` (
   `time_bid` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY  (`auctionId`,`bidderId`),
   KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

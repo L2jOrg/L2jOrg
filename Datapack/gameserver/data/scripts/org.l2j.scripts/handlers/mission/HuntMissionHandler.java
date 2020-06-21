@@ -20,9 +20,10 @@ package handlers.mission;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
@@ -37,6 +38,9 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class HuntMissionHandler extends AbstractMissionHandler {
 
     private final int requiredLevel;
@@ -44,7 +48,7 @@ public class HuntMissionHandler extends AbstractMissionHandler {
     private final List<Integer> monsters;
     private final int classLevel;
 
-    public HuntMissionHandler(MissionDataHolder holder) {
+    private HuntMissionHandler(MissionDataHolder holder) {
         super(holder);
         requiredLevel = holder.getParams().getInt("minLevel", 0);
         maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);
@@ -91,6 +95,19 @@ public class HuntMissionHandler extends AbstractMissionHandler {
                 notifyAvailablesReward(player);
             }
             storePlayerEntry(entry);
+        }
+    }
+
+    public static class Factory implements MissionHandlerFactory {
+
+        @Override
+        public AbstractMissionHandler create(MissionDataHolder data) {
+            return new HuntMissionHandler(data);
+        }
+
+        @Override
+        public String handlerName() {
+            return "hunt";
         }
     }
 }

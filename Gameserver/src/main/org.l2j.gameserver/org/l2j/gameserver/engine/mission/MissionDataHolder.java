@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.engine.mission;
 
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
@@ -48,6 +47,7 @@ public class MissionDataHolder {
 
     private final boolean isDisplayedWhenNotAvailable;
     private final AbstractMissionHandler handler;
+    private final int requiresMission;
 
     public MissionDataHolder(StatsSet set) {
         final Function<MissionDataHolder, AbstractMissionHandler> handler = MissionEngine.getInstance().getHandler(set.getString("handler"));
@@ -59,6 +59,7 @@ public class MissionDataHolder {
         params = set.getObject("params", StatsSet.class);
         cycle = set.getEnum("cycle", MissionCycle.class);
         isDisplayedWhenNotAvailable = set.getBoolean("display-not-available", true);
+        requiresMission = set.getInt("requires-mission", 0);
         this.handler = handler != null ? handler.apply(this) : null;
     }
 
@@ -89,6 +90,10 @@ public class MissionDataHolder {
     public boolean isDisplayable(Player player) {
         // Check for specific class restrictions
         if (!classRestriction.isEmpty() && !classRestriction.contains(player.getClassId())) {
+            return false;
+        }
+
+        if(requiresMission != 0 && !MissionData.getInstance().isCompleted(player, requiresMission)) {
             return false;
         }
 
@@ -146,5 +151,9 @@ public class MissionDataHolder {
 
     public boolean isAvailable(Player player) {
         return nonNull(handler) && handler.isAvailable(player);
+    }
+
+    public boolean isCompleted(Player player) {
+        return getStatus(player) == MissionStatus.COMPLETED.getClientId();
     }
 }

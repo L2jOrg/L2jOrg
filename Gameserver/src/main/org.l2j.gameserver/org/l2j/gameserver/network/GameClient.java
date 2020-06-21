@@ -19,13 +19,14 @@
 package org.l2j.gameserver.network;
 
 import io.github.joealisson.mmocore.Client;
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.mmocore.Connection;
 import org.l2j.commons.network.SessionKey;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
@@ -49,9 +50,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.security.NoSuchAlgorithmException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Objects;
@@ -67,8 +65,9 @@ import static org.l2j.commons.util.Util.isNotEmpty;
  * Represents a client connected on Game Server.
  *
  * @author KenM
+ * @author JoeAlisson
  */
-public final class GameClient extends Client<io.github.joealisson.mmocore.Connection<GameClient>> {
+public final class GameClient extends Client<Connection<GameClient>> {
     protected static final Logger LOGGER = LoggerFactory.getLogger(GameClient.class);
     protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
@@ -93,7 +92,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     private AccountData account;
     private boolean secondaryAuthed;
 
-    public GameClient(io.github.joealisson.mmocore.Connection<GameClient> connection) {
+    public GameClient(Connection<GameClient> connection) {
         super(connection);
         crypt = new Crypt(this);
     }
@@ -104,114 +103,13 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         }
 
         PlayerNameTable.getInstance().removeName(objId);
-        getDAO(ShortcutDAO.class).deleteAll(objId);
+        getDAO(PetDAO.class).deleteByOwner(objId);
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_contacts WHERE charId=? OR contactId=?")) {
-                ps.setInt(1, objId);
-                ps.setInt(2, objId);
-                ps.execute();
-            }
-
-            getDAO(PlayerDAO.class).deleteFriendship(objId);
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_hennas WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_macroses WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_quests WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_recipebook WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_skills WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_skills_save WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_subclasses WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM heroes WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM olympiad_nobles WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM pets WHERE item_obj_id IN (SELECT object_id FROM items WHERE items.owner_id=?)")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId IN (SELECT object_id FROM items WHERE items.owner_id=?)")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_special_abilities WHERE objectId IN (SELECT object_id FROM items WHERE items.owner_id=?)")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variables WHERE id IN (SELECT object_id FROM items WHERE items.owner_id=?)")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE owner_id=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM merchant_lease WHERE player_id=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_reco_bonus WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_instance_time WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM characters WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-        } catch (Exception e) {
-            LOGGER.error("Error deleting character.", e);
-        }
+        var itemDAO = getDAO(ItemDAO.class);
+        itemDAO.deleteVariationsByOwner(objId);
+        itemDAO.deleteSpecialAbilitiesByOwner(objId);
+        itemDAO.deleteByOwner(objId);
+        getDAO(PlayerDAO.class).deleteById(objId);
     }
 
     @Override
@@ -249,7 +147,6 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         setConnectionState(ConnectionState.CONNECTED);
         LOGGER_ACCOUNTING.debug("Client Connected: {}", this);
     }
-
 
     public void closeNow() {
         super.close(null);
@@ -376,14 +273,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         if (Config.DELETE_DAYS == 0) {
             deleteCharByObjId(objectId);
         } else {
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps2 = con.prepareStatement("UPDATE characters SET deletetime=? WHERE charId=?")) {
-                ps2.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
-                ps2.setInt(2, objectId);
-                ps2.execute();
-            } catch (SQLException e) {
-                LOGGER.warn("Failed to update char delete time: ", e);
-            }
+            getDAO(PlayerDAO.class).updateDeleteTime(objectId, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000));
         }
 
         LOGGER_ACCOUNTING.info("Delete, " + objectId + ", " + this);
@@ -396,15 +286,8 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             return;
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE charId=?")) {
-            statement.setInt(1, objectId);
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.error("Error restoring character.", e);
-        }
-
-        LOGGER_ACCOUNTING.info("Restore, " + objectId + ", " + this);
+        getDAO(PlayerDAO.class).updateDeleteTime(objectId, 0);
+        LOGGER_ACCOUNTING.info("Restore {} [{}]", objectId, this);
     }
 
     public Player load(int characterSlot) {

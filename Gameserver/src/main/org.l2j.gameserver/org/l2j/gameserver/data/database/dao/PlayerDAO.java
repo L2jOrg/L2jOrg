@@ -64,9 +64,6 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("SELECT friend_id FROM character_relationship WHERE char_id=:playerId: AND relation='FRIEND'")
     IntSet findFriendsById(int playerId);
 
-    @Query("DELETE FROM character_relationship WHERE char_id=:playerId: OR friend_id=:playerId:")
-    void deleteFriendship(int playerId);
-
     @Query("DELETE FROM character_relationship WHERE (char_id=:playerId: AND friend_id=:friendId:) OR (char_id=:friendId: AND friend_id=:playerId:)")
     void deleteFriendship(int playerId, int friendId);
 
@@ -165,4 +162,10 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("DELETE FROM player_teleports WHERE player_id = :playerId:")
     void removeTeleportFavorites(int playerId);
+
+    @Query("DELETE FROM characters WHERE charId=:playerId:")
+    void deleteById(int playerId);
+
+    @Query("UPDATE characters SET deletetime=:deleteTime: WHERE charId=:playerId:")
+    void updateDeleteTime(int playerId, long deleteTime);
 }

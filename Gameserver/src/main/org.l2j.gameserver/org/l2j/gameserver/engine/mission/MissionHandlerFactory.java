@@ -16,27 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.engine.mission;
 
 /**
- * @author St3eT
+ * @author JoeAlisson
  */
-public final class ExRequestAutoFish extends ClientPacket {
-    private boolean start;
+public interface MissionHandlerFactory {
 
-    @Override
-    public void readImpl() {
-        start = readBoolean();
-    }
+    AbstractMissionHandler create(MissionDataHolder data);
 
-    @Override
-    public void runImpl() {
-        final var player = client.getPlayer();
-
-        if (start) {
-            player.getFishing().startFishing();
-        } else {
-            player.getFishing().stopFishing();
-        }
-    }
+    String handlerName();
 }

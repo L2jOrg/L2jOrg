@@ -19,9 +19,10 @@
 package handlers.mission;
 
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
+import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
@@ -34,10 +35,12 @@ import static java.util.Objects.nonNull;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class OlympiadMissionHandler extends AbstractMissionHandler {
 	private final boolean winnerOnly;
-	public OlympiadMissionHandler(MissionDataHolder holder) {
+
+	private OlympiadMissionHandler(MissionDataHolder holder) {
 		super(holder);
 		winnerOnly = holder.getParams().getBoolean("win", false);
 	}
@@ -66,6 +69,19 @@ public class OlympiadMissionHandler extends AbstractMissionHandler {
 				notifyAvailablesReward(player);
 			}
 			storePlayerEntry(entry);
+		}
+	}
+
+	public static class Factory implements MissionHandlerFactory {
+
+		@Override
+		public AbstractMissionHandler create(MissionDataHolder data) {
+			return new OlympiadMissionHandler(data);
+		}
+
+		@Override
+		public String handlerName() {
+			return "olympiad";
 		}
 	}
 }

@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `residence_functions` (
   `expiration`  bigint NOT NULL ,
   `residenceId`  int NOT NULL ,
   PRIMARY KEY (`id`, `level`, `residenceId`)
-);
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;;

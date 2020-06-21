@@ -1238,10 +1238,6 @@ public final class Item extends WorldObject {
                 ps.executeUpdate();
             }
 
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variables WHERE id = ?")) {
-                ps.setInt(1, getObjectId());
-                ps.executeUpdate();
-            }
         } catch (Exception e) {
             LOGGER.error("Could not delete item " + this + " in DB ", e);
         } finally {

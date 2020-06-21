@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `castle_siege_guards` (
   `isHired` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `id` (`castleId`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 -- Gludio Castle
 REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES

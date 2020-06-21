@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `character_summons` (
   `curMp` int(9) unsigned DEFAULT '0',
   `time` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`ownerId`,`summonSkillId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

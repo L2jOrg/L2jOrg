@@ -114,16 +114,7 @@
                 <item id="1866" min="1" max="1" chance="2.782"/> <!-- Suede -->
                 <item id="2014" min="1" max="1" chance="0.3"/> <!-- Iron Hammer Head -->
                 <item id="2257" min="1" max="1" chance="0.3"/> <!-- Recipe: Trident -->
-                <!-- Classic: Also drops herbs. -->
-                <item id="70166" min="1" max="1" chance="5"/> <!-- Energy of Speed -->
-                <item id="70169" min="1" max="1" chance="4"/> <!-- Energy of Accuracy -->
-                <item id="70163" min="1" max="1" chance="3"/> <!-- Energy of Development -->
-                <item id="70167" min="1" max="1" chance="2.5"/> <!-- Powerful Energy of Speed -->
-                <item id="70170" min="1" max="1" chance="2"/> <!-- Powerful Energy of Accuracy -->
-                <item id="70164" min="1" max="1" chance="1.5"/> <!-- Powerful Energy of Development -->
-                <item id="70168" min="1" max="1" chance="0.75"/> <!-- Great Energy of Speed -->
-                <item id="70171" min="1" max="1" chance="0.5"/> <!-- Great Energy of Accuracy -->
-                <item id="70165" min="1" max="1" chance="0.25"/> <!-- Great Energy of Development -->
+                
             </drop>
             <spoil>
                 <item id="1873" min="1" max="1" chance="24.1"/> <!-- Silver Nugget -->
@@ -189,16 +180,7 @@
                 <item id="1928" min="1" max="1" chance="2.197"/> <!-- Piece Bone Gaiter Fragment -->
                 <item id="1926" min="1" max="1" chance="1.485"/> <!-- Piece Bone Breastplate Fragment -->
                 <item id="1661" min="1" max="1" chance="0.75"/> <!-- Thief Key -->
-                <!-- Classic: Also drops herbs. -->
-                <item id="70166" min="1" max="1" chance="5"/> <!-- Energy of Speed -->
-                <item id="70169" min="1" max="1" chance="4"/> <!-- Energy of Accuracy -->
-                <item id="70163" min="1" max="1" chance="3"/> <!-- Energy of Development -->
-                <item id="70167" min="1" max="1" chance="2.5"/> <!-- Powerful Energy of Speed -->
-                <item id="70170" min="1" max="1" chance="2"/> <!-- Powerful Energy of Accuracy -->
-                <item id="70164" min="1" max="1" chance="1.5"/> <!-- Powerful Energy of Development -->
-                <item id="70168" min="1" max="1" chance="0.75"/> <!-- Great Energy of Speed -->
-                <item id="70171" min="1" max="1" chance="0.5"/> <!-- Great Energy of Accuracy -->
-                <item id="70165" min="1" max="1" chance="0.25"/> <!-- Great Energy of Development -->
+                
             </drop>
             <spoil>
                 <item id="2179" min="1" max="1" chance="30.16"/> <!-- Recipe: Quality Leather Gloves -->
@@ -1848,7 +1830,8 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+        <!-- Old: <ai aggroRange="450" clanHelpRange="300" isAggressive="true"> -->
+        <ai>
             <clanList>
                 <clan>OL_MAHUM</clan>
             </clanList>
@@ -1910,7 +1893,8 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450">
+        <!-- Old: <ai clanHelpRange="300" aggroRange="450"> -->
+        <ai>
             <clanList>
                 <clan>OL_MAHUM</clan>
             </clanList>
@@ -2786,16 +2770,7 @@
                 <item id="2011" min="1" max="1" chance="1.143"/> <!-- Short Spear Edge -->
                 <item id="1876" min="1" max="1" chance="0.75"/> <!-- Mithril Ore -->
                 <item id="2140" min="1" max="1" chance="0.75"/> <!-- Recipe: High-grade Suede -->
-                <!-- Classic: Also drops herbs. -->
-                <item id="70166" min="1" max="1" chance="5"/> <!-- Energy of Speed -->
-                <item id="70169" min="1" max="1" chance="4"/> <!-- Energy of Accuracy -->
-                <item id="70163" min="1" max="1" chance="3"/> <!-- Energy of Development -->
-                <item id="70167" min="1" max="1" chance="2.5"/> <!-- Powerful Energy of Speed -->
-                <item id="70170" min="1" max="1" chance="2"/> <!-- Powerful Energy of Accuracy -->
-                <item id="70164" min="1" max="1" chance="1.5"/> <!-- Powerful Energy of Development -->
-                <item id="70168" min="1" max="1" chance="0.75"/> <!-- Great Energy of Speed -->
-                <item id="70171" min="1" max="1" chance="0.5"/> <!-- Great Energy of Accuracy -->
-                <item id="70165" min="1" max="1" chance="0.25"/> <!-- Great Energy of Development -->
+                
             </drop>
             <spoil>
                 <item id="1866" min="1" max="1" chance="30.97"/> <!-- Suede -->
@@ -2868,16 +2843,7 @@
                 <item id="1898" min="1" max="1" chance="2.536"/> <!-- Blue Diamond Necklace Gem -->
                 <item id="1876" min="1" max="1" chance="0.75"/> <!-- Mithril Ore -->
                 <item id="2178" min="1" max="1" chance="0.3"/> <!-- Recipe: Dark Stockings -->
-                <!-- Classic: Also drops herbs. -->
-                <item id="70166" min="1" max="1" chance="5"/> <!-- Energy of Speed -->
-                <item id="70169" min="1" max="1" chance="4"/> <!-- Energy of Accuracy -->
-                <item id="70163" min="1" max="1" chance="3"/> <!-- Energy of Development -->
-                <item id="70167" min="1" max="1" chance="2.5"/> <!-- Powerful Energy of Speed -->
-                <item id="70170" min="1" max="1" chance="2"/> <!-- Powerful Energy of Accuracy -->
-                <item id="70164" min="1" max="1" chance="1.5"/> <!-- Powerful Energy of Development -->
-                <item id="70168" min="1" max="1" chance="0.75"/> <!-- Great Energy of Speed -->
-                <item id="70171" min="1" max="1" chance="0.5"/> <!-- Great Energy of Accuracy -->
-                <item id="70165" min="1" max="1" chance="0.25"/> <!-- Great Energy of Development -->
+                
             </drop>
             <spoil>
                 <item id="2176" min="1" max="1" chance="35.55"/> <!-- Recipe: Leather Boots -->

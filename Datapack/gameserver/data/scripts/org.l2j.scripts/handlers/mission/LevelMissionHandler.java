@@ -19,9 +19,10 @@
 package handlers.mission;
 
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
+import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
@@ -34,10 +35,11 @@ import static java.util.Objects.nonNull;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class LevelMissionHandler extends AbstractMissionHandler {
 
-    public LevelMissionHandler(MissionDataHolder holder) {
+    private LevelMissionHandler(MissionDataHolder holder) {
         super(holder);
     }
 
@@ -66,6 +68,19 @@ public class LevelMissionHandler extends AbstractMissionHandler {
                 storePlayerEntry(entry);
                 notifyAvailablesReward(player);
             }
+        }
+    }
+
+    public static class Factory implements MissionHandlerFactory {
+
+        @Override
+        public AbstractMissionHandler create(MissionDataHolder data) {
+            return new LevelMissionHandler(data);
+        }
+
+        @Override
+        public String handlerName() {
+            return "level";
         }
     }
 }
