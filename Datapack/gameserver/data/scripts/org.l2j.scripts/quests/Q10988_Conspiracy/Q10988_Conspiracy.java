@@ -58,7 +58,7 @@ public class Q10988_Conspiracy extends Quest
 	private static final int MARAKU_WEREVOLF_CHIEFTAIN = 20364;
 	private static final int EVIL_EYE_PATROL = 20428;
 	// Items
-	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
+	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91918, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 50);
 	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50);// TODO: Finish Item

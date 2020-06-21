@@ -59,7 +59,7 @@ public class Q10982_SpiderHunt extends Quest
 	private static final int GIANT_FANG_SPIDER = 20106;
 	private static final int GIANT_BLADE_SPIDER = 20108;
 	// Items
-	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
+	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91918, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 50);
 	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50);// TODO: Finish Item

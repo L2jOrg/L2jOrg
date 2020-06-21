@@ -59,7 +59,7 @@ public final class Q10962_NewHorizons extends Quest
 	private static final int MUERTOS_WARRIOR = 21987; // NOTE: Murtos Fighter in old client
 	private static final int MUERTOS_CAPTAIN = 21988;
 	// Items
-	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
+	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91918, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 50);
 	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50); // TODO: Finish Item

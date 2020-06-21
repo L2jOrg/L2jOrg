@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- Immortal: This is information from NetPro from NA! -->
+	<npcs>
+		<npc>31817</npc> <!-- Veruti -->
+	</npcs>
+	<item>
+		<ingredient id="49676" count="2"/> <!-- Consumable: Sealed Doll of Border - Baium, 30-day --> 
+		<production id="91256" count="1" chance="0"/> <!-- Receivable: Baium's Doll Lv. 1 -->
+		<production id="91256" count="1" chance="5"/> <!-- Receivable: Baium's Doll Lv. 1 -->
+		<production id="90822" count="1" chance="95"/> <!-- Receivable: Sealed Doll of Border - Baium, 30-day -->
+	</item>
+	
+	<item>
+		<ingredient id="49676" count="2"/> <!-- Consumable: Sealed Doll of Border - Baium, 30-day --> 
+		<production id="91257" count="1" chance="0"/> <!-- Receivable: Queen Ant's Doll Lv. 1 -->
+		<production id="91257" count="1" chance="5"/> <!-- Receivable: Queen Ant's Doll Lv. 1 -->
+		<production id="90823" count="1" chance="95"/> <!-- Receivable: Sealed Doll of Border - Queen Ant, 30-day -->
+	</item>
+	
+	<item>
+		<ingredient id="90824" count="2"/> <!-- Consumable: Sealed Doll of Border - Orfen, 30-day --> 
+		<production id="91258" count="1" chance="0"/> <!-- Receivable: Orfen's Doll Lv. 1 -->
+		<production id="91258" count="1" chance="5"/> <!-- Receivable: Orfen's Doll Lv. 1 -->
+		<production id="90824" count="1" chance="95"/> <!-- Receivable: Sealed Doll of Border - Orfen, 30-day -->
+	</item>
+	
+	<item>
+		<ingredient id="91602" count="2"/> <!-- Receivable: Sealed Doll of Border - Frintezza, 30-day --> 
+		<production id="91604" count="1" chance="0"/> <!-- Receivable: Frintezza's Doll Lv. 1 -->
+		<production id="91604" count="1" chance="5"/> <!-- Receivable: Frintezza's Doll Lv. 1 -->
+		<production id="91602" count="1" chance="95"/> <!-- Receivable: Sealed Doll of Border - Frintezza, 30-day -->
+	</item>
+</list>

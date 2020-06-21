@@ -85,7 +85,7 @@
                 <enchant from="7" until="9" amount="15" bonus-per-level="3"/>
                 <enchant from="10" until="11" amount="25" bonus-per-level="3"/>
                 <enchant from="12" until="18" amount="29" bonus-per-level="1"/>
-                <enchant from="19" amount="46" bonus-per-level="1"/> <!-- TODO Confirm  correct value l2wiki (36) seems to be wrong since is less than A grade -->
+                <enchant from="19" amount="36" bonus-per-level="1"/> <!-- TODO Confirm  correct value l2wiki (36) seems to be wrong since is less than A grade -->
             </reward>
         </weapon>
 
@@ -210,7 +210,7 @@
     <scroll id="71328">
         <items>38221</items>
     </scroll>
-
+	<!-- Scroll Enchant Fishing Weapon -->
     <scroll id="90958">
         <items>38221</items>
     </scroll>
@@ -225,12 +225,12 @@
         <items>91574</items>
     </scroll>
 
-    <!-- Pc Cafe Event Enchant Scroll -->
-    <scroll id="91867">
+    <!-- Pc Cafe Event Enchant Scroll Excalibur -->
+    <scroll id="91867" max-enchant="10">
         <items>91866</items>
     </scroll>
 
-    <!-- PC Cafe Event Special Enchant -->
+    <!-- PC Cafe Event Special Enchant Excalibur -->
     <scroll id="91868" max-enchant="7">
         <items>91866</items>
     </scroll>
@@ -241,12 +241,12 @@
     </scroll>
 
     <!-- Enchant Scroll Death Knight Fire Sword -->
-    <scroll id="93931">
+    <scroll id="93931" max-enchant="10">
         <items>93864</items>
     </scroll>
 
     <!-- Enchant Scroll Death Knight Fire Sword -->
-    <scroll id="93932">
+    <scroll id="93932" max-enchant="10">
         <items>93864</items>
     </scroll>
 
@@ -324,15 +324,6 @@
         </items>
     </scroll>
 
-    <!-- Balthus Knights Varnish -->
-    <scroll id="90995" max-enchant="10">
-        <items>
-            90993 <!-- Damaged Antharas' Earring -->
-            90994 <!-- Damaged Baium's Ring -->
-            91006 <!-- Damaged Zaken's Earring -->
-        </items>
-    </scroll>
-
     <!-- Aden Talisman Enchant Scroll -->
     <scroll id="91756" max-enchant="10">
         <items>91745</items> <!-- Talisman of Aden -->
@@ -351,6 +342,11 @@
     <!-- Enchant Scroll: Talisman of Baium -->
     <scroll id="99002" max-enchant="5">
         <items>49683</items> <!-- Talisman of Baium -->
+    </scroll>
+	
+	<!-- Enchant Scroll Talisman of Baium -->
+    <scroll id="91951" max-enchant="5">
+        <items>49683 90527 99001</items>
     </scroll>
 
     <!-- Enchant Scroll: Dragon Valley Earring -->
@@ -372,16 +368,6 @@
         <items>93042</items> <!-- Adventurer’s Belt -->
     </scroll>
 
-    <!-- Spirit Varnish -->
-    <scroll id="91187" max-enchant="10">
-        <items>
-            91117 <!-- Nebula Necklace -->
-            91119 <!-- Ignis Necklace -->
-            91121 <!-- Procella Necklace -->
-            91123 <!-- Petram Necklace -->
-        </items>
-    </scroll>
-
     <!-- Sayha's Cloak Enchant Scroll -->
     <scroll id="91213" max-enchant="10">
         <items>91210 91211 91212</items>
@@ -401,7 +387,7 @@
     </scroll>
 
     <!-- Eva's Scroll Enchant Hair Accessory -->
-    <scroll id="90494">
+    <scroll id="90494" max-enchant="10">
         <items>
             70749  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             70748  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -433,12 +419,7 @@
     <!-- Dragon's Belt Ornament -->
     <scroll id="91789" max-enchant="10">
         <items>91788 91862</items>
-    </scroll>
-
-    <!-- Enchant Scroll Talisman of Baium -->
-    <scroll id="91951" max-enchant="5">
-        <items>49683 90527 99001</items>
-    </scroll>
+    </scroll>    
 
     <!-- Enchant Scroll Ring of Insolence -->
     <scroll id="91966" max-enchant="10">
@@ -478,7 +459,17 @@
     <scroll id="29743" grade="B"/>
     <scroll id="29022" grade="C"/>
     <scroll id="29020" grade="D"/>
-
+	
+	<!-- Spirit Varnish -->
+    <scroll id="91187" max-enchant="10">
+        <items>
+            91117 <!-- Nebula Necklace -->
+            91119 <!-- Ignis Necklace -->
+            91121 <!-- Procella Necklace -->
+            91123 <!-- Petram Necklace -->
+        </items>
+    </scroll>
+	
     <!-- Blessed Spirit Varnish -->
     <scroll id="91188" max-enchant="10">
         <items>
@@ -488,7 +479,35 @@
             91123 <!-- Petram Necklace -->
         </items>
     </scroll>
+	
+	<!-- Balthus Knights Varnish -->
+    <scroll id="90995" max-enchant="10">
+        <items>
+            90993 <!-- Damaged Antharas' Earring -->
+            90994 <!-- Damaged Baium's Ring -->
+            91006 <!-- Damaged Zaken's Earring -->
+        </items>
+    </scroll>
+	
+    <!-- Balthus Knights Matte Varnish -->
+    <scroll id="90996" max-enchant="6">
+        <items>
+            90993 <!-- Damaged Antharas' Earring -->
+            90994 <!-- Damaged Baium's Ring -->
+            91006 <!-- Damaged Zaken's Earring -->
+        </items>
+    </scroll>
 
+    <!-- Brilliant Spirit Varnish -->
+    <scroll id="91124" max-enchant="9">
+        <items>
+            91117 <!-- Nebula Necklace -->
+            91119 <!-- Ignis Necklace -->
+            91121 <!-- Procella Necklace -->
+            91123 <!-- Petram Necklace -->
+        </items>
+    </scroll>
+	
     <!-- Dragon Varnish -->
     <scroll id="91249" max-enchant="5">
         <items>
@@ -762,7 +781,7 @@
     </scroll>
 
     <!-- Stable Cloak Enchantment scroll lendary -->
-    <scroll id="71124">
+    <scroll id="71124" max-enchant="10">
         <items>70877 <!-- Elmoreden Cloak -->
             70878 <!-- Aden Cloak -->
             70879 <!-- Elmore Cloak -->
@@ -791,7 +810,7 @@
     </scroll>
 
     <!-- Stabilized Eva's Scroll Enchant Hair Accessory -->
-    <scroll id="90855">
+    <scroll id="90855" max-enchant="9">
         <items>
             70749  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             70748  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -821,7 +840,7 @@
     </scroll>
 
     <!-- Stable Eva's Enhancement Scroll Hair Accessories -->
-    <scroll id="90882">
+    <scroll id="90882" min-enchant="6" max-enchant="10">
         <items>
             70749  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             70748  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -851,29 +870,10 @@
     </scroll>
 
     <!-- Scroll Enchant Savior Earring -->
-    <scroll id="90990">
+    <scroll id="90990" max-enchant="7">
         <items>90987</items>
     </scroll>
-
-    <!-- Balthus Knights Matte Varnish -->
-    <scroll id="90996" max-enchant="6">
-        <items>
-            90993 <!-- Damaged Antharas' Earring -->
-            90994 <!-- Damaged Baium's Ring -->
-            91006 <!-- Damaged Zaken's Earring -->
-        </items>
-    </scroll>
-
-    <!-- Brilliant Spirit Varnish -->
-    <scroll id="91124" max-enchant="9">
-        <items>
-            91117 <!-- Nebula Necklace -->
-            91119 <!-- Ignis Necklace -->
-            91121 <!-- Procella Necklace -->
-            91123 <!-- Petram Necklace -->
-        </items>
-    </scroll>
-
+	
     <!-- Scroll Enchant Cloak -->
     <scroll id="70885" max-enchant="10">
         <items>70877 70878 70879 70880</items>
