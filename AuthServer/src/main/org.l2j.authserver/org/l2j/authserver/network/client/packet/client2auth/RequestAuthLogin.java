@@ -73,7 +73,7 @@ public class RequestAuthLogin extends AuthClientPacket {
             decUserData = rsaCipher.doFinal(userData, 0x00, 0x80);
 
             if(useNewAuth) {
-                decAuthData =  rsaCipher.doFinal(authData, 0x00, 0x80);
+                decAuthData = rsaCipher.doFinal(authData, 0x00, 0x80);
             }
         } catch (Exception e) {
             logger.warn(e.getMessage(), e);

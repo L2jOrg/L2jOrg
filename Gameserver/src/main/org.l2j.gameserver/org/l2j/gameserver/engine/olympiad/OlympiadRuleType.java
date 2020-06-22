@@ -16,28 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.rank;
-
-import org.l2j.gameserver.engine.rank.RankEngine;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+package org.l2j.gameserver.engine.olympiad;
 
 /**
  * @author JoeAlisson
  */
-public class ExRankingCharHistory extends ServerPacket {
-
-    @Override
-    protected void writeImpl(GameClient client) {
-        var history = RankEngine.getInstance().getPlayerHistory(client.getPlayer());
-
-        writeId(ServerExPacketId.EX_RANKING_CHAR_HISTORY);
-        writeInt(history.size());
-        for (var data : history) {
-            writeInt(data.getDate());
-            writeInt(data.getRank());
-            writeLong(data.getExp());
-        }
-    }
+public enum OlympiadRuleType {
+    TEAM,
+    CLASSLESS,
+    CLASS,
+    MAX
 }

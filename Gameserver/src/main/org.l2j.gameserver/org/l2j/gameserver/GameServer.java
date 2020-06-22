@@ -25,7 +25,6 @@ import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.*;
@@ -35,17 +34,17 @@ import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
+import org.l2j.gameserver.engine.events.EventEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
+import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.upgrade.UpgradeItemEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
 import org.l2j.gameserver.network.GameClient;
@@ -147,7 +146,7 @@ public class GameServer {
         CostumeEngine.init();
         UpgradeItemEngine.init();
         CombinationItemsManager.init();
-        RankManager.init();
+        RankEngine.init();
         BeautyShopData.getInstance();
         ExtendDropData.getInstance();
         ItemAuctionManager.getInstance();
@@ -181,9 +180,8 @@ public class GameServer {
         printSection("Instance");
         InstanceManager.getInstance();
 
-        printSection("Olympiad");
-        Olympiad.getInstance();
-        Hero.getInstance();
+        /*printSection("Olympiad");
+        Hero.getInstance();*/
 
         // Call to load caches
         printSection("Cache");
@@ -197,7 +195,7 @@ public class GameServer {
         }
 
         printSection("Event Engine");
-        EventEngineData.getInstance();
+        EventEngine.init();
         VoteSystem.initialize();
 
         printSection("Siege");

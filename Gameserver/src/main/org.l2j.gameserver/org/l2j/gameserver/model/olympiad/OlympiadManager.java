@@ -19,6 +19,7 @@
 package org.l2j.gameserver.model.olympiad;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -104,7 +105,7 @@ public class OlympiadManager {
     }
 
     private boolean isInCompetition(Player noble, Player player, boolean showMessage) {
-        if (!Olympiad._inCompPeriod) {
+        if (!OlympiadEngine.getInstance().isMatchInProgress()) {
             return false;
         }
 
@@ -141,19 +142,14 @@ public class OlympiadManager {
     }
 
     public final boolean registerNoble(Player player, CompetitionType type) {
-        if (!Olympiad._inCompPeriod) {
+        if (!OlympiadEngine.getInstance().isMatchInProgress()) {
             player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
             return false;
         }
 
-		if (Olympiad.getInstance().getMillisToCompEnd() < 1200000)
-		{
-            player.sendPacket(SystemMessageId.PARTICIPATION_REQUESTS_ARE_NO_LONGER_BEING_ACCEPTED);
-            return false;
-        }
 
         final int charId = player.getObjectId();
-        if (Olympiad.getInstance().getRemainingWeeklyMatches(charId) < 1) {
+        if (OlympiadEngine.getInstance().getRemainingDailyMatches(player) < 1) {
             player.sendPacket(SystemMessageId.YOU_CAN_PARTICIPATE_IN_UP_TO_30_MATCHES_PER_WEEK);
             return false;
         }
@@ -200,7 +196,7 @@ public class OlympiadManager {
     }
 
     public final boolean unRegisterNoble(Player noble) {
-        if (!Olympiad._inCompPeriod) {
+        if (!OlympiadEngine.getInstance().isMatchInProgress()) {
             noble.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
             return false;
         }

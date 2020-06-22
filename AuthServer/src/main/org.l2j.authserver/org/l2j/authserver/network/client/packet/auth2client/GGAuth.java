@@ -39,7 +39,7 @@ public final class GGAuth extends AuthServerPacket {
 
     @Override
     protected void writeImpl(AuthClient client) {
-        writeByte((byte)0x0b);
+        writeByte(0x0b);
         writeInt(_response);
         writeInt(0x00);
         writeInt(0x00);

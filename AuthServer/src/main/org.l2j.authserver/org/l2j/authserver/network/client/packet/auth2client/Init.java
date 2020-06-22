@@ -37,7 +37,7 @@ public final class Init extends AuthServerPacket {
 
     @Override
     protected void writeImpl(AuthClient client) {
-        writeByte((byte)0x00);
+        writeByte(0x00);
 
         writeInt(client.getSessionId());
         writeInt(0xc621);

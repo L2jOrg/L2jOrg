@@ -78,7 +78,6 @@ import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.model.stats.Stat;
@@ -2551,8 +2550,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     private void registerListenerWithoutId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners) {
         switch (registerType) {
             case OLYMPIAD: {
-                final Olympiad template = Olympiad.getInstance();
-                listeners.add(template.addListener(action.apply(template)));
+                /*final OlympiadEngine template = OlympiadEngine.getInstance();
+                listeners.add(template.addListener(action.apply(template)));*/
                 break;
             }
             case GLOBAL: // Global Listener

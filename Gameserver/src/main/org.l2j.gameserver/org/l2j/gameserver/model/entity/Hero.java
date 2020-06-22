@@ -33,7 +33,6 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
@@ -85,6 +84,9 @@ public class Hero {
     private static final Map<Integer, List<StatsSet>> HERO_FIGHTS = new ConcurrentHashMap<>();
     private static final Map<Integer, List<StatsSet>> HERO_DIARY = new ConcurrentHashMap<>();
     private static final Map<Integer, String> HERO_MESSAGE = new ConcurrentHashMap<>();
+    public static final String CHAR_ID = "charId";
+    public static final String CLASS_ID = "class_id";
+    public static final String CHAR_NAME = "char_name";
 
     private Hero() {
         init();
@@ -106,9 +108,9 @@ public class Hero {
              ResultSet rset2 = s2.executeQuery(GET_ALL_HEROES)) {
             while (rset.next()) {
                 final StatsSet hero = new StatsSet();
-                final int charId = rset.getInt(Olympiad.CHAR_ID);
-                hero.set(Olympiad.CHAR_NAME, rset.getString(Olympiad.CHAR_NAME));
-                hero.set(Olympiad.CLASS_ID, rset.getInt(Olympiad.CLASS_ID));
+                final int charId = rset.getInt(CHAR_ID);
+                hero.set(CHAR_NAME, rset.getString(CHAR_NAME));
+                hero.set(CLASS_ID, rset.getInt(CLASS_ID));
                 hero.set(COUNT, rset.getInt(COUNT));
                 hero.set(PLAYED, rset.getInt(PLAYED));
                 hero.set(CLAIMED, Boolean.parseBoolean(rset.getString(CLAIMED)));
@@ -124,9 +126,9 @@ public class Hero {
 
             while (rset2.next()) {
                 final StatsSet hero = new StatsSet();
-                final int charId = rset2.getInt(Olympiad.CHAR_ID);
-                hero.set(Olympiad.CHAR_NAME, rset2.getString(Olympiad.CHAR_NAME));
-                hero.set(Olympiad.CLASS_ID, rset2.getInt(Olympiad.CLASS_ID));
+                final int charId = rset2.getInt(CHAR_ID);
+                hero.set(CHAR_NAME, rset2.getString(CHAR_NAME));
+                hero.set(CLASS_ID, rset2.getInt(CLASS_ID));
                 hero.set(COUNT, rset2.getInt(COUNT));
                 hero.set(PLAYED, rset2.getInt(PLAYED));
                 hero.set(CLAIMED, Boolean.parseBoolean(rset2.getString(CLAIMED)));
@@ -355,7 +357,7 @@ public class Hero {
 
     public int getHeroByClass(int classid) {
         for (Entry<Integer, StatsSet> e : HEROES.entrySet()) {
-            if (e.getValue().getInt(Olympiad.CLASS_ID) == classid) {
+            if (e.getValue().getInt(CLASS_ID) == classid) {
                 return e.getKey();
             }
         }
@@ -550,7 +552,7 @@ public class Hero {
         }
 
         for (StatsSet hero : newHeroes) {
-            final int charId = hero.getInt(Olympiad.CHAR_ID);
+            final int charId = hero.getInt(CHAR_ID);
 
             if (COMPLETE_HEROS.containsKey(charId)) {
                 final StatsSet oldHero = COMPLETE_HEROS.get(charId);
@@ -561,8 +563,8 @@ public class Hero {
                 HEROES.put(charId, oldHero);
             } else {
                 final StatsSet newHero = new StatsSet();
-                newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
-                newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
+                newHero.set(CHAR_NAME, hero.getString(CHAR_NAME));
+                newHero.set(CLASS_ID, hero.getInt(CLASS_ID));
                 newHero.set(COUNT, 1);
                 newHero.set(PLAYED, 1);
                 newHero.set(CLAIMED, false);
@@ -588,12 +590,11 @@ public class Hero {
                     if (!COMPLETE_HEROS.containsKey(heroId)) {
                         try (PreparedStatement insert = con.prepareStatement(INSERT_HERO)) {
                             insert.setInt(1, heroId);
-                            insert.setInt(2, hero.getInt(Olympiad.CLASS_ID));
+                            insert.setInt(2, hero.getInt(CLASS_ID));
                             insert.setInt(3, hero.getInt(COUNT));
                             insert.setInt(4, hero.getInt(PLAYED));
                             insert.setString(5, String.valueOf(hero.getBoolean(CLAIMED)));
                             insert.execute();
-                            insert.close();
                         }
 
                         try (PreparedStatement statement = con.prepareStatement(GET_CLAN_ALLY)) {

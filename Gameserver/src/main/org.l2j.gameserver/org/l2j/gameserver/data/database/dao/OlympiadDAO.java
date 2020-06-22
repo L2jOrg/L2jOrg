@@ -19,9 +19,12 @@
 package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
+import org.l2j.gameserver.data.database.data.OlympiadData;
 
 /**
  * @author JoeAlisson
  */
-public interface OlympiadDAO extends DAO {
+public interface OlympiadDAO extends DAO<OlympiadData> {
+
+    OlympiadData findData();
 }

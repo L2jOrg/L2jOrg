@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -43,8 +42,8 @@ public class ExHeroList extends ServerPacket {
         writeInt(_heroList.size());
         for (Integer heroId : _heroList.keySet()) {
             final StatsSet hero = _heroList.get(heroId);
-            writeString(hero.getString(Olympiad.CHAR_NAME));
-            writeInt(hero.getInt(Olympiad.CLASS_ID));
+            writeString(hero.getString(Hero.CHAR_NAME));
+            writeInt(hero.getInt(Hero.CLASS_ID));
             writeString(hero.getString(Hero.CLAN_NAME, ""));
             writeInt(hero.getInt(Hero.CLAN_CREST, 0));
             writeString(hero.getString(Hero.ALLY_NAME, ""));

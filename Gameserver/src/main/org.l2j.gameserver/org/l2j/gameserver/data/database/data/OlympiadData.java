@@ -19,7 +19,10 @@
 package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
+
+import java.time.LocalDate;
 
 /**
  * @author JoeAlisson
@@ -30,14 +33,19 @@ public class OlympiadData {
     private int id;
 
     @Column("current_cycle")
-    private int cycle;
+    private int season;
     private int period;
 
     @Column("olympiad_end")
     private long olympiadEnd;
 
+    @Column("validation_end")
+    private long validationEnd;
+
     @Column("next_weekly_change")
-    private long nexWeeklyChange;
+    private long nextWeeklyChange;
+    @NonUpdatable
+    private LocalDate nextSeasonDate;
 
     public int getId() {
         return id;
@@ -47,12 +55,12 @@ public class OlympiadData {
         this.id = id;
     }
 
-    public int getCycle() {
-        return cycle;
+    public int getSeason() {
+        return season;
     }
 
-    public void setCycle(int cycle) {
-        this.cycle = cycle;
+    public void setSeason(int season) {
+        this.season = season;
     }
 
     public int getPeriod() {
@@ -71,11 +79,31 @@ public class OlympiadData {
         this.olympiadEnd = olympiadEnd;
     }
 
-    public long getNexWeeklyChange() {
-        return nexWeeklyChange;
+    public long getNextWeeklyChange() {
+        return nextWeeklyChange;
     }
 
-    public void setNexWeeklyChange(long nexWeeklyChange) {
-        this.nexWeeklyChange = nexWeeklyChange;
+    public void setNextWeeklyChange(long nextWeeklyChange) {
+        this.nextWeeklyChange = nextWeeklyChange;
+    }
+
+    public void increaseSeason() {
+        season++;
+    }
+
+    public long getValidationEnd() {
+        return validationEnd;
+    }
+
+    public void setValidationEnd(long validationEnd) {
+        this.validationEnd = validationEnd;
+    }
+
+    public void setNextSeasonDate(LocalDate nextSeasonDate) {
+        this.nextSeasonDate = nextSeasonDate;
+    }
+
+    public LocalDate getNextSeasonDate() {
+        return nextSeasonDate;
     }
 }

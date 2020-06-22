@@ -24,14 +24,11 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExHeroList;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
-
-import java.util.List;
 
 /**
  * Monument of Heroes AI.
@@ -235,24 +232,8 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 		return "MonumentOfHeroes-noblesse.html";
 	}
 	
-	private int getOlympiadRank(Player player)
-	{
-		final List<String> names = Olympiad.getInstance().getClassLeaderBoard(player.getClassId().getId());
-		try
-		{
-			for (int i = 1; i <= 3; i++)
-			{
-				if (names.get(i - 1).equals(player.getName()))
-				{
-					return i;
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			return -1;
-		}
-		return -1;
+	private int getOlympiadRank(Player player) {
+		return 1;
 	}
 	
 	public static AbstractNpcAI provider()

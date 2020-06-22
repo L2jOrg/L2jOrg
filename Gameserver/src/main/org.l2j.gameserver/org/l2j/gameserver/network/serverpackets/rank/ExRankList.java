@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.serverpackets.rank;
 
-import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.data.RankData;
+import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -76,23 +76,23 @@ public class ExRankList extends ServerPacket {
 
     private List<RankData> listRaceRankers(Player player, byte scope, int race) {
         if(scope == 0) {
-            return RankManager.getInstance().getRaceRankers(race);
+            return RankEngine.getInstance().getRaceRankers(race);
         }
-        return RankManager.getInstance().getRaceRankersByPlayer(player);
+        return RankEngine.getInstance().getRaceRankersByPlayer(player);
     }
 
     private List<RankData> listServerRankers(Player player, byte scope) {
         if(scope == 0) {
-            return RankManager.getInstance().getRankers();
+            return RankEngine.getInstance().getRankers();
         }
-        return RankManager.getInstance().getRankersByPlayer(player);
+        return RankEngine.getInstance().getRankersByPlayer(player);
     }
 
     private List<RankData> listFriendsRankers(Player player) {
-        return !player.getFriendList().isEmpty() ?  RankManager.getInstance().getFriendRankers(player) : Collections.emptyList();
+        return !player.getFriendList().isEmpty() ?  RankEngine.getInstance().getFriendRankers(player) : Collections.emptyList();
     }
 
     private List<RankData> listClanRankers(Player player) {
-        return nonNull(player.getClan()) ?  RankManager.getInstance().getClanRankers(player.getClanId()) : Collections.emptyList();
+        return nonNull(player.getClan()) ?  RankEngine.getInstance().getClanRankers(player.getClanId()) : Collections.emptyList();
     }
 }
