@@ -18,44 +18,43 @@
  */
 package org.l2j.gameserver.model.eventengine;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.data.database.dao.EventDAO;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.util.cron4j.PastPredictor;
 import org.l2j.gameserver.util.cron4j.Predictor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author UnAfraid
  */
 public class EventScheduler {
     private static final Logger LOGGER = LoggerFactory.getLogger(EventScheduler.class);
-    private final AbstractEventManager<?> _eventManager;
-    private final String _name;
+    private final AbstractEventManager<?> eventManager;
+    private final String name;
     private final String _pattern;
     private final boolean _repeat;
-    private List<EventMethodNotification> _notifications;
+    private List<EventMethodNotification> notifications;
     private ScheduledFuture<?> _task;
     private long lastRun = 0;
 
     public EventScheduler(AbstractEventManager<?> manager, StatsSet set) {
-        _eventManager = manager;
-        _name = set.getString("name", "");
+        eventManager = manager;
+        name = set.getString("name", "");
         _pattern = set.getString("minute", "*") + " " + set.getString("hour", "*") + " " + set.getString("dayOfMonth", "*") + " " + set.getString("month", "*") + " " + set.getString("dayOfWeek", "*");
         _repeat = set.getBoolean("repeat", false);
     }
 
     public String getName() {
-        return _name;
+        return name;
     }
 
     public long getNextSchedule() {
@@ -83,19 +82,19 @@ public class EventScheduler {
     }
 
     public void addEventNotification(EventMethodNotification notification) {
-        if (_notifications == null) {
-            _notifications = new ArrayList<>();
+        if (notifications == null) {
+            notifications = new ArrayList<>();
         }
-        _notifications.add(notification);
+        notifications.add(notification);
     }
 
     public List<EventMethodNotification> getEventNotifications() {
-        return _notifications;
+        return notifications;
     }
 
     public void startScheduler() {
-        if (_notifications == null) {
-            LOGGER.info("Scheduler without notificator manager: " + _eventManager.getClass().getSimpleName() + " pattern: " + _pattern);
+        if (notifications == null) {
+            LOGGER.info("Scheduler without notificator manager: " + eventManager.getClass().getSimpleName() + " pattern: " + _pattern);
             return;
         }
 
@@ -103,7 +102,7 @@ public class EventScheduler {
         final long nextSchedule = predictor.nextMatchingTime();
         final long timeSchedule = nextSchedule - System.currentTimeMillis();
         if (timeSchedule <= (30 * 1000)) {
-            LOGGER.warn("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
+            LOGGER.warn("Wrong reschedule for " + eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
             ThreadPool.schedule(this::startScheduler, timeSchedule + 1000);
             return;
         }
@@ -125,20 +124,8 @@ public class EventScheduler {
 
     public boolean updateLastRun() {
         lastRun = System.currentTimeMillis();
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("REPLACE INTO event_schedulers (eventName, schedulerName, lastRun) VALUES (?, ?, ?)")) {
-
-            ps.setString(1, _eventManager.getName());
-            ps.setString(2, _name);
-            ps.setTimestamp(3, new Timestamp(lastRun));
-            ps.execute();
-
-            return true;
-        } catch (Exception e) {
-            LOGGER.warn("Failed to insert/update information for scheduled task manager: " + _eventManager.getClass().getSimpleName() + " scheduler: " + _name, e);
-        }
-        lastRun = 0;
-        return false;
+        getDAO(EventDAO.class).updateLastRun(eventManager.getName(), name, lastRun);
+        return true;
     }
 
     public void stopScheduler() {
@@ -157,7 +144,7 @@ public class EventScheduler {
     }
 
     public void run() {
-        for (EventMethodNotification notification : _notifications) {
+        for (EventMethodNotification notification : notifications) {
             try {
                 notification.execute();
             } catch (Exception e) {

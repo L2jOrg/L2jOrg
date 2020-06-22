@@ -21,7 +21,7 @@
             </schedule>
 
             <conditionalSchedule>
-                <run name="start-match" if="HAVENT_RUN">
+                <run name="start-match" if="BETWEEN">
                     <name>start-match</name>
                     <name>stop-match</name>
                 </run>
