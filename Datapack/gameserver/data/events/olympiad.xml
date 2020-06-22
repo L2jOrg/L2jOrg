@@ -8,15 +8,6 @@
 
         <scheduler>
 
-            <schedule name="start-match" minute="0-50/10">
-                <event name="onStartMatch"/>
-            </schedule>
-
-            <schedule name="stop-match" minute="5-55/10">
-                <event name="onStopMatch"/>
-            </schedule>
-
-<!--
             <schedule name="start-match" dayOfWeek="1-6" hour="22" minute="00">
                 <event name="onStartMatch"/>
             </schedule>
@@ -24,7 +15,6 @@
             <schedule name="stop-match" dayOfWeek="1-6" hour="23" minute="00">
                 <event name="onStopMatch"/>
             </schedule>
--->
 
             <schedule name="new-season" dayOfWeek="1" hour="12" minute="00">
                 <event name="onNewSeason"/>
