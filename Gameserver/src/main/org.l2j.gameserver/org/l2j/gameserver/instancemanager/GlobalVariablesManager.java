@@ -108,7 +108,7 @@ public final class GlobalVariablesManager extends AbstractVariables {
     public void resetRaidBonus() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              Statement st = con.createStatement()) {
-            st.execute("DELETE FROM global_variables WHERE var like MA_C%");
+            st.execute("DELETE FROM global_variables WHERE var like 'MA_C%'");
         } catch (SQLException t) {
             LOGGER.warn(t.getMessage(), t);
         }
