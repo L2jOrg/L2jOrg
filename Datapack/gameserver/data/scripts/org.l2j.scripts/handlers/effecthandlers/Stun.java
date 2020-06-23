@@ -44,47 +44,33 @@ public class Stun extends AbstractEffect
     }
 
     @Override
-    public EffectType getEffectType()
-    {
+    public EffectType getEffectType() {
         return EffectType.STUN;
     }
 
     @Override
-    public void onExit(Creature effector, Creature effected, Skill skill)
-    {
+    public void onExit(Creature effector, Creature effected, Skill skill) {
         effected.stopStunning(false);
-        if (GameUtils.isSummon(effected))
-        {
-            if ((effector != null) && !effector.isDead())
-            {
-                if (GameUtils.isPlayable(effector) && (effected.getActingPlayer().getPvpFlag() == 0))
-                {
+        if (GameUtils.isSummon(effected)) {
+            if ((effector != null) && !effector.isDead()) {
+                if (GameUtils.isPlayable(effector) && (effected.getActingPlayer().getPvpFlag() == 0)) {
                     effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effected.getActingPlayer());
-                }
-                else
-                {
+                } else {
                    // ((Creature) effected).doSummonAttack(effector);
                     effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effected.getActingPlayer());
                 }
-            }
-            else
-            {
+            } else {
                 effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effected.getActingPlayer());
             }
         }
     }
 
     @Override
-    public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-    {
-        /*
-        final Creature effected = info.getEffected();
-        if ((effected == null) || effected.isRaid())
-        {
-            return;
-        }
-        info.getEffected().startStunning();
-    }*/
+    public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
+            if ((effected == null) || effected.isRaid())
+                return;
+
+            effected.startStunning();
     }
 
     public static class Factory implements SkillEffectFactory {
