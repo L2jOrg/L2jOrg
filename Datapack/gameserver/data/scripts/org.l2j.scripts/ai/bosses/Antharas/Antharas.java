@@ -54,7 +54,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
  * Antharas AI.
- * @author St3eT
+ * @author Vicochips
  */
 public final class Antharas extends AbstractNpcAI
 {
@@ -63,30 +63,6 @@ public final class Antharas extends AbstractNpcAI
 	private static final int BEHEMOTH = 29069; // Behemoth Dragon
 	private static final int TERASQUE = 29190; // Tarask Dragon
 	private static final int BOMBER = 29070; // Dragon Bomber
-	private static final Map<Integer, Location> INVISIBLE_NPC = new HashMap<>();
-
-	static {
-		INVISIBLE_NPC.put(29077, new Location(177229, 113298, -7735));
-		INVISIBLE_NPC.put(29078, new Location(176707, 113585, -7735));
-		INVISIBLE_NPC.put(29079, new Location(176385, 113889, -7735));
-		INVISIBLE_NPC.put(29080, new Location(176082, 114241, -7735));
-		INVISIBLE_NPC.put(29081, new Location(176066, 114802, -7735));
-		INVISIBLE_NPC.put(29082, new Location(176095, 115313, -7735));
-		INVISIBLE_NPC.put(29083, new Location(176425, 115829, -7735));
-		INVISIBLE_NPC.put(29084, new Location(176949, 116378, -7735));
-		INVISIBLE_NPC.put(29085, new Location(177655, 116402, -7735));
-		INVISIBLE_NPC.put(29086, new Location(178248, 116395, -7735));
-		INVISIBLE_NPC.put(29087, new Location(178706, 115998, -7735));
-		INVISIBLE_NPC.put(29088, new Location(179208, 115452, -7735));
-		INVISIBLE_NPC.put(29089, new Location(179191, 115079, -7735));
-		INVISIBLE_NPC.put(29090, new Location(179221, 114546, -7735));
-		INVISIBLE_NPC.put(29091, new Location(178916, 113925, -7735));
-		INVISIBLE_NPC.put(29092, new Location(178782, 113814, -7735));
-		INVISIBLE_NPC.put(29093, new Location(178419, 113417, -7735));
-		INVISIBLE_NPC.put(29094, new Location(177855, 113282, -7735));
-	}
-	
-
 	// Skill
 	private static final SkillHolder ANTH_JUMP = new SkillHolder(4106, 1); // Antharas Stun
 	private static final SkillHolder ANTH_TAIL = new SkillHolder(4107, 1); // Antharas Stun
@@ -127,7 +103,6 @@ public final class Antharas extends AbstractNpcAI
 	
 	private Antharas()
 	{
-		addSpawnId(INVISIBLE_NPC.keySet());
 		addSpawnId(ANTHARAS);
 		addMoveFinishedId(BOMBER);
 		addAggroRangeEnterId(BOMBER);
@@ -181,7 +156,7 @@ public final class Antharas extends AbstractNpcAI
 				else
 				{
 					setStatus(ALIVE);
-					_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+					_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
 					addBoss(_antharas);
 				}
 				break;
@@ -196,7 +171,7 @@ public final class Antharas extends AbstractNpcAI
 		{
 			case "SPAWN_ANTHARAS":
 			{
-				_antharas.teleToLocation(181323, 114850, -7623, 32542);
+				_antharas.teleToLocation(125798, 125390, -3952, 32542);
 				setStatus(IN_FIGHT);
 				_lastAttack = System.currentTimeMillis();
 				zone.broadcastPacket(new PlaySound("BS02_A"));
@@ -291,7 +266,7 @@ public final class Antharas extends AbstractNpcAI
 				{
 					setStatus(ALIVE);
 
-					oustCreatures();
+					//oustCreatures();
 
 					cancelQuestTimer("CHECK_ATTACK", npc, null);
 					cancelQuestTimer("SPAWN_MINION", npc, null);
@@ -351,7 +326,7 @@ public final class Antharas extends AbstractNpcAI
 					if(isNpc(creature)) {
 						creature.deleteMe();
 					} else if(isPlayer(creature)) {
-						creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+						//creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 					}
 				});
 				break;
@@ -380,7 +355,6 @@ public final class Antharas extends AbstractNpcAI
 					sandStorm = 2;
 					moveChance = 0;
 					npc.disableCoreAI(false);
-					INVISIBLE_NPC.forEach(AbstractScript::addSpawn);
 				}
 				else if (sandStorm == 1)
 				{
@@ -392,7 +366,7 @@ public final class Antharas extends AbstractNpcAI
 					}
 					else
 					{
-						npc.teleToLocation(177648, 114816, -7735, npc.getHeading());
+						//npc.teleToLocation(177648, 114816, -7735, npc.getHeading());
 						startQuestTimer("TID_FEAR_MOVE_TIMEOVER", 1000, npc, null);
 					}
 				}
@@ -461,7 +435,7 @@ public final class Antharas extends AbstractNpcAI
 					cancelQuestTimer("CHECK_ATTACK", _antharas, null);
 					cancelQuestTimer("SPAWN_MINION", _antharas, null);
 
-					oustCreatures();
+					//oustCreatures();
 					player.sendMessage(getClass().getSimpleName() + ": Fight has been aborted!");
 				}
 				else
@@ -483,12 +457,12 @@ public final class Antharas extends AbstractNpcAI
 		zone.forEachCreature(creature -> {
 			if(isNpc(creature)) {
 				if(creature.getId() == ANTHARAS) {
-					creature.teleToLocation(185708, 114298, -8221);
+					//creature.teleToLocation(185708, 114298, -8221);
 				} else {
 					creature.deleteMe();
 				}
 			} else if(isPlayer(creature)) {
-				creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+				//creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 			}
 		});
 	}
@@ -519,7 +493,7 @@ public final class Antharas extends AbstractNpcAI
 			if (!zone.isCreatureInZone(attacker) || (getStatus() != IN_FIGHT))
 			{
 				LOGGER.warn(": Player " + attacker.getName() + " attacked Antharas in invalid conditions!");
-				attacker.teleToLocation(80464, 152294, -3534);
+				//attacker.teleToLocation(80464, 152294, -3534);
 			}
 
 			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTH_ANTI_STRIDER.getSkillId()) && SkillCaster.checkUseConditions(npc, ANTH_ANTI_STRIDER.getSkill()))

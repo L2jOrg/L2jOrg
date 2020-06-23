@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerHpChange;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
@@ -273,6 +275,9 @@ public class CreatureStatus {
                 owner.broadcastStatusUpdate();
             }
             EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(getOwner(), oldHp, _currentHp), getOwner());
+            if (getOwner() instanceof Player) {
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHpChange((Player) getOwner()), getOwner());
+            }
         }
 
         return hpWasChanged;
@@ -335,6 +340,10 @@ public class CreatureStatus {
         // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         if (mpWasChanged && broadcastPacket) {
             owner.broadcastStatusUpdate();
+        }
+
+        if (mpWasChanged && getOwner() instanceof Player) {
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMpChange((Player) getOwner()), getOwner());
         }
 
         return mpWasChanged;

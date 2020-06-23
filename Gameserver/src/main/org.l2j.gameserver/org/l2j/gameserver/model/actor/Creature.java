@@ -1919,6 +1919,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
+    public final void startStunning() {
+        abortAttack();
+        abortCast();
+        stopMove(null);
+        getAI().notifyEvent(CtrlEvent.EVT_ACTION_BLOCKED);
+        if (!GameUtils.isSummon(this)) {
+            getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+        }
+        updateAbnormalVisualEffects();
+    }
+
     /**
      * Stop L2Effect: Transformation.<br>
      * <B><U>Actions</U>:</B>

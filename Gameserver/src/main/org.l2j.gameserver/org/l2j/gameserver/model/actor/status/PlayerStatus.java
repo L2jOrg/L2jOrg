@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.entity.Duel;
+import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
@@ -299,6 +301,10 @@ public class PlayerStatus extends PlayableStatus {
         // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         if ((currentCp != this.currentCp) && broadcastPacket) {
             getOwner().broadcastStatusUpdate();
+        }
+
+        if ((currentCp != this.currentCp)) {
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerCpChange(getOwner()), getOwner());
         }
     }
 

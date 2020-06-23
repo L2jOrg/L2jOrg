@@ -8397,6 +8397,10 @@ public final class Player extends Playable {
         return _lastHtmlActionOriginObjId;
     }
 
+    public void setLastHtmlActionOriginId(int objId) {
+        _lastHtmlActionOriginObjId = objId;
+    }
+
     private boolean validateHtmlAction(Iterable<String> actionIter, String action) {
         for (String cachedAction : actionIter) {
             if (cachedAction.charAt(cachedAction.length() - 1) == AbstractHtmlPacket.VAR_PARAM_START_CHAR) {
