@@ -143,8 +143,6 @@ open module org.l2j.scripts {
                 HpDrain.Factory,
                 IgnoreDeath.Factory,
                 ImmobilePetBuff.Factory,
-                ImmobileDamageBonus.Factory,
-                ImmobileDamageResist.Factory,
                 KnockBack.Factory,
                 Lethal.Factory,
                 Lucky.Factory,
