@@ -16,28 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.rank;
+package org.l2j.gameserver.data.database.dao;
 
-import org.l2j.gameserver.engine.rank.RankEngine;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.commons.database.DAO;
+import org.l2j.commons.database.annotation.Query;
 
 /**
  * @author JoeAlisson
  */
-public class ExRankingCharHistory extends ServerPacket {
+public interface EventDAO extends DAO<Void> {
 
-    @Override
-    protected void writeImpl(GameClient client) {
-        var history = RankEngine.getInstance().getPlayerHistory(client.getPlayer());
+    @Query("REPLACE INTO event_schedulers (eventName, schedulerName, lastRun) VALUES (:event:, :scheduler:, :lastRun:)")
+    void updateLastRun(String event, String scheduler, long lastRun);
 
-        writeId(ServerExPacketId.EX_RANKING_CHAR_HISTORY);
-        writeInt(history.size());
-        for (var data : history) {
-            writeInt(data.getDate());
-            writeInt(data.getRank());
-            writeLong(data.getExp());
-        }
-    }
+    @Query("SELECT lastRun FROM event_schedulers WHERE eventName = :event: AND schedulerName = :scheduler:")
+    long findLastRun(String event, String scheduler);
 }

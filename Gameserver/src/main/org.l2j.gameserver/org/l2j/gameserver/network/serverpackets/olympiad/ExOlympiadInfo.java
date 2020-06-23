@@ -16,35 +16,42 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.rank;
+package org.l2j.gameserver.network.serverpackets.olympiad;
 
-import org.l2j.gameserver.engine.rank.RankEngine;
+import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import static java.util.Objects.isNull;
-
 /**
  * @author JoeAlisson
  */
-public class ExRankingCharInfo extends ServerPacket {
+public class ExOlympiadInfo extends ServerPacket {
+
+    private final boolean open;
+    private final OlympiadRuleType type;
+    private final int remainTime;
+
+    private ExOlympiadInfo(boolean open, OlympiadRuleType type, int remainTime) {
+        this.open = open;
+        this.type = type;
+        this.remainTime = remainTime;
+    }
 
     @Override
     protected void writeImpl(GameClient client) {
-        var rank = RankEngine.getInstance().getRank(client.getPlayer());
-
-        writeId(ServerExPacketId.EX_RANKING_CHAR_INFO);
-        if(isNull(rank)) {
-            writeInt(0);
-            writeInt(0);
-            writeInt(0);
-            writeInt(0);
-        } else {
-            writeInt(rank.getRank());
-            writeInt(rank.getRankRace());
-            writeInt(rank.getRankSnapshot());
-            writeInt(rank.getRankRaceSnapshot());
-        }
+        writeId(ServerExPacketId.EX_OLYMPIAD_INFO);
+        writeByte(open);
+        writeInt(remainTime);
+        writeByte(type.ordinal());
     }
+
+    public static ExOlympiadInfo show(OlympiadRuleType type, int remainTime) {
+        return new ExOlympiadInfo(true, type, remainTime);
+    }
+
+    public static ExOlympiadInfo hide(OlympiadRuleType type) {
+        return new ExOlympiadInfo(false, type, 0);
+    }
+
 }

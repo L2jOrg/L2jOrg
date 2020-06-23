@@ -21,12 +21,12 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
@@ -74,7 +74,6 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_saveolymp",
 		"admin_sethero",
 		"admin_givehero",
-		"admin_endolympiad",
 		"admin_setconfig",
 		"admin_config_server",
 		"admin_gmon",
@@ -120,20 +119,8 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_saveolymp"))
 		{
-			Olympiad.getInstance().saveOlympiadStatus();
+			OlympiadEngine.getInstance().saveOlympiadStatus();
 			BuilderUtil.sendSysMessage(activeChar, "olympiad system saved.");
-		}
-		else if (command.startsWith("admin_endolympiad"))
-		{
-			try
-			{
-				Olympiad.getInstance().manualSelectHeroes();
-			}
-			catch (Exception e)
-			{
-				LOGGER.warn("An error occured while ending olympiad: " + e);
-			}
-			BuilderUtil.sendSysMessage(activeChar, "Heroes formed.");
 		}
 		else if (command.startsWith("admin_sethero"))
 		{

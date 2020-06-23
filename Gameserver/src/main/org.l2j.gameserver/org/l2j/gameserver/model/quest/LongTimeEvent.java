@@ -42,7 +42,7 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -79,7 +79,7 @@ public class LongTimeEvent extends Quest {
         var parser = new EventParser();
         parser.load();
 
-        final var today = LocalDate.now();
+        final var today = LocalDateTime.now();
         if (period.isWithinRange(today)) {
             startEvent();
         } else if (period.isAfter(today)) {
@@ -120,7 +120,7 @@ public class LongTimeEvent extends Quest {
     }
 
     public boolean isEventPeriod() {
-        return period.isWithinRange(LocalDate.now());
+        return period.isWithinRange(LocalDateTime.now());
     }
 
     private class EventParser extends GameXmlReader {
@@ -146,7 +146,7 @@ public class LongTimeEvent extends Quest {
                 startMessage = parseString(attrs, "start-message");
                 endMessage = parseString(attrs, "end-message");
 
-                final var today = LocalDate.now();
+                final var today = LocalDateTime.now();
 
                 if(period.isWithinRange(today)) {
                     for(var node = eventNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {

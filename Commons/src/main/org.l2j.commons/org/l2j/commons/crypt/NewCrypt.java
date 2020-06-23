@@ -18,25 +18,14 @@
  */
 package org.l2j.commons.crypt;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 
 
-/**
- * This class ...
- * @version $Revision: 1.3.4.1 $ $Date: 2005/03/27 15:30:09 $
- */
 public class NewCrypt
 {
-	protected static Logger _log = LoggerFactory.getLogger(NewCrypt.class.getName());
 	BlowfishEngine _crypt;
 	BlowfishEngine _decrypt;
-	
-	/**
-	 * @param blowfishKey
-	 */
+
 	public NewCrypt(byte[] blowfishKey)
 	{
 		_crypt = new BlowfishEngine();
@@ -163,7 +152,7 @@ public class NewCrypt
 		raw[pos++] = (byte) (ecx & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 8) & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 16) & 0xFF);
-		raw[pos++] = (byte) ((ecx >> 24) & 0xFF);
+		raw[pos] = (byte) ((ecx >> 24) & 0xFF);
 	}
 	
 	public byte[] decrypt(byte[] raw) throws IOException

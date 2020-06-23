@@ -33,7 +33,7 @@ public class ExEnterWorld extends ServerPacket {
     private final int daylight;
 
     public ExEnterWorld() {
-        var now = Instant.now();
+        var now = Instant.now().plusSeconds(2);
         epochInSeconds = (int) now.getEpochSecond();
         var rules = ZoneOffset.systemDefault().getRules();
         zoneIdOffsetSeconds = rules.getStandardOffset(now).getTotalSeconds();

@@ -23,6 +23,7 @@ import ai.AbstractNpcAI;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
@@ -30,7 +31,10 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.olympiad.*;
+import org.l2j.gameserver.model.olympiad.CompetitionType;
+import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
+import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
+import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
 import org.slf4j.Logger;
@@ -57,7 +61,8 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		"arenachange"
 	};
 	private static final Logger LOGGER = LoggerFactory.getLogger(OlyManager.class);
-	
+	private static final String UNCLAIMED_OLYMPIAD_POINTS_VAR = "UNCLAIMED_OLYMPIAD_POINTS";
+
 	private OlyManager()
 	{
 		addStartNpc(MANAGER);
@@ -98,8 +103,8 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				else
 				{
 					htmltext = getHtm(player, "OlyManager-joinMatch.html");
-					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(Olympiad.getInstance().getPeriod()));
-					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(Olympiad.getInstance().getCurrentCycle()));
+					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(OlympiadEngine.getInstance().getPeriod()));
+					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(OlympiadEngine.getInstance().getCurrentSeason()));
 					htmltext = htmltext.replace("%olympiad_participant%", String.valueOf(OlympiadManager.getInstance().getCountOpponents()));
 				}
 				break;
@@ -114,7 +119,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					htmltext = "OlyManager-noNoble.html";
 				}
-				else if (Olympiad.getInstance().getNoblePoints(player) <= 0)
+				else if (OlympiadEngine.getInstance().getOlympiadPoints(player) <= 0)
 				{
 					htmltext = "OlyManager-noPoints.html";
 				}
@@ -135,7 +140,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			case "calculatePoints":
 			{
-				if (player.getVariables().getInt(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR, 0) > 0)
+				if (player.getVariables().getInt(UNCLAIMED_OLYMPIAD_POINTS_VAR, 0) > 0)
 				{
 					htmltext = "OlyManager-calculateEnough.html";
 				}
@@ -149,10 +154,10 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			{
 				if (player.isInventoryUnder80(false))
 				{
-					final int tradePoints = player.getVariables().getInt(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR, 0);
+					final int tradePoints = player.getVariables().getInt(UNCLAIMED_OLYMPIAD_POINTS_VAR, 0);
 					if (tradePoints > 0)
 					{
-						player.getVariables().remove(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR);
+						player.getVariables().remove(UNCLAIMED_OLYMPIAD_POINTS_VAR);
 						giveItems(player, Config.ALT_OLY_COMP_RITEM, tradePoints * Config.ALT_OLY_MARK_PER_POINT);
 					}
 				}
@@ -165,90 +170,6 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			case "showEquipmentReward":
 			{
 				MultisellData.getInstance().separateAndSend(EQUIPMENT_MULTISELL, player, npc, false);
-				break;
-			}
-			case "rank_2": // Gladiator
-			case "rank_3": // Warlord
-			case "rank_5": // Paladin
-			case "rank_6": // Dark Avenger
-			case "rank_8": // Treasure Hunter
-			case "rank_9": // Hawkeye
-			case "rank_12": // Sorcerer
-			case "rank_13": // Necromancer
-			case "rank_14": // Warlock
-			case "rank_16": // Bishop
-			case "rank_17": // Prophet
-			case "rank_20": // Temple Knight
-			case "rank_21": // Sword Singer
-			case "rank_23": // Plains Walker
-			case "rank_24": // Silver Ranger
-			case "rank_27": // Spellsinger
-			case "rank_28": // Elemental Summoner
-			case "rank_30": // Elven Elder
-			case "rank_33": // Shillien Knight
-			case "rank_34": // Bladedancer
-			case "rank_36": // Abyss Walker
-			case "rank_37": // Phantom Ranger
-			case "rank_40": // Spellhowler
-			case "rank_41": // Phantom Summoner
-			case "rank_43": // Shillien Elder
-			case "rank_46": // Destroyer
-			case "rank_48": // Tyrant
-			case "rank_51": // Overlord
-			case "rank_52": // Warcryer
-			case "rank_55": // Bounty Hunter
-			case "rank_88": // Duelist
-			case "rank_89": // Dreadnought
-			case "rank_90": // Phoenix Knight
-			case "rank_91": // Hell Knight
-			case "rank_92": // Sagittarius
-			case "rank_93": // Adventurer
-			case "rank_94": // Archmage
-			case "rank_95": // Soultaker
-			case "rank_96": // Arcana Lord
-			case "rank_97": // Cardinal
-			case "rank_98": // Hierophant
-			case "rank_99": // Eva's Templar
-			case "rank_100": // Sword Muse
-			case "rank_101": // Wind Rider
-			case "rank_102": // Moonlight Sentinel
-			case "rank_103": // Mystic Muse
-			case "rank_104": // Elemental Master
-			case "rank_105": // Eva's Saint
-			case "rank_106": // Shillien Templar
-			case "rank_107": // Spectral Dancer
-			case "rank_108": // Ghost Hunter
-			case "rank_109": // Ghost Sentinel
-			case "rank_110": // Storm Screamer
-			case "rank_111": // Spectral Master
-			case "rank_112": // Shillien Saint
-			case "rank_113": // Titan
-			case "rank_114": // Grand Khavatari
-			case "rank_115": // Dominator
-			case "rank_116": // Doom Cryer
-			case "rank_117": // Fortune Seeker
-			case "rank_118": // Maestro
-			{
-				final int classId = Integer.parseInt(event.replace("rank_", ""));
-				final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
-				htmltext = getHtm(player, "OlyManager-rankDetail.html");
-				
-				int index = 1;
-				for (String name : names)
-				{
-					htmltext = htmltext.replace("%Rank" + index + "%", String.valueOf(index));
-					htmltext = htmltext.replace("%Name" + index + "%", name);
-					index++;
-					if (index > 15)
-					{
-						break;
-					}
-				}
-				for (; index <= 15; index++)
-				{
-					htmltext = htmltext.replace("%Rank" + index + "%", "");
-					htmltext = htmltext.replace("%Name" + index + "%", "");
-				}
 				break;
 			}
 		}
@@ -269,7 +190,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			
 			if (command.startsWith(BYPASSES[0])) // list
 			{
-				if (!Olympiad.getInstance().inCompPeriod())
+				if (!OlympiadEngine.getInstance().isMatchInProgress())
 				{
 					player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 					return false;
@@ -286,7 +207,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 				return false;
 			}
-			else if (!Olympiad.getInstance().inCompPeriod())
+			else if (!OlympiadEngine.getInstance().isMatchInProgress())
 			{
 				player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 				return false;

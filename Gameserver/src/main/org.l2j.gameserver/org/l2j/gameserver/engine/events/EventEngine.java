@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.xml.impl;
+package org.l2j.gameserver.engine.events;
 
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.Location;
@@ -44,30 +44,22 @@ import java.lang.reflect.Modifier;
 import java.nio.file.Path;
 import java.util.*;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public final class EventEngineData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(EventEngineData.class);
+public final class EventEngine extends GameXmlReader {
+    private static final Logger LOGGER = LoggerFactory.getLogger(EventEngine.class);
 
-    private EventEngineData() {
-        load();
+    private EventEngine() {
     }
 
     @Override
     protected Path getSchemaFilePath() {
         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/events.xsd");
-    }
-
-    private static <T> List<T> newList(Class<T> type) {
-        return new ArrayList<>();
-    }
-
-    private static <K, V> Map<K, V> newMap(Class<K> keyClass, Class<V> valueClass) {
-        return new LinkedHashMap<>();
     }
 
     @Override
@@ -78,23 +70,13 @@ public final class EventEngineData extends GameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        for (Node listNode = doc.getFirstChild(); listNode != null; listNode = listNode.getNextSibling()) {
-            if ("list".equals(listNode.getNodeName())) {
-                for (Node eventNode = listNode.getFirstChild(); eventNode != null; eventNode = eventNode.getNextSibling()) {
-                    if ("event".equals(eventNode.getNodeName())) {
-                        parseEvent(eventNode);
-                    }
-                }
-            }
-        }
+        forEach(doc, "list", listNode -> forEach(listNode, "event", this::parseEvent));
     }
 
-    /**
-     * @param eventNode
-     */
     private void parseEvent(Node eventNode) {
-        final String eventName = parseString(eventNode.getAttributes(), "name");
-        final String className = parseString(eventNode.getAttributes(), "class");
+        final var attr = eventNode.getAttributes();
+        final String eventName = parseString(attr, "name");
+        final String className = parseString(attr, "class");
         AbstractEventManager<?> eventManager = null;
         try {
             final Class<?> clazz = Class.forName(className);
@@ -111,39 +93,26 @@ public final class EventEngineData extends GameXmlReader {
                 throw new NoSuchMethodError("Couldn't method that gives instance of AbstractEventManager!");
             }
         } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't locate event manager instance for event: " + eventName + " !", e);
+            LOGGER.warn("Couldn't locate event manager {} instance for event: {}!", className, eventName, e);
             return;
         }
 
-        for (Node innerNode = eventNode.getFirstChild(); innerNode != null; innerNode = innerNode.getNextSibling()) {
-            if ("variables".equals(innerNode.getNodeName())) {
-                parseVariables(eventManager, innerNode);
-            } else if ("scheduler".equals(innerNode.getNodeName())) {
-                parseScheduler(eventManager, innerNode);
-            } else if ("rewards".equals(innerNode.getNodeName())) {
-                parseRewards(eventManager, innerNode);
+        for (Node child = eventNode.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
+            switch (child.getNodeName()){
+                case "variables" -> parseVariables(eventManager, child);
+                case "scheduler" -> parseScheduler(eventManager, child);
+                case "rewards" -> parseRewards(eventManager, child);
             }
         }
 
-        // Assign event name
         eventManager.setName(eventName);
-
-        // Start the scheduler
+        eventManager.onInitialized();
         eventManager.startScheduler();
-
-        // Start conditional schedulers
         eventManager.startConditionalSchedulers();
 
-        // Notify the event manager that we've done initializing its stuff
-        eventManager.onInitialized();
-
-        LOGGER.info(getClass().getSimpleName() + ": " + eventManager.getClass().getSimpleName() + ": Initialized");
+        LOGGER.info("{}:[{}] Initialized", eventName, eventManager.getClass().getSimpleName());
     }
 
-    /**
-     * @param eventManager
-     * @param innerNode
-     */
     private void parseVariables(AbstractEventManager<?> eventManager, Node innerNode) {
         final StatsSet variables = new StatsSet(LinkedHashMap::new);
         for (Node variableNode = innerNode.getFirstChild(); variableNode != null; variableNode = variableNode.getNextSibling()) {
@@ -158,12 +127,7 @@ public final class EventEngineData extends GameXmlReader {
         eventManager.setVariables(variables);
     }
 
-    /**
-     * @param eventManager
-     * @param innerNode
-     */
     private void parseScheduler(AbstractEventManager<?> eventManager, Node innerNode) {
-        eventManager.stopScheduler();
         final Set<EventScheduler> schedulers = new LinkedHashSet<>();
         final Set<IConditionalEventScheduler> conditionalSchedulers = new LinkedHashSet<>();
         for (Node scheduleNode = innerNode.getFirstChild(); scheduleNode != null; scheduleNode = scheduleNode.getNextSibling()) {
@@ -343,18 +307,13 @@ public final class EventEngineData extends GameXmlReader {
                 break;
             }
             default: {
-                LOGGER.info(getClass().getSimpleName() + ": Unhandled list case: " + type + " for event: " + eventManager.getClass().getSimpleName());
+                LOGGER.info("Unhandled list case: {} for event: {}", type, eventManager.getClass().getSimpleName());
                 break;
             }
         }
         variables.set(name, values);
     }
 
-    /**
-     * @param eventManager
-     * @param variables
-     * @param variableNode
-     */
     @SuppressWarnings("unchecked")
     private void parseMapVariables(AbstractEventManager<?> eventManager, StatsSet variables, Node variableNode) {
         final String name = parseString(variableNode.getAttributes(), "name");
@@ -427,7 +386,7 @@ public final class EventEngineData extends GameXmlReader {
                 return Location.class;
             }
             default: {
-                LOGGER.warn(": Unhandled class case: " + name + " for event: " + eventManager.getClass().getSimpleName());
+                LOGGER.warn("Unhandled class case: " + name + " for event: " + eventManager.getClass().getSimpleName());
                 return Object.class;
             }
         }
@@ -463,11 +422,23 @@ public final class EventEngineData extends GameXmlReader {
         }
     }
 
-    public static EventEngineData getInstance() {
+    public static void init() {
+        getInstance().load();
+    }
+
+    public static EventEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final EventEngineData INSTANCE = new EventEngineData();
+        private static final EventEngine INSTANCE = new EventEngine();
+    }
+
+    private static <T> List<T> newList(Class<T> type) {
+        return new ArrayList<>();
+    }
+
+    private static <K, V> Map<K, V> newMap(Class<K> keyClass, Class<V> valueClass) {
+        return new LinkedHashMap<>();
     }
 }

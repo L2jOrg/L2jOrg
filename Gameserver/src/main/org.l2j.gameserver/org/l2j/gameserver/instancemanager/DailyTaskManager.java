@@ -20,11 +20,11 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.engine.mission.MissionData;
+import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
@@ -35,7 +35,6 @@ import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.ScheduleTarget;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
@@ -83,11 +82,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     @ScheduleTarget
     private void onSave() {
         GlobalVariablesManager.getInstance().storeMe();
-
-        if (Olympiad.getInstance().inCompPeriod()) {
-            Olympiad.getInstance().saveOlympiadStatus();
-            LOGGER.info("Olympiad System: Data updated.");
-        }
     }
 
 
@@ -278,7 +272,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     }
 
     private void resetRankers() {
-        RankManager.getInstance().updateRankers();
+        RankEngine.getInstance().updateRankers();
     }
 
     private void resetDailyMissionRewards() {

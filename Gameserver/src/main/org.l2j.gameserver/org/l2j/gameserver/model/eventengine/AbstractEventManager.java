@@ -38,7 +38,6 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * @param <T>
  * @author UnAfraid
  */
 public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends AbstractScript {
@@ -53,8 +52,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
 
     public abstract void onInitialized();
 
-    /* ********************** */
-
     public String getName() {
         return _name;
     }
@@ -62,8 +59,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
     public void setName(String name) {
         _name = name;
     }
-
-    /* ********************** */
 
     public StatsSet getVariables() {
         return _variables;
@@ -73,8 +68,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
         _variables = new StatsSet(Collections.unmodifiableMap(variables.getSet()));
     }
 
-    /* ********************** */
-
     public EventScheduler getScheduler(String name) {
         return _schedulers.stream().filter(scheduler -> scheduler.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
     }
@@ -82,8 +75,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
     public void setSchedulers(Set<EventScheduler> schedulers) {
         _schedulers = Collections.unmodifiableSet(schedulers);
     }
-
-    /* ********************** */
 
     public Set<IConditionalEventScheduler> getConditionalSchedulers() {
         return _conditionalSchedulers;
@@ -93,8 +84,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
         _conditionalSchedulers = Collections.unmodifiableSet(schedulers);
     }
 
-    /* ********************** */
-
     public IEventDrop getRewards(String name) {
         return _rewards.get(name);
     }
@@ -103,13 +92,9 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
         _rewards = Collections.unmodifiableMap(rewards);
     }
 
-    /* ********************** */
-
     public Set<T> getEvents() {
         return _events;
     }
-
-    /* ********************** */
 
     public void startScheduler() {
         _schedulers.forEach(EventScheduler::startScheduler);
@@ -145,8 +130,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
         return false;
     }
 
-    /* ********************** */
-
     public final boolean registerPlayer(Player player) {
         return canRegister(player, true) && _registeredPlayers.offer(player);
     }
@@ -167,8 +150,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
         return _registeredPlayers;
     }
 
-    /* ********************** */
-
     @RegisterEvent(EventType.ON_PLAYER_LOGOUT)
     @RegisterType(ListenerRegisterType.GLOBAL)
     public void OnPlayerLogout(OnPlayerLogout event) {
@@ -177,8 +158,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
             onUnregisteredPlayer(player);
         }
     }
-
-    /* ********************** */
 
     /**
      * Triggered when a player is automatically removed from the event manager because he disconnected
@@ -198,8 +177,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
     protected void onStateChange(IEventState previousState, IEventState newState) {
 
     }
-
-    /* ********************** */
 
     @Override
     public String getScriptName() {

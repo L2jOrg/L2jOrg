@@ -375,7 +375,6 @@ public class EnterWorld extends ClientPacket {
                 player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
             }
         }
-
         player.onEnter();
         Quest.playerEnter(player);
     }

@@ -24,8 +24,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -399,7 +397,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                     }
 
                     // Notify to scripts
-                    EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
+                    //EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), OlympiadEngine.getInstance());
                 } else if (_pOneCrash && !_pTwoCrash) {
                     sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
                     sm.addString(_playerTwo.getName());
@@ -421,7 +419,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                         LOGGER_OLYMPIAD.info(_playerOne.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
                     }
                     // Notify to scripts
-                    EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
+                    //EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), OlympiadEngine.getInstance());
                 } else if (_pOneCrash && _pTwoCrash) {
                     stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
 
@@ -453,8 +451,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 stadium.broadcastPacket(result);
 
                 // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerOne, getType()), Olympiad.getInstance());
-                EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerTwo, getType()), Olympiad.getInstance());
+                //EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerOne, getType()), OlympiadEngine.getInstance());
+               // EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerTwo, getType()), OlympiadEngine.getInstance());
                 return;
             } catch (Exception e) {
                 LOGGER.warn("Exception on validateWinner(): " + e.getMessage(), e);
@@ -516,7 +514,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_LOSER_REWARD); // Loser
 
                 // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
+                //EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), OlympiadEngine.getInstance());
             } else if ((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0))) {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
                 sm.addString(_playerTwo.getName());
@@ -541,7 +539,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_LOSER_REWARD); // Loser
 
                 // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
+                //EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), OlympiadEngine.getInstance());
             } else {
                 // Save Fight Result
                 saveResults(_playerOne, _playerTwo, 0, _startTime, _fightTime, getType());

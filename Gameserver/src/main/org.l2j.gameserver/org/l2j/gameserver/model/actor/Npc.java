@@ -49,7 +49,6 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
 import org.l2j.gameserver.network.NpcStringId;
@@ -89,6 +88,7 @@ public class Npc extends Creature {
      * Minimum interval between social packets
      */
     private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
+    private static final String OLYMPIAD_HTML_PATH = "data/html/olympiad/";
     private final boolean _isQuestMonster = getTemplate().isQuestMonster();
     /**
      * The Spawn object that manage this Folk
@@ -641,7 +641,7 @@ public class Npc extends Creature {
         switch (npcId) {
             case 31688: {
                 if (player.isNoble()) {
-                    filename = Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm";
+                    filename = OLYMPIAD_HTML_PATH + "noble_main.htm";
                 } else {
                     filename = (getHtmlPath(npcId, val));
                 }
@@ -653,7 +653,7 @@ public class Npc extends Creature {
             case 31771:
             case 31772: {
                 if (player.isHero() || player.isNoble()) {
-                    filename = Olympiad.OLYMPIAD_HTML_PATH + "hero_main.htm";
+                    filename = OLYMPIAD_HTML_PATH + "hero_main.htm";
                 } else {
                     filename = (getHtmlPath(npcId, val));
                 }

@@ -26,7 +26,6 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.*;
-import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.network.serverpackets.MultiSellList;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -44,6 +43,7 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class MultisellData extends GameXmlReader {
@@ -227,8 +227,7 @@ public final class MultisellData extends GameXmlReader {
             return true;
         }
 
-        final ItemTemplate template = ItemEngine.getInstance().getTemplate(holder.getId());
-        return (template != null) && (template.isStackable() ? (holder.getCount() >= 1) : (holder.getCount() == 1));
+        return nonNull(ItemEngine.getInstance().getTemplate(holder.getId()));
     }
 
     public static MultisellData getInstance() {

@@ -95,7 +95,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
             SELECT pk.killer_id, pk.kill_time, c.char_name as name, IFNULL(cd.clan_name, '') AS clan, c.level, c.race, c.classid as active_class, c.online
             FROM player_killers pk
             JOIN characters c on pk.killer_id = c.charId
-            JOIN clan_data cd on c.clanid = cd.clan_id
+            LEFT JOIN  clan_data cd on c.clanid = cd.clan_id
             WHERE pk.player_id = :player: AND pk.kill_time >= :since:
             """)
     List<KillerData> findKillersByPlayer(int player, long since);

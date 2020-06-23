@@ -48,7 +48,6 @@ public final class AuthLogin extends ClientPacket {
         sessionId = readInt();
         authAccountId = readInt();
         authKey = readInt();
-        // packet.ge
     }
 
     @Override
