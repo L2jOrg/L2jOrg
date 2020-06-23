@@ -20,7 +20,7 @@ package org.l2j.gameserver.datatables.drop;
 
 import org.l2j.commons.util.DateRange;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
@@ -50,8 +50,7 @@ public class EventDropList {
      * @return all DateDrop of EventDropList allNpcDateDrops within the date range.
      */
     public List<DateDrop> getAllDrops() {
-        final var currentDate = LocalDate.now();
-        return allNpcEventsDrops.stream().filter(d -> d.dateRange.isWithinRange(currentDate)).collect(Collectors.toList());
+        return allNpcEventsDrops.stream().filter(d -> d.dateRange.isWithinRange(LocalDateTime.now())).collect(Collectors.toList());
     }
 
     public static class DateDrop {

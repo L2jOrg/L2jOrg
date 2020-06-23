@@ -24,6 +24,7 @@ import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -47,7 +48,7 @@ public class Util {
     public static final int[] INT_ARRAY_EMPTY = new int[0];
     public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
     public static final String[] STRING_ARRAY_EMPTY = new String[0];
-    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    public static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public static boolean isNullOrEmpty(final CharSequence value) {
         return isNull(value) || value.length() == 0;
@@ -255,11 +256,19 @@ public class Util {
         return nonNull(collection) && collection.size() > 0;
     }
 
+    public static LocalDateTime parseLocalDateTime(String dateString) {
+        if(dateString.length() > 10) {
+            return LocalDateTime.parse(dateString, DEFAULT_DATE_TIME_FORMATTER);
+        } else {
+            return LocalDate.parse(dateString, DateTimeFormatter.ISO_LOCAL_DATE).atStartOfDay();
+        }
+    }
+
     public static String formatDate(LocalDateTime dateTime) {
         return dateTime.format(DateTimeFormatter.ISO_DATE);
     }
 
     public static String formatDateTime(LocalDateTime dateTime) {
-        return dateTime.format(DATE_TIME_FORMATTER);
+        return dateTime.format(DEFAULT_DATE_TIME_FORMATTER);
     }
 }
