@@ -3510,18 +3510,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         getAI().clientStartAutoAttack();
 
-        // ImmobileDamageBonus and ImmobileDamageResist effect bonuses.
-
-        if (target.isImmobilized())
-
-        {
-            damage *= stats.getValue(Stat.IMMOBILE_DAMAGE_BONUS, 1);
-            damage /= target.getStats().getValue(Stat.IMMOBILE_DAMAGE_RESIST, 1);
-        }
-
-
-
-
         if (!reflect && !isDOT) {
             // RearDamage effect bonus.
             if (isBehind(target)) {
