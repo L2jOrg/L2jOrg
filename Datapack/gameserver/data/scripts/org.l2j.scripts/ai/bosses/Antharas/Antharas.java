@@ -171,7 +171,7 @@ public final class Antharas extends AbstractNpcAI
 		{
 			case "SPAWN_ANTHARAS":
 			{
-				_antharas.teleToLocation(181323, 114850, -7623, 32542);
+				_antharas.teleToLocation(125798, 125390, -3952, 32542);
 				setStatus(IN_FIGHT);
 				_lastAttack = System.currentTimeMillis();
 				zone.broadcastPacket(new PlaySound("BS02_A"));
@@ -266,7 +266,7 @@ public final class Antharas extends AbstractNpcAI
 				{
 					setStatus(ALIVE);
 
-					oustCreatures();
+					//oustCreatures();
 
 					cancelQuestTimer("CHECK_ATTACK", npc, null);
 					cancelQuestTimer("SPAWN_MINION", npc, null);
@@ -326,7 +326,7 @@ public final class Antharas extends AbstractNpcAI
 					if(isNpc(creature)) {
 						creature.deleteMe();
 					} else if(isPlayer(creature)) {
-						creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+						//creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 					}
 				});
 				break;
@@ -366,7 +366,7 @@ public final class Antharas extends AbstractNpcAI
 					}
 					else
 					{
-						npc.teleToLocation(177648, 114816, -7735, npc.getHeading());
+						//npc.teleToLocation(177648, 114816, -7735, npc.getHeading());
 						startQuestTimer("TID_FEAR_MOVE_TIMEOVER", 1000, npc, null);
 					}
 				}
@@ -435,7 +435,7 @@ public final class Antharas extends AbstractNpcAI
 					cancelQuestTimer("CHECK_ATTACK", _antharas, null);
 					cancelQuestTimer("SPAWN_MINION", _antharas, null);
 
-					oustCreatures();
+					//oustCreatures();
 					player.sendMessage(getClass().getSimpleName() + ": Fight has been aborted!");
 				}
 				else
@@ -457,12 +457,12 @@ public final class Antharas extends AbstractNpcAI
 		zone.forEachCreature(creature -> {
 			if(isNpc(creature)) {
 				if(creature.getId() == ANTHARAS) {
-					creature.teleToLocation(185708, 114298, -8221);
+					//creature.teleToLocation(185708, 114298, -8221);
 				} else {
 					creature.deleteMe();
 				}
 			} else if(isPlayer(creature)) {
-				creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+				//creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 			}
 		});
 	}
@@ -493,7 +493,7 @@ public final class Antharas extends AbstractNpcAI
 			if (!zone.isCreatureInZone(attacker) || (getStatus() != IN_FIGHT))
 			{
 				LOGGER.warn(": Player " + attacker.getName() + " attacked Antharas in invalid conditions!");
-				attacker.teleToLocation(80464, 152294, -3534);
+				//attacker.teleToLocation(80464, 152294, -3534);
 			}
 
 			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTH_ANTI_STRIDER.getSkillId()) && SkillCaster.checkUseConditions(npc, ANTH_ANTI_STRIDER.getSkill()))
