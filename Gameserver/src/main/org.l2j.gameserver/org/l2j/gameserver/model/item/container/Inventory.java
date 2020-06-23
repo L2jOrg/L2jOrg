@@ -754,24 +754,6 @@ public abstract class Inventory extends ItemContainer {
     }
 
     /**
-     * Blocks the given item slot from being equipped.
-     *
-     * @param itemSlot mask from ItemTemplate
-     */
-    public void blockItemSlot(long itemSlot) {
-        blockedItemSlotsMask |= itemSlot;
-    }
-
-    /**
-     * Unblocks the given item slot so it can be equipped.
-     *
-     * @param itemSlot mask from ItemTemplate
-     */
-    public void unblockItemSlot(long itemSlot) {
-        blockedItemSlotsMask &= ~itemSlot;
-    }
-
-    /**
      * @param bodyPart item bodyPart
      * @return if the given item slot is blocked or not.
      */

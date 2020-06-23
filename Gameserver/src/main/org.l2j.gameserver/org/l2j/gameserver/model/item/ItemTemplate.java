@@ -19,6 +19,7 @@
 package org.l2j.gameserver.model.item;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemGrade;
 import org.l2j.gameserver.enums.ItemSkillType;
@@ -29,6 +30,7 @@ import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
+import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.item.type.ActionType;
@@ -526,15 +528,15 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return nonNull(skills) ? skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : Collections.emptyList();
     }
 
-    /**
-     * Executes the action on each item skill with the specified type (If there are skills at all)
-     *
-     * @param type
-     * @param action
-     */
     public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
-        if (skills != null) {
+        if (nonNull(skills)) {
             skills.stream().filter(sk -> sk.getType() == type).forEach(action);
+        }
+    }
+
+    public final void forEachSkill(ItemSkillType type, Predicate<Skill> filter, Consumer<Skill> action) {
+        if(nonNull(skills)) {
+            skills.stream().filter(sk -> sk.getType() == type).map(SkillHolder::getSkill).filter(filter).forEach(action);
         }
     }
 

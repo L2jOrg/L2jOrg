@@ -89,7 +89,7 @@ public class PetInfo extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.PET_INFO);
 
-        writeByte((byte) _summon.getSummonType());
+        writeByte(_summon.getSummonType());
         writeInt(_summon.getObjectId());
         writeInt(_summon.getTemplate().getDisplayId() + 1000000);
 
@@ -101,14 +101,14 @@ public class PetInfo extends ServerPacket {
         writeInt(_summon.getStats().getMAtkSpd());
         writeInt(_summon.getStats().getPAtkSpd());
 
-        writeShort((short) _runSpd);
-        writeShort((short) _walkSpd);
-        writeShort((short) _swimRunSpd);
-        writeShort((short) _swimWalkSpd);
-        writeShort((short) _flRunSpd);
-        writeShort((short) _flWalkSpd);
-        writeShort((short) _flyRunSpd);
-        writeShort((short) _flyWalkSpd);
+        writeShort(_runSpd);
+        writeShort(_walkSpd);
+        writeShort( _swimRunSpd);
+        writeShort( _swimWalkSpd);
+        writeShort( _flRunSpd);
+        writeShort( _flWalkSpd);
+        writeShort( _flyRunSpd);
+        writeShort(_flyWalkSpd);
 
         writeDouble(_moveMultiplier);
         writeDouble(_summon.getAttackSpeedMultiplier()); // attack speed multiplier
@@ -119,7 +119,7 @@ public class PetInfo extends ServerPacket {
         writeInt(_summon.getArmor()); // body armor
         writeInt(0x00); // left hand weapon
 
-        writeByte((byte) (_summon.isShowSummonAnimation() ? 0x02 : _val)); // 0=teleported 1=default 2=summoned
+        writeByte((_summon.isShowSummonAnimation() ? 0x02 : _val)); // 0=teleported 1=default 2=summoned
         writeInt(-1); // High Five NPCString ID
         if (isPet(_summon)) {
             writeString(_summon.getName()); // Pet name.
@@ -140,7 +140,7 @@ public class PetInfo extends ServerPacket {
         writeInt(_summon.getMaxMp()); // max mp
 
         writeLong(_summon.getStats().getSp()); // sp
-        writeByte((byte) _summon.getLevel()); // lvl
+        writeByte( _summon.getLevel()); // lvl
         writeLong(_summon.getStats().getExp());
 
         if (_summon.getExpForThisLevel() > _summon.getStats().getExp()) {
@@ -168,24 +168,24 @@ public class PetInfo extends ServerPacket {
         writeInt(_summon.getPAtkSpd()); // atkspeed
         writeInt(_summon.getMAtkSpd()); // casting speed
 
-        writeByte((byte) 0); // TODO: Check me, might be ride status
-        writeByte((byte) _summon.getTeam().getId()); // Confirmed
-        writeByte((byte) _summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit - Confirmed
-        writeByte((byte) _summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit - - Confirmed
+        writeByte(0); // TODO: Check me, might be ride status
+        writeByte( _summon.getTeam().getId()); // Confirmed
+        writeByte( _summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit - Confirmed
+        writeByte( _summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit - - Confirmed
 
         writeInt(0x00); // TODO: Find me
         writeInt(_summon.getFormId()); // Transformation ID - Confirmed
 
-        writeByte((byte) _summon.getOwner().getSummonPoints()); // Used Summon Points
-        writeByte((byte) _summon.getOwner().getMaxSummonPoints()); // Maximum Summon Points
+        writeByte( _summon.getOwner().getSummonPoints()); // Used Summon Points
+        writeByte( _summon.getOwner().getMaxSummonPoints()); // Maximum Summon Points
 
         final Set<AbnormalVisualEffect> aves = _summon.getEffectList().getCurrentAbnormalVisualEffects();
-        writeShort((short) aves.size()); // Confirmed
+        writeShort(aves.size()); // Confirmed
         for (AbnormalVisualEffect ave : aves) {
-            writeShort((short) ave.getClientId()); // Confirmed
+            writeShort(ave.getClientId()); // Confirmed
         }
 
-        writeByte((byte) _statusMask);
+        writeByte(_statusMask);
     }
 
 }
