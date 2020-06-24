@@ -19,16 +19,23 @@
 
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
+import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Defender;
+import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.util.GameUtils;
+
+import static java.util.Objects.isNull;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 public class Stun extends AbstractEffect
 {
@@ -48,33 +55,27 @@ public class Stun extends AbstractEffect
     }
 
     @Override
-    public void onExit(Creature effector, Creature effected, Skill skill) {
-        effected.stopStunning(false);
-        if (GameUtils.isSummon(effected)) {
-            if ((effector != null) && !effector.isDead()) {
-                if (GameUtils.isPlayable(effector) && (effected.getActingPlayer().getPvpFlag() == 0)) {
-                    effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effected.getActingPlayer());
-                } else {
-                   // ((Creature) effected).doSummonAttack(effector);
-                    effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effected.getActingPlayer());
-                }
-            } else {
-                effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effected.getActingPlayer());
-            }
+    public boolean canStart(Creature effector, Creature effected, Skill skill) {
+        if (isNull(effected) || effected.isRaid()) {
+            return false;
         }
+        //effected.startStunning();
+        return isPlayer(effected) || isSummon(effected) || isAttackable(effected) && !(effected instanceof Defender || effected instanceof SiegeFlag || effected.getTemplate().getRace() == Race.SIEGE_WEAPON);
     }
 
     @Override
     public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
-<<<<<<< HEAD
+        effected.getAI().notifyEvent(CtrlEvent.EVT_ACTION_BLOCKED);
 
-=======
->>>>>>> development
-            if ((effected == null) || effected.isRaid())
-                return;
-
-            effected.startStunning();
     }
+
+    @Override
+    public void onExit(Creature effector, Creature effected, Skill skill) {
+        if (!isPlayer(effected)) {
+            effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
+        }
+    }
+
 
     public static class Factory implements SkillEffectFactory {
 
