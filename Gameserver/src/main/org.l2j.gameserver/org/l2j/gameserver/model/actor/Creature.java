@@ -33,7 +33,6 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.TimersManager;
@@ -3185,48 +3184,27 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return null;
     }
 
-    /**
-     * Add a skill to the Creature _skills and its Func objects to the calculator set of the Creature.<br>
-     * <B><U>Concept</U>:</B><br>
-     * All skills own by a Creature are identified in <B>_skills</B><br>
-     * <B><U>Actions</U>:</B>
-     * <ul>
-     * <li>Replace oldSkill by newSkill or Add the newSkill</li>
-     * <li>If an old skill has been replaced, remove all its Func objects of Creature calculator set</li>
-     * <li>Add Func objects of newSkill to the calculator set of the Creature</li>
-     * </ul>
-     * <B><U>Overridden in</U>:</B>
-     * <ul>
-     * <li>Player : Save update in the character_skills table of the database</li>
-     * </ul>
-     *
-     * @param newSkill The L2Skill to add to the Creature
-     * @return The L2Skill replaced or null if just added a new L2Skill
-     */
     @Override
     public Skill addSkill(Skill newSkill) {
         Skill oldSkill = null;
-        if (newSkill != null) {
-            // Mobius: Keep sublevel on skill level increase.
-            final Skill existingSkill = _skills.get(newSkill.getId());
-            if ((existingSkill != null) && (existingSkill.getSubLevel() > 0) && (newSkill.getSubLevel() == 0) && (existingSkill.getLevel() < newSkill.getLevel())) {
-                newSkill = SkillEngine.getInstance().getSkill(newSkill.getId(), newSkill.getLevel());
+        if (nonNull(newSkill)) {
+            oldSkill = _skills.get(newSkill.getId());
+
+            if(nonNull(oldSkill) && newSkill.getLevel() < oldSkill.getLevel()) {
+                return oldSkill;
             }
 
-            // Replace oldSkill by newSkill or Add the newSkill
-            oldSkill = _skills.put(newSkill.getId(), newSkill);
-            // If an old skill has been replaced, remove all its Func objects
-            if (oldSkill != null) {
-                // Stop all effects of that skill
+            _skills.put(newSkill.getId(), newSkill);
+
+            if (nonNull(oldSkill)) {
                 if (oldSkill.isPassive()) {
                     _effectList.stopSkillEffects(true, oldSkill);
                 }
-
-                stats.recalculateStats(true);
             }
 
             if (newSkill.isPassive()) {
                 newSkill.applyEffects(this, this, false, true, false, 0, null);
+                stats.recalculateStats(true);
             }
         }
         return oldSkill;
@@ -3254,7 +3232,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 stats.recalculateStats(true);
             }
         }
-
         return oldSkill;
     }
 
@@ -3349,11 +3326,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return disableRangedAttackEndTime;
     }
 
-    /**
-     * Not Implemented.
-     *
-     * @return
-     */
     public abstract int getLevel();
 
     public int getAccuracy() {

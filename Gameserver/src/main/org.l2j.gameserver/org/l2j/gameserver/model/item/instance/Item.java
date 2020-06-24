@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.model.item.instance;
 
+import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
@@ -81,9 +83,12 @@ import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.doIfNonNull;
 
 public final class Item extends WorldObject {
 
@@ -1429,21 +1434,6 @@ public final class Item extends WorldObject {
         return template.isFreightable();
     }
 
-    public int getOlyEnchantLevel() {
-        final Player player = getActingPlayer();
-        int enchant = enchantLevel;
-
-        if (player == null) {
-            return enchant;
-        }
-
-        if (player.isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ENCHANT_LIMIT)) {
-            enchant = Config.ALT_OLY_ENCHANT_LIMIT;
-        }
-
-        return enchant;
-    }
-
     public boolean hasPassiveSkills() {
         return (template.getItemType() == EtcItemType.RUNE || template.getItemType() == EtcItemType.NONE) && (loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
     }
@@ -1453,16 +1443,14 @@ public final class Item extends WorldObject {
             return;
         }
 
-        final Player player = getActingPlayer();
-        if (player != null) {
-            template.forEachSkill(ItemSkillType.NORMAL, holder ->
-            {
+        doIfNonNull(getActingPlayer(), player -> {
+            template.forEachSkill(ItemSkillType.NORMAL, holder -> {
                 final Skill skill = holder.getSkill();
                 if (skill.isPassive()) {
                     player.addSkill(skill, false);
                 }
             });
-        }
+        });
     }
 
     public void removeSkillsFromOwner() {
@@ -1470,16 +1458,24 @@ public final class Item extends WorldObject {
             return;
         }
 
-        final Player player = getActingPlayer();
-        if (player != null) {
-            template.forEachSkill(ItemSkillType.NORMAL, holder ->
-            {
-                final Skill skill = holder.getSkill();
-                if (skill.isPassive()) {
-                    player.removeSkill(skill, false, true);
+        doIfNonNull(getActingPlayer(), player -> {
+
+            IntSet removedSkills = new HashIntSet();
+            template.forEachSkill(ItemSkillType.NORMAL, Skill::isPassive, skill -> {
+                var oldSkill = player.removeSkill(skill, false, true);
+                if(nonNull(oldSkill)) {
+                    removedSkills.add(oldSkill.getId());
                 }
             });
-        }
+
+            if(!removedSkills.isEmpty()) {
+                player.getInventory().forEachItem(hasRemovedSkill(removedSkills), Item::giveSkillsToOwner);
+            }
+        });
+    }
+
+    public Predicate<Item> hasRemovedSkill(IntSet removedSkills) {
+        return item -> item != this && item.hasPassiveSkills() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, sk -> removedSkills.contains(sk.getSkillId()) );
     }
 
     @Override

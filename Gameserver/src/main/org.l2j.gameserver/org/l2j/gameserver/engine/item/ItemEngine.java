@@ -458,9 +458,9 @@ public final class ItemEngine extends GameXmlReader {
     public void destroyItem(String process, Item item, Player actor, Object reference) {
         synchronized (item) {
             final long old = item.getCount();
+            item.setItemLocation(ItemLocation.VOID);
             item.setCount(0);
             item.setOwnerId(0);
-            item.setItemLocation(ItemLocation.VOID);
             item.setLastChange(Item.REMOVED);
 
             World.getInstance().removeObject(item);

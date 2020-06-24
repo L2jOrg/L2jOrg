@@ -66,7 +66,10 @@ public class Stun extends AbstractEffect
 
     @Override
     public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> development
             if ((effected == null) || effected.isRaid())
                 return;
 
