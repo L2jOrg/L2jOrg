@@ -1391,43 +1391,46 @@
             </base-stat>
         </effects>
     </skill>
-    <skill id="3557" name="Valakas' Necklace">
-        <!-- Increases Fire Resistance, Sleep Resistance, Sleep Atk. Rate, Max HP/P. Atk./M. Atk., and P. Critical Rate of damage-dealing magic. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
+    <skill id="3557" name="Valakas' Necklace">	
+	<!-- Frre item, all players - Event! -->
         <icon initial="icon.accessory_necklace_of_valakas_i00"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
         <effects>
             <attack-trait>
-                <trait type="SLEEP">
-                    <power initial="40"/>
+                <trait type="PARALYZE">
+                    <power initial="10"/>
                 </trait>
             </attack-trait>
             <defence-trait>
-                <trait type="SLEEP">
-                    <power initial="40"/>
+                <trait type="PARALYZE">
+                    <power initial="10"/>
                 </trait>
             </defence-trait>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-                <power initial="4.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="8.0"/>
-            </stat-modify>
-            <stat-modify stat="REFLECT_DAMAGE_PERCENT">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5.0"/>
             </stat-modify>
-            <stat-modify stat="FIRE_RES">
-                <power initial="15.0"/>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="5.0"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE">
-                <power initial="2.0"/>
+            <stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power initial="5.0"/>
+            </stat-modify>                        
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power initial="5.0"/>
             </stat-modify>
-            <vital-stat-modify stat="MAX_HP">
-                <power initial="445.0"/>
-            </vital-stat-modify>
-            <reuse skill-type="PHYSIC">
-                <power initial="-10.0"/>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="5.0"/>
+            </stat-modify>
+            <reuse skill-type="MAGIC">
+                <power initial="-4.0"/>
+            </reuse>
+			<reuse skill-type="PHYSIC">
+                <power initial="-4.0"/>
+            </reuse>
+			<reuse skill-type="DANCE">
+                <power initial="-4.0"/>
             </reuse>
         </effects>
     </skill>
@@ -1675,12 +1678,14 @@
                     <power initial="10">
                         <value level="2">15</value>
                         <value level="3">20</value>
+                        <value level="4">30</value>
                     </power>
                 </trait>
                 <trait type="DERANGEMENT">
                     <power initial="5">
                         <value level="2">10</value>
                         <value level="3">15</value>
+                        <value level="4">20</value>
                     </power>
                 </trait>
             </defence-trait>
@@ -1689,12 +1694,14 @@
                     <power initial="10">
                         <value level="2">15</value>
                         <value level="3">20</value>
+                        <value level="4">30</value>
                     </power>
                 </trait>
                 <trait type="DERANGEMENT">
                     <power initial="5">
                         <value level="2">10</value>
                         <value level="3">15</value>
+                        <value level="4">20</value>
                     </power>
                 </trait>
             </attack-trait>
@@ -1702,16 +1709,21 @@
                 <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
+                    <value level="4">12.0</value>
                 </power>
             </stat-modify>
             <magic-cost type="PHYSIC">
                 <power initial="2.0">
                     <value level="2">3.0</value>
                     <value level="3">5.0</value>
+                    <value level="4">10.0</value>
                 </power>
             </magic-cost>
-            <stat-modify start-level="3" stat="ABSORB_MANA_DAMAGE_PERCENT">
-                <power initial="3.0"/>
+            <stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT">
+                <power>
+                    <value level="3">3.0</value>
+                    <value level="4">10.0</value>
+                </power>
             </stat-modify>
         </effects>
     </skill>
@@ -1739,65 +1751,122 @@
         </attributes>
         <target/>
         <effects>
+			<vital-stat-modify stat="MAX_MP" start-level="11" stop-level="12">
+				<power>                        
+                    <value level="11">10.0</value>
+                </power>
+            </vital-stat-modify>
             <attack-trait>
                 <trait type="SHOCK">
-                    <power initial="10">
-                        <value level="2">15</value>
-                        <value level="3">20</value>
+                    <power>                        
+                        <value level="12">10</value>
+                        <value level="13">15</value>
+                        <value level="14">20</value>
+                        <value level="15">30</value>
                     </power>
                 </trait>
                 <trait type="BLEED">
-                    <power initial="5">
-                        <value level="2">10</value>
-                        <value level="3">15</value>
-                    </power>
+                    <power>                        
+                        <value level="12">5</value>
+                        <value level="13">10</value>
+                        <value level="14">15</value>
+                        <value level="15">20</value>
+                    </power>          
                 </trait>
             </attack-trait>
             <defence-trait>
                 <trait type="SHOCK">
-                    <power initial="10">
-                        <value level="2">15</value>
-                        <value level="3">20</value>
+                    <power>
+                        <value level="8">4</value>
+                        <value level="10">5</value>
+                        <value level="12">10</value>
+                        <value level="13">15</value>
+                        <value level="14">20</value>
+                        <value level="15">30</value>
                     </power>
                 </trait>
                 <trait type="BLEED">
-                    <power initial="5">
-                        <value level="2">10</value>
-                        <value level="3">15</value>
-                    </power>
+                    <power initial="1">
+                        <value level="5">3</value>
+                        <value level="6">4</value>
+                        <value level="7">5</value>
+                        <value level="13">10</value>
+                        <value level="14">15</value>
+                        <value level="15">20</value>
+                    </power>          
                 </trait>
             </defence-trait>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
-                <power initial="2.0">
-                    <value level="2">3.0</value>
-                    <value level="3">4.0</value>
+			<stat-modify stat="ACCURACY">
+                <power>
+                    <value level="9">1.0</value>
+                    <value level="12">2.0</value>
+                    <value level="13">3.0</value>
+                    <value level="14">4.0</value>
+                    <value level="15">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power>
+                    <value level="9">1.0</value>
+                    <value level="12">2.0</value>
+                    <value level="13">3.0</value>
+                    <value level="14">4.0</value>
+                    <value level="15">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED" start-level="10" stop-level="12">
+                <power>
+                    <value level="10">15.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" start-level="10" stop-level="12">
+                <power>
+                    <value level="10">15.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power>
+                    <value level="12">3.0</value>
+                    <value level="13">4.0</value>
+                    <value level="14">5.0</value>
+                    <value level="15">10.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
-                <power initial="2.0">
-                    <value level="2">3.0</value>
-                    <value level="3">4.0</value>
+                <power>
+                    <value level="12">3.0</value>
+                    <value level="13">4.0</value>
+                    <value level="14">5.0</value>
+                    <value level="15">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" start-level="12">
-                <power initial="3">
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power>
+                    <value level="12">3</value>
                     <value level="13">6</value>
                     <value level="14">10</value>
                     <value level="15">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="12">
-                <power initial="3">
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power>
+                    <value level="12">3</value>
                     <value level="13">6</value>
                     <value level="14">10</value>
                     <value level="15">20</value>
                 </power>
             </stat-modify>
-            <stat-modify start-level="3" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="15.0"/>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power>
+                    <value level="14">15</value>
+                    <value level="15">20</value>
+                </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="3" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-                <power initial="10.0"/>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power>
+                    <value level="14">10</value>
+                    <value level="15">20</value>
+                </power>
             </stat-modify>
         </effects>
     </skill>
@@ -1822,6 +1891,7 @@
                     <power initial="10">
                         <value level="2">15</value>
                         <value level="3">20</value>
+                        <value level="4">30</value>
                     </power>
                 </trait>
             </attack-trait>
@@ -1830,6 +1900,7 @@
                     <power initial="10">
                         <value level="2">15</value>
                         <value level="3">20</value>
+                        <value level="4">30</value>
                     </power>
                 </trait>
             </defence-trait>
@@ -1837,34 +1908,40 @@
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
+                    <value level="4">5.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
+                    <value level="4">5.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="4.0">
                     <value level="2">6.0</value>
-                    <value level="3">10.0</value>
+                    <value level="3">7.0</value>
+                    <value level="4">10.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="4.0">
                     <value level="2">6.0</value>
-                    <value level="3">10.0</value>
+                    <value level="3">7.0</value>
+                    <value level="4">15.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="3">10.0</value>
+                    <value level="4">15.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power>
-                    <value level="3">10.0</value>
+                    <value level="3">5.0</value>
+                    <value level="4">10.0</value>
                 </power>
             </stat-modify>
         </effects>
@@ -1890,6 +1967,7 @@
                     <power initial="10">
                         <value level="2">15</value>
                         <value level="3">20</value>
+                        <value level="4">30</value>
                     </power>
                 </trait>
             </attack-trait>
@@ -1898,6 +1976,12 @@
                     <power initial="10">
                         <value level="2">15</value>
                         <value level="3">20</value>
+                        <value level="4">30</value>
+                    </power>
+                </trait>            
+                <trait type="SLEEP">
+                    <power>
+                        <value level="4">20</value>
                     </power>
                 </trait>
             </defence-trait>
@@ -1905,44 +1989,58 @@
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
+                    <value level="4">5.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
+                    <value level="4">5.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
                 <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
+                    <value level="4">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="2.0">
+                    <value level="2">4.0</value>
+                    <value level="3">6.0</value>
+                    <value level="4">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
                 <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
+                    <value level="4">10.0</value>
                 </power>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
                 <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
+                    <value level="4">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="2.0">
+                    <value level="2">4.0</value>
+                    <value level="3">6.0</value>
+                    <value level="4">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
                 <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
+                    <value level="4">10.0</value>
                 </power>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
-                <power initial="2.0">
-                    <value level="2">4.0</value>
-                    <value level="3">6.0</value>
-                </power>
-            </stat-modify>
+            </stat-modify>            
         </effects>
     </skill>
     <skill id="3571" name="Special Ability: Critical Stun" max-level="2" debuff="true" action="A2">
