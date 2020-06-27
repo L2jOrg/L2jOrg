@@ -27,71 +27,97 @@
 	</armor>
 
 	<weapon id="92404" name="Zaken’s Blood Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.special_weapon_onehandsword">
-		<restriction/>
-		<attributes weight="1300"/>
-		<crystal type="A"/>
+		<restriction freightable="false"/>
+		<attributes weight="1300" commission-type="ONE_HAND_SWORD"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="137.0"/>
 			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 		</stats>
+		<skills>
+			<skill id="50297" value="-1"/>
+		</skills>
 	</weapon>
 
 	<weapon id="92405" name="Core’s Plasma Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_karupis_i00" mana-consume="5">
-		<restriction/>
-		<attributes weight="1640" reuse-delay="1500"/>
-		<crystal type="A"/>
+		<restriction freightable="false"/>
+		<attributes weight="1640" reuse-delay="1500" commission-type="BOW"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="10" angle="360"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="12.0"/>
 			<stat type="MAGIC_ATTACK" value="151.0"/>
 			<stat type="PHYSICAL_ATTACK" value="570.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="500.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="227.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
 		</stats>
+		<skills>
+			<skill id="50299" value="-1"/>
+		</skills>
 	</weapon>
 
 	<weapon id="92406" name="Queen Ant’s Stone Spear" type="SPEAR" body-part="TWO_HAND" icon="BranchSys3.Icon.g_melisa_stormer_i00">
-		<restriction/>
-		<attributes weight="1820"/>
-		<crystal type="A"/>
+		<restriction freightable="false"/>
+		<attributes weight="1820" commission-type="SPEAR"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="66" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="137.0"/>
 			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 		</stats>
+		<skills>
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="50296" value="-1"/>
+		</skills>
 	</weapon>
 
 	<weapon id="92407" name="Orfen’s Poisonous Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_the_two_handed_sword_of_hero_i01">
-		<restriction/>
-		<attributes weight="1820"/>
-		<crystal type="A"/>
+		<restriction freightable="false"/>
+		<attributes weight="1820" commission-type="TWO_HAND_SWORD"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="46" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="137.0"/>
 			<stat type="PHYSICAL_ATTACK" value="305.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 		</stats>
+		<skills>
+			<skill id="50298" value="-1"/>
+		</skills>
 	</weapon>
 
 	<weapon id="92408" name="Baium’s Thunder Breaker" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_terakan_i00">
-		<restriction/>
-		<attributes weight="930"/>
-		<crystal type="A"/>
+		<restriction freightable="false"/>
+		<attributes weight="930" commission-type="DAGGER"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="12.0"/>
 			<stat type="MAGIC_ATTACK" value="137.0"/>
 			<stat type="PHYSICAL_ATTACK" value="220.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
 		</stats>
+		<skills>
+			<skill id="50295" value="-1"/>
+		</skills>
 	</weapon>
 
 	<item id="92409" name="Special Dragon's Fruit Lv. 2" type="SCROLL" icon="icon.bm_dragon_fruit">
@@ -167,17 +193,22 @@
 	</item>
 
 	<weapon id="92421" name="Queen Ant’s Stone Crasher" type="BLUNT" body-part="RIGHT_HAND" icon="icon.special_weapon_onehandblunt">
-		<restriction/>
-		<attributes weight="1550"/>
-		<crystal type="A"/>
+		<restriction freightable="false"/>
+		<attributes weight="1550" commission-type="BLUNT_WEAPON"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="MAGIC_ATTACK" value="173.0"/>
 			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="20.0"/>
 		</stats>
+		<skills>
+			<skill id="50300" value="-1"/>
+		</skills>
 	</weapon>
 
 	<item id="92422" name="Tower of Insolence Stone of Memory: 1st Floor" type="SCROLL" icon="icon.etc_ancient_tablet_i00">

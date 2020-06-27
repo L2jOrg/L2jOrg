@@ -1600,7 +1600,23 @@
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="46644"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="18.300000190734863" id="49488"/>
+                <item chance="18.300000190734863" id="1458"/>
+                <item chance="18.300000190734863" id="49487"/>
+                <item chance="18.300000190734863" id="91226"/>
+                <item chance="18.300000190734863" id="49490"/>                
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="39177" name="Red Libra Supplies Lv. 2" action="A1">
         <!-- none -->
@@ -1612,7 +1628,24 @@
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="46645"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="18.300000190734863" id="49488"/>
+                <item chance="18.300000190734863" id="49533"/>
+                <item chance="18.300000190734863" id="1459"/>
+                <item chance="18.300000190734863" id="49487"/>
+                <item chance="18.300000190734863" id="91226"/>                
+                <item chance="18.300000190734863" id="49490"/>                
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="39178" name="Red Libra Supplies Lv. 3" action="A1">
         <!-- none -->
@@ -1624,7 +1657,25 @@
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="46646"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="18.300000190734863" id="49488"/>
+                <item chance="18.300000190734863" id="49533"/>
+                <item chance="18.300000190734863" id="1460"/>
+                <item chance="18.300000190734863" id="49487"/>
+                <item chance="18.300000190734863" id="91226"/>                
+                <item chance="18.300000190734863" id="49490"/>                
+                <item chance="18.300000190734863" id="49108"/>                
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="39179" name="Red Libra Supplies Lv. 4" action="A1">
         <!-- none -->
@@ -1636,7 +1687,26 @@
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="46647"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="18.300000190734863" id="49488"/>
+                <item chance="18.300000190734863" id="49533"/>
+                <item chance="18.300000190734863" id="1461"/>
+                <item chance="18.300000190734863" id="49487"/>
+                <item chance="18.300000190734863" id="91226"/>                
+                <item chance="18.300000190734863" id="49490"/>                
+                <item chance="18.300000190734863" id="49108"/>                
+                <item chance="18.300000190734863" id="49110"/>                
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="39180" name="Low-grade Scroll: XP" action="A1">
         <!-- 1000 XP. -->
