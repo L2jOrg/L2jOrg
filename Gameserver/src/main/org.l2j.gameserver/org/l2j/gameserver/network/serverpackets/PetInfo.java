@@ -186,6 +186,9 @@ public class PetInfo extends ServerPacket {
         }
 
         writeByte(_statusMask);
+        writeInt(0);
+        writeInt(0);
+        writeInt(0);
     }
 
 }

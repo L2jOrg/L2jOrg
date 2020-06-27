@@ -63,11 +63,11 @@ public class AdminMenu implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
+	public boolean useAdminCommand(String command, Player playerGM)
 	{
 		if (command.equals("admin_char_manage"))
 		{
-			showMainPage(activeChar);
+			showMainPage(playerGM);
 		}
 		else if (command.startsWith("admin_teleport_character_to_menu"))
 		{
@@ -78,10 +78,10 @@ public class AdminMenu implements IAdminCommandHandler
 				final Player player = World.getInstance().findPlayer(playerName);
 				if (player != null)
 				{
-					teleportCharacter(player, new Location(Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4])), activeChar, "Admin is teleporting you.");
+					teleportCharacter(player, new Location(Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4])), playerGM, "Admin is teleporting you.");
 				}
 			}
-			showMainPage(activeChar);
+			showMainPage(playerGM);
 		}
 		else if (command.startsWith("admin_recall_char_menu"))
 		{
@@ -89,10 +89,9 @@ public class AdminMenu implements IAdminCommandHandler
 			{
 				final String targetName = command.substring(23);
 				final Player player = World.getInstance().findPlayer(targetName);
-				teleportCharacter(player, activeChar.getLocation(), activeChar, "Admin is teleporting you.");
+				teleportCharacter(player, playerGM.getLocation(), playerGM, "Admin is teleporting you.");
 			}
-			catch (StringIndexOutOfBoundsException e)
-			{
+			catch (StringIndexOutOfBoundsException e) {
 			}
 		}
 		else if (command.startsWith("admin_recall_party_menu"))
@@ -103,18 +102,18 @@ public class AdminMenu implements IAdminCommandHandler
 				final Player player = World.getInstance().findPlayer(targetName);
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					playerGM.sendPacket(SystemMessageId.INVALID_TARGET);
 					return true;
 				}
 				if (!player.isInParty())
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Player is not in party.");
-					teleportCharacter(player, activeChar.getLocation(), activeChar, "Admin is teleporting you.");
+					BuilderUtil.sendSysMessage(playerGM, "Player is not in party.");
+					teleportCharacter(player, playerGM.getLocation(), playerGM, "Admin is teleporting you.");
 					return true;
 				}
 				for (Player pm : player.getParty().getMembers())
 				{
-					teleportCharacter(pm, activeChar.getLocation(), activeChar, "Your party is being teleported by an Admin.");
+					teleportCharacter(pm, playerGM.getLocation(), playerGM, "Your party is being teleported by an Admin.");
 				}
 			}
 			catch (Exception e)
@@ -130,20 +129,20 @@ public class AdminMenu implements IAdminCommandHandler
 				final Player player = World.getInstance().findPlayer(targetName);
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					playerGM.sendPacket(SystemMessageId.INVALID_TARGET);
 					return true;
 				}
 				final Clan clan = player.getClan();
 				if (clan == null)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Player is not in a clan.");
-					teleportCharacter(player, activeChar.getLocation(), activeChar, "Admin is teleporting you.");
+					BuilderUtil.sendSysMessage(playerGM, "Player is not in a clan.");
+					teleportCharacter(player, playerGM.getLocation(), playerGM, "Admin is teleporting you.");
 					return true;
 				}
 				
 				for (Player member : clan.getOnlineMembers(0))
 				{
-					teleportCharacter(member, activeChar.getLocation(), activeChar, "Your clan is being teleported by an Admin.");
+					teleportCharacter(member, playerGM.getLocation(), playerGM, "Your clan is being teleported by an Admin.");
 				}
 			}
 			catch (Exception e)
@@ -151,12 +150,15 @@ public class AdminMenu implements IAdminCommandHandler
 				LOGGER.warn("", e);
 			}
 		}
+		else if(command.startsWith("admin_recall_all")) {
+			World.getInstance().forEachPlayer(p -> p.teleToLocation(playerGM, true));
+		}
 		else if (command.startsWith("admin_goto_char_menu"))
 		{
 			try
 			{
 				final Player player = World.getInstance().findPlayer(command.substring(21));
-				teleportToCharacter(activeChar, player);
+				teleportToCharacter(playerGM, player);
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -164,7 +166,7 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_kill_menu"))
 		{
-			handleKill(activeChar);
+			handleKill(playerGM);
 		}
 		else if (command.startsWith("admin_kick_menu"))
 		{
@@ -184,9 +186,9 @@ public class AdminMenu implements IAdminCommandHandler
 				{
 					text = "Player " + player + " was not found in the game.";
 				}
-				activeChar.sendMessage(text);
+				playerGM.sendMessage(text);
 			}
-			showMainPage(activeChar);
+			showMainPage(playerGM);
 		}
 		else if (command.startsWith("admin_ban_menu"))
 		{
@@ -194,9 +196,9 @@ public class AdminMenu implements IAdminCommandHandler
 			if (st.countTokens() > 1)
 			{
 				final String subCommand = "admin_ban_char";
-				AdminCommandHandler.getInstance().useAdminCommand(activeChar, subCommand + command.substring(14), true);
+				AdminCommandHandler.getInstance().useAdminCommand(playerGM, subCommand + command.substring(14), true);
 			}
-			showMainPage(activeChar);
+			showMainPage(playerGM);
 		}
 		else if (command.startsWith("admin_unban_menu"))
 		{
@@ -204,9 +206,9 @@ public class AdminMenu implements IAdminCommandHandler
 			if (st.countTokens() > 1)
 			{
 				final String subCommand = "admin_unban_char";
-				AdminCommandHandler.getInstance().useAdminCommand(activeChar, subCommand + command.substring(16), true);
+				AdminCommandHandler.getInstance().useAdminCommand(playerGM, subCommand + command.substring(16), true);
 			}
-			showMainPage(activeChar);
+			showMainPage(playerGM);
 		}
 		return true;
 	}
