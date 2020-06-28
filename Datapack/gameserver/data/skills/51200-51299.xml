@@ -1204,6 +1204,58 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0">                   
+                    <value level="3">2.0</value>                   
+                </power>
+            </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0">                   
+                    <value level="3">2.0</value>                   
+                </power>
+            </base-stat>
+			<base-stat type="DEX">
+                <power initial="1.0">                   
+                    <value level="3">2.0</value>                   
+                </power>
+            </base-stat>
+			<base-stat type="WIT">
+                <power initial="1.0">                   
+                    <value level="3">2.0</value>                   
+                </power>
+            </base-stat>
+			<base-stat type="CON">
+                <power initial="1.0">                   
+                    <value level="3">2.0</value>                   
+                </power>
+            </base-stat>
+			<base-stat type="MEN">
+                <power initial="1.0">                   
+                    <value level="3">2.0</value>                   
+                </power>
+            </base-stat>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="12.0">                   
+                    <value level="2">15.0</value>
+                    <value level="3">20.0</value>                   
+                </power>
+            </stat-modify>
+			<attack-trait>				
+                <trait type="SHOCK">
+                    <power initial="10">                   
+						<value level="2">20</value>
+						<value level="3">30</value>                   
+					</power>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="10">                   
+						<value level="2">20</value>
+						<value level="3">30</value>                   
+					</power>
+                </trait>				
+            </attack-trait>			
+        </effects>
     </skill>
     <skill id="51298" name="Dimensional Barrier" action="A1">
         <!-- Opens the dimensional curtain to block enemy attack 10 times for 15 seconds. -->

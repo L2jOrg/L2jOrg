@@ -1905,7 +1905,7 @@
                 <abnormals>PD_UP IMPROVE_PA_PD_UP</abnormals>
             </block-abnormal>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-                <power initial="-10.0"/>
+                <power initial="-25.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1938,7 +1938,7 @@
                 <abnormals>SPEED_UP IMPROVE_SPEED_AVOID_UP</abnormals>
             </block-abnormal>
             <speed mode="PER">
-                <power initial="-10.0"/>
+                <power initial="-49.0"/>
             </speed>
         </effects>
     </skill>
@@ -2002,7 +2002,9 @@
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal type="MULTI_BUFF">
-            <level initial="1"/>
+            <level initial="1">
+				<value level="2">2</value>
+            </level>
             <time initial="600"/>
             <chance initial="-1"/>
         </abnormal>
@@ -2066,7 +2068,7 @@
     <skill id="1366" name="Seal of Despair" max-level="6" debuff="true" action="A2" type="MAGIC">
         <!-- For 30 seconds, P. Accuracy -6, P. Atk. -10%, P. Critical Rate -30%, P. Critical Damage -30%, Movement Speed -20%, M. Def -30%, and Atk. Spd. -30%. -->
         <icon initial="icon.skill1376"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DEATH" level-bonus-rate="20">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DEATH" level-bonus-rate="30">
             <magic-level initial="79">
                 <value level="2">80</value>
                 <value level="3">81</value>
@@ -2098,7 +2100,7 @@
                 <value level="6">122</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="15"/>
         <abnormal type="ULTIMATE_DEBUFF">
             <level initial="1">
                 <value level="2">2</value>
@@ -2413,7 +2415,7 @@
     <skill id="1382" name="Mass Curse Gloom" max-level="11" debuff="true" action="A2" type="MAGIC">
         <!-- Curses the target and nearby enemies. M. Def. -23%. -->
         <icon initial="icon.skill1382"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
             <magic-level initial="58">
                 <value level="2">62</value>
                 <value level="3">66</value>
@@ -2469,7 +2471,7 @@
                 <value level="11">205</value>
             </mana>
         </consume>
-        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
+        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="15"/>
         <abnormal type="MD_DOWN">
             <level initial="3"/>
             <time initial="60"/>

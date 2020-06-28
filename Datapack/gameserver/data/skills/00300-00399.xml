@@ -1481,7 +1481,7 @@
         <target/>
         <abnormal type="FOCUS_DAGGER">
             <level initial="1"/>
-            <time initial="120"/>
+            <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <conditions>
@@ -1490,15 +1490,18 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-position-based position="FRONT" stat="CRITICAL_DAMAGE">
-                <power initial="-30.0"/>
-            </stat-position-based>
-            <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
-                <power initial="40.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+			<stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="-20.0"/>
             </stat-modify>
+            <stat-position-based mode="PER" position="FRONT" stat="CRITICAL_DAMAGE">
+                <power initial="-30.0"/>
+            </stat-position-based>           
+			<stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
+                <power initial="40.0"/>
+            </stat-modify>
+			<stat-position-based mode="PER" position="BACK" stat="CRITICAL_DAMAGE">
+                <power initial="90.0"/>
+            </stat-position-based>
         </effects>
     </skill>
     <skill id="356" name="Focus Chance" action="A2">
@@ -1517,7 +1520,7 @@
         <target/>
         <abnormal type="FOCUS_DAGGER">
             <level initial="1"/>
-            <time initial="120"/>
+            <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <conditions>
@@ -1526,18 +1529,18 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-position-based position="FRONT" stat="CRITICAL_RATE">
+            <stat-position-based mode="PER" position="FRONT" stat="CRITICAL_RATE">
                 <power initial="-30.0"/>
             </stat-position-based>
-            <stat-position-based position="BACK" stat="CRITICAL_RATE">
-                <power initial="60"/>
-            </stat-position-based>
-            <stat-position-based position="SIDE" stat="CRITICAL_RATE">
-                <power initial="30.0"/>
-            </stat-position-based>
-            <stat-modify mode="PER" stat="BLOW_RATE">
+			<stat-modify mode="PER" stat="BLOW_RATE">
                 <power initial="20"/>
             </stat-modify>
+			<stat-position-based mode="PER" position="SIDE" stat="CRITICAL_RATE">
+                <power initial="30.0"/>
+            </stat-position-based>
+            <stat-position-based mode="PER" position="BACK" stat="CRITICAL_RATE">
+                <power initial="60"/>
+            </stat-position-based>                       
         </effects>
     </skill>
     <skill id="357" name="Focus Power" action="A2">
@@ -1556,7 +1559,7 @@
         <target/>
         <abnormal type="FOCUS_DAGGER">
             <level initial="1"/>
-            <time initial="120"/>
+            <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <conditions>
@@ -1565,15 +1568,21 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-position-based position="FRONT" stat="CRITICAL_DAMAGE">
+            <stat-position-based mode="PER" position="FRONT" stat="CRITICAL_DAMAGE">
                 <power initial="-30.0"/>
+            </stat-position-based>
+			<stat-position-based mode="PER" position="SIDE" stat="CRITICAL_DAMAGE">
+                <power initial="30.0"/>
+            </stat-position-based>
+			<stat-position-based mode="PER" position="BACK" stat="CRITICAL_DAMAGE">
+                <power initial="60.0"/>
             </stat-position-based>
         </effects>
     </skill>
     <skill id="358" name="Bluff" max-level="9" debuff="true" action="A2">
         <!-- Deceives the enemy into turning their back, stuns for 3 seconds, and remove the enemy's urge to attack you. Requires a dagger. -->
         <icon initial="icon.skill0358"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30" auto-use="ACTIVE">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1624,6 +1633,9 @@
         </conditions>
         <effects>
             <effect name="Bluff">
+                <power initial="60.0"/>
+            </effect>
+			<effect name="DeleteHateOfMe">
                 <power initial="60.0"/>
             </effect>
             <effect name="TargetCancel">
