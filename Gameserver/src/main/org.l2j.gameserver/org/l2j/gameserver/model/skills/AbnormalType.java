@@ -167,6 +167,7 @@ public enum AbnormalType {
     RACE_ORC2(-1),
     REFLECT_MAGIC_DD(-1),
     RESIST_DEATH(-1),
+    EVAS_BUFF(-1),
     RHAPSODY(-1),
     SACRIFICE(-1),
     SEED_OF_CRITICAL(-1),

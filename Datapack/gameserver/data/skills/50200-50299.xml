@@ -498,7 +498,7 @@
         <target/>
 		<effects>
 			<base-stat type="STR">
-                <power initial="1"/> 
+                <power initial="1.0"/> 
             </base-stat>
 			<stat-modifystat="WEIGHT_LIMIT">
                 <power initial="1000.0"/>                 
@@ -525,7 +525,7 @@
         <target/>
 		<effects>
 			<base-stat type="STR">
-                <power initial="1"/> 
+                <power initial="1.0"/> 
             </base-stat>
 			<stat-modifystat="WEIGHT_LIMIT">
                 <power initial="1000.0"/>                 
@@ -552,7 +552,7 @@
         <target/>
 		<effects>
 			<base-stat type="INT">
-                <power initial="1"/> 
+                <power initial="1.0"/> 
             </base-stat>
 			<stat-modifystat="WEIGHT_LIMIT">
                 <power initial="1000.0"/>                 
@@ -576,7 +576,7 @@
         <target/>
 		<effects>
 			<base-stat type="INT">
-                <power initial="1"/> 
+                <power initial="1.0"/> 
             </base-stat>
 			<stat-modifystat="WEIGHT_LIMIT">
                 <power initial="1000.0"/>                 
@@ -998,22 +998,22 @@
             </trigger-skill-by-magic>            
 			<base-stat type="STR">
                 <power>                  
-                    <value level="5">1</value>
-                    <value level="6">2</value>
-                    <value level="7">3</value>
-                    <value level="8">4</value>
-                    <value level="9">5</value>
-                    <value level="10">6</value>
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
                 </power>
             </base-stat>
 			<base-stat type="INT">
                 <power>                  
-                    <value level="5">1</value>
-                    <value level="6">2</value>
-                    <value level="7">3</value>
-                    <value level="8">4</value>
-                    <value level="9">5</value>
-                    <value level="10">6</value>
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
                 </power>
             </base-stat>
         </effects>
@@ -1245,12 +1245,12 @@
             </trigger-skill-by-magic>          
 			<base-stat type="CON">
                 <power>                  
-                    <value level="5">1</value>
-                    <value level="6">2</value>
-                    <value level="7">3</value>
-                    <value level="8">4</value>
-                    <value level="9">5</value>
-                    <value level="10">6</value>
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
                 </power>
             </base-stat>			
         </effects>
@@ -1484,12 +1484,12 @@
             </trigger-skill-by-magic>          
 			<base-stat type="DEX">
                 <power>                  
-                    <value level="5">1</value>
-                    <value level="6">2</value>
-                    <value level="7">3</value>
-                    <value level="8">4</value>
-                    <value level="9">5</value>
-                    <value level="10">6</value>
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
                 </power>
             </base-stat>			
         </effects>
@@ -1723,12 +1723,12 @@
             </trigger-skill-by-magic>           
 			<base-stat type="MEN">
                 <power>                  
-                    <value level="5">1</value>
-                    <value level="6">2</value>
-                    <value level="7">3</value>
-                    <value level="8">4</value>
-                    <value level="9">5</value>
-                    <value level="10">6</value>
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
                 </power>
             </base-stat>			
         </effects>
@@ -1960,12 +1960,12 @@
             </trigger-skill-by-magic>
 			<base-stat type="WIT">
                 <power>                  
-                    <value level="5">1</value>
-                    <value level="6">2</value>
-                    <value level="7">3</value>
-                    <value level="8">4</value>
-                    <value level="9">5</value>
-                    <value level="10">6</value>
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
                 </power>
             </base-stat>			
         </effects>
