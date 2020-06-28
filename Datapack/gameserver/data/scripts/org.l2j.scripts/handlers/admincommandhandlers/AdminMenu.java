@@ -39,11 +39,6 @@ import java.util.StringTokenizer;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
-
-/**
- * This class handles following admin commands: - handles every admin menu command
- * @version $Revision: 1.3.2.6.2.4 $ $Date: 2005/04/11 10:06:06 $
- */
 public class AdminMenu implements IAdminCommandHandler
 {
 	private static final Logger LOGGER = LoggerFactory.getLogger(AdminMenu.class);
@@ -55,6 +50,7 @@ public class AdminMenu implements IAdminCommandHandler
 		"admin_recall_char_menu",
 		"admin_recall_party_menu",
 		"admin_recall_clan_menu",
+		"admin_recall_all",
 		"admin_goto_char_menu",
 		"admin_kick_menu",
 		"admin_kill_menu",
@@ -151,7 +147,11 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 		}
 		else if(command.startsWith("admin_recall_all")) {
-			World.getInstance().forEachPlayer(p -> p.teleToLocation(playerGM, true));
+			World.getInstance().forEachPlayer(p -> {
+				if(!p.isGM()) {
+					p.teleToLocation(playerGM, true);
+				}
+			});
 		}
 		else if (command.startsWith("admin_goto_char_menu"))
 		{
