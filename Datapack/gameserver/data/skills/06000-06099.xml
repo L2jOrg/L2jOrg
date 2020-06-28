@@ -1199,7 +1199,7 @@
         <!-- P. Critical Damage is increased by 100%%. -->
         <icon initial="icon.skill1542"/>
         <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
-            <magic-level initial="80"/>
+            <magic-level initial="1"/>
             <reuse initial="15000"/>
             <effect-range initial="-1"/>
         </attributes>
@@ -1210,7 +1210,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="100.0"/>
                 <weapon-type>SWORD BLUNT DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER</weapon-type>
             </stat-modify>
@@ -1242,6 +1242,14 @@
         <attributes property="MAGIC" magic-critical-rate="-5.0">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
+                <power initial="9000.0"/>
+            </stat-modify>   
+			<enlarge-slot type="INVENTORY_NORMAL">
+                <power initial="10.0"/>
+            </enlarge-slot>
+        </effects>
     </skill>
     <skill id="6062" name="Lv. 99 Raid Boss">
         <!-- An evil undead version of the elder of twin knights who were famous warriors in Gracia before the fall. -->

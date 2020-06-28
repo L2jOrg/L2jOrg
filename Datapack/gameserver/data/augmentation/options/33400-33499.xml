@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org options.xsd">
-    <option id="33404" name="Talisman_of_Eva">
+    <option id="33400" name="Talisman_of_Baium">
+	<!-- 2 -->
+		<skill id="50191" level="2" type="PASSIVE" />
+    </option>
+	<option id="33401" name="Talisman_of_Baium">
+	<!-- 3 -->
+		<skill id="50191" level="3" type="PASSIVE" />
+    </option>
+	<option id="33402" name="Talisman_of_Baium">
+	<!-- 4 -->
+		<skill id="50191" level="4" type="PASSIVE" />
+    </option>
+	<option id="33403" name="Talisman_of_Baium">
+	<!-- 5 -->
+		<skill id="50191" level="5" type="PASSIVE" />
+    </option>
+	<option id="33404" name="Talisman_of_Eva">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50913"  type="PASSIVE" />
     </option>
@@ -44,48 +60,220 @@
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50913" level="11" type="PASSIVE" />
     </option>
-    <option id="33415" name="Talisman_of_Eva">
+	
+    <option id="33415" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
-        <skill id="50293" level="1" type="PASSIVE" />
+        <skill id="50293" type="PASSIVE" />
     </option>
-    <option id="33416" name="Talisman_of_Eva">
+    <option id="33416" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="2" type="PASSIVE" />
     </option>
-    <option id="33417" name="Talisman_of_Eva">
+    <option id="33417" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="3" type="PASSIVE" />
     </option>
-    <option id="33418" name="Talisman_of_Eva">
+    <option id="33418" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="4" type="PASSIVE" />
     </option>
-    <option id="33419" name="Talisman_of_Eva">
+    <option id="33419" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="5" type="PASSIVE" />
     </option>
-    <option id="33420" name="Talisman_of_Eva">
+    <option id="33420" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="6" type="PASSIVE" />
     </option>
-    <option id="33421" name="Talisman_of_Eva">
+    <option id="33421" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="7" type="PASSIVE" />
     </option>
-    <option id="33422" name="Talisman_of_Eva">
+    <option id="33422" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="8" type="PASSIVE" />
     </option>
-    <option id="33423" name="Talisman_of_Eva">
+    <option id="33423" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="9" type="PASSIVE" />
     </option>
-    <option id="33424" name="Talisman_of_Eva">
+    <option id="33424" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="10" type="PASSIVE" />
     </option>
-    <option id="33425" name="Talisman_of_Eva">
+    <option id="33425" name="Talisman_of_Speed">
         <!--  level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%. -->
         <skill id="50293" level="11" type="PASSIVE" />
+    </option>
+	
+	<!-- RB Weapons -->
+	<option id="33426" name="Baium's_Thunder_Breaker">
+		<skill id="50268" type="PASSIVE" />
+    </option>	
+	<option id="33427" name="Baium's_Thunder_Breaker">
+		<skill id="50270" type="PASSIVE" />
+    </option>
+	<option id="33428" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="2" type="PASSIVE" />
+    </option>
+	<option id="33429" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="3" type="PASSIVE" />
+    </option>
+	<option id="33430" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="4" type="PASSIVE" />
+    </option>
+	<option id="33431" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="5" type="PASSIVE" />
+    </option>
+	<option id="33432" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="6" type="PASSIVE" />
+    </option>
+	<option id="33433" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="7" type="PASSIVE" />
+    </option>
+	<option id="33434" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="8" type="PASSIVE" />
+    </option>
+	<option id="33435" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="9" type="PASSIVE" />
+    </option>
+	<option id="33436" name="Baium's_Thunder_Breaker">
+		<skill id="50270" level="10" type="PASSIVE" />
+    </option>
+	
+	<option id="33437" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50273" type="PASSIVE" />
+    </option>	
+	<option id="33438" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" type="PASSIVE" />
+    </option>
+	<option id="33439" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="2" type="PASSIVE" />
+    </option>
+	<option id="33440" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="3" type="PASSIVE" />
+    </option>
+	<option id="33441" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="4" type="PASSIVE" />
+    </option>
+	<option id="33442" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="5" type="PASSIVE" />
+    </option>
+	<option id="33443" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="6" type="PASSIVE" />
+    </option>
+	<option id="33444" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="7" type="PASSIVE" />
+    </option>
+	<option id="33445" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="8" type="PASSIVE" />
+    </option>
+	<option id="33446" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="9" type="PASSIVE" />
+    </option>
+	<option id="33447" name="Queen_Ant's_Stone_Breaker">
+		<skill id="50275" level="10" type="PASSIVE" />
+    </option>
+	
+	<option id="33448" name="Zaken's_Blood_Sword">
+		<skill id="50278" type="PASSIVE" />
+    </option>	
+	<option id="33449" name="Zaken's_Blood_Sword">
+		<skill id="50280" type="PASSIVE" />
+    </option>
+	<option id="33450" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="2" type="PASSIVE" />
+    </option>
+	<option id="33451" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="3" type="PASSIVE" />
+    </option>
+	<option id="33452" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="4" type="PASSIVE" />
+    </option>
+	<option id="33453" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="5" type="PASSIVE" />
+    </option>
+	<option id="33454" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="6" type="PASSIVE" />
+    </option>
+	<option id="33455" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="7" type="PASSIVE" />
+    </option>
+	<option id="33456" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="8" type="PASSIVE" />
+    </option>
+	<option id="33457" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="9" type="PASSIVE" />
+    </option>
+	<option id="33458" name="Zaken's_Blood_Sword">
+		<skill id="50280" level="10" type="PASSIVE" />
+    </option>
+	
+	<option id="33459" name="Orfen's_Venomed_Sword">
+		<skill id="50283" type="PASSIVE" />
+    </option>	
+	<option id="33460" name="Orfen's_Venomed_Sword">
+		<skill id="50285" type="PASSIVE" />
+    </option>
+	<option id="33461" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="2" type="PASSIVE" />
+    </option>
+	<option id="33462" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="3" type="PASSIVE" />
+    </option>
+	<option id="33463" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="4" type="PASSIVE" />
+    </option>
+	<option id="33464" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="5" type="PASSIVE" />
+    </option>
+	<option id="33465" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="6" type="PASSIVE" />
+    </option>
+	<option id="33466" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="7" type="PASSIVE" />
+    </option>
+	<option id="334607" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="8" type="PASSIVE" />
+    </option>
+	<option id="33468" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="9" type="PASSIVE" />
+    </option>
+	<option id="33469" name="Orfen's_Venomed_Sword">
+		<skill id="50285" level="10" type="PASSIVE" />
+    </option>
+	
+	<option id="33470" name="Core's_Plasmic_Bow">
+		<skill id="50288" type="PASSIVE" />
+    </option>	
+	<option id="33471" name="Core's_Plasmic_Bow">
+		<skill id="50290" type="PASSIVE" />
+    </option>
+	<option id="33472" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="2" type="PASSIVE" />
+    </option>
+	<option id="33473" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="3" type="PASSIVE" />
+    </option>
+	<option id="33474" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="4" type="PASSIVE" />
+    </option>
+	<option id="33475" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="5" type="PASSIVE" />
+    </option>
+	<option id="33476" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="6" type="PASSIVE" />
+    </option>
+	<option id="33477" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="7" type="PASSIVE" />
+    </option>
+	<option id="33478" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="8" type="PASSIVE" />
+    </option>
+	<option id="33479" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="9" type="PASSIVE" />
+    </option>
+	<option id="33480" name="Core's_Plasmic_Bow">
+		<skill id="50290" level="10" type="PASSIVE" />
     </option>
 </list>

@@ -17,13 +17,14 @@
                 <power initial="360.0"/>
             </vital-stat-modify>
             <stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
-                <power initial="10.0">
-                    <value level="2">4.0</value>
-                </power>
+                <power initial="10.0"/>                 
             </stat-by-move-type>
-            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+			<stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
+                <power initial="4.0"/>                 
+            </stat-by-move-type>
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power>
-                    <value level="5">6.0</value>
+                    <value level="2">47.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGICAL_DEFENCE">
@@ -31,27 +32,39 @@
                     <value level="2">28.0</value>
                 </power>
             </stat-modify>
-            <vampiric-attack chance="0">
+            <vampiric-attack chance="70">
                 <power>
                     <value level="3">2.0</value>
                 </power>
             </vampiric-attack>
             <reuse skill-type="PHYSIC">
                 <power>
-                    <value level="3">4.0</value>
+                    <value level="3">-4.0</value>
                 </power>
             </reuse>
-            <defence-trait start-level="4">
+            <defence-trait>
                 <trait type="SHOCK">
-                    <power initial="10"/>
+                    <power>
+						<value level="4">10</value>
+					</power>
+                </trait>
+				<trait type="BOW">
+                    <power>                        
+                        <value level="5">10</value>
+                    </power>
                 </trait>
             </defence-trait>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power>
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="13340" name="Enchantment Effect: Light Armor Set +6" max-level="5">
         <!--
             level 1: Max HP +200, Max MP +80, Sit/Stand HP Recovery Bonus +10, and MP Recovery Bonus +4 through item set enchantment.
-            level 2: Max HP +80, Max MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, and M. Def. +28 through item set enchantment.
+            level 2: Max HP +200, Max MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, and M. Def. +28 through item set enchantment.
             level 3: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, and P. Skill Power/M. Skill Power +7%% through item set enchantment.
             level 4: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, P. Skill Power/M. Skill Power +7%%, and MEN/Paralysis/Stun Resistance +5%% through item set enchantment.
             level 5: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, P. Skill Power/M. Skill Power +7%%, MEN/Paralysis/Stun Resistance +5%%, Magic Attack Resistance +15%%, and M. Def. +7%% through item set enchantment.
@@ -62,36 +75,25 @@
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-                <power initial="200.0">
-                    <value level="2">80.0</value>
-                    <value level="3">200.0</value>
-                    <value level="3">80.0</value>
-                    <value level="4">200.0</value>
-                    <value level="4">80.0</value>
-                    <value level="5">200.0</value>
-                    <value level="5">80.0</value>
-                </power>
+                <power initial="200.0"/>                
+            </vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="80.0"/>               
             </vital-stat-modify>
             <stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
-                <power initial="10.0">
-                    <value level="2">4.0</value>
-                </power>
+                <power initial="10.0"/>                 
             </stat-by-move-type>
-            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+			<stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
+                <power initial="4.0"/>                 
+            </stat-by-move-type>
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power>
                     <value level="2">47.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGICAL_DEFENCE">
                 <power>
-                    <value level="2">28.0</value>
-                    <value level="2">0.0</value>
-                    <value level="3">28.0</value>
-                    <value level="3">0.0</value>
-                    <value level="4">28.0</value>
-                    <value level="4">0.0</value>
-                    <value level="5">28.0</value>
-                    <value level="5">7.0</value>
+                    <value level="2">28.0</value>                   
                 </power>
             </stat-modify>
             <speed>
@@ -99,8 +101,10 @@
                     <value level="3">4.0</value>
                 </power>
             </speed>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="3">
-                <power initial="7"/>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power>
+                    <value level="3">7.0</value>
+                </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
                 <power>
@@ -110,6 +114,11 @@
             <stat-modify mode="PER" stat="MAGIC_SUCCESS_RES">
                 <power>
                     <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power>
+                    <value level="5">7.0</value>
                 </power>
             </stat-modify>
             <defence-trait start-level="4">
@@ -138,7 +147,7 @@
         </attributes>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+            <vital-stat-modify stat="MAX_MP">
                 <power initial="140.0"/>
             </vital-stat-modify>
             <stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
@@ -147,8 +156,10 @@
             <stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
                 <power initial="6.0"/>
             </stat-by-move-type>
-            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" start-level="2">
-                <power initial="47"/>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power>
+                    <value level="2">47.0</value>
+                </power>
             </stat-modify>
             <stat-modify stat="MAGICAL_DEFENCE">
                 <power>
@@ -165,8 +176,10 @@
                     <value level="3">-4.0</value>
                 </power>
             </magic-cost>
-            <resist-abnormal-by-category category="DEBUFF" start-level="5">
-                <power initial="7"/>
+            <resist-abnormal-by-category category="DEBUFF">
+                <power>
+                    <value level="5">7.0</value>
+                </power>
             </resist-abnormal-by-category>
             <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
                 <power>

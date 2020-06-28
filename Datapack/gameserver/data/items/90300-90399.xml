@@ -102,6 +102,8 @@
 		<skills>
 			<skill id="55469" value="-1"/>  <!-- Lv. 2 Brooch -->
 			<skill id="55470" level="2" value="-1"/>  <!-- Lv. 2 Brooch - Additional Effect -->
+			<skill id="13654" type="ON_EQUIP" value="-1"/>  <!-- Equip Brooch -->
+			<skill id="13655" type="ON_UNEQUIP" value="-1"/>  <!-- Unequip Brooch -->
 		</skills>
 	</armor>
 
