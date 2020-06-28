@@ -500,7 +500,7 @@
 			<base-stat type="STR">
                 <power initial="1"/> 
             </base-stat>
-			<stat-modifystat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT">
                 <power initial="1000.0"/>                 
             </stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE">
@@ -527,7 +527,7 @@
 			<base-stat type="STR">
                 <power initial="1"/> 
             </base-stat>
-			<stat-modifystat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT">
                 <power initial="1000.0"/>                 
             </stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE">
@@ -554,7 +554,7 @@
 			<base-stat type="INT">
                 <power initial="1"/> 
             </base-stat>
-			<stat-modifystat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT">
                 <power initial="1000.0"/>                 
             </stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE">
@@ -578,7 +578,7 @@
 			<base-stat type="INT">
                 <power initial="1"/> 
             </base-stat>
-			<stat-modifystat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT">
                 <power initial="1000.0"/>                 
             </stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE">
@@ -921,16 +921,13 @@
                     <value level="10">11</value>
                 </power>
                 <chance initial="1">
-					<value level="2">1</value>
-                    <value level="3">1</value>
-                    <value level="4">1</value>
                     <value level="5">2</value>
                     <value level="6">4</value>
                     <value level="7">6</value>
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50269" target="ENEMY">
@@ -946,16 +943,13 @@
                     <value level="10">11</value>
                 </power>
                 <chance initial="1">
-					<value level="2">1</value>
-                    <value level="3">1</value>
-                    <value level="4">1</value>
                     <value level="5">2</value>
                     <value level="6">4</value>
                     <value level="7">6</value>
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>           
 			<trigger-skill-by-attack skill="50271" target="ENEMY">
@@ -974,7 +968,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50271" target="ENEMY">
@@ -993,7 +987,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>            
 			<base-stat type="STR">
@@ -1177,7 +1171,7 @@
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50274" target="ENEMY">
@@ -1202,7 +1196,7 @@
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>            
 			<trigger-skill-by-attack skill="50276" target="ENEMY">
@@ -1221,7 +1215,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50276" target="ENEMY">
@@ -1240,7 +1234,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>          
 			<base-stat type="CON">
@@ -1416,7 +1410,7 @@
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50279" target="ENEMY">
@@ -1441,7 +1435,7 @@
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>          
 			<trigger-skill-by-attack skill="50281" target="ENEMY">
@@ -1460,7 +1454,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50281" target="ENEMY">
@@ -1479,7 +1473,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>          
 			<base-stat type="DEX">
@@ -1655,7 +1649,7 @@
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50284" target="ENEMY">
@@ -1680,7 +1674,7 @@
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>            
 			<trigger-skill-by-attack skill="50286" target="ENEMY">
@@ -1699,7 +1693,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50286" target="ENEMY">
@@ -1718,7 +1712,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>           
 			<base-stat type="MEN">
@@ -1892,7 +1886,7 @@
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50289" target="ENEMY">
@@ -1917,7 +1911,7 @@
                     <value level="8">8</value>
                     <value level="9">10</value>
                     <value level="10">12</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>            
 			<trigger-skill-by-attack skill="50291" target="ENEMY">
@@ -1936,7 +1930,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>          
             <trigger-skill-by-magic skill="50291" target="ENEMY">
@@ -1955,7 +1949,7 @@
                     <value level="8">2</value>
                     <value level="9">2</value>
                     <value level="10">3</value>
-                <chance/>
+                </chance>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>
 			<base-stat type="WIT">
@@ -2140,8 +2134,8 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="ENERGY_SPEED_TRIGGER">
-            <level initial="1"/>
+        <abnormal>
+            <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
                 <value level="4">4</value>

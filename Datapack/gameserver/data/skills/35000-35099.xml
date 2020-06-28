@@ -529,13 +529,11 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-		<effects>
-			<abnormal type="SEED_TALISMAN1" visual="SEED_TALISMAN5">
-				<level initial="5"/>
-				<time initial="-1"/>
-				<chance initial="-1"/>
-			</abnormal>
-		</effects>
+        <abnormal type="SEED_TALISMAN1" visual="SEED_TALISMAN5">
+            <level initial="5"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="35019" name="Unequip Talisman of Insolence Lv. 6" action="A1">
         <!-- The effect of Talisman of Insolence VI weakens. -->
@@ -563,13 +561,11 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-		<effects>
-			<abnormal type="SEED_TALISMAN1" visual="TALISMAN_BAIUM">
-				<level initial="6"/>
-				<time initial="-1"/>
-				<chance initial="-1"/>
-			</abnormal>
-		</effects>
+        <abnormal type="SEED_TALISMAN1" visual="TALISMAN_BAIUM">
+            <level initial="6"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="35021" name="Talisman of Baium - Removal" action="A1">
         <!-- The effect of Talisman of Baium weakens. -->
