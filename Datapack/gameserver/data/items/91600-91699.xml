@@ -42,9 +42,9 @@
 	<!-- <Frintezza Doll's Spell Lv. 2>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nSpeed +5\nStun Atk. Rate +20%\nParalysis Atk. Rate +20%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skills>
+		<skill-reducer>
 			<skill id="51297" level="2"/>  <!-- Doll skills -->
-		</skills>
+		</skill-reducer>
 	</item>
 
 	<armor id="91606" name="Advanced Virgo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_virgo_star_1">
