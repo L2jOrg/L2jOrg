@@ -697,7 +697,6 @@
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <target/>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND"/>
         <abnormal type="SILENCE" visual="SILENCE">
             <level initial="1"/>

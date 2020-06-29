@@ -209,6 +209,7 @@ open module org.l2j.scripts {
                 StatUp.Factory,
                 StatsLinkedEffect.Factory,
                 StealAbnormal.Factory,
+                Stun.Factory,
                 Summon.Factory,
                 SummonAgathion.Factory,
                 SummonCubic.Factory,

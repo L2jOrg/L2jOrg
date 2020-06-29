@@ -1493,13 +1493,13 @@
 			<stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="-20.0"/>
             </stat-modify>
-            <stat-position-based mode="PER" position="FRONT" stat="CRITICAL_DAMAGE">
+            <stat-position-based position="FRONT" stat="CRITICAL_DAMAGE">
                 <power initial="-30.0"/>
             </stat-position-based>           
 			<stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
                 <power initial="40.0"/>
             </stat-modify>
-			<stat-position-based mode="PER" position="BACK" stat="CRITICAL_DAMAGE">
+			<stat-position-based position="BACK" stat="CRITICAL_DAMAGE">
                 <power initial="90.0"/>
             </stat-position-based>
         </effects>
@@ -1529,16 +1529,16 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-position-based mode="PER" position="FRONT" stat="CRITICAL_RATE">
+            <stat-position-based position="FRONT" stat="CRITICAL_RATE">
                 <power initial="-30.0"/>
             </stat-position-based>
 			<stat-modify mode="PER" stat="BLOW_RATE">
                 <power initial="20"/>
             </stat-modify>
-			<stat-position-based mode="PER" position="SIDE" stat="CRITICAL_RATE">
+			<stat-position-based  position="SIDE" stat="CRITICAL_RATE">
                 <power initial="30.0"/>
             </stat-position-based>
-            <stat-position-based mode="PER" position="BACK" stat="CRITICAL_RATE">
+            <stat-position-based  position="BACK" stat="CRITICAL_RATE">
                 <power initial="60"/>
             </stat-position-based>                       
         </effects>
@@ -1568,13 +1568,13 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-position-based mode="PER" position="FRONT" stat="CRITICAL_DAMAGE">
+            <stat-position-based position="FRONT" stat="CRITICAL_DAMAGE">
                 <power initial="-30.0"/>
             </stat-position-based>
-			<stat-position-based mode="PER" position="SIDE" stat="CRITICAL_DAMAGE">
+			<stat-position-based position="SIDE" stat="CRITICAL_DAMAGE">
                 <power initial="30.0"/>
             </stat-position-based>
-			<stat-position-based mode="PER" position="BACK" stat="CRITICAL_DAMAGE">
+			<stat-position-based position="BACK" stat="CRITICAL_DAMAGE">
                 <power initial="60.0"/>
             </stat-position-based>
         </effects>

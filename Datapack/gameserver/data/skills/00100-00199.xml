@@ -384,6 +384,8 @@
             <effect name="TargetCancel">
                 <power initial="40.0"/>
             </effect>
+            <effect name="BlockControl"/>
+            <effect name="Stun"/>
         </effects>
     </skill>
     <skill id="102" name="Entangle" max-level="18" debuff="true" action="A2">
