@@ -29,6 +29,58 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<reuse skill-type="PHYSIC">
+                <power initial="-3.0">                   
+                    <value level="2">-4.0</value>
+                    <value level="3">-5.0</value>                   
+                </power>
+            </reuse> 
+			<reuse skill-type="MAGIC">
+                <power initial="-3.0">                   
+                    <value level="2">-4.0</value>
+                    <value level="3">-5.0</value>                   
+                </power>
+            </reuse>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="12.0">                   
+                    <value level="2">15.0</value>
+                    <value level="3">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="12.0">                   
+                    <value level="2">15.0</value>
+                    <value level="3">20.0</value>                   
+                </power>
+            </stat-modify>
+			<defence-trait>
+				<trait type="DERANGEMENT">
+                    <power initial="40">                   
+						<value level="2">45</value>
+						<value level="3">50</value>                   
+					</power>
+                </trait>
+                <trait type="KNOCKDOWN">
+                    <power initial="20">                   
+						<value level="2">25</value>
+						<value level="3">30</value>                   
+					</power>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="20">                   
+						<value level="2">25</value>
+						<value level="3">30</value>                   
+					</power>
+                </trait>
+				<trait type="PULL">
+                    <power initial="20">                   
+						<value level="2">25</value>
+						<value level="3">30</value>                   
+					</power>
+                </trait>
+            </defence-trait>			
+        </effects>
     </skill>
     <skill id="39303" name="Queen Ant's Doll Spell" max-level="3">
         <!--
@@ -40,6 +92,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>			           
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="8.0">                   
+                    <value level="2">12.0</value>
+                    <value level="3">15.0</value>                   
+                </power>
+            </stat-modify>                              
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="8.0">                   
+                    <value level="2">10.0</value>
+                    <value level="3">13.0</value>                   
+                </power>
+            </stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="12.0">                   
+                    <value level="2">15.0</value>
+                    <value level="3">20.0</value>                   
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="39304" name="Orfen Doll's Spell" max-level="3">
         <!--
@@ -51,6 +123,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>			           
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="8.0">                   
+                    <value level="2">15.0</value>
+                    <value level="3">20.0</value>                   
+                </power>
+            </stat-modify>                              
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="8.0">                   
+                    <value level="2">10.0</value>
+                    <value level="3">15.0</value>                   
+                </power>
+            </stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="12.0">                   
+                    <value level="2">15.0</value>
+                    <value level="3">20.0</value>                   
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="39305" name="Dark Knights Transformation" max-level="3" action="A1">
         <!--
@@ -205,6 +297,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>          
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="2.0"/>
+            </vital-stat-modify>           
+        </effects>
     </skill>
     <skill id="39313" name="Hair Accessory Enchantment Effect">
         <!-- Max HP +4%%. -->
@@ -212,6 +309,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>          
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="4.0"/>
+            </vital-stat-modify>            
+        </effects>
     </skill>
     <skill id="39314" name="Hair Accessory Enchantment Effect">
         <!-- Max HP +8%% and Max MP +2%%. -->
@@ -219,6 +321,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>          
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="8.0"/>
+            </vital-stat-modify>           
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="2.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="39315" name="Hair Accessory Enchantment Effect">
         <!-- Max HP +12%%, Max MP +6%%, and Max CP +6%%. -->
@@ -226,6 +336,17 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="12.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="6.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="6.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="39316" name="Hair Accessory Enchantment Effect">
         <!-- Max HP +16%%, Max MP +10%%, and Max CP +10%%. -->
@@ -233,6 +354,17 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="16.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="10.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="10.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="39317" name="Hair Accessory Enchantment Effect">
         <!-- Max HP +20%%, Max MP +14%%, Max CP +14%%, and Damage Received -4%%. -->
@@ -240,6 +372,35 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="20.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="14.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="14.0"/>
+            </vital-stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="4.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="4.0"/>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="4.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="4.0"/>
+            </stat-modify>            
+        </effects>
     </skill>
     <skill id="39318" name="Item Skill: Mental Attack Resistance" max-level="3">
         <!--
@@ -251,6 +412,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <defence-trait>                
+				<trait type="DERANGEMENT">
+                    <power initial="5">
+                        <value level="2">10</value>
+                        <value level="3">20</value>                       
+                    </power>
+                </trait>				
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39319" name="Item Skill: Stun Resistance" max-level="3">
         <!-- Increases Stun Resistance. -->
@@ -258,6 +429,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <defence-trait>                
+				<trait type="SHOCK">
+                    <power initial="5">
+                        <value level="2">10</value>
+                        <value level="3">20</value>                       
+                    </power>
+                </trait>				
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39320" name="Item Skill: Paralysis Resistance" max-level="3">
         <!--
@@ -269,6 +450,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <defence-trait>                
+				<trait type="PARALYZE">
+                    <power initial="5">
+                        <value level="2">10</value>
+                        <value level="3">20</value>                       
+                    </power>
+                </trait>				
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39321" name="Item Skill: Bleed Resistance" max-level="3">
         <!--
@@ -280,6 +471,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <defence-trait>                
+				<trait type="BLEED">
+                    <power initial="5">
+                        <value level="2">10</value>
+                        <value level="3">20</value>                       
+                    </power>
+                </trait>				
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39322" name="Item Skill: Poison Resistance" max-level="3">
         <!--
@@ -291,6 +492,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <defence-trait>                
+				<trait type="POISON">
+                    <power initial="5">
+                        <value level="2">10</value>
+                        <value level="3">20</value>                       
+                    </power>
+                </trait>				
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39323" name="Item Skill: Hold Resistance" max-level="3">
         <!--
@@ -302,6 +513,16 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <defence-trait>                
+				<trait type="HOLD">
+                    <power initial="5">
+                        <value level="2">10</value>
+                        <value level="3">20</value>                       
+                    </power>
+                </trait>				
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39324" name="Item Skill: XP Gain" max-level="3">
         <!--
@@ -313,6 +534,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5.0">
+                        <value level="2">10.0</value>
+                        <value level="3">20.0</value>                       
+                    </power>
+            </stat-modify>            
+        </effects>
     </skill>
     <skill id="39325" name="Eva's Exhilarate" action="A1">
         <!-- HP Recovery +5000, MP Recovery +2000, CP Recovery +3000. -->
@@ -324,11 +553,22 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>            
+            <effect name="Heal">
+                <power initial="5000.0"/>
+            </effect>
+			<effect name="ManaHeal">
+                <power initial="2000.0"/>
+            </effect>
+			<effect name="CpHeal">
+                <power initial="3000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="39326" name="Eva's Speed" action="A1">
         <!-- For 2 minutes, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed +8. -->
         <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <reuse initial="900000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -336,6 +576,22 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="EVAS_BUFF">
+            <level initial="1"/>
+            <time initial="120"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="8.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="8.0"/>
+            </stat-modify>
+            <speed>
+                <power initial="8.0"/>                 
+            </speed>            
+        </effects>
     </skill>
     <skill id="39327" name="Eva's Shield" action="A1">
         <!-- For 10 sec., becomes invincible. The effect disappears when character attacks. -->
@@ -348,11 +604,19 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="RESIST_DEATH">
+            <level initial="2"/>              
+            <time initial="10"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="IgnoreDeath"/>           
+        </effects>
     </skill>
     <skill id="39328" name="Eva's Immunity" action="A1">
         <!-- For 10 sec., makes you immune to all debuffs. -->
         <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <reuse initial="600000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
@@ -360,6 +624,14 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="ABNORMAL_INVINCIBILITY">
+            <level initial="3"/>
+            <time initial="10"/>            
+            <chance initial="-1"/>
+        </abnormal>        
+        <effects>
+            <effect name="DebuffBlock"/>
+        </effects>
     </skill>
     <skill id="39329" name="Eva's Ultimate Defense" action="A1">
         <!-- For 10 seconds, P. Def. +3000 and M. Def. +2100. -->
@@ -372,11 +644,24 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="EVAS_BUFF">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="3000.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="2100.0"/>
+            </stat-modify>            
+        </effects>
     </skill>
     <skill id="39330" name="Eva's Sleep" debuff="true" action="A1">
         <!-- Makes the target fall asleep for 5 seconds. Can only be used against a PC. -->
         <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="30" remove-on-damage="true">
             <cast-range initial="900"/>
             <reuse initial="300000"/>
             <cool-time initial="500"/>
@@ -385,12 +670,25 @@
             <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND"/>
+        <abnormal type="SLEEP" visual="SLEEP">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="90"/>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+            <defence-trait>
+                <trait type="SLEEP">
+                    <power initial="100"/>
+                </trait>
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39331" name="Eva's Silence" debuff="true" action="A1">
         <!-- Interrupts P./M. skill casting for 5 seconds. Can only be used against a PC. -->
         <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
             <cast-range initial="900"/>
             <reuse initial="300000"/>
             <cool-time initial="500"/>
@@ -400,22 +698,44 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND"/>
+        <abnormal type="SILENCE" visual="SILENCE">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="90"/>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+        </effects>
     </skill>
     <skill id="39332" name="Eva's Critical Weakness" debuff="true" action="A1">
         <!-- Received P. Critical Damage and P. Critical Attack Receival Rate +50%% for 10 seconds when being attacked. -->
         <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
+            <magic-level initial="1"/>               
             <cast-range initial="900"/>
             <reuse initial="300000"/>
-            <effect-point initial="-671"/>
+            <effect-point initial="-671"/>                
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="43"/>
         </consume>
-        <target/>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="T_CRT_RATE_UP">
+            <level initial="2"/>
+            <time initial="10"/>
+            <chance initial="90"/>
+        </abnormal>       
+        <effects>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
+                <power initial="-50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
+                <power initial="-50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39333" name="Blood of Eva" action="A1">
         <!-- For 5 minutes, PvE Damage +10%%. -->
@@ -428,6 +748,21 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="EVAS_BUFF">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39334" name="Blessing of Luck" action="A1">
         <!-- For 5 minutes, a party member's HP Recovery Bonus/MP Recovery Bonus +20%%, P. Accuracy +4, P. Evasion +4, P. Atk./M. Atk. +15%%, Atk. Spd./Casting Spd. +10%%, P. Critical/M. Critical Rate +15%%, and P. Critical Damage/M. Critical Damage +15%%. -->

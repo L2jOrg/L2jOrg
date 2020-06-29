@@ -496,6 +496,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/> 
+            </base-stat>
+			<stat-modifystat="WEIGHT_LIMIT">
+                <power initial="1000.0"/>                 
+            </stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="50.0"/>                
+            </vital-stat-modify>			          
+            <speed>
+                <power initial="4.0"/>
+            </speed>  
+			<vampiric-attack chance="70">
+                <power initial="2.0"/> 
+            </vampiric-attack>
+        </effects>
     </skill>
     <skill id="50257" name="Tallum Boots -Heavy Armor">
         <!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Def. +10 -->
@@ -503,6 +523,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/> 
+            </base-stat>
+			<stat-modifystat="WEIGHT_LIMIT">
+                <power initial="1000.0"/>                 
+            </stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="50.0"/>                
+            </vital-stat-modify>			          
+            <speed>
+                <power initial="4.0"/>
+            </speed>  
+			<stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50258" name="Tallum Boots - Robe">
         <!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +20\nMax HP +50\nMovement Speed +4 -->
@@ -510,6 +550,23 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="INT">
+                <power initial="1.0"/> 
+            </base-stat>
+			<stat-modifystat="WEIGHT_LIMIT">
+                <power initial="1000.0"/>                 
+            </stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="50.0"/>                
+            </vital-stat-modify>				
+            <speed>
+                <power initial="4.0"/>
+            </speed>            
+        </effects>
     </skill>
     <skill id="50259" name="Tallum Boots - Light Armor">
         <!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nMovement Speed +4 -->
@@ -517,6 +574,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="INT">
+                <power initial="1.0"/> 
+            </base-stat>
+			<stat-modifystat="WEIGHT_LIMIT">
+                <power initial="1000.0"/>                 
+            </stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="50.0"/>                
+            </vital-stat-modify>	
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="120.0"/>               
+            </vital-stat-modify>           
+            <speed>
+                <power initial="4.0"/>
+            </speed>            
+        </effects>
     </skill>
     <skill id="50260" name="Enchantment Effect: A-grade Top and Lower Body" max-level="10">
         <!--
@@ -531,6 +608,28 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <stat-modify stat="REGENERATE_HP_RATE">
+                <power>                   
+                    <value level="5">5.0</value>
+                    <value level="6">10.0</value>
+                    <value level="7">11.0</value>
+                    <value level="8">12.0</value>
+                    <value level="9">13.0</value>
+					<value level="10">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="REGENERATE_MP_RATE">
+                <power>                   
+                    <value level="5">3.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">1.0</value>
+                    <value level="8">8.0</value>
+                    <value level="9">9.0</value>
+					<value level="10">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50261" name="Enchantment Effect: A-grade Top" max-level="10">
         <!--
@@ -545,6 +644,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <stat-modify stat="REGENERATE_HP_RATE">
+                <power>                   
+                    <value level="5">5.0</value>
+                    <value level="6">10.0</value>
+                    <value level="7">11.0</value>
+                    <value level="8">12.0</value>
+                    <value level="9">13.0</value>
+					<value level="10">15.0</value>
+                </power>
+            </stat-modify>           
+        </effects>
     </skill>
     <skill id="50262" name="Enchantment Effect: A-grade Lower Body" max-level="10">
         <!--
@@ -559,6 +670,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="REGENERATE_MP_RATE">
+                <power>                   
+                    <value level="5">3.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">1.0</value>
+                    <value level="8">8.0</value>
+                    <value level="9">9.0</value>
+					<value level="10">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50263" name="Enchantment Effect: A-grade Gloves (Physical)" max-level="10">
         <!--
@@ -573,6 +696,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power>                   
+                    <value level="5">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="7">5.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+					<value level="10">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50264" name="Enchantment Effect: A-grade Gloves (Magic)" max-level="10">
         <!--
@@ -587,6 +722,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power>                   
+                    <value level="5">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="7">5.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+					<value level="10">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50265" name="Enchantment Effect: A-grade Shoes (Physical)" max-level="10">
         <!--
@@ -601,6 +748,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <reuse skill-type="PHYSIC">
+                <power>                   
+                    <value level="5">-1.0</value>
+                    <value level="6">-2.0</value>
+                    <value level="7">-3.0</value>
+                    <value level="8">-5.0</value>
+                    <value level="9">-7.0</value>
+					<value level="10">-10.0</value>
+                </power>
+            </reuse>               
+        </effects>
     </skill>
     <skill id="50266" name="Enchantment Effect: A-grade Shoes (Magic)" max-level="10">
         <!--
@@ -615,6 +774,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <reuse skill-type="MAGIC">
+                <power>                   
+                    <value level="5">-1.0</value>
+                    <value level="6">-2.0</value>
+                    <value level="7">-3.0</value>
+                    <value level="8">-5.0</value>
+                    <value level="9">-7.0</value>
+					<value level="10">-10.0</value>
+                </power>
+            </reuse>               
+        </effects>
     </skill>
     <skill id="50267" name="Enchantment Effect: A-grade Helmet" max-level="10">
         <!--
@@ -629,6 +800,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>           
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power>                   
+                    <value level="5">50.0</value>
+                    <value level="6">150.0</value>
+                    <value level="7">300.0</value>
+                    <value level="8">500.0</value>
+                    <value level="9">750.0</value>
+					<value level="10">1000.0</value>
+                </power>              
+            </vital-stat-modify>         
+        </effects>
     </skill>
     <skill id="50268" name="Baium’s Soul">
         <!-- Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt -->
@@ -636,6 +819,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50269" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50269" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>            			
+        </effects>
     </skill>
     <skill id="50269" name="Baium’s Thunderbolt" max-level="22" type="MAGIC">
         <!--
@@ -663,9 +858,40 @@
             level 22: Attacks the enemy with bonus 89 Power added to M. Atk.
          -->
         <icon initial="icon.skill1469"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>       
+        <effects>
+            <magical-attack>
+                <power initial="113">
+                    <value level="2">115</value>
+                    <value level="3">117</value>
+                    <value level="4">119</value>
+                    <value level="5">123</value>
+                    <value level="6">127</value>
+                    <value level="7">132</value>
+                    <value level="8">136</value>
+                    <value level="9">140</value>
+                    <value level="10">145</value>
+                    <value level="11">149</value>
+                    <value level="12">67</value>
+                    <value level="13">69</value>
+                    <value level="14">70</value>
+                    <value level="15">71</value>
+                    <value level="16">73</value>
+                    <value level="17">76</value>
+                    <value level="18">79</value>
+                    <value level="19">81</value>
+                    <value level="20">84</value>
+                    <value level="21">87</value>
+                    <value level="22">89</value>                   
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50270" name="Baium’s Soul" max-level="10">
         <!--
@@ -681,6 +907,116 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50269" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50269" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>           
+			<trigger-skill-by-attack skill="50271" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50271" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>            
+			<base-stat type="STR">
+                <power>                  
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
+                </power>
+            </base-stat>
+			<base-stat type="INT">
+                <power>                  
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
+                </power>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="50271" name="Enhanced Baium’s Thunderbolt" max-level="20" type="MAGIC">
         <!--
@@ -699,9 +1035,32 @@
             level 20: Attacks the enemy with bonus 134 Power added to M. Atk.
          -->
         <icon initial="icon.skill1469"/>
-        <attributes>
+		<attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>        
+        <effects>
+            <magical-attack>
+                <power>
+                    <value level="5">191</value>
+                    <value level="6">198</value>
+                    <value level="7">204</value>
+                    <value level="8">211</value>
+                    <value level="9">217</value>
+                    <value level="10">224</value>
+                    <value level="11">0</value>
+                    <value level="15">114</value>
+                    <value level="16">118</value>
+                    <value level="17">122</value>
+                    <value level="18">126</value>
+                    <value level="19">130</value>
+                    <value level="20">134</value>                                  
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50273" name="Queen Ant's Soul">
         <!-- Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower -->
@@ -709,6 +1068,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50274" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50274" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>            		
+        </effects>
     </skill>
     <skill id="50274" name="Queen Ant’s Stone Shower" max-level="22" type="MAGIC">
         <!--
@@ -735,9 +1106,39 @@
             level 22: Attacks the enemy with bonus 57 Power added to M. Atk.
          -->
         <icon initial="icon.skill4282_new"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>        
+        <effects>
+            <magical-attack>
+                <power initial="72">
+                    <value level="2">73</value>
+                    <value level="3">74</value>
+                    <value level="4">76</value>
+                    <value level="5">78</value>
+                    <value level="6">81</value>
+                    <value level="7">84</value>
+                    <value level="8">86</value>
+                    <value level="9">89</value>
+                    <value level="10">92</value>
+                    <value level="11">95</value>
+                    <value level="12">43</value>
+                    <value level="13">44</value>
+                    <value level="15">45</value>
+                    <value level="16">47</value>
+                    <value level="17">48</value>
+                    <value level="18">50</value>
+                    <value level="19">52</value>
+                    <value level="20">53</value>
+                    <value level="21">55</value>
+                    <value level="22">57</value>                   
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50275" name="Queen Ant's Soul" max-level="10">
         <!--
@@ -753,6 +1154,106 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50274" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50274" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>            
+			<trigger-skill-by-attack skill="50276" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50276" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>          
+			<base-stat type="CON">
+                <power>                  
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
+                </power>
+            </base-stat>			
+        </effects>
     </skill>
     <skill id="50276" name="Enhanced Queen Ant’s Stone Shower" max-level="20" type="MAGIC">
         <!--
@@ -771,9 +1272,32 @@
             level 20: Attacks the enemy with bonus 85 Power added to M. Atk.
          -->
         <icon initial="icon.skill4282_new"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>       
+        <effects>
+            <magical-attack>
+                <power>
+                    <value level="5">121</value>
+                    <value level="6">126</value>
+                    <value level="7">130</value>
+                    <value level="8">134</value>
+                    <value level="9">138</value>
+                    <value level="10">142</value>
+                    <value level="11">0</value>
+                    <value level="15">73</value>
+                    <value level="16">75</value>
+                    <value level="17">78</value>
+                    <value level="18">80</value>
+                    <value level="19">83</value>
+                    <value level="20">85</value>                                  
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50278" name="Zaken's Soul">
         <!-- Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison -->
@@ -781,6 +1305,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50279" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50279" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>          		
+        </effects>
     </skill>
     <skill id="50279" name="Zaken’s Blood Prison" max-level="22" type="MAGIC">
         <!--
@@ -808,9 +1344,40 @@
             level 22: Attacks the enemy with bonus 81 Power added to M. Atk.
          -->
         <icon initial="icon.skill32100"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>       
+        <effects>
+            <magical-attack>
+                <power initial="103">
+                    <value level="2">105</value>
+                    <value level="3">107</value>
+                    <value level="4">109</value>
+                    <value level="5">112</value>
+                    <value level="6">116</value>
+                    <value level="7">120</value>
+                    <value level="8">124</value>
+                    <value level="9">128</value>
+                    <value level="10">132</value>
+                    <value level="11">136</value>
+                    <value level="12">61</value>
+                    <value level="13">63</value>
+                    <value level="14">64</value>
+                    <value level="15">65</value>
+                    <value level="16">67</value>
+                    <value level="17">69</value>
+                    <value level="18">72</value>
+                    <value level="19">74</value>
+                    <value level="20">76</value>
+                    <value level="21">79</value>
+                    <value level="22">81</value>                   
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50280" name="Zaken's Soul" max-level="10">
         <!--
@@ -826,6 +1393,106 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50279" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50279" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>          
+			<trigger-skill-by-attack skill="50281" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50281" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>          
+			<base-stat type="DEX">
+                <power>                  
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
+                </power>
+            </base-stat>			
+        </effects>
     </skill>
     <skill id="50281" name="Enhanced Zaken’s Blood Prison" max-level="20" type="MAGIC">
         <!--
@@ -844,9 +1511,32 @@
             level 20: Attacks the enemy with bonus 122 Power added to M. Atk.
          -->
         <icon initial="icon.skill32100"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>        
+        <effects>
+            <magical-attack>
+                <power>
+                    <value level="5">174</value>
+                    <value level="6">180</value>
+                    <value level="7">186</value>
+                    <value level="8">192</value>
+                    <value level="9">198</value>
+                    <value level="10">204</value>
+                    <value level="11">0</value>
+                    <value level="15">104</value>
+                    <value level="16">108</value>
+                    <value level="17">111</value>
+                    <value level="18">115</value>
+                    <value level="19">118</value>
+                    <value level="20">122</value>                                  
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50283" name="Orfen's Soul">
         <!-- Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest -->
@@ -854,6 +1544,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50284" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50284" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>            		
+        </effects>
     </skill>
     <skill id="50284" name="Orphen’s Poison Tempest" max-level="22" type="MAGIC">
         <!--
@@ -881,9 +1583,40 @@
             level 22: Attacks the enemy with bonus 81 Power added to M. Atk.
          -->
         <icon initial="icon.skill6435"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>       
+        <effects>
+            <magical-attack>
+                <power initial="103">
+                    <value level="2">105</value>
+                    <value level="3">107</value>
+                    <value level="4">109</value>
+                    <value level="5">112</value>
+                    <value level="6">116</value>
+                    <value level="7">120</value>
+                    <value level="8">124</value>
+                    <value level="9">128</value>
+                    <value level="10">132</value>
+                    <value level="11">136</value>
+                    <value level="12">61</value>
+                    <value level="13">63</value>
+                    <value level="14">64</value>
+                    <value level="15">65</value>
+                    <value level="16">67</value>
+                    <value level="17">69</value>
+                    <value level="18">72</value>
+                    <value level="19">74</value>
+                    <value level="20">76</value>
+                    <value level="21">79</value>
+                    <value level="22">81</value>                   
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50285" name="Orfen's Soul" max-level="10">
         <!--
@@ -899,6 +1632,106 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50284" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50284" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>            
+			<trigger-skill-by-attack skill="50286" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50286" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>           
+			<base-stat type="MEN">
+                <power>                  
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
+                </power>
+            </base-stat>			
+        </effects>
     </skill>
     <skill id="50286" name="Enhanced Orphen’s Poison Tempest" max-level="20" type="MAGIC">
         <!--
@@ -917,9 +1750,32 @@
             level 20: Attacks the enemy with bonus 122 Power added to M. Atk.
          -->
         <icon initial="icon.skill6435"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>        
+        <effects>
+            <magical-attack>
+                <power>
+                    <value level="5">174</value>
+                    <value level="6">180</value>
+                    <value level="7">186</value>
+                    <value level="8">192</value>
+                    <value level="9">198</value>
+                    <value level="10">204</value>
+                    <value level="11">0</value>
+                    <value level="15">104</value>
+                    <value level="16">108</value>
+                    <value level="17">111</value>
+                    <value level="18">115</value>
+                    <value level="19">118</value>
+                    <value level="20">122</value>                                  
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50288" name="Core's Soul">
         <!-- Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock -->
@@ -927,6 +1783,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <trigger-skill-by-attack skill="50284" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50284" target="ENEMY">
+                <power initial="1"/>               
+                <chance initial="1"/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>            		
+        </effects>
     </skill>
     <skill id="50289" name="Core's Plasma Shock" max-level="22" type="MAGIC">
         <!--
@@ -953,9 +1821,39 @@
             level 22: Attacks the enemy with bonus 57 Power added to M. Atk.
          -->
         <icon initial="icon.skill32633"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>       
+        <effects>
+            <magical-attack>
+                <power initial="72">
+                    <value level="2">73</value>
+                    <value level="3">74</value>
+                    <value level="4">76</value>
+                    <value level="5">78</value>
+                    <value level="6">81</value>
+                    <value level="7">84</value>
+                    <value level="8">86</value>
+                    <value level="9">89</value>
+                    <value level="10">92</value>
+                    <value level="11">95</value>
+                    <value level="12">43</value>
+                    <value level="13">44</value>
+                    <value level="15">45</value>
+                    <value level="16">47</value>
+                    <value level="17">48</value>
+                    <value level="18">50</value>
+                    <value level="19">52</value>
+                    <value level="20">53</value>
+                    <value level="21">55</value>
+                    <value level="22">57</value>                   
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50290" name="Core's Soul" max-level="10">
         <!--
@@ -971,6 +1869,106 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-attack skill="50289" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50289" target="ENEMY">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">9</value>
+                    <value level="9">10</value>
+                    <value level="10">11</value>
+                </power>
+                <chance initial="1">
+					<value level="2">1</value>
+                    <value level="3">1</value>
+                    <value level="4">1</value>
+                    <value level="5">2</value>
+                    <value level="6">4</value>
+                    <value level="7">6</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
+                    <value level="10">12</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>            
+			<trigger-skill-by-attack skill="50291" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>          
+            <trigger-skill-by-magic skill="50291" target="ENEMY">
+                <power>                   
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                </power>
+                <chance>
+                    <value level="5">1</value>
+                    <value level="6">1</value>
+                    <value level="7">1</value>
+                    <value level="8">2</value>
+                    <value level="9">2</value>
+                    <value level="10">3</value>
+                <chance/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>
+			<base-stat type="WIT">
+                <power>                  
+                    <value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
+                </power>
+            </base-stat>			
+        </effects>
     </skill>
     <skill id="50291" name="Enhanced Core's Plasma Shock" max-level="20" type="MAGIC">
         <!--
@@ -989,21 +1987,44 @@
             level 20: Attacks the enemy with bonus 85 Power added to M. Atk.
          -->
         <icon initial="icon.skill32633"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>             
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>        
+        <effects>
+            <magical-attack>
+                <power>
+                    <value level="5">121</value>
+                    <value level="6">126</value>
+                    <value level="7">130</value>
+                    <value level="8">134</value>
+                    <value level="9">138</value>
+                    <value level="10">142</value>
+                    <value level="11">0</value>
+                    <value level="15">73</value>
+                    <value level="16">75</value>
+                    <value level="17">78</value>
+                    <value level="18">80</value>
+                    <value level="19">83</value>
+                    <value level="20">85</value>                                  
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="50293" name="Talisman - Speed" max-level="11">
         <!--
             level 1: P. Def./M. Def. +5.
-            level 2: P. Def./M. Def. +10, Max HP +30, Speed +    1
-            level 3: P. Def./M. Def. +20, Max HP +80, Speed +    1
-            level 4: P. Def./M. Def. +30, Max HP +150, Speed +   1
-            level 5: P. Def./M. Def. +40, Max HP +230, Speed +   1
-            level 6: P. Def./M. Def. +50, Max HP +300, Speed +   1
-            level 7: P. Def./M. Def. +60, Max HP +500, Speed +   2
-            level 8: P. Def./M. Def. +80, Max HP +1000, Speed    3
-            level 9: P. Def./M. Def. +200, Max HP +1300, Speed   4
+            level 2: P. Def./M. Def. +10, Max HP +30, Speed +1.
+            level 3: P. Def./M. Def. +20, Max HP +80, Speed +1.
+            level 4: P. Def./M. Def. +30, Max HP +150, Speed +1.
+            level 5: P. Def./M. Def. +40, Max HP +230, Speed +1.
+            level 6: P. Def./M. Def. +50, Max HP +300, Speed +1.
+            level 7: P. Def./M. Def. +60, Max HP +500, Speed +2.
+            level 8: P. Def./M. Def. +80, Max HP +1000, Speed +3.
+            level 9: P. Def./M. Def. +200, Max HP +1300, Speed +4
             level 10: P. Def./M. Def. +250, Max HP +1800, Speed +6.
             level 11: P. Def./M. Def. +300, Max HP +2500, Speed +8.
          -->
@@ -1041,7 +2062,7 @@
                 </power>
             </stat-modify>
             <vital-stat-modify stat="MAX_HP">
-                <power initial="0">
+                <power>
                     <value level="2">30</value>
                     <value level="3">80</value>
                     <value level="4">150</value>
@@ -1055,12 +2076,8 @@
                 </power>
             </vital-stat-modify>
             <stat-modify stat="SPEED">
-                <power initial="0.0">
-                    <value level="2">1</value>
-                    <value level="3">1</value>
-                    <value level="4">1</value>
-                    <value level="5">1</value>
-                    <value level="6">1</value>
+                <power>
+                    <value level="2">1</value>                    
                     <value level="7">2</value>
                     <value level="8">3</value>
                     <value level="9">4</value>
@@ -1068,6 +2085,38 @@
                     <value level="11">8</value>
                 </power>
             </stat-modify>
+			<trigger-skill-by-attack skill="50294" target="ENEMY">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">3</value>
+                    <value level="4">4</value>
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                    <value level="11">11</value>
+                </power>
+                <chance initial="33.0"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="50294" target="ENEMY">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">3</value>
+                    <value level="4">4</value>
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">10</value>
+                    <value level="11">11</value>
+                </power>
+                <chance initial="33.0"/>
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>
         </effects>
     </skill>
     <skill id="50294" name="Energy of Speed" max-level="11">
@@ -1085,9 +2134,66 @@
             level 11: P. Atk. Spd. +300, P. Critical Damage +1200, M. Critical Damage +1000 with the power of speed.
          -->
         <icon initial="icon.skill5662"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+            <magic-level initial="1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="ENERGY_SPEED_TRIGGER">
+            <level initial="1"/>
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">5</value>
+                <value level="6">6</value>
+                <value level="7">7</value>
+                <value level="8">8</value>
+                <value level="9">9</value>
+                <value level="10">10</value>
+                <value level="11">11</value>
+            </level>
+            <time initial="8"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+					<value level="7">60</value>
+					<value level="8">80</value>
+					<value level="9">100</value>
+					<value level="10">150</value>
+					<value level="11">300</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power>					
+					<value level="5">30</value>
+					<value level="6">60</value>
+					<value level="7">100</value>
+					<value level="8">200</value>
+					<value level="9">500</value>
+				    <value level="10">800</value>
+				    <value level="11">1200</value>
+				</power>
+            </stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power>					
+					<value level="5">30</value>
+					<value level="6">60</value>
+					<value level="7">100</value>
+					<value level="8">200</value>
+					<value level="9">500</value>
+				    <value level="10">800</value>
+				    <value level="11">1200</value>
+				</power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50295" name="Baium’s Thunder Breaker">
         <!-- Dagger containing Baium’s soul. Can use Baium’s power.\nP. Atk. and M. Atk. increase depending on the level. -->

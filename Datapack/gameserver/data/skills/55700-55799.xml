@@ -209,18 +209,23 @@
     <skill id="55710" name="Equip Lv. 4 Brooch">
         <!-- The brooch radiates bright light. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
+			<effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal visual="AVE_BROOCH">
-            <time initial="-1"/>
-            <chance initial="-1"/>
-        </abnormal>
+		<effects>
+			<abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+				<level initial="3"/>
+				<time initial="-1"/>
+				<chance initial="-1"/>
+			</abnormal>
+		</effects>
     </skill>
     <skill id="55711" name="Remove Lv. 4 Brooch" action="A1">
         <!-- The bright light fades. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0" trait="HOLD">
+            <magic-level initial="1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -229,7 +234,7 @@
         <effects>
             <dispel>
                 <abnormal type="AVE_BROOCH">
-                    <power initial="10.0"/>
+                    <power initial="-1.0"/>
                 </abnormal>
             </dispel>
         </effects>

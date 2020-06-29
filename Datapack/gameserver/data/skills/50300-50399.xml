@@ -103,12 +103,12 @@
         <effects>
             <trigger-skill-by-attack skill="50308" target="ENEMY">
                 <power initial="1"/>
-                <chance initial="1.0"/>
+                <chance initial="3.0"/>
                 <min-damage initial="1.0"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-magic skill="50308" target="ENEMY">
                 <power initial="1"/>
-                <chance initial="1.0"/>
+                <chance initial="3.0"/>
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>
         </effects>
