@@ -26,10 +26,10 @@ import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
@@ -266,7 +266,7 @@ public class Shutdown extends Thread {
         ItemAuctionManager.getInstance().shutdown();
         LOGGER.info("Item Auction Manager: All tasks stopped.");
 
-        Olympiad.getInstance().saveOlympiadStatus();
+        OlympiadEngine.getInstance().saveOlympiadStatus();
         LOGGER.info("Olympiad System: Data saved.");
 
         Hero.getInstance().shutdown();

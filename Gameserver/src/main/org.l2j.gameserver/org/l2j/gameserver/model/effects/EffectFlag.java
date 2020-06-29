@@ -59,7 +59,8 @@ public enum EffectFlag {
     CHAT_BLOCK,
     FAKE_DEATH,
     DUELIST_FURY,
-    FEAR;
+    FEAR,
+    STUNNED;
 
     public long getMask() {
         return 1L << ordinal();

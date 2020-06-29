@@ -330,7 +330,9 @@
         </consume>
         <target scope="PARTY_PLEDGE" object="FRIEND" range="1000" affect-min="50" affect-random="100"/>
         <abnormal type="MULTI_BUFF">
-            <level initial="1"/>
+            <level initial="1">
+				<value level="2">2</value>
+            </level>
             <time initial="600"/>
             <chance initial="-1"/>
         </abnormal>
@@ -425,7 +427,11 @@
         </consume>
         <target scope="PARTY_PLEDGE" object="FRIEND" range="1000" affect-min="50" affect-random="100"/>
         <abnormal type="CP_UP">
-            <level initial="1"/>
+            <level initial="1">
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+            </level>
             <time initial="30"/>
             <chance initial="-1"/>
         </abnormal>
@@ -1333,8 +1339,6 @@
             <effect-point initial="-679"/>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
-
-            <element type="DARK" value="20"/>
         </attributes>
         <consume>
             <mana-init initial="32"/>

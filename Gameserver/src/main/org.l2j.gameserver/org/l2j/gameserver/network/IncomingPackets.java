@@ -76,7 +76,7 @@ public enum IncomingPackets implements PacketFactory {
     WITHDRAWAL_PLEDGE(RequestWithdrawalPledge::new, ConnectionState.IN_GAME_STATES),
     OUST_PLEDGE_MEMBER(RequestOustPledgeMember::new, ConnectionState.IN_GAME_STATES),
     NOT_USE_40(DISCARD, ConnectionState.IN_GAME_STATES),
-    LOGIN(AuthLogin::new, ConnectionState.CONNECTED_STATES)    ,
+    LOGIN(AuthLogin::new, ConnectionState.CONNECTED_STATES),
     GET_ITEM_FROM_PET(RequestGetItemFromPet::new, ConnectionState.IN_GAME_STATES),
     NOT_USE_22(DISCARD, ConnectionState.IN_GAME_STATES),
     ALLIANCE_INFO(RequestAllyInfo::new, ConnectionState.IN_GAME_STATES),

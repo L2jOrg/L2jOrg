@@ -130,12 +130,14 @@ public final class GameClient extends Client<Connection<GameClient>> {
     protected void onDisconnection() {
         LOGGER_ACCOUNTING.debug("Client Disconnected: {}", this);
 
-        if(state == ConnectionState.AUTHENTICATED) {
-            AuthServerCommunication.getInstance().removeAuthedClient(getAccountName());
-        } else {
-            AuthServerCommunication.getInstance().removeWaitingClient(getAccountName());
+        if(nonNull(getAccountName())) {
+            if (state == ConnectionState.AUTHENTICATED) {
+                AuthServerCommunication.getInstance().removeAuthedClient(getAccountName());
+            } else {
+                AuthServerCommunication.getInstance().removeWaitingClient(getAccountName());
+            }
+            AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getAccountName()));
         }
-        AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getAccountName()));
 
         if ((player == null) || !player.isInOfflineMode()) {
             Disconnection.of(this).onDisconnection();

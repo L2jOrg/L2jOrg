@@ -149,6 +149,32 @@
             <stat-modify mode="PER" start-level="10" stat="PHYSICAL_DEFENCE">
                 <power initial="10"/>
             </stat-modify>
+			<defence-trait start-level="10">
+                <trait type="BOW">
+                    <power initial="10"/>                    
+                </trait>
+                <trait type="DUAL">
+                    <power initial="10"/>
+                </trait>
+                <trait type="SWORD">
+                    <power initial="10"/>
+                </trait>
+                <trait type="DAGGER">
+                    <power initial="10"/>
+                </trait>
+                <trait type="DUALFIST">
+                    <power initial="10"/>
+                </trait>
+                <trait type="BLUNT">
+                    <power initial="10"/>
+                </trait>
+                <trait type="DUAL_DAGGER">
+                    <power initial="10"/>
+                </trait>
+                <trait type="SPEAR">
+                    <power initial="10"/>
+                </trait>
+            </defence-trait>
         </effects>
     </skill>
     <skill id="17708" name="Diamond" max-level="10">
@@ -210,7 +236,7 @@
             level 7: M. Def. +100, Received M. Critical Damage -12%.
             level 8: M. Def. +125, Received M. Critical Damage -14%.
             level 9: M. Def. +160, Received M. Critical Damage -16%.
-            level 10: M. Def. +250 P. Critical Attack Receival Rate -10%, and Received M. Critical Damage -20%.
+            level 10: M. Def. +250 M. Critical Attack Receival Rate -10%, and Received M. Critical Damage -20%.
          -->
         <icon initial="icon.etc_bm_jewel_pearl_i00">
             <value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>

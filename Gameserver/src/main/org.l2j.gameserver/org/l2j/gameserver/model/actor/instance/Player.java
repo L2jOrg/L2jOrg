@@ -6068,11 +6068,17 @@ public final class Player extends Playable {
     @Override
     public Skill removeSkill(Skill skill, boolean store) {
         removeCustomSkill(skill);
+        if(nonNull(skill)) {
+            sendSkillList();
+        }
         return store ? removeSkill(skill) : super.removeSkill(skill, true);
     }
 
     public Skill removeSkill(Skill skill, boolean store, boolean cancelEffect) {
         removeCustomSkill(skill);
+        if(nonNull(skill)) {
+            sendSkillList();
+        }
         return store ? removeSkill(skill) : super.removeSkill(skill, cancelEffect);
     }
 
@@ -8395,6 +8401,10 @@ public final class Player extends Playable {
 
     public int getLastHtmlActionOriginId() {
         return _lastHtmlActionOriginObjId;
+    }
+
+    public void setLastHtmlActionOriginId(int objId) {
+        _lastHtmlActionOriginObjId = objId;
     }
 
     private boolean validateHtmlAction(Iterable<String> actionIter, String action) {

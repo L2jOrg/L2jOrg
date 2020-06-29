@@ -24,18 +24,27 @@
 	<!-- <Frintezza Doll's Spell>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nStun Atk. Rate +10%\nParalysis Atk. Rate +10%\n\n30-day. Boosts abilities with Frintezza Doll's Spell stored in the inventory. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
+		<skill-reducer>
+			<skill id="51297" level="1"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<item id="91604" name="Frintezza Doll Lv. 1" type="RUNE" icon="icon.bm_doll_frintessa_30d">
 	<!-- <Frintezza Doll's Spell Lv. 1>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nStun Atk. Rate +10%\nParalysis Atk. Rate +10%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
+		<skill-reducer>
+			<skill id="51297" level="1"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<item id="91605" name="Frintezza Doll Lv. 2" type="RUNE" icon="icon.bm_doll_frintessa_30d">
 	<!-- <Frintezza Doll's Spell Lv. 2>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nSpeed +5\nStun Atk. Rate +20%\nParalysis Atk. Rate +20%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
+		<skill-reducer>
+			<skill id="51297" level="2"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<armor id="91606" name="Advanced Virgo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_virgo_star_1">

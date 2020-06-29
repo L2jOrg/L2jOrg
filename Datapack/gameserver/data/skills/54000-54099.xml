@@ -379,6 +379,41 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="2"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="2"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="20">
+                    <value level="2">30</value>                    
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power>
+                    <value level="2">50</value>                    
+                </power>
+            </vital-stat-modify>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power>
+                        <value level="2">4</value>                       
+                    </power>
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power>
+                        <value level="2">4</value>                       
+                    </power>     
+                </trait>
+            </defence-trait>
+			<vampiric-attack chance="70">
+                <power>                   
+                    <value level="2">3.0</value>
+                </power>
+            </vampiric-attack>
+        </effects>			
     </skill>
     <skill id="54020" name="Bracelet of Power">
         <!-- HP Recovery Bonus/MP Recovery Bonus +15%%, P. Accuracy +2, M. Accuracy +2 and Weight Limit +10,000. -->
@@ -390,10 +425,10 @@
             <effect name="TalismanSlot">
                 <power initial="5.0"/>
             </effect>
-            <stat-modify stat="REGENERATE_HP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_MP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify stat="ACCURACY">
@@ -554,7 +589,7 @@
                 </power>
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-                <power initial="0">
+                <power>
                     <value level="6">3</value>
                     <value level="7">3</value>
                     <value level="8">4</value>
@@ -568,7 +603,7 @@
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-                <power initial="0">
+                <power>
                     <value level="6">2</value>
                     <value level="7">2</value>
                     <value level="8">3</value>
@@ -582,7 +617,7 @@
                 </power>
             </stat-modify>
             <stat-modify stat="PHYSICAL_SKILL_POWER" mode="PER">
-                <power initial="0">
+                <power>
                     <value level="11">5</value>
                     <value level="12">6</value>
                     <value level="13">7</value>
@@ -591,7 +626,7 @@
                 </power>
             </stat-modify>
             <stat-modify stat="MAGICAL_SKILL_POWER" mode="PER">
-                <power initial="0">
+                <power>
                     <value level="11">10</value>
                     <value level="12">11</value>
                     <value level="13">12</value>
@@ -600,7 +635,7 @@
                 </power>
             </stat-modify>
             <stat-modify stat="CRITICAL_RATE">
-                <power initial="0">
+                <power>
                     <value level="11">10</value>
                     <value level="12">10</value>
                     <value level="13">20</value>
@@ -609,7 +644,7 @@
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
-                <power initial="0">
+                <power>
                     <value level="11">20</value>
                     <value level="12">20</value>
                     <value level="13">30</value>
@@ -633,6 +668,41 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <attack-trait>
+                <trait type="DERANGEMENT">
+                    <power initial="5">
+                        <value level="2">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+            <defence-trait>
+                <trait type="DERANGEMENT">
+                    <power initial="5">
+                        <value level="2">15</value>
+                    </power>
+                </trait>
+            </defence-trait>
+			<attack-trait>
+                <trait type="SHOCK">
+                    <power initial="5">
+                        <value level="2">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="5">
+                        <value level="2">15</value>
+                    </power>
+                </trait>
+            </defence-trait>
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+					<power initial="10">
+                        <value level="2">30</value>
+                    </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="54023" name="Water Defense" max-level="5">
         <!--
@@ -759,7 +829,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal>
+        <abnormal type="EXP_ELEMENTAL">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -2128,6 +2198,17 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>            
+            <stat-modify stat="WEIGHT_LIMIT">
+                <power initial="1000"/>
+            </stat-modify>
+			<base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="54082" name="Dragon's Belt" max-level="10">
         <!--

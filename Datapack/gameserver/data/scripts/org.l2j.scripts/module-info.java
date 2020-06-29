@@ -209,6 +209,7 @@ open module org.l2j.scripts {
                 StatUp.Factory,
                 StatsLinkedEffect.Factory,
                 StealAbnormal.Factory,
+                Stun.Factory,
                 Summon.Factory,
                 SummonAgathion.Factory,
                 SummonCubic.Factory,
@@ -315,6 +316,8 @@ open module org.l2j.scripts {
             events.ThePowerOfLove.ThePowerOfLove,
             events.TotalRecall.TotalRecall,
             events.WatermelonNinja.WatermelonNinja,
+
+            handlers.communityboard.AutoHpMpCp,
 
             // custom
             custom.events.Elpies.Elpies,

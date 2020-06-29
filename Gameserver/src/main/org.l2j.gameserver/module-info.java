@@ -116,6 +116,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.api.item;
     exports org.l2j.gameserver.network.serverpackets.attendance;
     exports org.l2j.gameserver.util.exp4j;
+    exports org.l2j.gameserver.engine.olympiad;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

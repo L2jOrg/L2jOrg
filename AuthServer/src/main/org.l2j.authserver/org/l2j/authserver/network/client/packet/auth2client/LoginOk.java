@@ -21,15 +21,12 @@ package org.l2j.authserver.network.client.packet.auth2client;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
-/**
- * Format: dddddddd f: the session key d: ? d: ? d: ? d: ? d: ? d: ? b: 16 bytes - unknown
- */
 public final class LoginOk extends AuthServerPacket {
 
 	@Override
 	protected void writeImpl(AuthClient client) {
 		var sessionKey = client.getSessionKey();
-		writeByte((byte)0x03);
+		writeByte(0x03);
 		writeInt(sessionKey.getAuthAccountId());
 		writeInt(sessionKey.getAuthKey());
 		writeBytes(new byte[8]);

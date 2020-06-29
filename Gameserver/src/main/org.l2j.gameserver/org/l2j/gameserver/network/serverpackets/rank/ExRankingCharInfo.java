@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.rank;
 
-import org.l2j.gameserver.data.database.RankManager;
+import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -32,7 +32,7 @@ public class ExRankingCharInfo extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        var rank = RankManager.getInstance().getRank(client.getPlayer());
+        var rank = RankEngine.getInstance().getRank(client.getPlayer());
 
         writeId(ServerExPacketId.EX_RANKING_CHAR_INFO);
         if(isNull(rank)) {

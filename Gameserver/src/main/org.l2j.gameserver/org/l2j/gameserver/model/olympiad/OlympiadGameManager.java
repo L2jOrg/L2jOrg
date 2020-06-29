@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model.olympiad;
 
+import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -62,7 +63,7 @@ public class OlympiadGameManager implements Runnable {
         LOGGER.info("Olympiad System: Loaded " + _tasks.size() + " stadiums.");
     }
 
-    protected final boolean isBattleStarted() {
+    public final boolean isBattleStarted() {
         return _battleStarted;
     }
 
@@ -72,11 +73,7 @@ public class OlympiadGameManager implements Runnable {
 
     @Override
     public final void run() {
-        if (Olympiad.getInstance().isOlympiadEnd()) {
-            return;
-        }
-
-        if (Olympiad.getInstance().inCompPeriod()) {
+        if (OlympiadEngine.getInstance().isMatchInProgress()) {
             AbstractOlympiadGame newGame;
 
             List<Set<Integer>> readyClassed = OlympiadManager.getInstance().hasEnoughRegisteredClassed();

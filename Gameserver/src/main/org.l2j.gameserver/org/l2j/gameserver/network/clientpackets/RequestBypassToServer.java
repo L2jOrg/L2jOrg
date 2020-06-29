@@ -47,8 +47,7 @@ import org.slf4j.LoggerFactory;
 import java.util.StringTokenizer;
 
 import static org.l2j.commons.util.Util.isInteger;
-import static org.l2j.gameserver.util.GameUtils.isCreature;
-import static org.l2j.gameserver.util.GameUtils.isNpc;
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
@@ -109,7 +108,7 @@ public final class RequestBypassToServer extends ClientPacket {
         }
 
         int bypassOriginId = 0;
-        if (requiresBypassValidation) {
+        if (requiresBypassValidation && !player.isGM()) {
             bypassOriginId = player.validateHtmlAction(bypass);
             if (bypassOriginId == -1) {
                 LOGGER.warn("Player {} sent non cached bypass: '{}'", player.getName(), bypass);

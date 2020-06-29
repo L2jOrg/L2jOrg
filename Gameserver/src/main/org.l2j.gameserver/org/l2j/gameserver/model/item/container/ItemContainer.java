@@ -42,6 +42,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -101,6 +102,10 @@ public abstract class ItemContainer {
             filter = filter.and(additionalFilter);
         }
         return items.values().stream().filter(filter).collect(Collectors.toCollection(LinkedList::new));
+    }
+
+    public void forEachItem(Predicate<Item> filter, Consumer<Item> action) {
+        items.values().stream().filter(filter).forEach(action);
     }
 
     public final IntSet getItemsId(Predicate<Item> filter) {

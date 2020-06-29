@@ -1244,6 +1244,8 @@
             <xs:enumeration value="TURN_PASSIVE"/>
             <xs:enumeration value="TURN_STONE"/>
             <xs:enumeration value="ULTIMATE_BUFF"/>
+            <xs:enumeration value="EVAS_BUFF"/>
+            <xs:enumeration value="ENERGY_SPEED_TRIGGER"/>
             <xs:enumeration value="ULTIMATE_DEBUFF"/>
             <xs:enumeration value="VALAKAS_ITEM"/>
             <xs:enumeration value="VAMPIRIC_ATTACK"/>

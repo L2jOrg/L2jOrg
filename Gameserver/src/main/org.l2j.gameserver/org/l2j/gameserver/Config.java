@@ -375,14 +375,7 @@ public final class Config {
     public static String BBS_DEFAULT;
 
     public static int WORLD_CHAT_POINTS_PER_DAY;
-    public static int ALT_OLY_START_TIME;
-    public static int ALT_OLY_MIN;
-    public static long ALT_OLY_CPERIOD;
     public static long ALT_OLY_BATTLE;
-    public static long ALT_OLY_WPERIOD;
-    public static long ALT_OLY_VPERIOD;
-    public static int ALT_OLY_START_POINTS;
-    public static int ALT_OLY_WEEKLY_POINTS;
     public static int ALT_OLY_CLASSED;
     public static int ALT_OLY_NONCLASSED;
     public static List<ItemHolder> ALT_OLY_WINNER_REWARD;
@@ -391,27 +384,16 @@ public final class Config {
     public static int ALT_OLY_COMP_RITEM;
     public static int ALT_OLY_MIN_MATCHES;
     public static int ALT_OLY_MARK_PER_POINT;
-    public static int ALT_OLY_HERO_POINTS;
-    public static int ALT_OLY_RANK1_POINTS;
-    public static int ALT_OLY_RANK2_POINTS;
-    public static int ALT_OLY_RANK3_POINTS;
-    public static int ALT_OLY_RANK4_POINTS;
-    public static int ALT_OLY_RANK5_POINTS;
     public static int ALT_OLY_MAX_POINTS;
     public static int ALT_OLY_DIVIDER_CLASSED;
     public static int ALT_OLY_DIVIDER_NON_CLASSED;
-    public static int ALT_OLY_MAX_WEEKLY_MATCHES;
 
     public static boolean ALT_OLY_LOG_FIGHTS;
     public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
-    public static boolean ALT_OLY_ANNOUNCE_GAMES;
     public static List<Integer> LIST_OLY_RESTRICTED_ITEMS;
     public static int ALT_OLY_ENCHANT_LIMIT;
     public static int ALT_OLY_WAIT_TIME;
 
-    public static String ALT_OLY_PERIOD;
-    public static int ALT_OLY_PERIOD_MULTIPLIER;
-    public static List<Integer> ALT_OLY_COMPETITION_DAYS;
     public static int ALT_MANOR_REFRESH_TIME;
     public static int ALT_MANOR_REFRESH_MIN;
     public static int ALT_MANOR_APPROVE_TIME;
@@ -794,6 +776,7 @@ public final class Config {
     public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
     public static boolean COMMUNITYBOARD_ENABLE_HEAL;
     public static boolean COMMUNITYBOARD_ENABLE_PREMIUM;
+    public static boolean COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP;
     public static int COMMUNITYBOARD_TELEPORT_PRICE;
     public static int COMMUNITYBOARD_BUFF_PRICE;
     public static int COMMUNITYBOARD_HEAL_PRICE;
@@ -1533,14 +1516,7 @@ public final class Config {
         // Load Olympiad config file (if exists)
         final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
 
-        ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 18);
-        ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
-        ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 21600000);
         ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
-        ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);
-        ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
-        ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
-        ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
         ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 20);
         ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 20);
         ALT_OLY_WINNER_REWARD = parseItemsList(Olympiad.getString("AltOlyWinReward", ""));
@@ -1549,20 +1525,13 @@ public final class Config {
         ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 45584);
         ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
         ALT_OLY_MARK_PER_POINT = Olympiad.getInt("AltOlyMarkPerPoint", 20);
-        ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 30);
-        ALT_OLY_RANK1_POINTS = Olympiad.getInt("AltOlyRank1Points", 60);
-        ALT_OLY_RANK2_POINTS = Olympiad.getInt("AltOlyRank2Points", 50);
-        ALT_OLY_RANK3_POINTS = Olympiad.getInt("AltOlyRank3Points", 45);
-        ALT_OLY_RANK4_POINTS = Olympiad.getInt("AltOlyRank4Points", 40);
-        ALT_OLY_RANK5_POINTS = Olympiad.getInt("AltOlyRank5Points", 30);
         ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
         ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
         ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
-        ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 70);
 
         ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
         ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
-        ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
+
         final String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
         LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItems.length);
         for (String id : olyRestrictedItems) {
@@ -1570,13 +1539,6 @@ public final class Config {
         }
         ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
         ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 60);
-
-        ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
-        ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
-        ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
-        for (String s : Olympiad.getString("AltOlyCompetitionDays", "6,7").split(",")) {
-            ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
-        }
 
         // Grand bosses
         final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
@@ -1698,6 +1660,7 @@ public final class Config {
         COMMUNITYBOARD_ENABLE_BUFFS = CommunityBoard.getBoolean("CommunityEnableBuffs", false);
         COMMUNITYBOARD_ENABLE_HEAL = CommunityBoard.getBoolean("CommunityEnableHeal", false);
         COMMUNITYBOARD_ENABLE_PREMIUM = CommunityBoard.getBoolean("CommunityEnablePremium", false);
+        COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP = CommunityBoard.getBoolean("CommunityEnableAutoHpMpCp", false);
         COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
         COMMUNITYBOARD_BUFF_PRICE = CommunityBoard.getInt("CommunityBuffPrice", 0);
         COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);

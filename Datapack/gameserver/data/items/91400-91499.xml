@@ -116,6 +116,8 @@
 		<skills>
 			<skill id="13659"/>  <!-- Brooch Lv. 4 -->
 			<skill id="13661" level="4"/>  <!-- Additional Brooch Effect -->
+			<skill id="13650" type="ON_EQUIP" value="-1"/>  <!-- Equip Lv. 4 Brooch -->
+			<skill id="13651" type="ON_UNEQUIP" value="-1"/>  <!-- Remove Lv. 4 Brooch -->
 		</skills>
 	</armor>
 
@@ -157,18 +159,27 @@
 	<!-- <Queen Ant Doll's Spell Lv. 2>\nP. Atk. +12%\nP. Critical Damage +10%\nMax HP +15%\n\nBoosts abilities with the Queen Ant Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
+		<skill-reducer>
+			<skill id="39303" level="2"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<item id="91423" name="Baium Doll Lv. 2" type="RUNE" icon="icon.bm_baium_doll_30d">
 	<!-- <Baium Doll's Spell Lv. 2\nSkill Cooldown -4%\nP. Def. +15%\nM. Def +15%\nMental Attack Resistance +45%\nParalysis Attack Resistance +25%\nKnock Down Attack Resistance +25%\nPull Attack Resistance +25%\n\nBoosts abilities with the Baium Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
+		<skill-reducer>
+			<skill id="39302" level="2"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<item id="91424" name="Orfen Doll Lv. 2" type="RUNE" icon="icon.bm_orfen_doll_30d">
 	<!-- <Orfen Doll's Spell Lv. 2\nM. Atk. +15%\nM. Critical Damage +10%\nMax MP +15%\n\nBoosts abilities with the Orfen Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
+		<skill-reducer>
+			<skill id="39304" level="2"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<armor id="91425" name="Greater Vital Stone Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_vital_high_lv1_lavianrose">
