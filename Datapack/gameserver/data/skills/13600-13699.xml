@@ -7,13 +7,11 @@
 			<effect-range initial="-1"/>
         </attributes>
         <target/>
-		<effects>
-			<abnormal type="AVE_BROOCH" visual="AVE_BROOCH_B">
-				<level initial="4"/>
-				<time initial="-1"/>
-				<chance initial="-1"/>
-			</abnormal>
-		</effects>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH_B">
+            <level initial="4"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="13649" name="Unequip Lv. 5 Brooch" action="A1">
         <!-- The brooch's radiant light fades. -->
@@ -40,13 +38,11 @@
 			<effect-range initial="-1"/>
         </attributes>
         <target/>
-		<effects>
-			<abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
-				<level initial="3"/>
-				<time initial="-1"/>
-				<chance initial="-1"/>
-			</abnormal>
-		</effects>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+            <level initial="3"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="13651" name="Unequip Lv. 4 Brooch" action="A1">
         <!-- The brooch’s brilliant light fades. -->
@@ -73,13 +69,11 @@
 			<effect-range initial="-1"/>
         </attributes>
         <target/>
-		<effects>
-			<abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
-				<level initial="2"/>
-				<time initial="-1"/>
-				<chance initial="-1"/>
-			</abnormal>
-		</effects>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+            <level initial="2"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="13653" name="Unequip Lv. 3 Brooch" action="A1">
         <!-- The brooch’s brilliant light fades. -->
@@ -106,13 +100,11 @@
 			<effect-range initial="-1"/>
         </attributes>
         <target/>
-		<effects>
-			<abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
-				<level initial="1"/>
-				<time initial="-1"/>
-				<chance initial="-1"/>
-			</abnormal>
-		</effects>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+            <level initial="2"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="13655" name="Unequip Lv. 2 Brooch" action="A1">
         <!-- The brooch’s brilliant light fades. -->

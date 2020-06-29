@@ -879,13 +879,11 @@
 			<effect-range initial="-1"/>
         </attributes>
         <target/>
-		<effects>
-			<abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
-				<level initial="2"/>
-				<time initial="-1"/>
-				<chance initial="-1"/>
-			</abnormal>
-		</effects>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+            <level initial="2"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="55467" name="Remove Lv. 2 Brooch" action="A1">
         <!-- Bright light fades. -->

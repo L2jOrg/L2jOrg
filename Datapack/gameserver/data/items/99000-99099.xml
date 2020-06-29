@@ -132,36 +132,36 @@
 	<!-- <Orfen Doll's Spell Lv. 3>\nM. Atk. +20%\nM. Critical Damage +15%\nMax MP +20%\n\nBoosts abilities with the Orfen Doll's Spell when stored in the inventory. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skills>
+		<skill-reducer>
 			<skill id="39304" level="3"/>  <!-- Doll skills -->
-		</skills>
+		</skill-reducer>
 	</item>
 
 	<item id="99023" name="Queen Ant Doll Lv. 3" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
 	<!-- <Queen Ant Doll's Spell Lv. 3>\nP. Atk. +15%\nP. Critical Damage +13%\nMax HP +20%\n\nBoosts abilities with the Queen Ant Doll's Spell when stored in the inventory. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skills>
+		<skill-reducer>
 			<skill id="39303" level="3"/>  <!-- Doll skills -->
-		</skills>
+		</skill-reducer>
 	</item>
 
 	<item id="99024" name="Baium Doll Lv. 3" type="RUNE" icon="icon.bm_baium_doll_30d">
 	<!-- <Baium Doll's Spell Lv. 3>\nSkill Cooldown -5%\nP. Def. +20%\nM. Def +20%\nMental Attack Resistance +50%\nParalysis Attack Resistance +30%\nKnock Down Attack Resistance +30%\nPull Attack Resistance +30%\n\nBoosts abilities with the Baium Doll's Spell when stored in the inventory. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skills>
+		<skill-reducer>
 			<skill id="39302" level="3"/>  <!-- Doll skills -->
-		</skills>
+		</skill-reducer>
 	</item>
 
 	<item id="99025" name="Frintezza Doll Lv. 3" type="RUNE" icon="icon.bm_doll_frintessa_30d">
 	<!-- <Frintezza Doll's Spell Lv. 3>\nSTR, INT +2\nDEX, WIT +2\nCON, MEN +2\nSpeed +7\nStun Atk. Rate +30%\nParalysis Atk. Rate +30%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skills>
+		<skill-reducer>
 			<skill id="51297" level="3"/>  <!-- Doll skills -->
-		</skills>
+		</skill-reducer>
 	</item>
 
 	<item id="99026" name="New Year Thank You Cube" type="ELIXIR" icon="icon.etc_11th_event_group">

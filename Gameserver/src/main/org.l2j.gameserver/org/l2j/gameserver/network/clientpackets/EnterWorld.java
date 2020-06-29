@@ -344,7 +344,7 @@ public class EnterWorld extends ClientPacket {
 
         var rateXp = getSettings(RateSettings.class).xp();
         if(rateXp > 1) {
-            player.sendPacket(new ExUserBoostStat(BoostStatType.SERVER, (short) (rateXp * 100 - 100)));
+           // player.sendPacket(new ExUserBoostStat(BoostStatType.SERVER, (short) (rateXp * 100 - 100)));
         }
 
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
