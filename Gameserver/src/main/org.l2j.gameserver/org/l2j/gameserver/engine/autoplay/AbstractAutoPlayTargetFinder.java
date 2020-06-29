@@ -38,7 +38,7 @@ abstract class AbstractAutoPlayTargetFinder implements AutoPlayTargetFinder {
 
     @Override
     public boolean canBeTarget(Player player, WorldObject target) {
-        return !player.isTargetingDisabled() && target.isTargetable() && target.isAutoAttackable(player) && checkRespectfulMode(player, target) &&
+        return !player.isGM() && !player.isTargetingDisabled() && target.isTargetable() && target.isAutoAttackable(player) && checkRespectfulMode(player, target) &&
                 GeoEngine.getInstance().canSeeTarget(player, target) && GeoEngine.getInstance().canMoveToTarget(player, target);
     }
 
