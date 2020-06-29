@@ -386,8 +386,6 @@
             </effect>
             <effect name="BlockControl"/>
             <effect name="Stun"/>
-            <effect name="BlockActions">
-            </effect>
         </effects>
     </skill>
     <skill id="102" name="Entangle" max-level="18" debuff="true" action="A2">
