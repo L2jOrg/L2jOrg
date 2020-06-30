@@ -6014,7 +6014,7 @@ public final class Player extends Playable {
      * @return True if the Player is on line.
      */
     public boolean isOnline() {
-        return _isOnline;
+        return _isOnline && getClient() != null;
     }
 
     public int isOnlineInt() {
