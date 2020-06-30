@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="error" monitorInterval="30">
     <properties>
-        <Property name="pattern">[%-5p][%d{yyyy-MM-dd HH:mm:ss}][%c{1}:%M:%L]: %msg%n%throwable</Property>
+        <Property name="pattern">[%-5p][%d{yyyy-MM-dd HH:mm:ss}][%tid][%c{1}:%M:%L]: %msg%n%throwable</Property>
     </properties>
     <Appenders>
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout pattern="%highlight{${pattern}}{Bright}"/>
-            <ThresholdFilter level="ALL"/>
+            <ThresholdFilter level="info"/>
         </Console>
 
         <RollingFile name="auth" filename="logs/auth.log" filepattern="logs/$${date:yyyy-MM}/auth-%d{dd-MM-yyyy}-%i.log.gz"  append="true" >
@@ -46,11 +46,10 @@
         <Root level="info">
             <AppenderRef ref="console"/>
         </Root>
-        <Logger name="org.l2j.authserver">
+        <Logger name="org.l2j.authserver" level="info">
             <AppenderRef ref="auth"/>
         </Logger>
-        <Logger name="com.zaxxer.hikari" level="info">
-            <AppenderRef ref="auth"/>
+        <Logger name="com.zaxxer.hikari" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="loginHistory" level="info">
