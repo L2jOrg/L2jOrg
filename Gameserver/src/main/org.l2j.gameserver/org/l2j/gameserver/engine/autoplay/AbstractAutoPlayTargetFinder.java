@@ -30,6 +30,7 @@ import org.l2j.gameserver.world.World;
 import java.util.Comparator;
 
 import static java.util.Objects.isNull;
+import static org.l2j.gameserver.util.GameUtils.isGM;
 
 /**
  * @author JoeAlisson
@@ -38,7 +39,7 @@ abstract class AbstractAutoPlayTargetFinder implements AutoPlayTargetFinder {
 
     @Override
     public boolean canBeTarget(Player player, WorldObject target) {
-        return !player.isGM() && !player.isTargetingDisabled() && target.isTargetable() && target.isAutoAttackable(player) && checkRespectfulMode(player, target) &&
+        return !isGM(target) && !player.isTargetingDisabled() && target.isTargetable() && target.isAutoAttackable(player) && checkRespectfulMode(player, target) &&
                 GeoEngine.getInstance().canSeeTarget(player, target) && GeoEngine.getInstance().canMoveToTarget(player, target);
     }
 

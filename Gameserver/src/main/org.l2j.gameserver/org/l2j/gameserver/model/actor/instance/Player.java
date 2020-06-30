@@ -8301,7 +8301,7 @@ public final class Player extends Playable {
         if (_movieHolder != null) {
             sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
         }
-        if(autoPlaySettings.isActive()) {
+        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive()) {
             AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
     }
