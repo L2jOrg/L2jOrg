@@ -523,8 +523,8 @@ public final class GameUtils {
         return object instanceof Artefact;
     }
 
-    public static boolean isGM(Creature creature) {
-        return nonNull(creature) && creature.isGM();
+    public static boolean isGM(WorldObject object) {
+        return object instanceof Player player && player.isGM();
     }
 
     public static boolean isWalker(WorldObject object) {
