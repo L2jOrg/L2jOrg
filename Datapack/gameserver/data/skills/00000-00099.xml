@@ -7675,7 +7675,7 @@
             </weapon>
         </conditions>
         <effects>
-            <damage-over-time ticks="5">
+            <damage-over-time ticks="1">
                 <power initial="25.0">
                     <value level="2">34.0</value>
                     <value level="3">44.0</value>
@@ -7750,7 +7750,7 @@
                 <value level="13">57</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="UNDEAD_REAL_ENEMY" range="200" affect-min="10" affect-random="10"/>
+        <target scope="POINT_BLANK" object="UNDEAD_REAL_ENEMY" range="200" affect-min="10" affect-random="15"/>
         <abnormal type="PA_DOWN">
             <level initial="3"/>
             <time initial="30"/>

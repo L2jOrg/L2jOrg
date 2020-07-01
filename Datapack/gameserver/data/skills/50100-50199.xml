@@ -1181,7 +1181,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="5.0"/>
             </stat-modify>
         </effects>
@@ -1197,7 +1197,9 @@
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-                <power initial="5.0"/>
+                <power initial="5.0">
+					<value level="2">10.0</value>
+                </power>
             </vital-stat-modify>
         </effects>
     </skill>
@@ -1207,6 +1209,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50189" name="Ring of Insolence" max-level="11">
         <!--
@@ -1226,6 +1233,63 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <defence-trait>
+                <trait type="SLEEP">
+                    <power initial="1.0">
+                        <value level="2">2.0</value>
+                        <value level="3">3.0</value>
+                        <value level="4">4.0</value>
+                        <value level="5">5.0</value>
+                        <value level="6">10.0</value>
+                        <value level="7">12.0</value>
+                        <value level="8">14.0</value>
+                        <value level="9">18.0</value>
+                        <value level="10">22.0</value>
+                        <value level="11">30.0</value>
+                    </power>
+                </trait>
+            </defence-trait>
+            <vital-stat-modify start-level="6" stat="MAX_HP">
+                <power initial="100">
+                    <value level="7">150.0</value>
+                    <value level="8">200.0</value>
+                    <value level="9">250.0</value>
+                    <value level="10">250.0</value>
+                    <value level="11">1000.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify start-level="6" stat="PHYSICAL_ATTACK">
+                <power initial="10">
+                    <value level="7">15.0</value>
+                    <value level="8">20.0</value>
+                    <value level="9">30.0</value>
+                    <value level="10">50.0</value>
+                    <value level="11">300.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify start-level="6" stat="MAGIC_ATTACK">
+                <power initial="10">
+                    <value level="7">15.0</value>
+                    <value level="8">20.0</value>
+                    <value level="9">30.0</value>
+                    <value level="10">50.0</value>
+                    <value level="11">300.0</value>
+                </power>
+            </stat-modify>
+            <base-stat start-level="8" type="CON">
+                <power initial="1">
+                    <value level="10">2.0</value>
+                    <value level="11">5.0</value>
+                </power>
+            </base-stat>
+            <base-stat start-level="11" type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat start-level="11" type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="50190" name="Earring of Dragon World" max-level="11">
         <!--
@@ -1315,6 +1379,86 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify stat="CRITICAL_RATE">
+                <power> 
+                    <value level="3">10.0</value>
+                    <value level="4">20.0</value>
+                    <value level="5">30.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power> 
+                    <value level="3">10.0</value>
+                    <value level="4">20.0</value>
+                    <value level="5">30.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power> 
+                    <value level="2">1.0</value>
+                    <value level="4">2.0</value>
+                    <value level="5">3.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power> 
+                    <value level="2">1.0</value>
+                    <value level="4">2.0</value>
+                    <value level="5">3.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="16.0"> 
+                    <value level="2">50.0</value>
+                    <value level="3">92.0</value>
+                    <value level="4">142.0</value>
+                    <value level="5">201.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="MAGIC_ATTACK">
+                <power initial="23.0"> 
+                    <value level="2">57.0</value>
+                    <value level="3">99.0</value>
+                    <value level="4">149.0</value>
+                    <value level="5">208.0</value>
+                </power>
+            </stat-modify>
+			<reuse skill-type="MAGIC">
+                <power initial="-1.0"> 
+                    <value level="2">-2.0</value>
+                    <value level="3">-3.0</value>
+                    <value level="4">-4.0</value>
+                    <value level="5">-7.0</value>
+                </power>
+            </reuse>
+			<reuse skill-type="PHYSIC">
+                <power initial="-1.0"> 
+                    <value level="2">-2.0</value>
+                    <value level="3">-3.0</value>
+                    <value level="4">-4.0</value>
+                    <value level="5">-7.0</value>
+                </power>
+            </reuse>
+			<base-stat type="CON">
+                <power initial="1.0"/>                
+            </base-stat>
+			<base-stat type="MEN">
+                <power initial="1.0"/>                
+            </base-stat>
+			<base-stat type="DEX" start-level="2">
+                <power initial="1.0"/>                
+            </base-stat>
+			<base-stat type="WIT" start-level="2">
+                <power initial="1.0"/>                
+            </base-stat>
+			<base-stat type="STR" start-level="3">
+                <power initial="1.0"/>                
+            </base-stat>
+			<base-stat type="INT" start-level="3">
+                <power initial="1.0"/>                
+            </base-stat>
+		</effects>
     </skill>
     <skill id="50195" name="Opal" max-level="10">
         <!--

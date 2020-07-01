@@ -150,10 +150,9 @@ public class PetInfo extends ServerPacket {
         }
 
         writeLong(_summon.getExpForNextLevel()); // 100% absoulte value
-
+        writeByte(0); //TODO find what it is for
         writeInt(isPet(_summon) ? _summon.getInventory().getTotalWeight() : 0); // weight
         writeInt(_summon.getMaxLoad()); // max weight it can carry
-        writeByte(0); //TODO find what it is for
         writeInt(_summon.getPAtk()); // patk
         writeInt(_summon.getPDef()); // pdef
         writeInt(_summon.getAccuracy()); // accuracy
@@ -186,6 +185,9 @@ public class PetInfo extends ServerPacket {
         }
 
         writeByte(_statusMask);
+        writeInt(0);
+        writeInt(0);
+        writeInt(0);
     }
 
 }

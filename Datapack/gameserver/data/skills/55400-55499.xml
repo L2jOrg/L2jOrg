@@ -875,21 +875,33 @@
     <skill id="55466" name="Put on Lv. 2 Brooch" action="A1">
         <!-- Brooch radiates bright light. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
-        <attributes property="PHYSIC">
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
+			<effect-range initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+            <level initial="2"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="55467" name="Remove Lv. 2 Brooch" action="A1">
         <!-- Bright light fades. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0" trait="HOLD">
+            <magic-level initial="1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <dispel>
+                <abnormal type="AVE_BROOCH">
+                    <power initial="-1.0"/>
+                </abnormal>
+            </dispel>
+        </effects>
     </skill>
     <skill id="55468" name="Lv. 1 Brooch">
         <!-- Activates 2 jewel slots. -->
@@ -980,20 +992,7 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_U">
-            <level initial="1">
-                <value level="2">2</value>
-                <value level="3">3</value>
-                <value level="4">4</value>
-                <value level="5">5</value>
-                <value level="6">6</value>
-                <value level="7">7</value>
-                <value level="8">8</value>
-                <value level="9">9</value>
-                <value level="10">10</value>
-            </level>
-            <time initial="-1"/>
-        </abnormal>
+        <!-- <abnormal type="EXP_SP_U"/> -->         
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0">
@@ -1022,7 +1021,7 @@
                 </power>
             </stat-modify>
             <stat-modify mode="PER" start-level="10" stat="ELEMENTAL_SPIRIT_BONUS_XP">
-                <power initial="30"/>
+                <power initial="50"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1127,6 +1126,32 @@
                     <value level="10">7</value>
                 </power>
             </speed>
+			<defence-trait start-level="10">
+                <trait type="BOW">
+                    <power initial="10"/>                    
+                </trait>
+                <trait type="DUAL">
+                    <power initial="10"/>
+                </trait>
+                <trait type="SWORD">
+                    <power initial="10"/>
+                </trait>
+                <trait type="DAGGER">
+                    <power initial="10"/>
+                </trait>
+                <trait type="DUALFIST">
+                    <power initial="10"/>
+                </trait>
+                <trait type="BLUNT">
+                    <power initial="10"/>
+                </trait>
+                <trait type="DUAL_DAGGER">
+                    <power initial="10"/>
+                </trait>
+                <trait type="SPEAR">
+                    <power initial="10"/>
+                </trait>
+            </defence-trait>
         </effects>
     </skill>
     <skill id="55475" name="Diamond" max-level="10">
@@ -1200,14 +1225,14 @@
             <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7">
                     <value level="2">14</value>
-                    <value level="3">14</value>
-                    <value level="4">14</value>
-                    <value level="5">14</value>
-                    <value level="6">14</value>
-                    <value level="7">14</value>
-                    <value level="8">14</value>
-                    <value level="9">14</value>
-                    <value level="10">14</value>
+                    <value level="3">28</value>
+                    <value level="4">46</value>
+                    <value level="5">74</value>
+                    <value level="6">85</value>
+                    <value level="7">100</value>
+                    <value level="8">125</value>
+                    <value level="9">160</value>
+					<value level="10">250</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" start-level="4" stat="MAGIC_CRITICAL_DAMAGE">
@@ -1397,6 +1422,29 @@
                         <value level="8">26</value>
                         <value level="9">30</value>
                         <value level="10">40</value>
+                    </power>
+                </trait>
+				<trait type="DERANGEMENT">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">30</value>
+                        <value level="10">40</value>
+                    </power>
+                </trait>
+				<trait type="SLEEP">
+                    <power>                       
+                        <value level="10">10</value>
+                    </power>
+                </trait>
+				<trait type="POISON">
+                    <power>                       
+                        <value level="10">10</value>
                     </power>
                 </trait>
             </defence-trait>

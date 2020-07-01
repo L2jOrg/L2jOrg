@@ -36,9 +36,11 @@ import static java.util.Objects.nonNull;
 public class ClientPacketHandler implements PacketHandler<GameClient> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientPacketHandler.class);
+    private static final Logger ST_PACKET = LoggerFactory.getLogger("ST_PACKET");
 
     @Override
     public ReadablePacket<GameClient> handlePacket(PacketBuffer buffer, GameClient client) {
+        ST_PACKET.debug("{}",buffer.remaining());
         var opcode = toUnsignedInt(buffer.read());
 
         if(opcode >= IncomingPackets.PACKET_ARRAY.length) {

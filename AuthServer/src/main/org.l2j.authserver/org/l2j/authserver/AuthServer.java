@@ -79,7 +79,7 @@ public class AuthServer {
         configureLogger();
         configureCaches();
         configureDatabase();
-        configureNetworkPackets();
+        configureNetworkPackets();  
         var processors = Runtime.getRuntime().availableProcessors();
         ThreadPool.init(processors, Math.max(1, processors/2));
         try {

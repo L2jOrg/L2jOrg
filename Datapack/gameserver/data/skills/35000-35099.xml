@@ -339,11 +339,11 @@
             <value level="6">icon.oman_tallisman_new_i01</value>
             <value level="7">icon.baium_talisman_new</value>
         </icon>
-        <attributes property="MAGIC" check="false">
+        <attributes property="MAGIC">
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="14.0">
                     <value level="2">27.0</value>
                     <value level="3">41.0</value>
@@ -373,7 +373,7 @@
                     <value level="7">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" start-level="3">
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
                 <power>
                     <value level="3">1.0</value>
                     <value level="4">2.0</value>
@@ -381,7 +381,7 @@
                     <value level="7">5.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" start-level="3">
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
                 <power>
                     <value level="3">1.0</value>
                     <value level="4">2.0</value>
@@ -539,7 +539,7 @@
         <!-- The effect of Talisman of Insolence VI weakens. -->
         <icon initial="icon.oman_tallisman_new_i01"/>
         <attributes magic-critical-rate="5.0" trait="HOLD">
-            <magic-level initial="60"/>
+            <magic-level initial="1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -571,7 +571,7 @@
         <!-- The effect of Talisman of Baium weakens. -->
         <icon initial="icon.baium_talisman_new"/>
         <attributes magic-critical-rate="5.0" trait="HOLD">
-            <magic-level initial="60"/>
+            <magic-level initial="1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>

@@ -356,7 +356,6 @@ public final class AutoPlayEngine {
                 !player.hasBlockActions() &&
                 !player.isControlBlocked() &&
                 !player.isAlikeDead() &&
-                !player.isInsideZone(ZoneType.PEACE) &&
                 !player.inObserverMode() &&
                 !player.isCastingNow();
     }

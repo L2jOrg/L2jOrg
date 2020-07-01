@@ -37,7 +37,7 @@ public class PlayerAuthRequest extends SendablePacket
 	}
 
 	protected void writeImpl(AuthServerClient client) {
-		writeByte((byte)0x02);
+		writeByte(0x02);
 		writeString(account);
 		writeInt(playOkID1);
 		writeInt(playOkID2);

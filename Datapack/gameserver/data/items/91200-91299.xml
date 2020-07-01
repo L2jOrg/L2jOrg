@@ -390,18 +390,27 @@
 	<!-- <Baium Doll's Spell Lv. 1>\nSkill Cooldown -3%\nP. Def. +12%\nM. Def +12%\nMental Attack Resistance +40%\nParalysis Attack Resistance +20%\nKnock Down Attack Resistance +20%\nPull Attack Resistance +20%\n\nBoosts abilities with the Baium Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
+		<skill-reducer>
+			<skill id="39302" level="2"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<item id="91257" name="Queen Ant Doll Lv. 1" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
 	<!-- <Queen Ant Doll's Spell Lv. 1>\nP. Atk. +8%\nP. Critical Damage +8%\nMax HP +12%\n\nBoosts abilities with the Queen Ant Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
+		<skill-reducer>
+			<skill id="39303" level="2"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<item id="91258" name="Orfen Doll Lv. 1" type="RUNE" icon="icon.bm_orfen_doll_30d">
 	<!-- <Orfen Doll's Spell Lv. 1>\nM. Atk. +8%\nM. Critical Damage +8%\nMax MP +12%\n\nBoosts abilities with the Orfen Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
+		<skill-reducer>
+			<skill id="39304" level="2"/>  <!-- Doll skills -->
+		</skill-reducer>
 	</item>
 
 	<item id="91259" name="Transformation Scroll - Singer" type="POTION" icon="icon.ev_13th_paper_inzone">

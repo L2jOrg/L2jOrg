@@ -3,78 +3,126 @@
     <skill id="13648" name="Equip Lv. 5 Brooch" action="A1">
         <!-- A radiant light is emanating from the brooch. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i06"/>
-        <attributes property="PHYSIC">
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
+			<effect-range initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH_B">
+            <level initial="4"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="13649" name="Unequip Lv. 5 Brooch" action="A1">
         <!-- The brooch's radiant light fades. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0" trait="HOLD">
+            <magic-level initial="1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <dispel>
+                <abnormal type="AVE_BROOCH">
+                    <power initial="-1.0"/>
+                </abnormal>
+            </dispel>
+        </effects>
     </skill>
     <skill id="13650" name="Equip Lv. 4 Brooch" action="A1">
         <!-- A radiant light is emanating from the brooch. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i05"/>
-        <attributes property="PHYSIC">
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
+			<effect-range initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+            <level initial="3"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="13651" name="Unequip Lv. 4 Brooch" action="A1">
         <!-- The brooch’s brilliant light fades. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0" trait="HOLD">
+            <magic-level initial="1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <dispel>
+                <abnormal type="AVE_BROOCH">
+                    <power initial="-1.0"/>
+                </abnormal>
+            </dispel>
+        </effects>
     </skill>
     <skill id="13652" name="Equip Lv. 3 Brooch" action="A1">
         <!-- A radiant light is emanating from the brooch. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
-        <attributes property="PHYSIC">
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
+			<effect-range initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+            <level initial="2"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="13653" name="Unequip Lv. 3 Brooch" action="A1">
         <!-- The brooch’s brilliant light fades. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0" trait="HOLD">
+            <magic-level initial="1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <dispel>
+                <abnormal type="AVE_BROOCH">
+                    <power initial="-1.0"/>
+                </abnormal>
+            </dispel>
+        </effects>
     </skill>
     <skill id="13654" name="Equip Lv. 2 Brooch" action="A1">
         <!-- A radiant light is emanating from the brooch. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
-        <attributes property="PHYSIC">
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
+			<effect-range initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
+            <level initial="2"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
     </skill>
     <skill id="13655" name="Unequip Lv. 2 Brooch" action="A1">
         <!-- The brooch’s brilliant light fades. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0" trait="HOLD">
+            <magic-level initial="1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <dispel>
+                <abnormal type="AVE_BROOCH">
+                    <power initial="-1.0"/>
+                </abnormal>
+            </dispel>
+        </effects>
     </skill>
     <skill id="13656" name="Brooch Lv. 1">
         <!-- 2 Gems can be equipped. -->

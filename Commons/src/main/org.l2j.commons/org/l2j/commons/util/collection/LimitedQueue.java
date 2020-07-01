@@ -18,8 +18,10 @@
  */
 package org.l2j.commons.util.collection;
 
-import java.util.Collection;
+import java.util.AbstractCollection;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Spliterator;
 
 /**
  *
@@ -27,53 +29,40 @@ import java.util.LinkedList;
  *
  * @author JoeAlisson
  */
-public class LimitedQueue<E> extends LinkedList<E> {
+public class LimitedQueue<E> extends AbstractCollection<E> {
 
+    private final LinkedList<E> queue = new LinkedList<>();
     private final int maxSize;
 
     public LimitedQueue(int maxElements) {
         this.maxSize = maxElements;
     }
 
-    @Override
-    public void addFirst(E e) {
-        if(size() + 1 > maxSize) {
-            removeFirst();
+    public synchronized boolean add(E e) {
+        queue.addLast(e);
+        if(queue.size() > maxSize) {
+            queue.removeFirst();
         }
-        super.addFirst(e);
-    }
-
-    @Override
-    public void addLast(E e) {
-        super.addLast(e);
-        if(size() > maxSize) {
-            removeFirst();
-        }
-    }
-
-    @Override
-    public boolean add(E e) {
-        addLast(e);
         return true;
     }
 
     @Override
-    public boolean addAll(int index, Collection<? extends E> c) {
-        if(super.addAll(index, c)){
-            while (size() > maxSize){
-                removeFirst();
-            }
-            return true;
-        }
-        return false;
+    public Iterator<E> iterator() {
+        return queue.iterator();
     }
 
     @Override
-    public E set(int index, E element) {
-        E e = super.set(index, element);
-        if (size()  > maxSize){
-            removeFirst();
-        }
-        return e;
+    public int size() {
+        return queue.size();
+    }
+
+    @Override
+    public void clear() {
+        queue.clear();
+    }
+
+    @Override
+    public Spliterator<E> spliterator() {
+        return queue.spliterator();
     }
 }

@@ -523,8 +523,8 @@ public final class GameUtils {
         return object instanceof Artefact;
     }
 
-    public static boolean isGM(Creature creature) {
-        return nonNull(creature) && creature.isGM();
+    public static boolean isGM(WorldObject object) {
+        return object instanceof Player player && player.isGM();
     }
 
     public static boolean isWalker(WorldObject object) {
@@ -582,6 +582,6 @@ public final class GameUtils {
 
     public static boolean canTeleport(Player player) {
         return !( isNull(player) || player.isInDuel() || player.isControlBlocked() || player.isConfused() || player.isFlying() || player.isFlyingMounted() ||
-                player.isInOlympiadMode() || player.isAlikeDead() || player.isOnCustomEvent() || player.isInBattle() || player.isInsideZone(ZoneType.JAIL) || player.isInTimedHuntingZone());
+                player.isInOlympiadMode() || player.isAlikeDead() || player.isOnCustomEvent() || player.getPvpFlag() > 0 || player.isInsideZone(ZoneType.JAIL) || player.isInTimedHuntingZone());
     }
 }
