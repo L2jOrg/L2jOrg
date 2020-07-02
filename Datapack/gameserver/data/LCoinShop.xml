@@ -97,8 +97,8 @@
          <ingredient id="91663" count="1"/>
          <production id="32250"/>
      </product>
-     <product id="10025" category="Other">
-         <ingredient id="91663" count="1"/>
+     <product id="10025" category="Other" limitPerDay="500">
+         <ingredient id="57" count="500"/>
          <production id="3031"/>
      </product>
      <product id="10026" category="Other">

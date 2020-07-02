@@ -23,6 +23,7 @@ import org.l2j.gameserver.data.xml.model.LCoinShopProductInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.LCoinShopRequest;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExPurchaseLimitShopItemBuy;
 import org.l2j.gameserver.util.GameUtils;
 
@@ -58,11 +59,12 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
         consumeIngredients(player, ingredients);
         player.addItem("LCoinShop", productItem.getId(), productItem.getCount() * amount, player, true);
         player.removeRequest(LCoinShopRequest.class);
+        player.sendPacket(new ExPurchaseLimitShopItemBuy(LCoinShopData.getInstance().getProductInfo(productId), false));
     }
 
     private boolean hasIngredients(Player player, List<ItemHolder> ingredients) {
         for (ItemHolder ingredient : ingredients)
-            if (player.getInventory().getInventoryItemCount(ingredient.getId(), -1) < ingredient.getCount()) {
+            if (player.getInventory().getInventoryItemCount(ingredient.getId(), -1) < ingredient.getCount() * amount) {
                 return false;
             }
 
@@ -72,9 +74,9 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
     private void consumeIngredients(Player player, List<ItemHolder> ingredients) {
         ingredients.forEach(ingredient -> {
             switch (ingredient.getId()) {
-                case 57 -> player.reduceAdena("LCoinShop", ingredient.getCount(), player, true);
-                case 91663 -> player.addLCoins(ingredient.getCount());
-                default -> player.getInventory().destroyItemByItemId("LCoinShop", ingredient.getId(), ingredient.getCount(), player, this);
+                case 57 -> player.reduceAdena("LCoinShop", ingredient.getCount() * amount, player, true);
+                case 91663 -> player.addLCoins(ingredient.getCount() * amount);
+                default -> player.getInventory().destroyItemByItemId("LCoinShop", ingredient.getId(), ingredient.getCount() * amount, player, this);
             }
         });
     }
