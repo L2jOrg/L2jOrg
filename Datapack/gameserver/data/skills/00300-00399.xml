@@ -786,8 +786,8 @@
         </consume>
         <target type="NONE"/>
         <effects>
-            <effect name="HealOverTime" ticks="2">
-                <power initial="-15.0"/>
+            <effect name="HealDamOverTime" ticks="2">
+                <power initial="12"/>
             </effect>
             <stat-modify mode="PER" stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
                 <power initial="10.0">

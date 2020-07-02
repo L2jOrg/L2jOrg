@@ -136,6 +136,7 @@ open module org.l2j.scripts {
                 Heal.Factory,
                 HealOverTime.Factory,
                 HealPercent.Factory,
+                HealDamOverTime.Factory,
                 Hide.Factory,
                 Hp.Factory,
                 HpByLevel.Factory,

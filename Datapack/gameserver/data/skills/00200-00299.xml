@@ -1092,11 +1092,11 @@
             <mana-init initial="8"/>
             <mana initial="8"/>
         </consume>
-        <target type="SELF"/>
+        <target type="NONE"/>
         <effects>
-            <damage-over-time ticks="2">
-                <power initial="12.0"/>
-            </damage-over-time>
+            <effect name="HealDamOverTime" ticks="2">
+                <power initial="12"/>
+            </effect>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="15.0"/>
             </stat-modify>
