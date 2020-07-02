@@ -2990,8 +2990,20 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <magic-cost>
+            <magic-cost type="PHYSIC">
+                <power initial="-10.0">
+                    <value level="2">-15.0</value>
+                    <value level="3">-20.0</value>
+                </power>
+            </magic-cost>
+			<magic-cost>
                 <power initial="-4.0">
+                    <value level="2">-7.0</value>
+                    <value level="3">-10.0</value>
+                </power>
+            </magic-cost>
+			<magic-cost type="DANCE">
+                <power initial="-10.0">
                     <value level="2">-15.0</value>
                     <value level="3">-20.0</value>
                 </power>
