@@ -58,5 +58,8 @@
         <Logger name="MySQL" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
+        <Logger name="io.github.joealisson.mmocore" level="error">
+            <AppenderRef ref="game"/>
+        </Logger>
     </Loggers>
 </Configuration>
