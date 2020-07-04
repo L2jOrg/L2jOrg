@@ -91,31 +91,31 @@ public final class CharacterCreate extends ClientPacket {
     public void runImpl() {
         // Last Verified: May 30, 2009 - Gracia Final - Players are able to create characters with names consisting of as little as 1,2,3 letter/number combinations.
         if ((name.length() < 1) || (name.length() > 16)) {
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
+            client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_16_ENG_CHARS));
             return;
         }
 
         if ((face > 2) || (face < 0)) {
             LOGGER.warn("Character Creation Failure: Character face {} is invalid. Possible client hack {}", face , client);
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+            client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_CREATION_FAILED));
             return;
         }
 
         if ((hairStyle < 0) || ( (!female) && (hairStyle > 4) ) || ((female) && (hairStyle > 6))) {
             LOGGER.warn("Character Creation Failure: Character hair style {} is invalid. Possible client hack {}", hairStyle, client);
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+            client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_CREATION_FAILED));
             return;
         }
 
         if ((hairColor > 3) || (hairColor < 0)) {
             LOGGER.warn("Character Creation Failure: Character hair color {} is invalid. Possible client hack {}", hairColor , client);
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+            client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_CREATION_FAILED));
             return;
         }
 
         // Last Verified: May 30, 2009 - Gracia Final
         if (!isAlphaNumeric(name) || !isValidName(name)) {
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
+            client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_INCORRECT_NAME));
             return;
         }
 
@@ -127,18 +127,18 @@ public final class CharacterCreate extends ClientPacket {
          */
         synchronized (PlayerNameTable.getInstance()) {
             if (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0 && (PlayerNameTable.getInstance().getAccountCharacterCount(client.getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT)) {
-                client.sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
+                client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_TOO_MANY_CHARACTERS));
                 return;
             }
 
             if (PlayerNameTable.getInstance().doesCharNameExist(name)) {
-                client.sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
+                client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_NAME_ALREADY_EXISTS));
                 return;
             }
 
             template = PlayerTemplateData.getInstance().getTemplate(classId);
             if ((template == null) || (ClassId.getClassId(classId).level() > 0)) {
-                client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+                client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_CREATION_FAILED));
                 return;
             }
 
@@ -160,7 +160,7 @@ public final class CharacterCreate extends ClientPacket {
         }
 
         if(isNull(newChar)) {
-            client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+            client.sendPacket(new CharCreateFail(CharCreateFail.CharacterCreateFailReason.REASON_CREATION_FAILED));
             return;
         }
 
