@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.serverpackets.sessionzones;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -58,7 +57,7 @@ public class TimedHuntingZoneList extends ServerPacket {
 			writeInt(78); // min level
 			writeInt(999); // max level
 			writeInt(0); // remain time base?
-			endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 2, 0);
+			endTime = _player.getHuntingZoneResetTime(2);
 			if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime) {
 				endTime = currentTime + 3600000;
 			}

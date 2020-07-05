@@ -24,7 +24,6 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -118,14 +117,13 @@ public class MentorManager {
 
     public void setPenalty(int mentorId, long penalty) {
         final Player player = World.getInstance().findPlayer(mentorId);
-        final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
-        vars.set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
+        player.setMentorPenaltyId(mentorId);
+        player.setMentorPenaltyTime(System.currentTimeMillis() + penalty);
     }
 
     public long getMentorPenalty(int mentorId) {
         final Player player = World.getInstance().findPlayer(mentorId);
-        final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
-        return vars.getLong("Mentor-Penalty-" + mentorId, 0);
+        return player.getMentorPenaltyTime();
     }
 
     /**

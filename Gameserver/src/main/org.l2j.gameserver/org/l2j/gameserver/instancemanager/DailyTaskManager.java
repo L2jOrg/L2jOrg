@@ -35,7 +35,6 @@ import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.ScheduleTarget;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2j.gameserver.settings.ChatSettings;
@@ -150,19 +149,13 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
 
     private void resetExtendDrop() {
         // Update data for offline players.
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?")) {
-            ps.setString(1, PlayerVariables.EXTEND_DROP);
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.error("Could not reset extend drop : ", e);
-        }
+        getDAO(PlayerVariablesDAO.class).resetExtendDrop();
 
         // Update data for online players.
         World.getInstance().getPlayers().forEach(player ->
         {
-            player.getVariables().remove(PlayerVariables.EXTEND_DROP);
-            player.getVariables().storeMe();
+            player.setExtendDrop("");
+            player.storeVariables();
         });
 
         LOGGER.info("Daily Extend Drop has been resetted.");
@@ -194,21 +187,14 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         }
 
         // Update data for offline players.
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var = ?")) {
-            ps.setInt(1, 0);
-            ps.setString(2, PlayerVariables.WORLD_CHAT_VARIABLE_NAME);
-            ps.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.error("Could not reset daily world chat points: ", e);
-        }
+        getDAO(PlayerVariablesDAO.class).resetWorldChatPoint();
 
         // Update data for online players.
         World.getInstance().getPlayers().forEach(player ->
         {
             player.setWorldChatUsed(0);
             player.sendPacket(new ExWorldChatCnt(player));
-            player.getVariables().storeMe();
+            player.storeVariables();
         });
 
         LOGGER.info("Daily world chat points has been resetted.");

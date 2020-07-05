@@ -3824,6 +3824,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return (_exceptions & excs.getMask()) == excs.getMask();
     }
 
+    public long getOverrideCond() {
+        return _exceptions;
+    }
+
     public void setOverrideCond(long masks) {
         _exceptions = masks;
     }

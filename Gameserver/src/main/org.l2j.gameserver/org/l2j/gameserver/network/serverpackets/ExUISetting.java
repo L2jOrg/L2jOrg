@@ -21,6 +21,9 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.network.clientpackets.RequestSaveKeyMapping;
+
+import java.util.Objects;
 
 /**
  * @author Mobius
@@ -31,8 +34,8 @@ public class ExUISetting extends ServerPacket {
     private final byte[] _uiKeyMapping;
 
     public ExUISetting(Player player) {
-        if (player.getVariables().hasVariable(UI_KEY_MAPPING_VAR)) {
-            _uiKeyMapping = player.getVariables().getByteArray(UI_KEY_MAPPING_VAR, SPLIT_VAR);
+        if (player.getUiKeyMapping() != null && !player.getUiKeyMapping().trim().equalsIgnoreCase("")) {
+            _uiKeyMapping = getByteArray(player.getUiKeyMapping(), UI_KEY_MAPPING_VAR, SPLIT_VAR);
         } else {
             _uiKeyMapping = null;
         }
@@ -47,6 +50,30 @@ public class ExUISetting extends ServerPacket {
         } else {
             writeInt(0);
         }
+    }
+
+    public byte[] getByteArray(Object val, String key, String splitOn) {
+        Objects.requireNonNull(key);
+        Objects.requireNonNull(splitOn);
+        if (val == null) {
+            throw new IllegalArgumentException("Byte value required, but not specified");
+        }
+        if (val instanceof Number) {
+            return new byte[] {
+                    ((Number) val).byteValue()
+            };
+        }
+        int c = 0;
+        final String[] vals = ((String) val).split(splitOn);
+        final byte[] result = new byte[vals.length];
+        for (String v : vals) {
+            try {
+                result[c++] = Byte.parseByte(v);
+            } catch (Exception e) {
+                throw new IllegalArgumentException("Byte value required, but found: " + val);
+            }
+        }
+        return result;
     }
 
 }
