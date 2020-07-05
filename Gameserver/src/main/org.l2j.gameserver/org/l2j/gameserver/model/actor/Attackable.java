@@ -863,7 +863,7 @@ public class Attackable extends Npc {
         final Player player = mainDamageDealer.getActingPlayer();
 
         // Don't drop anything if the last attacker or owner isn't Player
-        if (player == null) {
+        if (player == null || !player.isOnline()) {
             return;
         }
 

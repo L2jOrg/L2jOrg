@@ -264,6 +264,9 @@
 	<!-- Double-click to get 1 of the following: Garnet, Jade, Ruby, Sapphire, Diamond, Pearl, Vital Stone.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<skill-reducer>
+			<skill id="59327" value="-1"/> <!-- Shining Jewel Box -->
+		</skill-reducer>
 	</item>
 
 	<item id="71438" name="Jewel Coin" type="NONE" icon="BranchIcon.Icon.etc_premium_coin_i00">

@@ -55,5 +55,9 @@ public class ExRequestTeleport extends ClientPacket {
             player.addRequest(new TeleportRequest(player, id));
             player.useMagic(CommonSkill.TELEPORT.getSkill(), null, false, true);
         }
+
+        if (!GameUtils.canTeleport(player)){
+            player.sendPacket(SystemMessageId.YOU_CAN_T_TELEPORT_IN_THIS_AREA); // TODO: check if message is retail like.
+        }
     }
 }

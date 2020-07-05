@@ -532,7 +532,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
         // Feeding all unused buttons
         for(int i = 1 ; i <= 36 ; i++)
-            returnHtml = replaceVars(i, groupType, schemeName, "L2UI_NewTex.SideBar.SideBar_EventBtn_Normal", -1, page, returnHtml);
+            returnHtml = replaceVars(i, groupType, schemeName, "L2UI_CT1.l2ui_ct1.ComboBox_DF_Dropmenu_Bg", -1, page, returnHtml);
 
         return returnHtml;
     }

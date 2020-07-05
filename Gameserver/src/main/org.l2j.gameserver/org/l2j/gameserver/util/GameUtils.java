@@ -582,6 +582,6 @@ public final class GameUtils {
 
     public static boolean canTeleport(Player player) {
         return !( isNull(player) || player.isInDuel() || player.isControlBlocked() || player.isConfused() || player.isFlying() || player.isFlyingMounted() ||
-                player.isInOlympiadMode() || player.isAlikeDead() || player.isOnCustomEvent() || player.isInBattle() || player.isInsideZone(ZoneType.JAIL) || player.isInTimedHuntingZone());
+                player.isInOlympiadMode() || player.isAlikeDead() || player.isOnCustomEvent() || player.getPvpFlag() > 0 || player.isInsideZone(ZoneType.JAIL) || player.isInTimedHuntingZone());
     }
 }

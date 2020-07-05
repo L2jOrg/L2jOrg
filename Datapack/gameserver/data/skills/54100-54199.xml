@@ -10,7 +10,7 @@
         </attributes>
         <target/>
         <abnormal type="PD_UP">
-            <level initial="1"/>
+            <level initial="4"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -30,13 +30,13 @@
         </attributes>
         <target/>
         <abnormal type="MD_UP">
-            <level initial="1"/>
+            <level initial="4"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-                <power initial="300.0"/>
+                <power initial="350.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -66,7 +66,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="WEIGHT_PENALTY" stat-add="WEIGHT_PENALTY">
+            <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
                 <power initial="9000.0"/>
             </stat-modify>
         </effects>
@@ -81,22 +81,25 @@
         </attributes>
         <target/>
         <abnormal type="BERSERKER">
-            <level initial="1"/>
+            <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <vital-stat-modify mode="PER" stat="MAX_HP">
-                <power initial="-15.0"/>
-            </vital-stat-modify>
-            <vital-stat-modify mode="PER" stat="MAX_MP">
-                <power initial="-15.0"/>
-            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="-8.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="-16.0"/>
+            </stat-modify>
+			<stat-modify stat="EVASION_RATE">
+                <power initial="-4.0"/>
+            </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="10.0"/>
+                <power initial="8.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="20.0"/>
+                <power initial="16.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0"/>
@@ -119,7 +122,7 @@
         </attributes>
         <target/>
         <abnormal type="SPEED_UP">
-            <level initial="1"/>
+            <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -139,7 +142,7 @@
         </attributes>
         <target/>
         <abnormal type="PA_UP">
-            <level initial="1"/>
+            <level initial="3"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -159,7 +162,7 @@
         </attributes>
         <target/>
         <abnormal type="CRITICAL_PROB_UP">
-            <level initial="1"/>
+            <level initial="6"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -179,7 +182,7 @@
         </attributes>
         <target/>
         <abnormal type="ATTACK_TIME_DOWN">
-            <level initial="1"/>
+            <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -199,7 +202,7 @@
         </attributes>
         <target/>
         <abnormal type="CRITICAL_DMG_UP">
-            <level initial="1"/>
+            <level initial="3"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -219,7 +222,7 @@
         </attributes>
         <target/>
         <abnormal type="MA_UP">
-            <level initial="1"/>
+            <level initial="3"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -239,12 +242,18 @@
         </attributes>
         <target/>
         <abnormal type="CHEAP_MAGIC">
-            <level initial="1"/>
+            <level initial="3"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <magic-cost type="PHYSIC">
+                <power initial="-20.0"/>
+            </magic-cost>
+			<magic-cost>
+                <power initial="-10.0"/>
+            </magic-cost>
+			<magic-cost type="DANCE">
                 <power initial="-20.0"/>
             </magic-cost>
         </effects>
@@ -259,7 +268,7 @@
         </attributes>
         <target/>
         <abnormal type="MAGIC_CRITICAL_UP">
-            <level initial="1"/>
+            <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -299,7 +308,7 @@
         </attributes>
         <target/>
         <abnormal type="CANCEL_PROB_DOWN">
-            <level initial="1"/>
+            <level initial="6"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -319,7 +328,7 @@
         </attributes>
         <target/>
         <abnormal type="MULTI_BUFF">
-            <level initial="1"/>
+            <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
@@ -351,7 +360,7 @@
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
@@ -362,21 +371,22 @@
     <skill id="54117" name="Sayha's Restore HP" action="A2">
         <!-- Sayha's Power recovers HP over 20 minutes. -->
         <icon initial="icon.skill0211"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <reuse initial="2000"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
-        <abnormal type="HP_REGEN_UP">
+		<!-- need new Abnormal (-1 line) SAYHA_HP_REGEN -->
+        <abnormal type="LIFE_FORCE_OTHERS">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
-                <power initial="1.1"/>
-            </stat-modify>
+            <effect name="HealOverTime" ticks="10">
+                <power initial="500.0"/>
+            </effect>
         </effects>
     </skill>
     <skill id="54118" name="Sayha's Restore MP" action="A2">
@@ -388,15 +398,16 @@
             <hit-time initial="500"/>
         </attributes>
         <target/>
+		<!-- need new Abnormal (-1 line) SAYHA_MP_REGEN -->
         <abnormal type="MP_REGEN_UP">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
-                <power initial="1.1"/>
-            </stat-modify>
+            <effect name="ManaHealOverTime" ticks="10">
+                <power initial="300.0"/>
+            </effect>
         </effects>
     </skill>
     <skill id="54119" name="Chef's Fish Stew - Victory" action="A2">

@@ -4438,7 +4438,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450"/>
+        <ai clanHelpRange="300"/>
         <collision>
             <radius normal="26"/>
             <height normal="15"/>
@@ -4947,7 +4947,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="300"/>
+        <ai clanHelpRange="300"/>
         <collision>
             <radius normal="35" grown="42"/>
             <height normal="17" grown="21"/>
@@ -5074,7 +5074,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450"/>
+        <ai clanHelpRange="300"/>
         <collision>
             <radius normal="20" grown="24"/>
             <height normal="48" grown="57"/>

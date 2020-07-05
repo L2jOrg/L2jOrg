@@ -11286,9 +11286,6 @@ public final class SystemMessageId {
     @ClientString(id = 5287, message = "You can't teleport while dead.")
     public static SystemMessageId YOU_CAN_T_TELEPORT_WHILE_DEAD_5287;
 
-    @ClientString(id = 5288, message = "You can't teleport in this area.")
-    public static SystemMessageId YOU_CAN_T_TELEPORT_IN_THIS_AREA;
-
     @ClientString(id = 5289, message = "You can't teleport while participating in the Ceremony of Chaos.")
     public static SystemMessageId YOU_CAN_T_TELEPORT_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS;
 
@@ -17736,6 +17733,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
     public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
+
+    @ClientString(id = 5288, message = "You can't teleport in this area.")
+    public static SystemMessageId YOU_CAN_T_TELEPORT_IN_THIS_AREA;
 
     private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 
