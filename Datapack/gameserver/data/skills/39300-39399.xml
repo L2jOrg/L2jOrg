@@ -42,6 +42,12 @@
                     <value level="3">-5.0</value>                   
                 </power>
             </reuse>
+			<reuse skill-type="DANCE">
+                <power initial="-3.0">
+                    <value level="2">-4.0</value>
+                    <value level="3">-5.0</value>
+                </power>
+            </reuse>
 			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="12.0">                   
                     <value level="2">15.0</value>
@@ -215,6 +221,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39308" name="Life Control Tower's Scroll of Blessing" action="A1">
         <!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
@@ -230,7 +244,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+        <abnormal type="EXP_SP_G">
             <level initial="2"/>
             <time initial="3600"/>
             <chance initial="-1"/>

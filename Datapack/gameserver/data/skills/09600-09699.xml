@@ -7,10 +7,10 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="15.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="15.0"/>
             </stat-modify>
         </effects>
@@ -22,10 +22,10 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="15.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="15.0"/>
             </stat-modify>
         </effects>

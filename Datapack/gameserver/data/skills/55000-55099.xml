@@ -944,10 +944,10 @@
             <level max-level="85" scope="PASSIVE"/>
         </conditions>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="30.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="30.0"/>
             </stat-modify>
         </effects>

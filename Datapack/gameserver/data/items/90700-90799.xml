@@ -388,7 +388,7 @@
 			<stat type="MAX_MP" value="22.0"/>
 		</stats>
 		<skills>
-			<skill id="3559" level="12"/>  <!-- Damaged Zaken's Earring -->
+			<skill id="3559" level="12" value="-1"/>  <!-- Damaged Zaken's Earring -->
 		</skills>
 	</armor>
 
@@ -402,7 +402,7 @@
 			<stat type="MAX_MP" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="3559" level="13"/>  <!-- Damaged Zaken's Earring -->
+			<skill id="3559" level="13" value="-1"/>  <!-- Damaged Zaken's Earring -->
 		</skills>
 	</armor>
 
@@ -416,7 +416,7 @@
 			<stat type="MAX_MP" value="34.0"/>
 		</stats>
 		<skills>
-			<skill id="3559" level="14"/>  <!-- Damaged Zaken's Earring -->
+			<skill id="3559" level="14" value="-1"/>  <!-- Damaged Zaken's Earring -->
 		</skills>
 	</armor>
 
@@ -435,6 +435,9 @@
 			<stat type="MAGICAL_DEFENCE" value="89.0"/>
 			<stat type="MAX_MP" value="22.0"/>
 		</stats>
+		<skills>
+			<skill id="3559" level="12" value="-1"/>  <!-- Damaged Zaken's Earring -->
+		</skills>
 	</armor>
 
 	<item id="90768" name="Hair Accessory Coupon" type="NONE" icon="icon.etc_exchange_ticket_i04">

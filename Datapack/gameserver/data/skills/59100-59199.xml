@@ -91,11 +91,6 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-                <power initial="1"/>
-            </stat-modify>
-        </effects>
     </skill>
     <skill id="59107" name="Scorpio Agathion Unique Ability" max-level="11">
         <!--

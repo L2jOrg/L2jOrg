@@ -69,7 +69,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP" stat-add="BONUS_EXP">
                 <power initial="11.0">
                     <value level="2">30.0</value>
                 </power>

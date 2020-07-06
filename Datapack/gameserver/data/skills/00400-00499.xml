@@ -219,8 +219,6 @@
             </effect-point>
             <effect-range initial="400"/>
             <hit-time initial="1300"/>
-
-            <element type="DARK" value="20"/>
         </attributes>
         <consume>
             <mana initial="52">
@@ -284,7 +282,7 @@
                     <value level="20">2333.0</value>
                 </power>
             </physical-attack>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="-20.0">
                     <value level="6">-25.0</value>
                     <value level="11">-30.0</value>
