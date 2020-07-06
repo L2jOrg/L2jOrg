@@ -51,6 +51,12 @@
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="59106" value="-1"/>
+			<skill id="59115" value="-1"/>  <!-- Release Agathion -->
+			<skill id="54010" value="-1"/>  <!-- Release Agathion -->
+		</skills>
 	</armor>
 
 	<armor id="71308" name="Agathion - Gemini" type="NONE" body-part="AGATHION" icon="icon.agathion_gem_star_1">

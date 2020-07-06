@@ -281,12 +281,16 @@
     <skill id="54010" name="Agathion - Leo" action="A1">
         <!-- Releases the Agathion's seal. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="85"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <summon-agathion id="71307"/>
+        </effects>
     </skill>
     <skill id="54011" name="Agathion - Scorpio" action="A1">
         <!-- Releases the Agathion's seal. -->
