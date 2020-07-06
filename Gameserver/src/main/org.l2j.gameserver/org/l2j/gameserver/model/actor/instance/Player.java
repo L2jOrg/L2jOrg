@@ -97,7 +97,6 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.model.variables.AccountVariables;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -423,6 +422,331 @@ public final class Player extends Playable {
         return rankRace;
     }
 
+    /**
+     * [Start of] Player variables getters and setters
+     */
+
+    public boolean isHairAccessoryEnabled() {
+        return variables.isHairAccessoryEnabled();
+    }
+
+    /**
+     * @return The amount of times player has used world chat
+     */
+    public int getWorldChatUsed() {
+        return variables.getWorldChatUsed();
+    }
+
+    public int getVitalityItemsUsed() {
+        return variables.getVitalityItemsUsed();
+    }
+
+    public int getAbilityPointsMainClassUsed() {
+        return variables.getAbilityPointsMainClassUsed();
+    }
+
+    public int getAbilityPointsDualClassUsed() {
+        return variables.getAbilityPointsDualClassUsed();
+    }
+
+    public int getRevelationSkillMainClass1() {
+        return variables.getRevelationSkillMainClass1();
+    }
+
+    public int getRevelationSkillMainClass2() {
+        return variables.getRevelationSkillMainClass2();
+    }
+
+    public int getRevelationSkillDualClass1() {
+        return variables.getRevelationSkillDualClass1();
+    }
+
+    public int getRevelationSkillDualClass2() {
+        return variables.getRevelationSkillDualClass2();
+    }
+
+    public String getExtendDrop() {
+        return variables.getExtendDrop();
+    }
+
+    public int getFortuneTelling() {
+        return variables.getFortuneTelling();
+    }
+
+    public boolean isFortuneTellingBlackCat() {
+        return variables.isFortuneTellingBlackCat();
+    }
+
+    public long getHuntingZoneResetTime(int zoneId) {
+        String[] timeZones = variables.getHuntingZoneResetTime().split(";");
+
+        for(int i = 0 ; i < timeZones.length; i = i + 2) {
+            if (timeZones[i].equalsIgnoreCase("" + zoneId))
+                return Long.parseLong(timeZones[i + 1]);
+        }
+
+        return 0;
+    }
+
+    public int getAutoCp() {
+        return variables.getAutoCp();
+    }
+
+    public int getAutoHp() {
+        return variables.getAutoHp();
+    }
+
+    public int getAutoMp() {
+        return variables.getAutoMp();
+    }
+
+    public boolean getExpOff() {
+        return variables.getExpOff();
+    }
+
+    public boolean isItemsRewarded() {
+        return variables.isItemsRewarded();
+    }
+
+    public long getHennaDuration(int slot) {
+        switch (slot) {
+            case 1 -> { return variables.getHenna1Duration(); }
+            case 2 -> { return variables.getHenna2Duration(); }
+            case 3 -> { return variables.getHenna3Duration(); }
+        }
+        return 0;
+    }
+
+    public long getHennaDuration(long defaultValue, int slot) {
+        return getHennaDuration(slot) != 0 ? getHennaDuration(slot) : defaultValue;
+    }
+
+    /**
+     * @return the beauty shop hair, or his normal if not changed.
+     */
+    public int getVisualHair() {
+        return variables.getVisualHairId();
+    }
+
+    /**
+     * @return the beauty shop hair color, or his normal if not changed.
+     */
+    public int getVisualHairColor() {
+        return variables.getVisualHairColorId();
+    }
+
+    /**
+     * @return the beauty shop modified face, or his normal if not changed.
+     */
+    public int getVisualFace() {
+        return variables.getVisualFaceId();
+    }
+
+    public int[] getInstanceOrigin() {
+        return variables.getInstanceOrigin();
+    }
+
+    public int getInstanceRestore() {
+        return variables.getInstanceRestore();
+    }
+
+    public int getMentorPenaltyId() {
+        return variables.getMentorPenaltyId();
+    }
+
+    public long getMentorPenaltyTime() {
+        return variables.getMentorPenaltyTime();
+    }
+
+    public int getClaimedClanRewards(int defaultValue) {
+        return variables.getClaimedClanRewards() != 0 ? variables.getClaimedClanRewards() : defaultValue;
+    }
+
+    public String getCondOverrideKey() {
+        return variables.getCondOverrideKey();
+    }
+
+    public long getAttendanceDate() {
+        return variables.getAttendanceDate();
+    }
+
+    public int getAttendanceIndex() {
+        return variables.getAttendanceIndex();
+    }
+
+    public int getUnclaimedOlympiadPoints() {
+        return variables.getUnclaimedOlympiadPoints();
+    }
+
+    public int getMonsterReturn() {
+        return variables.getMonsterReturn();
+    }
+
+    public String getUiKeyMapping() {
+        return variables.getUiKeyMapping();
+    }
+
+    public void setHairAccessoryEnabled(boolean hairAccessory_Enabled) {
+        variables.setHairAccessoryEnabled(hairAccessory_Enabled);
+    }
+
+    /**
+     * Sets the amount of times player can use world chat
+     *
+     * @param timesUsed how many times world chat has been used up until now.
+     */
+    public void setWorldChatUsed(int timesUsed) {
+        variables.setWorldChatUsed(timesUsed);
+    }
+
+    public void setVitalityItemsUsed(int vitalityItemsUsed) {
+        variables.setVitalityItemsUsed(vitalityItemsUsed);
+        getDAO(PlayerVariablesDAO.class).save(variables);
+    }
+
+    public void setAbilityPointsMainClassUsed(int abilityPointsMainClassUsed) {
+        variables.setAbilityPointsMainClassUsed(abilityPointsMainClassUsed);
+    }
+
+    public void setAbilityPointsDualClassUsed(int abilityPointsDualClassUsed) {
+        variables.setAbilityPointsDualClassUsed(abilityPointsDualClassUsed);
+    }
+
+    public void setRevelationSkillMainClass1(int revelationSkillMainClass1) {
+        variables.setRevelationSkillMainClass1(revelationSkillMainClass1);
+    }
+
+    public void setRevelationSkillMainClass2(int revelationSkillMainClass2) {
+        variables.setRevelationSkillMainClass2(revelationSkillMainClass2);
+    }
+
+    public void setRevelationSkillDualClass1(int revelationSkillDualClass1) {
+        variables.setRevelationSkillDualClass1(revelationSkillDualClass1);
+    }
+
+    public void setRevelationSkillDualClass2(int revelationSkillDualClass2) {
+        variables.setRevelationSkillMainClass2(revelationSkillDualClass2);
+    }
+
+    public void setExtendDrop(String extendDrop) {
+        variables.setExtendDrop(extendDrop);
+    }
+
+    public void setFortuneTelling(int fortuneTelling) {
+        variables.setFortuneTelling(fortuneTelling);
+    }
+
+    public void setFortuneTellingBlackCat(boolean fortuneTellingBlackCat) {
+        variables.setFortuneTellingBlackCat(fortuneTellingBlackCat);
+    }
+
+    public void setHuntingZoneResetTime(int zoneId, long huntingZoneResetTime) {
+        if(variables.getHuntingZoneResetTime().equalsIgnoreCase("")) {
+            variables.setHuntingZoneResetTime(zoneId + ";" + huntingZoneResetTime);
+        } else {
+            variables.setHuntingZoneResetTime(variables.getHuntingZoneResetTime() + ";" + zoneId + ";" + huntingZoneResetTime);
+        }
+    }
+
+    public void setAutoCp(int autoCp) {
+        variables.setAutoCp(autoCp);
+    }
+
+    public void setAutoHp(int autoHp) {
+        variables.setAutoHp(autoHp);
+    }
+
+    public void setAutoMp(int autoMp) {
+        variables.setAutoMp(autoMp);
+    }
+
+    public void setExpOff(boolean expOff) {
+        variables.setExpOff(expOff);
+    }
+
+    public void setItemsRewarded(boolean itemsRewarded) {
+        variables.setItemsRewarded(itemsRewarded);
+    }
+
+    public void setHennaDuration(long hennaDuration, int slot) {
+        switch (slot) {
+            case 1 -> variables.setHenna1Duration(hennaDuration);
+            case 2 -> variables.setHenna2Duration(hennaDuration);
+            case 3 -> variables.setHenna3Duration(hennaDuration);
+        }
+    }
+
+    /**
+     * Sets the beauty shop hair
+     *
+     * @param visualHairId
+     */
+    public void setVisualHair(int visualHairId) {
+        variables.setVisualHairId(visualHairId);
+    }
+
+    /**
+     * Sets the beauty shop hair color
+     *
+     * @param visualHairColorId
+     */
+    public void setVisualHairColor(int visualHairColorId) {
+        variables.setVisualHairColorId(visualHairColorId);
+    }
+
+    /**
+     * Sets the beauty shop modified face
+     *
+     * @param visualFaceId
+     */
+    public void setVisualFace(int visualFaceId) {
+        variables.setVisualFaceId(visualFaceId);
+    }
+
+    public void setInstanceOrigin(String instanceOrigin) {
+        variables.setInstanceOrigin(instanceOrigin);
+    }
+
+    public void setInstanceRestore(int instanceRestore) {
+        variables.setInstanceRestore(instanceRestore);
+    }
+
+    public void setMentorPenaltyId(int mentorPenaltyId) {
+        variables.setMentorPenaltyId(mentorPenaltyId);
+    }
+
+    public void setMentorPenaltyTime(long mentorPenaltyTime) {
+        variables.setMentorPenaltyTime(mentorPenaltyTime);
+    }
+
+    public void setClaimedClanRewards(int claimedClanRewards) {
+        variables.setClaimedClanRewards(claimedClanRewards);
+    }
+
+    public void setCondOverrideKey(String condOverrideKey) {
+        variables.setCondOverrideKey(condOverrideKey);
+    }
+
+    public void setAttendanceDate(long attendanceDate) {
+        variables.setAttendanceDate(attendanceDate);
+    }
+
+    public void setAttendanceIndex(int attendanceIndex) {
+        variables.setAttendanceIndex(attendanceIndex);
+    }
+
+    public void setUnclaimedOlympiadPoints(int unclaimedOlympiadPoints) {
+        variables.setUnclaimedOlympiadPoints(unclaimedOlympiadPoints);
+    }
+
+    public void setMonsterReturn(int monsterReturn) {
+        variables.setMonsterReturn(monsterReturn);
+    }
+
+    public void setUiKeyMapping(String uiKeyMapping) {
+        variables.setUiKeyMapping(uiKeyMapping);
+    }
+
     public int getRevengeUsableLocation() {
         return variables.getRevengeLocations();
     }
@@ -442,6 +766,41 @@ public final class Player extends Playable {
     public void resetRevengeData() {
         variables.resetRevengeData();
     }
+
+    public void updateExtendDrop(int id, long count) {
+        StringBuilder result = new StringBuilder();
+        final String data = getExtendDrop();
+        if (data.isEmpty()) {
+            result = new StringBuilder(id + "," + count);
+        } else if (data.contains(";")) {
+            for (String s : data.split(";")) {
+                final String[] drop = s.split(",");
+                if (drop[0].equals(Integer.toString(id))) {
+                    continue;
+                }
+
+                result.append(";").append(s);
+            }
+            result = new StringBuilder(result.substring(1));
+        } else {
+            result = new StringBuilder(id + "," + count);
+        }
+        variables.setExtendDrop(result.toString());
+    }
+
+    public long getExtendDropCount(int id) {
+        final String data = getExtendDrop();
+        for (String s : data.split(";")) {
+            final String[] drop = s.split(",");
+            if (drop[0].equals(Integer.toString(id))) {
+                return Long.parseLong(drop[1]);
+            }
+        }
+        return 0;
+    }
+    /**
+     * [End of] Player variables getters and setters
+     */
 
     public LocalDate getCreateDate() {
         return data.getCreateDate();
@@ -779,7 +1138,6 @@ public final class Player extends Playable {
     private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
     private static final String RESTORE_CHAR_RECIPE_SHOP = "SELECT * FROM character_recipeshoplist WHERE charId=? ORDER BY `index`";
 
-    private static final String COND_OVERRIDE_KEY = "cond_override";
     // during fall validations will be disabled for 1000 ms.
     private static final int FALLING_VALIDATION_DELAY = 1000;
     // Training Camp
@@ -1185,6 +1543,8 @@ public final class Player extends Playable {
         var template = PlayerTemplateData.getInstance().getTemplate(character.getClassId());
         Player player = new Player(character, template);
         player.variables = getDAO(PlayerVariablesDAO.class).findById(objectId);
+        if (player.variables == null) // hack for char created before PlayerVariableData implementation (player_variables Table empty for this objectId)
+            player.variables = PlayerVariableData.init(objectId);
         player.statsData = playerDAO.findPlayerStatsData(objectId);
 
         player.costumes = playerDAO.findCostumes(objectId);
@@ -1291,7 +1651,7 @@ public final class Player extends Playable {
             }
 
             if (player.isGM()) {
-                final long masks = player.getVariables().getLong(COND_OVERRIDE_KEY, PcCondOverride.getAllExceptionsMask());
+                final long masks = player.getOverrideCond();
                 player.setOverrideCond(masks);
             }
 
@@ -1578,14 +1938,6 @@ public final class Player extends Playable {
 
     public final PlayerAppearance getAppearance() {
         return appearance;
-    }
-
-    public final boolean isHairAccessoryEnabled() {
-        return getVariables().getBoolean(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, true);
-    }
-
-    public final void setHairAccessoryEnabled(boolean enabled) {
-        getVariables().set(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, enabled);
     }
 
     public final PlayerTemplate getBaseTemplate() {
@@ -5735,11 +6087,6 @@ public final class Player extends Playable {
             storeRecipeShopList();
         }
 
-        final PlayerVariables vars = getScript(PlayerVariables.class);
-        if (vars != null) {
-            vars.storeMe();
-        }
-
         final AccountVariables aVars = getScript(AccountVariables.class);
         if (aVars != null) {
             aVars.storeMe();
@@ -6368,7 +6715,7 @@ public final class Player extends Playable {
 
                     // Task for henna duration
                     if (henna.getDuration() > 0) {
-                        final long remainingTime = getVariables().getLong("HennaDuration" + slot, currentTime) - currentTime;
+                        final long remainingTime = getHennaDuration(slot)  - currentTime;
                         if (remainingTime < 0) {
                             removeHenna(slot);
                             continue;
@@ -6455,7 +6802,7 @@ public final class Player extends Playable {
         ui.addComponentType(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
         sendPacket(ui);
 
-        final long remainingTime = getVariables().getLong("HennaDuration" + slot, 0) - System.currentTimeMillis();
+        final long remainingTime = getHennaDuration(slot) - System.currentTimeMillis();
         if ((henna.getDuration() < 0) || (remainingTime > 0)) {
             // Add the recovered dyes to the player's inventory and notify them.
             if (henna.getCancelFee() > 0) {
@@ -6473,7 +6820,7 @@ public final class Player extends Playable {
 
         // Remove henna duration task
         if (henna.getDuration() > 0) {
-            getVariables().remove("HennaDuration" + slot);
+            setHennaDuration(0, slot);
             if (_hennaRemoveSchedules.get(slot) != null) {
                 _hennaRemoveSchedules.get(slot).cancel(false);
                 _hennaRemoveSchedules.remove(slot);
@@ -6517,7 +6864,7 @@ public final class Player extends Playable {
 
                 // Task for henna duration
                 if (henna.getDuration() > 0) {
-                    getVariables().set("HennaDuration" + i, System.currentTimeMillis() + (henna.getDuration() * 60000));
+                    setHennaDuration(System.currentTimeMillis() + (henna.getDuration() * 60000), i);
                     _hennaRemoveSchedules.put(i, ThreadPool.schedule(new HennaDurationTask(this, i), System.currentTimeMillis() + (henna.getDuration() * 60000)));
                 }
 
@@ -7719,13 +8066,13 @@ public final class Player extends Playable {
             }
 
             if (subClass.isDualClass()) {
-                getVariables().remove(PlayerVariables.ABILITY_POINTS_DUAL_CLASS);
-                getVariables().remove(PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS);
-                int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
+                // getVariables().remove(CharacterVariables.ABILITY_POINTS_USED_DUAL_CLASS);
+                setAbilityPointsDualClassUsed(1000); // FIXME: what remove what meaning in character_variables Table
+                int revelationSkill = getRevelationSkillDualClass1();
                 if (revelationSkill != 0) {
                     removeSkill(revelationSkill);
                 }
-                revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
+                revelationSkill = getRevelationSkillDualClass2();
                 if (revelationSkill != 0) {
                     removeSkill(revelationSkill);
                 }
@@ -9207,12 +9554,12 @@ public final class Player extends Playable {
                 // Revelation skills.
                 if (isDualClassActive())
                 {
-                    int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
+                    int revelationSkill = getRevelationSkillDualClass1();
                     if (revelationSkill != 0)
                     {
                         addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
                     }
-                    revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
+                    revelationSkill = getRevelationSkillDualClass2();
                     if (revelationSkill != 0)
                     {
                         addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
@@ -9220,12 +9567,12 @@ public final class Player extends Playable {
                 }
                 else if (!isSubClassActive())
                 {
-                    int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS, 0);
+                    int revelationSkill = getRevelationSkillMainClass1();
                     if (revelationSkill != 0)
                     {
                         addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
                     }
-                    revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS, 0);
+                    revelationSkill = getRevelationSkillMainClass2();
                     if (revelationSkill != 0)
                     {
                         addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
@@ -10344,28 +10691,17 @@ public final class Player extends Playable {
     @Override
     public void addOverrideCond(PcCondOverride... excs) {
         super.addOverrideCond(excs);
-        getVariables().set(COND_OVERRIDE_KEY, Long.toString(_exceptions));
+        setCondOverrideKey(Long.toString(_exceptions));
     }
 
     @Override
     public void removeOverridedCond(PcCondOverride... excs) {
         super.removeOverridedCond(excs);
-        getVariables().set(COND_OVERRIDE_KEY, Long.toString(_exceptions));
+        setCondOverrideKey(Long.toString(_exceptions));
     }
 
-    /**
-     * @return {@code true} if {@link PlayerVariables} instance is attached to current player's scripts, {@code false} otherwise.
-     */
-    public boolean hasVariables() {
-        return getScript(PlayerVariables.class) != null;
-    }
-
-    /**
-     * @return {@link PlayerVariables} instance containing parameters regarding player.
-     */
-    public PlayerVariables getVariables() {
-        final PlayerVariables vars = getScript(PlayerVariables.class);
-        return vars != null ? vars : addScript(new PlayerVariables(getObjectId()));
+    public void storeVariables () {
+        getDAO(PlayerVariablesDAO.class).save(variables);
     }
 
     /**
@@ -10460,54 +10796,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @return the beauty shop hair, or his normal if not changed.
-     */
-    public int getVisualHair() {
-        return getVariables().getInt("visualHairId", appearance.getHairStyle());
-    }
-
-    /**
-     * Sets the beauty shop hair
-     *
-     * @param hairId
-     */
-    public void setVisualHair(int hairId) {
-        getVariables().set("visualHairId", hairId);
-    }
-
-    /**
-     * @return the beauty shop hair color, or his normal if not changed.
-     */
-    public int getVisualHairColor() {
-        return getVariables().getInt("visualHairColorId", appearance.getHairColor());
-    }
-
-    /**
-     * Sets the beauty shop hair color
-     *
-     * @param colorId
-     */
-    public void setVisualHairColor(int colorId) {
-        getVariables().set("visualHairColorId", colorId);
-    }
-
-    /**
-     * @return the beauty shop modified face, or his normal if not changed.
-     */
-    public int getVisualFace() {
-        return getVariables().getInt("visualFaceId", appearance.getFace());
-    }
-
-    /**
-     * Sets the beauty shop modified face
-     *
-     * @param faceId
-     */
-    public void setVisualFace(int faceId) {
-        getVariables().set("visualFaceId", faceId);
-    }
-
-    /**
      * @return {@code true} if player has mentees, {@code false} otherwise
      */
     public boolean isMentor() {
@@ -10521,11 +10809,8 @@ public final class Player extends Playable {
         return MentorManager.getInstance().isMentee(getObjectId());
     }
 
-    /**
-     * @return how much ability points player has spend on learning skills.
-     */
     public int getAbilityPointsUsed() {
-        return getVariables().getInt(isDualClassActive() ? PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS : PlayerVariables.ABILITY_POINTS_USED_MAIN_CLASS, 0);
+        return isDualClassActive() ? getAbilityPointsDualClassUsed() : getAbilityPointsMainClassUsed();
     }
 
     /**
@@ -10533,22 +10818,6 @@ public final class Player extends Playable {
      */
     public int getWorldChatPoints() {
         return (int) getStats().getValue(Stat.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
-    }
-
-    /**
-     * @return The amount of times player has used world chat
-     */
-    public int getWorldChatUsed() {
-        return getVariables().getInt(PlayerVariables.WORLD_CHAT_VARIABLE_NAME, 0);
-    }
-
-    /**
-     * Sets the amount of times player can use world chat
-     *
-     * @param timesUsed how many times world chat has been used up until now.
-     */
-    public void setWorldChatUsed(int timesUsed) {
-        getVariables().set(PlayerVariables.WORLD_CHAT_VARIABLE_NAME, timesUsed);
     }
 
     /**
@@ -10708,16 +10977,6 @@ public final class Player extends Playable {
 
     public boolean isInMatchingRoom() {
         return _matchingRoom != null;
-    }
-
-    public int getVitalityItemsUsed() {
-        return getVariables().getInt(PlayerVariables.VITALITY_ITEMS_USED_VARIABLE_NAME, 0);
-    }
-
-    public void setVitalityItemsUsed(int used) {
-        final PlayerVariables vars = getVariables();
-        vars.set(PlayerVariables.VITALITY_ITEMS_USED_VARIABLE_NAME, used);
-        vars.storeMe();
     }
 
     @Override
@@ -10917,8 +11176,8 @@ public final class Player extends Playable {
             receiveDate = getAccountVariables().getLong(ATTENDANCE_DATE_VAR, 0);
             rewardIndex = getAccountVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
         } else {
-            receiveDate = getVariables().getLong(ATTENDANCE_DATE_VAR, 0);
-            rewardIndex = getVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
+            receiveDate = getAttendanceDate();
+            rewardIndex = getAttendanceIndex();
         }
 
         // Check if player can receive reward today.
@@ -10948,8 +11207,8 @@ public final class Player extends Playable {
             getAccountVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
             getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
         } else {
-            getVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
-            getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
+            setAttendanceDate(nextReward.getTimeInMillis());
+            setAttendanceIndex(rewardIndex);
         }
     }
 

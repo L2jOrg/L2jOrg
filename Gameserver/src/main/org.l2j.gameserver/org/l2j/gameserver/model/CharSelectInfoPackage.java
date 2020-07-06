@@ -18,9 +18,12 @@
  */
 package org.l2j.gameserver.model;
 
+import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
+import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.variables.PlayerVariables;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * Used to Store data sent to Client for Character.<br>
@@ -30,7 +33,7 @@ import org.l2j.gameserver.model.variables.PlayerVariables;
  */
 public class CharSelectInfoPackage {
     private final int[][] _paperdoll;
-    private final PlayerVariables _vars;
+    private final PlayerVariableData _vars;
     private String _name;
     private int _objectId = 0;
     private long _exp = 0;
@@ -72,7 +75,12 @@ public class CharSelectInfoPackage {
         setObjectId(objectId);
         _name = name;
         _paperdoll = PlayerInventory.restoreVisibleInventory(objectId);
-        _vars = new PlayerVariables(_objectId);
+        PlayerVariableData vars = getDAO(PlayerVariablesDAO.class).findById(objectId);
+        if (vars == null) {
+            _vars = PlayerVariableData.init(objectId);
+        } else {
+            _vars = vars;
+        }
     }
 
     /**
@@ -165,7 +173,7 @@ public class CharSelectInfoPackage {
     }
 
     public int getFace() {
-        return _vars.getInt("visualFaceId", _face);
+        return _vars.getVisualFaceId();
     }
 
     public void setFace(int face) {
@@ -173,7 +181,7 @@ public class CharSelectInfoPackage {
     }
 
     public int getHairColor() {
-        return _vars.getInt("visualHairColorId", _hairColor);
+        return _vars.getVisualHairColorId();
     }
 
     public void setHairColor(int hairColor) {
@@ -181,7 +189,7 @@ public class CharSelectInfoPackage {
     }
 
     public int getHairStyle() {
-        return _vars.getInt("visualHairId", _hairStyle);
+        return _vars.getVisualHairId();
     }
 
     public void setHairStyle(int hairStyle) {
@@ -329,11 +337,11 @@ public class CharSelectInfoPackage {
     }
 
     public boolean isHairAccessoryEnabled() {
-        return _vars.getBoolean(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, true);
+        return _vars.isHairAccessoryEnabled();
     }
 
     public int getVitalityItemsUsed() {
-        return _vars.getInt(PlayerVariables.VITALITY_ITEMS_USED_VARIABLE_NAME, 0);
+        return _vars.getVitalityItemsUsed();
     }
 
     public boolean isNoble() {

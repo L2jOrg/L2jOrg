@@ -64,17 +64,17 @@ public final class TeleportToRaceTrack extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player) {
 		if (npc.getId() == RACE_MANAGER) {
-			final int returnId = player.getVariables().getInt(MONSTER_RETURN, -1);
+			final int returnId = player.getMonsterReturn();
 			if (returnId > 30000) {
 				player.teleToLocation(TELEPORTER_LOCATIONS.get(returnId));
-				player.getVariables().remove(MONSTER_RETURN);
+				player.setMonsterReturn(-1);
 			} else {
 				player.teleToLocation(TELEPORTER_LOCATIONS.get(30059)); // Dion
 			}
 		}
 		else {
 			player.teleToLocation(RACE_TRACK_TELEPORT);
-			player.getVariables().set(MONSTER_RETURN, npc.getId());
+			player.setMonsterReturn(npc.getId());
 		}
 		return super.onTalk(npc, player);
 	}

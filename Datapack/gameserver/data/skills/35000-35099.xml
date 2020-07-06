@@ -7,11 +7,18 @@
             <cast-range initial="400"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
-            <effect-range initial="-1"/>
+            <effect-range initial="800"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="TARGET"/>
+		<abnormal type="PRESERVE_ABNORMAL">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="NoblesseBless"/>
+        </effects>
     </skill>
     <skill id="35001" name="Fire Dragon's Protection" action="A1">
         <!-- Fully restores a dying character. Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
@@ -20,11 +27,20 @@
             <cast-range initial="400"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
-            <effect-range initial="-1"/>
+            <effect-range initial="800"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="TARGET"/>
+		<abnormal type="RESURRECTION_SPECIAL">
+            <level initial="2"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="ResurrectionSpecial">
+                <power initial="100.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="35002" name="Earth Dragon Breath" debuff="true" action="A1">
         <!-- For 15 seconds, Atk. Spd. is decreased by 50%% and Casting Spd. is decreased by 50%%. -->
@@ -47,9 +63,24 @@
             <effect-point initial="438"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="HERO_BUFF" visual="ULTIMATE_DEFENCE">
+            <level initial="3"/>
+            <time initial="15"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="3600.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="3240.0"/>
+            </stat-modify>
+            <resist-dispel-by-category category="BUFF">
+                <power initial="80.0"/>
+            </resist-dispel-by-category>            
+        </effects>
     </skill>
     <skill id="35004" name="Earth Dragon Pendant">
         <!-- M. Def. +9. -->
@@ -57,6 +88,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="9.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="35005" name="Earth Dragon Pendant +1" max-level="11">
         <!--
@@ -76,6 +112,64 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="DAMAGE_TAKEN">
+				<power>
+                    <value level="5">-3.0</value>
+                    <value level="6">-5.0</value>
+                    <value level="7">-10.0</value>
+                    <value level="8">-20.0</value>
+                </power>
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power>
+                    <value level="4">100.0</value>
+                    <value level="5">150.0</value>
+                    <value level="6">200.0</value>
+                    <value level="7">300.0</value>
+                    <value level="8">400.0</value>
+                    <value level="9">500.0</value>
+                    <value level="11">600.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+                <power>
+                    <value level="4">40.0</value>
+                    <value level="5">50.0</value>
+                    <value level="6">60.0</value>
+                    <value level="7">90.0</value>
+                    <value level="8">120.0</value>
+                    <value level="9">150.0</value>
+                    <value level="11">300.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
+                <power>
+                    <value level="6">200.0</value>
+                    <value level="7">300.0</value>
+                    <value level="8">400.0</value>
+                    <value level="9">500.0</value>
+                    <value level="11">600.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="10.0">
+                    <value level="2">12.0</value>
+                    <value level="3">13.0</value>
+                    <value level="4">14.0</value>
+                    <value level="5">15.0</value>
+                    <value level="6">16.0</value>
+                    <value level="7">17.0</value>
+                    <value level="8">18.0</value>
+                    <value level="9">20.0</value>
+                    <value level="10">21.0</value>
+                    <value level="11">24.0</value>
+                </power>
+            </stat-modify>                                        
+			<stat-modify mode="PER" stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power initial="10.0"/>               
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="35006" name="Fire Dragon Pendant">
         <!-- M. Def. +9. -->
@@ -108,30 +202,43 @@
         </attributes>
         <target/>
         <effects>
+			<stat-modify stat="PHYSICAL_ATTACK">
+                <power>
+                    <value level="5">10.0</value>
+                    <value level="6">20.0</value>
+                    <value level="7">30.0</value>
+                    <value level="8">40.0</value>
+                    <value level="9">50.0</value>
+                    <value level="10">60.0</value>
+                    <value level="11">80.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify stat="MAGIC_ATTACK">
+                <power>
+                    <value level="5">10.0</value>
+                    <value level="6">20.0</value>
+                    <value level="7">30.0</value>
+                    <value level="8">40.0</value>
+                    <value level="9">50.0</value>
+                    <value level="10">60.0</value>
+                    <value level="11">80.0</value>
+                </power>
+            </stat-modify>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power initial="10.0">
-                    <value level="2">0.0</value>
+                    <value level="2">12.0</value>
                     <value level="3">13.0</value>
-                    <value level="3">0.0</value>
                     <value level="4">14.0</value>
-                    <value level="4">0.0</value>
                     <value level="5">15.0</value>
-                    <value level="5">10.0</value>
                     <value level="6">16.0</value>
-                    <value level="6">20.0</value>
                     <value level="7">17.0</value>
-                    <value level="7">30.0</value>
                     <value level="8">18.0</value>
-                    <value level="8">40.0</value>
                     <value level="9">20.0</value>
-                    <value level="9">50.0</value>
                     <value level="10">21.0</value>
-                    <value level="10">60.0</value>
-                    <value level="11">21.0</value>
-                    <value level="11">60.0</value>
+                    <value level="11">24.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power>
                     <value level="4">2.0</value>
                     <value level="5">5.0</value>
@@ -141,7 +248,7 @@
                     <value level="9">30.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power>
                     <value level="4">2.0</value>
                     <value level="5">5.0</value>
@@ -150,26 +257,21 @@
                     <value level="8">25.0</value>
                     <value level="9">30.0</value>
                 </power>
-            </stat-modify>
-            <stat-modify stat="PHYSICAL_DEFENCE">
-                <power>
-                    <value level="5">10.0</value>
-                    <value level="6">20.0</value>
-                    <value level="7">30.0</value>
-                    <value level="8">40.0</value>
-                    <value level="9">50.0</value>
-                    <value level="10">60.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            </stat-modify>                       
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="8">5.0</value>
+                    <value level="11">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="8">5.0</value>
+                    <value level="11">10.0</value>
                 </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power initial="10.0"/>               
             </stat-modify>
         </effects>
     </skill>
@@ -827,7 +929,7 @@
                     <value level="21">100.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power>
                     <value level="3">3.0</value>
                     <value level="5">4.0</value>
@@ -1059,6 +1161,23 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>                      
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+                <power initial="7.0"/>
+            </stat-modify>
+			<stat-modify stat="ACCURACY">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
+                <power initial="7000.0"/>
+            </stat-modify> 
+        </effects>
     </skill>
     <skill id="35029" name="Item Skill: Might in Duel - PvE" max-level="5">
         <!--
@@ -1069,6 +1188,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="3.0">
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+                <power initial="3.0">
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>          
+		</effects>
     </skill>
     <skill id="35030" name="Item Skill: Defense in Duel - PvP" max-level="5">
         <!--
@@ -1079,6 +1210,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="3.0">
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>           
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>
+		</effects>
     </skill>
     <skill id="35031" name="Item Skill: Defense in Duel - PvE" max-level="5">
         <!--
@@ -1089,6 +1232,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="3.0">
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>           
+		</effects>
     </skill>
     <skill id="35032" name="Item Skill: Enhance" max-level="5">
         <!--
@@ -1137,6 +1292,22 @@
             <mana initial="48"/>
         </consume>
         <target/>
+		<abnormal type="ATTACK_SPEED_UP_BOW">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="36.0">
+                    <value level="2">39.0</value>
+                    <value level="3">80.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="35034" name="Item Skill: Fast Spell Casting" max-level="3" action="A1">
         <!--
@@ -1160,11 +1331,27 @@
             <mana initial="48"/>
         </consume>
         <target/>
+		<abnormal type="CASTING_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+		<effects>
+            <stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="21.0">
+                    <value level="2">26.0</value>
+                    <value level="3">60.0</value>                    
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="35035" name="Item Skill: Cleanse" action="A1">
+    <skill id="35035" name="Item Skill: Cleanse" action="A1" type="MAGIC">
         <!-- Skill: Cancels debuffs. -->
         <icon initial="icon.skill3123"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
             <cast-range initial="600"/>
             <reuse initial="300000"/>
             <effect-point initial="440"/>
@@ -1175,7 +1362,12 @@
         <consume>
             <mana initial="48"/>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <effects>
+            <dispel-by-category category="DEBUFF" max="10">
+                <power initial="100.0"/>
+            </dispel-by-category>
+        </effects>
     </skill>
     <skill id="35036" name="Warrior's Talisman - Attack">
         <!-- PvE Damage +3%%, P. Critical Damage/M. Critical Damage +20, P. Skill Power/M. Skill Power +2%%, and P. Accuracy/M. Accuracy +1. -->
@@ -1258,7 +1450,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE" stat-add="PVP_PHYSICAL_ATTACK_DAMAGE">
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
                 <power initial="3.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
@@ -1345,10 +1537,10 @@
             <enlarge-slot type="INVENTORY_NORMAL">
                 <power initial="2.0"/>
             </enlarge-slot>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="1.24"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.83"/>
             </stat-modify>
             <stat-modify stat="REGENERATE_CP_RATE">
@@ -1369,10 +1561,10 @@
             <enlarge-slot type="INVENTORY_NORMAL">
                 <power initial="3.0"/>
             </enlarge-slot>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="1.47"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.98"/>
             </stat-modify>
             <stat-modify stat="REGENERATE_CP_RATE">
@@ -1402,10 +1594,10 @@
             <enlarge-slot type="INVENTORY_NORMAL">
                 <power initial="4.0"/>
             </enlarge-slot>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="1.7"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="1.13"/>
             </stat-modify>
             <stat-modify stat="REGENERATE_CP_RATE">
@@ -1435,10 +1627,10 @@
             <enlarge-slot type="INVENTORY_NORMAL">
                 <power initial="5.0"/>
             </enlarge-slot>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="1.92"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="1.28"/>
             </stat-modify>
             <stat-modify stat="REGENERATE_CP_RATE">
@@ -1478,20 +1670,23 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-        <effects>
-            <base-stat type="CON">
-                <power initial="1.0"/>
-            </base-stat>
+        <effects>			           
+			<enlarge-slot type="INVENTORY_NORMAL">
+                <power initial="6.0"/>
+            </enlarge-slot>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
                 <power initial="7000.0"/>
             </stat-modify>
-            <enlarge-slot type="INVENTORY_NORMAL">
-                <power initial="6.0"/>
-            </enlarge-slot>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+            <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="2.31"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="1.54"/>
             </stat-modify>
             <stat-modify stat="REGENERATE_CP_RATE">
@@ -1506,8 +1701,14 @@
             <vital-stat-modify mode="PER" stat="MAX_CP">
                 <power initial="15.0"/>
             </vital-stat-modify>
-            <stat-modify stat="REFLECT_DAMAGE_PERCENT">
-                <power initial="6.0"/>
+			<stat-modify stat="ADDITIONAL_POTION_HP">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-6.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVE_DAMAGE_TAKEN">
+                <power initial="-6.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1521,16 +1722,19 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
                 <power initial="7000.0"/>
             </stat-modify>
             <enlarge-slot type="INVENTORY_NORMAL">
                 <power initial="6.0"/>
             </enlarge-slot>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="2.31"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="1.54"/>
             </stat-modify>
             <stat-modify stat="REGENERATE_CP_RATE">
@@ -1551,9 +1755,9 @@
             <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat-modify stat="REFLECT_DAMAGE_PERCENT">
-                <power initial="6.0"/>
-            </stat-modify>
+			<stat-modify stat="ADDITIONAL_POTION_HP">
+                <power initial="100.0"/>
+            </stat-modify>          
         </effects>
     </skill>
 </list>

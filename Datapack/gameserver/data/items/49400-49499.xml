@@ -937,9 +937,9 @@
 
 	<weapon id="49495" name="Warrior’s Dualsword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_r_dualsword_i00">
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="2460" commission-type="OTHER_ITEM" duration="21600" enchant-enabled="false"/>
+		<attributes weight="2460" commission-type="DUALSWORD" duration="21600" enchant-enabled="false"/>
 		<crystal />
-		<damage radius="40" angle="240"/>
+		<damage radius="44" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="51.0"/>

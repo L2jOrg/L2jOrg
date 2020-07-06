@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/LCoinShop.xsd" >
-    <!-- 270 Prot, Roff -->
     <product id="10001" category="Equip">
-        <ingredient id="91663" count="5"/>
+        <ingredient id="91663" count="1"/>
         <production id="92020"/>
     </product>
     <product id="10002" category="Equip">
@@ -14,7 +13,7 @@
          <production id="90311"/>
      </product>
      <product id="10004" category="Equip">
-         <ingredient id="91663" count="6"/>
+         <ingredient id="91663" count="1"/>
          <production id="9590"/>
      </product>
      <product id="10005" category="Equip">
@@ -97,8 +96,8 @@
          <ingredient id="91663" count="1"/>
          <production id="32250"/>
      </product>
-     <product id="10025" category="Other" limitPerDay="500">
-         <ingredient id="57" count="500"/>
+     <product id="10025" category="Other">
+         <ingredient id="91663" count="1"/>
          <production id="3031"/>
      </product>
      <product id="10026" category="Other">

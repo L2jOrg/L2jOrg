@@ -3384,6 +3384,9 @@
                     <value level="2">10.0</value>
                 </power>
             </stat-modify>
+			<magic-cost>
+                <power initial="-10.0"/>
+            </magic-cost>
         </effects>
     </skill>
     <skill id="1075" name="Peace" max-level="15" action="A1" type="MAGIC">

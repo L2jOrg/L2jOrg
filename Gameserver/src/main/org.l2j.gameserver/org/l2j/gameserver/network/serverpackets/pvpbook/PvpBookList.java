@@ -40,7 +40,6 @@ public class PvpBookList extends ServerPacket {
     protected void writeImpl(GameClient client)  {
         writeId(ServerExPacketId.EX_PVPBOOK_LIST);
         var player = client.getPlayer();
-        player.getVariables();
 
         writeInt(player.getRevengeUsableLocation());
         writeInt(player.getRevengeUsableTeleport());

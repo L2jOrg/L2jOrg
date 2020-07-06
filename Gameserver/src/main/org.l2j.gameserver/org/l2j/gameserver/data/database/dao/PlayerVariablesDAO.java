@@ -32,4 +32,13 @@ public interface PlayerVariablesDAO extends DAO<PlayerVariableData> {
 
     @Query("UPDATE player_variables SET revenge_locations = 5, revenge_teleports = 5")
     void resetRevengeData();
+
+    @Query("UPDATE player_variables SET world_chat_used = 1")
+    void resetWorldChatPoint();
+
+    @Query("UPDATE player_variables SET extend_drop = ''")
+    void resetExtendDrop();
+
+    @Query("UPDATE player_variables SET claimed_clan_rewards = 0")
+    void resetClaimedClanReward();
 }

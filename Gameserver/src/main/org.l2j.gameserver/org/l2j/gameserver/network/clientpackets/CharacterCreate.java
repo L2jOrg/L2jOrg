@@ -155,8 +155,6 @@ public final class CharacterCreate extends ClientPacket {
             character.setCreateDate(LocalDate.now());
 
             newChar = Player.create(character, template);
-
-
         }
 
         if(isNull(newChar)) {

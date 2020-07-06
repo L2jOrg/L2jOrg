@@ -81,11 +81,17 @@ public class PlayerData {
     @Column("title_color")
     private int titleColr;
 
+    private double maxHp;
+
     @Column("curHp")
     private double currentHp;
 
+    private double maxCp;
+
     @Column("curCp")
     private double currentCp;
+
+    private double maxMp;
 
     @Column("curMp")
     private double currentMp;
@@ -93,6 +99,7 @@ public class PlayerData {
     @Column("base_class")
     private int baseClass;
 
+    private long deletetime;
     private int apprentice;
     private int sponsor;
     private int race;
@@ -270,6 +277,10 @@ public class PlayerData {
         return titleColr;
     }
 
+    public double getMaxtHp() {
+        return maxHp;
+    }
+
     public double getCurrentHp() {
         return currentHp;
     }
@@ -278,12 +289,24 @@ public class PlayerData {
         return currentCp;
     }
 
+    public double getMaxtCp() {
+        return maxCp;
+    }
+
     public double getCurrentMp() {
         return currentMp;
     }
 
+    public double getMaxtMp() {
+        return maxMp;
+    }
+
     public int getBaseClass() {
         return baseClass;
+    }
+
+    public long getDeleteTime() {
+        return deletetime;
     }
 
     public void setBaseClass(int classId) {

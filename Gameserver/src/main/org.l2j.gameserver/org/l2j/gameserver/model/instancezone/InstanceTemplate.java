@@ -43,7 +43,6 @@ import org.l2j.gameserver.model.instancezone.conditions.ConditionGroupMin;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -308,11 +307,10 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
                 break;
             }
             case ORIGIN: {
-                final PlayerVariables vars = player.getVariables();
-                final int[] loc = vars.getIntArray("INSTANCE_ORIGIN", ";");
+                final int[] loc = player.getInstanceOrigin();
                 if (loc.length == 3) {
                     location = new Location(loc[0], loc[1], loc[2]);
-                    vars.remove("INSTANCE_ORIGIN");
+                    player.setInstanceOrigin("");
                 }
                 break;
             }

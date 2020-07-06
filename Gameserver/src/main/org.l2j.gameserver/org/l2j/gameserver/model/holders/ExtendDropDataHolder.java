@@ -49,7 +49,7 @@ public class ExtendDropDataHolder {
         if (_conditions.isEmpty() || _conditions.stream().allMatch(cond -> cond.test(player, npc))) {
             _items.forEach(i ->
             {
-                final long currentAmount = player.getVariables().getExtendDropCount(_id);
+                final long currentAmount = player.getExtendDropCount(_id);
                 if ((Rnd.nextDouble() < i.getChance()) && (currentAmount < i.getMaxCount())) {
                     boolean sendMessage = true;
                     final long newAmount = currentAmount + i.getCount();
@@ -61,7 +61,7 @@ public class ExtendDropDataHolder {
                         }
                     }
                     player.addItem("ExtendDrop", i.getId(), i.getCount(), player, sendMessage);
-                    player.getVariables().updateExtendDrop(_id, newAmount);
+                    player.updateExtendDrop(_id, newAmount);
                 }
             });
         }

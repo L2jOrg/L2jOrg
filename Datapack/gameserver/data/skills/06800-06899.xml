@@ -1817,7 +1817,7 @@
                     <value level="3">50.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power>
                     <value level="3">20.0</value>
                 </power>

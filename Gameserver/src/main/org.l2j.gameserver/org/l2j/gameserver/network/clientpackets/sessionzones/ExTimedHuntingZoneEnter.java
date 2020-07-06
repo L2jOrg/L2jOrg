@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.clientpackets.sessionzones;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
@@ -77,7 +76,7 @@ public class ExTimedHuntingZoneEnter extends ClientPacket {
 		}
 
 		final long currentTime = System.currentTimeMillis();
-		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
+		long endTime = player.getHuntingZoneResetTime(_zoneId);
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + 3600000;
@@ -104,7 +103,7 @@ public class ExTimedHuntingZoneEnter extends ClientPacket {
 				}
 			}
 
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, endTime);
+			player.setHuntingZoneResetTime(_zoneId, endTime);
 			player.startTimedHuntingZone(_zoneId, endTime - currentTime);
 		}
 		else

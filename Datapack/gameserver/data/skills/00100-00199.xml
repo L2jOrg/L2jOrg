@@ -1049,7 +1049,7 @@
         <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK_RANGE" stat-add="PHYSICAL_ATTACK_RANGE">
+            <stat-modify stat="PHYSICAL_ATTACK_RANGE">
                 <power initial="200.0">
                     <value level="2">400.0</value>
                 </power>

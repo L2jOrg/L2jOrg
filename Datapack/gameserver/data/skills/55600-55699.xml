@@ -1004,10 +1004,10 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">

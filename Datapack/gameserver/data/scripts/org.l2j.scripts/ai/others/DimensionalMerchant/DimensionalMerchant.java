@@ -19,6 +19,7 @@
 package ai.others.DimensionalMerchant;
 
 import ai.AbstractNpcAI;
+import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -32,6 +33,8 @@ import org.l2j.gameserver.network.serverpackets.PackageToList;
 import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 
+import javax.swing.text.html.HTMLDocument;
+
 /**
  * Dimensional Merchant AI.
  * @author Mobius
@@ -42,6 +45,13 @@ public class DimensionalMerchant extends AbstractNpcAI
     private static final int MERCHANT = 32478; // Dimensional Merchant
     // Others
     private static final int ATTENDANCE_REWARD_MULTISELL = 3247801;
+    private static final int HAIR_MULTISELL = 4706;
+    private static final int TICKET_MULTISELL = 4707;
+    private static final int ENHANCEMENT_MULTISELL = 567;
+    private static final int CLOAK_MULTISELL = 4669;
+    private static final int HERO_MULTISELL = 4680;
+    private static final int WEAPON_D_MULTISELL = 4037;
+    private static final int WEAPON_C_MULTISELL = 4038;
     private static final String COMMAND_BYPASS = "Quest DimensionalMerchant ";
 
     private DimensionalMerchant()
@@ -102,6 +112,35 @@ public class DimensionalMerchant extends AbstractNpcAI
                 MultisellData.getInstance().separateAndSend(ATTENDANCE_REWARD_MULTISELL, player, null, false);
                 break;
             }
+            case "hair":{
+                MultisellData.getInstance().separateAndSend(HAIR_MULTISELL, player, null, false);
+                break;
+            }
+            case "ticket":{
+                MultisellData.getInstance().separateAndSend(TICKET_MULTISELL, player, null, false);
+                break;
+            }
+            case "enhancement":{
+                MultisellData.getInstance().separateAndSend(ENHANCEMENT_MULTISELL, player, null, false);
+                break;
+            }
+            case "kingdomcloak":{
+                MultisellData.getInstance().separateAndSend(CLOAK_MULTISELL, player, null, false);
+                break;
+            }
+            case "herosweapon":{
+                MultisellData.getInstance().separateAndSend(HERO_MULTISELL, player, null, false);
+                break;
+            }
+            case "timedweapond":{
+                MultisellData.getInstance().separateAndSend(WEAPON_D_MULTISELL, player, null, false);
+                break;
+            }
+            case "timedweaponc":{
+                MultisellData.getInstance().separateAndSend(WEAPON_C_MULTISELL, player, null, false);
+                break;
+            }
+
         }
         return htmltext;
     }

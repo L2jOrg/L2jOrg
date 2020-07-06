@@ -659,6 +659,9 @@
 			<stat type="MAGICAL_DEFENCE" value="77.0"/>
 			<stat type="MAX_MP" value="30.0"/>
 		</stats>
+		<skills>
+			<skill id="3562" level="4" value="-1"/>  <!-- Queen Ant's Ring -->
+		</skills>
 	</armor>
 
 	<armor id="91379" name="Orfen's Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i04">
@@ -670,6 +673,9 @@
 			<stat type="MAGICAL_DEFENCE" value="103.0"/>
 			<stat type="MAX_MP" value="40.0"/>
 		</stats>
+		<skills>
+			<skill id="3560" level="4" value="-1"/>  <!-- Orfen's Earring -->
+		</skills>
 	</armor>
 
 	<armor id="91380" name="Ring of Core Lv. 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i04">
@@ -681,6 +687,10 @@
 			<stat type="MAGICAL_DEFENCE" value="77.0"/>
 			<stat type="MAX_MP" value="30.0"/>
 		</stats>
+		<skills>
+			<skill id="3563" level="4" value="-1"/>  <!-- Ring of Core -->
+			<skill id="35016" value="-1"/>  <!-- Ring of Core - Special Ability -->
+		</skills>
 	</armor>
 
 	<armor id="91381" name="Baium's Ring Lv. 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i04">
@@ -692,6 +702,9 @@
 			<stat type="MAGICAL_DEFENCE" value="89.0"/>
 			<stat type="MAX_MP" value="35.0"/>
 		</stats>
+		<skills>
+			<skill id="3561" level="15" value="-1"/>  <!-- Damaged Baium's Ring -->
+		</skills>
 	</armor>
 
 	<armor id="91382" name="Zaken's Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i04">
@@ -703,6 +716,9 @@
 			<stat type="MAGICAL_DEFENCE" value="121.0"/>
 			<stat type="MAX_MP" value="45.0"/>
 		</stats>
+		<skills>
+			<skill id="3559" level="15" value="-1"/>  <!-- Damaged Zaken's Earring -->
+		</skills>
 	</armor>
 
 	<armor id="91383" name="Antharas' Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_antaras_i04">
@@ -715,7 +731,7 @@
 			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="15"/>
+			<skill id="3558" level="15" value="-1"/> <!-- Damaged Antharas' Earring -->
 		</skills>
 	</armor>
 

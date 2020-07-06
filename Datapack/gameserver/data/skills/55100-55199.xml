@@ -1262,7 +1262,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="5.0">
                     <value level="2">10.0</value>
                     <value level="3">15.0</value>
@@ -1271,7 +1271,7 @@
                     <value level="6">40.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0">
                     <value level="2">10.0</value>
                     <value level="3">15.0</value>

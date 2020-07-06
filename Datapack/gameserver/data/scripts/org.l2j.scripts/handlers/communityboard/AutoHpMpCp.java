@@ -74,8 +74,26 @@ public class AutoHpMpCp implements ScriptEvent {
         return HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
     }
 
+    private static int getPercentByCommand(Player activeChar, String command) {
+        switch (command) {
+            case "autocp" -> { return activeChar.getAutoCp(); }
+            case "autohp" -> { return activeChar.getAutoHp(); }
+            case "automp" -> { return activeChar.getAutoMp(); }
+        }
+
+        return 0;
+    }
+
+    private static void setPercentByCommand(Player activeChar, String command, int percent)  {
+        switch (command) {
+            case "autocp" -> activeChar.setAutoCp(percent);
+            case "autohp" -> activeChar.setAutoHp(percent);
+            case "automp" -> activeChar.setAutoMp(percent);
+        }
+    }
+
     private static String processCommand(Player activeChar, String command, StringTokenizer params) {
-        if(activeChar.getVariables().getInt(command, 0) > 0) {
+        if(getPercentByCommand(activeChar, command) > 0) {
             List<String> listenedKeys = _listenedPlayer.get(activeChar.getObjectId());
             if (listenedKeys == null) {
                 LOGGER.error("Try to stop non existent command {} for {}", activeChar, command);
@@ -83,8 +101,8 @@ public class AutoHpMpCp implements ScriptEvent {
             }
             _listenedPlayer.get(activeChar.getObjectId()).remove(command);
 
-            activeChar.getVariables().remove(command);
-            activeChar.sendMessage("Auto xP system disabled.");
+            setPercentByCommand(activeChar, command, 0);
+            activeChar.sendMessage(command + " system disabled.");
         } else {
             int percent;
             try {
@@ -103,8 +121,8 @@ public class AutoHpMpCp implements ScriptEvent {
                 _listenedPlayer.put(activeChar.getObjectId(), new ArrayList<>());
             _listenedPlayer.get(activeChar.getObjectId()).add(command);
 
-            activeChar.getVariables().set(command, percent);
-            activeChar.sendMessage("You have enabled an automatic xP recovery. Your xP will automatically recover at a value of " + percent + "% or less.");
+            setPercentByCommand(activeChar, command, percent);
+            activeChar.sendMessage("You have enabled an " + command + " recovery. Your xP will automatically recover at a value of " + percent + "% or less.");
         }
         return "";
     }
@@ -117,7 +135,7 @@ public class AutoHpMpCp implements ScriptEvent {
         if(listenedKeys == null || !listenedKeys.contains("autocp"))
             return;
 
-        int percent = player.getVariables().getInt("autocp", 0);
+        int percent = player.getAutoCp();
         int currentPercent = (int) (player.getCurrentCp() / (player.getMaxCp() / 100.));
         if(percent <= 0 || currentPercent <= 0 || currentPercent > percent)
             return;
@@ -133,7 +151,7 @@ public class AutoHpMpCp implements ScriptEvent {
         if(listenedKeys == null || !listenedKeys.contains("autohp"))
             return;
 
-        int percent = player.getVariables().getInt("autohp", 0);
+        int percent = player.getAutoHp();
         int currentPercent = (int) (player.getCurrentHp() / (player.getMaxHp() / 100.));
         if(percent <= 0 || currentPercent <= 0 || currentPercent > percent)
             return;
@@ -149,7 +167,7 @@ public class AutoHpMpCp implements ScriptEvent {
         if(listenedKeys == null || !listenedKeys.contains("automp"))
             return;
 
-        int percent = player.getVariables().getInt("automp", 0);
+        int percent = player.getAutoMp();
         int currentPercent = (int) (player.getCurrentMp() / (player.getMaxMp() / 100.));
         if(percent <= 0 || currentPercent <= 0 || currentPercent > percent)
             return;

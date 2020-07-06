@@ -19,7 +19,6 @@
 package handlers.effecthandlers;
 
 
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
@@ -28,7 +27,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneList;
 
 /**
@@ -61,7 +59,7 @@ public class AddHuntingTime extends AbstractEffect
 		}
 		
 		final long currentTime = System.currentTimeMillis();
-		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
+		long endTime = player.getHuntingZoneResetTime(_zoneId);
 		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_TIME))
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, false);
@@ -72,7 +70,7 @@ public class AddHuntingTime extends AbstractEffect
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
 			endTime = _time + player.getTimedHuntingZoneRemainingTime();
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, currentTime + endTime);
+			player.setHuntingZoneResetTime(_zoneId, currentTime + endTime);
 			player.startTimedHuntingZone(_zoneId, endTime);
 		}
 		else
@@ -85,7 +83,7 @@ public class AddHuntingTime extends AbstractEffect
 			{
 				endTime = currentTime;
 			}
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, endTime + _time);
+			player.setHuntingZoneResetTime(_zoneId,  endTime + _time);
 		}
 		
 		player.sendPacket(new TimedHuntingZoneList(player));

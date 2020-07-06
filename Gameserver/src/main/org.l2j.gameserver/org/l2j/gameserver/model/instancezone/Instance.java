@@ -651,7 +651,7 @@ public final class Instance implements IIdentifiable, INamable {
 
                 // Set origin return location if enabled
                 if (_template.getExitLocationType() == InstanceTeleportType.ORIGIN) {
-                    player.getVariables().set("INSTANCE_ORIGIN", player.getX() + ";" + player.getY() + ";" + player.getZ());
+                    player.setInstanceOrigin(player.getX() + ";" + player.getY() + ";" + player.getZ());
                 }
 
                 // Remove player buffs
@@ -691,7 +691,7 @@ public final class Instance implements IIdentifiable, INamable {
     public void onPlayerLogout(Player player) {
         removePlayer(player);
         if (Config.RESTORE_PLAYER_INSTANCE) {
-            player.getVariables().set("INSTANCE_RESTORE", _id);
+            player.setInstanceRestore(_id);
         } else {
             final Location loc = getExitLocation(player);
             if (loc != null) {

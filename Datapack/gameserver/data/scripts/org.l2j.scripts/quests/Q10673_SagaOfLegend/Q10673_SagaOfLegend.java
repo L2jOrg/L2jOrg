@@ -305,7 +305,7 @@ public class Q10673_SagaOfLegend extends Quest
 		}
 		
 		// Avoid reward more than once.
-		if (player.getVariables().getBoolean("ITEMS_REWARDED", false))
+		if (player.isItemsRewarded())
 		{
 			return;
 		}
@@ -313,7 +313,7 @@ public class Q10673_SagaOfLegend extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
-			player.getVariables().set("ITEMS_REWARDED", true);
+			player.setItemsRewarded(true);
 			
 			switch (player.getRace())
 			{

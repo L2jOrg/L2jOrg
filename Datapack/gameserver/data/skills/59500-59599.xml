@@ -591,6 +591,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="6.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59560" name="Dragon Pendant - Attack Type Lv.  1 +1" max-level="5">
         <!--
@@ -604,6 +609,58 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="7.0">
+                    <value level="2">8.0</value>
+                    <value level="3">9.0</value>
+                    <value level="4">10.0</value>
+                    <value level="5">12.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power>
+                    <value level="3">5.0</value>
+                    <value level="5">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power>
+                    <value level="3">5.0</value>
+                    <value level="5">10.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59561" name="Dragon Pendant - Attack Type Lv.  2">
         <!-- M. Def. +15, XP/SP Gain +10%, P./M. Damage Received -2%, Atk. Spd. +2%. -->
@@ -611,6 +668,38 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="15.0"/>                 
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+               <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="10.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="2.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59562" name="Dragon Pendant - Attack Type Lv.  2 +1" max-level="5">
         <!--
@@ -624,6 +713,83 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="2.0">                   
+                    <value level="5">3.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power>
+                    <value level="5">2.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power>
+                    <value level="5">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="16.0">
+                    <value level="2">17.0</value>
+                    <value level="3">18.0</value>
+                    <value level="4">19.0</value>
+                    <value level="5">21.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="11.0">
+                    <value level="2">13.0</value>
+                    <value level="3">13.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="11.0">
+                    <value level="2">13.0</value>
+                    <value level="3">13.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59563" name="Dragon Pendant - Attack Type Lv.  3">
         <!-- M. Def. +25, XP/SP Gain +30%, P./M. Damage Received -7%, Atk. Spd. +3%, P. Atk. +5%, P. Critical Damage +5%, Max HP +100, Max MP +50. -->
@@ -631,6 +797,50 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="5.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="5.0"/> 
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power initial="100.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="50.0"/>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="25.0"/>                 
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+               <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="7.0"/>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="7.0"/>
+            </stat-modify>			
+        </effects>
     </skill>
     <skill id="59564" name="Dragon Pendant - Attack Type Lv.  3 +1" max-level="5">
         <!--
@@ -644,6 +854,98 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0">
+                    <value level="4">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="5.0">
+                    <value level="4">7.0</value>
+                    <value level="5">8.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="6.0">
+                    <value level="3">7.0</value>
+                    <value level="5">8.0</value>                   
+                </power>
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power initial="100.0">
+                    <value level="2">110.0</value>
+                    <value level="3">110.0</value>
+                    <value level="4">130.0</value>
+                    <value level="5">160.0</value>                   
+                </power>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="50.0">
+                    <value level="2">60.0</value>
+                    <value level="3">60.0</value>
+                    <value level="4">70.0</value>
+                    <value level="5">100.0</value>                   
+                </power>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="25.0">
+                    <value level="2">26.0</value>
+                    <value level="3">26.0</value>
+                    <value level="4">27.0</value>
+                    <value level="5">27.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30.0"/>               
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59565" name="Dragon Pendant - Attack Type Lv.  4">
         <!-- M. Def. +30, XP/SP Gain +40%, P./M. Damage Received -20%, Atk. Spd. +5%, P. Atk. +10%, P. Critical Damage +10%, P. Critical Rate +6%, Max HP +200, Max MP +140. -->
@@ -651,19 +953,166 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="10.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="6.0"/>
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power initial="200.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="140.0"/>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="30.0"/>                 
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+               <power initial="40.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="40.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>			
+        </effects>
     </skill>
     <skill id="59566" name="Dragon Pendant - Attack Type Lv.  4 +1" max-level="5">
         <!--
             level 1: M. Def +32 , XP/SP Gain +40%, Received P./M. Damage -20%, Atk. Spd. +5%, P. Atk. +10%, P. Critical Damage +10%, P. Critical Rate +6%, Max HP +200, Max MP +140.
             level 2: M. Def +34 , XP/SP Gain +40%, Received P./M. Damage -25%, Atk. Spd. +5%, P. Atk. +10%, P. Critical Damage +10%, P. Critical Rate +6%, Max HP +250, Max MP +150.
-            level 3: M. Def. +36, XP/SP Gain +40%, P./M. Damage Received -25%, Atk. Spd. +6%, P. Atk. +10%, P. Critical Damage +10%, P. Critical Rate +6%, Max HP +250, Max MP +160, Damage Reflect Resistance +360.
-            level 4: M. Def. +38, XP/SP Gain +40%, P./M. Damage Received -25%, Atk. Spd. +7%, P. Atk. +10%, P. Critical Damage +10%, P. Critical Rate +10%, Max HP +250, Max MP +180, Damage Reflect Resistance +380.
-            level 5: M. Def. +45, XP/SP Gain +50%, P./M. Damage Received -30%, Atk. Spd. +10%, P. Atk. +15%, P. Critical Damage +15%, P. Critical Rate +15%, Max HP +300, Max MP +200, Damage Reflect Resistance +450.
+            level 3: M. Def. +36, XP/SP Gain +40%, P./M. Damage Received -25%, Atk. Spd. +6%, P. Atk. +10%, P. Critical Damage +10%, P. Critical Rate +6%, Max HP +250, Max MP +160, Damage Reflect Resistance +5%.
+            level 4: M. Def. +38, XP/SP Gain +40%, P./M. Damage Received -25%, Atk. Spd. +7%, P. Atk. +10%, P. Critical Damage +10%, P. Critical Rate +10%, Max HP +250, Max MP +180, Damage Reflect Resistance +10%.
+            level 5: M. Def. +45, XP/SP Gain +50%, P./M. Damage Received -30%, Atk. Spd. +10%, P. Atk. +15%, P. Critical Damage +15%, P. Critical Rate +15%, Max HP +300, Max MP +200, Damage Reflect Resistance +15%.
          -->
         <icon initial="icon.bm_pendant_dragon_i00"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power>
+                    <value level="3">5.0</value>
+                    <value level="4">10.0</value>
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="4">7.0</value>
+                    <value level="5">10.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="10.0">
+                    <value level="5">15.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10.0">
+                    <value level="5">15.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_RATE">
+				<power initial="6.0">
+                    <value level="4">10.0</value>                   
+                    <value level="5">15.0</value>                   
+                </power>
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power initial="200.0">
+                    <value level="2">250.0</value>
+                    <value level="5">300.0</value>                   
+                </power>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="140.0">
+                    <value level="2">150.0</value>
+                    <value level="3">160.0</value>
+                    <value level="4">180.0</value>
+                    <value level="5">200.0</value>                   
+                </power>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="32.0">
+                    <value level="2">34.0</value>
+                    <value level="3">36.0</value>
+                    <value level="4">38.0</value>
+                    <value level="5">45.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="40.0">
+                    <value level="5">50.0</value>                   
+                </power>               
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="40.0">
+                    <value level="5">50.0</value>                   
+                </power> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59567" name="Dragon Pendant - Magic Type Lv.  1">
         <!-- M. Def. +6. -->
@@ -671,6 +1120,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="6.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59568" name="Dragon Pendant - Magic Type Lv.  1 +1" max-level="5">
         <!--
@@ -684,6 +1138,58 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="7.0">
+                    <value level="2">8.0</value>
+                    <value level="3">9.0</value>
+                    <value level="4">10.0</value>
+                    <value level="5">12.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power>
+                    <value level="3">5.0</value>
+                    <value level="5">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power>
+                    <value level="3">5.0</value>
+                    <value level="5">10.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="4">2.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59569" name="Dragon Pendant - Magic Type Lv.  2">
         <!-- M. Def. +15, XP/SP Gain +10%, P./M. Damage Received -2%, Casting Spd. +2%. -->
@@ -691,6 +1197,38 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="15.0"/>                 
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+               <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="10.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="2.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59570" name="Dragon Pendant - Magic Type Lv.  2 +1" max-level="5">
         <!--
@@ -704,6 +1242,83 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="2.0">                   
+                    <value level="5">3.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power>
+                    <value level="5">2.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power>
+                    <value level="5">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="16.0">
+                    <value level="2">17.0</value>
+                    <value level="3">18.0</value>
+                    <value level="4">19.0</value>
+                    <value level="5">21.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="11.0">
+                    <value level="2">13.0</value>
+                    <value level="3">13.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="11.0">
+                    <value level="2">13.0</value>
+                    <value level="3">13.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+                    <value level="3">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59571" name="Dragon Pendant - Magic Type Lv.  3">
         <!-- M. Def. +25, XP/SP Gain +30%, P./M. Damage Received -7%, Casting Spd. +3%, M. Atk. +5%, M. Critical Damage +5%, Max HP +100, Max MP +50. -->
@@ -711,6 +1326,50 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="3.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="5.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="5.0"/> 
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power initial="100.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="50.0"/>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="25.0"/>                 
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+               <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="7.0"/>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="7.0"/>
+            </stat-modify>			
+        </effects>
     </skill>
     <skill id="59572" name="Dragon Pendant - Magic Type Lv.  3 +1" max-level="5">
         <!--
@@ -724,6 +1383,98 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="3.0">
+                    <value level="4">4.0</value>
+                    <value level="5">5.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="5.0">
+                    <value level="4">7.0</value>
+                    <value level="5">8.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="6.0">
+                    <value level="3">7.0</value>
+                    <value level="5">8.0</value>                   
+                </power>
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power initial="100.0">
+                    <value level="2">110.0</value>
+                    <value level="3">110.0</value>
+                    <value level="4">130.0</value>
+                    <value level="5">160.0</value>                   
+                </power>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="50.0">
+                    <value level="2">60.0</value>
+                    <value level="3">60.0</value>
+                    <value level="4">70.0</value>
+                    <value level="5">100.0</value>                   
+                </power>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="25.0">
+                    <value level="2">26.0</value>
+                    <value level="3">26.0</value>
+                    <value level="4">27.0</value>
+                    <value level="5">27.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30.0"/>               
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59573" name="Dragon Pendant - Magic Type Lv.  4">
         <!-- M. Def. +30, XP/SP Gain +40%, P./M. Damage Received -20%, Casting Spd. +5%, M. Atk. +10%, M. Critical Damage +10%, M. Critical Rate +6%, Max HP +200, Max MP +140. -->
@@ -731,69 +1482,258 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10.0"/> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="6.0"/>
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power initial="200.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="140.0"/>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="30.0"/>                 
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+               <power initial="40.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="40.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>			
+        </effects>
     </skill>
     <skill id="59574" name="Dragon Pendant - Magic Type Lv.  4 +1" max-level="5">
         <!--
             level 1: M. Def +32 , XP/SP Gain +40%, Received P./M. Damage -20%, Casting Spd. +5%, M. Atk. +10%, M. Critical Damage +10%, M. Critical Rate +6%, Max HP +200, Max MP +140.
             level 2: M. Def +34 , XP/SP Gain +40%, Received P./M. Damage -25%, Casting Spd. +5%, M. Atk. +10%, M. Critical Damage +10%, M. Critical Rate +6%, Max HP +250, Max MP +150.
-            level 3: M. Def. +36, XP/SP Gain +40%, P./M. Damage Received -25%, Casting Spd. +6%, M. Atk. +10%, M. Critical Damage +10%, M. Critical Rate +6%, Max HP +250, Max MP +160, Damage Reflect Resistance +360.
-            level 4: M. Def. +38, XP/SP Gain +40%, P./M. Damage Received -25%, Casting Spd. +7%, M. Atk. +10%, M. Critical Damage +10%, M. Critical Rate +10%, Max HP +250, Max MP +180, Damage Reflect Resistance +380.
-            level 5: M. Def. +45, XP/SP Gain +50%, P./M. Damage Received -30%, Casting Spd. +10%, M. Atk. +15%, M. Critical Damage +15%, M. Critical Rate +15%, Max HP +300, Max MP +200, Damage Reflect Resistance +450.
+            level 3: M. Def. +36, XP/SP Gain +40%, P./M. Damage Received -25%, Casting Spd. +6%, M. Atk. +10%, M. Critical Damage +10%, M. Critical Rate +6%, Max HP +250, Max MP +160, Damage Reflect Resistance +5%.
+            level 4: M. Def. +38, XP/SP Gain +40%, P./M. Damage Received -25%, Casting Spd. +7%, M. Atk. +10%, M. Critical Damage +10%, M. Critical Rate +10%, Max HP +250, Max MP +180, Damage Reflect Resistance +10%.
+            level 5: M. Def. +45, XP/SP Gain +50%, P./M. Damage Received -30%, Casting Spd. +10%, M. Atk. +15%, M. Critical Damage +15%, M. Critical Rate +15%, Max HP +300, Max MP +200, Damage Reflect Resistance +15%.
          -->
         <icon initial="BranchIcon.icon.g_bm_pendant_dragon_m"/>
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power>
+                    <value level="3">5.0</value>
+                    <value level="4">10.0</value>
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="4">7.0</value>
+                    <value level="5">10.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10.0">
+                    <value level="5">15.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10.0">
+                    <value level="5">15.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+				<power initial="6.0">
+                    <value level="4">10.0</value>                   
+                    <value level="5">15.0</value>                   
+                </power>
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+                <power initial="200.0">
+                    <value level="2">250.0</value>
+                    <value level="5">300.0</value>                   
+                </power>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="140.0">
+                    <value level="2">150.0</value>
+                    <value level="3">160.0</value>
+                    <value level="4">180.0</value>
+                    <value level="5">200.0</value>                   
+                </power>
+            </vital-stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="32.0">
+                    <value level="2">34.0</value>
+                    <value level="3">36.0</value>
+                    <value level="4">38.0</value>
+                    <value level="5">45.0</value>                   
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="40.0">
+                    <value level="5">50.0</value>                   
+                </power>               
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="40.0">
+                    <value level="5">50.0</value>                   
+                </power> 
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+				<power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">25.0</value>
+                    <value level="5">30.0</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59575" name="Dragon's Blessing" action="A1">
         <!-- Keeps the target's buffs/debuffs. Dragon's Blessing disappears. -->
         <icon initial="icon.bm_blessing_dragon"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <cast-range initial="400"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
-            <effect-range initial="-1"/>
+            <effect-range initial="800"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="TARGET"/>
+		<abnormal type="PRESERVE_ABNORMAL">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="NoblesseBless"/>
+        </effects>
     </skill>
     <skill id="59576" name="Dragon's Protection" action="A1">
         <!-- Resurrects fully recovered from death. Buffs/debuffs remain at death. Dragon's Protection disappears. -->
         <icon initial="icon.bm_salvation_dragon"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true">
             <cast-range initial="400"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
-            <effect-range initial="-1"/>
+            <effect-range initial="800"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="RESURRECTION_SPECIAL">
+            <level initial="2"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="ResurrectionSpecial">
+                <power initial="100.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="59577" name="Dragon Invocation" action="A1">
         <!-- For 15 seconds, recovers HP by 100 and MP by 50 per second, and increases Speed by 33. -->
         <icon initial="icon.dragon_invocation"/>
-        <attributes property="PHYSIC">
+         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true">
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="FORCE_MEDITATION">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+			<effect name="HealOverTime" ticks="5">
+                <power initial="100.0"/>
+            </effect>
+            <effect name="ManaHealOverTime" ticks="1">
+                <power initial="50.0"/>                
+            </effect>
+            <speed>
+                <power initial="33.0"/>
+            </speed>
+        </effects>
     </skill>
     <skill id="59578" name="Dragon Barrier" action="A1">
         <!-- Creates a barrier for 10 seconds. Becomes invincible to normal hits, skills, and debuffs. -->
         <icon initial="icon.dragon_barrier"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <effect-range initial="-1"/>
             <hit-time initial="2000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="INVINCIBILITY" visual="INVINCIBILITY">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="-1"/>
+        </abnormal>       
+        <effects>
+            <damage-block block-hp="true"/>
+            <effect name="DebuffBlock"/>
+            <resist-dispel-by-category category="ALL">
+                <power initial="100.0"/>
+            </resist-dispel-by-category>
+        </effects>
     </skill>
     <skill id="59579" name="Release Agathion's Seal - Love" action="A1">
         <!-- Removes the Agathion's seal. -->
