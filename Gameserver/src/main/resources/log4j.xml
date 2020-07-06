@@ -6,7 +6,7 @@
     <Appenders>
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout pattern="%highlight{${pattern}}"/>
-            <ThresholdFilter level="all"/>
+            <ThresholdFilter level="info"/>
         </Console>
 
         <RollingFile name="game" filename="logs/game.log" filepattern="logs/$${date:yyyy-MM}/game-%d{dd-MM-yyyy}-%i.log.gz" append="true" >
@@ -41,25 +41,25 @@
     </Appenders>
 
     <Loggers>
-        <Root level="all">
+        <Root level="info">
             <AppenderRef ref="console"/>
         </Root>
-        <Logger name="org.l2j.gameserver" level="debug">
+        <Logger name="org.l2j.gameserver" level="info">
             <AppenderRef ref="game"/>
         </Logger>
-        <Logger name="org.l2j" level="debug">
+        <Logger name="org.l2j" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="org.l2j.gameserver.network" level="debug">
+        <Logger name="org.l2j.gameserver.network" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="com.zaxxer.hikari" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="MySQL" level="debug">
+        <Logger name="MySQL" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="org.ehcache" level="debug">
+        <Logger name="org.ehcache" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="ST_PACKET" level="debug">
