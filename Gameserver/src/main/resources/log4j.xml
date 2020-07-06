@@ -6,7 +6,7 @@
     <Appenders>
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout pattern="%highlight{${pattern}}"/>
-            <ThresholdFilter level="info"/>
+            <ThresholdFilter level="all"/>
         </Console>
 
         <RollingFile name="game" filename="logs/game.log" filepattern="logs/$${date:yyyy-MM}/game-%d{dd-MM-yyyy}-%i.log.gz" append="true" >
@@ -29,7 +29,7 @@
             <ThresholdFilter level="debug"/>
         </RollingFile>
 
-        <RollingFile name="debug" filename="logs/packet_statistics.log" filepattern="logs/$${date:yyyy-MM}/debug-%d{dd-MM-yyyy}-%i.log.gz" append="true" >
+        <RollingFile name="packet_statistics" filename="logs/packet_statistics.log" filepattern="logs/$${date:yyyy-MM}/debug-%d{dd-MM-yyyy}-%i.log.gz" append="true" >
             <PatternLayout pattern="${pattern}" />
             <Policies>
                 <TimeBasedTriggeringPolicy interval="30"/>
@@ -41,29 +41,32 @@
     </Appenders>
 
     <Loggers>
-        <Root level="info">
+        <Root level="all">
             <AppenderRef ref="console"/>
         </Root>
-        <Logger name="org.l2j.gameserver" level="info">
+        <Logger name="org.l2j.gameserver" level="debug">
             <AppenderRef ref="game"/>
         </Logger>
-        <Logger name="org.l2j" level="error">
+        <Logger name="org.l2j" level="debug">
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="org.l2j.gameserver.network" level="error">
+        <Logger name="org.l2j.gameserver.network" level="debug">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="com.zaxxer.hikari" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="MySQL" level="error">
+        <Logger name="MySQL" level="debug">
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="org.ehcache" level="error">
+        <Logger name="org.ehcache" level="debug">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="ST_PACKET" level="debug">
             <AppenderRef ref="packet_statistics"/>
+        </Logger>
+        <Logger name="io.github.joealisson.mmocore" level="error">
+            <AppenderRef ref="game"/>
         </Logger>
     </Loggers>
 </Configuration>

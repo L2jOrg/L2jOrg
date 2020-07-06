@@ -61,7 +61,6 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		"arenachange"
 	};
 	private static final Logger LOGGER = LoggerFactory.getLogger(OlyManager.class);
-	private static final String UNCLAIMED_OLYMPIAD_POINTS_VAR = "UNCLAIMED_OLYMPIAD_POINTS";
 
 	private OlyManager()
 	{
@@ -140,7 +139,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			case "calculatePoints":
 			{
-				if (player.getVariables().getInt(UNCLAIMED_OLYMPIAD_POINTS_VAR, 0) > 0)
+				if (player.getUnclaimedOlympiadPoints() > 0)
 				{
 					htmltext = "OlyManager-calculateEnough.html";
 				}
@@ -154,10 +153,10 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			{
 				if (player.isInventoryUnder80(false))
 				{
-					final int tradePoints = player.getVariables().getInt(UNCLAIMED_OLYMPIAD_POINTS_VAR, 0);
+					final int tradePoints = player.getUnclaimedOlympiadPoints();
 					if (tradePoints > 0)
 					{
-						player.getVariables().remove(UNCLAIMED_OLYMPIAD_POINTS_VAR);
+						player.setUnclaimedOlympiadPoints(0);
 						giveItems(player, Config.ALT_OLY_COMP_RITEM, tradePoints * Config.ALT_OLY_MARK_PER_POINT);
 					}
 				}

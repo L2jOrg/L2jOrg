@@ -20,17 +20,19 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * This class holds the clan members data.
@@ -695,9 +697,7 @@ public class ClanMember {
 
     public void resetBonus() {
         _onlineTime = 0;
-        final PlayerVariables vars = getVariables();
-        vars.set("CLAIMED_CLAN_REWARDS", 0);
-        vars.storeMe();
+        getDAO(PlayerVariablesDAO.class).resetClaimedClanReward();
     }
 
     public int getOnlineStatus() {
@@ -705,20 +705,14 @@ public class ClanMember {
     }
 
     public boolean isRewardClaimed(ClanRewardType type) {
-        final PlayerVariables vars = getVariables();
-        final int claimedRewards = vars.getInt("CLAIMED_CLAN_REWARDS", ClanRewardType.getDefaultMask());
+        final int claimedRewards = _player.getClaimedClanRewards(ClanRewardType.getDefaultMask());
         return (claimedRewards & type.getMask()) == type.getMask();
     }
 
     public void setRewardClaimed(ClanRewardType type) {
-        final PlayerVariables vars = getVariables();
-        int claimedRewards = vars.getInt("CLAIMED_CLAN_REWARDS", ClanRewardType.getDefaultMask());
+        int claimedRewards = _player.getClaimedClanRewards(ClanRewardType.getDefaultMask());
         claimedRewards |= type.getMask();
-        vars.set("CLAIMED_CLAN_REWARDS", claimedRewards);
-        vars.storeMe();
-    }
-
-    private PlayerVariables getVariables() {
-        return _player != null ? _player.getVariables() : new PlayerVariables(_objectId);
+        _player.setClaimedClanRewards(claimedRewards);
+        _player.storeVariables();
     }
 }

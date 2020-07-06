@@ -45,12 +45,10 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStatType;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
@@ -125,12 +123,11 @@ public class EnterWorld extends ClientPacket {
 
         // Restore to instanced area if enabled
         if (Config.RESTORE_PLAYER_INSTANCE) {
-            final PlayerVariables vars = player.getVariables();
             final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
-            if ((instance != null) && (instance.getId() == vars.getInt("INSTANCE_RESTORE", 0))) {
+            if ((instance != null) && (instance.getId() == player.getInstanceRestore())) {
                 player.setInstance(instance);
             }
-            vars.remove("INSTANCE_RESTORE");
+            player.setInstanceRestore(-1);
         }
 
         player.updatePvpTitleAndColor(false);
@@ -362,12 +359,10 @@ public class EnterWorld extends ClientPacket {
         }
 
         // Check if in time limited hunting zone.
-        if (player.isInTimedHuntingZone())
-        {
+        if (player.isInTimedHuntingZone()) {
             final long currentTime = System.currentTimeMillis();
-            final long pirateTombExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 2, 0);
-            if ((pirateTombExitTime > currentTime) && player.isInTimedHuntingZone(2))
-            {
+            final long pirateTombExitTime = player.getHuntingZoneResetTime(2);
+            if ((pirateTombExitTime > currentTime) && player.isInTimedHuntingZone(2)) {
                 player.startTimedHuntingZone(1, pirateTombExitTime - currentTime);
             }
             else

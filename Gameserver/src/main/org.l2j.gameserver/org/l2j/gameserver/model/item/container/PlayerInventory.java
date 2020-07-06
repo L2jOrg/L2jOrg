@@ -19,10 +19,11 @@
 package org.l2j.gameserver.model.item.container;
 
 import io.github.joealisson.primitive.IntCollection;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -44,14 +45,12 @@ import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.model.item.type.EtcItemType.ARROW;
 import static org.l2j.gameserver.model.item.type.EtcItemType.BOLT;
 
@@ -80,20 +79,18 @@ public class PlayerInventory extends Inventory {
 
     public static int[][] restoreVisibleInventory(int objectId) {
         final int[][] paperdoll = new int[InventorySlot.TOTAL_SLOTS][3];
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'")) {
-            statement2.setInt(1, objectId);
-            try (ResultSet invdata = statement2.executeQuery()) {
-                while (invdata.next()) {
-                    final int slot = invdata.getInt("loc_data");
-                    paperdoll[slot][0] = invdata.getInt("object_id");
-                    paperdoll[slot][1] = invdata.getInt("item_id");
-                    paperdoll[slot][2] = invdata.getInt("enchant_level");
-                }
-            }
+        try {
+            List<ItemData> paperDollItems = getDAO(ItemDAO.class).findAllPaperDollItemsByObjectId(objectId);
+            paperDollItems.forEach(paperDollItem -> {
+                final int slot = paperDollItem.getLocData();
+                paperdoll[slot][0] = paperDollItem.getObjectId();
+                paperdoll[slot][1] = paperDollItem.getItemId();
+                paperdoll[slot][2] = paperDollItem.getEnchantLevel();
+            });
         } catch (Exception e) {
             LOGGER.warn("Could not restore inventory: " + e.getMessage(), e);
         }
+
         return paperdoll;
     }
 

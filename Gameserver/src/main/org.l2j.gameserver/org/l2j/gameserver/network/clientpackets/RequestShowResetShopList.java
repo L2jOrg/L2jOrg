@@ -91,9 +91,9 @@ public class RequestShowResetShopList extends ClientPacket {
             }
         }
 
-        player.getVariables().remove("visualHairId");
-        player.getVariables().remove("visualHairColorId");
-        player.getVariables().remove("visualFaceId");
+        player.setVisualHair(0);
+        player.setVisualHairColor(0);
+        player.setVisualFace(0);
 
         player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.SUCCESS));
     }

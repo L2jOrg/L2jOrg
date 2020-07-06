@@ -30,7 +30,6 @@ import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.LuckyGameDataHolder;
 import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -79,8 +78,8 @@ public class RequestLuckyGamePlay extends ClientPacket {
             return;
         }
 
-        int playCount = player.getVariables().getInt(PlayerVariables.FORTUNE_TELLING_VARIABLE, 0);
-        boolean blackCat = player.getVariables().getBoolean(PlayerVariables.FORTUNE_TELLING_BLACK_CAT_VARIABLE, false);
+        int playCount = player.getFortuneTelling();
+        boolean blackCat = player.isFortuneTellingBlackCat();
         final EnumMap<LuckyGameItemType, List<ItemHolder>> rewards = new EnumMap<>(LuckyGameItemType.class);
         for (int i = 0; i < _reading; i++) {
             final double chance = 100 * Rnd.nextDouble();
@@ -155,9 +154,9 @@ public class RequestLuckyGamePlay extends ClientPacket {
 
         player.sendInventoryUpdate(iu);
 
-        player.getVariables().set(PlayerVariables.FORTUNE_TELLING_VARIABLE, playCount >= 50 ? (playCount - 50) : playCount);
+        player.setFortuneTelling(playCount >= 50 ? (playCount - 50) : playCount);
         if (blackCat && (playCount < 50)) {
-            player.getVariables().set(PlayerVariables.FORTUNE_TELLING_BLACK_CAT_VARIABLE, true);
+            player.setFortuneTellingBlackCat(true);
         }
     }
 }
