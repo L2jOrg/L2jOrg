@@ -8584,6 +8584,18 @@ public final class Player extends Playable {
     }
 
     @Override
+    public void teleToLocation(ILocational loc, int randomOffset) {
+        if ((_vehicle != null) && !_vehicle.isTeleporting()) {
+            setVehicle(null);
+        }
+
+        if (isFlyingMounted() && (loc.getZ() < -1005)) {
+            super.teleToLocation(loc.getX(), loc.getY(), -1005, loc.getHeading());
+        }
+        super.teleToLocation(loc, randomOffset);
+    }
+
+    @Override
     public void teleToLocation(ILocational loc, boolean allowRandomOffset) {
         if ((_vehicle != null) && !_vehicle.isTeleporting()) {
             setVehicle(null);
