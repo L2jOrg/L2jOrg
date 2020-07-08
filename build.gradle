@@ -28,7 +28,7 @@ subprojects {
     
     sourceCompatibility = JavaVersion.VERSION_14
     targetCompatibility = JavaVersion.VERSION_14
-    
+
     afterEvaluate {
         compileJava {
             inputs.property("moduleName", moduleName)
@@ -37,7 +37,7 @@ subprojects {
                     '--module-path', classpath.asPath,
                     '-parameters', '--enable-preview'
                 ]
-                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+                options.compilerArgs << "-Xlint:unchecked"
                 classpath = files()
             }
         }
@@ -53,6 +53,7 @@ distTar {
 }
 
 distributions {
+    subprojects.each { distTar.enabled = false}
     main {
         contents {
             from(["Datapack/authserver", "${project(':AuthServer').buildDir}/authserver"])  {

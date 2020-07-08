@@ -86,12 +86,6 @@ public class GameServer {
     public GameServer() throws Exception {
         final var serverLoadStart = Instant.now();
 
-        printSection("Identity Factory");
-        if (!IdFactory.getInstance().isInitialized()) {
-            LOGGER.error("Could not read object IDs from database. Please check your configuration.");
-            throw new Exception("Could not initialize the Identity factory!");
-        }
-
         printSection("World");
         World.init();
 
@@ -110,7 +104,8 @@ public class GameServer {
         printSection("Class Categories");
         CategoryManager.init();
 
-        printSection("Scripts");
+        printSection("Extensions Loaders");
+        ExtensionBoot.loaders();
         ScriptEngineManager.getInstance().executeScriptLoader();
 
         printSection("Spawns");
@@ -258,11 +253,18 @@ public class GameServer {
         printSection("Server Configuration");
         Config.load(); // TODO remove this
 
-        printSection("Scripting Engine");
-        ScriptEngineManager.init();
-
         var settings = getSettings(ServerSettings.class);
+        printSection("Thread Pools");
         ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize());
+
+        printSection("Identity Factory");
+        if (!IdFactory.getInstance().isInitialized()) {
+            LOGGER.error("Could not read object IDs from database. Please check your configuration.");
+            throw new Exception("Could not initialize the Identity factory!");
+        }
+
+        printSection("Extensions Initializers");
+        ExtensionBoot.initializers();
 
         INSTANCE = new GameServer();
 
@@ -326,14 +328,6 @@ public class GameServer {
         }
     }
 
-    private static void printSection(String s) {
-        LOGGER.info("{}=[ {} ]", "-".repeat(64 - s.length()), s);
-    }
-
-    public static GameServer getInstance() {
-        return INSTANCE;
-    }
-
     public ConnectionHandler<GameClient> getConnectionHandler() {
         return connectionHandler;
     }
@@ -345,5 +339,13 @@ public class GameServer {
         final long hours = TimeUnit.MILLISECONDS.toHours(uptime);
         uptime -= TimeUnit.HOURS.toMillis(hours);
         return String.format("%d Days, %d Hours, %d Minutes", days, hours, TimeUnit.MILLISECONDS.toMinutes(uptime));
+    }
+
+    private static void printSection(String s) {
+        LOGGER.info("{}=[ {} ]", "-".repeat(64 - s.length()), s);
+    }
+
+    public static GameServer getInstance() {
+        return INSTANCE;
     }
 }

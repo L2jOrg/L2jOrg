@@ -33,6 +33,7 @@ dependencies {
 
     runtimeOnly 'org.ehcache:ehcache:3.8.1'
     runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.13.3'
+    runtimeOnly project(':Script')
 }
 
 task createVersionFile(dependsOn: processResources) {
@@ -77,6 +78,8 @@ run {
     }
 }
 
+/*run.dependsOn( project(':Script').jar )*/
+
 startScripts {
     inputs.property("moduleName", moduleName)
     doFirst {
@@ -113,4 +116,4 @@ task dist(type: Copy) {
     }
 }
 
-build.finalizedBy dist
+jar.finalizedBy dist

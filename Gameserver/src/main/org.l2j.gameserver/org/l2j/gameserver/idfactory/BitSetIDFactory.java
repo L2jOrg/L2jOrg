@@ -21,6 +21,7 @@ package org.l2j.gameserver.idfactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.util.PrimeFinder;
 
+import java.time.temporal.ChronoUnit;
 import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -38,7 +39,7 @@ public final class BitSetIDFactory extends IdFactory {
     BitSetIDFactory() {
         synchronized (BitSetIDFactory.class) {
             initialize();
-            ThreadPool.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
+            ThreadPool.scheduleAtFixedRate(new BitSetCapacityCheck(), ChronoUnit.HOURS.getDuration(), ChronoUnit.HOURS.getDuration());
         }
         LOGGER.info("{} Identifiers available", freeIds.size());
     }

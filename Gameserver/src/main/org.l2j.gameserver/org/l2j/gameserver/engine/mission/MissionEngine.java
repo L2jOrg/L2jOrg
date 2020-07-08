@@ -20,6 +20,7 @@ package org.l2j.gameserver.engine.mission;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ServiceLoader;
 import java.util.function.Function;
 
 /**
@@ -45,6 +46,7 @@ public final class MissionEngine {
     }
 
     public static void init() {
+        ServiceLoader.load(MissionHandlerFactory.class).forEach(MissionEngine.getInstance()::registerHandler);
         MissionData.init();
     }
 

@@ -25,6 +25,8 @@ import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
+import org.l2j.gameserver.handler.IItemHandler;
+import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.WorldObject;
@@ -56,6 +58,7 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.ServiceLoader;
 import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.*;
@@ -502,6 +505,7 @@ public final class ItemEngine extends GameXmlReader {
     }
 
     public static void init() {
+        ServiceLoader.load(IItemHandler.class).forEach(ItemHandler.getInstance()::registerHandler);
         getInstance().load();
         EnchantItemEngine.init();
         EnchantItemOptionsData.init();
