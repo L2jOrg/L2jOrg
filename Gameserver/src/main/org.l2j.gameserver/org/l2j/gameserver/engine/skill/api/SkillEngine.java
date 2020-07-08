@@ -28,8 +28,7 @@ import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.BasicProperty;
 import org.l2j.gameserver.enums.NextActionType;
-import org.l2j.gameserver.handler.EffectHandler;
-import org.l2j.gameserver.handler.SkillConditionHandler;
+import org.l2j.gameserver.handler.*;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -49,6 +48,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.ServiceLoader;
 import java.util.function.Function;
 import java.util.function.IntConsumer;
 import java.util.stream.Collectors;
@@ -484,6 +484,11 @@ public class SkillEngine extends EffectParser {
     }
 
     public static void init() {
+        ServiceLoader.load(ITargetTypeHandler.class).forEach(TargetHandler.getInstance()::registerHandler);
+        ServiceLoader.load(IAffectObjectHandler.class).forEach(AffectObjectHandler.getInstance()::registerHandler);
+        ServiceLoader.load(IAffectScopeHandler.class).forEach(AffectScopeHandler.getInstance()::registerHandler);
+        ServiceLoader.load(SkillConditionFactory.class).forEach(SkillConditionHandler.getInstance()::registerFactory);
+        ServiceLoader.load(SkillEffectFactory.class).forEach(EffectHandler.getInstance()::registerFactory);
         getInstance().load();
         SkillTreesData.init();
         PetSkillData.init();

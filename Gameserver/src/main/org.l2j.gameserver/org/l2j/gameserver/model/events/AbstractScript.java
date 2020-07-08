@@ -102,7 +102,6 @@ import java.util.function.Function;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 
-
 /**
  * @author UnAfraid
  */

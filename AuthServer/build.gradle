@@ -93,4 +93,4 @@ task dist(type: Copy) {
     }
 }
 
-build.finalizedBy dist
+jar.finalizedBy dist

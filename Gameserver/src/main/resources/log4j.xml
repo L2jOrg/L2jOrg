@@ -53,6 +53,9 @@
         <Logger name="org.l2j.gameserver.network" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
+        <Logger name="org.l2j.gameserver.network.authcomm.AuthServerCommunication" level="info">
+            <AppenderRef ref="game"/>
+        </Logger>
         <Logger name="com.zaxxer.hikari" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
