@@ -59,7 +59,7 @@
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="io.github.joealisson.mmocore" level="error">
-            <AppenderRef ref="console"/>
+            <AppenderRef ref="debug"/>
         </Logger>
     </Loggers>
 </Configuration>

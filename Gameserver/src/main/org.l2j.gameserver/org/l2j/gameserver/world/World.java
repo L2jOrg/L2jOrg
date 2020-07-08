@@ -62,13 +62,12 @@ public final class World {
     /**
      * Gracia border Flying objects not allowed to the east of it.
      */
-    public static final int GRACIA_MAX_X = -166168;
-    public static final int GRACIA_MAX_Z = 6105;
-    public static final int GRACIA_MIN_Z = -895;
+    public static final int GRACIA_MAX_X = -166168; // TODO Remove
+
     /**
      * Bit shift, defines number of regions note, shifting by 15 will result in regions corresponding to map tiles shifting by 11 divides one tile to 16x16 regions.
      */
-    private static final int SHIFT_BY = 11;
+    private static final int SHIFT_BY = 10;
     public static final int TILE_SIZE = 32768;
     /**
      * Map dimensions.
@@ -131,17 +130,17 @@ public final class World {
         LOGGER.info("World Region Grid set up: {} by {}", REGIONS_X, REGIONS_Y);
     }
 
-    private List<WorldRegion> initSurroundingRegions(int x, int y) {
+    private List<WorldRegion> initSurroundingRegions(int rootX, int rootY) {
         List<WorldRegion> surroundingRegions = new ArrayList<>(9);
 
-        for (int sx = x - 1; sx <= (x + 1); sx++) {
-            for (int sy = y - 1; sy <= (y + 1); sy++) {
+        for (int x = rootX - 1; x <= rootX + 1; x++) {
+            for (int y = rootY - 1; y <= rootY + 1; y++) {
 
-                if (((sx >= 0) && (sx <= REGIONS_X) && (sy >= 0) && (sy <= REGIONS_Y))) {
-                    if(isNull(regions[sx][sy])) {
-                        regions[sx][sy] = new WorldRegion(sx, sy);
+                if ( x >= 0 && x <= REGIONS_X && y >= 0 && y <= REGIONS_Y) {
+                    if(isNull(regions[x][y])) {
+                        regions[x][y] = new WorldRegion(x, y);
                     }
-                    surroundingRegions.add(regions[sx][sy]);
+                    surroundingRegions.add(regions[x][y]);
                 }
             }
         }
@@ -355,7 +354,6 @@ public final class World {
     }
 
     private void switchRegion(WorldObject object, WorldRegion oldRegion, WorldRegion newRegion) {
-
         newRegion.forEachSurroundingRegion(w -> {
             if (!w.isSurroundingRegion(oldRegion)) {
                 w.forEachObject(WorldObject.class, other -> beAwareOfEachOther(object, other), other -> !object.equals(other) && Objects.equals(other.getInstanceWorld(), object.getInstanceWorld()));

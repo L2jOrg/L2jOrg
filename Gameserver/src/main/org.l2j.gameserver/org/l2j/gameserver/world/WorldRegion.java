@@ -27,7 +27,6 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.taskmanager.RandomAnimationTaskManager;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Arrays;
@@ -44,38 +43,25 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 
+/**
+ * @author JoeAlisson
+ */
 public final class WorldRegion {
 
+    private final IntMap<WorldObject> objects = new CHashIntMap<>();
+    private final Object taskLocker = new Object();
     private final int regionX;
     private final int regionY;
-    /**
-     * Map containing visible objects in this world region.
-     */
-    private final IntMap<WorldObject> objects = new CHashIntMap<>();
-    /**
-     * Map containing nearby regions forming this world region's effective area.
-     */
-    private WorldRegion[] surroundingRegions;
-    private boolean active;
 
+    private WorldRegion[] surroundingRegions;
     private ScheduledFuture<?> neighborsTask = null;
-    private final Object taskLocker = new Object();
+    private boolean active;
 
     WorldRegion(int regionX, int regionY) {
         this.regionX = regionX;
         this.regionY = regionY;
     }
 
-    private boolean areNeighborsEmpty() {
-        return checkEachSurroundingRegion(w -> !(w.isActive() && w.objects.values().stream().anyMatch(GameUtils::isPlayable)));
-    }
-
-    /**
-     * Add the WorldObject in the L2ObjectHashSet(WorldObject) objects containing WorldObject visible in this WorldRegion <BR>
-     * If WorldObject is a Player, Add the Player in the L2ObjectHashSet(Player) _allPlayable containing Player of all player in game in this WorldRegion <BR>
-     *
-     * @param object to be add on region
-     */
     public void addVisibleObject(WorldObject object) {
         if (isNull(object)) {
             return;
@@ -95,7 +81,6 @@ public final class WorldRegion {
      * Immediately sets self as active and starts a timer to set neighbors as active this timer is to avoid turning on neighbors in the case when a person just teleported into a region and then teleported out immediately...there is no reason to activate all the neighbors in that case.
      */
     private void startActivation() {
-        // First set self to active and do self-tasks...
         setActive(true);
 
         startNeighborsTask(true, Config.GRID_NEIGHBOR_TURNON_TIME);
@@ -108,16 +93,15 @@ public final class WorldRegion {
 
         this.active = active;
 
-        // Turn the AI on or off to match the region's activation.
-        switchAI(active);
+        switchAI();
     }
 
-    private void switchAI(boolean isOn) {
+    private void switchAI() {
         if (objects.isEmpty()) {
             return;
         }
 
-        if (!isOn) {
+        if (!active) {
             for (WorldObject o : objects.values()) {
                 if (isAttackable(o)) {
                     final Attackable mob = (Attackable) o;
@@ -172,11 +156,6 @@ public final class WorldRegion {
         startNeighborsTask(false, Config.GRID_NEIGHBOR_TURNOFF_TIME);
     }
 
-    /**
-     * Remove the WorldObject from the L2ObjectHashSet(WorldObject) objects in this WorldRegion. If WorldObject is a Player, remove it from the L2ObjectHashSet(Player) _allPlayable of this WorldRegion <BR>
-     *
-     * @param object
-     */
     void removeVisibleObject(WorldObject object) {
         if (isNull(object) || objects.isEmpty()) {
             return;
@@ -191,7 +170,11 @@ public final class WorldRegion {
         }
     }
 
-    boolean checkEachSurroundingRegion(Predicate<WorldRegion> p) {
+    private boolean areNeighborsEmpty() {
+        return checkEachSurrounding(Predicate.not(WorldRegion::isActive));
+    }
+
+    private boolean checkEachSurrounding(Predicate<WorldRegion> p) {
         for (WorldRegion worldRegion : surroundingRegions) {
             if (!p.test(worldRegion)) {
                 return false;
@@ -205,7 +188,7 @@ public final class WorldRegion {
     }
 
     <T extends WorldObject> void forEachObject(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        regionToWorldObjectStream(this).filter(applyInstanceFilter(clazz, filter)).map(clazz::cast).forEach(action);
+        regionToWorldObjectStream().filter(applyInstanceFilter(clazz, filter)).map(clazz::cast).forEach(action);
     }
 
     <T extends WorldObject> void forEachObjectInSurrounding(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
@@ -231,7 +214,7 @@ public final class WorldRegion {
     }
 
     <T extends WorldObject> void forAnyObjectInSurrounding(Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        filteredParallelSurroundingObjects(clazz, filter).findAny().ifPresent(action);
+        filteredSurroundingObjects(clazz, filter).findAny().ifPresent(action);
     }
 
     WorldObject findObjectInSurrounding(WorldObject reference, int objectId, int range) {
@@ -252,7 +235,7 @@ public final class WorldRegion {
     }
 
     <T extends WorldObject> T findAnyObjectInSurrounding(Class<T> clazz, Predicate<T> filter) {
-        return  filteredParallelSurroundingObjects(clazz, filter).findAny().orElse(null);
+        return  filteredSurroundingObjects(clazz, filter).findAny().orElse(null);
     }
 
     <T extends WorldObject> T findFirstObjectInSurrounding(Class<T> clazz, Predicate<T> filter, Comparator<T> comparator) {
@@ -260,11 +243,7 @@ public final class WorldRegion {
     }
 
     <T extends WorldObject> boolean hasObjectInSurrounding(Class<T> clazz, Predicate<T> filter) {
-        return Arrays.stream(surroundingRegions).flatMap(WorldRegion::regionToWorldObjectStream).anyMatch(applyInstanceFilter(clazz, filter));
-    }
-
-    <T extends WorldObject> long countObjectInSurrounding(Class<T> clazz, Predicate<T> filter) {
-        return filteredParallelSurroundingObjects(clazz, filter).count();
+        return Arrays.stream(surroundingRegions).flatMap(r -> r.objects.values().stream()).anyMatch(applyInstanceFilter(clazz, filter));
     }
 
     WorldObject getObject(int objectId) {
@@ -305,13 +284,13 @@ public final class WorldRegion {
         return object -> clazz.isInstance(object) && filter.test(clazz.cast(object));
     }
 
-    private static Stream<? extends WorldObject> regionToWorldObjectStream(WorldRegion region) {
-        return region.objects.values().parallelStream();
+    private Stream<? extends WorldObject> regionToWorldObjectStream() {
+        return objects.values().parallelStream();
     }
 
     @Override
     public String toString() {
-        return "(" + regionX + ", " + regionY + ")";
+        return "[" + regionX + ", " + regionY + "]";
     }
 
     /**
@@ -326,8 +305,7 @@ public final class WorldRegion {
 
         @Override
         public void run() {
-            forEachSurroundingRegion(w ->
-            {
+            forEachSurroundingRegion(w -> {
                 if (isActivating || w.areNeighborsEmpty()) {
                     w.setActive(isActivating);
                 }

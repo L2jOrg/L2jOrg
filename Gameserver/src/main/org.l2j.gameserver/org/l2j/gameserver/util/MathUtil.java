@@ -103,7 +103,7 @@ public final class MathUtil {
     }
 
     public static double calculateDistanceSq2D(int x1, int y1, int x2, int y2) {
-        return pow(x1 - x2, 2) + pow(y1 - y2, 2);
+        return (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
     }
 
     public static double calculateDistance2D(ILocational loc, ILocational other) {
@@ -123,7 +123,7 @@ public final class MathUtil {
     }
 
     public static double calculateDistanceSq3D(int x1, int y1, int z1, int x2, int y2, int z2) {
-        return pow(x1 -x2, 2) + pow(y1 - y2, 2) + pow(z1 - z2, 2);
+        return (x1 -x2) * (x1 -x2) + (y1 - y2) * (y1 - y2)  + (z1 - z2) * (z1 - z2);
     }
 
     public static double calculateDistanceSq3D(ILocational object, ILocational other) {

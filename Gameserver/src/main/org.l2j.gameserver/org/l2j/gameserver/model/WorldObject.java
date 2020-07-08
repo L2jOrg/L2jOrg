@@ -156,16 +156,13 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
             spawned = true;
             setWorldRegion(World.getInstance().getRegion(this));
 
-            // Add the WorldObject spawn in the _allobjects of World
             World.getInstance().addObject(this);
-
-            // Add the WorldObject spawn to _visibleObjects and if necessary to _allplayers of its WorldRegion
             worldRegion.addVisibleObject(this);
         }
 
         // this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
         // Add the WorldObject spawn in the world as a visible object
-        World.getInstance().addVisibleObject(this, getWorldRegion());
+        World.getInstance().addVisibleObject(this, worldRegion);
 
         onSpawn();
 
