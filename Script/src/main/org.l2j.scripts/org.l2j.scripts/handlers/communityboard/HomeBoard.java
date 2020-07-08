@@ -222,7 +222,7 @@ public final class HomeBoard implements IParseBoardHandler {
         String returnHtml = null;
         final String navigation = HtmCache.getInstance().getHtm(activeChar, NAVIGATION_PATH);
         if (command.equals("_bbshome") || command.equals("_bbstop")) {
-            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
         } else if (command.startsWith("_bbstop")) {
