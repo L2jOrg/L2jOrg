@@ -72,6 +72,55 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="SHOCK">
+                    <power>
+                        <value level="7">5</value>
+                        <value level="8">8</value>
+                        <value level="9">14</value>
+                        <value level="10">22</value>
+                        <value level="11">30</value>
+                        <value level="12">32</value>
+                        <value level="13">34</value>
+                        <value level="14">36</value>
+                        <value level="15">39</value>
+                        <value level="16">42</value>
+                        <value level="17">45</value>
+                        <value level="18">48</value>
+                        <value level="19">51</value>
+                        <value level="20">55</value>
+                        <value level="21">60</value>
+                        <value level="22">65</value>
+                    </power>
+                </trait>
+            </attack-trait>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="1.0">
+                    <value level="2">1.5</value>
+                    <value level="3">2.0</value>
+                    <value level="4">2.5</value>
+                    <value level="5">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="7">5.0</value>
+                    <value level="8">6.0</value>
+                    <value level="9">7.0</value>
+                    <value level="10">8.0</value>
+                    <value level="11">12.0</value>
+                    <value level="12">13.0</value>
+                    <value level="13">14.0</value>
+                    <value level="14">15.0</value>
+                    <value level="15">16.0</value>
+                    <value level="16">17.0</value>
+                    <value level="17">18.0</value>
+                    <value level="18">18.0</value>
+                    <value level="19">19.0</value>
+                    <value level="20">20.0</value>
+                    <value level="21">22.0</value>
+                    <value level="22">25.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59106" name="Leo Agathion Unique Ability" max-level="11">
         <!--
@@ -91,6 +140,47 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="PARALYZE">
+                    <power>
+                        <value level="7">5</value>
+                        <value level="8">8</value>
+                        <value level="9">14</value>
+                        <value level="10">22</value>
+                        <value level="11">30</value>
+                        <value level="12">32</value>
+                        <value level="13">34</value>
+                        <value level="14">36</value>
+                        <value level="15">38</value>
+                        <value level="16">40</value>
+                        <value level="17">42</value>
+                        <value level="18">44</value>
+                        <value level="19">46</value>
+                        <value level="20">49</value>
+                        <value level="21">52</value>
+                        <value level="22">55</value>
+                    </power>
+                </trait>
+            </attack-trait>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="1.0">
+                    <value level="2">1.5</value>
+                    <value level="3">2.0</value>
+                    <value level="4">2.5</value>
+                    <value level="5">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="8">5.0</value>
+                    <value level="9">6.0</value>
+                    <value level="10">7.0</value>
+                    <value level="11">10.0</value>
+                    <value level="15">11.0</value>
+                    <value level="19">12.0</value>
+                    <value level="21">13.0</value>
+                    <value level="22">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59107" name="Scorpio Agathion Unique Ability" max-level="11">
         <!--
@@ -110,6 +200,82 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">4.0</value>
+                    <value level="5">5.0</value>
+                    <value level="6">7.0</value>
+                    <value level="9">8.0</value>
+                    <value level="10">12.0</value>
+                    <value level="11">18.0</value>
+                    <value level="13">19.0</value>
+                    <value level="15">20.0</value>
+                    <value level="18">21.0</value>
+                    <value level="21">22.0</value>
+                    <value level="22">25.0</value>
+                </power>
+            </stat-modify>
+            <reuse skill-type="MAGIC">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="13">-11.0</value>
+                    <value level="14">-11.0</value>
+                    <value level="15">-12.0</value>
+                    <value level="16">-12.0</value>
+                    <value level="17">-13.0</value>
+                    <value level="18">-14.0</value>
+                    <value level="19">-15.0</value>
+                    <value level="20">-16.0</value>
+                    <value level="21">-17.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+            <reuse skill-type="PHYSIC">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="13">-11.0</value>
+                    <value level="14">-11.0</value>
+                    <value level="15">-12.0</value>
+                    <value level="16">-12.0</value>
+                    <value level="17">-13.0</value>
+                    <value level="18">-14.0</value>
+                    <value level="19">-15.0</value>
+                    <value level="20">-16.0</value>
+                    <value level="21">-17.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+            <reuse skill-type="DANCE">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="13">-11.0</value>
+                    <value level="14">-11.0</value>
+                    <value level="15">-12.0</value>
+                    <value level="16">-12.0</value>
+                    <value level="17">-13.0</value>
+                    <value level="18">-14.0</value>
+                    <value level="19">-15.0</value>
+                    <value level="20">-16.0</value>
+                    <value level="21">-17.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+        </effects>
     </skill>
     <skill id="59108" name="Sagittarius Agathion Unique Ability" max-level="11">
         <!--
@@ -129,6 +295,79 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="2.0">
+                    <value level="2">3.0</value>
+                    <value level="3">4.0</value>
+                    <value level="4">5.0</value>
+                    <value level="5">10.0</value>
+                    <value level="6">15.0</value>
+                    <value level="8">30.0</value>
+                    <value level="9">40.0</value>
+                    <value level="10">50.0</value>
+                    <value level="11">70.0</value>
+                    <value level="12">75.0</value>
+                    <value level="13">80.0</value>
+                    <value level="14">85.0</value>
+                    <value level="15">90.0</value>
+                    <value level="16">95.0</value>
+                    <value level="17">100.0</value>
+                    <value level="19">105.0</value>
+                    <value level="20">110.0</value>
+                    <value level="21">115.0</value>
+                    <value level="22">120.0</value>
+                </power>
+            </stat-modify>
+            <reuse skill-type="MAGIC">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="12">-12.0</value>
+                    <value level="13">-13.0</value>
+                    <value level="15">-14.0</value>
+                    <value level="17">-15.0</value>
+                    <value level="19">-16.0</value>
+                    <value level="21">-18.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+            <reuse skill-type="PHYSIC">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="12">-12.0</value>
+                    <value level="13">-13.0</value>
+                    <value level="15">-14.0</value>
+                    <value level="17">-15.0</value>
+                    <value level="19">-16.0</value>
+                    <value level="21">-18.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+            <reuse skill-type="DANCE">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="12">-12.0</value>
+                    <value level="13">-13.0</value>
+                    <value level="15">-14.0</value>
+                    <value level="17">-15.0</value>
+                    <value level="19">-16.0</value>
+                    <value level="21">-18.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+        </effects>
     </skill>
     <skill id="59109" name="Virgo Agathion Unique Ability" max-level="11">
         <!--
@@ -148,6 +387,55 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="DERANGEMENT">
+                    <power>
+                        <value level="7">5</value>
+                        <value level="8">8</value>
+                        <value level="9">14</value>
+                        <value level="10">22</value>
+                        <value level="11">30</value>
+                        <value level="12">32</value>
+                        <value level="13">34</value>
+                        <value level="14">36</value>
+                        <value level="15">39</value>
+                        <value level="16">42</value>
+                        <value level="17">45</value>
+                        <value level="18">48</value>
+                        <value level="19">51</value>
+                        <value level="20">55</value>
+                        <value level="21">60</value>
+                        <value level="22">65</value>
+                    </power>
+                </trait>
+            </attack-trait>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="1.0">
+                    <value level="2">1.5</value>
+                    <value level="3">2.0</value>
+                    <value level="4">2.5</value>
+                    <value level="5">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="7">5.0</value>
+                    <value level="8">6.0</value>
+                    <value level="9">7.0</value>
+                    <value level="10">8.0</value>
+                    <value level="11">12.0</value>
+                    <value level="12">13.0</value>
+                    <value level="13">14.0</value>
+                    <value level="14">15.0</value>
+                    <value level="15">16.0</value>
+                    <value level="16">17.0</value>
+                    <value level="17">18.0</value>
+                    <value level="18">18.0</value>
+                    <value level="19">20.0</value>
+                    <value level="20">22.0</value>
+                    <value level="21">25.0</value>
+                    <value level="22">30.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59110" name="Aquarius Agathion Unique Ability" max-level="11">
         <!--
@@ -167,6 +455,72 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="HOLD">
+                    <power>
+                        <value level="7">5</value>
+                        <value level="8">8</value>
+                        <value level="9">14</value>
+                        <value level="10">22</value>
+                        <value level="11">30</value>
+                        <value level="12">32</value>
+                        <value level="13">34</value>
+                        <value level="14">36</value>
+                        <value level="15">38</value>
+                        <value level="16">40</value>
+                        <value level="17">42</value>
+                        <value level="18">45</value>
+                        <value level="19">48</value>
+                        <value level="20">51</value>
+                        <value level="21">55</value>
+                        <value level="22">60</value>
+                    </power>
+                </trait>
+                <trait type="SLEEP">
+                    <power>
+                        <value level="7">5</value>
+                        <value level="8">8</value>
+                        <value level="9">14</value>
+                        <value level="10">22</value>
+                        <value level="11">30</value>
+                        <value level="12">32</value>
+                        <value level="13">34</value>
+                        <value level="14">36</value>
+                        <value level="15">38</value>
+                        <value level="16">40</value>
+                        <value level="17">42</value>
+                        <value level="18">45</value>
+                        <value level="19">48</value>
+                        <value level="20">51</value>
+                        <value level="21">55</value>
+                        <value level="22">60</value>
+                    </power>
+                </trait>
+            </attack-trait>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="1.0">
+                    <value level="2">1.5</value>
+                    <value level="3">2.0</value>
+                    <value level="4">2.5</value>
+                    <value level="5">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="8">5.0</value>
+                    <value level="9">6.0</value>
+                    <value level="10">7.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">12.0</value>
+                    <value level="14">14.0</value>
+                    <value level="15">16.0</value>
+                    <value level="16">18.0</value>
+                    <value level="17">20.0</value>
+                    <value level="19">22.0</value>
+                    <value level="20">24.0</value>
+                    <value level="21">28.0</value>
+                    <value level="22">35.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59111" name="Capricorn Agathion Unique Ability" max-level="11">
         <!--
@@ -186,6 +540,86 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">4.0</value>
+                    <value level="5">5.0</value>
+                    <value level="6">7.0</value>
+                    <value level="9">8.0</value>
+                    <value level="10">12.0</value>
+                    <value level="11">18.0</value>
+                    <value level="12">19.0</value>
+                    <value level="14">20.0</value>
+                    <value level="16">21.0</value>
+                    <value level="14">20.0</value>
+                    <value level="18">22.0</value>
+                    <value level="19">24.0</value>
+                    <value level="20">26.0</value>
+                    <value level="21">30.0</value>
+                    <value level="22">35.0</value>
+                </power>
+            </stat-modify>
+            <reuse skill-type="MAGIC">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="13">-11.0</value>
+                    <value level="14">-11.0</value>
+                    <value level="15">-12.0</value>
+                    <value level="16">-12.0</value>
+                    <value level="17">-13.0</value>
+                    <value level="18">-14.0</value>
+                    <value level="19">-15.0</value>
+                    <value level="20">-16.0</value>
+                    <value level="21">-17.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+            <reuse skill-type="PHYSIC">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="13">-11.0</value>
+                    <value level="14">-11.0</value>
+                    <value level="15">-12.0</value>
+                    <value level="16">-12.0</value>
+                    <value level="17">-13.0</value>
+                    <value level="18">-14.0</value>
+                    <value level="19">-15.0</value>
+                    <value level="20">-16.0</value>
+                    <value level="21">-17.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+            <reuse skill-type="DANCE">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="13">-11.0</value>
+                    <value level="14">-11.0</value>
+                    <value level="15">-12.0</value>
+                    <value level="16">-12.0</value>
+                    <value level="17">-13.0</value>
+                    <value level="18">-14.0</value>
+                    <value level="19">-15.0</value>
+                    <value level="20">-16.0</value>
+                    <value level="21">-17.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+        </effects>
     </skill>
     <skill id="59112" name="Libra Agathion Unique Ability" max-level="11">
         <!--
@@ -205,6 +639,79 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="2.0">
+                    <value level="2">3.0</value>
+                    <value level="3">4.0</value>
+                    <value level="4">5.0</value>
+                    <value level="5">10.0</value>
+                    <value level="6">15.0</value>
+                    <value level="8">25.0</value>
+                    <value level="9">35.0</value>
+                    <value level="10">45.0</value>
+                    <value level="11">60.0</value>
+                    <value level="12">65.0</value>
+                    <value level="13">70.0</value>
+                    <value level="14">75.0</value>
+                    <value level="15">80.0</value>
+                    <value level="16">85.0</value>
+                    <value level="17">90.0</value>
+                    <value level="19">100.0</value>
+                    <value level="20">110.0</value>
+                    <value level="21">130.0</value>
+                    <value level="22">160.0</value>
+                </power>
+            </stat-modify>
+            <reuse skill-type="MAGIC">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="12">-12.0</value>
+                    <value level="13">-13.0</value>
+                    <value level="15">-14.0</value>
+                    <value level="17">-15.0</value>
+                    <value level="19">-16.0</value>
+                    <value level="21">-18.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+            <reuse skill-type="PHYSIC">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="12">-12.0</value>
+                    <value level="13">-13.0</value>
+                    <value level="15">-14.0</value>
+                    <value level="17">-15.0</value>
+                    <value level="19">-16.0</value>
+                    <value level="21">-18.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+            <reuse skill-type="DANCE">
+                <power>
+                    <value level="7">-1.0</value>
+                    <value level="8">-3.0</value>
+                    <value level="9">-5.0</value>
+                    <value level="10">-7.0</value>
+                    <value level="11">-10.0</value>
+                    <value level="12">-12.0</value>
+                    <value level="13">-13.0</value>
+                    <value level="15">-14.0</value>
+                    <value level="17">-15.0</value>
+                    <value level="19">-16.0</value>
+                    <value level="21">-18.0</value>
+                    <value level="22">-20.0</value>
+                </power>
+            </reuse>
+        </effects>
     </skill>
     <skill id="59113" name="Gemini Agathion Unique Ability" max-level="11">
         <!--
@@ -224,6 +731,61 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="EXPSP_RATE">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">4.0</value>
+                    <value level="5">6.0</value>
+                    <value level="6">9.0</value>
+                    <value level="8">12.0</value>
+                    <value level="9">16.0</value>
+                    <value level="10">20.0</value>
+                    <value level="11">30.0</value>
+                    <value level="12">31.0</value>
+                    <value level="13">31.0</value>
+                    <value level="14">32.0</value>
+                    <value level="15">32.0</value>
+                    <value level="16">33.0</value>
+                    <value level="17">33.0</value>
+                    <value level="18">34.0</value>
+                    <value level="19">35.0</value>
+                    <value level="20">36.0</value>
+                    <value level="21">37.0</value>
+                    <value level="22">40.0</value>
+                </power>
+            </stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power>
+                    <value level="7">2.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">7.0</value>
+                    <value level="11">10.0</value>
+                    <value level="12">11.0</value>
+                    <value level="13">12.0</value>
+                    <value level="14">13.0</value>
+                    <value level="15">14.0</value>
+                    <value level="16">15.0</value>
+                    <value level="17">16.0</value>
+                    <value level="18">17.0</value>
+                    <value level="19">18.0</value>
+                    <value level="20">20.0</value>
+                    <value level="21">25.0</value>
+                    <value level="22">30.0</value>
+                </power>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power>
+                    <value level="18">2.0</value>
+                    <value level="19">5.0</value>
+                    <value level="20">7.0</value>
+                    <value level="21">10.0</value>
+                    <value level="22">15.0</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="59114" name="Agathion - Taurus" action="A1">
         <!-- Releases Agathion's Seal. -->
