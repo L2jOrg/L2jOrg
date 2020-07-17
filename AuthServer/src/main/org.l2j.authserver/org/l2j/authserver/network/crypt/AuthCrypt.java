@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.crypt;
 
+import io.github.joealisson.mmocore.Buffer;
 import org.l2j.commons.crypt.NewCrypt;
 import org.l2j.commons.util.Rnd;
 
@@ -47,45 +48,39 @@ public class AuthCrypt {
 		(byte) 0x6c
 	};
 	
-	private final NewCrypt _staticCrypt = new NewCrypt(STATIC_BLOWFISH_KEY);
-	private NewCrypt _crypt;
+	private static final NewCrypt staticCrypter = new NewCrypt(STATIC_BLOWFISH_KEY);
+
+	private NewCrypt crypter;
 	private boolean _static = true;
 	
 	public void setKey(byte[] key)
 	{
-		_crypt = new NewCrypt(key);
+		crypter = new NewCrypt(key);
 	}
 	
-	public boolean decrypt(byte[] raw, final int offset, final int size) throws IOException
-	{
-		_crypt.decrypt(raw, offset, size);
-		return NewCrypt.verifyChecksum(raw, offset, size);
+	public boolean decrypt(Buffer data, final int offset, final int size) throws IOException {
+		crypter.decrypt(data, offset, size);
+		return NewCrypt.verifyChecksum(data, offset, size);
 	}
 
 	public int encryptedSize(int dataSize) {
-		if(_static) {
-			dataSize += 8;
-			dataSize += 8 - (dataSize % 8);
-			dataSize += 8;
-		} else {
-			dataSize += 4;
-			dataSize += 8 - (dataSize % 8);
-			dataSize += 8;
-		}
+		dataSize += _static ? 8 : 4;
+		dataSize += 8 - (dataSize % 8);
+		dataSize += 8;
 		return dataSize;
-
 	}
 	
-	public byte[] encrypt(byte[] raw, final int offset, int size) throws IOException {
-        var encryptedSize = encryptedSize(size);
+	public boolean encrypt(Buffer data, final int offset, int size) throws IOException {
+        var encryptedSize = offset + encryptedSize(size);
+        data.limit(encryptedSize);
 		if (_static) {
-			NewCrypt.encXORPass(raw, offset, encryptedSize, Rnd.nextInt());
-			_staticCrypt.crypt(raw, offset, encryptedSize);
+			NewCrypt.encXORPass(data, offset, encryptedSize, Rnd.nextInt());
+			staticCrypter.crypt(data, offset, encryptedSize);
 			_static = false;
 		} else {
-			NewCrypt.appendChecksum(raw, offset, encryptedSize);
-			_crypt.crypt(raw, offset, encryptedSize);
+			NewCrypt.appendChecksum(data, offset, encryptedSize);
+			crypter.crypt(data, offset, encryptedSize);
 		}
-		return raw;
+		return true;
 	}
 }

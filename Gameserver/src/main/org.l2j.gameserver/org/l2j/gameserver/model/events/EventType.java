@@ -31,8 +31,6 @@ import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
-import org.l2j.gameserver.model.events.impl.server.OnPacketReceived;
-import org.l2j.gameserver.model.events.impl.server.OnPacketSent;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
@@ -182,9 +180,6 @@ public enum EventType {
     ON_TRAP_ACTION(OnTrapAction.class, void.class),
 
     ON_DAY_NIGHT_CHANGE(OnDayNightChange.class, void.class),
-
-    ON_PACKET_RECEIVED(OnPacketReceived.class, void.class),
-    ON_PACKET_SENT(OnPacketSent.class, void.class),
 
     // Instance events
     ON_INSTANCE_CREATED(OnInstanceCreated.class, void.class),

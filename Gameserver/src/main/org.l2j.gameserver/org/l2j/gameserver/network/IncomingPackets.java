@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network;
 
-import io.github.joealisson.mmocore.PacketBuffer;
+import io.github.joealisson.mmocore.ReadableBuffer;
 import org.l2j.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.network.clientpackets.friend.*;
 
@@ -285,7 +285,7 @@ public enum IncomingPackets implements PacketFactory {
     }
 
     @Override
-    public PacketFactory handleExtension(PacketBuffer buffer) {
+    public PacketFactory handleExtension(ReadableBuffer buffer) {
         var exPacketId = toUnsignedInt(buffer.readShort());
         if (exPacketId >= ExIncomingPackets.PACKET_ARRAY.length) {
             return NULLABLE_PACKET_FACTORY;

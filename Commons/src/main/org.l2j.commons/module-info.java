@@ -9,6 +9,7 @@ module org.l2j.commons {
     requires cache.api;
     requires java.desktop;
     requires io.github.joealisson.primitive;
+    requires io.github.joealisson.mmocore;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.util.collection;

@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.crypt;
 
+import io.github.joealisson.mmocore.Buffer;
 import org.l2j.commons.crypt.NewCrypt;
 
 import java.io.IOException;
@@ -30,31 +31,33 @@ public class AuthServerCrypt {
     private static final int CHECKSUM_SIZE = 4;
     private static final int PADDING_SIZE = 8;
 
-    private final NewCrypt staticCrypt = new NewCrypt(STATIC_BLOWFISH_KEY);
+    private static final NewCrypt staticCrypt = new NewCrypt(STATIC_BLOWFISH_KEY);
+
     private NewCrypt crypt;
 
     public void setKey(byte[] key) {
         crypt = new NewCrypt(key);
     }
 
-    public boolean decrypt(byte[] raw, final int offset, final int size) throws IOException {
+    public boolean decrypt(Buffer data, final int offset, final int size) throws IOException {
         if(nonNull(crypt)) {
-            crypt.decrypt(raw, offset, size);
+            crypt.decrypt(data, offset, size);
         } else {
-            staticCrypt.decrypt(raw, offset, size);
+            staticCrypt.decrypt(data, offset, size);
         }
-        return NewCrypt.verifyChecksum(raw, offset, size);
+        return NewCrypt.verifyChecksum(data, offset, size);
     }
 
-    public int encrypt(byte[] raw, final int offset, int size) throws IOException {
+    public int encrypt(Buffer data, final int offset, int size) throws IOException {
         size += CHECKSUM_SIZE;
         size += PADDING_SIZE - (size % PADDING_SIZE);
         size += PADDING_SIZE;
-        NewCrypt.appendChecksum(raw, offset, size);
+        data.limit(offset + size);
+        NewCrypt.appendChecksum(data, offset, size);
         if(nonNull(crypt)) {
-            crypt.crypt(raw, offset, size);
+            crypt.crypt(data, offset, size);
         } else {
-            staticCrypt.crypt(raw, offset, size);
+            staticCrypt.crypt(data, offset, size);
         }
         return size;
     }

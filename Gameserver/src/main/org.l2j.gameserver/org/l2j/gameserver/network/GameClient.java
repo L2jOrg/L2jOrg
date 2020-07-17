@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network;
 
+import io.github.joealisson.mmocore.Buffer;
 import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
 import org.l2j.commons.network.SessionKey;
@@ -94,7 +95,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
 
     public GameClient(Connection<GameClient> connection) {
         super(connection);
-        crypt = new Crypt(this);
+        crypt = new Crypt();
     }
 
     public static void deleteCharByObjId(int objId) {
@@ -113,16 +114,12 @@ public final class GameClient extends Client<Connection<GameClient>> {
     }
 
     @Override
-    public int encryptedSize(int dataSize) {
-        return dataSize;
-    }
-    @Override
-    public byte[] encrypt(byte[] data, int offset, int size) {
+    public boolean encrypt(Buffer data, int offset, int size) {
         return crypt.encrypt(data, offset, size);
     }
 
     @Override
-    public boolean decrypt(byte[] data, int offset, int size) {
+    public boolean decrypt(Buffer data, int offset, int size) {
         return crypt.decrypt(data, offset, size);
     }
 
@@ -186,10 +183,6 @@ public final class GameClient extends Client<Connection<GameClient>> {
 
     public void setGameGuardOk(boolean val) {
         isAuthedGG = val;
-    }
-
-    public boolean isAuthedGG() {
-        return isAuthedGG;
     }
 
     public String getAccountName() {
@@ -371,10 +364,6 @@ public final class GameClient extends Client<Connection<GameClient>> {
 
     public int[][] getTrace() {
         return trace;
-    }
-
-    public Crypt getCrypt() {
-        return crypt;
     }
 
     public ClientHardwareInfoHolder getHardwareInfo() {
