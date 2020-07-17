@@ -18,8 +18,8 @@
  */
 package org.l2j.authserver.network.client;
 
-import io.github.joealisson.mmocore.PacketBuffer;
 import io.github.joealisson.mmocore.PacketHandler;
+import io.github.joealisson.mmocore.ReadableBuffer;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.authserver.network.client.packet.client2auth.AuthGameGuard;
 import org.l2j.authserver.network.client.packet.client2auth.RequestAuthLogin;
@@ -41,8 +41,8 @@ public final class AuthPacketHandler implements PacketHandler<AuthClient> {
     private static final Logger logger = LoggerFactory.getLogger(AuthPacketHandler.class);
 
     @Override
-    public ReadablePacket<AuthClient> handlePacket(PacketBuffer buffer, AuthClient client) {
-        var opcode = toUnsignedInt(buffer.read());
+    public ReadablePacket<AuthClient> handlePacket(ReadableBuffer buffer, AuthClient client) {
+        var opcode = toUnsignedInt(buffer.readByte());
 
         ReadablePacket<AuthClient> packet = null;
         var state = client.getState();
@@ -75,7 +75,9 @@ public final class AuthPacketHandler implements PacketHandler<AuthClient> {
         return packet;
     }
 
-    private void debugOpcode(int opcode, PacketBuffer data, AuthClientState state) {
-        logger.warn("Unknown Opcode: {} for state {}\n {}", Integer.toHexString(opcode), state, CommonUtil.printData(data.expose()));
+    private void debugOpcode(int opcode, ReadableBuffer buffer, AuthClientState state) {
+        final byte[] data = new byte[buffer.remaining()];
+        buffer.readBytes(data);
+        logger.warn("Unknown Opcode: {} for state {}\n {}", Integer.toHexString(opcode), state, CommonUtil.printData(data));
     }
 }

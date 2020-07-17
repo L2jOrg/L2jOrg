@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network;
 
-import io.github.joealisson.mmocore.PacketBuffer;
+import io.github.joealisson.mmocore.ReadableBuffer;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 import java.util.EnumSet;
@@ -49,7 +49,7 @@ interface PacketFactory {
         return false;
     }
 
-    default PacketFactory handleExtension(PacketBuffer buffer) {
+    default PacketFactory handleExtension(ReadableBuffer buffer) {
         return NULLABLE_PACKET_FACTORY;
     }
 

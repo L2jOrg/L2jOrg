@@ -18,76 +18,58 @@
  */
 package org.l2j.gameserver.network;
 
-import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.server.OnPacketReceived;
-import org.l2j.gameserver.model.events.impl.server.OnPacketSent;
+import io.github.joealisson.mmocore.Buffer;
 
 import static java.lang.Byte.toUnsignedInt;
 
 /**
  * @author UnAfraid, Nos
+ * @author JoeAlisson
  */
 public class Crypt {
-    private final GameClient _client;
-    private final byte[] _inKey = new byte[16];
+    private final byte[] inKey = new byte[16];
     private final byte[] outKey = new byte[16];
-    private boolean _isEnabled;
+    private boolean enabled;
 
-    public Crypt(GameClient client) {
-        _client = client;
-    }
 
     public void setKey(byte[] key) {
-        System.arraycopy(key, 0, _inKey, 0, 16);
+        System.arraycopy(key, 0, inKey, 0, 16);
         System.arraycopy(key, 0, outKey, 0, 16);
     }
 
-    public byte[] encrypt(final byte[] data, final int offset, final int size) {
-        if(!_isEnabled) {
-            _isEnabled = true;
-            onPacketSent(data);
-            return data;
+    public boolean encrypt(final Buffer data, final int offset, final int size) {
+        if(!enabled) {
+            enabled = true;
+            return true;
         }
-
-        onPacketSent(data);
 
         int encrypted = 0;
         for (int i = 0; i < size; i++) {
-            int raw = toUnsignedInt(data[offset + i]);
+            int raw = toUnsignedInt(data.readByte(offset + i));
             encrypted =  raw ^ outKey[i & 0x0F] ^ encrypted;
-            data[offset + i] = (byte) encrypted;
+            data.writeByte(offset + i, (byte) encrypted);
         }
 
         shiftKey(outKey, size);
-        return data;
+        return true;
     }
 
-    public boolean decrypt(byte[] data, int offset, int size) {
-        if(!_isEnabled) {
-            onPacketReceive(data);
+    public boolean decrypt(Buffer data, int offset, int size) {
+        if(!enabled) {
             return true;
         }
 
         int xOr = 0;
         for(int i = 0; i < size; i++) {
-            int encrypted =  toUnsignedInt(data[offset + i]);
-            data[offset + i] = (byte) (encrypted ^ _inKey[i & 15] ^ xOr);
+            int encrypted = toUnsignedInt(data.readByte(offset + i));
+            data.writeByte(offset + i, (byte) (encrypted ^ inKey[i & 15] ^ xOr));
             xOr  = encrypted;
         }
 
-        shiftKey(_inKey, size);
-        onPacketReceive(data);
+        shiftKey(inKey, size);
         return true;
-
     }
 
-    private void onPacketSent(byte[] data) {
-        EventDispatcher.getInstance().notifyEvent(new OnPacketSent(_client, data));
-    }
-
-    private void onPacketReceive(byte[] data) {
-        EventDispatcher.getInstance().notifyEvent(new OnPacketReceived(_client, data));
-    }
 
     private void shiftKey(byte[] key, int size) {
         int old = key[8] & 0xff;

@@ -18,9 +18,9 @@
  */
 package org.l2j.authserver.network.gameserver;
 
-import io.github.joealisson.mmocore.PacketBuffer;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.PacketHandler;
+import io.github.joealisson.mmocore.ReadableBuffer;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.authserver.network.gameserver.packet.game2auth.*;
 import org.l2j.commons.threading.ThreadPool;
@@ -35,8 +35,8 @@ public final class GameServerPacketHandler implements PacketHandler<ServerClient
     private static final Logger logger = LoggerFactory.getLogger(GameServerPacketHandler.class);
 
     @Override
-    public ReadablePacket<ServerClient> handlePacket(PacketBuffer buffer, ServerClient client) {
-        var opcode = toUnsignedInt(buffer.read());
+    public ReadablePacket<ServerClient> handlePacket(ReadableBuffer buffer, ServerClient client) {
+        var opcode = toUnsignedInt(buffer.readByte());
         switch (client.getState()) {
             case CONNECTED:
                 return handlePacketInConnected(client, opcode);

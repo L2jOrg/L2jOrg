@@ -67,7 +67,7 @@ public final class World {
     /**
      * Bit shift, defines number of regions note, shifting by 15 will result in regions corresponding to map tiles shifting by 11 divides one tile to 16x16 regions.
      */
-    private static final int SHIFT_BY = 10;
+    private static final int SHIFT_BY = 11;
     public static final int TILE_SIZE = 32768;
     /**
      * Map dimensions.

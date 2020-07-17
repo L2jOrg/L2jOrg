@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AuthServerPacket extends WritablePacket<AuthClient> {
 
-    private static final Logger logger = LoggerFactory.getLogger(AuthServerPacket.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthServerPacket.class);
 
     @Override
     protected boolean write(AuthClient client) {
@@ -36,7 +36,7 @@ public abstract class AuthServerPacket extends WritablePacket<AuthClient> {
             writeImpl(client);
             return true;
         } catch (Exception e) {
-           logger.error(e.getMessage(),e);
+           LOGGER.error(e.getMessage(),e);
         }
         return false;
     }

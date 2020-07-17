@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.client;
 
+import io.github.joealisson.mmocore.Buffer;
 import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
 import org.l2j.authserver.controller.AuthController;
@@ -32,7 +33,6 @@ import org.l2j.authserver.network.client.packet.auth2client.PlayFail.PlayFailRea
 import org.l2j.authserver.network.crypt.AuthCrypt;
 import org.l2j.authserver.network.crypt.ScrambledKeyPair;
 import org.l2j.commons.network.SessionKey;
-import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,7 +54,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
     private final long _connectionStartTime;
     private final Map<Integer,Integer> charactersOnServer = new HashMap<>();
 
-    private AuthCrypt _authCrypt;
+    private AuthCrypt crypter;
     private ScrambledKeyPair _scrambledPair;
     private byte[] _blowfishKey;
     private int _sessionId;
@@ -75,10 +75,10 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 
 
     @Override
-    public boolean decrypt(byte[] data, int offset, int size) {
+    public boolean decrypt(Buffer data, int offset, int size) {
         boolean decrypted;
         try  {
-            decrypted = _authCrypt.decrypt(data, offset, size);
+            decrypted = crypter.decrypt(data, offset, size);
         }
         catch (IOException e) {
             LOGGER.error(e.getMessage(), e);
@@ -87,24 +87,19 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
         }
 
         if (!decrypted) {
-            LOGGER.warn("Wrong checksum from client: {}", toString());
+            LOGGER.warn("Closing connection! Wrong checksum from client: {}", this);
             close();
         }
         return decrypted;
     }
 
     @Override
-    public int encryptedSize(int dataSize) {
-        return _authCrypt.encryptedSize(dataSize);
-    }
-
-    @Override
-    public byte[] encrypt(byte[] data, int offset, int size) {
+    public boolean encrypt(Buffer data, int offset, int size) {
 	    try {
-	       return _authCrypt.encrypt(data, offset, size);
+	       return crypter.encrypt(data, offset, size);
         } catch (IOException e) {
 	        LOGGER.error(e.getMessage(), e);
-	        return Util.BYTE_ARRAY_EMPTY;
+	        return false;
         }
     }
 
@@ -225,7 +220,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
     }
 
     public void setCrypt(AuthCrypt crypt) {
-        _authCrypt =  crypt;
+        crypter =  crypt;
     }
 
     public void setRequestedServerInfo(long count) {

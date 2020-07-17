@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.gameserver;
 
+import io.github.joealisson.mmocore.Buffer;
 import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
 import org.l2j.authserver.controller.GameServerManager;
@@ -38,7 +39,7 @@ import static org.l2j.authserver.network.gameserver.ServerClientState.CONNECTED;
 
 public final class ServerClient extends Client<Connection<ServerClient>> {
 
-    private static Logger _log = LoggerFactory.getLogger(ServerClient.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServerClient.class);
     private RSAPrivateKey privateKey;
     private RSAPublicKey publicKey;
     private AuthServerCrypt crypt;
@@ -83,7 +84,7 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
     }
 
     @Override
-    public boolean decrypt(byte[] data, int offset, int size) {
+    public boolean decrypt(Buffer data, int offset, int size) {
         /*boolean decrypted;
         try  {
              decrypted =  crypt.decrypt(data, offset, size);
@@ -99,20 +100,16 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
         return true;
     }
 
-    @Override
-    public int encryptedSize(int dataSize) {
-        return dataSize;
-    }
 
     @Override
-    public byte[] encrypt(byte[] data, int offset, int size) {
+    public boolean encrypt(Buffer data, int offset, int size) {
         /*try {
             return  crypt.encrypt(data, offset, size);
         } catch (IOException e) {
             LOGGER.error(e.getLocalizedMessage(), e);
             return -1;
         }*/
-        return data;
+        return true;
     }
 
 	public void sendPacket(GameServerWritablePacket lsp) {
@@ -139,11 +136,11 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
         if(serverId != -1) {
             serverName = String.format("[%d] %s", serverId, GameServerManager.getInstance().getServerNameById(serverId));
         }
-        _log.info("ServerInfo {}: Connection Lost", serverName);
+        LOGGER.info("ServerInfo {}: Connection Lost", serverName);
 
         if (AUTHED == state) {
             gameServerInfo.setDown();
-            _log.info("Server [{}] {} is now set as disconnect", serverId, GameServerManager.getInstance().getServerNameById(serverId));
+            LOGGER.info("Server [{}] {} is now set as disconnect", serverId, GameServerManager.getInstance().getServerNameById(serverId));
         }
 	}
 }

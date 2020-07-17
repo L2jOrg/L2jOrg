@@ -18,6 +18,8 @@
  */
 package org.l2j.commons.crypt;
 
+import io.github.joealisson.mmocore.Buffer;
+
 import java.io.IOException;
 
 
@@ -1087,9 +1089,7 @@ public class BlowfishEngine
 		0x578FDFE3,
 		0x3AC372E6
 	};
-	// ====================================
-	// Useful constants
-	// ====================================
+
 	private static final int ROUNDS = 16;
 	private static final int BLOCK_SIZE = 8; // bytes = 64 bits
 	private static final int SBOX_SK = 256;
@@ -1119,47 +1119,29 @@ public class BlowfishEngine
 		encrypting = pEncrypting;
 		workingKey = key;
 		setKey(workingKey);
-		return;
 	}
 	
-	public String getAlgorithmName()
-	{
-		return "Blowfish";
-	}
-	
-	public final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException {
+	public final void processBlock(Buffer data, int offset) throws IOException {
 		if (workingKey == null) {
 			throw new IllegalStateException("Blowfish not initialised");
 		}
 
-		if ((inOff + BLOCK_SIZE) > in.length) {
+		if (offset + BLOCK_SIZE > data.limit()) {
 			throw new IOException("input buffer too short");
 		}
 
-		if ((outOff + BLOCK_SIZE) > out.length) {
-			throw new IOException("output buffer too short");
-		}
-
 		if (encrypting) {
-			encryptBlock(in, inOff, out, outOff);
+			encryptBlock(data, offset);
 		} else {
-			decryptBlock(in, inOff, out, outOff);
+			decryptBlock(data, offset);
 		}
-		return BLOCK_SIZE;
-	}
-	
-	public void reset()
-	{
 	}
 	
 	public int getBlockSize()
 	{
 		return BLOCK_SIZE;
 	}
-	
-	// ==================================
-	// Private Implementation
-	// ==================================
+
 	private int func(int x)
 	{
 		return (((S0[(x >>> 24)] + S1[(x >>> 16) & 0xff]) ^ S2[(x >>> 8) & 0xff]) + S3[x & 0xff]);
@@ -1167,9 +1149,6 @@ public class BlowfishEngine
 	
 	/**
 	 * apply the encryption cycle to each value pair in the table.
-	 * @param xl
-	 * @param xr
-	 * @param table
 	 */
 	private void processTable(int xl, int xr, int[] table)
 	{
@@ -1237,26 +1216,26 @@ public class BlowfishEngine
 	 * Encrypt the given input starting at the given offset and place the result in the provided buffer starting at the given offset.
      * The input will be an exact multiple of our blocksize.
 	 */
-	private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex) {
-		int xl = bytesTo32bits(src, srcIndex);
-		int xr = bytesTo32bits(src, srcIndex + 4);
+	private void encryptBlock(Buffer data, int index) {
+		int xl = data.readInt(index);
+		int xr = data.readInt(index + 4);
 		xl ^= P[0];
 		for (int i = 1; i < ROUNDS; i += 2) {
 			xr ^= func(xl) ^ P[i];
 			xl ^= func(xr) ^ P[i + 1];
 		}
 		xr ^= P[ROUNDS + 1];
-		bits32ToBytes(xr, dst, dstIndex);
-		bits32ToBytes(xl, dst, dstIndex + 4);
+		bits32ToBytes(xr, data, index);
+		bits32ToBytes(xl, data, index + 4);
 	}
 	
 	/**
 	 * Decrypt the given input starting at the given offset and place the result in the provided buffer starting at the given offset. The input will be an exact multiple of our blocksize.
 	 */
-	private void decryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
+	private void decryptBlock(Buffer data, int index)
 	{
-		int xl = bytesTo32bits(src, srcIndex);
-		int xr = bytesTo32bits(src, srcIndex + 4);
+		int xl = data.readInt(index);
+		int xr = data.readInt(index + 4);
 		xl ^= P[ROUNDS + 1];
 		for (int i = ROUNDS; i > 0; i -= 2)
 		{
@@ -1264,19 +1243,14 @@ public class BlowfishEngine
 			xl ^= func(xr) ^ P[i - 1];
 		}
 		xr ^= P[0];
-		bits32ToBytes(xr, dst, dstIndex);
-		bits32ToBytes(xl, dst, dstIndex + 4);
+		bits32ToBytes(xr, data, index);
+		bits32ToBytes(xl, data, index + 4);
 	}
-	
-	private int bytesTo32bits(byte[] b, int i) {
-		return ((b[i + 3] & 0xff) << 24) | ((b[i + 2] & 0xff) << 16) | ((b[i + 1] & 0xff) << 8) | ((b[i] & 0xff));
-	}
-	
-	private void bits32ToBytes(int in, byte[] b, int offset)
-	{
-		b[offset] = (byte) in;
-		b[offset + 1] = (byte) (in >> 8);
-		b[offset + 2] = (byte) (in >> 16);
-		b[offset + 3] = (byte) (in >> 24);
+
+	private void bits32ToBytes(int in, Buffer data, int offset) {
+		data.writeByte(offset, (byte) in);
+		data.writeByte(offset + 1, (byte) (in >> 8));
+		data.writeByte(offset + 2, (byte) (in >> 16));
+		data.writeByte(offset + 3, (byte) (in >> 24));
 	}
 }

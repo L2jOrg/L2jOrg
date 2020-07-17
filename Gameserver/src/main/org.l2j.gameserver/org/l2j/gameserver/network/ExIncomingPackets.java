@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network;
 
-import io.github.joealisson.mmocore.PacketBuffer;
+import io.github.joealisson.mmocore.ReadableBuffer;
 import org.l2j.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdena;
 import org.l2j.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaCancel;
@@ -576,14 +576,14 @@ public enum ExIncomingPackets implements PacketFactory {
     }
 
     @Override
-    public PacketFactory handleExtension(PacketBuffer buffer) {
+    public PacketFactory handleExtension(ReadableBuffer buffer) {
         if (EX_USER_BOOKMARK == this) {
             return handleBookMarkPaket(buffer);
         }
         return NULLABLE_PACKET_FACTORY;
     }
 
-    private PacketFactory handleBookMarkPaket(PacketBuffer packet) {
+    private PacketFactory handleBookMarkPaket(ReadableBuffer packet) {
         return switch (packet.readInt()) {
             case 0 -> new DynamicPacketFactory(RequestBookMarkSlotInfo::new);
             case 1 -> new DynamicPacketFactory(RequestSaveBookMarkSlot::new);

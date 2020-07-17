@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm;
 
+import io.github.joealisson.mmocore.Buffer;
 import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
 import org.l2j.gameserver.network.authcomm.gs2as.AuthRequest;
@@ -35,18 +36,14 @@ public class AuthServerClient extends Client<Connection<AuthServerClient>> {
         writePacket(packet);
     }
 
+
     @Override
-    public int encryptedSize(int dataSize) {
-        return dataSize;
+    public boolean encrypt(Buffer data, int offset, int size) {
+        return true;
     }
 
     @Override
-    public byte[] encrypt(byte[] data, int offset, int size) {
-        return data;
-    }
-
-    @Override
-    public boolean decrypt(byte[] data, int offset, int size) {
+    public boolean decrypt(Buffer data, int offset, int size) {
         return true;
     }
 
