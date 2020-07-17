@@ -563,7 +563,7 @@ public final class Player extends Playable {
     }
 
     public String getCondOverrideKey() {
-        return variables.getCondOverrideKey();
+        return isGM() ? variables.getCondOverrideKey().trim().equalsIgnoreCase("") ? Long.toString(PcCondOverride.getAllExceptionsMask()) : variables.getCondOverrideKey() : variables.getCondOverrideKey();
     }
 
     public long getAttendanceDate() {
@@ -1651,7 +1651,7 @@ public final class Player extends Playable {
             }
 
             if (player.isGM()) {
-                final long masks = player.getOverrideCond();
+                final long masks = Long.parseLong(player.getCondOverrideKey());
                 player.setOverrideCond(masks);
             }
 
