@@ -19,13 +19,14 @@
  */
 package org.l2j.scripts.quests.Q00354_ConquestOfAlligatorIsland;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Conquest of Alligator Island (354)
@@ -40,8 +41,8 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 38;
 	// Mobs
-	private static final Map<Integer, Double> MOB1 = new HashMap<>();
-	private static final Map<Integer, Integer> MOB2 = new HashMap<>();
+	private static final IntMap<Double> MOB1 = new HashIntMap<>();
+	private static final IntIntMap MOB2 = new HashIntIntMap();
 	static
 	{
 		MOB1.put(20804, 0.84); // crokian_lad

@@ -19,14 +19,13 @@
  */
 package org.l2j.scripts.quests.Q00369_CollectorOfJewels;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.QuestItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Collector of Jewels (369)
@@ -42,7 +41,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 25;
 	// Mobs
-	private static final Map<Integer, QuestItemHolder> MOBS_DROP_CHANCES = new HashMap<>();
+	private static final IntMap<QuestItemHolder> MOBS_DROP_CHANCES = new HashIntMap<>();
 	static
 	{
 		MOBS_DROP_CHANCES.put(20609, new QuestItemHolder(FLARE_SHARD, 75, 1)); // salamander_lakin

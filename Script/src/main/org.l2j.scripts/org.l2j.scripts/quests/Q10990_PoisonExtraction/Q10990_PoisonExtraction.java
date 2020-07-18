@@ -18,6 +18,8 @@
  */
 package org.l2j.scripts.quests.Q10990_PoisonExtraction;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
@@ -37,9 +39,7 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import static java.util.Objects.isNull;
@@ -58,7 +58,7 @@ public class Q10990_PoisonExtraction extends Quest
 	private static final int HUNTER_TARANTULA = 20403;
 	private static final int PLUNDER_TARANTULA = 20508;
 	private static final int TARANTULA = 91653;
-	private static final Map<Integer, Integer> MONSTER_DROP_CHANCES = new HashMap<>();
+	private static final IntIntMap MONSTER_DROP_CHANCES = new HashIntIntMap();
 	static
 	{
 		MONSTER_DROP_CHANCES.put(20403, 100);

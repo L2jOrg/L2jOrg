@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.ai.others.ClassMaster;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
@@ -56,11 +57,8 @@ import java.util.*;
 public final class ClassMaster extends AbstractNpcAI
 {
 	// NPCs
-	private static final List<Integer> CLASS_MASTERS = new ArrayList<>();
-	static {
-		CLASS_MASTERS.add(31756); // Mr. Cat
-		CLASS_MASTERS.add(31757); // Queen of Hearts
-	}
+	private static final IntSet CLASS_MASTERS = IntSet.of(31756, 31757); // Mr. Cat, Queen of Hearts
+
 	// Misc
 	private boolean _isEnabled;
 	private boolean _spawnClassMasters;
@@ -111,7 +109,7 @@ public final class ClassMaster extends AbstractNpcAI
 		{
 			case "buyitems":
 			{
-				htmltext = npc.getId() == CLASS_MASTERS.get(0) ? "test_server_helper001a.html" : "test_server_helper001b.html";
+				htmltext = npc.getId() == 31756 ? "test_server_helper001a.html" : "test_server_helper001b.html";
 				break;
 			}
 			/*

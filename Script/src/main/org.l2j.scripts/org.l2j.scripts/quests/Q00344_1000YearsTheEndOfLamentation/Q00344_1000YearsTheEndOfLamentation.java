@@ -19,14 +19,13 @@
  */
 package org.l2j.scripts.quests.Q00344_1000YearsTheEndOfLamentation;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 1000 years, the End of Lamentation (344)
@@ -47,7 +46,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 	private static final ItemHolder TOTEM_NECKLACE = new ItemHolder(4272, 1);
 	private static final ItemHolder CRUCIFIX = new ItemHolder(4273, 1);
 	// Monsters
-	private static final Map<Integer, Double> MONSTER_CHANCES = new HashMap<>();
+	private static final IntMap<Double> MONSTER_CHANCES = new HashIntMap<>();
 	{
 		MONSTER_CHANCES.put(20236, 0.58); // Cave Servant
 		MONSTER_CHANCES.put(20238, 0.75); // Cave Servant Warrior

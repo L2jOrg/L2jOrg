@@ -19,13 +19,14 @@
  */
 package org.l2j.scripts.quests.Q00370_AnElderSowsSeeds;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * An Elder Sows Seeds (370)
@@ -44,8 +45,8 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 28;
 	// Mobs
-	private static final Map<Integer, Integer> MOBS1 = new HashMap<>();
-	private static final Map<Integer, Double> MOBS2 = new HashMap<>();
+	private static final IntIntMap MOBS1 = new HashIntIntMap();
+	private static final IntMap<Double> MOBS2 = new HashIntMap<>();
 	static
 	{
 		MOBS1.put(20082, 9); // ant_recruit

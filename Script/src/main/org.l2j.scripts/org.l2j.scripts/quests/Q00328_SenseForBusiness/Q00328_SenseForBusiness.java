@@ -19,15 +19,16 @@
  */
 package org.l2j.scripts.quests.Q00328_SenseForBusiness;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Sense for Business (328)
@@ -37,8 +38,8 @@ public class Q00328_SenseForBusiness extends Quest
 {
 	// NPCs
 	private static final int SARIEN = 30436;
-	private static final Map<Integer, int[]> MONSTER_EYES = new HashMap<>();
-	private static final Map<Integer, Integer> MONSTER_BASILISKS = new HashMap<>();
+	private static final IntMap<int[]> MONSTER_EYES = new HashIntMap<>();
+	private static final IntIntMap MONSTER_BASILISKS = new HashIntIntMap();
 	// @formatter:off
 	static
 	{

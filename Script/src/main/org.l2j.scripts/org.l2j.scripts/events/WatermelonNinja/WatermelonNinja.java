@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.events.WatermelonNinja;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
@@ -31,9 +32,6 @@ import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.scripts.events.ScriptEvent;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * @URL https://eu.4gameforum.com/threads/653089/
  * @author vGodFather
@@ -43,9 +41,9 @@ public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
 	private static final int MANAGER = 31860;
 	private static final int NECTAR_SKILL = 2005;
 	
-	private static final List<Integer> SQUASH_LIST = Arrays.asList(13271, 13272, 13273, 13274, 13275, 13276, 13277, 13278);
-	private static final List<Integer> LARGE_SQUASH_LIST = Arrays.asList(13274, 13278);
-	private static final List<Integer> CHRONO_LIST = Arrays.asList(4202, 5133, 5817, 7058, 8350);
+	private static final IntSet SQUASH_LIST = IntSet.of(13271, 13272, 13273, 13274, 13275, 13276, 13277, 13278);
+	private static final IntSet LARGE_SQUASH_LIST = IntSet.of(13274, 13278);
+	private static final IntSet CHRONO_LIST = IntSet.of(4202, 5133, 5817, 7058, 8350);
 	
 	//@formatter:off
 	private static final String[] _NOCHRONO_TEXT =

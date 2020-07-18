@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.custom.NpcLocationInfo;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
@@ -36,14 +37,8 @@ import static org.l2j.commons.util.Util.isInteger;
  */
 public class NpcLocationInfo extends AbstractNpcAI
 {
-	private static final List<Integer> NPC = new ArrayList<>();
-	{
-		NPC.add(30598);
-		NPC.add(30599);
-		NPC.add(30600);
-		NPC.add(30601);
-		NPC.add(30602);
-	}
+	private static final IntSet NPC = IntSet.of(30598, 30599, 30600, 30601, 30602);
+
 	private static final List<Integer> NPCRADAR = new ArrayList<>();
 	{
 		// Talking Island

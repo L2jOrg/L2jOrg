@@ -19,15 +19,14 @@
  */
 package org.l2j.scripts.quests.Q00355_FamilyHonor;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.util.GameUtils;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Family Honor (355)
@@ -70,7 +69,7 @@ public final class Q00355_FamilyHonor extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 36;
 	
-	private static final Map<Integer, DropInfo> MOBS = new HashMap<>();
+	private static final IntMap<DropInfo> MOBS = new HashIntMap<>();
 	static
 	{
 		MOBS.put(20767, new DropInfo(560, 684)); // timak_orc_troop_leader

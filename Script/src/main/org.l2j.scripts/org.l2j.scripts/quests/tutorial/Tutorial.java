@@ -79,17 +79,17 @@ public abstract class Tutorial extends Quest {
 
     @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
-        final var qs = getQuestState(player, false);
+        final var state = getQuestState(player, false);
 
-        if (isNull(qs)) {
+        if (isNull(state)) {
             return null;
         }
 
         String htmltext = null;
         switch (event) {
             case "start_newbie_tutorial" -> {
-                if (qs.getMemoState() == 0) {
-                    qs.startQuest();
+                if (state.getMemoState() == 0) {
+                    state.startQuest();
                     showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
                     var startingEvent = startingVoiceHtml();
                     playTutorialVoice(player, startingEvent.getSound());
@@ -106,7 +106,7 @@ public abstract class Tutorial extends Quest {
                 showTutorialHtml(player, event);
             }
             case "8", "question_mark_1" -> {
-                if (qs.getMemoState() < 3) {
+                if (state.getMemoState() < 3) {
                     player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_1, 0), TutorialCloseHtml.STATIC_PACKET);
                 }
                 player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
@@ -116,8 +116,8 @@ public abstract class Tutorial extends Quest {
                 player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
             }
             case "reward_2" -> {
-                if (qs.isMemoState(4)) {
-                    qs.setMemoState(5);
+                if (state.isMemoState(4)) {
+                    state.setMemoState(5);
                     if (player.isMageClass() && (player.getRace() != Race.ORC)) {
                         giveItems(player, SPIRITSHOT_REWARD);
                         playTutorialVoice(player, "tutorial_voice_027");
@@ -130,14 +130,14 @@ public abstract class Tutorial extends Quest {
                 }
             }
             case "1" -> { // Client Event On Character move
-                if (qs.getMemoState() < 2) {
+                if (state.getMemoState() < 2) {
                     player.sendPacket(new TutorialEnableClientEvent(2));
                     playTutorialVoice(player, "tutorial_voice_004");
                     showTutorialHtml(player, "tutorial_point_view.html");
                 }
             }
             case "2" -> { // Client Event Change point of view
-                if (qs.getMemoState() < 2) {
+                if (state.getMemoState() < 2) {
                     player.sendPacket(new TutorialEnableClientEvent(8));
                     playTutorialVoice(player, "tutorial_voice_005");
                     showTutorialHtml(player, "tutorial_init_point_view.html");
@@ -145,7 +145,7 @@ public abstract class Tutorial extends Quest {
             }
             case "go_to_newbie_helper" -> {
                 player.teleToLocation(villageLocation());
-                qs.setState(State.COMPLETED);
+                state.setState(State.COMPLETED);
             }
         }
         return htmltext;

@@ -19,15 +19,14 @@
  */
 package org.l2j.scripts.quests.Q00326_VanquishRemnants;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Vanquish Remnants (326)
@@ -43,7 +42,7 @@ public final class Q00326_VanquishRemnants extends Quest
 	private static final int BLACK_CROSS_BADGE = 1361;
 	private static final int BLACK_LION_MARK = 1369;
 	// Monsters
-	private static final Map<Integer, int[]> MONSTERS = new HashMap<>();
+	private static final IntMap<int[]> MONSTERS = new HashIntMap<>();
 	//@formatter:off
 	static
 	{

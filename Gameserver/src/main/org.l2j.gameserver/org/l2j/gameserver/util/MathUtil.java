@@ -178,5 +178,10 @@ public final class MathUtil {
         return angleTarget;
     }
 
+    public static boolean checkOverFlow(long x, long y) {
+        long r = x + y;
+        return ((x ^ r) & (y ^ r)) < 0;
+    }
+
 
 }

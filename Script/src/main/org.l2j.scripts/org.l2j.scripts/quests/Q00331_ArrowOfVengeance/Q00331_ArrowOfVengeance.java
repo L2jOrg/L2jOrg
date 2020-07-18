@@ -19,15 +19,14 @@
  */
 package org.l2j.scripts.quests.Q00331_ArrowOfVengeance;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Arrow for Vengeance (331)
@@ -42,7 +41,7 @@ public class Q00331_ArrowOfVengeance extends Quest
 	private static final int MEDUSA_VENOM = 1453;
 	private static final int WYRMS_TOOTH = 1454;
 	// Monster
-	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
+	private static final IntIntMap MONSTERS = new HashIntIntMap();
 	static
 	{
 		MONSTERS.put(20145, 59); // Harpy

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model.quest;
 
+import io.github.joealisson.primitive.IntCollection;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
@@ -1649,7 +1650,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addStartNpc(Collection<Integer> npcIds) {
+    public void addStartNpc(IntCollection npcIds) {
         setNpcQuestStartId(npcIds);
     }
 
@@ -1667,7 +1668,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addFirstTalkId(Collection<Integer> npcIds) {
+    public void addFirstTalkId(IntCollection npcIds) {
         setNpcFirstTalkId(event -> notifyFirstTalk(event.getNpc(), event.getActiveChar()), npcIds);
     }
 
@@ -1685,7 +1686,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addAcquireSkillId(Collection<Integer> npcIds) {
+    public void addAcquireSkillId(IntCollection npcIds) {
         setPlayerSkillLearnId(event -> notifyAcquireSkill(event.getTrainer(), event.getActiveChar(), event.getSkill(), event.getAcquireType()), npcIds);
     }
 
@@ -1703,7 +1704,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param itemIds the IDs of the Item to register
      */
-    public void addItemBypassEventId(Collection<Integer> itemIds) {
+    public void addItemBypassEventId(IntCollection itemIds) {
         setItemBypassEvenId(event -> notifyItemEvent(event.getItem(), event.getActiveChar(), event.getEvent()), itemIds);
     }
 
@@ -1721,7 +1722,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param itemIds the IDs of the Item to register
      */
-    public void addItemTalkId(Collection<Integer> itemIds) {
+    public void addItemTalkId(IntCollection itemIds) {
         setItemTalkId(event -> notifyItemTalk(event.getItem(), event.getActiveChar()), itemIds);
     }
 
@@ -1739,7 +1740,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addAttackId(Collection<Integer> npcIds) {
+    public void addAttackId(IntCollection npcIds) {
         setAttackableAttackId(attack -> notifyAttack(attack.getTarget(), attack.getAttacker(), attack.getDamage(), attack.isSummon(), attack.getSkill()), npcIds);
     }
 
@@ -1757,7 +1758,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the collection of NPC IDs
      */
-    public void addKillId(Collection<Integer> npcIds) {
+    public void addKillId(IntCollection npcIds) {
         setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon(), kill.getPayload()), npcIds);
     }
 
@@ -1770,7 +1771,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         setNpcTalkId(npcIds);
     }
 
-    public void addTalkId(Collection<Integer> npcIds) {
+    public void addTalkId(IntCollection npcIds) {
         setNpcTalkId(npcIds);
     }
 
@@ -1788,7 +1789,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addTeleportId(Collection<Integer> npcIds) {
+    public void addTeleportId(IntCollection npcIds) {
         setNpcTeleportId(event -> notifyTeleport(event.getNpc()), npcIds);
     }
 
@@ -1806,7 +1807,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addSpawnId(Collection<Integer> npcIds) {
+    public void addSpawnId(IntCollection npcIds) {
         setNpcSpawnId(event -> notifySpawn(event.getNpc()), npcIds);
     }
 
@@ -1824,7 +1825,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds
      */
-    public void addDespawnId(Collection<Integer> npcIds) {
+    public void addDespawnId(IntCollection npcIds) {
         setNpcDespawnId(event -> onNpcDespawn(event.getNpc()), npcIds);
     }
 
@@ -1842,7 +1843,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addSkillSeeId(Collection<Integer> npcIds) {
+    public void addSkillSeeId(IntCollection npcIds) {
         setNpcSkillSeeId(event -> notifySkillSee(event.getTarget(), event.getCaster(), event.getSkill(), event.getTargets(), event.isSummon()), npcIds);
     }
 
@@ -1856,7 +1857,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addSpellFinishedId(Collection<Integer> npcIds) {
+    public void addSpellFinishedId(IntCollection npcIds) {
         setNpcSkillFinishedId(event -> notifySpellFinished(event.getCaster(), event.getTarget(), event.getSkill()), npcIds);
     }
 
@@ -1870,7 +1871,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addTrapActionId(Collection<Integer> npcIds) {
+    public void addTrapActionId(IntCollection npcIds) {
         setTrapActionId(event -> notifyTrapAction(event.getTrap(), event.getTrigger(), event.getAction()), npcIds);
     }
 
@@ -1888,7 +1889,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addFactionCallId(Collection<Integer> npcIds) {
+    public void addFactionCallId(IntCollection npcIds) {
         setAttackableFactionIdId(event -> notifyFactionCall(event.getNpc(), event.getCaller(), event.getAttacker(), event.isSummon()), npcIds);
     }
 
@@ -1906,7 +1907,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addAggroRangeEnterId(Collection<Integer> npcIds) {
+    public void addAggroRangeEnterId(IntCollection npcIds) {
         setAttackableAggroRangeEnterId(event -> notifyAggroRangeEnter(event.getNpc(), event.getActiveChar(), event.isSummon()), npcIds);
     }
 
@@ -1920,7 +1921,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addSeeCreatureId(Collection<Integer> npcIds) {
+    public void addSeeCreatureId(IntCollection npcIds) {
         setNpcCreatureSeeId(event -> notifySeeCreature(event.getNpc(), event.getCreature(), event.isSummon()), npcIds);
     }
 
@@ -1947,7 +1948,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param zoneIds the IDs of the zones to register
      */
-    public void addEnterZoneId(Collection<Integer> zoneIds) {
+    public void addEnterZoneId(IntCollection zoneIds) {
         setCreatureZoneEnterId(event -> notifyEnterZone(event.getCreature(), event.getZone()), zoneIds);
     }
 
@@ -1974,7 +1975,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param zoneIds the IDs of the zones to register
      */
-    public void addExitZoneId(Collection<Integer> zoneIds) {
+    public void addExitZoneId(IntCollection zoneIds) {
         setCreatureZoneExitId(event -> notifyExitZone(event.getCreature(), event.getZone()), zoneIds);
     }
 
@@ -1992,7 +1993,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addEventReceivedId(Collection<Integer> npcIds) {
+    public void addEventReceivedId(IntCollection npcIds) {
         setNpcEventReceivedId(event -> notifyEventReceived(event.getEventName(), event.getSender(), event.getReceiver(), event.getReference()), npcIds);
     }
 
@@ -2010,7 +2011,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addMoveFinishedId(Collection<Integer> npcIds) {
+    public void addMoveFinishedId(IntCollection npcIds) {
         setNpcMoveFinishedId(event -> notifyMoveFinished(event.getNpc()), npcIds);
     }
 
@@ -2028,7 +2029,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds the IDs of the NPCs to register
      */
-    public void addRouteFinishedId(Collection<Integer> npcIds) {
+    public void addRouteFinishedId(IntCollection npcIds) {
         setNpcMoveRouteFinishedId(event -> notifyRouteFinished(event.getNpc()), npcIds);
     }
 
@@ -2046,7 +2047,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds
      */
-    public void addNpcHateId(Collection<Integer> npcIds) {
+    public void addNpcHateId(IntCollection npcIds) {
         addNpcHateId(event -> new TerminateReturn(!onNpcHate(event.getNpc(), event.getActiveChar(), event.isSummon()), false, false), npcIds);
     }
 
@@ -2064,7 +2065,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds
      */
-    public void addSummonSpawnId(Collection<Integer> npcIds) {
+    public void addSummonSpawnId(IntCollection npcIds) {
         setPlayerSummonSpawnId(event -> onSummonSpawn(event.getSummon()), npcIds);
     }
 
@@ -2082,7 +2083,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds
      */
-    public void addSummonTalkId(Collection<Integer> npcIds) {
+    public void addSummonTalkId(IntCollection npcIds) {
         setPlayerSummonTalkId(event -> onSummonTalk(event.getSummon()), npcIds);
     }
 
@@ -2100,7 +2101,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npcIds
      */
-    public void addCanSeeMeId(Collection<Integer> npcIds) {
+    public void addCanSeeMeId(IntCollection npcIds) {
         addNpcHateId(event -> new TerminateReturn(!notifyOnCanSeeMe(event.getNpc(), event.getActiveChar()), false, false), npcIds);
     }
 
@@ -2122,7 +2123,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param templateIds
      */
-    public void addInstanceCreatedId(Collection<Integer> templateIds) {
+    public void addInstanceCreatedId(IntCollection templateIds) {
         setInstanceCreatedId(event -> onInstanceCreated(event.getInstanceWorld(), event.getCreator()), templateIds);
     }
 
@@ -2140,7 +2141,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param templateIds
      */
-    public void addInstanceDestroyId(Collection<Integer> templateIds) {
+    public void addInstanceDestroyId(IntCollection templateIds) {
         setInstanceDestroyId(event -> onInstanceDestroy(event.getInstanceWorld()), templateIds);
     }
 
@@ -2158,7 +2159,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param templateIds
      */
-    public void addInstanceEnterId(Collection<Integer> templateIds) {
+    public void addInstanceEnterId(IntCollection templateIds) {
         setInstanceEnterId(event -> onInstanceEnter(event.getPlayer(), event.getInstanceWorld()), templateIds);
     }
 
@@ -2176,7 +2177,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param templateIds
      */
-    public void addInstanceLeaveId(Collection<Integer> templateIds) {
+    public void addInstanceLeaveId(IntCollection templateIds) {
         setInstanceLeaveId(event -> onInstanceLeave(event.getPlayer(), event.getInstanceWorld()), templateIds);
     }
 
@@ -2493,7 +2494,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     public String getHtm(Player player, String fileName) {
         final HtmCache hc = HtmCache.getInstance();
-        String content = hc.getHtm(player, fileName.startsWith("data/") ? fileName : "data/scripts/org.l2j.scripts/" + getPath() + "/" + fileName);
+        String content = hc.getHtm(player, fileName.startsWith("data/") ? fileName : "data/html/extension/" + getPath() + "/" + fileName);
         if (content == null) {
             content = hc.getHtm(player, "data/scripts/org.l2j.scripts" + getPath() + "/" + fileName);
             if (content == null) {

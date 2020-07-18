@@ -19,13 +19,12 @@
  */
 package org.l2j.scripts.quests.Q00358_IllegitimateChildOfTheGoddess;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Illegitimate Child of the Goddess (358)
@@ -53,7 +52,7 @@ public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
 		4980, // Recipe: Doom Shield
 	};
 	// Mobs
-	private static final Map<Integer, Double> MOBS = new HashMap<>();
+	private static final IntMap<Double> MOBS = new HashIntMap<>();
 	static
 	{
 		MOBS.put(20672, 0.71); // trives

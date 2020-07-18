@@ -19,15 +19,14 @@
  */
 package org.l2j.scripts.village.master.FirstClassTransferTalk;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.VillageMasterFighter;
 import org.l2j.gameserver.model.actor.instance.VillageMasterPriest;
 import org.l2j.scripts.ai.AbstractNpcAI;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * This script manages the dialogs of the headmasters of all newbie villages.<br>
@@ -36,7 +35,7 @@ import java.util.Map;
  */
 public final class FirstClassTransferTalk extends AbstractNpcAI
 {
-	private static final Map<Integer, Race> MASTERS = new HashMap<>();
+	private static final IntMap<Race> MASTERS = new HashIntMap<>();
 	static
 	{
 		MASTERS.put(30026, Race.HUMAN); // Blitz, TI Fighter Guild Head Master

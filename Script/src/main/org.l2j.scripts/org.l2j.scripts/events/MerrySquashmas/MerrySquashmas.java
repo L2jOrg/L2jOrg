@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.events.MerrySquashmas;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -33,9 +34,6 @@ import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.scripts.events.ScriptEvent;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * @URL https://eu.4gameforum.com/threads/621704/
  * @author vGodFather
@@ -45,9 +43,9 @@ public class MerrySquashmas extends LongTimeEvent implements ScriptEvent
 	private static final int MANAGER = 33888;
 	private static final int SNOWY_NECTAR_SKILL = 17110;
 	
-	private static final List<Integer> SQUASH_LIST = Arrays.asList(13399, 13400, 13401, 13402, 13403, 13404, 13405, 13406);
-	private static final List<Integer> LARGE_SQUASH_LIST = Arrays.asList(13403, 13404, 13405, 13406);
-	private static final List<Integer> CHRONO_LIST = Arrays.asList(4202, 5133, 5817, 7058, 8350);
+	private static final IntSet SQUASH_LIST = IntSet.of(13399, 13400, 13401, 13402, 13403, 13404, 13405, 13406);
+	private static final IntSet LARGE_SQUASH_LIST = IntSet.of(13403, 13404, 13405, 13406);
+	private static final IntSet CHRONO_LIST = IntSet.of(4202, 5133, 5817, 7058, 8350);
 	
 	//@formatter:off
 	private static final String[] _NOCHRONO_TEXT =

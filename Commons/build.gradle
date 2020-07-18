@@ -27,6 +27,6 @@ dependencies {
     api 'io.github.joealisson:async-mmocore:3.3.0-SNAPSHOT'
     api 'org.slf4j:slf4j-api:2.0.0-alpha1'
 
-    implementation 'com.zaxxer:HikariCP:3.4.5'
+    implementation 'com.zaxxer:HikariCP:3.4.3'
     runtimeOnly 'mysql:mysql-connector-java:8.0.21'
 }

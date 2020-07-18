@@ -19,6 +19,8 @@
  */
 package org.l2j.scripts.quests.Q00662_AGameOfCards;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -28,9 +30,7 @@ import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * A Game of Cards (662)
@@ -47,7 +47,7 @@ public final class Q00662_AGameOfCards extends Quest
 	private static final int MIN_LEVEL = 61;
 	private static final int REQUIRED_CHIP_COUNT = 50;
 	// Monsters
-	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
+	private static final IntIntMap MONSTERS = new HashIntIntMap();
 	static
 	{
 		MONSTERS.put(20672, 357); // Trives
