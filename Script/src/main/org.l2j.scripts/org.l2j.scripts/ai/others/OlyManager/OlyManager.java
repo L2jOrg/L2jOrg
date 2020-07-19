@@ -101,7 +101,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				}
 				else
 				{
-					htmltext = getHtm(player, "OlyManager-joinMatch.html");
+					htmltext = getHtml(player, "OlyManager-joinMatch.html");
 					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(OlympiadEngine.getInstance().getPeriod()));
 					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(OlympiadEngine.getInstance().getCurrentSeason()));
 					htmltext = htmltext.replace("%olympiad_participant%", String.valueOf(OlympiadManager.getInstance().getCountOpponents()));

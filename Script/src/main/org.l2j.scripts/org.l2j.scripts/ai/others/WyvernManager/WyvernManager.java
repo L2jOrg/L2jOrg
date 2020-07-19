@@ -161,7 +161,7 @@ public final class WyvernManager extends AbstractNpcAI {
 	
 	private String replacePart(Player player, String htmlFile)
 	{
-		return getHtm(player, htmlFile).replace("%wyvern_fee%", String.valueOf(WYVERN_FEE)).replace("%strider_level%", String.valueOf(STRIDER_LVL));
+		return getHtml(player, htmlFile).replace("%wyvern_fee%", String.valueOf(WYVERN_FEE)).replace("%strider_level%", String.valueOf(STRIDER_LVL));
 	}
 	
 	@Override

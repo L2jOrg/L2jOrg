@@ -392,7 +392,7 @@ public final class Race extends Event implements ScriptEvent
 	private void showMenu(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		final String content = getHtm(activeChar, "admin_menu.htm");
+		final String content = getHtml(activeChar, "admin_menu.htm");
 		html.setHtml(content);
 		activeChar.sendPacket(html);
 	}

@@ -79,7 +79,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
             }
             case "map":
             {
-                htmltext = getHtm(player, "ClanHallAuctioneer-map.html");
+                htmltext = getHtml(player, "ClanHallAuctioneer-map.html");
                 htmltext = htmltext.replace("%MAP%", npc.getParameters().getString("fnAgitMap", "gludio"));
                 htmltext = htmltext.replace("%TOWN_NAME%", npc.getCastle().getName());
                 break;
@@ -108,7 +108,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
                 // THE_CLAN_DOES_NOT_OWN_A_CLAN_HALL
 
-                htmltext = getHtm(player, "ClanHallAuctioneer-cancelBid.html");
+                htmltext = getHtml(player, "ClanHallAuctioneer-cancelBid.html");
                 htmltext = htmltext.replaceAll("%myBid%", String.valueOf(clanHallAuction.getClanBid(clan)));
                 htmltext = htmltext.replaceAll("%myBidRemain%", String.valueOf(clanHallAuction.getClanBid(clan) * 9));
                 break;
@@ -152,7 +152,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                     {
                         final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
 
-                        htmltext = getHtm(player, "ClanHallAuctioneer-bid2.html");
+                        htmltext = getHtml(player, "ClanHallAuctioneer-bid2.html");
                         htmltext = htmltext.replaceAll("%id%", String.valueOf(clanHallAuction.getClanHallId()));
                         htmltext = htmltext.replaceAll("%minBid%", String.valueOf(clanHallAuction.getHighestBid()));
                         htmltext = htmltext.replaceAll("%myBid%", String.valueOf(clanHallAuction.getClanBid(clan)));
@@ -195,7 +195,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                 final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
 
                 final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
-                htmltext = getHtm(player, "ClanHallAuctioneer-bidInfo.html");
+                htmltext = getHtml(player, "ClanHallAuctioneer-bidInfo.html");
                 htmltext = htmltext.replaceAll("%id%", String.valueOf(clanHall.getId()));
                 htmltext = htmltext.replace("%owner%", owner != null ? owner.getName() : "");
                 htmltext = htmltext.replace("%clanLeader%", owner != null ? owner.getLeaderName() : "");
@@ -253,7 +253,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                 final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
                 final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
                 final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-                html.setHtml(getHtm(player, "ClanHallAuctioneer-info.html"));
+                html.setHtml(getHtml(player, "ClanHallAuctioneer-info.html"));
 
                 html.replace("%id%", clanHall.getId());
                 html.replace("%owner%", owner != null ? owner.getName() : "");
@@ -277,7 +277,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
             }
             else
             {
-                final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId(), getHtm(player, "ClanHallAuctioneer-list.html"));
+                final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId(), getHtml(player, "ClanHallAuctioneer-list.html"));
                 //@formatter:off
                 final PageResult result = PageBuilder.newBuilder(clanHalls, 8, "bypass -h Quest ClanHallAuctioneer auctionList")
                         .currentPage(page)
@@ -351,7 +351,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
             if (bid == 0)
             {
                 final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-                html.setHtml(getHtm(player, "ClanHallAuctioneer-bid1.html"));
+                html.setHtml(getHtml(player, "ClanHallAuctioneer-bid1.html"));
                 html.replace("%clanAdena%", clan.getWarehouse().getAdena());
                 html.replace("%minBid%", ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHallId).getHighestBid());
                 html.replace("%id%", clanHall.getId());
@@ -408,7 +408,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                 return;
             }
 
-            final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId(), getHtm(player, "ClanHallAuctioneer-bidderList.html"));
+            final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId(), getHtml(player, "ClanHallAuctioneer-bidderList.html"));
             //@formatter:off
             final PageResult result = PageBuilder.newBuilder(clanHallAuction.getBids().values().stream().sorted(Comparator.comparingLong(Bidder::getTime).reversed()).collect(Collectors.toList()), 10, "bypass -h Quest ClanHallAuctioneer auctionList")
                     .currentPage(page)

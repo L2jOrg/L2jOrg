@@ -253,7 +253,7 @@ public abstract class Tutorial extends Quest {
         if(fileName.startsWith("tutorial_")) {
             fileName = fileName.replace("tutorial_", "../");
         }
-        var htm = getHtm(player, fileName).replace("%TutorialQuest%", getName());
+        var htm = getHtml(player, fileName).replace("%TutorialQuest%", getName());
         player.sendPacket(new TutorialShowHtml(htm));
     }
 

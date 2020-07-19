@@ -101,7 +101,7 @@ public final class ClanHallDoorManager extends AbstractNpcAI
 		final ClanHall clanHall = npc.getClanHall();
 		if (isOwningClan(player, npc))
 		{
-			htmltext = getHtm(player, "ClanHallDoorManager-01.html");
+			htmltext = getHtml(player, "ClanHallDoorManager-01.html");
 			htmltext = htmltext.replace("%ownerClanName%", clanHall.getOwner().getName());
 		}
 		else if (clanHall.getOwnerId() <= 0)
@@ -110,7 +110,7 @@ public final class ClanHallDoorManager extends AbstractNpcAI
 		}
 		else
 		{
-			htmltext = getHtm(player, "ClanHallDoorManager-03.html");
+			htmltext = getHtml(player, "ClanHallDoorManager-03.html");
 			htmltext = htmltext.replace("%ownerName%", clanHall.getOwner().getLeaderName());
 			htmltext = htmltext.replace("%ownerClanName%", clanHall.getOwner().getName());
 		}

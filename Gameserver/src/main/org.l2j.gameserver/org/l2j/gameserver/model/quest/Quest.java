@@ -79,6 +79,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -772,7 +774,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
                     .map(AbstractEventListener::getOwner)
                     .filter(Quest.class::isInstance)
                     .map(Quest.class::cast)
-                    .distinct()
                     .collect(Collectors.toSet());
             //@formatter:on
 
@@ -798,14 +799,12 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player the player talking to the NPC
      */
     public final void notifyFirstTalk(Npc npc, Player player) {
-        String res = null;
         try {
-            res = onFirstTalk(npc, player);
+            String res = onFirstTalk(npc, player);
+            showResult(player, res, npc);
         } catch (Exception e) {
             showError(player, e);
-            return;
         }
-        showResult(player, res, npc);
     }
 
     /**
@@ -1591,7 +1590,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @return {@code false} if the message was sent, {@code true} otherwise
      */
     public boolean showResult(Player player, String res, Npc npc) {
-        if ((res == null) || res.isEmpty() || (player == null)) {
+        if (isNullOrEmpty(res) || isNull(player)) {
             return true;
         }
 
@@ -2457,13 +2456,11 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param filename the name of the HTML file to show
      * @param npc      the NPC that is showing the HTML file
      * @return the contents of the HTML file that was sent to the player
-     * @see #showHtmlFile(Player, String, Npc)
      */
     public String showHtmlFile(Player player, String filename, Npc npc) {
         final boolean questwindow = !filename.endsWith(".html");
 
-        // Create handler to file linked to the quest
-        String content = getHtm(player, filename);
+        String content = getHtml(player, filename);
 
         // Send message to client if message not empty
         if (content != null) {
@@ -2492,12 +2489,12 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param fileName the html file to be get.
      * @return the HTML file contents
      */
-    public String getHtm(Player player, String fileName) {
+    public String getHtml(Player player, String fileName) {
         String path;
         if(fileName.startsWith("data/")) {
             path = fileName;
         } else if(fileName.startsWith("./")) {
-            path = "data/extension/" + getPath() + "/" + fileName;
+            path = "data/extension/" + getPath() + fileName.substring(1);
         } else {
             path = "data/extension/html/" + getPath() + "/" + fileName;
         }
