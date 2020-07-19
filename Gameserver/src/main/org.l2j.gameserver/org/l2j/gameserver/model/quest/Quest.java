@@ -442,7 +442,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @return the path of the quest script
      */
     public String getPath() {
-        final String path = getClass().getName().replace('.', '/');
+        final String path = getClass().getName().replace("org.l2j.scripts.", "").replace('.', '/');
         return path.substring(0, path.lastIndexOf('/' + getClass().getSimpleName()));
     }
 
@@ -2493,15 +2493,15 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @return the HTML file contents
      */
     public String getHtm(Player player, String fileName) {
-        final HtmCache hc = HtmCache.getInstance();
-        String content = hc.getHtm(player, fileName.startsWith("data/") ? fileName : "data/html/extension/" + getPath() + "/" + fileName);
-        if (content == null) {
-            content = hc.getHtm(player, "data/scripts/org.l2j.scripts" + getPath() + "/" + fileName);
-            if (content == null) {
-                content = hc.getHtmForce(player, "data/scripts/quests/org.l2j.scripts" + getName() + "/" + fileName);
-            }
+        String path;
+        if(fileName.startsWith("data/")) {
+            path = fileName;
+        } else if(fileName.startsWith("./")) {
+            path = "data/extension/" + getPath() + "/" + fileName;
+        } else {
+            path = "data/extension/html/" + getPath() + "/" + fileName;
         }
-        return content;
+        return HtmCache.getInstance().getHtm(player, path);
     }
 
     /**

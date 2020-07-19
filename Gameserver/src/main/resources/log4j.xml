@@ -56,7 +56,7 @@
         <Logger name="org.l2j.gameserver.network.authcomm.AuthServerCommunication" level="info">
             <AppenderRef ref="game"/>
         </Logger>
-        <Logger name="com.zaxxer.hikari" level="error">
+        <Logger name="com.zaxxer.hikari" level="warn">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="MySQL" level="error">
@@ -68,8 +68,8 @@
         <Logger name="ST_PACKET" level="debug">
             <AppenderRef ref="packet_statistics"/>
         </Logger>
-        <Logger name="io.github.joealisson.mmocore" level="error">
-            <AppenderRef ref="game"/>
+        <Logger name="io.github.joealisson.mmocore" level="debug">
+            <AppenderRef ref="debug"/>
         </Logger>
     </Loggers>
 </Configuration>
