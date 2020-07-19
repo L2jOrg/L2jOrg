@@ -32,13 +32,12 @@ import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * @URL https://eu.4gameforum.com/threads/621704/
  * @author vGodFather
  */
-public class MerrySquashmas extends LongTimeEvent implements ScriptEvent
+public class MerrySquashmas extends LongTimeEvent
 {
 	private static final int MANAGER = 33888;
 	private static final int SNOWY_NECTAR_SKILL = 17110;

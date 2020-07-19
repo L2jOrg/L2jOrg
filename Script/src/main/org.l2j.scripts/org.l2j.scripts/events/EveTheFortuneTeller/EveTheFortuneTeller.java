@@ -25,13 +25,12 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.serverpackets.luckygame.ExStartLuckyGame;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * Eve the Fortune Teller Returns<br>
  * @author Mobius
  */
-public final class EveTheFortuneTeller extends LongTimeEvent implements ScriptEvent
+public final class EveTheFortuneTeller extends LongTimeEvent
 {
 	// NPCs
 	private static final int EVE = 31855;

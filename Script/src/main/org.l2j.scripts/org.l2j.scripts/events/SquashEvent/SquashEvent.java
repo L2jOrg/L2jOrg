@@ -32,12 +32,11 @@ import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * @author vGodFather
  */
-public class SquashEvent extends LongTimeEvent implements ScriptEvent
+public class SquashEvent extends LongTimeEvent
 {
 	private static final int MANAGER = 31860;
 	private static final int NECTAR_SKILL = 2005;

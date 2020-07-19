@@ -27,12 +27,11 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * @author Mobius
  */
-public class HappyHours extends LongTimeEvent implements ScriptEvent
+public class HappyHours extends LongTimeEvent
 {
 	// NPC
 	private static final int SIBI = 34262;

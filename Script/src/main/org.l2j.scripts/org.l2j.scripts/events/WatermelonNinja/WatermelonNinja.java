@@ -30,13 +30,12 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * @URL https://eu.4gameforum.com/threads/653089/
  * @author vGodFather
  */
-public class WatermelonNinja extends LongTimeEvent implements ScriptEvent
+public class WatermelonNinja extends LongTimeEvent
 {
 	private static final int MANAGER = 31860;
 	private static final int NECTAR_SKILL = 2005;

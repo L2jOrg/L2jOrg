@@ -30,6 +30,7 @@ import org.l2j.gameserver.datatables.drop.EventDropHolder;
 import org.l2j.gameserver.datatables.drop.EventDropList;
 import org.l2j.gameserver.instancemanager.EventShrineManager;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
@@ -123,6 +124,18 @@ public class LongTimeEvent extends Quest {
         return period.isWithinRange(LocalDateTime.now());
     }
 
+    protected String getConfigPath() {
+        return "data/extension/" + getPath() + "/config.xml";
+    }
+
+    @Override
+    public String getHtml(Player player, String fileName) {
+        if(!fileName.startsWith("data/")) {
+            fileName = "./" + fileName;
+        }
+        return super.getHtml(player, fileName);
+    }
+
     private class EventParser extends GameXmlReader {
 
         @Override
@@ -132,7 +145,7 @@ public class LongTimeEvent extends Quest {
 
         @Override
         public void load() {
-            parseDatapackFile("data/scripts/events/" + getScriptName() + "/config.xml");
+            parseDatapackFile(getConfigPath());
             releaseResources();
         }
 

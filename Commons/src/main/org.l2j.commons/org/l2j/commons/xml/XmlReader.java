@@ -49,7 +49,7 @@ import static java.util.Objects.nonNull;
  */
 public abstract class XmlReader extends XmlParser {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(XmlReader.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(XmlReader.class);
 
     private DocumentBuilder documentBuilder;
 

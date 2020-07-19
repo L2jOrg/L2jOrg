@@ -23,14 +23,13 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * Event: Letter Collector
  * @URL https://eu.4gameforum.com/threads/648400/
  * @author Mobius, Gigi, Adapted for Classic by QuangNguyen
  */
-public final class LetterCollector extends LongTimeEvent implements ScriptEvent
+public final class LetterCollector extends LongTimeEvent
 {
 	// NPC
 	private static final int ROSALIA = 9000;
