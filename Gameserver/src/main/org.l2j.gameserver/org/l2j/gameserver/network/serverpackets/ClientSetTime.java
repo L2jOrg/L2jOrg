@@ -18,12 +18,11 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.world.WorldTimeController;
 
-@StaticPacket
+
 public class ClientSetTime extends ServerPacket {
     public static final ClientSetTime STATIC_PACKET = new ClientSetTime();
 

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
@@ -29,7 +28,7 @@ import java.util.Collection;
 /**
  * @author l3x
  */
-@StaticPacket
+
 public final class ExSendManorList extends ServerPacket {
     public static final ExSendManorList STATIC_PACKET = new ExSendManorList();
 

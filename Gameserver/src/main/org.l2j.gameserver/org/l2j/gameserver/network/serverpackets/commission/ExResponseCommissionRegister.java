@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.serverpackets.commission;
 
-import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -26,7 +25,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 /**
  * @author NosBit
  */
-@StaticPacket
+
 public class ExResponseCommissionRegister extends ServerPacket {
     public static final ExResponseCommissionRegister SUCCEED = new ExResponseCommissionRegister(1);
     public static final ExResponseCommissionRegister FAILED = new ExResponseCommissionRegister(0);
