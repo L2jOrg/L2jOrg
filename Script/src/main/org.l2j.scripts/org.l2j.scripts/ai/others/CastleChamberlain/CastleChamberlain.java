@@ -125,7 +125,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	private NpcHtmlMessage getHtmlPacket(Player player, Npc npc, String htmlFile)
 	{
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-		packet.setHtml(getHtm(player, htmlFile));
+		packet.setHtml(getHtml(player, htmlFile));
 		return packet;
 	}
 	

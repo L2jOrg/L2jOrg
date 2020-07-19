@@ -19,20 +19,19 @@
  */
 package org.l2j.scripts.ai.others;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.scripts.ai.AbstractNpcAI;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Angel spawns...when one of the angels in the keys dies, the other angel will spawn.
  */
 public final class PolymorphingAngel extends AbstractNpcAI
 {
-	private static final Map<Integer, Integer> ANGELSPAWNS = new HashMap<>(5);
+	private static final IntIntMap ANGELSPAWNS = new HashIntIntMap(5);
 	
 	static
 	{

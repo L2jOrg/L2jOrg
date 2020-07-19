@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
@@ -37,6 +38,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static org.l2j.commons.util.Util.isDigit;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
@@ -222,17 +224,8 @@ public class AdminQuest implements IAdminCommandHandler
 				}
 			}
 			
-			final Set<Integer> npcIds = new TreeSet<>(quest.getRegisteredIds(ListenerRegisterType.NPC));
-			for (int npcId : npcIds)
-			{
-				npcs += ", " + npcId;
-				counter++;
-				if (counter > 50)
-				{
-					counter = 0;
-					break;
-				}
-			}
+			final IntSet npcIds = quest.getRegisteredIds(ListenerRegisterType.NPC);
+			npcs = npcIds.stream().limit(50).mapToObj(Objects::toString).collect(Collectors.joining(","));
 			
 			if (!events.isEmpty())
 			{

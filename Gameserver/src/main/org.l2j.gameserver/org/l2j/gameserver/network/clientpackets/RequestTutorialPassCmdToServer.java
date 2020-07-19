@@ -26,28 +26,25 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
 
 public class RequestTutorialPassCmdToServer extends ClientPacket {
-    private String _bypass = null;
+    private String bypass = null;
 
     @Override
     public void readImpl() {
-        _bypass = readString();
+        bypass = readString();
     }
 
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
 
-        if (_bypass.startsWith("admin_")) {
-            AdminCommandHandler.getInstance().useAdminCommand(player, _bypass, true);
+        if (bypass.startsWith("admin_")) {
+            AdminCommandHandler.getInstance().useAdminCommand(player, bypass, true);
         } else {
-            final IBypassHandler handler = BypassHandler.getInstance().getHandler(_bypass);
+            final IBypassHandler handler = BypassHandler.getInstance().getHandler(bypass);
             if (handler != null) {
-                handler.useBypass(_bypass, player, null);
+                handler.useBypass(bypass, player, null);
             }
         }
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerBypass(player, _bypass), player);
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerBypass(player, bypass), player);
     }
 }

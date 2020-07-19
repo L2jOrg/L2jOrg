@@ -55,9 +55,6 @@ public class MoveBackwardToLocation extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
 
         if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis())) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);

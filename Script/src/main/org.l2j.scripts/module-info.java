@@ -8,13 +8,13 @@ import org.l2j.scripts.handlers.effecthandlers.*;
 import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
-import org.l2j.scripts.quests.tutorial.Q10960_Tutorial.Q10960_Tutorial;
-import org.l2j.scripts.quests.tutorial.Q201_Tutorial.Q201_Tutorial;
-import org.l2j.scripts.quests.tutorial.Q202_Tutorial.Q202_Tutorial;
-import org.l2j.scripts.quests.tutorial.Q203_Tutorial.Q203_Tutorial;
-import org.l2j.scripts.quests.tutorial.Q204_Tutorial.Q204_Tutorial;
-import org.l2j.scripts.quests.tutorial.Q205_Tutorial.Q205_Tutorial;
-import org.l2j.scripts.quests.tutorial.Q206_Tutorial.Q206_Tutorial;
+import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
+import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
+import org.l2j.scripts.quests.tutorial.elf.Q203_Tutorial;
+import org.l2j.scripts.quests.tutorial.fighter.Q201_Tutorial;
+import org.l2j.scripts.quests.tutorial.kamael.Q10960_Tutorial;
+import org.l2j.scripts.quests.tutorial.mage.Q202_Tutorial;
+import org.l2j.scripts.quests.tutorial.orc.Q205_Tutorial;
 
 open module org.l2j.scripts {
 
@@ -343,7 +343,7 @@ open module org.l2j.scripts {
             org.l2j.scripts.ai.others.ClassMaster.ClassMaster,
             org.l2j.scripts.ai.others.DimensionalMerchant.DimensionalMerchant,
             org.l2j.scripts.ai.others.MonumentOfHeroes.MonumentOfHeroes,
-            org.l2j.scripts.ai.others.NewbieGuide.NewbieGuide,
+            org.l2j.scripts.ai.others.guide.NewbieGuide,
             org.l2j.scripts.ai.others.OlyBuffer.OlyBuffer,
             org.l2j.scripts.ai.others.Proclaimer.Proclaimer,
             org.l2j.scripts.ai.others.Servitors.SinEater,

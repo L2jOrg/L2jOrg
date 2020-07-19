@@ -18,14 +18,13 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author JIV
  */
-@StaticPacket
+
 public class ExEnchantSkillResult extends ServerPacket {
     public static final ExEnchantSkillResult STATIC_PACKET_TRUE = new ExEnchantSkillResult(true);
     public static final ExEnchantSkillResult STATIC_PACKET_FALSE = new ExEnchantSkillResult(false);

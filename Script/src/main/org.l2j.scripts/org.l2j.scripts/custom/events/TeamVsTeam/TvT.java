@@ -54,7 +54,6 @@ import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.scripts.events.ScriptEvent;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -69,7 +68,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Team vs Team event.
  * @author Mobius
  */
-public class TvT extends Event implements ScriptEvent
+public class TvT extends Event
 {
 	// NPC
 	private static final int MANAGER = 70010;

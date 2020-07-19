@@ -19,6 +19,8 @@
  */
 package org.l2j.scripts.quests.Q00300_HuntingLetoLizardman;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -27,9 +29,6 @@ import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static java.util.Objects.isNull;
 
@@ -50,7 +49,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	private static final int MIN_LEVEL = 34;
 	private static final int REQUIRED_BRACELET_COUNT = 60;
 	// Monsters
-	private static final Map<Integer, Integer> MOBS_SAC = new HashMap<>();
+	private static final IntIntMap MOBS_SAC = new HashIntIntMap();
 	static
 	{
 		MOBS_SAC.put(20577, 360); // Leto Lizardman

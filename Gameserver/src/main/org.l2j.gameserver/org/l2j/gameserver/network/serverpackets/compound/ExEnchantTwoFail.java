@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.serverpackets.compound;
 
-import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -26,7 +25,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 /**
  * @author UnAfraid
  */
-@StaticPacket
+
 public class ExEnchantTwoFail extends ServerPacket {
     public static final ExEnchantTwoFail STATIC_PACKET = new ExEnchantTwoFail();
 

@@ -19,6 +19,8 @@
  */
 package org.l2j.scripts.ai.others;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -30,9 +32,7 @@ import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Polymorphing on attack monsters AI.
@@ -40,7 +40,7 @@ import java.util.Map;
  */
 public final class PolymorphingOnAttack extends AbstractNpcAI
 {
-	private static final Map<Integer, List<Integer>> MOBSPAWNS = new HashMap<>();
+	private static final IntMap<List<Integer>> MOBSPAWNS = new HashIntMap<>();
 	
 	static
 	{

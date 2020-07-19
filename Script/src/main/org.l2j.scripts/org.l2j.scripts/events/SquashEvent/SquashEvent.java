@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.events.SquashEvent;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -31,22 +32,18 @@ import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
-import org.l2j.scripts.events.ScriptEvent;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author vGodFather
  */
-public class SquashEvent extends LongTimeEvent implements ScriptEvent
+public class SquashEvent extends LongTimeEvent
 {
 	private static final int MANAGER = 31860;
 	private static final int NECTAR_SKILL = 2005;
 	
-	private static final List<Integer> SQUASH_LIST = Arrays.asList(12774, 12775, 12776, 12777, 12778, 12779, 13016, 13017);
-	private static final List<Integer> LARGE_SQUASH_LIST = Arrays.asList(12778, 12779, 13016, 13017);
-	private static final List<Integer> CHRONO_LIST = Arrays.asList(4202, 5133, 5817, 7058, 8350);
+	private static final IntSet SQUASH_LIST = IntSet.of(12774, 12775, 12776, 12777, 12778, 12779, 13016, 13017);
+	private static final IntSet LARGE_SQUASH_LIST = IntSet.of(12778, 12779, 13016, 13017);
+	private static final IntSet CHRONO_LIST = IntSet.of(4202, 5133, 5817, 7058, 8350);
 	
 	//@formatter:off
 	private static final String[] _NOCHRONO_TEXT =

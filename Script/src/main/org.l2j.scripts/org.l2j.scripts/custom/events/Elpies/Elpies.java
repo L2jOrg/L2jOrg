@@ -29,11 +29,10 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.scripts.events.ScriptEvent;
 
 import java.util.concurrent.ScheduledFuture;
 
-public final class Elpies extends Event implements ScriptEvent
+public final class Elpies extends Event
 {
 	// NPC
 	private static final int ELPY = 900100;

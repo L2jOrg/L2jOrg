@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model.events;
 
+import io.github.joealisson.primitive.*;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -84,6 +85,7 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.util.MinionList;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.Zone;
@@ -94,11 +96,11 @@ import org.slf4j.LoggerFactory;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 
@@ -107,11 +109,11 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  */
 public abstract class AbstractScript extends ManagedScript implements IEventTimerEvent<String>, IEventTimerCancel<String> {
     protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractScript.class);
-    private final Map<ListenerRegisterType, Set<Integer>> _registeredIds = new ConcurrentHashMap<>();
+    private final Map<ListenerRegisterType, IntSet> _registeredIds = new EnumMap<>(ListenerRegisterType.class);
     private final Queue<AbstractEventListener> _listeners = new PriorityBlockingQueue<>();
     private volatile TimerExecutor<String> _timerExecutor;
 
-    public AbstractScript() {
+    protected AbstractScript() {
         initializeAnnotationListeners();
     }
 
@@ -131,11 +133,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Show an on screen message to the player.
-     *
-     * @param player    the player to display the message to
-     * @param npcString the NPC string to display
-     * @param position  the position of the message on the screen
-     * @param time      the duration of the message in milliseconds
      * @param params    values of parameters to replace in the NPC String (like S1, C1 etc.)
      */
     public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, String... params) {
@@ -147,11 +144,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Show an on screen message to the player.
-     *
-     * @param player     the player to display the message to
-     * @param npcString  the NPC string to display
-     * @param position   the position of the message on the screen
-     * @param time       the duration of the message in milliseconds
      * @param showEffect the upper effect
      * @param params     values of parameters to replace in the NPC String (like S1, C1 etc.)
      */
@@ -164,11 +156,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Show an on screen message to the player.
-     *
-     * @param player    the player to display the message to
-     * @param systemMsg the system message to display
-     * @param position  the position of the message on the screen
-     * @param time      the duration of the message in milliseconds
      * @param params    values of parameters to replace in the system message (like S1, C1 etc.)
      */
     public static void showOnScreenMsg(Player player, SystemMessageId systemMsg, int position, int time, String... params) {
@@ -193,11 +180,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param summoner     the NPC that requires this spawn
-     * @param npcId        the ID of the NPC to spawn
-     * @param pos          the object containing the spawn location coordinates
-     * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
      * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
      * @return the {@link Npc} object of the newly spawned NPC, {@code null} if the NPC doesn't exist
      */
@@ -206,12 +188,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Add a temporary spawn of the specified NPC.
-     *
-     * @param npcId         the ID of the NPC to spawn
-     * @param pos           the object containing the spawn location coordinates
-     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * Add a temporary spawn of the specified NPC. the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
      * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
      * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
      */
@@ -221,11 +198,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param npcId        the ID of the NPC to spawn
-     * @param pos          the object containing the spawn location coordinates
-     * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-     * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
      * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
      * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
      * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
@@ -234,15 +206,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, false, 0);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param npcId         the ID of the NPC to spawn
-     * @param pos           the object containing the spawn location coordinates
-     * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-     * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
      * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
      * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
      * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
@@ -254,11 +219,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param summoner     the NPC that requires this spawn
-     * @param npcId        the ID of the NPC to spawn
-     * @param pos          the object containing the spawn location coordinates
-     * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
      * @param instanceId   the ID of the instance to spawn the NPC in (0 - the open world)
      * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
      * @see #addSpawn(int, IPositionable)
@@ -271,15 +231,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return addSpawn(summoner, npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, 0, false, instanceId);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param npcId         the ID of the NPC to spawn
-     * @param pos           the object containing the spawn location coordinates
-     * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-     * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
      * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
      * @param instanceId    the ID of the instance to spawn the NPC in (0 - the open world)
      * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
@@ -295,11 +248,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param npcId        the ID of the NPC to spawn
-     * @param x            the X coordinate of the spawn location
-     * @param y            the Y coordinate of the spawn location
-     * @param z            the Z coordinate (height) of the spawn location
      * @param heading      the heading of the NPC
      * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
      * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
@@ -313,11 +261,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param npcId         the ID of the NPC to spawn
-     * @param x             the X coordinate of the spawn location
-     * @param y             the Y coordinate of the spawn location
-     * @param z             the Z coordinate (height) of the spawn location
      * @param heading       the heading of the NPC
      * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
      * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
@@ -330,15 +273,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, isSummonSpawn, 0);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param npcId         the ID of the NPC to spawn
-     * @param x             the X coordinate of the spawn location
-     * @param y             the Y coordinate of the spawn location
-     * @param z             the Z coordinate (height) of the spawn location
      * @param heading       the heading of the NPC
      * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
      * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
@@ -355,11 +291,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
-     *
-     * @param summoner      the NPC that requires this spawn
-     * @param npcId         the ID of the NPC to spawn
-     * @param x             the X coordinate of the spawn location
-     * @param y             the Y coordinate of the spawn location
      * @param z             the Z coordinate (height) of the spawn location
      * @param heading       the heading of the NPC
      * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
@@ -420,8 +351,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return player.getInventory().getInventoryItemCount(itemId, -1);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Check if the player has the specified item in his inventory.
      *
@@ -451,8 +380,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
         return hasQuestItems(player, item.getId());
     }
-
-    // ---------------------------------------------------------------------------------------------------------------------------
 
     /**
      * Check if the player has all the specified items in his inventory and, if necessary, if their count is also as required.
@@ -485,8 +412,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public static boolean hasQuestItems(Player player, int itemId) {
         return player.getInventory().getItemByItemId(itemId) != null;
     }
-
-    // ---------------------------------------------------------------------------------------------------------------------------
 
     /**
      * Check for multiple items in player's inventory.
@@ -523,13 +448,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return enchantedItem.getEnchantLevel();
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Give a reward to player using multipliers.
-     *
-     * @param player the player to whom to give the item
-     * @param holder
      */
     public static void rewardItems(Player player, ItemHolder holder) {
         rewardItems(player, holder.getId(), holder.getCount());
@@ -601,8 +521,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         sendItemGetMessage(player, itemInstance, count);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Send the system message and the status update packets to the player.
      *
@@ -636,24 +554,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Give item/reward to the player
-     *
-     * @param player
-     * @param itemId
-     * @param count
      */
     public static void giveItems(Player player, int itemId, long count) {
         giveItems(player, itemId, count, 0, false);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Give item/reward to the player
-     *
-     * @param player
-     * @param itemId
-     * @param count
-     * @param playSound
      */
     public static void giveItems(Player player, int itemId, long count, boolean playSound) {
         giveItems(player, itemId, count, 0, playSound);
@@ -661,23 +568,11 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Give item/reward to the player
-     *
-     * @param player
-     * @param holder
      */
     protected static void giveItems(Player player, ItemHolder holder) {
         giveItems(player, holder.getId(), holder.getCount());
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
-    /**
-     * @param player
-     * @param itemId
-     * @param count
-     * @param enchantlevel
-     * @param playSound
-     */
     public static void giveItems(Player player, int itemId, long count, int enchantlevel, boolean playSound) {
         if (player.isSimulatingTalking()) {
             return;
@@ -704,13 +599,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         sendItemGetMessage(player, item, count);
     }
 
-    /**
-     * @param player
-     * @param itemId
-     * @param count
-     * @param attributeType
-     * @param attributeValue
-     */
     public static void giveItems(Player player, int itemId, long count, AttributeType attributeType, int attributeValue) {
         if (player.isSimulatingTalking()) {
             return;
@@ -742,16 +630,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         sendItemGetMessage(player, item, count);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Give the specified player a set amount of items if he is lucky enough.<br>
      * Not recommended to use this for non-stacking items.
-     *
-     * @param player       the player to give the item(s) to
-     * @param itemId       the ID of the item to give
-     * @param amountToGive the amount of items to give
-     * @param limit        the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
      * @param dropChance   the drop chance as a decimal digit from 0 to 1
      * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
      * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
@@ -763,11 +644,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Give the specified player a set amount of items if he is lucky enough.<br>
      * Not recommended to use this for non-stacking items.
-     *
-     * @param player       the player to give the item(s) to
-     * @param npc          the NPC that "dropped" the item (can be null)
-     * @param itemId       the ID of the item to give
-     * @param amountToGive the amount of items to give
      * @param limit        the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
      * @param dropChance   the drop chance as a decimal digit from 0 to 1
      * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
@@ -777,16 +653,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Give the specified player a random amount of items if he is lucky enough.<br>
      * Not recommended to use this for non-stacking items.
-     *
-     * @param player     the player to give the item(s) to
-     * @param npc        the NPC that "dropped" the item (can be null)
-     * @param itemId     the ID of the item to give
-     * @param minAmount  the minimum amount of items to give
      * @param maxAmount  the maximum amount of items to give (will give a random amount between min/maxAmount multiplied by quest rates)
      * @param limit      the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
      * @param dropChance the drop chance as a decimal digit from 0 to 1
@@ -840,22 +709,14 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 if (playSound) {
                     playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
                 }
-                // if there is no limit, return true every time an item is given
-                if (limit <= 0) {
-                    return true;
-                }
+                return limit <= 0;
             }
         }
         return false;
     }
 
     /**
-     * Take an amount of a specified item from player's inventory.
-     *
-     * @param player the player whose item to take
-     * @param itemId the ID of the item to take
-     * @param amount the amount to take
-     * @return {@code true} if any items were taken, {@code false} otherwise
+     * Take an amount of a specified item from player's inventory. {@code true} if any items were taken, {@code false} otherwise
      */
     public static boolean takeItems(Player player, int itemId, long amount) {
         if (player.isSimulatingTalking()) {
@@ -885,8 +746,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
         return player.destroyItemByItemId("Quest", itemId, amount, player, true);
     }
-
-    // ---------------------------------------------------------------------------------------------------------------------------
 
     /**
      * Take a set amount of a specified item from player's inventory.
@@ -929,15 +788,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return true;
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
-     * Take an amount of all specified items from player's inventory.
-     *
-     * @param player  the player whose items to take
-     * @param amount  the amount to take of each item
-     * @param itemIds a list or an array of IDs of the items to take
-     * @return {@code true} if all items were taken, {@code false} otherwise
+     * Take an amount of all specified items from player's inventory. {@code true} if all items were taken, {@code false} otherwise
      */
     public static boolean takeItems(Player player, int amount, int... itemIds) {
         if (player.isSimulatingTalking()) {
@@ -956,8 +808,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public static void playSound(Instance world, String sound) {
         world.broadcastPacket(new PlaySound(sound));
     }
-
-    // ---------------------------------------------------------------------------------------------------------------------------
 
     /**
      * Send a packet in order to play a sound to the player.
@@ -1010,8 +860,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public static int getRandom(int max) {
         return Rnd.get(max);
     }
-
-    // ---------------------------------------------------------------------------------------------------------------------------
 
     /**
      * Get a random integer from {@code min} (inclusive) to {@code max} (inclusive).<br>
@@ -1076,8 +924,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return array[getRandom(array.length)];
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Get the ID of the item equipped in the specified inventory slot of the player.
      *
@@ -1098,19 +944,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Sends the special camera packet to the player.
-     *
-     * @param player   the player
-     * @param creature the watched creature
-     * @param force
-     * @param angle1
-     * @param angle2
-     * @param time
-     * @param range
-     * @param duration
-     * @param relYaw
-     * @param relPitch
-     * @param isWide
-     * @param relAngle
      */
     public static void specialCamera(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
         if (player.isSimulatingTalking()) {
@@ -1119,22 +952,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle));
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Sends the special camera packet to the player.
-     *
-     * @param player
-     * @param creature
-     * @param force
-     * @param angle1
-     * @param angle2
-     * @param time
-     * @param duration
-     * @param relYaw
-     * @param relPitch
-     * @param isWide
-     * @param relAngle
      */
     public static void specialCameraEx(Player player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
         if (player.isSimulatingTalking()) {
@@ -1145,20 +964,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Sends the special camera packet to the player.
-     *
-     * @param player
-     * @param creature
-     * @param force
-     * @param angle1
-     * @param angle2
-     * @param time
-     * @param range
-     * @param duration
-     * @param relYaw
-     * @param relPitch
-     * @param isWide
-     * @param relAngle
-     * @param unk
      */
     public static void specialCamera3(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
         if (player.isSimulatingTalking()) {
@@ -1166,8 +971,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
         player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
     }
-
-    // ---------------------------------------------------------------------------------------------------------------------------
 
     public static void specialCamera(Instance world, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
         world.broadcastPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
@@ -1184,8 +987,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         player.getRadar().addMarker(x, y, z);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     @Override
     public final void onTimerEvent(TimerHolder<String> holder) {
         onTimerEvent(holder.getEvent(), holder.getParams(), holder.getNpc(), holder.getPlayer());
@@ -1196,16 +997,12 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         onTimerCancel(holder.getEvent(), holder.getParams(), holder.getNpc(), holder.getPlayer());
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     public void onTimerEvent(String event, StatsSet params, Npc npc, Player player) {
         LOGGER.warn("[" + getClass().getSimpleName() + "]: Timer event arrived at non overriden onTimerEvent method event: " + event + " npc: " + npc + " player: " + player);
     }
 
     public void onTimerCancel(String event, StatsSet params, Npc npc, Player player) {
     }
-
-    // ---------------------------------------------------------------------------------------------------------------------------
 
     /**
      * @return the {@link TimerExecutor} object that manages timers
@@ -1225,10 +1022,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return _timerExecutor != null;
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     private void initializeAnnotationListeners() {
-        final List<Integer> ids = new ArrayList<>();
+        final IntSet ids = new HashIntSet();
         for (Method method : getClass().getMethods()) {
             if (method.isAnnotationPresent(RegisterEvent.class) && method.isAnnotationPresent(RegisterType.class)) {
                 final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
@@ -1248,39 +1043,32 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 }
 
                 int priority = 0;
-
-                // Clear the list
                 ids.clear();
 
-                // Scan for possible Id filters
                 for (Annotation annotation : method.getAnnotations()) {
-                    if (annotation instanceof Id) {
-                        final Id npc = (Id) annotation;
+                    if (annotation instanceof Id npc) {
                         for (int id : npc.value()) {
                             ids.add(id);
                         }
-                    } else if (annotation instanceof Ids) {
-                        final Ids npcs = (Ids) annotation;
+                    } else if (annotation instanceof Ids npcs) {
                         for (Id npc : npcs.value()) {
                             for (int id : npc.value()) {
                                 ids.add(id);
                             }
                         }
-                    } else if (annotation instanceof Range) {
-                        final Range range = (Range) annotation;
+                    } else if (annotation instanceof Range range) {
                         if (range.from() > range.to()) {
-                            LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+                            LOGGER.warn("Wrong Range: from is higher then to!");
                             continue;
                         }
 
                         for (int id = range.from(); id <= range.to(); id++) {
                             ids.add(id);
                         }
-                    } else if (annotation instanceof Ranges) {
-                        final Ranges ranges = (Ranges) annotation;
+                    } else if (annotation instanceof Ranges ranges) {
                         for (Range range : ranges.value()) {
                             if (range.from() > range.to()) {
-                                LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+                                LOGGER.warn("Wrong Ranges: from is higher then to!");
                                 continue;
                             }
 
@@ -1288,13 +1076,12 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                                 ids.add(id);
                             }
                         }
-                    } else if (annotation instanceof NpcLevelRange) {
-                        final NpcLevelRange range = (NpcLevelRange) annotation;
+                    } else if (annotation instanceof NpcLevelRange range) {
                         if (range.from() > range.to()) {
-                            LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+                            LOGGER.warn("Wrong NpcLevelRange: from is higher then to!");
                             continue;
                         } else if (type != ListenerRegisterType.NPC) {
-                            LOGGER.warn(": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
+                            LOGGER.warn("ListenerRegisterType {} for NpcLevelRange, NPC is expected!", type);
                             continue;
                         }
 
@@ -1303,8 +1090,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                             templates.forEach(template -> ids.add(template.getId()));
                         }
 
-                    } else if (annotation instanceof NpcLevelRanges) {
-                        final NpcLevelRanges ranges = (NpcLevelRanges) annotation;
+                    } else if (annotation instanceof NpcLevelRanges ranges) {
                         for (NpcLevelRange range : ranges.value()) {
                             if (range.from() > range.to()) {
                                 LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
@@ -1319,14 +1105,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                                 templates.forEach(template -> ids.add(template.getId()));
                             }
                         }
-                    } else if (annotation instanceof Priority) {
-                        final Priority p = (Priority) annotation;
+                    } else if (annotation instanceof Priority p) {
                         priority = p.value();
                     }
                 }
 
                 if (!ids.isEmpty()) {
-                    _registeredIds.computeIfAbsent(type, k -> ConcurrentHashMap.newKeySet()).addAll(ids);
+                    _registeredIds.computeIfAbsent(type, k -> CHashIntMap.newKeySet()).addAll(ids);
                 }
 
                 registerAnnotation(method, eventType, type, priority, ids);
@@ -1347,14 +1132,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return true;
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides callback operation when Attackable dies from a player.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setAttackableKillId(Consumer<OnAttackableKill> callback, int... npcIds) {
         for (int id : npcIds) {
@@ -1365,32 +1144,24 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return registerConsumer(callback, EventType.ON_ATTACKABLE_KILL, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides callback operation when Attackable dies from a player.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setAttackableKillId(Consumer<OnAttackableKill> callback, Collection<Integer> npcIds) {
-        for (int id : npcIds) {
-            if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addKillId for non existing NPC: " + id + "!");
-            }
-        }
+    protected final List<AbstractEventListener> setAttackableKillId(Consumer<OnAttackableKill> callback, IntCollection npcIds) {
+        checkNpcIds(npcIds, EventType.ON_ATTACKABLE_KILL);
         return registerConsumer(callback, EventType.ON_ATTACKABLE_KILL, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
+    private void checkNpcIds(IntCollection npcIds, EventType type) {
+        npcIds.forEach(id -> {
+            if (isNull(NpcData.getInstance().getTemplate(id))) {
+                LOGGER.error("Found registering event type {} for non existing NPC: {}!", type, id);
+            }
+        });
+    }
 
     /**
      * Provides instant callback operation when Attackable dies from a player with return type.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> addCreatureKillId(Function<OnCreatureDeath, ? extends AbstractEventReturn> callback, int... npcIds) {
         return registerFunction(callback, EventType.ON_CREATURE_DEATH, ListenerRegisterType.NPC, npcIds);
@@ -1398,47 +1169,27 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when Attackable dies from a player.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setCreatureKillId(Consumer<OnCreatureDeath> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_DEATH, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when {@link Attackable} dies from a {@link Player}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setCreatureKillId(Consumer<OnCreatureDeath> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setCreatureKillId(Consumer<OnCreatureDeath> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_DEATH, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when Attackable dies from a player with return type.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> addCreatureAttackedId(Function<OnCreatureAttacked, ? extends AbstractEventReturn> callback, int... npcIds) {
         return registerFunction(callback, EventType.ON_CREATURE_ATTACKED, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when Attackable dies from a player.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setCreatureAttackedId(Consumer<OnCreatureAttacked> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_ATTACKED, ListenerRegisterType.NPC, npcIds);
@@ -1446,23 +1197,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Attackable} dies from a {@link Player}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setCreatureAttackedid(Consumer<OnCreatureAttacked> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setCreatureAttackedid(Consumer<OnCreatureAttacked> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_ATTACKED, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when {@link Player} talk to {@link Npc} for first time.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcFirstTalkId(Consumer<OnNpcFirstTalk> callback, int... npcIds) {
         for (int id : npcIds) {
@@ -1475,73 +1216,42 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} talk to {@link Npc} for first time.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcFirstTalkId(Consumer<OnNpcFirstTalk> callback, Collection<Integer> npcIds) {
-        for (int id : npcIds) {
-            if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addFirstTalkId for non existing NPC: " + id + "!");
-            }
-        }
+    protected final List<AbstractEventListener> setNpcFirstTalkId(Consumer<OnNpcFirstTalk> callback, IntCollection npcIds) {
+        checkNpcIds(npcIds, EventType.ON_NPC_FIRST_TALK);
         return registerConsumer(callback, EventType.ON_NPC_FIRST_TALK, ListenerRegisterType.NPC, npcIds);
     }
-
-    // ---------------------------------------------------------------------------------------------------------------------------
 
     /**
      * Provides instant callback operation when {@link Player} talk to {@link Npc}.
      *
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcTalkId(Collection<Integer> npcIds) {
-        for (int id : npcIds) {
-            if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addTalkId for non existing NPC: " + id + "!");
-            }
-        }
+    protected final List<AbstractEventListener> setNpcTalkId(IntCollection npcIds) {
+        checkNpcIds(npcIds, EventType.ON_NPC_TALK);
         return registerDummy(EventType.ON_NPC_TALK, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Player} talk to {@link Npc}.
-     *
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcTalkId(int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addTalkId for non existing NPC: " + id + "!");
+                LOGGER.error("Found addTalkId for non existing NPC: {}!", id);
             }
         }
         return registerDummy(EventType.ON_NPC_TALK, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when teleport {@link Npc}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcTeleportId(Consumer<OnNpcTeleport> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcTeleportId(Consumer<OnNpcTeleport> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_TELEPORT, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when teleport {@link Npc}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcTeleportId(Consumer<OnNpcTeleport> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_TELEPORT, ListenerRegisterType.NPC, npcIds);
@@ -1549,9 +1259,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} talk to {@link Npc} and must receive quest state.
-     *
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcQuestStartId(int... npcIds) {
         for (int id : npcIds) {
@@ -1562,29 +1269,16 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return registerDummy(EventType.ON_NPC_QUEST_START, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when {@link Player} talk to {@link Npc} and must receive quest state.
-     *
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcQuestStartId(Collection<Integer> npcIds) {
-        for (int id : npcIds) {
-            if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addStartNpc for non existing NPC: " + id + "!");
-            }
-        }
+    protected final List<AbstractEventListener> setNpcQuestStartId(IntCollection npcIds) {
+        checkNpcIds(npcIds, EventType.ON_NPC_QUEST_START);
         return registerDummy(EventType.ON_NPC_QUEST_START, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when Npc sees skill from a player.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcSkillSeeId(Consumer<OnNpcSkillSee> callback, int... npcIds) {
         for (int id : npcIds) {
@@ -1595,30 +1289,16 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return registerConsumer(callback, EventType.ON_NPC_SKILL_SEE, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when Npc sees skill from a player.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcSkillSeeId(Consumer<OnNpcSkillSee> callback, Collection<Integer> npcIds) {
-        for (int id : npcIds) {
-            if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addSkillSeeId for non existing NPC: " + id + "!");
-            }
-        }
+    protected final List<AbstractEventListener> setNpcSkillSeeId(Consumer<OnNpcSkillSee> callback, IntCollection npcIds) {
+        checkNpcIds(npcIds, EventType.ON_NPC_SKILL_SEE);
         return registerConsumer(callback, EventType.ON_NPC_SKILL_SEE, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when Npc casts skill on a player.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcSkillFinishedId(Consumer<OnNpcSkillFinished> callback, int... npcIds) {
         for (int id : npcIds) {
@@ -1629,30 +1309,16 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return registerConsumer(callback, EventType.ON_NPC_SKILL_FINISHED, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when Npc casts skill on a player.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcSkillFinishedId(Consumer<OnNpcSkillFinished> callback, Collection<Integer> npcIds) {
-        for (int id : npcIds) {
-            if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addSpellFinishedId for non existing NPC: " + id + "!");
-            }
-        }
+    protected final List<AbstractEventListener> setNpcSkillFinishedId(Consumer<OnNpcSkillFinished> callback, IntCollection npcIds) {
+        checkNpcIds(npcIds, EventType.ON_NPC_SKILL_FINISHED);
         return registerConsumer(callback, EventType.ON_NPC_SKILL_FINISHED, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when Npc is spawned.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, int... npcIds) {
         for (int id : npcIds) {
@@ -1665,150 +1331,84 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when Npc is spawned.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, Collection<Integer> npcIds) {
-        for (int id : npcIds) {
-            if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addSpawnId for non existing NPC: " + id + "!");
-            }
-        }
+    protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, IntCollection npcIds) {
+        checkNpcIds(npcIds, EventType.ON_NPC_SPAWN);
         return registerConsumer(callback, EventType.ON_NPC_SPAWN, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when Npc is despawned.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcDespawnId(Consumer<OnNpcDespawn> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_DESPAWN, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when Npc is despawned.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcDespawnId(Consumer<OnNpcDespawn> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcDespawnId(Consumer<OnNpcDespawn> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_DESPAWN, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Npc} receives event from another {@link Npc}
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcEventReceivedId(Consumer<OnNpcEventReceived> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_EVENT_RECEIVED, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when {@link Npc} receives event from another {@link Npc}
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcEventReceivedId(Consumer<OnNpcEventReceived> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcEventReceivedId(Consumer<OnNpcEventReceived> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_EVENT_RECEIVED, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Npc} finishes to move.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcMoveFinishedId(Consumer<OnNpcMoveFinished> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_MOVE_FINISHED, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when {@link Npc} finishes to move.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcMoveFinishedId(Consumer<OnNpcMoveFinished> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcMoveFinishedId(Consumer<OnNpcMoveFinished> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_MOVE_FINISHED, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Npc} finishes to move on its route.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcMoveRouteFinishedId(Consumer<OnNpcMoveRouteFinished> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_MOVE_ROUTE_FINISHED, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when {@link Npc} finishes to move on its route.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcMoveRouteFinishedId(Consumer<OnNpcMoveRouteFinished> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcMoveRouteFinishedId(Consumer<OnNpcMoveRouteFinished> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_MOVE_ROUTE_FINISHED, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Npc} is about to hate and start attacking a creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcHateId(Consumer<OnAttackableHate> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_HATE, ListenerRegisterType.NPC, npcIds);
     }
 
-    // ---------------------------------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when {@link Npc} is about to hate and start attacking a creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcHateId(Consumer<OnAttackableHate> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcHateId(Consumer<OnAttackableHate> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_HATE, ListenerRegisterType.NPC, npcIds);
     }
 
-    // --------------------------------------------------------------------------------------------------
-    // --------------------------------Default listener register methods---------------------------------
-    // --------------------------------------------------------------------------------------------------
-
     /**
      * Provides instant callback operation when {@link Npc} is about to hate and start attacking a creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> addNpcHateId(Function<OnAttackableHate, TerminateReturn> callback, int... npcIds) {
         return registerFunction(callback, EventType.ON_NPC_HATE, ListenerRegisterType.NPC, npcIds);
@@ -1816,21 +1416,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Npc} is about to hate and start attacking a creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> addNpcHateId(Function<OnAttackableHate, TerminateReturn> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> addNpcHateId(Function<OnAttackableHate, TerminateReturn> callback, IntCollection npcIds) {
         return registerFunction(callback, EventType.ON_NPC_HATE, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Npc} is about to hate and start attacking a creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcCanBeSeenId(Consumer<OnNpcCanBeSeen> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_CAN_BE_SEEN, ListenerRegisterType.NPC, npcIds);
@@ -1838,21 +1430,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Npc} is about to hate and start attacking a creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcCanBeSeenId(Consumer<OnNpcCanBeSeen> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcCanBeSeenId(Consumer<OnNpcCanBeSeen> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_CAN_BE_SEEN, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Npc} is about to hate and start attacking a creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcCanBeSeenId(Function<OnNpcCanBeSeen, TerminateReturn> callback, int... npcIds) {
         return registerFunction(callback, EventType.ON_NPC_CAN_BE_SEEN, ListenerRegisterType.NPC, npcIds);
@@ -1860,21 +1444,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Npc} is about to hate and start attacking a creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcCanBeSeenId(Function<OnNpcCanBeSeen, TerminateReturn> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcCanBeSeenId(Function<OnNpcCanBeSeen, TerminateReturn> callback, IntCollection npcIds) {
         return registerFunction(callback, EventType.ON_NPC_CAN_BE_SEEN, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Npc} sees another creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
@@ -1882,10 +1458,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Creature} sees another creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setCreatureSeeId(Consumer<OnCreatureSee> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
@@ -1893,47 +1465,30 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Npc} sees another creature.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_NPC_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when Attackable is under attack to other clan mates.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setAttackableFactionIdId(Consumer<OnAttackableFactionCall> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_ATTACKABLE_FACTION_CALL, ListenerRegisterType.NPC, npcIds);
     }
 
-    // --------------------------------------------------------------------------------------------------
-    // --------------------------------------Register methods--------------------------------------------
-    // --------------------------------------------------------------------------------------------------
 
     /**
      * Provides instant callback operation when Attackable is under attack to other clan mates.
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setAttackableFactionIdId(Consumer<OnAttackableFactionCall> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setAttackableFactionIdId(Consumer<OnAttackableFactionCall> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_ATTACKABLE_FACTION_CALL, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when Attackable is attacked from a player.
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, int... npcIds) {
         for (int id : npcIds) {
@@ -1947,51 +1502,31 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Provides instant callback operation when Attackable is attacked from a player.
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, Collection<Integer> npcIds) {
-        for (int id : npcIds) {
-            if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addAttackId for non existing NPC: " + id + "!");
-            }
-        }
+    protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, IntCollection npcIds) {
+        checkNpcIds(npcIds, EventType.ON_ATTACKABLE_ATTACK);
         return registerConsumer(callback, EventType.ON_ATTACKABLE_ATTACK, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Player} enters in {@link Attackable}'s aggressive range.
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setAttackableAggroRangeEnterId(Consumer<OnAttackableAggroRangeEnter> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_ATTACKABLE_AGGRO_RANGE_ENTER, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
-     * -------------------------------------------------------------------------------------------------------
-     */
-
-    /**
      * Provides instant callback operation when {@link Player} enters in {@link Attackable}'s aggressive range.
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setAttackableAggroRangeEnterId(Consumer<OnAttackableAggroRangeEnter> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setAttackableAggroRangeEnterId(Consumer<OnAttackableAggroRangeEnter> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_ATTACKABLE_AGGRO_RANGE_ENTER, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Player} learn's a {@link Skill}.
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setPlayerSkillLearnId(Consumer<OnPlayerSkillLearn> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SKILL_LEARN, ListenerRegisterType.NPC, npcIds);
@@ -2000,20 +1535,14 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Provides instant callback operation when {@link Player} learn's a {@link Skill}.
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setPlayerSkillLearnId(Consumer<OnPlayerSkillLearn> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setPlayerSkillLearnId(Consumer<OnPlayerSkillLearn> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SKILL_LEARN, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Player} summons a servitor or a pet
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setPlayerSummonSpawnId(Consumer<OnPlayerSummonSpawn> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_SPAWN, ListenerRegisterType.NPC, npcIds);
@@ -2022,24 +1551,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Provides instant callback operation when {@link Player} summons a servitor or a pet
      *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setPlayerSummonSpawnId(Consumer<OnPlayerSummonSpawn> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setPlayerSummonSpawnId(Consumer<OnPlayerSummonSpawn> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_SPAWN, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
-     * -------------------------------------------------------------------------------------------------------
-     */
-
-    /**
      * Provides instant callback operation when {@link Player} talk with a servitor or a pet
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setPlayerSummonTalkId(Consumer<OnPlayerSummonTalk> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_TALK, ListenerRegisterType.NPC, npcIds);
@@ -2047,41 +1565,21 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} talk with a servitor or a pet
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setPlayerSummonTalkId(Consumer<OnPlayerSummonSpawn> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setPlayerSummonTalkId(Consumer<OnPlayerSummonSpawn> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_TALK, ListenerRegisterType.NPC, npcIds);
     }
-
-    /**
-     * Provides instant callback operation when {@link Player} summons a servitor or a pet
-     *
-     * @param callback
-     * @return
-     */
+    
     protected final List<AbstractEventListener> setPlayerLoginId(Consumer<OnPlayerLogin> callback) {
         return registerConsumer(callback, EventType.ON_PLAYER_LOGIN, ListenerRegisterType.GLOBAL);
     }
-
-    /**
-     * Provides instant callback operation when {@link Player} summons a servitor or a pet
-     *
-     * @param callback
-     * @return
-     */
+    
     protected final List<AbstractEventListener> setPlayerLogoutId(Consumer<OnPlayerLogout> callback) {
         return registerConsumer(callback, EventType.ON_PLAYER_LOGOUT, ListenerRegisterType.GLOBAL);
     }
 
     /**
      * Provides instant callback operation when {@link Creature} Enters on a {@link Zone}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setCreatureZoneEnterId(Consumer<OnCreatureZoneEnter> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_ZONE_ENTER, ListenerRegisterType.ZONE, npcIds);
@@ -2089,21 +1587,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Creature} Enters on a {@link Zone}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setCreatureZoneEnterId(Consumer<OnCreatureZoneEnter> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setCreatureZoneEnterId(Consumer<OnCreatureZoneEnter> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_ZONE_ENTER, ListenerRegisterType.ZONE, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Creature} Exits on a {@link Zone}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setCreatureZoneExitId(Consumer<OnCreatureZoneExit> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_ZONE_EXIT, ListenerRegisterType.ZONE, npcIds);
@@ -2111,21 +1601,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Creature} Exits on a {@link Zone}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setCreatureZoneExitId(Consumer<OnCreatureZoneExit> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setCreatureZoneExitId(Consumer<OnCreatureZoneExit> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_ZONE_EXIT, ListenerRegisterType.ZONE, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Trap} acts.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setTrapActionId(Consumer<OnTrapAction> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_TRAP_ACTION, ListenerRegisterType.NPC, npcIds);
@@ -2133,21 +1615,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Trap} acts.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setTrapActionId(Consumer<OnTrapAction> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setTrapActionId(Consumer<OnTrapAction> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_TRAP_ACTION, ListenerRegisterType.NPC, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link ItemTemplate} receives an event from {@link Player}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setItemBypassEvenId(Consumer<OnItemBypassEvent> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_ITEM_BYPASS_EVENT, ListenerRegisterType.ITEM, npcIds);
@@ -2155,21 +1629,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link ItemTemplate} receives an event from {@link Player}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setItemBypassEvenId(Consumer<OnItemBypassEvent> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setItemBypassEvenId(Consumer<OnItemBypassEvent> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_ITEM_BYPASS_EVENT, ListenerRegisterType.ITEM, npcIds);
     }
 
     /**
      * Provides instant callback operation when {@link Player} talk to {@link ItemTemplate}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> setItemTalkId(Consumer<OnItemTalk> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_ITEM_TALK, ListenerRegisterType.ITEM, npcIds);
@@ -2177,20 +1643,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} talk to {@link ItemTemplate}.
-     *
-     * @param callback
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> setItemTalkId(Consumer<OnItemTalk> callback, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> setItemTalkId(Consumer<OnItemTalk> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_ITEM_TALK, ListenerRegisterType.ITEM, npcIds);
     }
 
     /**
      * Provides instant callback operation when Olympiad match finishes.
-     *
-     * @param callback
-     * @return
      */
     protected final List<AbstractEventListener> setOlympiadMatchResult(Consumer<OnOlympiadMatchResult> callback) {
         return registerConsumer(callback, EventType.ON_OLYMPIAD_MATCH_RESULT, ListenerRegisterType.OLYMPIAD);
@@ -2198,10 +1657,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when castle siege begins
-     *
-     * @param callback
-     * @param castleIds
-     * @return
      */
     protected final List<AbstractEventListener> setCastleSiegeStartId(Consumer<OnCastleSiegeStart> callback, int... castleIds) {
         return registerConsumer(callback, EventType.ON_CASTLE_SIEGE_START, ListenerRegisterType.CASTLE, castleIds);
@@ -2209,21 +1664,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when castle siege begins
-     *
-     * @param callback
-     * @param castleIds
-     * @return
      */
-    protected final List<AbstractEventListener> setCastleSiegeStartId(Consumer<OnCastleSiegeStart> callback, Collection<Integer> castleIds) {
+    protected final List<AbstractEventListener> setCastleSiegeStartId(Consumer<OnCastleSiegeStart> callback, IntCollection castleIds) {
         return registerConsumer(callback, EventType.ON_CASTLE_SIEGE_START, ListenerRegisterType.CASTLE, castleIds);
     }
 
     /**
      * Provides instant callback operation when Castle owner has changed during a siege
-     *
-     * @param callback
-     * @param castleIds
-     * @return
      */
     protected final List<AbstractEventListener> setCastleSiegeOwnerChangeId(Consumer<OnCastleSiegeOwnerChange> callback, int... castleIds) {
         return registerConsumer(callback, EventType.ON_CASTLE_SIEGE_OWNER_CHANGE, ListenerRegisterType.CASTLE, castleIds);
@@ -2231,21 +1678,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when Castle owner has changed during a siege
-     *
-     * @param callback
-     * @param castleIds
-     * @return
      */
-    protected final List<AbstractEventListener> setCastleSiegeOwnerChangeId(Consumer<OnCastleSiegeOwnerChange> callback, Collection<Integer> castleIds) {
+    protected final List<AbstractEventListener> setCastleSiegeOwnerChangeId(Consumer<OnCastleSiegeOwnerChange> callback, IntCollection castleIds) {
         return registerConsumer(callback, EventType.ON_CASTLE_SIEGE_OWNER_CHANGE, ListenerRegisterType.CASTLE, castleIds);
     }
 
     /**
      * Provides instant callback operation when castle siege ends
-     *
-     * @param callback
-     * @param castleIds
-     * @return
      */
     protected final List<AbstractEventListener> setCastleSiegeFinishId(Consumer<OnCastleSiegeFinish> callback, int... castleIds) {
         return registerConsumer(callback, EventType.ON_CASTLE_SIEGE_FINISH, ListenerRegisterType.CASTLE, castleIds);
@@ -2253,20 +1692,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when castle siege ends
-     *
-     * @param callback
-     * @param castleIds
-     * @return
      */
-    protected final List<AbstractEventListener> setCastleSiegeFinishId(Consumer<OnCastleSiegeFinish> callback, Collection<Integer> castleIds) {
+    protected final List<AbstractEventListener> setCastleSiegeFinishId(Consumer<OnCastleSiegeFinish> callback, IntCollection castleIds) {
         return registerConsumer(callback, EventType.ON_CASTLE_SIEGE_FINISH, ListenerRegisterType.CASTLE, castleIds);
     }
 
     /**
      * Provides instant callback operation when player's profession has change
-     *
-     * @param callback
-     * @return
      */
     protected final List<AbstractEventListener> setPlayerProfessionChangeId(Consumer<OnPlayerProfessionChange> callback) {
         return registerConsumer(callback, EventType.ON_PLAYER_PROFESSION_CHANGE, ListenerRegisterType.GLOBAL);
@@ -2274,9 +1706,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when player's cancel profession
-     *
-     * @param callback
-     * @return
      */
     protected final List<AbstractEventListener> setPlayerProfessionCancelId(Consumer<OnPlayerProfessionCancel> callback) {
         return registerConsumer(callback, EventType.ON_PLAYER_PROFESSION_CANCEL, ListenerRegisterType.GLOBAL);
@@ -2284,10 +1713,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when instance world created
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
     protected final List<AbstractEventListener> setInstanceCreatedId(Consumer<OnInstanceCreated> callback, int... templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_CREATED, ListenerRegisterType.INSTANCE, templateIds);
@@ -2295,21 +1720,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when instance world created
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
-    protected final List<AbstractEventListener> setInstanceCreatedId(Consumer<OnInstanceCreated> callback, Collection<Integer> templateIds) {
+    protected final List<AbstractEventListener> setInstanceCreatedId(Consumer<OnInstanceCreated> callback, IntCollection templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_CREATED, ListenerRegisterType.INSTANCE, templateIds);
     }
 
     /**
      * Provides instant callback operation when instance world destroyed
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
     protected final List<AbstractEventListener> setInstanceDestroyId(Consumer<OnInstanceDestroy> callback, int... templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_DESTROY, ListenerRegisterType.INSTANCE, templateIds);
@@ -2317,21 +1734,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when instance world destroyed
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
-    protected final List<AbstractEventListener> setInstanceDestroyId(Consumer<OnInstanceDestroy> callback, Collection<Integer> templateIds) {
+    protected final List<AbstractEventListener> setInstanceDestroyId(Consumer<OnInstanceDestroy> callback, IntCollection templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_DESTROY, ListenerRegisterType.INSTANCE, templateIds);
     }
 
     /**
      * Provides instant callback operation when player enters into instance world
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
     protected final List<AbstractEventListener> setInstanceEnterId(Consumer<OnInstanceEnter> callback, int... templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_ENTER, ListenerRegisterType.INSTANCE, templateIds);
@@ -2339,21 +1748,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when player enters into instance world
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
-    protected final List<AbstractEventListener> setInstanceEnterId(Consumer<OnInstanceEnter> callback, Collection<Integer> templateIds) {
+    protected final List<AbstractEventListener> setInstanceEnterId(Consumer<OnInstanceEnter> callback, IntCollection templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_ENTER, ListenerRegisterType.INSTANCE, templateIds);
     }
 
     /**
      * Provides instant callback operation when player leave from instance world
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
     protected final List<AbstractEventListener> setInstanceLeaveId(Consumer<OnInstanceLeave> callback, int... templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_LEAVE, ListenerRegisterType.INSTANCE, templateIds);
@@ -2361,21 +1762,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when player leave from instance world
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
-    protected final List<AbstractEventListener> setInstanceLeaveId(Consumer<OnInstanceLeave> callback, Collection<Integer> templateIds) {
+    protected final List<AbstractEventListener> setInstanceLeaveId(Consumer<OnInstanceLeave> callback, IntCollection templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_LEAVE, ListenerRegisterType.INSTANCE, templateIds);
     }
 
     /**
      * Provides instant callback operation on instance status change
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
     protected final List<AbstractEventListener> setInstanceStatusChangeId(Consumer<OnInstanceStatusChange> callback, int... templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_STATUS_CHANGE, ListenerRegisterType.INSTANCE, templateIds);
@@ -2383,23 +1776,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation on instance status change
-     *
-     * @param callback
-     * @param templateIds
-     * @return
      */
-    protected final List<AbstractEventListener> setInstanceStatusChangeId(Consumer<OnInstanceStatusChange> callback, Collection<Integer> templateIds) {
+    protected final List<AbstractEventListener> setInstanceStatusChangeId(Consumer<OnInstanceStatusChange> callback, IntCollection templateIds) {
         return registerConsumer(callback, EventType.ON_INSTANCE_STATUS_CHANGE, ListenerRegisterType.INSTANCE, templateIds);
     }
 
     /**
      * Method that registers Function type of listeners (Listeners that need parameters but doesn't return objects)
-     *
-     * @param callback
-     * @param type
-     * @param registerType
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, int... npcIds) {
         return registerListener((container) -> new ConsumerEventListener(container, type, callback, this), registerType, npcIds);
@@ -2407,25 +1790,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Method that registers Function type of listeners (Listeners that need parameters but doesn't return objects)
-     *
-     * @param callback
-     * @param type
-     * @param registerType
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, IntCollection npcIds) {
         return registerListener((container) -> new ConsumerEventListener(container, type, callback, this), registerType, npcIds);
     }
 
     /**
      * Method that registers Function type of listeners (Listeners that need parameters and return objects)
-     *
-     * @param callback
-     * @param type
-     * @param registerType
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> registerFunction(Function<? extends IBaseEvent, ? extends AbstractEventReturn> callback, EventType type, ListenerRegisterType registerType, int... npcIds) {
         return registerListener((container) -> new FunctionEventListener(container, type, callback, this), registerType, npcIds);
@@ -2433,25 +1804,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Method that registers Function type of listeners (Listeners that need parameters and return objects)
-     *
-     * @param callback
-     * @param type
-     * @param registerType
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> registerFunction(Function<? extends IBaseEvent, ? extends AbstractEventReturn> callback, EventType type, ListenerRegisterType registerType, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> registerFunction(Function<? extends IBaseEvent, ? extends AbstractEventReturn> callback, EventType type, ListenerRegisterType registerType, IntCollection npcIds) {
         return registerListener((container) -> new FunctionEventListener(container, type, callback, this), registerType, npcIds);
     }
 
     /**
      * Method that registers runnable type of listeners (Listeners that doesn't needs parameters or return objects)
-     *
-     * @param callback
-     * @param type
-     * @param registerType
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> registerRunnable(Runnable callback, EventType type, ListenerRegisterType registerType, int... npcIds) {
         return registerListener((container) -> new RunnableEventListener(container, type, callback, this), registerType, npcIds);
@@ -2459,26 +1818,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Method that registers runnable type of listeners (Listeners that doesn't needs parameters or return objects)
-     *
-     * @param callback
-     * @param type
-     * @param registerType
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> registerRunnable(Runnable callback, EventType type, ListenerRegisterType registerType, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> registerRunnable(Runnable callback, EventType type, ListenerRegisterType registerType, IntCollection npcIds) {
         return registerListener((container) -> new RunnableEventListener(container, type, callback, this), registerType, npcIds);
     }
 
     /**
      * Method that registers runnable type of listeners (Listeners that doesn't needs parameters or return objects)
-     *
-     * @param callback
-     * @param type
-     * @param registerType
-     * @param priority
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> registerAnnotation(Method callback, EventType type, ListenerRegisterType registerType, int priority, int... npcIds) {
         return registerListener((container) -> new AnnotationEventListener(container, type, callback, this, priority), registerType, npcIds);
@@ -2486,25 +1832,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Method that registers runnable type of listeners (Listeners that doesn't needs parameters or return objects)
-     *
-     * @param callback
-     * @param type
-     * @param registerType
-     * @param priority
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> registerAnnotation(Method callback, EventType type, ListenerRegisterType registerType, int priority, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> registerAnnotation(Method callback, EventType type, ListenerRegisterType registerType, int priority, IntCollection npcIds) {
         return registerListener((container) -> new AnnotationEventListener(container, type, callback, this, priority), registerType, npcIds);
     }
 
     /**
      * Method that registers dummy type of listeners (Listeners doesn't gets notification but just used to check if their type present or not)
-     *
-     * @param type
-     * @param registerType
-     * @param npcIds
-     * @return
      */
     protected final List<AbstractEventListener> registerDummy(EventType type, ListenerRegisterType registerType, int... npcIds) {
         return registerListener((container) -> new DummyEventListener(container, type, this), registerType, npcIds);
@@ -2512,23 +1846,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Method that registers dummy type of listeners (Listeners doesn't gets notification but just used to check if their type present or not)
-     *
-     * @param type
-     * @param registerType
-     * @param npcIds
-     * @return
      */
-    protected final List<AbstractEventListener> registerDummy(EventType type, ListenerRegisterType registerType, Collection<Integer> npcIds) {
+    protected final List<AbstractEventListener> registerDummy(EventType type, ListenerRegisterType registerType, IntCollection npcIds) {
         return registerListener((container) -> new DummyEventListener(container, type, this), registerType, npcIds);
     }
 
     /**
      * Generic listener register method
-     *
-     * @param action
-     * @param registerType
-     * @param ids
-     * @return
      */
     protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, int... ids) {
         final List<AbstractEventListener> listeners = new ArrayList<>(ids.length > 0 ? ids.length : 1);
@@ -2536,7 +1860,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             for (int id : ids) {
                 registerListenrWithId(action, registerType, listeners, id);
 
-                _registeredIds.computeIfAbsent(registerType, k -> ConcurrentHashMap.newKeySet()).add(id);
+                _registeredIds.computeIfAbsent(registerType, k -> CHashIntMap.newKeySet()).add(id);
             }
         } else {
             registerListenerWithoutId(action, registerType, listeners);
@@ -2582,20 +1906,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Generic listener register method
-     *
-     * @param action
-     * @param registerType
-     * @param ids
-     * @return
      */
-    protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, Collection<Integer> ids) {
+    protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, IntCollection ids) {
         final List<AbstractEventListener> listeners = new ArrayList<>(!ids.isEmpty() ? ids.size() : 1);
         if (!ids.isEmpty()) {
-            for (int id : ids) {
-                registerListenrWithId(action, registerType, listeners, id);
-            }
+            ids.forEach(id -> registerListenrWithId(action, registerType, listeners, id));
 
-            _registeredIds.computeIfAbsent(registerType, k -> ConcurrentHashMap.newKeySet()).addAll(ids);
+            _registeredIds.computeIfAbsent(registerType, k -> CHashIntMap.newKeySet()).addAll(ids);
         } else {
             registerListenerWithoutId(action, registerType, listeners);
         }
@@ -2646,66 +1963,34 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
     }
 
-    public Set<Integer> getRegisteredIds(ListenerRegisterType type) {
-        return _registeredIds.getOrDefault(type, Collections.emptySet());
+    public IntSet getRegisteredIds(ListenerRegisterType type) {
+        return _registeredIds.getOrDefault(type, Containers.emptyIntSet());
     }
 
     public Queue<AbstractEventListener> getListeners() {
         return _listeners;
     }
 
-    /**
-     * @param template
-     */
     public void onSpawnActivate(SpawnTemplate template) {
 
     }
 
-    /**
-     * @param template
-     */
     public void onSpawnDeactivate(SpawnTemplate template) {
 
     }
 
-    /**
-     * @param template
-     * @param group
-     * @param npc
-     */
     public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc) {
 
     }
 
-    /**
-     * @param template
-     * @param group
-     * @param npc
-     */
     public void onSpawnDespawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc) {
 
     }
 
-    /**
-     * @param template
-     * @param group
-     * @param npc
-     * @param killer
-     */
     public void onSpawnNpcDeath(SpawnTemplate template, SpawnGroup group, Npc npc, Creature killer) {
 
     }
 
-    /**
-     * @param trapId
-     * @param x
-     * @param y
-     * @param z
-     * @param heading
-     * @param skill
-     * @param instanceId
-     * @return
-     */
     public Trap addTrap(int trapId, int x, int y, int z, int heading, Skill skill, int instanceId) {
         final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(trapId);
         final Trap trap = new Trap(npcTemplate, instanceId, -1);
@@ -2717,11 +2002,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return trap;
     }
 
-    /**
-     * @param master
-     * @param minionId
-     * @return
-     */
     public Npc addMinion(Monster master, int minionId) {
         return MinionList.spawnMinion(master, minionId);
     }
@@ -2742,7 +2022,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
             for (int itemId : itemIds) {
                 if (item.getId() == itemId) {
-                    if ((count + item.getCount()) > Long.MAX_VALUE) {
+                    if (MathUtil.checkOverFlow(count, item.getCount())) {
                         return Long.MAX_VALUE;
                     }
                     count += item.getCount();
@@ -2786,11 +2066,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Execute a procedure for each player depending on the parameters.
-     *
-     * @param player                the player on which the procedure will be executed
-     * @param npc                   the related NPC
-     * @param isSummon              {@code true} if the event that called this method was originated by the player's summon, {@code false} otherwise
-     * @param includeParty          if {@code true}, #actionForEachPlayer(Player, Npc, boolean) will be called with the player's party members
      * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(Player, Npc, boolean)} will be called with the player's command channel members
      * @see #actionForEachPlayer(Player, Npc, boolean)
      */
@@ -2951,11 +2226,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Adds the desire to cast a skill to the given NPC.
-     *
-     * @param npc    the NPC whom cast the skill
-     * @param target the skill target
-     * @param skill  the skill to cast
-     * @param desire the desire to cast the skill
      */
     protected void addSkillCastDesire(Npc npc, WorldObject target, SkillHolder skill, int desire) {
         addSkillCastDesire(npc, target, skill.getSkill(), desire);
@@ -2963,11 +2233,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Adds the desire to cast a skill to the given NPC.
-     *
-     * @param npc    the NPC whom cast the skill
-     * @param target the skill target
-     * @param skill  the skill to cast
-     * @param desire the desire to cast the skill
      */
     protected void addSkillCastDesire(Npc npc, WorldObject target, Skill skill, int desire) {
         if (isAttackable(npc) && isCreature(target)) {
@@ -2976,23 +2241,14 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         npc.setTarget(target != null ? target : npc);
         npc.doCast(skill);
     }
-
-    /**
-     * @param player
-     * @param x
-     * @param y
-     * @param z
-     */
+    
     public void removeRadar(Player player, int x, int y, int z) {
         if (player.isSimulatingTalking()) {
             return;
         }
         player.getRadar().removeMarker(x, y, z);
     }
-
-    /**
-     * @param player
-     */
+    
     public void clearRadar(Player player) {
         if (player.isSimulatingTalking()) {
             return;
@@ -3010,7 +2266,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         if (player.isSimulatingTalking()) {
             return;
         }
-        new MovieHolder(Arrays.asList(player), movie);
+        new MovieHolder(List.of(player), movie);
     }
 
     /**

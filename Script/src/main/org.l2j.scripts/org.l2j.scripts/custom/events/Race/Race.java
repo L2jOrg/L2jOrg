@@ -32,7 +32,6 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.scripts.events.ScriptEvent;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -45,7 +44,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 /**
  * @author Gnacik
  */
-public final class Race extends Event implements ScriptEvent
+public final class Race extends Event
 {
 	// Event NPCs list
 	private List<Npc> _npclist;
@@ -392,7 +391,7 @@ public final class Race extends Event implements ScriptEvent
 	private void showMenu(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		final String content = getHtm(activeChar, "admin_menu.htm");
+		final String content = getHtml(activeChar, "admin_menu.htm");
 		html.setHtml(content);
 		activeChar.sendPacket(html);
 	}

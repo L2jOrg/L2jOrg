@@ -19,6 +19,8 @@
  */
 package org.l2j.scripts.quests.Q00662_AGameOfCards;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -28,9 +30,7 @@ import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * A Game of Cards (662)
@@ -47,7 +47,7 @@ public final class Q00662_AGameOfCards extends Quest
 	private static final int MIN_LEVEL = 61;
 	private static final int REQUIRED_CHIP_COUNT = 50;
 	// Monsters
-	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
+	private static final IntIntMap MONSTERS = new HashIntIntMap();
 	static
 	{
 		MONSTERS.put(20672, 357); // Trives
@@ -313,7 +313,7 @@ public final class Q00662_AGameOfCards extends Quest
 				
 				if ((i9 % 32) < 31)
 				{
-					htmltext = getHtm(player, "30845-12.html");
+					htmltext = getHtml(player, "30845-12.html");
 				}
 				else if ((i9 % 32) == 31)
 				{
@@ -482,7 +482,7 @@ public final class Q00662_AGameOfCards extends Quest
 						rewardItems(player, 729, 1);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
-						htmltext = getHtm(player, "30845-13.html");
+						htmltext = getHtml(player, "30845-13.html");
 					}
 					else if (i6 == 30)
 					{
@@ -490,7 +490,7 @@ public final class Q00662_AGameOfCards extends Quest
 						rewardItems(player, 951, 2);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
-						htmltext = getHtm(player, "30845-14.html");
+						htmltext = getHtml(player, "30845-14.html");
 					}
 					else if ((i6 == 21) || (i6 == 12))
 					{
@@ -499,34 +499,34 @@ public final class Q00662_AGameOfCards extends Quest
 						rewardItems(player, 955, 1);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
-						htmltext = getHtm(player, "30845-15.html");
+						htmltext = getHtml(player, "30845-15.html");
 					}
 					else if (i6 == 20)
 					{
 						rewardItems(player, 951, 2);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
-						htmltext = getHtm(player, "30845-16.html");
+						htmltext = getHtml(player, "30845-16.html");
 					}
 					else if (i6 == 11)
 					{
 						rewardItems(player, 951, 1);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
-						htmltext = getHtm(player, "30845-17.html");
+						htmltext = getHtml(player, "30845-17.html");
 					}
 					else if (i6 == 10)
 					{
 						rewardItems(player, 956, 2);
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
-						htmltext = getHtm(player, "30845-18.html");
+						htmltext = getHtml(player, "30845-18.html");
 					}
 					else if (i6 == 0)
 					{
 						st.set("ExMemoState", 0);
 						st.set("v1", 0);
-						htmltext = getHtm(player, "30845-19.html");
+						htmltext = getHtml(player, "30845-19.html");
 					}
 				}
 				
@@ -623,7 +623,7 @@ public final class Q00662_AGameOfCards extends Quest
 					int i2 = (i0 % 10000) / 100;
 					int i3 = (i0 % 1000000) / 10000;
 					int i4 = (i0 % 100000000) / 1000000;
-					htmltext = getHtm(player, "30845-11a.html");
+					htmltext = getHtml(player, "30845-11a.html");
 					
 					if ((i9 % 2) < 1)
 					{

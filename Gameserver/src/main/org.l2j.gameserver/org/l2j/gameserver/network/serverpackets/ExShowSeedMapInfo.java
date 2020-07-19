@@ -18,12 +18,11 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.instancemanager.GraciaSeedsManager;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
-@StaticPacket
+
 public class ExShowSeedMapInfo extends ServerPacket {
     public static final ExShowSeedMapInfo STATIC_PACKET = new ExShowSeedMapInfo();
 

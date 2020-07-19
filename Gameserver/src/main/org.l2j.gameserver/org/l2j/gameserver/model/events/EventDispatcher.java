@@ -120,13 +120,6 @@ public final class EventDispatcher {
         }
     }
 
-    /**
-     * @param <T>
-     * @param event
-     * @param containers
-     * @param callbackClass
-     * @return
-     */
     private <T extends AbstractEventReturn> T notifyEventToMultipleContainers(IBaseEvent event, ListenersContainer[] containers, Class<T> callbackClass) {
         try {
             if (event == null) {

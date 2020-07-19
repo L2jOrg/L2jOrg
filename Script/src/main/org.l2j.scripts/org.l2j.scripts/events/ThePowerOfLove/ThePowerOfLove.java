@@ -25,13 +25,12 @@ import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * The Power Of Love
  * @author hlwrave
  */
-public final class ThePowerOfLove extends LongTimeEvent implements ScriptEvent
+public final class ThePowerOfLove extends LongTimeEvent
 {
 	// NPC
 	private static final int COCO = 33893;

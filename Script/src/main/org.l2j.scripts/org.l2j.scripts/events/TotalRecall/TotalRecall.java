@@ -25,14 +25,13 @@ import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * Total Recall Event
  * @URL https://eu.4gameforum.com/threads/578395/
  * @author QuangNguyen
  */
-public final class TotalRecall extends LongTimeEvent implements ScriptEvent
+public final class TotalRecall extends LongTimeEvent
 {
 	// NPC
 	private static final int FROG = 9013;

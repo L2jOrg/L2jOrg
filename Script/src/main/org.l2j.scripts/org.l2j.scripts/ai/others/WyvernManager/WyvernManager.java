@@ -18,14 +18,13 @@
  */
 package org.l2j.scripts.ai.others.WyvernManager;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.scripts.ai.AbstractNpcAI;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Wyvern Manager
@@ -55,7 +54,7 @@ public final class WyvernManager extends AbstractNpcAI {
 		13197
 	};
 	// NPCS
-	private static final Map<Integer, ManagerType> MANAGERS = new HashMap<>();
+	private static final IntMap<ManagerType> MANAGERS = new HashIntMap<>();
 	static
 	{
 		MANAGERS.put(35101, ManagerType.CASTLE);
@@ -162,7 +161,7 @@ public final class WyvernManager extends AbstractNpcAI {
 	
 	private String replacePart(Player player, String htmlFile)
 	{
-		return getHtm(player, htmlFile).replace("%wyvern_fee%", String.valueOf(WYVERN_FEE)).replace("%strider_level%", String.valueOf(STRIDER_LVL));
+		return getHtml(player, htmlFile).replace("%wyvern_fee%", String.valueOf(WYVERN_FEE)).replace("%strider_level%", String.valueOf(STRIDER_LVL));
 	}
 	
 	@Override

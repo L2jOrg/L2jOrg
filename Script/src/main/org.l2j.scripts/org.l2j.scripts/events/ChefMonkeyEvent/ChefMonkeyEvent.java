@@ -22,14 +22,13 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
-import org.l2j.scripts.events.ScriptEvent;
 
 /**
  * Chef Monkey Event
  * URL https://eu.4gameforum.com/threads/603119/
  * @author Mobius
  */
-public final class ChefMonkeyEvent extends LongTimeEvent implements ScriptEvent
+public final class ChefMonkeyEvent extends LongTimeEvent
 {
 	// NPC
 	private static final int CHEF_MONKEY = 34292;

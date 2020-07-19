@@ -19,6 +19,8 @@
  */
 package org.l2j.scripts.quests.Q00329_CuriosityOfADwarf;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -29,9 +31,7 @@ import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Curiosity Of A Dwarf (329)
@@ -47,7 +47,7 @@ public final class Q00329_CuriosityOfADwarf extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 33;
 	// Monsters
-	private static final Map<Integer, List<ItemHolder>> MONSTER_DROPS = new HashMap<>();
+	private static final IntMap<List<ItemHolder>> MONSTER_DROPS = new HashIntMap<>();
 	static
 	{
 		MONSTER_DROPS.put(20083, Arrays.asList(new ItemHolder(GOLEM_HEARTSTONE, 3), new ItemHolder(BROKEN_HEARTSTONE, 54))); // Granitic Golem

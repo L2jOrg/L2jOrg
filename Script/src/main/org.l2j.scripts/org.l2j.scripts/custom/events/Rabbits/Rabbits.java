@@ -28,7 +28,6 @@ import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.scripts.events.ScriptEvent;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,7 +41,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
  * Chests are hidden at Fantasy Isle and players must use the Rabbit transformation's skills to find and open them.
  * @author Gnacik, Zoey76
  */
-public final class Rabbits extends Event implements ScriptEvent
+public final class Rabbits extends Event
 {
 	// NPCs
 	private static final int NPC_MANAGER = 900101;

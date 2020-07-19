@@ -19,6 +19,8 @@
  */
 package org.l2j.scripts.quests.Q00360_PlunderTheirSupplies;
 
+import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
@@ -27,9 +29,6 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.util.GameUtils;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Plunder Supplies (360)
@@ -42,7 +41,7 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	// Misc
 	private static final int MIN_LVL = 52;
 	// Monsters
-	private static final Map<Integer, Integer> MONSTER_DROP_CHANCES = new HashMap<>();
+	private static final IntIntMap MONSTER_DROP_CHANCES = new HashIntIntMap();
 	// Item
 	private static final int SUPPLY_ITEMS = 5872;
 	
