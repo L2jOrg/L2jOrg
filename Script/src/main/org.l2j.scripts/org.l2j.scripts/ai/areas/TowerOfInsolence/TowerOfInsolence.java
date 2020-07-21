@@ -42,7 +42,6 @@ import java.util.concurrent.ScheduledFuture;
 /**
  * @author Thoss
  */
-// TODO: Make spawn in template, 10 locations min / floor for each monster 20977 & 21081 (@pearlbear)
 public class TowerOfInsolence extends AbstractNpcAI {
     private static final Logger LOGGER = LoggerFactory.getLogger(TowerOfInsolence.class);
 
