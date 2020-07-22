@@ -49,7 +49,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class VipEngine extends GameXmlReader {
 
     private static final byte VIP_MAX_TIER = 10;
-    private IntMap<VipInfo> vipTiers = new HashIntMap<>(11);
+    private final IntMap<VipInfo> vipTiers = new HashIntMap<>(11);
 
     private VipEngine() {
         var listeners = Listeners.players();

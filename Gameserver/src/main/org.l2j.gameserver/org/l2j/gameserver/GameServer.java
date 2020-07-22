@@ -264,6 +264,7 @@ public class GameServer {
         }
 
         printSection("Extensions Initializers");
+        ScriptEngineManager.init();
         ExtensionBoot.initializers();
 
         INSTANCE = new GameServer();
@@ -274,6 +275,7 @@ public class GameServer {
             DeadLockDetector deadLockDetector = new DeadLockDetector(Duration.ofSeconds(settings.deadLockDetectorInterval()), () -> {
                 if (settings.restartOnDeadLock()) {
                     Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
+                    LOGGER.warn("Deadlock detected restarting the server");
                     Shutdown.getInstance().startShutdown(null, 60, true);
                 }
             });

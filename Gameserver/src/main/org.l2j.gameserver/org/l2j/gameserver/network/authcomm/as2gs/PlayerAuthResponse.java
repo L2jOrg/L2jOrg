@@ -52,7 +52,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
     @Override
     public void readImpl() {
         account = readString();
-        authed = readByte() == 1;
+        authed = readBoolean();
         if(authed) {
             gameserverSession = readInt();
             gameserverAccountId = readInt();
