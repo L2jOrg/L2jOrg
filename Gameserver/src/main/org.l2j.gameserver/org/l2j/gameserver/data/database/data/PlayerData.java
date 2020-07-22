@@ -32,86 +32,85 @@ public class PlayerData {
     private String name;
     private byte level;
 
-    @Column("sex")
-    private boolean female;
-    private byte face;
-    private byte hairColor;
-    private byte hairStyle;
-    private int classId;
-
-    private long lastAccess;
-    private long exp;
-    private long expBeforeDeath;
-    private long sp;
-    private boolean wantsPeace;
-    private int heading;
-    private int reputation;
-    private int fame;
-    private int raidBossPoints;
-
-    @Column("pvpkills")
-    private int pvp;
-
-    @Column("pkkills")
-    private int pk;
-    private long onlineTime;
-    private boolean nobless;
-
-    @Column("clan_join_expiry_time")
-    private long clanJoinExpiryTime;
-
-    @Column("clan_create_expiry_time")
-    private long clanCreateExpiryTime;
-
-    @Column("pccafe_points")
-    private int pcCafePoints;
-
-    private int  clanId;
-
-    @Column("power_grade")
-    private int powerGrade;
-
-    @Column("vitality_points")
-    private int vitalityPoints;
-
-    private int subPledge;
-    private String title;
-    private int accessLevel;
-
-    @Column("title_color")
-    private int titleColr;
-
     private double maxHp;
-
     @Column("curHp")
     private double currentHp;
-
     private double maxCp;
-
     @Column("curCp")
     private double currentCp;
-
     private double maxMp;
-
     @Column("curMp")
     private double currentMp;
 
-    @Column("base_class")
-    private int baseClass;
+    private byte face;
+    private byte hairStyle;
+    private byte hairColor;
+    @Column("sex")
+    private boolean female;
 
-    private long deletetime;
-    private int apprentice;
-    private int sponsor;
-    private int race;
-
-    @Column("lvl_joined_academy")
-    private int levelJoinedAcademy;
+    private int heading;
     private int x;
     private int y;
     private int z;
+
+    private long exp;
+    private long expBeforeDeath;
+    private long sp;
+
+    private int reputation;
+    private int fame;
+    private int raidBossPoints;
+    @Column("pvpkills")
+    private int pvp;
+    @Column("pkkills")
+    private int pk;
+
+    private int  clanId;
+    private int race;
+    private int classId;
+    @Column("base_class")
+    private int baseClass;
+    //TODO check transform_id
+
+    private long deletetime;
+    //TODO check cancraft
+
+    private String title;
+    @Column("title_color")
+    private int titleColor;
+
+    private int accessLevel;
+    // TODO check online
+    private long onlineTime;
+    //TODO check clan_privs
+    // TODO check char_slot
+    private long lastAccess;
+    private boolean wantsPeace;
+
+    @Column("power_grade")
+    private int powerGrade;
+    private boolean nobless; // TODO should be removed
+    private int subPledge;
+    @Column("lvl_joined_academy")
+    private int levelJoinedAcademy;
+
+    private int apprentice;
+    private int sponsor;
+
+    @Column("clan_join_expiry_time")
+    private long clanJoinExpiryTime;
+    @Column("clan_create_expiry_time")
+    private long clanCreateExpiryTime;
+
     private int bookMarkSlot;
+    @Column("vitality_points")
+    private int vitalityPoints;
+
     private LocalDate createDate;
     private String language;
+    @Column("pccafe_points")
+    private int pcCafePoints;
+
 
     public int getCharId() {
         return charId;
@@ -274,7 +273,7 @@ public class PlayerData {
     }
 
     public int getTitleColor() {
-        return titleColr;
+        return titleColor;
     }
 
     public double getMaxtHp() {

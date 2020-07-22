@@ -322,7 +322,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     }
 
     public CharSelectInfoPackage getCharSelection(int charslot) {
-        if ((charSlotMapping == null) || (charslot < 0) || (charslot >= charSlotMapping.length)) {
+        if (isNull(charSlotMapping) || charslot < 0 || charslot >= charSlotMapping.length) {
             return null;
         }
         return charSlotMapping[charslot];

@@ -41,7 +41,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.time.ZoneOffset;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -52,31 +51,30 @@ import static org.l2j.gameserver.enums.InventorySlot.TWO_HAND;
 
 /**
  * @author JoeAlisson
- * @reworked Thoss
- * [Delete direct access to database]
+ * @author Thoss
  */
 public class CharSelectionInfo extends ServerPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CharSelectionInfo.class);
-    private static final int CLIENT_ZONE_OFFSET = ZoneOffset.ofHours(5).getTotalSeconds();
-    private final String _loginName;
-    private final int _sessionId;
-    private final CharSelectInfoPackage[] _characterPackages;
-    private int _activeId;
+
+    private final String loginName;
+    private final int sessionId;
+    private final CharSelectInfoPackage[] playersInfo;
+    private int activeId;
 
     public CharSelectionInfo(String loginName, int sessionId) {
         this(loginName, sessionId, -1);
     }
 
     public CharSelectionInfo(String loginName, int sessionId, int activeId) {
-        _sessionId = sessionId;
-        _loginName = loginName;
-        _characterPackages = loadCharacterSelectInfo(_loginName);
-        _activeId = activeId;
+        this.sessionId = sessionId;
+        this.loginName = loginName;
+        this.activeId = activeId;
+        playersInfo = loadCharacterSelectInfo();
     }
 
-    private static CharSelectInfoPackage[] loadCharacterSelectInfo(String loginName) {
-        CharSelectInfoPackage charInfopackage;
+    private CharSelectInfoPackage[] loadCharacterSelectInfo() {
+        CharSelectInfoPackage playerInfo;
         LinkedList<CharSelectInfoPackage> characterList = new LinkedList<>();
         try {
             boolean reloadDatas = false;
@@ -94,9 +92,9 @@ public class CharSelectionInfo extends ServerPacket {
                 charDatas = getDAO(PlayerDAO.class).findAllCharactersByAccount(loginName);
 
             for(PlayerData charData : charDatas) {
-                charInfopackage = restoreChar(charData);
-                if (charInfopackage != null) {
-                    characterList.add(charInfopackage);
+                playerInfo = restoreChar(charData);
+                if (playerInfo != null) {
+                    characterList.add(playerInfo);
                 }
             }
 
@@ -108,7 +106,7 @@ public class CharSelectionInfo extends ServerPacket {
         return new CharSelectInfoPackage[0];
     }
 
-    private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId) {
+    private void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId) {
         PlayerSubclassesData charSubClassesDatas = getDAO(PlayerSubclassesDAO.class).findByIdAndClassId(ObjectId, activeClassId);
 
         try {
@@ -123,7 +121,7 @@ public class CharSelectionInfo extends ServerPacket {
         }
     }
 
-    private static CharSelectInfoPackage restoreChar(PlayerData chardata) throws Exception {
+    private CharSelectInfoPackage restoreChar(PlayerData chardata)  {
         final int objectId = chardata.getCharId();
         final String name = chardata.getName();
 
@@ -223,14 +221,14 @@ public class CharSelectionInfo extends ServerPacket {
     }
 
     public CharSelectInfoPackage[] getCharInfo() {
-        return _characterPackages;
+        return playersInfo;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.CHARACTER_SELECTION_INFO);
 
-        final int size = _characterPackages.length;
+        final int size = playersInfo.length;
         writeInt(size); // Created character count
 
         writeInt(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
@@ -241,21 +239,21 @@ public class CharSelectionInfo extends ServerPacket {
         writeByte(0x00); // Balthus Knights, if 1 suggests premium account
 
         long lastAccess = 0;
-        if (_activeId == -1) {
+        if (activeId == -1) {
             for (int i = 0; i < size; i++) {
-                if (lastAccess < _characterPackages[i].getLastAccess()) {
-                    lastAccess = _characterPackages[i].getLastAccess();
-                    _activeId = i;
+                if (lastAccess < playersInfo[i].getLastAccess()) {
+                    lastAccess = playersInfo[i].getLastAccess();
+                    activeId = i;
                 }
             }
         }
         for (int i = 0; i < size; i++) {
-            var charInfoPackage = _characterPackages[i];
+            var charInfoPackage = playersInfo[i];
 
             writeString(charInfoPackage.getName()); // Character name
             writeInt(charInfoPackage.getObjectId()); // Character ID
-            writeString(_loginName); // Account name
-            writeInt(_sessionId); // Account ID
+            writeString(loginName); // Account name
+            writeInt(sessionId); // Account ID
             writeInt(0x00); // Pledge ID
             writeInt(0x00); // Builder level
 
@@ -322,7 +320,7 @@ public class CharSelectionInfo extends ServerPacket {
 
             writeInt(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
             writeInt(charInfoPackage.getClassId());
-            writeInt(i == _activeId);
+            writeInt(i == activeId);
 
             writeByte(Math.min(charInfoPackage.getEnchantEffect(RIGHT_HAND.getId()), 127));
             writeInt(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
@@ -346,7 +344,7 @@ public class CharSelectionInfo extends ServerPacket {
             writeByte(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x02 : 0x00); // Hero glow
             writeByte(charInfoPackage.isHairAccessoryEnabled()); // Show hair accessory if enabled
             writeInt(0); // ban time in secs
-            writeInt((int) (charInfoPackage.getLastAccess() / 1000) + CLIENT_ZONE_OFFSET);
+            writeInt((int) (charInfoPackage.getLastAccess() / 1000));
 
         }
     }
