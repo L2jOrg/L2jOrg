@@ -110,7 +110,7 @@ task dist(type: Copy) {
     into ("$buildDir/gameserver/lib")
 
     copy {
-        from([sourceSets.main.resources, 'bin'])
+        from([sourceSets.main.resources])
         into("$buildDir/gameserver")
     }
 }

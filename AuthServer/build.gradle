@@ -87,7 +87,7 @@ task dist(type: Copy) {
 
     copy {
         into("$buildDir/authserver")
-        from([sourceSets.main.resources, 'bin'])
+        from([sourceSets.main.resources])
 
     }
 }
