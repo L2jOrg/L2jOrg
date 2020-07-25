@@ -133,7 +133,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     public void onSpawn() {
-        broadcastInfo(); // Tempfix for invisible spawns.
+        // broadcastInfo(); // Tempfix for invisible spawns.
     }
 
     @Override
