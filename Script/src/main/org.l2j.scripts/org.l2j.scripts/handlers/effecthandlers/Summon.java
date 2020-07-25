@@ -111,7 +111,6 @@ public final class Summon extends AbstractEffect {
         summon.setCurrentHp(summon.getMaxHp(), false);
         summon.setCurrentMp(summon.getMaxMp(), false);
         summon.setHeading(player.getHeading());
-        summon.setRunning();
 
         player.addServitor(summon);
         summon.setShowSummonAnimation(true);
