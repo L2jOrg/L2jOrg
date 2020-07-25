@@ -25,7 +25,7 @@ import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
@@ -54,8 +54,9 @@ public final class VipEngine extends GameXmlReader {
     private VipEngine() {
         var listeners = Listeners.players();
 
-        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOAD, (Consumer<OnPlayerLoad>) (event) -> {
             final var player = event.getPlayer();
+            player.setVipTier(getVipTier(player));
             if(player.getVipTier() > 0) {
                 manageTier(player);
             } else {

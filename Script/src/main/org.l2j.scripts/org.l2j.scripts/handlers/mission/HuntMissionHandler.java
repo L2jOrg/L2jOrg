@@ -74,6 +74,10 @@ public class HuntMissionHandler extends AbstractMissionHandler {
             return;
         }
 
+        if(!canStart(player)) {
+            return;
+        }
+
         final var party = player.getParty();
         if (isNull(party)) {
             onKillProgress(player);

@@ -149,6 +149,9 @@ public enum EventType {
     // Other player events
     ON_PLAYER_REPUTATION_CHANGED(OnPlayerReputationChanged.class, void.class),
     ON_PLAYER_LEVEL_CHANGED(OnPlayerLevelChanged.class, void.class),
+    ON_PLAYER_RESTORE(OnPlayerRestore.class, void.class),
+    ON_PLAYER_SELECT(OnPlayerSelect.class, void.class, TerminateReturn.class),
+    ON_PLAYER_LOAD(OnPlayerLoad.class, void.class),
     ON_PLAYER_LOGIN(OnPlayerLogin.class, void.class),
     ON_PLAYER_LOGOUT(OnPlayerLogout.class, void.class),
     ON_PLAYER_PK_CHANGED(OnPlayerPKChanged.class, void.class),
@@ -160,8 +163,6 @@ public enum EventType {
     ON_PLAYER_CHANGE_TO_AWAKENED_CLASS(OnPlayerChangeToAwakenedClass.class, void.class),
     ON_PLAYER_PVP_CHANGED(OnPlayerPvPChanged.class, void.class),
     ON_PLAYER_PVP_KILL(OnPlayerPvPKill.class, void.class),
-    ON_PLAYER_RESTORE(OnPlayerRestore.class, void.class),
-    ON_PLAYER_SELECT(OnPlayerSelect.class, void.class, TerminateReturn.class),
     ON_PLAYER_SOCIAL_ACTION(OnPlayerSocialAction.class, void.class),
     ON_PLAYER_SKILL_LEARN(OnPlayerSkillLearn.class, void.class),
     ON_PLAYER_SUMMON_SPAWN(OnPlayerSummonSpawn.class, void.class),

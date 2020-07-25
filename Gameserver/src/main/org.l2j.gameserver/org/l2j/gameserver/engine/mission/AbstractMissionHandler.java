@@ -47,6 +47,13 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
         return holder;
     }
 
+    protected boolean canStart(Player player) {
+        var classRestriction = holder.getClassRestriction();
+        var requiredMission = holder.getRequiredMission();
+        return (classRestriction.isEmpty() || classRestriction.contains(player.getClassId())) &&
+                (requiredMission == 0 || MissionData.getInstance().isCompleted(player, requiredMission));
+    }
+
     public boolean isAvailable(Player player) {
         return holder.isDisplayable(player) && falseIfNullOrElse(getPlayerEntry(player, false), entry ->
              switch (entry.getStatus()) {

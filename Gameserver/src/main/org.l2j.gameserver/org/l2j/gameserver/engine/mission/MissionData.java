@@ -24,7 +24,6 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -35,14 +34,12 @@ import org.w3c.dom.Document;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @author Sdw
@@ -88,16 +85,7 @@ public class MissionData extends GameXmlReader {
 
             set.set("rewards", items);
 
-            final List<ClassId> classRestriction = new ArrayList<>(1);
-            forEach(missionNode, "classes", classesNode -> {
-                if(isNullOrEmpty(classesNode.getTextContent())) {
-                    return;
-                }
-                classRestriction.addAll(Arrays.stream(classesNode.getTextContent().split(" ")).map(id -> ClassId.getClassId(Integer.parseInt(id))).collect(Collectors.toList()));
-            });
-
-            set.set("classRestriction", classRestriction);
-
+            forEach(missionNode, "classes", classesNode -> set.set("classRestriction", classesNode.getTextContent()));
             // Initial values in case handler doesn't exists
             set.set("handler", "");
             set.set("params", StatsSet.EMPTY_STATSET);

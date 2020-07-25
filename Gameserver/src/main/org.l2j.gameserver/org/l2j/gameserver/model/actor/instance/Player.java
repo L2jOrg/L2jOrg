@@ -35,7 +35,6 @@ import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.database.data.*;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.CategoryManager;
@@ -68,7 +67,10 @@ import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.entity.*;
+import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.model.entity.Duel;
+import org.l2j.gameserver.model.entity.Event;
+import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.*;
@@ -170,11 +172,12 @@ public final class Player extends Playable {
     private AutoPlaySettings autoPlaySettings;
     private PlayerVariableData variables;
     private PlayerStatsData statsData;
-    private IntMap<CostumeData> costumes = Containers.emptyIntMap();
-    private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
-    private IntMap<CostumeCollectionData> costumesCollections  = Containers.emptyIntMap();
-    private CostumeCollectionData activeCostumesCollection = CostumeCollectionData.DEFAULT;
+    private IntMap<CostumeData> costumes;
+    private ScheduledFuture<?> _timedHuntingZoneFinishTask;
+    private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
+    private CostumeCollectionData activeCostumesCollection;
     private IntSet teleportFavorites;
+    private IntMap<String> accountPlayers = new HashIntMap<>();
 
     private byte vipTier;
     private int rank;
@@ -183,7 +186,7 @@ public final class Player extends Playable {
     private byte shadowSouls;
     private int additionalSoulshot;
 
-    private Player(PlayerData playerData, PlayerTemplate template) {
+    Player(PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
         this.data = playerData;
         setName(playerData.getName());
@@ -509,16 +512,12 @@ public final class Player extends Playable {
     }
 
     public long getHennaDuration(int slot) {
-        switch (slot) {
-            case 1 -> { return variables.getHenna1Duration(); }
-            case 2 -> { return variables.getHenna2Duration(); }
-            case 3 -> { return variables.getHenna3Duration(); }
-        }
-        return 0;
-    }
-
-    public long getHennaDuration(long defaultValue, int slot) {
-        return getHennaDuration(slot) != 0 ? getHennaDuration(slot) : defaultValue;
+        return switch (slot) {
+            case 1 -> variables.getHenna1Duration();
+            case 2 -> variables.getHenna2Duration();
+            case 3 -> variables.getHenna3Duration();
+            default -> 0;
+        };
     }
 
     /**
@@ -801,7 +800,6 @@ public final class Player extends Playable {
     /**
      * [End of] Player variables getters and setters
      */
-
     public LocalDate getCreateDate() {
         return data.getCreateDate();
     }
@@ -940,6 +938,14 @@ public final class Player extends Playable {
         return shadowSouls;
     }
 
+    public void setCostumes(IntMap<CostumeData> costumes) {
+        this.costumes = costumes;
+    }
+
+    public void setActiveCostumeCollection(CostumeCollectionData collection) {
+        this.activeCostumesCollection = collection;
+    }
+
     public CostumeData addCostume(int costumeId) {
         if(costumes.equals(Containers.emptyIntMap())) {
             costumes = new HashIntMap<>();
@@ -1071,6 +1077,18 @@ public final class Player extends Playable {
         sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, reuse));
     }
 
+    void setVariables(PlayerVariableData variables) {
+        this.variables = variables;
+    }
+
+    void setStatsData(PlayerStatsData statsData) {
+        this.statsData = statsData;
+    }
+
+    void setTeleportFavorites(IntSet teleports) {
+        this.teleportFavorites = teleports;
+    }
+
     public static Player create(PlayerData playerData, PlayerTemplate template) {
         final Player player = new Player(playerData, template);
         player.setRecomLeft(20);
@@ -1187,7 +1205,6 @@ public final class Player extends Playable {
     // charges
     private final AtomicInteger _charges = new AtomicInteger();
     private final Request _request = new Request(this);
-    private final Map<Integer, String> _chars = new ConcurrentSkipListMap<>();
     /**
      * Player's cubics.
      */
@@ -1506,253 +1523,6 @@ public final class Player extends Playable {
         _mpUpdateDecCheck = getMaxMp() - _mpUpdateInterval;
     }
 
-
-    /**
-     * Retrieve a Player from the characters table of the database and add it in _allObjects of the L2world (call restore method).<br>
-     * <B><U> Actions</U> :</B>
-     * <ul>
-     * <li>Retrieve the Player from the characters table of the database</li>
-     * <li>Add the Player object in _allObjects</li>
-     * <li>Set the x,y,z position of the Player and make it invisible</li>
-     * <li>Update the overloaded status of the Player</li>
-     * </ul>
-     *
-     * @param objectId Identifier of the object to initialized
-     * @return The Player loaded from the database
-     */
-    public static Player load(int objectId) {
-        return restore(objectId);
-    }
-
-    /**
-     * Retrieve a Player from the characters table of the database and add it in _allObjects of the L2world. <B><U> Actions</U> :</B>
-     * <li>Retrieve the Player from the characters table of the database</li>
-     * <li>Add the Player object in _allObjects</li>
-     * <li>Set the x,y,z position of the Player and make it invisible</li>
-     * <li>Update the overloaded status of the Player</li>
-     *
-     * @param objectId Identifier of the object to initialized
-     * @return The Player loaded from the database
-     */
-    private static Player restore(int objectId) {
-        var playerDAO = getDAO(PlayerDAO.class);
-        var character = playerDAO.findById(objectId);
-        if(isNull(character)) {
-            return null;
-        }
-        var template = PlayerTemplateData.getInstance().getTemplate(character.getClassId());
-        Player player = new Player(character, template);
-        player.variables = getDAO(PlayerVariablesDAO.class).findById(objectId);
-        if (player.variables == null) // hack for char created before PlayerVariableData implementation (player_variables Table empty for this objectId)
-            player.variables = PlayerVariableData.init(objectId);
-        player.statsData = playerDAO.findPlayerStatsData(objectId);
-
-        player.costumes = playerDAO.findCostumes(objectId);
-        doIfNonNull(playerDAO.findPlayerCostumeCollection(objectId), c -> player.activeCostumesCollection = c);
-
-        if(isNull(player.statsData)) { // TODO remove late, just temp fix to already created players
-            player.statsData = PlayerStatsData.init(objectId);
-            player.updateCharacteristicPoints();
-        }
-
-        player.teleportFavorites = playerDAO.findTeleportFavorites(objectId);
-
-        player.setHeading(character.getHeading());
-        player.getStats().setExp(character.getExp());
-        player.getStats().setLevel(character.getLevel());
-        player.getStats().setSp(character.getSp());
-        player.setReputation(character.getReputation());
-        player.setFame(character.getFame());
-        player.setPvpKills(character.getPvP());
-        player.setPkKills(character.getPk());
-        player.setOnlineTime(character.getOnlineTime());
-        player.setNoble(character.isNobless());
-        player.getStats().setVitalityPoints(character.getVitalityPoints());
-
-        player.setHero(Hero.getInstance().isHero(objectId));
-
-        if(player.getLevel() >= 40) {
-            player.initElementalSpirits();
-        }
-
-        if (character.getClanId() > 0) {
-            player.setClan(ClanTable.getInstance().getClan(character.getClanId()));
-        }
-
-        if (player.getClan() != null) {
-            if (player.getClan().getLeaderId() != player.getObjectId()) {
-                if (player.getPowerGrade() == 0) {
-                    player.setPowerGrade(5);
-                }
-                player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
-            } else {
-                player.getClanPrivileges().setAll();
-                player.setPowerGrade(1);
-            }
-            player.setPledgeClass(ClanMember.calculatePledgeClass(player));
-        } else {
-            if (player.isNoble()) {
-                player.setPledgeClass(5);
-            }
-
-            if (player.isHero()) {
-                player.setPledgeClass(8);
-            }
-
-            player.getClanPrivileges().clear();
-        }
-
-        player.setTitle(character.getTitle());
-
-        if (character.getTitleColor() != PlayerAppearance.DEFAULT_TITLE_COLOR) {
-            player.getAppearance().setTitleColor(character.getTitleColor());
-        }
-
-        player.setFistsWeaponItem(player.findFistsWeaponItem());
-        player.setUptime(System.currentTimeMillis());
-        player.setClassIndex(0);
-
-        if (restoreSubClassData(player)) {
-            if (character.getClassId() != player.getBaseClass()) {
-                for (SubClass subClass : player.getSubClasses().values()) {
-                    if (subClass.getClassId() == character.getClassId()) {
-                        player.setClassIndex(subClass.getClassIndex());
-                    }
-                }
-            }
-        }
-
-        if ((player.getClassIndex() == 0) && (character.getClassId() != player.getBaseClass())) {
-            // Subclass in use but doesn't exist in DB -
-            // a possible restart-while-modifysubclass cheat has been attempted.
-            // Switching to use base class
-            player.setClassId(player.getBaseClass());
-            LOGGER.warn("Player {} reverted to base class. Possibly has tried a relogin exploit while subclassing.", player);
-        } else {
-            player._activeClass = character.getClassId();
-        }
-
-        player.setXYZInvisible(character.getX(), character.getY(), character.getZ());
-        player.setLastServerPosition(character.getX(), character.getY(), character.getZ());
-
-        player.setBookMarkSlot(character.getBookMarkSlot());
-        player.setLang(character.getLanguage());
-
-        // TODO this info should stay on GameClient, since it was already loaded
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement stmt = con.prepareStatement("SELECT charId, char_name FROM characters WHERE account_name=? AND charId<>?")) {
-            // Retrieve the Player from the characters table of the database
-            stmt.setString(1, character.getAccountName());
-            stmt.setInt(2, objectId);
-
-            ResultSet chars = stmt.executeQuery();
-            while (chars.next()) {
-                player._chars.put(chars.getInt("charId"), chars.getString("char_name"));
-            }
-
-            if (player.isGM()) {
-                final long masks = Long.parseLong(player.getCondOverrideKey());
-                player.setOverrideCond(masks);
-            }
-
-            // Retrieve from the database all items of this Player and add them to _inventory
-            player.getInventory().restore();
-            // Retrieve from the database all secondary data of this Player
-            // Note that Clan, Noblesse and Hero skills are given separately and not here.
-            // Retrieve from the database all skills of this Player and add them to _skills
-            player.restoreCharData();
-
-            // Reward auto-get skills and all available skills if auto-learn skills is true.
-            player.rewardSkills();
-
-            player.getFreight().restore();
-            if (!Config.WAREHOUSE_CACHE) {
-                player.getWarehouse();
-            }
-
-            player.restoreItemReuse();
-
-            // Restore player shortcuts
-            player.restoreShortCuts();
-
-            // Initialize status update cache
-            player.initStatusUpdateCache();
-
-            // Restore current Cp, HP and MP values
-            player.setCurrentCp(character.getCurrentCp());
-            player.setCurrentHp(character.getCurrentHp());
-            player.setCurrentMp(character.getCurrentMp());
-
-            player.setOriginalCpHpMp(character.getCurrentCp(), character.getCurrentHp(), character.getCurrentMp());
-
-            if (character.getCurrentHp() < 0.5) {
-                player.setIsDead(true);
-                player.stopHpMpRegeneration();
-            }
-
-            // Restore pet if exists in the world
-            player.setPet(World.getInstance().findPet(player.getObjectId()));
-            final Summon pet = player.getPet();
-            if (pet != null) {
-                pet.setOwner(player);
-            }
-
-            if (player.hasServitors()) {
-                for (Summon summon : player.getServitors().values()) {
-                    summon.setOwner(player);
-                }
-            }
-
-            // Recalculate all stats
-            player.getStats().recalculateStats(false);
-
-            // Update the overloaded status of the Player
-            player.refreshOverloaded(false);
-            player.restoreFriendList();
-
-            player.loadRecommendations();
-            player.startRecoGiveTask();
-            player.startOnlineTimeUpdateTask();
-
-            player.setOnlineStatus(true, false);
-            SaveTaskManager.getInstance().registerPlayer(player);
-        } catch (Exception e) {
-            LOGGER.error("Failed loading character.", e);
-        }
-        return player;
-    }
-
-    /**
-     * Restores sub-class data for the Player, used to check the current class index for the character.
-     *
-     * @param player
-     * @return
-     */
-    private static boolean restoreSubClassData(Player player) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_SUBCLASSES)) {
-            statement.setInt(1, player.getObjectId());
-            try (ResultSet rset = statement.executeQuery()) {
-                while (rset.next()) {
-                    final SubClass subClass = new SubClass();
-                    subClass.setClassId(rset.getInt("class_id"));
-                    subClass.setIsDualClass(rset.getBoolean("dual_class"));
-                    subClass.setVitalityPoints(rset.getInt("vitality_points"));
-                    subClass.setLevel(rset.getByte("level"));
-                    subClass.setExp(rset.getLong("exp"));
-                    subClass.setSp(rset.getLong("sp"));
-                    subClass.setClassIndex(rset.getInt("class_index"));
-
-                    // Enforce the correct indexing of _subClasses against their class indexes.
-                    player.getSubClasses().put(subClass.getClassIndex(), subClass);
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Could not restore classes for " + player.getName() + ": " + e.getMessage(), e);
-        }
-        return true;
-    }
-
     public long getPvpFlagLasts() {
         return _pvpFlagLasts;
     }
@@ -1807,8 +1577,8 @@ public final class Player extends Playable {
         return data.getAccountName();
     }
 
-    public Map<Integer, String> getAccountChars() {
-        return _chars;
+    public IntMap<String> getAccountChars() {
+        return accountPlayers;
     }
 
     public int getRelation(Player target) {
@@ -5949,7 +5719,7 @@ public final class Player extends Playable {
      * <li>Pet Inventory Items</li>
      * </ul>
      */
-    private void restoreCharData() {
+    void restoreCharData() {
         // Retrieve from the database all skills of this Player and add them to _skills.
         restoreSkills();
 
@@ -5983,7 +5753,7 @@ public final class Player extends Playable {
      * <li>Short-cuts</li>
      * </ul>
      */
-    private void restoreShortCuts() {
+    void restoreShortCuts() {
         // Retrieve from the database all shortCuts of this Player and add them to _shortCuts.
         shortcuts.restoreMe();
     }
@@ -6623,7 +6393,7 @@ public final class Player extends Playable {
     /**
      * Retrieve from the database all Item Reuse Time of this Player and add them to the player.
      */
-    private void restoreItemReuse() {
+    void restoreItemReuse() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(RESTORE_ITEM_REUSE_SAVE);
              PreparedStatement delete = con.prepareStatement(DELETE_ITEM_REUSE_SAVE)) {
@@ -10496,7 +10266,7 @@ public final class Player extends Playable {
     /**
      * Load Player Recommendations data.
      */
-    private void loadRecommendations() {
+    void loadRecommendations() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("SELECT rec_have, rec_left FROM character_reco_bonus WHERE charId = ?")) {
             statement.setInt(1, getObjectId());
@@ -11105,7 +10875,7 @@ public final class Player extends Playable {
         return super.getMoveType();
     }
 
-    private void startOnlineTimeUpdateTask() {
+    void startOnlineTimeUpdateTask() {
         if (_onlineTimeUpdateTask != null) {
             stopOnlineTimeUpdateTask();
         }
@@ -11320,10 +11090,8 @@ public final class Player extends Playable {
         sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
     }
 
-    public long getTimedHuntingZoneRemainingTime()
-    {
-        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
-        {
+    public long getTimedHuntingZoneRemainingTime() {
+        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone()) {
             return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
         }
         return 0;

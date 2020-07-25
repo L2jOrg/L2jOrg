@@ -60,6 +60,9 @@ public final class CommonUtil
 	 */
 	public static String printData(byte[] data, int len)
 	{
+		if(data == null || data.length == 0 || len == 0) {
+			return Util.STRING_EMPTY;
+		}
 		return new String(HexUtils.bArr2HexEdChars(data, len));
 	}
 	

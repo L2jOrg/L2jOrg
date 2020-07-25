@@ -3652,7 +3652,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         _status.removeStatusListener(object);
     }
 
-    protected void stopHpMpRegeneration() {
+    public void stopHpMpRegeneration() {
         _status.stopHpMpRegeneration();
     }
 

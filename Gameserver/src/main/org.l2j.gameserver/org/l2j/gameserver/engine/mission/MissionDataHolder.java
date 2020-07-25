@@ -28,6 +28,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.temporal.TemporalAdjusters;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Function;
 
@@ -40,14 +41,14 @@ public class MissionDataHolder {
 
     private final int id;
     private final List<ItemHolder> rewardsItems;
-    private final List<ClassId> classRestriction;
+    private final EnumSet<ClassId> classRestriction;
     private final int requiredCompletions;
     private final StatsSet params;
     private final MissionCycle cycle;
 
     private final boolean isDisplayedWhenNotAvailable;
     private final AbstractMissionHandler handler;
-    private final int requiresMission;
+    private final int requiredMission;
 
     public MissionDataHolder(StatsSet set) {
         final Function<MissionDataHolder, AbstractMissionHandler> handler = MissionEngine.getInstance().getHandler(set.getString("handler"));
@@ -55,11 +56,11 @@ public class MissionDataHolder {
         id = set.getInt("id");
         requiredCompletions = set.getInt("required-completion", 1);
         rewardsItems = set.getList("rewards", ItemHolder.class);
-        classRestriction = set.getList("classRestriction", ClassId.class);
+        classRestriction = set.getStringAsEnumSet("classRestriction", ClassId.class);
         params = set.getObject("params", StatsSet.class);
         cycle = set.getEnum("cycle", MissionCycle.class);
         isDisplayedWhenNotAvailable = set.getBoolean("display-not-available", true);
-        requiresMission = set.getInt("requires-mission", 0);
+        requiredMission = set.getInt("requires-mission", 0);
         this.handler = handler != null ? handler.apply(this) : null;
     }
 
@@ -93,7 +94,7 @@ public class MissionDataHolder {
             return false;
         }
 
-        if(requiresMission != 0 && !MissionData.getInstance().isCompleted(player, requiresMission)) {
+        if(requiredMission != 0 && !MissionData.getInstance().isCompleted(player, requiredMission)) {
             return false;
         }
 
@@ -155,5 +156,13 @@ public class MissionDataHolder {
 
     public boolean isCompleted(Player player) {
         return getStatus(player) == MissionStatus.COMPLETED.getClientId();
+    }
+
+    EnumSet<ClassId> getClassRestriction() {
+        return classRestriction;
+    }
+
+    int getRequiredMission() {
+        return requiredMission;
     }
 }

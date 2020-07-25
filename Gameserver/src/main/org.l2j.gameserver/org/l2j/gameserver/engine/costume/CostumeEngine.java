@@ -24,6 +24,7 @@ import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.api.costume.CostumeGrade;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.CostumeCollectionData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -53,7 +54,9 @@ import java.util.*;
 import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
+import static java.util.Objects.requireNonNullElseGet;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.model.skills.AbnormalType.TURN_STONE;
@@ -170,9 +173,7 @@ public class CostumeEngine extends GameXmlReader {
         processCollections(player);
         player.sendPacket(new ExSendCostumeListFull());
         checkStackedEffects(player, 0);
-
-        doIfNonNull(collections.get(player.getActiveCostumeCollection().getId()),
-                c -> player.addSkill(c.skill(), false));
+        doIfNonNull(collections.get(player.getActiveCostumeCollection().getId()), c -> player.addSkill(c.skill(), false));
     }
 
     private void checkStackedEffects(Player player, int previousStack) {
@@ -187,9 +188,15 @@ public class CostumeEngine extends GameXmlReader {
     }
 
     public void processCollections(Player player) {
-        collections.values().stream()
-            .filter(c -> hasAllCostumes(player, c))
-            .forEach(c -> player.addCostumeCollection(c.id()));
+        var playerDAO = getDAO(PlayerDAO.class);
+        var costumes = playerDAO.findCostumes(player.getObjectId());
+        player.setCostumes(costumes);
+        if(!costumes.isEmpty()) {
+            collections.values().stream()
+                    .filter(c -> hasAllCostumes(player, c))
+                    .forEach(c -> player.addCostumeCollection(c.id()));
+        }
+        player.setActiveCostumeCollection(requireNonNullElseGet(playerDAO.findPlayerCostumeCollection(player.getObjectId()), () -> CostumeCollectionData.DEFAULT));
     }
 
     private boolean hasAllCostumes(Player player, CostumeCollection costumeCollection) {
