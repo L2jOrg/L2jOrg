@@ -35,6 +35,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
@@ -89,7 +90,12 @@ public class OlympiadEngine extends AbstractEventManager<AbstractEvent<?>> {
 
     private void onPlayerLogin(Player player) {
         if(matchInProgress) {
-            player.sendPacket(ExOlympiadInfo.show(OlympiadRuleType.MAX, 300));
+            var scheduler = getScheduler("stop-match");
+            if(nonNull(scheduler)) {
+                player.sendPacket(ExOlympiadInfo.show(OlympiadRuleType.MAX, (int) scheduler.getRemainingTime(TimeUnit.SECONDS)));
+            } else {
+                LOGGER.warn("Can't find stop-match scheduler");
+            }
         }
     }
 
