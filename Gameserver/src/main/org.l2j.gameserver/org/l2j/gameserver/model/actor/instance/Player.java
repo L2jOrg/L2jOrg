@@ -172,7 +172,7 @@ public final class Player extends Playable {
     private AutoPlaySettings autoPlaySettings;
     private PlayerVariableData variables;
     private PlayerStatsData statsData;
-    private IntMap<CostumeData> costumes;
+    private IntMap<CostumeData> costumes = Containers.emptyIntMap();
     private ScheduledFuture<?> _timedHuntingZoneFinishTask;
     private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection;

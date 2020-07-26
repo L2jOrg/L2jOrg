@@ -604,6 +604,7 @@ public class PlayerStats extends PlayableStats {
         if (player.hasAbnormalType(AbnormalType.ABILITY_CHANGE) && player.hasServitors()) {
             player.getServitors().values().forEach(servitor -> servitor.getStats().recalculateStats(broadcast));
         }
+        // TODO send only when XP_BONUS change
         player.sendPacket(new ExUserBoostStat(BoostStatType.STAT, (short) (round(getExpBonusMultiplier() * 100) - 100)));
     }
 }

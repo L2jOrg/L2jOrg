@@ -57,9 +57,6 @@ import static org.l2j.gameserver.model.item.type.ArmorType.SIGIL;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
- * This class manages inventory
- *
- * @version $Revision: 1.13.2.9.2.12 $ $Date: 2005/03/29 23:15:15 $ rewritten 23.2.2006 by Advi
  * @author JoeAlisson
  */
 public abstract class Inventory extends ItemContainer {
@@ -74,7 +71,7 @@ public abstract class Inventory extends ItemContainer {
     // protected to be accessed from child classes only
     protected int _totalWeight;
     // used to quickly check for using of item of special type
-    private int _wearedMask;
+    private int wearedMask;
     private int blockedItemSlotsMask;
 
     /**
@@ -296,7 +293,7 @@ public abstract class Inventory extends ItemContainer {
                 old.setItemLocation(getBaseLocation());
                 old.setLastChange(Item.MODIFIED);
 
-                _wearedMask = paperdoll.values().stream().mapToInt(Item::getItemMask).reduce(0, (l, r) -> l | r);
+                wearedMask &= ~old.getItemMask();
                 listeners.forEach(l -> l.notifyUnequiped(slot, old, this));
                 old.updateDatabase();
             }
@@ -305,7 +302,7 @@ public abstract class Inventory extends ItemContainer {
                 paperdoll.put(slot, item);
                 item.setItemLocation(getEquipLocation(), slot.getId());
                 item.setLastChange(Item.MODIFIED);
-                _wearedMask |= item.getTemplate().getItemMask();
+                wearedMask |= item.getItemMask();
                 listeners.forEach(l -> l.notifyEquiped(slot, item, this));
                 item.updateDatabase();
             }
@@ -321,7 +318,7 @@ public abstract class Inventory extends ItemContainer {
      * @return the mask of wore item
      */
     public int getWearedMask() {
-        return _wearedMask;
+        return wearedMask;
     }
 
     /**
