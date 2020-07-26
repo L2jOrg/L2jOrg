@@ -1075,6 +1075,7 @@ public final class Player extends Playable {
             sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
         }
         sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, reuse));
+        super.onStartRangedAttack(isCrossBow, reuse);
     }
 
     void setVariables(PlayerVariableData variables) {
