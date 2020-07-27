@@ -25,6 +25,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -79,17 +80,17 @@ public class Q10986_SwampMonster extends Quest
 	private static final ItemHolder MOON_CAPE = new ItemHolder(7857, 1);
 	private static final ItemHolder MOON_SILK = new ItemHolder(7858, 1);
 	private static final ItemHolder MOON_SANDALS = new ItemHolder(7859, 1);
-	// Misc
-	private static final int MAX_LEVEL = 20;
+
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10986_SwampMonster()
 	{
 		super(10986);
+		addCondClassIds(ClassId.DARK_FIGHTER, ClassId.DARK_MAGE);
 		addStartNpc(VOLODOS);
 		addTalkId(VOLODOS, CAPTAIN_BATHIS);
 		addKillId(MARSH_ZOMBIE, MARSH_ZOMBIE_SCOUT, DARK_HORROR, LESSER_DARK_HORROR);
-		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
+		addCondLevel(15, 20, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_TERRIBLE_SWAMP_MONSTERS);
 	}
 	

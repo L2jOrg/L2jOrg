@@ -503,7 +503,7 @@ public class Npc extends Creature {
             if (handler != null) {
                 handler.useBypass(command, player, this);
             } else {
-                LOGGER.info(getClass().getSimpleName() + ": Unknown NPC bypass: \"" + command + "\" NpcId: " + getId());
+                LOGGER.warn("Unknown NPC {} bypass {}", getId(),  command);
             }
         }
     }

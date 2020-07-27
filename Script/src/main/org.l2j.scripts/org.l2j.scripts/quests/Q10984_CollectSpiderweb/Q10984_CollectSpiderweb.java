@@ -26,6 +26,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -87,18 +88,18 @@ public class Q10984_CollectSpiderweb extends Quest
 	private static final ItemHolder MOON_CAPE = new ItemHolder(7857, 1);
 	private static final ItemHolder MOON_SILK = new ItemHolder(7858, 1);
 	private static final ItemHolder MOON_SANDALS = new ItemHolder(7859, 1);
-	// Misc
-	private static final int MAX_LEVEL = 20;
+
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10984_CollectSpiderweb()
 	{
 		super(10984);
+		addCondClassIds(ClassId.ELVEN_FIGHTER, ClassId.ELVEN_MAGE);
 		addStartNpc(HERBIEL);
 		addTalkId(HERBIEL, CAPTAIN_BATHIS);
 		addKillId(MONSTER_DROP_CHANCES.keySet());
 		registerQuestItems(BIGSPIDERWEB);
-		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
+		addCondLevel(15, 20, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_SPIDER_WEB);
 	}
 	

@@ -40,7 +40,6 @@ import java.util.Set;
  */
 public enum ClassId implements IIdentifiable {
     FIGHTER(0, false, Race.HUMAN, null),
-
     WARRIOR(1, false, Race.HUMAN, FIGHTER),
     GLADIATOR(2, false, Race.HUMAN, WARRIOR),
     WARLORD(3, false, Race.HUMAN, WARRIOR),
