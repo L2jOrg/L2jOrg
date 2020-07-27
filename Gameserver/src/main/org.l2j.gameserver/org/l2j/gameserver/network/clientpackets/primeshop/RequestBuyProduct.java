@@ -66,7 +66,6 @@ public abstract class RequestBuyProduct extends ClientPacket {
         }
 
         if(product.getVipTier() > player.getVipTier()) {
-            // should never happens but is better check
             // TODO find the correct message
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SOLD_OUT));
             return false;

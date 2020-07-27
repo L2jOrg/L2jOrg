@@ -118,7 +118,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "damage" -> parseWeaponDamage(weapon, node);
                 case "consume" -> parseWeaponConsume(weapon, node);
                 case "restriction" -> parseItemRestriction(weapon, node);
-                case "conditions" -> parseItemCondition(weapon, node);
+                case "condition" -> parseItemCondition(weapon, node);
                 case "stats" -> parseItemStats(weapon, node);
                 case "skills"-> parseItemSkills(weapon, node);
             }
@@ -269,7 +269,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "attributes" -> parseArmorAttributes(armor, node);
                 case "crystal" -> parseCrystalType(armor, node);
                 case "restriction" -> parseItemRestriction(armor, node);
-                case "conditions" -> parseItemCondition(armor, node);
+                case "condition" -> parseItemCondition(armor, node);
                 case "stats" -> parseItemStats(armor, node);
                 case "skills"-> parseItemSkills(armor, node);
             }
@@ -300,7 +300,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "skill-reducer" -> parseSkillReducer(item, node);
                 case "extract" -> parseItemExtract(item, node);
                 case "transformation-book" -> parseTransformationBook(item, node);
-                case "conditions" -> parseItemCondition(item, node);
+                case "condition" -> parseItemCondition(item, node);
             }
         } );
         item.fillType2();
