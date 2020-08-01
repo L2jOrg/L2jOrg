@@ -20,7 +20,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.database.data.CrestData;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
-import org.l2j.gameserver.network.serverpackets.ExPledgeEmblem;
+import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeEmblem;
 
 /**
  * @author -Wooden-, Sdw

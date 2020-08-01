@@ -19,6 +19,7 @@
 package org.l2j.commons.database.handler;
 
 import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.helpers.HandlersSupport;
 import org.l2j.commons.database.helpers.QueryDescriptor;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
@@ -66,16 +67,16 @@ public class EntityHandler implements TypeHandler<Object> {
             for (int i = 1; i <= metaData.getColumnCount(); i++) {
                 var columnName = metaData.getColumnLabel(i);
 
-                Field f = findField(fields, columnName);
-                if(isNull(f)) {
+                Field field = findField(fields, columnName);
+                if(isNull(field)) {
                     LOGGER.debug("There is no field with name {} on Type {}",  columnName, type.getName());
                     continue;
                 }
-                if(f.trySetAccessible()) {
-                    var handler = TypeHandler.MAP.getOrDefault(f.getType().isEnum() ? "enum" : f.getType().getName(), TypeHandler.MAP.get(Object.class.getName()));
-                    f.set(instance, handler.handleColumn(resultSet, i, f.getType()));
+                if(field.trySetAccessible()) {
+                    var handler = HandlersSupport.handlerFromField(field);
+                    field.set(instance, handler.handleColumn(resultSet, i, field.getType()));
                 } else {
-                    throw new SQLException("No accessible field " + f.getName() + " On type " + type );
+                    throw new SQLException("No accessible field " + field.getName() + " On type " + type );
                 }
             }
             return instance;

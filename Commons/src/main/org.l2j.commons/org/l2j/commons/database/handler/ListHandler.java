@@ -18,6 +18,7 @@
  */
 package org.l2j.commons.database.handler;
 
+import org.l2j.commons.database.helpers.HandlersSupport;
 import org.l2j.commons.database.helpers.QueryDescriptor;
 
 import java.lang.reflect.ParameterizedType;
@@ -26,8 +27,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
@@ -40,18 +43,27 @@ public class ListHandler implements TypeHandler<List<?>> {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public List<?> handleResult(QueryDescriptor queryDescriptor) throws SQLException {
+        return handleResultAndThen(queryDescriptor, null);
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public List<?> handleResultAndThen(QueryDescriptor queryDescriptor, Consumer<Object> typeConsumer) throws SQLException {
         Class<?> genericType = (Class<?>) ((ParameterizedType)queryDescriptor.getGenericReturnType()).getActualTypeArguments()[0];
 
-        var handler = MAP.getOrDefault(genericType.getName(), MAP.get(Object.class.getName()));
+        var handler = HandlersSupport.handlerFromClass(genericType);
         if(isNull(handler)) {
             throw new IllegalStateException("There is no TypeHandler to Type " + genericType);
         }
         List<Object> result = new ArrayList<>();
         var resultSet = queryDescriptor.getResultSet();
         while (resultSet.next()) {
-            result.add(handler.handleType(resultSet, genericType));
+            var entry = handler.handleType(resultSet, genericType);
+            if(nonNull(typeConsumer)) {
+                typeConsumer.accept(entry);
+            }
+            result.add(entry);
         }
         return result;
     }

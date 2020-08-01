@@ -21,14 +21,17 @@ package org.l2j.commons.database.handler;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.ConcurrentIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.database.helpers.HandlersSupport;
 import org.l2j.commons.database.helpers.QueryDescriptor;
 
 import java.lang.reflect.ParameterizedType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
@@ -43,16 +46,26 @@ public class ConcurrentIntMapHandler implements TypeHandler<IntMap<?>> {
     @Override
     @SuppressWarnings("unchecked")
     public IntMap<?> handleResult(QueryDescriptor queryDescriptor) throws SQLException {
+        return handleResultAndThen(queryDescriptor, null);
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public IntMap<?> handleResultAndThen(QueryDescriptor queryDescriptor, Consumer<Object> typeConsumer) throws SQLException {
         Class<?> genericType = (Class<?>) ((ParameterizedType)queryDescriptor.getGenericReturnType()).getActualTypeArguments()[0];
 
-        var handler = MAP.getOrDefault(genericType.getName(), MAP.get(Object.class.getName()));
+        var handler = HandlersSupport.handlerFromClass(genericType);
         if(isNull(handler)) {
             throw new IllegalStateException("There is no TypeHandler to Type " + genericType);
         }
         ConcurrentIntMap<Object> result = new CHashIntMap<>();
         var resultSet = queryDescriptor.getResultSet();
         while (resultSet.next()) {
-            result.put(resultSet.getInt(1), handler.handleType(resultSet, genericType));
+            var entry = handler.handleType(resultSet, genericType);
+            if(nonNull(typeConsumer)) {
+                typeConsumer.accept(entry);
+            }
+            result.put(resultSet.getInt(1), entry);
         }
         return result;
     }

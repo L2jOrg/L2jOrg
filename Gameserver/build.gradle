@@ -77,8 +77,6 @@ run {
     }
 }
 
-/*run.dependsOn( project(':Script').jar )*/
-
 startScripts {
     inputs.property("moduleName", moduleName)
     doFirst {
@@ -110,7 +108,7 @@ task dist(type: Copy) {
     into ("$buildDir/gameserver/lib")
 
     copy {
-        from([sourceSets.main.resources])
+        from([sourceSets.main.resources, 'bin'])
         into("$buildDir/gameserver")
     }
 }

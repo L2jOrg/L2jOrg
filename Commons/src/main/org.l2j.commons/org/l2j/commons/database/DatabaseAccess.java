@@ -19,6 +19,7 @@
 package org.l2j.commons.database;
 
 import org.l2j.commons.cache.CacheFactory;
+import org.l2j.commons.database.helpers.HandlersSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,10 +44,11 @@ public class DatabaseAccess {
             return true;
         }
         try {
+            HandlersSupport.initialize();
             DatabaseFactory.getInstance();
             return initialized = true;
         } catch (SQLException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
         return initialized;
     }
@@ -65,7 +67,7 @@ public class DatabaseAccess {
         try {
             DatabaseFactory.getInstance().shutdown();
         } catch (SQLException e) {
-            LOGGER.warn(e.getLocalizedMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 }
