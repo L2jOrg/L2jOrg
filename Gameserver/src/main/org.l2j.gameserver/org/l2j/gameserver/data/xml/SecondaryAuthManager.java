@@ -65,8 +65,8 @@ public class SecondaryAuthManager extends GameXmlReader {
                 return;
             }
 
-            maxAttempts = parseInteger(attrs, "max-attempts");
-            banTime = parseInteger(attrs, "ban-time");
+            maxAttempts = parseInt(attrs, "max-attempts");
+            banTime = parseInt(attrs, "ban-time");
             recoveryLink = parseString(attrs, "recovery-link");
 
             forEach(node, "forbidden-passwords", forbiddenList -> forEach(forbiddenList, "password", pwdNode -> forbiddenPasswords.add(Integer.parseInt(pwdNode.getTextContent()))));

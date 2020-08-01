@@ -84,8 +84,8 @@ public final class PetDataTable extends GameXmlReader {
         final Node n = doc.getFirstChild();
         for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
             if (d.getNodeName().equals("pet")) {
-                final int npcId = parseInteger(d.getAttributes(), "id");
-                final int itemId = parseInteger(d.getAttributes(), "itemId");
+                final int npcId = parseInt(d.getAttributes(), "id");
+                final int itemId = parseInt(d.getAttributes(), "itemId");
                 // index ignored for now
                 final PetData data = new PetData(npcId, itemId);
                 for (Node p = d.getFirstChild(); p != null; p = p.getNextSibling()) {
@@ -97,18 +97,18 @@ public final class PetDataTable extends GameXmlReader {
                                 data.addFood(Integer.valueOf(foodId));
                             }
                         } else if ("load".equals(type)) {
-                            data.setLoad(parseInteger(attrs, "val"));
+                            data.setLoad(parseInt(attrs, "val"));
                         } else if ("hungry_limit".equals(type)) {
-                            data.setHungryLimit(parseInteger(attrs, "val"));
+                            data.setHungryLimit(parseInt(attrs, "val"));
                         } else if ("sync_level".equals(type)) {
-                            data.setSyncLevel(parseInteger(attrs, "val") == 1);
+                            data.setSyncLevel(parseInt(attrs, "val") == 1);
                         }
                         // evolve ignored
                     } else if (p.getNodeName().equals("skills")) {
                         for (Node s = p.getFirstChild(); s != null; s = s.getNextSibling()) {
                             if (s.getNodeName().equals("skill")) {
                                 attrs = s.getAttributes();
-                                data.addNewSkill(parseInteger(attrs, "skillId"), parseInteger(attrs, "skillLvl"), parseInteger(attrs, "minLvl"));
+                                data.addNewSkill(parseInt(attrs, "skillId"), parseInt(attrs, "skillLvl"), parseInt(attrs, "minLvl"));
                             }
                         }
                     } else if (p.getNodeName().equals("stats")) {

@@ -93,7 +93,7 @@ public final class BuyListData extends GameXmlReader {
             final int buyListId = Integer.parseInt(f.getName().replaceAll(".xml", ""));
             forEach(doc, "list", (list) ->
             {
-                final int defaultBaseTax = parseInteger(list.getAttributes(), "baseTax", 0);
+                final int defaultBaseTax = parseInt(list.getAttributes(), "baseTax", 0);
                 final ProductList buyList = new ProductList(buyListId);
                 forEach(list, (node) ->
                 {
@@ -101,13 +101,13 @@ public final class BuyListData extends GameXmlReader {
                         case "item": {
                             final NamedNodeMap attrs = node.getAttributes();
 
-                            final int itemId = parseInteger(attrs, "id");
+                            final int itemId = parseInt(attrs, "id");
                             final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                             if (item != null) {
                                 final long price = parseLong(attrs, "price", -1L);
                                 final long restockDelay = parseLong(attrs, "restock_delay", -1L);
                                 final long count = parseLong(attrs, "count", -1L);
-                                final int baseTax = parseInteger(attrs, "baseTax", defaultBaseTax);
+                                final int baseTax = parseInt(attrs, "baseTax", defaultBaseTax);
 
                                 buyList.addProduct(new Product(buyListId, item, price, restockDelay, count, baseTax));
                             } else {

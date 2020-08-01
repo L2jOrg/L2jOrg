@@ -992,8 +992,8 @@ public final class ClassMaster extends AbstractNpcAI
 												attrs = r.getAttributes();
 												if ("item".equals(r.getNodeName()))
 												{
-													final int itemId = parseInteger(attrs, "id");
-													final int count = parseInteger(attrs, "count", 1);
+													final int itemId = parseInt(attrs, "id");
+													final int count = parseInt(attrs, "count", 1);
 
 													rewardedItems.add(new ItemHolder(itemId, count));
 												}
@@ -1014,8 +1014,8 @@ public final class ClassMaster extends AbstractNpcAI
 												attrs = r.getAttributes();
 												if ("item".equals(r.getNodeName()))
 												{
-													final int itemId = parseInteger(attrs, "id");
-													final int count = parseInteger(attrs, "count", 1);
+													final int itemId = parseInt(attrs, "id");
+													final int count = parseInt(attrs, "count", 1);
 
 													requiredItems.add(new ItemHolder(itemId, count));
 												}

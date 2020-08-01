@@ -166,7 +166,7 @@ public final class ItemEngine extends GameXmlReader {
         if(nonNull(condition)) {
             var attr = node.getAttributes();
             var msg = parseString(attr, "msg");
-            var msgId = parseInteger(attr, "msg-id");
+            var msgId = parseInt(attr, "msg-id");
             if(nonNull(msg)) {
                 condition.setMessage(msg);
             } else if(nonNull(msgId)) {
@@ -356,7 +356,7 @@ public final class ItemEngine extends GameXmlReader {
         item.setCommissionType(parseEnum(attr, CommissionItemType.class, "commission-type", CommissionItemType.OTHER_ITEM));
         item.setReuseDelay(parseInt(attr, "reuse-delay"));
         item.setReuseGroup(parseInt(attr, "reuse-group"));
-        item.setDuration(parselong(attr, "duration"));
+        item.setDuration(parseLong(attr, "duration"));
         item.setForNpc(parseBoolean(attr, "for-npc"));
     }
 

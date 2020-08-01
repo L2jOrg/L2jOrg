@@ -52,13 +52,14 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * This class manages the zones
  *
  * @author durgus
- * @author joeAlisson
+ * @author JoeAlisson
  */
 public final class ZoneManager extends GameXmlReader {
 
@@ -162,7 +163,7 @@ public final class ZoneManager extends GameXmlReader {
     private void addZone(Node zoneNode, Class<?> zoneClass, String file) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException, InvalidZoneException {
         var constructor = zoneClass.asSubclass(Zone.class).getConstructor(int.class);
         var attributes = zoneNode.getAttributes();
-        var zoneId = parseInteger(attributes, "id");
+        var zoneId = computeIfNonNull(attributes.getNamedItem("id"), this::parseInt);
         if(isNull(zoneId)) {
             zoneId = lastDynamicId++;
         }
@@ -248,9 +249,9 @@ public final class ZoneManager extends GameXmlReader {
 
     private void parseSpawn(Zone zone, NamedNodeMap attr) {
         if(zone instanceof SpawnZone) {
-            var x = parseInteger(attr, "x");
-            var y = parseInteger(attr, "y");
-            var z = parseInteger(attr, "z");
+            var x = parseInt(attr, "x");
+            var y = parseInt(attr, "y");
+            var z = parseInt(attr, "z");
             var type = parseString(attr, "type");
             ((SpawnZone) zone).parseLoc(x, y, z, type);
         }
@@ -293,8 +294,8 @@ public final class ZoneManager extends GameXmlReader {
         for (Node node = polygonNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
                 var attr = node.getAttributes();
-                xPoints.add(parseInteger(attr, "x"));
-                yPoints.add(parseInteger(attr, "y"));
+                xPoints.add(parseInt(attr, "x"));
+                yPoints.add(parseInt(attr, "y"));
             }
         }
         if(xPoints.size() < 3) {
@@ -302,14 +303,14 @@ public final class ZoneManager extends GameXmlReader {
         }
 
         var attributes = polygonNode.getAttributes();
-        var minZ = parseInteger(attributes, "min-z");
-        var maxZ = parseInteger(attributes, "max-z");
+        var minZ = parseInt(attributes, "min-z");
+        var maxZ = parseInt(attributes, "max-z");
         return new ZonePolygonArea(xPoints.toArray(int[]::new), yPoints.toArray(int[]::new), minZ, maxZ);
     }
 
     private ZoneArea parseCylinder(Node zoneNode) throws InvalidZoneException {
         var attributes = zoneNode.getAttributes();
-        int radius = parseInteger(attributes, "radius");
+        int radius = parseInt(attributes, "radius");
 
         if(radius <= 0) {
             throw new  InvalidZoneException("The Zone with Cylinder form must have a radius");
@@ -319,10 +320,10 @@ public final class ZoneManager extends GameXmlReader {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
                 var attr = node.getAttributes();
 
-                int x = parseInteger(attr, "x");
-                int y = parseInteger(attr, "y");
-                var minZ = parseInteger(attributes, "min-z");
-                var maxZ = parseInteger(attributes, "max-z");
+                int x = parseInt(attr, "x");
+                int y = parseInt(attr, "y");
+                var minZ = parseInt(attributes, "min-z");
+                var maxZ = parseInt(attributes, "max-z");
                 return new ZoneCylinderArea(x, y, minZ, maxZ, radius);
             }
         }
@@ -337,14 +338,14 @@ public final class ZoneManager extends GameXmlReader {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
                 var attr = node.getAttributes();
 
-                int x = parseInteger(attr, "x");
-                int y = parseInteger(attr, "y");
+                int x = parseInt(attr, "x");
+                int y = parseInt(attr, "y");
                 points[point++] = x;
                 points[point++] = y;
 
                 if(point > 3) {
-                    var minZ = parseInteger(attributes, "min-z");
-                    var maxZ = parseInteger(attributes, "max-z");
+                    var minZ = parseInt(attributes, "min-z");
+                    var maxZ = parseInt(attributes, "max-z");
                     return new ZoneCubeArea(points[0], points[2], points[1], points[3], minZ, maxZ);
                 }
             }

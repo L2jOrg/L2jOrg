@@ -108,7 +108,7 @@ public final class PlayerTemplateData extends GameXmlReader {
                                     }
                                     if ("node".equalsIgnoreCase(cnd.getNodeName())) {
                                         attrs = cnd.getAttributes();
-                                        creationPoints.add(new Location(parseInteger(attrs, "x"), parseInteger(attrs, "y"), parseInteger(attrs, "z")));
+                                        creationPoints.add(new Location(parseInt(attrs, "x"), parseInt(attrs, "y"), parseInt(attrs, "z")));
                                     } else if ("walk".equalsIgnoreCase(cnd.getNodeName())) {
                                         set.set("baseWalkSpd", cnd.getTextContent());
                                     } else if ("run".equalsIgnoreCase(cnd.getNodeName())) {
@@ -136,7 +136,7 @@ public final class PlayerTemplateData extends GameXmlReader {
 
                             if ("level".equalsIgnoreCase(lvlNode.getNodeName())) {
                                 attrs = lvlNode.getAttributes();
-                                level = parseInteger(attrs, "val");
+                                level = parseInt(attrs, "val");
 
                                 var maxLevel = LevelData.getInstance().getMaxLevel();
                                 for (Node valNode = lvlNode.getFirstChild(); valNode != null; valNode = valNode.getNextSibling()) {

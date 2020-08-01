@@ -709,13 +709,13 @@ public class FourSepulchers extends AbstractNpcAI
 							final NamedNodeMap attrs = b.getAttributes();
 							final int[] info =
 									{
-											parseInteger(attrs, "sepulcherId"),
-											parseInteger(attrs, "wave"),
-											parseInteger(attrs, "npcId"),
-											parseInteger(attrs, "x"),
-											parseInteger(attrs, "y"),
-											parseInteger(attrs, "z"),
-											parseInteger(attrs, "heading")
+											parseInt(attrs, "sepulcherId"),
+											parseInt(attrs, "wave"),
+											parseInt(attrs, "npcId"),
+											parseInt(attrs, "x"),
+											parseInt(attrs, "y"),
+											parseInt(attrs, "z"),
+											parseInt(attrs, "heading")
 									};
 							ROOM_SPAWN_DATA.add(info);
 						}

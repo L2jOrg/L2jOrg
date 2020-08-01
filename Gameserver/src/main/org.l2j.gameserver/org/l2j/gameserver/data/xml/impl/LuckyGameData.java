@@ -82,8 +82,8 @@ public class LuckyGameData extends GameXmlReader {
 
             forEach(rewardNode, "modify_reward", uniqueRewardNode ->
             {
-                holder.setMinModifyRewardGame(parseInteger(uniqueRewardNode.getAttributes(), "min_game"));
-                holder.setMaxModifyRewardGame(parseInteger(uniqueRewardNode.getAttributes(), "max_game"));
+                holder.setMinModifyRewardGame(parseInt(uniqueRewardNode.getAttributes(), "min_game"));
+                holder.setMaxModifyRewardGame(parseInt(uniqueRewardNode.getAttributes(), "max_game"));
                 forEach(uniqueRewardNode, "item", itemNode ->
                 {
                     final StatsSet stats = new StatsSet(parseAttributes(itemNode));
@@ -91,7 +91,7 @@ public class LuckyGameData extends GameXmlReader {
                 });
             });
 
-            _luckyGame.put(parseInteger(rewardNode.getAttributes(), "index"), holder);
+            _luckyGame.put(parseInt(rewardNode.getAttributes(), "index"), holder);
         }));
     }
 

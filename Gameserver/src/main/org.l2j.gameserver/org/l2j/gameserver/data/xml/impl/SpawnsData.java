@@ -150,15 +150,15 @@ public class SpawnsData extends GameXmlReader {
         forEach(innerNode, XmlReader::isNode, territoryNode ->
         {
             final String name = parseString(territoryNode.getAttributes(), "name", fileName + "_" + (spawnTemplate.getTerritories().size() + 1));
-            final int minZ = parseInteger(territoryNode.getAttributes(), "minZ");
-            final int maxZ = parseInteger(territoryNode.getAttributes(), "maxZ");
+            final int minZ = parseInt(territoryNode.getAttributes(), "minZ");
+            final int maxZ = parseInt(territoryNode.getAttributes(), "maxZ");
 
             final List<Integer> xNodes = new ArrayList<>();
             final List<Integer> yNodes = new ArrayList<>();
             forEach(territoryNode, "node", node ->
             {
-                xNodes.add(parseInteger(node.getAttributes(), "x"));
-                yNodes.add(parseInteger(node.getAttributes(), "y"));
+                xNodes.add(parseInt(node.getAttributes(), "x"));
+                yNodes.add(parseInt(node.getAttributes(), "y"));
             });
             final int[] x = xNodes.stream().mapToInt(Integer::valueOf).toArray();
             final int[] y = yNodes.stream().mapToInt(Integer::valueOf).toArray();
@@ -211,10 +211,10 @@ public class SpawnsData extends GameXmlReader {
     private void parseLocations(Node n, NpcSpawnTemplate npcTemplate) {
         for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
             if ("location".equalsIgnoreCase(d.getNodeName())) {
-                final int x = parseInteger(d.getAttributes(), "x");
-                final int y = parseInteger(d.getAttributes(), "y");
-                final int z = parseInteger(d.getAttributes(), "z");
-                final int heading = parseInteger(d.getAttributes(), "heading", 0);
+                final int x = parseInt(d.getAttributes(), "x");
+                final int y = parseInt(d.getAttributes(), "y");
+                final int z = parseInt(d.getAttributes(), "z");
+                final int heading = parseInt(d.getAttributes(), "heading", 0);
                 final double chance = parseDouble(d.getAttributes(), "chance");
                 npcTemplate.addSpawnLocation(new ChanceLocation(x, y, z, heading, chance));
             }

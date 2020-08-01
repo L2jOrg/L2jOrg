@@ -115,7 +115,7 @@ public class ClanRewardManager extends GameXmlReader {
 
             forEach(hunting, "item", itemsNode -> {
                 final NamedNodeMap itemsAttr = itemsNode.getAttributes();
-                bonus.setItemReward(new ItemHolder(parseInt(itemsAttr, "id"), parselong(itemsAttr, "count")));
+                bonus.setItemReward(new ItemHolder(parseInt(itemsAttr, "id"), parseLong(itemsAttr, "count")));
             });
 
             clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);

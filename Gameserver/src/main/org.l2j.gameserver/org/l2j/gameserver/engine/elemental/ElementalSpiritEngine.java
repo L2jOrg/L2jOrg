@@ -77,34 +77,34 @@ public final class ElementalSpiritEngine extends GameXmlReader {
         var attributes = spiritNode.getAttributes();
         var type = parseByte(attributes, "type");
         var stage = parseByte(attributes, "stage");
-        var npcId = parseInteger(attributes, "npc");
-        var extractItem = parseInteger(attributes, "extract-item");
-        var maxCharacteristics = parseInteger(attributes, "max-characteristics");
+        var npcId = parseInt(attributes, "npc");
+        var extractItem = parseInt(attributes, "extract-item");
+        var maxCharacteristics = parseInt(attributes, "max-characteristics");
         ElementalSpiritTemplate template = new ElementalSpiritTemplate(type, stage, npcId, extractItem, maxCharacteristics);
         spiritData.computeIfAbsent(type, HashMap::new).put(stage, template);
 
         forEach(spiritNode, "level", levelNode -> {
             var levelInfo = levelNode.getAttributes();
-            var level = parseInteger(levelInfo, "id");
-            var attack = parseInteger(levelInfo, "atk");
-            var defense = parseInteger(levelInfo, "def");
-            var criticalRate = parseInteger(levelInfo, "crit-rate");
-            var criticalDamage = parseInteger(levelInfo, "crit-dam");
+            var level = parseInt(levelInfo, "id");
+            var attack = parseInt(levelInfo, "atk");
+            var defense = parseInt(levelInfo, "def");
+            var criticalRate = parseInt(levelInfo, "crit-rate");
+            var criticalDamage = parseInt(levelInfo, "crit-dam");
             var maxExperience = parseLong(levelInfo, "max-exp");
             template.addLevelInfo(level, attack, defense, criticalRate, criticalDamage, maxExperience);
         });
 
         forEach(spiritNode, "evolve-item", itemNode -> {
             var itemInfo = itemNode.getAttributes();
-            var itemId = parseInteger(itemInfo, "id");
-            var count = parseInteger(itemInfo, "count");
+            var itemId = parseInt(itemInfo, "id");
+            var count = parseInt(itemInfo, "count");
             template.addItemToEvolve(itemId, count);
         });
 
         forEach(spiritNode, "absorb-item", absorbItemNode -> {
             var absorbInfo = absorbItemNode.getAttributes();
-            var itemId = parseInteger(absorbInfo, "id");
-            var experience = parseInteger(absorbInfo, "experience");
+            var itemId = parseInt(absorbInfo, "id");
+            var experience = parseInt(absorbInfo, "experience");
             template.addAbsorbItem(itemId, experience);
         });
 

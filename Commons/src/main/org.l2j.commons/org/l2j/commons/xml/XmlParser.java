@@ -64,17 +64,17 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Boolean parseBoolean(Node node, Boolean defaultValue) {
-        return node != null ? Boolean.valueOf(node.getNodeValue()) : defaultValue;
+    protected boolean parseBoolean(Node node, boolean defaultValue) {
+        return node != null ? Boolean.parseBoolean(node.getNodeValue()) : defaultValue;
     }
 
     /**
      * Parses a boolean value.
      * @param node the node to parse
-     * @return if the node is not null, the value of the parsed node, otherwise null
+     * @return if the node is not null, the value of the parsed node, otherwise false
      */
-    protected Boolean parseBoolean(Node node) {
-        return parseBoolean(node, null);
+    protected boolean parseBoolean(Node node) {
+        return parseBoolean(node, false);
     }
 
     /**
@@ -83,7 +83,7 @@ public class XmlParser {
      * @param name the name of the attribute to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected Boolean parseBoolean(NamedNodeMap attrs, String name)
+    protected boolean parseBoolean(NamedNodeMap attrs, String name)
     {
         return parseBoolean(attrs.getNamedItem(name));
     }
@@ -95,7 +95,7 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Boolean parseBoolean(NamedNodeMap attrs, String name, Boolean defaultValue)
+    protected boolean parseBoolean(NamedNodeMap attrs, String name, boolean defaultValue)
     {
         return parseBoolean(attrs.getNamedItem(name), defaultValue);
     }
@@ -106,9 +106,9 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Byte parseByte(Node node, Byte defaultValue)
+    protected byte parseByte(Node node, byte defaultValue)
     {
-        return node != null ? Byte.decode(node.getNodeValue()) : defaultValue;
+        return node != null ? Byte.parseByte(node.getNodeValue()) : defaultValue;
     }
 
     /**
@@ -116,9 +116,9 @@ public class XmlParser {
      * @param node the node to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected Byte parseByte(Node node)
+    protected byte parseByte(Node node)
     {
-        return parseByte(node, null);
+        return parseByte(node, (byte) 0);
     }
 
     /**
@@ -127,7 +127,7 @@ public class XmlParser {
      * @param name the name of the attribute to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected Byte parseByte(NamedNodeMap attrs, String name)
+    protected byte parseByte(NamedNodeMap attrs, String name)
     {
         return parseByte(attrs.getNamedItem(name));
     }
@@ -139,7 +139,7 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Byte parseByte(NamedNodeMap attrs, String name, Byte defaultValue)
+    protected byte parseByte(NamedNodeMap attrs, String name, byte defaultValue)
     {
         return parseByte(attrs.getNamedItem(name), defaultValue);
     }
@@ -150,7 +150,7 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Short parseShort(Node node, Short defaultValue)
+    protected short parseShort(Node node, short defaultValue)
     {
         return node != null ? Short.decode(node.getNodeValue()) : defaultValue;
     }
@@ -160,9 +160,9 @@ public class XmlParser {
      * @param node the node to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected Short parseShort(Node node)
+    protected short parseShort(Node node)
     {
-        return parseShort(node, null);
+        return parseShort(node, (short) 0);
     }
 
     /**
@@ -171,7 +171,7 @@ public class XmlParser {
      * @param name the name of the attribute to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected Short parseShort(NamedNodeMap attrs, String name)
+    protected short parseShort(NamedNodeMap attrs, String name)
     {
         return parseShort(attrs.getNamedItem(name));
     }
@@ -183,7 +183,7 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Short parseShort(NamedNodeMap attrs, String name, Short defaultValue)
+    protected short parseShort(NamedNodeMap attrs, String name, Short defaultValue)
     {
         return parseShort(attrs.getNamedItem(name), defaultValue);
     }
@@ -229,102 +229,23 @@ public class XmlParser {
     /**
      * parse the node value as long.
      *
-     * @return -1 if node is null or the node name not exists.
+     * @return 0 if node is null or the node name not exists.
      */
-    protected long parselong(NamedNodeMap node, String name) {
-        return nonNull(node) ? parselong(node.getNamedItem(name), -1L) : -1L;
+    protected long parseLong(NamedNodeMap node, String name) {
+        return nonNull(node) ? parseLong(node.getNamedItem(name), 0) : 0;
     }
 
-    protected long parselong(Node node, long defaultValue) {
+    /**
+     * parse the node value as long.
+     *
+     * @return defaultValue  if node is null or the node name not exists.
+     */
+    protected long parseLong(NamedNodeMap node, String name, long defaultValue) {
+        return nonNull(node) ? parseLong(node.getNamedItem(name), defaultValue) : defaultValue;
+    }
+
+    protected long parseLong(Node node, long defaultValue) {
         return  nonNull(node ) ? Long.decode(node.getNodeValue())  : defaultValue;
-    }
-
-    /**
-     * Parses an integer value.
-     * @param node the node to parse
-     * @param defaultValue the default value
-     * @return if the node is not null, the value of the parsed node, otherwise the default value
-     */
-    protected Integer parseInteger(Node node, Integer defaultValue)
-    {
-        return node != null ? Integer.decode(node.getNodeValue()) : defaultValue;
-    }
-
-    /**
-     * Parses an integer value.
-     * @param node the node to parse
-     * @return if the node is not null, the value of the parsed node, otherwise null
-     */
-    protected Integer parseInteger(Node node)
-    {
-        return parseInteger(node, null);
-    }
-
-    /**
-     * Parses an integer value.
-     * @param attrs the attributes
-     * @param name the name of the attribute to parse
-     * @return if the node is not null, the value of the parsed node, otherwise null
-     */
-    protected Integer parseInteger(NamedNodeMap attrs, String name)
-    {
-        return parseInteger(attrs.getNamedItem(name));
-    }
-
-    /**
-     * Parses an integer value.
-     * @param attrs the attributes
-     * @param name the name of the attribute to parse
-     * @param defaultValue the default value
-     * @return if the node is not null, the value of the parsed node, otherwise the default value
-     */
-    protected Integer parseInteger(NamedNodeMap attrs, String name, Integer defaultValue)
-    {
-        return parseInteger(attrs.getNamedItem(name), defaultValue);
-    }
-
-    /**
-     * Parses a long value.
-     * @param node the node to parse
-     * @param defaultValue the default value
-     * @return if the node is not null, the value of the parsed node, otherwise the default value
-     */
-    protected Long parseLong(Node node, Long defaultValue)
-    {
-        return node != null ? Long.decode(node.getNodeValue()) : defaultValue;
-    }
-
-    /**
-     * Parses a long value.
-     * @param node the node to parse
-     * @return if the node is not null, the value of the parsed node, otherwise null
-     */
-    protected Long parseLong(Node node)
-    {
-        return parseLong(node, null);
-    }
-
-    /**
-     * Parses a long value.
-     * @param attrs the attributes
-     * @param name the name of the attribute to parse
-     * @return if the node is not null, the value of the parsed node, otherwise null
-     */
-    protected Long parseLong(NamedNodeMap attrs, String name)
-    {
-        return parseLong(attrs.getNamedItem(name));
-    }
-
-    /**
-     * Parses a long value.
-     * @param attrs the attributes
-     * @param name the name of the attribute to parse
-     * @param defaultValue the default value
-     * @return if the node is not null, the value of the parsed node, otherwise the default value
-     */
-    protected Long parseLong(NamedNodeMap attrs, String name, Long defaultValue)
-    {
-        return parseLong(attrs.getNamedItem(name), defaultValue);
     }
 
     /**
@@ -363,7 +284,7 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Float parseFloat(NamedNodeMap attrs, String name, Float defaultValue)
+    protected float parseFloat(NamedNodeMap attrs, String name, Float defaultValue)
     {
         return parseFloat(attrs.getNamedItem(name), defaultValue);
     }
@@ -404,7 +325,7 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Double parseDouble(NamedNodeMap attrs, String name, Double defaultValue)
+    protected double parseDouble(NamedNodeMap attrs, String name, double defaultValue)
     {
         return parseDouble(attrs.getNamedItem(name), defaultValue);
     }

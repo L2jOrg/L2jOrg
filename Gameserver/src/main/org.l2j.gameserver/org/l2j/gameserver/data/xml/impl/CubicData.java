@@ -107,18 +107,18 @@ public class CubicData extends GameXmlReader {
             switch (conditionNode.getNodeName()) {
                 case "hp": {
                     final HpConditionType type = parseEnum(conditionNode.getAttributes(), HpConditionType.class, "type");
-                    final int hpPer = parseInteger(conditionNode.getAttributes(), "percent");
+                    final int hpPer = parseInt(conditionNode.getAttributes(), "percent");
                     holder.addCondition(new HpCondition(type, hpPer));
                     break;
                 }
                 case "range": {
-                    final int range = parseInteger(conditionNode.getAttributes(), "value");
+                    final int range = parseInt(conditionNode.getAttributes(), "value");
                     holder.addCondition(new RangeCondition(range));
                     break;
                 }
                 case "healthPercent": {
-                    final int min = parseInteger(conditionNode.getAttributes(), "min");
-                    final int max = parseInteger(conditionNode.getAttributes(), "max");
+                    final int min = parseInt(conditionNode.getAttributes(), "min");
+                    final int max = parseInt(conditionNode.getAttributes(), "max");
                     holder.addCondition(new HealthCondition(min, max));
                     break;
                 }

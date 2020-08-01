@@ -112,11 +112,6 @@ class JDBCInvocation implements InvocationHandler {
         }
     }
 
-    private boolean hasResultConsumer(Method method) {
-        var size = method.getParameterCount();
-        return size > 0 && method.getParameterTypes()[size -1] == Consumer.class;
-    }
-
     private boolean save(Method method, Object[] args) throws SQLException {
         if(args.length < 1 || isNull(args[0])) {
             return false;

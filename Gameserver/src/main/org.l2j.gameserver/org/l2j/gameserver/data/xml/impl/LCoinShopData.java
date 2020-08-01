@@ -75,12 +75,12 @@ public class LCoinShopData extends GameXmlReader {
 
     private void parseProduct(Node productNode) {
         var attributes = productNode.getAttributes();
-        var id = parseInteger(attributes, "id");
+        var id = parseInt(attributes, "id");
         var category = parseEnum(attributes, Category.class, "category", Category.Equip);
-        var limitPerDay = parseInteger(attributes, "limitPerDay", 0);
-        var minLevel = parseInteger(attributes, "minLevel", 1);
+        var limitPerDay = parseInt(attributes, "limitPerDay", 0);
+        var minLevel = parseInt(attributes, "minLevel", 1);
         var isEvent = parseBoolean(attributes, "isEvent", false);
-        var remainServerItemAmount = parseInteger(attributes, "remainServerItemAmount", -1);
+        var remainServerItemAmount = parseInt(attributes, "remainServerItemAmount", -1);
         List<ItemHolder> ingredients = new ArrayList<>();
         ItemHolder production = null;
         final NodeList list = productNode.getChildNodes();
@@ -112,8 +112,8 @@ public class LCoinShopData extends GameXmlReader {
 
     private ItemHolder parseItemInfo(Node itemInfoNode) {
         var attributes = itemInfoNode.getAttributes();
-        var itemId = parseInteger(attributes, "id");
-        var count = parseInteger(attributes, "count");
+        var itemId = parseInt(attributes, "id");
+        var count = parseInt(attributes, "count");
 
         final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
         if (isNull(item)) {

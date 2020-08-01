@@ -125,7 +125,7 @@ public final class VipEngine extends GameXmlReader {
             attributes = bonusNode.getAttributes();
             vipInfo.setSilverCoinChance(parseFloat(attributes, "silver-coin-acquisition"));
             vipInfo.setRustyCoinChance(parseFloat(attributes, "rusty-coin-acquisition"));
-            vipInfo.setSkill(parseInteger(attributes, "skill"));
+            vipInfo.setSkill(parseInt(attributes, "skill"));
         }
     }
 

@@ -92,7 +92,7 @@ public final class MultisellData extends GameXmlReader {
 
                         for (Node d = itemNode.getFirstChild(); d != null; d = d.getNextSibling()) {
                             if ("ingredient".equalsIgnoreCase(d.getNodeName())) {
-                                final int id = parseInteger(d.getAttributes(), "id");
+                                final int id = parseInt(d.getAttributes(), "id");
                                 final long count = parseLong(d.getAttributes(), "count");
                                 final byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
                                 final Boolean maintainIngredient = parseBoolean(d.getAttributes(), "maintainIngredient", false);
@@ -104,7 +104,7 @@ public final class MultisellData extends GameXmlReader {
                                     LOGGER.warn("Invalid ingredient id or count for itemId: " + ingredient.getId() + ", count: " + ingredient.getCount() + " in list: " + listId);
                                 }
                             } else if ("production".equalsIgnoreCase(d.getNodeName())) {
-                                final int id = parseInteger(d.getAttributes(), "id");
+                                final int id = parseInt(d.getAttributes(), "id");
                                 final long count = parseLong(d.getAttributes(), "count");
                                 final double chance = parseDouble(d.getAttributes(), "chance", Double.NaN);
                                 byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
