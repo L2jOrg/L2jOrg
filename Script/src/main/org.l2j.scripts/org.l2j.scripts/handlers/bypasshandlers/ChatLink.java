@@ -27,8 +27,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 
-import static org.l2j.gameserver.util.GameUtils.isNpc;
-
 public class ChatLink implements IBypassHandler
 {
 	private static final String[] COMMANDS =
@@ -37,31 +35,21 @@ public class ChatLink implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player player, Creature target)
-	{
-		if (!isNpc(target))
-		{
-			return false;
-		}
-		
-		int val = 0;
-		try
-		{
-			val = Integer.parseInt(command.substring(5));
-		}
-		catch (Exception ioobe)
-		{
-			
-		}
-		
-		final Npc npc = (Npc) target;
-		if ((val == 0) && npc.hasListener(EventType.ON_NPC_FIRST_TALK))
-		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
-		}
-		else
-		{
-			npc.showChatWindow(player, val);
+	public boolean useBypass(String command, Player player, Creature target) {
+		if(target instanceof Npc npc) {
+			int val = 0;
+			try {
+				val = Integer.parseInt(command.substring(5));
+			}
+			catch (Exception ignore) {
+				// ignore
+			}
+
+			if ((val == 0) && npc.hasListener(EventType.ON_NPC_FIRST_TALK)) {
+				EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
+			} else {
+				npc.showChatWindow(player, val);
+			}
 		}
 		return false;
 	}

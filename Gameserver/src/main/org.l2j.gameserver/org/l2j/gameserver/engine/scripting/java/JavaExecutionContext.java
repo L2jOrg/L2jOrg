@@ -96,7 +96,9 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     }
 
     private List<Path> findModuleInfo() throws IOException {
-        return Files.find(sourcePath, Integer.MAX_VALUE, (path, attributes) -> "module-info.java".equals(path.getFileName().toString())).collect(Collectors.toList());
+        try(var files = Files.find(sourcePath, Integer.MAX_VALUE, (path, attributes) -> "module-info.java".equals(path.getFileName().toString()))) {
+            return files.collect(Collectors.toList());
+        }
     }
 
     private void tryConfigureModuleLayer() {
@@ -125,9 +127,11 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     }
 
     private void compile(Path sourcePath) throws JavaCompilerException, IOException {
-        var paths = Files.walk(sourcePath).filter(this::needCompile).collect(Collectors.toList());
-        if(!Util.isNullOrEmpty(paths)) {
-            compile(paths, compileOptions());
+        try(var stream = Files.walk(sourcePath).filter(this::needCompile)) {
+            var paths = stream.collect(Collectors.toList());
+            if (!Util.isNullOrEmpty(paths)) {
+                compile(paths, compileOptions());
+            }
         }
     }
 

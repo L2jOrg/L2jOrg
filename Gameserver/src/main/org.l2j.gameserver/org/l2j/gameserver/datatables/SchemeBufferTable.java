@@ -27,6 +27,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
@@ -53,9 +54,9 @@ public class SchemeBufferTable {
     private SchemeBufferTable() {
         int count = 0;
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            PreparedStatement st = con.prepareStatement(LOAD_SCHEMES);
-            ResultSet rs = st.executeQuery();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
+             PreparedStatement st = con.prepareStatement(LOAD_SCHEMES);
+             ResultSet rs = st.executeQuery()) {
 
             while (rs.next()) {
                 final int objectId = rs.getInt("object_id");
@@ -77,15 +78,14 @@ public class SchemeBufferTable {
                 setScheme(objectId, schemeName, schemeList);
                 count++;
             }
-
-            rs.close();
-            st.close();
         } catch (Exception e) {
             LOGGER.warn("SchemeBufferTable: Failed to load buff schemes : " + e);
         }
 
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+            dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(new File(Config.DATAPACK_ROOT,"data/SchemeBufferSkills.xml"));
 
@@ -116,21 +116,20 @@ public class SchemeBufferTable {
     }
 
     public void saveSchemes() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            // Delete all entries from database.
-            PreparedStatement st = con.prepareStatement(DELETE_SCHEMES);
-            st.execute();
-            st.close();
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
+             PreparedStatement st = con.prepareStatement(DELETE_SCHEMES);
+             PreparedStatement stInsert = con.prepareStatement(INSERT_SCHEME)) {
 
-            st = con.prepareStatement(INSERT_SCHEME);
+            st.execute();
 
             // Save _schemesTable content.
             for (var player : _schemesTable.entrySet()) {
                 for (Map.Entry<String, ArrayList<Integer>> scheme : player.getValue().entrySet()) {
-                    // Build a String composed of skill ids seperated by a ",".
+                    // Build a String composed of skill ids separated by a ",".
                     final StringBuilder sb = new StringBuilder();
                     for (int skillId : scheme.getValue()) {
-                        sb.append(skillId + ",");
+                        sb.append(skillId);
+                        sb.append(",");
                     }
 
                     // Delete the last "," : must be called only if there is something to delete !
@@ -138,14 +137,13 @@ public class SchemeBufferTable {
                         sb.setLength(sb.length() - 1);
                     }
 
-                    st.setInt(1, player.getKey());
-                    st.setString(2, scheme.getKey());
-                    st.setString(3, sb.toString());
-                    st.addBatch();
+                    stInsert.setInt(1, player.getKey());
+                    stInsert.setString(2, scheme.getKey());
+                    stInsert.setString(3, sb.toString());
+                    stInsert.addBatch();
                 }
             }
-            st.executeBatch();
-            st.close();
+            stInsert.executeBatch();
         } catch (Exception e) {
             LOGGER.warn("BufferTableScheme: Error while saving schemes : " + e);
         }

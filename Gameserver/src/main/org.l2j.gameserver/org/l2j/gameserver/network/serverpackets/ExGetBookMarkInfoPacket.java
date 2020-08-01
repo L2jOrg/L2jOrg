@@ -38,7 +38,7 @@ public class ExGetBookMarkInfoPacket extends ServerPacket {
         writeId(ServerExPacketId.EX_USER_BOOKMARK);
 
         writeInt(0x00); // Dummy
-        writeInt(player.getBookmarkslot());
+        writeInt(player.getBookMarkSlot());
         writeInt(player.getTeleportBookmarks().size());
 
         for (TeleportBookmark tpbm : player.getTeleportBookmarks()) {

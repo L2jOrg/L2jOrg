@@ -23,8 +23,6 @@ import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.quest.Quest;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 /**
@@ -33,8 +31,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AbstractNpcAI extends Quest
 {
-	protected final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
-	
 	public AbstractNpcAI()
 	{
 		super(-1);

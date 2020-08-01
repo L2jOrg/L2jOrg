@@ -27,15 +27,15 @@ public class ExLightingCandleEvent extends ServerPacket {
     public static final ExLightingCandleEvent ENABLED = new ExLightingCandleEvent((short) 1);
     public static final ExLightingCandleEvent DISABLED = new ExLightingCandleEvent((short) 1);
 
-    private short enabled;
+    private final short active;
 
-    private ExLightingCandleEvent(short enabled) {
-        this.enabled = enabled;
+    private ExLightingCandleEvent(short active) {
+        this.active = active;
     }
 
     @Override
     protected void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_LIGHTING_CANDLE);
-        writeShort(enabled);
+        writeShort(active);
     }
 }

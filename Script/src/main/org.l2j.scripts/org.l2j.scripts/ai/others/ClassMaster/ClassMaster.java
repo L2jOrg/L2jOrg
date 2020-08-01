@@ -56,6 +56,7 @@ import java.util.*;
  */
 public final class ClassMaster extends AbstractNpcAI
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(ClassMaster.class);
 	// NPCs
 	private static final IntSet CLASS_MASTERS = IntSet.of(31756, 31757); // Mr. Cat, Queen of Hearts
 
@@ -63,7 +64,7 @@ public final class ClassMaster extends AbstractNpcAI
 	private boolean _isEnabled;
 	private boolean _spawnClassMasters;
 	private boolean _showPopupWindow;
-	private static final Logger LOGGER = LoggerFactory.getLogger(ClassMaster.class);
+
 	private final List<ClassChangeData> _classChangeData = new LinkedList<>();
 	
 	public ClassMaster() {

@@ -333,12 +333,11 @@ public class AdminPunishment implements IAdminCommandHandler
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", cmd, affect.name(), name);
 				return useAdminCommand("admin_punishment info " + name + " " + affect.name(), activeChar);
 			}
-			case "admin_ban_char":
-			{
-				if (st.hasMoreTokens())
-				{
+			case "admin_ban_char": {
+				if (st.hasMoreTokens()) {
 					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.BAN, 0, "Banned by admin"), activeChar);
 				}
+				break;
 			}
 			case "admin_unban_char":
 			{
@@ -346,6 +345,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.BAN), activeChar);
 				}
+				break;
 			}
 			case "admin_ban_acc":
 			{
@@ -353,6 +353,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.ACCOUNT, PunishmentType.BAN, 0, "Banned by admin"), activeChar);
 				}
+				break;
 			}
 			case "admin_unban_acc":
 			{
@@ -360,6 +361,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.ACCOUNT, PunishmentType.BAN), activeChar);
 				}
+				break;
 			}
 			case "admin_ban_chat":
 			{
@@ -367,6 +369,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "Chat banned by admin"), activeChar);
 				}
+				break;
 			}
 			case "admin_unban_chat":
 			{
@@ -374,6 +377,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN), activeChar);
 				}
+				break;
 			}
 			case "admin_jail":
 			{
@@ -381,6 +385,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.JAIL, 0, "Jailed by admin"), activeChar);
 				}
+				break;
 			}
 			case "admin_unjail":
 			{
@@ -388,6 +393,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.JAIL), activeChar);
 				}
+				break;
 			}
 		}
 		return true;

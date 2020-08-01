@@ -838,9 +838,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             boolean crossbow = false;
             switch (weaponType) {
                 case CROSSBOW:
-                case TWO_HAND_CROSSBOW: {
+                case TWO_HAND_CROSSBOW:
                     crossbow = true;
-                }
                 case BOW: {
                     final int reuse = Formulas.calculateReuseTime(this, weaponItem);
                     onStartRangedAttack(crossbow, reuse);

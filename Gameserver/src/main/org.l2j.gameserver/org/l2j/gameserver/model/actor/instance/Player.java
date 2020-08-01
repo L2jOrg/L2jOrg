@@ -10160,10 +10160,6 @@ public final class Player extends Playable {
         return _tpbookmarks.values();
     }
 
-    public int getBookmarkslot() {
-        return _bookmarkslot;
-    }
-
     public int getQuestInventoryLimit() {
         return Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
     }
