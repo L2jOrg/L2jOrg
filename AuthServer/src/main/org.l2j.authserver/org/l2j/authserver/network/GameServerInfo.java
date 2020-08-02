@@ -253,31 +253,43 @@ public class GameServerInfo {
         }
 
         private boolean applyMask(byte[] addr) {
+            boolean applied = false;
             // V4 vs V4 or V6 vs V6 checks
             if (_isIPv4 == (addr.length == 4)) {
-                for (int i = 0; i < this.subnet.length; i++) {
-                    if ((addr[i] & this.mask[i]) != this.subnet[i]) {
-                        return false;
-                    }
+                applied= applyIPV4(addr);
+            }
+            else if(_isIPv4) { // my V4 vs V6
+                // check for embedded v4 in v6 addr (not done !)
+                applied = applyIPV4OverIPV6(addr);
+            } else {
+                // my V6 vs V4
+                applied = applyIPV6OverIPV4(addr);
+            }
+            return applied;
+        }
+
+        private boolean applyIPV6OverIPV4(byte[] addr) {
+            for (int i = 0; i < this.subnet.length; i++) {
+                if ((addr[i] & this.mask[i + 12]) != this.subnet[i + 12]) {
+                    return true;
                 }
             }
-            else {
-                // check for embedded v4 in v6 addr (not done !)
-                if (_isIPv4) {
-                    // my V4 vs V6
-                    for (int i = 0; i < this.subnet.length; i++) {
-                        if ((addr[i + 12] & this.mask[i]) != this.subnet[i]) {
-                            return false;
-                        }
-                    }
+            return false;
+        }
+
+        private boolean applyIPV4OverIPV6(byte[] addr) {
+            for (int i = 0; i < this.subnet.length; i++) {
+                if ((addr[i + 12] & this.mask[i]) != this.subnet[i]) {
+                    return false;
                 }
-                else {
-                    // my V6 vs V4
-                    for (int i = 0; i < this.subnet.length; i++) {
-                        if ((addr[i] & this.mask[i + 12]) != this.subnet[i + 12]) {
-                            return false;
-                        }
-                    }
+            }
+            return true;
+        }
+
+        private boolean applyIPV4(byte[] addr) {
+            for (int i = 0; i < this.subnet.length; i++) {
+                if ((addr[i] & this.mask[i]) != this.subnet[i]) {
+                    return false;
                 }
             }
             return true;

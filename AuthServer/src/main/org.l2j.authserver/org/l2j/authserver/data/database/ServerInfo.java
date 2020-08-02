@@ -28,8 +28,6 @@ public class ServerInfo {
     @Column("server_type")
     private int serverType;
 
-    public ServerInfo() { }
-
     public int getId() {
         return serverId;
     }

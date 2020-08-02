@@ -63,7 +63,6 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
-import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Properties;
@@ -269,16 +268,18 @@ public class GameServer {
         INSTANCE = new GameServer();
 
         ThreadPool.execute(AuthServerCommunication.getInstance());
+        scheduleDeadLockDetector(settings);
+    }
 
+    private static void scheduleDeadLockDetector(ServerSettings settings) {
         if (settings.useDeadLockDetector()) {
-            DeadLockDetector deadLockDetector = new DeadLockDetector(Duration.ofSeconds(settings.deadLockDetectorInterval()), () -> {
-                if (settings.restartOnDeadLock()) {
-                    Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
+            ThreadPool.scheduleAtFixedDelay(new DeadLockDetector( () -> {
+                if(getSettings(ServerSettings.class).restartOnDeadLock()) {
+                    Broadcast.toAllOnlinePlayers("Server restarting now.");
                     LOGGER.warn("Deadlock detected restarting the server");
                     Shutdown.getInstance().startShutdown(null, 60, true);
                 }
-            });
-            deadLockDetector.start();
+            }), settings.deadLockDetectorInterval(), settings.deadLockDetectorInterval(), TimeUnit.SECONDS);
         }
     }
 

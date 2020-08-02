@@ -167,11 +167,15 @@ public class Util {
             beginIndex = 1;
         }
 
+        return checkNumeric(value, includePoint, beginIndex);
+    }
+
+    private static boolean checkNumeric(String value, boolean includePoint, int beginIndex) {
         var points = 0;
 
         for(var i = beginIndex; i < value.length(); i++) {
-            var caracter = value.charAt(i);
-            final var isPoint = caracter == '.';
+            var character = value.charAt(i);
+            final var isPoint = character == '.';
             if(isPoint) {
                 if(!includePoint) {
                     return false;
@@ -183,7 +187,7 @@ public class Util {
                 return false;
             }
 
-            if(!isPoint && !Character.isDigit(caracter)) {
+            if(!isPoint && !Character.isDigit(character)) {
                 return false;
             }
         }
@@ -217,12 +221,10 @@ public class Util {
         Field field = null;
         while (nonNull(searchClass)) {
             try {
-                if(nonNull( field = searchClass.getDeclaredField(fieldName))) {
-                    break;
-                }
-                searchClass = searchClass.getSuperclass();
-            } catch (NoSuchFieldException e) {
+                field = searchClass.getDeclaredField(fieldName);
                 break;
+            } catch (NoSuchFieldException e) {
+                searchClass = searchClass.getSuperclass();
             }
         }
         return field;

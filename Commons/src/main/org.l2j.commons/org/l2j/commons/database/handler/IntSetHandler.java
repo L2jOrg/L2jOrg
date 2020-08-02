@@ -58,7 +58,7 @@ public class IntSetHandler implements TypeHandler<IntSet> {
 
     @Override
     public void setParameter(PreparedStatement statement, int parameterIndex, IntSet arg) {
-
+        throw new UnsupportedOperationException();
     }
 
     @Override

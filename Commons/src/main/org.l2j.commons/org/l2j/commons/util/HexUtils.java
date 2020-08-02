@@ -45,7 +45,7 @@ public class HexUtils
 		'E',
 		'F'
 	};
-	private static final char[] _NEW_LINE_CHARS = System.getProperty("line.separator").toCharArray();
+	private static final char[] NEW_LINE_CHARS = System.getProperty("line.separator").toCharArray();
 	
 	/**
 	 * Method to generate the hexadecimal character presentation of a byte<br>
@@ -182,15 +182,15 @@ public class HexUtils
 		return dstAsciiChars;
 	}
 	
-	private static final int _HEX_ED_BPL = 16;
-	private static final int _HEX_ED_CPB = 2;
+	private static final int HEX_ED_BPL = 16;
+	private static final int HEX_ED_CPB = 2;
 	
 	/**
 	 * Method to generate the hexadecimal character representation of a byte array like in a hex editor<br>
 	 * Line Format: {OFFSET} {HEXADECIMAL} {ASCII}({NEWLINE})<br>
 	 * {OFFSET} = offset of the first byte in line(8 chars)<br>
-	 * {HEXADECIMAL} = hexadecimal character representation({@link #_HEX_ED_BPL}*2 chars)<br>
-	 * {ASCII} = ascii character presentation({@link #_HEX_ED_BPL} chars)
+	 * {HEXADECIMAL} = hexadecimal character representation({@link #HEX_ED_BPL}*2 chars)<br>
+	 * {ASCII} = ascii character presentation({@link #HEX_ED_BPL} chars)
 	 * @param data byte array to generate the hexadecimal character representation
 	 * @param len the number of bytes to generate the hexadecimal character representation from
 	 * @return byte array which contains the hexadecimal character representation of the given byte array
@@ -198,8 +198,8 @@ public class HexUtils
 	public static char[] bArr2HexEdChars(byte[] data, int len)
 	{
 		// {OFFSET} {HEXADECIMAL} {ASCII}{NEWLINE}
-		final int lineLength = 9 + (_HEX_ED_BPL * _HEX_ED_CPB) + 1 + _HEX_ED_BPL + _NEW_LINE_CHARS.length;
-		final int lenBplMod = len % _HEX_ED_BPL;
+		final int lineLength = 9 + (HEX_ED_BPL * HEX_ED_CPB) + 1 + HEX_ED_BPL + NEW_LINE_CHARS.length;
+		final int lenBplMod = len % HEX_ED_BPL;
 		// create text buffer
 		// 1. don't allocate a full last line if not _HEX_ED_BPL bytes are shown in last line
 		// 2. no new line at end of buffer
@@ -210,13 +210,13 @@ public class HexUtils
 		char[] textData;
 		if (lenBplMod == 0)
 		{
-			numLines = len / _HEX_ED_BPL;
-			textData = new char[(lineLength * numLines) - _NEW_LINE_CHARS.length];
+			numLines = len / HEX_ED_BPL;
+			textData = new char[(lineLength * numLines) - NEW_LINE_CHARS.length];
 		}
 		else
 		{
-			numLines = (len / _HEX_ED_BPL) + 1;
-			textData = new char[(lineLength * numLines) - (_HEX_ED_BPL - (lenBplMod)) - _NEW_LINE_CHARS.length];
+			numLines = (len / HEX_ED_BPL) + 1;
+			textData = new char[(lineLength * numLines) - (HEX_ED_BPL - (lenBplMod)) - NEW_LINE_CHARS.length];
 		}
 		
 		// performance penalty, only doing space filling in the loop is faster
@@ -229,11 +229,11 @@ public class HexUtils
 		int lineAsciiDataStart;
 		for (int i = 0; i < numLines; ++i)
 		{
-			dataOffset = i * _HEX_ED_BPL;
-			dataLen = Math.min(len - dataOffset, _HEX_ED_BPL);
+			dataOffset = i * HEX_ED_BPL;
+			dataLen = Math.min(len - dataOffset, HEX_ED_BPL);
 			lineStart = i * lineLength;
 			lineHexDataStart = lineStart + 9;
-			lineAsciiDataStart = lineHexDataStart + (_HEX_ED_BPL * _HEX_ED_CPB) + 1;
+			lineAsciiDataStart = lineHexDataStart + (HEX_ED_BPL * HEX_ED_CPB) + 1;
 			
 			int2HexChars(dataOffset, textData, lineStart); // the offset of this line
 			textData[lineHexDataStart - 1] = ' '; // separate
@@ -243,13 +243,13 @@ public class HexUtils
 			if (i < (numLines - 1))
 			{
 				textData[lineAsciiDataStart - 1] = ' '; // separate
-				System.arraycopy(_NEW_LINE_CHARS, 0, textData, lineAsciiDataStart + _HEX_ED_BPL, _NEW_LINE_CHARS.length); // the new line
+				System.arraycopy(NEW_LINE_CHARS, 0, textData, lineAsciiDataStart + HEX_ED_BPL, NEW_LINE_CHARS.length); // the new line
 			}
-			else if (dataLen < _HEX_ED_BPL)
+			else if (dataLen < HEX_ED_BPL)
 			{
 				// last line which shows less than _HEX_ED_BPL bytes
-				final int lineHexDataEnd = lineHexDataStart + (dataLen * _HEX_ED_CPB);
-				Arrays.fill(textData, lineHexDataEnd, lineHexDataEnd + ((_HEX_ED_BPL - dataLen) * _HEX_ED_CPB) + 1, ' '); // spaces, for the last line if there are not _HEX_ED_BPL bytes
+				final int lineHexDataEnd = lineHexDataStart + (dataLen * HEX_ED_CPB);
+				Arrays.fill(textData, lineHexDataEnd, lineHexDataEnd + ((HEX_ED_BPL - dataLen) * HEX_ED_CPB) + 1, ' '); // spaces, for the last line if there are not _HEX_ED_BPL bytes
 			}
 			else
 			{

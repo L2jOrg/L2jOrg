@@ -44,14 +44,15 @@ import static org.l2j.commons.util.Util.*;
 public final class SettingsFile extends Properties {
 
     private static final long serialVersionUID = -4599023842346938325L;
-    private static final Logger logger = LoggerFactory.getLogger(SettingsFile.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SettingsFile.class);
     private static final String DEFAULT_DELIMITER = "[,;]";
+    public static final String ERROR_GETTING_PROPERTY = "Error getting property {} : {}";
 
     SettingsFile(String filePath) {
         try (var reader = newBufferedReader(Paths.get(filePath))) {
             load(reader);
         } catch (IOException e) {
-            logger.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getLocalizedMessage(), e);
         }
     }
 
@@ -70,7 +71,7 @@ public final class SettingsFile extends Properties {
         try {
             return Integer.parseInt(getProperty(key), radix);
         } catch (Exception e) {
-            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            LOGGER.warn(ERROR_GETTING_PROPERTY, key, e.getMessage());
         }
         return defaultValue;
     }
@@ -115,7 +116,7 @@ public final class SettingsFile extends Properties {
             int mapValue = Integer.parseInt(value[1].trim());
             map.put(mapKey, mapValue);
         } catch (Exception e) {
-            logger.warn("Error getting property {} on entry {}: {}", key, entry, e.getLocalizedMessage());
+            LOGGER.warn("Error getting property {} on entry {}: {}", key, entry, e.getMessage());
         }
     }
 
@@ -127,7 +128,7 @@ public final class SettingsFile extends Properties {
                 int value = Integer.parseInt(v.trim());
                 list.add(value);
             } catch (Exception e) {
-                logger.warn("Error getting property {} on value {} : {}", key, v, e.getLocalizedMessage());
+                LOGGER.warn("Error getting property {} on value {} : {}", key, v, e.getMessage());
             }
         });
         return list;
@@ -141,7 +142,7 @@ public final class SettingsFile extends Properties {
         try {
             return Double.parseDouble(getProperty(key));
         } catch (Exception e) {
-            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            LOGGER.warn(ERROR_GETTING_PROPERTY, key, e.getMessage());
         }
         return defaultValue;
     }
@@ -150,7 +151,7 @@ public final class SettingsFile extends Properties {
         try {
             return Float.parseFloat(getProperty(key));
         } catch (Exception e) {
-            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            LOGGER.warn(ERROR_GETTING_PROPERTY, key, e.getMessage());
         }
         return defaultValue;
     }
@@ -176,7 +177,7 @@ public final class SettingsFile extends Properties {
         try {
             return Long.parseLong(getProperty(key));
         } catch (Exception e) {
-            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            LOGGER.warn(ERROR_GETTING_PROPERTY, key, e.getMessage());
         }
         return defaultValue;
     }
@@ -185,7 +186,7 @@ public final class SettingsFile extends Properties {
         try {
             return Byte.parseByte(getProperty(key));
         } catch (Exception e) {
-            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            LOGGER.warn(ERROR_GETTING_PROPERTY, key, e.getMessage());
         }
         return defaultValue;
     }
@@ -194,7 +195,7 @@ public final class SettingsFile extends Properties {
         try {
             return Short.parseShort(getProperty(key));
         } catch (Exception e) {
-            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            LOGGER.warn(ERROR_GETTING_PROPERTY, key, e.getMessage());
         }
         return defaultValue;
     }
@@ -207,7 +208,7 @@ public final class SettingsFile extends Properties {
         try {
             return Enum.valueOf(enumClass, value);
         } catch (Exception e) {
-            logger.warn("Unknown enum constant {} of type {}", key, enumClass);
+            LOGGER.warn("Unknown enum constant {} of type {}", key, enumClass);
         }
         return defaultValue;
     }
@@ -223,7 +224,7 @@ public final class SettingsFile extends Properties {
             try{
                 result.add(Enum.valueOf(enumClass, enumName.trim()));
             } catch (Exception e) {
-                logger.warn("Unknown enum constant {} of type {}", enumName, enumClass);
+                LOGGER.warn("Unknown enum constant {} of type {}", enumName, enumClass);
             }
         }
         return result;
