@@ -650,12 +650,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				return false;
 			}
 			
-			if (client.isDetached())
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Client is detached.");
-				return false;
-			}
-			
 			String ip;
 			final int[][] trace = client.getTrace();
 			for (int i = 0; i < trace.length; i++)
@@ -1022,9 +1016,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		if (isNull(client)) {
 			BuilderUtil.sendSysMessage(activeChar, "Client is null.");
 		}
-		else if (client.isDetached()) {
-			BuilderUtil.sendSysMessage(activeChar, "Client is detached.");
-		}
 		else {
 			ip = client.getHostAddress();
 		}
@@ -1219,26 +1210,16 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				continue;
 			}
-			
-			if (client.isDetached())
+
+			if (findDisconnected)
 			{
-				if (!findDisconnected)
-				{
-					continue;
-				}
+				continue;
 			}
-			else
+
+			ip = client.getHostAddress();
+			if (!ip.equals(IpAdress))
 			{
-				if (findDisconnected)
-				{
-					continue;
-				}
-				
-				ip = client.getHostAddress();
-				if (!ip.equals(IpAdress))
-				{
-					continue;
-				}
+				continue;
 			}
 			
 			final String name = player.getName();
@@ -1317,7 +1298,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		for (Player player : players)
 		{
 			client = player.getClient();
-			if ((client == null) || client.isDetached())
+			if ((client == null))
 			{
 				continue;
 			}
@@ -1371,7 +1352,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		for (Player player : players)
 		{
 			client = player.getClient();
-			if ((client == null) || client.isDetached())
+			if (client == null)
 			{
 				continue;
 			}

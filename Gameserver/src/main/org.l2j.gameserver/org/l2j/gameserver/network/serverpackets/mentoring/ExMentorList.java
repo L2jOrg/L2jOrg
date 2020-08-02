@@ -60,7 +60,7 @@ public class ExMentorList extends ServerPacket {
             writeString(mentee.getName());
             writeInt(mentee.getClassId());
             writeInt(mentee.getLevel());
-            writeInt(mentee.isOnlineInt());
+            writeInt(mentee.isOnline());
         }
     }
 

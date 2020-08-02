@@ -119,7 +119,7 @@ public final class AdminCoins implements IAdminCommandHandler
 	}
 
 	private boolean canReceiveCoin(Player player) {
-		return player.isOnlineInt() == 1 && player.getNCoins() < Integer.MAX_VALUE;
+		return player.isOnline() && player.getNCoins() < Integer.MAX_VALUE;
 	}
 
 	private void updateCoin(Player player, int coinCount) {

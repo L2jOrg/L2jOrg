@@ -461,7 +461,7 @@ public class ClanMember {
         if ((_player == null) || !_player.isOnline()) {
             return false;
         }
-        return (_player.getClient() != null) && !_player.getClient().isDetached();
+        return (_player.getClient() != null);
     }
 
     /**

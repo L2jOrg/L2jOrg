@@ -81,7 +81,7 @@ public final class RequestHardWareInfo extends ClientPacket {
         if (Config.HARDWARE_INFO_ENABLED && (Config.MAX_PLAYERS_PER_HWID > 0)) {
             int count = 0;
             for (Player player : World.getInstance().getPlayers()) {
-                if ((player.isOnlineInt() == 1) && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo()))) {
+                if (player.isOnline() && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo()))) {
                     count++;
                 }
             }

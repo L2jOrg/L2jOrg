@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
-import org.l2j.gameserver.util.OfflineTradeUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,9 +45,7 @@ public final class Logout extends ClientPacket {
         }
 
         LOGGER_ACCOUNTING.info("Logged out, " + client);
+        Disconnection.of(client, player).defaultSequence(false);
 
-        if (!OfflineTradeUtil.enteredOfflineMode(player)) {
-            Disconnection.of(client, player).defaultSequence(false);
-        }
     }
 }

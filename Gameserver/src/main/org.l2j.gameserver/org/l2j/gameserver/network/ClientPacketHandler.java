@@ -46,8 +46,7 @@ public class ClientPacketHandler implements PacketHandler<GameClient> {
         if(opcode >= IncomingPackets.PACKET_ARRAY.length) {
             unknownPacket(buffer, opcode, null);
             return null;
-        }   
-
+        }
         PacketFactory packetFactory = getPacketFactory(opcode, buffer);
 
         return makePacketWithFactory(buffer, client, opcode, packetFactory);

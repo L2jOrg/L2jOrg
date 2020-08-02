@@ -123,7 +123,7 @@ public final class InstanceManager extends GameXmlReader {
         // Parse "instance" node
         final int id = parseInt(instanceNode.getAttributes(), "id");
         if (instanceTemplates.containsKey(id)) {
-            LOGGER.warn(": Instance template with ID " + id + " already exists");
+            LOGGER.warn("Instance template with ID {} already exists", id);
             return;
         }
 

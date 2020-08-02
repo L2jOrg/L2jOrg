@@ -5208,10 +5208,6 @@ public final class Player extends Playable {
      */
     public void setPrivateStoreType(PrivateStoreType privateStoreType) {
         this.privateStoreType = privateStoreType;
-
-        if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached())) {
-            Disconnection.of(this).storeMe().deleteMe();
-        }
     }
 
     /**
@@ -5653,7 +5649,7 @@ public final class Player extends Playable {
     public void updateOnlineStatus() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("UPDATE characters SET online=?, lastAccess=? WHERE charId=?")) {
-            statement.setInt(1, isOnlineInt());
+            statement.setInt(1, isOnline() ? 1 : 0);
             statement.setLong(2, System.currentTimeMillis());
             statement.setInt(3, getObjectId());
             statement.execute();
@@ -5692,7 +5688,7 @@ public final class Player extends Playable {
             statement.setInt(25, hasDwarvenCraft() ? 1 : 0);
             statement.setString(26, getTitle());
             statement.setInt(27, appearance.getTitleColor());
-            statement.setInt(28, isOnlineInt());
+            statement.setInt(28, isOnline() ? 1 : 0);
             statement.setInt(29, _clanPrivileges.getBitmask());
             statement.setBoolean(30, wantsPeace());
             statement.setInt(31, data.getBaseClass());
@@ -5944,7 +5940,7 @@ public final class Player extends Playable {
             statement.setInt(26, getClassId().getId());
             statement.setString(27, getTitle());
             statement.setInt(28, appearance.getTitleColor());
-            statement.setInt(29, isOnlineInt());
+            statement.setInt(29, isOnline() ? 1 : 0);
             statement.setInt(30, _clanPrivileges.getBitmask());
             statement.setBoolean(31, wantsPeace());
             statement.setInt(32, data.getBaseClass());
@@ -6134,25 +6130,6 @@ public final class Player extends Playable {
      */
     public boolean isOnline() {
         return _isOnline;
-    }
-
-    public int isOnlineInt() {
-        if (_isOnline && (_client != null)) {
-            return _client.isDetached() ? 2 : 1;
-        }
-        return 0;
-    }
-
-    /**
-     * Verifies if the player is in offline mode.<br>
-     * The offline mode may happen for different reasons:<br>
-     * Abnormally: Player gets abruptly disconnected from server.<br>
-     * Normally: The player gets into offline shop mode, only available by enabling the offline shop mod.
-     *
-     * @return {@code true} if the player is in offline mode, {@code false} otherwise
-     */
-    public boolean isInOfflineMode() {
-        return (_client == null) || _client.isDetached();
     }
 
     @Override
@@ -11068,7 +11045,7 @@ public final class Player extends Playable {
         sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
         _timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
         {
-            if ((isOnlineInt() > 0) && isInTimedHuntingZone(zoneId))
+            if (isOnline() && isInTimedHuntingZone(zoneId))
             {
                 sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
                 abortCast();

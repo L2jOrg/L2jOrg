@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ItemRequest;
 import org.l2j.gameserver.model.TradeList;
@@ -124,11 +123,6 @@ public final class RequestPrivateStoreSell extends ClientPacket {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             LOGGER.warn("PrivateStore sell has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
             return;
-        }
-
-        // Update offline trade record, if realtime saving is enabled
-        if (Config.OFFLINE_TRADE_ENABLE && Config.STORE_OFFLINE_TRADE_IN_REALTIME && ((storePlayer.getClient() == null) || storePlayer.getClient().isDetached())) {
-            OfflineTradersTable.onTransaction(storePlayer, storeList.getItemCount() == 0, false);
         }
 
         if (storeList.getItemCount() == 0) {

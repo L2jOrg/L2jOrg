@@ -90,7 +90,6 @@ public final class Config {
     private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
     private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
-    private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
 
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
@@ -703,17 +702,7 @@ public final class Config {
     public static double DEFENDER_MDEF_MULTIPLIER;
     public static double DEFENDER_AGRRO_RANGE_MULTIPLIER;
     public static double DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
-    public static boolean OFFLINE_TRADE_ENABLE;
-    public static boolean OFFLINE_CRAFT_ENABLE;
-    public static boolean OFFLINE_MODE_IN_PEACE_ZONE;
 
-    public static boolean RESTORE_OFFLINERS;
-    public static int OFFLINE_MAX_DAYS;
-    public static boolean OFFLINE_DISCONNECT_FINISHED;
-    public static boolean OFFLINE_SET_NAME_COLOR;
-    public static int OFFLINE_NAME_COLOR;
-    public static boolean OFFLINE_FAME;
-    public static boolean STORE_OFFLINE_TRADE_IN_REALTIME;
     public static boolean DISPLAY_SERVER_TIME;
     public static int BUFFER_MAX_SCHEMES;
     public static int BUFFER_STATIC_BUFF_COST;
@@ -1718,21 +1707,6 @@ public final class Config {
             LOGGER.warn("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
         }
         MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
-
-        // Load OfflineTrade config file (if exists)
-        final PropertiesParser OfflineTrade = new PropertiesParser(CUSTOM_OFFLINE_TRADE_CONFIG_FILE);
-
-        OFFLINE_TRADE_ENABLE = OfflineTrade.getBoolean("OfflineTradeEnable", false);
-        OFFLINE_CRAFT_ENABLE = OfflineTrade.getBoolean("OfflineCraftEnable", false);
-        OFFLINE_MODE_IN_PEACE_ZONE = OfflineTrade.getBoolean("OfflineModeInPeaceZone", false);
-
-        OFFLINE_SET_NAME_COLOR = OfflineTrade.getBoolean("OfflineSetNameColor", false);
-        OFFLINE_NAME_COLOR = Integer.decode("0x" + OfflineTrade.getString("OfflineNameColor", "808080"));
-        OFFLINE_FAME = OfflineTrade.getBoolean("OfflineFame", true);
-        RESTORE_OFFLINERS = OfflineTrade.getBoolean("RestoreOffliners", false);
-        OFFLINE_MAX_DAYS = OfflineTrade.getInt("OfflineMaxDays", 10);
-        OFFLINE_DISCONNECT_FINISHED = OfflineTrade.getBoolean("OfflineDisconnectFinished", true);
-        STORE_OFFLINE_TRADE_IN_REALTIME = OfflineTrade.getBoolean("StoreOfflineTradeInRealtime", true);
 
         // Load PcCafe config file (if exists)
         final PropertiesParser PcCafe = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);

@@ -70,11 +70,6 @@ public final class AntiFeedManager {
             return false;
         }
 
-        // Players in offline mode should't be valid targets.
-        if (targetPlayer.getClient().isDetached()) {
-            return false;
-        }
-
         if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId())) {
             if ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL) {
                 return false;
@@ -89,7 +84,7 @@ public final class AntiFeedManager {
 
             final GameClient targetClient = targetPlayer.getClient();
             final GameClient attackerClient = attackerPlayer.getClient();
-            if ((targetClient == null) || (attackerClient == null) || targetClient.isDetached() || attackerClient.isDetached()) {
+            if ((targetClient == null) || (attackerClient == null)) {
                 // unable to check ip address
                 return !Config.ANTIFEED_DISCONNECTED_AS_DUALBOX;
             }
@@ -150,7 +145,7 @@ public final class AntiFeedManager {
         if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS) {
             final String address = client.getHostAddress();
             for (Player player : World.getInstance().getPlayers()) {
-                if (((player.getClient() == null) || player.getClient().isDetached()) && player.getIPAddress().equals(address)) {
+                if (player.getClient() == null && player.getIPAddress().equals(address)) {
                     connectionCount.decrementAndGet();
                 }
             }

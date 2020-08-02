@@ -80,7 +80,7 @@ public abstract class AbstractOlympiadGame {
             return SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_MADE_HASTE_WITH_THEIR_TAIL_BETWEEN_THEIR_LEGS_THE_MATCH_HAS_BEEN_CANCELLED);
         }
 
-        if ((player.getClient() == null) || player.getClient().isDetached()) {
+        if ((player.getClient() == null)) {
             return SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_MADE_HASTE_WITH_THEIR_TAIL_BETWEEN_THEIR_LEGS_THE_MATCH_HAS_BEEN_CANCELLED);
         }
 
