@@ -43,7 +43,7 @@ public class ExtractableProduct {
         _id = id;
         _min = min;
         _max = max;
-        _chance = (int) (chance * 1000);
+        _chance = (int) chance ;
         _minEnchant = minEnchant;
         _maxEnchant = maxEnchant;
     }

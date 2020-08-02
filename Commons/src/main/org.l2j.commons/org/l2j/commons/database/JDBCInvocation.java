@@ -26,8 +26,8 @@ import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.handler.TypeHandler;
 import org.l2j.commons.database.helpers.EntityBasedStrategy;
+import org.l2j.commons.database.helpers.HandlersSupport;
 import org.l2j.commons.database.helpers.QueryDescriptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,7 +39,6 @@ import java.sql.SQLException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.ServiceLoader;
 import java.util.function.Consumer;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -64,9 +63,6 @@ class JDBCInvocation implements InvocationHandler {
     private static final Cache<Class<?>, QueryDescriptor> saveDescriptors = CacheFactory.getInstance().getCache("sql-save-descriptors");
 
     JDBCInvocation() {
-        for (TypeHandler<?> typeHandler : ServiceLoader.load(TypeHandler.class)) {
-            TypeHandler.MAP.put(typeHandler.type(), typeHandler);
-        }
     }
 
     @Override
@@ -75,7 +71,7 @@ class JDBCInvocation implements InvocationHandler {
             return save(method, args);
         }
 
-        var handler = TypeHandler.MAP.getOrDefault(method.getReturnType().isEnum() ? "enum" : method.getReturnType().getName(), TypeHandler.MAP.get(Object.class.getName()));
+        var handler = HandlersSupport.handlerFromMethod(method);
 
         if(isNull(handler)) {
             throw new IllegalStateException("There is no TypeHandler Service for type " + method.getReturnType().getName());
@@ -88,14 +84,11 @@ class JDBCInvocation implements InvocationHandler {
         try(var query = buildQuery(method);
             var con = DatabaseFactory.getInstance().getConnection()) {
             query.execute(con, args);
-            if(hasResultConsumer(method)) {
-                var consumer = resultSetConsumer(args);
-                if(nonNull(consumer)) {
-                    consumer.accept(query.getResultSet());
-                }  else {
-                    LOGGER.warn("Should be a consumer on last parameter of method {}", method);
-                }
-                return null;
+            if(query.hasResultSetConsumer()) {
+               resultSetConsumer(query, args);
+               return null;
+            } else if(query.hasTypeConsumer()) {
+                return handler.handleResultAndThen(query, typeConsumer(args));
             } else {
                 return handler.handleResult(query);
             }
@@ -103,17 +96,20 @@ class JDBCInvocation implements InvocationHandler {
     }
 
     @SuppressWarnings("unchecked")
-    private Consumer<ResultSet> resultSetConsumer(Object[] args) {
+    private Consumer<Object> typeConsumer(Object[] args) {
         var consumer = args[args.length-1];
         if(consumer instanceof Consumer) {
-            return  (Consumer<ResultSet>) consumer;
+            return (Consumer<Object>) consumer;
         }
         return null;
     }
 
-    private boolean hasResultConsumer(Method method) {
-        var size = method.getParameterCount();
-        return size >= 1 && method.getParameterTypes()[size -1] == Consumer.class;
+    @SuppressWarnings("unchecked")
+    private void resultSetConsumer(QueryDescriptor query, Object[] args) throws SQLException {
+        var consumer = args[args.length-1];
+        if(consumer instanceof Consumer) {
+            ((Consumer<ResultSet>) consumer).accept(query.getResultSet());
+        }
     }
 
     private boolean save(Method method, Object[] args) throws SQLException {
@@ -138,8 +134,8 @@ class JDBCInvocation implements InvocationHandler {
             return false;
         }
 
-        try(var con = DatabaseFactory.getInstance().getConnection();
-            var query = buildSaveQuery(clazz, method, table) ) {
+        try(var query = buildSaveQuery(clazz, method, table);
+            var con = DatabaseFactory.getInstance().getConnection()) {
             if(isBatch) {
                 query.executeBatch(con, (Collection<?>) args[0]);
             } else {

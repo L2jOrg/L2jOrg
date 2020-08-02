@@ -71,7 +71,7 @@ public class TeleportersData extends GameXmlReader {
         forEach(doc, "list", list -> forEach(list, "npc", npc -> {
 
             final var teleportList = new HashMap<String, TeleportHolder>();
-            final int npcId = parseInteger(npc.getAttributes(), "id");
+            final int npcId = parseInt(npc.getAttributes(), "id");
 
             forEach(npc, node -> {
                 switch (node.getNodeName()) {
@@ -85,7 +85,7 @@ public class TeleportersData extends GameXmlReader {
     }
 
     private void parseNpcs(final HashMap<String, TeleportHolder> teleportList, Node node) {
-        forEach(node, "npc", npcNode -> registerTeleportList(parseInteger(npcNode.getAttributes(), "id"), teleportList));
+        forEach(node, "npc", npcNode -> registerTeleportList(parseInt(npcNode.getAttributes(), "id"), teleportList));
     }
 
     private void parseTeleport(HashMap<String, TeleportHolder> teleportList, int npcId, Node node) {

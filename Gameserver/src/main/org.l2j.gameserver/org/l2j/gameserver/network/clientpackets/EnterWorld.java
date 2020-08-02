@@ -56,8 +56,13 @@ import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
+import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
+import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeWaitingListAlarm;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
-import org.l2j.gameserver.settings.*;
+import org.l2j.gameserver.settings.AttendanceSettings;
+import org.l2j.gameserver.settings.ChatSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
@@ -337,11 +342,6 @@ public class EnterWorld extends ClientPacket {
 
         if (getSettings(AttendanceSettings.class).enabled()) {
             sendAttendanceInfo(player);
-        }
-
-        var rateXp = getSettings(RateSettings.class).xp();
-        if(rateXp > 1) {
-           // player.sendPacket(new ExUserBoostStat(BoostStatType.SERVER, (short) (rateXp * 100 - 100)));
         }
 
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));

@@ -40,33 +40,29 @@ public class Crypt {
     public boolean encrypt(final Buffer data, final int offset, final int size) {
         if(!enabled) {
             enabled = true;
-            return true;
-        }
+        } else {
+            int encrypted = 0;
+            for (int i = 0; i < size; i++) {
+                int raw = toUnsignedInt(data.readByte(offset + i));
+                encrypted = raw ^ outKey[i & 0x0F] ^ encrypted;
+                data.writeByte(offset + i, (byte) encrypted);
+            }
 
-        int encrypted = 0;
-        for (int i = 0; i < size; i++) {
-            int raw = toUnsignedInt(data.readByte(offset + i));
-            encrypted =  raw ^ outKey[i & 0x0F] ^ encrypted;
-            data.writeByte(offset + i, (byte) encrypted);
+            shiftKey(outKey, size);
         }
-
-        shiftKey(outKey, size);
         return true;
     }
 
     public boolean decrypt(Buffer data, int offset, int size) {
-        if(!enabled) {
-            return true;
+        if(enabled) {
+            int xOr = 0;
+            for(int i = 0; i < size; i++) {
+                int encrypted = toUnsignedInt(data.readByte(offset + i));
+                data.writeByte(offset + i, (byte) (encrypted ^ inKey[i & 15] ^ xOr));
+                xOr  = encrypted;
+            }
+            shiftKey(inKey, size);
         }
-
-        int xOr = 0;
-        for(int i = 0; i < size; i++) {
-            int encrypted = toUnsignedInt(data.readByte(offset + i));
-            data.writeByte(offset + i, (byte) (encrypted ^ inKey[i & 15] ^ xOr));
-            xOr  = encrypted;
-        }
-
-        shiftKey(inKey, size);
         return true;
     }
 

@@ -23,17 +23,13 @@ import org.l2j.commons.database.helpers.QueryDescriptor;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.function.Consumer;
 
 /**
  * @author JoeAlisson
  * @param <T> the entity type
  */
 public interface TypeHandler<T> {
-
-    @SuppressWarnings("rawTypes")
-    Map<String, TypeHandler> MAP = new HashMap<>();
 
     T defaultValue();
     T handleResult(QueryDescriptor queryDescriptor) throws SQLException;
@@ -45,6 +41,10 @@ public interface TypeHandler<T> {
 
     default T handleColumn(ResultSet resultSet, int column, Class<?> type) throws SQLException {
         return handleColumn(resultSet, column);
+    }
+
+    default T handleResultAndThen(QueryDescriptor query, Consumer<Object> typeConsumer) throws SQLException {
+        return handleResult(query);
     }
 }
 

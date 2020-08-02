@@ -18,29 +18,28 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
-
-import java.util.Map;
-import java.util.Map.Entry;
 
 /**
  * @author -Wooden-
  * @author UnAfraid, mrTJO
+ * @author JoeAlisson
  */
 public class PackageToList extends ServerPacket {
-    private final Map<Integer, String> _players;
+    private final IntMap<String> players;
 
-    public PackageToList(Map<Integer, String> chars) {
-        _players = chars;
+    public PackageToList(IntMap<String> players) {
+        this.players = players;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.PACKAGE_TO_LIST);
 
-        writeInt(_players.size());
-        for (Entry<Integer, String> entry : _players.entrySet()) {
+        writeInt(players.size());
+        for (IntMap.Entry<String> entry : players.entrySet()) {
             writeInt(entry.getKey());
             writeString(entry.getValue());
         }

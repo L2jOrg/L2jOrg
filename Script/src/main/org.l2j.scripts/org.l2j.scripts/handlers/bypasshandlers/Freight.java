@@ -84,7 +84,7 @@ public class Freight implements IBypassHandler
 				player.sendPacket(new PackageToList(player.getAccountChars()));
 			}
 		}
-		return false;
+		return true;
 	}
 	
 	@Override

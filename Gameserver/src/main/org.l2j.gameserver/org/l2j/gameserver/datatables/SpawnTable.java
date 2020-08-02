@@ -131,9 +131,10 @@ public final class SpawnTable {
             if (spawnFile.exists()) // update
             {
                 final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
-                try {
-                    final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
-                    final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+                try(final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
+                    final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));) {
+
                     String currentLine;
                     while ((currentLine = reader.readLine()) != null) {
                         if (currentLine.contains("</group>")) {
@@ -143,8 +144,7 @@ public final class SpawnTable {
                         }
                         writer.write(currentLine + System.lineSeparator());
                     }
-                    writer.close();
-                    reader.close();
+
                     spawnFile.delete();
                     tempFile.renameTo(spawnFile);
                 } catch (Exception e) {
@@ -187,9 +187,9 @@ public final class SpawnTable {
             final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
             final File spawnFile = new File( nonNull(spawn.getNpcSpawnTemplate()) ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFilePath() : OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
             final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
-            try {
-                final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
-                final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+            try (final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
+                 final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))){
+
                 final String spawnId = String.valueOf(spawn.getId());
                 final String spawnX = String.valueOf(spawn.getX());
                 final String spawnY = String.valueOf(spawn.getY());
@@ -224,8 +224,6 @@ public final class SpawnTable {
                         lineCount++;
                     }
                 }
-                writer.close();
-                reader.close();
                 spawnFile.delete();
                 tempFile.renameTo(spawnFile);
                 // Delete empty file

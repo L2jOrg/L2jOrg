@@ -40,6 +40,7 @@ import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.instance.PlayerFactory;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
@@ -93,7 +94,8 @@ public final class GameClient extends Client<Connection<GameClient>> {
     private AccountData account;
     private boolean secondaryAuthed;
 
-    public GameClient(Connection<GameClient> connection) {
+    public
+    GameClient(Connection<GameClient> connection) {
         super(connection);
         crypt = new Crypt();
     }
@@ -309,7 +311,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
             return null;
         }
 
-        player = Player.load(objectId);
+        player = PlayerFactory.loadPlayer(this, objectId);
         if (player == null) {
             LOGGER.error("Could not restore in slot: {}", characterSlot);
         }

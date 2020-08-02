@@ -71,7 +71,7 @@ public class AugmentationEngine extends EffectParser {
     @Override
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "option", optionNode -> {
-            final int id = parseInteger(optionNode.getAttributes(), "id");
+            final int id = parseInt(optionNode.getAttributes(), "id");
             final Options option = new Options(id);
 
             forEach(optionNode, XmlReader::isNode, innerNode -> {

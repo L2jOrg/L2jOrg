@@ -104,14 +104,14 @@ public class NpcData extends GameXmlReader {
                     if ("npc".equalsIgnoreCase(listNode.getNodeName())) {
                         NamedNodeMap attrs = listNode.getAttributes();
                         final StatsSet set = new StatsSet(new HashMap<>());
-                        final int npcId = parseInteger(attrs, "id");
+                        final int npcId = parseInt(attrs, "id");
                         Map<String, Object> parameters = null;
                         Map<Integer, Skill> skills = null;
                         Set<Integer> clans = null;
                         Set<Integer> ignoreClanNpcIds = null;
                         List<DropHolder> dropLists = null;
                         set.set("id", npcId);
-                        set.set("displayId", parseInteger(attrs, "displayId"));
+                        set.set("displayId", parseInt(attrs, "displayId"));
                         set.set("level", parseByte(attrs, "level"));
                         set.set("type", parseString(attrs, "type"));
                         set.set("name", parseString(attrs, "name"));
@@ -136,10 +136,10 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "equipment": {
-                                    set.set("chestId", parseInteger(attrs, "chest"));
-                                    set.set("rhandId", parseInteger(attrs, "rhand"));
-                                    set.set("lhandId", parseInteger(attrs, "lhand"));
-                                    set.set("weaponEnchant", parseInteger(attrs, "weaponEnchant"));
+                                    set.set("chestId", parseInt(attrs, "chest"));
+                                    set.set("rhandId", parseInt(attrs, "rhand"));
+                                    set.set("lhandId", parseInt(attrs, "lhand"));
+                                    set.set("weaponEnchant", parseInt(attrs, "weaponEnchant"));
                                     break;
                                 }
                                 case "acquire": {
@@ -150,19 +150,19 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "mpreward": {
-                                    set.set("mpRewardValue", parseInteger(attrs, "value"));
+                                    set.set("mpRewardValue", parseInt(attrs, "value"));
                                     set.set("mpRewardType", parseEnum(attrs, MpRewardType.class, "type"));
-                                    set.set("mpRewardTicks", parseInteger(attrs, "ticks"));
+                                    set.set("mpRewardTicks", parseInt(attrs, "ticks"));
                                     set.set("mpRewardAffectType", parseEnum(attrs, MpRewardAffectType.class, "affects"));
                                     break;
                                 }
                                 case "stats": {
-                                    set.set("baseSTR", parseInteger(attrs, "str"));
-                                    set.set("baseINT", parseInteger(attrs, "int"));
-                                    set.set("baseDEX", parseInteger(attrs, "dex"));
-                                    set.set("baseWIT", parseInteger(attrs, "wit"));
-                                    set.set("baseCON", parseInteger(attrs, "con"));
-                                    set.set("baseMEN", parseInteger(attrs, "men"));
+                                    set.set("baseSTR", parseInt(attrs, "str"));
+                                    set.set("baseINT", parseInt(attrs, "int"));
+                                    set.set("baseDEX", parseInt(attrs, "dex"));
+                                    set.set("baseWIT", parseInt(attrs, "wit"));
+                                    set.set("baseCON", parseInt(attrs, "con"));
+                                    set.set("baseMEN", parseInt(attrs, "men"));
                                     for (Node statsNode = npcNode.getFirstChild(); statsNode != null; statsNode = statsNode.getNextSibling()) {
                                         attrs = statsNode.getAttributes();
                                         switch (statsNode.getNodeName().toLowerCase()) {
@@ -176,23 +176,23 @@ public class NpcData extends GameXmlReader {
                                             case "attack": {
                                                 set.set("basePAtk", parseDouble(attrs, "physical"));
                                                 set.set("baseMAtk", parseDouble(attrs, "magical"));
-                                                set.set("baseRndDam", parseInteger(attrs, "random"));
+                                                set.set("baseRndDam", parseInt(attrs, "random"));
                                                 set.set("baseCritRate", parseDouble(attrs, "critical"));
                                                 set.set("accuracy", parseFloat(attrs, "accuracy")); // TODO: Implement me
                                                 set.set("basePAtkSpd", parseFloat(attrs, "attackSpeed"));
-                                                set.set("reuseDelay", parseInteger(attrs, "reuseDelay")); // TODO: Implement me
+                                                set.set("reuseDelay", parseInt(attrs, "reuseDelay")); // TODO: Implement me
                                                 set.set("baseAtkType", parseString(attrs, "type"));
-                                                set.set("baseAtkRange", parseInteger(attrs, "range"));
-                                                set.set("distance", parseInteger(attrs, "distance")); // TODO: Implement me
-                                                set.set("width", parseInteger(attrs, "width")); // TODO: Implement me
+                                                set.set("baseAtkRange", parseInt(attrs, "range"));
+                                                set.set("distance", parseInt(attrs, "distance")); // TODO: Implement me
+                                                set.set("width", parseInt(attrs, "width")); // TODO: Implement me
                                                 break;
                                             }
                                             case "defence": {
                                                 set.set("basePDef", parseDouble(attrs, "physical"));
                                                 set.set("baseMDef", parseDouble(attrs, "magical"));
-                                                set.set("evasion", parseInteger(attrs, "evasion")); // TODO: Implement me
-                                                set.set("baseShldDef", parseInteger(attrs, "shield"));
-                                                set.set("baseShldRate", parseInteger(attrs, "shieldRate"));
+                                                set.set("evasion", parseInt(attrs, "evasion")); // TODO: Implement me
+                                                set.set("baseShldDef", parseInt(attrs, "shield"));
+                                                set.set("baseShldRate", parseInt(attrs, "shieldRate"));
                                                 break;
                                             }
                                             case "abnormalresist": {
@@ -208,40 +208,40 @@ public class NpcData extends GameXmlReader {
                                                             final String attackAttributeType = parseString(attrs, "type");
                                                             switch (attackAttributeType.toUpperCase()) {
                                                                 case "FIRE": {
-                                                                    set.set("baseFire", parseInteger(attrs, "value"));
+                                                                    set.set("baseFire", parseInt(attrs, "value"));
                                                                     break;
                                                                 }
                                                                 case "WATER": {
-                                                                    set.set("baseWater", parseInteger(attrs, "value"));
+                                                                    set.set("baseWater", parseInt(attrs, "value"));
                                                                     break;
                                                                 }
                                                                 case "WIND": {
-                                                                    set.set("baseWind", parseInteger(attrs, "value"));
+                                                                    set.set("baseWind", parseInt(attrs, "value"));
                                                                     break;
                                                                 }
                                                                 case "EARTH": {
-                                                                    set.set("baseEarth", parseInteger(attrs, "value"));
+                                                                    set.set("baseEarth", parseInt(attrs, "value"));
                                                                     break;
                                                                 }
                                                                 case "DARK": {
-                                                                    set.set("baseDark", parseInteger(attrs, "value"));
+                                                                    set.set("baseDark", parseInt(attrs, "value"));
                                                                     break;
                                                                 }
                                                                 case "HOLY": {
-                                                                    set.set("baseHoly", parseInteger(attrs, "value"));
+                                                                    set.set("baseHoly", parseInt(attrs, "value"));
                                                                     break;
                                                                 }
                                                             }
                                                             break;
                                                         }
                                                         case "defence": {
-                                                            set.set("baseFireRes", parseInteger(attrs, "fire"));
-                                                            set.set("baseWaterRes", parseInteger(attrs, "water"));
-                                                            set.set("baseWindRes", parseInteger(attrs, "wind"));
-                                                            set.set("baseEarthRes", parseInteger(attrs, "earth"));
-                                                            set.set("baseHolyRes", parseInteger(attrs, "holy"));
-                                                            set.set("baseDarkRes", parseInteger(attrs, "dark"));
-                                                            set.set("baseElementRes", parseInteger(attrs, "default"));
+                                                            set.set("baseFireRes", parseInt(attrs, "fire"));
+                                                            set.set("baseWaterRes", parseInt(attrs, "water"));
+                                                            set.set("baseWindRes", parseInt(attrs, "wind"));
+                                                            set.set("baseEarthRes", parseInt(attrs, "earth"));
+                                                            set.set("baseHolyRes", parseInt(attrs, "holy"));
+                                                            set.set("baseDarkRes", parseInt(attrs, "dark"));
+                                                            set.set("baseElementRes", parseInt(attrs, "default"));
                                                             break;
                                                         }
                                                     }
@@ -301,8 +301,8 @@ public class NpcData extends GameXmlReader {
                                     for (Node skillListNode = npcNode.getFirstChild(); skillListNode != null; skillListNode = skillListNode.getNextSibling()) {
                                         if ("skill".equalsIgnoreCase(skillListNode.getNodeName())) {
                                             attrs = skillListNode.getAttributes();
-                                            final int skillId = parseInteger(attrs, "id");
-                                            final int skillLevel = parseInteger(attrs, "level");
+                                            final int skillId = parseInt(attrs, "id");
+                                            final int skillLevel = parseInt(attrs, "level");
                                             final Skill skill = SkillEngine.getInstance().getSkill(skillId, skillLevel);
                                             if (skill != null) {
                                                 skills.put(skill.getId(), skill);
@@ -314,10 +314,10 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "shots": {
-                                    set.set("soulShot", parseInteger(attrs, "soul"));
-                                    set.set("spiritShot", parseInteger(attrs, "spirit"));
-                                    set.set("shotShotChance", parseInteger(attrs, "shotChance"));
-                                    set.set("spiritShotChance", parseInteger(attrs, "spiritChance"));
+                                    set.set("soulShot", parseInt(attrs, "soul"));
+                                    set.set("spiritShot", parseInt(attrs, "spirit"));
+                                    set.set("shotShotChance", parseInt(attrs, "shotChance"));
+                                    set.set("spiritShotChance", parseInt(attrs, "spiritChance"));
                                     break;
                                 }
                                 case "corpsetime": {
@@ -334,22 +334,22 @@ public class NpcData extends GameXmlReader {
                                 }
                                 case "ai": {
                                     set.set("aiType", parseString(attrs, "type"));
-                                    set.set("aggroRange", parseInteger(attrs, "aggroRange"));
-                                    set.set("clanHelpRange", parseInteger(attrs, "clanHelpRange"));
-                                    set.set("dodge", parseInteger(attrs, "dodge"));
+                                    set.set("aggroRange", parseInt(attrs, "aggroRange"));
+                                    set.set("clanHelpRange", parseInt(attrs, "clanHelpRange"));
+                                    set.set("dodge", parseInt(attrs, "dodge"));
                                     set.set("isChaos", parseBoolean(attrs, "isChaos"));
                                     set.set("isAggressive", parseBoolean(attrs, "isAggressive"));
                                     for (Node aiNode = npcNode.getFirstChild(); aiNode != null; aiNode = aiNode.getNextSibling()) {
                                         attrs = aiNode.getAttributes();
                                         switch (aiNode.getNodeName().toLowerCase()) {
                                             case "skill": {
-                                                set.set("minSkillChance", parseInteger(attrs, "minChance"));
-                                                set.set("maxSkillChance", parseInteger(attrs, "maxChance"));
-                                                set.set("primarySkillId", parseInteger(attrs, "primaryId"));
-                                                set.set("shortRangeSkillId", parseInteger(attrs, "shortRangeId"));
-                                                set.set("shortRangeSkillChance", parseInteger(attrs, "shortRangeChance"));
-                                                set.set("longRangeSkillId", parseInteger(attrs, "longRangeId"));
-                                                set.set("longRangeSkillChance", parseInteger(attrs, "longRangeChance"));
+                                                set.set("minSkillChance", parseInt(attrs, "minChance"));
+                                                set.set("maxSkillChance", parseInt(attrs, "maxChance"));
+                                                set.set("primarySkillId", parseInt(attrs, "primaryId"));
+                                                set.set("shortRangeSkillId", parseInt(attrs, "shortRangeId"));
+                                                set.set("shortRangeSkillChance", parseInt(attrs, "shortRangeChance"));
+                                                set.set("longRangeSkillId", parseInt(attrs, "longRangeId"));
+                                                set.set("longRangeSkillChance", parseInt(attrs, "longRangeChance"));
                                                 break;
                                             }
                                             case "clanlist": {
@@ -396,9 +396,9 @@ public class NpcData extends GameXmlReader {
                                                 final NamedNodeMap drop_attrs = drop_node.getAttributes();
                                                 if ("item".equals(drop_node.getNodeName().toLowerCase())) {
                                                     final double chance = parseDouble(drop_attrs, "chance");
-                                                    final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY ? chance / 100 : chance);
-                                                    if (ItemEngine.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null) {
-                                                        LOGGER.warn("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
+                                                    final DropHolder dropItem = new DropHolder(dropType, parseInt(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY ? chance / 100 : chance);
+                                                    if (ItemEngine.getInstance().getTemplate(parseInt(drop_attrs, "id")) == null) {
+                                                        LOGGER.warn("DropListItem: Could not find item with id " + parseInt(drop_attrs, "id") + ".");
                                                     } else {
                                                         dropLists.add(dropItem);
                                                     }

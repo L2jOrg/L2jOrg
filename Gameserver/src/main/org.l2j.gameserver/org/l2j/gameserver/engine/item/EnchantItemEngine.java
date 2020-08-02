@@ -56,6 +56,7 @@ import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.network.serverpackets.item.ItemAnnounceType.ENHANCEMENT;
@@ -200,7 +201,8 @@ public class EnchantItemEngine extends GameXmlReader {
             var attr = child.getAttributes();
             var slots = parseEnumSet(child.getFirstChild(), BodyPart.class);
             var group = chanceGroups.get(parseString(attr, "group"));
-            enchantChances.add(new EnchantChance(group, slots, parseBoolean(attr, "magic-weapon", null)));
+
+            enchantChances.add(new EnchantChance(group, slots, computeIfNonNull(attr.getNamedItem("magic-weapon"), this::parseBoolean)));
         }
 
         scrollGroups.put(parseInt(node.getAttributes(), "id"), new ScrollGroup(enchantChances));

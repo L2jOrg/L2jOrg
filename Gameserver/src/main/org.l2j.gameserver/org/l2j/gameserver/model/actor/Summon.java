@@ -98,7 +98,6 @@ public abstract class Summon extends Playable {
         }
 
         setFollowStatus(true);
-        updateAndBroadcastStatus(0);
         sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
         World.getInstance().forEachVisibleObject(getOwner(), Player.class, player -> player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player))));
         final Party party = _owner.getParty();
@@ -656,7 +655,7 @@ public abstract class Summon extends Playable {
             return;
         }
 
-        sendPacket(new PetInfo(this, val));
+        //sendPacket(new PetInfo(this, val));
         sendPacket(new PetStatusUpdate(this));
         if (isSpawned()) {
             broadcastNpcInfo(val);

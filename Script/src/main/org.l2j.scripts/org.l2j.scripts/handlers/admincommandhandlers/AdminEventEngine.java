@@ -31,18 +31,17 @@ import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.World;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
-/**
- * This class handles following admin commands: - admin = shows menu
- * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/04/11 10:06:06 $
- */
-public class AdminEventEngine implements IAdminCommandHandler
-{
+public class AdminEventEngine implements IAdminCommandHandler {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminEventEngine.class);
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -110,12 +109,10 @@ public class AdminEventEngine implements IAdminCommandHandler
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
 				final String eventName = command.substring(16);
-				try
-				{
+				try(final DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(Config.DATAPACK_ROOT + "/data/events/" + eventName)));
+					final BufferedReader inbr = new BufferedReader(new InputStreamReader(in))) {
 					final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-					
-					final DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(Config.DATAPACK_ROOT + "/data/events/" + eventName)));
-					final BufferedReader inbr = new BufferedReader(new InputStreamReader(in));
+
 					adminReply.setFile(null, "data/html/mods/EventEngine/Participation.htm");
 					adminReply.replace("%eventName%", eventName);
 					adminReply.replace("%eventCreator%", inbr.readLine());
@@ -123,12 +120,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 					adminReply.replace("npc_%objectId%_event_participate", "admin_event"); // Weird, but nice hack, isnt it? :)
 					adminReply.replace("button value=\"Participate\"", "button value=\"Back\"");
 					activeChar.sendPacket(adminReply);
-					inbr.close();
 				}
-				catch (Exception e)
-				{
-					
-					e.printStackTrace();
+				catch (Exception e) {
+					LOGGER.error(e.getMessage(), e);
 					
 				}
 				
@@ -154,18 +148,13 @@ public class AdminEventEngine implements IAdminCommandHandler
 			}
 			else if (actualCommand.startsWith("admin_event_store"))
 			{
-				try
-				{
-					final FileOutputStream file = new FileOutputStream(new File(Config.DATAPACK_ROOT, "data/events/" + tempName));
-					final PrintStream p = new PrintStream(file);
+				try(final FileOutputStream file = new FileOutputStream(new File(Config.DATAPACK_ROOT, "data/events/" + tempName));
+					final PrintStream p = new PrintStream(file)) {
 					p.println(activeChar.getName());
 					p.println(tempBuffer);
-					file.close();
-					p.close();
 				}
-				catch (Exception e)
-				{
-					e.printStackTrace();
+				catch (Exception e) {
+					LOGGER.error(e.getMessage(), e);
 				}
 				
 				tempBuffer = "";

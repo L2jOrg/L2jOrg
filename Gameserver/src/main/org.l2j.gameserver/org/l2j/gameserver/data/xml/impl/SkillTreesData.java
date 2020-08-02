@@ -143,12 +143,12 @@ public final class SkillTreesData extends GameXmlReader {
         var attributes = skillTreeNode.getAttributes();
 
         var type = parseString(attributes,"type");
-        var cId = parseInteger(attributes, "classId", -1);
-        var parentId = parseInteger(attributes, "parentClassId", -1);
+        var cId = parseInt(attributes, "classId", -1);
+        var parentId = parseInt(attributes, "parentClassId", -1);
 
         ClassId classId = ClassId.getClassId(cId);
 
-        if(nonNull(classId) && parentId > -1 && !cId.equals(parentId)) {
+        if(nonNull(classId) && parentId > -1 && cId != parentId) {
             parentClassMap.putIfAbsent(classId, ClassId.getClassId(parentId));
         }
 
@@ -176,13 +176,13 @@ public final class SkillTreesData extends GameXmlReader {
             var attrs = b.getAttributes();
 
             switch (b.getNodeName()) {
-                case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count")));
-                case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInteger(attrs, "id"), parseInteger(attrs, "lvl")));
+                case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
+                case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "lvl")));
                 case "race" -> skillLearn.addRace(Race.valueOf(b.getTextContent()));
                 case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(b.getTextContent()));
                 case "socialClass" -> skillLearn.setSocialClass(Enum.valueOf(SocialClass.class, b.getTextContent()));
                 case "removeSkill" -> {
-                    final int removeSkillId = parseInteger(attrs, "id");
+                    final int removeSkillId = parseInt(attrs, "id");
                     skillLearn.addRemoveSkills(removeSkillId);
                     removeSkillCache.computeIfAbsent(classId, k -> new HashIntSet()).add(removeSkillId);
                 }

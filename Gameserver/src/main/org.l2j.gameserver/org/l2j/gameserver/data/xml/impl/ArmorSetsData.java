@@ -72,8 +72,8 @@ public final class ArmorSetsData extends GameXmlReader {
             if ("list".equalsIgnoreCase(n.getNodeName())) {
                 for (Node setNode = n.getFirstChild(); setNode != null; setNode = setNode.getNextSibling()) {
                     if ("set".equalsIgnoreCase(setNode.getNodeName())) {
-                        final int id = parseInteger(setNode.getAttributes(), "id");
-                        final int minimumPieces = parseInteger(setNode.getAttributes(), "minimumPieces", 0);
+                        final int id = parseInt(setNode.getAttributes(), "id");
+                        final int minimumPieces = parseInt(setNode.getAttributes(), "minimumPieces", 0);
                         final boolean isVisual = parseBoolean(setNode.getAttributes(), "visual", false);
                         final ArmorSet set = new ArmorSet(id, minimumPieces, isVisual);
                         if (_armorSets.putIfAbsent(id, set) != null) {
@@ -85,7 +85,7 @@ public final class ArmorSetsData extends GameXmlReader {
                                     forEach(innerSetNode, b -> "item".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
-                                        final int itemId = parseInteger(attrs, "id");
+                                        final int itemId = parseInt(attrs, "id");
                                         final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                                         if (item == null) {
                                             LOGGER.warn("Attempting to register non existing required item: " + itemId + " to a set: " + f.getName());
@@ -99,7 +99,7 @@ public final class ArmorSetsData extends GameXmlReader {
                                     forEach(innerSetNode, b -> "item".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
-                                        final int itemId = parseInteger(attrs, "id");
+                                        final int itemId = parseInt(attrs, "id");
                                         final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                                         if (item == null) {
                                             LOGGER.warn("Attempting to register non existing optional item: " + itemId + " to a set: " + f.getName());
@@ -113,13 +113,13 @@ public final class ArmorSetsData extends GameXmlReader {
                                     forEach(innerSetNode, b -> "skill".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
-                                        final int skillId = parseInteger(attrs, "id");
-                                        final int skillLevel = parseInteger(attrs, "level");
-                                        final int minPieces = parseInteger(attrs, "minimumPieces", set.getMinimumPieces());
-                                        final int minEnchant = parseInteger(attrs, "minimumEnchant", 0);
+                                        final int skillId = parseInt(attrs, "id");
+                                        final int skillLevel = parseInt(attrs, "level");
+                                        final int minPieces = parseInt(attrs, "minimumPieces", set.getMinimumPieces());
+                                        final int minEnchant = parseInt(attrs, "minimumEnchant", 0);
                                         final boolean isOptional = parseBoolean(attrs, "optional", false);
-                                        final int artifactSlotMask = parseInteger(attrs, "slotMask", 0);
-                                        final int artifactBookSlot = parseInteger(attrs, "bookSlot", 0);
+                                        final int artifactSlotMask = parseInt(attrs, "slotMask", 0);
+                                        final int artifactBookSlot = parseInt(attrs, "bookSlot", 0);
                                         set.addSkill(new ArmorsetSkillHolder(skillId, skillLevel, minPieces, minEnchant, isOptional, artifactSlotMask, artifactBookSlot));
                                     });
                                     break;
@@ -128,7 +128,7 @@ public final class ArmorSetsData extends GameXmlReader {
                                     forEach(innerSetNode, b -> "stat".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
-                                        set.addStatsBonus(parseEnum(attrs, BaseStats.class, "type"), parseInteger(attrs, "val"));
+                                        set.addStatsBonus(parseEnum(attrs, BaseStats.class, "type"), parseInt(attrs, "val"));
                                     });
                                     break;
                                 }

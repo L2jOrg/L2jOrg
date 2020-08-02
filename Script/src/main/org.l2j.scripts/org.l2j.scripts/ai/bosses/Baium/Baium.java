@@ -122,9 +122,7 @@ public final class Baium extends AbstractNpcAI
         switch (getStatus())
         {
             case WAITING:
-            {
                 setStatus(ALIVE);
-            }
             case ALIVE:
             {
                 addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);

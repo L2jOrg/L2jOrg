@@ -55,138 +55,138 @@ public class AdminReload implements IAdminCommandHandler {
         final String actualCommand = st.nextToken();
         if (actualCommand.equalsIgnoreCase("admin_reload"))
         {
-            if (!st.hasMoreTokens())
-            {
+            if (!st.hasMoreTokens()) {
                 AdminHtml.showAdminHtml(activeChar, "reload.htm");
                 activeChar.sendMessage(RELOAD_USAGE);
-                return true;
+            }  else {
+                doReload(activeChar, st);
+                BuilderUtil.sendSysMessage(activeChar, "WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
             }
-
-            final String type = st.nextToken();
-            switch (type.toLowerCase()) {
-                case "config" -> {
-                    Config.load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Configs.");
-                }
-                case "access" -> {
-                    AdminData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Access.");
-                }
-                case "npc" -> {
-                    NpcData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Npcs.");
-                }
-                case "quest" -> {
-                    if (st.hasMoreElements()) {
-                        final String value = st.nextToken();
-                        if (!isDigit(value)) {
-                            QuestManager.getInstance().reload(value);
-                            AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quest Name:" + value + ".");
-                        } else {
-                            final int questId = Integer.parseInt(value);
-                            QuestManager.getInstance().reload(questId);
-                            AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quest ID:" + questId + ".");
-                        }
-                    } else {
-                        QuestManager.getInstance().reloadAllScripts();
-                        BuilderUtil.sendSysMessage(activeChar, "All scripts have been reloaded.");
-                        AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quests.");
-                    }
-                }
-                case "walker" -> {
-                    WalkingManager.getInstance().load();
-                    BuilderUtil.sendSysMessage(activeChar, "All walkers have been reloaded");
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Walkers.");
-                }
-                case "htm", "html" -> {
-                    if (st.hasMoreElements()) {
-                        var path = "data/html/" + st.nextToken();
-                        if (HtmCache.getInstance().purge(path)) {
-                            AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htm File:" + path + ".");
-                        } else {
-                            BuilderUtil.sendSysMessage(activeChar, "Html Cache doesn't contains File or Directory.");
-                        }
-                    } else {
-                        HtmCache.getInstance().reload();
-                        AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htms.");
-                    }
-                }
-                case "multisell" -> {
-                    MultisellData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Multisells.");
-                }
-                case "buylist" -> {
-                    BuyListData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Buylists.");
-                }
-                case "teleport" -> {
-                    TeleportersData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Teleports.");
-                }
-                case "skill" -> {
-                    SkillEngine.getInstance().reload();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Skills.");
-                }
-                case "item" -> {
-                    ItemEngine.getInstance().reload();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Items.");
-                }
-                case "door" -> {
-                    DoorDataManager.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Doors.");
-                }
-                case "zone" -> {
-                    ZoneManager.getInstance().reload();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Zones.");
-                }
-                case "crest" -> {
-                    CrestTable.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Crests.");
-                }
-                case "enchant" -> {
-                    EnchantItemEngine.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item enchanting data.");
-                }
-                case "transform" -> {
-                    TransformData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded transform data.");
-                }
-                case "crystalizable" -> {
-                    ItemCrystallizationData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
-                }
-                case "primeshop" -> {
-                    PrimeShopData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Prime Shop data.");
-                }
-                case "sets" -> {
-                    ArmorSetsData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Armor sets data.");
-                }
-                case "options" -> {
-                    AugmentationEngine.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Options data.");
-                }
-                case "fishing" -> {
-                    FishingData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fishing data.");
-                }
-                case "attendance" -> {
-                    AttendanceRewardData.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Attendance Reward data.");
-                }
-                case "instance" -> {
-                    InstanceManager.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Instances data.");
-                }
-                default -> {
-                    activeChar.sendMessage(RELOAD_USAGE);
-                    return true;
-                }
-            }
-            BuilderUtil.sendSysMessage(activeChar, "WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
+            return true;
         }
-        return true;
+        return false;
+    }
+
+    private void doReload(Player activeChar, StringTokenizer st) {
+        final String type = st.nextToken();
+        switch (type.toLowerCase()) {
+            case "config" -> {
+                Config.load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Configs.");
+            }
+            case "access" -> {
+                AdminData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Access.");
+            }
+            case "npc" -> {
+                NpcData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Npcs.");
+            }
+            case "quest" -> {
+                if (st.hasMoreElements()) {
+                    final String value = st.nextToken();
+                    if (!isDigit(value)) {
+                        QuestManager.getInstance().reload(value);
+                        AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quest Name:" + value + ".");
+                    } else {
+                        final int questId = Integer.parseInt(value);
+                        QuestManager.getInstance().reload(questId);
+                        AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quest ID:" + questId + ".");
+                    }
+                } else {
+                    QuestManager.getInstance().reloadAllScripts();
+                    BuilderUtil.sendSysMessage(activeChar, "All scripts have been reloaded.");
+                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quests.");
+                }
+            }
+            case "walker" -> {
+                WalkingManager.getInstance().load();
+                BuilderUtil.sendSysMessage(activeChar, "All walkers have been reloaded");
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Walkers.");
+            }
+            case "htm", "html" -> {
+                if (st.hasMoreElements()) {
+                    var path = "data/html/" + st.nextToken();
+                    if (HtmCache.getInstance().purge(path)) {
+                        AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htm File:" + path + ".");
+                    } else {
+                        BuilderUtil.sendSysMessage(activeChar, "Html Cache doesn't contains File or Directory.");
+                    }
+                } else {
+                    HtmCache.getInstance().reload();
+                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htms.");
+                }
+            }
+            case "multisell" -> {
+                MultisellData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Multisells.");
+            }
+            case "buylist" -> {
+                BuyListData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Buylists.");
+            }
+            case "teleport" -> {
+                TeleportersData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Teleports.");
+            }
+            case "skill" -> {
+                SkillEngine.getInstance().reload();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Skills.");
+            }
+            case "item" -> {
+                ItemEngine.getInstance().reload();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Items.");
+            }
+            case "door" -> {
+                DoorDataManager.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Doors.");
+            }
+            case "zone" -> {
+                ZoneManager.getInstance().reload();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Zones.");
+            }
+            case "crest" -> {
+                CrestTable.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Crests.");
+            }
+            case "enchant" -> {
+                EnchantItemEngine.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item enchanting data.");
+            }
+            case "transform" -> {
+                TransformData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded transform data.");
+            }
+            case "crystalizable" -> {
+                ItemCrystallizationData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
+            }
+            case "primeshop" -> {
+                PrimeShopData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Prime Shop data.");
+            }
+            case "sets" -> {
+                ArmorSetsData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Armor sets data.");
+            }
+            case "options" -> {
+                AugmentationEngine.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Options data.");
+            }
+            case "fishing" -> {
+                FishingData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fishing data.");
+            }
+            case "attendance" -> {
+                AttendanceRewardData.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Attendance Reward data.");
+            }
+            case "instance" -> {
+                InstanceManager.getInstance().load();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Instances data.");
+            }
+            default -> activeChar.sendMessage(RELOAD_USAGE);
+        }
     }
 
     @Override

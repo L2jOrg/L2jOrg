@@ -105,14 +105,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     }
 
     private void calcBlockSize(UserInfoType type) {
-        switch (type) {
-            case BASIC_INFO:
-                initSize += type.getBlockLength() + (player.getAppearance().getVisibleName().length() * 2);
-            case CLAN:
-                initSize += type.getBlockLength() + (title.length() * 2);
-            default:
-                initSize += type.getBlockLength();
-        }
+        initSize += switch (type) {
+            case BASIC_INFO -> type.getBlockLength() + (player.getAppearance().getVisibleName().length() * 2);
+            case CLAN ->  type.getBlockLength() + (title.length() * 2);
+            default ->  type.getBlockLength();
+        };
     }
 
     @Override

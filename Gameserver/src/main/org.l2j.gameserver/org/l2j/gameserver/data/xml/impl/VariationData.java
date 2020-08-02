@@ -76,7 +76,7 @@ public class VariationData extends GameXmlReader {
             {
                 forEach(variationsNode, "variation", variationNode ->
                 {
-                    final int mineralId = parseInteger(variationNode.getAttributes(), "mineralId");
+                    final int mineralId = parseInt(variationNode.getAttributes(), "mineralId");
                     if (ItemEngine.getInstance().getTemplate(mineralId) == null) {
                         LOGGER.warn("Mineral with item id {}  was not found.", mineralId);
                     }
@@ -86,7 +86,7 @@ public class VariationData extends GameXmlReader {
                     {
                         final String weaponTypeString = parseString(groupNode.getAttributes(), "weaponType").toUpperCase();
                         final VariationWeaponType weaponType = VariationWeaponType.valueOf(weaponTypeString);
-                        final int order = parseInteger(groupNode.getAttributes(), "order");
+                        final int order = parseInt(groupNode.getAttributes(), "order");
 
                         final List<OptionDataCategory> sets = new ArrayList<>();
                         forEach(groupNode, "optionCategory", categoryNode ->
@@ -96,7 +96,7 @@ public class VariationData extends GameXmlReader {
                             forEach(categoryNode, "option", optionNode ->
                             {
                                 final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
-                                final int optionId = parseInteger(optionNode.getAttributes(), "id");
+                                final int optionId = parseInt(optionNode.getAttributes(), "id");
                                 final Options opt = AugmentationEngine.getInstance().getOptions(optionId);
                                 if (opt == null) {
                                     LOGGER.warn(": Null option for id " + optionId);
@@ -107,8 +107,8 @@ public class VariationData extends GameXmlReader {
                             forEach(categoryNode, "optionRange", optionNode ->
                             {
                                 final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
-                                final int fromId = parseInteger(optionNode.getAttributes(), "from");
-                                final int toId = parseInteger(optionNode.getAttributes(), "to");
+                                final int fromId = parseInt(optionNode.getAttributes(), "from");
+                                final int toId = parseInt(optionNode.getAttributes(), "to");
                                 for (int id = fromId; id <= toId; id++) {
                                     final Options op = AugmentationEngine.getInstance().getOptions(id);
                                     if (op == null) {
@@ -134,11 +134,11 @@ public class VariationData extends GameXmlReader {
             {
                 forEach(variationsNode, "itemGroup", variationNode ->
                 {
-                    final int id = parseInteger(variationNode.getAttributes(), "id");
+                    final int id = parseInt(variationNode.getAttributes(), "id");
                     final List<Integer> items = new ArrayList<>();
                     forEach(variationNode, "item", itemNode ->
                     {
-                        final int itemId = parseInteger(itemNode.getAttributes(), "id");
+                        final int itemId = parseInt(itemNode.getAttributes(), "id");
                         if (ItemEngine.getInstance().getTemplate(itemId) == null) {
                             LOGGER.warn(": Item with id " + itemId + " was not found.");
                         }
@@ -153,11 +153,11 @@ public class VariationData extends GameXmlReader {
             {
                 forEach(variationNode, "fee", feeNode ->
                 {
-                    final int itemGroupId = parseInteger(feeNode.getAttributes(), "itemGroup");
+                    final int itemGroupId = parseInt(feeNode.getAttributes(), "itemGroup");
                     final List<Integer> itemGroup = itemGroups.get(itemGroupId);
-                    final int itemId = parseInteger(feeNode.getAttributes(), "itemId");
-                    final int itemCount = parseInteger(feeNode.getAttributes(), "itemCount");
-                    final int cancelFee = parseInteger(feeNode.getAttributes(), "cancelFee");
+                    final int itemId = parseInt(feeNode.getAttributes(), "itemId");
+                    final int itemCount = parseInt(feeNode.getAttributes(), "itemCount");
+                    final int cancelFee = parseInt(feeNode.getAttributes(), "cancelFee");
                     if (ItemEngine.getInstance().getTemplate(itemId) == null) {
                         LOGGER.warn(": Item with id " + itemId + " was not found.");
                     }
@@ -166,13 +166,13 @@ public class VariationData extends GameXmlReader {
                     final IntMap<VariationFee> feeByMinerals = new HashIntMap<>();
                     forEach(feeNode, "mineral", mineralNode ->
                     {
-                        final int mId = parseInteger(mineralNode.getAttributes(), "id");
+                        final int mId = parseInt(mineralNode.getAttributes(), "id");
                         feeByMinerals.put(mId, fee);
                     });
                     forEach(feeNode, "mineralRange", mineralNode ->
                     {
-                        final int fromId = parseInteger(mineralNode.getAttributes(), "from");
-                        final int toId = parseInteger(mineralNode.getAttributes(), "to");
+                        final int fromId = parseInt(mineralNode.getAttributes(), "from");
+                        final int toId = parseInt(mineralNode.getAttributes(), "to");
                         for (int id = fromId; id <= toId; id++) {
                             feeByMinerals.put(id, fee);
                         }

@@ -226,9 +226,9 @@ public final class EventEngine extends GameXmlReader {
                             forEach(groupsNode, "item", itemNode ->
                             {
                                 final NamedNodeMap attrs = itemNode.getAttributes();
-                                final int id = parseInteger(attrs, "id");
-                                final int min = parseInteger(attrs, "min");
-                                final int max = parseInteger(attrs, "max");
+                                final int id = parseInt(attrs, "id");
+                                final int min = parseInt(attrs, "min");
+                                final int max = parseInt(attrs, "max");
                                 final double chance = parseDouble(attrs, "chance");
                                 group.addItem(new EventDropItem(id, min, max, chance));
                             });
@@ -241,9 +241,9 @@ public final class EventEngine extends GameXmlReader {
                         forEach(rewardsNode, "item", itemNode ->
                         {
                             final NamedNodeMap attrs = itemNode.getAttributes();
-                            final int id = parseInteger(attrs, "id");
-                            final int min = parseInteger(attrs, "min");
-                            final int max = parseInteger(attrs, "max");
+                            final int id = parseInt(attrs, "id");
+                            final int min = parseInt(attrs, "min");
+                            final int max = parseInt(attrs, "max");
                             final double chance = parseDouble(attrs, "chance");
                             droplist.addItem(new EventDropItem(id, min, max, chance));
                         });
@@ -285,7 +285,7 @@ public final class EventEngine extends GameXmlReader {
             case "ItemHolder": {
                 for (Node stringNode = variableNode.getFirstChild(); stringNode != null; stringNode = stringNode.getNextSibling()) {
                     if ("item".equals(stringNode.getNodeName())) {
-                        ((List<ItemHolder>) values).add(new ItemHolder(parseInteger(stringNode.getAttributes(), "id"), parseLong(stringNode.getAttributes(), "count", 1L)));
+                        ((List<ItemHolder>) values).add(new ItemHolder(parseInt(stringNode.getAttributes(), "id"), parseLong(stringNode.getAttributes(), "count", 1L)));
                     }
                 }
                 break;
@@ -293,7 +293,7 @@ public final class EventEngine extends GameXmlReader {
             case "SkillHolder": {
                 for (Node stringNode = variableNode.getFirstChild(); stringNode != null; stringNode = stringNode.getNextSibling()) {
                     if ("skill".equals(stringNode.getNodeName())) {
-                        ((List<SkillHolder>) values).add(new SkillHolder(parseInteger(stringNode.getAttributes(), "id"), parseInteger(stringNode.getAttributes(), "level", 1)));
+                        ((List<SkillHolder>) values).add(new SkillHolder(parseInt(stringNode.getAttributes(), "id"), parseInt(stringNode.getAttributes(), "level", 1)));
                     }
                 }
                 break;
@@ -301,7 +301,7 @@ public final class EventEngine extends GameXmlReader {
             case "Location": {
                 for (Node stringNode = variableNode.getFirstChild(); stringNode != null; stringNode = stringNode.getNextSibling()) {
                     if ("location".equals(stringNode.getNodeName())) {
-                        ((List<Location>) values).add(new Location(parseInteger(stringNode.getAttributes(), "x"), parseInteger(stringNode.getAttributes(), "y"), parseInteger(stringNode.getAttributes(), "z", parseInteger(stringNode.getAttributes(), "heading", 0))));
+                        ((List<Location>) values).add(new Location(parseInt(stringNode.getAttributes(), "x"), parseInt(stringNode.getAttributes(), "y"), parseInt(stringNode.getAttributes(), "z", parseInt(stringNode.getAttributes(), "heading", 0))));
                     }
                 }
                 break;
@@ -332,17 +332,17 @@ public final class EventEngine extends GameXmlReader {
                 }
                 case "item": {
                     final NamedNodeMap attrs = stringNode.getAttributes();
-                    ((Map<Object, ItemHolder>) map).put(parseObject(eventManager, keyType, parseString(attrs, "key")), new ItemHolder(parseInteger(stringNode.getAttributes(), "id"), parseLong(stringNode.getAttributes(), "count")));
+                    ((Map<Object, ItemHolder>) map).put(parseObject(eventManager, keyType, parseString(attrs, "key")), new ItemHolder(parseInt(stringNode.getAttributes(), "id"), parseLong(stringNode.getAttributes(), "count")));
                     break;
                 }
                 case "skill": {
                     final NamedNodeMap attrs = stringNode.getAttributes();
-                    ((Map<Object, SkillHolder>) map).put(parseObject(eventManager, keyType, parseString(attrs, "key")), new SkillHolder(parseInteger(stringNode.getAttributes(), "id"), parseInteger(stringNode.getAttributes(), "level")));
+                    ((Map<Object, SkillHolder>) map).put(parseObject(eventManager, keyType, parseString(attrs, "key")), new SkillHolder(parseInt(stringNode.getAttributes(), "id"), parseInt(stringNode.getAttributes(), "level")));
                     break;
                 }
                 case "location": {
                     final NamedNodeMap attrs = stringNode.getAttributes();
-                    ((Map<Object, Location>) map).put(parseObject(eventManager, keyType, parseString(attrs, "key")), new Location(parseInteger(stringNode.getAttributes(), "x"), parseInteger(stringNode.getAttributes(), "y"), parseInteger(stringNode.getAttributes(), "z", parseInteger(stringNode.getAttributes(), "heading", 0))));
+                    ((Map<Object, Location>) map).put(parseObject(eventManager, keyType, parseString(attrs, "key")), new Location(parseInt(stringNode.getAttributes(), "x"), parseInt(stringNode.getAttributes(), "y"), parseInt(stringNode.getAttributes(), "z", parseInt(stringNode.getAttributes(), "heading", 0))));
                     break;
                 }
                 default: {

@@ -67,8 +67,8 @@ public class CombinationItemsManager extends GameXmlReader {
 
             forEach(itemNode, "reward", rewardNode -> {
                 var attrs = rewardNode.getAttributes();
-                final int id = parseInteger(attrs, "id");
-                final int count = parseInteger(attrs, "count", 1);
+                final int id = parseInt(attrs, "id");
+                final int count = parseInt(attrs, "count", 1);
                 final CombinationItemType type = parseEnum(attrs, CombinationItemType.class, "type");
 
                 item.addReward(new CombinationItemReward(id, count, type));

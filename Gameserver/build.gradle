@@ -77,8 +77,6 @@ run {
     }
 }
 
-/*run.dependsOn( project(':Script').jar )*/
-
 startScripts {
     inputs.property("moduleName", moduleName)
     doFirst {

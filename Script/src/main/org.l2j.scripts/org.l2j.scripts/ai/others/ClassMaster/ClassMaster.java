@@ -56,6 +56,7 @@ import java.util.*;
  */
 public final class ClassMaster extends AbstractNpcAI
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(ClassMaster.class);
 	// NPCs
 	private static final IntSet CLASS_MASTERS = IntSet.of(31756, 31757); // Mr. Cat, Queen of Hearts
 
@@ -63,7 +64,7 @@ public final class ClassMaster extends AbstractNpcAI
 	private boolean _isEnabled;
 	private boolean _spawnClassMasters;
 	private boolean _showPopupWindow;
-	private static final Logger LOGGER = LoggerFactory.getLogger(ClassMaster.class);
+
 	private final List<ClassChangeData> _classChangeData = new LinkedList<>();
 	
 	public ClassMaster() {
@@ -992,8 +993,8 @@ public final class ClassMaster extends AbstractNpcAI
 												attrs = r.getAttributes();
 												if ("item".equals(r.getNodeName()))
 												{
-													final int itemId = parseInteger(attrs, "id");
-													final int count = parseInteger(attrs, "count", 1);
+													final int itemId = parseInt(attrs, "id");
+													final int count = parseInt(attrs, "count", 1);
 
 													rewardedItems.add(new ItemHolder(itemId, count));
 												}
@@ -1014,8 +1015,8 @@ public final class ClassMaster extends AbstractNpcAI
 												attrs = r.getAttributes();
 												if ("item".equals(r.getNodeName()))
 												{
-													final int itemId = parseInteger(attrs, "id");
-													final int count = parseInteger(attrs, "count", 1);
+													final int itemId = parseInt(attrs, "id");
+													final int count = parseInt(attrs, "count", 1);
 
 													requiredItems.add(new ItemHolder(itemId, count));
 												}

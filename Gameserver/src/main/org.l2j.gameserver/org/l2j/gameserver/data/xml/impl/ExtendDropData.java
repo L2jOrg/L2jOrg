@@ -71,9 +71,9 @@ public class ExtendDropData extends GameXmlReader {
             final List<ExtendDropItemHolder> items = new ArrayList<>(1);
             forEach(dropNode, "items", itemsNode -> forEach(itemsNode, "item", itemNode ->
             {
-                final int itemId = parseInteger(itemNode.getAttributes(), "id");
-                final int itemCount = parseInteger(itemNode.getAttributes(), "count");
-                final int itemMaxCount = parseInteger(itemNode.getAttributes(), "maxCount");
+                final int itemId = parseInt(itemNode.getAttributes(), "id");
+                final int itemCount = parseInt(itemNode.getAttributes(), "count");
+                final int itemMaxCount = parseInt(itemNode.getAttributes(), "maxCount");
                 final double itemChance = parseDouble(itemNode.getAttributes(), "chance");
                 final double itemAdditionalChance = parseDouble(itemNode.getAttributes(), "additionalChance");
                 items.add(new ExtendDropItemHolder(itemId, itemCount, itemMaxCount, itemChance, itemAdditionalChance));
@@ -99,7 +99,7 @@ public class ExtendDropData extends GameXmlReader {
             forEach(dropNode, "systemMessages", systemMessagesNode -> forEach(systemMessagesNode, "systemMessage", systemMessageNode ->
             {
                 final long amount = parseLong(systemMessageNode.getAttributes(), "amount");
-                final SystemMessageId systemMessageId = SystemMessageId.getSystemMessageId(parseInteger(systemMessageNode.getAttributes(), "id"));
+                final SystemMessageId systemMessageId = SystemMessageId.getSystemMessageId(parseInt(systemMessageNode.getAttributes(), "id"));
                 systemMessages.put(amount, systemMessageId);
             }));
             set.set("systemMessages", systemMessages);

@@ -57,19 +57,19 @@ distributions {
     subprojects.each { distTar.enabled = false}
     main {
         contents {
-            from(["Datapack/authserver", "${project(':AuthServer').buildDir}/authserver"])  {
+            from(["${project(':AuthServer').buildDir}/authserver"])  {
                 into("authserver")
             }
 
-            from(["Datapack/gameserver", "${project(':Gameserver').buildDir}/gameserver"]) {
+            from(["Datapack", "${project(':Gameserver').buildDir}/gameserver"]) {
                 into("gameserver")
             }
 
-            from("Datapack/database_installer") {
+            from("database/installer") {
                 into("gameserver/sql")
             }
 
-            from("Datapack/database_installer") {
+            from("database/installer") {
                 into("authserver/sql")
             }
         }

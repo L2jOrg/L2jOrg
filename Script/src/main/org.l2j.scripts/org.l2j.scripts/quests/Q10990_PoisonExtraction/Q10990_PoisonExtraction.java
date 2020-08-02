@@ -26,6 +26,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -92,11 +93,12 @@ public class Q10990_PoisonExtraction extends Quest
 	public Q10990_PoisonExtraction()
 	{
 		super(10990);
+		addCondClassIds(ClassId.DWARVEN_FIGHTER);
 		addStartNpc(GERALD);
 		addTalkId(GERALD, CAPTAIN_BATHIS);
 		addKillId(MONSTER_DROP_CHANCES.keySet());
 		registerQuestItems(TARANTULA);
-		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
+		addCondLevel(15, 20, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_POISON_EXTRACTION);
 	}
 	

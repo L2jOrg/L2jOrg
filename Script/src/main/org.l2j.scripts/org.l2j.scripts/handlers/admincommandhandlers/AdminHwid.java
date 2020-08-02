@@ -31,8 +31,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class AdminHwid implements IAdminCommandHandler
 {
-	private static final String[] ADMIN_COMMANDS =
-	{
+	private static final String[] ADMIN_COMMANDS = {
 		"admin_hwid",
 		"admin_hwinfo"
 	};
@@ -42,7 +41,7 @@ public class AdminHwid implements IAdminCommandHandler
 	{
 		if (!isPlayer(activeChar.getTarget()) || (activeChar.getTarget().getActingPlayer().getClient() == null) || (activeChar.getTarget().getActingPlayer().getClient().getHardwareInfo() == null))
 		{
-			return true;
+			return false;
 		}
 		final Player target = activeChar.getTarget().getActingPlayer();
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);

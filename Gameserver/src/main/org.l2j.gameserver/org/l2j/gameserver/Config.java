@@ -1568,10 +1568,9 @@ public final class Config {
         SOD_TIAT_KILL_COUNT = GraciaSeedsSettings.getInt("TiatKillCountForNextState", 10);
         SOD_STAGE_2_LENGTH = GraciaSeedsSettings.getLong("Stage2Length", 720) * 60000;
 
-        try {
+        try(var lines = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
             //@formatter:off
-            FILTER_LIST = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)
-                    .map(String::trim)
+            FILTER_LIST = lines.map(String::trim)
                     .filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
                     .collect(Collectors.toList());
             //@formatter:on

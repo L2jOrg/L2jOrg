@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
+import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -27,10 +29,12 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  */
 public class ExOlympiadRecord extends ServerPacket {
 
+
     @Override
     protected void writeImpl(GameClient client)  {
         writeId(ServerExPacketId.EX_OLYMPIAD_RECORD);
 
+        var olympiadEngine = OlympiadEngine.getInstance();
         // current season
         writeInt(0); // points
         writeInt(0); // win count
@@ -55,11 +59,11 @@ public class ExOlympiadRecord extends ServerPacket {
 
         writeInt(0); // prev grade
 
-        writeInt(2020); // season year
-        writeInt(6); // season month
-        writeByte(true); // match open
-        writeInt(2); // season
-        writeByte(false); // registered
-        writeByte(1); // game rule type (0 - 3v3)
+        writeInt(olympiadEngine.getSeasonYear());
+        writeInt(olympiadEngine.getSeasonMonth());
+        writeByte(olympiadEngine.isMatchInProgress());
+        writeInt(olympiadEngine.getCurrentSeason());
+        writeByte(olympiadEngine.isRegistered(client.getPlayer()));
+        writeByte(OlympiadRuleType.CLASSLESS.ordinal());
     }
 }

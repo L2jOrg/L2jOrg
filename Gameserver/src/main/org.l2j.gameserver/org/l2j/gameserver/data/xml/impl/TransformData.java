@@ -117,8 +117,8 @@ public final class TransformData extends GameXmlReader {
                                             for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
                                                 if ("skill".equals(s.getNodeName())) {
                                                     attrs = s.getAttributes();
-                                                    final int skillId = parseInteger(attrs, "id");
-                                                    final int skillLevel = parseInteger(attrs, "level");
+                                                    final int skillId = parseInt(attrs, "id");
+                                                    final int skillLevel = parseInt(attrs, "level");
                                                     templateData.addSkill(new SkillHolder(skillId, skillLevel));
                                                 }
                                             }
@@ -142,9 +142,9 @@ public final class TransformData extends GameXmlReader {
                                             for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
                                                 if ("skill".equals(s.getNodeName())) {
                                                     attrs = s.getAttributes();
-                                                    final int skillId = parseInteger(attrs, "id");
-                                                    final int skillLevel = parseInteger(attrs, "level");
-                                                    final int minLevel = parseInteger(attrs, "minLevel");
+                                                    final int skillId = parseInt(attrs, "id");
+                                                    final int skillLevel = parseInt(attrs, "level");
+                                                    final int minLevel = parseInt(attrs, "minLevel");
                                                     templateData.addAdditionalSkill(new AdditionalSkillHolder(skillId, skillLevel, minLevel));
                                                 }
                                             }
@@ -158,7 +158,7 @@ public final class TransformData extends GameXmlReader {
                                             for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
                                                 if ("item".equals(s.getNodeName())) {
                                                     attrs = s.getAttributes();
-                                                    final int itemId = parseInteger(attrs, "id");
+                                                    final int itemId = parseInt(attrs, "id");
                                                     final boolean allowed = parseBoolean(attrs, "allowed");
                                                     templateData.addAdditionalItem(new AdditionalItemHolder(itemId, allowed));
                                                 }

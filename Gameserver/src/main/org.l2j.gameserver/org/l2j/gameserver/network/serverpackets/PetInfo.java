@@ -30,58 +30,59 @@ import java.util.Set;
 
 import static org.l2j.gameserver.util.GameUtils.isPet;
 
+/**
+ * @author JoeAlisson
+ */
 public class PetInfo extends ServerPacket {
-    private final Summon _summon;
-    private final int _val;
-    private final int _runSpd;
-    private final int _walkSpd;
-    private final int _swimRunSpd;
-    private final int _swimWalkSpd;
-    private final int _flRunSpd = 0;
-    private final int _flWalkSpd = 0;
-    private final int _flyRunSpd;
-    private final int _flyWalkSpd;
-    private final double _moveMultiplier;
-    private int _maxFed;
-    private int _curFed;
-    private int _statusMask = 0;
+    private final Summon summon;
+    private final int animationType;
+    private final int runSpd;
+    private final int walkSpd;
+    private final int swimRunSpd;
+    private final int swimWalkSpd;
+    private final int flyRunSpd;
+    private final int flyWalkSpd;
+    private final double moveMultiplier;
+    private int maxFed;
+    private int currentFed;
+    private int statusMask = 0;
 
     public PetInfo(Summon summon, int val) {
-        _summon = summon;
-        _moveMultiplier = summon.getMovementSpeedMultiplier();
-        _runSpd = (int) Math.round(summon.getRunSpeed() / _moveMultiplier);
-        _walkSpd = (int) Math.round(summon.getWalkSpeed() / _moveMultiplier);
-        _swimRunSpd = (int) Math.round(summon.getSwimRunSpeed() / _moveMultiplier);
-        _swimWalkSpd = (int) Math.round(summon.getSwimWalkSpeed() / _moveMultiplier);
-        _flyRunSpd = summon.isFlying() ? _runSpd : 0;
-        _flyWalkSpd = summon.isFlying() ? _walkSpd : 0;
-        _val = val;
+        this.summon = summon;
+        moveMultiplier = summon.getMovementSpeedMultiplier();
+        runSpd = (int) Math.round(summon.getRunSpeed() / moveMultiplier);
+        walkSpd = (int) Math.round(summon.getWalkSpeed() / moveMultiplier);
+        swimRunSpd = (int) Math.round(summon.getSwimRunSpeed() / moveMultiplier);
+        swimWalkSpd = (int) Math.round(summon.getSwimWalkSpeed() / moveMultiplier);
+        flyRunSpd = summon.isFlying() ? runSpd : 0;
+        flyWalkSpd = summon.isFlying() ? walkSpd : 0;
+        animationType = val;
         if (isPet(summon)) {
-            final Pet pet = (Pet) _summon;
-            _curFed = pet.getCurrentFed(); // how fed it is
-            _maxFed = pet.getMaxFed(); // max fed it can be
+            final Pet pet = (Pet) this.summon;
+            currentFed = pet.getCurrentFed(); // how fed it is
+            maxFed = pet.getMaxFed(); // max fed it can be
         } else if (summon.isServitor()) {
-            final Servitor sum = (Servitor) _summon;
-            _curFed = sum.getLifeTimeRemaining();
-            _maxFed = sum.getLifeTime();
+            final Servitor sum = (Servitor) this.summon;
+            currentFed = sum.getLifeTimeRemaining();
+            maxFed = sum.getLifeTime();
         }
 
         if (summon.isBetrayed()) {
-            _statusMask |= 0x01; // Auto attackable status
+            statusMask |= 0x01; // Auto attackable status
         }
-        _statusMask |= 0x02; // can be chatted with
+        statusMask |= 0x02; // can be chatted with
 
         if (summon.isRunning()) {
-            _statusMask |= 0x04;
+            statusMask |= 0x04;
         }
         if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(summon)) {
-            _statusMask |= 0x08;
+            statusMask |= 0x08;
         }
         if (summon.isDead()) {
-            _statusMask |= 0x10;
+            statusMask |= 0x10;
         }
         if (summon.isMountable()) {
-            _statusMask |= 0x20;
+            statusMask |= 0x20;
         }
     }
 
@@ -89,102 +90,96 @@ public class PetInfo extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.PET_INFO);
 
-        writeByte(_summon.getSummonType());
-        writeInt(_summon.getObjectId());
-        writeInt(_summon.getTemplate().getDisplayId() + 1000000);
+        writeByte(summon.getSummonType());
+        writeInt(summon.getObjectId());
+        writeInt(summon.getTemplate().getDisplayId() + 1000000);
 
-        writeInt(_summon.getX());
-        writeInt(_summon.getY());
-        writeInt(_summon.getZ());
-        writeInt(_summon.getHeading());
+        writeInt(summon.getX());
+        writeInt(summon.getY());
+        writeInt(summon.getZ());
+        writeInt(summon.getHeading());
 
-        writeInt(_summon.getStats().getMAtkSpd());
-        writeInt(_summon.getStats().getPAtkSpd());
+        writeInt(summon.getStats().getMAtkSpd());
+        writeInt(summon.getStats().getPAtkSpd());
 
-        writeShort(_runSpd);
-        writeShort(_walkSpd);
-        writeShort( _swimRunSpd);
-        writeShort( _swimWalkSpd);
-        writeShort( _flRunSpd);
-        writeShort( _flWalkSpd);
-        writeShort( _flyRunSpd);
-        writeShort(_flyWalkSpd);
+        writeShort(runSpd);
+        writeShort(walkSpd);
+        writeShort(swimRunSpd);
+        writeShort(swimWalkSpd);
+        writeShort(runSpd);
+        writeShort(walkSpd);
+        writeShort(flyRunSpd);
+        writeShort(flyWalkSpd);
 
-        writeDouble(_moveMultiplier);
-        writeDouble(_summon.getAttackSpeedMultiplier()); // attack speed multiplier
-        writeDouble(_summon.getTemplate().getfCollisionRadius());
-        writeDouble(_summon.getTemplate().getfCollisionHeight());
+        writeDouble(moveMultiplier);
+        writeDouble(summon.getAttackSpeedMultiplier());
+        writeDouble(summon.getTemplate().getfCollisionRadius());
+        writeDouble(summon.getTemplate().getfCollisionHeight());
 
-        writeInt(_summon.getWeapon()); // right hand weapon
-        writeInt(_summon.getArmor()); // body armor
-        writeInt(0x00); // left hand weapon
+        writeInt(summon.getWeapon());
+        writeInt(summon.getArmor());
+        writeInt(0x00); // left hand
 
-        writeByte((_summon.isShowSummonAnimation() ? 0x02 : _val)); // 0=teleported 1=default 2=summoned
+        writeByte((summon.isShowSummonAnimation() ? 0x02 : animationType)); // 0=teleported 1=default 2=summoned
         writeInt(-1); // High Five NPCString ID
-        if (isPet(_summon)) {
-            writeString(_summon.getName()); // Pet name.
+        if (isPet(summon)) {
+            writeString(summon.getName());
         } else {
-            writeString(_summon.getTemplate().isUsingServerSideName() ? _summon.getName() : ""); // Summon name.
+            writeString(summon.getTemplate().isUsingServerSideName() ? summon.getName() : "");
         }
-        writeInt(-1); // High Five NPCString ID
-        writeString(_summon.getTitle()); // owner name
+        writeInt(-1); // High Five NPCStringID (title)
+        writeString(summon.getTitle());
 
-        writeByte((byte) _summon.getPvpFlag()); // confirmed
-        writeInt(_summon.getReputation()); // confirmed
+        writeByte(summon.getPvpFlag());
+        writeInt(summon.getReputation());
 
-        writeInt(_curFed); // how fed it is
-        writeInt(_maxFed); // max fed it can be
-        writeInt((int) _summon.getCurrentHp()); // current hp
-        writeInt(_summon.getMaxHp()); // max hp
-        writeInt((int) _summon.getCurrentMp()); // current mp
-        writeInt(_summon.getMaxMp()); // max mp
+        writeInt(currentFed);
+        writeInt(maxFed);
+        writeInt((int) summon.getCurrentHp());
+        writeInt(summon.getMaxHp());
+        writeInt((int) summon.getCurrentMp());
+        writeInt(summon.getMaxMp());
+        writeLong(summon.getStats().getSp());
 
-        writeLong(_summon.getStats().getSp()); // sp
-        writeByte( _summon.getLevel()); // lvl
-        writeLong(_summon.getStats().getExp());
+        writeShort(summon.getLevel());
+        writeLong(summon.getStats().getExp());
+        writeLong(summon.getExpForThisLevel());
+        writeLong(summon.getExpForNextLevel());
 
-        if (_summon.getExpForThisLevel() > _summon.getStats().getExp()) {
-            writeLong(_summon.getStats().getExp()); // 0% absolute value
-        } else {
-            writeLong(_summon.getExpForThisLevel()); // 0% absolute value
-        }
-
-        writeLong(_summon.getExpForNextLevel()); // 100% absoulte value
-        writeByte(0); //TODO find what it is for
-        writeInt(isPet(_summon) ? _summon.getInventory().getTotalWeight() : 0); // weight
-        writeInt(_summon.getMaxLoad()); // max weight it can carry
-        writeInt(_summon.getPAtk()); // patk
-        writeInt(_summon.getPDef()); // pdef
-        writeInt(_summon.getAccuracy()); // accuracy
-        writeInt(_summon.getEvasionRate()); // evasion
-        writeInt(_summon.getCriticalHit()); // critical
-        writeInt(_summon.getMAtk()); // matk
-        writeInt(_summon.getMDef()); // mdef
-        writeInt(_summon.getMagicAccuracy()); // magic accuracy
-        writeInt(_summon.getMagicEvasionRate()); // magic evasion
-        writeInt(_summon.getMCriticalHit()); // mcritical
-        writeInt((int) _summon.getStats().getMoveSpeed()); // speed
-        writeInt(_summon.getPAtkSpd()); // atkspeed
-        writeInt(_summon.getMAtkSpd()); // casting speed
+        writeInt(isPet(summon) ? summon.getInventory().getTotalWeight() : 0);
+        writeInt(summon.getMaxLoad());
+        writeInt(summon.getPAtk());
+        writeInt(summon.getPDef());
+        writeInt(summon.getAccuracy());
+        writeInt(summon.getEvasionRate());
+        writeInt(summon.getCriticalHit());
+        writeInt(summon.getMAtk());
+        writeInt(summon.getMDef());
+        writeInt(summon.getMagicAccuracy());
+        writeInt(summon.getMagicEvasionRate());
+        writeInt(summon.getMCriticalHit());
+        writeInt((int) summon.getStats().getMoveSpeed());
+        writeInt(summon.getPAtkSpd());
+        writeInt(summon.getMAtkSpd());
 
         writeByte(0); // TODO: Check me, might be ride status
-        writeByte( _summon.getTeam().getId()); // Confirmed
-        writeByte( _summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit - Confirmed
-        writeByte( _summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit - - Confirmed
+        writeByte( summon.getTeam().getId());
+        writeByte( summon.getSoulShotsPerHit());
+        writeByte( summon.getSpiritShotsPerHit());
 
         writeInt(0x00); // TODO: Find me
-        writeInt(_summon.getFormId()); // Transformation ID - Confirmed
+        writeInt(summon.getFormId());
 
-        writeByte( _summon.getOwner().getSummonPoints()); // Used Summon Points
-        writeByte( _summon.getOwner().getMaxSummonPoints()); // Maximum Summon Points
+        writeByte( summon.getOwner().getSummonPoints());
+        writeByte( summon.getOwner().getMaxSummonPoints());
 
-        final Set<AbnormalVisualEffect> aves = _summon.getEffectList().getCurrentAbnormalVisualEffects();
-        writeShort(aves.size()); // Confirmed
+        final Set<AbnormalVisualEffect> aves = summon.getEffectList().getCurrentAbnormalVisualEffects();
+        writeShort(aves.size());
         for (AbnormalVisualEffect ave : aves) {
-            writeShort(ave.getClientId()); // Confirmed
+            writeShort(ave.getClientId());
         }
 
-        writeByte(_statusMask);
+        writeByte(statusMask);
         writeInt(0);
         writeInt(0);
         writeInt(0);

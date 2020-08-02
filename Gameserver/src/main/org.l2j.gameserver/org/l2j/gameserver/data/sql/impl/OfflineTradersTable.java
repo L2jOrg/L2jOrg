@@ -24,6 +24,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.instance.PlayerFactory;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
@@ -37,7 +38,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Calendar;
 
-
+/*
+ * TODO Remove
+ */
 public class OfflineTradersTable {
     // SQL DEFINITIONS
     private static final String SAVE_OFFLINE_STATUS = "INSERT INTO character_offline_trade (`charId`,`time`,`type`,`title`) VALUES (?,?,?,?)";
@@ -296,13 +299,12 @@ public class OfflineTradersTable {
                 Player player = null;
 
                 try {
+                    // TODO FIX or remove this will throw NPE always
                     final GameClient client = new GameClient(null);
                     client.setDetached(true);
-                    player = Player.load(rs.getInt("charId"));
-                    client.setPlayer(player);
+                    player = PlayerFactory.loadPlayer(client, rs.getInt("charId"));
                     player.setOnlineStatus(true, false);
                     client.setAccountName(player.getAccountNamePlayer());
-                    player.setClient(client);
                     player.setOfflineStartTime(time);
 
                     if (isSellBuff) {

@@ -1198,7 +1198,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Provides instant callback operation when {@link Attackable} dies from a {@link Player}.
      */
-    protected final List<AbstractEventListener> setCreatureAttackedid(Consumer<OnCreatureAttacked> callback, IntCollection npcIds) {
+    protected final List<AbstractEventListener> setCreatureAttackedId(Consumer<OnCreatureAttacked> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_CREATURE_ATTACKED, ListenerRegisterType.NPC, npcIds);
     }
 

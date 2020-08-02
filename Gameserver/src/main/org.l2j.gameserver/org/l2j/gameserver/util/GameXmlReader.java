@@ -77,11 +77,11 @@ public abstract class GameXmlReader extends XmlReader {
                     break;
                 }
                 case "skill": {
-                    parameters.put(parseString(attrs, "name"), new SkillHolder(parseInteger(attrs, "id"), parseInteger(attrs, "level")));
+                    parameters.put(parseString(attrs, "name"), new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "level")));
                     break;
                 }
                 case "location": {
-                    parameters.put(parseString(attrs, "name"), new Location(parseInteger(attrs, "x"), parseInteger(attrs, "y"), parseInteger(attrs, "z"), parseInteger(attrs, "heading", 0)));
+                    parameters.put(parseString(attrs, "name"), new Location(parseInt(attrs, "x"), parseInt(attrs, "y"), parseInt(attrs, "z"), parseInt(attrs, "heading", 0)));
                     break;
                 }
                 case "minions": {
@@ -89,7 +89,7 @@ public abstract class GameXmlReader extends XmlReader {
                     for (Node minions_node = parameters_node.getFirstChild(); minions_node != null; minions_node = minions_node.getNextSibling()) {
                         if (minions_node.getNodeName().equalsIgnoreCase("npc")) {
                             attrs = minions_node.getAttributes();
-                            minions.add(new MinionHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count"), parseInteger(attrs, "respawnTime"), parseInteger(attrs, "weightPoint")));
+                            minions.add(new MinionHolder(parseInt(attrs, "id"), parseInt(attrs, "count"), parseInt(attrs, "respawnTime"), parseInt(attrs, "weightPoint")));
                         }
                     }
 
@@ -105,15 +105,15 @@ public abstract class GameXmlReader extends XmlReader {
 
     protected Location parseLocation(Node n) {
         final NamedNodeMap attrs = n.getAttributes();
-        final int x = parseInteger(attrs, "x");
-        final int y = parseInteger(attrs, "y");
-        final int z = parseInteger(attrs, "z");
-        final int heading = parseInteger(attrs, "heading", 0);
+        final int x = parseInt(attrs, "x");
+        final int y = parseInt(attrs, "y");
+        final int z = parseInt(attrs, "z");
+        final int heading = parseInt(attrs, "heading", 0);
         return new Location(x, y, z, heading);
     }
 
     protected ItemHolder parseItemHolder(Node n) {
         final var attrs = n.getAttributes();
-        return new ItemHolder(parseInt(attrs, "id"), parselong(attrs, "count"), parseInt(attrs, "enchant", 0));
+        return new ItemHolder(parseInt(attrs, "id"), parseLong(attrs, "count"), parseInt(attrs, "enchant", 0));
     }
 }

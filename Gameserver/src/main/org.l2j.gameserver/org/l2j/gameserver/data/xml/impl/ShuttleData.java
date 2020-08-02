@@ -97,19 +97,19 @@ public final class ShuttleData extends GameXmlReader {
                                 for (Node a = b.getFirstChild(); a != null; a = a.getNextSibling()) {
                                     if ("door".equalsIgnoreCase(a.getNodeName())) {
                                         attrs = a.getAttributes();
-                                        data.addDoor(parseInteger(attrs, "id"));
+                                        data.addDoor(parseInt(attrs, "id"));
                                     }
                                 }
                             } else if ("stops".equalsIgnoreCase(b.getNodeName())) {
                                 for (Node a = b.getFirstChild(); a != null; a = a.getNextSibling()) {
                                     if ("stop".equalsIgnoreCase(a.getNodeName())) {
                                         attrs = a.getAttributes();
-                                        final ShuttleStop stop = new ShuttleStop(parseInteger(attrs, "id"));
+                                        final ShuttleStop stop = new ShuttleStop(parseInt(attrs, "id"));
 
                                         for (Node z = a.getFirstChild(); z != null; z = z.getNextSibling()) {
                                             if ("dimension".equalsIgnoreCase(z.getNodeName())) {
                                                 attrs = z.getAttributes();
-                                                stop.addDimension(new Location(parseInteger(attrs, "x"), parseInteger(attrs, "y"), parseInteger(attrs, "z")));
+                                                stop.addDimension(new Location(parseInt(attrs, "x"), parseInt(attrs, "y"), parseInt(attrs, "z")));
                                             }
                                         }
                                         data.addStop(stop);
@@ -123,7 +123,7 @@ public final class ShuttleData extends GameXmlReader {
                                         for (Node z = a.getFirstChild(); z != null; z = z.getNextSibling()) {
                                             if ("loc".equalsIgnoreCase(z.getNodeName())) {
                                                 attrs = z.getAttributes();
-                                                locs.add(new Location(parseInteger(attrs, "x"), parseInteger(attrs, "y"), parseInteger(attrs, "z")));
+                                                locs.add(new Location(parseInt(attrs, "x"), parseInt(attrs, "y"), parseInt(attrs, "z")));
                                             }
                                         }
 

@@ -125,7 +125,7 @@ public class ListenerTest extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.NPC)
 	@NpcLevelRange(from = 1, to = 10)
 	@Priority(100)
-	private void OnCreatureKill(OnCreatureDeath event)
+	private void onCreatureDeath(OnCreatureDeath event)
 	{
 		// 70% chance to drop
 		if (Rnd.get(100) >= 70)

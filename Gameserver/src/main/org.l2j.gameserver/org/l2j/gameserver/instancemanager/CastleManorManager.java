@@ -124,7 +124,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
             if ("list".equalsIgnoreCase(n.getNodeName())) {
                 for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
                     if ("castle".equalsIgnoreCase(d.getNodeName())) {
-                        final int castleId = parseInteger(d.getAttributes(), "id");
+                        final int castleId = parseInt(d.getAttributes(), "id");
                         for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
                             if ("crop".equalsIgnoreCase(c.getNodeName())) {
                                 set = new StatsSet();

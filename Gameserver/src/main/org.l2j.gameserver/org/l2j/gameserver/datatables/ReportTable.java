@@ -49,6 +49,7 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
@@ -101,6 +102,8 @@ public final class ReportTable {
                 }
 
                 final SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
+                parser.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, ""); // Compliant
+                parser.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, ""); // compliant
                 parser.parse(punishments, new PunishmentsLoader());
             } catch (Exception e) {
                 LOGGER.warn("Could not load punishments from /config/BotReportPunishments.xml", e);

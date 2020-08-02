@@ -121,7 +121,7 @@ public final class InstanceManager extends GameXmlReader {
      */
     private void parseInstanceTemplate(Node instanceNode, File file) {
         // Parse "instance" node
-        final int id = parseInteger(instanceNode.getAttributes(), "id");
+        final int id = parseInt(instanceNode.getAttributes(), "id");
         if (instanceTemplates.containsKey(id)) {
             LOGGER.warn(": Instance template with ID " + id + " already exists");
             return;
@@ -135,9 +135,9 @@ public final class InstanceManager extends GameXmlReader {
             switch (innerNode.getNodeName()) {
                 case "time": {
                     final NamedNodeMap attrs = innerNode.getAttributes();
-                    template.setDuration(parseInteger(attrs, "duration", -1));
-                    template.setEmptyDestroyTime(parseInteger(attrs, "empty", -1));
-                    template.setEjectTime(parseInteger(attrs, "eject", -1));
+                    template.setDuration(parseInt(attrs, "duration", -1));
+                    template.setEmptyDestroyTime(parseInt(attrs, "empty", -1));
+                    template.setEjectTime(parseInt(attrs, "eject", -1));
                     break;
                 }
                 case "misc": {
@@ -218,7 +218,7 @@ public final class InstanceManager extends GameXmlReader {
                     final List<Integer> exceptionBuffList = new ArrayList<>();
                     for (Node e = innerNode.getFirstChild(); e != null; e = e.getNextSibling()) {
                         if (e.getNodeName().equals("skill")) {
-                            exceptionBuffList.add(parseInteger(e.getAttributes(), "id"));
+                            exceptionBuffList.add(parseInt(e.getAttributes(), "id"));
                         }
                     }
                     template.setRemoveBuff(removeBuffType, exceptionBuffList);
@@ -230,13 +230,13 @@ public final class InstanceManager extends GameXmlReader {
                     for (Node e = innerNode.getFirstChild(); e != null; e = e.getNextSibling()) {
                         if (e.getNodeName().equals("reset")) {
                             final NamedNodeMap attrs = e.getAttributes();
-                            final int time = parseInteger(attrs, "time", -1);
+                            final int time = parseInt(attrs, "time", -1);
                             if (time > 0) {
                                 data.add(new InstanceReenterTimeHolder(time));
                             } else {
                                 final DayOfWeek day = parseEnum(attrs, DayOfWeek.class, "day");
-                                final int hour = parseInteger(attrs, "hour", -1);
-                                final int minute = parseInteger(attrs, "minute", -1);
+                                final int hour = parseInt(attrs, "hour", -1);
+                                final int minute = parseInt(attrs, "minute", -1);
                                 data.add(new InstanceReenterTimeHolder(day, hour, minute));
                             }
                         }

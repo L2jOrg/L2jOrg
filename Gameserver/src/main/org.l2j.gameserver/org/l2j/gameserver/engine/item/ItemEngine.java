@@ -118,7 +118,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "damage" -> parseWeaponDamage(weapon, node);
                 case "consume" -> parseWeaponConsume(weapon, node);
                 case "restriction" -> parseItemRestriction(weapon, node);
-                case "conditions" -> parseItemCondition(weapon, node);
+                case "condition" -> parseItemCondition(weapon, node);
                 case "stats" -> parseItemStats(weapon, node);
                 case "skills"-> parseItemSkills(weapon, node);
             }
@@ -166,7 +166,7 @@ public final class ItemEngine extends GameXmlReader {
         if(nonNull(condition)) {
             var attr = node.getAttributes();
             var msg = parseString(attr, "msg");
-            var msgId = parseInteger(attr, "msg-id");
+            var msgId = parseInt(attr, "msg-id");
             if(nonNull(msg)) {
                 condition.setMessage(msg);
             } else if(nonNull(msgId)) {
@@ -269,7 +269,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "attributes" -> parseArmorAttributes(armor, node);
                 case "crystal" -> parseCrystalType(armor, node);
                 case "restriction" -> parseItemRestriction(armor, node);
-                case "conditions" -> parseItemCondition(armor, node);
+                case "condition" -> parseItemCondition(armor, node);
                 case "stats" -> parseItemStats(armor, node);
                 case "skills"-> parseItemSkills(armor, node);
             }
@@ -300,7 +300,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "skill-reducer" -> parseSkillReducer(item, node);
                 case "extract" -> parseItemExtract(item, node);
                 case "transformation-book" -> parseTransformationBook(item, node);
-                case "conditions" -> parseItemCondition(item, node);
+                case "condition" -> parseItemCondition(item, node);
             }
         } );
         item.fillType2();
@@ -356,7 +356,7 @@ public final class ItemEngine extends GameXmlReader {
         item.setCommissionType(parseEnum(attr, CommissionItemType.class, "commission-type", CommissionItemType.OTHER_ITEM));
         item.setReuseDelay(parseInt(attr, "reuse-delay"));
         item.setReuseGroup(parseInt(attr, "reuse-group"));
-        item.setDuration(parselong(attr, "duration"));
+        item.setDuration(parseLong(attr, "duration"));
         item.setForNpc(parseBoolean(attr, "for-npc"));
     }
 

@@ -87,8 +87,8 @@ public final class MapRegionManager extends GameXmlReader {
            var attributes = regionNode.getAttributes();
            var name = parseString(attributes, "name");
            var town = parseString(attributes, "town");
-           var loc = parseInteger(attributes, "loc");
-           var bbs = parseInteger(attributes, "bbs");
+           var loc = parseInt(attributes, "loc");
+           var bbs = parseInt(attributes, "bbs");
 
            var region = new MapRegion(town, loc, bbs);
            parseRegion(regionNode, region);
@@ -100,9 +100,9 @@ public final class MapRegionManager extends GameXmlReader {
         for (Node node = regionNode.getFirstChild(); node != null; node = node.getNextSibling()) {
              var attributes = node.getAttributes();
              if ("respawn-point".equalsIgnoreCase(node.getNodeName())) {
-                 final int spawnX = parseInteger(attributes, "x");
-                 final int spawnY = parseInteger(attributes, "y");
-                 final int spawnZ = parseInteger(attributes, "z");
+                 final int spawnX = parseInt(attributes, "x");
+                 final int spawnY = parseInt(attributes, "y");
+                 final int spawnZ = parseInt(attributes, "z");
 
                  if (parseBoolean(attributes, "chaotic")) {
                      region.addChaoticSpawn(spawnX, spawnY, spawnZ);

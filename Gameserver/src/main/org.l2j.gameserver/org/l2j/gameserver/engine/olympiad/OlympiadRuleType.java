@@ -25,5 +25,14 @@ public enum OlympiadRuleType {
     TEAM,
     CLASSLESS,
     CLASS,
-    MAX
+    MAX;
+
+    public static OlympiadRuleType of(byte ruleType) {
+        return switch (ruleType) {
+            case 0 -> TEAM;
+            case 1 -> CLASSLESS;
+            case 2 -> CLASS;
+            default -> MAX;
+        };
+    }
 }

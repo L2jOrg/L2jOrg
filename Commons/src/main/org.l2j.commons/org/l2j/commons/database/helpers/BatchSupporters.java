@@ -38,7 +38,7 @@ public final class BatchSupporters {
     }
 
     public static final class IntIterableBatchSupport implements BatchSupport {
-        private static final TypeHandler<?> handler = TypeHandler.MAP.get(Integer.TYPE.getName());
+        private static final TypeHandler<?> handler = HandlersSupport.handlerFromClass(Integer.TYPE);
 
         @Override
         public PrimitiveIterator.OfInt getIterator(Object iterable) {
@@ -49,7 +49,7 @@ public final class BatchSupporters {
         }
 
         @Override
-        public TypeHandler getHandler() {
+        public TypeHandler<?> getHandler() {
             return handler;
         }
     }

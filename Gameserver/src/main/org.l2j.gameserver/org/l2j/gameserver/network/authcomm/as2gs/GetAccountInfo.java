@@ -46,13 +46,12 @@ public class GetAccountInfo extends ReceivablePacket
 		try(var con = DatabaseFactory.getInstance().getConnection();
 			var statement = con.prepareStatement("SELECT COUNT(1) FROM characters WHERE account_name=?")) {
 			statement.setString(1, _account);
-			var rset = statement.executeQuery();
-			if(rset.next()) {
-				playerSize = rset.getInt(1);
+			try(var resultSet = statement.executeQuery()) {
+				if (resultSet.next()) {
+					playerSize = resultSet.getInt(1);
+				}
 			}
 			AuthServerCommunication.getInstance().sendPacket(new SetAccountInfo(_account, playerSize));
-
-
 		} catch(Exception e) {
 			_log.error("GetAccountInfo:runImpl():" + e, e);
 		}

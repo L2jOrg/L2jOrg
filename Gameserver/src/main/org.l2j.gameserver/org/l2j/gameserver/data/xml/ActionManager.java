@@ -66,8 +66,8 @@ public final class ActionManager extends GameXmlReader {
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "action", actionNode -> {
             var attrs = actionNode.getAttributes();
-            var id = parseInteger(attrs, "id");
-            var optionId = parseInteger(attrs, "option");
+            var id = parseInt(attrs, "id");
+            var optionId = parseInt(attrs, "option");
 
             final ActionData action = new ActionData(id, parseString(attrs, "handler"), optionId, parseBoolean(attrs, "auto-use"));
             actions.put(id, action);

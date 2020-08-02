@@ -25,6 +25,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -85,10 +86,11 @@ public class Q10982_SpiderHunt extends Quest
 	public Q10982_SpiderHunt()
 	{
 		super(10982);
+		addCondClassIds(ClassId.FIGHTER, ClassId.MAGE);
 		addStartNpc(JACKSON);
 		addTalkId(JACKSON, CAPTAIN_BATHIS);
 		addKillId(GIANT_SPIDER, GIANT_FANG_SPIDER, GIANT_BLADE_SPIDER);
-		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
+		addCondLevel(15, 20, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_SPIDER_HUNT);
 	}
 	

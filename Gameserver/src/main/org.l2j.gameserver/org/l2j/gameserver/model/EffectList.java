@@ -551,31 +551,30 @@ public final class EffectList {
      */
     private boolean isLimitExceeded(SkillBuffType... buffTypes) {
         for (SkillBuffType buffType : buffTypes) {
+            // case TOGGLE: Do toggles have limit?
             switch (buffType) {
-                case TRIGGER: {
+                case TRIGGER -> {
                     if (triggerBuffCount.get() > Config.TRIGGERED_BUFFS_MAX_AMOUNT) {
                         return true;
                     }
                 }
-                case DANCE: {
+                case DANCE -> {
                     if (danceCount.get() > Config.DANCES_MAX_AMOUNT) {
                         return true;
                     }
                 }
-                // case TOGGLE: Do toggles have limit?
-                case DEBUFF: {
+                case DEBUFF -> {
                     if (debuffCount.get() > 24) {
                         return true;
                     }
                 }
-                case BUFF: {
+                case BUFF -> {
                     if (getBuffCount() > owner.getStats().getMaxBuffCount()) {
                         return true;
                     }
                 }
             }
         }
-
         return false;
     }
 

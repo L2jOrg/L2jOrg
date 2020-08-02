@@ -58,7 +58,7 @@ public class ServerNameReader extends XmlReader {
 
     private void parseServerName(Node serverNameNode) {
         var attrs = serverNameNode.getAttributes();
-        serverNames.put(parseInteger(attrs, "id"), parseString(attrs, "name"));
+        serverNames.put(parseInt(attrs, "id"), parseString(attrs, "name"));
     }
 
     public void cleanUp() {

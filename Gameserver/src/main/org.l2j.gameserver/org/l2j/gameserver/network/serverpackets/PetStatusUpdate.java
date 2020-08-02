@@ -26,26 +26,21 @@ import org.l2j.gameserver.network.ServerPacketId;
 
 import static org.l2j.gameserver.util.GameUtils.isPet;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.5.2.3.2.5 $ $Date: 2005/03/29 23:15:10 $
- */
 public class PetStatusUpdate extends ServerPacket {
-    private final Summon _summon;
-    private int _maxFed;
-    private int _curFed;
+    private final Summon summon;
+    private int maxFed;
+    private int currentFed;
 
     public PetStatusUpdate(Summon summon) {
-        _summon = summon;
-        if (isPet(_summon)) {
-            final Pet pet = (Pet) _summon;
-            _curFed = pet.getCurrentFed(); // how fed it is
-            _maxFed = pet.getMaxFed(); // max fed it can be
-        } else if (_summon.isServitor()) {
-            final Servitor sum = (Servitor) _summon;
-            _curFed = sum.getLifeTimeRemaining();
-            _maxFed = sum.getLifeTime();
+        this.summon = summon;
+        if (isPet(this.summon)) {
+            final Pet pet = (Pet) this.summon;
+            currentFed = pet.getCurrentFed(); // how fed it is
+            maxFed = pet.getMaxFed(); // max fed it can be
+        } else if (this.summon.isServitor()) {
+            final Servitor sum = (Servitor) this.summon;
+            currentFed = sum.getLifeTimeRemaining();
+            maxFed = sum.getLifeTime();
         }
     }
 
@@ -53,23 +48,23 @@ public class PetStatusUpdate extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.PET_STATUS_UPDATE);
 
-        writeInt(_summon.getSummonType());
-        writeInt(_summon.getObjectId());
-        writeInt(_summon.getX());
-        writeInt(_summon.getY());
-        writeInt(_summon.getZ());
-        writeString(_summon.getTitle());
-        writeInt(_curFed);
-        writeInt(_maxFed);
-        writeInt((int) _summon.getCurrentHp());
-        writeInt(_summon.getMaxHp());
-        writeInt((int) _summon.getCurrentMp());
-        writeInt(_summon.getMaxMp());
-        writeInt(_summon.getLevel());
-        writeLong(_summon.getStats().getExp());
-        writeLong(_summon.getExpForThisLevel()); // 0% absolute value
-        writeLong(_summon.getExpForNextLevel()); // 100% absolute value
-        writeInt(0x01); // TODO: Find me!
+        writeInt(summon.getSummonType());
+        writeInt(summon.getObjectId());
+        writeInt(summon.getX());
+        writeInt(summon.getY());
+        writeInt(summon.getZ());
+        writeString(summon.getTitle());
+        writeInt(currentFed);
+        writeInt(maxFed);
+        writeInt((int) summon.getCurrentHp());
+        writeInt(summon.getMaxHp());
+        writeInt((int) summon.getCurrentMp());
+        writeInt(summon.getMaxMp());
+        writeInt(summon.getLevel());
+        writeLong(summon.getStats().getExp());
+        writeLong(summon.getExpForThisLevel());
+        writeLong(summon.getExpForNextLevel());
+        writeInt(0x00);
     }
 
 }

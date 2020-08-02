@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.SecondaryAuthManager;
-import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
@@ -43,26 +42,11 @@ import org.slf4j.LoggerFactory;
 public class CharacterSelect extends ClientPacket {
     protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
-    // cd
-    private int _charSlot;
-
-    @SuppressWarnings("unused")
-    private int _unk1; // new in C4
-    @SuppressWarnings("unused")
-    private int _unk2; // new in C4
-    @SuppressWarnings("unused")
-    private int _unk3; // new in C4
-    @SuppressWarnings("unused")
-    private int _unk4; // new in C4
+    private int selectedSlot;
 
     @Override
     public void readImpl() {
-        _charSlot = readInt();
-        _unk1 = readShort();
-        _unk2 = readInt();
-        _unk3 = readInt();
-        _unk4 = readInt();
-
+        selectedSlot = readInt();
     }
 
     @Override
@@ -83,7 +67,7 @@ public class CharacterSelect extends ClientPacket {
                 // should always be null
                 // but if not then this is repeated packet and nothing should be done here
                 if (client.getPlayer() == null) {
-                    final CharSelectInfoPackage info = client.getCharSelection(_charSlot);
+                    final CharSelectInfoPackage info = client.getCharSelection(selectedSlot);
                     if (info == null) {
                         return;
                     }
@@ -109,17 +93,13 @@ public class CharacterSelect extends ClientPacket {
                     }
 
                     // load up character from disk
-                    final Player player = client.load(_charSlot);
+                    final Player player = client.load(selectedSlot);
                     if (player == null) {
                         return; // handled in GameClient
                     }
 
                     PlayerNameTable.getInstance().addName(player);
-
-                    player.setClient(client);
-                    client.setPlayer(player);
                     player.setOnlineStatus(true, true);
-                    player.setVipTier(VipEngine.getInstance().getVipTier(player));
 
                     final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(player, player.getObjectId(), player.getName(), client), Listeners.players(), TerminateReturn.class);
                     if ((terminate != null) && terminate.terminate()) {

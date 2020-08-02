@@ -72,8 +72,8 @@ public final class TeleportEngine extends GameXmlReader {
 
     private void parseTeleport(Node teleportNode) {
         var attributes = teleportNode.getAttributes();
-        var id = parseInteger(attributes, "id");
-        var price = parseInteger(attributes, "price");
+        var id = parseInt(attributes, "id");
+        var price = parseInt(attributes, "price");
         var castle = parseByte(attributes, "castle");
 
         var locationNode = teleportNode.getFirstChild();

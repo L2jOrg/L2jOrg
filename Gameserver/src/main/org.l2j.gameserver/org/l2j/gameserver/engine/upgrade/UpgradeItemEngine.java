@@ -201,7 +201,7 @@ public class UpgradeItemEngine extends GameXmlReader {
         final var id = parseInt(attrs, "id");
         final var item = parseInt(attrs, "item");
         final var enchantment = parseInt(attrs, "enchantment");
-        final var commission= parselong(attrs, "commission");
+        final var commission= parseLong(attrs, "commission");
         final var chance = parseInt(attrs, "chance");
         final var type = parseEnum(attrs, UpgradeType.class, "type");
 
@@ -244,7 +244,7 @@ public class UpgradeItemEngine extends GameXmlReader {
         final var id = parseInt(attrs, "id");
         final var item = parseInt(attrs, "item");
         final var enchantment = parseInt(attrs, "enchantment");
-        final var commission= parselong(attrs, "commission");
+        final var commission= parseLong(attrs, "commission");
         final var result = parseInt(attrs, "result");
         final var resultEnchantment = parseInt(attrs, "result-enchantment");
         final var material = parseMaterial(node);

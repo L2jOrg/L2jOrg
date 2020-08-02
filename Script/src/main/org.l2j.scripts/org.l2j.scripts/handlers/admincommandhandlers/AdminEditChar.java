@@ -1284,12 +1284,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%end%", replyMSG2);
 		activeChar.sendPacket(adminReply);
 	}
-	
-	/**
-	 * @param activeChar
-	 * @param characterName
-	 * @throws IllegalArgumentException
-	 */
+
 	private void findCharactersPerAccount(Player activeChar, String characterName) throws IllegalArgumentException
 	{
 		final Player player = World.getInstance().findPlayer(characterName);
@@ -1298,10 +1293,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			throw new IllegalArgumentException("Player doesn't exist");
 		}
 		
-		final Map<Integer, String> chars = player.getAccountChars();
+		final var chars = player.getAccountChars();
 		final StringJoiner replyMSG = new StringJoiner("<br1>");
-		chars.values().stream().forEachOrdered(replyMSG::add);
-		
+		chars.values().forEach(replyMSG::add);
+
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/accountinfo.htm");
 		adminReply.replace("%account%", player.getAccountName());
@@ -1309,11 +1304,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%characters%", replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
-	
-	/**
-	 * @param activeChar
-	 * @param multibox
-	 */
+
 	private void findDualbox(Player activeChar, int multibox)
 	{
 		final Map<String, List<Player>> ipMap = new HashMap<>();

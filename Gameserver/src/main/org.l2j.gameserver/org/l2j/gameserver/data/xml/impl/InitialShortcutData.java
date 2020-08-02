@@ -113,7 +113,7 @@ public final class InitialShortcutData extends GameXmlReader {
         for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
             if ("page".equals(c.getNodeName())) {
                 attrs = c.getAttributes();
-                final int pageId = parseInteger(attrs, "pageId");
+                final int pageId = parseInt(attrs, "pageId");
                 for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling()) {
                     if ("slot".equals(b.getNodeName())) {
                         list.add(createShortcut(pageId, b));
@@ -142,8 +142,8 @@ public final class InitialShortcutData extends GameXmlReader {
                     continue;
                 }
 
-                final int macroId = parseInteger(attrs, "macroId");
-                final int icon = parseInteger(attrs, "icon");
+                final int macroId = parseInt(attrs, "macroId");
+                final int icon = parseInt(attrs, "icon");
                 final String name = parseString(attrs, "name");
                 final String description = parseString(attrs, "description");
                 final String acronym = parseString(attrs, "acronym");
@@ -158,13 +158,13 @@ public final class InitialShortcutData extends GameXmlReader {
                         final String cmd = b.getTextContent();
                         switch (type) {
                             case SKILL: {
-                                d1 = parseInteger(attrs, "skillId"); // Skill ID
-                                d2 = parseInteger(attrs, "skillLvl", 0); // Skill level
+                                d1 = parseInt(attrs, "skillId"); // Skill ID
+                                d2 = parseInt(attrs, "skillLvl", 0); // Skill level
                                 break;
                             }
                             case ACTION: {
                                 // Not handled by client.
-                                d1 = parseInteger(attrs, "actionId");
+                                d1 = parseInt(attrs, "actionId");
                                 break;
                             }
                             case TEXT: {
@@ -172,17 +172,17 @@ public final class InitialShortcutData extends GameXmlReader {
                                 break;
                             }
                             case SHORTCUT: {
-                                d1 = parseInteger(attrs, "page"); // Page
-                                d2 = parseInteger(attrs, "slot", 0); // Slot
+                                d1 = parseInt(attrs, "page"); // Page
+                                d2 = parseInt(attrs, "slot", 0); // Slot
                                 break;
                             }
                             case ITEM: {
                                 // Not handled by client.
-                                d1 = parseInteger(attrs, "itemId");
+                                d1 = parseInt(attrs, "itemId");
                                 break;
                             }
                             case DELAY: {
-                                d1 = parseInteger(attrs, "delay"); // Delay in seconds
+                                d1 = parseInt(attrs, "delay"); // Delay in seconds
                                 break;
                             }
                         }
@@ -203,11 +203,11 @@ public final class InitialShortcutData extends GameXmlReader {
      */
     private Shortcut createShortcut(int pageId, Node b) {
         final NamedNodeMap attrs = b.getAttributes();
-        final int slotId = parseInteger(attrs, "slotId");
+        final int slotId = parseInt(attrs, "slotId");
         final ShortcutType shortcutType = parseEnum(attrs, ShortcutType.class, "shortcutType");
-        final int shortcutId = parseInteger(attrs, "shortcutId");
-        final int shortcutLevel = parseInteger(attrs, "shortcutLevel", 0);
-        final int characterType = parseInteger(attrs, "characterType", 0);
+        final int shortcutId = parseInt(attrs, "shortcutId");
+        final int shortcutLevel = parseInt(attrs, "shortcutLevel", 0);
+        final int characterType = parseInt(attrs, "characterType", 0);
         return new Shortcut(Shortcut.pageAndSlotToClientId(pageId, slotId), shortcutType, shortcutId, shortcutLevel, 0, characterType);
     }
 

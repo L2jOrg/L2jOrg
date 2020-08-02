@@ -26,19 +26,19 @@ import org.l2j.gameserver.network.ServerExPacketId;
  * @author Sdw
  */
 public class ExUserInfoInvenWeight extends ServerPacket {
-    private final Player _activeChar;
+    private final Player player;
 
     public ExUserInfoInvenWeight(Player cha) {
-        _activeChar = cha;
+        player = cha;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_USER_INFO_INVEN_WEIGHT);
 
-        writeInt(_activeChar.getObjectId());
-        writeInt(_activeChar.getCurrentLoad());
-        writeInt(_activeChar.getMaxLoad());
+        writeInt(player.getObjectId());
+        writeInt(player.getCurrentLoad());
+        writeInt(player.getMaxLoad());
     }
 
 }

@@ -51,9 +51,10 @@ import org.l2j.gameserver.network.clientpackets.mentoring.*;
 import org.l2j.gameserver.network.clientpackets.mission.RequestOneDayRewardReceive;
 import org.l2j.gameserver.network.clientpackets.mission.RequestTodoList;
 import org.l2j.gameserver.network.clientpackets.olympiad.*;
-import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
-import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
-import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
+import org.l2j.gameserver.network.clientpackets.pledge.*;
+import org.l2j.gameserver.network.clientpackets.pledge.bonus.RequestPledgeBonusOpen;
+import org.l2j.gameserver.network.clientpackets.pledge.bonus.RequestPledgeBonusReward;
+import org.l2j.gameserver.network.clientpackets.pledge.bonus.RequestPledgeBonusRewardList;
 import org.l2j.gameserver.network.clientpackets.primeshop.*;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestKillerLocation;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestPvpBookList;
@@ -467,8 +468,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PAYBACK_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_PAYBACK_GIVE_REWARD(null, ConnectionState.IN_GAME_STATES),
     EX_AUTOPLAY_SETTING(ExAutoPlaySetting::new, ConnectionState.IN_GAME_STATES),
-    EX_OLYMPIAD_MATCH_MAKING(null, ConnectionState.IN_GAME_STATES),
-    EX_OLYMPIAD_MATCH_MAKING_CANCEL(null, ConnectionState.IN_GAME_STATES),
+    EX_OLYMPIAD_MATCH_MAKING(ExOlympiadMatchMaking::new, ConnectionState.IN_GAME_STATES),
+    EX_OLYMPIAD_MATCH_MAKING_CANCEL(ExOlympiadMatchMakingCancel::new, ConnectionState.IN_GAME_STATES),
     EX_FESTIVAL_BM_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_FESTIVAL_BM_GAME(null, ConnectionState.IN_GAME_STATES),
     EX_GACHA_SHOP_INFO(null, ConnectionState.IN_GAME_STATES),

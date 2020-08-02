@@ -741,7 +741,7 @@ public class PlayerInventory extends Inventory {
     }
 
     public boolean validateCapacity(long slots, boolean questItem) {
-        return ((slots == 0) && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getSize(Item::isQuestItem) + slots) <= owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= owner.getInventoryLimit();
+        return (slots == 0 && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getSize(Item::isQuestItem) + slots) <= owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= owner.getInventoryLimit();
     }
 
     @Override

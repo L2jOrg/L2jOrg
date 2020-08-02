@@ -82,7 +82,7 @@ public final class ClanHallManager extends GameXmlReader {
             if ("list".equals(listNode.getNodeName())) {
                 for (Node clanHallNode = listNode.getFirstChild(); clanHallNode != null; clanHallNode = clanHallNode.getNextSibling()) {
                     if ("clanHall".equals(clanHallNode.getNodeName())) {
-                        params.set("id", parseInteger(clanHallNode.getAttributes(), "id"));
+                        params.set("id", parseInt(clanHallNode.getAttributes(), "id"));
                         params.set("name", parseString(clanHallNode.getAttributes(), "name", "None"));
                         params.set("grade", parseEnum(clanHallNode.getAttributes(), ClanHallGrade.class, "grade", ClanHallGrade.NONE));
                         params.set("type", parseEnum(clanHallNode.getAttributes(), ClanHallType.class, "type", ClanHallType.OTHER));
@@ -91,16 +91,16 @@ public final class ClanHallManager extends GameXmlReader {
                             switch (tpNode.getNodeName()) {
                                 case "auction": {
                                     final NamedNodeMap at = tpNode.getAttributes();
-                                    params.set("minBid", parseInteger(at, "min-bid"));
-                                    params.set("lease", parseInteger(at, "lease"));
-                                    params.set("deposit", parseInteger(at, "deposit"));
+                                    params.set("minBid", parseInt(at, "min-bid"));
+                                    params.set("lease", parseInt(at, "lease"));
+                                    params.set("deposit", parseInt(at, "deposit"));
                                     break;
                                 }
                                 case "npcs": {
                                     for (Node npcNode = tpNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling()) {
                                         if ("npc".equals(npcNode.getNodeName())) {
                                             final NamedNodeMap np = npcNode.getAttributes();
-                                            final int npcId = parseInteger(np, "id");
+                                            final int npcId = parseInt(np, "id");
                                             npcs.add(npcId);
                                         }
                                     }
@@ -111,7 +111,7 @@ public final class ClanHallManager extends GameXmlReader {
                                     for (Node npcNode = tpNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling()) {
                                         if ("door".equals(npcNode.getNodeName())) {
                                             final NamedNodeMap np = npcNode.getAttributes();
-                                            final int doorId = parseInteger(np, "id");
+                                            final int doorId = parseInt(np, "id");
                                             final Door door = DoorDataManager.getInstance().getDoor(doorId);
                                             if (door != null) {
                                                 doors.add(door);
@@ -125,12 +125,12 @@ public final class ClanHallManager extends GameXmlReader {
                                     for (Node npcNode = tpNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling()) {
                                         if ("teleport".equals(npcNode.getNodeName())) {
                                             final NamedNodeMap np = npcNode.getAttributes();
-                                            final int npcStringId = parseInteger(np, "npcStringId");
-                                            final int x = parseInteger(np, "x");
-                                            final int y = parseInteger(np, "y");
-                                            final int z = parseInteger(np, "z");
-                                            final int minFunctionLevel = parseInteger(np, "minFunctionLevel");
-                                            final int cost = parseInteger(np, "cost");
+                                            final int npcStringId = parseInt(np, "npcStringId");
+                                            final int x = parseInt(np, "x");
+                                            final int y = parseInt(np, "y");
+                                            final int z = parseInt(np, "z");
+                                            final int minFunctionLevel = parseInt(np, "minFunctionLevel");
+                                            final int cost = parseInt(np, "cost");
                                             teleports.add(new ClanHallTeleportHolder(npcStringId, x, y, z, minFunctionLevel, cost));
                                         }
                                     }
@@ -139,12 +139,12 @@ public final class ClanHallManager extends GameXmlReader {
                                 }
                                 case "ownerRestartPoint": {
                                     final NamedNodeMap ol = tpNode.getAttributes();
-                                    params.set("owner_loc", new Location(parseInteger(ol, "x"), parseInteger(ol, "y"), parseInteger(ol, "z")));
+                                    params.set("owner_loc", new Location(parseInt(ol, "x"), parseInt(ol, "y"), parseInt(ol, "z")));
                                     break;
                                 }
                                 case "banishPoint": {
                                     final NamedNodeMap bl = tpNode.getAttributes();
-                                    params.set("banish_loc", new Location(parseInteger(bl, "x"), parseInteger(bl, "y"), parseInteger(bl, "z")));
+                                    params.set("banish_loc", new Location(parseInt(bl, "x"), parseInt(bl, "y"), parseInt(bl, "z")));
                                     break;
                                 }
                             }

@@ -21,6 +21,7 @@ package org.l2j.gameserver.util;
 /**
  * @param <E> The enum type
  * @author HorridoJoho
+ * TODO Remove this
  */
 public final class EnumIntBitmask<E extends Enum<E>> implements Cloneable {
     private final Class<E> _enumClass;

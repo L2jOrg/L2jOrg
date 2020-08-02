@@ -41,89 +41,89 @@ import java.util.concurrent.atomic.AtomicReference;
  * @author UnAfraid
  */
 public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends AbstractScript {
-    private final Set<T> _events = ConcurrentHashMap.newKeySet();
-    private final Queue<Player> _registeredPlayers = new ConcurrentLinkedDeque<>();
-    private final AtomicReference<IEventState> _state = new AtomicReference<>();
-    private String _name;
-    private volatile StatsSet _variables = StatsSet.EMPTY_STATSET;
-    private volatile Set<EventScheduler> _schedulers = Collections.emptySet();
-    private volatile Set<IConditionalEventScheduler> _conditionalSchedulers = Collections.emptySet();
-    private volatile Map<String, IEventDrop> _rewards = Collections.emptyMap();
+    private final Set<T> events = ConcurrentHashMap.newKeySet();
+    private final Queue<Player> registeredPlayers = new ConcurrentLinkedDeque<>();
+    private final AtomicReference<IEventState> state = new AtomicReference<>();
+    private String name;
+    private volatile StatsSet variables = StatsSet.EMPTY_STATSET;
+    private volatile Set<EventScheduler> schedulers = Collections.emptySet();
+    private volatile Set<IConditionalEventScheduler> conditionalSchedulers = Collections.emptySet();
+    private volatile Map<String, IEventDrop> rewards = Collections.emptyMap();
 
     public abstract void onInitialized();
 
     public String getName() {
-        return _name;
+        return name;
     }
 
     public void setName(String name) {
-        _name = name;
+        this.name = name;
     }
 
     public StatsSet getVariables() {
-        return _variables;
+        return variables;
     }
 
     public void setVariables(StatsSet variables) {
-        _variables = new StatsSet(Collections.unmodifiableMap(variables.getSet()));
+        this.variables = new StatsSet(Collections.unmodifiableMap(variables.getSet()));
     }
 
     public EventScheduler getScheduler(String name) {
-        return _schedulers.stream().filter(scheduler -> scheduler.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
+        return schedulers.stream().filter(scheduler -> scheduler.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
     }
 
     public void setSchedulers(Set<EventScheduler> schedulers) {
-        _schedulers = Collections.unmodifiableSet(schedulers);
+        this.schedulers = Collections.unmodifiableSet(schedulers);
     }
 
     public Set<IConditionalEventScheduler> getConditionalSchedulers() {
-        return _conditionalSchedulers;
+        return conditionalSchedulers;
     }
 
     public void setConditionalSchedulers(Set<IConditionalEventScheduler> schedulers) {
-        _conditionalSchedulers = Collections.unmodifiableSet(schedulers);
+        conditionalSchedulers = Collections.unmodifiableSet(schedulers);
     }
 
     public IEventDrop getRewards(String name) {
-        return _rewards.get(name);
+        return rewards.get(name);
     }
 
     public void setRewards(Map<String, IEventDrop> rewards) {
-        _rewards = Collections.unmodifiableMap(rewards);
+        this.rewards = Collections.unmodifiableMap(rewards);
     }
 
     public Set<T> getEvents() {
-        return _events;
+        return events;
     }
 
     public void startScheduler() {
-        _schedulers.forEach(EventScheduler::startScheduler);
+        schedulers.forEach(EventScheduler::startScheduler);
     }
 
     public void stopScheduler() {
-        _schedulers.forEach(EventScheduler::stopScheduler);
+        schedulers.forEach(EventScheduler::stopScheduler);
     }
 
     public void startConditionalSchedulers() {
         //@formatter:off
-        _conditionalSchedulers.stream()
+        conditionalSchedulers.stream()
                 .filter(IConditionalEventScheduler::test)
                 .forEach(IConditionalEventScheduler::run);
         //@formatter:on
     }
 
     public IEventState getState() {
-        return _state.get();
+        return state.get();
     }
 
     public void setState(IEventState newState) {
-        final IEventState previousState = _state.get();
-        _state.set(newState);
+        final IEventState previousState = state.get();
+        state.set(newState);
         onStateChange(previousState, newState);
     }
 
     public boolean setState(IEventState previousState, IEventState newState) {
-        if (_state.compareAndSet(previousState, newState)) {
+        if (state.compareAndSet(previousState, newState)) {
             onStateChange(previousState, newState);
             return true;
         }
@@ -131,30 +131,30 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
     }
 
     public final boolean registerPlayer(Player player) {
-        return canRegister(player, true) && _registeredPlayers.offer(player);
+        return canRegister(player, true) && registeredPlayers.offer(player);
     }
 
     public final boolean unregisterPlayer(Player player) {
-        return _registeredPlayers.remove(player);
+        return registeredPlayers.remove(player);
     }
 
     public final boolean isRegistered(Player player) {
-        return _registeredPlayers.contains(player);
+        return registeredPlayers.contains(player);
     }
 
     public boolean canRegister(Player player, boolean sendMessage) {
-        return !_registeredPlayers.contains(player);
+        return !registeredPlayers.contains(player);
     }
 
     public final Queue<Player> getRegisteredPlayers() {
-        return _registeredPlayers;
+        return registeredPlayers;
     }
 
     @RegisterEvent(EventType.ON_PLAYER_LOGOUT)
     @RegisterType(ListenerRegisterType.GLOBAL)
     public void OnPlayerLogout(OnPlayerLogout event) {
         final Player player = event.getActiveChar();
-        if (_registeredPlayers.remove(player)) {
+        if (registeredPlayers.remove(player)) {
             onUnregisteredPlayer(player);
         }
     }
@@ -170,9 +170,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
 
     /**
      * Triggered when state is changed
-     *
-     * @param previousState
-     * @param newState
      */
     protected void onStateChange(IEventState previousState, IEventState newState) {
 

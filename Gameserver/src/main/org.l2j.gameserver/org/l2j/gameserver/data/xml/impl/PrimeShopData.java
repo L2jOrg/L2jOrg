@@ -82,8 +82,8 @@ public class PrimeShopData extends GameXmlReader {
             if ("item".equalsIgnoreCase(b.getNodeName())) {
                 var attrs = b.getAttributes();
 
-                final int itemId = parseInteger(attrs, "id");
-                final int count = parseInteger(attrs, "count");
+                final int itemId = parseInt(attrs, "id");
+                final int count = parseInt(attrs, "count");
 
                 final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                 if (isNull(item)) {
@@ -94,14 +94,14 @@ public class PrimeShopData extends GameXmlReader {
             }
         }
         var attrs = productNode.getAttributes();
-        var product = new PrimeShopProduct(parseInteger(attrs, "id"), items);
+        var product = new PrimeShopProduct(parseInt(attrs, "id"), items);
         product.setCategory(parseByte(attrs, "category"));
         product.setPaymentType(parseByte(attrs, "paymentType"));
-        product.setPrice(parseInteger(attrs, "price"));
+        product.setPrice(parseInt(attrs, "price"));
 		product.setPanelType(parseByte(attrs, "panelType"));
 		product.setRecommended(parseByte(attrs, "recommended"));
-		product.setStart(parseInteger(attrs, "startSale"));
-		product.setEnd(parseInteger(attrs, "endSale"));
+		product.setStart(parseInt(attrs, "startSale"));
+		product.setEnd(parseInt(attrs, "endSale"));
 		product.setDaysOfWeek(parseByte(attrs, "dayOfWeek"));
 		product.setStartHour(parseByte(attrs, "startHour"));
 		product.setStartMinute(parseByte(attrs, "startMinute"));
@@ -117,7 +117,7 @@ public class PrimeShopData extends GameXmlReader {
         product.setRestrictionDay(parseByte(attrs, "restrictionDay"));
         product.setAvailableCount(parseByte(attrs, "availableCount"));
         product.setVipTier(parseByte(attrs, "vipTier"));
-        product.setSilverCoin(parseInteger(attrs, "silverCoin"));
+        product.setSilverCoin(parseInt(attrs, "silverCoin"));
         product.setVipGift(parseBoolean(attrs, "isVipGift"));
 
         if(product.isVipGift()) {

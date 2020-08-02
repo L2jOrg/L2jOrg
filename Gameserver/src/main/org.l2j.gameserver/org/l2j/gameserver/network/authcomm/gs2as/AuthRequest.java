@@ -28,18 +28,18 @@ public class AuthRequest extends SendablePacket {
 
 	protected void writeImpl(AuthServerClient client) {
 		var serverSettings = Configurator.getSettings(ServerSettings.class);
-		writeByte((byte) 0x00);
-		writeByte((byte) serverSettings.serverId());
-		writeByte((byte) (serverSettings.acceptAlternativeId() ? 0x01 : 0x00));
+		writeByte(0x00);
+		writeByte(serverSettings.serverId());
+		writeByte(serverSettings.acceptAlternativeId());
 		writeInt(serverSettings.type());
 		writeInt(serverSettings.maximumOnlineUsers());
 		writeByte(serverSettings.ageLimit());
 
-		writeByte((byte) (serverSettings.isShowingBrackets() ? 0x01 : 0x00));
-		writeByte((byte) (serverSettings.isPvP() ? 0x01 : 0x00));
+		writeByte(serverSettings.isShowingBrackets());
+		writeByte(serverSettings.isPvP());
 
 		var hosts = Config.GAME_SERVER_HOSTS.size();
-		writeShort((short) hosts);
+		writeShort(hosts);
 
 		for (int i = 0; i < Config.GAME_SERVER_HOSTS.size(); i++) {
 			writeString(Config.GAME_SERVER_HOSTS.get(i));

@@ -24,6 +24,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -84,10 +85,11 @@ public class Q10988_Conspiracy extends Quest
 	public Q10988_Conspiracy()
 	{
 		super(10988);
+		addCondClassIds(ClassId.ORC_FIGHTER, ClassId.ORC_MAGE);
 		addStartNpc(USKA);
 		addTalkId(USKA, CAPTAIN_BATHIS);
 		addKillId(KASHA_SPIDER, KASHA_BLADE_SPIDER, MARAKU_WEREVOLF_CHIEFTAIN, EVIL_EYE_PATROL);
-		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
+		addCondLevel(15, 20, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_CONSPIRACY);
 	}
 	

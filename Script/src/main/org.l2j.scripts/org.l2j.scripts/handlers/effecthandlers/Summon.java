@@ -108,15 +108,13 @@ public final class Summon extends AbstractEffect {
             }
         }
 
-        summon.setCurrentHp(summon.getMaxHp());
-        summon.setCurrentMp(summon.getMaxMp());
+        summon.setCurrentHp(summon.getMaxHp(), false);
+        summon.setCurrentMp(summon.getMaxMp(), false);
         summon.setHeading(player.getHeading());
 
         player.addServitor(summon);
-
         summon.setShowSummonAnimation(true);
         summon.spawnMe();
-        summon.setRunning();
     }
 
     public static class Factory implements SkillEffectFactory {

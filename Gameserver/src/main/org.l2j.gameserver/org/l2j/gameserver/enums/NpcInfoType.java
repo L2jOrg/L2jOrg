@@ -27,7 +27,7 @@ public enum NpcInfoType implements IUpdateTypeComponent {
     // 0
     ID(0x00, 4),
     ATTACKABLE(0x01, 1),
-    UNKNOWN1(0x02, 4),
+    RELATIONS(0x02, 4),
     NAME(0x03, 2),
     POSITION(0x04, (3 * 4)),
     HEADING(0x05, 4),

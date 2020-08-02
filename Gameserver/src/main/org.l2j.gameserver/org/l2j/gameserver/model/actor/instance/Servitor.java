@@ -76,6 +76,7 @@ public class Servitor extends Summon implements Runnable {
         super(template, owner);
         setInstanceType(InstanceType.L2ServitorInstance);
         setShowSummonAnimation(true);
+        running = true;
     }
 
     @Override

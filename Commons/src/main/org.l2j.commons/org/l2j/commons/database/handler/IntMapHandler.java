@@ -20,6 +20,7 @@ package org.l2j.commons.database.handler;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.database.helpers.HandlersSupport;
 import org.l2j.commons.database.helpers.QueryDescriptor;
 
 import java.lang.reflect.ParameterizedType;
@@ -44,7 +45,7 @@ public class IntMapHandler implements TypeHandler<IntMap<?>> {
     public IntMap<?> handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         Class<?> genericType = (Class<?>) ((ParameterizedType)queryDescriptor.getGenericReturnType()).getActualTypeArguments()[0];
 
-        var handler = MAP.getOrDefault(genericType.getName(), MAP.get(Object.class.getName()));
+        var handler = HandlersSupport.handlerFromClass(genericType);
         if(isNull(handler)) {
             throw new IllegalStateException("There is no TypeHandler to Type " + genericType);
         }

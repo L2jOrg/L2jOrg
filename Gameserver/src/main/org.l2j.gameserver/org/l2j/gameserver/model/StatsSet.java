@@ -681,7 +681,7 @@ public class StatsSet implements IParserAdvUtils {
     }
 
     public <T extends Enum<T>> EnumSet<T> getStringAsEnumSet(String key, Class<T> enumClass, String delimiter) {
-        var values = getString(key);
+        var values = getString(key, Util.STRING_EMPTY);
         if(Util.isNotEmpty(values)) {
             try {
               return StreamUtil.collectToEnumSet(enumClass, Arrays.stream(values.split(delimiter)).map(e -> Enum.valueOf(enumClass, e)));

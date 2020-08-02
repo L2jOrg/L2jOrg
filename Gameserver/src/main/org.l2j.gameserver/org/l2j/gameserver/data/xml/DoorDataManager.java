@@ -84,14 +84,14 @@ public final class DoorDataManager extends GameXmlReader {
         forEach(doorNode, XmlReader::isNode, innerDoorNode -> {
             final NamedNodeMap attrs = innerDoorNode.getAttributes();
             if (innerDoorNode.getNodeName().equals("nodes")) {
-                params.set("nodeZ", parseInteger(attrs, "nodeZ"));
+                params.set("nodeZ", parseInt(attrs, "nodeZ"));
 
                 final AtomicInteger count = new AtomicInteger();
                 forEach(innerDoorNode, XmlReader::isNode, nodes -> {
                     final NamedNodeMap nodeAttrs = nodes.getAttributes();
                     if ("node".equals(nodes.getNodeName())) {
-                        params.set("nodeX_" + count.get(), parseInteger(nodeAttrs, "x"));
-                        params.set("nodeY_" + count.getAndIncrement(), parseInteger(nodeAttrs, "y"));
+                        params.set("nodeX_" + count.get(), parseInt(nodeAttrs, "x"));
+                        params.set("nodeY_" + count.getAndIncrement(), parseInt(nodeAttrs, "y"));
                     }
                 });
             } else if (attrs != null) {

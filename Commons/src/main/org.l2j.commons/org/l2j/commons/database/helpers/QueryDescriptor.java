@@ -24,9 +24,11 @@ import org.l2j.commons.database.annotation.Query;
 import org.l2j.commons.database.helpers.BatchSupporters.BatchSupport;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.Collection;
+import java.util.function.Consumer;
 import java.util.regex.Pattern;
 
 import static java.util.Objects.nonNull;
@@ -43,6 +45,9 @@ public class QueryDescriptor implements AutoCloseable {
     private final String query;
     private final Method method;
     private final MapParameterStrategy strategy;
+    private final boolean isUpdate;
+    private boolean hasResultSetConsumer;
+    private boolean hasTypeConsumer;
 
     public QueryDescriptor(Method method, String query) {
         this(method, query, NO_PARAMETER_STRATEGY);
@@ -56,10 +61,20 @@ public class QueryDescriptor implements AutoCloseable {
         this.query = query;
         this.method = method;
         this.strategy = strategy;
+        this.isUpdate = !SELECT_PATTERN.matcher(query).matches();
+
+        var size = method.getParameterCount();
+        if(size > 0 && method.getParameterTypes()[size -1] == Consumer.class) {
+            if(ResultSet.class.isAssignableFrom((Class<?>)((ParameterizedType) method.getGenericParameterTypes()[size -1]).getActualTypeArguments()[0])) {
+                hasResultSetConsumer =  true;
+            } else {
+                hasTypeConsumer = true;
+            }
+        }
     }
 
     public boolean isUpdate() {
-        return !SELECT_PATTERN.matcher(query).matches();
+        return isUpdate;
     }
 
     public boolean isBatch(Object[] args) {
@@ -95,6 +110,14 @@ public class QueryDescriptor implements AutoCloseable {
     public ResultSet getResultSet() throws SQLException {
         var statement = statementLocal.get();
         return nonNull(statement) ? statement.getResultSet() : null;
+    }
+
+    public boolean hasTypeConsumer() {
+        return hasTypeConsumer;
+    }
+
+    public boolean hasResultSetConsumer() {
+        return hasResultSetConsumer;
     }
 
     @Override

@@ -74,31 +74,31 @@ public final class HitConditionBonusData extends GameXmlReader {
             final NamedNodeMap attrs = d.getAttributes();
             switch (d.getNodeName()) {
                 case "front": {
-                    frontBonus = parseInteger(attrs, "val");
+                    frontBonus = parseInt(attrs, "val");
                     break;
                 }
                 case "side": {
-                    sideBonus = parseInteger(attrs, "val");
+                    sideBonus = parseInt(attrs, "val");
                     break;
                 }
                 case "back": {
-                    backBonus = parseInteger(attrs, "val");
+                    backBonus = parseInt(attrs, "val");
                     break;
                 }
                 case "high": {
-                    highBonus = parseInteger(attrs, "val");
+                    highBonus = parseInt(attrs, "val");
                     break;
                 }
                 case "low": {
-                    lowBonus = parseInteger(attrs, "val");
+                    lowBonus = parseInt(attrs, "val");
                     break;
                 }
                 case "dark": {
-                    darkBonus = parseInteger(attrs, "val");
+                    darkBonus = parseInt(attrs, "val");
                     break;
                 }
                 case "rain": {
-                    rainBonus = parseInteger(attrs, "val");
+                    rainBonus = parseInt(attrs, "val");
                     break;
                 }
             }

@@ -26,18 +26,18 @@ import org.l2j.gameserver.network.ServerExPacketId;
  * @author Sdw
  */
 public class ExAdenaInvenCount extends ServerPacket {
-    private final Player _activeChar;
+    private final Player player;
 
     public ExAdenaInvenCount(Player cha) {
-        _activeChar = cha;
+        player = cha;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_ADENA_INVEN_COUNT);
 
-        writeLong(_activeChar.getAdena());
-        writeShort((short) _activeChar.getInventory().getSize());
+        writeLong(player.getAdena());
+        writeShort(player.getInventory().getSize());
     }
 
 }

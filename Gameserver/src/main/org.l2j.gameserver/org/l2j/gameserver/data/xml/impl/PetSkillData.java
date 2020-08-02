@@ -67,9 +67,9 @@ public class PetSkillData extends GameXmlReader {
                     if ("skill".equalsIgnoreCase(d.getNodeName())) {
                         final NamedNodeMap attrs = d.getAttributes();
 
-                        final int npcId = parseInteger(attrs, "npcId");
-                        final int skillId = parseInteger(attrs, "skillId");
-                        final int skillLvl = parseInteger(attrs, "skillLvl");
+                        final int npcId = parseInt(attrs, "npcId");
+                        final int skillId = parseInt(attrs, "skillId");
+                        final int skillLvl = parseInt(attrs, "skillLvl");
 
                         Map<Long, SkillHolder> skillTree = _skillTrees.computeIfAbsent(npcId, k -> new HashMap<>());
 

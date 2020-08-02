@@ -1553,10 +1553,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @return {@code false}
      */
     public boolean showError(Player player, Throwable t) {
-        LOGGER.warn(getScriptFile().toAbsolutePath().toString(), t);
-        if (t.getMessage() == null) {
-            LOGGER.warn(": " + t.getMessage());
-        }
+        LOGGER.warn(getScriptName(), t);
         if ((player != null) && player.getAccessLevel().isGm()) {
             final String res = "<html><body><title>Script error</title>" + CommonUtil.getStackTrace(t) + "</body></html>";
             return showResult(player, res);
