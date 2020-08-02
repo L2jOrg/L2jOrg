@@ -35,6 +35,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
+import java.time.Year;
+import java.time.YearMonth;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
@@ -61,13 +63,13 @@ public class OlympiadEngine extends AbstractEventManager<AbstractEvent<?>> {
     public void onInitialized() {
         data = getDAO(OlympiadDAO.class).findData();
 
-        var startDate = LocalDate.parse(getVariables().getString("start-date", "2020-06-22"));
         if(isNull(data)) {
             data = new OlympiadData();
-            data.setNextSeasonDate(startDate);
+            data.setNextSeasonDate(LocalDate.parse(getVariables().getString("start-date", "2020-06-22")));
+            data.setId(1);
             getDAO(OlympiadDAO.class).save(data);
         } else if(getVariables().getBoolean("force-start-date", false)) {
-            data.setNextSeasonDate(startDate);
+            data.setNextSeasonDate(LocalDate.parse(getVariables().getString("start-date", "2020-06-22")));
         }
 
         if(data.getNextSeasonDate().isAfter(LocalDate.now())) {
@@ -81,7 +83,7 @@ public class OlympiadEngine extends AbstractEventManager<AbstractEvent<?>> {
 
     public void onStartMatch() {
         matchInProgress = true;
-        Broadcast.toAllOnlinePlayers(ExOlympiadInfo.show(OlympiadRuleType.MAX, 300));
+        Broadcast.toAllOnlinePlayers(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, 300));
         var listeners = Listeners.players();
         onPlayerLoginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) e -> onPlayerLogin(e.getPlayer()), this);
         listeners.addListener(onPlayerLoginListener);
@@ -92,7 +94,7 @@ public class OlympiadEngine extends AbstractEventManager<AbstractEvent<?>> {
         if(matchInProgress) {
             var scheduler = getScheduler("stop-match");
             if(nonNull(scheduler)) {
-                player.sendPacket(ExOlympiadInfo.show(OlympiadRuleType.MAX, (int) scheduler.getRemainingTime(TimeUnit.SECONDS)));
+                player.sendPacket(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, (int) scheduler.getRemainingTime(TimeUnit.SECONDS)));
             } else {
                 LOGGER.warn("Can't find stop-match scheduler");
             }
@@ -104,7 +106,7 @@ public class OlympiadEngine extends AbstractEventManager<AbstractEvent<?>> {
         if(nonNull(onPlayerLoginListener)) {
             Listeners.players().removeListener(onPlayerLoginListener);
         }
-        Broadcast.toAllOnlinePlayers(ExOlympiadInfo.hide(OlympiadRuleType.MAX));
+        Broadcast.toAllOnlinePlayers(ExOlympiadInfo.hide(OlympiadRuleType.CLASSLESS));
         Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED));
     }
 
@@ -138,6 +140,22 @@ public class OlympiadEngine extends AbstractEventManager<AbstractEvent<?>> {
 
     public int getRemainingDailyMatches(Player player) {
         return 5;
+    }
+
+    public void registerPlayer(Player player, OlympiadRuleType ruleType) {
+        registerPlayer(player);
+    }
+
+    public void unregisterPlayer(Player player, OlympiadRuleType ruleType) {
+        unregisterPlayer(player);
+    }
+
+    public int getSeasonMonth() {
+        return YearMonth.now().getMonthValue();
+    }
+
+    public int getSeasonYear() {
+        return Year.now().getValue();
     }
 
     public static OlympiadEngine getInstance() {

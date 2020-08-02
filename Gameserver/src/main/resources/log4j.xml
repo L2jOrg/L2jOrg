@@ -47,7 +47,7 @@
         <Logger name="org.l2j.gameserver" level="info">
             <AppenderRef ref="game"/>
         </Logger>
-        <Logger name="org.l2j" level="error">
+        <Logger name="org.l2j" level="warn">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="org.l2j.gameserver.network" level="error">
@@ -68,7 +68,7 @@
         <Logger name="ST_PACKET" level="debug">
             <AppenderRef ref="packet_statistics"/>
         </Logger>
-        <Logger name="io.github.joealisson.mmocore" level="debug">
+        <Logger name="io.github.joealisson.mmocore" level="error">
             <AppenderRef ref="debug"/>
         </Logger>
     </Loggers>

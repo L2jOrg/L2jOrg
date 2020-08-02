@@ -16,23 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.engine.olympiad;
+package org.l2j.gameserver.network.clientpackets.olympiad;
+
+import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
+import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
 
 /**
  * @author JoeAlisson
  */
-public enum OlympiadRuleType {
-    TEAM,
-    CLASSLESS,
-    CLASS,
-    MAX;
+public class ExOlympiadMatchMakingCancel extends ClientPacket {
 
-    public static OlympiadRuleType of(byte ruleType) {
-        return switch (ruleType) {
-            case 0 -> TEAM;
-            case 1 -> CLASSLESS;
-            case 2 -> CLASS;
-            default -> MAX;
-        };
+    private byte ruleType;
+
+    @Override
+    protected void readImpl() throws Exception {
+        ruleType = readByte();
+    }
+
+    @Override
+    protected void runImpl() {
+        OlympiadEngine.getInstance().unregisterPlayer(client.getPlayer(), OlympiadRuleType.of(ruleType));
+        client.sendPacket(new ExOlympiadRecord());
     }
 }
