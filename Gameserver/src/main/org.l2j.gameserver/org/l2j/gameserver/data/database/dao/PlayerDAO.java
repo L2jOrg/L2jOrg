@@ -175,7 +175,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("DELETE FROM character_skills_save WHERE skill_id=:skillId:")
     void deleteSkillSave(int skillId);
 
-    @Query("UPDATE character_reco_bonus SET rec_left = 0, rec_have = GREATEST(rec_have - 20,0)")
+    @Query("UPDATE character_reco_bonus SET rec_left = 0, rec_have = GREATEST(CAST(rec_have AS SIGNED)  -20 , 0)")
     void resetRecommends();
 
     @Query("UPDATE characters SET vitality_points = :points:")
