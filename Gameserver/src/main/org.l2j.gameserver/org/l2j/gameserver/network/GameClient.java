@@ -137,9 +137,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
             AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getAccountName()));
         }
 
-        if (player == null) {
-            Disconnection.of(this).onDisconnection();
-        }
+        Disconnection.of(this).onDisconnection();
     }
 
     @Override
