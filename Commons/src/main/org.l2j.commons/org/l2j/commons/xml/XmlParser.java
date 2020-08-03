@@ -202,10 +202,10 @@ public class XmlParser {
     /**
      * parse the node value as int.
      *
-     * @return -1 if node is null or the node name not exists.
+     * @return 0 if node is null or the node name not exists.
      */
     protected int parseInt(NamedNodeMap node, String name) {
-        return parseInt(node, name, -1);
+        return parseInt(node, name, 0);
     }
 
     /**

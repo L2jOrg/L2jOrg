@@ -111,7 +111,7 @@ public class NpcData extends GameXmlReader {
                         Set<Integer> ignoreClanNpcIds = null;
                         List<DropHolder> dropLists = null;
                         set.set("id", npcId);
-                        set.set("displayId", parseInt(attrs, "displayId"));
+                        set.set("displayId", parseInt(attrs, "displayId", npcId));
                         set.set("level", parseByte(attrs, "level"));
                         set.set("type", parseString(attrs, "type"));
                         set.set("name", parseString(attrs, "name"));
