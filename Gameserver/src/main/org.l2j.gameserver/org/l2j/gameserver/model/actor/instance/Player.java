@@ -1863,6 +1863,7 @@ public final class Player extends Playable {
         return _simulatedTalking;
     }
 
+    // TODO Remove
     public void setSimulatedTalking(boolean value) {
         _simulatedTalking = value;
     }
@@ -4000,10 +4001,8 @@ public final class Player extends Playable {
      */
     @Override
     public void sendPacket(ServerPacket... packets) {
-        if (_client != null) {
-            for (ServerPacket packet : packets) {
-                _client.sendPacket(packet);
-            }
+        for (ServerPacket packet : packets) {
+            _client.sendPacket(packet);
         }
     }
 
