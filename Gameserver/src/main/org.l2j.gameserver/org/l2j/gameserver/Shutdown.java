@@ -22,7 +22,6 @@ import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
@@ -245,14 +244,6 @@ public class Shutdown extends Thread {
      * This sends a last byebye, disconnects all players and saves data.
      */
     private void saveData() {
-        try {
-            if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS && !Config.STORE_OFFLINE_TRADE_IN_REALTIME) {
-                OfflineTradersTable.getInstance().storeOffliners();
-            }
-        } catch (Throwable t) {
-            LOGGER.warn("Error saving offline shops.", t);
-        }
-
         disconnectAllCharacters();
         LOGGER.info("All players disconnected and saved.");
 

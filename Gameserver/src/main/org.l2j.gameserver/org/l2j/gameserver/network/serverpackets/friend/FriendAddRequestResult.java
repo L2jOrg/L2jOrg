@@ -30,7 +30,7 @@ public class FriendAddRequestResult extends ServerPacket {
     private final int _result;
     private final int _charId;
     private final String _charName;
-    private final int _isOnline;
+    private final boolean _isOnline;
     private final int _charObjectId;
     private final int _charLevel;
     private final int _charClassId;
@@ -39,7 +39,7 @@ public class FriendAddRequestResult extends ServerPacket {
         _result = result;
         _charId = activeChar.getObjectId();
         _charName = activeChar.getName();
-        _isOnline = activeChar.isOnlineInt();
+        _isOnline = activeChar.isOnline();
         _charObjectId = activeChar.getObjectId();
         _charLevel = activeChar.getLevel();
         _charClassId = activeChar.getActiveClass();
@@ -56,7 +56,7 @@ public class FriendAddRequestResult extends ServerPacket {
         writeInt(_charObjectId);
         writeInt(_charLevel);
         writeInt(_charClassId);
-        writeShort((short) 0x00); // Always 0 on retail
+        writeShort(0x00); // Always 0 on retail
     }
 
 }

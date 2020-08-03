@@ -88,7 +88,7 @@ public class HappyHours extends LongTimeEvent
 						systemMsg.addInt(20);
 						for (Player plr : World.getInstance().getPlayers())
 						{
-							if ((plr != null) && (plr.isOnlineInt() == 1) && plr.isAffectedBySkill(TRANSFORMATION_SKILL))
+							if ((plr != null) && plr.isOnline() && plr.isAffectedBySkill(TRANSFORMATION_SKILL))
 							{
 								plr.addItem("HappyHours", SIBIS_COIN, 20, player, false);
 								plr.sendPacket(screenMsg);

@@ -114,7 +114,7 @@ public abstract class VoteSystem implements Runnable {
             announce(getSiteName() + ": Current vote count is " + currentVotes + ".");
             announce(getSiteName() + ": We need " + votesDiff + " vote(s) for next reward.");
             for (Player p : pls) {
-                if ((p.getClient() == null) || p.getClient().isDetached()) {
+                if ((p.getClient() == null)) {
                     continue;
                 }
 

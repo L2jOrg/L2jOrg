@@ -160,7 +160,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 	}
 
 	private boolean canReceivePoints(Player player) {
-		return player.isOnlineInt() == 1 &&  player.getPcCafePoints() < Integer.MAX_VALUE;
+		return player.isOnline() && player.getPcCafePoints() < Integer.MAX_VALUE;
 	}
 
 	private void increasePoints(Player player, int points) {

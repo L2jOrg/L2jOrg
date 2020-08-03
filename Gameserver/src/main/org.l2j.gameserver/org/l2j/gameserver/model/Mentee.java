@@ -101,11 +101,7 @@ public class Mentee {
     }
 
     public boolean isOnline() {
-        return (getPlayerInstance() != null) && (getPlayerInstance().isOnlineInt() > 0);
-    }
-
-    public int isOnlineInt() {
-        return isOnline() ? getPlayerInstance().isOnlineInt() : 0;
+        return (getPlayerInstance() != null) && getPlayerInstance().isOnline();
     }
 
     public void sendPacket(ServerPacket packet) {

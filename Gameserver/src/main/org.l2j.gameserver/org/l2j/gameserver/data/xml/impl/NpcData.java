@@ -53,6 +53,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.contains;
 
 /**
@@ -111,9 +112,9 @@ public class NpcData extends GameXmlReader {
                         Set<Integer> ignoreClanNpcIds = null;
                         List<DropHolder> dropLists = null;
                         set.set("id", npcId);
-                        set.set("displayId", parseInt(attrs, "displayId"));
-                        set.set("level", parseByte(attrs, "level"));
-                        set.set("type", parseString(attrs, "type"));
+                        set.set("displayId", parseInt(attrs, "displayId", npcId));
+                        set.set("level", parseByte(attrs, "level", (byte) 70));
+                        set.set("type", parseString(attrs, "type", "Npc"));
                         set.set("name", parseString(attrs, "name"));
                         set.set("usingServerSideName", parseBoolean(attrs, "usingServerSideName"));
                         set.set("title", parseString(attrs, "title"));
@@ -151,9 +152,9 @@ public class NpcData extends GameXmlReader {
                                 }
                                 case "mpreward": {
                                     set.set("mpRewardValue", parseInt(attrs, "value"));
-                                    set.set("mpRewardType", parseEnum(attrs, MpRewardType.class, "type"));
+                                    set.set("mpRewardType", parseEnum(attrs, MpRewardType.class, "type", MpRewardType.DIFF));
                                     set.set("mpRewardTicks", parseInt(attrs, "ticks"));
-                                    set.set("mpRewardAffectType", parseEnum(attrs, MpRewardAffectType.class, "affects"));
+                                    set.set("mpRewardAffectType", parseEnum(attrs, MpRewardAffectType.class, "affects", MpRewardAffectType.SOLO));
                                     break;
                                 }
                                 case "stats": {
@@ -179,7 +180,7 @@ public class NpcData extends GameXmlReader {
                                                 set.set("baseRndDam", parseInt(attrs, "random"));
                                                 set.set("baseCritRate", parseDouble(attrs, "critical"));
                                                 set.set("accuracy", parseFloat(attrs, "accuracy")); // TODO: Implement me
-                                                set.set("basePAtkSpd", parseFloat(attrs, "attackSpeed"));
+                                                set.set("basePAtkSpd", parseFloat(attrs, "attackSpeed", 300F));
                                                 set.set("reuseDelay", parseInt(attrs, "reuseDelay")); // TODO: Implement me
                                                 set.set("baseAtkType", parseString(attrs, "type"));
                                                 set.set("baseAtkRange", parseInt(attrs, "range"));
@@ -196,8 +197,8 @@ public class NpcData extends GameXmlReader {
                                                 break;
                                             }
                                             case "abnormalresist": {
-                                                set.set("physicalAbnormalResist", parseDouble(attrs, "physical"));
-                                                set.set("magicAbnormalResist", parseDouble(attrs, "magic"));
+                                                set.set("physicalAbnormalResist", parseDouble(attrs, "physical", 10));
+                                                set.set("magicAbnormalResist", parseDouble(attrs, "magic", 10));
                                                 break;
                                             }
                                             case "attribute": {
@@ -253,14 +254,14 @@ public class NpcData extends GameXmlReader {
                                                     attrs = speedNode.getAttributes();
                                                     switch (speedNode.getNodeName().toLowerCase()) {
                                                         case "walk": {
-                                                            final var ground = parseDouble(attrs, "ground");
+                                                            final var ground = parseDouble(attrs, "ground", 50);
                                                             set.set("baseWalkSpd", ground);
                                                             set.set("baseSwimWalkSpd", parseDouble(attrs, "swim", ground));
                                                             set.set("baseFlyWalkSpd", parseDouble(attrs, "fly", ground));
                                                             break;
                                                         }
                                                         case "run": {
-                                                            final var ground = parseDouble(attrs, "ground");
+                                                            final var ground = parseDouble(attrs, "ground", 120);
                                                             set.set("baseRunSpd", ground);
                                                             set.set("baseSwimRunSpd", parseDouble(attrs, "swim", ground));
                                                             set.set("baseFlyRunSpd", parseDouble(attrs, "fly", ground));
@@ -271,7 +272,7 @@ public class NpcData extends GameXmlReader {
                                                 break;
                                             }
                                             case "hittime": {
-                                                set.set("hitTime", npcNode.getTextContent()); // TODO: Implement me default 600 (value in ms)
+                                                set.set("hitTime", parseInt(npcNode, 100));
                                                 break;
                                             }
                                         }
@@ -279,16 +280,17 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "status": {
-                                    set.set("unique", parseBoolean(attrs, "unique"));
-                                    set.set("attackable", parseBoolean(attrs, "attackable"));
-                                    set.set("targetable", parseBoolean(attrs, "targetable"));
-                                    set.set("talkable", parseBoolean(attrs, "talkable"));
-                                    set.set("undying", parseBoolean(attrs, "undying"));
-                                    set.set("showName", parseBoolean(attrs, "showName"));
-                                    set.set("randomWalk", parseBoolean(attrs, "randomWalk"));
-                                    set.set("randomAnimation", parseBoolean(attrs, "randomAnimation"));
+                                    set.set("unique", (Boolean) computeIfNonNull(attrs.getNamedItem("unique"), this::parseBoolean));
+                                    set.set("attackable", parseBoolean(attrs, "attackable", true));
+                                    set.set("targetable", parseBoolean(attrs, "targetable", true));
+                                    set.set("talkable", parseBoolean(attrs, "talkable", true));
+                                    set.set("undying", parseBoolean(attrs, "undying", true));
+                                    set.set("showName", parseBoolean(attrs, "showName", true));
+
+                                    set.set("randomWalk", (Boolean) computeIfNonNull(attrs.getNamedItem("randomWalk"), this::parseBoolean));
+                                    set.set("randomAnimation", parseBoolean(attrs, "randomAnimation", true));
                                     set.set("flying", parseBoolean(attrs, "flying"));
-                                    set.set("canMove", parseBoolean(attrs, "canMove"));
+                                    set.set("canMove", parseBoolean(attrs, "canMove", true));
                                     set.set("noSleepMode", parseBoolean(attrs, "noSleepMode"));
                                     set.set("passableDoor", parseBoolean(attrs, "passableDoor"));
                                     set.set("hasSummoner", parseBoolean(attrs, "hasSummoner"));
@@ -321,11 +323,11 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "corpsetime": {
-                                    set.set("corpseTime", npcNode.getTextContent());
+                                    set.set("corpseTime", parseInt(npcNode, Config.DEFAULT_CORPSE_TIME));
                                     break;
                                 }
                                 case "excrteffect": {
-                                    set.set("exCrtEffect", npcNode.getTextContent()); // TODO: Implement me default ? type boolean
+                                    set.set("exCrtEffect", parseBoolean(npcNode, true));
                                     break;
                                 }
                                 case "snpcprophprate": {
@@ -333,7 +335,7 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "ai": {
-                                    set.set("aiType", parseString(attrs, "type"));
+                                    set.set("aiType", parseString(attrs, "type", null));
                                     set.set("aggroRange", parseInt(attrs, "aggroRange"));
                                     set.set("clanHelpRange", parseInt(attrs, "clanHelpRange"));
                                     set.set("dodge", parseInt(attrs, "dodge"));
@@ -343,8 +345,8 @@ public class NpcData extends GameXmlReader {
                                         attrs = aiNode.getAttributes();
                                         switch (aiNode.getNodeName().toLowerCase()) {
                                             case "skill": {
-                                                set.set("minSkillChance", parseInt(attrs, "minChance"));
-                                                set.set("maxSkillChance", parseInt(attrs, "maxChance"));
+                                                set.set("minSkillChance", parseInt(attrs, "minChance", 7));
+                                                set.set("maxSkillChance", parseInt(attrs, "maxChance", 15));
                                                 set.set("primarySkillId", parseInt(attrs, "primaryId"));
                                                 set.set("shortRangeSkillId", parseInt(attrs, "shortRangeId"));
                                                 set.set("shortRangeSkillChance", parseInt(attrs, "shortRangeChance"));

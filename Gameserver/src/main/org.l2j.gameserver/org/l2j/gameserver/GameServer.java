@@ -27,7 +27,10 @@ import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.data.sql.impl.*;
+import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.sql.impl.CrestTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ReportTable;
@@ -60,7 +63,6 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
-import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Properties;
@@ -222,11 +224,7 @@ public class GameServer {
 
         Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 
-        LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
-
-        if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS) {
-            OfflineTradersTable.getInstance().restoreOfflineTraders();
-        }
+        LOGGER.info("IdFactory: Free ObjectID's remaining: {}", IdFactory.getInstance().size());
 
         var serverSettings = getSettings(ServerSettings.class);
         if (serverSettings.scheduleRestart()) {
@@ -270,16 +268,18 @@ public class GameServer {
         INSTANCE = new GameServer();
 
         ThreadPool.execute(AuthServerCommunication.getInstance());
+        scheduleDeadLockDetector(settings);
+    }
 
+    private static void scheduleDeadLockDetector(ServerSettings settings) {
         if (settings.useDeadLockDetector()) {
-            DeadLockDetector deadLockDetector = new DeadLockDetector(Duration.ofSeconds(settings.deadLockDetectorInterval()), () -> {
-                if (settings.restartOnDeadLock()) {
-                    Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
+            ThreadPool.scheduleAtFixedDelay(new DeadLockDetector( () -> {
+                if(getSettings(ServerSettings.class).restartOnDeadLock()) {
+                    Broadcast.toAllOnlinePlayers("Server restarting now.");
                     LOGGER.warn("Deadlock detected restarting the server");
                     Shutdown.getInstance().startShutdown(null, 60, true);
                 }
-            });
-            deadLockDetector.start();
+            }), settings.deadLockDetectorInterval(), settings.deadLockDetectorInterval(), TimeUnit.SECONDS);
         }
     }
 

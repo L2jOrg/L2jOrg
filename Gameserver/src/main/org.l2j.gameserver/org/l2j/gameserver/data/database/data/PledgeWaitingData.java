@@ -97,6 +97,6 @@ public class PledgeWaitingData {
     }
 
     public boolean isOnline() {
-        return (getPlayerInstance() != null) && (getPlayerInstance().isOnlineInt() > 0);
+        return (getPlayerInstance() != null) && (getPlayerInstance().isOnline());
     }
 }

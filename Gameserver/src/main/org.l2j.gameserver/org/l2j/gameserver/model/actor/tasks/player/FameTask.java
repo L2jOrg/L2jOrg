@@ -44,9 +44,7 @@ public class FameTask implements Runnable {
         if ((_player == null) || (_player.isDead() && !Config.FAME_FOR_DEAD_PLAYERS)) {
             return;
         }
-        if (((_player.getClient() == null) || _player.getClient().isDetached()) && !Config.OFFLINE_FAME) {
-            return;
-        }
+
         _player.setFame(_player.getFame() + _value);
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_FAME);
         sm.addInt(_value);

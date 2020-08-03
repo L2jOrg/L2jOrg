@@ -674,7 +674,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         sendPacket(new ExTeleportToLocationActivate(this));
 
         // allow recall of the detached characters
-        if (!isPlayer(this) || ((getActingPlayer().getClient() != null) && getActingPlayer().getClient().isDetached())) {
+        if (!isPlayer(this) || ((getActingPlayer().getClient() != null))) {
             onTeleported();
         }
         revalidateZone(true);

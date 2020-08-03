@@ -84,7 +84,6 @@ public final class GameClient extends Client<Connection<GameClient>> {
     private ClientHardwareInfoHolder hardwareInfo;
     private boolean isAuthedGG;
     private CharSelectInfoPackage[] charSlotMapping = null;
-    private volatile boolean isDetached = false;
 
     private boolean _protocol;
 
@@ -138,9 +137,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
             AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getAccountName()));
         }
 
-        if ((player == null) || !player.isInOfflineMode()) {
-            Disconnection.of(this).onDisconnection();
-        }
+        Disconnection.of(this).onDisconnection();
     }
 
     @Override
@@ -209,7 +206,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     }
 
     public void sendPacket(ServerPacket packet) {
-        if (isDetached || isNull(packet)) {
+        if (isNull(packet)) {
             return;
         }
 
@@ -220,14 +217,6 @@ public final class GameClient extends Client<Connection<GameClient>> {
 
     public void sendPacket(SystemMessageId smId) {
         sendPacket(SystemMessage.getSystemMessage(smId));
-    }
-
-    public boolean isDetached() {
-        return isDetached;
-    }
-
-    public void setDetached(boolean b) {
-        isDetached = b;
     }
 
     /**
@@ -296,7 +285,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
         Player player = World.getInstance().findPlayer(objectId);
         if (player != null) {
             // exploit prevention, should not happens in normal way
-            if (player.isOnlineInt() == 1) {
+            if (player.isOnline()) {
                 LOGGER.error("Attempt of double login: {} ({}) {}", player.getName(), objectId, accountName);
             }
             if (player.getClient() != null)

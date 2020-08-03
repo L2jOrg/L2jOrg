@@ -51,7 +51,7 @@ public final class RequestJoinParty extends ClientPacket {
             return;
         }
 
-        if (isNull(target.getClient()) || target.getClient().isDetached()) {
+        if (isNull(target.getClient())) {
             requestor.sendPacket(getSystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE).addString(name));
             return;
         }

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
 
 /**
@@ -34,11 +33,6 @@ public class RequestExOlympiadMatchListRefresh extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
-            return;
-        }
-
-        activeChar.sendPacket(new ExOlympiadMatchList());
+        client.sendPacket(new ExOlympiadMatchList());
     }
 }

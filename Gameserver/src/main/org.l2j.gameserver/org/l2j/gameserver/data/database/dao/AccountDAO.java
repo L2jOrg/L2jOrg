@@ -32,4 +32,7 @@ public interface AccountDAO extends DAO<AccountData> {
 
     @Query("SELECT * FROM account_data WHERE account = :account:")
     AccountData findById(String account);
+
+    @Query("DELETE FROM account_gsdata WHERE var = :var:")
+    void deleteAccountVariable(String var);
 }

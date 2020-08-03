@@ -45,7 +45,7 @@ public class GameServerManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(GameServerManager.class);
     private static final int KEYS_SIZE = 10;
 
-    private static IntMap<String> serverNames = new HashIntMap<>();
+    private IntMap<String> serverNames = new HashIntMap<>();
 
     private final IntMap<GameServerInfo> gameservers = new CHashIntMap<>();
     private KeyPair[] _keyPairs;

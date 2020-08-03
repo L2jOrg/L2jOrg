@@ -29,10 +29,7 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import java.util.Arrays;
-import java.util.EnumSet;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isNotEmpty;
@@ -196,16 +193,16 @@ public class XmlParser {
      */
     protected int parseInt(Node node, int defaultValue)
     {
-        return node != null ? Integer.decode(node.getNodeValue()) : defaultValue;
+        return nonNull(node) ? Integer.decode(Objects.requireNonNullElseGet(node.getNodeValue(), node::getTextContent)) : defaultValue;
     }
 
     /**
      * parse the node value as int.
      *
-     * @return -1 if node is null or the node name not exists.
+     * @return 0 if node is null or the node name not exists.
      */
     protected int parseInt(NamedNodeMap node, String name) {
-        return parseInt(node, name, -1);
+        return parseInt(node, name, 0);
     }
 
     /**

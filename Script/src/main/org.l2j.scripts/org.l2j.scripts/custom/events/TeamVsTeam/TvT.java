@@ -207,7 +207,7 @@ public class TvT extends Event
 				// Remove offline players.
 				for (Player participant : PLAYER_LIST)
 				{
-					if ((participant == null) || (participant.isOnlineInt() != 1))
+					if ((participant == null) || !participant.isOnline())
 					{
 						PLAYER_LIST.remove(participant);
 						PLAYER_SCORES.remove(participant);
