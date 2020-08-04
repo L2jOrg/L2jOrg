@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.quests.Q00333_HuntOfTheBlackLion;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
@@ -126,8 +127,8 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		final int chance = getRandom(100);
-		final int chance1 = getRandom(100);
+		final int chance = Rnd.get(100);
+		final int chance1 = Rnd.get(100);
 		if (qs == null)
 		{
 			return null;
@@ -330,7 +331,7 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				}
 				else
 				{
-					if (getRandom(100) < 50)
+					if (Rnd.get(100) < 50)
 					{
 						giveItems(player, COMPLETE_STATUE_OF_SHILEN, 1);
 						takeItems(player, STATUE_OF_SHILEN_HEAD, 1);
@@ -358,7 +359,7 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				}
 				else
 				{
-					if (getRandom(100) < 50)
+					if (Rnd.get(100) < 50)
 					{
 						giveItems(player, COMPLETE_ANCIENT_TABLET, 1);
 						takeItems(player, FRAGMENT_OF_ANCIENT_TABLET_1ST_PIECE, 1);
@@ -491,7 +492,7 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 						giveItems(player, IMPERIAL_DIAMOND, 1);
 						htmltext = "30736-04m.html";
 					}
-					else if (getRandom(100) < 50)
+					else if (Rnd.get(100) < 50)
 					{
 						if (chance1 < 25)
 						{
@@ -703,15 +704,15 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_4TH_ORDER))
 					{
-						if (getRandom(100) < 55)
+						if (Rnd.get(100) < 55)
 						{
 							giveItems(killer, STAKATO_TALON, 1);
 						}
-						if (getRandom(100) < 12)
+						if (Rnd.get(100) < 12)
 						{
 							giveItems(killer, CARGO_BOX_4TH, 1);
 						}
-						if ((getRandom(100) < 2) && hasQuestItems(killer, SOPHYAS_4TH_ORDER))
+						if ((Rnd.get(100) < 2) && hasQuestItems(killer, SOPHYAS_4TH_ORDER))
 						{
 							addSpawn(MARSH_STAKATO_MARQUESS, npc, true, 0, false);
 						}
@@ -722,11 +723,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_1ST_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, UNDEAD_ASH, 1);
 						}
-						if (getRandom(100) < 11)
+						if (Rnd.get(100) < 11)
 						{
 							giveItems(killer, CARGO_BOX_1ST, 1);
 						}
@@ -737,11 +738,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_1ST_ORDER))
 					{
-						if (getRandom(100) < 60)
+						if (Rnd.get(100) < 60)
 						{
 							giveItems(killer, UNDEAD_ASH, 1);
 						}
-						if (getRandom(100) < 8)
+						if (Rnd.get(100) < 8)
 						{
 							giveItems(killer, CARGO_BOX_1ST, 1);
 						}
@@ -752,11 +753,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_1ST_ORDER))
 					{
-						if (getRandom(100) < 60)
+						if (Rnd.get(100) < 60)
 						{
 							giveItems(killer, UNDEAD_ASH, 1);
 						}
-						if (getRandom(100) < 9)
+						if (Rnd.get(100) < 9)
 						{
 							giveItems(killer, CARGO_BOX_1ST, 1);
 						}
@@ -767,11 +768,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_1ST_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, UNDEAD_ASH, 1);
 						}
-						if (getRandom(100) < 12)
+						if (Rnd.get(100) < 12)
 						{
 							giveItems(killer, CARGO_BOX_1ST, 1);
 						}
@@ -782,11 +783,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_1ST_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, UNDEAD_ASH, 1);
 						}
-						if (getRandom(100) < 13)
+						if (Rnd.get(100) < 13)
 						{
 							giveItems(killer, CARGO_BOX_1ST, 1);
 						}
@@ -797,11 +798,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_1ST_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, UNDEAD_ASH, 1);
 						}
-						if (getRandom(100) < 15)
+						if (Rnd.get(100) < 15)
 						{
 							giveItems(killer, CARGO_BOX_1ST, 1);
 						}
@@ -812,11 +813,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_2ND_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, BLOODY_AXE_INSIGNIA, 1);
 						}
-						if (getRandom(100) < 9)
+						if (Rnd.get(100) < 9)
 						{
 							giveItems(killer, CARGO_BOX_2ND, 1);
 						}
@@ -827,11 +828,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_2ND_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, BLOODY_AXE_INSIGNIA, 1);
 						}
-						if (getRandom(100) < 10)
+						if (Rnd.get(100) < 10)
 						{
 							giveItems(killer, CARGO_BOX_2ND, 1);
 						}
@@ -842,11 +843,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_2ND_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, BLOODY_AXE_INSIGNIA, 1);
 						}
-						if (getRandom(100) < 11)
+						if (Rnd.get(100) < 11)
 						{
 							giveItems(killer, CARGO_BOX_2ND, 1);
 						}
@@ -857,11 +858,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_2ND_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, BLOODY_AXE_INSIGNIA, 1);
 						}
-						if (getRandom(100) < 12)
+						if (Rnd.get(100) < 12)
 						{
 							giveItems(killer, CARGO_BOX_2ND, 1);
 						}
@@ -872,11 +873,11 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_2ND_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, BLOODY_AXE_INSIGNIA, 1);
 						}
-						if (getRandom(100) < 13)
+						if (Rnd.get(100) < 13)
 						{
 							giveItems(killer, CARGO_BOX_2ND, 1);
 						}
@@ -887,15 +888,15 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_4TH_ORDER))
 					{
-						if (getRandom(100) < 60)
+						if (Rnd.get(100) < 60)
 						{
 							giveItems(killer, STAKATO_TALON, 1);
 						}
-						if (getRandom(100) < 13)
+						if (Rnd.get(100) < 13)
 						{
 							giveItems(killer, CARGO_BOX_4TH, 1);
 						}
-						if ((getRandom(100) < 2) && hasQuestItems(killer, SOPHYAS_4TH_ORDER))
+						if ((Rnd.get(100) < 2) && hasQuestItems(killer, SOPHYAS_4TH_ORDER))
 						{
 							addSpawn(MARSH_STAKATO_MARQUESS, npc, true, 0, false);
 						}
@@ -906,15 +907,15 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_4TH_ORDER))
 					{
-						if (getRandom(100) < 56)
+						if (Rnd.get(100) < 56)
 						{
 							giveItems(killer, STAKATO_TALON, 1);
 						}
-						if (getRandom(100) < 14)
+						if (Rnd.get(100) < 14)
 						{
 							giveItems(killer, CARGO_BOX_4TH, 1);
 						}
-						if ((getRandom(100) < 2) && hasQuestItems(killer, SOPHYAS_4TH_ORDER))
+						if ((Rnd.get(100) < 2) && hasQuestItems(killer, SOPHYAS_4TH_ORDER))
 						{
 							addSpawn(MARSH_STAKATO_MARQUESS, npc, true, 0, false);
 						}
@@ -925,15 +926,15 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_4TH_ORDER))
 					{
-						if (getRandom(100) < 60)
+						if (Rnd.get(100) < 60)
 						{
 							giveItems(killer, STAKATO_TALON, 1);
 						}
-						if (getRandom(100) < 15)
+						if (Rnd.get(100) < 15)
 						{
 							giveItems(killer, CARGO_BOX_4TH, 1);
 						}
-						if ((getRandom(100) < 2) && hasQuestItems(killer, SOPHYAS_4TH_ORDER))
+						if ((Rnd.get(100) < 2) && hasQuestItems(killer, SOPHYAS_4TH_ORDER))
 						{
 							addSpawn(MARSH_STAKATO_MARQUESS, npc, true, 0, false);
 						}
@@ -945,16 +946,16 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_3RD_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, DELU_LIZARDMAN_FANG, 1);
 						}
-						if (getRandom(100) < 14)
+						if (Rnd.get(100) < 14)
 						{
 							giveItems(killer, CARGO_BOX_3RD, 1);
 						}
 					}
-					if ((getRandom(100) < 3) && hasQuestItems(killer, SOPHYAS_3RD_ORDER))
+					if ((Rnd.get(100) < 3) && hasQuestItems(killer, SOPHYAS_3RD_ORDER))
 					{
 						addSpawn(DELU_LIZARDMAN_HEADHUNTER, npc, true, 0, false);
 						addSpawn(DELU_LIZARDMAN_HEADHUNTER, npc, true, 0, false);
@@ -965,16 +966,16 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 				{
 					if (hasQuestItems(killer, SOPHYAS_3RD_ORDER))
 					{
-						if (getRandom(2) == 0)
+						if (Rnd.get(2) == 0)
 						{
 							giveItems(killer, DELU_LIZARDMAN_FANG, 1);
 						}
-						if (getRandom(100) < 15)
+						if (Rnd.get(100) < 15)
 						{
 							giveItems(killer, CARGO_BOX_3RD, 1);
 						}
 					}
-					if ((getRandom(100) < 3) && hasQuestItems(killer, SOPHYAS_3RD_ORDER))
+					if ((Rnd.get(100) < 3) && hasQuestItems(killer, SOPHYAS_3RD_ORDER))
 					{
 						addSpawn(DELU_LIZARDMAN_HEADHUNTER, npc, true, 0, false);
 						addSpawn(DELU_LIZARDMAN_HEADHUNTER, npc, true, 0, false);

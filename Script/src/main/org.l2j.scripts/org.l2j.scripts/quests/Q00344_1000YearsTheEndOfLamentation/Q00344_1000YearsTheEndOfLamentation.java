@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00344_1000YearsTheEndOfLamentation;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -123,7 +124,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 					else
 					{
 						takeItems(player, ARTICLES, -1);
-						if (getRandom(1000) >= count)
+						if (Rnd.get(1000) >= count)
 						{
 							giveAdena(player, count * 60, true);
 							htmltext = event;
@@ -131,7 +132,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 						else
 						{
 							qs.setCond(2, true);
-							switch (getRandom(4))
+							switch (Rnd.get(4))
 							{
 								case 0:
 								{
@@ -246,7 +247,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 					if (hasItem(talker, OLD_HILT))
 					{
 						takeItems(talker, OLD_HILT.getId(), -1);
-						final int rand = getRandom(100);
+						final int rand = Rnd.get(100);
 						if (rand <= 52)
 						{
 							rewardItems(talker, ORIHARUKON_ORE);
@@ -280,7 +281,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 					if (hasItem(talker, OLD_KEY))
 					{
 						takeItems(talker, OLD_KEY.getId(), -1);
-						final int rand = getRandom(100);
+						final int rand = Rnd.get(100);
 						if (rand <= 39)
 						{
 							rewardItems(talker, COKES);
@@ -310,7 +311,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 					if (hasItem(talker, TOTEM_NECKLACE))
 					{
 						takeItems(talker, TOTEM_NECKLACE.getId(), -1);
-						final int rand = getRandom(100);
+						final int rand = Rnd.get(100);
 						if (rand <= 47)
 						{
 							rewardItems(talker, LEATHER);
@@ -340,7 +341,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 					if (hasItem(talker, CRUCIFIX))
 					{
 						takeItems(talker, CRUCIFIX.getId(), -1);
-						final int rand = getRandom(100);
+						final int rand = Rnd.get(100);
 						if (rand <= 49)
 						{
 							rewardItems(talker, STONE_OF_PURITY);

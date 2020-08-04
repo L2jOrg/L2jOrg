@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.ai.bosses.Core;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
@@ -139,7 +140,7 @@ public final class Core extends AbstractNpcAI
 		for (Entry<Integer, Location> spawn : MINNION_SPAWNS.entrySet())
 		{
 			spawnLocation = spawn.getValue();
-			mob = (Attackable) addSpawn(spawn.getKey(), spawnLocation.getX(), spawnLocation.getY(), spawnLocation.getZ(), getRandom(61794), false, 0);
+			mob = (Attackable) addSpawn(spawn.getKey(), spawnLocation.getX(), spawnLocation.getY(), spawnLocation.getZ(), Rnd.get(61794), false, 0);
 			mob.setIsRaidMinion(true);
 			_minions.add(mob);
 		}
@@ -175,7 +176,7 @@ public final class Core extends AbstractNpcAI
 		{
 			if (_firstAttacked)
 			{
-				if (getRandom(100) == 0)
+				if (Rnd.get(100) == 0)
 				{
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.REMOVING_INTRUDERS);
 				}
@@ -203,7 +204,7 @@ public final class Core extends AbstractNpcAI
 			
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
 			// Calculate Min and Max respawn times randomly.
-			final long respawnTime = (Config.CORE_SPAWN_INTERVAL + getRandom(-Config.CORE_SPAWN_RANDOM, Config.CORE_SPAWN_RANDOM)) * 3600000;
+			final long respawnTime = (Config.CORE_SPAWN_INTERVAL + Rnd.get(-Config.CORE_SPAWN_RANDOM, Config.CORE_SPAWN_RANDOM)) * 3600000;
 			startQuestTimer("core_unlock", respawnTime, null, null);
 			// Also save the respawn time so that the info is maintained past reboots.
 			final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);

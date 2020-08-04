@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -139,7 +140,7 @@ public class Q00328_SenseForBusiness extends Quest
 		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isStarted())
 		{
-			final int chance = getRandom(100);
+			final int chance = Rnd.get(100);
 			if (MONSTER_EYES.containsKey(npc.getId()))
 			{
 				if (chance < MONSTER_EYES.get(npc.getId())[0])

@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.quests.Q00500_BrothersBoundInChains;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.QuestType;
@@ -118,7 +119,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 				{
 					takeItems(player, CRUMBS_OF_PENITENCE, -1);
 					takeItems(player, PENITENT_MANACLES, -1);
-					player.setPkKills(Math.max(0, player.getPkKills() - getRandom(1, 3)));
+					player.setPkKills(Math.max(0, player.getPkKills() - Rnd.get(1, 3)));
 					qs.unset(KILL_COUNT_VAR);
 					qs.exitQuest(QuestType.DAILY, true);
 				}

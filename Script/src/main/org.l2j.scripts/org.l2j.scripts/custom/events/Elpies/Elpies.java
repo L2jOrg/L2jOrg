@@ -20,6 +20,7 @@
 package org.l2j.scripts.custom.events.Elpies;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.Spawn;
@@ -99,7 +100,7 @@ public final class Elpies extends Event
 		
 		EVENT_ACTIVE = true;
 
-		final EventLocation randomLoc = getRandomEntry(EventLocation.values());
+		final EventLocation randomLoc = Rnd.get(EventLocation.values());
 		
 		CURRENT_ELPY_COUNT = 0;
 		final long despawnDelay = EVENT_DURATION_MINUTES * 60000;
@@ -212,12 +213,12 @@ public final class Elpies extends Event
 		
 		public int getRandomX()
 		{
-			return getRandom(_minX, _maxX);
+			return Rnd.get(_minX, _maxX);
 		}
 		
 		public int getRandomY()
 		{
-			return getRandom(_minY, _maxY);
+			return Rnd.get(_minY, _maxY);
 		}
 		
 		public int getZ()
@@ -228,13 +229,13 @@ public final class Elpies extends Event
 	
 	private static void dropItem(Npc mob, Player player, int[][] droplist)
 	{
-		final int chance = getRandom(100);
+		final int chance = Rnd.get(100);
 		
 		for (int[] drop : droplist)
 		{
 			if (chance >= drop[1])
 			{
-				mob.dropItem(player, drop[0], getRandom(drop[2], drop[3]));
+				mob.dropItem(player, drop[0], Rnd.get(drop[2], drop[3]));
 				break;
 			}
 		}

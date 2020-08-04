@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.events.LetterCollector;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
@@ -26,7 +27,7 @@ import org.l2j.gameserver.model.quest.LongTimeEvent;
 
 /**
  * Event: Letter Collector
- * @URL https://eu.4gameforum.com/threads/648400/
+ * https://eu.4gameforum.com/threads/648400/
  * @author Mobius, Gigi, Adapted for Classic by QuangNguyen
  */
 public final class LetterCollector extends LongTimeEvent
@@ -171,7 +172,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, A) >= 2)
 				{
 					takeItems(player, A, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -185,7 +186,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, C) >= 2)
 				{
 					takeItems(player, C, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -199,7 +200,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, E) >= 2)
 				{
 					takeItems(player, E, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -213,7 +214,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, G) >= 2)
 				{
 					takeItems(player, G, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -227,7 +228,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, I) >= 2)
 				{
 					takeItems(player, I, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -241,7 +242,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, L) >= 2)
 				{
 					takeItems(player, L, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -255,7 +256,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, M) >= 2)
 				{
 					takeItems(player, M, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -269,7 +270,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, N) >= 2)
 				{
 					takeItems(player, N, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -283,7 +284,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, O) >= 2)
 				{
 					takeItems(player, O, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -297,7 +298,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, R) >= 2)
 				{
 					takeItems(player, R, 2);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -311,7 +312,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, H) >= 1)
 				{
 					takeItems(player, H, 1);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -325,7 +326,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, S) >= 1)
 				{
 					takeItems(player, S, 1);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else
@@ -339,7 +340,7 @@ public final class LetterCollector extends LongTimeEvent
 				if (getQuestItemsCount(player, II) >= 1)
 				{
 					takeItems(player, II, 1);
-					giveItems(player, getRandomEntry(LETTERS), 1);
+					giveItems(player, Rnd.get(LETTERS), 1);
 					htmltext = "9000-2.htm";
 				}
 				else

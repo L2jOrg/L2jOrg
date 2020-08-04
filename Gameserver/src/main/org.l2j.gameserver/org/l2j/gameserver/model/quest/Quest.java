@@ -2346,7 +2346,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
             int highestRoll = 0;
 
             for (Player member : party.getMembers()) {
-                final int rnd = getRandom(1000);
+                final int rnd = Rnd.get(1000);
 
                 if ((rnd > highestRoll) && checkPartyMember(member, npc)) {
                     highestRoll = rnd;
@@ -2412,7 +2412,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
             return null;
         }
 
-        qs = candidates.get(getRandom(candidates.size()));
+        qs = Rnd.get(candidates);
         return !checkDistanceToTarget(qs.getPlayer(), target) ? null : qs;
     }
 

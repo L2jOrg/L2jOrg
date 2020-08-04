@@ -22,21 +22,16 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Rnd
-{
+public final class Rnd {
+
 	private Rnd() {}
 
 	private static Random rnd() {
 		return ThreadLocalRandom.current();
 	}
 
-	public static double get() // get random number from 0 to 1
-	{
-		return rnd().nextDouble();
-	}
-
 	/**
-	 * Gets a random number from 0(inclusive) to n(exclusive)
+	 * Gets a random number from 0 (inclusive) to n (exclusive)
 	 *
 	 * @param n The superior limit (exclusive)
 	 * @return A number from 0 to n-1
@@ -45,48 +40,89 @@ public class Rnd
 		return n < 1 ? 0 : rnd().nextInt(n);
 	}
 
-	public static long get(long n)
-	{
-		return (long) (rnd().nextDouble() * n);
+	/**
+	 * Gets a random number from 0 (inclusive) to n (exclusive)
+	 *
+	 * @param n The superior limit (exclusive)
+	 * @return A number from 0 to n-1
+	 */
+	public static long get(long n) {
+		return (long) (n < 1 ? 0 : rnd().nextDouble() * n);
 	}
 
-	public static int get(int min, int max) // get random number from min to max (not max-1 !)
-	{
-		return min + get(max - min + 1);
-	}
-
-	public static long get(long min, long max) // get random number from min to max (not max-1 !)
-	{
+	/**
+	 * Gets a random number from min (inclusive) to max (inclusive)
+	 *
+	 * @param min The min value (inclusive)
+	 * @param max The superior limit (inclusive)
+	 * @return A number from min to max
+	 */
+	public static int get(int min, int max) {
+		if(min == max) {
+			return min;
+		}
 		return min + get(max - min + 1);
 	}
 
 	/**
-	 * @param origin (double)
-	 * @param bound (double)
-	 * @return a random double value between the specified origin (inclusive) and the specified bound (inclusive).
+	 * Gets a random number from min (inclusive) to max (inclusive)
+	 *
+	 * @param min The min value (inclusive)
+	 * @param max The superior limit (inclusive)
+	 * @return A number from min to max
 	 */
-	public static double get(double origin, double bound) {
-		if (origin == bound) {
-			return origin;
+	public static long get(long min, long max) {
+		if(min == max) {
+			return min;
 		}
-		return origin + (((bound - origin) + 1) * rnd().nextDouble());
+		return min + get(max - min + 1);
 	}
 
+	/**
+	 * Gets a random number from min (inclusive) to max (inclusive)
+	 *
+	 * @param min The min value (inclusive)
+	 * @param max The superior limit (inclusive)
+	 * @return A number from min to max
+	 */
+	public static double get(double min, double max) {
+		if (min == max) {
+			return min;
+		}
+		return min + (((max - min) + 1) * rnd().nextDouble());
+	}
+
+	/**
+	 * @return A random int
+	 */
 	public static int nextInt()
 	{
 		return rnd().nextInt();
 	}
 
+	/**
+	 * @return A random number between 0 (inclusive) and 1.0 (exclusive)
+	 */
 	public static double nextDouble()
 	{
 		return rnd().nextDouble();
 	}
 
+	/**
+	 * @return A Gaussian ("normally") distributed
+	 *      {@code double} value with mean {@code 0.0} and
+	 *      standard deviation {@code 1.0} from this random number
+	 *      generator's sequence
+	 */
 	public static double nextGaussian()
 	{
 		return rnd().nextGaussian();
 	}
 
+	/**
+	 *
+	 * @return A random boolean
+	 */
 	public static boolean nextBoolean()
 	{
 		return rnd().nextBoolean();
@@ -103,33 +139,34 @@ public class Rnd
 	}
 
 	/**
-	 * Randomizer for calculating odds. <br>
-	 * Recommended for use instead of Rnd.get ()
+	 * get a random chance <br>
+	 *
 	 * @param chance in percent from 0 to 100
+	 *
 	 * @return true if successful.
 	 * <li> If chance <= 0, returns false
-	 * <li> If chance> = 100, returns true
-	 * Translated by Google.
+	 * <li> If chance >= 100, returns true
+	 *
 	 */
 	public static boolean chance(int chance) {
 		return chance >= 1 && (chance > 99 || rnd().nextInt(100) <= chance);
 	}
 
 	/**
-	 * Randomizer for calculating odds. <br>
-	 * Recommended for use instead of Rnd.get () if very small chances are needed
+	 * get a random chance <br>
+	 *
 	 * @param chance in percent from 0 to 100
 	 * @return true if successful.
+	 *
 	 * <li> If chance <= 0, returns false
 	 * <li> If chance> = 100, returns true
-	 * Translated by Google.
+	 *
 	 */
 	public static boolean chance(double chance) {
 		return chance > 0 && (chance >= 100 || rnd().nextDouble() * 100 <= chance);
 	}
 
-	public static <E> E get(E[] list)
-	{
+	public static <E> E get(E[] list) {
 		if(list.length == 0)
 			return null;
 		if(list.length == 1)
@@ -142,8 +179,7 @@ public class Rnd
 		return list[get(list.length)];
 	}
 
-	public static <E> E get(List<E> list)
-	{
+	public static <E> E get(List<E> list) {
 		if(list.isEmpty())
 			return null;
 		if(list.size() == 1)

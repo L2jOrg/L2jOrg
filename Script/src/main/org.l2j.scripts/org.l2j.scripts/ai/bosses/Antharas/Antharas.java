@@ -19,6 +19,7 @@
 package org.l2j.scripts.ai.bosses.Antharas;
 
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -269,15 +270,15 @@ public final class Antharas extends AbstractNpcAI
 				{
 					if (attacker_1_hate > 10)
 					{
-						attacker_1_hate -= getRandom(10);
+						attacker_1_hate -= Rnd.get(10);
 					}
 					if (attacker_2_hate > 10)
 					{
-						attacker_2_hate -= getRandom(10);
+						attacker_2_hate -= Rnd.get(10);
 					}
 					if (attacker_3_hate > 10)
 					{
-						attacker_3_hate -= getRandom(10);
+						attacker_3_hate -= Rnd.get(10);
 					}
 					manageSkills(npc);
 					startQuestTimer("CHECK_ATTACK", 60000, npc, null);
@@ -303,11 +304,11 @@ public final class Antharas extends AbstractNpcAI
 				}
 				else if (_minionCount < 99)
 				{
-					addSpawn(getRandomBoolean() ? BEHEMOTH : TERASQUE, npc, true);
+					addSpawn(Rnd.nextBoolean() ? BEHEMOTH : TERASQUE, npc, true);
 					_minionCount++;
 				}
 				
-				if ((getRandom(100) > 10) && (minionMultipler < 4))
+				if ((Rnd.get(100) > 10) && (minionMultipler < 4))
 				{
 					minionMultipler++;
 				}
@@ -320,7 +321,7 @@ public final class Antharas extends AbstractNpcAI
 					if(isNpc(creature)) {
 						creature.deleteMe();
 					} else if(isPlayer(creature)) {
-						//creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+						//creature.teleToLocation(79800 + Rnd.get(600), 151200 + Rnd.get(1100), -3534);
 					}
 				});
 				break;
@@ -456,7 +457,7 @@ public final class Antharas extends AbstractNpcAI
 					creature.deleteMe();
 				}
 			} else if(isPlayer(creature)) {
-				//creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+				//creature.teleToLocation(79800 + Rnd.get(600), 151200 + Rnd.get(1100), -3534);
 			}
 		});
 	}
@@ -531,7 +532,7 @@ public final class Antharas extends AbstractNpcAI
 				notifyEvent("DESPAWN_MINIONS", null, null);
 				zone.broadcastPacket(new SpecialCamera(npc, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
 				zone.broadcastPacket(new PlaySound("BS01_D"));
-				final long respawnTime = (Config.ANTHARAS_SPAWN_INTERVAL + getRandom(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM)) * 3600000;
+				final long respawnTime = (Config.ANTHARAS_SPAWN_INTERVAL + Rnd.get(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM)) * 3600000;
 				setRespawn(respawnTime);
 				startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
 				cancelQuestTimer("SET_REGEN", npc, null);
@@ -627,21 +628,21 @@ public final class Antharas extends AbstractNpcAI
 		{
 			if (attacker_1_hate < (damage + 1000))
 			{
-				attacker_1_hate = damage + getRandom(3000);
+				attacker_1_hate = damage + Rnd.get(3000);
 			}
 		}
 		else if ((attacker_2 != null) && (attacker == attacker_2))
 		{
 			if (attacker_2_hate < (damage + 1000))
 			{
-				attacker_2_hate = damage + getRandom(3000);
+				attacker_2_hate = damage + Rnd.get(3000);
 			}
 		}
 		else if ((attacker_3 != null) && (attacker == attacker_3))
 		{
 			if (attacker_3_hate < (damage + 1000))
 			{
-				attacker_3_hate = damage + getRandom(3000);
+				attacker_3_hate = damage + Rnd.get(3000);
 			}
 		}
 		else
@@ -649,17 +650,17 @@ public final class Antharas extends AbstractNpcAI
 			final int i1 = CommonUtil.min(attacker_1_hate, attacker_2_hate, attacker_3_hate);
 			if (attacker_1_hate == i1)
 			{
-				attacker_1_hate = damage + getRandom(3000);
+				attacker_1_hate = damage + Rnd.get(3000);
 				attacker_1 = attacker;
 			}
 			else if (attacker_2_hate == i1)
 			{
-				attacker_2_hate = damage + getRandom(3000);
+				attacker_2_hate = damage + Rnd.get(3000);
 				attacker_2 = attacker;
 			}
 			else if (attacker_3_hate == i1)
 			{
-				attacker_3_hate = damage + getRandom(3000);
+				attacker_3_hate = damage + Rnd.get(3000);
 				attacker_3 = attacker;
 			}
 		}
@@ -711,7 +712,7 @@ public final class Antharas extends AbstractNpcAI
 		}
 		if (i2 > 0)
 		{
-			if (getRandom(100) < 70)
+			if (Rnd.get(100) < 70)
 			{
 				switch (i1)
 				{
@@ -740,42 +741,42 @@ public final class Antharas extends AbstractNpcAI
 			boolean castOnTarget = false;
 			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.25))
 			{
-				if (getRandom(100) < 30)
+				if (Rnd.get(100) < 30)
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_MOUTH;
 				}
-				else if ((getRandom(100) < 80) && (((distance_c2 < 1423) && (direction_c2 < 188) && (direction_c2 > 172)) || ((distance_c2 < 802) && (direction_c2 < 194) && (direction_c2 > 166))))
+				else if ((Rnd.get(100) < 80) && (((distance_c2 < 1423) && (direction_c2 < 188) && (direction_c2 > 172)) || ((distance_c2 < 802) && (direction_c2 < 194) && (direction_c2 > 166))))
 				{
 					skillToCast = ANTH_TAIL;
 				}
-				else if ((getRandom(100) < 40) && (((distance_c2 < 850) && (direction_c2 < 210) && (direction_c2 > 150)) || ((distance_c2 < 425) && (direction_c2 < 270) && (direction_c2 > 90))))
+				else if ((Rnd.get(100) < 40) && (((distance_c2 < 850) && (direction_c2 < 210) && (direction_c2 > 150)) || ((distance_c2 < 425) && (direction_c2 < 270) && (direction_c2 > 90))))
 				{
 					skillToCast = ANTH_DEBUFF;
 				}
-				else if ((getRandom(100) < 10) && (distance_c2 < 1100))
+				else if ((Rnd.get(100) < 10) && (distance_c2 < 1100))
 				{
 					skillToCast = ANTH_JUMP;
 				}
-				else if (getRandom(100) < 10)
+				else if (Rnd.get(100) < 10)
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_METEOR;
 				}
-				else if (getRandom(100) < 6)
+				else if (Rnd.get(100) < 6)
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_BREATH;
 				}
-				else if (getRandomBoolean())
+				else if (Rnd.nextBoolean())
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_NORM_ATTACK_EX;
 				}
-				else if (getRandom(100) < 5)
+				else if (Rnd.get(100) < 5)
 				{
 					castOnTarget = true;
-					skillToCast = getRandomBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;
+					skillToCast = Rnd.nextBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;
 				}
 				else
 				{
@@ -785,37 +786,37 @@ public final class Antharas extends AbstractNpcAI
 			}
 			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.5))
 			{
-				if ((getRandom(100) < 80) && (((distance_c2 < 1423) && (direction_c2 < 188) && (direction_c2 > 172)) || ((distance_c2 < 802) && (direction_c2 < 194) && (direction_c2 > 166))))
+				if ((Rnd.get(100) < 80) && (((distance_c2 < 1423) && (direction_c2 < 188) && (direction_c2 > 172)) || ((distance_c2 < 802) && (direction_c2 < 194) && (direction_c2 > 166))))
 				{
 					skillToCast = ANTH_TAIL;
 				}
-				else if ((getRandom(100) < 40) && (((distance_c2 < 850) && (direction_c2 < 210) && (direction_c2 > 150)) || ((distance_c2 < 425) && (direction_c2 < 270) && (direction_c2 > 90))))
+				else if ((Rnd.get(100) < 40) && (((distance_c2 < 850) && (direction_c2 < 210) && (direction_c2 > 150)) || ((distance_c2 < 425) && (direction_c2 < 270) && (direction_c2 > 90))))
 				{
 					skillToCast = ANTH_DEBUFF;
 				}
-				else if ((getRandom(100) < 10) && (distance_c2 < 1100))
+				else if ((Rnd.get(100) < 10) && (distance_c2 < 1100))
 				{
 					skillToCast = ANTH_JUMP;
 				}
-				else if (getRandom(100) < 7)
+				else if (Rnd.get(100) < 7)
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_METEOR;
 				}
-				else if (getRandom(100) < 6)
+				else if (Rnd.get(100) < 6)
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_BREATH;
 				}
-				else if (getRandomBoolean())
+				else if (Rnd.nextBoolean())
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_NORM_ATTACK_EX;
 				}
-				else if (getRandom(100) < 5)
+				else if (Rnd.get(100) < 5)
 				{
 					castOnTarget = true;
-					skillToCast = getRandomBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;
+					skillToCast = Rnd.nextBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;
 				}
 				else
 				{
@@ -825,33 +826,33 @@ public final class Antharas extends AbstractNpcAI
 			}
 			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))
 			{
-				if ((getRandom(100) < 80) && (((distance_c2 < 1423) && (direction_c2 < 188) && (direction_c2 > 172)) || ((distance_c2 < 802) && (direction_c2 < 194) && (direction_c2 > 166))))
+				if ((Rnd.get(100) < 80) && (((distance_c2 < 1423) && (direction_c2 < 188) && (direction_c2 > 172)) || ((distance_c2 < 802) && (direction_c2 < 194) && (direction_c2 > 166))))
 				{
 					skillToCast = ANTH_TAIL;
 				}
-				else if ((getRandom(100) < 10) && (distance_c2 < 1100))
+				else if ((Rnd.get(100) < 10) && (distance_c2 < 1100))
 				{
 					skillToCast = ANTH_JUMP;
 				}
-				else if (getRandom(100) < 5)
+				else if (Rnd.get(100) < 5)
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_METEOR;
 				}
-				else if (getRandom(100) < 6)
+				else if (Rnd.get(100) < 6)
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_BREATH;
 				}
-				else if (getRandomBoolean())
+				else if (Rnd.nextBoolean())
 				{
 					castOnTarget = true;
 					skillToCast = ANTH_NORM_ATTACK_EX;
 				}
-				else if (getRandom(100) < 5)
+				else if (Rnd.get(100) < 5)
 				{
 					castOnTarget = true;
-					skillToCast = getRandomBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;
+					skillToCast = Rnd.nextBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;
 				}
 				else
 				{
@@ -859,29 +860,29 @@ public final class Antharas extends AbstractNpcAI
 					skillToCast = ANTH_NORM_ATTACK;
 				}
 			}
-			else if ((getRandom(100) < 80) && (((distance_c2 < 1423) && (direction_c2 < 188) && (direction_c2 > 172)) || ((distance_c2 < 802) && (direction_c2 < 194) && (direction_c2 > 166))))
+			else if ((Rnd.get(100) < 80) && (((distance_c2 < 1423) && (direction_c2 < 188) && (direction_c2 > 172)) || ((distance_c2 < 802) && (direction_c2 < 194) && (direction_c2 > 166))))
 			{
 				skillToCast = ANTH_TAIL;
 			}
-			else if (getRandom(100) < 3)
+			else if (Rnd.get(100) < 3)
 			{
 				castOnTarget = true;
 				skillToCast = ANTH_METEOR;
 			}
-			else if (getRandom(100) < 6)
+			else if (Rnd.get(100) < 6)
 			{
 				castOnTarget = true;
 				skillToCast = ANTH_BREATH;
 			}
-			else if (getRandomBoolean())
+			else if (Rnd.nextBoolean())
 			{
 				castOnTarget = true;
 				skillToCast = ANTH_NORM_ATTACK_EX;
 			}
-			else if (getRandom(100) < 5)
+			else if (Rnd.get(100) < 5)
 			{
 				castOnTarget = true;
-				skillToCast = getRandomBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;
+				skillToCast = Rnd.nextBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;
 			}
 			else
 			{

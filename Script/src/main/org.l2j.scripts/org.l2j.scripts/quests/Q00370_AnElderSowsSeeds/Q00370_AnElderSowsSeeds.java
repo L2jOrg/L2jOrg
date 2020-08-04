@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
@@ -134,7 +135,7 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 		int npcId = npc.getId();
 		if (MOBS1.containsKey(npcId))
 		{
-			if (getRandom(100) < MOBS1.get(npcId))
+			if (Rnd.get(100) < MOBS1.get(npcId))
 			{
 				Player luckyPlayer = getRandomPartyMember(player, npc);
 				if (luckyPlayer != null)

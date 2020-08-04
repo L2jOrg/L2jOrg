@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00331_ArrowOfVengeance;
 
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntIntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -136,7 +137,7 @@ public class Q00331_ArrowOfVengeance extends Quest
 		final QuestState st = getQuestState(player, false);
 		if (st != null)
 		{
-			if (getRandom(100) < MONSTERS.get(npc.getId()))
+			if (Rnd.get(100) < MONSTERS.get(npc.getId()))
 			{
 				switch (npc.getId())
 				{

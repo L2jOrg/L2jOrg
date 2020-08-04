@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.ai.others.CastleTeleporter;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.Location;
@@ -196,11 +197,11 @@ public final class CastleTeleporter extends AbstractNpcAI
 	private Location getTeleportLocation(StatsSet npcParams, String paramName1, String paramName2, String paramName3)
 	{
 		final Location loc;
-		if (getRandom(100) < 33)
+		if (Rnd.get(100) < 33)
 		{
 			loc = new Location(npcParams.getInt("pos_x" + paramName1), npcParams.getInt("pos_y" + paramName1), npcParams.getInt("pos_z" + paramName1));
 		}
-		else if (getRandom(100) < 66)
+		else if (Rnd.get(100) < 66)
 		{
 			loc = new Location(npcParams.getInt("pos_x" + paramName2), npcParams.getInt("pos_y" + paramName2), npcParams.getInt("pos_z" + paramName2));
 		}

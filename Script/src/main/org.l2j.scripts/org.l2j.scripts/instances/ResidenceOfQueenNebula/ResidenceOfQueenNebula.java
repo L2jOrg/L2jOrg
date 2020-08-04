@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.instances.ResidenceOfQueenNebula;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.Npc;
@@ -77,11 +78,11 @@ public class ResidenceOfQueenNebula extends AbstractInstance
                 if (world != null)
                 {
                     var plr = world.getPlayers().stream().findAny().orElse(null);
-                    startQuestTimer("CAST_AQUA_RAGE", 60000 + getRandom(-15000, 15000), npc, plr);
+                    startQuestTimer("CAST_AQUA_RAGE", 60000 + Rnd.get(-15000, 15000), npc, plr);
                     if (npc.getId() == NEBULA)
                     {
                         npc.doCast(AQUA_SUMMON.getSkill());
-                        for (int i = 0; i < getRandom(4, 6); i++)
+                        for (int i = 0; i < Rnd.get(4, 6); i++)
                         {
                             addSpawn(npc, WATER_SLIME, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, -1, true, npc.getInstanceId());
                             startQuestTimer("SPAWN_WATER_SLIME", 300000, npc, null);
@@ -184,14 +185,14 @@ public class ResidenceOfQueenNebula extends AbstractInstance
             {
                 if (player.getAffectedSkillLevel(AQUA_RAGE) == 1)
                 {
-                    if (getRandom(100) < 50)
+                    if (Rnd.get(100) < 50)
                     {
                         player.stopSkillEffects(AQUA_RAGE_1.getSkill());
                     }
                 }
                 else if (player.getAffectedSkillLevel(AQUA_RAGE) == 2)
                 {
-                    if (getRandom(100) < 50)
+                    if (Rnd.get(100) < 50)
                     {
                         player.stopSkillEffects(AQUA_RAGE_2.getSkill());
                         final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 1);
@@ -200,7 +201,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
                 }
                 else if (player.getAffectedSkillLevel(AQUA_RAGE) == 3)
                 {
-                    if (getRandom(100) < 50)
+                    if (Rnd.get(100) < 50)
                     {
                         player.stopSkillEffects(AQUA_RAGE_3.getSkill());
                         final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 2);
@@ -209,7 +210,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
                 }
                 else if (player.getAffectedSkillLevel(AQUA_RAGE) == 4)
                 {
-                    if (getRandom(100) < 50)
+                    if (Rnd.get(100) < 50)
                     {
                         player.stopSkillEffects(AQUA_RAGE_4.getSkill());
                         final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 3);

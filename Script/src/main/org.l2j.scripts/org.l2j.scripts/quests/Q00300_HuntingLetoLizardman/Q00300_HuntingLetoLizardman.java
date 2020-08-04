@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00300_HuntingLetoLizardman;
 
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntIntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -92,7 +93,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 				if (getQuestItemsCount(player, BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
 				{
 					takeItems(player, BRACELET_OF_LIZARDMAN, -1);
-					int rand = getRandom(1000);
+					int rand = Rnd.get(1000);
 					if (rand < 500)
 					{
 						giveItems(player, REWARD_ADENA);
@@ -125,7 +126,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = getQuestState(partyMember, false);
-			if (st.isCond(1) && (getRandom(1000) < MOBS_SAC.get(npc.getId())))
+			if (st.isCond(1) && (Rnd.get(1000) < MOBS_SAC.get(npc.getId())))
 			{
 				giveItems(player, BRACELET_OF_LIZARDMAN, 1);
 				if (getQuestItemsCount(player, BRACELET_OF_LIZARDMAN) == REQUIRED_BRACELET_COUNT)

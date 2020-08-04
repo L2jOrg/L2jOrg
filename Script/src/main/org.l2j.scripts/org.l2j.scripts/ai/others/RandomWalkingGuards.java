@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.ai.others;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
@@ -54,14 +55,14 @@ public class RandomWalkingGuards extends AbstractNpcAI  {
 				final Location randomLoc = GameUtils.getRandomPosition(npc.getSpawn().getLocation(), 0, Config.MAX_DRIFT_RANGE);
 				addMoveToDesire(npc, GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), randomLoc.getX(), randomLoc.getY(), randomLoc.getZ(), npc.getInstanceWorld()), 23);
 			}
-			startQuestTimer("RANDOM_WALK", getRandom(MIN_WALK_DELAY, MAX_WALK_DELAY), npc, null);
+			startQuestTimer("RANDOM_WALK", Rnd.get(MIN_WALK_DELAY, MAX_WALK_DELAY), npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(Npc npc) {
-		startQuestTimer("RANDOM_WALK", getRandom(MIN_WALK_DELAY, MAX_WALK_DELAY), npc, null);
+		startQuestTimer("RANDOM_WALK", Rnd.get(MIN_WALK_DELAY, MAX_WALK_DELAY), npc, null);
 		return super.onSpawn(npc);
 	}
 	

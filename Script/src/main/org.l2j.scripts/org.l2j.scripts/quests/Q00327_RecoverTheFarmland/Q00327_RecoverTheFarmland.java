@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.quests.Q00327_RecoverTheFarmland;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -197,7 +198,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				else
 				{
 					takeItems(player, CLAY_URN_FRAGMENT, 5);
-					if (getRandom(6) < 5)
+					if (Rnd.get(6) < 5)
 					{
 						giveItems(player, ANCIENT_CLAY_URN, 1);
 						html = event;
@@ -218,7 +219,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				else
 				{
 					takeItems(player, BRASS_TRINKET_PIECE, 5);
-					if (getRandom(7) < 6)
+					if (Rnd.get(7) < 6)
 					{
 						giveItems(player, ANCIENT_BRASS_TIARA, 1);
 						html = event;
@@ -239,7 +240,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				else
 				{
 					takeItems(player, BRONZE_MIRROR_PIECE, 5);
-					if (getRandom(7) < 6)
+					if (Rnd.get(7) < 6)
 					{
 						giveItems(player, ANCIENT_BRONZE_MIRROR, 1);
 						html = event;
@@ -260,7 +261,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				else
 				{
 					takeItems(player, JADE_NECKLACE_BEAD, 5);
-					if (getRandom(8) < 7)
+					if (Rnd.get(8) < 7)
 					{
 						giveItems(player, ANCIENT_JADE_NECKLACE, 1);
 						html = event;
@@ -280,7 +281,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				}
 				else
 				{
-					rewardItems(player, SOULSHOT_D, getRandom(70, 110));
+					rewardItems(player, SOULSHOT_D, Rnd.get(70, 110));
 					takeItems(player, ANCIENT_CLAY_URN, 1);
 					html = event;
 				}
@@ -294,7 +295,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				}
 				else
 				{
-					final int rnd = getRandom(100);
+					final int rnd = Rnd.get(100);
 					if (rnd < 40)
 					{
 						rewardItems(player, HEALING_POTION, 1);
@@ -320,7 +321,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				}
 				else
 				{
-					rewardItems(player, (getRandom(100) < 59) ? SCROLL_OF_ESCAPE : SCROLL_OF_RESURRECTION, 1);
+					rewardItems(player, (Rnd.get(100) < 59) ? SCROLL_OF_ESCAPE : SCROLL_OF_RESURRECTION, 1);
 					takeItems(player, ANCIENT_BRONZE_MIRROR, 1);
 					html = event;
 				}
@@ -334,7 +335,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				}
 				else
 				{
-					rewardItems(player, SPIRITSHOT_D, getRandom(50, 90));
+					rewardItems(player, SPIRITSHOT_D, Rnd.get(50, 90));
 					takeItems(player, ANCIENT_JADE_NECKLACE, 1);
 					html = event;
 				}
@@ -360,9 +361,9 @@ public final class Q00327_RecoverTheFarmland extends Quest
 				giveItems(killer, TUREK_DOG_TAG, 1);
 			}
 			
-			if (getRandom(100) < FRAGMENTS_DROP_PROB.get(npc.getId()))
+			if (Rnd.get(100) < FRAGMENTS_DROP_PROB.get(npc.getId()))
 			{
-				giveItems(killer, getRandom(CLAY_URN_FRAGMENT, JADE_NECKLACE_BEAD), 1);
+				giveItems(killer, Rnd.get(CLAY_URN_FRAGMENT, JADE_NECKLACE_BEAD), 1);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

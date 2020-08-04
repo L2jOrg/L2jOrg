@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00662_AGameOfCards;
 
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntIntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -140,11 +141,11 @@ public final class Q00662_AGameOfCards extends Quest
 					int i5 = 0;
 					while ((i1 == i2) || (i1 == i3) || (i1 == i4) || (i1 == i5) || (i2 == i3) || (i2 == i4) || (i2 == i5) || (i3 == i4) || (i3 == i5) || (i4 == i5))
 					{
-						i1 = getRandom(70) + 1;
-						i2 = getRandom(70) + 1;
-						i3 = getRandom(70) + 1;
-						i4 = getRandom(70) + 1;
-						i5 = getRandom(70) + 1;
+						i1 = Rnd.get(70) + 1;
+						i2 = Rnd.get(70) + 1;
+						i3 = Rnd.get(70) + 1;
+						i4 = Rnd.get(70) + 1;
+						i5 = Rnd.get(70) + 1;
 					}
 					if (i1 >= 57)
 					{
@@ -707,10 +708,10 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 		}
 		
-		final Player player = players.get(getRandom(players.size()));
+		final Player player = players.get(Rnd.get(players.size()));
 		if ((player != null) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
-			if (MONSTERS.get(npc.getId()) < getRandom(1000))
+			if (MONSTERS.get(npc.getId()) < Rnd.get(1000))
 			{
 				final QuestState st = getQuestState(player, false);
 				if (st != null)

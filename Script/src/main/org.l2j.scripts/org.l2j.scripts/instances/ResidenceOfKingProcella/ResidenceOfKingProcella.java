@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.instances.ResidenceOfKingProcella;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -71,7 +72,7 @@ public class ResidenceOfKingProcella extends AbstractInstance {
             {
                 enterInstance(player, npc, TEMPLATE_ID);
                 _procella = (RaidBoss) addSpawn(PROCELLA, 212862, 179828, -15489, 49151, false, 0, true, player.getInstanceId());
-                startQuestTimer("SPAWN_MINION", 300000 + getRandom(-15000, 15000), _procella, player);
+                startQuestTimer("SPAWN_MINION", 300000 + Rnd.get(-15000, 15000), _procella, player);
                 startQuestTimer("SPAWN_STORM", 5000, _procella, player);
                 _procellaStormCount = 0;
                 break;
@@ -93,7 +94,7 @@ public class ResidenceOfKingProcella extends AbstractInstance {
                 {
                     _procella.useMagic(HURRICANE_SUMMON.getSkill());
 
-                    final Npc procellaStorm = addSpawn(PROCELLA_STORM, _procella.getX() + getRandom(-500, 500), _procella.getY() + getRandom(-500, 500), _procella.getZ(), 31011, true, 0, true, npc.getInstanceId());
+                    final Npc procellaStorm = addSpawn(PROCELLA_STORM, _procella.getX() + Rnd.get(-500, 500), _procella.getY() + Rnd.get(-500, 500), _procella.getZ(), 31011, true, 0, true, npc.getInstanceId());
                     procellaStorm.setRandomWalking(true);
                     _procellaStormCount++;
                     startQuestTimer("SPAWN_STORM", 60000, _procella, null);
@@ -110,7 +111,7 @@ public class ResidenceOfKingProcella extends AbstractInstance {
                 else
                 {
                     _procella.setInvisible(true);
-                    startQuestTimer("SPAWN_MINION", 300000 + getRandom(-15000, 15000), _procella, player);
+                    startQuestTimer("SPAWN_MINION", 300000 + Rnd.get(-15000, 15000), _procella, player);
                 }
                 break;
             }
