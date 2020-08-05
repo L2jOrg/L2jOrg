@@ -98,6 +98,7 @@ public enum TraitType {
 
     private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
 
+    // TODO change to enumset
     private final static List<TraitType> _weaknesses = new ArrayList<>();
     static
     {

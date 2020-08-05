@@ -21,8 +21,6 @@ package org.l2j.gameserver.network;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.slf4j.Logger;
@@ -112,7 +110,6 @@ public final class Disconnection {
     public Disconnection deleteMe() {
         try {
             if ((player != null) && player.isOnline()) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(player), player);
                 player.deleteMe();
             }
         } catch (RuntimeException e) {

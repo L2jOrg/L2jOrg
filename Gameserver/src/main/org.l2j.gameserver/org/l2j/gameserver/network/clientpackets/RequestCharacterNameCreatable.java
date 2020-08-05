@@ -18,10 +18,11 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.network.serverpackets.ExIsCharNameCreatable;
+import org.l2j.gameserver.settings.ServerSettings;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 /**
@@ -59,6 +60,6 @@ public class RequestCharacterNameCreatable extends ClientPacket {
     }
 
     private boolean isValidName(String text) {
-        return Config.CHARNAME_TEMPLATE_PATTERN.matcher(text).matches();
+        return getSettings(ServerSettings.class).acceptPlayerName(text);
     }
 }

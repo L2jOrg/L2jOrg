@@ -25,8 +25,6 @@ import org.l2j.commons.network.SessionKey;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
-import org.l2j.gameserver.data.database.dao.ItemDAO;
-import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -37,8 +35,8 @@ import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.CharacterDeleteFailType;
 import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.instancemanager.MentorManager;
-import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.PlayerFactory;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
@@ -54,6 +52,7 @@ import org.slf4j.LoggerFactory;
 import java.security.NoSuchAlgorithmException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -83,7 +82,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     private Player player;
     private ClientHardwareInfoHolder hardwareInfo;
     private boolean isAuthedGG;
-    private CharSelectInfoPackage[] charSlotMapping = null;
+    private List<PlayerSelectInfo> playersInfo;
 
     private boolean _protocol;
 
@@ -92,26 +91,12 @@ public final class GameClient extends Client<Connection<GameClient>> {
     private ConnectionState state;
     private AccountData account;
     private boolean secondaryAuthed;
+    private int activeSlot = -1;
 
     public
     GameClient(Connection<GameClient> connection) {
         super(connection);
         crypt = new Crypt();
-    }
-
-    public static void deleteCharByObjId(int objId) {
-        if (objId < 0) {
-            return;
-        }
-
-        PlayerNameTable.getInstance().removeName(objId);
-        getDAO(PetDAO.class).deleteByOwner(objId);
-
-        var itemDAO = getDAO(ItemDAO.class);
-        itemDAO.deleteVariationsByOwner(objId);
-        itemDAO.deleteSpecialAbilitiesByOwner(objId);
-        itemDAO.deleteByOwner(objId);
-        getDAO(PlayerDAO.class).deleteById(objId);
     }
 
     @Override
@@ -144,14 +129,6 @@ public final class GameClient extends Client<Connection<GameClient>> {
     public void onConnected() {
         setConnectionState(ConnectionState.CONNECTED);
         LOGGER_ACCOUNTING.debug("Client Connected: {}", this);
-    }
-
-    public void closeNow() {
-        super.close(null);
-    }
-
-    public void close(ServerPacket packet) {
-        super.close(packet);
     }
 
     public void close(boolean toLoginScreen) {
@@ -219,16 +196,6 @@ public final class GameClient extends Client<Connection<GameClient>> {
         sendPacket(SystemMessage.getSystemMessage(smId));
     }
 
-    /**
-     * Method to handle character deletion
-     *
-     * @param characterSlot
-     * @return a byte:
-     * <li>-1: Error: No char was found for such charslot, caught exception, etc...
-     * <li>0: character is not member of any clan, proceed with deletion
-     * <li>1: character is member of a clan, but not clan leader
-     * <li>2: character is clan leader
-     */
     public CharacterDeleteFailType markToDeleteChar(int characterSlot) {
         final int objectId = getObjectIdForSlot(characterSlot);
         if (objectId < 0) {
@@ -257,7 +224,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
         }
 
         if (Config.DELETE_DAYS == 0) {
-            deleteCharByObjId(objectId);
+            PlayerFactory.deleteCharByObjId(objectId);
         } else {
             getDAO(PlayerDAO.class).updateDeleteTime(objectId, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000));
         }
@@ -308,21 +275,17 @@ public final class GameClient extends Client<Connection<GameClient>> {
         return player;
     }
 
-    public void setCharSelection(CharSelectInfoPackage[] chars) {
-        charSlotMapping = chars;
-    }
-
-    public CharSelectInfoPackage getCharSelection(int charslot) {
-        if (isNull(charSlotMapping) || charslot < 0 || charslot >= charSlotMapping.length) {
+    public PlayerSelectInfo getPlayerSelection(int slot) {
+        if (isNull(playersInfo) || slot < 0 || slot >= playersInfo.size()) {
             return null;
         }
-        return charSlotMapping[charslot];
+        return playersInfo.get(slot);
     }
 
-    private int getObjectIdForSlot(int characterSlot) {
-        final CharSelectInfoPackage info = getCharSelection(characterSlot);
+    private int getObjectIdForSlot(int slot) {
+        final PlayerSelectInfo info = getPlayerSelection(slot);
         if (info == null) {
-            LOGGER.warn("{} tried to delete Character in slot {} but no characters exits at that slot.", this, characterSlot);
+            LOGGER.warn("{} tried select in slot {} but no characters exits at that slot.", this, slot);
             return -1;
         }
         return info.getObjectId();
@@ -539,5 +502,29 @@ public final class GameClient extends Client<Connection<GameClient>> {
         } else {
             sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_NEW));
         }
+    }
+
+    public int getPlayerCount() {
+        return nonNull(playersInfo) ? playersInfo.size() : 0;
+    }
+
+    public List<PlayerSelectInfo> getPlayersInfo() {
+        if(isNull(playersInfo)) {
+            synchronized (this) {
+                if(isNull(playersInfo)) {
+                    playersInfo = PlayerFactory.loadPlayersInfo(this);
+                }
+            }
+        }
+        return playersInfo;
+    }
+
+    public void addPlayerInfo(PlayerSelectInfo playerInfo) {
+        activeSlot = playersInfo.size();
+        playersInfo.add(playerInfo);
+    }
+
+    public int getActiveSlot() {
+        return activeSlot;
     }
 }

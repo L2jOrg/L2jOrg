@@ -53,7 +53,7 @@ public final class AuthLogin extends ClientPacket {
     @Override
     public void runImpl() {
         if (account.isEmpty() || !client.isProtocolOk()) {
-            client.closeNow();
+            client.close();
             return;
         }
 

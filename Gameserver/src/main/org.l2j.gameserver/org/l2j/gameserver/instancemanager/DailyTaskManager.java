@@ -74,7 +74,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         World.getInstance().forEachPlayer(player -> {
             player.setExtendDrop("");
 
-            player.setRecomLeft(0);
+            player.setRecomLeft(20);
             player.setRecomHave(player.getRecomHave() - 20);
             player.sendPacket(new ExVoteSystemInfo(player));
 

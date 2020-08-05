@@ -38,7 +38,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
     void setAllCharactersOffline();
 
     @Query("SELECT * FROM characters WHERE account_name = :account: ORDER BY createDate")
-    List<PlayerData> findAllCharactersByAccount(String account);
+    List<PlayerData> findPlayersByAccount(String account);
 
     @Query("SELECT * FROM characters WHERE charId = :objectId:")
     PlayerData findById(int objectId);
@@ -175,7 +175,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("DELETE FROM character_skills_save WHERE skill_id=:skillId:")
     void deleteSkillSave(int skillId);
 
-    @Query("UPDATE character_reco_bonus SET rec_left = 0, rec_have = GREATEST(CAST(rec_have AS SIGNED)  -20 , 0)")
+    @Query("UPDATE character_reco_bonus SET rec_left = 20, rec_have = GREATEST(CAST(rec_have AS SIGNED)  -20 , 0)")
     void resetRecommends();
 
     @Query("UPDATE characters SET vitality_points = :points:")

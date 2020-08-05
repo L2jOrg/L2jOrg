@@ -41,8 +41,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.regex.Pattern;
-import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -567,7 +565,6 @@ public final class Config {
 
     public static boolean HARDWARE_INFO_ENABLED;
     public static int MAX_PLAYERS_PER_HWID;
-    public static Pattern CHARNAME_TEMPLATE_PATTERN;
     public static String PET_NAME_TEMPLATE;
     public static String CLAN_NAME_TEMPLATE;
     public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
@@ -860,17 +857,6 @@ public final class Config {
             LOGGER.warn("Error setting datapack root!", e);
             DATAPACK_ROOT = new File(".");
         }
-
-        Pattern charNamePattern;
-
-        try {
-            charNamePattern = Pattern.compile(serverSettings.getString("CnameTemplate", ".*"));
-        } catch (PatternSyntaxException e) {
-            LOGGER.warn("Character name pattern is invalid!", e);
-            charNamePattern = Pattern.compile(".*");
-        }
-
-        CHARNAME_TEMPLATE_PATTERN = charNamePattern;
 
         PET_NAME_TEMPLATE = serverSettings.getString("PetNameTemplate", ".*");
         CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");

@@ -256,16 +256,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public Creature(int objectId, CreatureTemplate template) {
         super(objectId);
-        if (template == null) {
-            throw new NullPointerException("Template is null!");
-        }
-
+        _template = Objects.requireNonNull(template);
         setInstanceType(InstanceType.Creature);
-        // Set its template to the new Creature
-        _template = template;
+
         initCharStat();
         initCharStatus();
 
+        // TODO move  to NPc
         if (GameUtils.isNpc(this)) {
             // Copy the skills of the L2NPCInstance from its template to the Creature Instance
             // The skills list can be affected by spell effects so it's necessary to make a copy
@@ -273,7 +270,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             for (Skill skill : template.getSkills().values()) {
                 addSkill(skill);
             }
-        } else if (GameUtils.isSummon(this)) {
+        } else if (GameUtils.isSummon(this)) { // TODO move to Summon
             // Copy the skills of the Summon from its template to the Creature Instance
             // The skills list can be affected by spell effects so it's necessary to make a copy
             // to avoid that a spell affecting a Summon, affects others Summon of the same type too.

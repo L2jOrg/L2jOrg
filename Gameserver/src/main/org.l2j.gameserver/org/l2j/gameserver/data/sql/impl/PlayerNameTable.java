@@ -60,7 +60,7 @@ public class PlayerNameTable {
         }
     }
 
-    private void addName(int objectId, String name) {
+    public final void addName(int objectId, String name) {
         if (nonNull(name)) {
             if (!name.equals(playerData.get(objectId))) {
                 playerData.put(objectId, name);

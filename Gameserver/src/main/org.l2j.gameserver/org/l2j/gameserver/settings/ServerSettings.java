@@ -23,6 +23,9 @@ import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.ServerType;
 
 import java.nio.file.Path;
+import java.util.function.Predicate;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 /**
  * @author JoeAlisson
@@ -50,6 +53,7 @@ public class ServerSettings implements Settings {
     private int deadLockDetectorInterval;
     private boolean restartOnDeadLock;
     private int maxPlayers;
+    private Predicate<String> playerNameTemplate;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -81,6 +85,16 @@ public class ServerSettings implements Settings {
         useDeadLockDetector = settingsFile.getBoolean("DeadLockDetector", true);
         deadLockDetectorInterval = settingsFile.getInteger("DeadLockCheckInterval", 1800);
         restartOnDeadLock = settingsFile.getBoolean("RestartOnDeadlock", false);
+
+        determinePlayerNamePattern(settingsFile);
+    }
+
+    private void determinePlayerNamePattern(SettingsFile settingsFile) {
+        try {
+            playerNameTemplate = Pattern.compile(settingsFile.getString("CnameTemplate", ".*")).asMatchPredicate();
+        } catch (PatternSyntaxException e) {
+            playerNameTemplate = Pattern.compile(".*").asMatchPredicate();
+        }
     }
 
     private int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
@@ -172,5 +186,7 @@ public class ServerSettings implements Settings {
         return restartOnDeadLock;
     }
 
-
+    public boolean acceptPlayerName(String name) {
+        return playerNameTemplate.test(name);
+    }
 }

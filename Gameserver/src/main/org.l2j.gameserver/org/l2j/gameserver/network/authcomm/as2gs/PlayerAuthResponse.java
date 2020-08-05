@@ -28,8 +28,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
-import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.LoginFail;
+import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
 import org.l2j.gameserver.network.serverpackets.html.TutorialShowHtml;
 
@@ -87,9 +87,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
             }
 
             sendPacket(new PlayerInGame(client.getAccountName()));
-            var charSelectionInfo = new CharSelectionInfo(client.getAccountName(), client.getSessionId().getGameServerSessionId());
-            client.sendPacket(charSelectionInfo);
-            client.setCharSelection(charSelectionInfo.getCharInfo());
+            client.sendPacket(new PlayerSelectionInfo(client));
         } else {
             client.close(new LoginFail(LoginFail.ACCESS_FAILED_TRY_LATER));
         }

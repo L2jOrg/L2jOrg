@@ -46,7 +46,7 @@ public final class ProtocolVersion extends ClientPacket {
         // this packet is never encrypted
         if (version == -2) {
             // this is just a ping attempt from the new C2 client
-            client.closeNow();
+            client.close();
         } else if (!contains(getSettings(ServerSettings.class).acceptedProtocols(), version)) {
             LOGGER_ACCOUNTING.warn("Wrong protocol version {}, {}", version, client);
             AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(client.getAccountName()));
