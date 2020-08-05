@@ -38,32 +38,24 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class AdminChangeAccessLevel implements IAdminCommandHandler
 {
-	private static final String[] ADMIN_COMMANDS =
-	{
-		"admin_changelvl"
-	};
+	private static final String[] ADMIN_COMMANDS = { "admin_changelvl" };
 	
 	@Override
-	public boolean useAdminCommand(String command, Player gm)
-	{
+	public boolean useAdminCommand(String command, Player gm) {
 		final String[] parts = command.split(" ");
-		if (parts.length == 2)
-		{
-			try
-			{
+
+		if (parts.length == 2) {
+			try {
 				final int lvl = Integer.parseInt(parts[1]);
 				final WorldObject target = gm.getTarget();
-				if (!isPlayer(target))
-				{
+
+				if (!isPlayer(target)) {
 					gm.sendPacket(SystemMessageId.INVALID_TARGET);
-				}
-				else
-				{
+				} else {
 					onlineChange(gm, (Player) target, lvl);
 				}
 			}
-			catch (Exception e)
-			{
+			catch (Exception e) {
 				BuilderUtil.sendSysMessage(gm, "Usage: //changelvl <target_new_level> | <player_name> <new_level>");
 			}
 		}
@@ -86,19 +78,8 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 		}
 		return true;
 	}
-	
-	@Override
-	public String[] getAdminCommandList()
-	{
-		return ADMIN_COMMANDS;
-	}
-	
-	/**
-	 * @param activeChar the active GM
-	 * @param player the online target
-	 * @param lvl the access level
-	 */
-	private static void onlineChange(Player activeChar, Player player, int lvl)
+
+	private void onlineChange(Player activeChar, Player player, int lvl)
 	{
 		if (lvl >= 0)
 		{
@@ -120,5 +101,11 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 			player.sendMessage("Your character has been banned. Bye.");
 			Disconnection.of(player).defaultSequence(false);
 		}
+	}
+
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 }

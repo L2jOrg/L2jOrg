@@ -49,14 +49,6 @@ public final class Disconnection {
 
         // Anti Feed
         AntiFeedManager.getInstance().onDisconnect(this.client);
-
-        if (this.client != null) {
-            this.client.setPlayer(null);
-        }
-
-        if (this.player != null) {
-            this.player.setClient(null);
-        }
     }
 
     public static GameClient getClient(GameClient client, Player player) {
@@ -112,6 +104,8 @@ public final class Disconnection {
             if ((player != null) && player.isOnline()) {
                 player.deleteMe();
             }
+
+            detachPlayerFromClient();
         } catch (RuntimeException e) {
             LOGGER.warn(e.getMessage());
         }
@@ -119,11 +113,21 @@ public final class Disconnection {
         return this;
     }
 
+    private void detachPlayerFromClient() {
+        if (this.client != null) {
+            this.client.setPlayer(null);
+        }
+
+        if (this.player != null) {
+            this.player.setClient(null);
+        }
+    }
+
     public Disconnection close(boolean toLoginScreen) {
         if (client != null) {
             client.close(toLoginScreen);
         }
-
+        detachPlayerFromClient();
         return this;
     }
 
@@ -131,7 +135,7 @@ public final class Disconnection {
         if (client != null) {
             client.close(packet);
         }
-
+        detachPlayerFromClient();
         return this;
     }
 

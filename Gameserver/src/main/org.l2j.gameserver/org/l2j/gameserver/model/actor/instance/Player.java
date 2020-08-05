@@ -8653,7 +8653,7 @@ public final class Player extends Playable {
      */
     @Override
     public boolean deleteMe() {
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
+        EventDispatcher.getInstance().notifyEvent(new OnPlayerLogout(this), this);
         AutoPlayEngine.getInstance().stopTasks(this);
         try {
             for (Zone zone : ZoneManager.getInstance().getZones(this)) {
