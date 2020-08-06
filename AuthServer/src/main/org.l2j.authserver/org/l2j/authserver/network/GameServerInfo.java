@@ -64,6 +64,7 @@ public class GameServerInfo {
 
     public GameServerInfo(ServerInfo serverInfo) {
         this(serverInfo.getId(), null);
+        serverType = serverInfo.getServerType();
     }
 
     public GameServerInfo(int id,  ServerClient client) {
