@@ -172,7 +172,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             writeByte(data.isNobless());
             writeByte(Hero.getInstance().isHero(data.getCharId()) ? 0x02 : 0x00); // Hero glow
             writeByte(playerInfo.isHairAccessoryEnabled()); // Show hair accessory if enabled
-            writeInt(0); // ban time in secs
+            writeInt(playerInfo.getRemainBanExpireTime()); // ban time in secs
             writeInt((int) (playerInfo.getLastAccess() / 1000));
 
         }

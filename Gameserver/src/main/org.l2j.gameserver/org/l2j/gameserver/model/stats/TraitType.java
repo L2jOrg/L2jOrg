@@ -18,8 +18,7 @@
  */
 package org.l2j.gameserver.model.stats;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.EnumSet;
 
 /**
  * @author UnAfraid, NosBit
@@ -98,34 +97,26 @@ public enum TraitType {
 
     private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
 
-    // TODO change to enumset
-    private final static List<TraitType> _weaknesses = new ArrayList<>();
-    static
-    {
-        _weaknesses.add(BUG_WEAKNESS);
-        _weaknesses.add(ANIMAL_WEAKNESS);
-        _weaknesses.add(PLANT_WEAKNESS);
-        _weaknesses.add(BEAST_WEAKNESS);
-        _weaknesses.add(DRAGON_WEAKNESS);
-        _weaknesses.add(GIANT_WEAKNESS);
-        _weaknesses.add(CONSTRUCT_WEAKNESS);
-        _weaknesses.add(VALAKAS);
-        _weaknesses.add(ANESTHESIA);
-        _weaknesses.add(DEMONIC_WEAKNESS);
-        _weaknesses.add(DIVINE_WEAKNESS);
-        _weaknesses.add(ELEMENTAL_WEAKNESS);
-        _weaknesses.add(FAIRY_WEAKNESS);
-        _weaknesses.add(HUMAN_WEAKNESS);
-        _weaknesses.add(HUMANOID_WEAKNESS);
-        _weaknesses.add(UNDEAD_WEAKNESS);
-        _weaknesses.add(EMBRYO_WEAKNESS);
-        _weaknesses.add(SPIRIT_WEAKNESS);
-    }
-
-    public static List<TraitType> getAllWeakness()
-    {
-        return _weaknesses;
-    }
+    private final static EnumSet<TraitType> WEAKNESSES = EnumSet.of(
+        BUG_WEAKNESS,
+        ANIMAL_WEAKNESS,
+        PLANT_WEAKNESS,
+        BEAST_WEAKNESS,
+        DRAGON_WEAKNESS,
+        GIANT_WEAKNESS,
+        CONSTRUCT_WEAKNESS,
+        VALAKAS,
+        ANESTHESIA,
+        DEMONIC_WEAKNESS,
+        DIVINE_WEAKNESS,
+        ELEMENTAL_WEAKNESS,
+        FAIRY_WEAKNESS,
+        HUMAN_WEAKNESS,
+        HUMANOID_WEAKNESS,
+        UNDEAD_WEAKNESS,
+        EMBRYO_WEAKNESS,
+        SPIRIT_WEAKNESS
+    );
 
     TraitType(int type) {
         _type = type;
@@ -133,5 +124,10 @@ public enum TraitType {
 
     public int getType() {
         return _type;
+    }
+
+    public static EnumSet<TraitType> getAllWeakness()
+    {
+        return WEAKNESSES;
     }
 }

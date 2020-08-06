@@ -25,6 +25,9 @@ import org.l2j.gameserver.data.database.data.ItemVariationData;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.enums.InventorySlot;
+import org.l2j.gameserver.instancemanager.PunishmentManager;
+import org.l2j.gameserver.model.punishment.PunishmentAffect;
+import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,6 +50,7 @@ public class PlayerSelectInfo {
     private final EnumMap<InventorySlot, ItemData> paperdoll = new EnumMap<>(InventorySlot.class);
     private final PlayerVariableData _vars;
     private final PlayerData data;
+    private final long banExpireTime;
 
     private VariationInstance _augmentation;
 
@@ -57,6 +61,7 @@ public class PlayerSelectInfo {
 
         PlayerVariableData vars = getDAO(PlayerVariablesDAO.class).findById(data.getCharId());
         _vars = Objects.requireNonNullElseGet(vars, () -> PlayerVariableData.init(data.getCharId()));
+        banExpireTime = PunishmentManager.getInstance().getPunishmentExpiration(data.getCharId(), PunishmentAffect.CHARACTER, PunishmentType.BAN);
     }
 
     private void restoreVisibleInventory() {
@@ -146,5 +151,10 @@ public class PlayerSelectInfo {
 
     public PlayerData getData() {
         return data;
+    }
+
+    public int getRemainBanExpireTime() {
+        var diff = banExpireTime - System.currentTimeMillis();
+        return diff > 0 ? (int) (diff / 1000) : 0;
     }
 }

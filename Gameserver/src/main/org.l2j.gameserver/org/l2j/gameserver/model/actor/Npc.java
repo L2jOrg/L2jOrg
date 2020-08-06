@@ -173,6 +173,10 @@ public class Npc extends Creature {
 
         setIsFlying(template.isFlying());
         initStatusUpdateCache();
+
+        for (Skill skill : template.getSkills().values()) {
+            addSkill(skill);
+        }
     }
 
     /**
