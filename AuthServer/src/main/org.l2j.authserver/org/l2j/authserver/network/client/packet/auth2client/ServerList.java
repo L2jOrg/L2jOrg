@@ -56,12 +56,12 @@ public final class ServerList extends AuthServerPacket {
     @Override
     public void writeImpl(AuthClient client) {
         var servers = GameServerManager.getInstance().getRegisteredGameServers();
-        writeByte((byte)0x04);
-        writeByte((byte)servers.size());
-        writeByte((byte)client.getLastServer());
+        writeByte(0x04);
+        writeByte(servers.size());
+        writeByte(client.getLastServer());
 
         for (var server : servers.values()) {
-            writeByte((byte)server.getId());
+            writeByte(server.getId());
 
             byte[] address = server.getAddressFor(client.getHostAddress());
 
@@ -69,23 +69,23 @@ public final class ServerList extends AuthServerPacket {
             writeInt(server.getPort());
             writeByte(server.getAgeLimit()); // minimum age
             writeByte(server.isPvp());
-            writeShort((short) server.getOnlinePlayersCount());
-            writeShort((short) server.getMaxPlayers());
+            writeShort(server.getOnlinePlayersCount());
+            writeShort(server.getMaxPlayers());
 
             var status = server.getStatus();
             if(ServerStatus.STATUS_GM_ONLY == status && client.getAccessLevel() < getSettings(AuthServerSettings.class).gmMinimumLevel()) {
                 status = ServerStatus.STATUS_DOWN;
             }
 
-            writeByte((byte) (ServerStatus.STATUS_DOWN == status ? 0x00 : 0x01));
+            writeByte(ServerStatus.STATUS_DOWN != status);
             writeInt(server.getServerType());
-            writeByte((byte) (server.isShowingBrackets() ? 0x01 : 0x00)); // Region
+            writeByte(server.isShowingBrackets()); // Region
         }
 
-        writeShort((short)0xa4);
+        writeShort(0xa4);
         for (var server : servers.values()) {
-            writeByte((byte)server.getId());
-            writeByte((byte)client.getPlayersOnServer(server.getId()));
+            writeByte(server.getId());
+            writeByte(client.getPlayersOnServer(server.getId()));
         }
     }
 }

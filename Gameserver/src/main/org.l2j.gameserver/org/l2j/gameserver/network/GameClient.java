@@ -243,8 +243,8 @@ public final class GameClient extends Client<Connection<GameClient>> {
         LOGGER_ACCOUNTING.info("Restore {} [{}]", objectId, this);
     }
 
-    public Player load(int characterSlot) {
-        final int objectId = getObjectIdForSlot(characterSlot);
+    public Player load(int slot) {
+        final int objectId = getObjectIdForSlot(slot);
         if (objectId < 0) {
             return null;
         }
@@ -269,9 +269,9 @@ public final class GameClient extends Client<Connection<GameClient>> {
 
         player = PlayerFactory.loadPlayer(this, objectId);
         if (player == null) {
-            LOGGER.error("Could not restore in slot: {}", characterSlot);
+            LOGGER.error("Could not restore in slot: {}", slot);
         }
-
+        activeSlot = slot;
         return player;
     }
 
@@ -526,5 +526,12 @@ public final class GameClient extends Client<Connection<GameClient>> {
 
     public int getActiveSlot() {
         return activeSlot;
+    }
+
+    public void reloadActivePlayerInfo() {
+        PlayerSelectInfo current = playersInfo.remove(activeSlot);
+        if(nonNull(current)) {
+            playersInfo.add(activeSlot, new PlayerSelectInfo(getDAO(PlayerDAO.class).findById(current.getObjectId())));
+        }
     }
 }

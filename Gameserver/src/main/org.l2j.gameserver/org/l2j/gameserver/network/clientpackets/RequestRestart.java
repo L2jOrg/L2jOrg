@@ -52,6 +52,7 @@ public final class RequestRestart extends ClientPacket {
 
         Disconnection.of(client, player).storeMe().deleteMe();
 
+        client.reloadActivePlayerInfo();
         // return the client to the authed status
         client.setConnectionState(ConnectionState.AUTHENTICATED);
 
