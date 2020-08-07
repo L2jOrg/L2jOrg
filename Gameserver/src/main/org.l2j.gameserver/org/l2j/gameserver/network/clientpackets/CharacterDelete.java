@@ -29,11 +29,6 @@ import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.8.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
- */
 public final class CharacterDelete extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CharacterDelete.class);

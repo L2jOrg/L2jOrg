@@ -50,6 +50,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.security.NoSuchAlgorithmException;
+import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
@@ -196,26 +197,26 @@ public final class GameClient extends Client<Connection<GameClient>> {
         sendPacket(SystemMessage.getSystemMessage(smId));
     }
 
-    public CharacterDeleteFailType markToDeleteChar(int characterSlot) {
-        final int objectId = getObjectIdForSlot(characterSlot);
-        if (objectId < 0) {
+    public CharacterDeleteFailType markToDeleteChar(int slot) {
+        PlayerSelectInfo info = getPlayerSelection(slot);
+        if (isNull(info)) {
             return CharacterDeleteFailType.UNKNOWN;
         }
 
-        if (MentorManager.getInstance().isMentor(objectId)) {
+        if (MentorManager.getInstance().isMentor(info.getObjectId())) {
             return CharacterDeleteFailType.MENTOR;
-        } else if (MentorManager.getInstance().isMentee(objectId)) {
+        } else if (MentorManager.getInstance().isMentee(info.getObjectId())) {
             return CharacterDeleteFailType.MENTEE;
-        } else if (CommissionManager.getInstance().hasCommissionItems(objectId)) {
+        } else if (CommissionManager.getInstance().hasCommissionItems(info.getObjectId())) {
             return CharacterDeleteFailType.COMMISSION;
-        } else if (MailEngine.getInstance().hasMailInProgress(objectId)) {
+        } else if (MailEngine.getInstance().hasMailInProgress(info.getObjectId())) {
             return CharacterDeleteFailType.MAIL;
         } else {
-            final int clanId = PlayerNameTable.getInstance().getClassIdById(objectId);
+            final int clanId = PlayerNameTable.getInstance().getClassIdById(info.getObjectId());
             if (clanId > 0) {
                 final Clan clan = ClanTable.getInstance().getClan(clanId);
                 if (clan != null) {
-                    if (clan.getLeaderId() == objectId) {
+                    if (clan.getLeaderId() == info.getObjectId()) {
                         return CharacterDeleteFailType.PLEDGE_MASTER;
                     }
                     return CharacterDeleteFailType.PLEDGE_MEMBER;
@@ -224,12 +225,15 @@ public final class GameClient extends Client<Connection<GameClient>> {
         }
 
         if (Config.DELETE_DAYS == 0) {
-            PlayerFactory.deleteCharByObjId(objectId);
+            PlayerFactory.deleteCharByObjId(info.getObjectId());
+            playersInfo.remove(slot);
         } else {
-            getDAO(PlayerDAO.class).updateDeleteTime(objectId, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000));
+            var deleteTime = Duration.ofDays(Config.DELETE_DAYS).toMillis() + System.currentTimeMillis();
+            info.setDeleteTime(deleteTime);
+            getDAO(PlayerDAO.class).updateDeleteTime(info.getObjectId(), deleteTime);
         }
 
-        LOGGER_ACCOUNTING.info("Delete, " + objectId + ", " + this);
+        LOGGER_ACCOUNTING.info("{} deleted {}", this, info.getObjectId());
         return CharacterDeleteFailType.NONE;
     }
 

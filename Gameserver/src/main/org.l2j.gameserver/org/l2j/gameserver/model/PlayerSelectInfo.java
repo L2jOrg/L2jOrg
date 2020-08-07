@@ -157,4 +157,8 @@ public class PlayerSelectInfo {
         var diff = banExpireTime - System.currentTimeMillis();
         return diff > 0 ? (int) (diff / 1000) : 0;
     }
+
+    public void setDeleteTime(long deleteTime) {
+        this.data.setDeleteTime(deleteTime);
+    }
 }

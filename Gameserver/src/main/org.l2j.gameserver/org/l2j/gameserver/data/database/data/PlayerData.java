@@ -459,5 +459,9 @@ public class PlayerData {
     public void setSp(int sp) {
         this.sp = sp;
     }
+
+    public void setDeleteTime(long deleteTime) {
+        this.deletetime = deleteTime;
+    }
 }
 
