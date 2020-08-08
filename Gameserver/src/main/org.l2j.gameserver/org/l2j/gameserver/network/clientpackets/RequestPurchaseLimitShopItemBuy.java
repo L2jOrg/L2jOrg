@@ -23,18 +23,21 @@ import org.l2j.gameserver.data.xml.model.LCoinShopProductInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.LCoinShopRequest;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.network.serverpackets.ExPurchaseLimitShopItemBuy;
-import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.network.serverpackets.l2coin.ExPurchaseLimitShopItemBuy;
 
 import java.util.List;
 
+/**
+ * @author JoeAlisson
+ */
 public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
     private int productId;
     private int amount;
+    private byte tab;
+
     @Override
     protected void readImpl() throws Exception {
-        readByte();
+        tab = readByte();
         productId = readInt();
         amount = readInt();
     }
@@ -42,24 +45,21 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
     @Override
     protected void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
 
         LCoinShopProductInfo product = LCoinShopData.getInstance().getProductInfo(productId);
         ItemHolder productItem = product.getProduction();
         List<ItemHolder> ingredients = product.getIngredients();
 
         if (player.hasItemRequest() || player.hasRequest(LCoinShopRequest.class) || !hasIngredients(player, ingredients)) {
-            player.sendPacket(new ExPurchaseLimitShopItemBuy(LCoinShopData.getInstance().getProductInfo(productId), true));
+            player.sendPacket(ExPurchaseLimitShopItemBuy.fail(product, tab));
             return;
         }
 
         player.addRequest(new LCoinShopRequest(player));
         consumeIngredients(player, ingredients);
         player.addItem("LCoinShop", productItem.getId(), productItem.getCount() * amount, player, true);
+        player.sendPacket(ExPurchaseLimitShopItemBuy.success(product, tab));
         player.removeRequest(LCoinShopRequest.class);
-        player.sendPacket(new ExPurchaseLimitShopItemBuy(LCoinShopData.getInstance().getProductInfo(productId), false));
     }
 
     private boolean hasIngredients(Player player, List<ItemHolder> ingredients) {
@@ -67,17 +67,12 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
             if (player.getInventory().getInventoryItemCount(ingredient.getId(), -1) < ingredient.getCount() * amount) {
                 return false;
             }
-
         return true;
     }
 
     private void consumeIngredients(Player player, List<ItemHolder> ingredients) {
-        ingredients.forEach(ingredient -> {
-            switch (ingredient.getId()) {
-                case 57 -> player.reduceAdena("LCoinShop", ingredient.getCount() * amount, player, true);
-                case 91663 -> player.addLCoins(ingredient.getCount() * amount);
-                default -> player.getInventory().destroyItemByItemId("LCoinShop", ingredient.getId(), ingredient.getCount() * amount, player, this);
-            }
-        });
+        for (ItemHolder ingredient : ingredients) {
+            player.destroyItemByItemId("LCoinShop", ingredient.getId(), ingredient.getCount() * amount, player, true);
+        }
     }
 }

@@ -685,7 +685,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
             }
 
             if (rustyCoinChance > 0) {
-                dropList.add(new DropHolder(DropType.DROP, CommonItem.RUSTY_COIN, 2, 5, rustyCoinChance));
+                dropList.add(new DropHolder(DropType.DROP, CommonItem.GOLD_COIN, 2, 5, rustyCoinChance));
             }
 
             if (l2CoinDropChance > 0) {

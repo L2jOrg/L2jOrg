@@ -3002,15 +3002,9 @@ public final class Player extends Playable {
 
         if (count > 0) {
             inventory.addAdena(process, count, this, reference);
-
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(inventory.getAdenaInstance());
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
+            final InventoryUpdate iu = new InventoryUpdate();
+            iu.addItem(inventory.getAdenaInstance());
+            sendInventoryUpdate(iu);
         }
     }
 
@@ -3421,15 +3415,10 @@ public final class Player extends Playable {
             return false;
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
-            playerIU.addItem(item);
-            sendInventoryUpdate(playerIU);
-        } else {
-            sendItemList();
-        }
-
+        final InventoryUpdate playerIU = new InventoryUpdate();
+        playerIU.addItem(item);
+        sendInventoryUpdate(playerIU);
+        
         // Sends message to client if requested
         if (sendMessage) {
             if (count > 1) {

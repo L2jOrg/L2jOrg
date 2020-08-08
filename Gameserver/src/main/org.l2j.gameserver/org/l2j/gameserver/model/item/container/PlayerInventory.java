@@ -343,7 +343,7 @@ public class PlayerInventory extends Inventory {
                 _beautyTickets = item;
             } else if( item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
                 silverCoin = item;
-            } else if(item.getId() == CommonItem.RUSTY_COIN && !item.equals(rustyCoin)) {
+            } else if(item.getId() == CommonItem.GOLD_COIN && !item.equals(rustyCoin)) {
                 rustyCoin = item;
             }
              else if(item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
@@ -404,7 +404,7 @@ public class PlayerInventory extends Inventory {
                 _beautyTickets = item;
             } else if (item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
                 silverCoin = item;
-            } else if (item.getId() == CommonItem.RUSTY_COIN && !item.equals(rustyCoin)) {
+            } else if (item.getId() == CommonItem.GOLD_COIN && !item.equals(rustyCoin)) {
                 rustyCoin = item;
             } else if (item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
                 l2Coin = item;
@@ -649,7 +649,7 @@ public class PlayerInventory extends Inventory {
         _adena = getItemByItemId(CommonItem.ADENA);
         _ancientAdena = getItemByItemId(CommonItem.ANCIENT_ADENA);
         _beautyTickets = getItemByItemId(BEAUTY_TICKET_ID);
-        rustyCoin = getItemByItemId(CommonItem.RUSTY_COIN);
+        rustyCoin = getItemByItemId(CommonItem.GOLD_COIN);
          silverCoin = getItemByItemId(CommonItem.SILVER_COIN);
          l2Coin = getItemByItemId(CommonItem.L2_COIN);
     }
