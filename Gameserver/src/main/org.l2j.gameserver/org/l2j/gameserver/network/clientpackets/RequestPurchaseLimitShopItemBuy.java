@@ -47,13 +47,14 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
         final Player player = client.getPlayer();
 
         LCoinShopProductInfo product = LCoinShopData.getInstance().getProductInfo(productId);
-        ItemHolder productItem = product.getProduction();
         List<ItemHolder> ingredients = product.getIngredients();
 
-        if (player.hasItemRequest() || player.hasRequest(LCoinShopRequest.class) || !hasIngredients(player, ingredients)) {
+        if (player.hasItemRequest() || player.hasRequest(LCoinShopRequest.class) || !hasIngredients(player, ingredients) || product.isExpired()) {
             player.sendPacket(ExPurchaseLimitShopItemBuy.fail(product, tab));
             return;
         }
+
+        ItemHolder productItem = product.getProduction();
 
         player.addRequest(new LCoinShopRequest(player));
         consumeIngredients(player, ingredients);

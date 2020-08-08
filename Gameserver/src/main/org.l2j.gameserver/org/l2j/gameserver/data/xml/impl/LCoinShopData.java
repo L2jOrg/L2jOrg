@@ -18,8 +18,9 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.LinkedHashIntMap;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.model.LCoinShopProductInfo;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -34,19 +35,21 @@ import org.w3c.dom.NodeList;
 
 import java.io.File;
 import java.nio.file.Path;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.data.xml.model.LCoinShopProductInfo.Category;
 
 public class LCoinShopData extends GameXmlReader {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(LCoinShopData.class);
-    private IntMap<LCoinShopProductInfo> productInfos = new HashIntMap<>();
+    private final IntMap<LCoinShopProductInfo> productInfos = new LinkedHashIntMap<>();
 
     public LCoinShopData() {
-        load();
     }
 
     public LCoinShopProductInfo getProductInfo(int id) {
@@ -81,6 +84,13 @@ public class LCoinShopData extends GameXmlReader {
         var minLevel = parseInt(attributes, "minLevel", 1);
         var isEvent = parseBoolean(attributes, "isEvent", false);
         var remainServerItemAmount = parseInt(attributes, "remainServerItemAmount", -1);
+        var expiration = parseString(attributes,"expiration-date");
+        LocalDateTime expirationDate = null;
+
+        if(nonNull(expiration)) {
+            expirationDate = Util.parseLocalDateTime(expiration);
+        }
+
         List<ItemHolder> ingredients = new ArrayList<>();
         ItemHolder production = null;
         final NodeList list = productNode.getChildNodes();
@@ -105,7 +115,7 @@ public class LCoinShopData extends GameXmlReader {
             return;
         }
 
-        if (productInfos.put(id, new LCoinShopProductInfo(id, category, limitPerDay, minLevel, isEvent, ingredients, production, remainServerItemAmount)) != null) {
+        if (productInfos.put(id, new LCoinShopProductInfo(id, category, limitPerDay, minLevel, isEvent, ingredients, production, remainServerItemAmount, expirationDate)) != null) {
             LOGGER.warn("Duplicate product id {}", id);
         }
     }
@@ -122,6 +132,10 @@ public class LCoinShopData extends GameXmlReader {
         }
 
         return new ItemHolder(itemId, count);
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static LCoinShopData getInstance() {

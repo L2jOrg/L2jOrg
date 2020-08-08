@@ -136,7 +136,7 @@ public class GameServer {
         ElementalSpiritEngine.init();
         TeleportEngine.init();
         PrimeShopData.getInstance();
-        LCoinShopData.getInstance();
+        LCoinShopData.init();
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
         AttendanceRewardData.getInstance();
