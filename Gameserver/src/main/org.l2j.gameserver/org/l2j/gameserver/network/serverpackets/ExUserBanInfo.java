@@ -18,24 +18,31 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.data.xml.model.LCoinShopProductInfo;
+import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.ServerExPacketId;
 
-public class ExPurchaseLimitShopItemBuy extends ServerPacket {
-    private final boolean isFailToBuy;
-    private final LCoinShopProductInfo productInfo;
+/**
+ * @author JoeAlisson
+ */
+public class ExUserBanInfo extends ServerPacket {
 
-    public ExPurchaseLimitShopItemBuy(LCoinShopProductInfo info, boolean isFailToBuy) {
-        this.productInfo = info;
-        this.isFailToBuy = isFailToBuy;
+    private final PunishmentType type;
+    private final long expiration;
+    private final String reason;
+
+    public ExUserBanInfo(PunishmentType type, long expiration, String reason) {
+        this.type = type;
+        this.expiration = expiration;
+        this.reason = reason;
     }
 
     @Override
-    protected void writeImpl(GameClient client) throws Exception {
-        writeByte(isFailToBuy ? 1 : 0);
-        writeByte(0x3);
-        writeInt(productInfo.getId());
-        writeInt(productInfo.getProduction().getId());
-        writeInt(productInfo.getLimitPerDay());
+    protected void writeImpl(GameClient client) {
+        writeId(ServerExPacketId.EX_USER_BAN_INFO);
+        writeInt(type.ordinal());
+        writeLong(expiration > 0 ? System.currentTimeMillis() : 0);
+        writeLong(expiration);
+        writeString(reason);
     }
 }

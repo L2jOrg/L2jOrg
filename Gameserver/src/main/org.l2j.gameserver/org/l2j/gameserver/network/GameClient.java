@@ -538,4 +538,13 @@ public final class GameClient extends Client<Connection<GameClient>> {
             playersInfo.add(activeSlot, new PlayerSelectInfo(getDAO(PlayerDAO.class).findById(current.getObjectId())));
         }
     }
+
+    public int getPlayerInfoAccessLevel(int playerId) {
+        for (PlayerSelectInfo info : playersInfo) {
+            if(info.getObjectId() == playerId) {
+                return info.getAccessLevel();
+            }
+        }
+        throw new IllegalStateException("There is no info of player " + playerId);
+    }
 }

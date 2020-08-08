@@ -442,7 +442,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_UNLOCKED_ITEM_CANCEL(null, ConnectionState.IN_GAME_STATES),
     EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(ExElementalSpiritChangeType::new, ConnectionState.IN_GAME_STATES),
     EX_BLOCK_PACKET_FOR_AD(ExRequestBlockListForAD::new, ConnectionState.IN_GAME_STATES),
-    EX_USER_BAN_INFO(null, ConnectionState.IN_GAME_STATES),
+    EX_USER_BAN_INFO(ExRequestUserBanInfo::new, ConnectionState.AUTHENTICATED_STATES),
     EX_INTERACT_MODIFY(null, ConnectionState.IN_GAME_STATES),
     EX_TRY_ENCHANT_ARTIFACT(null, ConnectionState.IN_GAME_STATES),
     EX_UPGRADE_SYSTEM_NORMAL_REQUEST(ExUpgradeSystemNormalRequest::new, ConnectionState.IN_GAME_STATES),
