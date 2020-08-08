@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.serverpackets.ExUserBanInfo;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author JoeAlisson
  */
@@ -37,13 +39,13 @@ public class ExRequestUserBanInfo extends ClientPacket {
     }
 
     @Override
-    protected void runImpl() throws Exception {
+    protected void runImpl()  {
         int accessLevel = client.getPlayerInfoAccessLevel(playerId);
         if(accessLevel < 0) {
             client.sendPacket(new ExUserBanInfo(PunishmentType.PERMANENT_BAN, 0, "violation of the terms of conduct"));
         } else {
             PunishmentTask punishment = PunishmentManager.getInstance().getPunishment(playerId, PunishmentAffect.CHARACTER, PunishmentType.BAN);
-            if(punishment.getExpirationTime() > 0) {
+            if(nonNull(punishment) && punishment.getExpirationTime() > 0) {
                 client.sendPacket(new ExUserBanInfo(PunishmentType.BAN, punishment.getExpirationTime(), punishment.getReason()));
             }
         }
