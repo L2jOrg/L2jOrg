@@ -124,7 +124,7 @@ public final class VipEngine extends GameXmlReader {
         if(nonNull(bonusNode)) {
             attributes = bonusNode.getAttributes();
             vipInfo.setSilverCoinChance(parseFloat(attributes, "silver-coin-acquisition"));
-            vipInfo.setRustyCoinChance(parseFloat(attributes, "rusty-coin-acquisition"));
+            vipInfo.setGoldCoinChance(parseFloat(attributes, "gold-coin-acquisition"));
             vipInfo.setSkill(parseInt(attributes, "skill"));
         }
     }
@@ -167,7 +167,7 @@ public final class VipEngine extends GameXmlReader {
     }
 
     public float getRustyCoinDropChance(Player player) {
-        return getVipInfo(player).getRustyCoinChance();
+        return getVipInfo(player).getGoldCoinChance();
     }
 
     public boolean checkVipTierExpiration(Player player) {

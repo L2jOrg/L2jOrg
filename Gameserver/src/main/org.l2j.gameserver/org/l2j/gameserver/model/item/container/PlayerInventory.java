@@ -59,7 +59,7 @@ public class PlayerInventory extends Inventory {
     private Item _ancientAdena;
     private Item _beautyTickets;
     private Item silverCoin;
-    private Item rustyCoin;
+    private Item goldCoin;
     private Item l2Coin;
     private Item currentAmmunition;
 
@@ -343,8 +343,8 @@ public class PlayerInventory extends Inventory {
                 _beautyTickets = item;
             } else if( item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
                 silverCoin = item;
-            } else if(item.getId() == CommonItem.GOLD_COIN && !item.equals(rustyCoin)) {
-                rustyCoin = item;
+            } else if(item.getId() == CommonItem.GOLD_COIN && !item.equals(goldCoin)) {
+                goldCoin = item;
             }
              else if(item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
                 l2Coin = item;
@@ -404,8 +404,8 @@ public class PlayerInventory extends Inventory {
                 _beautyTickets = item;
             } else if (item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
                 silverCoin = item;
-            } else if (item.getId() == CommonItem.GOLD_COIN && !item.equals(rustyCoin)) {
-                rustyCoin = item;
+            } else if (item.getId() == CommonItem.GOLD_COIN && !item.equals(goldCoin)) {
+                goldCoin = item;
             } else if (item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
                 l2Coin = item;
             }
@@ -649,7 +649,7 @@ public class PlayerInventory extends Inventory {
         _adena = getItemByItemId(CommonItem.ADENA);
         _ancientAdena = getItemByItemId(CommonItem.ANCIENT_ADENA);
         _beautyTickets = getItemByItemId(BEAUTY_TICKET_ID);
-        rustyCoin = getItemByItemId(CommonItem.GOLD_COIN);
+        goldCoin = getItemByItemId(CommonItem.GOLD_COIN);
          silverCoin = getItemByItemId(CommonItem.SILVER_COIN);
          l2Coin = getItemByItemId(CommonItem.L2_COIN);
     }
@@ -845,8 +845,8 @@ public class PlayerInventory extends Inventory {
         return false;
     }
 
-    public long getRustyCoin() {
-        return nonNull(rustyCoin) ? rustyCoin.getCount() : 0;
+    public long getGoldCoin() {
+        return nonNull(goldCoin) ? goldCoin.getCount() : 0;
     }
 
     public long getSilverCoin() {

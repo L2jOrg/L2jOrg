@@ -37,31 +37,31 @@ public class ReceiveVipProductList extends ServerPacket {
 
         writeId(ServerExPacketId.EX_BR_VIP_PRODUCT_LIST_ACK);
         writeLong(player.getAdena());
-        writeLong(player.getRustyCoin()); // Rusty Coin Amount
+        writeLong(player.getGoldCoin()); // Gold Coin Amount
         writeLong(player.getSilverCoin()); // Silver Coin Amount
         writeByte(1); // Show Reward tab
 
         if(nonNull(gift)) {
             writeInt(products.size() + 1);
-            putProduct(gift);
+            writeProduct(gift);
         } else {
             writeInt(products.size());
         }
 
         for (var product : products.values()) {
-            putProduct(product);
+            writeProduct(product);
         }
     }
 
-    private void putProduct(PrimeShopProduct product) {
+    private void writeProduct(PrimeShopProduct product) {
         writeInt(product.getId());
         writeByte(product.getCategory());
         writeByte(product.getPaymentType());
-        writeInt(product.getPrice()); // L2 Coin | Rusty Coin seems to use the same field based on payment type
+        writeInt(product.getPrice()); // L2 Coin | Gold Coin seems to use the same field based on payment type
         writeInt(product.getSilverCoin());
         writeByte(product.getPanelType()); // NEW - 6; HOT - 5 ... Unk
         writeByte(product.getVipTier());
-        writeByte(10); // Unk
+        writeByte(10);
 
         writeByte(product.getItems().size());
 

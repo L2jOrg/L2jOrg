@@ -362,8 +362,8 @@ public final class Player extends Playable {
         getClient().updateCoin(coins);
     }
 
-    public long getRustyCoin() {
-        return inventory.getRustyCoin();
+    public long getGoldCoin() {
+        return inventory.getGoldCoin();
     }
 
     public long getSilverCoin() {
@@ -379,7 +379,7 @@ public final class Player extends Playable {
     }
 
     public long getLCoins() { return inventory.getLCoin(); }
-
+    // TODO Remove
     public void addLCoins(long count) { inventory.addLCoin(count); }
 
     public boolean isInBattle() {
@@ -1572,10 +1572,6 @@ public final class Player extends Playable {
     }
 
     public String getAccountName() {
-        return _client == null ? data.getAccountName(): _client.getAccountName();
-    }
-
-    public String getAccountNamePlayer() {
         return data.getAccountName();
     }
 
