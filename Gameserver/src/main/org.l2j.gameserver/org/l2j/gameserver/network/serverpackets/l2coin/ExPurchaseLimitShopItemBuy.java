@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.l2coin;
 
-import org.l2j.gameserver.data.xml.model.LCoinShopProductInfo;
+import org.l2j.gameserver.engine.item.shop.lcoin.LCoinShopProduct;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -30,10 +30,10 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExPurchaseLimitShopItemBuy extends ServerPacket {
 
     private final boolean fail;
-    private final LCoinShopProductInfo product;
+    private final LCoinShopProduct product;
     private final byte tab;
 
-    private ExPurchaseLimitShopItemBuy(LCoinShopProductInfo product, byte tab, boolean fail) {
+    private ExPurchaseLimitShopItemBuy(LCoinShopProduct product, byte tab, boolean fail) {
         this.fail = fail;
         this.tab = tab;
         this.product = product;
@@ -44,9 +44,9 @@ public class ExPurchaseLimitShopItemBuy extends ServerPacket {
         writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_BUY);
         writeByte(fail);
         writeByte(tab);
-        writeInt(product.getId());
+        writeInt(product.id());
 
-        ItemHolder production = product.getProduction();
+        ItemHolder production = product.production();
         int size = 1;
         writeInt(size); // size
         for (int i = 0; i < size ; i++) {
@@ -58,11 +58,11 @@ public class ExPurchaseLimitShopItemBuy extends ServerPacket {
         writeInt(product.getRemainAmount()); // remain item count
     }
 
-    public static ServerPacket fail(LCoinShopProductInfo product, byte tab) {
+    public static ServerPacket fail(LCoinShopProduct product, byte tab) {
         return new ExPurchaseLimitShopItemBuy(product, tab,true);
     }
 
-    public static ServerPacket success(LCoinShopProductInfo product, byte tab) {
+    public static ServerPacket success(LCoinShopProduct product, byte tab) {
         return new ExPurchaseLimitShopItemBuy(product, tab, false);
     }
 }

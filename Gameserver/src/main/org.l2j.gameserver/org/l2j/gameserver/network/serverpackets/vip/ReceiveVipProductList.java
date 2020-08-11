@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.network.serverpackets.vip;
 
-import org.l2j.gameserver.data.xml.impl.PrimeShopData;
-import org.l2j.gameserver.model.primeshop.PrimeShopItem;
-import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
+import org.l2j.gameserver.engine.item.shop.L2Store;
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -32,8 +32,8 @@ public class ReceiveVipProductList extends ServerPacket {
     @Override
     protected void writeImpl(GameClient client) {
         var player = client.getPlayer();
-        var products = PrimeShopData.getInstance().getPrimeItems();
-        var gift = PrimeShopData.getInstance().getVipGiftOfTier(player.getVipTier());
+        var products = L2Store.getInstance().getPrimeItems();
+        var gift = L2Store.getInstance().getVipGiftOfTier(player.getVipTier());
 
         writeId(ServerExPacketId.EX_BR_VIP_PRODUCT_LIST_ACK);
         writeLong(player.getAdena());
@@ -53,7 +53,7 @@ public class ReceiveVipProductList extends ServerPacket {
         }
     }
 
-    private void writeProduct(PrimeShopProduct product) {
+    private void writeProduct(L2StoreProduct product) {
         writeInt(product.getId());
         writeByte(product.getCategory());
         writeByte(product.getPaymentType());
@@ -65,7 +65,7 @@ public class ReceiveVipProductList extends ServerPacket {
 
         writeByte(product.getItems().size());
 
-        for (PrimeShopItem item : product.getItems()) {
+        for (L2StoreItem item : product.getItems()) {
             writeInt(item.getId());
             writeInt((int) item.getCount());
         }

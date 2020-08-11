@@ -16,21 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.primeshop;
+package org.l2j.gameserver.network.clientpackets.l2store;
 
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRGamePoint extends ClientPacket {
+public final class RequestBRRecentProductList extends ClientPacket {
     @Override
     public void readImpl() {
+
     }
 
     @Override
     public void runImpl() {
-        client.sendPacket(new ExBRGamePoint());
+        // Player player = client.getActiveChar();
+        // TODO: Implement it.
     }
 }

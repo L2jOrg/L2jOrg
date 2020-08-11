@@ -118,6 +118,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.attendance;
     exports org.l2j.gameserver.util.exp4j;
     exports org.l2j.gameserver.engine.olympiad;
+    exports org.l2j.gameserver.engine.item.shop;
 
     uses org.l2j.gameserver.handler.IActionHandler;
     uses org.l2j.gameserver.handler.IActionShiftHandler;

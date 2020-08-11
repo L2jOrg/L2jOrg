@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.primeshop;
+package org.l2j.gameserver.network.clientpackets.l2store;
 
-import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
-import org.l2j.gameserver.data.xml.impl.PrimeShopData;
+import org.l2j.gameserver.data.database.dao.L2StoreDAO;
+import org.l2j.gameserver.engine.item.shop.L2Store;
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.request.PrimeShopRequest;
-import org.l2j.gameserver.model.primeshop.PrimeShopItem;
-import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
+import org.l2j.gameserver.model.actor.request.L2StoreRequest;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
+import org.l2j.gameserver.network.serverpackets.store.ExBRBuyProduct;
+import org.l2j.gameserver.network.serverpackets.store.ExBRGamePoint;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -46,35 +46,35 @@ public final class RequestBRBuyProduct extends RequestBuyProduct {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
-        if (activeChar.hasItemRequest() || activeChar.hasRequest(PrimeShopRequest.class)) {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SERVER_ERROR));
+        if (player.hasItemRequest() || player.hasRequest(L2StoreRequest.class)) {
+            player.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SERVER_ERROR));
             return;
         }
         try {
-            activeChar.addRequest(new PrimeShopRequest(activeChar));
-            final PrimeShopProduct item = PrimeShopData.getInstance().getItem(productId);
+            player.addRequest(new L2StoreRequest(player));
+            final L2StoreProduct item = L2Store.getInstance().getItem(productId);
 
-            if (validatePlayer(item, count, activeChar) && processPayment(activeChar, item, count)) {
+            if (validatePlayer(item, count, player) && processPayment(player, item, count)) {
 
-                for (PrimeShopItem subItem : item.getItems()) {
-                    activeChar.addItem("PrimeShop", subItem.getId(), subItem.getCount() * count, activeChar, true);
+                for (L2StoreItem subItem : item.getItems()) {
+                    player.addItem("PrimeShop", subItem.getId(), subItem.getCount() * count, player, true);
                 }
 
                 client.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));
                 client.sendPacket(new ExBRGamePoint());
-                getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
+                getDAO(L2StoreDAO.class).addHistory(productId, count, player.getAccountName());
                 if(item.isVipGift()) {
                     client.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
                 }
 
             }
         } finally {
-            activeChar.removeRequest(PrimeShopRequest.class);
+            player.removeRequest(L2StoreRequest.class);
         }
     }
 }

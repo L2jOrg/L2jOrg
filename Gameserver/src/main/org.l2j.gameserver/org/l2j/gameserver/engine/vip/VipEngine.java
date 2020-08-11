@@ -20,7 +20,7 @@ package org.l2j.gameserver.engine.vip;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.data.xml.impl.PrimeShopData;
+import org.l2j.gameserver.engine.item.shop.L2Store;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
@@ -88,7 +88,7 @@ public final class VipEngine extends GameXmlReader {
                 player.addSkill(skill);
             }
         }
-        if(PrimeShopData.getInstance().canReceiveVipGift(player)) {
+        if(L2Store.getInstance().canReceiveVipGift(player)) {
             player.sendPacket(ExBRNewIconCashBtnWnd.SHOW);
         } else {
             player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);

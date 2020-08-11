@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.primeshop;
+package org.l2j.gameserver.network.serverpackets.store;
 
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.primeshop.PrimeShopItem;
-import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -29,12 +29,12 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author Gnacik
  */
 public class ExBRProductInfo extends ServerPacket {
-    private final PrimeShopProduct item;
+    private final L2StoreProduct item;
     private final int points;
     private final long adenas;
     private final long coins;
 
-    public ExBRProductInfo(PrimeShopProduct item, Player player) {
+    public ExBRProductInfo(L2StoreProduct item, Player player) {
         this.item = item;
         points = player.getNCoins();
         adenas = player.getAdena();
@@ -48,7 +48,7 @@ public class ExBRProductInfo extends ServerPacket {
         writeInt(item.getId());
         writeInt(item.getPrice());
         writeInt(item.getItems().size());
-        for (PrimeShopItem item : item.getItems()) {
+        for (L2StoreItem item : item.getItems()) {
             writeInt(item.getId());
             writeInt((int) item.getCount());
             writeInt(item.getWeight());

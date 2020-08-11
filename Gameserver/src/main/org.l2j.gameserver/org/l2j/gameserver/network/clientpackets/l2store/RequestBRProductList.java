@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.primeshop;
+package org.l2j.gameserver.network.clientpackets.l2store;
 
-import org.l2j.gameserver.data.xml.impl.PrimeShopData;
+import org.l2j.gameserver.engine.item.shop.L2Store;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRProductList;
+import org.l2j.gameserver.network.serverpackets.store.ExBRProductList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,7 +45,7 @@ public final class RequestBRProductList extends ClientPacket {
             switch (_type) {
                 case 0: // Home page
                 {
-                    player.sendPacket(new ExBRProductList(player, 0, PrimeShopData.getInstance().getPrimeItems().values()));
+                    player.sendPacket(new ExBRProductList(player, 0, L2Store.getInstance().getPrimeItems().values()));
                     break;
                 }
                 case 1: // History

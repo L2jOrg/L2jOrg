@@ -17,28 +17,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.primeshop;
+package org.l2j.gameserver.engine.item.shop.l2store;
 
 import org.l2j.gameserver.model.holders.ItemHolder;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class PrimeShopItem extends ItemHolder {
-    private final int _weight;
-    private final int _isTradable;
+public class L2StoreItem extends ItemHolder {
+    private final int weight;
+    private final boolean tradable;
 
-    public PrimeShopItem(int itemId, int count, int weight, int isTradable) {
+    public L2StoreItem(int itemId, int count, int weight, boolean isTradable) {
         super(itemId, count);
-        _weight = weight;
-        _isTradable = isTradable;
+        this.weight = weight;
+        tradable = isTradable;
     }
 
     public int getWeight() {
-        return _weight;
+        return weight;
     }
 
-    public int isTradable() {
-        return _isTradable;
+    public boolean isTradable() {
+        return tradable;
     }
 }

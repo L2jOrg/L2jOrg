@@ -16,36 +16,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.primeshop;
+package org.l2j.gameserver.network.clientpackets.l2store;
 
-import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
+import org.l2j.gameserver.data.database.dao.L2StoreDAO;
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;
+import org.l2j.gameserver.network.serverpackets.store.ExBRBuyProduct;
+import org.l2j.gameserver.network.serverpackets.store.ExBRBuyProduct.ExBrProductReplyType;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Calendar;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
+/**
+ * @author JoeAlisson
+ */
 public abstract class RequestBuyProduct extends ClientPacket {
 
     private static final int HERO_COINS = 23805;
 
-    protected static boolean validatePlayer(PrimeShopProduct product, int count, Player player) {
+    protected boolean validatePlayer(L2StoreProduct product, int count, Player player) {
         final long currentTime = System.currentTimeMillis() / 1000;
 
-        if (product == null) {
+        if (isNull(product)) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_PRODUCT));
             GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime");
             return false;
         }
 
-        if ((count < 1) || (count > 99)) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime");
+        if (count < 1 || count > 99) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid item count [" + count + "] from l2 store");
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INCORRECT_COUNT));
             return false;
         }
@@ -94,16 +98,24 @@ public abstract class RequestBuyProduct extends ClientPacket {
             return false;
         }
 
-        if(product.getRestrictionDay() > 0 && getDAO(PrimeShopDAO.class).countBougthItemToday(player.getObjectId(), product.getId()) >= product.getRestrictionDay()) {
+        if(product.getRestrictionAmount() > 0 && hasBoughtMaxAmount(player, product)) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.ALREADY_BOUGHT));
             return false;
         }
         return true;
     }
 
-    protected static int validatePaymentId(Player player, PrimeShopProduct item, long amount) {
+    private boolean hasBoughtMaxAmount(Player player, L2StoreProduct product) {
+        return switch (product.getRestrictionPeriod()) {
+            case DAY ->  getDAO(L2StoreDAO.class).countBoughtItemToday(player.getAccountName(), product.getId()) >= product.getRestrictionAmount();
+            case MONTH -> getDAO(L2StoreDAO.class).countBoughtItemInDays(player.getAccountName(), product.getId(), 30) >= product.getRestrictionAmount();
+            case EVER -> getDAO(L2StoreDAO.class).hasBoughtProduct(player.getAccountName(), product.getId());
+        };
+    }
+
+    protected int validatePaymentId(Player player, L2StoreProduct item, long amount) {
         switch (item.getPaymentType()) {
-            case 0: // Prime points
+            case 0: // Nc Coin
             {
                 return 0;
             }
@@ -120,7 +132,7 @@ public abstract class RequestBuyProduct extends ClientPacket {
         return -1;
     }
 
-    protected boolean processPayment(Player activeChar, PrimeShopProduct item, int count) {
+    protected boolean processPayment(Player activeChar, L2StoreProduct item, int count) {
         final int price = (item.getPrice() * count);
         final int paymentId = validatePaymentId(activeChar, item, price);
 

@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,20 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.actor.request;
+package org.l2j.gameserver.network.serverpackets.store;
 
-import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * @author UnAfraid
+ * @author Gnacik, UnAfraid
  */
-public class PrimeShopRequest extends AbstractRequest {
-    public PrimeShopRequest(Player activeChar) {
-        super(activeChar);
-    }
+public class ExBRGamePoint extends ServerPacket {
 
     @Override
-    public boolean isUsing(int objectId) {
-        return false;
+    public void writeImpl(GameClient client) {
+        writeId(ServerExPacketId.EX_BR_NOTIFY_GAME_POINT);
+
+        var player = client.getPlayer();
+        writeInt(player.getObjectId());
+        writeLong(client.getCoin());
+        writeInt(0x00);
     }
+
 }

@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.xml.impl;
+package org.l2j.gameserver.engine.item.shop;
 
+import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.LinkedHashIntMap;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.data.xml.model.LCoinShopProductInfo;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.shop.lcoin.LCoinShopProduct;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -38,36 +38,33 @@ import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.gameserver.data.xml.model.LCoinShopProductInfo.Category;
 
-public class LCoinShopData extends GameXmlReader {
+/**
+ * @author JoeAlisson
+ */
+public class LCoinShop extends GameXmlReader {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(LCoinShopData.class);
-    private final IntMap<LCoinShopProductInfo> productInfos = new LinkedHashIntMap<>();
+    private static final Logger LOGGER = LoggerFactory.getLogger(LCoinShop.class);
 
-    public LCoinShopData() {
-    }
+    private final IntMap<LCoinShopProduct> productInfos = new LinkedHashIntMap<>();
+    private final IntMap<Map<String, Integer>> shopHistory = new HashIntMap<>();
 
-    public LCoinShopProductInfo getProductInfo(int id) {
-        return productInfos.get(id);
-    }
-
-    public IntMap<LCoinShopProductInfo> getProductInfos() {
-        return productInfos;
+    private LCoinShop() {
     }
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/LCoinShop.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/shop/l-coin.xsd");
     }
 
     @Override
     public void load() {
-        parseDatapackFile("data/LCoinShop.xml");
+        parseDatapackFile("data/shop/l-coin.xml");
         releaseResources();
     }
 
@@ -79,10 +76,8 @@ public class LCoinShopData extends GameXmlReader {
     private void parseProduct(Node productNode) {
         var attributes = productNode.getAttributes();
         var id = parseInt(attributes, "id");
-        var category = parseEnum(attributes, Category.class, "category", Category.Equip);
         var limitPerDay = parseInt(attributes, "limitPerDay", 0);
         var minLevel = parseInt(attributes, "minLevel", 1);
-        var isEvent = parseBoolean(attributes, "isEvent", false);
         var remainServerItemAmount = parseInt(attributes, "remainServerItemAmount", -1);
         var expiration = parseString(attributes,"expiration-date");
         LocalDateTime expirationDate = null;
@@ -94,18 +89,23 @@ public class LCoinShopData extends GameXmlReader {
         List<ItemHolder> ingredients = new ArrayList<>();
         ItemHolder production = null;
         final NodeList list = productNode.getChildNodes();
-        for (int i = 0; i < list.getLength(); i++)
-        {
+        for (int i = 0; i < list.getLength(); i++) {
+
             final Node targetNode = list.item(i);
-            var holder = parseItemInfo(targetNode);
-            if (holder == null) {
+
+            var holder = parseItemHolder(targetNode);
+            if (isNull(holder)) {
+                return;
+            }
+
+            if(isNull(ItemEngine.getInstance().getTemplate(holder.getId()))) {
+                LOGGER.error("Item template does not exists for itemId: {} in product id {}", holder.getId(), id);
                 return;
             }
 
             if ("ingredient".equalsIgnoreCase(targetNode.getNodeName())) {
                 ingredients.add(holder);
-            }
-            else {
+            } else {
                 production = holder;
             }
         }
@@ -115,34 +115,28 @@ public class LCoinShopData extends GameXmlReader {
             return;
         }
 
-        if (productInfos.put(id, new LCoinShopProductInfo(id, category, limitPerDay, minLevel, isEvent, ingredients, production, remainServerItemAmount, expirationDate)) != null) {
+        if (productInfos.put(id, new LCoinShopProduct(id, limitPerDay, minLevel, ingredients, production, remainServerItemAmount, expirationDate)) != null) {
             LOGGER.warn("Duplicate product id {}", id);
         }
     }
 
-    private ItemHolder parseItemInfo(Node itemInfoNode) {
-        var attributes = itemInfoNode.getAttributes();
-        var itemId = parseInt(attributes, "id");
-        var count = parseInt(attributes, "count");
+    public LCoinShopProduct getProductInfo(int id) {
+        return productInfos.get(id);
+    }
 
-        final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
-        if (isNull(item)) {
-            LOGGER.error("Item template does not exists for itemId: {} in product id {}", itemId, itemInfoNode.getAttributes().getNamedItem("id"));
-            return null;
-        }
-
-        return new ItemHolder(itemId, count);
+    public IntMap<LCoinShopProduct> getProductInfos() {
+        return productInfos;
     }
 
     public static void init() {
         getInstance().load();
     }
 
-    public static LCoinShopData getInstance() {
-        return LCoinShopData.Singleton.INSTANCE;
+    public static LCoinShop getInstance() {
+        return LCoinShop.Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final LCoinShopData INSTANCE = new LCoinShopData();
+        private static final LCoinShop INSTANCE = new LCoinShop();
     }
 }

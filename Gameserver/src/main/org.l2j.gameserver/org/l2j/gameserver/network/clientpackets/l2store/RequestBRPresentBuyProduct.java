@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.primeshop;
+package org.l2j.gameserver.network.clientpackets.l2store;
 
-import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
+import org.l2j.gameserver.data.database.dao.L2StoreDAO;
 import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
-import org.l2j.gameserver.data.xml.impl.PrimeShopData;
+import org.l2j.gameserver.engine.item.shop.L2Store;
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
+import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.request.PrimeShopRequest;
+import org.l2j.gameserver.model.actor.request.L2StoreRequest;
 import org.l2j.gameserver.model.item.container.Attachment;
-import org.l2j.gameserver.model.primeshop.PrimeShopItem;
-import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
-import org.l2j.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
+import org.l2j.gameserver.network.serverpackets.store.ExBRBuyProduct;
+import org.l2j.gameserver.network.serverpackets.store.ExBRGamePoint;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -57,28 +57,28 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
+        final Player player = client.getPlayer();
 
-        if (activeChar == null) {
+        if (player == null) {
             return;
         }
 
         final int receiverId = PlayerNameTable.getInstance().getIdByName(_charName);
         if (receiverId <= 0) {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVENTORY_FULL0));
+            player.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVENTORY_FULL0));
             return;
         }
 
-        if (activeChar.hasItemRequest() || activeChar.hasRequest(PrimeShopRequest.class)) {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVENTORY_FULL));
+        if (player.hasItemRequest() || player.hasRequest(L2StoreRequest.class)) {
+            player.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.INVENTORY_FULL));
             return;
         }
 
         try {
-            activeChar.addRequest(new PrimeShopRequest(activeChar));
+            player.addRequest(new L2StoreRequest(player));
 
-            final PrimeShopProduct item = PrimeShopData.getInstance().getItem(productId);
-            if (validatePlayer(item, count, activeChar) && processPayment(activeChar, item, count)) {
+            final L2StoreProduct item = L2Store.getInstance().getItem(productId);
+            if (validatePlayer(item, count, player) && processPayment(player, item, count)) {
 
                 client.sendPacket(new ExBRBuyProduct(ExBRBuyProduct.ExBrProductReplyType.SUCCESS));
                 client.sendPacket(new ExBRGamePoint());
@@ -86,18 +86,18 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
                 final var mail = MailData.of(receiverId, _mailTitle, _mailBody, MailType.PRIME_SHOP_GIFT);
 
                 final Attachment attachement = new Attachment(mail.getSender(), mail.getId());
-                for (PrimeShopItem subItem : item.getItems()) {
-                    attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount() * count, activeChar, this);
+                for (L2StoreItem subItem : item.getItems()) {
+                    attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount() * count, player, this);
                 }
                 mail.attach(attachement);
                 MailEngine.getInstance().sendMail(mail);
-                getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());
+                getDAO(L2StoreDAO.class).addHistory(productId, count, player.getAccountName());
                 if(item.isVipGift()) {
                     client.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
                 }
             }
         } finally {
-            activeChar.removeRequest(PrimeShopRequest.class);
+            player.removeRequest(L2StoreRequest.class);
         }
 
     }

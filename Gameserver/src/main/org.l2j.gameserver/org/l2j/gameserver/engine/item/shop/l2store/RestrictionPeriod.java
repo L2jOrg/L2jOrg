@@ -16,25 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.primeshop;
-
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+package org.l2j.gameserver.engine.item.shop.l2store;
 
 /**
- * @author Gnacik, UnAfraid
+ * @author JoeAlisson
  */
-public class ExBRGamePoint extends ServerPacket {
-
-    @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_NOTIFY_GAME_POINT);
-
-        var player = client.getPlayer();
-        writeInt(player.getObjectId());
-        writeLong(client.getCoin());
-        writeInt(0x00);
-    }
-
+public enum RestrictionPeriod {
+    DAY,
+    MONTH,
+    EVER
 }

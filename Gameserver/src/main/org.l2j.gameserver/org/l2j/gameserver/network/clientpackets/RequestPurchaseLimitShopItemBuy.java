@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.LCoinShopData;
-import org.l2j.gameserver.data.xml.model.LCoinShopProductInfo;
+import org.l2j.gameserver.engine.item.shop.LCoinShop;
+import org.l2j.gameserver.engine.item.shop.lcoin.LCoinShopProduct;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.LCoinShopRequest;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -46,15 +46,16 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
     protected void runImpl() {
         final Player player = client.getPlayer();
 
-        LCoinShopProductInfo product = LCoinShopData.getInstance().getProductInfo(productId);
-        List<ItemHolder> ingredients = product.getIngredients();
+        LCoinShopProduct product = LCoinShop.getInstance().getProductInfo(productId);
+        List<ItemHolder> ingredients = product.ingredients();
 
-        if (player.hasItemRequest() || player.hasRequest(LCoinShopRequest.class) || !hasIngredients(player, ingredients) || product.isExpired()) {
+        if (player.hasItemRequest() || player.hasRequest(LCoinShopRequest.class) || !hasIngredients(player, ingredients) || product.isExpired()
+            || player.getLevel() < product.minLevel()) {
             player.sendPacket(ExPurchaseLimitShopItemBuy.fail(product, tab));
             return;
         }
 
-        ItemHolder productItem = product.getProduction();
+        ItemHolder productItem = product.production();
 
         player.addRequest(new LCoinShopRequest(player));
         consumeIngredients(player, ingredients);

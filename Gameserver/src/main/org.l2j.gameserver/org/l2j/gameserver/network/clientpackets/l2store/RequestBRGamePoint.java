@@ -16,28 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.primeshop;
+package org.l2j.gameserver.network.clientpackets.l2store;
 
-import org.l2j.gameserver.data.xml.impl.PrimeShopData;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.store.ExBRGamePoint;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRProductInfo extends ClientPacket {
-    private int _brId;
-
+public final class RequestBRGamePoint extends ClientPacket {
     @Override
     public void readImpl() {
-        _brId = readInt();
     }
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        if (player != null) {
-            PrimeShopData.getInstance().showProductInfo(player, _brId);
-        }
+        client.sendPacket(new ExBRGamePoint());
     }
 }

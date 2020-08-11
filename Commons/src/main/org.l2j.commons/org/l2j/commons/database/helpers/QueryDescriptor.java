@@ -38,7 +38,7 @@ import static java.util.Objects.nonNull;
  */
 public class QueryDescriptor implements AutoCloseable {
 
-    private static final Pattern SELECT_PATTERN = Pattern.compile("^SELECT.*", Pattern.CASE_INSENSITIVE);
+    private static final Pattern SELECT_PATTERN = Pattern.compile("^SELECT.*", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
     private static final NoParameterStrategy NO_PARAMETER_STRATEGY = new NoParameterStrategy();
     private static final ThreadLocal<Statement> statementLocal = new ThreadLocal<>();
 

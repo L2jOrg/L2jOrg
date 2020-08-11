@@ -1,4 +1,5 @@
 /*
+ * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -16,21 +17,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.model.actor.request;
 
-import org.l2j.gameserver.network.serverpackets.ExPurchaseLimitShopItemList;
+import org.l2j.gameserver.model.actor.instance.Player;
 
-public class RequestOpenWndWithoutNPC extends ClientPacket {
-    private int dialogId;
-    @Override
-    protected void readImpl() throws Exception {
-        dialogId = readByte();
+/**
+ * @author UnAfraid
+ */
+public class L2StoreRequest extends AbstractRequest {
+    public L2StoreRequest(Player activeChar) {
+        super(activeChar);
     }
 
     @Override
-    protected void runImpl() throws Exception {
-        if (dialogId == 4) {
-            getClient().sendPacket(new ExPurchaseLimitShopItemList());
-        }
+    public boolean isUsing(int objectId) {
+        return false;
     }
 }

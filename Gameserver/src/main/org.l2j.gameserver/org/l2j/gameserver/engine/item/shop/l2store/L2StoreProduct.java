@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.primeshop;
+package org.l2j.gameserver.engine.item.shop.l2store;
 
 import org.l2j.gameserver.engine.item.ItemEngine;
 
@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class PrimeShopProduct {
+public class L2StoreProduct {
 
     private final int id;
     private byte category;
@@ -48,14 +48,15 @@ public class PrimeShopProduct {
     private byte maxLevel;
     private byte minBirthday;
     private byte maxBirthday;
-    private byte restrictionDay;
+    private byte restrictionAmount;
     private byte availableCount;
-    private List<PrimeShopItem> items;
+    private final List<L2StoreItem> items;
     private byte vipTier;
     private int silverCoin;
     private boolean isVipGift;
+    private RestrictionPeriod restrictionPeriod;
 
-    public PrimeShopProduct(int id, List<PrimeShopItem> items) {
+    public L2StoreProduct(int id, List<L2StoreItem> items) {
         this.id = id;
         this.items = items;
     }
@@ -81,7 +82,7 @@ public class PrimeShopProduct {
     }
 
     public int getWeight() {
-        return items.stream().mapToInt(PrimeShopItem::getWeight).sum();
+        return items.stream().mapToInt(L2StoreItem::getWeight).sum();
     }
 
     public byte getPanelType() {
@@ -124,7 +125,7 @@ public class PrimeShopProduct {
         return stock;
     }
 
-    public byte getTotal() {
+    public byte getMaxStock() {
         return maxStock;
     }
 
@@ -148,15 +149,15 @@ public class PrimeShopProduct {
         return maxBirthday;
     }
 
-    public byte getRestrictionDay() {
-        return restrictionDay;
+    public byte getRestrictionAmount() {
+        return restrictionAmount;
     }
 
     public byte getAvailableCount() {
         return availableCount;
     }
 
-    public List<PrimeShopItem> getItems() {
+    public List<L2StoreItem> getItems() {
         return items;
     }
 
@@ -236,8 +237,8 @@ public class PrimeShopProduct {
         this.maxBirthday = maxBirthday;
     }
 
-    public void setRestrictionDay(byte restrictionDay) {
-        this.restrictionDay = restrictionDay;
+    public void setRestrictionAmount(byte restrictionAmount) {
+        this.restrictionAmount = restrictionAmount;
     }
 
     public void setAvailableCount(byte availableCount) {
@@ -266,5 +267,13 @@ public class PrimeShopProduct {
 
     public boolean isVipGift() {
         return isVipGift;
+    }
+
+    public void setRestrictionPeriod(RestrictionPeriod restrictionPeriod) {
+        this.restrictionPeriod = restrictionPeriod;
+    }
+
+    public RestrictionPeriod getRestrictionPeriod() {
+        return restrictionPeriod;
     }
 }

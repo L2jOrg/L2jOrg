@@ -16,22 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.primeshop;
+package org.l2j.gameserver.network.clientpackets.l2store;
 
+import org.l2j.gameserver.engine.item.shop.L2Store;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRRecentProductList extends ClientPacket {
+public final class RequestBRProductInfo extends ClientPacket {
+    private int _brId;
+
     @Override
     public void readImpl() {
-
+        _brId = readInt();
     }
 
     @Override
     public void runImpl() {
-        // Player player = client.getActiveChar();
-        // TODO: Implement it.
+        final Player player = client.getPlayer();
+        if (player != null) {
+            L2Store.getInstance().showProductInfo(player, _brId);
+        }
     }
 }

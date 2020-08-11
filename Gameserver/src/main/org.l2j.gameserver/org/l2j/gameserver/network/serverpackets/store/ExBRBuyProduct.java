@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.primeshop;
+package org.l2j.gameserver.network.serverpackets.store;
 
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.network.GameClient;
