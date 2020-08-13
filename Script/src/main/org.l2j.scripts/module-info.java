@@ -213,7 +213,8 @@ open module org.l2j.scripts {
                 TwoHandedSwordBonus.Factory,
                 Unsummon.Factory,
                 UnsummonAgathion.Factory,
-                VampiricAttack.Factory
+                VampiricAttack.Factory,
+                VipPoint.Factory
             ;
 
     provides org.l2j.gameserver.engine.skill.api.SkillConditionFactory
