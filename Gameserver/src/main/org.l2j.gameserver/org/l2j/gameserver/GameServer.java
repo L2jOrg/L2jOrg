@@ -319,13 +319,14 @@ public class GameServer {
 
                 fullVersion = String.format("%s: %s-%s (%s)", updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
                 var protocol = getSettings(ServerSettings.class).acceptedProtocols();
-                printSection("Server Info Version");
+                printSection("L2jOrg Server Info Version");
                 LOGGER.info("Update: .................. {}", updateName);
                 LOGGER.info("Protocol: ................ {}", protocol);
                 LOGGER.info("Build Version: ........... {}", version);
                 LOGGER.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
                 LOGGER.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
                 LOGGER.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
+                LOGGER.info("Report any bug at https://github.com/JoeAlisson/L2jOrg/issues");
             }
         } catch (IOException e) {
             LOGGER.warn(e.getLocalizedMessage(), e);

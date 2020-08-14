@@ -35,7 +35,7 @@ public final class EtcItem extends ItemTemplate {
     private EtcItemType type;
     private List<ExtractableProduct> _extractableItems;
     private int _extractableCountMin;
-    private int _extractableCountMax;
+    private int maxExtractable;
     private boolean isInfinite;
     private boolean selfResurrection;
     private AutoUseType autoUseType;
@@ -51,7 +51,7 @@ public final class EtcItem extends ItemTemplate {
             type2 = ItemTemplate.TYPE2_QUEST;
         } else {
             type2 = switch (getId()) {
-                case CommonItem.ADENA, CommonItem.ANCIENT_ADENA, CommonItem.GOLD_COIN, CommonItem.SILVER_COIN, CommonItem.L2_COIN -> ItemTemplate.TYPE2_MONEY;
+                case CommonItem.ADENA, CommonItem.GOLD_COIN, CommonItem.SILVER_COIN, CommonItem.L2_COIN -> ItemTemplate.TYPE2_MONEY;
                 default -> ItemTemplate.TYPE2_OTHER;
             };
         }
@@ -97,8 +97,8 @@ public final class EtcItem extends ItemTemplate {
     /**
      * @return the maximum count of extractable items
      */
-    public int getExtractableCountMax() {
-        return _extractableCountMax;
+    public int getMaxExtractable() {
+        return maxExtractable;
     }
 
     /**
@@ -157,5 +157,9 @@ public final class EtcItem extends ItemTemplate {
 
     public boolean isAutoSupply() {
         return autoUseType == AutoUseType.SUPPLY;
+    }
+
+    public void setExtractableMax(int maxExtractable) {
+        this.maxExtractable = maxExtractable;
     }
 }

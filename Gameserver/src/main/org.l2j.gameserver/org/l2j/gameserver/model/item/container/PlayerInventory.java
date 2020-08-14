@@ -56,7 +56,6 @@ public class PlayerInventory extends Inventory {
 
     private final Player owner;
     private Item _adena;
-    private Item _ancientAdena;
     private Item _beautyTickets;
     private Item silverCoin;
     private Item goldCoin;
@@ -95,14 +94,6 @@ public class PlayerInventory extends Inventory {
         return _adena != null ? _adena.getCount() : 0;
     }
 
-    public Item getAncientAdenaInstance() {
-        return _ancientAdena;
-    }
-
-    public long getAncientAdena() {
-        return (_ancientAdena != null) ? _ancientAdena.getCount() : 0;
-    }
-
     public Item getBeautyTicketsInstance() {
         return _beautyTickets;
     }
@@ -116,19 +107,17 @@ public class PlayerInventory extends Inventory {
      * Returns the list of items in inventory available for transaction
      * @return Item : items in inventory
      */
-    public Collection<Item> getUniqueItems(boolean allowAdena, boolean allowAncientAdena) {
-        return getUniqueItems(allowAdena, allowAncientAdena, true);
+    public Collection<Item> getUniqueItems(boolean allowAdena) {
+        return getUniqueItems(allowAdena, true);
     }
 
-    public Collection<Item> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable) {
+    public Collection<Item> getUniqueItems(boolean allowAdena, boolean onlyAvailable) {
         final Collection<Item> list = new LinkedList<>();
         for (Item item : items.values()) {
             if (!allowAdena && (item.getId() == CommonItem.ADENA)) {
                 continue;
             }
-            if (!allowAncientAdena && (item.getId() == CommonItem.ANCIENT_ADENA)) {
-                continue;
-            }
+
             boolean isDuplicate = false;
             for (Item litem : list) {
                 if (litem.getId() == item.getId()) {
@@ -292,36 +281,6 @@ public class PlayerInventory extends Inventory {
     }
 
     /**
-     * Adds specified amount of ancient adena to player inventory.
-     *
-     * @param process   : String Identifier of process triggering this action
-     * @param count     : int Quantity of adena to be added
-     * @param actor     : Player Player requesting the item add
-     * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-     */
-    public void addAncientAdena(String process, long count, Player actor, Object reference) {
-        if (count > 0) {
-            addItem(process,CommonItem.ANCIENT_ADENA, count, actor, reference);
-        }
-    }
-
-    /**
-     * Removes specified amount of ancient adena from player inventory.
-     *
-     * @param process   : String Identifier of process triggering this action
-     * @param count     : int Quantity of adena to be removed
-     * @param actor     : Player Player requesting the item add
-     * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-     * @return boolean : true if adena was reduced
-     */
-    public boolean reduceAncientAdena(String process, long count, Player actor, Object reference) {
-        if (count > 0) {
-            return destroyItemByItemId(process, CommonItem.ANCIENT_ADENA, count, actor, reference) != null;
-        }
-        return false;
-    }
-
-    /**
      * Adds item in inventory and checks _adena and _ancientAdena
      *
      * @param process   : String Identifier of process triggering this action
@@ -337,8 +296,6 @@ public class PlayerInventory extends Inventory {
         if (item != null) {
             if ((item.getId() == CommonItem.ADENA) && !item.equals(_adena)) {
                 _adena = item;
-            } else if ((item.getId() == CommonItem.ANCIENT_ADENA) && !item.equals(_ancientAdena)) {
-                _ancientAdena = item;
             } else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets)) {
                 _beautyTickets = item;
             } else if( item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
@@ -398,8 +355,6 @@ public class PlayerInventory extends Inventory {
         if (item != null) {
             if ((item.getId() == CommonItem.ADENA) && !item.equals(_adena)) {
                 _adena = item;
-            } else if ((item.getId() == CommonItem.ANCIENT_ADENA) && !item.equals(_ancientAdena)) {
-                _ancientAdena = item;
             } else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets)) {
                 _beautyTickets = item;
             } else if (item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
@@ -442,10 +397,6 @@ public class PlayerInventory extends Inventory {
 
         if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId()))) {
             _adena = null;
-        }
-
-        if ((_ancientAdena != null) && ((_ancientAdena.getCount() <= 0) || (_ancientAdena.getOwnerId() != getOwnerId()))) {
-            _ancientAdena = null;
         }
 
         // Notify to scripts
@@ -494,10 +445,6 @@ public class PlayerInventory extends Inventory {
 
         if ((_adena != null) && (_adena.getCount() <= 0)) {
             _adena = null;
-        }
-
-        if ((_ancientAdena != null) && (_ancientAdena.getCount() <= 0)) {
-            _ancientAdena = null;
         }
 
         // Notify to scripts
@@ -565,10 +512,6 @@ public class PlayerInventory extends Inventory {
             _adena = null;
         }
 
-        if ((_ancientAdena != null) && ((_ancientAdena.getCount() <= 0) || (_ancientAdena.getOwnerId() != getOwnerId()))) {
-            _ancientAdena = null;
-        }
-
         // Notify to scripts
         if (item != null) {
             EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getTemplate());
@@ -592,10 +535,6 @@ public class PlayerInventory extends Inventory {
 
         if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId()))) {
             _adena = null;
-        }
-
-        if ((_ancientAdena != null) && ((_ancientAdena.getCount() <= 0) || (_ancientAdena.getOwnerId() != getOwnerId()))) {
-            _ancientAdena = null;
         }
 
         // Notify to scripts
@@ -622,8 +561,6 @@ public class PlayerInventory extends Inventory {
 
         if (item.getId() == CommonItem.ADENA) {
             _adena = null;
-        } else if (item.getId() == CommonItem.ANCIENT_ADENA) {
-            _ancientAdena = null;
         } else if (item.getId() == BEAUTY_TICKET_ID) {
             _beautyTickets = null;
         }
@@ -647,7 +584,6 @@ public class PlayerInventory extends Inventory {
     public void restore() {
         super.restore();
         _adena = getItemByItemId(CommonItem.ADENA);
-        _ancientAdena = getItemByItemId(CommonItem.ANCIENT_ADENA);
         _beautyTickets = getItemByItemId(BEAUTY_TICKET_ID);
         goldCoin = getItemByItemId(CommonItem.GOLD_COIN);
          silverCoin = getItemByItemId(CommonItem.SILVER_COIN);

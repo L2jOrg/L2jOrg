@@ -2967,12 +2967,6 @@ public final class Player extends Playable {
         return inventory.getAdena();
     }
 
-    /**
-     * @return the Ancient Adena amount of the Player.
-     */
-    public long getAncientAdena() {
-        return inventory.getAncientAdena();
-    }
 
     /**
      * @return the Beauty Tickets of the Player.
@@ -3091,85 +3085,6 @@ public final class Player extends Playable {
                 }
             }
         }
-
-        return true;
-    }
-
-    /**
-     * Add ancient adena to Inventory of the Player and send a Server->Client InventoryUpdate packet to the Player.
-     *
-     * @param process     : String Identifier of process triggering this action
-     * @param count       : int Quantity of ancient adena to be added
-     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
-     * @param sendMessage : boolean Specifies whether to send message to Client about this action
-     */
-    public void addAncientAdena(String process, long count, WorldObject reference, boolean sendMessage) {
-        if (sendMessage) {
-            final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-            sm.addItemName(CommonItem.ANCIENT_ADENA);
-            sm.addLong(count);
-            sendPacket(sm);
-        }
-
-        if (count > 0) {
-            inventory.addAncientAdena(process, count, this, reference);
-
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(inventory.getAncientAdenaInstance());
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
-        }
-    }
-
-    /**
-     * Reduce ancient adena in Inventory of the Player and send a Server->Client InventoryUpdate packet to the Player.
-     *
-     * @param process     : String Identifier of process triggering this action
-     * @param count       : long Quantity of ancient adena to be reduced
-     * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
-     * @param sendMessage : boolean Specifies whether to send message to Client about this action
-     * @return boolean informing if the action was successful
-     */
-    public boolean reduceAncientAdena(String process, long count, WorldObject reference, boolean sendMessage) {
-        if (count > inventory.getAncientAdena()) {
-            if (sendMessage) {
-                sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
-            }
-
-            return false;
-        }
-
-        if (count > 0) {
-            final Item ancientAdenaItem = inventory.getAncientAdenaInstance();
-            if (!inventory.reduceAncientAdena(process, count, this, reference)) {
-                return false;
-            }
-
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(ancientAdenaItem);
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
-
-            if (sendMessage) {
-                if (count > 1) {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-                    sm.addItemName(CommonItem.ANCIENT_ADENA);
-                    sm.addLong(count);
-                    sendPacket(sm);
-                } else {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                    sm.addItemName(CommonItem.ANCIENT_ADENA);
-                    sendPacket(sm);
-                }
-            }
-        }
-
         return true;
     }
 
@@ -3220,7 +3135,7 @@ public final class Player extends Playable {
         return addItem(process, itemId, count, 0, reference, sendMessage);
     }
 
-    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
+    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage, boolean sendUpdate) {
         Item item = null;
         if (count > 0) {
             final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
@@ -3239,7 +3154,7 @@ public final class Player extends Playable {
                     handler.useItem(this, new Item(itemId), false);
                 }
             } else {
-                item = inventory.addItem(process, itemId, count, this, reference);
+                item = inventory.addItem(process, itemId, count, this, reference, sendUpdate);
                 if(enchant > 0) {
                     item.setEnchantLevel(enchant);
                 }
@@ -3269,6 +3184,10 @@ public final class Player extends Playable {
             }
         }
         return item;
+    }
+
+    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
+        return addItem(process, itemId, count, enchant, reference, sendMessage, true);
     }
 
 

@@ -107,7 +107,6 @@ public final class ItemEngine extends GameXmlReader {
         var attrs = weaponNode.getAttributes();
         var weapon = new Weapon(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, WeaponType.class, "type"), parseEnum(attrs, BodyPart.class, "body-part"));
 
-        weapon.setIcon(parseString(attrs, "icon"));
         weapon.setDisplayId(parseInt(attrs, "display-id", weapon.getId()));
         weapon.setMagic(parseBoolean(attrs, "magic"));
 
@@ -261,7 +260,6 @@ public final class ItemEngine extends GameXmlReader {
         var attrs = armorNode.getAttributes();
         var armor = new Armor(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, ArmorType.class, "type"), parseEnum(attrs, BodyPart.class, "body-part"));
 
-        armor.setIcon(parseString(attrs, "icon"));
         armor.setDisplayId(parseInt(attrs, "display-id", armor.getId()));
 
         forEach(armorNode,node ->{
@@ -288,7 +286,6 @@ public final class ItemEngine extends GameXmlReader {
     private void parseItem(Node itemNode) {
         var attrs = itemNode.getAttributes();
         var item = new EtcItem(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, EtcItemType.class, "type", EtcItemType.NONE));
-        item.setIcon(parseString(attrs, "icon"));
         item.setDisplayId(parseInt(attrs, "display-id", item.getId()));
 
         forEach(itemNode, node ->{
@@ -318,11 +315,14 @@ public final class ItemEngine extends GameXmlReader {
 
     private void parseItemExtract(EtcItem item, Node node) {
         item.setHandler("ExtractableItems");
-        forEach(node, "item", itemNode -> {
-            var attr = itemNode.getAttributes();
-            item.addCapsuledItem(new ExtractableProduct(parseInt(attr, "id"), parseInt(attr, "min-count"), parseInt(attr, "min-count"),
-                    parseDouble(attr, "chance"), parseInt(attr, "min-enchant"), parseInt(attr, "max-enchant")));
-        });
+        item.setExtractableMax(parseInt(node.getAttributes(), "max"));
+        for(var itemNode = node.getFirstChild(); nonNull(itemNode); itemNode = itemNode.getNextSibling()) {
+            if(itemNode.getNodeName().equals("item")) {
+                var attr = itemNode.getAttributes();
+                item.addCapsuledItem(new ExtractableProduct(parseInt(attr, "id"), parseInt(attr, "min-count"), parseInt(attr, "min-count"),
+                        parseDouble(attr, "chance"), parseInt(attr, "min-enchant"), parseInt(attr, "max-enchant")));
+            }
+        }
     }
 
     private void parseSkillReducer(EtcItem item, Node node) {
