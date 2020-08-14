@@ -57,7 +57,7 @@ public final class CommissionManager {
 
     private static final int INTERACTION_DISTANCE = 250;
     private static final int ITEMS_LIMIT_PER_REQUEST = 999;
-    private static final int MAX_ITEMS_REGISTRED_PER_PLAYER = 10;
+    private static final int MAX_ITEMS_REGISTERED_PER_PLAYER = 10;
     private static final long MIN_REGISTRATION_AND_SALE_FEE = 1000;
     private static final double REGISTRATION_FEE_PER_DAY = 0.001;
     private static final double SALE_FEE_PER_DAY = 0.005;
@@ -157,7 +157,7 @@ public final class CommissionManager {
         //@formatter:off
         final List<CommissionItem> commissionItems = _commissionItems.values().stream()
                 .filter(c -> c.getItemInstance().getOwnerId() == player.getObjectId())
-                .limit(MAX_ITEMS_REGISTRED_PER_PLAYER)
+                .limit(MAX_ITEMS_REGISTERED_PER_PLAYER)
                 .collect(Collectors.toList());
         //@formatter:on
 
@@ -205,7 +205,7 @@ public final class CommissionManager {
                     .count();
             //@formatter:on
 
-            if (playerRegisteredItems >= MAX_ITEMS_REGISTRED_PER_PLAYER) {
+            if (playerRegisteredItems >= MAX_ITEMS_REGISTERED_PER_PLAYER) {
                 player.sendPacket(SystemMessageId.THE_ITEM_HAS_FAILED_TO_BE_REGISTERED);
                 player.sendPacket(ExResponseCommissionRegister.FAILED);
                 return;

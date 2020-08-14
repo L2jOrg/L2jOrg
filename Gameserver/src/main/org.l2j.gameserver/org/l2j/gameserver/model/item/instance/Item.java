@@ -189,7 +189,7 @@ public final class Item extends WorldObject {
      * Constructor of the Item from the objetId and the description of the item given by the ItemTemplate.
      *
      * @param objectId : int designating the ID of the object in the world
-     * @param template     : ItemTemplate containing informations of the item
+     * @param template : ItemTemplate containing informations of the item
      */
     public Item(int objectId, ItemTemplate template) {
         super(objectId);
@@ -302,20 +302,20 @@ public final class Item extends WorldObject {
         if (generalSettings.logItems()) {
             if (!generalSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
                 if (enchantLevel > 0) {
-                    LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
+                    LOG_ITEMS.info("SETOWNER:" + process // in case of null
                             + ", item " + getObjectId() //
                             + ":+" + enchantLevel //
                             + " " + template.getName() //
                             + "(" + _count + "), " //
-                            + String.valueOf(creator) + ", " // in case of null
-                            + String.valueOf(reference)); // in case of null
+                            + creator + ", " // in case of null
+                            + reference); // in case of null
                 } else {
                     LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
                             + ":" + template.getName() //
                             + "(" + _count + "), " //
-                            + String.valueOf(creator) + ", " // in case of null
-                            + String.valueOf(reference)); // in case of null
+                            + creator + ", " // in case of null
+                            + reference); // in case of null
                 }
             }
         }

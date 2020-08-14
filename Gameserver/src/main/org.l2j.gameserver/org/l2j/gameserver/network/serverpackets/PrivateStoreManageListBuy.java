@@ -37,7 +37,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket {
         _sendType = sendType;
         _objId = player.getObjectId();
         _playerAdena = player.getAdena();
-        _itemList = player.getInventory().getUniqueItems(false, true);
+        _itemList = player.getInventory().getUniqueItems(false);
         _buyList = player.getBuyList().getItems();
     }
 
