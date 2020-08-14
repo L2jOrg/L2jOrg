@@ -83,7 +83,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private int id;
     private int displayId;
     private String name;
-    private String icon;
     private int weight;
     private boolean stackable;
     protected CrystalType crystalType;
@@ -684,15 +683,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return commissionType;
     }
 
-    /**
-     * Usable in HTML windows.
-     *
-     * @return the icon link in client files
-     */
-    public String getIcon() {
-        return icon;
-    }
-
     public boolean isPetItem() {
         return getItemType() == EtcItemType.PET_COLLAR;
     }
@@ -705,10 +695,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
             }
         }
         return defaultValue;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
     }
 
     public void setDisplayId(int displayId) {
