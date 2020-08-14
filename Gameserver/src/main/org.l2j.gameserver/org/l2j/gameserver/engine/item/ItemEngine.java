@@ -318,11 +318,14 @@ public final class ItemEngine extends GameXmlReader {
 
     private void parseItemExtract(EtcItem item, Node node) {
         item.setHandler("ExtractableItems");
-        forEach(node, "item", itemNode -> {
-            var attr = itemNode.getAttributes();
-            item.addCapsuledItem(new ExtractableProduct(parseInt(attr, "id"), parseInt(attr, "min-count"), parseInt(attr, "min-count"),
-                    parseDouble(attr, "chance"), parseInt(attr, "min-enchant"), parseInt(attr, "max-enchant")));
-        });
+        item.setExtractableMax(parseInt(node.getAttributes(), "max"));
+        for(var itemNode = node.getFirstChild(); nonNull(itemNode); itemNode = itemNode.getNextSibling()) {
+            if(itemNode.getNodeName().equals("item")) {
+                var attr = itemNode.getAttributes();
+                item.addCapsuledItem(new ExtractableProduct(parseInt(attr, "id"), parseInt(attr, "min-count"), parseInt(attr, "min-count"),
+                        parseDouble(attr, "chance"), parseInt(attr, "min-enchant"), parseInt(attr, "max-enchant")));
+            }
+        }
     }
 
     private void parseSkillReducer(EtcItem item, Node node) {

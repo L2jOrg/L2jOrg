@@ -42,6 +42,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Template for item skills handler.
  * @author Zoey76
+ * @author JoeAlisson
  */
 public class ItemSkillsTemplate implements IItemHandler {
 

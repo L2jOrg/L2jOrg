@@ -3220,7 +3220,7 @@ public final class Player extends Playable {
         return addItem(process, itemId, count, 0, reference, sendMessage);
     }
 
-    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
+    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage, boolean sendUpdate) {
         Item item = null;
         if (count > 0) {
             final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
@@ -3239,7 +3239,7 @@ public final class Player extends Playable {
                     handler.useItem(this, new Item(itemId), false);
                 }
             } else {
-                item = inventory.addItem(process, itemId, count, this, reference);
+                item = inventory.addItem(process, itemId, count, this, reference, sendUpdate);
                 if(enchant > 0) {
                     item.setEnchantLevel(enchant);
                 }
@@ -3269,6 +3269,10 @@ public final class Player extends Playable {
             }
         }
         return item;
+    }
+
+    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
+        return addItem(process, itemId, count, enchant, reference, sendMessage, true);
     }
 
 
