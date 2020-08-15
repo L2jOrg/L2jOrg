@@ -20,6 +20,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -32,6 +33,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
 /**
@@ -136,18 +139,10 @@ public class ContactList {
 
         _contacts.remove(name);
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(QUERY_REMOVE)) {
-            statement.setInt(1, activeChar.getObjectId());
-            statement.setInt(2, contactId);
-            statement.execute();
-
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
-            sm.addString(name);
-            activeChar.sendPacket(sm);
-        } catch (Exception e) {
-            LOGGER.warn("Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
-        }
+        getDAO(PlayerDAO.class).deleteContact(activeChar.getObjectId(), contactId);
+        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
+        sm.addString(name);
+        activeChar.sendPacket(sm);
     }
 
     public Set<String> getAllContacts() {

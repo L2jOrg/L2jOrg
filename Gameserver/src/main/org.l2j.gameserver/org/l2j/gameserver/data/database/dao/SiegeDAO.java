@@ -20,22 +20,18 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.AccountData;
 
 /**
  * @author JoeAlisson
  */
-public interface AccountDAO extends DAO<AccountData> {
+public interface SiegeDAO extends DAO<Object> {
 
-    @Query("DELETE a1, a FROM account_gsdata a1 JOIN account_data a ON a.account = a1.account_name WHERE a.account NOT IN (SELECT account_name FROM characters);")
-    int deleteWithoutAccount();
+    @Query("DELETE FROM castle_siege_guards WHERE npcId = :npcId: AND x = :x: AND y = :y: AND z = :z: AND isHired = 1")
+    void deleteGuard(int npcId, int x, int y, int z);
 
-    @Query("SELECT * FROM account_data WHERE account = :account:")
-    AccountData findById(String account);
+    @Query("DELETE FROM castle_siege_guards WHERE castleId = :castleId: AND isHired = 1")
+    void deleteGuardsOfCastle(int castleId);
 
-    @Query("DELETE FROM account_gsdata WHERE var = :var:")
-    void deleteAccountVariable(String var);
-
-    @Query("DELETE FROM account_gsdata WHERE account_name = :accountName: ")
-    void deleteVariables(String accountName);
+    @Query("SELECT EXISTS(SELECT 1 FROM siege_clans WHERE clan_id=:clanId: AND castle_id=:castleId:)")
+    boolean isRegistered(int clanId, int castleId);
 }

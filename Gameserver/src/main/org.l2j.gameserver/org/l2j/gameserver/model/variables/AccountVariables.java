@@ -19,6 +19,7 @@
 package org.l2j.gameserver.model.variables;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.AccountDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,6 +28,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map.Entry;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
 /**
@@ -37,7 +40,6 @@ public class AccountVariables extends AbstractVariables {
 
     // SQL Queries.
     private static final String SELECT_QUERY = "SELECT * FROM account_gsdata WHERE account_name = ?";
-    private static final String DELETE_QUERY = "DELETE FROM account_gsdata WHERE account_name = ?";
     private static final String INSERT_QUERY = "INSERT INTO account_gsdata (account_name, var, value) VALUES (?, ?, ?)";
 
     private final String _accountName;
@@ -74,12 +76,9 @@ public class AccountVariables extends AbstractVariables {
             return false;
         }
 
+        getDAO(AccountDAO.class).deleteVariables(_accountName);
+
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            // Clear previous entries.
-            try (PreparedStatement st = con.prepareStatement(DELETE_QUERY)) {
-                st.setString(1, _accountName);
-                st.execute();
-            }
 
             // Insert all variables.
             try (PreparedStatement st = con.prepareStatement(INSERT_QUERY)) {
@@ -92,7 +91,7 @@ public class AccountVariables extends AbstractVariables {
                 st.executeBatch();
             }
         } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't update variables for: " + _accountName, e);
+            LOGGER.warn("Couldn't update variables for: {}", _accountName, e);
             return false;
         } finally {
             compareAndSetChanges(true, false);
@@ -102,19 +101,8 @@ public class AccountVariables extends AbstractVariables {
 
     @Override
     public boolean deleteMe() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            // Clear previous entries.
-            try (PreparedStatement st = con.prepareStatement(DELETE_QUERY)) {
-                st.setString(1, _accountName);
-                st.execute();
-            }
-
-            // Clear all entries
-            getSet().clear();
-        } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't delete variables for: " + _accountName, e);
-            return false;
-        }
+        getDAO(AccountDAO.class).deleteVariables(_accountName);
+        getSet().clear();
         return true;
     }
 }

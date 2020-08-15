@@ -21,6 +21,7 @@ package org.l2j.gameserver.instancemanager;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -29,11 +30,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Collection;
 import java.util.Collections;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author UnAfraid
@@ -60,38 +62,13 @@ public class MentorManager {
         }
     }
 
-    /**
-     * Removes mentee for current Player
-     *
-     * @param mentorId
-     * @param menteeId
-     */
     public void deleteMentee(int mentorId, int menteeId) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("DELETE FROM character_mentees WHERE mentorId = ? AND charId = ?")) {
-            statement.setInt(1, mentorId);
-            statement.setInt(2, menteeId);
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.warn(e.getMessage(), e);
-        }
+        getDAO(PlayerDAO.class).deleteMentee(mentorId, menteeId);
     }
 
-    /**
-     * @param mentorId
-     * @param menteeId
-     */
     public void deleteMentor(int mentorId, int menteeId) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("DELETE FROM character_mentees WHERE mentorId = ? AND charId = ?")) {
-            statement.setInt(1, mentorId);
-            statement.setInt(2, menteeId);
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.warn(e.getMessage(), e);
-        } finally {
-            removeMentor(mentorId, menteeId);
-        }
+        getDAO(PlayerDAO.class).deleteMentee(mentorId, menteeId);
+        removeMentor(mentorId, menteeId);
     }
 
     public boolean isMentor(int objectId) {

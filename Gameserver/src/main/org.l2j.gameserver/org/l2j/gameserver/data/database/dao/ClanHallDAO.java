@@ -34,4 +34,10 @@ public interface ClanHallDAO extends DAO<Object> {
 
     @Query("REPLACE INTO clanhall (id, owner_id, paid_until) VALUES (:id:,:owner:,:paidUntil:)")
     void save(int id, int owner, long paidUntil);
+
+    @Query("DELETE FROM clanhall_auctions_bidders WHERE clanHallId=:id:")
+    void deleteBidders(int id);
+
+    @Query("DELETE FROM clanhall_auctions_bidders WHERE clanId=:id:")
+    void deleteBidder(int id);
 }

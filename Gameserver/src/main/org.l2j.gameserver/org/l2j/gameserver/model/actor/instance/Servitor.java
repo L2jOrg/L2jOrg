@@ -22,6 +22,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
@@ -53,6 +54,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author UnAfraid
@@ -255,13 +257,9 @@ public class Servitor extends Summon implements Runnable {
             SummonEffectsTable.getInstance().getServitorEffects(getOwner()).getOrDefault(getReferenceSkill(), Collections.emptyList()).clear();
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(DELETE_SKILL_SAVE)) {
-            // Delete all current stored effects for summon to avoid dupe
-            statement.setInt(1, getOwner().getObjectId());
-            statement.setInt(2, getOwner().getClassIndex());
-            statement.setInt(3, _referenceSkill);
-            statement.execute();
+        getDAO(PetDAO.class).deleteSkillsSave(getOwner().getObjectId(), getOwner().getClassIndex(), _referenceSkill);
+
+        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
 
             int buff_index = 0;
 

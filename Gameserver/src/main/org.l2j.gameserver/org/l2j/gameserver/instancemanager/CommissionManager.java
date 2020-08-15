@@ -20,6 +20,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -48,6 +49,8 @@ import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author NosBit
@@ -360,16 +363,7 @@ public final class CommissionManager {
      * @return {@code true} if the item was deleted successfully, {@code false} otherwise
      */
     private boolean deleteItemFromDB(long commissionId) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement(DELETE_COMMISSION_ITEM)) {
-            ps.setLong(1, commissionId);
-            if (ps.executeUpdate() > 0) {
-                return true;
-            }
-        } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Failed deleting commission item. Commission ID: " + commissionId, e);
-        }
-        return false;
+        return getDAO(ItemDAO.class).deleteCommission(commissionId);
     }
 
     /**

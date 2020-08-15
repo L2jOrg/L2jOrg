@@ -21,6 +21,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.model.item.auction.ItemAuctionInstance;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -32,12 +33,16 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
 /**
@@ -74,19 +79,8 @@ public final class ItemAuctionManager extends GameXmlReader {
     }
 
     public static void deleteAuction(int auctionId) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            try (PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?")) {
-                statement.setInt(1, auctionId);
-                statement.execute();
-            }
-
-            try (PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction_bid WHERE auctionId=?")) {
-                statement.setInt(1, auctionId);
-                statement.execute();
-            }
-        } catch (SQLException e) {
-            LOGGER.error("ItemAuctionManager: Failed deleting auction: " + auctionId, e);
-        }
+        getDAO(ItemDAO.class).deleteItemAuction(auctionId);
+        getDAO(ItemDAO.class).deleteItemAuctionBid(auctionId);
     }
 
     @Override

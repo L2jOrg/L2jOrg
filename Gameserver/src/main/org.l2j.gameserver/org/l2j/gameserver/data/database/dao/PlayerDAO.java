@@ -180,4 +180,58 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("UPDATE characters SET vitality_points = :points:")
     void resetVitality(int points);
+
+    @Query("DELETE FROM character_recipebook WHERE charId=:playerId: AND id=:recipeId: AND classIndex=:classIndex:")
+    void deleteRecipe(int playerId, int recipeId, int classIndex);
+
+    @Query("UPDATE characters SET online=:online:, lastAccess=:lastAccess: WHERE charId=:playerId:")
+    void updateOnlineStatus(int playerId, boolean online, long lastAccess);
+
+    @Query("DELETE FROM character_skills WHERE skill_id=:skillId: AND charId=:playerId: AND class_index=:classIndex:")
+    void deleteSkill(int playerId, int skillId, int classIndex);
+
+    @Query("DELETE FROM character_hennas WHERE charId=:playerId: AND slot=:slot: AND class_index=:classIndex:")
+    void deleteHenna(int playerId, int slot, int classIndex);
+
+    @Query("DELETE FROM character_hennas WHERE charId=:playerId: AND class_index=:classIndex:")
+    void deleteHennas(int playerId, int classIndex);
+
+    @Query("DELETE FROM character_skills_save WHERE charId=:playerId: AND class_index=:classIndex:")
+    void deleteSkillsSave(int playerId, int classIndex);
+
+    @Query("DELETE FROM character_skills WHERE charId=? AND class_index=?")
+    void deleteSkills(int playerId, int classIndex);
+
+    @Query("DELETE FROM character_subclasses WHERE charId=:playerId: AND class_index=:classIndex:")
+    void deleteSubClass(int playerId, int classIndex);
+
+    @Query("UPDATE character_tpbookmark SET icon=:icon:,tag=:tag:,name=:name: where charId=:playerId: AND Id=:id:")
+    void updateTeleportBookMark(int playerId, int id, int icon, String tag, String name);
+
+    @Query("DELETE FROM character_tpbookmark WHERE charId=:playerId: AND Id=:id:")
+    void deleteTeleportBookMark(int playerId, int id);
+
+    @Query("DELETE FROM character_recipeshoplist WHERE charId=:playerId:")
+    void deleteRecipeShop(int playerId);
+
+    @Query("UPDATE characters SET subpledge=:pledgeType: WHERE charId=:playerId:")
+    void updateSubpledge(int playerId, int pledgeType);
+
+    @Query("UPDATE characters SET power_grade=:powerGrade: WHERE charId=:playerId:")
+    void updatePowerGrade(int playerId, int powerGrade);
+
+    @Query("UPDATE characters SET apprentice=:apprentice:,sponsor=:sponsor: WHERE charId=playerId")
+    void updateApprenticeAndSponsor(int playerId, int apprentice, int sponsor);
+
+    @Query("DELETE FROM character_contacts WHERE charId =:playeId: and contactId = :contactId:")
+    void deleteContact(int playerId, int contactId);
+
+    @Query("DELETE FROM character_macroses WHERE charId=:playerId: AND id=:id:")
+    void deleteMacro(int playerId, int id);
+
+    @Query("DELETE FROM character_instance_time WHERE charId=:playerId: AND instanceId=:id:")
+    void deleteInstanceTime(int playerId, int id);
+
+    @Query("DELETE FROM character_mentees WHERE mentorId = :mentorId: AND charId = :menteeId:")
+    void deleteMentee(int mentorId, int menteeId);
 }

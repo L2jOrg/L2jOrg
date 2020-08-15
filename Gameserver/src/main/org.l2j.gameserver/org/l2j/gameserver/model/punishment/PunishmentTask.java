@@ -20,6 +20,7 @@ package org.l2j.gameserver.model.punishment;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.data.database.dao.PunishmentDAO;
 import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.handler.PunishmentHandler;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
@@ -32,6 +33,8 @@ import org.slf4j.LoggerFactory;
 import java.sql.*;
 import java.util.concurrent.ScheduledFuture;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+
 
 /**
  * @author UnAfraid
@@ -40,7 +43,6 @@ public class PunishmentTask implements Runnable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(PunishmentTask.class);
 
     private static final String INSERT_QUERY = "INSERT INTO punishments (`key`, `affect`, `type`, `expiration`, `reason`, `punishedBy`) VALUES (?, ?, ?, ?, ?, ?)";
-    private static final String UPDATE_QUERY = "UPDATE punishments SET expiration = ? WHERE id = ?";
     private final String _key;
     private final PunishmentAffect _affect;
     private final PunishmentType _type;
@@ -195,18 +197,11 @@ public class PunishmentTask implements Runnable {
      */
     private void onEnd() {
         if (_isStored) {
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement st = con.prepareStatement(UPDATE_QUERY)) {
-                st.setLong(1, System.currentTimeMillis());
-                st.setLong(2, _id);
-                st.execute();
-            } catch (SQLException e) {
-                LOGGER.warn(getClass().getSimpleName() + ": Couldn't update punishment task for: " + _affect + " " + _key + " id: " + _id, e);
-            }
+            getDAO(PunishmentDAO.class).updateExpiration(_id, System.currentTimeMillis());
         }
 
         if (_type == PunishmentType.CHAT_BAN && _affect == PunishmentAffect.CHARACTER) {
-            final Player player = World.getInstance().findPlayer(Integer.valueOf(_key));
+            final Player player = World.getInstance().findPlayer(Integer.parseInt(_key));
             if (player != null) {
                 player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
             }

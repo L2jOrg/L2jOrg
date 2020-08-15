@@ -19,6 +19,7 @@
 package org.l2j.gameserver.model.variables;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,6 +28,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map.Entry;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
 /**
@@ -37,7 +40,6 @@ public class ClanVariables extends AbstractVariables {
 
     // SQL Queries.
     private static final String SELECT_QUERY = "SELECT * FROM clan_variables WHERE clanId = ?";
-    private static final String DELETE_QUERY = "DELETE FROM clan_variables WHERE clanId = ?";
     private static final String INSERT_QUERY = "INSERT INTO clan_variables (clanId, var, val) VALUES (?, ?, ?)";
 
     private final int _objectId;
@@ -59,7 +61,7 @@ public class ClanVariables extends AbstractVariables {
                 }
             }
         } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
+            LOGGER.warn("Couldn't restore variables for: {}", _objectId, e);
             return false;
         } finally {
             compareAndSetChanges(true, false);
@@ -74,13 +76,9 @@ public class ClanVariables extends AbstractVariables {
             return false;
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            // Clear previous entries.
-            try (PreparedStatement st = con.prepareStatement(DELETE_QUERY)) {
-                st.setInt(1, _objectId);
-                st.execute();
-            }
+        getDAO(ClanDAO.class).deleteVariables(_objectId);
 
+        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             // Insert all variables.
             try (PreparedStatement st = con.prepareStatement(INSERT_QUERY)) {
                 st.setInt(1, _objectId);
@@ -92,7 +90,7 @@ public class ClanVariables extends AbstractVariables {
                 st.executeBatch();
             }
         } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
+            LOGGER.warn("Couldn't update variables for: {}", _objectId, e);
             return false;
         } finally {
             compareAndSetChanges(true, false);
@@ -102,19 +100,8 @@ public class ClanVariables extends AbstractVariables {
 
     @Override
     public boolean deleteMe() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            // Clear previous entries.
-            try (PreparedStatement st = con.prepareStatement(DELETE_QUERY)) {
-                st.setInt(1, _objectId);
-                st.execute();
-            }
-
-            // Clear all entries
-            getSet().clear();
-        } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
-            return false;
-        }
+        getDAO(ClanDAO.class).deleteVariables(_objectId);
+        getSet().clear();
         return true;
     }
 }

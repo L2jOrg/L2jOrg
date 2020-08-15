@@ -20,6 +20,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.enums.ClanRewardType;
@@ -30,7 +31,6 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -533,18 +533,8 @@ public class ClanMember {
         }
     }
 
-    /**
-     * Update pledge type.
-     */
     public void updatePledgeType() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE characters SET subpledge=? WHERE charId=?")) {
-            ps.setLong(1, _pledgeType);
-            ps.setInt(2, getObjectId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Could not update pledge type: " + e.getMessage(), e);
-        }
+        getDAO(PlayerDAO.class).updateSubpledge(_objectId, _pledgeType);
     }
 
     /**
@@ -575,6 +565,7 @@ public class ClanMember {
      * Update the characters table of the database with power grade.
      */
     public void updatePowerGrade() {
+        getDAO(PlayerDAO.class).updatePowerGrade(_objectId, _powerGrade);
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("UPDATE characters SET power_grade=? WHERE charId=?")) {
             ps.setLong(1, _powerGrade);
@@ -676,15 +667,7 @@ public class ClanMember {
      * @param sponsor    the sponsor
      */
     public void saveApprenticeAndSponsor(int apprentice, int sponsor) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE characters SET apprentice=?,sponsor=? WHERE charId=?")) {
-            ps.setInt(1, apprentice);
-            ps.setInt(2, sponsor);
-            ps.setInt(3, getObjectId());
-            ps.execute();
-        } catch (SQLException e) {
-            LOGGER.warn("Could not save apprentice/sponsor: " + e.getMessage(), e);
-        }
+        getDAO(PlayerDAO.class).updateApprenticeAndSponsor(_objectId, apprentice, sponsor);
     }
 
     public long getOnlineTime() {

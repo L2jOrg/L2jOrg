@@ -21,6 +21,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.SiegeDAO;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
@@ -36,6 +37,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author JoeAlisson
@@ -63,7 +66,7 @@ public final class SiegeManager {
 
     }
 
-    public final boolean checkIsRegistered(Clan clan, int castleid) {
+    public final boolean checkIsRegistered(Clan clan, int castleId) {
         if (clan == null) {
             return false;
         }
@@ -72,20 +75,7 @@ public final class SiegeManager {
             return true;
         }
 
-        boolean register = false;
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?")) {
-            statement.setInt(1, clan.getId());
-            statement.setInt(2, castleid);
-            try (ResultSet rs = statement.executeQuery()) {
-                if (rs.next()) {
-                    register = true;
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Exception: checkIsRegistered(): " + e.getMessage(), e);
-        }
-        return register;
+        return getDAO(SiegeDAO.class).isRegistered(clan.getId(), castleId);
     }
 
     public final void removeSiegeSkills(Player player) {

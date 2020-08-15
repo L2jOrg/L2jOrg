@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
@@ -88,6 +89,7 @@ import java.util.function.Predicate;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
 
 public final class Item extends WorldObject {
@@ -876,15 +878,8 @@ public final class Item extends WorldObject {
         final VariationInstance augment = _augmentation;
         _augmentation = null;
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId = ?")) {
-            ps.setInt(1, getObjectId());
-            ps.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.error("Could not remove augmentation for item: " + toString() + " from DB: ", e);
-        }
 
-        // Notify to scripts.
+        getDAO(ItemDAO.class).deleteVariations(objectId);
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augment, false), getTemplate());
     }
 
@@ -948,13 +943,7 @@ public final class Item extends WorldObject {
     }
 
     private void updateItemElements(Connection con) {
-        try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ?")) {
-            ps.setInt(1, getObjectId());
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            LOGGER.error("Could not update elementals for item: " + toString() + " from DB: ", e);
-        }
-
+        getDAO(ItemDAO.class).deleteElementals(objectId);
         if (_elementals == null) {
             return;
         }
@@ -1077,18 +1066,9 @@ public final class Item extends WorldObject {
         if (_elementals == null) {
             return;
         }
+        _elementals.clear();
 
-        synchronized (_elementals) {
-            _elementals.clear();
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ?")) {
-            ps.setInt(1, getObjectId());
-            ps.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.error("Could not remove all elemental enchant for item: " + toString() + " from DB: ", e);
-        }
+        getDAO(ItemDAO.class).deleteElementals(objectId);
     }
 
     /**
@@ -1222,33 +1202,9 @@ public final class Item extends WorldObject {
             return;
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE object_id = ?")) {
-                ps.setInt(1, getObjectId());
-                ps.executeUpdate();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId = ?")) {
-                ps.setInt(1, getObjectId());
-                ps.executeUpdate();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ?")) {
-                ps.setInt(1, getObjectId());
-                ps.executeUpdate();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_special_abilities WHERE objectId = ?")) {
-                ps.setInt(1, getObjectId());
-                ps.executeUpdate();
-            }
-
-        } catch (Exception e) {
-            LOGGER.error("Could not delete item " + this + " in DB ", e);
-        } finally {
-            _existsInDb = false;
-            _storedInDb = false;
-        }
+        getDAO(ItemDAO.class).deleteItem(objectId);
+        _existsInDb = false;
+        _storedInDb = false;
     }
 
     /**

@@ -27,6 +27,7 @@ import io.github.joealisson.primitive.maps.impl.CHashIntLongMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.enums.InstanceReenterType;
@@ -63,6 +64,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * Instance manager.
@@ -515,17 +517,8 @@ public final class InstanceManager extends GameXmlReader {
      * @param id     template id of instance world
      */
     public void deleteInstanceTime(Player player, int id) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement(DELETE_INSTANCE_TIME)) {
-            ps.setInt(1, player.getObjectId());
-            ps.setInt(2, id);
-            ps.execute();
-            if (playerInstanceTimes.get(player.getObjectId()) != null) {
-                playerInstanceTimes.get(player.getObjectId()).remove(id);
-            }
-        } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Could not delete character instance reenter data: ", e);
-        }
+        getDAO(PlayerDAO.class).deleteInstanceTime(player.getObjectId(), id);
+        playerInstanceTimes.get(player.getObjectId()).remove(id);
     }
 
     /**
