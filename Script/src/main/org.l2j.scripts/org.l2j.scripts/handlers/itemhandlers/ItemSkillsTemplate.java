@@ -69,7 +69,7 @@ public class ItemSkillsTemplate implements IItemHandler {
             return false;
         }
 
-        if(!item.isInfinite() && (item.getAction() == ActionType.CAPSULE || item.getAction() == ActionType.SKILL_REDUCE)) {
+        if(!item.isInfinite() && item.getAction() != ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) {
             if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false)) {
                 playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
                 return false;
@@ -132,6 +132,7 @@ public class ItemSkillsTemplate implements IItemHandler {
         if (successfulUse && !item.isInfinite() && item.getAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) {
             if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false)) {
                 playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
+                LOGGER.warn("Failed to consume item {} of {}", item, playable);
                 return false;
             }
         }
