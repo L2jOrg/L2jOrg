@@ -34,7 +34,6 @@ import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.CharacterDeleteFailType;
 import org.l2j.gameserver.instancemanager.CommissionManager;
-import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -203,11 +202,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
             return CharacterDeleteFailType.UNKNOWN;
         }
 
-        if (MentorManager.getInstance().isMentor(info.getObjectId())) {
-            return CharacterDeleteFailType.MENTOR;
-        } else if (MentorManager.getInstance().isMentee(info.getObjectId())) {
-            return CharacterDeleteFailType.MENTEE;
-        } else if (CommissionManager.getInstance().hasCommissionItems(info.getObjectId())) {
+        if (CommissionManager.getInstance().hasCommissionItems(info.getObjectId())) {
             return CharacterDeleteFailType.COMMISSION;
         } else if (MailEngine.getInstance().hasMailInProgress(info.getObjectId())) {
             return CharacterDeleteFailType.MAIL;

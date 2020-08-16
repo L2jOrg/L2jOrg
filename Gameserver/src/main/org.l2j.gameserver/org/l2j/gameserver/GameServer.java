@@ -165,7 +165,6 @@ public class GameServer {
         PetDataTable.getInstance();
         CubicData.getInstance();
         PlayerSummonTable.getInstance().init();
-        MentorManager.getInstance();
 
         printSection("Clans");
         ClanTable.init();

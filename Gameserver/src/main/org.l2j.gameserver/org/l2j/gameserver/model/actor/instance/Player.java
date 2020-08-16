@@ -551,14 +551,6 @@ public final class Player extends Playable {
         return variables.getInstanceRestore();
     }
 
-    public int getMentorPenaltyId() {
-        return variables.getMentorPenaltyId();
-    }
-
-    public long getMentorPenaltyTime() {
-        return variables.getMentorPenaltyTime();
-    }
-
     public int getClaimedClanRewards(int defaultValue) {
         return variables.getClaimedClanRewards() != 0 ? variables.getClaimedClanRewards() : defaultValue;
     }
@@ -710,14 +702,6 @@ public final class Player extends Playable {
 
     public void setInstanceRestore(int instanceRestore) {
         variables.setInstanceRestore(instanceRestore);
-    }
-
-    public void setMentorPenaltyId(int mentorPenaltyId) {
-        variables.setMentorPenaltyId(mentorPenaltyId);
-    }
-
-    public void setMentorPenaltyTime(long mentorPenaltyTime) {
-        variables.setMentorPenaltyTime(mentorPenaltyTime);
     }
 
     public void setClaimedClanRewards(int claimedClanRewards) {
@@ -5650,6 +5634,7 @@ public final class Player extends Playable {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("DELETE FROM character_premium_items WHERE charId=? AND itemNum=? ")) {
             statement.setInt(1, getObjectId());
+
             statement.setInt(2, itemNum);
             statement.execute();
         } catch (Exception e) {
@@ -7969,14 +7954,6 @@ public final class Player extends Playable {
         }
 
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogin(this), this);
-
-        if (isMentee()) {
-            // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeStatus(this, true), this);
-        } else if (isMentor()) {
-            // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMentorStatus(this, true), this);
-        }
     }
 
     public long getLastAccess() {
@@ -8668,14 +8645,6 @@ public final class Player extends Playable {
 
         for (Player player : _snoopListener) {
             player.removeSnooped(this);
-        }
-
-        if (isMentee()) {
-            // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeStatus(this, false), this);
-        } else if (isMentor()) {
-            // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMentorStatus(this, false), this);
         }
 
         // we store all data from players who are disconnected while in an event in order to restore it in the next login
@@ -10296,20 +10265,6 @@ public final class Player extends Playable {
         return false;
     }
 
-    /**
-     * @return {@code true} if player has mentees, {@code false} otherwise
-     */
-    public boolean isMentor() {
-        return MentorManager.getInstance().isMentor(getObjectId());
-    }
-
-    /**
-     * @return {@code true} if player has mentor, {@code false} otherwise
-     */
-    public boolean isMentee() {
-        return MentorManager.getInstance().isMentee(getObjectId());
-    }
-
     public int getAbilityPointsUsed() {
         return isDualClassActive() ? getAbilityPointsDualClassUsed() : getAbilityPointsMainClassUsed();
     }
@@ -10724,10 +10679,6 @@ public final class Player extends Playable {
     public boolean isInSameAlly(Player player) {
         var ally = getAllyId();
         return ally > 0 && player.getAllyId() == ally;
-    }
-
-    public boolean hasMentorRelationship(Player player) {
-        return nonNull(MentorManager.getInstance().getMentee(objectId, player.getObjectId())) || nonNull(MentorManager.getInstance().getMentee(player.getObjectId(), objectId));
     }
 
     public boolean isSiegeFriend(WorldObject target)

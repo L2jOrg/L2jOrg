@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -62,9 +61,6 @@ public final class CreatureSay extends ServerPacket {
             }
             if ((receiver.getClanId() > 0) && (receiver.getClanId() == sender.getClanId())) {
                 _mask |= 0x02;
-            }
-            if ((MentorManager.getInstance().getMentee(receiver.getObjectId(), sender.getObjectId()) != null) || (MentorManager.getInstance().getMentee(sender.getObjectId(), receiver.getObjectId()) != null)) {
-                _mask |= 0x04;
             }
             if ((receiver.getAllyId() > 0) && (receiver.getAllyId() == sender.getAllyId())) {
                 _mask |= 0x08;

@@ -56,10 +56,6 @@ public final class TradeStart extends AbstractItemPacket {
                 mask |= 0x02;
             }
 
-            if(player.hasMentorRelationship(partner)) {
-                mask |= 0x04;
-            }
-
             if(player.isInSameAlly(partner)) {
                 mask |= 0x08;
 

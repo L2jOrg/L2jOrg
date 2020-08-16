@@ -168,7 +168,6 @@ public final class Config {
     public static int ALT_FREIGHT_SLOTS;
     public static int ALT_FREIGHT_PRICE;
 
-    public static long MENTOR_PENALTY_FOR_MENTEE_LEAVE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_TELEPORT;
@@ -1041,7 +1040,6 @@ public final class Config {
         ALT_FREIGHT_SLOTS = Character.getInt("MaximumFreightSlots", 200);
         ALT_FREIGHT_PRICE = Character.getInt("FreightPrice", 1000);
 
-        MENTOR_PENALTY_FOR_MENTEE_LEAVE = Character.getInt("MentorPenaltyForMenteeLeave", 2) * 24 * 60 * 60 * 1000;
         ENCHANT_CHANCE_ELEMENT_STONE = Character.getDouble("EnchantChanceElementStone", 50);
         ENCHANT_CHANCE_ELEMENT_CRYSTAL = Character.getDouble("EnchantChanceElementCrystal", 30);
         ENCHANT_CHANCE_ELEMENT_JEWEL = Character.getDouble("EnchantChanceElementJewel", 20);

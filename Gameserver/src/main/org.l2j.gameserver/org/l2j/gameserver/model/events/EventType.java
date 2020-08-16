@@ -140,12 +140,7 @@ public enum EventType {
     ON_PLAYER_ITEM_DROP(OnPlayerItemDrop.class, void.class),
     ON_PLAYER_ITEM_PICKUP(OnPlayerItemPickup.class, void.class),
     ON_PLAYER_ITEM_TRANSFER(OnPlayerItemTransfer.class, void.class),
-    // Mentoring events
-    ON_PLAYER_MENTEE_ADD(OnPlayerMenteeAdd.class, void.class),
-    ON_PLAYER_MENTEE_LEFT(OnPlayerMenteeLeft.class, void.class),
-    ON_PLAYER_MENTEE_REMOVE(OnPlayerMenteeRemove.class, void.class),
-    ON_PLAYER_MENTEE_STATUS(OnPlayerMenteeStatus.class, void.class),
-    ON_PLAYER_MENTOR_STATUS(OnPlayerMentorStatus.class, void.class),
+
     // Other player events
     ON_PLAYER_REPUTATION_CHANGED(OnPlayerReputationChanged.class, void.class),
     ON_PLAYER_LEVEL_CHANGED(OnPlayerLevelChanged.class, void.class),

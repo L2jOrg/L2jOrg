@@ -231,7 +231,4 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("DELETE FROM character_instance_time WHERE charId=:playerId: AND instanceId=:id:")
     void deleteInstanceTime(int playerId, int id);
-
-    @Query("DELETE FROM character_mentees WHERE mentorId = :mentorId: AND charId = :menteeId:")
-    void deleteMentee(int mentorId, int menteeId);
 }

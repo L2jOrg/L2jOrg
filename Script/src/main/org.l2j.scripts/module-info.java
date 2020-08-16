@@ -625,7 +625,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.targethandlers.NpcBody,
             org.l2j.scripts.handlers.targethandlers.None,
             org.l2j.scripts.handlers.targethandlers.MyParty,
-            org.l2j.scripts.handlers.targethandlers.MyMentor,
             org.l2j.scripts.handlers.targethandlers.Item,
             org.l2j.scripts.handlers.targethandlers.HolyThing,
             org.l2j.scripts.handlers.targethandlers.Ground,
