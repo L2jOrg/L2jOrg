@@ -299,7 +299,7 @@ public class PlayerFactory {
     public static void init(GameClient client, PlayerData data) {
 
         getDAO(PlayerDAO.class).save(PlayerStatsData.init(data.getCharId()));
-        getDAO(PlayerVariablesDAO.class).save(PlayerVariableData.init(data.getCharId()));
+        getDAO(PlayerVariablesDAO.class).save(PlayerVariableData.init(data.getCharId(), data.getFace(), data.getHairStyle(), data.getHairColor()));
         getDAO(PlayerDAO.class).resetRecommends();
 
         addItems(data);

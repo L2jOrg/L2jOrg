@@ -32,7 +32,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.EnumMap;
-import java.util.Objects;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -59,8 +58,7 @@ public class PlayerSelectInfo {
         restoreVisibleInventory();
         restoreAugmentation();
 
-        PlayerVariableData vars = getDAO(PlayerVariablesDAO.class).findById(data.getCharId());
-        _vars = Objects.requireNonNullElseGet(vars, () -> PlayerVariableData.init(data.getCharId()));
+        _vars = getDAO(PlayerVariablesDAO.class).findById(data.getCharId());
         banExpireTime = PunishmentManager.getInstance().getPunishmentExpiration(data.getCharId(), PunishmentAffect.CHARACTER, PunishmentType.BAN);
     }
 
