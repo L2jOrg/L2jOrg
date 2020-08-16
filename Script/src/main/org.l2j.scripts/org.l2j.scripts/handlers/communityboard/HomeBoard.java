@@ -23,10 +23,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CommunityDAO;
-import org.l2j.gameserver.data.database.dao.ReportDAO;
-import org.l2j.gameserver.data.database.data.ReportData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
@@ -44,8 +41,6 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.function.BiPredicate;
@@ -62,15 +57,13 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  * @author JoeAlisson
  */
 public final class HomeBoard implements IParseBoardHandler {
-    private static final Logger LOGGER = LoggerFactory.getLogger(HomeBoard.class);
 
     private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/new/navigation.html";
     private static final int PAGE_LIMIT = 6;
 
     private static final String[] COMMANDS = {
-            "_bbshome",
-            "_bbstop",
-            "_bbsreport"
+        "_bbshome",
+        "_bbstop",
     };
 
     private static final String[] CUSTOM_COMMANDS = {
@@ -319,18 +312,6 @@ public final class HomeBoard implements IParseBoardHandler {
             }
 
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
-        } else if (command.startsWith("_bbsreport")) {
-            var reportText = command.replace("_bbsreport ", "");
-            if (Util.isNotEmpty(reportText)) {
-
-                var report = new ReportData();
-                report.setPlayerId(activeChar.getObjectId());
-                report.setReport(reportText);
-                report.setPending(true);
-                getDAO(ReportDAO.class).save(report);
-                activeChar.sendMessage("Thank you For your Report!! the GM will be informed!");
-                AdminData.getInstance().broadcastMessageToGMs(String.format("Player: %s (%s) has just submitted a report!", activeChar.getName(), activeChar.getObjectId()));
-            }
         } else if (command.startsWith("_bbspremium")) {
                 //_bbspremium;L2 amount;VIP amout ex: _bbspremium;100;200
                 final String fullBypass = command.replace("_bbspremium ", "");
