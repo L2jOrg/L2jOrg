@@ -26,10 +26,11 @@ public class ReceiveVipLuckyGameInfo extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
+        final var player = client.getPlayer();
         writeId(ServerExPacketId.EX_LUCKY_GAME_INFO);
         writeByte(true); //Enable 1
-        writeInt((int) client.getPlayer().getAdena());
-        writeInt(client.getCoin());
+        writeInt((int) player.getAdena());
+        writeInt(player.getNCoins());
     }
 
 }

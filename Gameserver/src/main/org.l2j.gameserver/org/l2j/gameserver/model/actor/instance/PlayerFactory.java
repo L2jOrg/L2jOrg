@@ -90,8 +90,7 @@ public class PlayerFactory {
         }
 
         var template = PlayerTemplateData.getInstance().getTemplate(playerData.getClassId());
-        Player player = new Player(playerData, template);
-        player.setClient(client);
+        Player player = new Player(client, playerData, template);
         client.setPlayer(player);
 
         player.setVariables(getDAO(PlayerVariablesDAO.class).findById(playerId));

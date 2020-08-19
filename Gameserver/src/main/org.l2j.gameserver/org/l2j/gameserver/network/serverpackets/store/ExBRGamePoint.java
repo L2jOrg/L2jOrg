@@ -33,7 +33,7 @@ public class ExBRGamePoint extends ServerPacket {
 
         var player = client.getPlayer();
         writeInt(player.getObjectId());
-        writeLong(client.getCoin());
+        writeLong(player.getNCoins());
         writeInt(0x00);
     }
 

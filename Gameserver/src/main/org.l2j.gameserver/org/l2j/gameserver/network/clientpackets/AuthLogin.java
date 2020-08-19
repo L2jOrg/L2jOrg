@@ -24,6 +24,8 @@ import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerAuthRequest;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
 
+import static java.util.Objects.isNull;
+
 /**
  * This class ...
  *
@@ -59,10 +61,10 @@ public final class AuthLogin extends ClientPacket {
 
 
         // avoid potential exploits
-        if (client.getAccountName() == null) {
+        if (isNull(client.getAccount())) {
             // Preventing duplicate login in case client login server socket was disconnected or this packet was not sent yet
 
-            client.setAccountName(account);
+            client.loadAccount(account);
             final SessionKey key = new SessionKey(authAccountId, authKey, sessionId, accountId);
             client.setSessionId(key);
 

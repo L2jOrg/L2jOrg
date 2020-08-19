@@ -46,6 +46,7 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
@@ -114,6 +115,7 @@ import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
+import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.AttendanceSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
@@ -164,10 +166,12 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  */
 public final class Player extends Playable {
 
+    private final GameClient client;
     private final PlayerData data;
     private final PlayerAppearance appearance;
     private final Map<ShotType, Integer> activeSoulShots = new EnumMap<>(ShotType.class);
     private final LimitedQueue<DamageInfo> lastDamages = new LimitedQueue<>(30);
+    private final AccountData account;
 
     private ElementalSpirit[] spirits;
     private ElementalType activeElementalSpiritType;
@@ -188,9 +192,11 @@ public final class Player extends Playable {
     private byte shadowSouls;
     private int additionalSoulshot;
 
-    Player(PlayerData playerData, PlayerTemplate template) {
+    Player(GameClient client, PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
         this.data = playerData;
+        this.client = client;
+        this.account = client.getAccount();
         setName(playerData.getName());
         setInstanceType(InstanceType.L2PcInstance);
         initCharStatusUpdateValues();
@@ -344,23 +350,38 @@ public final class Player extends Playable {
     }
 
     public long getVipPoints() {
-        return getClient().getVipPoints();
+        return account.getVipPoints();
     }
 
     public void updateVipPoints(long points) {
-        getClient().updateVipPoints(points);
+        if(points == 0) {
+            return;
+        }
+        var currentVipTier = VipEngine.getInstance().getVipTier(getVipPoints());
+        account.updateVipPoints(points);
+        var newTier = VipEngine.getInstance().getVipTier(getVipPoints());
+        if(newTier != currentVipTier) {
+            vipTier = newTier;
+            if(newTier > 0) {
+                account.setVipTierExpiration(Instant.now().plus(30, ChronoUnit.DAYS).toEpochMilli());
+                VipEngine.getInstance().manageTier(this);
+            } else {
+                account.setVipTierExpiration(0);
+            }
+        }
+        sendPacket(new ReceiveVipInfo());
     }
 
     public void setNCoins(int coins) {
-        getClient().setCoin(coins);
+        account.setCoins(coins);
     }
 
     public int getNCoins() {
-        return getClient().getCoin();
+        return account.getCoin();
     }
 
     public void updateNCoins(int coins) {
-        getClient().updateCoin(coins);
+        account.updateCoins(coins);
     }
 
     public long getGoldCoin() {
@@ -372,11 +393,11 @@ public final class Player extends Playable {
     }
 
     public long getVipTierExpiration() {
-        return getClient().getVipTierExpiration();
+        return account.getVipTierExpiration();
     }
 
     public void setVipTierExpiration(long expiration) {
-        getClient().setVipTierExpiration(expiration);
+        account.setVipTierExpiration(expiration);
     }
 
     public long getLCoins() { return inventory.getLCoin(); }
@@ -1198,9 +1219,6 @@ public final class Player extends Playable {
      **/
     protected boolean _recoTwoHoursGiven = false;
     protected boolean _inventoryDisable = false;
-
-    private GameClient _client;
-    private String _ip = "N/A";
 
     private String _lang = null;
     private String _htmlPrefix = null;
@@ -3606,18 +3624,11 @@ public final class Player extends Playable {
      * @return the client owner of this char.
      */
     public GameClient getClient() {
-        return _client;
-    }
-
-    public void setClient(GameClient client) {
-        _client = client;
-        if ((_client != null) && (_client.getHostAddress() != null)) {
-            _ip = _client.getHostAddress();
-        }
+        return client;
     }
 
     public String getIPAddress() {
-        return _ip;
+        return client.getHostAddress();
     }
 
     public Location getCurrentSkillWorldPosition() {
@@ -3857,7 +3868,7 @@ public final class Player extends Playable {
     @Override
     public void sendPacket(ServerPacket... packets) {
         for (ServerPacket packet : packets) {
-            _client.sendPacket(packet);
+            client.sendPacket(packet);
         }
     }
 
@@ -9214,7 +9225,7 @@ public final class Player extends Playable {
     }
 
     public FloodProtectors getFloodProtectors() {
-        return _client.getFloodProtectors();
+        return client.getFloodProtectors();
     }
 
     public boolean isFlyingMounted() {
