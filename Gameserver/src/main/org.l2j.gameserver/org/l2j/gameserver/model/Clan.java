@@ -20,11 +20,11 @@ package org.l2j.gameserver.model;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.ClanData;
+import org.l2j.gameserver.data.database.data.ClanSkillData;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
@@ -51,7 +51,6 @@ import org.l2j.gameserver.model.item.container.ClanWarehouse;
 import org.l2j.gameserver.model.item.container.Warehouse;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.model.variables.ClanVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
@@ -153,7 +152,6 @@ public class Clan implements IIdentifiable, INamable {
     private boolean noticeEnabled = false;
     private ClanRewardBonus _lastMembersOnlineBonus = null;
     private ClanRewardBonus _lastHuntingBonus = null;
-    private volatile ClanVariables _vars;
 
     private final ClanData data;
 
@@ -607,10 +605,6 @@ public class Clan implements IIdentifiable, INamable {
 
     public void updateInDB() {
         getDAO(ClanDAO.class).save(data);
-        // Update variables at database
-        if (_vars != null) {
-            _vars.storeMe();
-        }
     }
 
     public void updateClanInDB() {
@@ -675,23 +669,22 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     private void restoreSkills() {
-        getDAO(ClanDAO.class).findSkillsByClan(data.getId()).forEach(skillData -> {
+        for (ClanSkillData skillData : getDAO(ClanDAO.class).findSkillsByClan(data.getId())) {
             doIfNonNull(SkillEngine.getInstance().getSkill(skillData.getId(), skillData.getLevel()), skill -> {
                 switch (skillData.getSubPledge()) {
                     case -2 -> _skills.put(skill.getId(), skill);
                     case 0 -> _subPledgeSkills.put(skill.getId(), skill);
                     default -> {
                         var subPledge = subPledges.get(skillData.getSubPledge());
-                        if(nonNull(subPledge)) {
-                           subPledge.addNewSkill(skill);
+                        if (nonNull(subPledge)) {
+                            subPledge.addNewSkill(skill);
                         } else {
                             LOGGER.info("Missing sub pledge {} for clan {}, skill skipped.", subPledge, this);
                         }
                     }
                 }
             });
-
-        });
+        }
     }
 
     public final Skill[] getAllSkills() {
@@ -708,10 +701,6 @@ public class Clan implements IIdentifiable, INamable {
 
     /**
      * Used to add a new skill to the list, send a packet to all online clan members, update their stats and store it in db
-     *
-     * @param newSkill
-     * @param subType
-     * @return
      */
     public Skill addNewSkill(Skill newSkill, int subType) {
         Skill oldSkill = null;
@@ -1773,20 +1762,15 @@ public class Clan implements IIdentifiable, INamable {
 
         final int currentMaxOnline = (int) members.values().stream().filter(member -> member.getOnlineTime() > Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS).count();
         if (getMaxOnlineMembers() < currentMaxOnline) {
-            getVariables().set("MAX_ONLINE_MEMBERS", currentMaxOnline);
+            data.setMaxOnlineMembers(currentMaxOnline);
         }
     }
 
-    /**
-     * @param activeChar
-     * @param target
-     * @param value
-     */
     public synchronized void addHuntingPoints(Player activeChar, Npc target, double value) {
         // TODO: Figure out the retail formula
         final int points = (int) value / 2960; // Reduced / 10 for Classic.
         if (points > 0) {
-            getVariables().set("HUNTING_POINTS", getHuntingPoints() + points);
+            data.addHuntingPoints(points);
             final ClanRewardBonus availableBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(this);
             if (availableBonus != null) {
                 if (_lastHuntingBonus == null) {
@@ -1801,19 +1785,19 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public int getMaxOnlineMembers() {
-        return getVariables().getInt("MAX_ONLINE_MEMBERS", 0);
+        return data.getMaxOnlineMember();
     }
 
     public int getHuntingPoints() {
-        return getVariables().getInt("HUNTING_POINTS", 0);
+        return data.getHuntingPoints();
     }
 
     public int getPreviousMaxOnlinePlayers() {
-        return getVariables().getInt("PREVIOUS_MAX_ONLINE_PLAYERS", 0);
+        return data.getPrevMaxOnlineMember();
     }
 
     public int getPreviousHuntingPoints() {
-        return getVariables().getInt("PREVIOUS_HUNTING_POINTS", 0);
+        return data.getPrevHuntingPoints();
     }
 
     public boolean canClaimBonusReward(Player player, ClanRewardType type) {
@@ -1822,40 +1806,13 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void resetClanBonus() {
-        // Save current state
-        getVariables().set("PREVIOUS_MAX_ONLINE_PLAYERS", getMaxOnlineMembers());
-        getVariables().set("PREVIOUS_HUNTING_POINTS", getHuntingPoints());
+        data.setPrevMaxOnlineMember(data.getMaxOnlineMember());
+        data.setPrevHuntingPoints(data.getHuntingPoints());
+        data.setHuntingPoints(0);
+        data.setMaxOnlineMembers(0);
 
-        // Reset
         members.values().forEach(ClanMember::resetBonus);
-        getVariables().remove("HUNTING_POINTS");
-
-        // force store
-        getVariables().storeMe();
-
-        // Send Packet
         broadcastToOnlineMembers(ExPledgeBonusMarkReset.STATIC_PACKET);
-    }
-
-    public ClanVariables getVariables() {
-        if (_vars == null) {
-            synchronized (this) {
-                if (_vars == null) {
-                    _vars = new ClanVariables(data.getId());
-                    if (Config.CLAN_VARIABLES_STORE_INTERVAL > 0) {
-                        ThreadPool.scheduleAtFixedRate(this::storeVariables, Config.CLAN_VARIABLES_STORE_INTERVAL, Config.CLAN_VARIABLES_STORE_INTERVAL);
-                    }
-                }
-            }
-        }
-        return _vars;
-    }
-
-    private void storeVariables() {
-        final ClanVariables vars = _vars;
-        if (vars != null) {
-            vars.storeMe();
-        }
     }
 
     public int getArenaProgress() {
