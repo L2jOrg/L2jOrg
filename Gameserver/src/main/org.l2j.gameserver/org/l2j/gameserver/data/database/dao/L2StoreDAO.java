@@ -29,7 +29,7 @@ public interface L2StoreDAO extends DAO<Object> {
     @Query("""
             SELECT SUM(count) FROM l2store_history 
             WHERE product_id = :productId: AND account=:account: AND sell_date = CURRENT_DATE""")
-    int countBoughtItemToday(String account, int productId);
+    int countBoughtProductToday(String account, int productId);
 
     @Query("""
             INSERT INTO l2store_history ( product_id, count, account) 
@@ -41,11 +41,11 @@ public interface L2StoreDAO extends DAO<Object> {
             SELECT EXISTS ( 
             SELECT 1 FROM l2store_history 
             WHERE account=:account: AND sell_date = CURRENT_DATE AND product_id BETWEEN :minProductId: AND :maxProductId: )""")
-    boolean hasBoughtAnyItemInRangeToday(String account, int minProductId, int maxProductId);
+    boolean hasBoughtAnyProductInRangeToday(String account, int minProductId, int maxProductId);
 
-    @Query("SELECT EXISTS( SELECT 1 FROM l2store_history WHERE account = :account: AND product_id = :productId:)")
-    boolean hasBoughtProduct(String account, int productId);
+    @Query("SELECT SUM(count) FROM l2store_history WHERE account = :account: AND product_id = :productId:")
+    int countBoughtProduct(String account, int productId);
 
     @Query("SELECT SUM(count) FROM l2store_history WHERE account=:account: AND product_id = :productId: AND CURRENT_DATE - INTERVAL :days: DAY <= sell_date")
-    int countBoughtItemInDays(String account, int productId, int days);
+    int countBoughtProductInDays(String account, int productId, int days);
 }

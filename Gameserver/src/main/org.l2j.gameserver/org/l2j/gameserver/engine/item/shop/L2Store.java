@@ -169,7 +169,7 @@ public class L2Store extends GameXmlReader {
     }
 
     public boolean canReceiveVipGift(Player player) {
-        return player.getVipTier() > 0 && !getDAO(L2StoreDAO.class).hasBoughtAnyItemInRangeToday(player.getAccountName(), VIP_GIFT_BASE_ID+1, VIP_GIFT_BASE_ID+10);
+        return player.getVipTier() > 0 && !getDAO(L2StoreDAO.class).hasBoughtAnyProductInRangeToday(player.getAccountName(), VIP_GIFT_BASE_ID+1, VIP_GIFT_BASE_ID+10);
     }
 
     public static void init() {

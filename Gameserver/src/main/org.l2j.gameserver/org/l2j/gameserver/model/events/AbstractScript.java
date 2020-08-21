@@ -1154,7 +1154,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
             for (int itemId : itemIds) {
                 if (item.getId() == itemId) {
-                    if (MathUtil.checkOverFlow(count, item.getCount())) {
+                    if (MathUtil.checkAddOverFlow(count, item.getCount())) {
                         return Long.MAX_VALUE;
                     }
                     count += item.getCount();

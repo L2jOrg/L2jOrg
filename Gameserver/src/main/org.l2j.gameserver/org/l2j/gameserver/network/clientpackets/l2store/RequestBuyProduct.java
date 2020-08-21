@@ -31,6 +31,7 @@ import java.util.Calendar;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.gameserver.network.SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_NCOIN;
 
 /**
  * @author JoeAlisson
@@ -98,60 +99,69 @@ public abstract class RequestBuyProduct extends ClientPacket {
             return false;
         }
 
-        if(product.getRestrictionAmount() > 0 && hasBoughtMaxAmount(player, product)) {
-            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.ALREADY_BOUGHT));
-            return false;
-        }
-        return true;
+        return !hasBoughtMaxAmount(product, count, player);
     }
 
-    private boolean hasBoughtMaxAmount(Player player, L2StoreProduct product) {
+    private boolean hasBoughtMaxAmount(L2StoreProduct product, int count, Player player) {
+        if(product.getRestrictionAmount() > 0) {
+            if (count > product.getRestrictionAmount()) {
+                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INCORRECT_COUNT));
+                return true;
+            }
+
+            int boughtAmount = getBoughtAmount(player, product);
+            if (boughtAmount >= product.getRestrictionAmount()) {
+                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.ALREADY_BOUGHT));
+                return true;
+            }
+
+            if(boughtAmount + count >= product.getRestrictionAmount()) {
+                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INCORRECT_COUNT));
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    private int getBoughtAmount(Player player, L2StoreProduct product) {
         return switch (product.getRestrictionPeriod()) {
-            case DAY ->  getDAO(L2StoreDAO.class).countBoughtItemToday(player.getAccountName(), product.getId()) >= product.getRestrictionAmount();
-            case MONTH -> getDAO(L2StoreDAO.class).countBoughtItemInDays(player.getAccountName(), product.getId(), 30) >= product.getRestrictionAmount();
-            case EVER -> getDAO(L2StoreDAO.class).hasBoughtProduct(player.getAccountName(), product.getId());
+            case DAY ->  getDAO(L2StoreDAO.class).countBoughtProductToday(player.getAccountName(), product.getId());
+            case MONTH -> getDAO(L2StoreDAO.class).countBoughtProductInDays(player.getAccountName(), product.getId(), 30);
+            case EVER -> getDAO(L2StoreDAO.class).countBoughtProduct(player.getAccountName(), product.getId());
         };
     }
 
-    protected int validatePaymentId(Player player, L2StoreProduct item, long amount) {
-        switch (item.getPaymentType()) {
-            case 0: // Nc Coin
-            {
-                return 0;
-            }
-            case 1: // Adenas
-            {
-                return CommonItem.ADENA;
-            }
-            case 2: // Hero coins
-            {
-                return HERO_COINS;
-            }
-        }
-
-        return -1;
+    protected int validatePaymentId(L2StoreProduct item) {
+        return switch (item.getPaymentType()) {
+            case 0 -> 0; // Nc Coin
+            case 1 -> CommonItem.ADENA; // Adenas
+            case 2 -> HERO_COINS;
+            default ->  -1;
+        };
     }
 
-    protected boolean processPayment(Player activeChar, L2StoreProduct item, int count) {
-        final int price = (item.getPrice() * count);
-        final int paymentId = validatePaymentId(activeChar, item, price);
+    protected boolean processPayment(Player player, L2StoreProduct item, int count) {
+        final int price = Math.multiplyExact(item.getPrice(), count);
+        final int paymentId = validatePaymentId(item);
 
         if (paymentId < 0) {
-            activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
             return false;
         } else if (paymentId > 0) {
-            if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getId(), paymentId, price, activeChar, true)) {
-                activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+            if (!player.destroyItemByItemId("PrimeShop", paymentId, price, player, true)) {
+                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
                 return false;
             }
         } else {
-            if (activeChar.getNCoins() < price) {
-                activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+            if (player.getNCoins() < price) {
+                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+                player.sendPacket(YOU_DO_NOT_HAVE_ENOUGH_NCOIN);
                 return false;
             }
             if(price > 0) {
-                activeChar.updateNCoins(-price);
-                activeChar.updateVipPoints(price);
+                player.updateNCoins(-price);
+                player.updateVipPoints(price);
             }
         }
         return true;
