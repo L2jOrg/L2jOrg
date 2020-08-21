@@ -75,7 +75,10 @@ public class LCoinShop extends GameXmlReader {
 
     public void reloadShopHistory() {
         getDAO(LCoinShopDAO.class).deleteExpired();
-        getDAO(LCoinShopDAO.class).loadAllGrouped(this::addHistory);
+        synchronized (shopHistory) {
+            shopHistory.clear();
+            getDAO(LCoinShopDAO.class).loadAllGrouped(this::addHistory);
+        }
     }
 
     private void addHistory(ResultSet result) {
