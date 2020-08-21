@@ -61,7 +61,7 @@ import static org.l2j.commons.util.Util.isNotEmpty;
 /**
  * Represents a client connected on Game Server.
  *
- * @author KenM
+ * @author KenM2
  * @author JoeAlisson
  */
 public final class GameClient extends Client<Connection<GameClient>> {
@@ -465,13 +465,6 @@ public final class GameClient extends Client<Connection<GameClient>> {
         return activeSlot;
     }
 
-    public void reloadActivePlayerInfo() {
-        PlayerSelectInfo current = playersInfo.remove(activeSlot);
-        if(nonNull(current)) {
-            playersInfo.add(activeSlot, new PlayerSelectInfo(getDAO(PlayerDAO.class).findById(current.getObjectId())));
-        }
-    }
-
     public int getPlayerInfoAccessLevel(int playerId) {
         for (PlayerSelectInfo info : playersInfo) {
             if(info.getObjectId() == playerId) {
@@ -479,5 +472,9 @@ public final class GameClient extends Client<Connection<GameClient>> {
             }
         }
         throw new IllegalStateException("There is no info of player " + playerId);
+    }
+
+    public void detachPlayersInfo() {
+        playersInfo = null;
     }
 }

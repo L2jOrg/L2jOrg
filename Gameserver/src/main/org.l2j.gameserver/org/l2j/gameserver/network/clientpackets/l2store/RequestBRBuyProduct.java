@@ -32,6 +32,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Gnacik, UnAfraid
+ * @author JoeAlisson
  */
 public final class RequestBRBuyProduct extends RequestBuyProduct {
 

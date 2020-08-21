@@ -115,7 +115,7 @@ public abstract class RequestBuyProduct extends ClientPacket {
                 return true;
             }
 
-            if(boughtAmount + count >= product.getRestrictionAmount()) {
+            if(boughtAmount + count > product.getRestrictionAmount()) {
                 player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INCORRECT_COUNT));
                 return true;
             }

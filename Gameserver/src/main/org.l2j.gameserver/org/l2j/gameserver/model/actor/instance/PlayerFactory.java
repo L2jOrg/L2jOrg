@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.dao.PetDAO;
@@ -58,9 +57,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -237,21 +233,10 @@ public class PlayerFactory {
         player.setOnlineStatus(true, false);
         SaveTaskManager.getInstance().registerPlayer(player);
 
-        // TODO this info should stay on GameClient, since it was already loaded
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement stmt = con.prepareStatement("SELECT charId, char_name FROM characters WHERE account_name=? AND charId<>?")) {
-            // Retrieve the Player from the characters table of the database
-            stmt.setString(1, playerData.getAccountName());
-            stmt.setInt(2, playerId);
-
-            ResultSet chars = stmt.executeQuery();
-            while (chars.next()) {
-                player.getAccountChars().put(chars.getInt("charId"), chars.getString("char_name"));
+        for (PlayerSelectInfo info : client.getPlayersInfo()) {
+            if(info.getObjectId() != player.getObjectId()) {
+                player.getAccountChars().put(info.getObjectId(), info.getName());
             }
-
-
-        } catch (Exception e) {
-            LOGGER.error("Failed loading character.", e);
         }
         return player;
     }
