@@ -248,7 +248,6 @@ public class AdminShowQuests implements IAdminCommandHandler {
 	private void setQuestVar(Player target, Player actor, String[] val) {
 		QuestState qs = target.getQuestState(val[0]);
 		final String[] outval = new String[3];
-		qs.setSimulated(false);
 		
 		if (val[1].equals("state")) {
 			switch (val[2]) {

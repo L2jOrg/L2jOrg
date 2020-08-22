@@ -1202,9 +1202,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @see #actionForEachPlayer(Player, Npc, boolean)
      */
     public final void executeForEachPlayer(Player player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         if ((includeParty || includeCommandChannel) && player.isInParty()) {
             if (includeCommandChannel && player.getParty().isInCommandChannel()) {
                 player.getParty().getCommandChannel().checkEachMember(member ->
@@ -1375,16 +1372,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
     
     public void removeRadar(Player player, int x, int y, int z) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.getRadar().removeMarker(x, y, z);
     }
     
     public void clearRadar(Player player) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.getRadar().removeAllMarkers();
     }
 
@@ -1395,9 +1386,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param movie  the movie
      */
     public void playMovie(Player player, Movie movie) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         new MovieHolder(List.of(player), movie);
     }
 
@@ -1445,9 +1433,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param time   the duration of the message in milliseconds
      */
     public static void showOnScreenMsg(Player player, String text, int time) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(new ExShowScreenMessage(text, time));
     }
 
@@ -1456,9 +1441,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param params    values of parameters to replace in the NPC String (like S1, C1 etc.)
      */
     public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, String... params) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(new ExShowScreenMessage(npcString, position, time, params));
     }
 
@@ -1468,9 +1450,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param params     values of parameters to replace in the NPC String (like S1, C1 etc.)
      */
     public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, boolean showEffect, String... params) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(new ExShowScreenMessage(npcString, position, time, showEffect, params));
     }
 
@@ -1479,9 +1458,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param params    values of parameters to replace in the system message (like S1, C1 etc.)
      */
     public static void showOnScreenMsg(Player player, SystemMessageId systemMsg, int position, int time, String... params) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(new ExShowScreenMessage(systemMsg, position, time, params));
     }
 
@@ -1783,10 +1759,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param count  the amount of items to give
      */
     public static void rewardItems(Player player, int itemId, long count) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-
         if (count <= 0) {
             return;
         }
@@ -1894,10 +1866,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     public static void giveItems(Player player, int itemId, long count, int enchantlevel, boolean playSound) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-
         if (count <= 0) {
             return;
         }
@@ -1920,10 +1888,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     public static void giveItems(Player player, int itemId, long count, AttributeType attributeType, int attributeValue) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-
         if (count <= 0) {
             return;
         }
@@ -1983,10 +1947,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
      */
     public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound) {
-        if (player.isSimulatingTalking()) {
-            return false;
-        }
-
         final long currentCount = getQuestItemsCount(player, itemId);
 
         if ((limit > 0) && (currentCount >= limit)) {
@@ -2039,10 +1999,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * Take an amount of a specified item from player's inventory. {@code true} if any items were taken, {@code false} otherwise
      */
     public static boolean takeItems(Player player, int itemId, long amount) {
-        if (player.isSimulatingTalking()) {
-            return false;
-        }
-
         // Get object item from player's inventory list
         final Item item = player.getInventory().getItemByItemId(itemId);
         if (item == null) {
@@ -2089,9 +2045,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @return {@code true} if all items were taken, {@code false} otherwise
      */
     protected static boolean takeAllItems(Player player, ItemHolder... itemList) {
-        if (player.isSimulatingTalking()) {
-            return false;
-        }
         if ((itemList == null) || (itemList.length == 0)) {
             return false;
         }
@@ -2112,10 +2065,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * Take an amount of all specified items from player's inventory. {@code true} if all items were taken, {@code false} otherwise
      */
     public static boolean takeItems(Player player, int amount, int... itemIds) {
-        if (player.isSimulatingTalking()) {
-            return false;
-        }
-
         boolean check = true;
         if (itemIds != null) {
             for (int item : itemIds) {
@@ -2136,9 +2085,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param sound  the name of the sound to play
      */
     public static void playSound(Player player, String sound) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(QuestSound.getSound(sound));
     }
 
@@ -2149,9 +2095,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param sound  the {@link QuestSound} object of the sound to play
      */
     public static void playSound(Player player, QuestSound sound) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(sound.getPacket());
     }
 
@@ -2163,9 +2106,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param sp     the amount of SP to give to the player
      */
     public static void addExpAndSp(Player player, long exp, int sp) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.addExpAndSp((long) player.getStats().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStats().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
         PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
     }
@@ -2192,9 +2132,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * Sends the special camera packet to the player.
      */
     public static void specialCamera(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle));
     }
 
@@ -2202,9 +2139,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * Sends the special camera packet to the player.
      */
     public static void specialCameraEx(Player player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(new SpecialCamera(creature, player, force, angle1, angle2, time, duration, relYaw, relPitch, isWide, relAngle));
     }
 
@@ -2212,9 +2146,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * Sends the special camera packet to the player.
      */
     public static void specialCamera3(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
     }
 
@@ -2227,9 +2158,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     public static void addRadar(Player player, int x, int y, int z) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.getRadar().addMarker(x, y, z);
     }
 }

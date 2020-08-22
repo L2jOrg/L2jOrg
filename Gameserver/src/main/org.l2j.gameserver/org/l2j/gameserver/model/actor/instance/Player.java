@@ -1349,10 +1349,7 @@ public final class Player extends Playable {
      * Last NPC Id talked on a quest
      */
     private int _questNpcObject = 0;
-    /**
-     * Used for simulating Quest onTalk
-     */
-    private boolean _simulatedTalking = false;
+
     /**
      * The Pet of the Player
      */
@@ -1822,15 +1819,6 @@ public final class Player extends Playable {
 
     public void setLastQuestNpcObject(int npcId) {
         _questNpcObject = npcId;
-    }
-
-    public boolean isSimulatingTalking() {
-        return _simulatedTalking;
-    }
-
-    // TODO Remove
-    public void setSimulatedTalking(boolean value) {
-        _simulatedTalking = value;
     }
 
     /**

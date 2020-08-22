@@ -41,6 +41,8 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.type.NoRestartZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -53,6 +55,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
  */
 public final class Antharas extends AbstractNpcAI
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Antharas.class);
 	// NPC
 	private static final int ANTHARAS = 29068; // Antharas
 	private static final int BEHEMOTH = 29069; // Behemoth Dragon

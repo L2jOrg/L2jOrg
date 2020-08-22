@@ -125,8 +125,10 @@ public class QuestLink implements IBypassHandler {
 				createQuestButton(npc, quest, sbStarted, " (In Progress)", "02</fstring>");
 			}
 			else if (questState.isCompleted()) {
-				sbCompleted.append("<font color=\"787878\">");
-				createQuestButton(npc, quest, sbCompleted," (Complete) ", "03</fstring>");
+				sbCompleted.append("<font color=\"787878\">").
+					append("<button icon=\"quest\" align=\"left\">").
+					append(quest.isCustomQuest() ? quest.getPath() + " (Complete) " : "<fstring>" + quest.getNpcStringId() + "03</fstring>").
+					append("</button></font>");
 			}
 		}
 		

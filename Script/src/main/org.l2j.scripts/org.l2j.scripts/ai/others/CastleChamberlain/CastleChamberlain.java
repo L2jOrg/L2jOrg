@@ -48,6 +48,8 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.scripts.ai.AbstractNpcAI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
 import java.util.StringTokenizer;
@@ -60,6 +62,7 @@ import static org.l2j.commons.util.Util.parseNextInt;
  */
 public final class CastleChamberlain extends AbstractNpcAI
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(CastleChamberlain.class);
 	// NPCs
 	//@formatter:off
 	private static final int[] NPC =

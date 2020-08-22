@@ -33,14 +33,13 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
  * Quest state class.
  *
  * @author Luis Arias
  */
 public final class QuestState {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(QuestState.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(QuestState.class);
 
     /**
      * The name of the quest of this QuestState
@@ -159,9 +158,6 @@ public final class QuestState {
      * @see org.l2j.gameserver.model.quest.State
      */
     public boolean setState(byte state, boolean saveInDb) {
-        if (_simulated) {
-            return false;
-        }
         if (_state == state) {
             return false;
         }
@@ -187,10 +183,6 @@ public final class QuestState {
      * @return String (equal to parameter "val")
      */
     public String setInternal(String var, String val) {
-        if (_simulated) {
-            return null;
-        }
-
         if (_vars == null) {
             _vars = new HashMap<>();
         }
@@ -204,9 +196,6 @@ public final class QuestState {
     }
 
     public String set(String var, int val) {
-        if (_simulated) {
-            return null;
-        }
         return set(var, Integer.toString(val));
     }
 
@@ -227,10 +216,6 @@ public final class QuestState {
      * @return String (equal to parameter "val")
      */
     public String set(String var, String val) {
-        if (_simulated) {
-            return null;
-        }
-
         if (_vars == null) {
             _vars = new HashMap<>();
         }
@@ -278,10 +263,6 @@ public final class QuestState {
      * @param old  the previous quest progress condition to check against
      */
     private void setCond(int cond, int old) {
-        if (_simulated) {
-            return;
-        }
-
         if (cond == old) {
             return;
         }
@@ -359,10 +340,6 @@ public final class QuestState {
      * @return the previous value of the variable or {@code null} if none were found
      */
     public String unset(String var) {
-        if (_simulated) {
-            return null;
-        }
-
         if (_vars == null) {
             return null;
         }
@@ -451,10 +428,6 @@ public final class QuestState {
      * @see #setCond(int, boolean)
      */
     public QuestState setCond(int value) {
-        if (_simulated) {
-            return null;
-        }
-
         if (isStarted()) {
             set("cond", Integer.toString(value));
         }
@@ -484,10 +457,6 @@ public final class QuestState {
      * @see #set(String var, String val)
      */
     public QuestState setCond(int value, boolean playQuestMiddle) {
-        if (_simulated) {
-            return null;
-        }
-
         if (!isStarted()) {
             return this;
         }
@@ -510,9 +479,6 @@ public final class QuestState {
     }
 
     public QuestState setMemoState(int value) {
-        if (_simulated) {
-            return null;
-        }
         set("memoState", String.valueOf(value));
         return this;
     }
@@ -542,9 +508,6 @@ public final class QuestState {
      * @return this QuestState
      */
     public QuestState setMemoStateEx(int slot, int value) {
-        if (_simulated) {
-            return null;
-        }
         set("memoStateEx" + slot, String.valueOf(value));
         return this;
     }
@@ -571,9 +534,6 @@ public final class QuestState {
      * @param isExitQuestOnCleanUp {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
      */
     public void setIsExitQuestOnCleanUp(boolean isExitQuestOnCleanUp) {
-        if (_simulated) {
-            return;
-        }
         _isExitQuestOnCleanUp = isExitQuestOnCleanUp;
     }
 
@@ -584,9 +544,6 @@ public final class QuestState {
      * @return the newly created {@code QuestState} object
      */
     public QuestState startQuest() {
-        if (_simulated) {
-            return null;
-        }
         if (isCreated() && !getQuest().isCustomQuest()) {
             set("cond", "1");
             setState(State.STARTED);
@@ -607,10 +564,6 @@ public final class QuestState {
      * @see #exitQuest(boolean repeatable, boolean playExitQuest)
      */
     public QuestState exitQuest(QuestType type) {
-        if (_simulated) {
-            return null;
-        }
-
         switch (type) {
             case DAILY: {
                 exitQuest(false);
@@ -643,9 +596,6 @@ public final class QuestState {
      * @see #exitQuest(boolean repeatable, boolean playExitQuest)
      */
     public QuestState exitQuest(QuestType type, boolean playExitQuest) {
-        if (_simulated) {
-            return null;
-        }
         exitQuest(type);
         if (playExitQuest) {
             _player.sendPacket(QuestSound.ITEMSOUND_QUEST_FINISH.getPacket());
@@ -664,10 +614,6 @@ public final class QuestState {
      * @see #exitQuest(boolean repeatable, boolean playExitQuest)
      */
     private QuestState exitQuest(boolean repeatable) {
-        if (_simulated) {
-            return null;
-        }
-
         _player.removeNotifyQuestOfDeath(this);
 
         if (!isStarted()) {
@@ -700,10 +646,6 @@ public final class QuestState {
      * @see #exitQuest(boolean repeatable)
      */
     public QuestState exitQuest(boolean repeatable, boolean playExitQuest) {
-        if (_simulated) {
-            return null;
-        }
-
         exitQuest(repeatable);
         if (playExitQuest) {
             _player.sendPacket(QuestSound.ITEMSOUND_QUEST_FINISH.getPacket());
@@ -720,10 +662,6 @@ public final class QuestState {
      * It can be overridden in scripts (quests).
      */
     public void setRestartTime() {
-        if (_simulated) {
-            return;
-        }
-
         final Calendar reDo = Calendar.getInstance();
         if (reDo.get(Calendar.HOUR_OF_DAY) >= getQuest().getResetHour()) {
             reDo.add(Calendar.DATE, 1);
@@ -741,9 +679,5 @@ public final class QuestState {
     public boolean isNowAvailable() {
         final String val = get("restartTime");
         return (val != null) && (Long.parseLong(val) <= System.currentTimeMillis());
-    }
-
-    public void setSimulated(boolean simulated) {
-        _simulated = simulated;
     }
 }

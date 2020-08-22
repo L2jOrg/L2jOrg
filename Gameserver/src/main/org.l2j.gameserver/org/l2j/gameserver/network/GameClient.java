@@ -61,7 +61,7 @@ import static org.l2j.commons.util.Util.isNotEmpty;
 /**
  * Represents a client connected on Game Server.
  *
- * @author KenM2
+ * @author KenM
  * @author JoeAlisson
  */
 public final class GameClient extends Client<Connection<GameClient>> {
