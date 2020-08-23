@@ -68,10 +68,7 @@ public class AttackableAI extends CreatureAI {
     // private static final int MAX_DRIFT_RANGE = 300;
     private static final int MAX_ATTACK_TIMEOUT = 1200; // int ticks, i.e. 2min
     int lastBuffTick;
-    /**
-     * The Attackable AI task executed every 1s (call onEvtThink method).
-     */
-   // private Future<?> _aiTask;
+
     /**
      * The delay after which the attacked is stopped.
      */
@@ -319,10 +316,7 @@ public class AttackableAI extends CreatureAI {
                                 npc.addDamageHate(t, 0, 1);
                             }
                             if (npc instanceof Guard) {
-                                World.getInstance().forEachVisibleObjectInRange(npc, Guard.class, 500, guard ->
-                                {
-                                    guard.addDamageHate(t, 0, 10);
-                                });
+                                World.getInstance().forEachVisibleObjectInRange(npc, Guard.class, 500, guard -> guard.addDamageHate(t, 0, 10));
                             }
                         } else if (t instanceof FriendlyNpc) {
                             // Get the hate level of the Attackable against this Creature target contained in _aggroList
