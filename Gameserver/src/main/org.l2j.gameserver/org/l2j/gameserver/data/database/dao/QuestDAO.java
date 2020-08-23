@@ -44,7 +44,7 @@ public interface QuestDAO extends DAO<QuestData> {
     @Query("DELETE FROM character_quests WHERE charId=:playerId: AND name=:name:")
     void deleteQuest(int playerId, String name);
 
-    @Query("DELETE FROM character_quests WHERE charId=? AND name=? AND var!='<state>'")
+    @Query("DELETE FROM character_quests WHERE charId=:playerId: AND name=:name: AND var != '<state>'")
     void deleteNonRepeatable(int playerId, String name);
 
     @Query("UPDATE character_quests SET value=:value: WHERE charId=:playerId: AND name=:questName: AND var = :var:")

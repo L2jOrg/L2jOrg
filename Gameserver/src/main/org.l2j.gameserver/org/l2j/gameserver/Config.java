@@ -330,7 +330,6 @@ public final class Config {
 
     public static boolean ALLOW_DISCARDITEM;
 
-    public static int CLAN_VARIABLES_STORE_INTERVAL;
     public static boolean LAZY_ITEMS_UPDATE;
     public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
     public static boolean DESTROY_ALL_ITEMS;
@@ -1191,7 +1190,6 @@ public final class Config {
         ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
         ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
 
-        CLAN_VARIABLES_STORE_INTERVAL = General.getInt("ClanVariablesStoreInterval", 15) * 60 * 1000;
         LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
         UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
         DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);

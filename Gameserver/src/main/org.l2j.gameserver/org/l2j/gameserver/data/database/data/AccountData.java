@@ -24,7 +24,8 @@ import org.l2j.commons.database.annotation.Table;
 @Table("account_data")
 public class AccountData {
 
-    private String account;
+    @Column("account")
+    private String accountName;
 
     private int coin;
 
@@ -40,8 +41,14 @@ public class AccountData {
     @Column("sec_auth_attempts")
     private int secAuthAttempts;
 
-    public void setAccount(String accountName) {
-        this.account = accountName;
+    public static AccountData of(String accountName) {
+        var account = new AccountData();
+        account.accountName =  accountName;
+        return account;
+    }
+
+    public String getAccountName() {
+        return accountName;
     }
 
     public long getVipPoints() {
@@ -90,5 +97,10 @@ public class AccountData {
 
     public int increaseSecAuthAttempts() {
         return ++secAuthAttempts;
+    }
+
+    @Override
+    public String toString() {
+        return accountName;
     }
 }

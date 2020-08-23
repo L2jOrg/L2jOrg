@@ -37,7 +37,6 @@ public class PackageToList extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.PACKAGE_TO_LIST);
-
         writeInt(players.size());
         for (IntMap.Entry<String> entry : players.entrySet()) {
             writeInt(entry.getKey());

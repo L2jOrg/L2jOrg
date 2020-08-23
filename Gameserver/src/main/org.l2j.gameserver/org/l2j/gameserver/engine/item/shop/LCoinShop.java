@@ -22,8 +22,11 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.LinkedHashIntMap;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.data.database.dao.LCoinShopDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.shop.l2store.RestrictionPeriod;
 import org.l2j.gameserver.engine.item.shop.lcoin.LCoinShopProduct;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -35,14 +38,15 @@ import org.w3c.dom.NodeList;
 
 import java.io.File;
 import java.nio.file.Path;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author JoeAlisson
@@ -66,6 +70,28 @@ public class LCoinShop extends GameXmlReader {
     public void load() {
         parseDatapackFile("data/shop/l-coin.xml");
         releaseResources();
+        reloadShopHistory();
+    }
+
+    public void reloadShopHistory() {
+        getDAO(LCoinShopDAO.class).deleteExpired();
+        synchronized (shopHistory) {
+            shopHistory.clear();
+            getDAO(LCoinShopDAO.class).loadAllGrouped(this::addHistory);
+        }
+    }
+
+    private void addHistory(ResultSet result) {
+        try {
+            while (result.next()) {
+                int id = result.getInt("product_id");
+                String account = result.getString("account");
+                int count = result.getInt("sum");
+                shopHistory.computeIfAbsent(id, i -> new HashMap<>()).put(account, count);
+            }
+        } catch (SQLException e) {
+            LOGGER.warn(e.getMessage(), e);
+        }
     }
 
     @Override
@@ -76,9 +102,10 @@ public class LCoinShop extends GameXmlReader {
     private void parseProduct(Node productNode) {
         var attributes = productNode.getAttributes();
         var id = parseInt(attributes, "id");
-        var limitPerDay = parseInt(attributes, "limitPerDay", 0);
-        var minLevel = parseInt(attributes, "minLevel", 1);
-        var remainServerItemAmount = parseInt(attributes, "remainServerItemAmount", -1);
+        var restrictionAmount = parseInt(attributes, "restriction-amount");
+        var restrictionPeriod = parseEnum(attributes, RestrictionPeriod.class, "restriction-period");
+        var minLevel = parseInt(attributes, "min-level", 1);
+        var serverItemAmount = parseInt(attributes, "server-item-amount", -1);
         var expiration = parseString(attributes,"expiration-date");
         LocalDateTime expirationDate = null;
 
@@ -115,7 +142,7 @@ public class LCoinShop extends GameXmlReader {
             return;
         }
 
-        if (productInfos.put(id, new LCoinShopProduct(id, limitPerDay, minLevel, ingredients, production, remainServerItemAmount, expirationDate)) != null) {
+        if (productInfos.put(id, new LCoinShopProduct(id, restrictionAmount, restrictionPeriod, minLevel, ingredients, production, serverItemAmount, expirationDate)) != null) {
             LOGGER.warn("Duplicate product id {}", id);
         }
     }
@@ -126,6 +153,14 @@ public class LCoinShop extends GameXmlReader {
 
     public IntMap<LCoinShopProduct> getProductInfos() {
         return productInfos;
+    }
+
+    public void addHistory(Player player, LCoinShopProduct product, int amount) {
+        shopHistory.computeIfAbsent(product.id(), id -> new HashMap<>()).merge(player.getAccountName(), amount, Integer::sum);
+    }
+
+    public int boughtCount(Player player, LCoinShopProduct product) {
+        return shopHistory.getOrDefault(product.id(), Collections.emptyMap()).getOrDefault(player.getAccountName(), 0);
     }
 
     public static void init() {

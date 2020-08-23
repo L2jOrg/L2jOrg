@@ -49,9 +49,9 @@ public class ExPurchaseLimitShopItemListNew extends ServerPacket {
             writeInt(product.id());
             writeInt(product.production().getId());
             writeIngredients(product.ingredients());
-            writeInt(product.getRemainAmount());
+            writeInt(product.restrictionAmount() - LCoinShop.getInstance().boughtCount(client.getPlayer(), product));
             writeInt(product.remainTime());
-            writeInt(product.getRemainServerItemAmount());
+            writeInt(product.remainServerItemAmount());
         }
     }
 

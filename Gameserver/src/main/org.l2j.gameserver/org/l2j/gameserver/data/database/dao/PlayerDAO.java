@@ -37,7 +37,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("UPDATE characters SET online = 0")
     void setAllCharactersOffline();
 
-    @Query("SELECT * FROM characters WHERE account_name = :account: ORDER BY createDate")
+    @Query("SELECT * FROM characters WHERE account_name = :account:")
     List<PlayerData> findPlayersByAccount(String account);
 
     @Query("SELECT * FROM characters WHERE charId = :objectId:")
@@ -220,7 +220,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("UPDATE characters SET power_grade=:powerGrade: WHERE charId=:playerId:")
     void updatePowerGrade(int playerId, int powerGrade);
 
-    @Query("UPDATE characters SET apprentice=:apprentice:,sponsor=:sponsor: WHERE charId=playerId")
+    @Query("UPDATE characters SET apprentice=:apprentice:,sponsor=:sponsor: WHERE charId= :playerId:")
     void updateApprenticeAndSponsor(int playerId, int apprentice, int sponsor);
 
     @Query("DELETE FROM character_contacts WHERE charId =:playeId: and contactId = :contactId:")

@@ -92,7 +92,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
  * @author Luis Arias
  */
 public class Quest extends AbstractScript implements IIdentifiable {
-    public static final Logger LOGGER = LoggerFactory.getLogger(Quest.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Quest.class);
     private static final String DEFAULT_NO_QUEST_MSG = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
 
     private static final int RESET_HOUR = 6;
@@ -759,7 +759,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
             if (startingQuests.contains(this) && (startConditionHtml != null)) {
                 res = startConditionHtml;
             } else {
-                res = onTalk(npc, player, false);
+                res = onTalk(npc, player);
             }
         } catch (Exception e) {
             showError(player, e);
@@ -1158,23 +1158,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param killer   this parameter contains a reference to the exact instance of the Creature who killed the Creature.
      */
     public void onCreatureKill(Creature creature, Creature killer) {}
-
-    /**
-     * This function is called whenever a player clicks to the "Quest" link of an NPC that is registered for the quest.
-     *
-     * @param npc       this parameter contains a reference to the exact instance of the NPC that the player is talking with.
-     * @param talker    this parameter contains a reference to the exact instance of the player who is talking to the NPC.
-     * @param simulated Used by QuestLink to determine state of quest.
-     * @return the text returned by the event (may be {@code null}, a filename or just text)
-     */
-    public String onTalk(Npc npc, Player talker, boolean simulated) {
-        final QuestState qs = talker.getQuestState(getName());
-        if (qs != null) {
-            qs.setSimulated(simulated);
-        }
-        talker.setSimulatedTalking(simulated);
-        return onTalk(npc, talker);
-    }
 
     /**
      * This function is called whenever a player clicks to the "Quest" link of an NPC that is registered for the quest.

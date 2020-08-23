@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.engine.item.shop.lcoin;
 
+import org.l2j.gameserver.engine.item.shop.l2store.RestrictionPeriod;
 import org.l2j.gameserver.model.holders.ItemHolder;
 
 import java.time.Duration;
@@ -29,10 +30,10 @@ import static java.util.Objects.nonNull;
 /**
  * @author JoeAlisson
  */
-public record LCoinShopProduct(int id, int limitPerDay, int minLevel, List<ItemHolder> ingredients, ItemHolder production, int remainServerItemAmount, LocalDateTime expiration) {
+public record LCoinShopProduct(int id, int restrictionAmount, RestrictionPeriod restrictionPeriod, int minLevel, List<ItemHolder> ingredients, ItemHolder production, int remainServerItemAmount, LocalDateTime expiration) {
 
     public int getRemainAmount() {
-        return limitPerDay; // TODO
+        return restrictionAmount;
     }
 
     public int remainTime() {
@@ -41,9 +42,5 @@ public record LCoinShopProduct(int id, int limitPerDay, int minLevel, List<ItemH
 
     public boolean isExpired() {
         return nonNull(expiration) && LocalDateTime.now().isAfter(expiration);
-    }
-
-    public int getRemainServerItemAmount() {
-        return remainServerItemAmount; // TODO
     }
 }

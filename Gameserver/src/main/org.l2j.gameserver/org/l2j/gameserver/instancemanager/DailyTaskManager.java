@@ -24,6 +24,7 @@ import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
+import org.l2j.gameserver.engine.item.shop.LCoinShop;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
@@ -62,11 +63,13 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
 
     @ScheduleTarget
     private void onReset() {
-        resetClanBonus();
+        ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
         resetDailyMissionRewards();
         resetDailySkills();
-        resetRankers();
+        RankEngine.getInstance().updateRankers();
         resetPlayersData();
+        LCoinShop.getInstance().reloadShopHistory();
+        LOGGER.info("Daily task has been reset.");
     }
 
     private void resetPlayersData() {
@@ -151,20 +154,11 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         LOGGER.info("Vitality has been reset");
     }
 
-    private void resetClanBonus() {
-        ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
-        LOGGER.info("Daily clan bonus has been reset.");
-    }
-
     private void resetDailySkills() {
         for (SkillHolder skill : getVariables().getList("reset_skills", SkillHolder.class, Collections.emptyList())) {
             getDAO(PlayerDAO.class).deleteSkillSave(skill.getSkillId());
         }
         LOGGER.info("Daily skill reuse cleaned.");
-    }
-
-    private void resetRankers() {
-        RankEngine.getInstance().updateRankers();
     }
 
     private void resetDailyMissionRewards() {

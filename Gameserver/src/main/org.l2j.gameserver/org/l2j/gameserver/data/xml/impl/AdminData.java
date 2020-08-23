@@ -266,7 +266,7 @@ public final class AdminData extends GameXmlReader {
      * @param player the player
      */
     public void showGm(Player player) {
-        _gmList.putIfAbsent(player, false);
+        _gmList.put(player, false);
     }
 
     /**
@@ -275,7 +275,7 @@ public final class AdminData extends GameXmlReader {
      * @param player the player
      */
     public void hideGm(Player player) {
-        _gmList.putIfAbsent(player, true);
+        _gmList.put(player, true);
     }
 
     /**

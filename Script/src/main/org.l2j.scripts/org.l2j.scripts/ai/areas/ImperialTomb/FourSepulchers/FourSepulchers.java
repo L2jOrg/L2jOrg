@@ -42,6 +42,8 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.type.EffectZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -63,6 +65,8 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public class FourSepulchers extends AbstractNpcAI
 {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(FourSepulchers.class);
 	
 	// NPCs
 	private static final int CONQUEROR_MANAGER = 31921;

@@ -19,11 +19,13 @@
 package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
-import org.l2j.gameserver.data.database.data.ReportData;
+import org.l2j.commons.database.annotation.Query;
 
 /**
  * @author JoeAlisson
  */
-public interface ReportDAO extends DAO<ReportData> {
+public interface PetitionDAO extends DAO<Object> {
 
+    @Query("INSERT INTO petition_feedback VALUES (:name:,:gmName:,:rate:,:message:,:time:)")
+    void saveFeedback(String name, String gmName, int rate, String message, long time);
 }

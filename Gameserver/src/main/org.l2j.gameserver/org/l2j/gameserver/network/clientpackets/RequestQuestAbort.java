@@ -52,7 +52,6 @@ public final class RequestQuestAbort extends ClientPacket {
         if (qe != null) {
             final QuestState qs = activeChar.getQuestState(qe.getName());
             if (qs != null) {
-                qs.setSimulated(false);
                 qs.exitQuest(QuestType.REPEATABLE);
                 activeChar.sendPacket(new QuestList(activeChar));
                 EventDispatcher.getInstance().notifyEventAsync(new OnPlayerQuestAbort(activeChar, _questId), activeChar, Listeners.players());

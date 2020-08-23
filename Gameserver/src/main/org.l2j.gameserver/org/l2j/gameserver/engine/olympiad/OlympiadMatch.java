@@ -16,25 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.store;
-
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+package org.l2j.gameserver.engine.olympiad;
 
 /**
- * @author Gnacik, UnAfraid
+ * @author JoeAlisson
  */
-public class ExBRGamePoint extends ServerPacket {
-
-    @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_NOTIFY_GAME_POINT);
-
-        var player = client.getPlayer();
-        writeInt(player.getObjectId());
-        writeLong(player.getNCoins());
-        writeInt(0x00);
-    }
-
+public class OlympiadMatch {
 }

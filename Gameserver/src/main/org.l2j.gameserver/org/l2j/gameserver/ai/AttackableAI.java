@@ -64,7 +64,7 @@ import static org.l2j.gameserver.util.MathUtil.*;
 public class AttackableAI extends CreatureAI {
     private static final Logger LOGGER = LoggerFactory.getLogger(AttackableAI.class);
 
-    private static final int RANDOM_WALK_RATE = 30; // confirmed
+    private static final int RANDOM_WALK_RATE = 1;
     // private static final int MAX_DRIFT_RANGE = 300;
     private static final int MAX_ATTACK_TIMEOUT = 1200; // int ticks, i.e. 2min
     int lastBuffTick;
@@ -416,7 +416,7 @@ public class AttackableAI extends CreatureAI {
                 // Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
                 moveTo(x1, y1, leader.getZ());
                 return;
-            } else if (Rnd.get(RANDOM_WALK_RATE) == 0) {
+            } else if (Rnd.chance(RANDOM_WALK_RATE)) {
                 for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF)) {
                     target = skillTargetReconsider(sk, true);
                     if (target != null) {
@@ -428,7 +428,7 @@ public class AttackableAI extends CreatureAI {
             }
         }
         // Order to the Monster to random walk (1/100)
-        else if ((npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0) && npc.isRandomWalkingEnabled()) {
+        else if (npc.getSpawn() != null && Rnd.chance(RANDOM_WALK_RATE) && npc.isRandomWalkingEnabled()) {
             int x1 = 0;
             int y1 = 0;
             int z1 = 0;

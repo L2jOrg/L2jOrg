@@ -11682,9 +11682,6 @@ public final class SystemMessageId {
     @ClientString(id = 6003, message = "The item you selected cannot be purchased. Unfortunately, the sale period ended.")
     public static SystemMessageId THE_ITEM_YOU_SELECTED_CANNOT_BE_PURCHASED_UNFORTUNATELY_THE_SALE_PERIOD_ENDED;
 
-    @ClientString(id = 6005, message = "You do not have enough NCoin.")
-    public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_NCOIN;
-
     @ClientString(id = 6006, message = "The item cannot be received because the inventory weight/quantity limit has been exceeded.")
     public static SystemMessageId THE_ITEM_CANNOT_BE_RECEIVED_BECAUSE_THE_INVENTORY_WEIGHT_QUANTITY_LIMIT_HAS_BEEN_EXCEEDED;
 
@@ -12747,9 +12744,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 7112, message = "Adena to buy: $s1 Adena \\n Coin cost: $s2 L2 Coins \\n Do you want to buy Adena as set above?")
     public static SystemMessageId ADENA_TO_BUY_S1_ADENA_N_COIN_COST_S2_L2_COINS_N_DO_YOU_WANT_TO_BUY_ADENA_AS_SET_ABOVE;
-
-    @ClientString(id = 7113, message = "Not enough L2 Coins to buy it.")
-    public static SystemMessageId NOT_ENOUGH_L2_COINS_TO_BUY_IT;
 
     @ClientString(id = 7114, message = "Vitality Mode is over.")
     public static SystemMessageId VITALITY_MODE_IS_OVER;
@@ -14206,7 +14200,7 @@ public final class SystemMessageId {
     @ClientString(id = 61, message = "Nothing happened.")
     public static SystemMessageId NOTHING_HAPPENED;
 
-    @ClientString(id = 80, message = "Your title cannot exceed 16 characters in length.  Please try again.")
+    @ClientString(id = 80, message = "Your title cannot exceed 16 characters in length. Please try again.")
     public static SystemMessageId YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN;
 
     @ClientString(id = 84, message = "You may not attack in a peaceful zone.")
@@ -17623,6 +17617,9 @@ public final class SystemMessageId {
     @ClientString(id = 6004, message = "Enchant failed. The enchant skill for the corresponding item will be exactly retained.")
     public static SystemMessageId ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED;
 
+    @ClientString(id = 6005, message = "You do not have enough NCoin.")
+    public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_NCOIN;
+
     @ClientString(id = 6083, message = "You cannot use this system during trading, private store, and workshop setup.")
     public static SystemMessageId YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP;
 
@@ -17724,6 +17721,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 7090, message = "Cannot locate the selected foe. The foe is not online.")
     public static SystemMessageId CANNOT_LOCATE_THE_SELECTED_FOE_THE_FOE_IS_NOT_ONLINE;
+
+    @ClientString(id = 7113, message = "Not enough L2 Coins to buy it.")
+    public static SystemMessageId NOT_ENOUGH_L2_COINS_TO_BUY_IT;
 
     @ClientString(id = 7238, message = "You are too far way to trade.")
     public static SystemMessageId YOU_ARE_TOO_FAR_WAY_TO_TRADE;

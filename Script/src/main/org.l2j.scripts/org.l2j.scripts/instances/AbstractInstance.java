@@ -32,6 +32,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.scripts.ai.AbstractNpcAI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -39,8 +41,9 @@ import java.util.List;
  * Abstract class for Instances.
  * @author FallenAngel
  */
-public abstract class AbstractInstance extends AbstractNpcAI
-{
+public abstract class AbstractInstance extends AbstractNpcAI {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractInstance.class);
 	private final int[] _templateIds;
 	
 	public AbstractInstance(int... templateId)

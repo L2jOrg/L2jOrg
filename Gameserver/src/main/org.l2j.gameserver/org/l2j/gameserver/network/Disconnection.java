@@ -117,10 +117,6 @@ public final class Disconnection {
         if (this.client != null) {
             this.client.setPlayer(null);
         }
-
-        if (this.player != null) {
-            this.player.setClient(null);
-        }
     }
 
     public Disconnection close(boolean toLoginScreen) {
