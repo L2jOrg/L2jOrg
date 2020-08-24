@@ -234,7 +234,7 @@ public abstract class Tutorial extends Quest {
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
         final var questState = getQuestState(killer, false);
-        if (nonNull(questState) && questState.getCond() < 2 && !hasQuestItems(killer, BLUE_GEM) && (Rnd.get(100) < 50)) {
+        if (nonNull(questState) && questState.getCond() < 2 && questState.getMemoState() > 0 && !hasQuestItems(killer, BLUE_GEM) && (Rnd.chance(25))) {
             killer.addItem("Quest", BLUE_GEM, 1, killer, true);
             questState.setMemoState(3);
             questState.setCond(2);

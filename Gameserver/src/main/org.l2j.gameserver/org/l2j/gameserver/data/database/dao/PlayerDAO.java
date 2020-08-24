@@ -37,7 +37,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("UPDATE characters SET online = 0")
     void setAllCharactersOffline();
 
-    @Query("SELECT * FROM characters WHERE account_name = :account:")
+    @Query("SELECT * FROM characters WHERE account_name = :account: ORDER BY createDate")
     List<PlayerData> findPlayersByAccount(String account);
 
     @Query("SELECT * FROM characters WHERE charId = :objectId:")

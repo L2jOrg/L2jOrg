@@ -354,18 +354,26 @@ public final class World {
     }
 
     private void switchRegion(WorldObject object, WorldRegion oldRegion, WorldRegion newRegion) {
-        newRegion.forEachSurroundingRegion(w -> {
-            if (!w.isSurroundingRegion(oldRegion)) {
-                w.forEachObject(WorldObject.class, other -> beAwareOfEachOther(object, other), other -> !object.equals(other) && Objects.equals(other.getInstanceWorld(), object.getInstanceWorld()));
+        for (WorldRegion region : newRegion.surroundingRegions()) {
+            if(!region.isSurroundingRegion(oldRegion)) {
+                for (WorldObject other : region.objects()) {
+                    if(!other.equals(object) && Objects.equals(other.getInstanceWorld(), object.getInstanceWorld())) {
+                        beAwareOfEachOther(object, other);
+                    }
+                }
             }
-        });
+        }
 
         if(nonNull(oldRegion)) {
-            oldRegion.forEachSurroundingRegion(w -> {
-                if (!newRegion.isSurroundingRegion(w)) {
-                    w.forEachObject(WorldObject.class, other -> this.forgetEachOther(object, other), other -> !object.equals(other));
+            for (WorldRegion region : oldRegion.surroundingRegions()) {
+                if(!region.isSurroundingRegion(oldRegion)) {
+                    for (WorldObject other : region.objects()) {
+                        if(!other.equals(object)) {
+                            forgetEachOther(object, other);
+                        }
+                    }
                 }
-            });
+            }
         }
     }
 
@@ -563,7 +571,7 @@ public final class World {
             if (isNpc(object)) {
                 final Npc npc = (Npc) object;
                 npc.deleteMe();
-                LOGGER.warn("Deleting npc {} NPCID[{}] from invalid location X:{} Y:{} Z: {}", object.getName(), npc.getId(), object.getX(), object.getY(), object.getZ());
+                LOGGER.warn("Deleting npc {} from invalid location X:{} Y:{} Z: {}", npc, object.getX(), object.getY(), object.getZ());
 
                 final Spawn spawn = npc.getSpawn();
                 if (nonNull(spawn)) {
