@@ -45,6 +45,7 @@ import org.l2j.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2j.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
 import org.l2j.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2j.gameserver.network.clientpackets.l2coin.RequestPurchaseLimitShopItemList;
+import org.l2j.gameserver.network.clientpackets.l2store.*;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
 import org.l2j.gameserver.network.clientpackets.mentoring.*;
@@ -55,7 +56,6 @@ import org.l2j.gameserver.network.clientpackets.pledge.*;
 import org.l2j.gameserver.network.clientpackets.pledge.bonus.RequestPledgeBonusOpen;
 import org.l2j.gameserver.network.clientpackets.pledge.bonus.RequestPledgeBonusReward;
 import org.l2j.gameserver.network.clientpackets.pledge.bonus.RequestPledgeBonusRewardList;
-import org.l2j.gameserver.network.clientpackets.primeshop.*;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestKillerLocation;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestPvpBookList;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExTeleportToKiller;
@@ -442,7 +442,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_UNLOCKED_ITEM_CANCEL(null, ConnectionState.IN_GAME_STATES),
     EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(ExElementalSpiritChangeType::new, ConnectionState.IN_GAME_STATES),
     EX_BLOCK_PACKET_FOR_AD(ExRequestBlockListForAD::new, ConnectionState.IN_GAME_STATES),
-    EX_USER_BAN_INFO(null, ConnectionState.IN_GAME_STATES),
+    EX_USER_BAN_INFO(ExRequestUserBanInfo::new, ConnectionState.AUTHENTICATED_STATES),
     EX_INTERACT_MODIFY(null, ConnectionState.IN_GAME_STATES),
     EX_TRY_ENCHANT_ARTIFACT(null, ConnectionState.IN_GAME_STATES),
     EX_UPGRADE_SYSTEM_NORMAL_REQUEST(ExUpgradeSystemNormalRequest::new, ConnectionState.IN_GAME_STATES),

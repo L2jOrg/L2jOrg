@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.ai.bosses.Orfen;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -111,7 +112,7 @@ public final class Orfen extends AbstractNpcAI
 			else
 			{
 				// the time has already expired while the server was offline. Immediately spawn Orfen.
-				final int i = getRandom(10);
+				final int i = Rnd.get(10);
 				Location loc;
 				if (i < 4)
 				{
@@ -182,7 +183,7 @@ public final class Orfen extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("orfen_unlock"))
 		{
-			final int i = getRandom(10);
+			final int i = Rnd.get(10);
 			Location loc;
 			if (i < 4)
 			{
@@ -204,7 +205,7 @@ public final class Orfen extends AbstractNpcAI
 		{
 			if ((_IsTeleported && (npc.getCurrentHp() > (npc.getMaxHp() * 0.95))) || (!ZONE.isInsideZone(npc) && !_IsTeleported))
 			{
-				setSpawnPoint(npc, getRandom(3) + 1);
+				setSpawnPoint(npc, Rnd.get(3) + 1);
 				_IsTeleported = false;
 			}
 			else if (_IsTeleported && !ZONE.isInsideZone(npc))
@@ -247,9 +248,9 @@ public final class Orfen extends AbstractNpcAI
 		if (npc.getId() == ORFEN)
 		{
 			final Creature originalCaster = isSummon ? caster.getServitors().values().stream().findFirst().orElse(caster.getPet()) : caster;
-			if ((skill.getEffectPoint() > 0) && (getRandom(5) == 0) && isInsideRadius2D(npc, originalCaster, 1000))
+			if ((skill.getEffectPoint() > 0) && (Rnd.get(5) == 0) && isInsideRadius2D(npc, originalCaster, 1000))
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[getRandom(4)], caster.getName());
+				npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[Rnd.get(4)], caster.getName());
 				originalCaster.teleToLocation(npc.getLocation());
 				npc.setTarget(originalCaster);
 				npc.doCast(PARALYSIS.getSkill());
@@ -267,7 +268,7 @@ public final class Orfen extends AbstractNpcAI
 		}
 		final int npcId = npc.getId();
 		final int callerId = caller.getId();
-		if ((npcId == RAIKEL_LEOS) && (getRandom(20) == 0))
+		if ((npcId == RAIKEL_LEOS) && (Rnd.get(20) == 0))
 		{
 			npc.setTarget(attacker);
 			npc.doCast(BLOW.getSkill());
@@ -279,7 +280,7 @@ public final class Orfen extends AbstractNpcAI
 			{
 				chance = 9;
 			}
-			if ((callerId != RIBA_IREN) && (caller.getCurrentHp() < (caller.getMaxHp() / 2.0)) && (getRandom(10) < chance))
+			if ((callerId != RIBA_IREN) && (caller.getCurrentHp() < (caller.getMaxHp() / 2.0)) && (Rnd.get(10) < chance))
 			{
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 				npc.setTarget(caller);
@@ -300,9 +301,9 @@ public final class Orfen extends AbstractNpcAI
 				_IsTeleported = true;
 				setSpawnPoint(npc, 0);
 			}
-			else if (isInsideRadius2D(npc, attacker, 1000) && !isInsideRadius2D(npc, attacker, 300) && (getRandom(10) == 0))
+			else if (isInsideRadius2D(npc, attacker, 1000) && !isInsideRadius2D(npc, attacker, 300) && (Rnd.get(10) == 0))
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[getRandom(3)], attacker.getName());
+				npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[Rnd.get(3)], attacker.getName());
 				attacker.teleToLocation(npc.getLocation());
 				npc.setTarget(attacker);
 				npc.doCast(PARALYSIS.getSkill());
@@ -327,7 +328,7 @@ public final class Orfen extends AbstractNpcAI
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
 			// Calculate Min and Max respawn times randomly.
-			long respawnTime = Config.ORFEN_SPAWN_INTERVAL + getRandom(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM);
+			long respawnTime = Config.ORFEN_SPAWN_INTERVAL + Rnd.get(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM);
 			respawnTime *= 3600000;
 			startQuestTimer("orfen_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots

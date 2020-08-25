@@ -34,11 +34,11 @@ public class ReceiveVipInfo extends ServerPacket {
         var vipData = VipEngine.getInstance();
         var vipTier = player.getVipTier();
 
-        var vipDuration = (int) ChronoUnit.SECONDS.between(Instant.now(), Instant.ofEpochMilli(client.getVipTierExpiration()));
+        var vipDuration = (int) ChronoUnit.SECONDS.between(Instant.now(), Instant.ofEpochMilli(player.getVipTierExpiration()));
 
         writeId(ServerExPacketId.EX_VIP_INFO);
         writeByte(vipTier); // VIP Current level ( MAX 7 )
-        writeLong(client.getVipPoints()); // VIP Current Points
+        writeLong(player.getVipPoints()); // VIP Current Points
         writeInt(vipDuration); // VIP Benefit Duration Seconds
         writeLong(vipData.getPointsToLevel(vipTier + 1)); // VIP Points to next Level
         writeLong(vipData.getPointsDepreciatedOnLevel(vipTier)); // VIP Points used on  30 days period

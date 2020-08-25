@@ -207,8 +207,7 @@ public final class AntiFeedManager {
             return;
         }
 
-        _eventIPs.forEach((k, v) ->
-        {
+        _eventIPs.forEach((k, v) -> {
             removeClient(k, client);
         });
     }

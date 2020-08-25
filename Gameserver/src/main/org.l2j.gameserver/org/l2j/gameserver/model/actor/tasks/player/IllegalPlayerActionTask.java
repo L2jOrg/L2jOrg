@@ -29,7 +29,6 @@ import org.l2j.gameserver.network.Disconnection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 /**
  * Task that handles illegal player actions.
  */

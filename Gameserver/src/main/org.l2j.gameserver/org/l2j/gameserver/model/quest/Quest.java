@@ -25,6 +25,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.database.dao.QuestDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -80,6 +81,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
@@ -90,10 +92,9 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
  * @author Luis Arias
  */
 public class Quest extends AbstractScript implements IIdentifiable {
-    public static final Logger LOGGER = LoggerFactory.getLogger(Quest.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Quest.class);
     private static final String DEFAULT_NO_QUEST_MSG = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
-    private static final String QUEST_DELETE_FROM_CHAR_QUERY = "DELETE FROM character_quests WHERE charId=? AND name=?";
-    private static final String QUEST_DELETE_FROM_CHAR_QUERY_NON_REPEATABLE_QUERY = "DELETE FROM character_quests WHERE charId=? AND name=? AND var!=?";
+
     private static final int RESET_HOUR = 6;
     private static final int RESET_MINUTES = 30;
     private static final int STEEL_DOOR_COIN = 37045; // Steel Door Guild Coin
@@ -231,16 +232,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param value the value of the variable
      */
     public static void updateQuestVarInDb(QuestState qs, String var, String value) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("UPDATE character_quests SET value=? WHERE charId=? AND name=? AND var = ?")) {
-            statement.setString(1, value);
-            statement.setInt(2, qs.getPlayer().getObjectId());
-            statement.setString(3, qs.getQuestName());
-            statement.setString(4, var);
-            statement.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.warn("could not update char quest:", e);
-        }
+        getDAO(QuestDAO.class).updateQuestVar(qs.getPlayer().getObjectId(), qs.getQuestName(), var, value);
     }
 
     /**
@@ -250,15 +242,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param var the name of the variable to delete
      */
     public static void deleteQuestVarInDb(QuestState qs, String var) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("DELETE FROM character_quests WHERE charId=? AND name=? AND var=?")) {
-            statement.setInt(1, qs.getPlayer().getObjectId());
-            statement.setString(2, qs.getQuestName());
-            statement.setString(3, var);
-            statement.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.warn("Unable to delete char quest!", e);
-        }
+        getDAO(QuestDAO.class).deleteQuestVar(qs.getPlayer().getObjectId(), qs.getQuestName(), var);
     }
 
     /**
@@ -268,16 +252,10 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param repeatable if {@code false}, the state variable will be preserved, otherwise it will be deleted as well
      */
     public static void deleteQuestInDb(QuestState qs, boolean repeatable) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement(repeatable ? QUEST_DELETE_FROM_CHAR_QUERY : QUEST_DELETE_FROM_CHAR_QUERY_NON_REPEATABLE_QUERY)) {
-            ps.setInt(1, qs.getPlayer().getObjectId());
-            ps.setString(2, qs.getQuestName());
-            if (!repeatable) {
-                ps.setString(3, "<state>");
-            }
-            ps.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.warn("could not delete char quest:", e);
+        if(repeatable){
+            getDAO(QuestDAO.class).deleteQuest(qs.getPlayer().getObjectId(), qs.getQuestName());
+        } else  {
+            getDAO(QuestDAO.class).deleteNonRepeatable(qs.getPlayer().getObjectId(), qs.getQuestName());
         }
     }
 
@@ -600,7 +578,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param skill    the skill used to attack the NPC (can be null)
      */
     public final void notifyAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill) {
-        String res = null;
+        String res;
         try {
             res = onAttack(npc, attacker, damage, isSummon, skill);
         } catch (Exception e) {
@@ -781,7 +759,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
             if (startingQuests.contains(this) && (startConditionHtml != null)) {
                 res = startConditionHtml;
             } else {
-                res = onTalk(npc, player, false);
+                res = onTalk(npc, player);
             }
         } catch (Exception e) {
             showError(player, e);
@@ -1180,23 +1158,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param killer   this parameter contains a reference to the exact instance of the Creature who killed the Creature.
      */
     public void onCreatureKill(Creature creature, Creature killer) {}
-
-    /**
-     * This function is called whenever a player clicks to the "Quest" link of an NPC that is registered for the quest.
-     *
-     * @param npc       this parameter contains a reference to the exact instance of the NPC that the player is talking with.
-     * @param talker    this parameter contains a reference to the exact instance of the player who is talking to the NPC.
-     * @param simulated Used by QuestLink to determine state of quest.
-     * @return the text returned by the event (may be {@code null}, a filename or just text)
-     */
-    public String onTalk(Npc npc, Player talker, boolean simulated) {
-        final QuestState qs = talker.getQuestState(getName());
-        if (qs != null) {
-            qs.setSimulated(simulated);
-        }
-        talker.setSimulatedTalking(simulated);
-        return onTalk(npc, talker);
-    }
 
     /**
      * This function is called whenever a player clicks to the "Quest" link of an NPC that is registered for the quest.
@@ -2346,7 +2307,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
             int highestRoll = 0;
 
             for (Player member : party.getMembers()) {
-                final int rnd = getRandom(1000);
+                final int rnd = Rnd.get(1000);
 
                 if ((rnd > highestRoll) && checkPartyMember(member, npc)) {
                     highestRoll = rnd;
@@ -2412,7 +2373,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
             return null;
         }
 
-        qs = candidates.get(getRandom(candidates.size()));
+        qs = Rnd.get(candidates);
         return !checkDistanceToTarget(qs.getPlayer(), target) ? null : qs;
     }
 

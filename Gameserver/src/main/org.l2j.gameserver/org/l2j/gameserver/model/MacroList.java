@@ -21,6 +21,7 @@ package org.l2j.gameserver.model;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.enums.MacroType;
 import org.l2j.gameserver.enums.MacroUpdateType;
 import org.l2j.gameserver.enums.ShortcutType;
@@ -38,6 +39,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
@@ -128,14 +130,7 @@ public class MacroList implements IRestorable {
     }
 
     private void deleteMacroFromDb(Macro macro) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM character_macroses WHERE charId=? AND id=?")) {
-            ps.setInt(1, owner.getObjectId());
-            ps.setInt(2, macro.getId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.warn("could not delete macro:", e);
-        }
+        getDAO(PlayerDAO.class).deleteMacro(owner.getObjectId(), macro.getId());
     }
 
     @Override

@@ -19,6 +19,7 @@
 package org.l2j.scripts.custom.events.Race;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -127,7 +128,6 @@ public final class Race extends Event
 		// Check Custom Table - we use custom NPCs
 		if (!Config.CUSTOM_NPC_DATA)
 		{
-			LOGGER.info(getName() + ": Event can't be started, because custom npc table is disabled!");
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPC table is disabled!");
 			return false;
 		}
@@ -164,7 +164,7 @@ public final class Race extends Event
 		// Announce
 		Broadcast.toAllOnlinePlayers("Race started!");
 		// Get random Finish
-		final int location = getRandom(0, _locations.length - 1);
+		final int location = Rnd.get(_locations.length);
 		_randspawn = _coords[location];
 		// And spawn NPC
 		recordSpawn(_stop_npc, _randspawn[0], _randspawn[1], _randspawn[2], _randspawn[3], false, 0);
@@ -404,7 +404,7 @@ public final class Race extends Event
 	
 	private void winRace(Player player)
 	{
-		final int[] _reward = _rewards[getRandom(_rewards.length - 1)];
+		final int[] _reward = _rewards[Rnd.get(_rewards.length - 1)];
 		player.addItem("eventModRace", _reward[0], _reward[1], _npc, true);
 		Broadcast.toAllOnlinePlayers(player.getName() + " is a winner!");
 		eventStop();

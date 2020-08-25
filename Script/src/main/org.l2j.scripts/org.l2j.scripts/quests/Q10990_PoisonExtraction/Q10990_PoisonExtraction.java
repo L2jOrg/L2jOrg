@@ -20,6 +20,7 @@ package org.l2j.scripts.quests.Q10990_PoisonExtraction;
 
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntIntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
@@ -238,7 +239,7 @@ public class Q10990_PoisonExtraction extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getId())) {
+			if (Rnd.get(100) < MONSTER_DROP_CHANCES.get(npc.getId())) {
 				giveItems(killer, TARANTULA, 1);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}

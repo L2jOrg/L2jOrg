@@ -18,23 +18,20 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.CharSelectInfoPackage;
+import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerRestore;
-import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
+import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.4.2.1.2.2 $ $Date: 2005/03/27 15:29:29 $
- */
+import static java.util.Objects.nonNull;
+
 public final class CharacterRestore extends ClientPacket {
-    // cd
-    private int _charSlot;
+
+    private int slot;
 
     @Override
     public void readImpl() {
-        _charSlot = readInt();
+        slot = readInt();
     }
 
     @Override
@@ -43,11 +40,12 @@ public final class CharacterRestore extends ClientPacket {
             return;
         }
 
-        client.restore(_charSlot);
-        final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().getGameServerSessionId(), 0);
-        client.sendPacket(cl);
-        client.setCharSelection(cl.getCharInfo());
-        final CharSelectInfoPackage charInfo = client.getCharSelection(_charSlot);
-        EventDispatcher.getInstance().notifyEvent(new OnPlayerRestore(charInfo.getObjectId(), charInfo.getName(), client));
+        client.restore(slot);
+        client.sendPacket(new PlayerSelectionInfo(client, slot));
+
+        final PlayerSelectInfo playerInfo = client.getPlayerSelection(slot);
+        if(nonNull(playerInfo)) {
+            EventDispatcher.getInstance().notifyEvent(new OnPlayerRestore(playerInfo.getObjectId(), playerInfo.getName(), client));
+        }
     }
 }

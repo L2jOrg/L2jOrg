@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
@@ -125,7 +126,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			else
 			{
-				final int itemCount = ((getRandom(100) < MOB2.get(npcId)) ? 2 : 1);
+				final int itemCount = ((Rnd.get(100) < MOB2.get(npcId)) ? 2 : 1);
 				giveItemRandomly(st.getPlayer(), npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
 			}
 		}

@@ -110,7 +110,7 @@ public final class PunishmentManager {
         return p != null ? p.getExpirationTime() : 0;
     }
 
-    private PunishmentTask getPunishment(Object key, PunishmentAffect affect, PunishmentType type) {
+    public PunishmentTask getPunishment(Object key, PunishmentAffect affect, PunishmentType type) {
         return _tasks.get(affect).getPunishment(String.valueOf(key), type);
     }
 

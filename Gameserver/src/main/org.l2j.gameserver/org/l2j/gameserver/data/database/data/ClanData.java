@@ -78,6 +78,18 @@ public class ClanData {
     @Column("new_leader_id")
     private int newLeaderId;
 
+    @Column("max_online_member")
+    private int maxOnlineMember;
+
+    @Column("prev_max_online_member")
+    private int prevMaxOnlineMember;
+
+    @Column("hunting_points")
+    private int huntingPoints;
+
+    @Column("prev_hunting_points")
+    private int prevHuntingPoints;
+
     public int getId() {
         return id;
     }
@@ -212,6 +224,42 @@ public class ClanData {
 
     public void setNewLeader(int leaderId) {
         this.leaderId = leaderId;
+    }
+
+    public void setMaxOnlineMembers(int maxOnlineMember) {
+        this.maxOnlineMember = maxOnlineMember;
+    }
+
+    public int getMaxOnlineMember() {
+        return maxOnlineMember;
+    }
+
+    public void addHuntingPoints(int points) {
+        this.huntingPoints += points;
+    }
+
+    public int getHuntingPoints() {
+        return huntingPoints;
+    }
+
+    public int getPrevMaxOnlineMember() {
+        return prevMaxOnlineMember;
+    }
+
+    public int getPrevHuntingPoints() {
+        return prevHuntingPoints;
+    }
+
+    public void setPrevMaxOnlineMember(int maxOnlineMember) {
+        this.prevMaxOnlineMember = maxOnlineMember;
+    }
+
+    public void setPrevHuntingPoints(int huntingPoints) {
+        this.prevHuntingPoints = huntingPoints;
+    }
+
+    public void setHuntingPoints(int huntingPoints) {
+        this.huntingPoints = huntingPoints;
     }
 
     public String toString() {

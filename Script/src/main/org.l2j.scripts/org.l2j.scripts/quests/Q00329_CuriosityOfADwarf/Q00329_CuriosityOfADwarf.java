@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00329_CuriosityOfADwarf;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -105,7 +106,7 @@ public final class Q00329_CuriosityOfADwarf extends Quest
 		final QuestState st = getQuestState(killer, false);
 		if ((st != null) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
-			final int rnd = getRandom(100);
+			final int rnd = Rnd.get(100);
 			for (ItemHolder drop : MONSTER_DROPS.get(npc.getId()))
 			{
 				if (rnd < drop.getCount())

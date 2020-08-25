@@ -25,6 +25,7 @@ import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.shop.L2Store;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.InstanceManager;
@@ -162,7 +163,7 @@ public class AdminReload implements IAdminCommandHandler {
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
             }
             case "primeshop" -> {
-                PrimeShopData.getInstance().load();
+                L2Store.getInstance().load();
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Prime Shop data.");
             }
             case "sets" -> {

@@ -7544,8 +7544,20 @@ public final class SystemMessageId {
     @ClientString(id = 3688, message = "The shared dimensional item has not been found.")
     public static SystemMessageId THE_SHARED_DIMENSIONAL_ITEM_HAS_NOT_BEEN_FOUND;
 
+     @ClientString(id = 3689, message = "The mentoring relationship with $s1 has been canceled. The mentor cannot obtain another mentee for two days.")
+    public static SystemMessageId THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS;
+
     @ClientString(id = 3690, message = "Do you wish to make $s1 your mentor? (Class: $s2 / Level: $s3)")
     public static SystemMessageId DO_YOU_WISH_TO_MAKE_S1_YOUR_MENTOR_CLASS_S2_LEVEL_S3;
+
+    @ClientString(id = 3691, message = "From now on, $s1 will be your mentor.")
+    public static SystemMessageId FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR;
+
+    @ClientString(id = 3692, message = "From now on, $s1 will be your mentee.")
+    public static SystemMessageId FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE;
+
+    @ClientString(id = 3693, message = "A mentor can have up to 3 mentees at the same time.")
+    public static SystemMessageId A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME;
 
     @ClientString(id = 3694, message = "You must Awaken in order to become a mentor.")
     public static SystemMessageId YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR;
@@ -7562,6 +7574,21 @@ public final class SystemMessageId {
     @ClientString(id = 3698, message = "Your mentor $s1 has disconnected.")
     public static SystemMessageId YOUR_MENTOR_S1_HAS_DISCONNECTED;
 
+    @ClientString(id = 3699, message = "$s1 has declined becoming your mentee.")
+    public static SystemMessageId S1_HAS_DECLINED_BECOMING_YOUR_MENTEE;
+
+    @ClientString(id = 3700, message = "You have declined $s1's mentoring offer.")
+    public static SystemMessageId YOU_HAVE_DECLINED_S1_S_MENTORING_OFFER;
+
+    @ClientString(id = 3701, message = "You cannot become your own mentee.")
+    public static SystemMessageId YOU_CANNOT_BECOME_YOUR_OWN_MENTEE;
+
+    @ClientString(id = 3702, message = "$s1 already has a mentor.")
+    public static SystemMessageId S1_ALREADY_HAS_A_MENTOR;
+
+    @ClientString(id = 3703, message = "$s1 is above level 85 and cannot become a mentee.")
+    public static SystemMessageId S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE;
+
     @ClientString(id = 3704, message = "$s1 does not have the item needed to become a mentee.")
     public static SystemMessageId S1_DOES_NOT_HAVE_THE_ITEM_NEEDED_TO_BECOME_A_MENTEE;
 
@@ -7571,11 +7598,17 @@ public final class SystemMessageId {
     @ClientString(id = 3706, message = "Your mentor-mentee relationship with your mentor $s1 has ended as you are an Awakened character of Lv. 85 or above. You can no longer be paired with a mentor.")
     public static SystemMessageId YOUR_MENTORMENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR;
 
+    @ClientString(id = 3707, message = "You have offered to become $s1's mentor.")
+    public static SystemMessageId YOU_HAVE_OFFERED_TO_BECOME_S1_S_MENTOR;
+
     @ClientString(id = 3708, message = "$s1 will be removed from your Ignore List.\\nProceed?")
     public static SystemMessageId S1_WILL_BE_REMOVED_FROM_YOUR_IGNORE_LISTNPROCEED;
 
     @ClientString(id = 3709, message = "Could not connect to Authentication Server. Please try again later.")
     public static SystemMessageId COULD_NOT_CONNECT_TO_AUTHENTICATION_SERVER_PLEASE_TRY_AGAIN_LATER;
+
+    @ClientString(id = 3710, message = "Invitation can occur only when the mentee is in main class status.")
+    public static SystemMessageId INVITATION_CAN_OCCUR_ONLY_WHEN_THE_MENTEE_IS_IN_MAIN_CLASS_STATUS;
 
     @ClientString(id = 3711, message = "Do you wish to end the mentoring relationship with $s1?  If the mentor's contract ends, the mentor cannot obtain another mentee for two days.")
     public static SystemMessageId DO_YOU_WISH_TO_END_THE_MENTORING_RELATIONSHIP_WITH_S1_IF_THE_MENTOR_S_CONTRACT_ENDS_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS;
@@ -11649,9 +11682,6 @@ public final class SystemMessageId {
     @ClientString(id = 6003, message = "The item you selected cannot be purchased. Unfortunately, the sale period ended.")
     public static SystemMessageId THE_ITEM_YOU_SELECTED_CANNOT_BE_PURCHASED_UNFORTUNATELY_THE_SALE_PERIOD_ENDED;
 
-    @ClientString(id = 6005, message = "You do not have enough NCoin.")
-    public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_NCOIN;
-
     @ClientString(id = 6006, message = "The item cannot be received because the inventory weight/quantity limit has been exceeded.")
     public static SystemMessageId THE_ITEM_CANNOT_BE_RECEIVED_BECAUSE_THE_INVENTORY_WEIGHT_QUANTITY_LIMIT_HAS_BEEN_EXCEEDED;
 
@@ -12714,9 +12744,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 7112, message = "Adena to buy: $s1 Adena \\n Coin cost: $s2 L2 Coins \\n Do you want to buy Adena as set above?")
     public static SystemMessageId ADENA_TO_BUY_S1_ADENA_N_COIN_COST_S2_L2_COINS_N_DO_YOU_WANT_TO_BUY_ADENA_AS_SET_ABOVE;
-
-    @ClientString(id = 7113, message = "Not enough L2 Coins to buy it.")
-    public static SystemMessageId NOT_ENOUGH_L2_COINS_TO_BUY_IT;
 
     @ClientString(id = 7114, message = "Vitality Mode is over.")
     public static SystemMessageId VITALITY_MODE_IS_OVER;
@@ -14173,7 +14200,7 @@ public final class SystemMessageId {
     @ClientString(id = 61, message = "Nothing happened.")
     public static SystemMessageId NOTHING_HAPPENED;
 
-    @ClientString(id = 80, message = "Your title cannot exceed 16 characters in length.  Please try again.")
+    @ClientString(id = 80, message = "Your title cannot exceed 16 characters in length. Please try again.")
     public static SystemMessageId YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN;
 
     @ClientString(id = 84, message = "You may not attack in a peaceful zone.")
@@ -17191,39 +17218,6 @@ public final class SystemMessageId {
     @ClientString(id = 3669, message = "The item for changing an attribute does not exist.")
     public static SystemMessageId THE_ITEM_FOR_CHANGING_AN_ATTRIBUTE_DOES_NOT_EXIST;
 
-    @ClientString(id = 3689, message = "The mentoring relationship with $s1 has been canceled. The mentor cannot obtain another mentee for two days.")
-    public static SystemMessageId THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS;
-
-    @ClientString(id = 3691, message = "From now on, $s1 will be your mentor.")
-    public static SystemMessageId FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR;
-
-    @ClientString(id = 3692, message = "From now on, $s1 will be your mentee.")
-    public static SystemMessageId FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE;
-
-    @ClientString(id = 3693, message = "A mentor can have up to 3 mentees at the same time.")
-    public static SystemMessageId A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME;
-
-    @ClientString(id = 3699, message = "$s1 has declined becoming your mentee.")
-    public static SystemMessageId S1_HAS_DECLINED_BECOMING_YOUR_MENTEE;
-
-    @ClientString(id = 3700, message = "You have declined $s1's mentoring offer.")
-    public static SystemMessageId YOU_HAVE_DECLINED_S1_S_MENTORING_OFFER;
-
-    @ClientString(id = 3701, message = "You cannot become your own mentee.")
-    public static SystemMessageId YOU_CANNOT_BECOME_YOUR_OWN_MENTEE;
-
-    @ClientString(id = 3702, message = "$s1 already has a mentor.")
-    public static SystemMessageId S1_ALREADY_HAS_A_MENTOR;
-
-    @ClientString(id = 3703, message = "$s1 is above level 85 and cannot become a mentee.")
-    public static SystemMessageId S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE;
-
-    @ClientString(id = 3707, message = "You have offered to become $s1's mentor.")
-    public static SystemMessageId YOU_HAVE_OFFERED_TO_BECOME_S1_S_MENTOR;
-
-    @ClientString(id = 3710, message = "Invitation can occur only when the mentee is in main class status.")
-    public static SystemMessageId INVITATION_CAN_OCCUR_ONLY_WHEN_THE_MENTEE_IS_IN_MAIN_CLASS_STATUS;
-
     @ClientString(id = 3712, message = "Plunder skill has been already used on this target.")
     public static SystemMessageId PLUNDER_SKILL_HAS_BEEN_ALREADY_USED_ON_THIS_TARGET;
 
@@ -17623,6 +17617,9 @@ public final class SystemMessageId {
     @ClientString(id = 6004, message = "Enchant failed. The enchant skill for the corresponding item will be exactly retained.")
     public static SystemMessageId ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED;
 
+    @ClientString(id = 6005, message = "You do not have enough NCoin.")
+    public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_NCOIN;
+
     @ClientString(id = 6083, message = "You cannot use this system during trading, private store, and workshop setup.")
     public static SystemMessageId YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP;
 
@@ -17724,6 +17721,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 7090, message = "Cannot locate the selected foe. The foe is not online.")
     public static SystemMessageId CANNOT_LOCATE_THE_SELECTED_FOE_THE_FOE_IS_NOT_ONLINE;
+
+    @ClientString(id = 7113, message = "Not enough L2 Coins to buy it.")
+    public static SystemMessageId NOT_ENOUGH_L2_COINS_TO_BUY_IT;
 
     @ClientString(id = 7238, message = "You are too far way to trade.")
     public static SystemMessageId YOU_ARE_TOO_FAR_WAY_TO_TRADE;

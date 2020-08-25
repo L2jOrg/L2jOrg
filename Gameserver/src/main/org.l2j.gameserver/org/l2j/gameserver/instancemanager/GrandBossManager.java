@@ -20,6 +20,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.data.database.dao.BossDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import org.l2j.gameserver.model.StatsSet;
@@ -34,6 +35,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
 /**
@@ -179,11 +182,7 @@ public final class GrandBossManager implements IStorable {
             final StatsSet info = _storedInfo.get(bossId);
 
             if (statusOnly || (boss == null) || (info == null)) {
-                try (PreparedStatement ps = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2)) {
-                    ps.setInt(1, _bossStatus.get(bossId));
-                    ps.setInt(2, bossId);
-                    ps.executeUpdate();
-                }
+                getDAO(BossDAO.class).updateStatus(bossId, _bossStatus.get(bossId));
             } else {
                 try (PreparedStatement ps = con.prepareStatement(UPDATE_GRAND_BOSS_DATA)) {
                     ps.setInt(1, boss.getX());

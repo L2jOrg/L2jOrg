@@ -23,7 +23,6 @@ import org.slf4j.LoggerFactory;
 
 import java.nio.file.Path;
 
-
 /**
  * Abstract class for classes that are meant to be implemented by scripts.<BR>
  *
@@ -38,13 +37,11 @@ public abstract class ManagedScript {
 
     public ManagedScript() {
         _scriptFile = getScriptPath();
-        setLastLoadTime(System.currentTimeMillis());
+        _lastLoadTime = System.currentTimeMillis();
     }
 
-    public abstract Path getScriptPath();
-
     /**
-     * Attempts to reload this script and to refresh the necessary bindings with it ScriptControler.<BR>
+     * Attempts to reload this script and to refresh the necessary bindings with it ScriptController.<BR>
      * Subclasses of this class should override this method to properly refresh their bindings when necessary.
      *
      * @return true if and only if the script was reloaded, false otherwise.
@@ -58,8 +55,6 @@ public abstract class ManagedScript {
             return false;
         }
     }
-
-    public abstract boolean unload();
 
     public boolean isActive() {
         return _isActive;
@@ -90,5 +85,9 @@ public abstract class ManagedScript {
         _lastLoadTime = lastLoadTime;
     }
 
+    public abstract Path getScriptPath();
+
     public abstract String getScriptName();
+
+    public abstract boolean unload();
 }

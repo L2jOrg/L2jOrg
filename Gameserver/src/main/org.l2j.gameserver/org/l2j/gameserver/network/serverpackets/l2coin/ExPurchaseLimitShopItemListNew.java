@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.l2coin;
 
-import org.l2j.gameserver.data.xml.impl.LCoinShopData;
+import org.l2j.gameserver.engine.item.shop.LCoinShop;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -42,17 +42,17 @@ public class ExPurchaseLimitShopItemListNew extends ServerPacket {
         writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST_NEW);
         writeByte(index);
 
-        final var products = LCoinShopData.getInstance().getProductInfos();
+        final var products = LCoinShop.getInstance().getProductInfos();
         writeInt(products.size());
 
-        products.values().forEach(product -> {
-            writeInt(product.getId());
-            writeInt(product.getProduction().getId());
-            writeIngredients(product.getIngredients());
-            writeInt(product.getRemainAmount());
-            writeInt(product.getRemainTime());
-            writeInt(product.getRemainServerItemAmount());
-        });
+        for (var product : products.values()) {
+            writeInt(product.id());
+            writeInt(product.production().getId());
+            writeIngredients(product.ingredients());
+            writeInt(product.restrictionAmount() - LCoinShop.getInstance().boughtCount(client.getPlayer(), product));
+            writeInt(product.remainTime());
+            writeInt(product.remainServerItemAmount());
+        }
     }
 
     private void writeIngredients(List<ItemHolder> ingredients) {

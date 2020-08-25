@@ -19,6 +19,7 @@
 package org.l2j.scripts.instances.MonsterArena;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
@@ -232,15 +233,15 @@ public class MonsterArena extends AbstractInstance
 						}
 
 						// Rare reward.
-						if (getRandom(100) < 1) // 1% chance.
+						if (Rnd.get(100) < 1) // 1% chance.
 						{
 							giveItems(player, TICKET_L, 1);
 						}
-						else if (getRandom(100) < 1) // 1% chance.
+						else if (Rnd.get(100) < 1) // 1% chance.
 						{
 							giveItems(player, TICKET_M, 1);
 						}
-						else if (getRandom(100) < 1) // 1% chance.
+						else if (Rnd.get(100) < 1) // 1% chance.
 						{
 							giveItems(player, TICKET_H, 1);
 						}

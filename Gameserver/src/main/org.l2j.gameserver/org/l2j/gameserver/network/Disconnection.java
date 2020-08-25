@@ -21,8 +21,6 @@ package org.l2j.gameserver.network;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.slf4j.Logger;
@@ -51,14 +49,6 @@ public final class Disconnection {
 
         // Anti Feed
         AntiFeedManager.getInstance().onDisconnect(this.client);
-
-        if (this.client != null) {
-            this.client.setPlayer(null);
-        }
-
-        if (this.player != null) {
-            this.player.setClient(null);
-        }
     }
 
     public static GameClient getClient(GameClient client, Player player) {
@@ -112,9 +102,10 @@ public final class Disconnection {
     public Disconnection deleteMe() {
         try {
             if ((player != null) && player.isOnline()) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(player), player);
                 player.deleteMe();
             }
+
+            detachPlayerFromClient();
         } catch (RuntimeException e) {
             LOGGER.warn(e.getMessage());
         }
@@ -122,11 +113,17 @@ public final class Disconnection {
         return this;
     }
 
+    private void detachPlayerFromClient() {
+        if (this.client != null) {
+            this.client.setPlayer(null);
+        }
+    }
+
     public Disconnection close(boolean toLoginScreen) {
         if (client != null) {
             client.close(toLoginScreen);
         }
-
+        detachPlayerFromClient();
         return this;
     }
 
@@ -134,7 +131,7 @@ public final class Disconnection {
         if (client != null) {
             client.close(packet);
         }
-
+        detachPlayerFromClient();
         return this;
     }
 

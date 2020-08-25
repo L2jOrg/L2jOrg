@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.ai.areas.DwarvenVillage.Toma;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -53,7 +54,7 @@ public class Toma extends AbstractNpcAI
 	{
 		if (event.equals("RESPAWN_TOMA"))
 		{
-			addSpawn(TOMA, getRandomEntry(LOCATIONS), false, TELEPORT_DELAY);
+			addSpawn(TOMA, Rnd.get(LOCATIONS), false, TELEPORT_DELAY);
 		}
 		return null;
 	}

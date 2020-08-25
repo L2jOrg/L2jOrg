@@ -19,6 +19,7 @@
 package org.l2j.scripts.instances.LastImperialTomb;
 
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.WorldObject;
@@ -112,15 +113,15 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			case HALISHA2:
 			{
-				if (getRandom(100) < 10)
+				if (Rnd.get(100) < 10)
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 2);
 				}
-				else if (getRandom(100) < 10)
+				else if (Rnd.get(100) < 10)
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 5);
 				}
-				else if (getRandom(100) < 2)
+				else if (Rnd.get(100) < 2)
 				{
 					return getInstance().getSkill(YOKE_OF_SCARLET, 1);
 				}
@@ -131,27 +132,27 @@ public class ScarletVanHalisha extends AbstractNpcAI
 			}
 			case HALISHA3:
 			{
-				if (getRandom(100) < 10)
+				if (Rnd.get(100) < 10)
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 3);
 				}
-				else if (getRandom(100) < 10)
+				else if (Rnd.get(100) < 10)
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 6);
 				}
-				else if (getRandom(100) < 10)
+				else if (Rnd.get(100) < 10)
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 2);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (getRandom(100) < 10))
+				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (Rnd.get(100) < 10))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_FIELD, 1);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (getRandom(100) < 10))
+				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (Rnd.get(100) < 10))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_MORPH, 1);
 				}
-				else if (getRandom(100) < 2)
+				else if (Rnd.get(100) < 2)
 				{
 					return getInstance().getSkill(YOKE_OF_SCARLET, 1);
 				}
@@ -171,7 +172,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			return;
 		}
-		if ((getRandom(100) < 30) || (_target == null) || _target.isDead())
+		if ((Rnd.get(100) < 30) || (_target == null) || _target.isDead())
 		{
 			_skill = getRndSkills(npc);
 			_target = getRandomTarget(npc, _skill);
@@ -266,7 +267,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				}
 			}
 		}
-		return getRandomEntry(result);
+		return Rnd.get(result);
 	}
 	
 	public static void main(String[] args)

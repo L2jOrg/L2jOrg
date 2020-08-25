@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.custom.events.TeamVsTeam;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.Team;
@@ -231,7 +232,7 @@ public class TvT extends Event
 				PVP_WORLD = manager.createInstance(template, null);
 				// Randomize player list and separate teams.
 				Collections.shuffle(PLAYER_LIST);
-				boolean team = getRandomBoolean(); // If teams are not even, randomize where extra player goes.
+				boolean team = Rnd.nextBoolean(); // If teams are not even, randomize where extra player goes.
 				for (Player participant : PLAYER_LIST)
 				{
 					if (team)

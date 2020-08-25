@@ -21,6 +21,7 @@ package org.l2j.authserver.controller;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.authserver.data.database.ServerInfo;
 import org.l2j.authserver.data.database.dao.GameserverDAO;
 import org.l2j.authserver.data.xml.ServerNameReader;
 import org.l2j.authserver.network.GameServerInfo;
@@ -77,10 +78,10 @@ public class GameServerManager {
     }
 
     private void loadRegisteredGameServers() {
-        getDAO(GameserverDAO.class).findAll().forEach(gameServer -> {
-            GameServerInfo gsi = new GameServerInfo(gameServer);
-            gameservers.put(gameServer.getId(), gsi);
-        });
+        for (ServerInfo serverInfo : getDAO(GameserverDAO.class).findAll()) {
+            GameServerInfo gsi = new GameServerInfo(serverInfo);
+            gameservers.put(serverInfo.getId(), gsi);
+        }
         LOGGER.info("Loaded {} registered Game Servers", gameservers.size());
     }
 

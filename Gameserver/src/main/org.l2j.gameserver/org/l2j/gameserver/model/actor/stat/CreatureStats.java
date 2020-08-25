@@ -83,8 +83,7 @@ public class CreatureStats {
 
     public CreatureStats(Creature activeChar) {
         creature = activeChar;
-        for (int i = 0; i < TraitType.values().length; i++)
-        {
+        for (int i = 0; i < TraitType.values().length; i++) {
             _attackTraitValues[i] = 1;
             _defenceTraitValues[i] = 0;
         }

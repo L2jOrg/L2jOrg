@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.ai.areas.LairOfAntharas;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -42,7 +43,7 @@ public final class Pytan extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		if (getRandom(100) < 5)
+		if (Rnd.get(100) < 5)
 		{
 			final Npc spawnBanshee = addSpawn(KNORIKS, npc, false, 300000);
 			final Playable attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;

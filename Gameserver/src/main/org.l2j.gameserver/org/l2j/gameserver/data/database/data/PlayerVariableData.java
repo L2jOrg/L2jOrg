@@ -29,11 +29,14 @@ public class PlayerVariableData {
 
     public static final int REVENGE_USABLE_FUNCTIONS = 5;
 
-    public static PlayerVariableData init(int playerId) {
+    public static PlayerVariableData init(int playerId, byte face, byte hairStyle, byte hairColor) {
         var data = new PlayerVariableData();
         data.revengeTeleports = REVENGE_USABLE_FUNCTIONS;
         data.revengeLocations = REVENGE_USABLE_FUNCTIONS;
         data.playerId = playerId;
+        data.visualFaceId = face;
+        data.visualHairId = hairStyle;
+        data.visualHairColorId = hairColor;
         return data;
     }
 
@@ -120,12 +123,6 @@ public class PlayerVariableData {
 
     @Column("instance_restore")
     private int instanceRestore;
-
-    @Column("mentor_penalty_id")
-    private int mentorPenaltyId;
-
-    @Column("mentor_penalty_time")
-    private long mentorPenaltyTime;
 
     @Column("claimed_clan_rewards")
     private int claimedClanRewards;
@@ -258,14 +255,6 @@ public class PlayerVariableData {
         return instanceRestore;
     }
 
-    public int getMentorPenaltyId() {
-        return mentorPenaltyId;
-    }
-
-    public long getMentorPenaltyTime() {
-        return mentorPenaltyTime;
-    }
-
     public int getClaimedClanRewards() {
         return claimedClanRewards;
     }
@@ -396,14 +385,6 @@ public class PlayerVariableData {
 
     public void setInstanceRestore(int instanceRestore) {
         this.instanceRestore = instanceRestore;
-    }
-
-    public void setMentorPenaltyId(int mentorPenaltyId) {
-        this.mentorPenaltyId = mentorPenaltyId;
-    }
-
-    public void setMentorPenaltyTime(long mentorPenaltyTime) {
-        this.mentorPenaltyTime = mentorPenaltyTime;
     }
 
     public void setClaimedClanRewards(int claimedClanRewards) {

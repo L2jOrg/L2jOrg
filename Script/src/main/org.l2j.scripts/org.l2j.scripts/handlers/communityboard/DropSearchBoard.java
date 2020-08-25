@@ -325,14 +325,8 @@ public class DropSearchBoard implements IParseBoardHandler
 				builder.append("<tr>");
 			}
 			
-			String icon = item.getIcon();
-			if (icon == null)
-			{
-				icon = "icon.etc_question_mark_i00";
-			}
-			
 			builder.append("<td>");
-			builder.append("<button value=\".\" action=\"bypass _bbs_search_drop " + item.getId() + " 1 $order $level\" width=32 height=32 back=\"" + icon + "\" fore=\"" + icon + "\">");
+			builder.append("<button value=\".\" action=\"bypass _bbs_search_drop ").append(item.getId()).append(" 1 $order $level\" width=32 height=32  itemtooltip=\"").append(item.getId()).append("\">");
 			builder.append("</td>");
 			builder.append("<td width=200>");
 			builder.append("&#").append(item.getId()).append(";");

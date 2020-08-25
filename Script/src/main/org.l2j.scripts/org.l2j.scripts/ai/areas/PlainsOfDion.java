@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.ai.areas;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.ChatType;
@@ -63,7 +64,7 @@ public final class PlainsOfDion extends AbstractNpcAI  {
     {
         if (npc.isScriptValue(0))
         {
-            final int i = getRandom(5);
+            final int i = Rnd.get(5);
             if (i < 2)
             {
                 npc.broadcastSay(ChatType.NPC_GENERAL, MONSTERS_MSG[i], player.getName());
@@ -78,7 +79,7 @@ public final class PlainsOfDion extends AbstractNpcAI  {
                 if (Util.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoEngine.getInstance().canSeeTarget(npc, obj))
                 {
                     addAttackPlayerDesire(obj, player);
-                    obj.broadcastSay(ChatType.NPC_GENERAL, MONSTERS_ASSIST_MSG[getRandom(3)]);
+                    obj.broadcastSay(ChatType.NPC_GENERAL, MONSTERS_ASSIST_MSG[Rnd.get(3)]);
                 }
             });
             npc.setScriptValue(1);

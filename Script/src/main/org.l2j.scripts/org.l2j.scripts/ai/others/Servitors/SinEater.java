@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.ai.others.Servitors;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
@@ -54,9 +55,9 @@ public final class SinEater extends AbstractNpcAI
 	{
 		if (event.equals("TALK") && (player != null) && (player.getPet() != null))
 		{
-			if (getRandom(100) < 30)
+			if (Rnd.get(100) < 30)
 			{
-				final int random = getRandom(100);
+				final int random = Rnd.get(100);
 				final Summon summon = player.getPet();
 				
 				if (random < 20)
@@ -90,7 +91,7 @@ public final class SinEater extends AbstractNpcAI
 	@Id(SIN_EATER)
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final int random = getRandom(100);
+		final int random = Rnd.get(100);
 		final Summon summon = (Summon) event.getTarget();
 		
 		if (random < 30)
@@ -112,9 +113,9 @@ public final class SinEater extends AbstractNpcAI
 	@Id(SIN_EATER)
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
-		if (getRandom(100) < 30)
+		if (Rnd.get(100) < 30)
 		{
-			final int random = getRandom(100);
+			final int random = Rnd.get(100);
 			final Summon summon = (Summon) event.getTarget();
 			
 			if (random < 35)
@@ -135,16 +136,16 @@ public final class SinEater extends AbstractNpcAI
 	@Override
 	public void onSummonSpawn(Summon summon)
 	{
-		broadcastSummonSay(summon, getRandomBoolean() ? NpcStringId.HEY_IT_SEEMS_LIKE_YOU_NEED_MY_HELP_DOESN_T_IT : NpcStringId.ALMOST_GOT_IT_OUCH_STOP_DAMN_THESE_BLOODY_MANACLES);
+		broadcastSummonSay(summon, Rnd.nextBoolean() ? NpcStringId.HEY_IT_SEEMS_LIKE_YOU_NEED_MY_HELP_DOESN_T_IT : NpcStringId.ALMOST_GOT_IT_OUCH_STOP_DAMN_THESE_BLOODY_MANACLES);
 		startQuestTimer("TALK", 60000, null, summon.getOwner());
 	}
 	
 	@Override
 	public void onSummonTalk(Summon summon)
 	{
-		if (getRandom(100) < 10)
+		if (Rnd.get(100) < 10)
 		{
-			final int random = getRandom(100);
+			final int random = Rnd.get(100);
 			
 			if (random < 25)
 			{

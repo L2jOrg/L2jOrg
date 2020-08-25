@@ -21,6 +21,7 @@ package org.l2j.scripts.ai.others;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -90,11 +91,11 @@ public final class PolymorphingOnAttack extends AbstractNpcAI
 			final List<Integer> tmp = MOBSPAWNS.get(npc.getId());
 			if (tmp != null)
 			{
-				if ((npc.getCurrentHp() <= ((npc.getMaxHp() * tmp.get(1)) / 100.0)) && (getRandom(100) < tmp.get(2)))
+				if ((npc.getCurrentHp() <= ((npc.getMaxHp() * tmp.get(1)) / 100.0)) && (Rnd.get(100) < tmp.get(2)))
 				{
 					if (tmp.get(3) >= 0)
 					{
-						final NpcStringId npcString = MOBTEXTS[tmp.get(3)][getRandom(MOBTEXTS[tmp.get(3)].length)];
+						final NpcStringId npcString = MOBTEXTS[tmp.get(3)][Rnd.get(MOBTEXTS[tmp.get(3)].length)];
 						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), npcString));
 						
 					}

@@ -19,6 +19,7 @@
 package org.l2j.scripts.ai.areas.ImperialTomb.FourSepulchers;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.ChatType;
@@ -41,6 +42,8 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.type.EffectZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -62,6 +65,8 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public class FourSepulchers extends AbstractNpcAI
 {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(FourSepulchers.class);
 	
 	// NPCs
 	private static final int CONQUEROR_MANAGER = 31921;
@@ -300,12 +305,12 @@ public class FourSepulchers extends AbstractNpcAI
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), npc.getSpawn().getLocation().getX() + getRandom(-400, 400), npc.getSpawn().getLocation().getY() + getRandom(-400, 400), npc.getZ(), npc.getInstanceWorld());
+					final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), npc.getSpawn().getLocation().getX() + Rnd.get(-400, 400), npc.getSpawn().getLocation().getY() + Rnd.get(-400, 400), npc.getZ(), npc.getInstanceWorld());
 					if (MathUtil.isInsideRadius3D(npc, npc.getSpawn().getLocation(), 600))
 					{
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 					}
-					npc.broadcastSay(ChatType.NPC_GENERAL, VICTIM_MSG[getRandom(VICTIM_MSG.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, VICTIM_MSG[Rnd.get(VICTIM_MSG.length)]);
 					startQuestTimer("VICTIM_FLEE", 3000, npc, null, false);
 				}
 				return null;
@@ -334,7 +339,7 @@ public class FourSepulchers extends AbstractNpcAI
 				{
 					if (currentWave == 2)
 					{
-						if (getRandomBoolean())
+						if (Rnd.nextBoolean())
 						{
 							spawnNextWave(player);
 						}
@@ -469,7 +474,7 @@ public class FourSepulchers extends AbstractNpcAI
 			}
 			case ROOM_6_REWARD_CHEST:
 			{
-				npc.dropItem(killer, 57, getRandom(300, 1300));
+				npc.dropItem(killer, 57, Rnd.get(300, 1300));
 				break;
 			}
 			default:

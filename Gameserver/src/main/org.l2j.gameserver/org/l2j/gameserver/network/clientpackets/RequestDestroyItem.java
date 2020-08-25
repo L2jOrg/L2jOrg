@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
@@ -36,9 +36,7 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.util.GameUtils.isItem;
 
 /**
@@ -145,13 +143,7 @@ public final class RequestDestroyItem extends ClientPacket {
                 pet.unSummon(activeChar);
             }
 
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?")) {
-                statement.setInt(1, _objectId);
-                statement.execute();
-            } catch (Exception e) {
-                LOGGER.warn("could not delete pet objectid: ", e);
-            }
+            getDAO(PetDAO.class).deleteByItem(_objectId);
         }
         if (itemToRemove.isTimeLimitedItem()) {
             itemToRemove.endOfLife();

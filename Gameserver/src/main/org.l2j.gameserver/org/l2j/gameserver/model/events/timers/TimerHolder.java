@@ -47,9 +47,9 @@ public class TimerHolder<T> implements Runnable {
     private final ScheduledFuture<?> _task;
 
     public TimerHolder(T event, StatsSet params, long time, Npc npc, Player player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor) {
-        Objects.requireNonNull(event, getClass().getSimpleName() + ": \"event\" cannot be null!");
-        Objects.requireNonNull(eventScript, getClass().getSimpleName() + ": \"script\" cannot be null!");
-        Objects.requireNonNull(postExecutor, getClass().getSimpleName() + ": \"postExecutor\" cannot be null!");
+        Objects.requireNonNull(event, "\"event\" cannot be null!");
+        Objects.requireNonNull(eventScript, "\"script\" cannot be null!");
+        Objects.requireNonNull(postExecutor, "\"postExecutor\" cannot be null!");
         _event = event;
         _params = params;
         _time = time;
@@ -134,9 +134,7 @@ public class TimerHolder<T> implements Runnable {
     }
 
     /**
-     * @param event
-     * @param npc
-     * @param player
+     *
      * @return {@code true} if event, npc, player are equals to the ones stored in this TimerHolder, {@code false} otherwise
      */
     public boolean isEqual(T event, Npc npc, Player player) {

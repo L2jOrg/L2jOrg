@@ -36,6 +36,8 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.scripts.ai.AbstractNpcAI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
@@ -47,6 +49,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
 @Disabled
 public class ListenerTest extends AbstractNpcAI
 {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(ListenerTest.class);
 	private static final int[] ELPIES =
 	{
 		20432

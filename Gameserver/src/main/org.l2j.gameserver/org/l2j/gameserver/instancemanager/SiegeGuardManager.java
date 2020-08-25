@@ -19,6 +19,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.SiegeDAO;
 import org.l2j.gameserver.data.xml.impl.CastleDataManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -41,6 +42,8 @@ import java.sql.ResultSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
 /**
@@ -263,16 +266,7 @@ public final class SiegeGuardManager {
      * @param pos
      */
     public void removeSiegeGuard(int npcId, IPositionable pos) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1")) {
-            ps.setInt(1, npcId);
-            ps.setInt(2, pos.getX());
-            ps.setInt(3, pos.getY());
-            ps.setInt(4, pos.getZ());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Error deleting hired siege guard at " + pos + " : " + e.getMessage(), e);
-        }
+        getDAO(SiegeDAO.class).deleteGuard(npcId, pos.getX(), pos.getY(), pos.getZ());
     }
 
     /**
@@ -281,13 +275,7 @@ public final class SiegeGuardManager {
      * @param castle the castle instance
      */
     public void removeSiegeGuards(Castle castle) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1")) {
-            ps.setInt(1, castle.getId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Error deleting hired siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
-        }
+        getDAO(SiegeDAO.class).deleteGuardsOfCastle(castle.getId());
     }
 
     /**

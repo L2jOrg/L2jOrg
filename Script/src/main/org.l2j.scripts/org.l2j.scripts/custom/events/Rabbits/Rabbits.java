@@ -19,6 +19,7 @@
 package org.l2j.scripts.custom.events.Rabbits;
 
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.WorldObject;
@@ -101,7 +102,6 @@ public final class Rabbits extends Event
 		// Check starting conditions
 		if (!Config.CUSTOM_NPC_DATA)
 		{
-			LOGGER.info(getName() + ": Event can't be started, because custom NPCs are disabled!");
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPCs are disabled!");
 			return false;
 		}
@@ -114,7 +114,7 @@ public final class Rabbits extends Event
 		// Spawn Chests
 		for (int i = 0; i <= TOTAL_CHEST_COUNT; i++)
 		{
-			recordSpawn(_npcs, CHEST, getRandom(-60653, -58772), getRandom(-55830, -58146), -2030, 0, false, EVENT_TIME * 60000);
+			recordSpawn(_npcs, CHEST, Rnd.get(-60653, -58772), Rnd.get(-55830, -58146), -2030, 0, false, EVENT_TIME * 60000);
 		}
 		
 		// Announce event start
@@ -248,12 +248,12 @@ public final class Rabbits extends Event
 	
 	private static void dropItem(Npc npc, Player player, int[][] droplist)
 	{
-		final int chance = getRandom(100);
+		final int chance = Rnd.get(100);
 		for (int[] drop : droplist)
 		{
 			if (chance > drop[1])
 			{
-				npc.dropItem(player, drop[0], getRandom(drop[2], drop[3]));
+				npc.dropItem(player, drop[0], Rnd.get(drop[2], drop[3]));
 				return;
 			}
 		}

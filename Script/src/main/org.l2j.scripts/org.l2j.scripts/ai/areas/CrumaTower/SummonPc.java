@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.ai.areas.CrumaTower;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
@@ -50,7 +51,7 @@ public final class SummonPc extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
-		final int chance = getRandom(100);
+		final int chance = Rnd.get(100);
 		final boolean attacked = npc.getVariables().getBoolean("attacked", false);
 		if (!isInsideRadius3D(npc,  attacker,  300) && !attacked)
 		{

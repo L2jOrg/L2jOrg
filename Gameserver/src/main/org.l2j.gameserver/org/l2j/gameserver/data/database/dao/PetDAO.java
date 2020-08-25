@@ -40,4 +40,10 @@ public interface PetDAO extends DAO<PetData> {
 
     @Query("DELETE FROM pets WHERE item_obj_id IN (SELECT object_id FROM items WHERE items.owner_id=:playerId:)")
     void deleteByOwner(int playerId);
+
+    @Query("UPDATE pets SET fed=:fed: WHERE item_obj_id = :itemId:")
+    void updateFed(int itemId, int fed);
+
+    @Query("DELETE FROM character_summon_skills_save WHERE ownerId=:ownerId: AND ownerClassIndex=:classIndex: AND summonSkillId=:skill:")
+    void deleteSkillsSave(int ownerId, int classIndex, int skill);
 }

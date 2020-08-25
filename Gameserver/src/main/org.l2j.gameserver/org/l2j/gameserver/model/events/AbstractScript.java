@@ -108,883 +108,15 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author UnAfraid
  */
 public abstract class AbstractScript extends ManagedScript implements IEventTimerEvent<String>, IEventTimerCancel<String> {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractScript.class);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractScript.class);
+
     private final Map<ListenerRegisterType, IntSet> _registeredIds = new EnumMap<>(ListenerRegisterType.class);
     private final Queue<AbstractEventListener> _listeners = new PriorityBlockingQueue<>();
     private volatile TimerExecutor<String> _timerExecutor;
 
     protected AbstractScript() {
         initializeAnnotationListeners();
-    }
-
-    /**
-     * Show an on screen message to the player.
-     *
-     * @param player the player to display the message to
-     * @param text   the message to display
-     * @param time   the duration of the message in milliseconds
-     */
-    public static void showOnScreenMsg(Player player, String text, int time) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(new ExShowScreenMessage(text, time));
-    }
-
-    /**
-     * Show an on screen message to the player.
-     * @param params    values of parameters to replace in the NPC String (like S1, C1 etc.)
-     */
-    public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, String... params) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(new ExShowScreenMessage(npcString, position, time, params));
-    }
-
-    /**
-     * Show an on screen message to the player.
-     * @param showEffect the upper effect
-     * @param params     values of parameters to replace in the NPC String (like S1, C1 etc.)
-     */
-    public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, boolean showEffect, String... params) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(new ExShowScreenMessage(npcString, position, time, showEffect, params));
-    }
-
-    /**
-     * Show an on screen message to the player.
-     * @param params    values of parameters to replace in the system message (like S1, C1 etc.)
-     */
-    public static void showOnScreenMsg(Player player, SystemMessageId systemMsg, int position, int time, String... params) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(new ExShowScreenMessage(systemMsg, position, time, params));
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     *
-     * @param npcId the ID of the NPC to spawn
-     * @param pos   the object containing the spawn location coordinates
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
-     */
-    public static Npc addSpawn(int npcId, IPositionable pos) {
-        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), false, 0, false, 0);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
-     * @return the {@link Npc} object of the newly spawned NPC, {@code null} if the NPC doesn't exist
-     */
-    public static Npc addSpawn(Npc summoner, int npcId, IPositionable pos, boolean randomOffset, long despawnDelay) {
-        return addSpawn(summoner, npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, false, 0);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC. the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
-     */
-    public static Npc addSpawn(int npcId, IPositionable pos, boolean isSummonSpawn) {
-        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), false, 0, isSummonSpawn, 0);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
-     */
-    public static Npc addSpawn(int npcId, IPositionable pos, boolean randomOffset, long despawnDelay) {
-        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, false, 0);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
-     */
-    public static Npc addSpawn(int npcId, IPositionable pos, boolean randomOffset, long despawnDelay, boolean isSummonSpawn) {
-        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, isSummonSpawn, 0);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @param instanceId   the ID of the instance to spawn the NPC in (0 - the open world)
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable)
-     * @see #addSpawn(int, IPositionable, boolean)
-     * @see #addSpawn(int, IPositionable, boolean, long)
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
-     */
-    public static Npc addSpawn(Npc summoner, int npcId, IPositionable pos, boolean randomOffset, int instanceId) {
-        return addSpawn(summoner, npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, 0, false, instanceId);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
-     * @param instanceId    the ID of the instance to spawn the NPC in (0 - the open world)
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable)
-     * @see #addSpawn(int, IPositionable, boolean)
-     * @see #addSpawn(int, IPositionable, boolean, long)
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
-     */
-    public static Npc addSpawn(int npcId, IPositionable pos, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instanceId) {
-        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, isSummonSpawn, instanceId);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @param heading      the heading of the NPC
-     * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-     * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
-     */
-    public static Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay) {
-        return addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, false, 0);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @param heading       the heading of the NPC
-     * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-     * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
-     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
-     */
-    public static Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn) {
-        return addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, isSummonSpawn, 0);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @param heading       the heading of the NPC
-     * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-     * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
-     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
-     * @param instanceId    the ID of the instance to spawn the NPC in (0 - the open world)
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
-     * @see #addSpawn(int, int, int, int, int, boolean, long)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean)
-     */
-    public static Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instanceId) {
-        return addSpawn(null, npcId, x, y, z, heading, randomOffset, despawnDelay, isSummonSpawn, instanceId);
-    }
-
-    /**
-     * Add a temporary spawn of the specified NPC.
-     * @param z             the Z coordinate (height) of the spawn location
-     * @param heading       the heading of the NPC
-     * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-     * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
-     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
-     * @param instance      instance where NPC should be spawned ({@code null} - normal world)
-     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
-     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
-     * @see #addSpawn(int, int, int, int, int, boolean, long)
-     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean)
-     */
-    public static Npc addSpawn(Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instance) {
-        try {
-            final Spawn spawn = new Spawn(npcId);
-            if ((x == 0) && (y == 0)) {
-                LOGGER.error("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
-                return null;
-            }
-            if (randomOffset) {
-                int offset = Rnd.get(50, 100);
-                if (Rnd.nextBoolean()) {
-                    offset *= -1;
-                }
-                x += offset;
-                offset = Rnd.get(50, 100);
-                if (Rnd.nextBoolean()) {
-                    offset *= -1;
-                }
-                y += offset;
-            }
-            spawn.setInstanceId(instance);
-            spawn.setHeading(heading);
-            spawn.setXYZ(x, y, z);
-            spawn.stopRespawn();
-
-            final Npc npc = spawn.doSpawn(isSummonSpawn);
-            if (despawnDelay > 0) {
-                npc.scheduleDespawn(despawnDelay);
-            }
-            if (summoner != null) {
-                summoner.addSummonedNpc(npc);
-            }
-            return npc;
-        } catch (Exception e) {
-            LOGGER.warn("Could not spawn NPC #" + npcId + "; error: " + e.getMessage());
-        }
-        return null;
-    }
-
-    /**
-     * Get the amount of an item in player's inventory.
-     *
-     * @param player the player whose inventory to check
-     * @param itemId the ID of the item whose amount to get
-     * @return the amount of the specified item in player's inventory
-     */
-    public static long getQuestItemsCount(Player player, int itemId) {
-        return player.getInventory().getInventoryItemCount(itemId, -1);
-    }
-
-    /**
-     * Check if the player has the specified item in his inventory.
-     *
-     * @param player the player whose inventory to check for the specified item
-     * @param item   the {@link ItemHolder} object containing the ID and count of the item to check
-     * @return {@code true} if the player has the required count of the item
-     */
-    protected static boolean hasItem(Player player, ItemHolder item) {
-        return hasItem(player, item, true);
-    }
-
-    /**
-     * Check if the player has the required count of the specified item in his inventory.
-     *
-     * @param player     the player whose inventory to check for the specified item
-     * @param item       the {@link ItemHolder} object containing the ID and count of the item to check
-     * @param checkCount if {@code true}, check if each item is at least of the count specified in the ItemHolder,<br>
-     *                   otherwise check only if the player has the item at all
-     * @return {@code true} if the player has the item
-     */
-    protected static boolean hasItem(Player player, ItemHolder item, boolean checkCount) {
-        if (item == null) {
-            return false;
-        }
-        if (checkCount) {
-            return getQuestItemsCount(player, item.getId()) >= item.getCount();
-        }
-        return hasQuestItems(player, item.getId());
-    }
-
-    /**
-     * Check if the player has all the specified items in his inventory and, if necessary, if their count is also as required.
-     *
-     * @param player     the player whose inventory to check for the specified item
-     * @param checkCount if {@code true}, check if each item is at least of the count specified in the ItemHolder,<br>
-     *                   otherwise check only if the player has the item at all
-     * @param itemList   a list of {@link ItemHolder} objects containing the IDs of the items to check
-     * @return {@code true} if the player has all the items from the list
-     */
-    protected static boolean hasAllItems(Player player, boolean checkCount, ItemHolder... itemList) {
-        if ((itemList == null) || (itemList.length == 0)) {
-            return false;
-        }
-        for (ItemHolder item : itemList) {
-            if (!hasItem(player, item, checkCount)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
-     * Check for an item in player's inventory.
-     *
-     * @param player the player whose inventory to check for quest items
-     * @param itemId the ID of the item to check for
-     * @return {@code true} if the item exists in player's inventory, {@code false} otherwise
-     */
-    public static boolean hasQuestItems(Player player, int itemId) {
-        return player.getInventory().getItemByItemId(itemId) != null;
-    }
-
-    /**
-     * Check for multiple items in player's inventory.
-     *
-     * @param player  the player whose inventory to check for quest items
-     * @param itemIds a list of item IDs to check for
-     * @return {@code true} if all items exist in player's inventory, {@code false} otherwise
-     */
-    public static boolean hasQuestItems(Player player, int... itemIds) {
-        if ((itemIds == null) || (itemIds.length == 0)) {
-            return false;
-        }
-        final PlayerInventory inv = player.getInventory();
-        for (int itemId : itemIds) {
-            if (inv.getItemByItemId(itemId) == null) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
-     * Get the enchantment level of an item in player's inventory.
-     *
-     * @param player the player whose item to check
-     * @param itemId the ID of the item whose enchantment level to get
-     * @return the enchantment level of the item or 0 if the item was not found
-     */
-    public static int getEnchantLevel(Player player, int itemId) {
-        final Item enchantedItem = player.getInventory().getItemByItemId(itemId);
-        if (enchantedItem == null) {
-            return 0;
-        }
-        return enchantedItem.getEnchantLevel();
-    }
-
-    /**
-     * Give a reward to player using multipliers.
-     */
-    public static void rewardItems(Player player, ItemHolder holder) {
-        rewardItems(player, holder.getId(), holder.getCount());
-    }
-
-    /**
-     * Give a reward to player using multipliers.
-     *
-     * @param player the player to whom to give the item
-     * @param itemId the ID of the item to give
-     * @param count  the amount of items to give
-     */
-    public static void rewardItems(Player player, int itemId, long count) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-
-        if (count <= 0) {
-            return;
-        }
-
-        final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
-        if (item == null) {
-            return;
-        }
-
-        try {
-            if (itemId == CommonItem.ADENA) {
-                count *= Config.RATE_QUEST_REWARD_ADENA;
-            } else if (Config.RATE_QUEST_REWARD_USE_MULTIPLIERS) {
-                if (item instanceof EtcItem) {
-                    switch (((EtcItem) item).getItemType()) {
-                        case POTION: {
-                            count *= Config.RATE_QUEST_REWARD_POTION;
-                            break;
-                        }
-                        case ENCHANT_WEAPON:
-                        case ENCHANT_ARMOR:
-                        case SCROLL: {
-                            count *= Config.RATE_QUEST_REWARD_SCROLL;
-                            break;
-                        }
-                        case RECIPE: {
-                            count *= Config.RATE_QUEST_REWARD_RECIPE;
-                            break;
-                        }
-                        case MATERIAL: {
-                            count *= Config.RATE_QUEST_REWARD_MATERIAL;
-                            break;
-                        }
-                        default: {
-                            count *= Config.RATE_QUEST_REWARD;
-                        }
-                    }
-                }
-            } else {
-                count *= Config.RATE_QUEST_REWARD;
-            }
-        } catch (Exception e) {
-            count = Long.MAX_VALUE;
-        }
-
-        // Add items to player's inventory
-        final Item itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
-        if (itemInstance == null) {
-            return;
-        }
-
-        sendItemGetMessage(player, itemInstance, count);
-    }
-
-    /**
-     * Send the system message and the status update packets to the player.
-     *
-     * @param player the player that has got the item
-     * @param item   the item obtain by the player
-     * @param count  the item count
-     */
-    private static void sendItemGetMessage(Player player, Item item, long count) {
-        // If item for reward is gold, send message of gold reward to client
-        if (item.getId() == CommonItem.ADENA) {
-            final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
-            smsg.addLong(count);
-            player.sendPacket(smsg);
-        }
-        // Otherwise, send message of object reward to client
-        else if (count > 1) {
-            final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-            smsg.addItemName(item);
-            smsg.addLong(count);
-            player.sendPacket(smsg);
-        } else {
-            final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-            smsg.addItemName(item);
-            player.sendPacket(smsg);
-        }
-        // send packets
-        player.sendPacket(new ExUserInfoInvenWeight(player));
-        player.sendPacket(new ExAdenaInvenCount(player));
-        player.sendPacket(new ExBloodyCoinCount());
-    }
-
-    /**
-     * Give item/reward to the player
-     */
-    public static void giveItems(Player player, int itemId, long count) {
-        giveItems(player, itemId, count, 0, false);
-    }
-
-    /**
-     * Give item/reward to the player
-     */
-    public static void giveItems(Player player, int itemId, long count, boolean playSound) {
-        giveItems(player, itemId, count, 0, playSound);
-    }
-
-    /**
-     * Give item/reward to the player
-     */
-    protected static void giveItems(Player player, ItemHolder holder) {
-        giveItems(player, holder.getId(), holder.getCount());
-    }
-
-    public static void giveItems(Player player, int itemId, long count, int enchantlevel, boolean playSound) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-
-        if (count <= 0) {
-            return;
-        }
-
-        // Add items to player's inventory
-        final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
-        if (item == null) {
-            return;
-        }
-
-        // set enchant level for item if that item is not adena
-        if ((enchantlevel > 0) && (itemId != CommonItem.ADENA)) {
-            item.setEnchantLevel(enchantlevel);
-        }
-
-        if (playSound) {
-            playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-        }
-        sendItemGetMessage(player, item, count);
-    }
-
-    public static void giveItems(Player player, int itemId, long count, AttributeType attributeType, int attributeValue) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-
-        if (count <= 0) {
-            return;
-        }
-
-        // Add items to player's inventory
-        final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
-        if (item == null) {
-            return;
-        }
-
-        // set enchant level for item if that item is not adena
-        if ((attributeType != null) && (attributeValue > 0)) {
-            item.setAttribute(new AttributeHolder(attributeType, attributeValue), true);
-            if (item.isEquipped()) {
-                // Recalculate all stats
-                player.getStats().recalculateStats(true);
-            }
-
-            final InventoryUpdate iu = new InventoryUpdate();
-            iu.addModifiedItem(item);
-            player.sendInventoryUpdate(iu);
-        }
-
-        sendItemGetMessage(player, item, count);
-    }
-
-    /**
-     * Give the specified player a set amount of items if he is lucky enough.<br>
-     * Not recommended to use this for non-stacking items.
-     * @param dropChance   the drop chance as a decimal digit from 0 to 1
-     * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
-     * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
-     */
-    public static boolean giveItemRandomly(Player player, int itemId, long amountToGive, long limit, double dropChance, boolean playSound) {
-        return giveItemRandomly(player, null, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
-    }
-
-    /**
-     * Give the specified player a set amount of items if he is lucky enough.<br>
-     * Not recommended to use this for non-stacking items.
-     * @param limit        the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
-     * @param dropChance   the drop chance as a decimal digit from 0 to 1
-     * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
-     * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
-     */
-    public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound) {
-        return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
-    }
-
-    /**
-     * Give the specified player a random amount of items if he is lucky enough.<br>
-     * Not recommended to use this for non-stacking items.
-     * @param maxAmount  the maximum amount of items to give (will give a random amount between min/maxAmount multiplied by quest rates)
-     * @param limit      the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
-     * @param dropChance the drop chance as a decimal digit from 0 to 1
-     * @param playSound  if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
-     * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
-     */
-    public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound) {
-        if (player.isSimulatingTalking()) {
-            return false;
-        }
-
-        final long currentCount = getQuestItemsCount(player, itemId);
-
-        if ((limit > 0) && (currentCount >= limit)) {
-            return true;
-        }
-
-        minAmount *= Config.RATE_QUEST_DROP;
-        maxAmount *= Config.RATE_QUEST_DROP;
-        dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
-        if ((npc != null) && Config.CHAMPION_ENABLE && npc.isChampion()) {
-            if ((itemId == CommonItem.ADENA) || (itemId == CommonItem.ANCIENT_ADENA)) {
-                dropChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
-                minAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
-                maxAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
-            } else {
-                dropChance *= Config.CHAMPION_REWARDS_CHANCE;
-                minAmount *= Config.CHAMPION_REWARDS_AMOUNT;
-                maxAmount *= Config.CHAMPION_REWARDS_AMOUNT;
-            }
-        }
-
-        long amountToGive = (minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount);
-        final double random = Rnd.nextDouble();
-        // Inventory slot check (almost useless for non-stacking items)
-        if ((dropChance >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId)) {
-            if ((limit > 0) && ((currentCount + amountToGive) > limit)) {
-                amountToGive = limit - currentCount;
-            }
-
-            // Give the item to player
-            if (player.addItem("Quest", itemId, amountToGive, npc, true) != null) {
-                // limit reached (if there is no limit, this block doesn't execute)
-                if ((currentCount + amountToGive) == limit) {
-                    if (playSound) {
-                        playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-                    }
-                    return true;
-                }
-
-                if (playSound) {
-                    playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-                }
-                return limit <= 0;
-            }
-        }
-        return false;
-    }
-
-    /**
-     * Take an amount of a specified item from player's inventory. {@code true} if any items were taken, {@code false} otherwise
-     */
-    public static boolean takeItems(Player player, int itemId, long amount) {
-        if (player.isSimulatingTalking()) {
-            return false;
-        }
-
-        // Get object item from player's inventory list
-        final Item item = player.getInventory().getItemByItemId(itemId);
-        if (item == null) {
-            return false;
-        }
-
-        // Tests on count value in order not to have negative value
-        if ((amount < 0) || (amount > item.getCount())) {
-            amount = item.getCount();
-        }
-
-        // Destroy the quantity of items wanted
-        if (item.isEquipped()) {
-            var unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getBodyPart());
-            final InventoryUpdate iu = new InventoryUpdate();
-            for (Item itm : unequiped) {
-                iu.addModifiedItem(itm);
-            }
-            player.sendInventoryUpdate(iu);
-            player.broadcastUserInfo();
-        }
-        return player.destroyItemByItemId("Quest", itemId, amount, player, true);
-    }
-
-    /**
-     * Take a set amount of a specified item from player's inventory.
-     *
-     * @param player the player whose item to take
-     * @param holder the {@link ItemHolder} object containing the ID and count of the item to take
-     * @return {@code true} if the item was taken, {@code false} otherwise
-     */
-    protected static boolean takeItem(Player player, ItemHolder holder) {
-        if (holder == null) {
-            return false;
-        }
-        return takeItems(player, holder.getId(), holder.getCount());
-    }
-
-    /**
-     * Take a set amount of all specified items from player's inventory.
-     *
-     * @param player   the player whose items to take
-     * @param itemList the list of {@link ItemHolder} objects containing the IDs and counts of the items to take
-     * @return {@code true} if all items were taken, {@code false} otherwise
-     */
-    protected static boolean takeAllItems(Player player, ItemHolder... itemList) {
-        if (player.isSimulatingTalking()) {
-            return false;
-        }
-        if ((itemList == null) || (itemList.length == 0)) {
-            return false;
-        }
-        // first check if the player has all items to avoid taking half the items from the list
-        if (!hasAllItems(player, true, itemList)) {
-            return false;
-        }
-        for (ItemHolder item : itemList) {
-            // this should never be false, but just in case
-            if (!takeItem(player, item)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
-     * Take an amount of all specified items from player's inventory. {@code true} if all items were taken, {@code false} otherwise
-     */
-    public static boolean takeItems(Player player, int amount, int... itemIds) {
-        if (player.isSimulatingTalking()) {
-            return false;
-        }
-
-        boolean check = true;
-        if (itemIds != null) {
-            for (int item : itemIds) {
-                check &= takeItems(player, item, amount);
-            }
-        }
-        return check;
-    }
-
-    public static void playSound(Instance world, String sound) {
-        world.broadcastPacket(new PlaySound(sound));
-    }
-
-    /**
-     * Send a packet in order to play a sound to the player.
-     *
-     * @param player the player whom to send the packet
-     * @param sound  the name of the sound to play
-     */
-    public static void playSound(Player player, String sound) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(QuestSound.getSound(sound));
-    }
-
-    /**
-     * Send a packet in order to play a sound to the player.
-     *
-     * @param player the player whom to send the packet
-     * @param sound  the {@link QuestSound} object of the sound to play
-     */
-    public static void playSound(Player player, QuestSound sound) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(sound.getPacket());
-    }
-
-    /**
-     * Add EXP and SP as quest reward.
-     *
-     * @param player the player whom to reward with the EXP/SP
-     * @param exp    the amount of EXP to give to the player
-     * @param sp     the amount of SP to give to the player
-     */
-    public static void addExpAndSp(Player player, long exp, int sp) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.addExpAndSp((long) player.getStats().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStats().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
-        PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
-    }
-
-    /**
-     * Get a random integer from 0 (inclusive) to {@code max} (exclusive).<br>
-     * Use this method instead of importing {@link Rnd} utility.
-     *
-     * @param max the maximum value for randomization
-     * @return a random integer number from 0 to {@code max - 1}
-     */
-    public static int getRandom(int max) {
-        return Rnd.get(max);
-    }
-
-    /**
-     * Get a random integer from {@code min} (inclusive) to {@code max} (inclusive).<br>
-     * Use this method instead of importing {@link Rnd} utility.
-     *
-     * @param min the minimum value for randomization
-     * @param max the maximum value for randomization
-     * @return a random integer number from {@code min} to {@code max}
-     */
-    public static int getRandom(int min, int max) {
-        return Rnd.get(min, max);
-    }
-
-    /**
-     * Get a random boolean.<br>
-     * Use this method instead of importing {@link Rnd} utility.
-     *
-     * @return {@code true} or {@code false} randomly
-     */
-    public static boolean getRandomBoolean() {
-        return Rnd.nextBoolean();
-    }
-
-    /**
-     * Get a random entry.<br>
-     * @param <T>
-     * @param array of values.
-     * @return one value from array.
-     */
-    @SuppressWarnings("unchecked")
-    public static <T> T getRandomEntry(T... array)
-    {
-        if (array.length == 0)
-        {
-            return null;
-        }
-        return array[getRandom(array.length)];
-    }
-
-    /**
-     * Get a random entry.<br>
-     * @param <T>
-     * @param list of values.
-     * @return one value from list.
-     */
-    public static <T> T getRandomEntry(List<T> list)
-    {
-        if (list.isEmpty())
-        {
-            return null;
-        }
-        return list.get(getRandom(list.size()));
-    }
-
-    /**
-     * Get a random entry.<br>
-     * @param array of Integers.
-     * @return one Integer from array.
-     */
-    public static int getRandomEntry(int... array)
-    {
-        return array[getRandom(array.length)];
-    }
-
-    /**
-     * Get the ID of the item equipped in the specified inventory slot of the player.
-     *
-     * @param player the player whose inventory to check
-     * @param slot   the location in the player's inventory to check
-     * @return the ID of the item equipped in the specified inventory slot or 0 if the slot is empty or item is {@code null}.
-     */
-    public static int getItemEquipped(Player player, InventorySlot slot) {
-        return player.getInventory().getPaperdollItemId(slot);
-    }
-
-    /**
-     * @return the number of ticks from the {@link WorldTimeController}.
-     */
-    public static int getGameTicks() {
-        return WorldTimeController.getInstance().getGameTicks();
-    }
-
-    /**
-     * Sends the special camera packet to the player.
-     */
-    public static void specialCamera(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle));
-    }
-
-    /**
-     * Sends the special camera packet to the player.
-     */
-    public static void specialCameraEx(Player player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(new SpecialCamera(creature, player, force, angle1, angle2, time, duration, relYaw, relPitch, isWide, relAngle));
-    }
-
-    /**
-     * Sends the special camera packet to the player.
-     */
-    public static void specialCamera3(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
-    }
-
-    public static void specialCamera(Instance world, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
-        world.broadcastPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
-    }
-
-    public static void addRadar(Player player, ILocational loc) {
-        addRadar(player, loc.getX(), loc.getY(), loc.getZ());
-    }
-
-    public static void addRadar(Player player, int x, int y, int z) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
-        player.getRadar().addMarker(x, y, z);
     }
 
     @Override
@@ -2022,7 +1154,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
             for (int itemId : itemIds) {
                 if (item.getId() == itemId) {
-                    if (MathUtil.checkOverFlow(count, item.getCount())) {
+                    if (MathUtil.checkAddOverFlow(count, item.getCount())) {
                         return Long.MAX_VALUE;
                     }
                     count += item.getCount();
@@ -2070,9 +1202,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @see #actionForEachPlayer(Player, Npc, boolean)
      */
     public final void executeForEachPlayer(Player player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         if ((includeParty || includeCommandChannel) && player.isInParty()) {
             if (includeCommandChannel && player.getParty().isInCommandChannel()) {
                 player.getParty().getCommandChannel().checkEachMember(member ->
@@ -2243,16 +1372,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
     
     public void removeRadar(Player player, int x, int y, int z) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.getRadar().removeMarker(x, y, z);
     }
     
     public void clearRadar(Player player) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         player.getRadar().removeAllMarkers();
     }
 
@@ -2263,9 +1386,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param movie  the movie
      */
     public void playMovie(Player player, Movie movie) {
-        if (player.isSimulatingTalking()) {
-            return;
-        }
         new MovieHolder(List.of(player), movie);
     }
 
@@ -2303,5 +1423,741 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 }
             }
         }
+    }
+
+    /**
+     * Show an on screen message to the player.
+     *
+     * @param player the player to display the message to
+     * @param text   the message to display
+     * @param time   the duration of the message in milliseconds
+     */
+    public static void showOnScreenMsg(Player player, String text, int time) {
+        player.sendPacket(new ExShowScreenMessage(text, time));
+    }
+
+    /**
+     * Show an on screen message to the player.
+     * @param params    values of parameters to replace in the NPC String (like S1, C1 etc.)
+     */
+    public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, String... params) {
+        player.sendPacket(new ExShowScreenMessage(npcString, position, time, params));
+    }
+
+    /**
+     * Show an on screen message to the player.
+     * @param showEffect the upper effect
+     * @param params     values of parameters to replace in the NPC String (like S1, C1 etc.)
+     */
+    public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, boolean showEffect, String... params) {
+        player.sendPacket(new ExShowScreenMessage(npcString, position, time, showEffect, params));
+    }
+
+    /**
+     * Show an on screen message to the player.
+     * @param params    values of parameters to replace in the system message (like S1, C1 etc.)
+     */
+    public static void showOnScreenMsg(Player player, SystemMessageId systemMsg, int position, int time, String... params) {
+        player.sendPacket(new ExShowScreenMessage(systemMsg, position, time, params));
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     *
+     * @param npcId the ID of the NPC to spawn
+     * @param pos   the object containing the spawn location coordinates
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+     */
+    public static Npc addSpawn(int npcId, IPositionable pos) {
+        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), false, 0, false, 0);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
+     * @return the {@link Npc} object of the newly spawned NPC, {@code null} if the NPC doesn't exist
+     */
+    public static Npc addSpawn(Npc summoner, int npcId, IPositionable pos, boolean randomOffset, long despawnDelay) {
+        return addSpawn(summoner, npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, false, 0);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC. the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+     */
+    public static Npc addSpawn(int npcId, IPositionable pos, boolean isSummonSpawn) {
+        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), false, 0, isSummonSpawn, 0);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+     */
+    public static Npc addSpawn(int npcId, IPositionable pos, boolean randomOffset, long despawnDelay) {
+        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, false, 0);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+     */
+    public static Npc addSpawn(int npcId, IPositionable pos, boolean randomOffset, long despawnDelay, boolean isSummonSpawn) {
+        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, isSummonSpawn, 0);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @param instanceId   the ID of the instance to spawn the NPC in (0 - the open world)
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable)
+     * @see #addSpawn(int, IPositionable, boolean)
+     * @see #addSpawn(int, IPositionable, boolean, long)
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+     */
+    public static Npc addSpawn(Npc summoner, int npcId, IPositionable pos, boolean randomOffset, int instanceId) {
+        return addSpawn(summoner, npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, 0, false, instanceId);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
+     * @param instanceId    the ID of the instance to spawn the NPC in (0 - the open world)
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable)
+     * @see #addSpawn(int, IPositionable, boolean)
+     * @see #addSpawn(int, IPositionable, boolean, long)
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+     */
+    public static Npc addSpawn(int npcId, IPositionable pos, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instanceId) {
+        return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, isSummonSpawn, instanceId);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @param heading      the heading of the NPC
+     * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
+     * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+     */
+    public static Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay) {
+        return addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, false, 0);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @param heading       the heading of the NPC
+     * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
+     * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
+     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+     */
+    public static Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn) {
+        return addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, isSummonSpawn, 0);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @param heading       the heading of the NPC
+     * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
+     * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
+     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
+     * @param instanceId    the ID of the instance to spawn the NPC in (0 - the open world)
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
+     * @see #addSpawn(int, int, int, int, int, boolean, long)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean)
+     */
+    public static Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instanceId) {
+        return addSpawn(null, npcId, x, y, z, heading, randomOffset, despawnDelay, isSummonSpawn, instanceId);
+    }
+
+    /**
+     * Add a temporary spawn of the specified NPC.
+     * @param z             the Z coordinate (height) of the spawn location
+     * @param heading       the heading of the NPC
+     * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
+     * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
+     * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
+     * @param instance      instance where NPC should be spawned ({@code null} - normal world)
+     * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
+     * @see #addSpawn(int, int, int, int, int, boolean, long)
+     * @see #addSpawn(int, int, int, int, int, boolean, long, boolean)
+     */
+    public static Npc addSpawn(Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instance) {
+        try {
+            final Spawn spawn = new Spawn(npcId);
+            if ((x == 0) && (y == 0)) {
+                LOGGER.error("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
+                return null;
+            }
+            if (randomOffset) {
+                int offset = Rnd.get(50, 100);
+                if (Rnd.nextBoolean()) {
+                    offset *= -1;
+                }
+                x += offset;
+                offset = Rnd.get(50, 100);
+                if (Rnd.nextBoolean()) {
+                    offset *= -1;
+                }
+                y += offset;
+            }
+            spawn.setInstanceId(instance);
+            spawn.setHeading(heading);
+            spawn.setXYZ(x, y, z);
+            spawn.stopRespawn();
+
+            final Npc npc = spawn.doSpawn(isSummonSpawn);
+            if (despawnDelay > 0) {
+                npc.scheduleDespawn(despawnDelay);
+            }
+            if (summoner != null) {
+                summoner.addSummonedNpc(npc);
+            }
+            return npc;
+        } catch (Exception e) {
+            LOGGER.warn("Could not spawn NPC #" + npcId + "; error: " + e.getMessage());
+        }
+        return null;
+    }
+
+    /**
+     * Get the amount of an item in player's inventory.
+     *
+     * @param player the player whose inventory to check
+     * @param itemId the ID of the item whose amount to get
+     * @return the amount of the specified item in player's inventory
+     */
+    public static long getQuestItemsCount(Player player, int itemId) {
+        return player.getInventory().getInventoryItemCount(itemId, -1);
+    }
+
+    /**
+     * Check if the player has the specified item in his inventory.
+     *
+     * @param player the player whose inventory to check for the specified item
+     * @param item   the {@link ItemHolder} object containing the ID and count of the item to check
+     * @return {@code true} if the player has the required count of the item
+     */
+    protected static boolean hasItem(Player player, ItemHolder item) {
+        return hasItem(player, item, true);
+    }
+
+    /**
+     * Check if the player has the required count of the specified item in his inventory.
+     *
+     * @param player     the player whose inventory to check for the specified item
+     * @param item       the {@link ItemHolder} object containing the ID and count of the item to check
+     * @param checkCount if {@code true}, check if each item is at least of the count specified in the ItemHolder,<br>
+     *                   otherwise check only if the player has the item at all
+     * @return {@code true} if the player has the item
+     */
+    protected static boolean hasItem(Player player, ItemHolder item, boolean checkCount) {
+        if (item == null) {
+            return false;
+        }
+        if (checkCount) {
+            return getQuestItemsCount(player, item.getId()) >= item.getCount();
+        }
+        return hasQuestItems(player, item.getId());
+    }
+
+    /**
+     * Check if the player has all the specified items in his inventory and, if necessary, if their count is also as required.
+     *
+     * @param player     the player whose inventory to check for the specified item
+     * @param checkCount if {@code true}, check if each item is at least of the count specified in the ItemHolder,<br>
+     *                   otherwise check only if the player has the item at all
+     * @param itemList   a list of {@link ItemHolder} objects containing the IDs of the items to check
+     * @return {@code true} if the player has all the items from the list
+     */
+    protected static boolean hasAllItems(Player player, boolean checkCount, ItemHolder... itemList) {
+        if ((itemList == null) || (itemList.length == 0)) {
+            return false;
+        }
+        for (ItemHolder item : itemList) {
+            if (!hasItem(player, item, checkCount)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Check for an item in player's inventory.
+     *
+     * @param player the player whose inventory to check for quest items
+     * @param itemId the ID of the item to check for
+     * @return {@code true} if the item exists in player's inventory, {@code false} otherwise
+     */
+    public static boolean hasQuestItems(Player player, int itemId) {
+        return player.getInventory().getItemByItemId(itemId) != null;
+    }
+
+    /**
+     * Check for multiple items in player's inventory.
+     *
+     * @param player  the player whose inventory to check for quest items
+     * @param itemIds a list of item IDs to check for
+     * @return {@code true} if all items exist in player's inventory, {@code false} otherwise
+     */
+    public static boolean hasQuestItems(Player player, int... itemIds) {
+        if ((itemIds == null) || (itemIds.length == 0)) {
+            return false;
+        }
+        final PlayerInventory inv = player.getInventory();
+        for (int itemId : itemIds) {
+            if (inv.getItemByItemId(itemId) == null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Get the enchantment level of an item in player's inventory.
+     *
+     * @param player the player whose item to check
+     * @param itemId the ID of the item whose enchantment level to get
+     * @return the enchantment level of the item or 0 if the item was not found
+     */
+    public static int getEnchantLevel(Player player, int itemId) {
+        final Item enchantedItem = player.getInventory().getItemByItemId(itemId);
+        if (enchantedItem == null) {
+            return 0;
+        }
+        return enchantedItem.getEnchantLevel();
+    }
+
+    /**
+     * Give a reward to player using multipliers.
+     */
+    public static void rewardItems(Player player, ItemHolder holder) {
+        rewardItems(player, holder.getId(), holder.getCount());
+    }
+
+    /**
+     * Give a reward to player using multipliers.
+     *
+     * @param player the player to whom to give the item
+     * @param itemId the ID of the item to give
+     * @param count  the amount of items to give
+     */
+    public static void rewardItems(Player player, int itemId, long count) {
+        if (count <= 0) {
+            return;
+        }
+
+        final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
+        if (item == null) {
+            return;
+        }
+
+        try {
+            if (itemId == CommonItem.ADENA) {
+                count *= Config.RATE_QUEST_REWARD_ADENA;
+            } else if (Config.RATE_QUEST_REWARD_USE_MULTIPLIERS) {
+                if (item instanceof EtcItem) {
+                    switch (((EtcItem) item).getItemType()) {
+                        case POTION: {
+                            count *= Config.RATE_QUEST_REWARD_POTION;
+                            break;
+                        }
+                        case ENCHANT_WEAPON:
+                        case ENCHANT_ARMOR:
+                        case SCROLL: {
+                            count *= Config.RATE_QUEST_REWARD_SCROLL;
+                            break;
+                        }
+                        case RECIPE: {
+                            count *= Config.RATE_QUEST_REWARD_RECIPE;
+                            break;
+                        }
+                        case MATERIAL: {
+                            count *= Config.RATE_QUEST_REWARD_MATERIAL;
+                            break;
+                        }
+                        default: {
+                            count *= Config.RATE_QUEST_REWARD;
+                        }
+                    }
+                }
+            } else {
+                count *= Config.RATE_QUEST_REWARD;
+            }
+        } catch (Exception e) {
+            count = Long.MAX_VALUE;
+        }
+
+        // Add items to player's inventory
+        final Item itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+        if (itemInstance == null) {
+            return;
+        }
+
+        sendItemGetMessage(player, itemInstance, count);
+    }
+
+    /**
+     * Send the system message and the status update packets to the player.
+     *
+     * @param player the player that has got the item
+     * @param item   the item obtain by the player
+     * @param count  the item count
+     */
+    private static void sendItemGetMessage(Player player, Item item, long count) {
+        // If item for reward is gold, send message of gold reward to client
+        if (item.getId() == CommonItem.ADENA) {
+            final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+            smsg.addLong(count);
+            player.sendPacket(smsg);
+        }
+        // Otherwise, send message of object reward to client
+        else if (count > 1) {
+            final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+            smsg.addItemName(item);
+            smsg.addLong(count);
+            player.sendPacket(smsg);
+        } else {
+            final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+            smsg.addItemName(item);
+            player.sendPacket(smsg);
+        }
+        // send packets
+        player.sendPacket(new ExUserInfoInvenWeight(player));
+        player.sendPacket(new ExAdenaInvenCount(player));
+        player.sendPacket(new ExBloodyCoinCount());
+    }
+
+    /**
+     * Give item/reward to the player
+     */
+    public static void giveItems(Player player, int itemId, long count) {
+        giveItems(player, itemId, count, 0, false);
+    }
+
+    /**
+     * Give item/reward to the player
+     */
+    public static void giveItems(Player player, int itemId, long count, boolean playSound) {
+        giveItems(player, itemId, count, 0, playSound);
+    }
+
+    /**
+     * Give item/reward to the player
+     */
+    protected static void giveItems(Player player, ItemHolder holder) {
+        giveItems(player, holder.getId(), holder.getCount());
+    }
+
+    public static void giveItems(Player player, int itemId, long count, int enchantlevel, boolean playSound) {
+        if (count <= 0) {
+            return;
+        }
+
+        // Add items to player's inventory
+        final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+        if (item == null) {
+            return;
+        }
+
+        // set enchant level for item if that item is not adena
+        if ((enchantlevel > 0) && (itemId != CommonItem.ADENA)) {
+            item.setEnchantLevel(enchantlevel);
+        }
+
+        if (playSound) {
+            playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+        }
+        sendItemGetMessage(player, item, count);
+    }
+
+    public static void giveItems(Player player, int itemId, long count, AttributeType attributeType, int attributeValue) {
+        if (count <= 0) {
+            return;
+        }
+
+        // Add items to player's inventory
+        final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+        if (item == null) {
+            return;
+        }
+
+        // set enchant level for item if that item is not adena
+        if ((attributeType != null) && (attributeValue > 0)) {
+            item.setAttribute(new AttributeHolder(attributeType, attributeValue), true);
+            if (item.isEquipped()) {
+                // Recalculate all stats
+                player.getStats().recalculateStats(true);
+            }
+
+            final InventoryUpdate iu = new InventoryUpdate();
+            iu.addModifiedItem(item);
+            player.sendInventoryUpdate(iu);
+        }
+
+        sendItemGetMessage(player, item, count);
+    }
+
+    /**
+     * Give the specified player a set amount of items if he is lucky enough.<br>
+     * Not recommended to use this for non-stacking items.
+     * @param dropChance   the drop chance as a decimal digit from 0 to 1
+     * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
+     * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
+     */
+    public static boolean giveItemRandomly(Player player, int itemId, long amountToGive, long limit, double dropChance, boolean playSound) {
+        return giveItemRandomly(player, null, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
+    }
+
+    /**
+     * Give the specified player a set amount of items if he is lucky enough.<br>
+     * Not recommended to use this for non-stacking items.
+     * @param limit        the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
+     * @param dropChance   the drop chance as a decimal digit from 0 to 1
+     * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
+     * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
+     */
+    public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound) {
+        return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
+    }
+
+    /**
+     * Give the specified player a random amount of items if he is lucky enough.<br>
+     * Not recommended to use this for non-stacking items.
+     * @param maxAmount  the maximum amount of items to give (will give a random amount between min/maxAmount multiplied by quest rates)
+     * @param limit      the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
+     * @param dropChance the drop chance as a decimal digit from 0 to 1
+     * @param playSound  if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
+     * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
+     */
+    public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound) {
+        final long currentCount = getQuestItemsCount(player, itemId);
+
+        if ((limit > 0) && (currentCount >= limit)) {
+            return true;
+        }
+
+        minAmount *= Config.RATE_QUEST_DROP;
+        maxAmount *= Config.RATE_QUEST_DROP;
+        dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
+        if ((npc != null) && Config.CHAMPION_ENABLE && npc.isChampion()) {
+            if (itemId == CommonItem.ADENA) {
+                dropChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
+                minAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+                maxAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+            } else {
+                dropChance *= Config.CHAMPION_REWARDS_CHANCE;
+                minAmount *= Config.CHAMPION_REWARDS_AMOUNT;
+                maxAmount *= Config.CHAMPION_REWARDS_AMOUNT;
+            }
+        }
+
+        long amountToGive = (minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount);
+        final double random = Rnd.nextDouble();
+        // Inventory slot check (almost useless for non-stacking items)
+        if ((dropChance >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId)) {
+            if ((limit > 0) && ((currentCount + amountToGive) > limit)) {
+                amountToGive = limit - currentCount;
+            }
+
+            // Give the item to player
+            if (player.addItem("Quest", itemId, amountToGive, npc, true) != null) {
+                // limit reached (if there is no limit, this block doesn't execute)
+                if ((currentCount + amountToGive) == limit) {
+                    if (playSound) {
+                        playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+                    }
+                    return true;
+                }
+
+                if (playSound) {
+                    playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+                }
+                return limit <= 0;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Take an amount of a specified item from player's inventory. {@code true} if any items were taken, {@code false} otherwise
+     */
+    public static boolean takeItems(Player player, int itemId, long amount) {
+        // Get object item from player's inventory list
+        final Item item = player.getInventory().getItemByItemId(itemId);
+        if (item == null) {
+            return false;
+        }
+
+        // Tests on count value in order not to have negative value
+        if ((amount < 0) || (amount > item.getCount())) {
+            amount = item.getCount();
+        }
+
+        // Destroy the quantity of items wanted
+        if (item.isEquipped()) {
+            var unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getBodyPart());
+            final InventoryUpdate iu = new InventoryUpdate();
+            for (Item itm : unequiped) {
+                iu.addModifiedItem(itm);
+            }
+            player.sendInventoryUpdate(iu);
+            player.broadcastUserInfo();
+        }
+        return player.destroyItemByItemId("Quest", itemId, amount, player, true);
+    }
+
+    /**
+     * Take a set amount of a specified item from player's inventory.
+     *
+     * @param player the player whose item to take
+     * @param holder the {@link ItemHolder} object containing the ID and count of the item to take
+     * @return {@code true} if the item was taken, {@code false} otherwise
+     */
+    protected static boolean takeItem(Player player, ItemHolder holder) {
+        if (holder == null) {
+            return false;
+        }
+        return takeItems(player, holder.getId(), holder.getCount());
+    }
+
+    /**
+     * Take a set amount of all specified items from player's inventory.
+     *
+     * @param player   the player whose items to take
+     * @param itemList the list of {@link ItemHolder} objects containing the IDs and counts of the items to take
+     * @return {@code true} if all items were taken, {@code false} otherwise
+     */
+    protected static boolean takeAllItems(Player player, ItemHolder... itemList) {
+        if ((itemList == null) || (itemList.length == 0)) {
+            return false;
+        }
+        // first check if the player has all items to avoid taking half the items from the list
+        if (!hasAllItems(player, true, itemList)) {
+            return false;
+        }
+        for (ItemHolder item : itemList) {
+            // this should never be false, but just in case
+            if (!takeItem(player, item)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Take an amount of all specified items from player's inventory. {@code true} if all items were taken, {@code false} otherwise
+     */
+    public static boolean takeItems(Player player, int amount, int... itemIds) {
+        boolean check = true;
+        if (itemIds != null) {
+            for (int item : itemIds) {
+                check &= takeItems(player, item, amount);
+            }
+        }
+        return check;
+    }
+
+    public static void playSound(Instance world, String sound) {
+        world.broadcastPacket(new PlaySound(sound));
+    }
+
+    /**
+     * Send a packet in order to play a sound to the player.
+     *
+     * @param player the player whom to send the packet
+     * @param sound  the name of the sound to play
+     */
+    public static void playSound(Player player, String sound) {
+        player.sendPacket(QuestSound.getSound(sound));
+    }
+
+    /**
+     * Send a packet in order to play a sound to the player.
+     *
+     * @param player the player whom to send the packet
+     * @param sound  the {@link QuestSound} object of the sound to play
+     */
+    public static void playSound(Player player, QuestSound sound) {
+        player.sendPacket(sound.getPacket());
+    }
+
+    /**
+     * Add EXP and SP as quest reward.
+     *
+     * @param player the player whom to reward with the EXP/SP
+     * @param exp    the amount of EXP to give to the player
+     * @param sp     the amount of SP to give to the player
+     */
+    public static void addExpAndSp(Player player, long exp, int sp) {
+        player.addExpAndSp((long) player.getStats().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStats().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
+        PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
+    }
+
+    /**
+     * Get the ID of the item equipped in the specified inventory slot of the player.
+     *
+     * @param player the player whose inventory to check
+     * @param slot   the location in the player's inventory to check
+     * @return the ID of the item equipped in the specified inventory slot or 0 if the slot is empty or item is {@code null}.
+     */
+    public static int getItemEquipped(Player player, InventorySlot slot) {
+        return player.getInventory().getPaperdollItemId(slot);
+    }
+
+    /**
+     * @return the number of ticks from the {@link WorldTimeController}.
+     */
+    public static int getGameTicks() {
+        return WorldTimeController.getInstance().getGameTicks();
+    }
+
+    /**
+     * Sends the special camera packet to the player.
+     */
+    public static void specialCamera(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
+        player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle));
+    }
+
+    /**
+     * Sends the special camera packet to the player.
+     */
+    public static void specialCameraEx(Player player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle) {
+        player.sendPacket(new SpecialCamera(creature, player, force, angle1, angle2, time, duration, relYaw, relPitch, isWide, relAngle));
+    }
+
+    /**
+     * Sends the special camera packet to the player.
+     */
+    public static void specialCamera3(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
+        player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
+    }
+
+    public static void specialCamera(Instance world, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
+        world.broadcastPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
+    }
+
+    public static void addRadar(Player player, ILocational loc) {
+        addRadar(player, loc.getX(), loc.getY(), loc.getZ());
+    }
+
+    public static void addRadar(Player player, int x, int y, int z) {
+        player.getRadar().addMarker(x, y, z);
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.ai.others;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
@@ -56,13 +57,13 @@ public final class TimakOrcTroopLeader extends AbstractNpcAI
 			final Monster monster = (Monster) npc;
 			if (!monster.isTeleporting() && !monster.hasMinions())
 			{
-				if (getRandom(1, 100) <= npc.getParameters().getInt("SummonPrivateRate", 0))
+				if (Rnd.get(1, 100) <= npc.getParameters().getInt("SummonPrivateRate", 0))
 				{
 					for (MinionHolder is : npc.getParameters().getMinionList("Privates"))
 					{
 						addMinion((Monster) npc, is.getId());
 					}
-					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG));
+					npc.broadcastSay(ChatType.NPC_GENERAL, Rnd.get(ON_ATTACK_MSG));
 				}
 			}
 		}

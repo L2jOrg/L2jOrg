@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00355_FamilyHonor;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -151,7 +152,7 @@ public final class Q00355_FamilyHonor extends Quest
 			}
 			case "30929-03.html":
 			{
-				final int random = getRandom(100);
+				final int random = Rnd.get(100);
 				
 				if (hasQuestItems(player, SCULPTOR_BERONA))
 				{
@@ -203,7 +204,7 @@ public final class Q00355_FamilyHonor extends Quest
 		}
 		
 		final DropInfo info = MOBS.get(npc.getId());
-		final int random = getRandom(1000);
+		final int random = Rnd.get(1000);
 		
 		if (random < info.getFirstChance())
 		{

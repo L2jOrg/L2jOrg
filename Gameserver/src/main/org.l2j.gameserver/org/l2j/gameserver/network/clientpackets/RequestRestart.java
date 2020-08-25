@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
-import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
+import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.RestartResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,8 +48,7 @@ public final class RequestRestart extends ClientPacket {
             return;
         }
 
-        LOGGER_ACCOUNTING.info("Logged out, " + client);
-
+        LOGGER_ACCOUNTING.info("{} Logged out",  client);
 
         Disconnection.of(client, player).storeMe().deleteMe();
 
@@ -57,10 +56,6 @@ public final class RequestRestart extends ClientPacket {
         client.setConnectionState(ConnectionState.AUTHENTICATED);
 
         client.sendPacket(RestartResponse.TRUE);
-
-        // send char list
-        final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().getGameServerSessionId());
-        client.sendPacket(cl);
-        client.setCharSelection(cl.getCharInfo());
+        client.sendPacket(new PlayerSelectionInfo(client));
     }
 }

@@ -23,7 +23,7 @@ import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.SecondaryAuthManager;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
-import org.l2j.gameserver.model.CharSelectInfoPackage;
+import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
@@ -67,7 +67,7 @@ public class CharacterSelect extends ClientPacket {
                 // should always be null
                 // but if not then this is repeated packet and nothing should be done here
                 if (client.getPlayer() == null) {
-                    final CharSelectInfoPackage info = client.getCharSelection(selectedSlot);
+                    final PlayerSelectInfo info = client.getPlayerSelection(selectedSlot);
                     if (info == null) {
                         return;
                     }
@@ -109,6 +109,7 @@ public class CharacterSelect extends ClientPacket {
 
                     client.setConnectionState(ConnectionState.JOINING_GAME);
                     client.sendPacket(new CharSelected(player, client.getSessionId().getGameServerSessionId()));
+                    client.detachPlayersInfo();
                 }
             } finally {
                 client.getActivePlayerLock().unlock();

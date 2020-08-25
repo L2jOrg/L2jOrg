@@ -29,8 +29,6 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
 	`visual_face_id` INT,
 	`instance_origin` VARCHAR(255),
 	`instance_restore` INT DEFAULT 0,
-	`mentor_penalty_id` INT,
-	`mentor_penalty_time` BIGINT DEFAULT 0,
 	`claimed_clan_rewards` INT DEFAULT 0,
 	`cond_override_key` VARCHAR(255),
 	`ui_key_mapping` VARCHAR(255),

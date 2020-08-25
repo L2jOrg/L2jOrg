@@ -25,6 +25,7 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExAdenaInvenCount;
@@ -319,46 +320,17 @@ public class AdminCreateItem implements IAdminCommandHandler
 		target.sendPacket(new ExAdenaInvenCount(target));
 	}
 	
-	private int getCoinId(String name)
-	{
-		int id;
-		if (name.equalsIgnoreCase("adena"))
-		{
-			id = 57;
-		}
-		else if (name.equalsIgnoreCase("ancientadena"))
-		{
-			id = 5575;
-		}
-		else if (name.equalsIgnoreCase("festivaladena"))
-		{
-			id = 6673;
-		}
-		else if (name.equalsIgnoreCase("blueeva"))
-		{
-			id = 4355;
-		}
-		else if (name.equalsIgnoreCase("goldeinhasad"))
-		{
-			id = 4356;
-		}
-		else if (name.equalsIgnoreCase("silvershilen"))
-		{
-			id = 4357;
-		}
-		else if (name.equalsIgnoreCase("bloodypaagrio"))
-		{
-			id = 4358;
-		}
-		else if (name.equalsIgnoreCase("fantasyislecoin"))
-		{
-			id = 13067;
-		}
-		else
-		{
-			id = 0;
-		}
-		
-		return id;
+	private int getCoinId(String name) {
+	 return switch (name) {
+			case "Adena" -> CommonItem.ADENA;
+			case "L2Coin" -> CommonItem.L2_COIN;
+			case "SilverCoin" -> CommonItem.SILVER_COIN;
+			case "GoldCoin" -> CommonItem.GOLD_COIN;
+			case "BlueEva" -> 4355;
+			case "GoldEinhasad" -> 4356;
+			case "SilverShilen" -> 4357;
+			case "BloodyPaagrio" -> 4358;
+			default -> 0;
+		};
 	}
 }

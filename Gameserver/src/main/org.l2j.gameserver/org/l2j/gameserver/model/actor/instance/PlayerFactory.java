@@ -18,33 +18,51 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
+import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.database.data.PlayerStatsData;
 import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.data.xml.impl.InitialEquipmentData;
+import org.l2j.gameserver.data.xml.impl.InitialShortcutData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
+import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
+import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.EquipableItem;
+import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.PcItemTemplate;
+import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.util.Objects.isNull;
-import static java.util.Objects.requireNonNullElseGet;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -56,6 +74,9 @@ public class PlayerFactory {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PlayerFactory.class);
 
+    private PlayerFactory() {
+    }
+
     public static Player loadPlayer(GameClient client, int playerId) {
         var playerDAO = getDAO(PlayerDAO.class);
         var playerData = playerDAO.findById(playerId);
@@ -65,11 +86,10 @@ public class PlayerFactory {
         }
 
         var template = PlayerTemplateData.getInstance().getTemplate(playerData.getClassId());
-        Player player = new Player(playerData, template);
-        player.setClient(client);
+        Player player = new Player(client, playerData, template);
         client.setPlayer(player);
 
-        player.setVariables(requireNonNullElseGet(getDAO(PlayerVariablesDAO.class).findById(playerId), () -> PlayerVariableData.init(playerId)));
+        player.setVariables(getDAO(PlayerVariablesDAO.class).findById(playerId));
         player.setStatsData(playerDAO.findPlayerStatsData(playerId));
 
         if(isNull(player.getStatsData())) { // TODO remove late, just temp fix to already created players
@@ -156,6 +176,9 @@ public class PlayerFactory {
         // Reward auto-get skills and all available skills if auto-learn skills is true.
         player.rewardSkills();
 
+        if(playerData.getLastAccess() == 0){
+            InitialShortcutData.getInstance().registerAllShortcuts(player);
+        }
 
         player.getFreight().restore();
         if (!Config.WAREHOUSE_CACHE) {
@@ -173,12 +196,12 @@ public class PlayerFactory {
 
         // Restore current Cp, HP and MP values
         player.setCurrentCp(playerData.getCurrentCp());
-        player.setCurrentHp(playerData.getCurrentHp());
-        player.setCurrentMp(playerData.getCurrentMp());
+        player.setCurrentHp(playerData.getHp());
+        player.setCurrentMp(playerData.getMp());
 
-        player.setOriginalCpHpMp(playerData.getCurrentCp(), playerData.getCurrentHp(), playerData.getCurrentMp());
+        player.setOriginalCpHpMp(playerData.getCurrentCp(), playerData.getHp(), playerData.getMp());
 
-        if (playerData.getCurrentHp() < 0.5) {
+        if (playerData.getHp() < 0.5) {
             player.setIsDead(true);
             player.stopHpMpRegeneration();
         }
@@ -210,23 +233,142 @@ public class PlayerFactory {
         player.setOnlineStatus(true, false);
         SaveTaskManager.getInstance().registerPlayer(player);
 
-        // TODO this info should stay on GameClient, since it was already loaded
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement stmt = con.prepareStatement("SELECT charId, char_name FROM characters WHERE account_name=? AND charId<>?")) {
-            // Retrieve the Player from the characters table of the database
-            stmt.setString(1, playerData.getAccountName());
-            stmt.setInt(2, playerId);
-
-            ResultSet chars = stmt.executeQuery();
-            while (chars.next()) {
-                player.getAccountChars().put(chars.getInt("charId"), chars.getString("char_name"));
+        for (PlayerSelectInfo info : client.getPlayersInfo()) {
+            if(info.getObjectId() != player.getObjectId()) {
+                player.getAccountChars().put(info.getObjectId(), info.getName());
             }
-
-
-        } catch (Exception e) {
-            LOGGER.error("Failed loading character.", e);
         }
         return player;
     }
 
+    public static void savePlayerData(PlayerTemplate template, PlayerData data) {
+        data.setId(IdFactory.getInstance().getNextId());
+
+        if (Config.STARTING_LEVEL > 1) {
+            data.setLevel(Config.STARTING_LEVEL);
+            data.setExperience(LevelData.getInstance().getExpForLevel(Config.STARTING_LEVEL));
+        }
+
+        if (Config.STARTING_SP > 0) {
+            data.setSp(Config.STARTING_SP);
+        }
+
+        var hp = template.getBaseHpMax(data.getLevel()) * BaseStats.CON.getValue(template.getBaseCON());
+        data.setMaxHp(hp);
+        data.setHp(hp);
+
+        var mp = template.getBaseMpMax(data.getLevel()) * BaseStats.MEN.getValue(template.getBaseMEN());
+        data.setMaxMp(mp);
+        data.setMp(mp);
+
+        if (Config.CUSTOM_STARTING_LOC) {
+            data.setX(Config.CUSTOM_STARTING_LOC_X);
+            data.setY(Config.CUSTOM_STARTING_LOC_Y);
+            data.setZ(Config.CUSTOM_STARTING_LOC_Z);
+        } else {
+            final Location createLoc = template.getCreationPoint();
+            data.setX(createLoc.getX());
+            data.setY(createLoc.getY());
+            data.setZ(createLoc.getZ());
+        }
+
+
+        data.setRace(template.getRace().ordinal());
+        data.setTitleColor(PlayerAppearance.DEFAULT_TITLE_COLOR);
+        data.setCreateDate(LocalDate.now());
+
+        getDAO(PlayerDAO.class).save(data);
+    }
+
+    public static void init(GameClient client, PlayerData data) {
+
+        getDAO(PlayerDAO.class).save(PlayerStatsData.init(data.getCharId()));
+        getDAO(PlayerVariablesDAO.class).save(PlayerVariableData.init(data.getCharId(), data.getFace(), data.getHairStyle(), data.getHairColor()));
+        getDAO(PlayerDAO.class).resetRecommends();
+
+        addItems(data);
+
+        client.addPlayerInfo(restorePlayerInfo(data));
+
+    }
+
+    private static void addItems(PlayerData data) {
+        int nextLocData = 0;
+        if(Config.STARTING_ADENA > 0) {
+            getDAO(ItemDAO.class).saveItem(data.getCharId(), IdFactory.getInstance().getNextId(), CommonItem.ADENA, Config.STARTING_ADENA, ItemLocation.INVENTORY, nextLocData++);
+        }
+
+        final var initialItems = InitialEquipmentData.getInstance().getEquipmentList(data.getClassId());
+        for (PcItemTemplate ie : initialItems) {
+            ItemTemplate template = ItemEngine.getInstance().getTemplate(ie.getId());
+
+            if(isNull(template)) {
+                LOGGER.warn("Could not create item during player creation: itemId {}, amount {}", ie.getId(), ie.getCount());
+                continue;
+            }
+
+            ItemLocation loc;
+            int locData;
+            if(ie.isEquipped() && template instanceof EquipableItem equipable) {
+                loc = ItemLocation.PAPERDOLL;
+                locData = equipable.getBodyPart().slot().getId();
+            } else {
+                loc = ItemLocation.INVENTORY;
+                locData = nextLocData++;
+            }
+
+            getDAO(ItemDAO.class).saveItem(data.getCharId(), IdFactory.getInstance().getNextId(), ie.getId(), ie.getCount(), loc, locData);
+        }
+    }
+
+    public static void deletePlayer(PlayerData data) {
+        if(data.getClanId() > 0) {
+            final Clan clan = ClanTable.getInstance().getClan(data.getClanId());
+            if (clan != null) {
+                clan.removeClanMember(data.getCharId(), 0);
+            }
+        }
+
+        deleteCharByObjId(data.getCharId());
+    }
+
+    public static void deleteCharByObjId(int objId) {
+        if (objId < 0) {
+            return;
+        }
+
+        getDAO(PetDAO.class).deleteByOwner(objId);
+
+        var itemDAO = getDAO(ItemDAO.class);
+        itemDAO.deleteVariationsByOwner(objId);
+        itemDAO.deleteSpecialAbilitiesByOwner(objId);
+        itemDAO.deleteByOwner(objId);
+        getDAO(PlayerDAO.class).deleteById(objId);
+        PlayerNameTable.getInstance().removeName(objId);
+    }
+
+    public static List<PlayerSelectInfo> loadPlayersInfo(GameClient client) {
+        PlayerSelectInfo playerInfo;
+        List<PlayerSelectInfo> playersInfo = new ArrayList<>(7);
+        try {
+            for (PlayerData playerData : getDAO(PlayerDAO.class).findPlayersByAccount(client.getAccountName())) {
+                playerInfo = restorePlayerInfo(playerData);
+                if (nonNull(playerInfo)) {
+                    playersInfo.add(playerInfo);
+                }
+            }
+        } catch (Exception e) {
+            LOGGER.warn("Could not restore player info", e);
+        }
+        return playersInfo;
+    }
+
+    private static PlayerSelectInfo restorePlayerInfo(PlayerData data)  {
+        final long deleteTime = data.getDeleteTime();
+        if (deleteTime > 0 && System.currentTimeMillis() > deleteTime) {
+            PlayerFactory.deletePlayer(data);
+            return null;
+        }
+        return new PlayerSelectInfo(data);
+    }
 }

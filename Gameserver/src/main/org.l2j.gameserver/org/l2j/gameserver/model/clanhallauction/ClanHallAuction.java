@@ -20,6 +20,7 @@
 package org.l2j.gameserver.model.clanhallauction;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.ClanHallDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
@@ -40,16 +41,16 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class ClanHallAuction {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallAuction.class);
     private static final String LOAD_CLANHALL_BIDDERS = "SELECT * FROM clanhall_auctions_bidders WHERE clanHallId=?";
-    private static final String DELETE_CLANHALL_BIDDERS = "DELETE FROM clanhall_auctions_bidders WHERE clanHallId=?";
     private static final String INSERT_CLANHALL_BIDDER = "REPLACE INTO clanhall_auctions_bidders (clanHallId, clanId, bid, bidTime) VALUES (?,?,?,?)";
-    private static final String DELETE_CLANHALL_BIDDER = "DELETE FROM clanhall_auctions_bidders WHERE clanId=?";
     private final int _clanHallId;
     private volatile Map<Integer, Bidder> _bidders;
 
@@ -105,13 +106,7 @@ public class ClanHallAuction {
 
     public void removeBid(Clan clan) {
         getBids().remove(clan.getId());
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement(DELETE_CLANHALL_BIDDER)) {
-            ps.setInt(1, clan.getId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.error("Failed clearing bidder " + clan.getName() + " for clan hall " + _clanHallId + ": ", e);
-        }
+        getDAO(ClanHallDAO.class).deleteBidder(clan.getId());
     }
 
     public long getHighestBid() {
@@ -144,13 +139,7 @@ public class ClanHallAuction {
             clanHall.setOwner(highestBidder.getClan());
             getBids().clear();
 
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement(DELETE_CLANHALL_BIDDERS)) {
-                ps.setInt(1, _clanHallId);
-                ps.execute();
-            } catch (Exception e) {
-                LOGGER.error("Failed clearing bidder for clan hall " + _clanHallId + ": ", e);
-            }
+            getDAO(ClanHallDAO.class).deleteBidders(_clanHallId);
         }
     }
 

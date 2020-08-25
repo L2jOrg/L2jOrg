@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00369_CollectorOfJewels;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.QuestItemHolder;
@@ -116,7 +117,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestItemHolder item = MOBS_DROP_CHANCES.get(npc.getId());
-		if (getRandom(100) < item.getChance())
+		if (Rnd.get(100) < item.getChance())
 		{
 			Player luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)

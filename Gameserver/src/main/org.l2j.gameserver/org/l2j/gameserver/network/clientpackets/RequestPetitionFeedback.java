@@ -18,21 +18,15 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.PetitionDAO;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Plim
  */
 public class RequestPetitionFeedback extends ClientPacket {
-    private static final Logger LOGGER = LoggerFactory.getLogger(RequestPetitionFeedback.class);
-    private static final String INSERT_FEEDBACK = "INSERT INTO petition_feedback VALUES (?,?,?,?,?)";
 
     // cdds
     // private int _unknown;
@@ -59,17 +53,7 @@ public class RequestPetitionFeedback extends ClientPacket {
             return;
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(INSERT_FEEDBACK)) {
-            statement.setString(1, player.getName());
-            statement.setString(2, player.getLastPetitionGmName());
-            statement.setInt(3, _rate);
-            statement.setString(4, _message);
-            statement.setLong(5, System.currentTimeMillis());
-            statement.execute();
-        } catch (SQLException e) {
-            LOGGER.error("Error while saving petition feedback");
-        }
+        getDAO(PetitionDAO.class).saveFeedback(player.getName(), player.getLastPetitionGmName(), _rate, _message, System.currentTimeMillis());
     }
 
 }

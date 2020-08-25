@@ -41,8 +41,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.regex.Pattern;
-import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -170,7 +168,6 @@ public final class Config {
     public static int ALT_FREIGHT_SLOTS;
     public static int ALT_FREIGHT_PRICE;
 
-    public static long MENTOR_PENALTY_FOR_MENTEE_LEAVE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_TELEPORT;
@@ -333,7 +330,6 @@ public final class Config {
 
     public static boolean ALLOW_DISCARDITEM;
 
-    public static int CLAN_VARIABLES_STORE_INTERVAL;
     public static boolean LAZY_ITEMS_UPDATE;
     public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
     public static boolean DESTROY_ALL_ITEMS;
@@ -567,7 +563,6 @@ public final class Config {
 
     public static boolean HARDWARE_INFO_ENABLED;
     public static int MAX_PLAYERS_PER_HWID;
-    public static Pattern CHARNAME_TEMPLATE_PATTERN;
     public static String PET_NAME_TEMPLATE;
     public static String CLAN_NAME_TEMPLATE;
     public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
@@ -861,17 +856,6 @@ public final class Config {
             DATAPACK_ROOT = new File(".");
         }
 
-        Pattern charNamePattern;
-
-        try {
-            charNamePattern = Pattern.compile(serverSettings.getString("CnameTemplate", ".*"));
-        } catch (PatternSyntaxException e) {
-            LOGGER.warn("Character name pattern is invalid!", e);
-            charNamePattern = Pattern.compile(".*");
-        }
-
-        CHARNAME_TEMPLATE_PATTERN = charNamePattern;
-
         PET_NAME_TEMPLATE = serverSettings.getString("PetNameTemplate", ".*");
         CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
 
@@ -1055,7 +1039,6 @@ public final class Config {
         ALT_FREIGHT_SLOTS = Character.getInt("MaximumFreightSlots", 200);
         ALT_FREIGHT_PRICE = Character.getInt("FreightPrice", 1000);
 
-        MENTOR_PENALTY_FOR_MENTEE_LEAVE = Character.getInt("MentorPenaltyForMenteeLeave", 2) * 24 * 60 * 60 * 1000;
         ENCHANT_CHANCE_ELEMENT_STONE = Character.getDouble("EnchantChanceElementStone", 50);
         ENCHANT_CHANCE_ELEMENT_CRYSTAL = Character.getDouble("EnchantChanceElementCrystal", 30);
         ENCHANT_CHANCE_ELEMENT_JEWEL = Character.getDouble("EnchantChanceElementJewel", 20);
@@ -1207,7 +1190,6 @@ public final class Config {
         ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
         ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
 
-        CLAN_VARIABLES_STORE_INTERVAL = General.getInt("ClanVariablesStoreInterval", 15) * 60 * 1000;
         LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
         UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
         DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);

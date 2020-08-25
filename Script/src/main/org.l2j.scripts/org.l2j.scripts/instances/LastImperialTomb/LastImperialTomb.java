@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.instances.LastImperialTomb;
 
+import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -842,7 +843,7 @@ public class LastImperialTomb extends AbstractInstance
 			return;
 		}
 		world.setParameter("isPlayingSong", true);
-		final int random = getRandom(1, 5);
+		final int random = Rnd.get(1, 5);
 		final SkillHolder skill = new SkillHolder(5007, random);
 		final SkillHolder skillEffect = new SkillHolder(5008, random);
 		broadCastPacket(world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, SKILL_MSG.get(random), null));

@@ -31,4 +31,8 @@ public class ServerInfo {
     public int getId() {
         return serverId;
     }
+
+    public int getServerType() {
+        return serverType;
+    }
 }

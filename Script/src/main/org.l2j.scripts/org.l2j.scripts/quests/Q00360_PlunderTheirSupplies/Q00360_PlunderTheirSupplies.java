@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00360_PlunderTheirSupplies;
 
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntIntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
@@ -103,7 +104,7 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 			return super.onKill(npc, killer, isPet);
 		}
 		
-		if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getId()))
+		if (Rnd.get(100) < MONSTER_DROP_CHANCES.get(npc.getId()))
 		{
 			giveItems(killer, SUPPLY_ITEMS, 1);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);

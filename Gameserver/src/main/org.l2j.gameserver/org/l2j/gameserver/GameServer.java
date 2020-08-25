@@ -39,6 +39,8 @@ import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.events.EventEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.shop.L2Store;
+import org.l2j.gameserver.engine.item.shop.LCoinShop;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.rank.RankEngine;
@@ -135,8 +137,8 @@ public class GameServer {
         VipEngine.init();
         ElementalSpiritEngine.init();
         TeleportEngine.init();
-        PrimeShopData.getInstance();
-        LCoinShopData.getInstance();
+        L2Store.init();
+        LCoinShop.init();
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
         AttendanceRewardData.getInstance();
@@ -163,7 +165,6 @@ public class GameServer {
         PetDataTable.getInstance();
         CubicData.getInstance();
         PlayerSummonTable.getInstance().init();
-        MentorManager.getInstance();
 
         printSection("Clans");
         ClanTable.init();
@@ -317,13 +318,14 @@ public class GameServer {
 
                 fullVersion = String.format("%s: %s-%s (%s)", updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
                 var protocol = getSettings(ServerSettings.class).acceptedProtocols();
-                printSection("Server Info Version");
+                printSection("L2jOrg Server Info Version");
                 LOGGER.info("Update: .................. {}", updateName);
                 LOGGER.info("Protocol: ................ {}", protocol);
                 LOGGER.info("Build Version: ........... {}", version);
                 LOGGER.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
                 LOGGER.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
                 LOGGER.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
+                LOGGER.info("Report any bug at https://github.com/JoeAlisson/L2jOrg/issues");
             }
         } catch (IOException e) {
             LOGGER.warn(e.getLocalizedMessage(), e);

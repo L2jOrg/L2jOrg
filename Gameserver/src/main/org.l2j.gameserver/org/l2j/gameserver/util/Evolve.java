@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.util;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.PetData;
@@ -37,8 +37,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
 /**
@@ -224,13 +223,7 @@ public final class Evolve {
             petSummon.startFeed();
         }
 
-        // pet control item no longer exists, delete the pet from the db
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?")) {
-            ps.setInt(1, removedItem.getObjectId());
-            ps.execute();
-        } catch (Exception e) {
-        }
+        getDAO(PetDAO.class).deleteByItem(removedItem.getObjectId());
         return true;
     }
 

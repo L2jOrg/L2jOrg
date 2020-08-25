@@ -21,6 +21,7 @@ package org.l2j.scripts.quests.Q00326_VanquishRemnants;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -104,7 +105,7 @@ public final class Q00326_VanquishRemnants extends Quest
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isStarted() && (getRandom(100) < MONSTERS.get(npc.getId())[0]))
+		if ((st != null) && st.isStarted() && (Rnd.get(100) < MONSTERS.get(npc.getId())[0]))
 		{
 			giveItems(killer, MONSTERS.get(npc.getId())[1], 1);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);

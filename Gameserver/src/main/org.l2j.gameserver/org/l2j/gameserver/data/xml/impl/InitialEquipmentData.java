@@ -32,10 +32,7 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -50,7 +47,7 @@ public final class InitialEquipmentData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(InitialEquipmentData.class);
     private static final String NORMAL = "data/stats/initialEquipment.xml";
     private static final String EVENT = "data/stats/initialEquipmentEvent.xml";
-    private final Map<ClassId, List<PcItemTemplate>> _initialEquipmentList = new HashMap<>();
+    private final Map<ClassId, List<PcItemTemplate>> _initialEquipmentList = new EnumMap<>(ClassId.class);
 
     private InitialEquipmentData() {
         load();
@@ -112,7 +109,7 @@ public final class InitialEquipmentData extends GameXmlReader {
      * @return the initial equipment for the given class Id.
      */
     public List<PcItemTemplate> getEquipmentList(ClassId cId) {
-        return _initialEquipmentList.get(cId);
+        return _initialEquipmentList.getOrDefault(cId, Collections.emptyList());
     }
 
     /**
@@ -122,7 +119,7 @@ public final class InitialEquipmentData extends GameXmlReader {
      * @return the initial equipment for the given class Id.
      */
     public List<PcItemTemplate> getEquipmentList(int cId) {
-        return _initialEquipmentList.get(ClassId.getClassId(cId));
+        return getEquipmentList(ClassId.getClassId(cId));
     }
 
     public static InitialEquipmentData getInstance() {

@@ -24,6 +24,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.SpawnDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.datatables.SpawnTable;
@@ -46,6 +47,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
 /**
@@ -324,14 +326,7 @@ public class DBSpawnManager {
         }
 
         if (updateDb) {
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement("DELETE FROM npc_respawns WHERE id = ?")) {
-                ps.setInt(1, npcId);
-                ps.execute();
-            } catch (Exception e) {
-                // problem with deleting spawn
-                LOGGER.warn(getClass().getSimpleName() + ": Could not remove npc #" + npcId + " from DB: ", e);
-            }
+            getDAO(SpawnDAO.class).deleteRespawn(npcId);
         }
 
         SpawnTable.getInstance().deleteSpawn(spawn, false);

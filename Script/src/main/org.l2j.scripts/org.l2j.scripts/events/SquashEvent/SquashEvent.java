@@ -580,7 +580,7 @@ public class SquashEvent extends LongTimeEvent
 		{
 			if (npcId == drop[0])
 			{
-				if (getRandomBoolean())
+				if (Rnd.nextBoolean())
 				{
 					continue;
 				}
@@ -591,8 +591,8 @@ public class SquashEvent extends LongTimeEvent
 						((Monster) mob).dropItem(player, drop[1], 1);
 						break;
 					}
-					((Monster) mob).dropItem(player, drop[1], (getRandom(1, 3)));
-					if (getRandomBoolean())
+					((Monster) mob).dropItem(player, drop[1], (Rnd.get(1, 3)));
+					if (Rnd.nextBoolean())
 					{
 						break;
 					}

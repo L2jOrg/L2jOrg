@@ -19,12 +19,15 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.GlobalVariableDAO;
 import org.l2j.gameserver.model.variables.AbstractVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.Map.Entry;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * Global Variables Manager.
@@ -95,23 +98,11 @@ public final class GlobalVariablesManager extends AbstractVariables {
 
     @Override
     public boolean deleteMe() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement del = con.createStatement()) {
-            del.execute(DELETE_QUERY);
-        } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't delete global variables to database.", e);
-            return false;
-        }
-        return true;
+        return getDAO(GlobalVariableDAO.class).deleteAll();
     }
 
     public void resetRaidBonus() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement st = con.createStatement()) {
-            st.execute("DELETE FROM global_variables WHERE var like 'MA_C%'");
-        } catch (SQLException t) {
-            LOGGER.warn(t.getMessage(), t);
-        }
+        getDAO(GlobalVariableDAO.class).deleteRaidBonus();
     }
 
     public static void init() {

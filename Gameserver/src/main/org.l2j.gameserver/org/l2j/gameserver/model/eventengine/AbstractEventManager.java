@@ -29,10 +29,7 @@ import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 
 import java.nio.file.Path;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.atomic.AtomicReference;
@@ -42,7 +39,7 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends AbstractScript {
     private final Set<T> events = ConcurrentHashMap.newKeySet();
-    private final Queue<Player> registeredPlayers = new ConcurrentLinkedDeque<>();
+    private final Deque<Player> registeredPlayers = new ConcurrentLinkedDeque<>();
     private final AtomicReference<IEventState> state = new AtomicReference<>();
     private String name;
     private volatile StatsSet variables = StatsSet.EMPTY_STATSET;
@@ -153,6 +150,7 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
     @RegisterEvent(EventType.ON_PLAYER_LOGOUT)
     @RegisterType(ListenerRegisterType.GLOBAL)
     public void OnPlayerLogout(OnPlayerLogout event) {
+
         final Player player = event.getActiveChar();
         if (registeredPlayers.remove(player)) {
             onUnregisteredPlayer(player);

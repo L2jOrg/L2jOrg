@@ -59,7 +59,6 @@ public final class TeleportHolder {
     private static final String BUTTON_TELEPORT_BYPASS = "<button align=left icon=\"teleport\" action=\"bypass -h ";
     private static final String CONFIRM_TELEPORT_MSG = "\" msg=\"811;";
     private static final String ADENA_STRING_ID = "<fstring>1000308</fstring>";
-    private static final String ANCIENT_ADENA_STRING_ID = "<fstring>1000309</fstring>";
     private static final String TEMPLATE_TELEPORTER_HTM = "data/html/teleporter/teleports.htm";
     private static final String CASTLE_TELEPORTER_BUSY_HTM = "data/html/teleporter/castleteleporter-busy.htm";
     private static final EnumSet<DayOfWeek> DISCOUNT_DAYS = EnumSet.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY);
@@ -254,8 +253,6 @@ public final class TeleportHolder {
         if (fstring) {
             if (itemId == CommonItem.ADENA) {
                 return ADENA_STRING_ID;
-            } else if (itemId == CommonItem.ANCIENT_ADENA) {
-                return ANCIENT_ADENA_STRING_ID;
             }
         }
         final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);

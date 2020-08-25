@@ -195,7 +195,7 @@ public class Util {
     }
 
     public static boolean isAlphaNumeric(String text) {
-        if ((text == null) || text.isEmpty()) {
+        if (isNullOrEmpty(text)) {
             return false;
         }
         for (char c : text.toCharArray()) {

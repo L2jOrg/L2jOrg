@@ -20,7 +20,6 @@ package org.l2j.scripts.handlers.itemhandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.actor.Playable;
@@ -29,220 +28,77 @@ import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 /**
  * Extractable Items handler.
  * @author HorridoJoho, Mobius
+ * @author JoeAlisson
  */
-public class ExtractableItems implements IItemHandler
-{
+public class ExtractableItems implements IItemHandler {
+
 	@Override
-	public boolean useItem(Playable playable, Item item, boolean forceUse)
-	{
-		if (!isPlayer(playable))
-		{
+	public boolean useItem(Playable playable, Item item, boolean forceUse) {
+		if(!(item.getTemplate() instanceof EtcItem etcItem)) {
+			return false;
+		}
+
+		if (!(playable instanceof Player player)) {
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
-		
-		final Player activeChar = playable.getActingPlayer();
-		final EtcItem etcitem = (EtcItem) item.getTemplate();
-		final List<ExtractableProduct> exitems = etcitem.getExtractableItems();
-		if (exitems == null)
-		{
-			LOGGER.info("No extractable data defined for " + etcitem);
+
+		final List<ExtractableProduct> extractables = etcItem.getExtractableItems();
+
+		if (isNull(extractables)) {
+			LOGGER.info("No extractable data defined for {}",  etcItem);
 			return false;
 		}
 		
-		if (!activeChar.isInventoryUnder80(false))
-		{
-			activeChar.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+		if (!player.isInventoryUnder80(false)) {
+			player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 			return false;
 		}
-		
-		// destroy item
-		if (!activeChar.destroyItem("Extract", item.getObjectId(), 1, activeChar, true))
-		{
+
+		if (!player.destroyItem("Extract", item.getObjectId(), 1, player, true)) {
 			return false;
 		}
-		
-		final Map<Item, Long> extractedItems = new HashMap<>();
-		final List<Item> enchantedItems = new ArrayList<>();
-		if (etcitem.getExtractableCountMin() > 0)
-		{
-			while (extractedItems.size() < etcitem.getExtractableCountMin())
-			{
-				for (ExtractableProduct expi : exitems)
-				{
-					if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
-					{
-						break;
-					}
-					
-					if (Rnd.get(100000) <= expi.getChance())
-					{
-						final int min = (int) (expi.getMin() * Config.RATE_EXTRACTABLE);
-						final int max = (int) (expi.getMax() * Config.RATE_EXTRACTABLE);
-						
-						int createItemAmount = (max == min) ? min : (Rnd.get((max - min) + 1) + min);
-						if (createItemAmount == 0)
-						{
-							continue;
-						}
-						
-						// Do not extract the same item.
-						boolean alreadyExtracted = false;
-						for (Item i : extractedItems.keySet())
-						{
-							if (i.getTemplate().getId() == expi.getId())
-							{
-								alreadyExtracted = true;
-								break;
-							}
-						}
-						if (alreadyExtracted && (exitems.size() >= etcitem.getExtractableCountMax()))
-						{
-							continue;
-						}
-						
-						if (ItemEngine.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
-						{
-							final Item newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
-							if (expi.getMaxEnchant() > 0)
-							{
-								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
-								enchantedItems.add(newItem);
-							}
-							addItem(extractedItems, newItem);
-						}
-						else
-						{
-							while (createItemAmount > 0)
-							{
-								final Item newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
-								if (expi.getMaxEnchant() > 0)
-								{
-									newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
-									enchantedItems.add(newItem);
-								}
-								addItem(extractedItems, newItem);
-								createItemAmount--;
-							}
-						}
-					}
-				}
+
+		var inventoryUpdate = new InventoryUpdate();
+		int extracted = 0;
+		for (ExtractableProduct product : extractables) {
+
+			if (etcItem.getMaxExtractable() > 0 && extracted >= etcItem.getMaxExtractable()) {
+				break;
 			}
-		}
-		else
-		{
-			for (ExtractableProduct expi : exitems)
-			{
-				if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
-				{
-					break;
+
+			if (Rnd.chance(product.chance())) {
+				final int min = (int) (product.min() * Config.RATE_EXTRACTABLE);
+				final int max = (int) (product.max() * Config.RATE_EXTRACTABLE);
+
+				int amount = Rnd.get(min, max);
+				if (amount == 0) {
+					continue;
 				}
-				
-				if (Rnd.get(100000) <= expi.getChance())
-				{
-					final int min = (int) (expi.getMin() * Config.RATE_EXTRACTABLE);
-					final int max = (int) (expi.getMax() * Config.RATE_EXTRACTABLE);
-					
-					int createItemAmount = (max == min) ? min : (Rnd.get((max - min) + 1) + min);
-					if (createItemAmount == 0)
-					{
-						continue;
-					}
-					
-					if (ItemEngine.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
-					{
-						final Item newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
-						if (expi.getMaxEnchant() > 0)
-						{
-							newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
-							enchantedItems.add(newItem);
-						}
-						addItem(extractedItems, newItem);
-					}
-					else
-					{
-						while (createItemAmount > 0)
-						{
-							final Item newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
-							if (expi.getMaxEnchant() > 0)
-							{
-								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
-								enchantedItems.add(newItem);
-							}
-							addItem(extractedItems, newItem);
-							createItemAmount--;
-						}
-					}
+
+				int enchant = Rnd.get(product.minEnchant(), product.maxEnchant());
+				var extractedItem = player.addItem("Extract", product.id(), amount, enchant,  item, true, false);
+				if(nonNull(extractedItem)) {
+					extracted++;
+					inventoryUpdate.addItem(extractedItem);
 				}
 			}
 		}
 		
-		if (extractedItems.isEmpty())
-		{
-			activeChar.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
+		if (extracted == 0) {
+			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
+		} else {
+			player.sendInventoryUpdate(inventoryUpdate);
 		}
-		if (!enchantedItems.isEmpty())
-		{
-			final InventoryUpdate playerIU = new InventoryUpdate();
-			for (Item i : enchantedItems)
-			{
-				playerIU.addModifiedItem(i);
-			}
-			activeChar.sendPacket(playerIU);
-		}
-		
-		for (Item i : extractedItems.keySet())
-		{
-			sendMessage(activeChar, i, extractedItems.get(i));
-		}
-		
 		return true;
-	}
-	
-	private void addItem(Map<Item, Long> extractedItems, Item newItem)
-	{
-		if (extractedItems.get(newItem) != null)
-		{
-			extractedItems.put(newItem, extractedItems.get(newItem) + 1);
-		}
-		else
-		{
-			extractedItems.put(newItem, 1L);
-		}
-	}
-	
-	private void sendMessage(Player player, Item item, Long count)
-	{
-		final SystemMessage sm;
-		if (count > 1)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
-			sm.addItemName(item);
-			sm.addLong(count);
-		}
-		else if (item.getEnchantLevel() > 0)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
-			sm.addInt(item.getEnchantLevel());
-			sm.addItemName(item);
-		}
-		else
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
-			sm.addItemName(item);
-		}
-		player.sendPacket(sm);
 	}
 }
