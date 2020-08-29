@@ -137,6 +137,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.Map.Entry;
@@ -10613,58 +10614,22 @@ public final class Player extends Playable {
         return falseIfNullOrElse(getTraingCampInfo(), t -> t.getEndTime() > System.currentTimeMillis());
     }
 
-    public AttendanceInfoHolder getAttendanceInfo() {
-        // Get reset time.
-        final Calendar calendar = Calendar.getInstance();
-        if ((calendar.get(Calendar.HOUR_OF_DAY) < 6) && (calendar.get(Calendar.MINUTE) < 30)) {
-            calendar.add(Calendar.DAY_OF_MONTH, -1);
-        }
-        calendar.set(Calendar.HOUR_OF_DAY, 6);
-        calendar.set(Calendar.MINUTE, 30);
-        calendar.set(Calendar.SECOND, 0);
-        calendar.set(Calendar.MILLISECOND, 0);
-
-        // Get last player reward time.
-        final long receiveDate;
-        int rewardIndex;
-        if (getSettings(AttendanceSettings.class).shareAccount()) {
-            receiveDate = getAccountVariables().getLong(ATTENDANCE_DATE_VAR, 0);
-            rewardIndex = getAccountVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
-        } else {
-            receiveDate = getAttendanceDate();
-            rewardIndex = getAttendanceIndex();
-        }
-
-        // Check if player can receive reward today.
-        boolean canBeRewarded = false;
-        if (calendar.getTimeInMillis() > receiveDate) {
-            canBeRewarded = true;
-            // Reset index if max is reached.
-            if (rewardIndex >= (AttendanceRewardData.getInstance().getRewardsCount() - 1)) {
-                rewardIndex = 0;
-            }
-        }
-
-        return new AttendanceInfoHolder(rewardIndex, canBeRewarded);
+    public boolean canReceiveAttendance() {
+        return isNull(account.nextAttendance()) || LocalDateTime.now().isAfter(account.nextAttendance());
     }
 
-    public void setAttendanceInfo(int rewardIndex) {
+    public byte lastAttendanceReward() {
+        return account.lastAttendanceReward();
+    }
 
-        final Calendar nextReward = Calendar.getInstance();
-        nextReward.set(Calendar.MINUTE, 30);
-        if (nextReward.get(Calendar.HOUR_OF_DAY) >= 6)
-        {
-            nextReward.add(Calendar.DATE, 1);
+    public void updateAttendanceReward(byte rewardIndex) {
+        var now = LocalDateTime.now();
+        if(now.getHour() > 6 || (now.getHour() == 6 && now.getMinute() > 30) ) {
+            now = now.plusDays(1);
         }
-        nextReward.set(Calendar.HOUR_OF_DAY, 6);
 
-        if (getSettings(AttendanceSettings.class).shareAccount()) {
-            getAccountVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
-            getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
-        } else {
-            setAttendanceDate(nextReward.getTimeInMillis());
-            setAttendanceIndex(rewardIndex);
-        }
+        account.setLastAttendanceReward(rewardIndex);
+        account.setNextAttendance(now.with()  withHour(6).withMinute(30).withSecond(0));
     }
 
     public boolean isFriend(Player player) {

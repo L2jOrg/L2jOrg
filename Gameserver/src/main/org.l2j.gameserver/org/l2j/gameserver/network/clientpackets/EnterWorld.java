@@ -39,7 +39,6 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
-import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
@@ -70,6 +69,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -369,21 +369,20 @@ public class EnterWorld extends ClientPacket {
         Quest.playerEnter(player);
     }
 
-    private void sendAttendanceInfo(Player activeChar) {
+    private void sendAttendanceInfo(Player player) {
         var attendanceSettings = getSettings(AttendanceSettings.class);
         ThreadPool.schedule(() -> {
             // Check if player can receive reward today.
-            final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
-            if (attendanceInfo.isRewardAvailable()) {
-                final int lastRewardIndex = attendanceInfo.getRewardIndex() + 1;
-                activeChar.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
-                activeChar.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
-                activeChar.sendMessage("Click on General Menu -> Attendance Check.");
+            if (player.canReceiveAttendance()) {
+                final int lastRewardIndex = player.lastAttendanceReward() + 1;
+                player.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
+                player.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
+                player.sendMessage("Click on General Menu -> Attendance Check.");
                 if (attendanceSettings.popUpWindow()) {
-                    activeChar.sendPacket(new ExVipAttendanceItemList(activeChar));
+                    player.sendPacket(new ExVipAttendanceItemList(player));
                 }
             }
-        }, attendanceSettings.delay() * 60  * 1000);
+        }, attendanceSettings.delay(), TimeUnit.MINUTES);
     }
 
     private void onGameMasterEnter(Player activeChar) {
@@ -396,11 +395,7 @@ public class EnterWorld extends ClientPacket {
             SkillTreesData.getInstance().addSkills(activeChar, true);
         }
 
-        if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel())) {
-            AdminData.getInstance().addGm(activeChar, false);
-        } else {
-            AdminData.getInstance().addGm(activeChar, true);
-        }
+        AdminData.getInstance().addGm(activeChar, !Config.GM_STARTUP_AUTO_LIST || !AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel()));
 
         if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", activeChar.getAccessLevel())) {
             BuilderUtil.setHiding(activeChar, true);

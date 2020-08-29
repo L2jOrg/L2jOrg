@@ -25,7 +25,6 @@ public class AttendanceSettings implements Settings {
 
     private boolean enabled;
     private boolean vipOnly;
-    private boolean shareAccount;
     private int delay;
     private boolean popUpWindow;
 
@@ -33,7 +32,6 @@ public class AttendanceSettings implements Settings {
     public void load(SettingsFile settingsFile) {
         enabled = settingsFile.getBoolean("EnableAttendanceRewards", false);
         vipOnly = settingsFile.getBoolean("VipOnlyAttendanceRewards", false);
-        shareAccount = settingsFile.getBoolean("AttendanceRewardsShareAccount", false);
         delay =  settingsFile.getInteger("AttendanceRewardDelay", 30);
         popUpWindow = settingsFile.getBoolean("AttendancePopupWindow", false);
     }
@@ -44,10 +42,6 @@ public class AttendanceSettings implements Settings {
 
     public boolean vipOnly() {
         return vipOnly;
-    }
-
-    public boolean shareAccount() {
-        return shareAccount;
     }
 
     public int delay() {

@@ -8,5 +8,7 @@ CREATE TABLE IF NOT EXISTS `account_data`
     `coin` INT NOT NULL DEFAULT 0,
     `vip_point` BIGINT NOT NULL DEFAULT 0,
     `vip_tier_expiration` BIGINT NOT NULL DEFAULT 0,
+    `next_attendance` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `last_attendance_reward` TINYINT DEFAULT 0,
     PRIMARY KEY (`account`)
 ) ENGINE = InnoDB DEFAULT CHARSET=UTF8MB4;
