@@ -100,7 +100,6 @@ import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stat;
-import org.l2j.gameserver.model.variables.AccountVariables;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -5649,11 +5648,6 @@ public final class Player extends Playable {
             storeRecipeShopList();
         }
 
-        final AccountVariables aVars = getScript(AccountVariables.class);
-        if (aVars != null) {
-            aVars.storeMe();
-        }
-
         if(nonNull(spirits)) {
             for (ElementalSpirit spirit : spirits) {
                 if(nonNull(spirit)) {
@@ -10167,20 +10161,6 @@ public final class Player extends Playable {
         getDAO(PlayerVariablesDAO.class).save(variables);
     }
 
-    /**
-     * @return {@code true} if {@link AccountVariables} instance is attached to current player's scripts, {@code false} otherwise.
-     */
-    public boolean hasAccountVariables() {
-        return getScript(AccountVariables.class) != null;
-    }
-
-    /**
-     * @return {@link AccountVariables} instance containing parameters regarding player.
-     */
-    public AccountVariables getAccountVariables() {
-        final AccountVariables vars = getScript(AccountVariables.class);
-        return vars != null ? vars : addScript(new AccountVariables(getAccountName()));
-    }
 
     @Override
     public int getId() {
