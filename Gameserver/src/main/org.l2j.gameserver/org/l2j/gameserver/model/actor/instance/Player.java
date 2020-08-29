@@ -1134,19 +1134,12 @@ public final class Player extends Playable {
     private static final String RESTORE_CHAR_HENNAS = "SELECT slot,symbol_id FROM character_hennas WHERE charId=? AND class_index=?";
     private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
 
-    // Character Recipe List Save
-    private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
+
     private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
     private static final String RESTORE_CHAR_RECIPE_SHOP = "SELECT * FROM character_recipeshoplist WHERE charId=? ORDER BY `index`";
 
     // during fall validations will be disabled for 1000 ms.
     private static final int FALLING_VALIDATION_DELAY = 1000;
-    // Training Camp
-    private static final String TRAINING_CAMP_VAR = "TRAINING_CAMP";
-    private static final String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
-    // Attendance Reward system
-    private static final String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
-    private static final String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
 
     private final ReentrantLock _subclassLock = new ReentrantLock();
     private final ContactList _contactList = new ContactList(this);
@@ -10582,38 +10575,6 @@ public final class Player extends Playable {
         addStatusUpdateValue(StatusUpdateType.CUR_CP);
     }
 
-    public TrainingHolder getTraingCampInfo() {
-        final String info = getAccountVariables().getString(TRAINING_CAMP_VAR, null);
-        if (info == null) {
-            return null;
-        }
-        return new TrainingHolder(Integer.parseInt(info.split(";")[0]), Integer.parseInt(info.split(";")[1]), Integer.parseInt(info.split(";")[2]), Long.parseLong(info.split(";")[3]), Long.parseLong(info.split(";")[4]));
-    }
-
-    public void setTraingCampInfo(TrainingHolder holder) {
-        getAccountVariables().set(TRAINING_CAMP_VAR, holder.getObjectId() + ";" + holder.getClassIndex() + ";" + holder.getLevel() + ";" + holder.getStartTime() + ";" + holder.getEndTime());
-    }
-
-    public void removeTraingCampInfo() {
-        getAccountVariables().remove(TRAINING_CAMP_VAR);
-    }
-
-    public long getTraingCampDuration() {
-        return getAccountVariables().getLong(TRAINING_CAMP_DURATION, 0);
-    }
-
-    public void setTraingCampDuration(long duration) {
-        getAccountVariables().set(TRAINING_CAMP_DURATION, duration);
-    }
-
-    public void resetTraingCampDuration() {
-        getAccountVariables().remove(TRAINING_CAMP_DURATION);
-    }
-
-    public boolean isInTraingCamp() {
-        return falseIfNullOrElse(getTraingCampInfo(), t -> t.getEndTime() > System.currentTimeMillis());
-    }
-
     public boolean canReceiveAttendance() {
         return isNull(account.nextAttendance()) || LocalDateTime.now().isAfter(account.nextAttendance());
     }
@@ -10629,7 +10590,7 @@ public final class Player extends Playable {
         }
 
         account.setLastAttendanceReward(rewardIndex);
-        account.setNextAttendance(now.with()  withHour(6).withMinute(30).withSecond(0));
+        account.setNextAttendance(now.withHour(6).withMinute(30).withSecond(0));
     }
 
     public boolean isFriend(Player player) {

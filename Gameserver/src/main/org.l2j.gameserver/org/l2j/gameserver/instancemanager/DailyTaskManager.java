@@ -102,11 +102,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
                 player.sendPacket(new ExWorldChatCnt(player));
             }
 
-            if (Config.TRAINING_CAMP_ENABLE) {
-                player.resetTraingCampDuration();
-                player.getAccountVariables().storeMe();
-            }
-
             if(player.getVipTier() > 0) {
                 VipEngine.getInstance().checkVipTierExpiration(player);
             }
@@ -124,11 +119,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
         if (getSettings(ChatSettings.class).worldChatEnabled()) {
             getDAO(PlayerVariablesDAO.class).resetWorldChatPoint();
             LOGGER.info("Daily world chat points has been reset.");
-        }
-
-        if (Config.TRAINING_CAMP_ENABLE) {
-            getDAO(AccountDAO.class).deleteAccountVariable("TRAINING_CAMP_DURATION");
-            LOGGER.info("Training Camp daily time has been resetted.");
         }
 
         getDAO(PlayerVariablesDAO.class).resetRevengeData();
