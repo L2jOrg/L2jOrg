@@ -115,7 +115,6 @@ import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
-import org.l2j.gameserver.settings.AttendanceSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -10357,7 +10356,7 @@ public final class Player extends Playable {
      * @return {@code true} if item object id is currently in use by some request, {@code false} otherwise.
      */
     public boolean isProcessingItem(int objectId) {
-        return nonNull(requests) && requests.values().stream().anyMatch(req -> req.isUsing(objectId));
+        return nonNull(requests) && requests.values().stream().anyMatch(req -> req.isUsingItem(objectId));
     }
 
     /**
@@ -10367,7 +10366,7 @@ public final class Player extends Playable {
      */
     public void removeRequestsThatProcessesItem(int objectId) {
         if (requests != null) {
-            requests.values().removeIf(req -> req.isUsing(objectId));
+            requests.values().removeIf(req -> req.isUsingItem(objectId));
         }
     }
 

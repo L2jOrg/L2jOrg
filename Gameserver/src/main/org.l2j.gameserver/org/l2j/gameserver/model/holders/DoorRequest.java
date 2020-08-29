@@ -20,18 +20,27 @@
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.model.actor.instance.Door;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.request.AbstractRequest;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class DoorRequestHolder {
+public class DoorRequest extends AbstractRequest {
     private final Door _target;
 
-    public DoorRequestHolder(Door door) {
+    public DoorRequest(Player player, Door door) {
+        super(player);
         _target = door;
     }
 
     public Door getDoor() {
         return _target;
+    }
+
+    @Override
+    public boolean isUsingItem(int objectId) {
+        return false;
     }
 }

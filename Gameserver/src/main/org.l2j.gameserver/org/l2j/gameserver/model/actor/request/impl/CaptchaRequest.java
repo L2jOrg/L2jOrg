@@ -47,7 +47,7 @@ public class CaptchaRequest extends AbstractRequest {
     }
 
     @Override
-    public boolean isUsing(int objectId) {
+    public boolean isUsingItem(int objectId) {
         return false;
     }
 

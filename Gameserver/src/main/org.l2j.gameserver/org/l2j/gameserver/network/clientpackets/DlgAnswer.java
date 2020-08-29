@@ -24,9 +24,11 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.holders.DoorRequestHolder;
-import org.l2j.gameserver.model.holders.SummonRequestHolder;
+import org.l2j.gameserver.model.holders.DoorRequest;
+import org.l2j.gameserver.model.holders.SummonRequest;
 import org.l2j.gameserver.network.SystemMessageId;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author Dezmond_snz
@@ -47,43 +49,47 @@ public final class DlgAnswer extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
-        final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayerDlgAnswer(activeChar, messageId, answer, requesterId), activeChar, TerminateReturn.class);
+        final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayerDlgAnswer(player, messageId, answer, requesterId), player, TerminateReturn.class);
         if ((term != null) && term.terminate()) {
             return;
         }
 
         if (messageId == ANY_STRING) {
-            if (activeChar.removeAction(PlayerAction.ADMIN_COMMAND)) {
-                final String cmd = activeChar.getAdminConfirmCmd();
-                activeChar.setAdminConfirmCmd(null);
+            if (player.removeAction(PlayerAction.ADMIN_COMMAND)) {
+                final String cmd = player.getAdminConfirmCmd();
+                player.setAdminConfirmCmd(null);
                 if (answer == 0) {
                     return;
                 }
 
                 // The 'useConfirm' must be disabled here, as we don't want to repeat that process.
-                AdminCommandHandler.getInstance().useAdminCommand(activeChar, cmd, false);
+                AdminCommandHandler.getInstance().useAdminCommand(player, cmd, false);
             }
         } else if ((messageId == SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT.getId()) || (messageId == SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId())) {
-            activeChar.reviveAnswer(answer);
+            player.reviveAnswer(answer);
         } else if (messageId == SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId()) {
-            final SummonRequestHolder holder = activeChar.removeScript(SummonRequestHolder.class);
-            if ((answer == 1) && (holder != null) && (holder.getTarget().getObjectId() == requesterId)) {
-                activeChar.teleToLocation(holder.getTarget().getLocation(), true);
+            final SummonRequest request = player.getRequest(SummonRequest.class);
+            if (answer == 1 && nonNull(request) && request.getTarget().getObjectId() == requesterId) {
+                player.teleToLocation(request.getTarget().getLocation(), true);
+                player.removeRequest(SummonRequest.class);
             }
         } else if (messageId == SystemMessageId.WOULD_YOU_LIKE_TO_OPEN_THE_GATE.getId()) {
-            final DoorRequestHolder holder = activeChar.removeScript(DoorRequestHolder.class);
-            if ((holder != null) && (holder.getDoor() == activeChar.getTarget()) && (answer == 1)) {
-                holder.getDoor().openMe();
+
+            final DoorRequest request = player.getRequest(DoorRequest.class);
+            if (nonNull(request) && request.getDoor() == player.getTarget() && answer == 1) {
+                request.getDoor().openMe();
+                player.removeRequest(DoorRequest.class);
             }
         } else if (messageId == SystemMessageId.WOULD_YOU_LIKE_TO_CLOSE_THE_GATE.getId()) {
-            final DoorRequestHolder holder = activeChar.removeScript(DoorRequestHolder.class);
-            if ((holder != null) && (holder.getDoor() == activeChar.getTarget()) && (answer == 1)) {
-                holder.getDoor().closeMe();
+            final DoorRequest request = player.getRequest(DoorRequest.class);
+            if (nonNull(request) && request.getDoor() == player.getTarget() && answer == 1) {
+                request.getDoor().closeMe();
+                player.removeRequest(DoorRequest.class);
             }
         }
     }

@@ -19,19 +19,27 @@
  */
 package org.l2j.gameserver.model.holders;
 
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.request.AbstractRequest;
 import org.l2j.gameserver.model.item.instance.Item;
 
 /**
  * @author UnAfraid
  */
-public class PetItemHolder {
+public class PetItemRequest extends AbstractRequest {
     private final Item _item;
 
-    public PetItemHolder(Item item) {
+    public PetItemRequest(Player player, Item item) {
+        super(player);
         _item = item;
     }
 
     public Item getItem() {
         return _item;
+    }
+
+    @Override
+    public boolean isUsingItem(int objectId) {
+        return _item.getObjectId() == objectId;
     }
 }
