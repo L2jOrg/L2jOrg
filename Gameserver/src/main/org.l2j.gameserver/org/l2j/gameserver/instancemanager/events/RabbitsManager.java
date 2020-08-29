@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.quest.Event;
 /**
  * @author Mobius
  */
-public class RabbitsManager extends AbstractEventManager<AbstractEvent<?>> {
+public class RabbitsManager extends AbstractEventManager<AbstractEvent> {
 
     private RabbitsManager() {
     }

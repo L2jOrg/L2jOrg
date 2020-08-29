@@ -22,7 +22,7 @@ package org.l2j.scripts.ai.others.OlyManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
-import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
@@ -102,8 +102,8 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				else
 				{
 					htmltext = getHtml(player, "OlyManager-joinMatch.html");
-					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(OlympiadEngine.getInstance().getPeriod()));
-					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(OlympiadEngine.getInstance().getCurrentSeason()));
+					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(Olympiad.getInstance().getPeriod()));
+					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(Olympiad.getInstance().getCurrentSeason()));
 					htmltext = htmltext.replace("%olympiad_participant%", String.valueOf(OlympiadManager.getInstance().getCountOpponents()));
 				}
 				break;
@@ -118,7 +118,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					htmltext = "OlyManager-noNoble.html";
 				}
-				else if (OlympiadEngine.getInstance().getOlympiadPoints(player) <= 0)
+				else if (Olympiad.getInstance().getOlympiadPoints(player) <= 0)
 				{
 					htmltext = "OlyManager-noPoints.html";
 				}
@@ -189,7 +189,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			
 			if (command.startsWith(BYPASSES[0])) // list
 			{
-				if (!OlympiadEngine.getInstance().isMatchInProgress())
+				if (!Olympiad.getInstance().isMatchesInProgress())
 				{
 					player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 					return false;
@@ -206,7 +206,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 				return false;
 			}
-			else if (!OlympiadEngine.getInstance().isMatchInProgress())
+			else if (!Olympiad.getInstance().isMatchesInProgress())
 			{
 				player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 				return false;

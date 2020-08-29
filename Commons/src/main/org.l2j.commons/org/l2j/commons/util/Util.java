@@ -258,7 +258,15 @@ public class Util {
         return nonNull(collection) && collection.size() > 0;
     }
 
-    public static LocalDateTime parseLocalDateTime(String dateString) {
+    public static LocalDateTime parseLocalDateTime(String dateTimeString) {
+        if(dateTimeString.length() > 10) {
+            return LocalDateTime.parse(dateTimeString, DEFAULT_DATE_TIME_FORMATTER);
+        } else {
+            return LocalDate.parse(dateTimeString, DateTimeFormatter.ISO_LOCAL_DATE).atStartOfDay();
+        }
+    }
+
+    public static LocalDateTime parseLocalDate(String dateString) {
         if(dateString.length() > 10) {
             return LocalDateTime.parse(dateString, DEFAULT_DATE_TIME_FORMATTER);
         } else {

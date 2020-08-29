@@ -1407,7 +1407,7 @@ public final class Player extends Playable {
     private long _teleportProtectEndTime = 0;
     private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
     @SuppressWarnings("rawtypes")
-    private volatile Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events;
+    private volatile Map<Class<? extends AbstractEvent>, AbstractEvent> _events;
     private boolean _isOnCustomEvent = false;
     // protects a char from aggro mobs when getting up from fake death
     private long _recentFakeDeathEndTime = 0;
@@ -10078,7 +10078,7 @@ public final class Player extends Playable {
     @Override
     public boolean canRevive() {
         if (_events != null) {
-            for (AbstractEvent<?> listener : _events.values()) {
+            for (AbstractEvent listener : _events.values()) {
                 if (listener.isOnEvent(this) && !listener.canRevive(this)) {
                     return false;
                 }
@@ -10114,7 +10114,7 @@ public final class Player extends Playable {
             return true;
         }
         if (_events != null) {
-            for (AbstractEvent<?> listener : _events.values()) {
+            for (AbstractEvent listener : _events.values()) {
                 if (listener.isOnEvent(this)) {
                     return true;
                 }
@@ -10128,7 +10128,7 @@ public final class Player extends Playable {
             return true;
         }
         if (_events != null) {
-            for (AbstractEvent<?> listener : _events.values()) {
+            for (AbstractEvent listener : _events.values()) {
                 if (listener.isOnEvent(this) && listener.isBlockingExit(this)) {
                     return true;
                 }
@@ -10142,7 +10142,7 @@ public final class Player extends Playable {
             return true;
         }
         if (_events != null) {
-            for (AbstractEvent<?> listener : _events.values()) {
+            for (AbstractEvent listener : _events.values()) {
                 if (listener.isOnEvent(this) && listener.isBlockingDeathPenalty(this)) {
                     return true;
                 }
@@ -10474,7 +10474,7 @@ public final class Player extends Playable {
      * @param event
      * @return {@code true} if event is successfuly registered, {@code false} in case events map is not initialized yet or event is not registered
      */
-    public boolean registerOnEvent(AbstractEvent<?> event) {
+    public boolean registerOnEvent(AbstractEvent event) {
         if (_events == null) {
             synchronized (this) {
                 if (_events == null) {
@@ -10489,7 +10489,7 @@ public final class Player extends Playable {
      * @param event
      * @return {@code true} if event is successfuly removed, {@code false} in case events map is not initialized yet or event is not registered
      */
-    public boolean removeFromEvent(AbstractEvent<?> event) {
+    public boolean removeFromEvent(AbstractEvent event) {
         if (_events == null) {
             return false;
         }
@@ -10501,7 +10501,7 @@ public final class Player extends Playable {
      * @param clazz
      * @return the event instance or null in case events map is not initialized yet or event is not registered
      */
-    public <T extends AbstractEvent<?>> T getEvent(Class<T> clazz) {
+    public <T extends AbstractEvent> T getEvent(Class<T> clazz) {
         if (_events == null) {
             return null;
         }
@@ -10512,7 +10512,7 @@ public final class Player extends Playable {
     /**
      * @return the first event that player participates on or null if he doesn't
      */
-    public AbstractEvent<?> getEvent() {
+    public AbstractEvent getEvent() {
         if (_events == null) {
             return null;
         }
@@ -10524,7 +10524,7 @@ public final class Player extends Playable {
      * @param clazz
      * @return {@code true} if player is registered on specified event, {@code false} in case events map is not initialized yet or event is not registered
      */
-    public boolean isOnEvent(Class<? extends AbstractEvent<?>> clazz) {
+    public boolean isOnEvent(Class<? extends AbstractEvent> clazz) {
         if (_events == null) {
             return false;
         }

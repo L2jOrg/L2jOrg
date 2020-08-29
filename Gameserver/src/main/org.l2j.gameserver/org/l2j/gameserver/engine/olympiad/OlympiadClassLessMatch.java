@@ -16,28 +16,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.olympiad;
+package org.l2j.gameserver.engine.olympiad;
 
-import org.l2j.gameserver.engine.olympiad.Olympiad;
-import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
-import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.SystemMessageId;
+
+import static java.util.Objects.isNull;
 
 /**
  * @author JoeAlisson
  */
-public class ExOlympiadMatchMaking extends ClientPacket {
+class OlympiadClassLessMatch extends OlympiadMatch {
 
-    private byte ruleType;
+    private Player red;
+    private Player blue;
 
-    @Override
-    protected void readImpl() throws Exception {
-        ruleType = readByte();
+    OlympiadClassLessMatch() {
+
     }
 
     @Override
-    protected void runImpl()  {
-        Olympiad.getInstance().registerPlayer(client.getPlayer(), OlympiadRuleType.of(ruleType));
-        client.sendPacket(new ExOlympiadRecord());
+    public void addParticipant(Player player)  {
+        if(isNull(red)) {
+            red = player;
+        } else {
+            blue = player;
+        }
+    }
+
+    @Override
+    public void sendMessage(SystemMessageId messageId) {
+        red.sendPacket(messageId);
+        blue.sendPacket(messageId);
     }
 }

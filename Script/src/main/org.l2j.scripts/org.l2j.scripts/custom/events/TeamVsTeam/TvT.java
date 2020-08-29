@@ -770,7 +770,7 @@ public class TvT extends Event
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	private void OnPlayerLogout(OnPlayerLogout event)
 	{
-		final Player player = event.getActiveChar();
+		final Player player = event.getPlayer();
 		// Remove player from lists.
 		PLAYER_LIST.remove(player);
 		PLAYER_SCORES.remove(player);

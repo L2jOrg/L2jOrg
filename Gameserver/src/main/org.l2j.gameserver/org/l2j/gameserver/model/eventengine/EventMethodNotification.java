@@ -21,56 +21,40 @@ package org.l2j.gameserver.model.eventengine;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-import java.util.List;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class EventMethodNotification {
-    private final AbstractEventManager<?> _manager;
-    private final Method _method;
-    private final Object[] _args;
+    private final AbstractEventManager<?> manager;
+    private final Method method;
 
-    /**
-     * @param manager
-     * @param methodName
-     * @param args
-     * @throws NoSuchMethodException
-     */
-    public EventMethodNotification(AbstractEventManager<?> manager, String methodName, List<Object> args) throws NoSuchMethodException {
-        _manager = manager;
-        _method = manager.getClass().getDeclaredMethod(methodName, args.stream().map(Object::getClass).toArray(Class[]::new));
-        _args = args.toArray();
+    public EventMethodNotification(AbstractEventManager<?> manager, String methodName) throws NoSuchMethodException {
+        this.manager = manager;
+        method = manager.getClass().getDeclaredMethod(methodName);
     }
 
     public AbstractEventManager<?> getManager() {
-        return _manager;
+        return manager;
     }
 
     public Method getMethod() {
-        return _method;
+        return method;
     }
 
     public void execute() throws Exception {
-        if (Modifier.isStatic(_method.getModifiers())) {
-            invoke(null);
-        } else {
-            // Attempt to find getInstance() method
-            for (Method method : _manager.getClass().getMethods()) {
-                if (Modifier.isStatic(method.getModifiers()) && (_manager.getClass().isAssignableFrom(method.getReturnType())) && (method.getParameterCount() == 0)) {
-                    final Object instance = method.invoke(null);
-                    invoke(instance);
-                }
+        if(method.trySetAccessible()) {
+            if(Modifier.isStatic(method.getModifiers())) {
+                method.invoke( null);
+            } else {
+                method.invoke(manager);
             }
         }
     }
 
-    private void invoke(Object instance) throws Exception {
-        final boolean wasAccessible = _method.canAccess(instance);
-        if (!wasAccessible) {
-            _method.setAccessible(true);
-        }
-        _method.invoke(instance, _args);
-        _method.setAccessible(wasAccessible);
+    @Override
+    public String toString() {
+        return "Method Notification " +  manager.getClass() + "#" + method.getName();
     }
 }

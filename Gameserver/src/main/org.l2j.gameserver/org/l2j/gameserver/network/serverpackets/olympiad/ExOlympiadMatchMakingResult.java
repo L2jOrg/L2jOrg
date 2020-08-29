@@ -16,28 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.olympiad;
+package org.l2j.gameserver.network.serverpackets.olympiad;
 
-import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
-import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
+import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author JoeAlisson
  */
-public class ExOlympiadMatchMaking extends ClientPacket {
+public class ExOlympiadMatchMakingResult extends ServerPacket {
 
-    private byte ruleType;
+    private final boolean registered;
+    private final OlympiadRuleType ruleType;
 
-    @Override
-    protected void readImpl() throws Exception {
-        ruleType = readByte();
+    public ExOlympiadMatchMakingResult(boolean registered, OlympiadRuleType ruleType) {
+        this.registered = registered;
+        this.ruleType = ruleType;
     }
 
     @Override
-    protected void runImpl()  {
-        Olympiad.getInstance().registerPlayer(client.getPlayer(), OlympiadRuleType.of(ruleType));
-        client.sendPacket(new ExOlympiadRecord());
+    protected void writeImpl(GameClient client) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_MATCH_MAKING_RESULT);
+        writeByte(registered);
+        writeByte(ruleType.ordinal());
     }
 }

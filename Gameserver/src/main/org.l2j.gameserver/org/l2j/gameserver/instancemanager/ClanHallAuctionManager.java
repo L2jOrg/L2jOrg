@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * @author Sdw
  */
-public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?>> {
+public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent> {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallAuctionManager.class);
 
     private static final Map<Integer, ClanHallAuction> AUCTIONS = new HashMap<>();
