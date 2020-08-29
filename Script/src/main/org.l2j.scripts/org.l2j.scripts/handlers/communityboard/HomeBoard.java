@@ -18,6 +18,8 @@
  */
 package org.l2j.scripts.handlers.communityboard;
 
+import io.github.joealisson.primitive.ArrayIntList;
+import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
@@ -125,7 +127,7 @@ public final class HomeBoard implements IParseBoardHandler {
         return commands.stream().filter(Objects::nonNull).toArray(String[]::new);
     }
 
-    private String getSchemesListAsHtml(Map<String, ArrayList<Integer>> schemes) {
+    private String getSchemesListAsHtml(Map<String, IntList> schemes) {
         String result = "<tr><td height=4></td></tr>";
         int schemesCount = 0;
 
@@ -135,7 +137,7 @@ public final class HomeBoard implements IParseBoardHandler {
         }
         else
         {
-            for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet()) {
+            for (var scheme : schemes.entrySet()) {
                 if(schemesCount == 0 || schemesCount == 2)
                     result += "<tr>";
 
@@ -155,7 +157,7 @@ public final class HomeBoard implements IParseBoardHandler {
         return result;
     }
 
-    private String getSchemeTD(Map.Entry<String, ArrayList<Integer>> scheme) {
+    private String getSchemeTD(Map.Entry<String, IntList> scheme) {
         final int cost = getFee(scheme.getValue());
 
         String result = "";
@@ -346,7 +348,7 @@ public final class HomeBoard implements IParseBoardHandler {
                     canCreateScheme = false;
                 }
 
-                final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
+                final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
                 if (schemes != null) {
                     if (schemes.size() == Config.BUFFER_MAX_SCHEMES) {
                         activeChar.sendMessage("Maximum schemes amount is already reached.");
@@ -360,7 +362,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 }
 
                 if (canCreateScheme) {
-                    SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayList<>());
+                    SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayIntList(), true);
                     returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1, returnHtml);
                 } else {
                     returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
@@ -389,7 +391,7 @@ public final class HomeBoard implements IParseBoardHandler {
             final String schemeName = st.nextToken();
             final int skillId = Integer.parseInt(st.nextToken());
             final int page = Integer.parseInt(st.nextToken());
-            final List<Integer> skills = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName);
+            final IntList skills = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName);
 
             if (currentCommand.startsWith("_bbsskillselect") && !schemeName.equalsIgnoreCase("none")) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
@@ -439,7 +441,9 @@ public final class HomeBoard implements IParseBoardHandler {
                 activeChar.sendMessage("You don't have a pet.");
             }
             else if ((cost == 0) || activeChar.reduceAdena("Community Board Buffer", cost, target, true)) {
-                for (int skillId : SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName)) {
+                final var it = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName).iterator();
+                while (it.hasNext()) {
+                    var skillId = it.nextInt();
                     SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId)).applyEffects(target, target);
                 }
             }
@@ -450,7 +454,7 @@ public final class HomeBoard implements IParseBoardHandler {
             final String currentCommand = st.nextToken();
 
             final String schemeName = st.nextToken();
-            final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
+            final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
             if ((schemes != null) && schemes.containsKey(schemeName)) {
                 schemes.remove(schemeName);
             }
@@ -460,7 +464,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
         if (nonNull(returnHtml)) {
             if (Config.CUSTOM_CB_ENABLED) {
-                final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
+                final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
 
                 returnHtml = returnHtml.replace("%schemes%", getSchemesListAsHtml(schemes));
                 returnHtml = returnHtml.replace("%max_schemes%", Integer.toString(Config.BUFFER_MAX_SCHEMES));
@@ -486,7 +490,7 @@ public final class HomeBoard implements IParseBoardHandler {
         return false;
     }
 
-    private String setHtmlSchemeBuffList(Player player, String groupType, String schemeName, List<Integer> skills, int page,  String returnHtml) {
+    private String setHtmlSchemeBuffList(Player player, String groupType, String schemeName, IntList skills, int page,  String returnHtml) {
         int skillCount = 0;
         int buffCount = 1;
         int danceCount = 1;
@@ -494,7 +498,7 @@ public final class HomeBoard implements IParseBoardHandler {
         // Feeding all Buffs / Dances buttons
         // 36 equals number od buff + dance displayed in html (hard coded)
         for(int i = 1 ; i <= 36 ; i++) {
-            Skill skill = null;
+            Skill skill;
 
             if(skillCount < skills.size()) {
                 skill = SkillEngine.getInstance().getSkill(skills.get(skillCount), 1);
@@ -529,7 +533,7 @@ public final class HomeBoard implements IParseBoardHandler {
     {
         returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
-        final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
+        final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         returnHtml = setHtmlSchemeBuffList(player, groupType, schemeName, schemeSkills, page, returnHtml);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
         returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + Config.BUFFS_MAX_AMOUNT + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
@@ -564,7 +568,7 @@ public final class HomeBoard implements IParseBoardHandler {
         // Cut skills list up to page number.
         // skills = skills.subList((page - 1) * PAGE_LIMIT, Math.min(page * PAGE_LIMIT, skills.size()));
 
-        final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
+        final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         final StringBuilder sb = new StringBuilder(skills.size() * 150);
         int column = 0;
         int maxColumn = skills.size() <= 16 ? 4 : 7;
@@ -665,7 +669,7 @@ public final class HomeBoard implements IParseBoardHandler {
      * @param list : A list of skill ids.
      * @return a global fee for all skills contained in list.
      */
-    private static int getFee(List<Integer> list)
+    private static int getFee(IntList list)
     {
         if (Config.BUFFER_STATIC_BUFF_COST > 0)
         {
@@ -673,9 +677,9 @@ public final class HomeBoard implements IParseBoardHandler {
         }
 
         int fee = 0;
-        for (int sk : list)
-        {
-            fee += SchemeBufferTable.getInstance().getAvailableBuff(sk).getPrice();
+        final var it = list.iterator();
+        while (it.hasNext()) {
+            fee += SchemeBufferTable.getInstance().getAvailableBuff(it.nextInt()).getPrice();
         }
 
         return fee;
@@ -686,7 +690,7 @@ public final class HomeBoard implements IParseBoardHandler {
         return (objectsSize / pageSize) + ((objectsSize % pageSize) == 0 ? 0 : 1);
     }
 
-    private static long getCountOf(List<Integer> skills, boolean dances)
+    private static long getCountOf(IntList skills, boolean dances)
     {
         return skills.stream().filter(sId -> SkillEngine.getInstance().getSkill(sId, 1).isDance() == dances).count();
     }

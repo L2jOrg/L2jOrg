@@ -149,7 +149,7 @@ public class GameServer {
         BeautyShopData.getInstance();
         ExtendDropData.getInstance();
         ItemAuctionManager.getInstance();
-        SchemeBufferTable.getInstance();
+        SchemeBufferTable.init();
         GrandBossManager.getInstance();
 
         printSection("Characters");
