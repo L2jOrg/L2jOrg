@@ -48,6 +48,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 import static java.util.Objects.isNull;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
 /**
@@ -157,7 +158,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                                 return;
                             }
 
-                            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+                            final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
                             sm.addItemName(item.getId());
                             sm.addLong(item.getCount());
                             player.sendPacket(sm);
@@ -166,7 +167,7 @@ public final class RequestAcquireSkill extends ClientPacket {
 
                     clan.takeReputationScore(repCost, true);
 
-                    final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+                    final SystemMessage cr = getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
                     cr.addInt(repCost);
                     player.sendPacket(cr);
 
@@ -212,7 +213,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                         return;
                     }
 
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
                     sm.addItemName(item.getId());
                     sm.addLong(item.getCount());
                     player.sendPacket(sm);
@@ -220,7 +221,7 @@ public final class RequestAcquireSkill extends ClientPacket {
 
                 if (repCost > 0) {
                     clan.takeReputationScore(repCost, true);
-                    final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+                    final SystemMessage cr = getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
                     cr.addInt(repCost);
                     player.sendPacket(cr);
                 }
@@ -360,10 +361,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      */
     private void giveSkill(Player player, Npc trainer, Skill skill, boolean store) {
         // Send message.
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.LEARNED_S1_LV_S2);
-        sm.addSkillName(skill);
-        player.sendPacket(sm);
-
+        player.sendPacket(getSystemMessage(SystemMessageId.LEARNED_S1_LV_S2).addSkillName(skill).addInt(skill.getLevel()));
         player.addSkill(skill, store);
 
         player.sendItemList();

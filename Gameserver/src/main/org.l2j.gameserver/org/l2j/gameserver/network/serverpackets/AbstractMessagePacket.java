@@ -210,15 +210,15 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         if (skill.getId() != skill.getDisplayId()) {
             return addString(skill.getName());
         }
-        return addSkillName(skill.getId(), skill.getLevel(), skill.getSubLevel());
+        return addSkillName(skill.getId(), skill.getLevel());
     }
 
     public final T addSkillName(int id) {
-        return addSkillName(id, 1, 0);
+        return addSkillName(id, 1);
     }
 
-    public final T addSkillName(int id, int lvl, int subLvl) {
-        append(new SMParam(TYPE_SKILL_NAME, new int[] { id, lvl, subLvl }));
+    public final T addSkillName(int id, int lvl) {
+        append(new SMParam(TYPE_SKILL_NAME, new int[] { id, lvl}));
         return (T) this;
     }
 
@@ -315,7 +315,6 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
                     final int[] array = param.getIntArrayValue();
                     writeInt(array[0]); // skill id
                     writeShort( array[1]); // skill level
-                    writeShort(array[2]); // skill sub level
                 }
                 case TYPE_POPUP_ID, TYPE_ZONE_NAME -> {
                     final int[] array = param.getIntArrayValue();
