@@ -8561,12 +8561,6 @@ public final class SystemMessageId {
     @ClientString(id = 4173, message = "You cannot send a whisper to a user who is participating in the Olympiad.")
     public static SystemMessageId YOU_CANNOT_SEND_A_WHISPER_TO_A_USER_WHO_IS_PARTICIPATING_IN_THE_OLYMPIAD;
 
-    @ClientString(id = 4174, message = "After about 1 minute, you will move to the Olympiad arena.")
-    public static SystemMessageId AFTER_ABOUT_1_MINUTE_YOU_WILL_MOVE_TO_THE_OLYMPIAD_ARENA;
-
-    @ClientString(id = 4175, message = "You will shortly move to the Olympiad arena.")
-    public static SystemMessageId YOU_WILL_SHORTLY_MOVE_TO_THE_OLYMPIAD_ARENA;
-
     @ClientString(id = 4176, message = "It seemed as if everything had returned to normal.")
     public static SystemMessageId IT_SEEMED_AS_IF_EVERYTHING_HAD_RETURNED_TO_NORMAL;
 
@@ -17376,6 +17370,12 @@ public final class SystemMessageId {
 
     @ClientString(id = 4172, message = "You cannot chat while participating in the Olympiad.")
     public static SystemMessageId YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD;
+
+    @ClientString(id = 4174, message = "After about 1 minute, you will move to the Olympiad arena.")
+    public static SystemMessageId AFTER_ABOUT_1_MINUTE_YOU_WILL_MOVE_TO_THE_OLYMPIAD_ARENA;
+
+    @ClientString(id = 4175, message = "You will shortly move to the Olympiad arena.")
+    public static SystemMessageId YOU_WILL_SHORTLY_MOVE_TO_THE_OLYMPIAD_ARENA;
 
     @ClientString(id = 4201, message = "You are not in a party.")
     public static SystemMessageId YOU_ARE_NOT_IN_A_PARTY;

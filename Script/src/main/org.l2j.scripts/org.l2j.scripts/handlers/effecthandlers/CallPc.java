@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.holders.SummonRequestHolder;
+import org.l2j.gameserver.model.holders.SummonRequest;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
@@ -74,7 +74,7 @@ public final class CallPc extends AbstractEffect {
                 target.sendPacket( getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(itemId));
             }
 
-            target.addScript(new SummonRequestHolder(player, skill));
+            target.addRequest(new SummonRequest(player, skill));
             target.sendPacket(new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT).addString(player.getName()).addZoneName(player.getX(), player.getY(), player.getZ())
                     .addTime(30000).addRequesterId(player.getObjectId()));
         }
@@ -105,7 +105,7 @@ public final class CallPc extends AbstractEffect {
             return false;
         }
 
-        if (target.isFlyingMounted() || target.isInTraingCamp() || target.isInTimedHuntingZone()) {
+        if (target.isFlyingMounted() || target.isInTimedHuntingZone()) {
             creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
             return false;
         }

@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,28 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.holders;
-
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.model.actor.instance.Player;
+package org.l2j.gameserver.engine.olympiad;
 
 /**
- * @author UnAfraid
+ * @author JoeAlisson
  */
-public class SummonRequestHolder {
-    private final Player _target;
-    private final Skill _skill;
-
-    public SummonRequestHolder(Player destination, Skill skill) {
-        _target = destination;
-        _skill = skill;
-    }
-
-    public Player getTarget() {
-        return _target;
-    }
-
-    public Skill getSkill() {
-        return _skill;
-    }
+public enum MatchState  {
+    CREATED,
+    STARTED,
+    WARM_UP
 }

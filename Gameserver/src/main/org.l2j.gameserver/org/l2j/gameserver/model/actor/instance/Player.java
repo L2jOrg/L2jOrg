@@ -100,7 +100,6 @@ import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stat;
-import org.l2j.gameserver.model.variables.AccountVariables;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -116,7 +115,6 @@ import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
-import org.l2j.gameserver.settings.AttendanceSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -137,6 +135,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.Map.Entry;
@@ -1133,19 +1132,12 @@ public final class Player extends Playable {
     private static final String RESTORE_CHAR_HENNAS = "SELECT slot,symbol_id FROM character_hennas WHERE charId=? AND class_index=?";
     private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
 
-    // Character Recipe List Save
-    private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
+
     private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
     private static final String RESTORE_CHAR_RECIPE_SHOP = "SELECT * FROM character_recipeshoplist WHERE charId=? ORDER BY `index`";
 
     // during fall validations will be disabled for 1000 ms.
     private static final int FALLING_VALIDATION_DELAY = 1000;
-    // Training Camp
-    private static final String TRAINING_CAMP_VAR = "TRAINING_CAMP";
-    private static final String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
-    // Attendance Reward system
-    private static final String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
-    private static final String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
 
     private final ReentrantLock _subclassLock = new ReentrantLock();
     private final ContactList _contactList = new ContactList(this);
@@ -1407,7 +1399,7 @@ public final class Player extends Playable {
     private long _teleportProtectEndTime = 0;
     private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
     @SuppressWarnings("rawtypes")
-    private volatile Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events;
+    private volatile Map<Class<? extends AbstractEvent>, AbstractEvent> _events;
     private boolean _isOnCustomEvent = false;
     // protects a char from aggro mobs when getting up from fake death
     private long _recentFakeDeathEndTime = 0;
@@ -5653,11 +5645,6 @@ public final class Player extends Playable {
         storeItemReuseDelay();
         if (Config.STORE_RECIPE_SHOPLIST) {
             storeRecipeShopList();
-        }
-
-        final AccountVariables aVars = getScript(AccountVariables.class);
-        if (aVars != null) {
-            aVars.storeMe();
         }
 
         if(nonNull(spirits)) {
@@ -10078,7 +10065,7 @@ public final class Player extends Playable {
     @Override
     public boolean canRevive() {
         if (_events != null) {
-            for (AbstractEvent<?> listener : _events.values()) {
+            for (AbstractEvent listener : _events.values()) {
                 if (listener.isOnEvent(this) && !listener.canRevive(this)) {
                     return false;
                 }
@@ -10114,7 +10101,7 @@ public final class Player extends Playable {
             return true;
         }
         if (_events != null) {
-            for (AbstractEvent<?> listener : _events.values()) {
+            for (AbstractEvent listener : _events.values()) {
                 if (listener.isOnEvent(this)) {
                     return true;
                 }
@@ -10128,7 +10115,7 @@ public final class Player extends Playable {
             return true;
         }
         if (_events != null) {
-            for (AbstractEvent<?> listener : _events.values()) {
+            for (AbstractEvent listener : _events.values()) {
                 if (listener.isOnEvent(this) && listener.isBlockingExit(this)) {
                     return true;
                 }
@@ -10142,7 +10129,7 @@ public final class Player extends Playable {
             return true;
         }
         if (_events != null) {
-            for (AbstractEvent<?> listener : _events.values()) {
+            for (AbstractEvent listener : _events.values()) {
                 if (listener.isOnEvent(this) && listener.isBlockingDeathPenalty(this)) {
                     return true;
                 }
@@ -10173,20 +10160,6 @@ public final class Player extends Playable {
         getDAO(PlayerVariablesDAO.class).save(variables);
     }
 
-    /**
-     * @return {@code true} if {@link AccountVariables} instance is attached to current player's scripts, {@code false} otherwise.
-     */
-    public boolean hasAccountVariables() {
-        return getScript(AccountVariables.class) != null;
-    }
-
-    /**
-     * @return {@link AccountVariables} instance containing parameters regarding player.
-     */
-    public AccountVariables getAccountVariables() {
-        final AccountVariables vars = getScript(AccountVariables.class);
-        return vars != null ? vars : addScript(new AccountVariables(getAccountName()));
-    }
 
     @Override
     public int getId() {
@@ -10383,7 +10356,7 @@ public final class Player extends Playable {
      * @return {@code true} if item object id is currently in use by some request, {@code false} otherwise.
      */
     public boolean isProcessingItem(int objectId) {
-        return nonNull(requests) && requests.values().stream().anyMatch(req -> req.isUsing(objectId));
+        return nonNull(requests) && requests.values().stream().anyMatch(req -> req.isUsingItem(objectId));
     }
 
     /**
@@ -10393,7 +10366,7 @@ public final class Player extends Playable {
      */
     public void removeRequestsThatProcessesItem(int objectId) {
         if (requests != null) {
-            requests.values().removeIf(req -> req.isUsing(objectId));
+            requests.values().removeIf(req -> req.isUsingItem(objectId));
         }
     }
 
@@ -10474,7 +10447,7 @@ public final class Player extends Playable {
      * @param event
      * @return {@code true} if event is successfuly registered, {@code false} in case events map is not initialized yet or event is not registered
      */
-    public boolean registerOnEvent(AbstractEvent<?> event) {
+    public boolean registerOnEvent(AbstractEvent event) {
         if (_events == null) {
             synchronized (this) {
                 if (_events == null) {
@@ -10489,7 +10462,7 @@ public final class Player extends Playable {
      * @param event
      * @return {@code true} if event is successfuly removed, {@code false} in case events map is not initialized yet or event is not registered
      */
-    public boolean removeFromEvent(AbstractEvent<?> event) {
+    public boolean removeFromEvent(AbstractEvent event) {
         if (_events == null) {
             return false;
         }
@@ -10501,7 +10474,7 @@ public final class Player extends Playable {
      * @param clazz
      * @return the event instance or null in case events map is not initialized yet or event is not registered
      */
-    public <T extends AbstractEvent<?>> T getEvent(Class<T> clazz) {
+    public <T extends AbstractEvent> T getEvent(Class<T> clazz) {
         if (_events == null) {
             return null;
         }
@@ -10512,7 +10485,7 @@ public final class Player extends Playable {
     /**
      * @return the first event that player participates on or null if he doesn't
      */
-    public AbstractEvent<?> getEvent() {
+    public AbstractEvent getEvent() {
         if (_events == null) {
             return null;
         }
@@ -10524,7 +10497,7 @@ public final class Player extends Playable {
      * @param clazz
      * @return {@code true} if player is registered on specified event, {@code false} in case events map is not initialized yet or event is not registered
      */
-    public boolean isOnEvent(Class<? extends AbstractEvent<?>> clazz) {
+    public boolean isOnEvent(Class<? extends AbstractEvent> clazz) {
         if (_events == null) {
             return false;
         }
@@ -10581,90 +10554,22 @@ public final class Player extends Playable {
         addStatusUpdateValue(StatusUpdateType.CUR_CP);
     }
 
-    public TrainingHolder getTraingCampInfo() {
-        final String info = getAccountVariables().getString(TRAINING_CAMP_VAR, null);
-        if (info == null) {
-            return null;
-        }
-        return new TrainingHolder(Integer.parseInt(info.split(";")[0]), Integer.parseInt(info.split(";")[1]), Integer.parseInt(info.split(";")[2]), Long.parseLong(info.split(";")[3]), Long.parseLong(info.split(";")[4]));
+    public boolean canReceiveAttendance() {
+        return isNull(account.nextAttendance()) || LocalDateTime.now().isAfter(account.nextAttendance());
     }
 
-    public void setTraingCampInfo(TrainingHolder holder) {
-        getAccountVariables().set(TRAINING_CAMP_VAR, holder.getObjectId() + ";" + holder.getClassIndex() + ";" + holder.getLevel() + ";" + holder.getStartTime() + ";" + holder.getEndTime());
+    public byte lastAttendanceReward() {
+        return account.lastAttendanceReward();
     }
 
-    public void removeTraingCampInfo() {
-        getAccountVariables().remove(TRAINING_CAMP_VAR);
-    }
-
-    public long getTraingCampDuration() {
-        return getAccountVariables().getLong(TRAINING_CAMP_DURATION, 0);
-    }
-
-    public void setTraingCampDuration(long duration) {
-        getAccountVariables().set(TRAINING_CAMP_DURATION, duration);
-    }
-
-    public void resetTraingCampDuration() {
-        getAccountVariables().remove(TRAINING_CAMP_DURATION);
-    }
-
-    public boolean isInTraingCamp() {
-        return falseIfNullOrElse(getTraingCampInfo(), t -> t.getEndTime() > System.currentTimeMillis());
-    }
-
-    public AttendanceInfoHolder getAttendanceInfo() {
-        // Get reset time.
-        final Calendar calendar = Calendar.getInstance();
-        if ((calendar.get(Calendar.HOUR_OF_DAY) < 6) && (calendar.get(Calendar.MINUTE) < 30)) {
-            calendar.add(Calendar.DAY_OF_MONTH, -1);
-        }
-        calendar.set(Calendar.HOUR_OF_DAY, 6);
-        calendar.set(Calendar.MINUTE, 30);
-        calendar.set(Calendar.SECOND, 0);
-        calendar.set(Calendar.MILLISECOND, 0);
-
-        // Get last player reward time.
-        final long receiveDate;
-        int rewardIndex;
-        if (getSettings(AttendanceSettings.class).shareAccount()) {
-            receiveDate = getAccountVariables().getLong(ATTENDANCE_DATE_VAR, 0);
-            rewardIndex = getAccountVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
-        } else {
-            receiveDate = getAttendanceDate();
-            rewardIndex = getAttendanceIndex();
+    public void updateAttendanceReward(byte rewardIndex) {
+        var now = LocalDateTime.now();
+        if(now.getHour() > 6 || (now.getHour() == 6 && now.getMinute() > 30) ) {
+            now = now.plusDays(1);
         }
 
-        // Check if player can receive reward today.
-        boolean canBeRewarded = false;
-        if (calendar.getTimeInMillis() > receiveDate) {
-            canBeRewarded = true;
-            // Reset index if max is reached.
-            if (rewardIndex >= (AttendanceRewardData.getInstance().getRewardsCount() - 1)) {
-                rewardIndex = 0;
-            }
-        }
-
-        return new AttendanceInfoHolder(rewardIndex, canBeRewarded);
-    }
-
-    public void setAttendanceInfo(int rewardIndex) {
-
-        final Calendar nextReward = Calendar.getInstance();
-        nextReward.set(Calendar.MINUTE, 30);
-        if (nextReward.get(Calendar.HOUR_OF_DAY) >= 6)
-        {
-            nextReward.add(Calendar.DATE, 1);
-        }
-        nextReward.set(Calendar.HOUR_OF_DAY, 6);
-
-        if (getSettings(AttendanceSettings.class).shareAccount()) {
-            getAccountVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
-            getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
-        } else {
-            setAttendanceDate(nextReward.getTimeInMillis());
-            setAttendanceIndex(rewardIndex);
-        }
+        account.setLastAttendanceReward(rewardIndex);
+        account.setNextAttendance(now.withHour(6).withMinute(30).withSecond(0));
     }
 
     public boolean isFriend(Player player) {

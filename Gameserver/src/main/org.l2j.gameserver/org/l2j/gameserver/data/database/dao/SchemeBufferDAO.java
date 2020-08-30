@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,25 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.holders;
+package org.l2j.gameserver.data.database.dao;
+
+import org.l2j.commons.database.DAO;
+import org.l2j.commons.database.annotation.Query;
+
+import java.sql.ResultSet;
+import java.util.function.Consumer;
 
 /**
- * @author Mobius
+ * @author JoeAlisson
  */
-public class AttendanceInfoHolder {
-    private final int _rewardIndex;
-    private final boolean _rewardAvailable;
+public interface SchemeBufferDAO extends DAO<Object> {
 
-    public AttendanceInfoHolder(int rewardIndex, boolean rewardAvailable) {
-        _rewardIndex = rewardIndex;
-        _rewardAvailable = rewardAvailable;
-    }
+    @Query("SELECT * FROM buffer_schemes")
+    void loadAll(Consumer<ResultSet> consumer);
 
-    public int getRewardIndex() {
-        return _rewardIndex;
-    }
-
-    public boolean isRewardAvailable() {
-        return _rewardAvailable;
-    }
+    @Query("TRUNCATE TABLE buffer_schemes")
+    void deleteAll();
 }

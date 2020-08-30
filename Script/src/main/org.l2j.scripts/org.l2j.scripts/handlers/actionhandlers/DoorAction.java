@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
-import org.l2j.gameserver.model.holders.DoorRequestHolder;
+import org.l2j.gameserver.model.holders.DoorRequest;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 
 import static org.l2j.gameserver.network.SystemMessageId.WOULD_YOU_LIKE_TO_CLOSE_THE_GATE;
@@ -37,12 +37,12 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 public class DoorAction implements IActionHandler
 {
     @Override
-    public boolean action(Player activeChar, WorldObject target, boolean interact)
+    public boolean action(Player player, WorldObject target, boolean interact)
     {
         // Check if the Player already target the Folk
-        if (activeChar.getTarget() != target)
+        if (player.getTarget() != target)
         {
-            activeChar.setTarget(target);
+            player.setTarget(target);
         }
         else if (interact)
         {
@@ -50,29 +50,28 @@ public class DoorAction implements IActionHandler
             final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByDoorId(door.getId());
             // MyTargetSelected my = new MyTargetSelected(getObjectId(), activeChar.getLevel());
             // activeChar.sendPacket(my);
-            if (target.isAutoAttackable(activeChar))
+            if (target.isAutoAttackable(player))
             {
-                if (Math.abs(activeChar.getZ() - target.getZ()) < 400)
+                if (Math.abs(player.getZ() - target.getZ()) < 400)
                 {
-                    activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+                    player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
                 }
             }
-            else if ((activeChar.getClan() != null) && (clanHall != null) && (activeChar.getClanId() == clanHall.getOwnerId()))
+            else if ((player.getClan() != null) && (clanHall != null) && (player.getClanId() == clanHall.getOwnerId()))
             {
-                if (!isInsideRadius2D(door, activeChar, Npc.INTERACTION_DISTANCE))
+                if (!isInsideRadius2D(door, player, Npc.INTERACTION_DISTANCE))
                 {
-                    activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
+                    player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
                 }
-                else
-                {
-                    activeChar.addScript(new DoorRequestHolder(door));
+                else {
+                    player.addRequest(new DoorRequest(player, door));
                     if (!door.isOpen())
                     {
-                        activeChar.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_OPEN_THE_GATE));
+                        player.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_OPEN_THE_GATE));
                     }
                     else
                     {
-                        activeChar.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_CLOSE_THE_GATE));
+                        player.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_CLOSE_THE_GATE));
                     }
                 }
             }

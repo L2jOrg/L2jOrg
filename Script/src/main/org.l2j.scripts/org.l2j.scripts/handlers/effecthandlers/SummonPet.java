@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.holders.PetItemHolder;
+import org.l2j.gameserver.model.holders.PetItemRequest;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
@@ -73,13 +73,13 @@ public final class SummonPet extends AbstractEffect {
             return;
         }
 
-        final PetItemHolder holder = player.removeScript(PetItemHolder.class);
-        if (isNull(holder)) {
+        final PetItemRequest request = player.getRequest(PetItemRequest.class);
+        if (isNull(request)) {
             LOGGER.warn("Summoning pet without attaching PetItemHandler!", new Throwable());
             return;
         }
-
-        final Item collar = holder.getItem();
+        player.removeRequest(PetItemRequest.class);
+        final Item collar = request.getItem();
         if (player.getInventory().getItemByObjectId(collar.getObjectId()) != collar) {
             LOGGER.warn("Player: {} is trying to summon pet from item that he doesn't owns.", player);
             return;

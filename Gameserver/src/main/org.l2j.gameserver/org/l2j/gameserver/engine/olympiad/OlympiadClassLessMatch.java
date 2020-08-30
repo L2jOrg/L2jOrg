@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,21 +16,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.holders;
+package org.l2j.gameserver.engine.olympiad;
 
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.SystemMessageId;
+
+import static java.util.Objects.isNull;
 
 /**
- * @author UnAfraid
+ * @author JoeAlisson
  */
-public class PetItemHolder {
-    private final Item _item;
+class OlympiadClassLessMatch extends OlympiadMatch {
 
-    public PetItemHolder(Item item) {
-        _item = item;
+    private Player red;
+    private Player blue;
+
+    OlympiadClassLessMatch() {
+
     }
 
-    public Item getItem() {
-        return _item;
+    @Override
+    public void addParticipant(Player player)  {
+        if(isNull(red)) {
+            red = player;
+        } else {
+            blue = player;
+        }
+    }
+
+    @Override
+    public void sendMessage(SystemMessageId messageId) {
+        red.sendPacket(messageId);
+        blue.sendPacket(messageId);
     }
 }

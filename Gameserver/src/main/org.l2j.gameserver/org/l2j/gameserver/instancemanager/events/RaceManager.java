@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.quest.Event;
 /**
  * @author Mobius
  */
-public class RaceManager extends AbstractEventManager<AbstractEvent<?>> {
+public class RaceManager extends AbstractEventManager<AbstractEvent> {
     private RaceManager() {
     }
 

@@ -1,4 +1,5 @@
 /*
+ * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -16,20 +17,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.database.dao;
+package org.l2j.gameserver.model.holders;
 
-import org.l2j.commons.database.DAO;
-import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.AccountData;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.request.AbstractRequest;
+import org.l2j.gameserver.model.item.instance.Item;
 
 /**
- * @author JoeAlisson
+ * @author UnAfraid
  */
-public interface AccountDAO extends DAO<AccountData> {
+public class PetItemRequest extends AbstractRequest {
+    private final Item _item;
 
-    @Query("DELETE FROM account_data a WHERE a.account NOT IN (SELECT account_name FROM characters)")
-    int deleteWithoutAccount();
+    public PetItemRequest(Player player, Item item) {
+        super(player);
+        _item = item;
+    }
 
-    @Query("SELECT * FROM account_data WHERE account = :account:")
-    AccountData findById(String account);
+    public Item getItem() {
+        return _item;
+    }
+
+    @Override
+    public boolean isUsingItem(int objectId) {
+        return _item.getObjectId() == objectId;
+    }
 }

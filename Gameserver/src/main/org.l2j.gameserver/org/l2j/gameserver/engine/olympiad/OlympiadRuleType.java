@@ -27,6 +27,10 @@ public enum OlympiadRuleType {
     CLASS,
     MAX;
 
+    public int participantCount() {
+        return this == TEAM ? 6 : 2;
+    }
+
     public static OlympiadRuleType of(byte ruleType) {
         return switch (ruleType) {
             case 0 -> TEAM;

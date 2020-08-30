@@ -68,6 +68,8 @@ import org.l2j.gameserver.world.zone.type.TaxZone;
 
 import java.util.List;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -142,6 +144,7 @@ public class Npc extends Creature {
      */
     private TaxZone _taxZone = null;
     private int scriptValue = 0;
+    private NpcVariables variables;
 
     /**
      * Constructor of Folk (use Creature constructor).<br>
@@ -1153,15 +1156,17 @@ public class Npc extends Creature {
      * @return {@code true} if {@link NpcVariables} instance is attached to current player's scripts, {@code false} otherwise.
      */
     public boolean hasVariables() {
-        return getScript(NpcVariables.class) != null;
+        return nonNull(variables);
     }
 
     /**
      * @return {@link NpcVariables} instance containing parameters regarding NPC.
      */
     public NpcVariables getVariables() {
-        final NpcVariables vars = getScript(NpcVariables.class);
-        return vars != null ? vars : addScript(new NpcVariables());
+        if(isNull(variables)) {
+            variables = new NpcVariables();
+        }
+        return variables;
     }
 
     /**

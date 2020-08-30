@@ -75,7 +75,7 @@ public final class Config {
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
     private static final String SERVER_CONFIG_FILE = "config/server.properties";
-    private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
+
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
     private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 
@@ -604,11 +604,6 @@ public final class Config {
     public static boolean DISABLE_OVER_ENCHANTING;
     public static int[] AUGMENTATION_BLACKLIST;
     public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
-    public static boolean TRAINING_CAMP_ENABLE;
-
-    public static int TRAINING_CAMP_MAX_DURATION;
-    public static double TRAINING_CAMP_EXP_MULTIPLIER;
-    public static double TRAINING_CAMP_SP_MULTIPLIER;
 
     // Antharas
     public static int ANTHARAS_WAIT_TIME;
@@ -1145,15 +1140,6 @@ public final class Config {
         STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);
 
         PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
-
-        // Load Training Camp config file (if exists)
-        final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);
-
-        TRAINING_CAMP_ENABLE = trainingCampSettings.getBoolean("TrainingCampEnable", false);
-
-        TRAINING_CAMP_MAX_DURATION = trainingCampSettings.getInt("TrainingCampDuration", 18000);
-        TRAINING_CAMP_EXP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampExpMultiplier", 1.0);
-        TRAINING_CAMP_SP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampSpMultiplier", 1.0);
 
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);

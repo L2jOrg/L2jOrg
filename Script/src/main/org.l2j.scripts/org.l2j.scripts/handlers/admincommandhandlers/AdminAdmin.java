@@ -21,7 +21,7 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
-import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
@@ -119,7 +119,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_saveolymp"))
 		{
-			OlympiadEngine.getInstance().saveOlympiadStatus();
+			Olympiad.getInstance().saveOlympiadStatus();
 			BuilderUtil.sendSysMessage(activeChar, "olympiad system saved.");
 		}
 		else if (command.startsWith("admin_sethero"))

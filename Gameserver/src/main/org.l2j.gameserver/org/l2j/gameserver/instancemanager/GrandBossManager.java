@@ -38,7 +38,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
-
 /**
  * Grand Boss manager.
  *

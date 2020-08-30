@@ -21,6 +21,8 @@ package org.l2j.gameserver.data.database.data;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
 
+import java.time.LocalDateTime;
+
 @Table("account_data")
 public class AccountData {
 
@@ -40,6 +42,12 @@ public class AccountData {
 
     @Column("sec_auth_attempts")
     private int secAuthAttempts;
+
+    @Column("next_attendance")
+    private LocalDateTime nextAttendance;
+
+    @Column("last_attendance_reward")
+    private byte lastAttendanceReward;
 
     public static AccountData of(String accountName) {
         var account = new AccountData();
@@ -97,6 +105,22 @@ public class AccountData {
 
     public int increaseSecAuthAttempts() {
         return ++secAuthAttempts;
+    }
+
+    public LocalDateTime nextAttendance() {
+        return nextAttendance;
+    }
+
+    public void setNextAttendance(LocalDateTime nextAttendance) {
+        this.nextAttendance = nextAttendance;
+    }
+
+    public byte lastAttendanceReward() {
+        return lastAttendanceReward;
+    }
+
+    public void setLastAttendanceReward(byte reward) {
+        lastAttendanceReward = reward;
     }
 
     @Override

@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.clientpackets.attendance;
 import org.l2j.gameserver.data.xml.impl.AttendanceRewardData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -64,9 +63,8 @@ public class RequestVipAttendanceCheck extends ClientPacket {
             return;
         }
 
-        final AttendanceInfoHolder attendanceInfo = player.getAttendanceInfo();
-        final boolean isRewardAvailable = attendanceInfo.isRewardAvailable();
-        final int rewardIndex = attendanceInfo.getRewardIndex();
+        final boolean isRewardAvailable = player.canReceiveAttendance();
+        byte rewardIndex = player.lastAttendanceReward();
         final ItemHolder reward = AttendanceRewardData.getInstance().getRewards().get(rewardIndex);
         final ItemTemplate itemTemplate = ItemEngine.getInstance().getTemplate(reward.getId());
 
@@ -80,16 +78,17 @@ public class RequestVipAttendanceCheck extends ClientPacket {
 
         // Reward.
         if (isRewardAvailable) {
+            rewardIndex++;
             // Save date and index.
-            player.setAttendanceInfo(rewardIndex + 1);
+            player.updateAttendanceReward(rewardIndex);
             // Add items to player.
             player.addItem("Attendance Reward", reward, player, true);
             // Send message.
             final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_RECEIVED_YOUR_VIP_ATTENDANCE_REWARD_FOR_DAY_S1);
-            msg.addInt(rewardIndex + 1);
+            msg.addInt(rewardIndex);
             player.sendPacket(msg);
             // Send confirm packet.
-            player.sendPacket(new ExConfirmVipAttendanceCheck(isRewardAvailable, rewardIndex + 1));
+            player.sendPacket(new ExConfirmVipAttendanceCheck(isRewardAvailable, rewardIndex));
         }
     }
 }

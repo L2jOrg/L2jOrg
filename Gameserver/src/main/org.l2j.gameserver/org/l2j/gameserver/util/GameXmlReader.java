@@ -103,7 +103,7 @@ public abstract class GameXmlReader extends XmlReader {
         return parameters;
     }
 
-    protected Location parseLocation(Node n) {
+    public Location parseLocation(Node n) {
         final NamedNodeMap attrs = n.getAttributes();
         final int x = parseInt(attrs, "x");
         final int y = parseInt(attrs, "y");
@@ -112,7 +112,7 @@ public abstract class GameXmlReader extends XmlReader {
         return new Location(x, y, z, heading);
     }
 
-    protected ItemHolder parseItemHolder(Node n) {
+    public ItemHolder parseItemHolder(Node n) {
         final var attrs = n.getAttributes();
         return new ItemHolder(parseInt(attrs, "id"), parseLong(attrs, "count"), parseInt(attrs, "enchant", 0));
     }

@@ -58,7 +58,7 @@ public class AdenaDistributionRequest extends AbstractRequest {
     }
 
     @Override
-    public boolean isUsing(int objectId) {
+    public boolean isUsingItem(int objectId) {
         return objectId == _adenaObjectId;
     }
 

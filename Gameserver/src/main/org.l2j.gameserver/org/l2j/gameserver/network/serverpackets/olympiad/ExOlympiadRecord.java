@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
-import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -34,7 +34,7 @@ public class ExOlympiadRecord extends ServerPacket {
     protected void writeImpl(GameClient client)  {
         writeId(ServerExPacketId.EX_OLYMPIAD_RECORD);
 
-        var olympiadEngine = OlympiadEngine.getInstance();
+        var olympiad = Olympiad.getInstance();
         // current season
         writeInt(0); // points
         writeInt(0); // win count
@@ -59,11 +59,11 @@ public class ExOlympiadRecord extends ServerPacket {
 
         writeInt(0); // prev grade
 
-        writeInt(olympiadEngine.getSeasonYear());
-        writeInt(olympiadEngine.getSeasonMonth());
-        writeByte(olympiadEngine.isMatchInProgress());
-        writeInt(olympiadEngine.getCurrentSeason());
-        writeByte(olympiadEngine.isRegistered(client.getPlayer()));
+        writeInt(olympiad.getSeasonYear());
+        writeInt(olympiad.getSeasonMonth());
+        writeByte(olympiad.isMatchesInProgress());
+        writeInt(olympiad.getCurrentSeason());
+        writeByte(olympiad.isRegistered(client.getPlayer()));
         writeByte(OlympiadRuleType.CLASSLESS.ordinal());
     }
 }

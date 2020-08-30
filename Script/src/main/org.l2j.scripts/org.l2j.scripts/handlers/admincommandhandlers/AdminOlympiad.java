@@ -18,7 +18,7 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.*;
@@ -119,7 +119,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			BuilderUtil.sendSysMessage(activeChar, "Player " + player + " has not 3rd class.");
 			return false;
 		}
-		else if (OlympiadEngine.getInstance().getOlympiadPoints(player) <= 0)
+		else if (Olympiad.getInstance().getOlympiadPoints(player) <= 0)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Player " + player + " has 0 oly points (add them with (//addolypoints).");
 			return false;

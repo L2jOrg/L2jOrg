@@ -16,20 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.database.dao;
-
-import org.l2j.commons.database.DAO;
-import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.AccountData;
+package org.l2j.gameserver.engine.olympiad;
 
 /**
  * @author JoeAlisson
  */
-public interface AccountDAO extends DAO<AccountData> {
+public enum OlympiadState {
+    SCHEDULED,
+    STARTED,
+    MATCH_MAKING;
 
-    @Query("DELETE FROM account_data a WHERE a.account NOT IN (SELECT account_name FROM characters)")
-    int deleteWithoutAccount();
+    public boolean matchesInProgress() {
+        return this == STARTED || this == MATCH_MAKING;
+    }
 
-    @Query("SELECT * FROM account_data WHERE account = :account:")
-    AccountData findById(String account);
 }
