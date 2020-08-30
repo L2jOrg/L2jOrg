@@ -18,6 +18,10 @@
  */
 package org.l2j.gameserver.model.instancezone;
 
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -54,15 +58,17 @@ import java.util.function.BiConsumer;
  * @author malyelfik
  */
 public class InstanceTemplate extends ListenersContainer implements IIdentifiable, INamable {
-    private final Map<Integer, DoorTemplate> _doors = new HashMap<>();
-    private final List<SpawnTemplate> _spawns = new ArrayList<>();
-    // Basic instance parameters
-    private int _templateId = -1;
-    private String _name = "UnknownInstance";
+
+    private final IntMap<DoorTemplate> doors = new HashIntMap<>();
+    private final List<SpawnTemplate> spawns = new ArrayList<>();
+
+    private final int id;
+    private final String name;
+    private final int maxWorldCount;
+
     private int _duration = -1;
     private long _emptyDestroyTime = -1;
     private int _ejectTime = Config.EJECT_DEAD_PLAYER_TIME;
-    private int _maxWorldCount = -1;
     private boolean _isPvP = false;
     private boolean _allowPlayerSummon = false;
     private float _expRate = Config.RATE_INSTANCE_XP;
@@ -80,23 +86,23 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     private List<InstanceReenterTimeHolder> _reenterData = Collections.emptyList();
     // Buff remove data
     private InstanceRemoveBuffType _removeBuffType = InstanceRemoveBuffType.NONE;
-    private List<Integer> _removeBuffExceptions = Collections.emptyList();
+    private IntSet _removeBuffExceptions = Containers.emptyIntSet();
     // Conditions
     private List<Condition> _conditions = Collections.emptyList();
     private int _groupMask = GroupType.NONE.getMask();
 
-    /**
-     * @param set
-     */
-    public InstanceTemplate(StatsSet set) {
-        _templateId = set.getInt("id", 0);
-        _name = set.getString("name", null);
-        _maxWorldCount = set.getInt("maxWorlds", -1);
+
+    public InstanceTemplate() {
+        id = 0;
+        name = null;
+        maxWorldCount = -1;
     }
 
-    // -------------------------------------------------------------
-    // Setters
-    // -------------------------------------------------------------
+    public InstanceTemplate(int id, String name, int maxWorld) {
+        this.id = id;
+        this.name = name;
+        maxWorldCount = maxWorld;
+    }
 
     /**
      * Allow summoning players (that are out of instance) to instance world by players inside.
@@ -123,7 +129,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param template   door template
      */
     public void addDoor(int templateId, DoorTemplate template) {
-        _doors.put(templateId, template);
+        doors.put(templateId, template);
     }
 
     /**
@@ -133,7 +139,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param spawns list of NPC spawn data
      */
     public void addSpawns(List<SpawnTemplate> spawns) {
-        _spawns.addAll(spawns);
+        this.spawns.addAll(spawns);
     }
 
     /**
@@ -177,7 +183,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param type          type of list like blacklist, whitelist, ... (see {@link InstanceRemoveBuffType} for more info)
      * @param exceptionList
      */
-    public void setRemoveBuff(InstanceRemoveBuffType type, List<Integer> exceptionList) {
+    public void setRemoveBuff(InstanceRemoveBuffType type, IntSet exceptionList) {
         _removeBuffType = type;
         _removeBuffExceptions = exceptionList;
     }
@@ -231,23 +237,12 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     // -------------------------------------------------------------
     @Override
     public int getId() {
-        return _templateId;
+        return id;
     }
 
     @Override
     public String getName() {
-        return _name;
-    }
-
-    /**
-     * Set name of instance world.
-     *
-     * @param name instance name
-     */
-    public void setName(String name) {
-        if ((name != null) && !name.isEmpty()) {
-            _name = name;
-        }
+        return name;
     }
 
     /**
@@ -402,15 +397,15 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      *
      * @return map in form <i>doorId, door template</i>
      */
-    public Map<Integer, DoorTemplate> getDoors() {
-        return _doors;
+    public IntMap<DoorTemplate> getDoors() {
+        return doors;
     }
 
     /**
      * @return list of all spawn templates
      */
     public List<SpawnTemplate> getSpawns() {
-        return _spawns;
+        return spawns;
     }
 
     /**
@@ -419,7 +414,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @return count of worlds
      */
     public int getMaxWorlds() {
-        return _maxWorldCount;
+        return maxWorldCount;
     }
 
     /**
@@ -726,6 +721,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     @Override
     public String toString() {
-        return "ID: " + _templateId + " Name: " + _name;
+        return "ID: " + id + " Name: " + name;
     }
 }

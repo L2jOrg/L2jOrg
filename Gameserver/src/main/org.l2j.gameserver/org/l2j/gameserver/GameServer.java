@@ -176,7 +176,7 @@ public class GameServer {
         StaticObjectData.getInstance();
 
         printSection("Instance");
-        InstanceManager.getInstance();
+        InstanceManager.init();
 
         /*printSection("Olympiad");
         Hero.getInstance();*/

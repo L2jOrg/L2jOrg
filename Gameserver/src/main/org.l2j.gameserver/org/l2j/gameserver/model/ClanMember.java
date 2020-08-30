@@ -557,22 +557,7 @@ public class ClanMember {
             _player.setPowerGrade(powerGrade);
         } else {
             // db save if char not logged in
-            updatePowerGrade();
-        }
-    }
-
-    /**
-     * Update the characters table of the database with power grade.
-     */
-    public void updatePowerGrade() {
-        getDAO(PlayerDAO.class).updatePowerGrade(_objectId, _powerGrade);
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE characters SET power_grade=? WHERE charId=?")) {
-            ps.setLong(1, _powerGrade);
-            ps.setInt(2, getObjectId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Could not update power _grade: " + e.getMessage(), e);
+            getDAO(PlayerDAO.class).updatePowerGrade(_objectId, _powerGrade);
         }
     }
 
