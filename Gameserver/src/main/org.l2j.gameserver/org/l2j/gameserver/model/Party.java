@@ -62,7 +62,7 @@ public class Party extends AbstractPlayerGroup {
 
     // @formatter:off
     private static final double[] BONUS_EXP_SP = {
-        1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 2.0
+        1.0, 1.6, 1.65, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2
     };
     // @formatter:on
 
