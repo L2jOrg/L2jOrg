@@ -695,22 +695,21 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public void sendInfo(Player activeChar) {
+    public void sendInfo(Player player) {
         // Check if the Player is the owner of the Pet
-        if (activeChar == _owner) {
-            activeChar.sendPacket(new PetInfo(this, isDead() ? 0 : 1));
+        if (player == _owner) {
+            player.sendPacket(new PetInfo(this, isTeleporting() ? 0 : 1));
             if (GameUtils.isPet(this)) {
-                activeChar.sendPacket(new PetItemList(getInventory().getItems()));
+                player.sendPacket(new PetItemList(getInventory().getItems()));
             }
         } else {
-            activeChar.sendPacket(new ExPetInfo(this, activeChar, 0));
+            player.sendPacket(new ExPetInfo(this, player, 0));
         }
     }
 
     @Override
     public void onTeleported() {
         super.onTeleported();
-        sendPacket(new TeleportToLocation(this, getX(), getY(), getZ(), getHeading()));
     }
 
     @Override
