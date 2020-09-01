@@ -296,6 +296,7 @@ open module org.l2j.scripts {
 
             org.l2j.scripts.ai.areas.CrumaTower.SummonPc,
             org.l2j.scripts.ai.areas.DragonValley.CaveMaiden,
+            org.l2j.scripts.ai.areas.DragonValley.LordIshka,
             org.l2j.scripts.ai.areas.DungeonOfAbyss.SoulTracker.Ingrit,
             org.l2j.scripts.ai.areas.DungeonOfAbyss.SoulTracker.Iris,
             org.l2j.scripts.ai.areas.DungeonOfAbyss.SoulTracker.Magrit,

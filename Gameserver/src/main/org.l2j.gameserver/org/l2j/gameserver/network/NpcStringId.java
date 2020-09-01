@@ -24758,6 +24758,9 @@ public final class NpcStringId {
     @ClientString(id = 1803290, message = "My servants can keep me safe! I have nothing to fear!")
     public static NpcStringId MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR;
 
+    @ClientString(id = 1803770, message = "Glory to the heroes who have defeated Lord Ishka!")
+    public static NpcStringId GLORY_TO_THE_HEROES_WHO_HAVE_DEFEATED_LORD_ISHKA;
+
 
     private static IntMap<NpcStringId> VALUES = new HashIntMap<>();
 
