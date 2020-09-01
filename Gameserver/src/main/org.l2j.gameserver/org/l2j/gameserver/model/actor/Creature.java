@@ -625,16 +625,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         setTarget(null);
 
         setIsTeleporting(true);
-        World.getInstance().removeVisibleObject(this, this.getWorldRegion());
-        setWorldRegion(null);
-
-        getAI().setIntention(AI_INTENTION_ACTIVE);
 
         // Adjust position a bit
         z += 5;
 
         // Send teleport packet to player and visible players
         broadcastPacket(new TeleportToLocation(this, x, y, z, heading));
+
+        World.getInstance().removeVisibleObject(this, this.getWorldRegion());
+        setWorldRegion(null);
+
+        getAI().setIntention(AI_INTENTION_ACTIVE);
 
         // Change instance world
         if (getInstanceWorld() != instance) {
@@ -652,8 +653,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Send teleport finished packet to player
         sendPacket(new ExTeleportToLocationActivate(this));
 
-        // allow recall of the detached characters
-        if (!isPlayer(this) || ((getActingPlayer().getClient() != null))) {
+        if (!isPlayer(this)) {
             onTeleported();
         }
         revalidateZone(true);

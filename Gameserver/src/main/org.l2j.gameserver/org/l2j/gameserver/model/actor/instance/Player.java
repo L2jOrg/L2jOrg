@@ -8127,19 +8127,19 @@ public final class Player extends Playable {
             pet.updateAndBroadcastStatus(0);
         }
 
-        getServitors().values().forEach(s ->
-        {
-            s.setFollowStatus(false);
-            s.teleToLocation(getLocation(), false);
-            ((SummonAI) s.getAI()).setStartFollowController(true);
-            s.setFollowStatus(true);
-            s.setInstance(getInstanceWorld());
-            s.updateAndBroadcastStatus(0);
-        });
+        if(nonNull(_servitors)) {
+            for (Summon summon : _servitors.values()) {
+                summon.setFollowStatus(false);
+                summon.teleToLocation(getLocation(), false);
+                ((SummonAI) summon.getAI()).setStartFollowController(true);
+                summon.setFollowStatus(true);
+                summon.setInstance(getInstanceWorld());
+                summon.updateAndBroadcastStatus(0);
+            }
+        }
 
         // Close time limited zone window.
-        if (!isInTimedHuntingZone())
-        {
+        if (!isInTimedHuntingZone()) {
             stopTimedHuntingZoneTask();
         }
 
