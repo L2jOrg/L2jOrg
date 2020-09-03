@@ -24,6 +24,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -195,7 +196,14 @@ public class VariationData extends GameXmlReader {
      * @return VariationInstance
      */
     public VariationInstance generateRandomVariation(Variation variation, Item targetItem) {
-        final VariationWeaponType weaponType = ((targetItem.getWeaponItem() != null) && targetItem.getWeaponItem().isMagicWeapon()) ? VariationWeaponType.MAGE : VariationWeaponType.WARRIOR;
+       VariationWeaponType weaponType = null;
+        if(targetItem.getWeaponItem() != null && targetItem.getWeaponItem().isMagicWeapon()) {
+            weaponType  = VariationWeaponType.MAGE;
+        } else if(targetItem.getWeaponItem() == null && targetItem.isArmor() && targetItem.getItemType() == ArmorType.NONE && targetItem.getEnchantLevel() >= 10) { // Ici le test pour savoir quel type d'item c'est, Pareil j'ai écrit au pif pour l'exemple
+            weaponType  = VariationWeaponType.CLOAK;
+        } else {
+            weaponType = VariationWeaponType.WARRIOR;
+        }
         return generateRandomVariation(variation, weaponType);
     }
 
