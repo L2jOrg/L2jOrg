@@ -118,7 +118,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         writeInt(player.getObjectId());
         writeInt(initSize);
-        writeShort(0x1B);
+        writeShort(0x1C);
         writeBytes(mask);
 
         if (containsMask(UserInfoType.RELATION)) {
