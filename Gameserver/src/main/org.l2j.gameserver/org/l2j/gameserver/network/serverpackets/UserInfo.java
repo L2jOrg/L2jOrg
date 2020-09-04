@@ -149,11 +149,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeShort(0x01); // CHA
         }
 
-        if(containsMask(UserInfoType.UNK)) {
-          writeShort(0); // block lenght ?
-          writeSizedString(""); // some string ?
-           }
-
         if (containsMask(UserInfoType.MAX_HPCPMP)) {
             writeShort(UserInfoType.MAX_HPCPMP.getBlockLength());
             writeInt(player.getMaxHp());
@@ -383,6 +378,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_MEN) + player.getHennaValue(BaseStats.MEN));
             writeShort(0x01);
             writeShort(0x01);
+        }
+        
+        if(containsMask(UserInfoType.UNK)) {
+          writeShort(0);
+          writeSizedString(""); // some string or craft points
         }
     }
 
