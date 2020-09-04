@@ -134,6 +134,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeInt(player.getBaseTemplate().getClassId().getRootClassId().getId());
             writeInt(player.getClassId().getId());
             writeInt(player.getLevel());
+            writeInt(-1); // unk
         }
 
         if (containsMask(UserInfoType.BASE_STATS)) {
@@ -147,6 +148,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeShort(0x01); // LUC
             writeShort(0x01); // CHA
         }
+
+        if(containsMask(UserInfoType.UNK)) {
+          writeShort(0); // block lenght ?
+          writeSizedString(""); // some string ?
+           }
 
         if (containsMask(UserInfoType.MAX_HPCPMP)) {
             writeShort(UserInfoType.MAX_HPCPMP.getBlockLength());

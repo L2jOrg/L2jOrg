@@ -480,6 +480,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_RANKING_CHAR_INFO(ExRankCharInfo::new, ConnectionState.IN_GAME_STATES),
     EX_RANKING_CHAR_HISTORY(ExRequestRankingCharHistory::new, ConnectionState.IN_GAME_STATES),
     EX_RANKING_CHAR_RANKERS(ExRankingCharRankers::new, ConnectionState.IN_GAME_STATES),
+    EX_RANKING_CHAR_SPAWN_BUFFZONE_NPC(null, ConnectionState.IN_GAME_STATES),
+    EX_RANKING_CHAR_BUFFZONE_NPC_POSITION(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_MERCENARY_RECRUIT_INFO_SET(null, ConnectionState.IN_GAME_STATES),
     EX_MERCENARY_CASTLEWAR_CASTLE_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(null, ConnectionState.IN_GAME_STATES),
@@ -507,6 +509,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MULTI_SELL_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_SAVE_ITEM_ANNOUNCE_SETTING(null, ConnectionState.IN_GAME_STATES),
     EX_OLYMPIAD_UI(null, ConnectionState.IN_GAME_STATES),
+    EX_SHARED_POSITION_SHARING_UI(null, ConnectionState.IN_GAME_STATES),
     EX_SHARED_POSITION_TELEPORT_UI(null, ConnectionState.IN_GAME_STATES),
     EX_SHARED_POSITION_TELEPORT(null, ConnectionState.IN_GAME_STATES),
     EX_AUTH_RECONNECT(null, ConnectionState.IN_GAME_STATES),
@@ -536,8 +539,20 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MABLE_GAME_RESET(null, ConnectionState.IN_GAME_STATES),
     EX_MABLE_GAME_CLOSE(null, ConnectionState.IN_GAME_STATES),
     EX_RETURN_TO_ORIGIN(null, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_PUT_ITEM(null, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_ENCHANT(null, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_CANCEL(null, ConnectionState.IN_GAME_STATES),
+    EX_PVP_RANKING_MY_INFO(null, ConnectionState.IN_GAME_STATES),
+    EX_PVP_RANKING_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_ACQUIRE_PET_SKILL(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_V3_INFO(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_ENEMY_INFO_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_ENEMY_REGISTER(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_ENEMY_DELETE(null, ConnectionState.IN_GAME_STATES),
     EX_PK_PENALTY_LIST(null, ConnectionState.IN_GAME_STATES),
-    EX_PK_PENALTY_LIST_ONLY_LOC(null, ConnectionState.IN_GAME_STATES)
+    EX_PK_PENALTY_LIST_ONLY_LOC(null, ConnectionState.IN_GAME_STATES),
+    EX_TRY_PET_EXTRACT_SYSTEM(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_V3_SET_ANNOUNCE(null, ConnectionState.IN_GAME_STATES),
     ;
 
     static final ExIncomingPackets[] PACKET_ARRAY = values();

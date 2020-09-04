@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.interfaces.IUpdateTypeComponent;
  */
 public enum UserInfoType implements IUpdateTypeComponent {
     RELATION(0x00, 4),
-    BASIC_INFO(0x01, 19),
+    BASIC_INFO(0x01, 23),
     BASE_STATS(0x02, 18),
     MAX_HPCPMP(0x03, 14),
     CURRENT_HPMPCP_EXP_SP(0x04, 38),
@@ -54,7 +54,8 @@ public enum UserInfoType implements IUpdateTypeComponent {
 
     RANKER(0x18, 6),
     STATS_POINTS(0x19, 16),
-    STATS_ABILITIES(0x1A, 18);
+    STATS_ABILITIES(0x1A, 18),
+    UNK(0x1B, 0);
 
     private final int mask;
     private final int blockLength;
