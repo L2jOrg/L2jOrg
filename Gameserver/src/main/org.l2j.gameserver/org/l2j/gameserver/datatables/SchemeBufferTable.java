@@ -52,7 +52,6 @@ public class SchemeBufferTable {
     private final IntMap<BuffSkillHolder> availableBuffs = new LinkedHashIntMap<>();
 
     private SchemeBufferTable() {
-        load();
     }
 
     private void load() {

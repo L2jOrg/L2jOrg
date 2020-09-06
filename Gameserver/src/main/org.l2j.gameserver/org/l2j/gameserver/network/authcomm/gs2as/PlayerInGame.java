@@ -30,8 +30,8 @@ public class PlayerInGame extends SendablePacket {
 
     @Override
     protected void writeImpl(AuthServerClient client) {
-        writeByte((byte)0x03);
-        writeShort((short) accounts.length);
+        writeByte(0x03);
+        writeShort(accounts.length);
         for (String account : accounts) {
             writeString(account);
         }
