@@ -26,6 +26,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.NextAction;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
@@ -35,15 +36,20 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EtcItem;
+import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.WeaponType;
+import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
@@ -214,6 +220,31 @@ public final class UseItem extends ClientPacket {
             case TWO_HAND, LEFT_HAND, RIGHT_HAND -> {
                 if (player.isMounted() || player.isDisarmed()) {
                     return false;
+                }
+                if (!item.isEquipped() && item.isWeapon() && player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
+                {
+                    final Weapon wpn = (Weapon) item.getWeaponItem();
+
+                    switch (player.getRace()) {
+                        case JIN_KAMAEL -> {
+                            if (Objects.requireNonNull(wpn).getItemType() == WeaponType.NONE) {
+                                player.sendPacket(YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                                return false;
+                            }
+                        }
+                        case DWARF, ORC -> {
+                            if (Objects.requireNonNull(wpn).getItemType() == WeaponType.RAPIER) {
+                                player.sendPacket(YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                                return false;
+                            }
+                        }
+                        case HUMAN, ELF, DARK_ELF -> {
+                            if (Objects.requireNonNull(wpn).getItemType() == WeaponType.ANCIENT_SWORD) {
+                                player.sendPacket(YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                                return false;
+                            }
+                        }
+                    }
                 }
             }
             case TALISMAN -> {
