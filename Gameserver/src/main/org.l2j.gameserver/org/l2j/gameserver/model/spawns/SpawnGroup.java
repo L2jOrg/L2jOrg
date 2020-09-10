@@ -114,7 +114,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     @Override
-    public SpawnGroup clone() {
+    public SpawnGroup clone() { // TODO change to a copy method
         final SpawnGroup group = new SpawnGroup(_name, _spawnByDefault);
 
         // Clone banned territories

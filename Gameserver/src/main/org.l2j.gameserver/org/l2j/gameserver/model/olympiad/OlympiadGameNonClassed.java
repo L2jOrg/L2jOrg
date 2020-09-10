@@ -26,6 +26,7 @@ import java.util.Set;
  * @author DS
  */
 public class OlympiadGameNonClassed extends OlympiadGameNormal {
+
     public OlympiadGameNonClassed(int id, Participant[] opponents) {
         super(id, opponents);
     }
@@ -48,5 +49,4 @@ public class OlympiadGameNonClassed extends OlympiadGameNormal {
     protected final int getDivider() {
         return Config.ALT_OLY_DIVIDER_NON_CLASSED;
     }
-
 }

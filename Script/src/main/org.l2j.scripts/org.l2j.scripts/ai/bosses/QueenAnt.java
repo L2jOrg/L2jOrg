@@ -16,12 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.bosses.QueenAnt;
+package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
@@ -73,14 +74,10 @@ public final class QueenAnt extends AbstractNpcAI
 	private static final int QUEEN_Y = 181594;
 	private static final int QUEEN_Z = -5734;
 	
-	// QUEEN Status Tracking :
-	private static final byte ALIVE = 0; // Queen Ant is spawned.
-	private static final byte DEAD = 1; // Queen Ant has been killed.
-	
 	private static Zone _zone;
 	
-	private static SkillHolder HEAL1 = new SkillHolder(4020, 1);
-	private static SkillHolder HEAL2 = new SkillHolder(4024, 1);
+	private static final SkillHolder HEAL1 = new SkillHolder(4020, 1);
+	private static final SkillHolder HEAL2 = new SkillHolder(4024, 1);
 	
 	Monster _queen = null;
 	private Monster _larva = null;
@@ -94,12 +91,12 @@ public final class QueenAnt extends AbstractNpcAI
 		addFactionCallId(NURSE);
 		
 		_zone = ZoneManager.getInstance().getZoneById(12012);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
-		final int status = GrandBossManager.getInstance().getBossStatus(QUEEN);
-		if (status == DEAD)
+		final var info = GrandBossManager.getInstance().getBossData(QUEEN);
+		final var status = GrandBossManager.getInstance().getBossStatus(QUEEN);
+		if (status == BossStatus.DEAD)
 		{
 			// load the unlock date and time for queen ant from DB
-			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long temp = info.getRespawnTime() - System.currentTimeMillis();
 			// if queen ant is locked until a certain time, mark it so and start the unlock timer
 			// the unlock time has not yet expired.
 			if (temp > 0)
@@ -110,26 +107,23 @@ public final class QueenAnt extends AbstractNpcAI
 			{
 				// the time has already expired while the server was offline. Immediately spawn queen ant.
 				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(QUEEN, ALIVE);
+				GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.ALIVE);
 				spawnBoss(queen);
 			}
 		}
 		else
 		{
-			int loc_x = info.getInt("loc_x");
-			int loc_y = info.getInt("loc_y");
-			int loc_z = info.getInt("loc_z");
-			final int heading = info.getInt("heading");
-			final double hp = info.getDouble("currentHP");
-			final double mp = info.getDouble("currentMP");
+			int loc_x = info.getX();
+			int loc_y = info.getY();
+			int loc_z = info.getZ();
 			if (!_zone.isInsideZone(loc_x, loc_y, loc_z))
 			{
 				loc_x = QUEEN_X;
 				loc_y = QUEEN_Y;
 				loc_z = QUEEN_Z;
 			}
-			final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, loc_x, loc_y, loc_z, heading, false, 0);
-			queen.setCurrentHpMp(hp, mp);
+			final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, loc_x, loc_y, loc_z, info.getHeading(), false, 0);
+			queen.setCurrentHpMp(info.getHp(), info.getMp());
 			spawnBoss(queen);
 		}
 	}
@@ -221,11 +215,10 @@ public final class QueenAnt extends AbstractNpcAI
 			}
 				break;
 		}
-			case "queen_unlock":
-		{
-			final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
-			GrandBossManager.getInstance().setBossStatus(QUEEN, ALIVE);
-			spawnBoss(queen);
+			case "queen_unlock": {
+				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
+				GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.ALIVE);
+				spawnBoss(queen);
 				break;
 			}
 			case "ANT_QUEEN_TASK":
@@ -366,16 +359,15 @@ public final class QueenAnt extends AbstractNpcAI
 		if (npcId == QUEEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
+			GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.DEAD);
 			// Calculate Min and Max respawn times randomly.
 			final long respawnTime = (Config.QUEEN_ANT_SPAWN_INTERVAL + Rnd.get(-Config.QUEEN_ANT_SPAWN_RANDOM, Config.QUEEN_ANT_SPAWN_RANDOM)) * 3600000;
 			startQuestTimer("queen_unlock", respawnTime, null, null);
 			cancelQuestTimer("action", npc, null);
 			cancelQuestTimer("heal", null, null);
 			// also save the respawn time so that the info is maintained past reboots
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(QUEEN, info);
+			final var info = GrandBossManager.getInstance().getBossData(QUEEN);
+			info.setRespawnTime(System.currentTimeMillis() + respawnTime);
 			_nurses.clear();
 			_larva.deleteMe();
 			_larva = null;

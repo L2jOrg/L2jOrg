@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.bosses.Baium;
+package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
@@ -26,9 +26,9 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.MountType;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -79,11 +79,7 @@ public final class Baium extends AbstractNpcAI
     private static final int FABRIC = 4295; // Blooded Fabric
     // Zone
     private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(70051, NoRestartZone.class); // Baium zone
-    // Status
-    private static final int ALIVE = 0;
-    private static final int WAITING = 1;
-    private static final int IN_FIGHT = 2;
-    private static final int DEAD = 3;
+
     // Locations
     private static final Location BAIUM_GIFT_LOC = new Location(115910, 17337, 10105);
     private static final Location BAIUM_LOC = new Location(116033, 17447, 10107, -25348);
@@ -118,28 +114,19 @@ public final class Baium extends AbstractNpcAI
         addSeeCreatureId(BAIUM);
         addSpellFinishedId(BAIUM);
 
-        final StatsSet info = GrandBossManager.getInstance().getStatsSet(BAIUM);
+        final var data = GrandBossManager.getInstance().getBossData(BAIUM);
 
         switch (getStatus())
         {
-            case WAITING:
-                setStatus(ALIVE);
             case ALIVE:
             {
                 addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
                 break;
             }
-            case IN_FIGHT:
+            case FIGHTING:
             {
-                final double curr_hp = info.getDouble("currentHP");
-                final double curr_mp = info.getDouble("currentMP");
-                final int loc_x = info.getInt("loc_x");
-                final int loc_y = info.getInt("loc_y");
-                final int loc_z = info.getInt("loc_z");
-                final int heading = info.getInt("heading");
-
-                _baium = (GrandBoss) addSpawn(BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
-                _baium.setCurrentHpMp(curr_hp, curr_mp);
+                _baium = (GrandBoss) addSpawn(BAIUM, data.getX(), data.getY(), data.getZ(), data.getHeading(), false, 0);
+                _baium.setCurrentHpMp(data.getHp(), data.getMp());
                 _lastAttack = System.currentTimeMillis();
                 addBoss(_baium);
 
@@ -153,7 +140,7 @@ public final class Baium extends AbstractNpcAI
             }
             case DEAD:
             {
-                final long remain = info.getLong("respawn_time") - System.currentTimeMillis();
+                final long remain = data.getRespawnTime() - System.currentTimeMillis();
                 if (remain > 0)
                 {
                     startQuestTimer("CLEAR_STATUS", remain, null, null);
@@ -179,11 +166,11 @@ public final class Baium extends AbstractNpcAI
             case "enter":
             {
                 String htmltext = null;
-                if (getStatus() == DEAD)
+                if (getStatus() == BossStatus.DEAD)
                 {
                     htmltext = "31862-03.html";
                 }
-                else if (getStatus() == IN_FIGHT)
+                else if (getStatus() == BossStatus.FIGHTING)
                 {
                     htmltext = "31862-02.html";
                 }
@@ -206,10 +193,10 @@ public final class Baium extends AbstractNpcAI
             }
             case "wakeUp":
             {
-                if (getStatus() == ALIVE)
+                if (getStatus() == BossStatus.ALIVE)
                 {
 
-                    setStatus(IN_FIGHT);
+                    setStatus(BossStatus.FIGHTING);
                     _baium = (GrandBoss) addSpawn(BAIUM, BAIUM_LOC, false, 0);
                     _baium.disableCoreAI(true);
                     addBoss(_baium);
@@ -370,7 +357,7 @@ public final class Baium extends AbstractNpcAI
                 {
                     notifyEvent("CLEAR_ZONE", null, null);
                     addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
-                    setStatus(ALIVE);
+                    setStatus(BossStatus.ALIVE);
                 }
                 else if (npc != null)
                 {
@@ -385,7 +372,7 @@ public final class Baium extends AbstractNpcAI
             }
             case "CLEAR_STATUS":
             {
-                setStatus(ALIVE);
+                setStatus(BossStatus.ALIVE);
                 addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
                 break;
             }
@@ -402,7 +389,7 @@ public final class Baium extends AbstractNpcAI
             }
             case "RESPAWN_BAIUM":
             {
-                if (getStatus() == DEAD)
+                if (getStatus() == BossStatus.DEAD)
                 {
                     setRespawn(0);
                     cancelQuestTimer("CLEAR_STATUS", null, null);
@@ -416,7 +403,7 @@ public final class Baium extends AbstractNpcAI
             }
             case "ABORT_FIGHT":
             {
-                if (getStatus() == IN_FIGHT)
+                if (getStatus() == BossStatus.FIGHTING)
                 {
                     _baium = null;
                     notifyEvent("CLEAR_ZONE", null, null);
@@ -433,7 +420,7 @@ public final class Baium extends AbstractNpcAI
             }
             case "DESPAWN_MINIONS":
             {
-                if (getStatus() == IN_FIGHT) {
+                if (getStatus() == BossStatus.FIGHTING) {
                     zone.forEachCreature(Creature::deleteMe, creature -> isNpc(creature) && creature.getId() == ARCHANGEL);
 
                     if (player != null)
@@ -532,7 +519,7 @@ public final class Baium extends AbstractNpcAI
     {
         if (zone.isCreatureInZone(killer))
         {
-            setStatus(DEAD);
+            setStatus(BossStatus.DEAD);
             addSpawn(TELE_CUBE, TELEPORT_CUBIC_LOC, false, 900000);
             zone.broadcastPacket(new PlaySound("BS01_D"));
             final long respawnTime = Config.BAIUM_SPAWN_INTERVAL * 3600000;
@@ -632,7 +619,7 @@ public final class Baium extends AbstractNpcAI
         vars.set("c_quest" + index, attacker);
     }
 
-    private int getStatus()
+    private BossStatus getStatus()
     {
         return GrandBossManager.getInstance().getBossStatus(BAIUM);
     }
@@ -642,14 +629,14 @@ public final class Baium extends AbstractNpcAI
         GrandBossManager.getInstance().addBoss(grandboss);
     }
 
-    private void setStatus(int status)
+    private void setStatus(BossStatus status)
     {
         GrandBossManager.getInstance().setBossStatus(BAIUM, status);
     }
 
     private void setRespawn(long respawnTime)
     {
-        GrandBossManager.getInstance().getStatsSet(BAIUM).set("respawn_time", (System.currentTimeMillis() + respawnTime));
+        GrandBossManager.getInstance().getBossData(BAIUM).setRespawnTime(System.currentTimeMillis() + respawnTime);
     }
 
     private void manageSkills(Npc npc)
@@ -715,19 +702,19 @@ public final class Baium extends AbstractNpcAI
             }
             else if (npc.getCurrentHp() > (npc.getMaxHp() * 0.25))
             {
-                if (Rnd.get(100) < 10)
+                if (Rnd.chance(10))
                 {
                     skillToCast = THUNDERBOLT;
                 }
-                else if (Rnd.get(100) < 10)
+                else if (Rnd.chance(10))
                 {
                     skillToCast = GROUP_HOLD;
                 }
-                else if (Rnd.get(100) < 10)
+                else if (Rnd.chance(10))
                 {
                     skillToCast = ENERGY_WAVE;
                 }
-                else if (Rnd.get(100) < 10)
+                else if (Rnd.chance(10))
                 {
                     skillToCast = EARTH_QUAKE;
                 }
@@ -736,19 +723,19 @@ public final class Baium extends AbstractNpcAI
                     skillToCast = BAIUM_ATTACK;
                 }
             }
-            else if (Rnd.get(100) < 10)
+            else if (Rnd.chance(10))
             {
                 skillToCast = THUNDERBOLT;
             }
-            else if (Rnd.get(100) < 10)
+            else if (Rnd.chance(10))
             {
                 skillToCast = GROUP_HOLD;
             }
-            else if (Rnd.get(100) < 10)
+            else if (Rnd.chance(10))
             {
                 skillToCast = ENERGY_WAVE;
             }
-            else if (Rnd.get(100) < 10)
+            else if (Rnd.chance(10))
             {
                 skillToCast = EARTH_QUAKE;
             }

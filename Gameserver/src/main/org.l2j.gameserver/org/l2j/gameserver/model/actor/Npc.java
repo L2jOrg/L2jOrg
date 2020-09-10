@@ -32,7 +32,7 @@ import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.instancemanager.RaidBossStatus;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.*;
@@ -137,7 +137,7 @@ public class Npc extends Creature {
     private NpcStringId _nameString;
 
     private StatsSet _params;
-    private RaidBossStatus _raidStatus;
+    private BossStatus _raidStatus;
 
     /**
      * Contains information about local tax payments.
@@ -1495,11 +1495,11 @@ public class Npc extends Creature {
         broadcastPacket(new ExShowChannelingEffect(this, target, state));
     }
 
-    public RaidBossStatus getRaidBossStatus() {
+    public BossStatus getRaidBossStatus() {
         return _raidStatus;
     }
 
-    public void setRaidBossStatus(RaidBossStatus status) {
+    public void setRaidBossStatus(BossStatus status) {
         _raidStatus = status;
     }
 }

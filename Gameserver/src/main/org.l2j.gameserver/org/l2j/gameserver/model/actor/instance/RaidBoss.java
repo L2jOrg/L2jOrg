@@ -71,7 +71,7 @@ public class RaidBoss extends Monster {
      */
     @Override
     protected void startMaintenanceTask() {
-        _maintenanceTask = ThreadPool.scheduleAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
+        _maintenanceTask = ThreadPool.scheduleAtFixedRate(this::checkAndReturnToSpawn, 60000, getMaintenanceInterval() + Rnd.get(5000));
     }
 
     protected void checkAndReturnToSpawn() {

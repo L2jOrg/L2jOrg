@@ -17,17 +17,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.bosses.Orfen;
+package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -79,9 +79,6 @@ public final class Orfen extends AbstractNpcAI
 	private static Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	private static Zone ZONE;
 	
-	private static final byte ALIVE = 0;
-	private static final byte DEAD = 1;
-	
 	private static final SkillHolder PARALYSIS = new SkillHolder(4064, 1);
 	private static final SkillHolder BLOW = new SkillHolder(4067, 4);
 	private static final SkillHolder ORFEN_HEAL = new SkillHolder(4516, 1);
@@ -97,12 +94,12 @@ public final class Orfen extends AbstractNpcAI
 		registerMobs(mobs);
 		_IsTeleported = false;
 		ZONE = ZoneManager.getInstance().getZoneById(12013);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
-		final int status = GrandBossManager.getInstance().getBossStatus(ORFEN);
-		if (status == DEAD)
+		final var info = GrandBossManager.getInstance().getBossData(ORFEN);
+		final var status = GrandBossManager.getInstance().getBossStatus(ORFEN);
+		if (status == BossStatus.DEAD)
 		{
 			// load the unlock date and time for Orfen from DB
-			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long temp = info.getRespawnTime() - System.currentTimeMillis();
 			// if Orfen is locked until a certain time, mark it so and start the unlock timer
 			// the unlock time has not yet expired.
 			if (temp > 0)
@@ -127,20 +124,14 @@ public final class Orfen extends AbstractNpcAI
 					loc = POS[3];
 				}
 				final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, loc, false, 0);
-				GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
+				GrandBossManager.getInstance().setBossStatus(ORFEN, BossStatus.ALIVE);
 				spawnBoss(orfen);
 			}
 		}
 		else
 		{
-			final int loc_x = info.getInt("loc_x");
-			final int loc_y = info.getInt("loc_y");
-			final int loc_z = info.getInt("loc_z");
-			final int heading = info.getInt("heading");
-			final double hp = info.getDouble("currentHP");
-			final double mp = info.getDouble("currentMP");
-			final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
-			orfen.setCurrentHpMp(hp, mp);
+			final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, info.getX(), info.getY(), info.getZ(), info.getHeading(), false, 0);
+			orfen.setCurrentHpMp(info.getHp(), info.getMp());
 			spawnBoss(orfen);
 		}
 	}
@@ -198,7 +189,7 @@ public final class Orfen extends AbstractNpcAI
 				loc = POS[3];
 			}
 			final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, loc, false, 0);
-			GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
+			GrandBossManager.getInstance().setBossStatus(ORFEN, BossStatus.ALIVE);
 			spawnBoss(orfen);
 		}
 		else if (event.equalsIgnoreCase("check_orfen_pos"))
@@ -326,21 +317,20 @@ public final class Orfen extends AbstractNpcAI
 		if (npc.getId() == ORFEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
+			GrandBossManager.getInstance().setBossStatus(ORFEN, BossStatus.DEAD);
 			// Calculate Min and Max respawn times randomly.
 			long respawnTime = Config.ORFEN_SPAWN_INTERVAL + Rnd.get(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM);
 			respawnTime *= 3600000;
 			startQuestTimer("orfen_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(ORFEN, info);
+			final var info = GrandBossManager.getInstance().getBossData(ORFEN);
+			info.setRespawnTime(System.currentTimeMillis() + respawnTime);
 			cancelQuestTimer("check_minion_loc", npc, null);
 			cancelQuestTimer("check_orfen_pos", npc, null);
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");
 		}
-		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == ALIVE) && (npc.getId() == RAIKEL_LEOS))
+		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == BossStatus.ALIVE) && (npc.getId() == RAIKEL_LEOS))
 		{
 			_minions.remove(npc);
 			startQuestTimer("spawn_minion", 360000, npc, null);

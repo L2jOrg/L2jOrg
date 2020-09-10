@@ -17,10 +17,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.bosses.Zaken;
+package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
@@ -43,20 +44,17 @@ public class Zaken extends AbstractNpcAI
 	private static final int ZAKEN_X = 52207;
 	private static final int ZAKEN_Y = 217230;
 	private static final int ZAKEN_Z = -3341;
-	// Misc
-	private static final byte ALIVE = 0;
-	private static final byte DEAD = 1;
 	
 	private Zaken()
 	{
 		addKillId(ZAKEN);
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ZAKEN);
-		final int status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
-		if (status == DEAD)
+		final var info = GrandBossManager.getInstance().getBossData(ZAKEN);
+		final var status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
+		if (status == BossStatus.DEAD)
 		{
 			// load the unlock date and time from DB
-			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long temp = info.getRespawnTime() - System.currentTimeMillis();
 			if (temp > 0)
 			{
 				startQuestTimer("zaken_unlock", temp, null, null);
@@ -85,7 +83,7 @@ public class Zaken extends AbstractNpcAI
 	private void spawnBoss()
 	{
 		final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, 0, false, 0);
-		GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
+		GrandBossManager.getInstance().setBossStatus(ZAKEN, BossStatus.ALIVE);
 		GrandBossManager.getInstance().addBoss(zaken);
 		zaken.broadcastPacket(new PlaySound(1, "BS01_A", 1, zaken.getObjectId(), zaken.getX(), zaken.getY(), zaken.getZ()));
 	}
@@ -94,14 +92,13 @@ public class Zaken extends AbstractNpcAI
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-		GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
+		GrandBossManager.getInstance().setBossStatus(ZAKEN, BossStatus.DEAD);
 		// Calculate Min and Max respawn times randomly.
 		final long respawnTime = (Config.ZAKEN_SPAWN_INTERVAL + Rnd.get(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM)) * 3600000;
 		startQuestTimer("zaken_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ZAKEN);
-		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-		GrandBossManager.getInstance().setStatsSet(ZAKEN, info);
+		final var info = GrandBossManager.getInstance().getBossData(ZAKEN);
+		info.setRespawnTime(System.currentTimeMillis() + respawnTime);
 		return super.onKill(npc, killer, isSummon);
 	}
 	

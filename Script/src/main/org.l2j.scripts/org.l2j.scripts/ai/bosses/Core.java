@@ -17,15 +17,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.bosses.Core;
+package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
@@ -74,9 +74,6 @@ public final class Core extends AbstractNpcAI
 		MINNION_SPAWNS.put(SUSCEPTOR, new Location(17706, 109423, -6488));
 		MINNION_SPAWNS.put(SUSCEPTOR, new Location(17849, 109388, -6480));
 	}
-	// Misc
-	private static final byte ALIVE = 0;
-	private static final byte DEAD = 1;
 	
 	private static boolean _firstAttacked;
 	
@@ -87,11 +84,11 @@ public final class Core extends AbstractNpcAI
 		registerMobs(CORE, DEATH_KNIGHT, DOOM_WRAITH, SUSCEPTOR);
 		
 		_firstAttacked = false;
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
-		if (GrandBossManager.getInstance().getBossStatus(CORE) == DEAD)
+		final var info = GrandBossManager.getInstance().getBossData(CORE);
+		if (GrandBossManager.getInstance().getBossStatus(CORE) == BossStatus.DEAD)
 		{
 			// Load the unlock date and time for Core from DB.
-			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long temp = info.getRespawnTime() - System.currentTimeMillis();
 			// If Core is locked until a certain time, mark it so and start the unlock timer the unlock time has not yet expired.
 			if (temp > 0)
 			{
@@ -101,7 +98,7 @@ public final class Core extends AbstractNpcAI
 			{
 				// The time has already expired while the server was offline. Immediately spawn Core.
 				final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
+				GrandBossManager.getInstance().setBossStatus(CORE, BossStatus.ALIVE);
 				spawnBoss(core);
 			}
 		}
@@ -112,14 +109,9 @@ public final class Core extends AbstractNpcAI
 			{
 				_firstAttacked = true;
 			}
-			final int loc_x = info.getInt("loc_x");
-			final int loc_y = info.getInt("loc_y");
-			final int loc_z = info.getInt("loc_z");
-			final int heading = info.getInt("heading");
-			final double hp = info.getDouble("currentHP");
-			final double mp = info.getDouble("currentMP");
-			final GrandBoss core = (GrandBoss) addSpawn(CORE, loc_x, loc_y, loc_z, heading, false, 0);
-			core.setCurrentHpMp(hp, mp);
+
+			final GrandBoss core = (GrandBoss) addSpawn(CORE, info.getX(), info.getY(), info.getZ(), info.getHeading(), false, 0);
+			core.setCurrentHpMp(info.getHp(), info.getMp());
 			spawnBoss(core);
 		}
 	}
@@ -152,7 +144,7 @@ public final class Core extends AbstractNpcAI
 		if (event.equalsIgnoreCase("core_unlock"))
 		{
 			final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
-			GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
+			GrandBossManager.getInstance().setBossStatus(CORE, BossStatus.ALIVE);
 			spawnBoss(core);
 		}
 		else if (event.equalsIgnoreCase("spawn_minion"))
@@ -202,18 +194,17 @@ public final class Core extends AbstractNpcAI
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.EMPTY);
 			_firstAttacked = false;
 			
-			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
+			GrandBossManager.getInstance().setBossStatus(CORE, BossStatus.DEAD);
 			// Calculate Min and Max respawn times randomly.
 			final long respawnTime = (Config.CORE_SPAWN_INTERVAL + Rnd.get(-Config.CORE_SPAWN_RANDOM, Config.CORE_SPAWN_RANDOM)) * 3600000;
 			startQuestTimer("core_unlock", respawnTime, null, null);
 			// Also save the respawn time so that the info is maintained past reboots.
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(CORE, info);
+			final var info = GrandBossManager.getInstance().getBossData(CORE);
+			info.setRespawnTime(System.currentTimeMillis() + respawnTime);
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");
 		}
-		else if ((GrandBossManager.getInstance().getBossStatus(CORE) == ALIVE) && _minions.contains(npc))
+		else if ((GrandBossManager.getInstance().getBossStatus(CORE) == BossStatus.ALIVE) && _minions.contains(npc))
 		{
 			_minions.remove(npc);
 			startQuestTimer("spawn_minion", 60000, npc, null);

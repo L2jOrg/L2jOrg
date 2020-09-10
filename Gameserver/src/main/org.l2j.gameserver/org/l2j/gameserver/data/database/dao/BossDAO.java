@@ -18,8 +18,11 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.BossData;
+import org.l2j.gameserver.instancemanager.BossStatus;
 
 /**
  * @author JoeAlisson
@@ -27,5 +30,8 @@ import org.l2j.commons.database.annotation.Query;
 public interface BossDAO extends DAO<Object>  {
 
     @Query("UPDATE grandboss_data set status = :status: where boss_id = :bossId:")
-    void updateStatus(int bossId, int status);
+    void updateGrandBossStatus(int bossId, BossStatus status);
+
+    @Query("SELECT * from grandboss_data")
+    IntMap<BossData> loadGrandBosses();
 }
