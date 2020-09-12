@@ -168,12 +168,12 @@ public class RankEngine {
         }
         if (player.getRankRace() <= 3) {
             return switch (player.getRace()) {
-                case HUMAN -> CommonSkill.RANKER_DECO_HUMAN;
-                case ELF -> CommonSkill.RANKER_DECO_ELF;
-                case DARK_ELF -> CommonSkill.RANKER_DECO_DARK_ELF;
-                case ORC -> CommonSkill.RANKER_DECO_ORC;
-                case DWARF -> CommonSkill.RANKER_DECO_DWARF;
-                case JIN_KAMAEL -> CommonSkill.RANKER_DECO_JIN_KAMAEL;
+                case HUMAN -> CommonSkill.RANKER_HUMAN_TRANSFORM;
+                case ELF -> CommonSkill.RANKER_ELF_TRANSFORM;
+                case DARK_ELF -> CommonSkill.RANKER_DARK_ELF_TRANSFORM;
+                case ORC -> CommonSkill.RANKER_ORC_TRANSFORM;
+                case DWARF -> CommonSkill.RANKER_DWARF_TRANSFORM;
+                case JIN_KAMAEL -> CommonSkill.RANKER_JIN_KAMAEL_TRANSFORM;
                 default -> null;
             };
         }
