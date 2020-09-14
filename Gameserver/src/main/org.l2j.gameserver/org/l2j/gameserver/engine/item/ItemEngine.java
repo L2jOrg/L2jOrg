@@ -25,6 +25,7 @@ import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
+import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -193,6 +194,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "sex" -> and(playerCondition, ConditionPlayerSex.of(parseInt(attr)));
                 case "flying" -> and(playerCondition, ConditionPlayerFlyMounted.of(parseBoolean(attr)));
                 case "zone" -> and(playerCondition, new ConditionPlayerInsideZoneId(parseIntList(attr)));
+                case "races" -> and(playerCondition, new ConditionPlayerRace(parseEnumSet(attr, Race.class)));
                 default -> playerCondition;
             };
         }

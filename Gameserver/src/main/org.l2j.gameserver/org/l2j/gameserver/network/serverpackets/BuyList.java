@@ -49,7 +49,7 @@ public final class BuyList extends AbstractItemPacket {
         writeLong(_money); // current money
         writeInt(_listId);
         writeInt(_inventorySlots);
-        writeShort((short) _list.size());
+        writeShort(_list.size());
         for (Product product : _list) {
             if ((product.getCount() > 0) || !product.hasLimitedStock()) {
                 writeItem(product);

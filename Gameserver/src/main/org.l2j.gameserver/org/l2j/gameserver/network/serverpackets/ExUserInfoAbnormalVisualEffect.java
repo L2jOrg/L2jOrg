@@ -29,27 +29,27 @@ import java.util.Set;
  * @author Sdw
  */
 public class ExUserInfoAbnormalVisualEffect extends ServerPacket {
-    private final Player _activeChar;
+    private final Player player;
 
     public ExUserInfoAbnormalVisualEffect(Player cha) {
-        _activeChar = cha;
+        player = cha;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT);
 
-        writeInt(_activeChar.getObjectId());
-        writeInt(_activeChar.getTransformationId());
+        writeInt(player.getObjectId());
+        writeInt(player.getTransformationId());
 
-        final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
-        final boolean isInvisible = _activeChar.isInvisible();
+        final Set<AbnormalVisualEffect> abnormalVisualEffects = player.getEffectList().getCurrentAbnormalVisualEffects();
+        final boolean isInvisible = player.isInvisible();
         writeInt(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
-            writeShort((short) abnormalVisualEffect.getClientId());
+            writeShort(abnormalVisualEffect.getClientId());
         }
         if (isInvisible) {
-            writeShort((short) AbnormalVisualEffect.STEALTH.getClientId());
+            writeShort(AbnormalVisualEffect.STEALTH.getClientId());
         }
     }
 

@@ -45,26 +45,26 @@ public class AcquireSkillList extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.ACQUIRE_SKILL_LIST);
 
-        writeShort((short) _learnable.size());
+        writeShort(_learnable.size());
         for (SkillLearn skill : _learnable) {
             if (skill == null) {
                 continue;
             }
             writeInt(skill.getSkillId());
-            writeShort((short) skill.getSkillLevel());
+            writeShort(skill.getSkillLevel());
             writeLong(skill.getLevelUpSp());
-            writeByte((byte) skill.getGetLevel());
-            writeShort((short) 0x00); // Salvation: Changed from byte to short.
+            writeByte(skill.getGetLevel());
+            writeShort(0x00); // Salvation: Changed from byte to short.
             if (skill.getRequiredItems().size() > 0) {
                 for (ItemHolder item : skill.getRequiredItems()) {
-                    writeByte((byte) 0x01);
+                    writeByte(0x01);
                     writeInt(item.getId());
                     writeLong(item.getCount());
                 }
             } else {
-                writeByte((byte) 0x00);
+                writeByte( 0x00);
             }
-            writeByte((byte) 0x00);
+            writeByte(0x00);
         }
     }
 

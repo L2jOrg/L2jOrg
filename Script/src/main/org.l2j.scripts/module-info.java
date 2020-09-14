@@ -1,3 +1,4 @@
+import org.l2j.scripts.ai.bosses.*;
 import org.l2j.scripts.handlers.actionhandlers.*;
 import org.l2j.scripts.handlers.actionshifthandlers.*;
 import org.l2j.scripts.handlers.admincommandhandlers.AdminCoins;
@@ -322,12 +323,12 @@ open module org.l2j.scripts {
             org.l2j.scripts.ai.areas.TowerOfInsolence.HeavenlyRift.Tower,
 
 
-            org.l2j.scripts.ai.bosses.Antharas.Antharas,
-            org.l2j.scripts.ai.bosses.Baium.Baium,
-            org.l2j.scripts.ai.bosses.Core.Core,
-            org.l2j.scripts.ai.bosses.Orfen.Orfen,
-            org.l2j.scripts.ai.bosses.QueenAnt.QueenAnt,
-            org.l2j.scripts.ai.bosses.Zaken.Zaken,
+                Antharas,
+                Baium,
+                Core,
+                Orfen,
+                QueenAnt,
+                Zaken,
             org.l2j.scripts.ai.bosses.LimitBarrier,
 
 

@@ -114,6 +114,7 @@ public class GameServer {
 
         printSection("Spawns");
         SpawnsData.init();
+        GrandBossManager.getInstance();
         DBSpawnManager.init();
         ThreadPool.executeForked(SpawnsData.getInstance()::spawnAll);
 
@@ -150,7 +151,6 @@ public class GameServer {
         ExtendDropData.getInstance();
         ItemAuctionManager.getInstance();
         SchemeBufferTable.init();
-        GrandBossManager.getInstance();
 
         printSection("Characters");
         ClassListData.getInstance();

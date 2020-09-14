@@ -312,10 +312,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return _zones[zone.ordinal()] > 0;
     }
 
-    /**
-     * @param zone
-     * @param state
-     */
     public final void setInsideZone(ZoneType zone, boolean state) {
         synchronized (_zones) {
             if (state) {

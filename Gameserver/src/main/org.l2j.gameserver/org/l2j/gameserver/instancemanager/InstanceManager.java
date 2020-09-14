@@ -80,7 +80,7 @@ public final class InstanceManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/instance.xsd");
+         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/instances/instance.xsd");
     }
 
     @Override

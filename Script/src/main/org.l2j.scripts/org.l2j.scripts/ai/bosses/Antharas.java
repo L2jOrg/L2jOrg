@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.bosses.Antharas;
+package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
@@ -24,9 +24,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.MountType;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -80,11 +80,7 @@ public final class Antharas extends AbstractNpcAI
 	private static final SkillHolder ANTH_METEOR = new SkillHolder(5093, 1); // Antharas Meteor
 	// Zone
 	private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(70050, NoRestartZone.class); // Antharas Nest zone
-	// Status
-	private static final int ALIVE = 0;
-	private static final int WAITING = 1;
-	private static final int IN_FIGHT = 2;
-	private static final int DEAD = 3;
+
 	// Misc
 	private GrandBoss _antharas = null;
 	private static long _lastAttack = 0;
@@ -108,36 +104,21 @@ public final class Antharas extends AbstractNpcAI
 		addAttackId(ANTHARAS, BOMBER, BEHEMOTH, TERASQUE);
 		addKillId(ANTHARAS, TERASQUE, BEHEMOTH);
 		
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARAS);
-		final double curr_hp = info.getDouble("currentHP");
-		final double curr_mp = info.getDouble("currentMP");
-		final int loc_x = info.getInt("loc_x");
-		final int loc_y = info.getInt("loc_y");
-		final int loc_z = info.getInt("loc_z");
-		final int heading = info.getInt("heading");
-		final long respawnTime = info.getLong("respawn_time");
-		
+		final var info = GrandBossManager.getInstance().getBossData(ANTHARAS);
+
 		switch (getStatus())
 		{
 			case ALIVE:
 			{
 				_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
-				_antharas.setCurrentHpMp(curr_hp, curr_mp);
+				_antharas.setCurrentHpMp(info.getHp(), info.getMp());
 				addBoss(_antharas);
 				break;
 			}
-			case WAITING:
+			case FIGHTING:
 			{
-				_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
-				_antharas.setCurrentHpMp(curr_hp, curr_mp);
-				addBoss(_antharas);
-				startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
-				break;
-			}
-			case IN_FIGHT:
-			{
-				_antharas = (GrandBoss) addSpawn(ANTHARAS, loc_x, loc_y, loc_z, heading, false, 0);
-				_antharas.setCurrentHpMp(curr_hp, curr_mp);
+				_antharas = (GrandBoss) addSpawn(ANTHARAS, info.getX(), info.getY(), info.getZ(), info.getHeading(), false, 0);
+				_antharas.setCurrentHpMp(info.getHp(), info.getMp());
 				addBoss(_antharas);
 				_lastAttack = System.currentTimeMillis();
 				startQuestTimer("CHECK_ATTACK", 60000, _antharas, null);
@@ -146,14 +127,14 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case DEAD:
 			{
-				final long remain = respawnTime - System.currentTimeMillis();
+				final long remain = info.getRespawnTime() - System.currentTimeMillis();
 				if (remain > 0)
 				{
 					startQuestTimer("CLEAR_STATUS", remain, null, null);
 				}
 				else
 				{
-					setStatus(ALIVE);
+					setStatus(BossStatus.ALIVE);
 					_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
 					addBoss(_antharas);
 				}
@@ -170,7 +151,7 @@ public final class Antharas extends AbstractNpcAI
 			case "SPAWN_ANTHARAS":
 			{
 				_antharas.teleToLocation(125798, 125390, -3952, 32542);
-				setStatus(IN_FIGHT);
+				setStatus(BossStatus.FIGHTING);
 				_lastAttack = System.currentTimeMillis();
 				zone.broadcastPacket(new PlaySound("BS02_A"));
 				startQuestTimer("CAMERA_1", 23, _antharas, null);
@@ -262,7 +243,7 @@ public final class Antharas extends AbstractNpcAI
 			{
 				if ((npc != null) && ((_lastAttack + 900000) < System.currentTimeMillis()))
 				{
-					setStatus(ALIVE);
+					setStatus(BossStatus.ALIVE);
 
 					//oustCreatures();
 
@@ -375,26 +356,12 @@ public final class Antharas extends AbstractNpcAI
 				_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 				addBoss(_antharas);
 				Broadcast.toAllOnlinePlayers(new Earthquake(185708, 114298, -8221, 20, 10));
-				setStatus(ALIVE);
-				break;
-			}
-			case "SKIP_WAITING":
-			{
-				if (getStatus() == WAITING)
-				{
-					cancelQuestTimer("SPAWN_ANTHARAS", null, null);
-					notifyEvent("SPAWN_ANTHARAS", null, null);
-					player.sendMessage(getClass().getSimpleName() + ": Skipping waiting time ...");
-				}
-				else
-				{
-					player.sendMessage(getClass().getSimpleName() + ": You can't skip waiting time right now!");
-				}
+				setStatus(BossStatus.ALIVE);
 				break;
 			}
 			case "RESPAWN_ANTHARAS":
 			{
-				if (getStatus() == DEAD)
+				if (getStatus() == BossStatus.DEAD)
 				{
 					setRespawn(0);
 					cancelQuestTimer("CLEAR_STATUS", null, null);
@@ -409,7 +376,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "DESPAWN_MINIONS":
 			{
-				if (getStatus() == IN_FIGHT)
+				if (getStatus() == BossStatus.FIGHTING)
 				{
 					_minionCount = 0;
 					zone.forEachCreature(Creature::deleteMe, creature -> isNpc(creature) && (creature.getId() == BEHEMOTH || creature.getId() == TERASQUE));
@@ -427,9 +394,9 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "ABORT_FIGHT":
 			{
-				if (getStatus() == IN_FIGHT)
+				if (getStatus() == BossStatus.FIGHTING)
 				{
-					setStatus(ALIVE);
+					setStatus(BossStatus.ALIVE);
 					cancelQuestTimer("CHECK_ATTACK", _antharas, null);
 					cancelQuestTimer("SPAWN_MINION", _antharas, null);
 
@@ -488,7 +455,7 @@ public final class Antharas extends AbstractNpcAI
 		}
 		else if (npc.getId() == ANTHARAS)
 		{
-			if (!zone.isCreatureInZone(attacker) || (getStatus() != IN_FIGHT))
+			if (!zone.isCreatureInZone(attacker) || (getStatus() != BossStatus.FIGHTING))
 			{
 				LOGGER.warn(": Player " + attacker.getName() + " attacked Antharas in invalid conditions!");
 				//attacker.teleToLocation(80464, 152294, -3534);
@@ -542,7 +509,7 @@ public final class Antharas extends AbstractNpcAI
 				cancelQuestTimer("CHECK_ATTACK", npc, null);
 				cancelQuestTimer("SPAWN_MINION", npc, null);
 				startQuestTimer("CLEAR_ZONE", 900000, null, null);
-				setStatus(DEAD);
+				setStatus(BossStatus.DEAD);
 			}
 			else
 			{
@@ -605,8 +572,7 @@ public final class Antharas extends AbstractNpcAI
 		return super.unload(removeFromList);
 	}
 	
-	private int getStatus()
-	{
+	private BossStatus getStatus() {
 		return GrandBossManager.getInstance().getBossStatus(ANTHARAS);
 	}
 	
@@ -615,14 +581,14 @@ public final class Antharas extends AbstractNpcAI
 		GrandBossManager.getInstance().addBoss(grandboss);
 	}
 	
-	private void setStatus(int status)
+	private void setStatus(BossStatus status)
 	{
 		GrandBossManager.getInstance().setBossStatus(ANTHARAS, status);
 	}
 	
 	private void setRespawn(long respawnTime)
 	{
-		GrandBossManager.getInstance().getStatsSet(ANTHARAS).set("respawn_time", System.currentTimeMillis() + respawnTime);
+		GrandBossManager.getInstance().getBossData(ANTHARAS).setRespawnTime(System.currentTimeMillis() + respawnTime);
 	}
 	
 	private void refreshAiParams(Player attacker, int damage)

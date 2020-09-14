@@ -18,8 +18,11 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-public enum RaidBossStatus {
-    ALIVE,
+/**
+ * @author JoeAlisson
+ */
+public enum BossStatus {
     DEAD,
-    UNDEFINED
+    ALIVE,
+    FIGHTING
 }

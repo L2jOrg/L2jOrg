@@ -134,7 +134,7 @@ public class DBSpawnManager {
     private void scheduleSpawn(int npcId) {
         final Npc npc = spawns.get(npcId).doSpawn();
         if (npc != null) {
-            npc.setRaidBossStatus(RaidBossStatus.ALIVE);
+            npc.setRaidBossStatus(BossStatus.ALIVE);
 
             final StatsSet info = new StatsSet();
             info.set("currentHP", npc.getCurrentHp());
@@ -162,7 +162,7 @@ public class DBSpawnManager {
         }
 
         if (isNpcDead) {
-            npc.setRaidBossStatus(RaidBossStatus.DEAD);
+            npc.setRaidBossStatus(BossStatus.DEAD);
 
             final int respawnMinDelay = (int) (npc.getSpawn().getRespawnMinDelay() * Config.RAID_MIN_RESPAWN_MULTIPLIER);
             final int respawnMaxDelay = (int) (npc.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
@@ -180,7 +180,7 @@ public class DBSpawnManager {
                 updateDb();
             }
         } else {
-            npc.setRaidBossStatus(RaidBossStatus.ALIVE);
+            npc.setRaidBossStatus(BossStatus.ALIVE);
 
             info.set("currentHP", npc.getCurrentHp());
             info.set("currentMP", npc.getCurrentMp());
@@ -216,7 +216,7 @@ public class DBSpawnManager {
             if (npc != null) {
                 npc.setCurrentHp(currentHP);
                 npc.setCurrentMp(currentMP);
-                npc.setRaidBossStatus(RaidBossStatus.ALIVE);
+                npc.setRaidBossStatus(BossStatus.ALIVE);
 
                 npcs.put(npcId, npc);
 
@@ -270,7 +270,7 @@ public class DBSpawnManager {
         if (npc == null) {
             throw new NullPointerException();
         }
-        npc.setRaidBossStatus(RaidBossStatus.ALIVE);
+        npc.setRaidBossStatus(BossStatus.ALIVE);
 
         final StatsSet info = new StatsSet();
         info.set("currentHP", npc.getMaxHp());
@@ -345,7 +345,7 @@ public class DBSpawnManager {
                     return;
                 }
 
-                if (npc.getRaidBossStatus() == RaidBossStatus.ALIVE) {
+                if (npc.getRaidBossStatus() == BossStatus.ALIVE) {
                     updateStatus(npc, false);
                 }
 
@@ -376,13 +376,13 @@ public class DBSpawnManager {
      * @param npcId the npc id
      * @return the raid npc status id
      */
-    public RaidBossStatus getNpcStatusId(int npcId) {
+    public BossStatus getNpcStatusId(int npcId) {
         if (npcs.containsKey(npcId)) {
             return npcs.get(npcId).getRaidBossStatus();
         } else if (schedules.containsKey(npcId)) {
-            return RaidBossStatus.DEAD;
+            return BossStatus.DEAD;
         } else {
-            return RaidBossStatus.UNDEFINED;
+            return null;
         }
     }
 
@@ -407,7 +407,7 @@ public class DBSpawnManager {
         info.set("currentMP", npc.getCurrentMp());
         info.set("respawnTime", 0);
 
-        npc.setRaidBossStatus(RaidBossStatus.ALIVE);
+        npc.setRaidBossStatus(BossStatus.ALIVE);
 
         storedInfo.put(npc.getId(), info);
         npcs.put(npc.getId(), npc);

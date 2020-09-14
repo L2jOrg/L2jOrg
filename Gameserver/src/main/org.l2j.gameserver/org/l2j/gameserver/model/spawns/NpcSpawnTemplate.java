@@ -285,7 +285,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
                 return;
             }
 
-
             for (int i = 0; i < _count; i++) {
                 spawnNpc(npcTemplate, instance);
             }

@@ -166,6 +166,17 @@ public class RankEngine {
                default -> null;
             };
         }
+        if (player.getRankRace() <= 3) {
+            return switch (player.getRace()) {
+                case HUMAN -> CommonSkill.RANKER_HUMAN_TRANSFORM;
+                case ELF -> CommonSkill.RANKER_ELF_TRANSFORM;
+                case DARK_ELF -> CommonSkill.RANKER_DARK_ELF_TRANSFORM;
+                case ORC -> CommonSkill.RANKER_ORC_TRANSFORM;
+                case DWARF -> CommonSkill.RANKER_DWARF_TRANSFORM;
+                case JIN_KAMAEL -> CommonSkill.RANKER_JIN_KAMAEL_TRANSFORM;
+                default -> null;
+            };
+        }
         return null;
     }
 

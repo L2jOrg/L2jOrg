@@ -1,18 +1,18 @@
 DROP TABLE IF EXISTS `grandboss_data`;
 CREATE TABLE IF NOT EXISTS `grandboss_data` (
-  `boss_id` smallint(5) unsigned NOT NULL,
-  `loc_x` mediumint(6) NOT NULL,
-  `loc_y` mediumint(6) NOT NULL,
-  `loc_z` mediumint(6) NOT NULL,
-  `heading` mediumint(6) NOT NULL DEFAULT '0',
-  `respawn_time` bigint(13) unsigned NOT NULL DEFAULT '0',
-  `currentHP` decimal(30,15) NOT NULL,
-  `currentMP` decimal(30,15) NOT NULL,
-  `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `boss_id` SMALLINT unsigned NOT NULL,
+  `loc_x` MEDIUMINT NOT NULL,
+  `loc_y` MEDIUMINT NOT NULL,
+  `loc_z` MEDIUMINT NOT NULL,
+  `heading` MEDIUMINT NOT NULL DEFAULT 0,
+  `respawn_time` BIGINT(13) unsigned NOT NULL DEFAULT 0,
+  `hp` DECIMAL(30,15) NOT NULL,
+  `mp` DECIMAL(30,15) NOT NULL,
+  `status` ENUM('DEAD', 'ALIVE', 'FIGHTING') NOT NULL DEFAULT 'ALIVE',
   PRIMARY KEY (`boss_id`)
 )  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
-INSERT IGNORE INTO `grandboss_data` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`,`currentHP`,`currentMP`) VALUES
+INSERT IGNORE INTO `grandboss_data` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`,`hp`,`mp`) VALUES
 (29001, -21610, 181594, -5734, 0, 229898.48, 667.776), -- Queen Ant
 (29006, 17726, 108915, -6480, 0, 622493.58388, 3793.536), -- Core
 (29014, 55024, 17368, -5412, 10126, 1176982, 3793.536), -- Orfen
