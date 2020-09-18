@@ -212,7 +212,7 @@ public class Siege implements Siegable {
             zone.setIsActive(true);
             zone.updateZoneStatusForCharactersInside();
 
-            Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), new PlaySound("systemmsg_eu.17"));
+            Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.17"));
             EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeStart(this), getCastle());
 
             endTime = Instant.now().plus(SiegeManager.getInstance().getSiegeLength(), ChronoUnit.MINUTES);
@@ -428,7 +428,7 @@ public class Siege implements Siegable {
     @Override
     public void endSiege() {
         if (isInProgress) {
-            Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED).addCastleId(castle.getId()), new PlaySound("systemmsg_eu.18"));
+            Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.18"));
 
             if (castle.getOwnerId() > 0) {
                 var clan = ClanTable.getInstance().getClan(castle.getOwnerId());

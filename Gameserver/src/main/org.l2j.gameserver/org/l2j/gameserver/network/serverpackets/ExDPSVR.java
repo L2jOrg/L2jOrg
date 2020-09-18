@@ -16,37 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.engine.olympiad;
+package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.SystemMessageId;
-
-import static java.util.Objects.isNull;
+import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author JoeAlisson
  */
-class OlympiadClassLessMatch extends OlympiadMatch {
-
-    private Player red;
-    private Player blue;
-
-    OlympiadClassLessMatch() {
-
-    }
+public class ExDPSVR extends ServerPacket {
 
     @Override
-    public void addParticipant(Player player)  {
-        if(isNull(red)) {
-            red = player;
-        } else {
-            blue = player;
-        }
-    }
-
-    @Override
-    public void sendMessage(SystemMessageId messageId) {
-        red.sendPacket(messageId);
-        blue.sendPacket(messageId);
+    protected void writeImpl(GameClient client) {
+        writeId(ServerExPacketId.EX_DPSVR);
+        writeInt(1);
     }
 }

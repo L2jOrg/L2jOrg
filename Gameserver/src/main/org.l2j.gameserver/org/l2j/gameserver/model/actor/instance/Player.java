@@ -3760,10 +3760,7 @@ public final class Player extends Playable {
 
     public final void broadcastUserInfo(UserInfoType... types) {
         // Send user info to the current player
-        final UserInfo ui = new UserInfo(this, false);
-        ui.addComponentType(types);
-        sendPacket(ui);
-
+        sendPacket(new UserInfo(this, types));
         // Broadcast char info to all known players
         broadcastCharInfo();
     }

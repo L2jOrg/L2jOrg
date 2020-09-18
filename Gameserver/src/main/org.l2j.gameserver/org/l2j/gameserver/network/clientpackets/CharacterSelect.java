@@ -108,7 +108,7 @@ public class CharacterSelect extends ClientPacket {
                     }
 
                     client.setConnectionState(ConnectionState.JOINING_GAME);
-                    client.sendPacket(new CharSelected(player, client.getSessionId().getGameServerSessionId()));
+                    client.sendPacket(new CharSelected(player, client.getSessionKey().getGameServerSessionId()));
                     client.detachPlayersInfo();
                 }
             } finally {

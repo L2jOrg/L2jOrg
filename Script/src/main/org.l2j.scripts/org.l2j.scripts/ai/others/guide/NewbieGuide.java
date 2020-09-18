@@ -105,7 +105,7 @@ public class NewbieGuide extends AbstractNpcAI {
 	
 	public void playTutorialVoice(Player player, String voice)
 	{
-		player.sendPacket(new PlaySound(2, voice, 0, 0, player.getX(), player.getY(), player.getZ()));
+		player.sendPacket(PlaySound.voice(voice));
 	}
 	
 	public static AbstractNpcAI provider()

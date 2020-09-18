@@ -48,7 +48,7 @@ public class PlayerSelectionInfo extends ServerPacket {
     }
 
     public PlayerSelectionInfo(GameClient client, int activeSlot) {
-        this.sessionId = client.getSessionId().getGameServerSessionId();
+        this.sessionId = client.getSessionKey().getGameServerSessionId();
         this.account = client.getAccountName();
         this.playersInfo = client.getPlayersInfo();
         this.activeSlot = activeSlot;

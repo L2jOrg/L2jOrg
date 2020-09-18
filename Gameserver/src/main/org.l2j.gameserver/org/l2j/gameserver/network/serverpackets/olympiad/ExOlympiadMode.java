@@ -26,20 +26,16 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author godson
  */
 public class ExOlympiadMode extends ServerPacket {
-    private final int _mode;
+    private final int mode;
 
-    /**
-     * @param mode (0 = return, 3 = spectate)
-     */
     public ExOlympiadMode(int mode) {
-        _mode = mode;
+        this.mode = mode;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_OLYMPIAD_MODE);
-
-        writeByte((byte) _mode);
+        writeByte(mode);
     }
 
 }

@@ -184,7 +184,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 						{
 							Hero.getInstance().claimHero(player);
 							showOnScreenMsg(player, (NpcStringId.getNpcStringId(13357 + player.getClassId().getId())), ExShowScreenMessage.TOP_CENTER, 5000);
-							player.broadcastPacket(new PlaySound(1, "ns01_f", 0, 0, 0, 0, 0));
+							player.broadcastPacket(PlaySound.music("ns01_f"));
 							htmltext = "MonumentOfHeroes-heroCertificationsDone.html";
 						}
 						else

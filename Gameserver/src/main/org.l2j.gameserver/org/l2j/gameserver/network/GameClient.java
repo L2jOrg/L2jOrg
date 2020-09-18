@@ -73,7 +73,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     private final FloodProtectors floodProtectors = new FloodProtectors(this);
 
     private final Crypt crypt;
-    private SessionKey sessionId;
+    private SessionKey sessionKey;
     private ConnectionState state;
     private AccountData account;
     private Player player;
@@ -164,12 +164,12 @@ public final class GameClient extends Client<Connection<GameClient>> {
         }
     }
 
-    public SessionKey getSessionId() {
-        return sessionId;
+    public SessionKey getSessionKey() {
+        return sessionKey;
     }
 
-    public void setSessionId(SessionKey sk) {
-        sessionId = sk;
+    public void setSessionKey(SessionKey sk) {
+        sessionKey = sk;
     }
 
     public void sendPacket(ServerPacket packet) {

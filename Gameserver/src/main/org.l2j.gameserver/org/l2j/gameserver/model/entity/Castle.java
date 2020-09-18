@@ -447,7 +447,7 @@ public final class Castle extends AbstractResidence {
         if (nonNull(clan)) {
             clan.setCastleId(getId()); // Set has castle flag for new owner
             clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-            clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
+            clan.broadcastToOnlineMembers(PlaySound.music("Siege_Victory"));
         }
     }
 

@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.commission;
+package org.l2j.gameserver.network.serverpackets.raidserver;
 
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * @author NosBit
+ * @author JoeAlisson
  */
-public class ExCloseCommission extends ServerPacket {
-    public static final ExCloseCommission STATIC_PACKET = new ExCloseCommission();
-
-    private ExCloseCommission() {
-    }
+public class ExRaidReserveResult extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CLOSE_COMMISSION);
+    protected void writeImpl(GameClient client) {
+        writeId(ServerExPacketId.EX_RAID_RESERVE_RESULT);
+        writeInt(true); // success?
+        writeBytes(new byte[] {127, 0, 0, 1 }); // dimensional server ip
+        writeInt(1); // server id
+        writeInt(client.getPlayer().getObjectId());
+        writeInt(client.getSessionKey().getGameServerSessionId());
     }
-
 }

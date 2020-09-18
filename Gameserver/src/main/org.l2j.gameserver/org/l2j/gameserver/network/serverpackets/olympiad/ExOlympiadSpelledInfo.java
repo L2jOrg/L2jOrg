@@ -57,19 +57,17 @@ public class ExOlympiadSpelledInfo extends ServerPacket {
         for (BuffInfo info : _effects) {
             if ((info != null) && info.isInUse()) {
                 writeInt(info.getSkill().getDisplayId());
-                writeShort((short) info.getSkill().getDisplayLevel());
-                writeShort((short) 0x00); // Sub level
-                writeInt(info.getSkill().getAbnormalType().getClientId());
+                writeInt(info.getSkill().getDisplayLevel());
+                writeShort(0x00); // Sub level
                 writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime());
             }
         }
         for (Skill skill : _effects2) {
             if (skill != null) {
                 writeInt(skill.getDisplayId());
-                writeShort((short) skill.getDisplayLevel());
-                writeShort((short) 0x00); // Sub level
-                writeInt(skill.getAbnormalType().getClientId());
-                writeShort((short) -1);
+                writeInt(skill.getDisplayLevel());
+                writeShort(0x00); // Sub level
+                writeShort(-1);
             }
         }
     }

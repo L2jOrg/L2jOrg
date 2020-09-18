@@ -226,10 +226,8 @@ public class TvT extends Event
 					EVENT_ACTIVE = false;
 					return null;
 				}
-				// Create the instance.
-				final InstanceManager manager = InstanceManager.getInstance();
-				final InstanceTemplate template = manager.getInstanceTemplate(INSTANCE_ID);
-				PVP_WORLD = manager.createInstance(template, null);
+
+				PVP_WORLD = InstanceManager.getInstance().createInstance(INSTANCE_ID, null);
 				// Randomize player list and separate teams.
 				Collections.shuffle(PLAYER_LIST);
 				boolean team = Rnd.nextBoolean(); // If teams are not even, randomize where extra player goes.

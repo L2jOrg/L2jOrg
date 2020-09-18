@@ -64,9 +64,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     public UserInfo(Player cha, UserInfoType... infoTypes) {
         this(cha, false);
         if(nonNull(infoTypes)) {
-            for (UserInfoType infoType : infoTypes) {
-              addComponentType(infoType);
-            }
+            addComponentType(infoTypes);
         }
     }
 

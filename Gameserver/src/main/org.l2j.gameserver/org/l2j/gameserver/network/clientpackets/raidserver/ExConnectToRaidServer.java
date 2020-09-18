@@ -16,24 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.commission;
+package org.l2j.gameserver.network.clientpackets.raidserver;
 
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
- * @author NosBit
+ * @author JoeAlisson
  */
-public class ExCloseCommission extends ServerPacket {
-    public static final ExCloseCommission STATIC_PACKET = new ExCloseCommission();
+public class ExConnectToRaidServer extends ClientPacket {
 
-    private ExCloseCommission() {
+    private int serverId;
+    private int playerId;
+    private int sessionId;
+
+    @Override
+    protected void readImpl() throws Exception {
+        serverId = readInt();
+        playerId = readInt();
+        sessionId = readInt();
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CLOSE_COMMISSION);
-    }
+    protected void runImpl()  {
 
+    }
 }

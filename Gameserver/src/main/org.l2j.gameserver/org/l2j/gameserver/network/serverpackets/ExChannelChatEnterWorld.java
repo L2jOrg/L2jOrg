@@ -16,24 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.commission;
+package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * @author NosBit
+ * @author JoeAlisson
  */
-public class ExCloseCommission extends ServerPacket {
-    public static final ExCloseCommission STATIC_PACKET = new ExCloseCommission();
-
-    private ExCloseCommission() {
-    }
+public class ExChannelChatEnterWorld extends ServerPacket{
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CLOSE_COMMISSION);
+    protected void writeImpl(GameClient client)  {
+        writeId(ServerExPacketId.EX_CC_ENTER_WORLD);
+        writeInt(1); // from server
+        writeInt(2); // to server
+        writeInt(16777343);
+        writeInt(2044);
+        writeShort(0);
     }
-
 }

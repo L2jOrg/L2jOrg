@@ -153,7 +153,7 @@ public final class Antharas extends AbstractNpcAI
 				_antharas.teleToLocation(125798, 125390, -3952, 32542);
 				setStatus(BossStatus.FIGHTING);
 				_lastAttack = System.currentTimeMillis();
-				zone.broadcastPacket(new PlaySound("BS02_A"));
+				zone.broadcastPacket(PlaySound.sound("BS02_A"));
 				startQuestTimer("CAMERA_1", 23, _antharas, null);
 				break;
 			}
@@ -501,7 +501,7 @@ public final class Antharas extends AbstractNpcAI
 				_antharas = null;
 				notifyEvent("DESPAWN_MINIONS", null, null);
 				zone.broadcastPacket(new SpecialCamera(npc, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
-				zone.broadcastPacket(new PlaySound("BS01_D"));
+				zone.broadcastPacket(PlaySound.sound("BS01_D"));
 				final long respawnTime = (Config.ANTHARAS_SPAWN_INTERVAL + Rnd.get(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM)) * 3600000;
 				setRespawn(respawnTime);
 				startQuestTimer("CLEAR_STATUS", respawnTime, null, null);

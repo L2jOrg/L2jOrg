@@ -2075,7 +2075,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     public static void playSound(Instance world, String sound) {
-        world.broadcastPacket(new PlaySound(sound));
+        world.broadcastPacket(PlaySound.sound(sound));
     }
 
     /**
@@ -2085,7 +2085,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param sound  the name of the sound to play
      */
     public static void playSound(Player player, String sound) {
-        player.sendPacket(QuestSound.getSound(sound));
+        player.sendPacket(PlaySound.sound(sound));
     }
 
     /**

@@ -20,12 +20,11 @@ package org.l2j.gameserver.engine.olympiad;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.dao.OlympiadDAO;
 import org.l2j.gameserver.data.database.data.OlympiadData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
+import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.ScheduleTarget;
 import org.l2j.gameserver.model.events.EventType;
@@ -42,10 +41,10 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Year;
 import java.time.YearMonth;
-import java.util.*;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
@@ -64,7 +63,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Olympiad.class);
 
-    private final Set<Player> matchMaking = ConcurrentHashMap.newKeySet(20);
+    private Set<Player> registered = ConcurrentHashMap.newKeySet(20);
+    private Set<Player> matchMaking = ConcurrentHashMap.newKeySet(20);
     private final Set<OlympiadMatch> matches = ConcurrentHashMap.newKeySet(10);
     private ConsumerEventListener onPlayerLoginListener;
     private OlympiadData data = new OlympiadData();
@@ -72,6 +72,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private LocalDate startDate;
     private boolean forceStartDate;
     private int minParticipant;
+    private int[] availableArenas;
 
     private Olympiad() {
     }
@@ -85,6 +86,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             forceStartDate = reader.parseBoolean(attr, "force-start-date");
             String strDate = reader.parseString(attr, "start-date");
             startDate = isNull(strDate) ? LocalDate.now() : LocalDate.parse(strDate);
+            availableArenas = reader.parseIntArray(attr, "available-arena-instances");
         }
     }
 
@@ -179,45 +181,48 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return;
         }
 
-        if(matchMaking.contains(player)) {
+        if(registered.contains(player)) {
             player.sendPacket(getSystemMessage(C1_YOU_HAVE_ALREADY_REGISTERED_FOR_THE_MATCH).addPcName(player));
             return;
         }
 
-        matchMaking.add(player);
+        registered.add(player);
         player.sendPacket(YOU_VE_BEEN_REGISTERED_IN_THE_WAITING_LIST_OF_ALL_CLASS_BATTLE);
         player.sendPacket(new ExOlympiadMatchMakingResult(true, ruleType));
 
-        if(state != MATCH_MAKING && matchMaking.size() >= minParticipant) {
+        if(state != MATCH_MAKING && registered.size() >= minParticipant) {
             state = MATCH_MAKING;
             ThreadPool.schedule(this::distributeAndStartMatches, 1, TimeUnit.MINUTES);
         }
     }
 
     private void distributeAndStartMatches() {
-        List<Player> participants;
-        synchronized (matchMaking) {
-            participants = new ArrayList<>(matchMaking);
-            matchMaking.clear();
-        }
+        var tmp = matchMaking;
+        matchMaking = registered;
+        registered = tmp;
 
-        while(participants.size() >= OlympiadRuleType.CLASSLESS.participantCount()) {
+        var participants = matchMaking.iterator();
+        while(matchMaking.size() >= OlympiadRuleType.CLASSLESS.participantCount()) {
             newMatch(participants);
         }
 
-        if(!participants.isEmpty()) {
-            matchMaking.addAll(participants);
+        if(!matchMaking.isEmpty()) {
+            registered.addAll(matchMaking);
+            matchMaking.clear();
         }
+
         if(state == MATCH_MAKING) {
             state = STARTED;
         }
     }
 
-    private void newMatch(List<Player> participants) {
+    private void newMatch(Iterator<Player> participants) {
         OlympiadMatch match = OlympiadMatch.of(OlympiadRuleType.CLASSLESS);
-
+        var arena = InstanceManager.getInstance().createInstance(Rnd.get(availableArenas));
+        match.setArenaInstance(arena);
         for (int i = 0; i < OlympiadRuleType.CLASSLESS.participantCount(); i++) {
-            match.addParticipant(participants.remove(Rnd.get(participants.size())));
+            match.addParticipant(participants.next());
+            participants.remove();
         }
 
         matches.add(match);
@@ -225,14 +230,14 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public void unregisterPlayer(Player player, OlympiadRuleType ruleType) {
-        if(matchMaking.remove(player)) {
+        if(registered.remove(player)) {
             player.sendPacket(YOU_HAVE_BEEN_REMOVED_FROM_THE_OLYMPIAD_WAITING_LIST);
             player.sendPacket(new ExOlympiadMatchMakingResult(false, ruleType));
         }
     }
 
     public boolean isRegistered(Player player) {
-        return matchMaking.contains(player);
+        return registered.contains(player);
     }
 
     @Override

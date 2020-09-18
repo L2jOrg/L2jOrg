@@ -18,6 +18,9 @@
  */
 package org.l2j.gameserver.model.instancezone;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
@@ -54,75 +57,64 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
- * Instance world.
  *
  * @author malyelfik
+ * @author JoeAlisson
  */
 public final class Instance implements IIdentifiable, INamable {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Instance.class);
 
-    // Basic instance parameters
-    private final int _id;
-    private final InstanceTemplate _template;
+    private final int id;
+    private final InstanceTemplate template;
 
-    // Advanced instance parameters
-    private final Set<Player> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
-    private final Set<Player> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
-    private final Set<Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
-    private final Map<Integer, Door> _doors = new HashMap<>(); // Spawned doors inside instance
-    private final StatsSet _parameters = new StatsSet();
-    // Timers
-    private final Map<Integer, ScheduledFuture<?>> _ejectDeadTasks = new ConcurrentHashMap<>();
-    private final List<SpawnTemplate> _spawns;
-    private long _endTime;
-    private ScheduledFuture<?> _cleanUpTask = null;
-    private ScheduledFuture<?> _emptyDestroyTask = null;
+    private final Set<Player> allowed = ConcurrentHashMap.newKeySet();
+    private final Set<Player> players = ConcurrentHashMap.newKeySet();
+    private final Set<Npc> npcs = ConcurrentHashMap.newKeySet();
+    private final IntMap<Door> doors = new HashIntMap<>();
+    private final StatsSet parameters = new StatsSet();
 
-    /**
-     * Create instance world.
-     *
-     * @param id       ID of instance world
-     * @param template template of instance world
-     * @param player   player who create instance world.
-     */
+    private final IntMap<ScheduledFuture<?>> ejectDeadTasks = new CHashIntMap<>();
+    private final List<SpawnTemplate> spawns;
+    private long endTime;
+    private ScheduledFuture<?> cleanUpTask = null;
+    private ScheduledFuture<?> emptyDestroyTask = null;
+
     public Instance(int id, InstanceTemplate template, Player player) {
-        // Set basic instance info
-        _id = id;
-        _template = template;
-        _spawns = new ArrayList<>(template.getSpawns().size());
+        this.id = id;
+        this.template = template;
+        spawns = new ArrayList<>(template.getSpawns().size());
 
         // Clone and add the spawn templates
-        template.getSpawns().stream().map(SpawnTemplate::clone).forEach(_spawns::add);
-
-        // Register world to instance manager.
-        InstanceManager.getInstance().register(this);
+        template.getSpawns().stream().map(SpawnTemplate::clone).forEach(spawns::add);
 
         // Set duration, spawns, status, etc..
-        setDuration(_template.getDuration());
+        setDuration(this.template.getDuration());
         setStatus(0);
         spawnDoors();
 
         // initialize instance spawns
-        _spawns.stream().filter(SpawnTemplate::isSpawningByDefault).forEach(spawnTemplate -> spawnTemplate.spawnAll(this));
+        spawns.stream().filter(SpawnTemplate::isSpawningByDefault).forEach(spawnTemplate -> spawnTemplate.spawnAll(this));
 
         if (!isDynamic()) {
             // Notify DP scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnInstanceCreated(this, player), _template);
+            EventDispatcher.getInstance().notifyEventAsync(new OnInstanceCreated(this, player), this.template);
         }
     }
 
     @Override
     public int getId() {
-        return _id;
+        return id;
     }
 
     @Override
     public String getName() {
-        return _template.getName();
+        return template.getName();
     }
 
     /**
@@ -131,7 +123,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return {@code true} if instance is dynamic or {@code false} if instance has static template
      */
     public boolean isDynamic() {
-        return _template.getId() == -1;
+        return template.getId() == -1;
     }
 
     /**
@@ -142,9 +134,9 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void setParameter(String key, Object val) {
         if (val == null) {
-            _parameters.remove(key);
+            parameters.remove(key);
         } else {
-            _parameters.set(key, val);
+            parameters.set(key, val);
         }
     }
 
@@ -154,7 +146,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return instance parameters
      */
     public StatsSet getParameters() {
-        return _parameters;
+        return parameters;
     }
 
     /**
@@ -163,7 +155,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return instance status, otherwise 0
      */
     public int getStatus() {
-        return _parameters.getInt("INSTANCE_STATUS", 0);
+        return parameters.getInt("INSTANCE_STATUS", 0);
     }
 
     /**
@@ -172,8 +164,8 @@ public final class Instance implements IIdentifiable, INamable {
      * @param value new world status
      */
     public void setStatus(int value) {
-        _parameters.set("INSTANCE_STATUS", value);
-        EventDispatcher.getInstance().notifyEventAsync(new OnInstanceStatusChange(this, value), _template);
+        parameters.set("INSTANCE_STATUS", value);
+        EventDispatcher.getInstance().notifyEventAsync(new OnInstanceStatusChange(this, value), template);
     }
 
     /**
@@ -193,9 +185,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param player player instance
      */
     public void addAllowed(Player player) {
-        if (!_allowed.contains(player)) {
-            _allowed.add(player);
-        }
+        allowed.add(player);
     }
 
     /**
@@ -205,16 +195,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return {@code true} when can enter, otherwise {@code false}
      */
     public boolean isAllowed(Player player) {
-        return _allowed.contains(player);
-    }
-
-    /**
-     * Returns all players who can enter to instance.
-     *
-     * @return allowed players list
-     */
-    public Set<Player> getAllowed() {
-        return _allowed;
+        return allowed.contains(player);
     }
 
     /**
@@ -223,10 +204,10 @@ public final class Instance implements IIdentifiable, INamable {
      * @param player player instance
      */
     public void addPlayer(Player player) {
-        _players.add(player);
-        if (_emptyDestroyTask != null) {
-            _emptyDestroyTask.cancel(false);
-            _emptyDestroyTask = null;
+        players.add(player);
+        if (emptyDestroyTask != null) {
+            emptyDestroyTask.cancel(false);
+            emptyDestroyTask = null;
         }
     }
 
@@ -236,13 +217,13 @@ public final class Instance implements IIdentifiable, INamable {
      * @param player player instance
      */
     public void removePlayer(Player player) {
-        _players.remove(player);
-        if (_players.isEmpty()) {
-            final long emptyTime = _template.getEmptyDestroyTime();
-            if ((_template.getDuration() == 0) || (emptyTime == 0)) {
+        players.remove(player);
+        if (players.isEmpty()) {
+            final long emptyTime = template.getEmptyDestroyTime();
+            if (template.getDuration() == 0 || emptyTime == 0) {
                 destroy();
-            } else if ((emptyTime >= 0) && (_emptyDestroyTask == null) && (getRemainingTime() < emptyTime)) {
-                _emptyDestroyTask = ThreadPool.schedule(this::destroy, emptyTime);
+            } else if (emptyTime >= 0 && isNull(emptyDestroyTask) && getRemainingTime() < emptyTime) {
+                emptyDestroyTask = ThreadPool.schedule(this::destroy, emptyTime);
             }
         }
     }
@@ -254,7 +235,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return {@code true} if player is inside, otherwise {@code false}
      */
     public boolean containsPlayer(Player player) {
-        return _players.contains(player);
+        return players.contains(player);
     }
 
     /**
@@ -263,7 +244,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return players within instance
      */
     public Set<Player> getPlayers() {
-        return _players;
+        return players;
     }
 
     /**
@@ -272,16 +253,15 @@ public final class Instance implements IIdentifiable, INamable {
      * @return players count inside instance
      */
     public int getPlayersCount() {
-        return _players.size();
+        return players.size();
     }
 
     /**
      * Spawn doors inside instance world.
      */
     private void spawnDoors() {
-        for (DoorTemplate template : _template.getDoors().values()) {
-            // Create new door instance
-            _doors.put(template.getId(), DoorDataManager.getInstance().spawnDoor(template, this));
+        for (DoorTemplate template : template.getDoors().values()) {
+            doors.put(template.getId(), DoorDataManager.getInstance().spawnDoor(template, this));
         }
     }
 
@@ -291,7 +271,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return collection of spawned doors
      */
     public Collection<Door> getDoors() {
-        return _doors.values();
+        return doors.values();
     }
 
     /**
@@ -301,7 +281,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return instance of door if found, otherwise {@code null}
      */
     public Door getDoor(int id) {
-        return _doors.get(id);
+        return doors.get(id);
     }
 
     /**
@@ -312,7 +292,7 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public List<SpawnGroup> getSpawnGroup(String name) {
         final List<SpawnGroup> spawns = new ArrayList<>();
-        _spawns.forEach(spawnTemplate -> spawns.addAll(spawnTemplate.getGroupsByName(name)));
+        this.spawns.forEach(spawnTemplate -> spawns.addAll(spawnTemplate.getGroupsByName(name)));
         return spawns;
     }
 
@@ -324,10 +304,6 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public List<Npc> spawnGroup(String name) {
         final List<SpawnGroup> spawns = getSpawnGroup(name);
-        if (spawns == null) {
-            LOGGER.warn("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
-            return Collections.emptyList();
-        }
 
         final List<Npc> npcs = new LinkedList<>();
         try {
@@ -336,7 +312,7 @@ public final class Instance implements IIdentifiable, INamable {
                 holder.getSpawns().forEach(spawn -> npcs.addAll(spawn.getSpawnedNpcs()));
             }
         } catch (Exception e) {
-            LOGGER.warn("Unable to spawn group " + name + " inside instance " + _template.getName() + " (" + _id + ")");
+            LOGGER.warn("Unable to spawn group " + name + " inside instance " + template.getName() + " (" + id + ")");
         }
         return npcs;
     }
@@ -348,7 +324,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return set of NPCs from instance
      */
     public Set<Npc> getNpcs() {
-        return _npcs;
+        return npcs;
     }
 
     /**
@@ -357,7 +333,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return set of NPCs from instance
      */
     public Set<Npc> getAliveNpcs() {
-        return _npcs.stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toSet());
+        return npcs.stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toSet());
     }
 
     /**
@@ -367,40 +343,40 @@ public final class Instance implements IIdentifiable, INamable {
      * @return first found NPC with specified ID, otherwise {@code null}
      */
     public Npc getNpc(int id) {
-        return _npcs.stream().filter(n -> n.getId() == id).findFirst().orElse(null);
+        return npcs.stream().filter(n -> n.getId() == id).findFirst().orElse(null);
     }
 
     public void addNpc(Npc npc) {
-        _npcs.add(npc);
+        npcs.add(npc);
     }
 
     public void removeNpc(Npc npc) {
-        _npcs.remove(npc);
+        npcs.remove(npc);
     }
 
     /**
      * Remove all players from instance world.
      */
     private void removePlayers() {
-        _players.forEach(this::ejectPlayer);
-        _players.clear();
+        players.forEach(this::ejectPlayer);
+        players.clear();
     }
 
     /**
      * Despawn doors inside instance world.
      */
     private void removeDoors() {
-        _doors.values().stream().filter(Objects::nonNull).forEach(Door::decayMe);
-        _doors.clear();
+        doors.values().stream().filter(Objects::nonNull).forEach(Door::decayMe);
+        doors.clear();
     }
 
     /**
      * Despawn NPCs inside instance world.
      */
     public void removeNpcs() {
-        _spawns.forEach(SpawnTemplate::despawnAll);
-        _npcs.forEach(Npc::deleteMe);
-        _npcs.clear();
+        spawns.forEach(SpawnTemplate::despawnAll);
+        npcs.forEach(Npc::deleteMe);
+        npcs.clear();
     }
 
     /**
@@ -411,24 +387,24 @@ public final class Instance implements IIdentifiable, INamable {
     public void setDuration(int minutes) {
         // Instance never ends
         if (minutes < 0) {
-            _endTime = -1;
+            endTime = -1;
             return;
         }
 
         // Stop running tasks
         final long millis = TimeUnit.MINUTES.toMillis(minutes);
-        if (_cleanUpTask != null) {
-            _cleanUpTask.cancel(true);
-            _cleanUpTask = null;
+        if (cleanUpTask != null) {
+            cleanUpTask.cancel(true);
+            cleanUpTask = null;
         }
 
-        if ((_emptyDestroyTask != null) && (millis < _emptyDestroyTask.getDelay(TimeUnit.MILLISECONDS))) {
-            _emptyDestroyTask.cancel(true);
-            _emptyDestroyTask = null;
+        if ((emptyDestroyTask != null) && (millis < emptyDestroyTask.getDelay(TimeUnit.MILLISECONDS))) {
+            emptyDestroyTask.cancel(true);
+            emptyDestroyTask = null;
         }
 
         // Set new cleanup task
-        _endTime = System.currentTimeMillis() + millis;
+        endTime = System.currentTimeMillis() + millis;
         if (minutes < 1) // Destroy instance
         {
             destroy();
@@ -436,10 +412,10 @@ public final class Instance implements IIdentifiable, INamable {
             sendWorldDestroyMessage(minutes);
             if (minutes <= 5) // Message 1 minute before destroy
             {
-                _cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - 60000);
+                cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - 60000);
             } else // Message 5 minutes before destroy
             {
-                _cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - (5 * 60000));
+                cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - (5 * 60000));
             }
         }
     }
@@ -449,22 +425,22 @@ public final class Instance implements IIdentifiable, INamable {
      * <b><font color=red>Use this method to destroy instance world properly.</font></b>
      */
     public synchronized void destroy() {
-        if (_cleanUpTask != null) {
-            _cleanUpTask.cancel(false);
-            _cleanUpTask = null;
+        if (cleanUpTask != null) {
+            cleanUpTask.cancel(false);
+            cleanUpTask = null;
         }
 
-        if (_emptyDestroyTask != null) {
-            _emptyDestroyTask.cancel(false);
-            _emptyDestroyTask = null;
+        if (emptyDestroyTask != null) {
+            emptyDestroyTask.cancel(false);
+            emptyDestroyTask = null;
         }
 
-        _ejectDeadTasks.values().forEach(t -> t.cancel(true));
-        _ejectDeadTasks.clear();
+        ejectDeadTasks.values().forEach(t -> t.cancel(true));
+        ejectDeadTasks.clear();
 
         // Notify DP scripts
         if (!isDynamic()) {
-            EventDispatcher.getInstance().notifyEvent(new OnInstanceDestroy(this), _template);
+            EventDispatcher.getInstance().notifyEvent(new OnInstanceDestroy(this), template);
         }
 
         removePlayers();
@@ -481,7 +457,7 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void ejectPlayer(Player player) {
         if (player.getInstanceWorld().equals(this)) {
-            final Location loc = _template.getExitLocation(player);
+            final Location loc = template.getExitLocation(player);
             if (loc != null) {
                 player.teleToLocation(loc, null);
             } else {
@@ -496,7 +472,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param packets packets to be send
      */
     public void broadcastPacket(ServerPacket... packets) {
-        for (Player player : _players) {
+        for (Player player : players) {
             for (ServerPacket packet : packets) {
                 player.sendPacket(packet);
             }
@@ -509,7 +485,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return remaining time in milliseconds if duration is not equal to -1, otherwise -1
      */
     public long getRemainingTime() {
-        return (_endTime == -1) ? -1 : (_endTime - System.currentTimeMillis());
+        return (endTime == -1) ? -1 : (endTime - System.currentTimeMillis());
     }
 
     /**
@@ -518,7 +494,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return destroy time in milliseconds if duration is not equal to -1, otherwise -1
      */
     public long getEndTime() {
-        return _endTime;
+        return endTime;
     }
 
     /**
@@ -526,7 +502,7 @@ public final class Instance implements IIdentifiable, INamable {
      * Penalty time is calculated from XML reenter data.
      */
     public void setReenterTime() {
-        setReenterTime(_template.calculateReenterTime());
+        setReenterTime(template.calculateReenterTime());
     }
 
     /**
@@ -536,17 +512,17 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void setReenterTime(long time) {
         // Cannot store reenter data for instance without template id.
-        if ((_template.getId() == -1) && (time > 0)) {
+        if ((template.getId() == -1) && (time > 0)) {
             return;
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)")) {
             // Save to database
-            for (Player player : _allowed) {
+            for (Player player : allowed) {
                 if (player != null) {
                     ps.setInt(1, player.getObjectId());
-                    ps.setInt(2, _template.getId());
+                    ps.setInt(2, template.getId());
                     ps.setLong(3, time);
                     ps.addBatch();
                 }
@@ -556,11 +532,11 @@ public final class Instance implements IIdentifiable, INamable {
             // Save to memory and send message to player
             final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
             if (InstanceManager.getInstance().getInstanceName(getTemplateId()) != null) {
-                msg.addInstanceName(_template.getId());
+                msg.addInstanceName(template.getId());
             } else {
-                msg.addString(_template.getName());
+                msg.addString(template.getName());
             }
-            _allowed.forEach(player ->
+            allowed.forEach(player ->
             {
                 if (player != null) {
                     InstanceManager.getInstance().setReenterPenalty(player.getObjectId(), getTemplateId(), time);
@@ -592,36 +568,27 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void finishInstance(int delay) {
         // Set re-enter for players
-        if (_template.getReenterType() == InstanceReenterType.ON_FINISH) {
+        if (template.getReenterType() == InstanceReenterType.ON_FINISH) {
             setReenterTime();
         }
         // Change instance duration
         setDuration(delay);
     }
 
-    // ---------------------------------------------
-    // Listeners
-    // ---------------------------------------------
-
-    /**
-     * This method is called when player dies inside instance.
-     *
-     * @param player
-     */
     public void onDeath(Player player) {
-        if (!player.isOnCustomEvent() && (_template.getEjectTime() > 0)) {
+        if (!player.isOnCustomEvent() && (template.getEjectTime() > 0)) {
             // Send message
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
-            sm.addInt(_template.getEjectTime());
+            sm.addInt(template.getEjectTime());
             player.sendPacket(sm);
 
             // Start eject task
-            _ejectDeadTasks.put(player.getObjectId(), ThreadPool.schedule(() ->
+            ejectDeadTasks.put(player.getObjectId(), ThreadPool.schedule(() ->
             {
                 if (player.isDead()) {
                     ejectPlayer(player.getActingPlayer());
                 }
-            }, _template.getEjectTime() * 60 * 1000)); // minutes to milliseconds
+            }, template.getEjectTime() * 60 * 1000)); // minutes to milliseconds
         }
     }
 
@@ -631,7 +598,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @param player resurrected player
      */
     public void doRevive(Player player) {
-        final ScheduledFuture<?> task = _ejectDeadTasks.remove(player.getObjectId());
+        final ScheduledFuture<?> task = ejectDeadTasks.remove(player.getObjectId());
         if (task != null) {
             task.cancel(true);
         }
@@ -650,24 +617,24 @@ public final class Instance implements IIdentifiable, INamable {
                 addPlayer(player);
 
                 // Set origin return location if enabled
-                if (_template.getExitLocationType() == InstanceTeleportType.ORIGIN) {
+                if (template.getExitLocationType() == InstanceTeleportType.ORIGIN) {
                     player.setInstanceOrigin(player.getX() + ";" + player.getY() + ";" + player.getZ());
                 }
 
                 // Remove player buffs
-                if (_template.isRemoveBuffEnabled()) {
-                    _template.removePlayerBuff(player);
+                if (template.isRemoveBuffEnabled()) {
+                    template.removePlayerBuff(player);
                 }
 
                 // Notify DP scripts
                 if (!isDynamic()) {
-                    EventDispatcher.getInstance().notifyEventAsync(new OnInstanceEnter(player, this), _template);
+                    EventDispatcher.getInstance().notifyEventAsync(new OnInstanceEnter(player, this), template);
                 }
             } else {
                 removePlayer(player);
                 // Notify DP scripts
                 if (!isDynamic()) {
-                    EventDispatcher.getInstance().notifyEventAsync(new OnInstanceLeave(player, this), _template);
+                    EventDispatcher.getInstance().notifyEventAsync(new OnInstanceLeave(player, this), template);
                 }
             }
         } else if (isNpc(object)) {
@@ -691,7 +658,7 @@ public final class Instance implements IIdentifiable, INamable {
     public void onPlayerLogout(Player player) {
         removePlayer(player);
         if (Config.RESTORE_PLAYER_INSTANCE) {
-            player.setInstanceRestore(_id);
+            player.setInstanceRestore(id);
         } else {
             final Location loc = getExitLocation(player);
             if (loc != null) {
@@ -712,7 +679,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return instance template ID
      */
     public int getTemplateId() {
-        return _template.getId();
+        return template.getId();
     }
 
     /**
@@ -721,7 +688,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return type of re-enter (see {@link InstanceReenterType} for possible values)
      */
     public InstanceReenterType getReenterType() {
-        return _template.getReenterType();
+        return template.getReenterType();
     }
 
     /**
@@ -730,7 +697,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return {@code true} when instance is PvP zone, otherwise {@code false}
      */
     public boolean isPvP() {
-        return _template.isPvP();
+        return template.isPvP();
     }
 
     /**
@@ -739,7 +706,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return {@code true} when summon is allowed, otherwise {@code false}
      */
     public boolean isPlayerSummonAllowed() {
-        return _template.isPlayerSummonAllowed();
+        return template.isPlayerSummonAllowed();
     }
 
     /**
@@ -748,7 +715,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return {@link Location} object if instance has enter location defined, otherwise {@code null}
      */
     public Location getEnterLocation() {
-        return _template.getEnterLocation();
+        return template.getEnterLocation();
     }
 
     /**
@@ -757,7 +724,7 @@ public final class Instance implements IIdentifiable, INamable {
      * @return list of enter locations
      */
     public List<Location> getEnterLocations() {
-        return _template.getEnterLocations();
+        return template.getEnterLocations();
     }
 
     /**
@@ -767,40 +734,36 @@ public final class Instance implements IIdentifiable, INamable {
      * @return {@link Location} object if instance has exit location defined, otherwise {@code null}
      */
     public Location getExitLocation(Player player) {
-        return _template.getExitLocation(player);
+        return template.getExitLocation(player);
     }
 
     /**
      * @return the exp rate of the instance
      */
     public float getExpRate() {
-        return _template.getExpRate();
+        return template.getExpRate();
     }
 
     /**
      * @return the sp rate of the instance
      */
     public float getSPRate() {
-        return _template.getSPRate();
+        return template.getSPRate();
     }
 
     /**
      * @return the party exp rate of the instance
      */
     public float getExpPartyRate() {
-        return _template.getExpPartyRate();
+        return template.getExpPartyRate();
     }
 
     /**
      * @return the party sp rate of the instance
      */
     public float getSPPartyRate() {
-        return _template.getSPPartyRate();
+        return template.getSPPartyRate();
     }
-
-    // ----------------------------------------------
-    // Tasks
-    // ----------------------------------------------
 
     /**
      * Clean up instance.
@@ -808,10 +771,10 @@ public final class Instance implements IIdentifiable, INamable {
     private void cleanUp() {
         if (getRemainingTime() <= TimeUnit.MINUTES.toMillis(1)) {
             sendWorldDestroyMessage(1);
-            _cleanUpTask = ThreadPool.schedule(this::destroy, 60 * 1000); // 1 minute
+            cleanUpTask = ThreadPool.schedule(this::destroy, 60 * 1000); // 1 minute
         } else {
             sendWorldDestroyMessage(5);
-            _cleanUpTask = ThreadPool.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
+            cleanUpTask = ThreadPool.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
         }
     }
 
@@ -838,7 +801,7 @@ public final class Instance implements IIdentifiable, INamable {
 
     @Override
     public String toString() {
-        return _template.getName() + "(" + _id + ")";
+        return template.getName() + "(" + id + ")";
     }
 
 
@@ -849,7 +812,7 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void openCloseDoor(int id, boolean open)
     {
-        final Door door = _doors.get(id);
+        final Door door = doors.get(id);
         if (door != null)
         {
             if (open)

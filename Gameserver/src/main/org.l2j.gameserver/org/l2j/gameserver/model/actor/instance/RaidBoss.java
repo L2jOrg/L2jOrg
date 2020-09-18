@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.util.MathUtil;
 
+import static org.l2j.gameserver.network.serverpackets.PlaySound.*;
+
 /**
  * This class manages all RaidBoss.<br>
  * In a group mob, there are one master called RaidBoss and several slaves called Minions.
@@ -58,7 +60,7 @@ public class RaidBoss extends Monster {
     public void onSpawn() {
         super.onSpawn();
         setRandomWalking(false);
-        broadcastPacket(new PlaySound(1, getParameters().getString("RaidSpawnMusic", "Rm01_A"), 0, 0, 0, 0, 0));
+        broadcastPacket(PlaySound.music(getParameters().getString("RaidSpawnMusic", "Rm01_A")));
     }
 
     @Override

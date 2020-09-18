@@ -98,9 +98,8 @@ public final class AdminInstance implements IAdminCommandHandler
             case "admin_instancecreate":
             {
                 final int templateId = Util.parseNextInt(st, 0);
-                final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(templateId);
 
-                if (template != null)
+                if (InstanceManager.getInstance().hasInstanceTemplate(templateId))
                 {
                     final String enterGroup = st.hasMoreTokens() ? st.nextToken() : "Alone";
                     final List<Player> members = new ArrayList<>();
@@ -147,7 +146,7 @@ public final class AdminInstance implements IAdminCommandHandler
                         }
                     }
 
-                    final Instance instance = InstanceManager.getInstance().createInstance(template, activeChar);
+                    final Instance instance = InstanceManager.getInstance().createInstance(templateId, activeChar);
                     final Location loc = instance.getEnterLocation();
                     if (loc != null)
                     {

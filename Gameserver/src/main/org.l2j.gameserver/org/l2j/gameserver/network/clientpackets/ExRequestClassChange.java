@@ -96,7 +96,7 @@ public class ExRequestClassChange extends ClientPacket {
             player.store(false); // Save player cause if server crashes before this char is saved, he will lose class.
             player.broadcastUserInfo();
             player.sendSkillList();
-            player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
+            player.sendPacket(PlaySound.sound("ItemSound.quest_fanfare_2"));
         }
     }
 }

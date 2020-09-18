@@ -133,7 +133,7 @@ public final class ClassMaster extends AbstractNpcAI
 				{
 					if (changeToNextClass(player))
 					{
-						player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
+						player.sendPacket(PlaySound.sound("ItemSound.quest_fanfare_2"));
 						player.broadcastUserInfo();
 						htmltext = "test_server_helper021.html";
 					}
@@ -257,7 +257,7 @@ public final class ClassMaster extends AbstractNpcAI
 					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 					player.broadcastUserInfo();
 					player.sendSkillList();
-					player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
+					player.sendPacket(PlaySound.sound("ItemSound.quest_fanfare_2"));
 					return "test_server_helper021.html";
 				}
 				break;

@@ -22,6 +22,7 @@ import io.github.joealisson.mmocore.WritablePacket;
 import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -78,7 +79,16 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
 
     }
 
-    public void writeOptionalD(int value) {
+    protected void writeId(ServerPacketId packet) {
+        writeByte(packet.getId());
+    }
+
+    protected void writeId(ServerExPacketId exPacket) {
+        writeByte(0xFE);
+        writeShort(exPacket.getId());
+    }
+
+    protected void writeOptionalD(int value) {
         if (value >= Short.MAX_VALUE) {
             writeShort(Short.MAX_VALUE);
             writeInt(value);
@@ -87,13 +97,10 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
         }
     }
 
-    protected void writeId(ServerPacketId packet) {
-        writeByte(packet.getId());
-    }
-
-    protected void writeId(ServerExPacketId exPacket) {
-        writeByte(0xFE);
-        writeShort(exPacket.getId());
+    protected void writeLocation(ILocational location) {
+        writeInt(location.getX());
+        writeInt(location.getY());
+        writeInt(location.getZ());
     }
 
     protected abstract void writeImpl(GameClient client) throws Exception;

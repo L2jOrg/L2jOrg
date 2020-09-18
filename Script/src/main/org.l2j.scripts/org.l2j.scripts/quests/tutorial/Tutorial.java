@@ -247,7 +247,7 @@ public abstract class Tutorial extends Quest {
     }
 
     protected void playTutorialVoice(Player player, String voice) {
-        player.sendPacket(new PlaySound(2, voice, 0, 0, player.getX(), player.getY(), player.getZ()));
+        player.sendPacket(PlaySound.voice(voice));
     }
 
     protected void showTutorialHtml(Player player, String fileName) {

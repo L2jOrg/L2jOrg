@@ -61,6 +61,7 @@ import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestPvpBookList;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExTeleportToKiller;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
+import org.l2j.gameserver.network.clientpackets.raidserver.ExConnectToRaidServer;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankingCharRankers;
 import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;
@@ -204,7 +205,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_SHOW_PETITION(null, ConnectionState.IN_GAME_STATES),
     EX_REQUEST_SHOWSTEP_TWO(null, ConnectionState.IN_GAME_STATES),
     EX_REQUEST_SHOWSTEP_THREE(null, ConnectionState.IN_GAME_STATES),
-    EX_CONNECT_TO_RAID_SERVER(null, ConnectionState.IN_GAME_STATES),
+    EX_CONNECT_TO_RAID_SERVER(ExConnectToRaidServer::new, ConnectionState.IN_GAME_STATES),
     EX_RETURN_FROM_RAID(null, ConnectionState.IN_GAME_STATES),
     EX_REFUND_REQ(RequestRefundItem::new, ConnectionState.IN_GAME_STATES),
     EX_BUY_SELL_UI_CLOSE_REQ(RequestBuySellUIClose::new, ConnectionState.IN_GAME_STATES),

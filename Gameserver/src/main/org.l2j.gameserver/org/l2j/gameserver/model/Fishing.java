@@ -244,7 +244,7 @@ public class Fishing {
         player.stopMove(null);
         player.broadcastPacket(new ExFishingStart(player, -1, baitData.getLevel(), baitLocation));
         player.sendPacket(new ExUserInfoFishing(player, true, baitLocation));
-        player.sendPacket(new PlaySound("SF_P_01"));
+        player.sendPacket(PlaySound.sound("SF_P_01"));
         player.sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
     }
 

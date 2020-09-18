@@ -7703,8 +7703,6 @@ public final class SystemMessageId {
     @ClientString(id = 3754, message = "$s1 second(s) to match end!")
     public static SystemMessageId S1_SECOND_S_TO_MATCH_END;
 
-    @ClientString(id = 3755, message = "$s1 second(s) to match start!")
-    public static SystemMessageId S1_SECOND_S_TO_MATCH_START;
 
     @ClientString(id = 3756, message = "Are you sure you want to quit?")
     public static SystemMessageId ARE_YOU_SURE_YOU_WANT_TO_QUIT;
@@ -17250,6 +17248,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 3749, message = "In $s1 second(s), you will be moved to where you were before participating in the Ceremony of Chaos.")
     public static SystemMessageId IN_S1_SECOND_S_YOU_WILL_BE_MOVED_TO_WHERE_YOU_WERE_BEFORE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS;
+
+    @ClientString(id = 3755, message = "$s1 second(s) to match start!")
+    public static SystemMessageId S1_SECOND_S_TO_MATCH_START;
 
     @ClientString(id = 3765, message = "Current Location: $s1 / $s2 / $s3 (inside the Seed of Hellfire)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_INSIDE_THE_SEED_OF_HELLFIRE;

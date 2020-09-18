@@ -69,7 +69,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
         }
 
         SessionKey skey = new SessionKey(authAccountId, authKey, gameserverSession, gameserverAccountId);
-        if(authed && client.getSessionId().equals(skey)) {
+        if(authed && client.getSessionKey().equals(skey)) {
             client.setConnectionState(ConnectionState.AUTHENTICATED);
             client.sendPacket(LoginFail.LOGIN_SUCCESS);
 

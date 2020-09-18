@@ -30,10 +30,10 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExOlympiadUserInfo extends ServerPacket {
     private final Player _player;
     private Participant _par = null;
-    private int _curHp;
-    private int _maxHp;
-    private int _curCp;
-    private int _maxCp;
+    private final int _curHp;
+    private final int _maxHp;
+    private final int _curCp;
+    private final int _maxCp;
 
     public ExOlympiadUserInfo(Player player) {
         _player = player;
@@ -71,12 +71,12 @@ public class ExOlympiadUserInfo extends ServerPacket {
         writeId(ServerExPacketId.EX_OLYMPIAD_USER_INFO);
 
         if (_player != null) {
-            writeByte((byte) _player.getOlympiadSide());
+            writeByte(_player.getOlympiadSide());
             writeInt(_player.getObjectId());
             writeString(_player.getName());
             writeInt(_player.getClassId().getId());
         } else {
-            writeByte((byte) _par.getSide());
+            writeByte(_par.getSide());
             writeInt(_par.getObjectId());
             writeString(_par.getName());
             writeInt(_par.getBaseClass());

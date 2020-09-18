@@ -85,13 +85,13 @@ public class Zaken extends AbstractNpcAI
 		final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, 0, false, 0);
 		GrandBossManager.getInstance().setBossStatus(ZAKEN, BossStatus.ALIVE);
 		GrandBossManager.getInstance().addBoss(zaken);
-		zaken.broadcastPacket(new PlaySound(1, "BS01_A", 1, zaken.getObjectId(), zaken.getX(), zaken.getY(), zaken.getZ()));
+		zaken.broadcastPacket(PlaySound.music("BS01_A",zaken));
 	}
 	
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(PlaySound.music("BS02_D", npc));
 		GrandBossManager.getInstance().setBossStatus(ZAKEN, BossStatus.DEAD);
 		// Calculate Min and Max respawn times randomly.
 		final long respawnTime = (Config.ZAKEN_SPAWN_INTERVAL + Rnd.get(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM)) * 3600000;
