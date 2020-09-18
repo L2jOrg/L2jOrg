@@ -23,7 +23,7 @@ import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.BossDAO;
-import org.l2j.gameserver.data.database.data.BossData;
+import org.l2j.gameserver.data.database.data.GrandBossData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
@@ -46,7 +46,7 @@ public final class GrandBossManager implements IStorable {
     protected static Logger LOGGER = LoggerFactory.getLogger(GrandBossManager.class.getName());
 
     protected static IntMap<GrandBoss> bosses = new CHashIntMap<>();
-    private IntMap<BossData> grandBossesData = Containers.emptyIntMap();
+    private IntMap<GrandBossData> grandBossesData = Containers.emptyIntMap();
 
     private GrandBossManager() {
         init();
@@ -59,7 +59,7 @@ public final class GrandBossManager implements IStorable {
     }
 
     public BossStatus getBossStatus(int bossId) {
-        return computeIfNonNull(grandBossesData.get(bossId), BossData::getStatus);
+        return computeIfNonNull(grandBossesData.get(bossId), GrandBossData::getStatus);
     }
 
     public void setBossStatus(int bossId, BossStatus status) {
@@ -85,7 +85,7 @@ public final class GrandBossManager implements IStorable {
         return grandBossesData.containsKey(bossId);
     }
 
-    public BossData getBossData(int bossId) {
+    public GrandBossData getBossData(int bossId) {
         return grandBossesData.get(bossId);
     }
 

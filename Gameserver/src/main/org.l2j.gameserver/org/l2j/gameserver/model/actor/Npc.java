@@ -31,7 +31,7 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.*;
@@ -799,7 +799,7 @@ public class Npc extends Creature {
             }
         }
 
-        DBSpawnManager.getInstance().updateStatus(this, true);
+        BossManager.getInstance().updateStatus(this, true);
         return true;
     }
 

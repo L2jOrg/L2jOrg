@@ -24,7 +24,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.Spawn;
@@ -226,15 +226,15 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Unload all zones.
 			ZoneManager.getInstance().unload();
 			// Delete all spawns.
-			for (Npc npc : DBSpawnManager.getInstance().getNpcs().values())
+			for (Npc npc : BossManager.getInstance().getNpcs().values())
 			{
 				if (npc != null)
 				{
-					DBSpawnManager.getInstance().deleteSpawn(npc.getSpawn(), true);
+					BossManager.getInstance().deleteSpawn(npc.getSpawn(), true);
 					npc.deleteMe();
 				}
 			}
-			DBSpawnManager.getInstance().cleanUp();
+			BossManager.getInstance().cleanUp();
 			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
 				if (isNpc(obj))
@@ -261,15 +261,15 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Unload all zones.
 			ZoneManager.getInstance().unload();
 			// Delete all spawns.
-			for (Npc npc : DBSpawnManager.getInstance().getNpcs().values())
+			for (Npc npc : BossManager.getInstance().getNpcs().values())
 			{
 				if (npc != null)
 				{
-					DBSpawnManager.getInstance().deleteSpawn(npc.getSpawn(), true);
+					BossManager.getInstance().deleteSpawn(npc.getSpawn(), true);
 					npc.deleteMe();
 				}
 			}
-			DBSpawnManager.getInstance().cleanUp();
+			BossManager.getInstance().cleanUp();
 			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
 				if (isNpc(obj))
@@ -286,7 +286,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			// Reload.
 			SpawnsData.getInstance().init();
-			DBSpawnManager.init();
+			BossManager.init();
 			ZoneManager.getInstance().reload();
 			QuestManager.getInstance().reloadAllScripts();
 			AdminData.getInstance().broadcastMessageToGMs("NPC respawn completed!");

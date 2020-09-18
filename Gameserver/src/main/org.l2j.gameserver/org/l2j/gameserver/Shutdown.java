@@ -248,7 +248,7 @@ public class Shutdown extends Thread {
         LOGGER.info("All players disconnected and saved.");
 
         // Save all raidboss and GrandBoss status ^_^
-        DBSpawnManager.getInstance().cleanUp();
+        BossManager.getInstance().cleanUp();
         LOGGER.info("RaidBossSpawnManager: All raidboss info saved.");
 
         GrandBossManager.getInstance().cleanUp();

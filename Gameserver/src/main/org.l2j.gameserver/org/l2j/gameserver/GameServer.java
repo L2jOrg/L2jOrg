@@ -115,7 +115,7 @@ public class GameServer {
         printSection("Spawns");
         SpawnsData.init();
         GrandBossManager.getInstance();
-        DBSpawnManager.init();
+        BossManager.init();
         ThreadPool.executeForked(SpawnsData.getInstance()::spawnAll);
 
         printSection("Server Data");
