@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.PetLevelData;
@@ -36,6 +37,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
 
@@ -201,6 +203,14 @@ public final class PetDataTable extends GameXmlReader {
 
     public int getPetItemByNpc(int npcId) {
         return zeroIfNullOrElse(pets.get(npcId), PetData::getItemId);
+    }
+
+    public boolean doesPetNameExist(String name, int petNpcId) {
+        return getDAO(PetDAO.class).existsPetName(name, getInstance().getPetItemByNpc(petNpcId));
+    }
+
+    public boolean isValidPetName(String name) {
+        return getSettings(ServerSettings.class).acceptPetName(name);
     }
 
     public static PetDataTable getInstance() {

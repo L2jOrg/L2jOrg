@@ -35,6 +35,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -53,6 +54,7 @@ public class Util {
     public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
     public static final String[] STRING_ARRAY_EMPTY = new String[0];
     public static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    public static final Predicate<String> ANY_PATTERN = Pattern.compile(".*").asMatchPredicate();
 
     public static boolean isNullOrEmpty(final CharSequence value) {
         return isNull(value) || value.length() == 0;

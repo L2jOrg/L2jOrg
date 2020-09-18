@@ -563,7 +563,6 @@ public final class Config {
 
     public static boolean HARDWARE_INFO_ENABLED;
     public static int MAX_PLAYERS_PER_HWID;
-    public static String PET_NAME_TEMPLATE;
     public static String CLAN_NAME_TEMPLATE;
     public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
     public static File DATAPACK_ROOT;
@@ -844,7 +843,6 @@ public final class Config {
 
         final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
 
-        PET_NAME_TEMPLATE = serverSettings.getString("PetNameTemplate", ".*");
         CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
 
         MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);

@@ -20,6 +20,7 @@ package org.l2j.gameserver.settings;
 
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ServerType;
 
 import java.nio.file.Path;
@@ -53,7 +54,8 @@ public class ServerSettings implements Settings {
     private int deadLockDetectorInterval;
     private boolean restartOnDeadLock;
     private int maxPlayers;
-    private Predicate<String> playerNameTemplate;
+    private Predicate<String> playerNamePattern;
+    private Predicate<String> petNamePattern;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -84,14 +86,15 @@ public class ServerSettings implements Settings {
         deadLockDetectorInterval = settingsFile.getInteger("DeadLockCheckInterval", 1800);
         restartOnDeadLock = settingsFile.getBoolean("RestartOnDeadlock", false);
 
-        determinePlayerNamePattern(settingsFile);
+        playerNamePattern = determineNamePattern(settingsFile, "CnameTemplate");
+        petNamePattern = determineNamePattern(settingsFile, "PetNameTemplate");
     }
 
-    private void determinePlayerNamePattern(SettingsFile settingsFile) {
+    private Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
         try {
-            playerNameTemplate = Pattern.compile(settingsFile.getString("CnameTemplate", ".*")).asMatchPredicate();
+            return Pattern.compile(settingsFile.getString(key, ".*")).asMatchPredicate();
         } catch (PatternSyntaxException e) {
-            playerNameTemplate = Pattern.compile(".*").asMatchPredicate();
+            return Util.ANY_PATTERN;
         }
     }
 
@@ -185,6 +188,10 @@ public class ServerSettings implements Settings {
     }
 
     public boolean acceptPlayerName(String name) {
-        return playerNameTemplate.test(name);
+        return playerNamePattern.test(name);
+    }
+
+    public boolean acceptPetName(String name) {
+        return petNamePattern.test(name);
     }
 }
