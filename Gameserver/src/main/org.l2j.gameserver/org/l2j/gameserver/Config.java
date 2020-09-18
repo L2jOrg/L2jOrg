@@ -74,7 +74,6 @@ public final class Config {
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
-    private static final String SERVER_CONFIG_FILE = "config/server.properties";
 
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
     private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
@@ -558,22 +557,6 @@ public final class Config {
     public static int KARMA_RATE_DROP_EQUIP_WEAPON;
 
     // --------------------------------------------------
-    // Server Settings
-    // --------------------------------------------------
-
-    public static boolean HARDWARE_INFO_ENABLED;
-    public static int MAX_PLAYERS_PER_HWID;
-    public static String CLAN_NAME_TEMPLATE;
-    public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
-    public static File DATAPACK_ROOT;
-    public static int SERVER_LIST_AGE;
-    public static boolean SERVER_LIST_BRACKET;
-
-    public static boolean SERVER_RESTART_SCHEDULE_MESSAGE;
-    public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
-    public static String[] SERVER_RESTART_SCHEDULE;
-
-    // --------------------------------------------------
     // Vitality Settings
     // --------------------------------------------------
     public static boolean ENABLE_VITALITY;
@@ -821,7 +804,7 @@ public final class Config {
 
     /**
      * This class initializes all global variables for configuration.<br>
-     * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
+     * If the key doesn't appear in properties file, a default value is set by this class. (properties file) for configuring your server.
      */
     public static void load() {
         FLOOD_PROTECTOR_USE_ITEM = new FloodProtectorConfig("UseItemFloodProtector");
@@ -841,28 +824,10 @@ public final class Config {
         FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
         FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
 
-        final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
-
-        CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
-
-        MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
-
-        HARDWARE_INFO_ENABLED = serverSettings.getBoolean("EnableHardwareInfo", false);
-        MAX_PLAYERS_PER_HWID = serverSettings.getInt("MaxPlayersPerHWID", 0);
-
-        SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
-        SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
-
-        SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
-        SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 600);
-        SERVER_RESTART_SCHEDULE = serverSettings.getString("ServerRestartSchedule", "08:00").split(",");
-
         // Hosts and Subnets
         final IPConfigData ipcd = new IPConfigData();
         GAME_SERVER_SUBNETS = ipcd.getSubnets();
         GAME_SERVER_HOSTS = ipcd.getHosts();
-
-
 
         // Load Feature config file (if exists)
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);

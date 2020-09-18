@@ -96,12 +96,14 @@ public final class CharacterCreate extends ClientPacket {
             return;
         }
 
-        if (!isAlphaNumeric(name) || !getSettings(ServerSettings.class).acceptPlayerName(name)) {
+        var serverSettings = getSettings(ServerSettings.class);
+        if (!serverSettings.acceptPlayerName(name)) {
             client.sendPacket(new CharCreateFail(REASON_INCORRECT_NAME));
             return;
         }
 
-        if (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0 && client.getPlayerCount() >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) {
+
+        if (!serverSettings.allowPlayersCount(client.getPlayerCount())) {
             client.sendPacket(new CharCreateFail(REASON_TOO_MANY_CHARACTERS));
             return;
         }

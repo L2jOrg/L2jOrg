@@ -41,6 +41,7 @@ public class PlayerSelectionInfo extends ServerPacket {
     private final String account;
     private final int sessionId;
     private final List<PlayerSelectInfo> playersInfo;
+    private final int maxPlayerAllowed;
     private int activeSlot;
 
     public PlayerSelectionInfo(GameClient client) {
@@ -52,6 +53,7 @@ public class PlayerSelectionInfo extends ServerPacket {
         this.account = client.getAccountName();
         this.playersInfo = client.getPlayersInfo();
         this.activeSlot = activeSlot;
+        this.maxPlayerAllowed = getSettings(ServerSettings.class).maxPlayersAllowed();
     }
 
     @Override
@@ -61,8 +63,9 @@ public class PlayerSelectionInfo extends ServerPacket {
         final int size = playersInfo.size();
         writeInt(size); // Created character count
 
-        writeInt(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-        writeByte(size == Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // if 1 can't create new char
+
+        writeInt(maxPlayerAllowed); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
+        writeByte(size == maxPlayerAllowed); // if 1 can't create new char
         writeByte(0x01); // 0=can't play, 1=can play free until level 85, 2=100% free play
         writeInt(0x02); // if 1, Korean client
         writeByte(0x00); // Gift message for inactive accounts // 152

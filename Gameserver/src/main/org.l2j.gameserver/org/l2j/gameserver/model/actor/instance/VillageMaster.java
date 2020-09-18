@@ -41,17 +41,17 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
-import java.util.regex.Pattern;
-import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 /**
@@ -356,14 +356,7 @@ public class VillageMaster extends Folk {
     }
 
     private static boolean isValidName(String name) {
-        Pattern pattern;
-        try {
-            pattern = Pattern.compile(Config.CLAN_NAME_TEMPLATE);
-        } catch (PatternSyntaxException e) {
-            LOGGER.warn("ERROR: Wrong pattern for clan name!");
-            pattern = Pattern.compile(".*");
-        }
-        return pattern.matcher(name).matches();
+        return getSettings(ServerSettings.class).acceptClanName(name);
     }
 
     @Override

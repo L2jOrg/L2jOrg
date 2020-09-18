@@ -27,10 +27,12 @@ import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.mail.MailEngine;
-import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.enums.SubclassInfoType;
-import org.l2j.gameserver.instancemanager.*;
+import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.InstanceManager;
+import org.l2j.gameserver.instancemanager.PetitionManager;
+import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -255,10 +257,6 @@ public class EnterWorld extends ClientPacket {
 
         AnnouncementsManager.getInstance().showAnnouncements(player);
 
-        if (getSettings(ServerSettings.class).scheduleRestart() && (Config.SERVER_RESTART_SCHEDULE_MESSAGE)) {
-            player.sendPacket(new CreatureSay(2, ChatType.BATTLEFIELD, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
-        }
-
         if (showClanNotice) {
             final NpcHtmlMessage notice = new NpcHtmlMessage();
             notice.setFile(player, "data/html/clanNotice.htm");
@@ -345,7 +343,7 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(new ExAutoSoulShot(0, true, 2));
         player.sendPacket(new ExAutoSoulShot(0, true, 3));
 
-        if (Config.HARDWARE_INFO_ENABLED) {
+        if (getSettings(ServerSettings.class).isHardwareInfoEnabled()) {
             ThreadPool.schedule(() -> {
                 if (client.getHardwareInfo() == null) {
                     Disconnection.of(client).defaultSequence(false);
