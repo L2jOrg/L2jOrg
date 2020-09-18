@@ -19,7 +19,6 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.commons.xml.XmlReader;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.MinionHolder;
@@ -60,7 +59,7 @@ public abstract class GameXmlReader extends XmlReader {
      * @return {@code false} if it fails to find the directory, {@code true} otherwise
      */
     protected boolean parseDatapackDirectory(String path, boolean recursive) {
-        return parseDirectory(new File(Config.DATAPACK_ROOT, path), recursive);
+        return parseDirectory(new File(getSettings(ServerSettings.class).dataPackDirectory().toFile(), path), recursive);
     }
 
     /**

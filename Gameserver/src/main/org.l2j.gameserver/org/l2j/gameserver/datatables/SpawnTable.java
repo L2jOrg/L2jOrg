@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.datatables;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.Spawn;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -130,7 +131,7 @@ public final class SpawnTable {
             final String spawnDelay = String.valueOf(spawn.getRespawnDelay() / 1000);
             if (spawnFile.exists()) // update
             {
-                final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
+                final File tempFile = new File(spawnFile.getAbsolutePath().substring(getSettings(ServerSettings.class).dataPackDirectory().toFile().getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 
                 try(final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
                     final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));) {
@@ -186,7 +187,7 @@ public final class SpawnTable {
             final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
             final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
             final File spawnFile = new File( nonNull(spawn.getNpcSpawnTemplate()) ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFilePath() : OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
-            final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
+            final File tempFile = new File(spawnFile.getAbsolutePath().substring(getSettings(ServerSettings.class).dataPackDirectory().toFile().getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
             try (final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
                  final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))){
 
@@ -228,7 +229,7 @@ public final class SpawnTable {
                 tempFile.renameTo(spawnFile);
                 // Delete empty file
                 if (lineCount < 7) {
-                    LOGGER.info(getClass().getSimpleName() + ": Deleted empty file: " + spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/'));
+                    LOGGER.info(getClass().getSimpleName() + ": Deleted empty file: " + spawnFile.getAbsolutePath().substring(getSettings(ServerSettings.class).dataPackDirectory().toFile().getAbsolutePath().length() + 1).replace('\\', '/'));
                     spawnFile.delete();
                 }
             } catch (Exception e) {

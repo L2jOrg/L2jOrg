@@ -844,13 +844,6 @@ public final class Config {
 
         final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
 
-        try {
-            DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
-        } catch (IOException e) {
-            LOGGER.warn("Error setting datapack root!", e);
-            DATAPACK_ROOT = new File(".");
-        }
-
         PET_NAME_TEMPLATE = serverSettings.getString("PetNameTemplate", ".*");
         CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
 
@@ -1668,9 +1661,7 @@ public final class Config {
         MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
         final String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
         MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
-        for (String lang : allowed) {
-            MULTILANG_ALLOWED.add(lang);
-        }
+        Collections.addAll(MULTILANG_ALLOWED, allowed);
         if (!MULTILANG_ALLOWED.contains(MULTILANG_DEFAULT)) {
             LOGGER.warn("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
         }

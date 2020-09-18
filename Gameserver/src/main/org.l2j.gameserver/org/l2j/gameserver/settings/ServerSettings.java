@@ -62,9 +62,7 @@ public class ServerSettings implements Settings {
 
         authServerAddress = settingsFile.getString("LoginHost", "127.0.0.1");
         authServerPort = settingsFile.getShort("LoginPort", (short) 9014);
-
         port = settingsFile.getShort("GameserverPort", (short) 7777);
-
         type = ServerType.maskOf(settingsFile.getStringArray("ServerListType"));
 
         maximumOnlineUsers = Math.max(1, settingsFile.getInteger("MaximumOnlineUsers", 20));
