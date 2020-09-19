@@ -222,14 +222,14 @@ public final class GameClient extends Client<Connection<GameClient>> {
         return CharacterDeleteFailType.NONE;
     }
 
-    public void restore(int characterSlot) {
-        final int objectId = getObjectIdForSlot(characterSlot);
-        if (objectId < 0) {
+    public void restore(int slot) {
+        var info = getPlayerSelection(slot);
+        if(isNull(info)) {
             return;
         }
-
-        getDAO(PlayerDAO.class).updateDeleteTime(objectId, 0);
-        LOGGER_ACCOUNTING.info("Restore {} [{}]", objectId, this);
+        info.setDeleteTime(0);
+        getDAO(PlayerDAO.class).updateDeleteTime(info.getObjectId(), 0);
+        LOGGER_ACCOUNTING.info("Restore {} [{}]", info.getObjectId(), this);
     }
 
     public Player load(int slot) {
