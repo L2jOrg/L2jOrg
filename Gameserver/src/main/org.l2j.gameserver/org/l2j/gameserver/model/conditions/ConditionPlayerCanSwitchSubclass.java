@@ -46,7 +46,7 @@ public class ConditionPlayerCanSwitchSubclass extends Condition {
             canSwitchSub = false;
         } else if (((_subIndex != 0) && (player.getSubClasses().get(_subIndex) == null)) || (player.getClassIndex() == _subIndex)) {
             canSwitchSub = false;
-        } else if (!player.isInventoryUnder90(true)) {
+        } else if (!player.isInventoryUnder90()) {
             player.sendPacket(SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT);
             canSwitchSub = false;
         } else if (player.getWeightPenalty() >= 2) {

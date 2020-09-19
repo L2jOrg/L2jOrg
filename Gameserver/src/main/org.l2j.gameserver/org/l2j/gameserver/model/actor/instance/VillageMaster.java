@@ -542,7 +542,7 @@ public class VillageMaster extends Folk {
                 return;
             }
             // Subclasses may not be changed while you have exceeded your inventory limit.
-            if (!player.isInventoryUnder90(true)) {
+            if (!player.isInventoryUnder90()) {
                 player.sendPacket(SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT);
                 return;
             }

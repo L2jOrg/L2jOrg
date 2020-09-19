@@ -461,26 +461,24 @@ public final class ItemEngine extends GameXmlReader {
      * @param reference the object referencing current action like NPC selling item or previous item in transformation.
      */
     public void destroyItem(String process, Item item, Player actor, Object reference) {
-        synchronized (item) {
-            final long old = item.getCount();
-            item.setItemLocation(ItemLocation.VOID);
-            item.setCount(0);
-            item.setOwnerId(0);
-            item.setLastChange(Item.REMOVED);
+        final long old = item.getCount();
+        item.setItemLocation(ItemLocation.VOID);
+        item.setCount(0);
+        item.setOwnerId(0);
+        item.setLastChange(Item.REMOVED);
 
-            World.getInstance().removeObject(item);
-            IdFactory.getInstance().releaseId(item.getObjectId());
+        World.getInstance().removeObject(item);
+        IdFactory.getInstance().releaseId(item.getObjectId());
 
-            var generalSettings = getSettings(GeneralSettings.class);
-            if (generalSettings.logItems()) {
-                if (!generalSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA) {
-                    LOGGER_ITEMS.info("DELETE: {}, item {}:+{} {} ({}), Previous Count ({}), {}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(),old ,actor, reference);
-                }
+        var generalSettings = getSettings(GeneralSettings.class);
+        if (generalSettings.logItems()) {
+            if (!generalSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA) {
+                LOGGER_ITEMS.info("DELETE: {}, item {}:+{} {} ({}), Previous Count ({}), {}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(),old ,actor, reference);
             }
-
-            auditGM(process, item.getId(), item.getCount(), actor, reference, item);
-            getDAO(PetDAO.class).deleteByItem(item.getObjectId());
         }
+
+        auditGM(process, item.getId(), item.getCount(), actor, reference, item);
+        getDAO(PetDAO.class).deleteByItem(item.getObjectId());
     }
 
     public void reload() {

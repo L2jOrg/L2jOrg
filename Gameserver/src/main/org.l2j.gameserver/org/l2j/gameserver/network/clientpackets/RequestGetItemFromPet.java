@@ -74,7 +74,7 @@ public final class RequestGetItemFromPet extends ClientPacket {
 
         final Item transferedItem = pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet);
         if (transferedItem != null) {
-            player.sendPacket(new PetItemList(pet.getInventory().getItems()));
+            pet.sendItemList();
         } else {
             LOGGER.warn("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
         }

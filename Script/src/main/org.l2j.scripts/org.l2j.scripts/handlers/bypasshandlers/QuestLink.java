@@ -173,7 +173,7 @@ public class QuestLink implements IBypassHandler {
 
 		if (nonNull(quest)) {
 
-			if (player.getWeightPenalty() >= 3 || !player.isInventoryUnder80(true)) {
+			if (player.getWeightPenalty() >= 3 || !player.isInventoryUnder80()) {
 				player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				return;
 			}

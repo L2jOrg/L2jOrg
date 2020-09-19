@@ -71,7 +71,6 @@ public final class ClanWarehouse extends Warehouse {
 
     @Override
     public Item addItem(String process, Item item, Player actor, Object reference) {
-        // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemAdd(process, actor, item, this), item.getTemplate());
         return super.addItem(process, item, actor, reference);
     }

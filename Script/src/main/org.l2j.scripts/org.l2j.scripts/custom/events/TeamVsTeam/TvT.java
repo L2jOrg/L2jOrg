@@ -647,7 +647,7 @@ public class TvT extends Event
 			player.sendMessage("You cannot register on the event while on a transformed state.");
 			return false;
 		}
-		if (!player.isInventoryUnder80(false))
+		if (!player.isInventoryUnder80())
 		{
 			player.sendMessage("There are too many items in your inventory.");
 			player.sendMessage("Try removing some items.");

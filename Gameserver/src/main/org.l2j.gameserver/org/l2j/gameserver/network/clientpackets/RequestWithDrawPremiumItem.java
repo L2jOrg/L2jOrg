@@ -53,7 +53,7 @@ public final class RequestWithDrawPremiumItem extends ClientPacket {
         } else if (activeChar.getPremiumItemList().isEmpty()) {
             GameUtils.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Player: " + activeChar.getName() + " try to get item with empty list!");
             return;
-        } else if ((activeChar.getWeightPenalty() >= 3) || !activeChar.isInventoryUnder90(false)) {
+        } else if ((activeChar.getWeightPenalty() >= 3) || !activeChar.isInventoryUnder90()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_THE_DIMENSIONAL_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT);
             return;
         } else if (activeChar.isProcessingTransaction()) {

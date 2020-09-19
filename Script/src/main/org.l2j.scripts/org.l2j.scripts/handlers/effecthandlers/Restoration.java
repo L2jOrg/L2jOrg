@@ -22,14 +22,15 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.PetItemList;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.util.GameUtils.*;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Restoration effect implementation.
@@ -72,12 +73,12 @@ public final class Restoration extends AbstractEffect {
                 newItem.setEnchantLevel(itemEnchantmentLevel);
             }
         }
-        else if (isPet(effected)) {
+        else if (effected instanceof Pet pet) {
             final Item newItem = effected.getInventory().addItem("Skill", itemId, itemCount, effected.getActingPlayer(), effector);
             if (itemEnchantmentLevel > 0) {
                 newItem.setEnchantLevel(itemEnchantmentLevel);
             }
-            effected.getActingPlayer().sendPacket(new PetItemList(effected.getInventory().getItems()));
+            pet.sendItemList();
         }
     }
 

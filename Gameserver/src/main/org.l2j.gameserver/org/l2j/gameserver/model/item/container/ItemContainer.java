@@ -18,11 +18,8 @@
  */
 package org.l2j.gameserver.model.item.container;
 
-import io.github.joealisson.primitive.CHashIntMap;
-import io.github.joealisson.primitive.IntMap;
-import io.github.joealisson.primitive.IntSet;
+import io.github.joealisson.primitive.*;
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.util.StreamUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -42,9 +39,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -58,6 +55,7 @@ public abstract class ItemContainer {
     protected static final Logger LOGGER = LoggerFactory.getLogger(ItemContainer.class);
 
     protected final IntMap<Item> items = new CHashIntMap<>();
+    protected final IntIntMap itemIdLookup = new HashIntIntMap();
 
     protected ItemContainer() {
     }
@@ -70,14 +68,6 @@ public abstract class ItemContainer {
         return items.size();
     }
 
-    @SafeVarargs
-    public final int getSize(Predicate<Item> filter, Predicate<Item>... filters) {
-        for (Predicate<Item> additionalFilter : filters) {
-            filter = filter.and(additionalFilter);
-        }
-        return (int) items.values().stream().filter(filter).count();
-    }
-
     /**
      * Gets the items in inventory.
      *
@@ -86,7 +76,7 @@ public abstract class ItemContainer {
      * TODO replace with bulk method operation forEach like
      */
     public Collection<Item> getItems() {
-        return getItems(i -> true);
+        return items.values();
     }
 
     /**
@@ -101,25 +91,42 @@ public abstract class ItemContainer {
         for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
-        return items.values().stream().filter(filter).collect(Collectors.toCollection(LinkedList::new));
+        List<Item> selected = new LinkedList<>();
+        for (Item item : items.values()) {
+            if(filter.test(item)) {
+                selected.add(item);
+            }
+        }
+        return selected;
     }
 
     public void forEachItem(Predicate<Item> filter, Consumer<Item> action) {
-        items.values().stream().filter(filter).forEach(action);
+        for (Item item : items.values()) {
+            if(filter.test(item)) {
+                action.accept(item);
+            }
+        }
+    }
+
+    public void forEachItem(Consumer<Item> action) {
+        items.values().forEach(action);
     }
 
     public final IntSet getItemsId(Predicate<Item> filter) {
-        return StreamUtil.collectToSet(items.entrySet().stream()
-                .filter(e -> filter.test(e.getValue()))
-                .mapToInt(IntMap.Entry::getKey));
+        IntSet ids = new HashIntSet();
+        for (IntMap.Entry<Item> entry : items.entrySet()) {
+            if(filter.test(entry.getValue())) {
+                ids.add(entry.getKey());
+            }
+        }
+        return ids;
     }
 
-    /**
-     * @param itemId the item Id
-     * @return the item from inventory by itemId
-     */
     public Item getItemByItemId(int itemId) {
-        return items.values().stream().filter(item -> item.getId() == itemId).findFirst().orElse(null);
+        if(itemIdLookup.containsKey(itemId)) {
+            return items.get(itemIdLookup.get(itemId));
+        }
+        return null;
     }
 
     /**
@@ -181,41 +188,17 @@ public abstract class ItemContainer {
      * @return Item corresponding to the new item or the updated item in inventory
      */
     public Item addItem(String process, Item item, Player actor, Object reference) {
-        final Item olditem = getItemByItemId(item.getId());
+        final Item oldItem = getItemByItemId(item.getId());
 
-        // If stackable item is found in inventory just add to current quantity
-        if ((olditem != null) && olditem.isStackable()) {
-            final long count = item.getCount();
-            olditem.changeCount(process, count, actor, reference);
-            olditem.setLastChange(Item.MODIFIED);
+        if (nonNull(oldItem) && oldItem.isStackable()) {
+            changeItemCount(process, oldItem.getId(), item.getCount(), actor, reference, oldItem);
 
-            // And destroys the item
             ItemEngine.getInstance().destroyItem(process, item, actor, reference);
             item.updateDatabase();
-            item = olditem;
-
-            // Updates database
-            final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
-            if ((item.getId() == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
-                // Small adena changes won't be saved to database all the time
-                if ((WorldTimeController.getInstance().getGameTicks() % 5) == 0) {
-                    item.updateDatabase();
-                }
-            } else {
-                item.updateDatabase();
-            }
+            item = oldItem;
         }
-        // If item hasn't be found in inventory, create new one
         else {
-            item.setOwnerId(process, getOwnerId(), actor, reference);
-            item.setItemLocation(getBaseLocation());
-            item.setLastChange((Item.ADDED));
-
-            // Add item in inventory
-            addItem(item);
-
-            // Updates database
-            item.updateDatabase();
+            addNewItem(item);
         }
 
         refreshWeight();
@@ -235,50 +218,57 @@ public abstract class ItemContainer {
     public Item addItem(String process, int itemId, long count, Player actor, Object reference) {
         Item item = getItemByItemId(itemId);
 
-        // If stackable item is found in inventory just add to current quantity
-        if ((item != null) && item.isStackable()) {
-            item.changeCount(process, count, actor, reference);
-            item.setLastChange(Item.MODIFIED);
-            // Updates database
-            // If Adena drop rate is not present it will be x1.
-            final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
-            if ((itemId == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
-                // Small adena changes won't be saved to database all the time
-                if ((WorldTimeController.getInstance().getGameTicks() % 5) == 0) {
-                    item.updateDatabase();
-                }
-            } else {
-                item.updateDatabase();
-            }
+        if (nonNull(item) && item.isStackable()) {
+            changeItemCount(process, itemId, count, actor, reference, item);
         }
-        // If item hasn't be found in inventory, create new one
         else {
-            for (int i = 0; i < count; i++) {
-                final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
-                if (template == null) {
-                    LOGGER.warn((actor != null ? "[" + actor.getName() + "] " : "") + "Invalid ItemId requested: ", itemId);
-                    return null;
-                }
-
-                item = ItemEngine.getInstance().createItem(process, itemId, template.isStackable() ? count : 1, actor, reference);
-                item.setOwnerId(getOwnerId());
-                item.setItemLocation(getBaseLocation());
-                item.setLastChange(Item.ADDED);
-
-                // Add item in inventory
-                addItem(item);
-                // Updates database
-                item.updateDatabase();
-
-                // If stackable, end loop as entire count is included in 1 instance of item
-                if (template.isStackable() || !Config.MULTIPLE_ITEM_DROP) {
-                    break;
-                }
-            }
+            item = createNewItem(process, itemId, count, actor, reference);
         }
-
         refreshWeight();
         return item;
+    }
+
+    private Item createNewItem(String process, int itemId, long count, Player actor, Object reference) {
+        Item item = null;
+        final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
+        if(nonNull(template)) {
+            if(template.isStackable()) {
+                item = ItemEngine.getInstance().createItem(process, itemId, count, actor, reference);
+                addNewItem(item);
+            } else {
+                for (int i = 0; i < count; i++) {
+                    item = ItemEngine.getInstance().createItem(process, itemId, count, actor, reference);
+                    addNewItem(item);
+                }
+            }
+        } else {
+            LOGGER.warn("{} Invalid ItemId {} requested by process {}", actor, itemId, process);
+        }
+        return item;
+    }
+
+    private void addNewItem(Item item) {
+        item.setOwnerId(getOwnerId());
+        item.setItemLocation(getBaseLocation());
+        item.setLastChange(Item.ADDED);
+
+        addItem(item);
+        item.updateDatabase();
+    }
+
+    private void changeItemCount(String process, int itemId, long count, Player actor, Object reference, Item item) {
+        item.changeCount(process, count, actor, reference);
+        item.setLastChange(Item.MODIFIED);
+
+        final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
+        if ((itemId == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
+
+            if ((WorldTimeController.getInstance().getGameTicks() % 5) == 0) {
+                item.updateDatabase();
+            }
+        } else {
+            item.updateDatabase();
+        }
     }
 
     /**
@@ -357,26 +347,24 @@ public abstract class ItemContainer {
             return null;
         }
 
-        synchronized (item) {
-            if (!items.containsKey(item.getObjectId())) {
-                return null;
-            }
-
-            if (count > item.getCount()) {
-                return null;
-            }
-
-            if (count == item.getCount()) {
-                removeItem(item);
-            } else {
-                item.changeCount(process, -count, actor, reference);
-                item.updateDatabase(true);
-                item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
-                item.setOwnerId(getOwnerId());
-            }
-            item.setItemLocation(newLocation);
-            item.updateDatabase(true);
+        if (!items.containsKey(item.getObjectId())) {
+            return null;
         }
+
+        if (count > item.getCount()) {
+            return null;
+        }
+
+        if (count == item.getCount()) {
+            removeItem(item);
+        } else {
+            item.changeCount(process, -count, actor, reference);
+            item.updateDatabase(true);
+            item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
+            item.setOwnerId(getOwnerId());
+        }
+        item.setItemLocation(newLocation);
+        item.updateDatabase(true);
 
         refreshWeight();
 
@@ -401,42 +389,40 @@ public abstract class ItemContainer {
      *
      * @param process   : String Identifier of process triggering this action
      * @param item      : Item to be destroyed
-     * @param count
+     * @param count     : amount to be destroyed
      * @param actor     : Player Player requesting the item destroy
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
     public Item destroyItem(String process, Item item, long count, Player actor, Object reference) {
-        synchronized (item) {
-            // Adjust item quantity
-            if (item.getCount() > count) {
-                item.changeCount(process, -count, actor, reference);
-                item.setLastChange(Item.MODIFIED);
+        // Adjust item quantity
+        if (item.getCount() > count) {
+            item.changeCount(process, -count, actor, reference);
+            item.setLastChange(Item.MODIFIED);
 
-                // don't update often for untraced item
-                if ((process != null) || ((WorldTimeController.getInstance().getGameTicks() % 10) == 0)) {
-                    item.updateDatabase();
-                }
-
-                refreshWeight();
-            } else {
-                if (item.getCount() < count) {
-                    return null;
-                }
-
-                final boolean removed = removeItem(item);
-                if (!removed) {
-                    return null;
-                }
-
-                ItemEngine.getInstance().destroyItem(process, item, actor, reference);
-
+            // don't update often for untraced item
+            if ((process != null) || ((WorldTimeController.getInstance().getGameTicks() % 10) == 0)) {
                 item.updateDatabase();
-                refreshWeight();
-
-                item.deleteMe();
-                item.setLastChange(Item.REMOVED);
             }
+
+            refreshWeight();
+        } else {
+            if (item.getCount() < count) {
+                return null;
+            }
+
+            final boolean removed = removeItem(item);
+            if (!removed) {
+                return null;
+            }
+
+            ItemEngine.getInstance().destroyItem(process, item, actor, reference);
+
+            item.updateDatabase();
+            refreshWeight();
+
+            item.deleteMe();
+            item.setLastChange(Item.REMOVED);
         }
         return item;
     }
@@ -515,15 +501,34 @@ public abstract class ItemContainer {
      */
     protected void addItem(Item item) {
         items.put(item.getObjectId(), item);
+        itemIdLookup.putIfAbsent(item.getId(), item.getObjectId());
     }
 
     /**
      * Removes item from inventory for further adjustments.
      *
-     * @param item : Item to be removed from inventory
+     * @param reference : Item to be removed from inventory
      */
-    protected boolean removeItem(Item item) {
-        return items.remove(item.getObjectId()) != null;
+    protected boolean removeItem(Item reference) {
+        Item removed = items.remove(reference.getObjectId());
+        if(nonNull(removed)) {
+            updateItemIdLookUp(removed, items.values());
+            return true;
+        }
+        return false;
+    }
+
+    protected void updateItemIdLookUp(Item removed, Collection<Item> items) {
+        if(itemIdLookup.get(removed.getId()) == removed.getObjectId()) {
+            itemIdLookup.remove(removed.getId());
+
+            for (Item i : items) {
+                if (i.getId() == removed.getId()) {
+                    itemIdLookup.put(removed.getId(), i.getObjectId());
+                    break;
+                }
+            }
+        }
     }
 
     /**

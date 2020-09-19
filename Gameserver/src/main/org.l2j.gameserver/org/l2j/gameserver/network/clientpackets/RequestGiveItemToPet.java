@@ -29,6 +29,8 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.nonNull;
+
 /**
  * This class ...
  *
@@ -104,12 +106,10 @@ public final class RequestGiveItemToPet extends ClientPacket {
         }
 
         final Item transferedItem = player.transferItem("Transfer", _objectId, _amount, pet.getInventory(), pet);
-        if (transferedItem != null)
-        {
-            player.sendPacket(new PetItemList(inventory.getItems()));
-        }
-        else {
-            LOGGER.warn("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
+        if (nonNull(transferedItem)) {
+            pet.sendItemList();
+        } else {
+            LOGGER.warn("Invalid item transfer request: {} (pet) --> {}", pet, player);
         }
     }
 }

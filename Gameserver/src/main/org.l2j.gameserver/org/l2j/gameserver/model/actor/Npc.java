@@ -1236,9 +1236,6 @@ public class Npc extends Creature {
             }
 
             item = ItemEngine.getInstance().createItem("Loot", itemId, itemCount, character, this);
-            if (item == null) {
-                return null;
-            }
 
             if (character != null) {
                 item.getDropProtection().protect(character);
@@ -1255,7 +1252,7 @@ public class Npc extends Creature {
             item.setProtected(false);
 
             // If stackable, end loop as entire count is included in 1 instance of item.
-            if (item.isStackable() || !Config.MULTIPLE_ITEM_DROP) {
+            if (item.isStackable()) {
                 break;
             }
         }

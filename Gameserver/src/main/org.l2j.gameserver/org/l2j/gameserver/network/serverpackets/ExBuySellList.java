@@ -39,7 +39,7 @@ public class ExBuySellList extends AbstractItemPacket {
     public ExBuySellList(Player player, boolean done) {
         final Summon pet = player.getPet();
         _sellList = player.getInventory().getItems(item -> !item.isEquipped() && item.isSellable() && ((pet == null) || (item.getObjectId() != pet.getControlObjectId())));
-        _inventorySlots = player.getInventory().getItems((item) -> !item.isQuestItem()).size();
+        _inventorySlots = player.getInventory().getSize();
         if (player.hasRefund()) {
             _refundList = player.getRefund().getItems();
         }

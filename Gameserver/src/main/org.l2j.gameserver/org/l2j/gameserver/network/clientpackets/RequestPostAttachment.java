@@ -112,11 +112,6 @@ public final class RequestPostAttachment extends ClientPacket {
         int slots = 0;
 
         for (Item item : attachments.getItems()) {
-            if (item == null) {
-                continue;
-            }
-
-            // Calculate needed slots
             if (item.getOwnerId() != mail.getSender()) {
                 GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get wrong item (ownerId != senderId) from attachment!");
                 return;
@@ -161,10 +156,6 @@ public final class RequestPostAttachment extends ClientPacket {
         // Proceed to the transfer
         final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
         for (Item item : attachments.getItems()) {
-            if (item == null) {
-                continue;
-            }
-
             if (item.getOwnerId() != mail.getSender()) {
                 GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get item with owner != sender !");
                 return;

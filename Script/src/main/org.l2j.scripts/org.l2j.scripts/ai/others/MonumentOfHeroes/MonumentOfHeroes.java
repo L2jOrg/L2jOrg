@@ -92,7 +92,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 				{
 					if (!hasAtLeastOneQuestItem(player, HERO_CLOAK/* , GLORIOUS_CLOAK */))
 					{
-						if (player.isInventoryUnder80(false))
+						if (player.isInventoryUnder80())
 						{
 							giveItems(player, HERO_CLOAK, 1);
 						}
@@ -120,7 +120,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 			{
 				if (Hero.getInstance().isHero(player.getObjectId()))
 				{
-					if (player.isInventoryUnder80(false))
+					if (player.isInventoryUnder80())
 					{
 						htmltext = hasAtLeastOneQuestItem(player, WEAPONS) ? "MonumentOfHeroes-weaponHave.html" : "MonumentOfHeroes-weaponList.html";
 					}
@@ -143,7 +143,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 					{
 						htmltext = "MonumentOfHeroes-circletHave.html";
 					}
-					else if (!player.isInventoryUnder80(false))
+					else if (!player.isInventoryUnder80())
 					{
 						player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 					}

@@ -278,17 +278,9 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new SkillCoolTime(player));
         client.sendPacket(new ExVoteSystemInfo(player));
 
-        for (Item item : player.getInventory().getItems()) {
-            if (item.isTimeLimitedItem()) {
-                item.scheduleLifeTimeTask();
-            }
-        }
+        player.getInventory().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
+        player.getWarehouse().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
 
-        for (Item whItem : player.getWarehouse().getItems()) {
-            if (whItem.isTimeLimitedItem()) {
-                whItem.scheduleLifeTimeTask();
-            }
-        }
 
         if (player.getClanJoinExpiryTime() > System.currentTimeMillis()) {
             player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);

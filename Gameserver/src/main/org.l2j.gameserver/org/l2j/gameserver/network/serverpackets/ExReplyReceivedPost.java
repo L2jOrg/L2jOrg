@@ -44,10 +44,10 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
         _msg = msg;
         if (msg.hasAttachments()) {
             final ItemContainer attachments = msg.getAttachment();
-            if ((attachments != null) && (attachments.getSize() > 0)) {
+            if (attachments != null && attachments.getSize() > 0) {
                 _items = attachments.getItems();
             } else {
-                LOGGER.warn("Message {} has attachments but itemcontainer is empty.", msg.getId());
+                LOGGER.warn("Message {} has attachments but item container is empty.", msg.getId());
             }
         }
     }
@@ -70,13 +70,13 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
             writeInt(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
         }
         writeInt(_msg.getId());
-        writeInt(_msg.isLocked() ? 1 : 0);
+        writeInt(_msg.isLocked());
         writeInt(0x00); // Unknown
         writeString(_msg.getSenderName());
         writeString(_msg.getSubject());
         writeString(_msg.getContent());
 
-        if ((_items != null) && !_items.isEmpty()) {
+        if (_items != null && !_items.isEmpty()) {
             writeInt(_items.size());
             for (Item item : _items) {
                 writeItem(item);
@@ -87,8 +87,8 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
         }
 
         writeLong(_msg.getFee());
-        writeInt(_msg.hasAttachments() ? 1 : 0);
-        writeInt(_msg.isReturned() ? 1 : 0);
+        writeInt(_msg.hasAttachments());
+        writeInt(_msg.isReturned());
     }
 
 }

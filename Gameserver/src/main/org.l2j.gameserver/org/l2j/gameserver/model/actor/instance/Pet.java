@@ -489,9 +489,8 @@ public class Pet extends Summon {
                 getOwner().getParty().distributeItem(getOwner(), target);
             } else {
                 final Item item = _inventory.addItem("Pickup", target, getOwner(), this);
-                if (item != null)
-                {
-                    getOwner().sendPacket(new PetItemList(getInventory().getItems()));
+                if (item != null) {
+                    sendItemList();
                 }
             }
         }
@@ -1014,6 +1013,18 @@ public class Pet extends Summon {
     public void updateAndBroadcastStatus(int val) {
         refreshOverloaded();
         super.updateAndBroadcastStatus(val);
+    }
+
+    @Override
+    public void sendInfo(Player player) {
+        super.sendInfo(player);
+        if(player == getOwner()) {
+            sendItemList();
+        }
+    }
+
+    public void sendItemList() {
+        sendPacket(new PetItemList(this));
     }
 
     @Override

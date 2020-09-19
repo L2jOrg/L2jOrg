@@ -112,7 +112,7 @@ public final class SummonPet extends AbstractEffect {
         pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
         pet.startFeed();
         pet.setFollowStatus(true);
-        pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
+        pet.sendItemList();
         pet.broadcastStatusUpdate();
     }
 

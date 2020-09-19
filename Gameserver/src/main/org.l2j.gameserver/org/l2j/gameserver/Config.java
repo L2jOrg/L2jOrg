@@ -211,7 +211,6 @@ public final class Config {
     public static int STARTING_SP;
     public static long MAX_ADENA;
 
-    public static boolean AUTO_LOOT_SLOT_LIMIT;
     public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
 
     public static boolean ENABLE_KEYBOARD_MOVEMENT;
@@ -335,7 +334,6 @@ public final class Config {
 
     public static boolean AUTODELETE_INVALID_QUEST_DATA;
     public static boolean ENABLE_STORY_QUEST_BUFF_REWARD;
-    public static boolean MULTIPLE_ITEM_DROP;
     public static boolean FORCE_INVENTORY_UPDATE;
 
     public static int MIN_NPC_ANIMATION;
@@ -1057,7 +1055,6 @@ public final class Config {
             MAX_ADENA = Long.MAX_VALUE;
         }
 
-        AUTO_LOOT_SLOT_LIMIT = Character.getBoolean("AutoLootSlotLimit", false);
         LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
 
         ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
@@ -1137,7 +1134,7 @@ public final class Config {
         DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
         AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
         ENABLE_STORY_QUEST_BUFF_REWARD = General.getBoolean("StoryQuestRewardBuff", true);
-        MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
+
         FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 
         MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);

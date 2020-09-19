@@ -41,7 +41,7 @@ public final class ItemList {
     }
 
     private static void sendPackets(Player player, boolean show) {
-        Collection<Item> items = player.getInventory().getItems(item -> !item.isQuestItem());
+        Collection<Item> items = player.getInventory().getItems();
         sendHeader(player, show, items.size());
         sendList(player, items);
     }

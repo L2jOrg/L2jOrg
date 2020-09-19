@@ -9870,24 +9870,12 @@ public final class Player extends Playable {
         return true;
     }
 
-    /**
-     * Test if player inventory is under 90% capacity
-     *
-     * @param includeQuestInv check also quest inventory
-     * @return
-     */
-    public boolean isInventoryUnder90(boolean includeQuestInv) {
-        return (inventory.getSize(item -> !item.isQuestItem() || includeQuestInv) <= (getInventoryLimit() * 0.9));
+    public boolean isInventoryUnder90() {
+        return inventory.getSize() < getInventoryLimit() * 0.9;
     }
 
-    /**
-     * Test if player inventory is under 80% capacity
-     *
-     * @param includeQuestInv check also quest inventory
-     * @return
-     */
-    public boolean isInventoryUnder80(boolean includeQuestInv) {
-        return (inventory.getSize(item -> !item.isQuestItem() || includeQuestInv) <= (getInventoryLimit() * 0.8));
+    public boolean isInventoryUnder80() {
+        return inventory.getSize() < getInventoryLimit() * 0.8;
     }
 
     public boolean havePetInvItems() {

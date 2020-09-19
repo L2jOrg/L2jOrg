@@ -16,50 +16,44 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.gm;
 
-import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
 
 import java.util.Collection;
 
-public class GMViewItemList extends AbstractItemPacket {
-    private final int sendType;
+/**
+ * @author JoeAlisson
+ */
+public class ExGMViewQuestItemList extends AbstractItemPacket {
     private final Collection<Item> items;
-    private final int _limit;
-    private final String playerName;
+    private final int sendType;
 
-    public GMViewItemList(int sendType, Player cha) {
+    public ExGMViewQuestItemList(int sendType, Player player) {
         this.sendType = sendType;
-        playerName = cha.getName();
-        _limit = cha.getInventoryLimit();
-        items = cha.getInventory().getItems();
-    }
-
-    public GMViewItemList(int sendType, Pet cha) {
-        this.sendType = sendType;
-        playerName = cha.getName();
-        _limit = cha.getInventoryLimit();
-        items = cha.getInventory().getItems();
+        items = player.getInventory().getQuestItems();
     }
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GM_VIEW_ITEMLIST);
+        writeId(ServerExPacketId.EX_GM_VIEW_QUEST_ITEMLIST);
+
         writeByte(sendType);
         if (sendType == 2) {
             writeInt(items.size());
+            writeInt(items.size());
+            for (Item item : items) {
+                writeItem(item);
+            }
         } else {
-            writeString(playerName);
-            writeInt(_limit); // inventory limit
+            writeInt(100);
+            writeInt(items.size());
         }
-        writeInt(items.size());
-        for (Item item : items) {
-            writeItem(item);
-        }
+        writeShort(0x00);
     }
 
 }

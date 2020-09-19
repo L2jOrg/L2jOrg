@@ -696,12 +696,8 @@ public abstract class Summon extends Playable {
 
     @Override
     public void sendInfo(Player player) {
-        // Check if the Player is the owner of the Pet
         if (player == _owner) {
             player.sendPacket(new PetInfo(this, isTeleporting() ? 0 : 1));
-            if (GameUtils.isPet(this)) {
-                player.sendPacket(new PetItemList(getInventory().getItems()));
-            }
         } else {
             player.sendPacket(new ExPetInfo(this, player, 0));
         }

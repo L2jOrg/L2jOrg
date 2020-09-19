@@ -89,10 +89,10 @@ public final class RequestPetUseItem extends ClientPacket {
         useItem(pet, item, activeChar);
     }
 
-    private void useItem(Pet pet, Item item, Player activeChar) {
+    private void useItem(Pet pet, Item item, Player player) {
         if (item.isEquipable()) {
             if (!item.getTemplate().isConditionAttached()) {
-                activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
+                player.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
                 return;
             }
 
@@ -102,7 +102,7 @@ public final class RequestPetUseItem extends ClientPacket {
                 pet.getInventory().equipItem(item);
             }
 
-            activeChar.sendPacket(new PetItemList(pet.getInventory().getItems()));
+            pet.sendItemList();
             pet.updateAndBroadcastStatus(1);
         } else {
             final IItemHandler handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
@@ -110,13 +110,13 @@ public final class RequestPetUseItem extends ClientPacket {
                 if (handler.useItem(pet, item, false)) {
                     final int reuseDelay = item.getReuseDelay();
                     if (reuseDelay > 0) {
-                        activeChar.addTimeStampItem(item, reuseDelay);
+                        player.addTimeStampItem(item, reuseDelay);
                     }
-                    activeChar.sendPacket(new PetItemList(pet.getInventory().getItems()));
+                    pet.sendItemList();
                     pet.updateAndBroadcastStatus(1);
                 }
             } else {
-                activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
+                player.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
                 LOGGER.warn("No item handler registered for itemId: " + item.getId());
             }
         }

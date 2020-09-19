@@ -36,7 +36,7 @@ public class ExQuestItemList extends AbstractItemPacket {
     public ExQuestItemList(int sendType, Player activeChar) {
         _sendType = sendType;
         _activeChar = activeChar;
-        _items = activeChar.getInventory().getItems(Item::isQuestItem);
+        _items = activeChar.getInventory().getQuestItems();
     }
 
     @Override

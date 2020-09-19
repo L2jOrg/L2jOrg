@@ -37,7 +37,7 @@ public final class BuyList extends AbstractItemPacket {
         _listId = list.getListId();
         _list = list.getProducts();
         _money = player.getAdena();
-        _inventorySlots = player.getInventory().getItems((item) -> !item.isQuestItem()).size();
+        _inventorySlots = player.getInventory().getSize();
         _castleTaxRate = castleTaxRate;
     }
 

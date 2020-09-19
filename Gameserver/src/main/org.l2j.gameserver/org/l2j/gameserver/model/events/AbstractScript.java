@@ -1147,11 +1147,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      */
     public long getQuestItemsCount(Player player, int... itemIds) {
         long count = 0;
-        for (Item item : player.getInventory().getItems()) {
-            if (item == null) {
-                continue;
-            }
-
+        for (Item item : player.getInventory().getQuestItems()) {
             for (int itemId : itemIds) {
                 if (item.getId() == itemId) {
                     if (MathUtil.checkAddOverFlow(count, item.getCount())) {
