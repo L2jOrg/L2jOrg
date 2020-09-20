@@ -128,7 +128,6 @@ public class GameServer {
         FishingData.getInstance();
         HennaData.getInstance();
         ShuttleData.getInstance();
-        GraciaSeedsManager.getInstance();
 
         printSection("Features");
         AnnouncementsManager.init();

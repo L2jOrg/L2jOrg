@@ -66,7 +66,7 @@ public final class Config {
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
     private static final String GENERAL_CONFIG_FILE = "config/general.properties";
-    private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
+
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
 
@@ -586,9 +586,7 @@ public final class Config {
     // Zaken
     public static int ZAKEN_SPAWN_INTERVAL;
     public static int ZAKEN_SPAWN_RANDOM;
-    // Gracia Seeds Settings
-    public static int SOD_TIAT_KILL_COUNT;
-    public static long SOD_STAGE_2_LENGTH;
+
     // chatfilter
     public static List<String> FILTER_LIST;
 
@@ -1435,13 +1433,6 @@ public final class Config {
 
         ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 168);
         ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 48);
-
-        // Gracia Seeds
-        final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
-
-        // Seed of Destruction
-        SOD_TIAT_KILL_COUNT = GraciaSeedsSettings.getInt("TiatKillCountForNextState", 10);
-        SOD_STAGE_2_LENGTH = GraciaSeedsSettings.getLong("Stage2Length", 720) * 60000;
 
         try(var lines = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
             //@formatter:off

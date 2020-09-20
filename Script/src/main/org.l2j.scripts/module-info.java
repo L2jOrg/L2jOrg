@@ -454,7 +454,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.admincommandhandlers.AdminGm,
             org.l2j.scripts.handlers.admincommandhandlers.AdminGmChat,
             org.l2j.scripts.handlers.admincommandhandlers.AdminGmSpeed,
-            org.l2j.scripts.handlers.admincommandhandlers.AdminGraciaSeeds,
             org.l2j.scripts.handlers.admincommandhandlers.AdminGrandBoss,
             org.l2j.scripts.handlers.admincommandhandlers.AdminHeal,
             org.l2j.scripts.handlers.admincommandhandlers.AdminHide,

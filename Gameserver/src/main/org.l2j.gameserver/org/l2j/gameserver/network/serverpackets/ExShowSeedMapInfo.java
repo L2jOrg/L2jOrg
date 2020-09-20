@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.instancemanager.GraciaSeedsManager;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -37,7 +36,7 @@ public class ExShowSeedMapInfo extends ServerPacket {
 
         // Seed of Destruction
         writeInt(1); // id 1? Grand Crusade
-        writeInt(2770 + GraciaSeedsManager.getInstance().getSoDState()); // sys msg id
+        writeInt(2770); // sys msg id + sod state
 
         // Seed of Infinity
         writeInt(2); // id 2? Grand Crusade
