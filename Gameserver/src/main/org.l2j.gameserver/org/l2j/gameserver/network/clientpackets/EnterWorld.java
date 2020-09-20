@@ -46,9 +46,11 @@ import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.clientpackets.craft.ExRequestCraftRandom;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
+import org.l2j.gameserver.network.serverpackets.craft.ReceiveCraftInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -279,6 +281,8 @@ public class EnterWorld extends ClientPacket {
 
         client.sendPacket(new SkillCoolTime(player));
         client.sendPacket(new ExVoteSystemInfo(player));
+        client.sendPacket(new ReceiveCraftInfo(player));
+
 
         for (Item item : player.getInventory().getItems()) {
             if (item.isTimeLimitedItem()) {

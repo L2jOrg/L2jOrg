@@ -38,6 +38,7 @@ import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCurio
 import org.l2j.gameserver.network.clientpackets.commission.*;
 import org.l2j.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.costume.*;
+import org.l2j.gameserver.network.clientpackets.craft.ExRequestCraftRandom;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2j.gameserver.network.clientpackets.elementalspirits.*;
@@ -502,7 +503,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_RAID_TELEPORT_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_TELEPORT_TO_RAID_POSITION(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_EXTRACT(null, ConnectionState.IN_GAME_STATES),
-    EX_CRAFT_RANDOM_INFO(null, ConnectionState.IN_GAME_STATES),
+    EX_CRAFT_RANDOM_INFO(ExRequestCraftRandom::new, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_LOCK_SLOT(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_REFRESH(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_MAKE(null, ConnectionState.IN_GAME_STATES),
