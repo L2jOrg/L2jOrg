@@ -376,7 +376,7 @@ public final class ReportTable {
             if(manager.hasPunishment(reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN)) {
                 manager.stopPunishment(reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
             }
-            manager.startPunishment(new PunishmentTask(0, reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, Instant.now().plus(14, ChronoUnit.HOURS).toEpochMilli(), "Chat banned bot report", "system", false));
+            manager.startPunishment(new PunishmentTask(reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, Instant.now().plus(14, ChronoUnit.HOURS).toEpochMilli(), "Chat banned bot report", "system"));
         }
 
     }

@@ -20,12 +20,18 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.PunishmentData;
+
+import java.util.List;
 
 /**
  * @author JoeAlisson
  */
-public interface PunishmentDAO extends DAO<Object> {
+public interface PunishmentDAO extends DAO<PunishmentData> {
 
     @Query("UPDATE punishments SET expiration = :expiration: WHERE id =:id:")
     void updateExpiration(int id, long expiration);
+
+    @Query("SELECT * FROM punishments")
+    List<PunishmentData> findAll();
 }

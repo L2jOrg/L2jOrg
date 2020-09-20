@@ -99,4 +99,7 @@ public interface ItemDAO extends DAO<Object> {
 
     @Query("DELETE FROM item_auction_bid WHERE auctionId=:auctionId:")
     void deleteItemAuctionBid(int auctionId);
+
+    @Query("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 1")
+    int findLastAuctionId();
 }
