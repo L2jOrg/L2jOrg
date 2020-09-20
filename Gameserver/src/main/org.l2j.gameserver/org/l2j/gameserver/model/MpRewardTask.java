@@ -19,13 +19,14 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.concurrent.ScheduledFuture;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -42,14 +43,10 @@ public class MpRewardTask {
         _creature = creature;
         _count = template.getMpRewardTicks();
         _value = calculateBaseValue(npc, creature);
-        _task = ThreadPool.scheduleAtFixedRate(this::run, Config.EFFECT_TICK_RATIO, Config.EFFECT_TICK_RATIO);
+        var effectTickRatio = getSettings(CharacterSettings.class).effectTickRatio();
+        _task = ThreadPool.scheduleAtFixedRate(this::run, effectTickRatio, effectTickRatio);
     }
 
-    /**
-     * @param npc
-     * @param creature
-     * @return
-     */
     private double calculateBaseValue(Npc npc, Creature creature) {
         final NpcTemplate template = npc.getTemplate();
         switch (template.getMpRewardType()) {

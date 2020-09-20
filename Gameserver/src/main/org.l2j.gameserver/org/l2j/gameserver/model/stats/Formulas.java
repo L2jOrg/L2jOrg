@@ -47,12 +47,15 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.Math.*;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
@@ -136,7 +139,7 @@ public final class Formulas {
         double damage = ( (77 *  attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, power)  * Math.sqrt(mAtk) ) / mDef) * shotsBonus;
 
         // Failure calculation
-        if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
+        if (getSettings(CharacterSettings.class).isMagicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 if (calcMagicSuccess(attacker, target, skill)) {
                     if (skill.hasAnyEffectType(EffectType.HP_DRAIN)) {
@@ -320,23 +323,23 @@ public final class Formulas {
      * @return true in case when ATTACK is canceled due to hit
      */
     public static boolean calcAtkBreak(Creature target, double dmg) {
-        if (target.isChanneling()) {
+        if (target.isChanneling() || target.isRaid() || target.isHpBlocked()) {
             return false;
         }
 
         double init = 0;
 
-        if (Config.ALT_GAME_CANCEL_CAST && target.isCastingNow(SkillCaster::canAbortCast)) {
+        var characterSettings = getSettings(CharacterSettings.class);
+        if (characterSettings.breakCast() && target.isCastingNow(SkillCaster::canAbortCast)) {
             init = 15;
-        }
-        if (Config.ALT_GAME_CANCEL_BOW && target.isAttackingNow()) {
+        } else if (characterSettings.breakBowAttack() && target.isAttackingNow()) {
             final Weapon wpn = target.getActiveWeaponItem();
-            if ((wpn != null) && (wpn.getItemType() == WeaponType.BOW)) {
+            if (nonNull(wpn) && wpn.getItemType() == WeaponType.BOW) {
                 init = 15;
             }
         }
 
-        if (target.isRaid() || target.isHpBlocked() || (init <= 0)) {
+        if (init <= 0) {
             return false; // No attack break
         }
 
@@ -352,7 +355,7 @@ public final class Formulas {
         // Adjust the rate to be between 1 and 99
         rate = max(Math.min(rate, 99), 1);
 
-        return Rnd.get(100) < rate;
+        return Rnd.chance(rate);
     }
 
     /**
@@ -692,7 +695,7 @@ public final class Formulas {
         damage *= calculatePvpPveBonus(attacker, target, skill, mcrit);
 
         // Failure calculation
-        if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
+        if (getSettings(CharacterSettings.class).isMagicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
                 sm.addString(target.getName());
@@ -1226,7 +1229,7 @@ public final class Formulas {
      */
     public static boolean calcStunBreak(Creature activeChar) {
         // Check if target is stunned and break it with 14% chance. (retail is 14% and 35% on crit?)
-        if (Config.ALT_GAME_STUN_BREAK && activeChar.hasBlockActions() && (Rnd.get(14) == 0)) {
+        if (getSettings(CharacterSettings.class).breakStun() && activeChar.hasBlockActions() && Rnd.chance(14)) {
             // Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
             return activeChar.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
         }

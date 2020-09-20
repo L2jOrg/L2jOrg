@@ -66,9 +66,9 @@ public class PlayableStats extends CreatureStats {
         setExp(getExp() + value);
 
         byte minimumLevel = 1;
-        if (isPet(getCreature())) {
+        if (getCreature() instanceof Pet pet) {
             // get minimum level from NpcTemplate
-            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getCreature()).getTemplate().getId());
+            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel((pet).getTemplate().getId());
         }
 
         byte level = minimumLevel; // minimum level

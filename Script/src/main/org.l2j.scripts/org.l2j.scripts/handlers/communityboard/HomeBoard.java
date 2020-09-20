@@ -41,6 +41,7 @@ import org.l2j.gameserver.network.serverpackets.BuyList;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -49,6 +50,7 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
@@ -396,20 +398,20 @@ public final class HomeBoard implements IParseBoardHandler {
             if (currentCommand.startsWith("_bbsskillselect") && !schemeName.equalsIgnoreCase("none")) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
                 if (skill.isDance()) {
-                    if (getCountOf(skills, true) < Config.DANCES_MAX_AMOUNT) {
+                    if (getCountOf(skills, true) < getSettings(CharacterSettings.class).maxDances()) {
                         skills.add(skillId);
                     } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of dances/songs.");
                     }
                 } else {
-                    if (getCountOf(skills, false) < Config.BUFFS_MAX_AMOUNT) {
+                    if (getCountOf(skills, false) < getSettings(CharacterSettings.class).maxBuffs()) {
                         skills.add(skillId);
                     } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of buffs.");
                     }
                 }
             } else if (currentCommand.startsWith("_bbsskillunselect")) {
-                skills.remove(Integer.valueOf(skillId));
+                skills.remove(skillId);
             }
 
             returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page, returnHtml);
@@ -536,7 +538,8 @@ public final class HomeBoard implements IParseBoardHandler {
         final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         returnHtml = setHtmlSchemeBuffList(player, groupType, schemeName, schemeSkills, page, returnHtml);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
-        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + Config.BUFFS_MAX_AMOUNT + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
+        var characterSettings = getSettings(CharacterSettings.class);
+        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + characterSettings.maxBuffs() + " buffs, " + getCountOf(schemeSkills, true) + " / " + characterSettings.maxDances() + " dances/songs");
         returnHtml = returnHtml.replace("%typesframe%", getTypesFrame(groupType, schemeName));
         returnHtml = returnHtml.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
         return returnHtml;

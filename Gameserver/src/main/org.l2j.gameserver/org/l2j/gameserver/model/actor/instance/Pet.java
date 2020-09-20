@@ -782,7 +782,7 @@ public class Pet extends Summon {
                     }
 
                     // Dances and songs are not kept in retail.
-                    if (skill.isDance() && !Config.ALT_STORE_DANCES) {
+                    if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances()) {
                         continue;
                     }
 

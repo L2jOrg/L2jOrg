@@ -362,7 +362,7 @@ public class EnchantItemEngine extends GameXmlReader {
     }
 
     private void announceEnchantment(Player player, Item item) {
-        final int minEnchantAnnounce = item.isArmor() ? getSettings(CharacterSettings.class).minimumEnchantAnnounceArmor() : getSettings(CharacterSettings.class).minimumEnchantAnnounceWeapon();
+        final int minEnchantAnnounce = item.isArmor() ? getSettings(CharacterSettings.class).minEnchantAnnounceArmor() : getSettings(CharacterSettings.class).minEnchantAnnounceWeapon();
         if (minEnchantAnnounce > 0 && item.getEnchantLevel() >= minEnchantAnnounce) {
 
             Broadcast.toAllOnlinePlayers(new ExItemAnnounce(ENHANCEMENT, player, item),

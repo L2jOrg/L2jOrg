@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.model.stats.*;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -43,6 +44,8 @@ import java.util.function.BiPredicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
@@ -73,7 +76,7 @@ public class CreatureStats {
     /**
      * Creature's maximum buff count.
      */
-    private int _maxBuffCount = Config.BUFFS_MAX_AMOUNT;
+    private int _maxBuffCount = getSettings(CharacterSettings.class).maxBuffs();
     private double _vampiricSum = 0;
     /**
      * Values to be recalculated after every stat update
@@ -391,7 +394,7 @@ public class CreatureStats {
         double mpConsume = skill.getMpConsume();
         final double nextDanceMpCost = Math.ceil(skill.getMpConsume() / 2.);
         if (skill.isDance()) {
-            if (Config.DANCE_CONSUME_ADDITIONAL_MP && (creature != null) && (creature.getDanceCount() > 0)) {
+            if (nonNull(creature) && creature.getDanceCount() > 0) {
                 mpConsume += creature.getDanceCount() * nextDanceMpCost;
             }
         }

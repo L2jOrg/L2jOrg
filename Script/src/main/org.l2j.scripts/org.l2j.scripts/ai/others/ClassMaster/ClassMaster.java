@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.TutorialCloseHtml;
 import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
@@ -48,6 +49,8 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -250,9 +253,9 @@ public final class ClassMaster extends AbstractNpcAI
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
-					if (Config.AUTO_LEARN_SKILLS)
-					{
-						player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+					var characterSettings = getSettings(CharacterSettings.class);
+					if (characterSettings.isAutoLearnSkillEnabled()) {
+						player.giveAvailableSkills(characterSettings.isAutoLearnSkillFSEnabled(), true);
 					}
 					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 					player.broadcastUserInfo();
@@ -644,9 +647,10 @@ public final class ClassMaster extends AbstractNpcAI
 				player.setBaseClass(player.getActiveClass());
 			}
 
-			if (Config.AUTO_LEARN_SKILLS)
+			var characterSettings = getSettings(CharacterSettings.class);
+			if (characterSettings.isAutoLearnSkillEnabled())
 			{
-				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+				player.giveAvailableSkills(characterSettings.isAutoLearnSkillFSEnabled(), true);
 			}
 			player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 			player.broadcastUserInfo();

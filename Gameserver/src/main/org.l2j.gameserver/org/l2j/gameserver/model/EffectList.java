@@ -33,6 +33,7 @@ import org.l2j.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget
 import org.l2j.gameserver.network.serverpackets.PartySpelled;
 import org.l2j.gameserver.network.serverpackets.ShortBuffStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadSpelledInfo;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,6 +46,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -554,12 +556,12 @@ public final class EffectList {
             // case TOGGLE: Do toggles have limit?
             switch (buffType) {
                 case TRIGGER -> {
-                    if (triggerBuffCount.get() > Config.TRIGGERED_BUFFS_MAX_AMOUNT) {
+                    if (triggerBuffCount.get() > getSettings(CharacterSettings.class).maxTriggeredBuffs()) {
                         return true;
                     }
                 }
                 case DANCE -> {
-                    if (danceCount.get() > Config.DANCES_MAX_AMOUNT) {
+                    if (danceCount.get() > getSettings(CharacterSettings.class).maxDances()) {
                         return true;
                     }
                 }

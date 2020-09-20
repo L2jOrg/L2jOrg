@@ -70,10 +70,6 @@ public final class FakeDeath extends AbstractEffect {
 	
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill) {
-		if (isPlayer(effected)) {
-			effected.getActingPlayer().setRecentFakeDeath(true);
-		}
-		
 		effected.broadcastPacket(new ChangeWaitType(effected, ChangeWaitType.WT_STOP_FAKEDEATH));
 		effected.broadcastPacket(new Revive(effected));
 	}

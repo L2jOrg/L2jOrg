@@ -131,11 +131,6 @@ public class AttackableAI extends CreatureAI {
                 return false;
             }
 
-            // check if the target is within the grace period for JUST getting up from fake death
-            if (player.isRecentFakeDeath()) {
-                return false;
-            }
-
             if (me instanceof Guard) {
                 World.getInstance().forEachVisibleObjectInRange(me, Guard.class, 500, guard ->
                 {

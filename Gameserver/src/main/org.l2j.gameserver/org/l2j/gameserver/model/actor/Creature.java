@@ -1318,14 +1318,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             setIsPendingRevive(false);
             setIsDead(false);
 
-            if ((Config.RESPAWN_RESTORE_CP > 0) && (_status.getCurrentCp() < (stats.getMaxCp() * Config.RESPAWN_RESTORE_CP))) {
-                _status.setCurrentCp(stats.getMaxCp() * Config.RESPAWN_RESTORE_CP);
+            var characterSettings = getSettings(CharacterSettings.class);
+
+            var restore = characterSettings.restoreCPPercent() * stats.getMaxCp();
+            if(restore > _status.getCurrentCp()) {
+                _status.setCurrentCp(restore);
             }
-            if ((Config.RESPAWN_RESTORE_HP > 0) && (_status.getCurrentHp() < (stats.getMaxHp() * Config.RESPAWN_RESTORE_HP))) {
-                _status.setCurrentHp(stats.getMaxHp() * Config.RESPAWN_RESTORE_HP);
+
+            restore = characterSettings.restoreHPPercent() * stats.getMaxHp();
+            if(restore > _status.getCurrentHp()) {
+                _status.setCurrentHp(restore);
             }
-            if ((Config.RESPAWN_RESTORE_MP > 0) && (_status.getCurrentMp() < (stats.getMaxMp() * Config.RESPAWN_RESTORE_MP))) {
-                _status.setCurrentMp(stats.getMaxMp() * Config.RESPAWN_RESTORE_MP);
+
+            restore = characterSettings.restoreMPPercent() * stats.getMaxMp();
+            if(restore > _status.getCurrentMp()) {
+                _status.setCurrentMp(restore);
             }
 
             // Start broadcast status
@@ -1864,11 +1871,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public final void stopFakeDeath(boolean removeEffects) {
         if (removeEffects) {
             stopEffects(EffectFlag.FAKE_DEATH);
-        }
-
-        // if this is a player instance, start the grace period for this character (grace from mobs only)!
-        if (isPlayer(this)) {
-            getActingPlayer().setRecentFakeDeath(true);
         }
 
         broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STOP_FAKEDEATH));

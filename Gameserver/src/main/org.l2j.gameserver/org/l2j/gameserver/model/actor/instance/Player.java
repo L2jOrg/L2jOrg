@@ -2578,8 +2578,9 @@ public final class Player extends Playable {
      */
     public void rewardSkills() {
         // Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
-        if (Config.AUTO_LEARN_SKILLS) {
-            giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+        var characterSettings = getSettings(CharacterSettings.class);
+        if (characterSettings.isAutoLearnSkillEnabled()) {
+            giveAvailableSkills(characterSettings.isAutoLearnSkillFSEnabled(), true);
         } else {
             giveAvailableAutoGetSkills();
         }
@@ -2661,7 +2662,7 @@ public final class Player extends Playable {
             skillsForStore.add(skill);
         }
         storeSkills(skillsForStore, -1);
-        if (Config.AUTO_LEARN_SKILLS && (skillCounter > 0)) {
+        if (skillCounter > 0 && getSettings(CharacterSettings.class).isAutoLearnSkillEnabled()) {
             sendMessage("You have learned " + skillCounter + " new skills.");
         }
         return skillCounter;
@@ -3578,19 +3579,6 @@ public final class Player extends Playable {
         _teleportProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_TELEPORT_PROTECTION * 1000) : 0;
     }
 
-    public boolean isRecentFakeDeath() {
-        return _recentFakeDeathEndTime > WorldTimeController.getInstance().getGameTicks();
-    }
-
-    /**
-     * Set protection from aggro mobs when getting up from fake death, according settings.
-     *
-     * @param protect
-     */
-    public void setRecentFakeDeath(boolean protect) {
-        _recentFakeDeathEndTime = protect ? WorldTimeController.getInstance().getGameTicks() + (Config.PLAYER_FAKEDEATH_UP_PROTECTION * WorldTimeController.TICKS_PER_SECOND) : 0;
-    }
-
     public final boolean isFakeDeath() {
         return isAffected(EffectFlag.FAKE_DEATH);
     }
@@ -4065,18 +4053,6 @@ public final class Player extends Playable {
                 }
             }
         }
-    }
-
-    @Override
-    public void doAutoAttack(Creature target) {
-        super.doAutoAttack(target);
-        setRecentFakeDeath(false);
-    }
-
-    @Override
-    public void doCast(Skill skill) {
-        super.doCast(skill);
-        setRecentFakeDeath(false);
     }
 
     public boolean canOpenPrivateStore() {
@@ -5783,10 +5759,6 @@ public final class Player extends Playable {
 
     @Override
     public void storeEffect(boolean storeEffects) {
-        if (!Config.STORE_SKILL_COOLTIME) {
-            return;
-        }
-
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
 
             // Delete all current stored effects for char to avoid dupe
@@ -5827,7 +5799,7 @@ public final class Player extends Playable {
                         }
 
                         // Dances and songs are not kept in retail.
-                        if (skill.isDance() && !Config.ALT_STORE_DANCES) {
+                        if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances()) {
                             continue;
                         }
 
@@ -7716,7 +7688,7 @@ public final class Player extends Playable {
 
             // 1. Call store() before modifying _classIndex to avoid skill effects rollover.
             // 2. Register the correct _classId against applied 'classIndex'.
-            store(Config.SUBCLASS_STORE_SKILL_COOLTIME);
+            store(false);
 
             if (_sellingBuffs != null) {
                 _sellingBuffs.clear();
@@ -7904,9 +7876,6 @@ public final class Player extends Playable {
         }
 
         inventory.applyItemSkills();
-        if (Config.STORE_SKILL_COOLTIME) {
-            restoreEffects();
-        }
 
         // TODO : Need to fix that hack!
         if (!isDead()) {

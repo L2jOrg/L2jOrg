@@ -101,35 +101,16 @@ public final class Config {
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
 
-    // --------------------------------------------------
-    // Variable Definitions
-    // --------------------------------------------------
-    public static double RESPAWN_RESTORE_CP;
-    public static double RESPAWN_RESTORE_HP;
-    public static double RESPAWN_RESTORE_MP;
+
     public static boolean ENABLE_MODIFY_SKILL_DURATION;
     public static Map<Integer, Integer> SKILL_DURATION_LIST;
     public static boolean ENABLE_MODIFY_SKILL_REUSE;
     public static Map<Integer, Integer> SKILL_REUSE_LIST;
-    public static boolean AUTO_LEARN_SKILLS;
-    public static boolean AUTO_LEARN_FS_SKILLS;
-    public static boolean AUTO_LOOT_HERBS;
-    public static byte BUFFS_MAX_AMOUNT;
-    public static byte TRIGGERED_BUFFS_MAX_AMOUNT;
-    public static byte DANCES_MAX_AMOUNT;
-    public static boolean DANCE_CANCEL_BUFF;
-    public static boolean DANCE_CONSUME_ADDITIONAL_MP;
-    public static boolean ALT_STORE_DANCES;
 
-    public static boolean ALT_GAME_CANCEL_BOW;
-    public static boolean ALT_GAME_CANCEL_CAST;
-    public static boolean ALT_GAME_MAGICFAILURES;
-    public static boolean ALT_GAME_STUN_BREAK;
-    public static int PLAYER_FAKEDEATH_UP_PROTECTION;
-    public static boolean STORE_SKILL_COOLTIME;
-    public static boolean SUBCLASS_STORE_SKILL_COOLTIME;
+    public static boolean AUTO_LOOT_HERBS;
+
     public static boolean SUMMON_STORE_SKILL_COOLTIME;
-    public static long EFFECT_TICK_RATIO;
+
     public static boolean LIFE_CRYSTAL_NEEDED;
     public static boolean DIVINE_SP_BOOK_NEEDED;
     public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
@@ -884,9 +865,7 @@ public final class Config {
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 
-        RESPAWN_RESTORE_CP = Character.getDouble("RespawnRestoreCP", 0) / 100;
-        RESPAWN_RESTORE_HP = Character.getDouble("RespawnRestoreHP", 65) / 100;
-        RESPAWN_RESTORE_MP = Character.getDouble("RespawnRestoreMP", 0) / 100;
+        // TODO move to skill property or custom
         ENABLE_MODIFY_SKILL_DURATION = Character.getBoolean("EnableModifySkillDuration", false);
 
         // Create Map only if enabled
@@ -929,24 +908,10 @@ public final class Config {
             }
         }
 
-        AUTO_LEARN_SKILLS = Character.getBoolean("AutoLearnSkills", false);
-        AUTO_LEARN_FS_SKILLS = Character.getBoolean("AutoLearnForgottenScrollSkills", false);
         AUTO_LOOT_HERBS = Character.getBoolean("AutoLootHerbs", false);
-        BUFFS_MAX_AMOUNT = Character.getByte("MaxBuffAmount", (byte) 20);
-        TRIGGERED_BUFFS_MAX_AMOUNT = Character.getByte("MaxTriggeredBuffAmount", (byte) 12);
-        DANCES_MAX_AMOUNT = Character.getByte("MaxDanceAmount", (byte) 12);
-        DANCE_CANCEL_BUFF = Character.getBoolean("DanceCancelBuff", false);
-        DANCE_CONSUME_ADDITIONAL_MP = Character.getBoolean("DanceConsumeAdditionalMP", true);
-        ALT_STORE_DANCES = Character.getBoolean("AltStoreDances", false);
-        ALT_GAME_CANCEL_BOW = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("bow") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
-        ALT_GAME_CANCEL_CAST = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("cast") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
-        ALT_GAME_MAGICFAILURES = Character.getBoolean("MagicFailures", true);
-        ALT_GAME_STUN_BREAK = Character.getBoolean("BreakStun", false);
-        PLAYER_FAKEDEATH_UP_PROTECTION = Character.getInt("PlayerFakeDeathUpProtection", 0);
-        STORE_SKILL_COOLTIME = Character.getBoolean("StoreSkillCooltime", true);
-        SUBCLASS_STORE_SKILL_COOLTIME = Character.getBoolean("SubclassStoreSkillCooltime", false);
+
         SUMMON_STORE_SKILL_COOLTIME = Character.getBoolean("SummonStoreSkillCooltime", true);
-        EFFECT_TICK_RATIO = Character.getLong("EffectTickRatio", 666);
+
         LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
         DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
         ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);

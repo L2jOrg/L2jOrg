@@ -37,8 +37,23 @@ public class CharacterSettings implements Settings {
     private float weightLimitMultiplier;
     private boolean removeCastleCirclets;
     private boolean restoreSummonOnReconnect;
-    private int minimumEnchantAnnounceWeapon;
-    private int minimumEnchantAnnounceArmor;
+    private int minEnchantAnnounceWeapon;
+    private int minEnchantAnnounceArmor;
+    private float restoreCPPercent;
+    private float restoreHPPercent;
+    private float restoreMPPercent;
+    private boolean autoLearnSkillEnabled;
+    private boolean autoLearnSkillFSEnabled;
+    private byte maxBuffs;
+    private byte maxTriggeredBuffs;
+    private byte maxDances;
+    private boolean dispelDanceAllowed;
+    private boolean storeDances;
+    private boolean breakCast;
+    private boolean breakBowAttack;
+    private boolean magicFailureAllowed;
+    private boolean breakStun;
+    private int effectTickRatio;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -58,8 +73,28 @@ public class CharacterSettings implements Settings {
         removeCastleCirclets = settingsFile.getBoolean("RemoveCastleCirclets", true);
         restoreSummonOnReconnect = settingsFile.getBoolean("RestoreSummonOnReconnect", true);
 
-        minimumEnchantAnnounceWeapon = settingsFile.getInteger("MinimumEnchantAnnounceWeapon", 7);
-        minimumEnchantAnnounceArmor = settingsFile.getInteger("MinimumEnchantAnnounceArmor", 6);
+        minEnchantAnnounceWeapon = settingsFile.getInteger("MinimumEnchantAnnounceWeapon", 7);
+        minEnchantAnnounceArmor = settingsFile.getInteger("MinimumEnchantAnnounceArmor", 6);
+
+        restoreCPPercent = settingsFile.getInteger("RespawnRestoreCP", 0) / 100f;
+        restoreHPPercent = settingsFile.getInteger("RespawnRestoreHP", 65) / 100f;
+        restoreMPPercent = settingsFile.getInteger("RespawnRestoreMP", 0) / 100f;
+
+        autoLearnSkillEnabled = settingsFile.getBoolean("AutoLearnSkills", false);
+        autoLearnSkillFSEnabled = settingsFile.getBoolean("AutoLearnForgottenScrollSkills", false);
+
+        maxBuffs = settingsFile.getByte("MaxBuffAmount", (byte) 20);
+        maxTriggeredBuffs = settingsFile.getByte("MaxTriggeredBuffAmount", (byte) 12);
+        maxDances = settingsFile.getByte("MaxDanceAmount", (byte) 12);
+        dispelDanceAllowed = settingsFile.getBoolean("DanceCancelBuff", false);
+        storeDances = settingsFile.getBoolean("AltStoreDances", false);
+        effectTickRatio = settingsFile.getInteger("EffectTickRatio", 666);
+
+        var cancelAttackType = settingsFile.getString("AltGameCancelByHit", "Cast");
+        breakCast = cancelAttackType.equalsIgnoreCase("Cast") || cancelAttackType.equalsIgnoreCase("all");
+        breakBowAttack = cancelAttackType.equalsIgnoreCase("Bow") || cancelAttackType.equalsIgnoreCase("all");
+        breakStun = settingsFile.getBoolean("BreakStun", true);
+        magicFailureAllowed = settingsFile.getBoolean("MagicFailures", true);
     }
 
     public int partyRange() {
@@ -102,11 +137,71 @@ public class CharacterSettings implements Settings {
         return restoreSummonOnReconnect;
     }
 
-    public int minimumEnchantAnnounceWeapon() {
-        return minimumEnchantAnnounceWeapon;
+    public int minEnchantAnnounceWeapon() {
+        return minEnchantAnnounceWeapon;
     }
 
-    public int minimumEnchantAnnounceArmor() {
-        return minimumEnchantAnnounceArmor;
+    public int minEnchantAnnounceArmor() {
+        return minEnchantAnnounceArmor;
+    }
+
+    public float restoreCPPercent() {
+        return restoreCPPercent;
+    }
+
+    public float restoreHPPercent() {
+        return restoreHPPercent;
+    }
+
+    public float restoreMPPercent() {
+        return restoreMPPercent;
+    }
+
+    public boolean isAutoLearnSkillEnabled() {
+        return autoLearnSkillEnabled;
+    }
+
+    public boolean isAutoLearnSkillFSEnabled() {
+        return autoLearnSkillFSEnabled;
+    }
+
+    public byte maxBuffs() {
+        return maxBuffs;
+    }
+
+    public byte maxTriggeredBuffs() {
+        return maxTriggeredBuffs;
+    }
+
+    public byte maxDances() {
+        return maxDances;
+    }
+
+    public boolean isDispelDanceAllowed() {
+        return dispelDanceAllowed;
+    }
+
+    public boolean storeDances() {
+        return storeDances;
+    }
+
+    public boolean breakCast() {
+        return breakCast;
+    }
+
+    public boolean breakBowAttack() {
+        return breakBowAttack;
+    }
+
+    public boolean breakStun() {
+        return breakStun;
+    }
+
+    public boolean isMagicFailureAllowed() {
+        return magicFailureAllowed;
+    }
+
+    public int effectTickRatio() {
+        return effectTickRatio;
     }
 }

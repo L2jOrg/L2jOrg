@@ -291,7 +291,7 @@ public class Servitor extends Summon implements Runnable {
                         }
 
                         // Dances and songs are not kept in retail.
-                        if (skill.isDance() && !Config.ALT_STORE_DANCES) {
+                        if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances()) {
                             continue;
                         }
 
