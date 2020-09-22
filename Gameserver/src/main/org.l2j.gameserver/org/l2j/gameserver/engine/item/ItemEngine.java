@@ -321,7 +321,7 @@ public final class ItemEngine extends GameXmlReader {
         for(var itemNode = node.getFirstChild(); nonNull(itemNode); itemNode = itemNode.getNextSibling()) {
             if(itemNode.getNodeName().equals("item")) {
                 var attr = itemNode.getAttributes();
-                item.addCapsuledItem(new ExtractableProduct(parseInt(attr, "id"), parseInt(attr, "min-count"), parseInt(attr, "min-count"),
+                item.addCapsuledItem(new ExtractableProduct(parseInt(attr, "id"), parseInt(attr, "min-count"), parseInt(attr, "max-count"),
                         parseDouble(attr, "chance"), parseInt(attr, "min-enchant"), parseInt(attr, "max-enchant")));
             }
         }
