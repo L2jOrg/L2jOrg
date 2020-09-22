@@ -7877,6 +7877,10 @@ public final class Player extends Playable {
 
         inventory.applyItemSkills();
 
+        if (getSettings(CharacterSettings.class).storeSkillCooltime()) {
+            restoreEffects();
+        }
+
         // TODO : Need to fix that hack!
         if (!isDead()) {
             setCurrentCp(_originalCp);

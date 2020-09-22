@@ -54,6 +54,7 @@ public class CharacterSettings implements Settings {
     private boolean magicFailureAllowed;
     private boolean breakStun;
     private int effectTickRatio;
+    private boolean storeSkillCooltime;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -89,6 +90,7 @@ public class CharacterSettings implements Settings {
         dispelDanceAllowed = settingsFile.getBoolean("DanceCancelBuff", false);
         storeDances = settingsFile.getBoolean("AltStoreDances", false);
         effectTickRatio = settingsFile.getInteger("EffectTickRatio", 666);
+        storeSkillCooltime = settingsFile.getBoolean("StoreSkillCooltime", true);
 
         var cancelAttackType = settingsFile.getString("AltGameCancelByHit", "Cast");
         breakCast = cancelAttackType.equalsIgnoreCase("Cast") || cancelAttackType.equalsIgnoreCase("all");
@@ -203,5 +205,9 @@ public class CharacterSettings implements Settings {
 
     public int effectTickRatio() {
         return effectTickRatio;
+    }
+
+    public boolean storeSkillCooltime() {
+        return storeSkillCooltime;
     }
 }

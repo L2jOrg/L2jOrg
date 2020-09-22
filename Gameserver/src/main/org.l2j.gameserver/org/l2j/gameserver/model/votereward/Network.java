@@ -50,11 +50,10 @@ public class Network extends VoteSystem {
             con.addRequestProperty("User-Agent", "Mozilla/5.0");
             isr = new InputStreamReader(con.getInputStream());
             br = new BufferedReader(isr);
-
             String line;
             while ((line = br.readLine()) != null) {
-                if (line.contains("<div class=\"tls-in-sts\"><b style")) {
-                    int votes = Integer.valueOf(line.split(">")[2].replace("</b", ""));
+                if (line.contains(">Vote : ")) {
+                    int votes = Integer.valueOf(line.split(">Vote : ")[1].split("</a>")[0]);
                     return votes;
                 }
             }
