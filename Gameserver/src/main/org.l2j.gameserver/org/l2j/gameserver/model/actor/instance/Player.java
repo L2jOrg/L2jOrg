@@ -168,21 +168,22 @@ public final class Player extends Playable {
     private final GameClient client;
     private final PlayerData data;
     private final PlayerAppearance appearance;
+    private final AccountData account;
     private final Map<ShotType, Integer> activeSoulShots = new EnumMap<>(ShotType.class);
     private final LimitedQueue<DamageInfo> lastDamages = new LimitedQueue<>(30);
-    private final AccountData account;
+    private final IntMap<String> accountPlayers = new HashIntMap<>();
+    private final ContactList contacts = new ContactList(this);
 
     private ElementalSpirit[] spirits;
     private ElementalType activeElementalSpiritType;
     private AutoPlaySettings autoPlaySettings;
     private PlayerVariableData variables;
     private PlayerStatsData statsData;
-    private IntMap<CostumeData> costumes = Containers.emptyIntMap();
     private ScheduledFuture<?> _timedHuntingZoneFinishTask;
-    private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection;
     private IntSet teleportFavorites;
-    private IntMap<String> accountPlayers = new HashIntMap<>();
+    private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
+    private IntMap<CostumeData> costumes = Containers.emptyIntMap();
 
     private byte vipTier;
     private int rank;
@@ -1140,7 +1141,6 @@ public final class Player extends Playable {
     private static final int FALLING_VALIDATION_DELAY = 1000;
 
     private final ReentrantLock _subclassLock = new ReentrantLock();
-    private final ContactList _contactList = new ContactList(this);
     private final Map<Integer, TeleportBookmark> _tpbookmarks = new ConcurrentSkipListMap<>();
     /**
      * The table containing all RecipeList of the Player
@@ -5507,6 +5507,8 @@ public final class Player extends Playable {
 
         // Restore items in pet inventory.
         restorePetInventoryItems();
+
+        contacts.restore();
     }
 
     /**
@@ -9955,8 +9957,8 @@ public final class Player extends Playable {
         _lastPetitionGmName = gmName;
     }
 
-    public ContactList getContactList() {
-        return _contactList;
+    public ContactList getContacts() {
+        return contacts;
     }
 
     public void setEventStatus() {

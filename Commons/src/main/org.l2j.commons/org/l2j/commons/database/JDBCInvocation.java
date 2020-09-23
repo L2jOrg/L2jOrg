@@ -26,6 +26,7 @@ import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.commons.database.handler.TypeHandler;
 import org.l2j.commons.database.helpers.EntityBasedStrategy;
 import org.l2j.commons.database.helpers.HandlersSupport;
 import org.l2j.commons.database.helpers.QueryDescriptor;
@@ -81,6 +82,10 @@ class JDBCInvocation implements InvocationHandler {
             return handler.defaultValue();
         }
 
+        return processQuery(method, args, handler);
+    }
+
+    private Object processQuery(Method method, Object[] args, TypeHandler<?> handler) throws SQLException {
         try(var query = buildQuery(method);
             var con = DatabaseFactory.getInstance().getConnection()) {
             query.execute(con, args);

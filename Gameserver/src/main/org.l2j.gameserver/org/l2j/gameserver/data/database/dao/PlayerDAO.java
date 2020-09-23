@@ -226,6 +226,12 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("DELETE FROM character_contacts WHERE charId =:playeId: and contactId = :contactId:")
     void deleteContact(int playerId, int contactId);
 
+    @Query("INSERT INTO character_contacts (charId, contactId) VALUES (:playerId:, :contactId:)")
+    void addContact(int playerId, int contactId);
+
+    @Query("SELECT contactId FROM character_contacts WHERE charId = :objectId:")
+    void findContacts(int objectId, Consumer<ResultSet> resultSet);
+
     @Query("DELETE FROM character_macroses WHERE charId=:playerId: AND id=:id:")
     void deleteMacro(int playerId, int id);
 
