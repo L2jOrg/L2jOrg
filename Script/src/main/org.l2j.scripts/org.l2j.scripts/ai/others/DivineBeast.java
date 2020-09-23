@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
+import static java.util.Objects.isNull;
+
 /**
  * Simple AI that manages special conditions for Divine Beast summon.
  * @author UnAfraid
@@ -40,20 +42,16 @@ public final class DivineBeast extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onSummonSpawn(Summon summon)
-	{
+	public void onSummonSpawn(Summon summon) {
 		startQuestTimer("VALIDATE_TRANSFORMATION", CHECK_TIME, null, summon.getActingPlayer(), true);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		if ((player == null) || !player.hasServitors())
-		{
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		if (isNull(player) || !player.hasServitors()) {
 			cancelQuestTimer(event, npc, player);
 		}
-		else if (player.getTransformationId() != TRANSFORMATION_ID)
-		{
+		else if (player.getTransformationId() != TRANSFORMATION_ID) {
 			cancelQuestTimer(event, npc, player);
 			player.getServitors().values().forEach(summon -> summon.unSummon(player));
 		}

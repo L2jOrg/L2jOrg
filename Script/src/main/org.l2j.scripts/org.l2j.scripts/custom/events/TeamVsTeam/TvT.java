@@ -41,10 +41,8 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.quest.Event;
-import org.l2j.gameserver.model.quest.QuestTimer;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.serverpackets.ExPVPMatchCCRecord;
@@ -820,13 +818,7 @@ public class TvT extends Event
 		EVENT_ACTIVE = true;
 		
 		// Cancel timers. (In case event started immediately after another event was canceled.)
-		for (List<QuestTimer> timers : getQuestTimers().values())
-		{
-			for (QuestTimer timer : timers)
-			{
-				timer.cancel();
-			}
-		}
+		cancelQuestTimers();
 		// Clear player lists.
 		PLAYER_LIST.clear();
 		PLAYER_SCORES.clear();
@@ -853,13 +845,7 @@ public class TvT extends Event
 		// Despawn event manager.
 		MANAGER_NPC_INSTANCE.deleteMe();
 		// Cancel timers.
-		for (List<QuestTimer> timers : getQuestTimers().values())
-		{
-			for (QuestTimer timer : timers)
-			{
-				timer.cancel();
-			}
-		}
+		cancelQuestTimers();
 		// Remove participants.
 		for (Player participant : PLAYER_LIST)
 		{
