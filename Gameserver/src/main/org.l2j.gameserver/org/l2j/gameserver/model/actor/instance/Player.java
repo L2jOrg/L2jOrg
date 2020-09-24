@@ -7878,10 +7878,7 @@ public final class Player extends Playable {
         }
 
         inventory.applyItemSkills();
-
-        if (getSettings(CharacterSettings.class).storeSkillCooltime()) {
-            restoreEffects();
-        }
+        restoreEffects();
 
         // TODO : Need to fix that hack!
         if (!isDead()) {
@@ -8929,8 +8926,8 @@ public final class Player extends Playable {
         getStats().setVitalityPoints(points, quiet);
     }
 
-    public void updateVitalityPoints(int points, boolean useRates, boolean quiet) {
-        getStats().updateVitalityPoints(points, useRates, quiet);
+    public void updateVitalityPoints(int points, boolean useRates) {
+        getStats().updateVitalityPoints(points, useRates);
     }
 
     public void checkItemRestriction() {

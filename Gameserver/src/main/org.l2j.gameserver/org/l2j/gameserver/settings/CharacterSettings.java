@@ -54,7 +54,17 @@ public class CharacterSettings implements Settings {
     private boolean magicFailureAllowed;
     private boolean breakStun;
     private int effectTickRatio;
-    private boolean storeSkillCooltime;
+    private boolean autoLootHerbs;
+    private boolean pledgeSkillsItemNeeded;
+    private boolean divineInspirationBookNeeded;
+    private boolean vitalityEnabled;
+    private boolean raidBossUseVitality;
+    private int maxRunSpeed;
+    private int maxPcritRate;
+    private int maxMcritRate;
+    private int maxPAtkSpeed;
+    private int maxMAtkSpeed;
+    private int maxEvasion;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -64,6 +74,7 @@ public class CharacterSettings implements Settings {
         autoLootItems = settingsFile.getIntSet("AutoLootItemIds", ",");
         autoLootRaid = settingsFile.getBoolean("AutoLootRaids", false);
         raidLootPrivilegeTime = settingsFile.getInteger("RaidLootRightsInterval", 900) * 1000;
+        autoLootHerbs = settingsFile.getBoolean("AutoLootHerbs", false);
 
         initialEquipEvent = settingsFile.getBoolean("InitialEquipmentEvent", false);
 
@@ -83,6 +94,8 @@ public class CharacterSettings implements Settings {
 
         autoLearnSkillEnabled = settingsFile.getBoolean("AutoLearnSkills", false);
         autoLearnSkillFSEnabled = settingsFile.getBoolean("AutoLearnForgottenScrollSkills", false);
+        pledgeSkillsItemNeeded = settingsFile.getBoolean("PledgeSkillsItemNeeded", true);
+        divineInspirationBookNeeded = settingsFile.getBoolean("DivineInspirationSpBookNeeded", true);
 
         maxBuffs = settingsFile.getByte("MaxBuffAmount", (byte) 20);
         maxTriggeredBuffs = settingsFile.getByte("MaxTriggeredBuffAmount", (byte) 12);
@@ -90,13 +103,22 @@ public class CharacterSettings implements Settings {
         dispelDanceAllowed = settingsFile.getBoolean("DanceCancelBuff", false);
         storeDances = settingsFile.getBoolean("AltStoreDances", false);
         effectTickRatio = settingsFile.getInteger("EffectTickRatio", 666);
-        storeSkillCooltime = settingsFile.getBoolean("StoreSkillCooltime", true);
 
         var cancelAttackType = settingsFile.getString("AltGameCancelByHit", "Cast");
         breakCast = cancelAttackType.equalsIgnoreCase("Cast") || cancelAttackType.equalsIgnoreCase("all");
         breakBowAttack = cancelAttackType.equalsIgnoreCase("Bow") || cancelAttackType.equalsIgnoreCase("all");
         breakStun = settingsFile.getBoolean("BreakStun", true);
         magicFailureAllowed = settingsFile.getBoolean("MagicFailures", true);
+
+        vitalityEnabled = settingsFile.getBoolean("EnableVitality", false);
+        raidBossUseVitality = settingsFile.getBoolean("RaidbossUseVitality", false);
+
+        maxRunSpeed = settingsFile.getInteger("MaxRunSpeed", 300);
+        maxPcritRate = settingsFile.getInteger("MaxPCritRate", 500);
+        maxMcritRate = settingsFile.getInteger("MaxMCritRate", 200);
+        maxPAtkSpeed = settingsFile.getInteger("MaxPAtkSpeed", 1500);
+        maxMAtkSpeed = settingsFile.getInteger("MaxMAtkSpeed", 1999);
+        maxEvasion = settingsFile.getInteger("MaxEvasion", 250);
     }
 
     public int partyRange() {
@@ -117,6 +139,10 @@ public class CharacterSettings implements Settings {
 
     public int raidLootPrivilegeTime() {
         return raidLootPrivilegeTime;
+    }
+
+    public boolean autoLootHerbs() {
+        return autoLootHerbs;
     }
 
     public boolean initialEquipEvent() {
@@ -163,6 +189,14 @@ public class CharacterSettings implements Settings {
         return autoLearnSkillEnabled;
     }
 
+    public boolean isPledgeSkillsItemNeeded() {
+        return pledgeSkillsItemNeeded;
+    }
+
+    public boolean isDivineInspirationBookNeeded() {
+        return divineInspirationBookNeeded;
+    }
+
     public boolean isAutoLearnSkillFSEnabled() {
         return autoLearnSkillFSEnabled;
     }
@@ -207,7 +241,35 @@ public class CharacterSettings implements Settings {
         return effectTickRatio;
     }
 
-    public boolean storeSkillCooltime() {
-        return storeSkillCooltime;
+    public boolean isVitalityEnabled() {
+        return vitalityEnabled;
+    }
+
+    public boolean raidBossUseVitality() {
+        return raidBossUseVitality;
+    }
+
+    public int maxRunSpeed() {
+        return maxRunSpeed;
+    }
+
+    public int maxPcritRate() {
+        return maxPcritRate;
+    }
+
+    public int maxMcritRate() {
+        return maxMcritRate;
+    }
+
+    public int maxPAtkSpeed() {
+        return maxPAtkSpeed;
+    }
+
+    public int maxMAtkSpeed() {
+        return maxMAtkSpeed;
+    }
+
+    public int maxEvasion() {
+        return maxEvasion;
     }
 }

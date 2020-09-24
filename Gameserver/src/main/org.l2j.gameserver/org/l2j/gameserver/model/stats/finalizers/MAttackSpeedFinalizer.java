@@ -24,8 +24,11 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Optional;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -42,7 +45,7 @@ public class MAttackSpeedFinalizer implements IStatsFunction {
 
         final double witBonus = creature.getWIT() > 0 ? BaseStats.WIT.calcBonus(creature) : 1.;
         baseValue *= witBonus;
-        return validateValue(creature, defaultValue(creature, stat, baseValue), 1, Config.MAX_MATK_SPEED);
+        return validateValue(creature, defaultValue(creature, stat, baseValue), 1, getSettings(CharacterSettings.class).maxMAtkSpeed());
     }
 
     private double defaultValue(Creature creature, Stat stat, double baseValue) {

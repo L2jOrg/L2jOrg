@@ -24,8 +24,11 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Optional;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -40,7 +43,7 @@ public class PAttackSpeedFinalizer implements IStatsFunction {
         }
         final double dexBonus = creature.getDEX() > 0 ? BaseStats.DEX.calcBonus(creature) : 1.;
         baseValue *= dexBonus;
-        return validateValue(creature, defaultValue(creature, stat, baseValue), 1, Config.MAX_PATK_SPEED);
+        return validateValue(creature, defaultValue(creature, stat, baseValue), 1, getSettings(CharacterSettings.class).maxPAtkSpeed());
     }
 
     private double defaultValue(Creature creature, Stat stat, double baseValue) {

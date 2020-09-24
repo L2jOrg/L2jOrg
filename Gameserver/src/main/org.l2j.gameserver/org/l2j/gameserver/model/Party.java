@@ -576,7 +576,7 @@ public class Party extends AbstractPlayerGroup {
                         }
                         clan.addHuntingPoints(member, target, finalExp);
                     }
-                    member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true, false);
+                    member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true);
                     PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
                 }
             } else {

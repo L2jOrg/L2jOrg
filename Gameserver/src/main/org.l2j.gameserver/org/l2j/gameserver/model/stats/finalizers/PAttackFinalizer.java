@@ -57,7 +57,7 @@ public class PAttackFinalizer implements IStatsFunction {
         }
         final double strBonus = creature.getSTR() > 0 ? BaseStats.STR.calcBonus(creature) : 1.;
         baseValue *= strBonus * creature.getLevelMod();
-        return Math.min(Stat.defaultValue(creature, stat, baseValue), Config.MAX_PATK);
+        return Stat.defaultValue(creature, stat, baseValue);
     }
 
     private double calcEnchantPAtkBonus(Item item) {

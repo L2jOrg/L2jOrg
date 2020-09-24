@@ -107,26 +107,9 @@ public final class Config {
     public static boolean ENABLE_MODIFY_SKILL_REUSE;
     public static Map<Integer, Integer> SKILL_REUSE_LIST;
 
-    public static boolean AUTO_LOOT_HERBS;
-
-    public static boolean SUMMON_STORE_SKILL_COOLTIME;
-
-    public static boolean LIFE_CRYSTAL_NEEDED;
-    public static boolean DIVINE_SP_BOOK_NEEDED;
     public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
     public static boolean ALT_GAME_SUBCLASS_EVERYWHERE;
-    public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
 
-    public static double MAX_BONUS_EXP;
-    public static double MAX_BONUS_SP;
-    public static int MAX_RUN_SPEED;
-    public static int MAX_PATK;
-    public static int MAX_MATK;
-    public static int MAX_PCRIT_RATE;
-    public static int MAX_MCRIT_RATE;
-    public static int MAX_PATK_SPEED;
-    public static int MAX_MATK_SPEED;
-    public static int MAX_EVASION;
     public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
     public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
     public static long MAX_SP;
@@ -534,16 +517,6 @@ public final class Config {
     public static int KARMA_RATE_DROP_EQUIP;
     public static int KARMA_RATE_DROP_EQUIP_WEAPON;
 
-    // --------------------------------------------------
-    // Vitality Settings
-    // --------------------------------------------------
-    public static boolean ENABLE_VITALITY;
-    public static int STARTING_VITALITY_POINTS;
-    public static boolean RAIDBOSS_USE_VITALITY;
-    public static float RATE_VITALITY_EXP_MULTIPLIER;
-    public static int VITALITY_MAX_ITEMS_ALLOWED;
-    public static float RATE_VITALITY_LOST;
-    public static float RATE_VITALITY_GAIN;
 
     // --------------------------------------------------
     // No classification assigned to the following yet
@@ -905,29 +878,10 @@ public final class Config {
             }
         }
 
-        AUTO_LOOT_HERBS = Character.getBoolean("AutoLootHerbs", false);
-
-        SUMMON_STORE_SKILL_COOLTIME = Character.getBoolean("SummonStoreSkillCooltime", true);
-
-        LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
-        DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
+        // TODO Remove
         ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
         ALT_GAME_SUBCLASS_EVERYWHERE = Character.getBoolean("AltSubclassEverywhere", false);
 
-        ALLOW_TRANSFORM_WITHOUT_QUEST = Character.getBoolean("AltTransformationWithoutQuest", false);
-        ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
-        STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
-        RAIDBOSS_USE_VITALITY = Character.getBoolean("RaidbossUseVitality", true);
-        MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 0);
-        MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 0);
-        MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 300);
-        MAX_PATK = Character.getInt("MaxPAtk", 999999);
-        MAX_MATK = Character.getInt("MaxMAtk", 999999);
-        MAX_PCRIT_RATE = Character.getInt("MaxPCritRate", 500);
-        MAX_MCRIT_RATE = Character.getInt("MaxMCritRate", 200);
-        MAX_PATK_SPEED = Character.getInt("MaxPAtkSpeed", 1500);
-        MAX_MATK_SPEED = Character.getInt("MaxMAtkSpeed", 1999);
-        MAX_EVASION = Character.getInt("MaxEvasion", 250);
         MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
         MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);
         MAX_SP = Character.getLong("MaxSp", 50000000000L) >= 0 ? Character.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;
@@ -1267,10 +1221,6 @@ public final class Config {
         RATE_QUEST_REWARD_MATERIAL = RatesSettings.getFloat("RateQuestRewardMaterial", 1);
         RATE_RAIDBOSS_POINTS = RatesSettings.getFloat("RateRaidbossPointsReward", 1);
 
-        RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 2);
-        VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
-        RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
-        RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
         RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
         if (RATE_KARMA_LOST == -1) {
             RATE_KARMA_LOST = getSettings(RateSettings.class).xp();

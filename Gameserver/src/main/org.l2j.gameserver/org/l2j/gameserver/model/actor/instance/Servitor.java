@@ -244,10 +244,6 @@ public class Servitor extends Summon implements Runnable {
 
     @Override
     public void storeEffect(boolean storeEffects) {
-        if (!Config.SUMMON_STORE_SKILL_COOLTIME) {
-            return;
-        }
-
         if ((getOwner() == null) || getOwner().isInOlympiadMode()) {
             return;
         }

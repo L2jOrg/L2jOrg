@@ -25,8 +25,10 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.PlaySound.*;
 
 /**
@@ -104,7 +106,7 @@ public class RaidBoss extends Monster {
 
     @Override
     public boolean useVitalityRate() {
-        return Config.RAIDBOSS_USE_VITALITY;
+        return getSettings(CharacterSettings.class).raidBossUseVitality();
     }
 
     public void setUseRaidCurse(boolean val) {

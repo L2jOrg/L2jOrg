@@ -461,7 +461,7 @@ public class Attackable extends Npc {
                                         }
                                         clan.addHuntingPoints(attacker, this, finalExp);
                                     }
-                                    attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
+                                    attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true);
                                     PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
                                 }
 
@@ -879,7 +879,8 @@ public class Attackable extends Npc {
             final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
             // Check if the autoLoot mode is active
             var characterSettings = getSettings(CharacterSettings.class);
-            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot()) || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS)) {
+            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot())
+                    || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && characterSettings.autoLootHerbs())) {
                 player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
             } else {
                 dropItem(player, drop); // drop the item on the ground

@@ -26,6 +26,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
@@ -54,9 +55,11 @@ public class QuestTimerManager {
         }
 
         var timers = questTimers.get(event);
-        for (QuestTimer timer : timers) {
-            if(timer.matches(quest, event, npc, player)) {
-                return timer;
+        if(nonNull(timers)) {
+            for (QuestTimer timer : timers) {
+                if (timer.matches(quest, event, npc, player)) {
+                    return timer;
+                }
             }
         }
         return null;

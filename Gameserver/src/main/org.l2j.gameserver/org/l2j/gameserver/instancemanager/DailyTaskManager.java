@@ -39,6 +39,7 @@ import org.l2j.gameserver.model.eventengine.ScheduleTarget;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
@@ -150,7 +151,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     private void onVitalityReset() {
-        if (!Config.ENABLE_VITALITY) {
+        if (!getSettings(CharacterSettings.class).isVitalityEnabled()) {
             return;
         }
 

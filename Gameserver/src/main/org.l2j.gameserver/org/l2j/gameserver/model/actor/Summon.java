@@ -98,7 +98,7 @@ public abstract class Summon extends Playable {
     public void onSpawn() {
         super.onSpawn();
 
-        if (Config.SUMMON_STORE_SKILL_COOLTIME && !isTeleporting()) {
+        if (!isTeleporting()) {
             restoreEffects();
         }
 

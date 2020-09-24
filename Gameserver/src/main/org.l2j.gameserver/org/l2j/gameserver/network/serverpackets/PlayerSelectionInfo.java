@@ -18,13 +18,13 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 
 import java.util.List;
@@ -169,7 +169,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             writeDouble(0x00); // Current pet MP
 
             writeInt(data.getVitalityPoints());
-            writeInt((int) (Config.RATE_VITALITY_EXP_MULTIPLIER * 100)); // Vitality Percent
+            writeInt((int)  getSettings(RateSettings.class).rateVitalityExpMul() * 100); // Vitality Percent
             writeInt(playerInfo.getVitalityItemsUsed()); // Remaining vitality item uses
             writeInt(data.getAccessLevel() != -100); // Char is active or not
             writeByte(data.isNobless());

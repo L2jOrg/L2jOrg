@@ -18,10 +18,13 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.RateSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Sdw
@@ -34,7 +37,8 @@ public class ExVitalityEffectInfo extends ServerPacket {
     public ExVitalityEffectInfo(Player cha) {
         _points = cha.getVitalityPoints();
         _vitalityBonus = (int) cha.getStats().getVitalityExpBonus() * 100;
-        _vitalityItemsRemaining = Config.VITALITY_MAX_ITEMS_ALLOWED - cha.getVitalityItemsUsed();
+        _vitalityItemsRemaining = getSettings(RateSettings.class).maxItemsVitality() - cha.getVitalityItemsUsed();
+
     }
 
     @Override
@@ -43,9 +47,9 @@ public class ExVitalityEffectInfo extends ServerPacket {
 
         writeInt(_points);
         writeInt(_vitalityBonus); // Vitality Bonus
-        writeShort((short) 0x00); // Vitality additional bonus in %
-        writeShort((short) _vitalityItemsRemaining); // How much vitality items remaining for use
-        writeShort((short) Config.VITALITY_MAX_ITEMS_ALLOWED); // Max number of items for use
+        writeShort(0x00); // Vitality additional bonus in %
+        writeShort(_vitalityItemsRemaining); // How much vitality items remaining for use
+        writeShort(getSettings(RateSettings.class).maxItemsVitality()); // Max number of items for use
     }
 
 }

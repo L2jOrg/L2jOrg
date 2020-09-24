@@ -739,10 +739,6 @@ public class Pet extends Summon {
 
     @Override
     public void storeEffect(boolean storeEffects) {
-        if (!Config.SUMMON_STORE_SKILL_COOLTIME) {
-            return;
-        }
-
         // Clear list for overwrite
         SummonEffectsTable.getInstance().getPetEffects().getOrDefault(getControlObjectId(), Collections.emptyList()).clear();
 
