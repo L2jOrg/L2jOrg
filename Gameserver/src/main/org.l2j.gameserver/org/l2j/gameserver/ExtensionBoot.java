@@ -46,12 +46,15 @@ public class ExtensionBoot {
         ServiceLoader.load(IVoicedCommandHandler.class).forEach(VoicedCommandHandler.getInstance()::registerHandler);
         ServiceLoader.load(IPlayerActionHandler.class).forEach(PlayerActionHandler.getInstance()::registerHandler);
         ServiceLoader.load(ConditionFactory.class).forEach(ConditionHandler.getInstance()::registerFactory);
-        ServiceLoader.load(IParseBoardHandler.class).forEach(CommunityBoardHandler.getInstance()::registerHandler);
     }
 
     static void loaders() {
         ServiceLoader.load(Quest.class).forEach(q -> LOGGER.debug("Quest {} Loaded", q));
         // TODO split in more specific types
         ServiceLoader.load(AbstractScript.class).forEach(s -> LOGGER.debug("Script {} Loaded", s));
+    }
+
+    static void CBLoaders(){
+        ServiceLoader.load(IParseBoardHandler.class).forEach(CommunityBoardHandler.getInstance()::registerHandler);
     }
 }

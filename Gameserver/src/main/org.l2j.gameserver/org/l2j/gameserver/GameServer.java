@@ -269,6 +269,9 @@ public class GameServer {
 
         ThreadPool.execute(AuthServerCommunication.getInstance());
         scheduleDeadLockDetector(settings);
+
+        printSection("CB Loaders");
+        ExtensionBoot.CBLoaders();
     }
 
     private static void scheduleDeadLockDetector(ServerSettings settings) {
