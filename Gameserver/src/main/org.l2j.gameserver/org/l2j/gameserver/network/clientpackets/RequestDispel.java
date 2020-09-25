@@ -56,7 +56,7 @@ public class RequestDispel extends ClientPacket {
         if (skill == null) {
             return;
         }
-        if (!skill.canBeDispelled() || skill.isStayAfterDeath() || skill.isDebuff()) {
+        if (!skill.canBeDispelled() || skill.isDebuff()) {
             return;
         }
         if (skill.getAbnormalType() == AbnormalType.TRANSFORM) {
