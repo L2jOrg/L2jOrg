@@ -20,6 +20,7 @@ package org.l2j.gameserver.engine.olympiad;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.OlympiadDAO;
 import org.l2j.gameserver.data.database.data.OlympiadData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
@@ -32,14 +33,18 @@ import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadInfo;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchMakingResult;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchResult;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Year;
 import java.time.YearMonth;
@@ -63,13 +68,16 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Olympiad.class);
 
+    private final Set<OlympiadMatch> matches = ConcurrentHashMap.newKeySet(10);
     private Set<Player> registered = ConcurrentHashMap.newKeySet(20);
     private Set<Player> matchMaking = ConcurrentHashMap.newKeySet(20);
-    private final Set<OlympiadMatch> matches = ConcurrentHashMap.newKeySet(10);
+
     private ConsumerEventListener onPlayerLoginListener;
     private OlympiadData data = new OlympiadData();
     private OlympiadState state = OlympiadState.SCHEDULED;
     private LocalDate startDate;
+    private Duration matchDuration;
+
     private boolean forceStartDate;
     private int minParticipant;
     private int[] availableArenas;
@@ -87,6 +95,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             String strDate = reader.parseString(attr, "start-date");
             startDate = isNull(strDate) ? LocalDate.now() : LocalDate.parse(strDate);
             availableArenas = reader.parseIntArray(attr, "available-arena-instances");
+            matchDuration = Duration.ofMinutes(reader.parseInt(attr, "match-duration"));
         }
     }
 
@@ -176,19 +185,41 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return 5;
     }
 
-    public void registerPlayer(Player player, OlympiadRuleType ruleType) {
-        if(!state.matchesInProgress())  {
+    public void requestMatchMaking(Player player) {
+        if (!validateMatchMaking(player)) {
             return;
+        }
+
+        player.sendPacket(new ExOlympiadMatchResult());
+        var htmlMessage = new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/html/olympiad/match-making.htm"));
+        htmlMessage.replace("%stats%", stats());
+        player.sendPacket(htmlMessage);
+    }
+
+    private boolean validateMatchMaking(Player player) {
+        if(!state.matchesInProgress())  {
+            return false;
         }
 
         if(registered.contains(player)) {
             player.sendPacket(getSystemMessage(C1_YOU_HAVE_ALREADY_REGISTERED_FOR_THE_MATCH).addPcName(player));
+            return false;
+        }
+        return true;
+    }
+
+    private String stats() {
+        return String.format("(period: %d, week: %d, number of participants: %d)", data.getPeriod(), data.getSeason(), registered.size() + matchMaking.size() + matches.size() * 2);
+    }
+
+    public void startMatchMaking(Player player) {
+        if(!validateMatchMaking(player)) {
             return;
         }
 
         registered.add(player);
         player.sendPacket(YOU_VE_BEEN_REGISTERED_IN_THE_WAITING_LIST_OF_ALL_CLASS_BATTLE);
-        player.sendPacket(new ExOlympiadMatchMakingResult(true, ruleType));
+        player.sendPacket(new ExOlympiadRecord(), new ExOlympiadMatchMakingResult(true, OlympiadRuleType.CLASSLESS));
 
         if(state != MATCH_MAKING && registered.size() >= minParticipant) {
             state = MATCH_MAKING;
@@ -220,6 +251,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         OlympiadMatch match = OlympiadMatch.of(OlympiadRuleType.CLASSLESS);
         var arena = InstanceManager.getInstance().createInstance(Rnd.get(availableArenas));
         match.setArenaInstance(arena);
+        match.setMatchDuration(matchDuration);
         for (int i = 0; i < OlympiadRuleType.CLASSLESS.participantCount(); i++) {
             match.addParticipant(participants.next());
             participants.remove();
@@ -227,6 +259,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
         matches.add(match);
         ThreadPool.schedule(match, 1, TimeUnit.MINUTES);
+    }
+
+    void finishMatch(OlympiadMatch olympiadMatch) {
+
     }
 
     public void unregisterPlayer(Player player, OlympiadRuleType ruleType) {

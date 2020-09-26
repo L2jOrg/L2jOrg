@@ -62,7 +62,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public abstract class Inventory extends ItemContainer {
 
     public static final int BEAUTY_TICKET_ID = 36308;
-    public static final long MAX_ADENA = Config.MAX_ADENA;
+    public static final long MAX_ADENA = Long.MAX_VALUE;
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
 

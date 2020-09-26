@@ -16,27 +16,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.olympiad;
+package org.l2j.scripts.handlers.bypasshandlers;
 
 import org.l2j.gameserver.engine.olympiad.Olympiad;
-import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
-import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
+import org.l2j.gameserver.handler.IBypassHandler;
+import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Player;
+
+import java.util.StringTokenizer;
 
 /**
  * @author JoeAlisson
  */
-public class ExOlympiadMatchMaking extends ClientPacket {
-
-    private byte ruleType;
+public class OlympiadHandler implements IBypassHandler {
 
     @Override
-    protected void readImpl() throws Exception {
-        ruleType = readByte();
+    public boolean useBypass(String bypass, Player player, Creature bypassOrigin) {
+        var tokens = new StringTokenizer(bypass);
+        tokens.nextToken();
+        if(tokens.hasMoreTokens()) {
+            String command = tokens.nextToken();
+            if(command.equalsIgnoreCase("start_match_making")) {
+                Olympiad.getInstance().startMatchMaking(player);
+            }
+        }
+
+
+        return false;
     }
 
     @Override
-    protected void runImpl()  {
-        Olympiad.getInstance().requestMatchMaking(client.getPlayer());
+    public String[] getBypassList() {
+        return new String[] {"Olympiad"};
     }
 }

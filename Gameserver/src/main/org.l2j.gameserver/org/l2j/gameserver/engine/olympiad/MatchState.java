@@ -25,5 +25,6 @@ public enum MatchState  {
     CREATED,
     STARTED,
     WARM_UP,
-    IN_BATTLE
+    IN_BATTLE,
+    FINISHED
 }

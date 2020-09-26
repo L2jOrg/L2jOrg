@@ -28,6 +28,7 @@ import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadSpelledInfo;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadUserInfo;
 
 import static java.util.Objects.isNull;
+import static org.l2j.gameserver.network.SystemMessageId.*;
 
 /**
  * @author JoeAlisson
@@ -36,6 +37,8 @@ class OlympiadClasslessMatch extends OlympiadMatch {
 
     private Player red;
     private Player blue;
+    private Location redBackLocation;
+    private Location blueBackLocation;
 
     OlympiadClasslessMatch() {
     }
@@ -51,6 +54,9 @@ class OlympiadClasslessMatch extends OlympiadMatch {
 
     @Override
     protected void teleportPlayers(Location first, Location second, Instance arena) {
+        redBackLocation = red.getLocation();
+        blueBackLocation = blue.getLocation();
+
         red.setIsInOlympiadMode(true);
         red.setOlympiadSide(1);
         blue.setIsInOlympiadMode(true);
@@ -69,8 +75,8 @@ class OlympiadClasslessMatch extends OlympiadMatch {
 
     @Override
     public void broadcastPacket(ServerPacket packet) {
-        red.sendPacket(packet);
-        blue.sendPacket(packet);
+        red.broadcastPacket(packet);
+        blue.broadcastPacket(packet);
     }
 
     @Override
@@ -87,5 +93,18 @@ class OlympiadClasslessMatch extends OlympiadMatch {
 
         spellInfo = new ExOlympiadSpelledInfo(blue);
         blue.getEffectList().getEffects().forEach(spellInfo::addSkill);
+    }
+
+    @Override
+    protected void calculateResults() {
+        broadcastMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+        //broadcastMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+        //broadcastMessage(C1_HAS_LOST_S2_POINTS_IN_THE_OLYMPIAD_GAMES);
+    }
+
+    @Override
+    protected void teleportBack() {
+        red.teleToLocation(redBackLocation, null);
+        blue.teleToLocation(blueBackLocation, null);
     }
 }

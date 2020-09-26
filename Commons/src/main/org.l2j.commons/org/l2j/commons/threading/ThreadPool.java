@@ -66,7 +66,7 @@ public class ThreadPool {
     }
 
     public static ScheduledFuture<?> schedule(Runnable r, Duration delay) {
-        return schedule(r, delay.toSeconds(), TimeUnit.SECONDS);
+        return schedule(r, delay.toMillis(), TimeUnit.MILLISECONDS);
     }
 
     public static ScheduledFuture<?> schedule(Runnable r, long delay){

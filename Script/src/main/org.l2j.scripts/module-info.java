@@ -502,6 +502,7 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.bypasshandlers.Link,
             org.l2j.scripts.handlers.bypasshandlers.Multisell,
             org.l2j.scripts.handlers.bypasshandlers.Observation,
+            org.l2j.scripts.handlers.bypasshandlers.OlympiadHandler,
             org.l2j.scripts.handlers.bypasshandlers.PlayerHelp,
             org.l2j.scripts.handlers.bypasshandlers.PrivateWarehouse,
             org.l2j.scripts.handlers.bypasshandlers.QuestLink,
