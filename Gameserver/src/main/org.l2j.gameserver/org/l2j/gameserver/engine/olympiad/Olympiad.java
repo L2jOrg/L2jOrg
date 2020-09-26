@@ -36,7 +36,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadInfo;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchMakingResult;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchResult;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -190,7 +189,6 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return;
         }
 
-        player.sendPacket(new ExOlympiadMatchResult());
         var htmlMessage = new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/html/olympiad/match-making.htm"));
         htmlMessage.replace("%stats%", stats());
         player.sendPacket(htmlMessage);
@@ -262,7 +260,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     void finishMatch(OlympiadMatch olympiadMatch) {
-
+        matches.remove(olympiadMatch);
     }
 
     public void unregisterPlayer(Player player, OlympiadRuleType ruleType) {
