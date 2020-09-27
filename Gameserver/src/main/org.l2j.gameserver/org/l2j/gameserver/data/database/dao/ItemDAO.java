@@ -24,6 +24,7 @@ import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.database.data.ItemVariationData;
 import org.l2j.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.model.commission.CommissionItem;
 
 import java.util.Collection;
 import java.util.List;
@@ -63,8 +64,14 @@ public interface ItemDAO extends DAO<Object> {
     @Query("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId = :itemId:")
     ItemVariationData findItemVariationByItemId(int itemId);
 
-    @Query("SELECT object_id, item_id, loc_data, enchant_level FROM items WHERE owner_id = :ownerId: AND loc='PAPERDOLL'")
-    List<ItemData> findEquipedItemsByOwner(int ownerId);
+    @Query("SELECT * FROM items WHERE owner_id = :ownerId: AND loc=:loc:")
+    List<ItemData> findItemsByOwnerAndLoc(int ownerId, ItemLocation loc);
+
+    @Query("SELECT * FROM items WHERE owner_id=:ownerId: AND loc='MAIL' AND loc_data=:mailId:")
+    List<ItemData> findItemsAttachment(int ownerId, int mailId);
+
+    @Query("SELECT * FROM items WHERE owner_id=:ownerId: AND (loc=:baseLoc: OR loc=:equipLoc:) ORDER BY loc_data")
+    List<ItemData> findInventoryItems(int ownerId,  ItemLocation baseLoc, ItemLocation equipLoc);
 
     void save(Collection<ItemOnGroundData> datas);
 
@@ -102,4 +109,11 @@ public interface ItemDAO extends DAO<Object> {
 
     @Query("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 1")
     int findLastAuctionId();
+
+    @Query("""
+           SELECT * FROM items i
+           JOIN commission_items ci ON ci.item_object_id = i.object_id
+           WHERE i.loc = 'COMMISSION'
+           """)
+    List<CommissionItem> findCommissionItems();
 }

@@ -20,48 +20,51 @@ package org.l2j.commons.database.handler;
 
 import org.l2j.commons.database.TypeHandler;
 import org.l2j.commons.database.QueryDescriptor;
-import org.l2j.commons.util.Util;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.Instant;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
  */
-public class ByteArrayHandler implements TypeHandler<byte[]> {
-
+public class InstantHandler implements TypeHandler<Instant> {
     @Override
-    public byte[] defaultValue() {
-        return Util.BYTE_ARRAY_EMPTY;
+    public Instant defaultValue() {
+        return null;
     }
 
     @Override
-    public byte[] handleResult(QueryDescriptor queryDescriptor) throws SQLException {
+    public Instant handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         var resultSet = queryDescriptor.getResultSet();
         if(resultSet.next()) {
-            return handleColumn(resultSet, 1);
+            handleColumn(resultSet, 1);
         }
         return defaultValue();
     }
 
     @Override
-    public byte[] handleType(ResultSet resultSet, Class<?> type) throws SQLException {
+    public Instant handleType(ResultSet resultSet, Class<?> type) throws SQLException {
         return handleColumn(resultSet, 1);
     }
 
     @Override
-    public byte[] handleColumn(ResultSet resultSet, int column) throws SQLException {
-        return resultSet.getBytes(column);
+    public Instant handleColumn(ResultSet resultSet, int column) throws SQLException {
+        var timestamp = resultSet.getTimestamp(column);
+        return nonNull(timestamp) ? timestamp.toInstant() : null;
     }
 
     @Override
-    public void setParameter(PreparedStatement statement, int parameterIndex, byte[] arg) throws SQLException {
-        statement.setBytes(parameterIndex, arg);
+    public void setParameter(PreparedStatement statement, int parameterIndex, Instant instant) throws SQLException {
+        statement.setTimestamp(parameterIndex, nonNull(instant) ? Timestamp.from(instant) : null);
     }
 
     @Override
     public String type() {
-        return byte[].class.getName();
+        return Instant.class.getName();
     }
 }

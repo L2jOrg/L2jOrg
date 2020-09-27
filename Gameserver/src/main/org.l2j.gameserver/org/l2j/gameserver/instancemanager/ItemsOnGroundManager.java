@@ -62,7 +62,6 @@ public final class ItemsOnGroundManager implements Runnable {
             return;
         }
 
-        // if DestroyPlayerDroppedItem was previously false, items currently protected will be added to ItemsAutoDestroy
         if (generalSettings.destroyPlayerDroppedItem()) {
             if (!generalSettings.destroyEquipableItem()) {
                 itemDAO.updateNonEquipDropTimeByNonDestroyable(System.currentTimeMillis());

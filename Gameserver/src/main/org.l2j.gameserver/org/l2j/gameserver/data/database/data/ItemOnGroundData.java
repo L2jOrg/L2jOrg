@@ -34,17 +34,16 @@ public class ItemOnGroundData {
     @Column("item_id")
     private int itemId;
 
-    private long count;
-
     @Column("enchant_level")
     private int enchantLevel;
 
+    @Column("drop_time")
+    private long dropTime;
+
+    private long count;
     private int x;
     private int y;
     private int z;
-
-    @Column("drop_time")
-    private long dropTime;
     private int equipable;
 
     public static ItemOnGroundData of(Item item) {

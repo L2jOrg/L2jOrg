@@ -26,10 +26,7 @@ import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.handler.TypeHandler;
 import org.l2j.commons.database.helpers.EntityBasedStrategy;
-import org.l2j.commons.database.helpers.HandlersSupport;
-import org.l2j.commons.database.helpers.QueryDescriptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

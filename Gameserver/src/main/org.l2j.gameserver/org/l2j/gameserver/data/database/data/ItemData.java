@@ -44,7 +44,7 @@ public class ItemData {
 
     @Column("time_of_use")
     private int timeOfUse;
-    private int time;
+    private long time;
 
     public int getOwnerId() {
         return ownerId;
@@ -76,7 +76,7 @@ public class ItemData {
         return timeOfUse;
     }
 
-    public float getTime() {
+    public long getTime() {
         return time;
     }
 }

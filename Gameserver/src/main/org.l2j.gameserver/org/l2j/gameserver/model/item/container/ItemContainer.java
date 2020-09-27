@@ -19,8 +19,9 @@
 package org.l2j.gameserver.model.item.container;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.WorldObject;
@@ -34,9 +35,6 @@ import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -45,6 +43,7 @@ import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
 /**
@@ -566,29 +565,20 @@ public abstract class ItemContainer {
      * Get back items in container from database
      */
     public void restore() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND (loc=?)")) {
-            ps.setInt(1, getOwnerId());
-            ps.setString(2, getBaseLocation().name());
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    final Item item = new Item(rs);
-                    World.getInstance().addObject(item);
+        for (ItemData itemData : getDAO(ItemDAO.class).findItemsByOwnerAndLoc(getOwnerId(), getBaseLocation())) {
+            var item = new Item(itemData);
+            World.getInstance().addObject(item);
 
-                    final Player owner = getOwner() != null ? getOwner().getActingPlayer() : null;
+            final Player owner = getOwner() != null ? getOwner().getActingPlayer() : null;
 
-                    // If stackable item is found in inventory just add to current quantity
-                    if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
-                        addItem("Restore", item, owner, null);
-                    } else {
-                        addItem(item);
-                    }
-                }
+            // If stackable item is found in inventory just add to current quantity
+            if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
+                addItem("Restore", item, owner, null);
+            } else {
+                addItem(item);
             }
-            refreshWeight();
-        } catch (Exception e) {
-            LOGGER.warn("could not restore container:", e);
         }
+        refreshWeight();
     }
 
     public boolean validateCapacity(long slots) {

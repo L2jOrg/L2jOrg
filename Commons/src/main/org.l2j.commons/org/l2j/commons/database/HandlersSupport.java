@@ -16,9 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.commons.database.helpers;
-
-import org.l2j.commons.database.handler.TypeHandler;
+package org.l2j.commons.database;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -32,12 +30,12 @@ import java.util.ServiceLoader;
 public class HandlersSupport {
 
     @SuppressWarnings("rawTypes")
-    public static final Map<String, TypeHandler> MAP = new HashMap<>();
+    private static final Map<String, TypeHandler> MAP = new HashMap<>();
 
     private HandlersSupport() {
     }
 
-    public static void initialize() {
+    static void initialize() {
         for (TypeHandler<?> typeHandler : ServiceLoader.load(TypeHandler.class)) {
             MAP.put(typeHandler.type(), typeHandler);
         }
@@ -47,8 +45,8 @@ public class HandlersSupport {
         return MAP.getOrDefault(method.getReturnType().isEnum() ? "enum" : method.getReturnType().getName(), HandlersSupport.MAP.get(Object.class.getName()));
     }
 
-    @SuppressWarnings("rawTypes")
-    public static TypeHandler handlerFromClass(Class<?> genericType) {
+    @SuppressWarnings("unchecked")
+    public static <T> TypeHandler<T> handlerFromClass(Class<T> genericType) {
         return MAP.getOrDefault(genericType.isEnum() ? "enum" : genericType.getName(), HandlersSupport.MAP.get(Object.class.getName()));
     }
 

@@ -19,6 +19,8 @@
 package org.l2j.commons.database.helpers;
 
 import io.github.joealisson.primitive.IntKeyValue;
+import org.l2j.commons.database.HandlersSupport;
+import org.l2j.commons.database.TypeHandler;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -57,7 +59,7 @@ public class EntityBasedStrategy implements MapParameterStrategy {
                     var argumentIndex = parameterInfo.getValue().getKey();
                     var value = field.get(entity);
                     var type = parameterInfo.getValue().getValue();
-                    var handler = HandlersSupport.handlerFromClass(type);
+                    var handler = (TypeHandler<Object>) HandlersSupport.handlerFromClass(type);
                     if(nonNull(value)) {
                         handler.setParameter(statement, argumentIndex, value);
                     } else {
