@@ -50,15 +50,15 @@ public final class MultiSellList extends AbstractItemPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.MULTI_SELL_LIST);
 
-        writeByte((byte) 0x00); // Helios
+        writeByte(0x00); // Helios
         writeInt(_list.getId()); // list id
-        writeByte((byte) 0x00); // GOD Unknown
+        writeByte(0x00); // GOD Unknown
         writeInt(1 + (_index / MultisellData.PAGE_SIZE)); // page started from 1
-        writeInt(_finished ? 0x01 : 0x00); // finished
+        writeInt(_finished); // finished
         writeInt(MultisellData.PAGE_SIZE); // size of pages
         writeInt(_size); // list length
-        writeByte((byte) 0x00); // Grand Crusade
-        writeByte((byte) (_list.isChanceMultisell() ? 0x01 : 0x00)); // new multisell window
+        writeByte(0x00); // Grand Crusade
+        writeByte(_list.isChanceMultisell()); // new multisell window
         writeInt(0x20); // Helios - Always 32
 
         while (_size-- > 0) {
@@ -66,16 +66,16 @@ public final class MultiSellList extends AbstractItemPacket {
             final MultisellEntryHolder entry = _list.getEntries().get(_index++);
 
             writeInt(_index); // Entry ID. Start from 1.
-            writeByte((byte) (entry.isStackable() ? 1 : 0));
+            writeByte(entry.isStackable());
 
             // Those values will be passed down to MultiSellChoose packet.
-            writeShort((short)(itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0)); // enchant level
+            writeShort((itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0)); // enchant level
             writeItemAugment(itemEnchantment);
             writeItemElemental(itemEnchantment);
             writeItemEnsoulOptions(itemEnchantment);
 
-            writeShort((short) entry.getProducts().size());
-            writeShort((short) entry.getIngredients().size());
+            writeShort(entry.getProducts().size());
+            writeShort(entry.getIngredients().size());
 
             for (ItemChanceHolder product : entry.getProducts()) {
                 final ItemTemplate template = ItemEngine.getInstance().getTemplate(product.getId());
@@ -87,10 +87,10 @@ public final class MultiSellList extends AbstractItemPacket {
                     writeShort((short) template.getType2());
                 } else {
                     writeLong(0);
-                    writeShort((short) 65535);
+                    writeShort(65535);
                 }
                 writeLong(_list.getProductCount(product));
-                writeShort((short) (product.getEnchantmentLevel() > 0 ? product.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0)); // enchant level
+                writeShort((product.getEnchantmentLevel() > 0 ? product.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0)); // enchant level
                 writeInt((int) Math.ceil(product.getChance())); // chance
                 writeItemAugment(displayItemEnchantment);
                 writeItemElemental(displayItemEnchantment);
@@ -102,9 +102,9 @@ public final class MultiSellList extends AbstractItemPacket {
                 final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getId() == ingredient.getId())) ? itemEnchantment : null;
 
                 writeInt(ingredient.getId());
-                writeShort((short)(template != null ? template.getType2() : 65535));
+                writeShort((template != null ? template.getType2() : 65535));
                 writeLong(_list.getIngredientCount(ingredient));
-                writeShort((short) (ingredient.getEnchantmentLevel() > 0 ? ingredient.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0)); // enchant level
+                writeShort((ingredient.getEnchantmentLevel() > 0 ? ingredient.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0)); // enchant level
                 writeItemAugment(displayItemEnchantment);
                 writeItemElemental(displayItemEnchantment);
                 writeItemEnsoulOptions(displayItemEnchantment);

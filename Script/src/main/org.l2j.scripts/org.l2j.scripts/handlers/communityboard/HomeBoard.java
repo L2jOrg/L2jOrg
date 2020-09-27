@@ -217,7 +217,6 @@ public final class HomeBoard implements IParseBoardHandler {
         }
 
         String returnHtml = null;
-        final String navigation = HtmCache.getInstance().getHtm(activeChar, NAVIGATION_PATH);
         if (command.equals("_bbshome") || command.equals("_bbstop")) {
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
@@ -232,15 +231,11 @@ public final class HomeBoard implements IParseBoardHandler {
             final String fullBypass = command.replace("_bbsmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
             final int multisellId = Integer.parseInt(buypassOptions[0]);
-            final String page = buypassOptions[1];
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
             MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
         } else if (command.startsWith("_bbsexcmultisell")) {
             final String fullBypass = command.replace("_bbsexcmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
             final int multisellId = Integer.parseInt(buypassOptions[0]);
-            final String page = buypassOptions[1];
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
             MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, true);
         } else if (command.startsWith("_bbssell")) {
             final String page = command.replace("_bbssell ", "");
@@ -468,6 +463,7 @@ public final class HomeBoard implements IParseBoardHandler {
             if (Config.CUSTOM_CB_ENABLED) {
                 final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
 
+                final String navigation = HtmCache.getInstance().getHtm(activeChar, NAVIGATION_PATH);
                 returnHtml = returnHtml.replace("%schemes%", getSchemesListAsHtml(schemes));
                 returnHtml = returnHtml.replace("%max_schemes%", Integer.toString(Config.BUFFER_MAX_SCHEMES));
                 returnHtml = returnHtml.replace("%navigation%", navigation);

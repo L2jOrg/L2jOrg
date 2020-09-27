@@ -185,7 +185,7 @@ public final class MultisellData extends GameXmlReader {
     public final void separateAndSend(int listId, Player player, Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier) {
         final MultisellListHolder template = _multisells.get(listId);
         if (template == null) {
-            LOGGER.warn("Can't find list id: " + listId + " requested by player: " + player.getName() + ", npcId: " + (npc != null ? npc.getId() : 0));
+            LOGGER.warn("Can't find list id: {} requested by player: {}, npcId: {}", listId, player,  (npc != null ? npc.getId() : 0));
             return;
         }
 
