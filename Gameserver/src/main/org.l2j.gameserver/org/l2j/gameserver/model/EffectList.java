@@ -1004,8 +1004,8 @@ public final class EffectList {
     private void updateEffectList(boolean broadcast) {
         // Create new empty flags.
         long flags = 0;
-        final Set<AbnormalType> abnormalTypeFlags = EnumSet.noneOf(AbnormalType.class);
-        final Set<AbnormalVisualEffect> abnormalVisualEffectFlags = EnumSet.noneOf(AbnormalVisualEffect.class);
+        final Set<AbnormalType> abnormalTypes = EnumSet.noneOf(AbnormalType.class);
+        final Set<AbnormalVisualEffect> abnormalVisualEffects = EnumSet.noneOf(AbnormalVisualEffect.class);
         final Set<BuffInfo> unhideBuffs = new HashSet<>();
 
         // Recalculate new flags
@@ -1020,7 +1020,7 @@ public final class EffectList {
                         unhideBuffs.removeIf(b -> b.isAbnormalType(skill.getAbnormalType()));
                     }
                     // If this incoming buff is hidden and its first of its abnormal, or it removes any previous hidden buff with the same or lower abnormal level and add this instead.
-                    else if (!abnormalTypeFlags.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl()))) {
+                    else if (!abnormalTypes.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl()))) {
                         unhideBuffs.add(info);
                     }
                 }
@@ -1031,13 +1031,13 @@ public final class EffectList {
                 }
 
                 // Add the AbnormalType flag.
-                abnormalTypeFlags.add(skill.getAbnormalType());
+                abnormalTypes.add(skill.getAbnormalType());
 
                 // Add AbnormalVisualEffect flag.
                 if (skill.hasAbnormalVisualEffect()) {
                     var visual = skill.getAbnormalVisualEffect();
-                    abnormalVisualEffectFlags.addAll(visual); // TODO review : why two lists ?
-                    abnormalVisualEffects.addAll(visual);
+                    abnormalVisualEffects.addAll(visual); // TODO review : why two lists ?
+                    this.abnormalVisualEffects.addAll(visual);
                     if (broadcast) {
                         owner.updateAbnormalVisualEffects();
                     }
@@ -1059,7 +1059,7 @@ public final class EffectList {
 
         // Replace the old flags with the new flags.
         effectFlags = flags;
-        stackedEffects = abnormalTypeFlags;
+        stackedEffects = abnormalTypes;
 
         // Unhide the selected buffs.
         unhideBuffs.forEach(b ->
@@ -1073,8 +1073,8 @@ public final class EffectList {
 
         if (broadcast) {
             // Check if there is change in AbnormalVisualEffect
-            if (!abnormalVisualEffectFlags.containsAll(abnormalVisualEffects)) {
-                abnormalVisualEffects = abnormalVisualEffectFlags;
+            if (!abnormalVisualEffects.containsAll(this.abnormalVisualEffects)) {
+                this.abnormalVisualEffects = abnormalVisualEffects;
                 owner.updateAbnormalVisualEffects();
             }
 

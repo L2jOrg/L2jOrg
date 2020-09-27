@@ -660,7 +660,7 @@ public abstract class Summon extends Playable {
             return;
         }
 
-        //sendPacket(new PetInfo(this, val));
+        sendPacket(new PetInfo(this, val));
         sendPacket(new PetStatusUpdate(this));
         if (isSpawned()) {
             broadcastNpcInfo(val);
