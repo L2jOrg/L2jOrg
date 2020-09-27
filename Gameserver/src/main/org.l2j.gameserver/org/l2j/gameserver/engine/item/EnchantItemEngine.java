@@ -313,7 +313,7 @@ public class EnchantItemEngine extends GameXmlReader {
 
             EnchantResult result;
             if(crystalId != 0 && count > 0) {
-                var crystal = player.getInventory().addItem("Enchant", crystalId, count, player, item);
+                var crystal = player.getInventory().addItem("Enchant", crystalId, count, player, item, false);
                 player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(crystal).addLong(count));
                 inventoryUpdate.addItem(crystal);
                 result = EnchantResult.fail(crystalId, count);
@@ -324,7 +324,7 @@ public class EnchantItemEngine extends GameXmlReader {
             doIfNonNull(item.isWeapon() ? weaponRewards.get(item.getCrystalType()) : armorRewards.get(item.getCrystalType()), failReward -> {
                 long rewardAmount = failReward.amount(item.getEnchantLevel());
                 if(rewardAmount > 0) {
-                    var reward = player.getInventory().addItem("Enchant",  failReward.id(), rewardAmount, player, item);
+                    var reward = player.getInventory().addItem("Enchant",  failReward.id(), rewardAmount, player, item, false);
                     player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(reward).addLong(rewardAmount));
                     inventoryUpdate.addItem(reward);
                     result.withStone(failReward.id(), rewardAmount);
