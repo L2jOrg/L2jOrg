@@ -83,6 +83,7 @@ public final class HomeBoard implements IParseBoardHandler {
             Config.COMMUNITYBOARD_ENABLE_BUFFS ? "_bbsskillunselect" : null,
             Config.COMMUNITYBOARD_ENABLE_BUFFS ? "_bbsgivebuffs" : null,
             Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null,
+            Config.COMMUNITYBOARD_ENABLE_CLEANUP ? "_bbscleanup" : null,
             Config.COMMUNITYBOARD_ENABLE_PREMIUM ? "_bbspremium" : null,
             Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null
     };
@@ -311,7 +312,22 @@ public final class HomeBoard implements IParseBoardHandler {
             }
 
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
-        } else if (command.startsWith("_bbspremium")) {
+        }
+        else if (command.startsWith("_bbscleanup"))
+        {
+            final String page = command.replace("_bbscleanup ", "");
+            activeChar.stopAllEffects();
+
+            final Summon summon = activeChar.getPet();
+            if (summon != null)
+            {
+                summon.stopAllEffects();
+            }
+            activeChar.sendMessage("You removed all buffs!");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
+        }
+
+        else if (command.startsWith("_bbspremium")) {
                 //_bbspremium;L2 amount;VIP amout ex: _bbspremium;100;200
                 final String fullBypass = command.replace("_bbspremium ", "");
                 final String[] buypassOptions = fullBypass.split(";");
