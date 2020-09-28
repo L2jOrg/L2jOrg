@@ -408,6 +408,10 @@ public final class Player extends Playable {
         return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);
     }
 
+    public boolean teleportInBattle() {
+        return !isInBattle() && getSettings(CharacterSettings.class).teleportInBattle();
+    }
+
     public void setAutoPlaySettings(AutoPlaySettings autoPlaySettings) {
         this.autoPlaySettings = autoPlaySettings;
     }
