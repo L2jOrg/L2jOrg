@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.BossDAO;
+import org.l2j.gameserver.data.database.dao.GrandBossDAO;
 import org.l2j.gameserver.data.database.data.GrandBossData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
@@ -53,7 +54,7 @@ public final class GrandBossManager implements IStorable {
     }
 
     private void init() {
-        grandBossesData = getDAO(BossDAO.class).loadGrandBosses();
+        grandBossesData = getDAO(GrandBossDAO.class).loadGrandBosses();
         LOGGER.info("Loaded {} Grand Bosses.", grandBossesData.size());
         ThreadPool.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
     }
@@ -66,7 +67,7 @@ public final class GrandBossManager implements IStorable {
         var bossData = grandBossesData.get(bossId);
         if(nonNull(bossData)) {
             bossData.setStatus(status);
-            getDAO(BossDAO.class).updateGrandBossStatus(bossId, status);
+            getDAO(GrandBossDAO.class).updateGrandBossStatus(bossId, status);
             LOGGER.info("Updated {} ({}) status to {}", NpcData.getInstance().getTemplate(bossId).getName(), bossId, status );
         }
     }
@@ -107,7 +108,7 @@ public final class GrandBossManager implements IStorable {
             }
         }
 
-        return getDAO(BossDAO.class).save(grandBossesData.values());
+        return getDAO(GrandBossDAO.class).save(grandBossesData.values());
     }
 
     /**

@@ -24,6 +24,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
@@ -112,7 +113,7 @@ public final class Item extends WorldObject {
     /**
      * ID of the owner
      */
-    private int _ownerId;
+    private int ownerId;
     /**
      * ID of who dropped the item last, used for knownlist
      */
@@ -120,7 +121,7 @@ public final class Item extends WorldObject {
     /**
      * Quantity of the item
      */
-    private long _count = 1;
+    private long count = 1;
     /**
      * Initial Quantity of the item
      */
@@ -128,7 +129,7 @@ public final class Item extends WorldObject {
     /**
      * Remaining time (in miliseconds)
      */
-    private long _time;
+    private long time;
     /**
      * Quantity of the item can decrease
      */
@@ -140,7 +141,7 @@ public final class Item extends WorldObject {
     /**
      * Slot where item is stored : Paperdoll slot, inventory order ...
      */
-    private int _locData;
+    private int locData;
     /**
      * Level of enchantment of the item
      */
@@ -183,7 +184,7 @@ public final class Item extends WorldObject {
         super.setName(template.getName());
         loc = ItemLocation.VOID;
         _dropTime = 0;
-        _time = template.getTime() == -1 ? -1 : System.currentTimeMillis() + (template.getTime() * 60 * 1000);
+        time = template.getTime() == -1 ? -1 : System.currentTimeMillis() + (template.getTime() * 60 * 1000);
         scheduleLifeTimeTask();
     }
 
@@ -203,25 +204,8 @@ public final class Item extends WorldObject {
         }
         super.setName(this.template.getName());
         loc = ItemLocation.VOID;
-        _time = this.template.getTime() == -1 ? -1 : System.currentTimeMillis() + (this.template.getTime() * 60 * 1000);
+        time = this.template.getTime() == -1 ? -1 : System.currentTimeMillis() + (this.template.getTime() * 60 * 1000);
         scheduleLifeTimeTask();
-    }
-
-    public Item(ResultSet rs) throws SQLException {
-        this(rs.getInt("object_id"), ItemEngine.getInstance().getTemplate(rs.getInt("item_id")));
-        _count = rs.getLong("count");
-        _ownerId = rs.getInt("owner_id");
-        loc = ItemLocation.valueOf(rs.getString("loc"));
-        _locData = rs.getInt("loc_data");
-        enchantLevel = rs.getInt("enchant_level");
-        _time = rs.getLong("time");
-        _existsInDb = true;
-        _storedInDb = true;
-
-        if (isEquipable()) {
-            restoreAttributes();
-            restoreSpecialAbilities();
-        }
     }
 
     /**
@@ -242,6 +226,41 @@ public final class Item extends WorldObject {
         setProtected(getDropTime() == -1);
         setSpawned(true);
         setXYZ(data.getX(), data.getY(), data.getZ());
+    }
+
+    public Item(ResultSet rs) throws SQLException {
+        this(rs.getInt("object_id"), ItemEngine.getInstance().getTemplate(rs.getInt("item_id")));
+        count = rs.getLong("count");
+        ownerId = rs.getInt("owner_id");
+        loc = ItemLocation.valueOf(rs.getString("loc"));
+        locData = rs.getInt("loc_data");
+        enchantLevel = rs.getInt("enchant_level");
+        time = rs.getLong("time");
+        _existsInDb = true;
+        _storedInDb = true;
+
+        if (isEquipable()) {
+            restoreAttributes();
+            restoreSpecialAbilities();
+        }
+    }
+
+    public Item(ItemData data) {
+        this(data.getObjectId(), data.getItemId());
+        count = data.getCount();
+        ownerId = data.getOwnerId();
+        loc = data.getLoc();
+        locData = data.getLocData();
+        enchantLevel = data.getEnchantLevel();
+        time = data.getTime();
+
+        _existsInDb = true;
+        _storedInDb = true;
+
+        if(isEquipable()) {
+            restoreAttributes();
+            restoreSpecialAbilities();
+        }
 
     }
 
@@ -308,14 +327,14 @@ public final class Item extends WorldObject {
                             + ", item " + getObjectId() //
                             + ":+" + enchantLevel //
                             + " " + template.getName() //
-                            + "(" + _count + "), " //
+                            + "(" + count + "), " //
                             + creator + ", " // in case of null
                             + reference); // in case of null
                 } else {
                     LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
                             + ":" + template.getName() //
-                            + "(" + _count + "), " //
+                            + "(" + count + "), " //
                             + creator + ", " // in case of null
                             + reference); // in case of null
                 }
@@ -342,7 +361,7 @@ public final class Item extends WorldObject {
      * @return int : ownerID of the item
      */
     public int getOwnerId() {
-        return _ownerId;
+        return ownerId;
     }
 
     /**
@@ -351,14 +370,14 @@ public final class Item extends WorldObject {
      * @param owner_id : int designating the ID of the owner
      */
     public void setOwnerId(int owner_id) {
-        if (owner_id == _ownerId) {
+        if (owner_id == ownerId) {
             return;
         }
 
         // Remove any inventory skills from the old owner.
         removeSkillsFromOwner();
 
-        _ownerId = owner_id;
+        ownerId = owner_id;
         _storedInDb = false;
 
         // Give any inventory skills to the new owner only if the item is in inventory
@@ -375,7 +394,7 @@ public final class Item extends WorldObject {
      * @param loc_data : int designating the slot where the item is stored or the village for freights
      */
     public void setItemLocation(ItemLocation loc, int loc_data) {
-        if ((loc == this.loc) && (loc_data == _locData)) {
+        if ((loc == this.loc) && (loc_data == locData)) {
             return;
         }
 
@@ -383,7 +402,7 @@ public final class Item extends WorldObject {
         removeSkillsFromOwner();
 
         this.loc = loc;
-        _locData = loc_data;
+        locData = loc_data;
         _storedInDb = false;
 
         // Give any inventory skills to the new owner only if the item is in inventory
@@ -408,7 +427,7 @@ public final class Item extends WorldObject {
      * @return Returns the count.
      */
     public long getCount() {
-        return _count;
+        return count;
     }
 
     /**
@@ -418,11 +437,11 @@ public final class Item extends WorldObject {
      * @param count the new count to set
      */
     public void setCount(long count) {
-        if (_count == count) {
+        if (this.count == count) {
             return;
         }
 
-        _count = count >= -1 ? count : 0;
+        this.count = count >= -1 ? count : 0;
         _storedInDb = false;
     }
 
@@ -440,16 +459,16 @@ public final class Item extends WorldObject {
         if (count == 0) {
             return;
         }
-        final long old = _count;
+        final long old = this.count;
         final long max = itemId == CommonItem.ADENA ? Inventory.MAX_ADENA : Integer.MAX_VALUE;
 
-        if ((count > 0) && (_count > (max - count))) {
+        if ((count > 0) && (this.count > (max - count))) {
             setCount(max);
         } else {
-            setCount(_count + count);
+            setCount(this.count + count);
         }
 
-        if (_count < 0) {
+        if (this.count < 0) {
             setCount(0);
         }
 
@@ -463,7 +482,7 @@ public final class Item extends WorldObject {
                             + ", item " + getObjectId() //
                             + ":+" + enchantLevel //
                             + " " + template.getName() //
-                            + "(" + _count + "), PrevCount(" //
+                            + "(" + this.count + "), PrevCount(" //
                             + String.valueOf(old) + "), " // in case of null
                             + String.valueOf(creator) + ", " // in case of null
                             + String.valueOf(reference)); // in case of null
@@ -471,7 +490,7 @@ public final class Item extends WorldObject {
                     LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
                             + ":" + template.getName() //
-                            + "(" + _count + "), PrevCount(" //
+                            + "(" + this.count + "), PrevCount(" //
                             + String.valueOf(old) + "), " // in case of null
                             + String.valueOf(creator) + ", " // in case of null
                             + String.valueOf(reference)); // in case of null
@@ -533,7 +552,7 @@ public final class Item extends WorldObject {
      * @return int
      */
     public int getLocationSlot() {
-        return _locData;
+        return locData;
     }
 
     /**
@@ -854,7 +873,7 @@ public final class Item extends WorldObject {
     public boolean setAugmentation(VariationInstance augmentation, boolean updateDatabase) {
         // there shall be no previous augmentation..
         if (_augmentation != null) {
-            LOGGER.info("Warning: Augment set for (" + getObjectId() + ") " + getName() + " owner: " + _ownerId);
+            LOGGER.info("Warning: Augment set for (" + getObjectId() + ") " + getName() + " owner: " + ownerId);
             return false;
         }
 
@@ -1098,13 +1117,13 @@ public final class Item extends WorldObject {
 
         try {
             if (_existsInDb) {
-                if ((_ownerId == 0) || (loc == ItemLocation.VOID) || (loc == ItemLocation.REFUND) || ((_count == 0) && (loc != ItemLocation.LEASE))) {
+                if ((ownerId == 0) || (loc == ItemLocation.VOID) || (loc == ItemLocation.REFUND) || ((count == 0) && (loc != ItemLocation.LEASE))) {
                     removeFromDb();
                 } else if (!Config.LAZY_ITEMS_UPDATE || force) {
                     updateInDb();
                 }
             } else {
-                if ((_ownerId == 0) || (loc == ItemLocation.VOID) || (loc == ItemLocation.REFUND) || ((_count == 0) && (loc != ItemLocation.LEASE))) {
+                if ((ownerId == 0) || (loc == ItemLocation.VOID) || (loc == ItemLocation.REFUND) || ((count == 0) && (loc != ItemLocation.LEASE))) {
                     return;
                 }
                 insertIntoDb();
@@ -1132,12 +1151,12 @@ public final class Item extends WorldObject {
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,time=? WHERE object_id = ?")) {
-            ps.setInt(1, _ownerId);
-            ps.setLong(2, _count);
+            ps.setInt(1, ownerId);
+            ps.setLong(2, count);
             ps.setString(3, loc.name());
-            ps.setInt(4, _locData);
+            ps.setInt(4, locData);
             ps.setInt(5, enchantLevel);
-            ps.setLong(6, _time);
+            ps.setLong(6, time);
             ps.setInt(7, getObjectId());
             ps.executeUpdate();
             _existsInDb = true;
@@ -1167,14 +1186,14 @@ public final class Item extends WorldObject {
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,time) VALUES (?,?,?,?,?,?,?,?)")) {
-            ps.setInt(1, _ownerId);
+            ps.setInt(1, ownerId);
             ps.setInt(2, itemId);
-            ps.setLong(3, _count);
+            ps.setLong(3, count);
             ps.setString(4, loc.name());
-            ps.setInt(5, _locData);
+            ps.setInt(5, locData);
             ps.setInt(6, enchantLevel);
             ps.setInt(7, getObjectId());
-            ps.setLong(8, _time);
+            ps.setLong(8, time);
 
             ps.executeUpdate();
             _existsInDb = true;
@@ -1290,7 +1309,7 @@ public final class Item extends WorldObject {
     }
 
     public boolean isTimeLimitedItem() {
-        return _time > 0;
+        return time > 0;
     }
 
     /**
@@ -1299,11 +1318,11 @@ public final class Item extends WorldObject {
      * @return Time
      */
     public long getTime() {
-        return _time;
+        return time;
     }
 
     public long getRemainingTime() {
-        return _time - System.currentTimeMillis();
+        return time - System.currentTimeMillis();
     }
 
     public void endOfLife() {
@@ -1391,7 +1410,7 @@ public final class Item extends WorldObject {
     }
 
     public boolean hasPassiveSkills() {
-        return (template.getItemType() == EtcItemType.RUNE || template.getItemType() == EtcItemType.NONE) && (loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
+        return (template.getItemType() == EtcItemType.RUNE || template.getItemType() == EtcItemType.NONE) && (loc == ItemLocation.INVENTORY) && (ownerId > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
     }
 
     public void giveSkillsToOwner() {

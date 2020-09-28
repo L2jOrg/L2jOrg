@@ -26,6 +26,8 @@ import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Doppelganger;
+import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.item.instance.Item;
@@ -35,7 +37,7 @@ import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 
 import static java.util.Objects.isNull;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.calculateAngleFrom;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 
@@ -51,6 +53,7 @@ public final class KnockBack extends AbstractEffect {
     private final int animationSpeed;
     private final boolean knockDown;
     private final FlyType type;
+    private final boolean pveOnly;
 
     private KnockBack(StatsSet params) {
         power = params.getInt("power", 50);
@@ -59,11 +62,17 @@ public final class KnockBack extends AbstractEffect {
         animationSpeed = params.getInt("animationSpeed", 0);
         knockDown = params.getBoolean("knock-down", false);
         type = params.getEnum("type", FlyType.class, knockDown ? FlyType.PUSH_DOWN_HORIZONTAL : FlyType.PUSH_HORIZONTAL);
+        pveOnly = params.getBoolean("pve-only", false);
     }
 
     @Override
-    public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
-    {
+    public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
+        if(isNpc(effected) && !isAttackable(effected) && !(effected instanceof Doppelganger) ) {
+            return false;
+        }
+        if(pveOnly && !(effected instanceof Monster)) {
+            return false;
+        }
         return knockDown || Formulas.calcProbability(100, effector, effected, skill);
     }
 

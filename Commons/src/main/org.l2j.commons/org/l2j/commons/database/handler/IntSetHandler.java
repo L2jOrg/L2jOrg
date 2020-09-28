@@ -20,7 +20,8 @@ package org.l2j.commons.database.handler;
 
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.commons.database.helpers.QueryDescriptor;
+import org.l2j.commons.database.TypeHandler;
+import org.l2j.commons.database.QueryDescriptor;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

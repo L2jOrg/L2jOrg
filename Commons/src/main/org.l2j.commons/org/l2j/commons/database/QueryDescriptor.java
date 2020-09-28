@@ -16,12 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.commons.database.helpers;
+package org.l2j.commons.database;
 
 import io.github.joealisson.primitive.IntKeyValue;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.commons.database.helpers.BatchSupporters;
 import org.l2j.commons.database.helpers.BatchSupporters.BatchSupport;
+import org.l2j.commons.database.helpers.IndexedValuesStrategy;
+import org.l2j.commons.database.helpers.MapParameterStrategy;
+import org.l2j.commons.database.helpers.NoParameterStrategy;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
@@ -49,15 +53,15 @@ public class QueryDescriptor implements AutoCloseable {
     private boolean hasResultSetConsumer;
     private boolean hasTypeConsumer;
 
-    public QueryDescriptor(Method method, String query) {
+    QueryDescriptor(Method method, String query) {
         this(method, query, NO_PARAMETER_STRATEGY);
     }
 
-    public QueryDescriptor(Method method, String query, IntMap<IntKeyValue<Class<?>>> parametersInfo) {
+    QueryDescriptor(Method method, String query, IntMap<IntKeyValue<Class<?>>> parametersInfo) {
         this(method, query, new IndexedValuesStrategy(parametersInfo));
     }
 
-    public QueryDescriptor(Method method, String query, MapParameterStrategy strategy) {
+    QueryDescriptor(Method method, String query, MapParameterStrategy strategy) {
         this.query = query;
         this.method = method;
         this.strategy = strategy;

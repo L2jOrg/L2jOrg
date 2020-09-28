@@ -25,6 +25,7 @@ import org.l2j.gameserver.data.database.data.ItemVariationData;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.enums.InventorySlot;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentType;
@@ -63,7 +64,7 @@ public class PlayerSelectInfo {
     }
 
     private void restoreVisibleInventory() {
-        for (ItemData itemData : getDAO(ItemDAO.class).findEquipedItemsByOwner(data.getCharId())) {
+        for (ItemData itemData : getDAO(ItemDAO.class).findItemsByOwnerAndLoc(data.getCharId(), ItemLocation.PAPERDOLL)) {
             paperdoll.put(InventorySlot.fromId(itemData.getLocData()), itemData);
         }
     }

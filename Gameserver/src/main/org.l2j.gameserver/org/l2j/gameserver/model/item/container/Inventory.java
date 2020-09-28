@@ -18,9 +18,10 @@
  */
 package org.l2j.gameserver.model.item.container;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.item.InventoryListener;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -36,9 +37,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
@@ -50,6 +48,7 @@ import java.util.stream.Collectors;
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.model.item.CommonItem.WEDDING_BOUQUET;
@@ -62,7 +61,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public abstract class Inventory extends ItemContainer {
 
     public static final int BEAUTY_TICKET_ID = 36308;
-    public static final long MAX_ADENA = Long.MAX_VALUE;
+    public static final long MAX_ADENA = Config.MAX_ADENA;
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
 
@@ -648,41 +647,28 @@ public abstract class Inventory extends ItemContainer {
      */
     @Override
     public void restore() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data")) {
-            ps.setInt(1, getOwnerId());
-            ps.setString(2, getBaseLocation().name());
-            ps.setString(3, getEquipLocation().name());
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
+        for (ItemData data : getDAO(ItemDAO.class).findInventoryItems(getOwnerId(), getBaseLocation(), getEquipLocation())) {
+            final Item item = new Item(data);
+            if(getOwner() instanceof Player player) {
+                if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
+                    item.setItemLocation(ItemLocation.INVENTORY);
+                }
 
-                    try {
-                        final Item item = new Item(rs);
-                        if (isPlayer(getOwner())) {
-                            final Player player = (Player) getOwner();
-
-                            if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
-                                item.setItemLocation(ItemLocation.INVENTORY);
-                            }
-                        }
-
-                        World.getInstance().addObject(item);
-
-                        // If stackable item is found in inventory just add to current quantity
-                        if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
-                            addItem("Restore", item, getOwner().getActingPlayer(), null);
-                        } else {
-                            addItem(item);
-                        }
-                    }catch (Exception e) {
-                        LOGGER.warn("Could not restore item {}  for {}", rs.getInt("item_id"), getOwner());
-                    }
+                if(item.isTimeLimitedItem()) {
+                    item.scheduleLifeTimeTask();
                 }
             }
-            refreshWeight();
-        } catch (Exception e) {
-            LOGGER.warn("Could not restore inventory: " + e.getMessage(), e);
+
+            World.getInstance().addObject(item);
+
+            // If stackable item is found in inventory just add to current quantity
+            if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
+                addItem("Restore", item, getOwner().getActingPlayer(), null);
+            } else {
+                addItem(item);
+            }
         }
+        refreshWeight();
     }
 
     public int getTalismanSlots() {

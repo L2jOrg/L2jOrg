@@ -113,6 +113,9 @@ public class Shutdown extends Thread {
             case GM_RESTART -> LOGGER.info("GM restart received. Restarting NOW!");
         }
 
+        AuthServerCommunication.getInstance().shutdown();
+        LOGGER.info("Auth server communication has been shut down.");
+
         // last byebye, save all data and quit this server
         saveData();
 
@@ -126,9 +129,6 @@ public class Shutdown extends Thread {
 
             WorldTimeController.getInstance().stopTimer();
             LOGGER.info("Game Time Controller: Timer stopped.");
-
-            AuthServerCommunication.getInstance().shutdown();
-            LOGGER.info("Auth server Communication: Thread interrupted.");
 
             DatabaseAccess.shutdown();
             LOGGER.info("Database connection has been shut down.");

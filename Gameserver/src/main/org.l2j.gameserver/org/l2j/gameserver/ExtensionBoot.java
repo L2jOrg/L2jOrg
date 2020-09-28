@@ -54,7 +54,7 @@ public class ExtensionBoot {
         ServiceLoader.load(AbstractScript.class).forEach(s -> LOGGER.debug("Script {} Loaded", s));
     }
 
-    static void CBLoaders(){
+    static void posLoaders(){
         ServiceLoader.load(IParseBoardHandler.class).forEach(CommunityBoardHandler.getInstance()::registerHandler);
     }
 }

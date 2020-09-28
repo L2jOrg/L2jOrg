@@ -41,6 +41,7 @@ import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.world.World;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -585,6 +586,17 @@ public class PlayerInventory extends Inventory {
         goldCoin = getItemByItemId(CommonItem.GOLD_COIN);
          silverCoin = getItemByItemId(CommonItem.SILVER_COIN);
          l2Coin = getItemByItemId(CommonItem.L2_COIN);
+    }
+
+    @Override
+    public void deleteMe() {
+        super.deleteMe();
+        for (Item item : questItems.values()) {
+            item.updateDatabase(true);
+            item.deleteMe();
+            World.getInstance().removeObject(item);
+        }
+        questItems.clear();
     }
 
     /**

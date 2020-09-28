@@ -139,6 +139,12 @@ module org.l2j.gameserver {
             org.l2j.gameserver.engine.item.container.listener.BroochListener;
 
     uses org.l2j.gameserver.api.item.InventoryListener;
+    provides org.l2j.gameserver.api.item.InventoryListener
+            with org.l2j.gameserver.engine.item.container.listener.StatsListener;
+
+    provides org.l2j.commons.database.TypeHandler
+            with org.l2j.gameserver.data.database.handler.CommissionItemHandler;
+
     uses org.l2j.gameserver.handler.IPunishmentHandler;
     uses org.l2j.gameserver.handler.IUserCommandHandler;
     uses org.l2j.gameserver.handler.IVoicedCommandHandler;
@@ -153,6 +159,4 @@ module org.l2j.gameserver {
     uses org.l2j.gameserver.model.events.AbstractScript;
     uses org.l2j.gameserver.handler.IParseBoardHandler;
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
-    provides org.l2j.gameserver.api.item.InventoryListener
-        with org.l2j.gameserver.engine.item.container.listener.StatsListener;
 }
