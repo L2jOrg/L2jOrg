@@ -216,12 +216,6 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExUserInfoInvenWeight(player));
         client.sendPacket(new ExAdenaInvenCount(player));
         client.sendPacket(new ExBloodyCoinCount());
-        client.sendPacket(new ShortCutInit());
-        player.forEachShortcut(s -> {
-            if(s.isActive()) {
-                client.sendPacket(new ExActivateAutoShortcut(s.getClientId(), true));
-            }
-        });
         client.sendPacket(new ExDressRoomUiOpen());
 
         if (Config.PLAYER_SPAWN_PROTECTION > 0) {
@@ -275,9 +269,7 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new SkillCoolTime(player));
         client.sendPacket(new ExVoteSystemInfo(player));
 
-        player.getInventory().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
         player.getWarehouse().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
-
 
         if (player.getClanJoinExpiryTime() > System.currentTimeMillis()) {
             player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
@@ -327,10 +319,6 @@ public class EnterWorld extends ClientPacket {
         }
 
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
-        player.sendPacket(new ExAutoSoulShot(0, true, 0));
-        player.sendPacket(new ExAutoSoulShot(0, true, 1));
-        player.sendPacket(new ExAutoSoulShot(0, true, 2));
-        player.sendPacket(new ExAutoSoulShot(0, true, 3));
 
         if (getSettings(ServerSettings.class).isHardwareInfoEnabled()) {
             ThreadPool.schedule(() -> {

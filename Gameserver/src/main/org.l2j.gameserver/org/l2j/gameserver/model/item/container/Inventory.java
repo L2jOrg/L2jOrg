@@ -653,6 +653,10 @@ public abstract class Inventory extends ItemContainer {
                 if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
                     item.setItemLocation(ItemLocation.INVENTORY);
                 }
+
+                if(item.isTimeLimitedItem()) {
+                    item.scheduleLifeTimeTask();
+                }
             }
 
             World.getInstance().addObject(item);

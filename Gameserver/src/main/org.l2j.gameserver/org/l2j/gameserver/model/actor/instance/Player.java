@@ -106,6 +106,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangeAccessLevel;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
@@ -5518,8 +5519,13 @@ public final class Player extends Playable {
      * </ul>
      */
     void restoreShortCuts() {
-        // Retrieve from the database all shortCuts of this Player and add them to _shortCuts.
         shortcuts.restoreMe();
+        sendPacket(new ShortCutInit());
+        forEachShortcut(s -> {
+            if(s.isActive()) {
+                client.sendPacket(new ExActivateAutoShortcut(s.getClientId(), true));
+            }
+        });
     }
 
     /**
@@ -7877,8 +7883,15 @@ public final class Player extends Playable {
             }
         }
 
+        inventory.restore();
+        restoreItemReuse();
         inventory.applyItemSkills();
+        restoreShortCuts();
         restoreEffects();
+
+        /*for (int i = 0; i < 4; i++) {
+            sendPacket(new ExAutoSoulShot(0, true, i));
+        }*/
 
         // TODO : Need to fix that hack!
         if (!isDead()) {

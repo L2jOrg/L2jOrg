@@ -166,8 +166,6 @@ public class PlayerFactory {
             player.setOverrideCond(masks);
         }
 
-        // Retrieve from the database all items of this Player and add them to _inventory
-        player.getInventory().restore();
         // Retrieve from the database all secondary data of this Player
         // Note that Clan, Noblesse and Hero skills are given separately and not here.
         // Retrieve from the database all skills of this Player and add them to _skills
@@ -185,10 +183,6 @@ public class PlayerFactory {
             player.getWarehouse();
         }
 
-        player.restoreItemReuse();
-
-        // Restore player shortcuts
-        player.restoreShortCuts();
         EventDispatcher.getInstance().notifyEvent(new OnPlayerLoad(player), Listeners.players());
 
         // Initialize status update cache
