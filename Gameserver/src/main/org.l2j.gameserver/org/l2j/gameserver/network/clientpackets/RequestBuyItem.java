@@ -223,7 +223,7 @@ public final class RequestBuyItem extends ClientPacket {
             merchant.handleTaxPayment((long) (subTotal * castleTaxRate));
         }
 
-        client.sendPacket(new ExUserInfoInvenWeight(player));
+        client.sendPacket(new ExUserInfoInvenWeight());
         client.sendPacket(new ExBuySellList(player, true));
         player.sendPacket(SystemMessageId.EXCHANGE_IS_SUCCESSFUL);
     }

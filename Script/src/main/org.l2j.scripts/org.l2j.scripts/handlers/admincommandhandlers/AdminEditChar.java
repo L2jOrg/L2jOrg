@@ -372,7 +372,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
-					player.sendPacket(new ExUserInfoInvenWeight(player));
+					player.sendPacket(new ExUserInfoInvenWeight());
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
 				}

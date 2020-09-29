@@ -586,6 +586,7 @@ public class PlayerInventory extends Inventory {
         goldCoin = getItemByItemId(CommonItem.GOLD_COIN);
          silverCoin = getItemByItemId(CommonItem.SILVER_COIN);
          l2Coin = getItemByItemId(CommonItem.L2_COIN);
+        applyItemSkills();
     }
 
     @Override

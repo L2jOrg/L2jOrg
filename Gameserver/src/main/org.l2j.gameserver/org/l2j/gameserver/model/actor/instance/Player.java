@@ -7887,15 +7887,9 @@ public final class Player extends Playable {
             }
         }
 
-        inventory.restore();
         restoreItemReuse();
-        inventory.applyItemSkills();
         restoreShortCuts();
         restoreEffects();
-
-        /*for (int i = 0; i < 4; i++) {
-            sendPacket(new ExAutoSoulShot(0, true, i));
-        }*/
 
         // TODO : Need to fix that hack!
         if (!isDead()) {
@@ -10400,15 +10394,15 @@ public final class Player extends Playable {
     }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
-        sendPacket(iu, new ExAdenaInvenCount(this), new ExBloodyCoinCount(), new ExUserInfoInvenWeight(this));
+        sendPacket(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(), new ExUserInfoInvenWeight());
     }
 
     public void sendItemList() {
         ItemList.sendList(this);
         sendPacket(new ExQuestItemList(1, this));
         sendPacket(new ExQuestItemList(2, this));
-        sendPacket(new ExAdenaInvenCount(this));
-        sendPacket(new ExUserInfoInvenWeight(this));
+        sendPacket(new ExAdenaInvenCount());
+        sendPacket(new ExUserInfoInvenWeight());
         sendPacket(new ExBloodyCoinCount());
     }
 

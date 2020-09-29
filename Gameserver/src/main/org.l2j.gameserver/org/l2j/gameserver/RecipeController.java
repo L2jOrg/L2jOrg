@@ -384,7 +384,7 @@ public class RecipeController {
         }
 
         private void updateCurLoad() {
-            _target.sendPacket(new ExUserInfoInvenWeight(_target));
+            _target.sendPacket(new ExUserInfoInvenWeight());
         }
 
         private void updateCurMp() {

@@ -177,7 +177,7 @@ public final class RequestRefundItem extends ClientPacket {
         }
 
         // Update current load status on player
-        client.sendPacket(new ExUserInfoInvenWeight(player));
+        client.sendPacket(new ExUserInfoInvenWeight());
         client.sendPacket(new ExBuySellList(player, true));
     }
 }

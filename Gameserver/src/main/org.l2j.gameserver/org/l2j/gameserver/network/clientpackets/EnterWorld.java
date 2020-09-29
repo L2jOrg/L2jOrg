@@ -50,7 +50,6 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -154,10 +153,6 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExEnterWorld());
         player.getMacros().sendAllMacros();
         client.sendPacket(new ExGetBookMarkInfoPacket(player));
-
-        ItemList.sendList(player);
-        client.sendPacket(new ExQuestItemList(1, player));
-        client.sendPacket(new ExQuestItemList(2, player));
         player.sendPacket(ExBasicActionList.STATIC_PACKET);
 
         for (Castle castle : CastleManager.getInstance().getCastles()) {
@@ -213,9 +208,6 @@ public class EnterWorld extends ClientPacket {
         }
 
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
-        client.sendPacket(new ExUserInfoInvenWeight(player));
-        client.sendPacket(new ExAdenaInvenCount(player));
-        client.sendPacket(new ExBloodyCoinCount());
         client.sendPacket(new ExDressRoomUiOpen());
 
         if (Config.PLAYER_SPAWN_PROTECTION > 0) {
@@ -237,7 +229,6 @@ public class EnterWorld extends ClientPacket {
             }
         }
 
-        player.sendPacket(new ExStorageMaxCount(player));
         client.sendPacket(new FriendListPacket(player));
 
         SystemMessage sm = getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN).addString(player.getName());
@@ -269,8 +260,6 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new SkillCoolTime(player));
         client.sendPacket(new ExVoteSystemInfo(player));
 
-        player.getWarehouse().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
-
         if (player.getClanJoinExpiryTime() > System.currentTimeMillis()) {
             player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
         }
@@ -287,14 +276,6 @@ public class EnterWorld extends ClientPacket {
 
         if (Config.WELCOME_MESSAGE_ENABLED) {
             player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
-        }
-
-        if (!player.getPremiumItemList().isEmpty()) {
-            player.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
-        }
-
-        if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType())) {
-            player.sendPacket(new ExBeautyItemList(player));
         }
 
         if(player.getActiveElementalSpiritType() >= 0) {
@@ -340,8 +321,30 @@ public class EnterWorld extends ClientPacket {
                 player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
             }
         }
+        restoreItems(player);
         player.onEnter();
         Quest.playerEnter(player);
+    }
+
+    private void restoreItems(Player player) {
+        player.getInventory().restore();
+        player.sendPacket(new ExUserInfoInvenWeight(), new ExAdenaInvenCount(), new ExBloodyCoinCount());
+        for (int i = 0; i < 4; i++) {
+            player.sendPacket(new ExAutoSoulShot(0, true, i));
+        }
+        ItemList.sendList(player);
+        client.sendPacket(new ExQuestItemList(1, player));
+        client.sendPacket(new ExQuestItemList(2, player));
+        player.sendPacket(new ExStorageMaxCount(player));
+        player.getWarehouse().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
+
+        if (!player.getPremiumItemList().isEmpty()) {
+            player.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
+        }
+
+        if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType())) {
+            player.sendPacket(new ExBeautyItemList(player));
+        }
     }
 
     private void sendAttendanceInfo(Player player) {

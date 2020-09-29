@@ -18,24 +18,19 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class ExAdenaInvenCount extends ServerPacket {
-    private final Player player;
-
-    public ExAdenaInvenCount(Player cha) {
-        player = cha;
-    }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_ADENA_INVEN_COUNT);
-
+        var player = client.getPlayer();
         writeLong(player.getAdena());
         writeShort(player.getInventory().getSize());
     }

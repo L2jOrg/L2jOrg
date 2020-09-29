@@ -18,24 +18,19 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class ExUserInfoInvenWeight extends ServerPacket {
-    private final Player player;
-
-    public ExUserInfoInvenWeight(Player cha) {
-        player = cha;
-    }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_USER_INFO_INVEN_WEIGHT);
-
+        var player = client.getPlayer();
         writeInt(player.getObjectId());
         writeInt(player.getCurrentLoad());
         writeInt(player.getMaxLoad());

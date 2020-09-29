@@ -159,7 +159,7 @@ public final class RequestSellItem extends ClientPacket {
         player.addAdena("Sell", totalPrice, merchant, false);
 
         // Update current load as well
-        client.sendPacket(new ExUserInfoInvenWeight(player));
+        client.sendPacket(new ExUserInfoInvenWeight());
         client.sendPacket(new ExBuySellList(player, true));
     }
 }
