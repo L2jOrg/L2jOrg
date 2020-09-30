@@ -125,7 +125,7 @@ public class ItemInfo {
 
         // Get the augmentation bonus
         if ((item.getAugmentationOption1() >= 0) && (item.getAugmentationOption2() >= 0)) {
-            augmentation = new VariationInstance(0, item.getAugmentationOption1(), item.getAugmentationOption2());
+            augmentation = new VariationInstance(targetItem.getObjectId(), 0, item.getAugmentationOption1(), item.getAugmentationOption2());
         }
 
         // Get the quantity of the Item

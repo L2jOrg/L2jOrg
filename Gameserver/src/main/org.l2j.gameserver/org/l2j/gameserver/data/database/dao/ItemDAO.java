@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * @author JoeAlisson
  */
-public interface ItemDAO extends DAO<Object> {
+public interface ItemDAO extends DAO<ItemData> {
 
     @Query("DELETE FROM items WHERE items.owner_id NOT IN (SELECT charId FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data) AND items.owner_id != -1")
     int deleteWithoutOwner();
@@ -61,8 +61,8 @@ public interface ItemDAO extends DAO<Object> {
     @Query("SELECT * FROM itemsonground")
     List<ItemOnGroundData> findAllItemsOnGround();
 
-    @Query("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId = :itemId:")
-    ItemVariationData findItemVariationByItemId(int itemId);
+    @Query("SELECT * FROM item_variations WHERE itemId = :itemId:")
+    ItemVariationData findItemVariationByItem(int itemId);
 
     @Query("SELECT * FROM items WHERE owner_id = :ownerId: AND loc=:loc:")
     List<ItemData> findItemsByOwnerAndLoc(int ownerId, ItemLocation loc);
@@ -116,4 +116,6 @@ public interface ItemDAO extends DAO<Object> {
            WHERE i.loc = 'COMMISSION'
            """)
     List<CommissionItem> findCommissionItems();
+
+    void save(ItemVariationData data);
 }

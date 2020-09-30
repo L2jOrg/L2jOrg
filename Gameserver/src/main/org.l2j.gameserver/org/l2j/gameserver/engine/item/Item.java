@@ -111,6 +111,7 @@ public final class Item extends WorldObject {
     private final Map<Integer, EnsoulOption> _ensoulSpecialOptions = new LinkedHashMap<>(3);
 
     private ItemChangeType lastChange = ItemChangeType.MODIFIED;
+    private VariationInstance augmentation = null;
 
     /**
      * ID of the owner
@@ -152,10 +153,6 @@ public final class Item extends WorldObject {
      * Wear Item
      */
     private boolean _wear;
-    /**
-     * Augmented Item
-     */
-    private VariationInstance _augmentation = null;
 
     //@formatter:on
     private long _dropTime;
@@ -194,7 +191,7 @@ public final class Item extends WorldObject {
      * @param objectId : int designating the ID of the object in the world
      * @param template : ItemTemplate containing informations of the item
      */
-    public Item(int objectId, ItemTemplate template) {
+    Item(int objectId, ItemTemplate template) {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
         itemId = template.getId();
@@ -826,7 +823,19 @@ public final class Item extends WorldObject {
      * @return true if augmented
      */
     public boolean isAugmented() {
-        return _augmentation != null;
+        return nonNull(augmentation);
+    }
+
+    public void applyAugmentationBonus(Player player) {
+        if(nonNull(augmentation)) {
+            augmentation.applyBonus(player);
+        }
+    }
+
+    public void removeAugmentationBonus(Player player) {
+        if(nonNull(augmentation)) {
+            augmentation.removeBonus(player);
+        }
     }
 
     /**
@@ -835,7 +844,7 @@ public final class Item extends WorldObject {
      * @return augmentation
      */
     public VariationInstance getAugmentation() {
-        return _augmentation;
+        return augmentation;
     }
 
     /**
@@ -847,14 +856,14 @@ public final class Item extends WorldObject {
      */
     public boolean setAugmentation(VariationInstance augmentation, boolean updateDatabase) {
         // there shall be no previous augmentation..
-        if (_augmentation != null) {
+        if (this.augmentation != null) {
             LOGGER.info("Warning: Augment set for (" + getObjectId() + ") " + getName() + " owner: " + ownerId);
             return false;
         }
 
-        _augmentation = augmentation;
+        this.augmentation = augmentation;
         if (updateDatabase) {
-            updateItemOptions();
+            updateItemVariation();
         }
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augmentation, true), getTemplate());
         return true;
@@ -864,13 +873,13 @@ public final class Item extends WorldObject {
      * Remove the augmentation
      */
     public void removeAugmentation() {
-        if (_augmentation == null) {
+        if (augmentation == null) {
             return;
         }
 
         // Copy augmentation before removing it.
-        final VariationInstance augment = _augmentation;
-        _augmentation = null;
+        final VariationInstance augment = augmentation;
+        augmentation = null;
 
 
         getDAO(ItemDAO.class).deleteVariations(objectId);
@@ -878,20 +887,10 @@ public final class Item extends WorldObject {
     }
 
     public void restoreAttributes() {
+        doIfNonNull(getDAO(ItemDAO.class).findItemVariationByItem(objectId), data -> augmentation = new VariationInstance(data));
+
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps1 = con.prepareStatement("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId=?");
              PreparedStatement ps2 = con.prepareStatement("SELECT elemType,elemValue FROM item_elementals WHERE itemId=?")) {
-            ps1.setInt(1, getObjectId());
-            try (ResultSet rs = ps1.executeQuery()) {
-                if (rs.next()) {
-                    int mineralId = rs.getInt("mineralId");
-                    int option1 = rs.getInt("option1");
-                    int option2 = rs.getInt("option2");
-                    if ((option1 != -1) && (option2 != -1)) {
-                        _augmentation = new VariationInstance(mineralId, option1, option2);
-                    }
-                }
-            }
 
             ps2.setInt(1, getObjectId());
             try (ResultSet rs = ps2.executeQuery()) {
@@ -908,23 +907,11 @@ public final class Item extends WorldObject {
         }
     }
 
-    public void updateItemOptions() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            updateItemOptions(con);
-        } catch (SQLException e) {
-            LOGGER.error("Could not update atributes for item: " + toString() + " from DB:", e);
-        }
-    }
-
-    private void updateItemOptions(Connection con) {
-        try (PreparedStatement ps = con.prepareStatement("REPLACE INTO item_variations VALUES(?,?,?,?)")) {
-            ps.setInt(1, getObjectId());
-            ps.setInt(2, _augmentation != null ? _augmentation.getMineralId() : 0);
-            ps.setInt(3, _augmentation != null ? _augmentation.getOption1Id() : -1);
-            ps.setInt(4, _augmentation != null ? _augmentation.getOption2Id() : -1);
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            LOGGER.error("Could not update atributes for item: " + toString() + " from DB: ", e);
+    public void updateItemVariation() {
+        if(nonNull(augmentation)) {
+            getDAO(ItemDAO.class).save(augmentation.getData());
+        } else {
+            getDAO(ItemDAO.class).deleteVariations(objectId);
         }
     }
 
@@ -1137,8 +1124,8 @@ public final class Item extends WorldObject {
             _existsInDb = true;
             _storedInDb = true;
 
-            if (_augmentation != null) {
-                updateItemOptions(con);
+            if (augmentation != null) {
+                updateItemVariation();
             }
             if (_elementals != null) {
                 updateItemElements(con);
@@ -1174,8 +1161,8 @@ public final class Item extends WorldObject {
             _existsInDb = true;
             _storedInDb = true;
 
-            if (_augmentation != null) {
-                updateItemOptions(con);
+            if (augmentation != null) {
+                updateItemVariation();
             }
             if (_elementals != null) {
                 updateItemElements(con);

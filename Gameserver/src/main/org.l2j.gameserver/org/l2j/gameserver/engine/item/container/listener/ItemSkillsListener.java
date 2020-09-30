@@ -57,9 +57,7 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         final AtomicBoolean update = new AtomicBoolean();
         final AtomicBoolean updateTimestamp = new AtomicBoolean();
 
-        if (item.isAugmented()) {
-            item.getAugmentation().removeBonus(player);
-        }
+        item.removeAugmentationBonus(player);
 
         player.getStats().recalculateStats(true);
 
@@ -186,12 +184,8 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         final AtomicBoolean update = new AtomicBoolean();
         final AtomicBoolean updateTimestamp = new AtomicBoolean();
 
-        // Apply augmentation bonuses on equip
-        if (item.isAugmented()) {
-            item.getAugmentation().applyBonus(player);
-        }
+        item.applyAugmentationBonus(player);
 
-        // Recalculate all stats
         player.getStats().recalculateStats(true);
 
         item.getTemplate().forEachSkill(ItemSkillType.ON_ENCHANT, holder -> {

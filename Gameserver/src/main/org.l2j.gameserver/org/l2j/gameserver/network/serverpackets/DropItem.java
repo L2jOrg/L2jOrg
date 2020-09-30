@@ -23,8 +23,8 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class DropItem extends ServerPacket {
-    private final Item _item;
-    private final int _charObjId;
+    private final Item item;
+    private final int playerId;
 
     /**
      * Constructor of the DropItem server packet
@@ -33,31 +33,31 @@ public class DropItem extends ServerPacket {
      * @param playerObjId : int designating the player ID who dropped the item
      */
     public DropItem(Item item, int playerObjId) {
-        _item = item;
-        _charObjId = playerObjId;
+        this.item = item;
+        playerId = playerObjId;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.DROP_ITEM);
 
-        writeInt(_charObjId);
-        writeInt(_item.getObjectId());
-        writeInt(_item.getDisplayId());
+        writeInt(playerId);
+        writeInt(item.getObjectId());
+        writeInt(item.getDisplayId());
 
-        writeInt(_item.getX());
-        writeInt(_item.getY());
-        writeInt(_item.getZ());
+        writeInt(item.getX());
+        writeInt(item.getY());
+        writeInt(item.getZ());
         // only show item count if it is a stackable item
-        writeByte((byte) (_item.isStackable() ? 0x01 : 0x00));
-        writeLong(_item.getCount());
+        writeByte(item.isStackable());
+        writeLong(item.getCount());
 
-        writeByte((byte) 0x00);
+        writeByte(0x00);
         // writeInt(0x01); if above C == true (1) then readInt()
 
-        writeByte((byte) _item.getEnchantLevel()); // Grand Crusade
-        writeByte((byte) (_item.getAugmentation() != null ? 1 : 0)); // Grand Crusade
-        writeByte((byte) _item.getSpecialAbilities().size()); // Grand Crusade
+        writeByte(item.getEnchantLevel());
+        writeByte(item.isAugmented());
+        writeByte(item.getSpecialAbilities().size());
     }
 
 }

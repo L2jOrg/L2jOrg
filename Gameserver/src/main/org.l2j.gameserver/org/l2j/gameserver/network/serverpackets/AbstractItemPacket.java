@@ -160,7 +160,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 
     private int calculateMask(Item item) {
         int mask = 0;
-        if (nonNull(item.getAugmentation())) {
+        if (item.isAugmented()) {
             mask |= ItemListType.AUGMENT_BONUS.getMask();
         }
 

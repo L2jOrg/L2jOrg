@@ -72,14 +72,14 @@ public class PlayerSelectInfo {
     private void restoreAugmentation() {
         var weapon = paperdoll.get(RIGHT_HAND);
         if (nonNull(weapon)) {
-            ItemVariationData itemVariation = getDAO(ItemDAO.class).findItemVariationByItemId(weapon.getObjectId());
+            ItemVariationData itemVariation = getDAO(ItemDAO.class).findItemVariationByItem(weapon.getObjectId());
             if(nonNull(itemVariation)) {
                 try {
                     int mineralId = itemVariation.getMineralId();
                     int option1 = itemVariation.getOption1();
                     int option2 = itemVariation.getOption2();
                     if ((option1 != -1 ) && (option2 != -1)) {
-                        _augmentation = new VariationInstance(mineralId, option1, option2);
+                        _augmentation = new VariationInstance(targetItem.getObjectId(), mineralId, option1, option2);
                     }
                 } catch (Exception e) {
                     LOGGER.warn("Could not restore augmentation info", e);

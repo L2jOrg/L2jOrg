@@ -72,11 +72,11 @@ public class ExCharInfo extends ServerPacket {
         writeShort(0x1A);
         for (InventorySlot slot : getPaperdollOrderAugument()) { // normal
             var augment = player.getInventory().getPaperdollAugmentation(slot);
-            writeInt(Util.zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
+            writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
         }
         for (InventorySlot slot : getPaperdollOrderAugument()) { // random
             var augment = player.getInventory().getPaperdollAugmentation(slot);
-            writeInt(Util.zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
+            writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
         }
 
         writeByte(player.getInventory().getArmorMaxEnchant());

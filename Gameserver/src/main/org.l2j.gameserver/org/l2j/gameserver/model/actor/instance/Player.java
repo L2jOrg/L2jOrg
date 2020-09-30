@@ -7690,7 +7690,7 @@ public final class Player extends Playable {
             // Remove active item skills before saving char to database
             // because next time when choosing this class, weared items can
             // be different
-            inventory.forEachEquippedItem(item -> item.getAugmentation().removeBonus(this), Item::isAugmented);
+            inventory.forEachEquippedItem(item -> item.removeAugmentationBonus(this));
 
             // abort any kind of cast.
             abortCast();

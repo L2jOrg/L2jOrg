@@ -323,9 +323,7 @@ public abstract class ItemContainer {
         if ((targetItem != sourceItem) && (targetItem != null)) {
             targetItem.updateDatabase();
         }
-        if (sourceItem.isAugmented()) {
-            sourceItem.getAugmentation().removeBonus(actor);
-        }
+        sourceItem.removeAugmentationBonus(actor);
         refreshWeight();
         target.refreshWeight();
         return targetItem;
