@@ -160,7 +160,6 @@ public final class Item extends WorldObject {
     private boolean _protected;
     private boolean _existsInDb; // if a record exists in DB.
     private boolean _storedInDb; // if DB data is up-to-date.
-    private Map<AttributeType, AttributeHolder> _elementals = null;
     private ScheduledFuture<?> itemLootShedule = null;
     private ScheduledFuture<?> _lifeTimeTask;
 
@@ -311,7 +310,7 @@ public final class Item extends WorldObject {
                             + creator + ", " // in case of null
                             + reference); // in case of null
                 } else {
-                    LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
+                    LOG_ITEMS.info("SETOWNER:" + process // in case of null
                             + ", item " + getObjectId() //
                             + ":" + template.getName() //
                             + "(" + count + "), " //
@@ -888,23 +887,6 @@ public final class Item extends WorldObject {
 
     public void restoreAttributes() {
         doIfNonNull(getDAO(ItemDAO.class).findItemVariationByItem(objectId), data -> augmentation = new VariationInstance(data));
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps2 = con.prepareStatement("SELECT elemType,elemValue FROM item_elementals WHERE itemId=?")) {
-
-            ps2.setInt(1, getObjectId());
-            try (ResultSet rs = ps2.executeQuery()) {
-                while (rs.next()) {
-                    final byte attributeType = rs.getByte(1);
-                    final int attributeValue = rs.getInt(2);
-                    if ((attributeType != -1) && (attributeValue != -1)) {
-                        applyAttribute(new AttributeHolder(AttributeType.findByClientId(attributeType), attributeValue));
-                    }
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error("Could not restore augmentation and elemental data for item " + toString() + " from DB: ", e);
-        }
     }
 
     public void updateItemVariation() {
@@ -913,143 +895,6 @@ public final class Item extends WorldObject {
         } else {
             getDAO(ItemDAO.class).deleteVariations(objectId);
         }
-    }
-
-    public void updateItemElementals() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            updateItemElements(con);
-        } catch (SQLException e) {
-            LOGGER.error("Could not update elementals for item: " + toString() + " from DB: ", e);
-        }
-    }
-
-    private void updateItemElements(Connection con) {
-        getDAO(ItemDAO.class).deleteElementals(objectId);
-        if (_elementals == null) {
-            return;
-        }
-
-        try (PreparedStatement ps = con.prepareStatement("INSERT INTO item_elementals VALUES(?,?,?)")) {
-            for (AttributeHolder attribute : _elementals.values()) {
-                ps.setInt(1, getObjectId());
-                ps.setByte(2, attribute.getType().getClientId());
-                ps.setInt(3, attribute.getValue());
-                ps.executeUpdate();
-                ps.clearParameters();
-            }
-        } catch (SQLException e) {
-            LOGGER.error("Could not update elementals for item: " + toString() + " from DB: ", e);
-        }
-    }
-
-    public Collection<AttributeHolder> getAttributes() {
-        return _elementals != null ? _elementals.values() : null;
-    }
-
-    public boolean hasAttributes() {
-        return (_elementals != null) && !_elementals.isEmpty();
-    }
-
-    public AttributeHolder getAttribute(AttributeType type) {
-        return _elementals != null ? _elementals.get(type) : null;
-    }
-
-    public AttributeHolder getAttackAttribute() {
-        if (isWeapon()) {
-            if (template.getAttributes() != null) {
-                return template.getAttributes().stream().findFirst().orElse(null);
-            } else if (_elementals != null) {
-                return _elementals.values().stream().findFirst().orElse(null);
-            }
-        }
-        return null;
-    }
-
-    public AttributeType getAttackAttributeType() {
-        final AttributeHolder holder = getAttackAttribute();
-        return holder != null ? holder.getType() : AttributeType.NONE;
-    }
-
-    public int getAttackAttributePower() {
-        final AttributeHolder holder = getAttackAttribute();
-        return holder != null ? holder.getValue() : 0;
-    }
-
-    public int getDefenceAttribute(AttributeType element) {
-        if (isArmor()) {
-            if (template.getAttributes() != null) {
-                final AttributeHolder attribute = template.getAttribute(element);
-                if (attribute != null) {
-                    return attribute.getValue();
-                }
-            } else if (_elementals != null) {
-                final AttributeHolder attribute = getAttribute(element);
-                if (attribute != null) {
-                    return attribute.getValue();
-                }
-            }
-        }
-        return 0;
-    }
-
-    private synchronized void applyAttribute(AttributeHolder holder) {
-        if (_elementals == null) {
-            _elementals = new LinkedHashMap<>(3);
-            _elementals.put(holder.getType(), holder);
-        } else {
-            final AttributeHolder attribute = getAttribute(holder.getType());
-            if (attribute != null) {
-                attribute.setValue(holder.getValue());
-            } else {
-                _elementals.put(holder.getType(), holder);
-            }
-        }
-    }
-
-    /**
-     * Add elemental attribute to item and save to db
-     *
-     * @param holder
-     * @param updateDatabase
-     */
-    public void setAttribute(AttributeHolder holder, boolean updateDatabase) {
-        applyAttribute(holder);
-        if (updateDatabase) {
-            updateItemElementals();
-        }
-    }
-
-    /**
-     * Remove elemental from item
-     *
-     * @param type byte element to remove
-     */
-    public void clearAttribute(AttributeType type) {
-        if ((_elementals == null) || (getAttribute(type) == null)) {
-            return;
-        }
-
-        synchronized (_elementals) {
-            _elementals.remove(type);
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ? AND elemType = ?")) {
-            ps.setInt(1, getObjectId());
-            ps.setByte(2, type.getClientId());
-            ps.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.error("Could not remove elemental enchant for item: " + toString() + " from DB: ", e);
-        }
-    }
-
-    public void clearAllAttributes() {
-        if (_elementals == null) {
-            return;
-        }
-        _elementals.clear();
-
-        getDAO(ItemDAO.class).deleteElementals(objectId);
     }
 
     /**
@@ -1127,9 +972,7 @@ public final class Item extends WorldObject {
             if (augmentation != null) {
                 updateItemVariation();
             }
-            if (_elementals != null) {
-                updateItemElements(con);
-            }
+
             if (!_ensoulOptions.isEmpty() || !_ensoulSpecialOptions.isEmpty()) {
                 updateSpecialAbilities(con);
             }
@@ -1164,9 +1007,7 @@ public final class Item extends WorldObject {
             if (augmentation != null) {
                 updateItemVariation();
             }
-            if (_elementals != null) {
-                updateItemElements(con);
-            }
+
             if ((_ensoulOptions != null) || (_ensoulSpecialOptions != null)) {
                 updateSpecialAbilities(con);
             }

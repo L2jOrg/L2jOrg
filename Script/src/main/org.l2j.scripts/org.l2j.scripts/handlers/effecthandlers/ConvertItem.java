@@ -87,7 +87,7 @@ public final class ConvertItem extends AbstractEffect {
 		}
 		
 		final int enchantLevel = wpn.getEnchantLevel();
-		final AttributeHolder elementals = isNull(wpn.getAttributes())  ? null : wpn.getAttackAttribute();
+
 		var unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getBodyPart());
 		if (unequiped.size() <= 0) {
 			return;
@@ -125,10 +125,7 @@ public final class ConvertItem extends AbstractEffect {
 		if (isNull(newItem)) {
 			return;
 		}
-		
-		if (nonNull(elementals)) {
-			newItem.setAttribute(elementals, true);
-		}
+
 		newItem.setEnchantLevel(enchantLevel);
 		player.getInventory().equipItem(newItem);
 		

@@ -108,7 +108,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     protected boolean immediateEffect;
     protected boolean exImmediateEffect;
     protected ActionType _defaultAction = ActionType.NONE;
-    private Map<AttributeType, AttributeHolder> _elementals = null;
     private List<ItemSkillHolder> skills;
 
     private int reuseDelay;
@@ -292,34 +291,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return name;
     }
 
-
-    public Collection<AttributeHolder> getAttributes() {
-        return _elementals != null ? _elementals.values() : null;
-    }
-
-    /**
-     * Sets the base elemental of the item.
-     *
-     * @param holder the element to set.
-     */
-    public void setAttributes(AttributeHolder holder) {
-        if (_elementals == null) {
-            _elementals = new LinkedHashMap<>(3);
-            _elementals.put(holder.getType(), holder);
-        } else {
-            final AttributeHolder attribute = getAttribute(holder.getType());
-            if (attribute != null) {
-                attribute.setValue(holder.getValue());
-            } else {
-                _elementals.put(holder.getType(), holder);
-            }
-        }
-    }
-
-    public AttributeHolder getAttribute(AttributeType type) {
-        return _elementals != null ? _elementals.get(type) : null;
-    }
-
     /**
      * @return the part of the body used with the item.
      */
@@ -452,39 +423,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @param template : FuncTemplate to add
      */
     public void addFunctionTemplate(FuncTemplate template) {
-        switch (template.getStat()) {
-            case FIRE_RES:
-            case FIRE_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.FIRE, (int) template.getValue()));
-                break;
-            }
-            case WATER_RES:
-            case WATER_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.WATER, (int) template.getValue()));
-                break;
-            }
-            case WIND_RES:
-            case WIND_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.WIND, (int) template.getValue()));
-                break;
-            }
-            case EARTH_RES:
-            case EARTH_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.EARTH, (int) template.getValue()));
-                break;
-            }
-            case HOLY_RES:
-            case HOLY_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.HOLY, (int) template.getValue()));
-                break;
-            }
-            case DARK_RES:
-            case DARK_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.DARK, (int) template.getValue()));
-                break;
-            }
-        }
-
         if (_funcTemplates == null) {
             _funcTemplates = new ArrayList<>();
         }

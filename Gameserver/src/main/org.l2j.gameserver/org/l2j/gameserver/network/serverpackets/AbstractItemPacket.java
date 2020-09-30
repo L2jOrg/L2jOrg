@@ -46,10 +46,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
             mask |= ItemListType.AUGMENT_BONUS.getMask();
         }
 
-        if ((item.getAttackElementType() >= 0) || (item.getAttributeDefence(AttributeType.FIRE) > 0) || (item.getAttributeDefence(AttributeType.WATER) > 0) || (item.getAttributeDefence(AttributeType.WIND) > 0) || (item.getAttributeDefence(AttributeType.EARTH) > 0) || (item.getAttributeDefence(AttributeType.HOLY) > 0) || (item.getAttributeDefence(AttributeType.DARK) > 0)) {
-            mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
-        }
-
         if (item.getEnchantOptions() != null) {
             for (int id : item.getEnchantOptions()) {
                 if (id > 0) {
@@ -146,10 +142,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
     }
 
     private void writeItemElemental(Item item) {
-        writeShort(item.getAttackAttributeType().getClientId());
-        writeShort(item.getAttackAttributePower());
+        writeShort(NONE.getClientId());
+        writeShort(0x00);
         for (var type : AttributeType.ATTRIBUTE_TYPES) {
-            writeShort(item.getDefenceAttribute(type));
+            writeShort(0);
         }
     }
 
@@ -162,10 +158,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         int mask = 0;
         if (item.isAugmented()) {
             mask |= ItemListType.AUGMENT_BONUS.getMask();
-        }
-
-        if (hasAttribute(item)) {
-            mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
         }
 
         if (nonNull(item.getEnchantOptions())) {
@@ -187,10 +179,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         }
 
         return mask;
-    }
-
-    private boolean hasAttribute(Item item) {
-        return (item.getAttackAttributeType() != NONE) || (item.getDefenceAttribute(AttributeType.FIRE) > 0) || (item.getDefenceAttribute(AttributeType.WATER) > 0) || (item.getDefenceAttribute(AttributeType.WIND) > 0) || (item.getDefenceAttribute(AttributeType.EARTH) > 0) || (item.getDefenceAttribute(AttributeType.HOLY) > 0) || (item.getDefenceAttribute(AttributeType.DARK) > 0);
     }
 
     protected void writeItem(Item item) {
@@ -268,25 +256,14 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
     }
 
     protected void writeItemElemental(ItemInfo item) {
-        if (item != null) {
-            writeShort(item.getAttackElementType());
-            writeShort(item.getAttackElementPower());
-            writeShort(item.getAttributeDefence(AttributeType.FIRE));
-            writeShort(item.getAttributeDefence(AttributeType.WATER));
-            writeShort(item.getAttributeDefence(AttributeType.WIND));
-            writeShort(item.getAttributeDefence(AttributeType.EARTH));
-            writeShort(item.getAttributeDefence(AttributeType.HOLY));
-            writeShort(item.getAttributeDefence(AttributeType.DARK));
-        } else {
-            writeShort(0);
-            writeShort(0);
-            writeShort(0);
-            writeShort(0);
-            writeShort(0);
-            writeShort(0);
-            writeShort(0);
-            writeShort(0);
-        }
+        writeShort(-2); // element type
+        writeShort(0); // element power
+        writeShort(0); // defense fire
+        writeShort(0); // defense water
+        writeShort(0); // defense wind
+        writeShort(0); // defense earth
+        writeShort(0); // defense holy
+        writeShort(0); // defense dark
     }
 
     protected void writeItemEnchantEffect(ItemInfo item) {

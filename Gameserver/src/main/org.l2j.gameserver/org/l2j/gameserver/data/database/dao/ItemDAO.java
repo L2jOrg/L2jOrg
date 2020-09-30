@@ -93,9 +93,6 @@ public interface ItemDAO extends DAO<Object> {
     @Query("DELETE FROM item_variations WHERE itemId = :objectId:")
     void deleteVariations(int objectId);
 
-    @Query("DELETE FROM item_elementals WHERE itemId = :objectId:")
-    void deleteElementals(int objectId);
-
     @Query("DELETE FROM items WHERE object_id = :objectId:")
     void deleteItem(int objectId);
 

@@ -190,15 +190,6 @@
 	<admin command="admin_speed" accessLevel="100" />
 	<admin command="admin_speed_menu" accessLevel="100" />
 
-	<!-- ADMIN ELEMENT -->
-	<admin command="admin_setlh" accessLevel="100" />
-	<admin command="admin_setlc" accessLevel="100" />
-	<admin command="admin_setll" accessLevel="100" />
-	<admin command="admin_setlg" accessLevel="100" />
-	<admin command="admin_setlb" accessLevel="100" />
-	<admin command="admin_setlw" accessLevel="100" />
-	<admin command="admin_setls" accessLevel="100" />
-
 	<!-- ADMIN ENCHANT -->
 	<admin command="admin_seteh" accessLevel="100" />
 	<admin command="admin_setec" accessLevel="100" />

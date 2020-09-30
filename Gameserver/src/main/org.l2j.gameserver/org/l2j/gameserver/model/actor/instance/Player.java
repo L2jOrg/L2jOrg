@@ -161,7 +161,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
 
 /**
  * This class represents all player characters in the world.<br>
- * There is always a client-thread connected to this (except if a player-store is activated upon logout).
+ * There is always a client-thread connected to this.
  *
  * @author JoeAlisson
  */

@@ -18,13 +18,12 @@
  */
 package org.l2j.gameserver.model;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemChangeType;
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.engine.item.Item;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -34,7 +33,7 @@ import java.util.Objects;
  * Get all information from Item to generate ItemInfo.
  */
 public class ItemInfo {
-    private final int[] attributeDefense = { 0, 0, 0, 0, 0, 0 };
+
     private ItemTemplate template;
     private int objectId;
     private long count;
@@ -46,11 +45,7 @@ public class ItemInfo {
     private Collection<EnsoulOption> soulCrystalOptions;
     private Collection<EnsoulOption> soulCrystalSpecialOptions;
     private int[] enchantOption;
-    private byte elemAtkType = -2;
-    private int elemAtkPower = 0;
-
     private int time;
-
     private int price;
 
     private ItemChangeType change;
@@ -94,11 +89,6 @@ public class ItemInfo {
         _available = item.isAvailable();
         locationSlot = item.getLocationSlot();
 
-        elemAtkType = item.getAttackAttributeType().getClientId();
-        elemAtkPower = item.getAttackAttributePower();
-        for (AttributeType type : AttributeType.ATTRIBUTE_TYPES) {
-            attributeDefense[type.getClientId()] = item.getDefenceAttribute(type);
-        }
         enchantOption = item.getEnchantOptions();
         soulCrystalOptions = item.getSpecialAbilities();
         soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
@@ -144,12 +134,6 @@ public class ItemInfo {
         time = -9999;
 
         locationSlot = item.getLocationSlot();
-
-        elemAtkType = item.getAttackElementType();
-        elemAtkPower = item.getAttackElementPower();
-        for (byte i = 0; i < 6; i++) {
-            attributeDefense[i] = item.getElementDefAttr(i);
-        }
 
         enchantOption = item.getEnchantOptions();
         soulCrystalOptions = item.getSoulCrystalOptions();
@@ -240,18 +224,6 @@ public class ItemInfo {
 
     public int getLocationSlot() {
         return locationSlot;
-    }
-
-    public int getAttackElementType() {
-        return elemAtkType;
-    }
-
-    public int getAttackElementPower() {
-        return elemAtkPower;
-    }
-
-    public int getAttributeDefence(AttributeType attribute) {
-        return attributeDefense[attribute.getClientId()];
     }
 
     public int[] getEnchantOptions() {

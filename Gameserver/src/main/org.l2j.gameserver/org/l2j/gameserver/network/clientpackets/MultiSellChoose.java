@@ -21,8 +21,8 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ItemInfo;
@@ -35,8 +35,6 @@ import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -54,9 +52,6 @@ import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
-/**
- * The Class MultiSellChoose.
- */
 public class MultiSellChoose extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(MultiSellChoose.class);
 
@@ -66,14 +61,6 @@ public class MultiSellChoose extends ClientPacket {
     private int _enchantLevel;
     private int _augmentOption1;
     private int _augmentOption2;
-    private short _attackAttribute;
-    private short _attributePower;
-    private short _fireDefence;
-    private short _waterDefence;
-    private short _windDefence;
-    private short _earthDefence;
-    private short _holyDefence;
-    private short _darkDefence;
     private EnsoulOption[] _soulCrystalOptions;
     private EnsoulOption[] _soulCrystalSpecialOptions;
 
@@ -85,14 +72,14 @@ public class MultiSellChoose extends ClientPacket {
         _enchantLevel = readShort();
         _augmentOption1 = readInt();
         _augmentOption2 = readInt();
-        _attackAttribute = readShort();
-        _attributePower = readShort();
-        _fireDefence = readShort();
-        _waterDefence = readShort();
-        _windDefence = readShort();
-        _earthDefence = readShort();
-        _holyDefence = readShort();
-        _darkDefence = readShort();
+        readShort(); /*_attackAttribute*/
+        readShort(); /*_attributePower*/
+        readShort(); /*_fireDefence*/
+        readShort(); /*_waterDefence*/
+        readShort(); /*_windDefence*/
+        readShort(); /*_earthDefence*/
+        readShort(); /*_holyDefence*/
+        readShort(); /*_darkDefence*/
         _soulCrystalOptions = new EnsoulOption[readByte()]; // Ensoul size
         for (int i = 0; i < _soulCrystalOptions.length; i++) {
             final int ensoulId = readInt(); // Ensoul option id
@@ -175,14 +162,6 @@ public class MultiSellChoose extends ClientPacket {
         //@formatter:off
         if ((itemEnchantment != null) && ((_amount > 1)
                 || (itemEnchantment.getEnchantLevel() != _enchantLevel)
-                || (itemEnchantment.getAttackElementType() != _attackAttribute)
-                || (itemEnchantment.getAttackElementPower() != _attributePower)
-                || (itemEnchantment.getAttributeDefence(AttributeType.FIRE) != _fireDefence)
-                || (itemEnchantment.getAttributeDefence(AttributeType.WATER) != _waterDefence)
-                || (itemEnchantment.getAttributeDefence(AttributeType.WIND) != _windDefence)
-                || (itemEnchantment.getAttributeDefence(AttributeType.EARTH) != _earthDefence)
-                || (itemEnchantment.getAttributeDefence(AttributeType.HOLY) != _holyDefence)
-                || (itemEnchantment.getAttributeDefence(AttributeType.DARK) != _darkDefence)
                 || ((itemEnchantment.getAugmentation() == null) && ((_augmentOption1 != 0) || (_augmentOption2 != 0)))
                 || ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getOption1Id() != _augmentOption1) || (itemEnchantment.getAugmentation().getOption2Id() != _augmentOption2)))
                 || ((_soulCrystalOptions != null) && itemEnchantment.getSoulCrystalOptions().stream().anyMatch(e -> !CommonUtil.contains(_soulCrystalOptions, e)))
@@ -407,40 +386,7 @@ public class MultiSellChoose extends ClientPacket {
                     if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getTemplate().getClass().equals(itemEnchantment.getTemplate().getClass())) {
                         addedItem.setEnchantLevel(itemEnchantment.getEnchantLevel());
                         addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
-                        if (addedItem.isWeapon())
-                        {
-                            if (itemEnchantment.getAttackElementPower() > 0)
-                            {
-                                addedItem.setAttribute(new AttributeHolder(AttributeType.findByClientId(itemEnchantment.getAttackElementType()), itemEnchantment.getAttackElementPower()), false);
-                            }
-                        }
-                        else
-                        {
-                            if (itemEnchantment.getAttributeDefence(AttributeType.FIRE) > 0)
-                            {
-                                addedItem.setAttribute(new AttributeHolder(AttributeType.FIRE, itemEnchantment.getAttributeDefence(AttributeType.FIRE)), false);
-                            }
-                            if (itemEnchantment.getAttributeDefence(AttributeType.WATER) > 0)
-                            {
-                                addedItem.setAttribute(new AttributeHolder(AttributeType.WATER, itemEnchantment.getAttributeDefence(AttributeType.WATER)), false);
-                            }
-                            if (itemEnchantment.getAttributeDefence(AttributeType.WIND) > 0)
-                            {
-                                addedItem.setAttribute(new AttributeHolder(AttributeType.WIND, itemEnchantment.getAttributeDefence(AttributeType.WIND)), false);
-                            }
-                            if (itemEnchantment.getAttributeDefence(AttributeType.EARTH) > 0)
-                            {
-                                addedItem.setAttribute(new AttributeHolder(AttributeType.EARTH, itemEnchantment.getAttributeDefence(AttributeType.EARTH)), false);
-                            }
-                            if (itemEnchantment.getAttributeDefence(AttributeType.HOLY) > 0)
-                            {
-                                addedItem.setAttribute(new AttributeHolder(AttributeType.HOLY, itemEnchantment.getAttributeDefence(AttributeType.HOLY)), false);
-                            }
-                            if (itemEnchantment.getAttributeDefence(AttributeType.DARK) > 0)
-                            {
-                                addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
-                            }
-                        }
+
 						if (_soulCrystalOptions != null) {
 							int pos = -1;
 							for (EnsoulOption ensoul : _soulCrystalOptions) {

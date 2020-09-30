@@ -30,15 +30,6 @@ CREATE TABLE IF NOT EXISTS `item_variations`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
 
-DROP TABLE IF EXISTS `item_elementals`;
-CREATE TABLE IF NOT EXISTS `item_elementals` (
-     `itemId` INT NOT NULL DEFAULT 0,
-     `elemType` TINYINT NOT NULL DEFAULT -1,
-     `elemValue` INT NOT NULL DEFAULT -1,
-     PRIMARY KEY (`itemId`, `elemType`),
-     FOREIGN KEY (`itemId`) REFERENCES items(object_id) ON DELETE CASCADE
-)  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
-
 DROP TABLE IF EXISTS `item_special_abilities`;
 CREATE TABLE IF NOT EXISTS `item_special_abilities` (
     `objectId` INT NOT NULL,

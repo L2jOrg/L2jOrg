@@ -49,7 +49,7 @@ public class ExChangeAttributeInfo extends ServerPacket {
         _crystalItemId = crystalItemId;
         _attributes = 0;
         for (AttributeType e : AttributeType.ATTRIBUTE_TYPES) {
-            if (e != item.getAttackAttributeType()) {
+            if (e != AttributeType.NONE) {
                 _attributes |= ATTRIBUTE_MASKS.get(e);
             }
         }

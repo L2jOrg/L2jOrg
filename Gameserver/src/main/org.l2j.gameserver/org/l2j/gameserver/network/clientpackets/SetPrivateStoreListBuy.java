@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
@@ -73,14 +72,14 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
 
             final int option1 = readInt();
             final int option2 = readInt();
-            final short attackAttributeId = readShort();
-            final int attackAttributeValue = readShort();
-            final int defenceFire = readShort();
-            final int defenceWater = readShort();
-            final int defenceWind = readShort();
-            final int defenceEarth = readShort();
-            final int defenceHoly = readShort();
-            final int defenceDark = readShort();
+            readShort(); /*attackAttributeId*/
+            readShort(); /*attackAttributeValue*/
+            readShort(); /*defenceFire*/
+            readShort(); /*defenceWater*/
+            readShort(); /*defenceWind*/
+            readShort(); /*defenceEarth*/
+            readShort(); /*defenceHoly*/
+            readShort(); /*defenceDark*/
             readInt(); // Visual ID is not used on Classic
 
             final EnsoulOption[] soulCrystalOptions = new EnsoulOption[readByte()];
@@ -95,14 +94,6 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
             final TradeItem item = new TradeItem(template, cnt, price);
             item.setEnchant(enchantLevel);
             item.setAugmentation(option1, option2);
-            item.setAttackElementType(AttributeType.findByClientId(attackAttributeId));
-            item.setAttackElementPower(attackAttributeValue);
-            item.setElementDefAttr(AttributeType.FIRE, defenceFire);
-            item.setElementDefAttr(AttributeType.WATER, defenceWater);
-            item.setElementDefAttr(AttributeType.WIND, defenceWind);
-            item.setElementDefAttr(AttributeType.EARTH, defenceEarth);
-            item.setElementDefAttr(AttributeType.HOLY, defenceHoly);
-            item.setElementDefAttr(AttributeType.DARK, defenceDark);
             item.setSoulCrystalOptions(Arrays.asList(soulCrystalOptions));
             item.setSoulCrystalSpecialOptions(Arrays.asList(soulCrystalSpecialOptions));
             _items[i] = item;

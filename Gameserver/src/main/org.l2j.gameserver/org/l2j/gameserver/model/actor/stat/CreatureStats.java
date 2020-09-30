@@ -414,12 +414,6 @@ public class CreatureStats {
     }
 
     public AttributeType getAttackElement() {
-        final Item weaponInstance = creature.getActiveWeaponInstance();
-        // 1st order - weapon element
-        if ((weaponInstance != null) && (weaponInstance.getAttackAttributeType() != AttributeType.NONE)) {
-            return weaponInstance.getAttackAttributeType();
-        }
-
         // temp fix starts
         int tempVal = 0;
         final int stats[] =
