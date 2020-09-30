@@ -212,6 +212,7 @@ public final class Player extends Playable {
         Arrays.fill(htmlActionCaches, new LinkedList<>());
         running = true;
         setAccessLevel(playerData.getAccessLevel(), false, false);
+        super.setReputation(data.getReputation());
     }
 
     public void deleteShortcuts(Predicate<Shortcut> filter) {
