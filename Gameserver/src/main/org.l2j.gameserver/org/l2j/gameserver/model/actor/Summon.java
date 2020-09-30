@@ -41,7 +41,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.container.PetInventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;

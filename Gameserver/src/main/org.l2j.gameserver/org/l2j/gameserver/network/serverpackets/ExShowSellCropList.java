@@ -22,7 +22,7 @@ import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 

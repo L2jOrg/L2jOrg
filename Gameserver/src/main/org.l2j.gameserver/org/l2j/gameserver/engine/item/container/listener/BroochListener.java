@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import static java.util.Objects.nonNull;
 

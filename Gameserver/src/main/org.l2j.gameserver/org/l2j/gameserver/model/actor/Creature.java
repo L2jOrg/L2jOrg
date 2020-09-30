@@ -66,7 +66,7 @@ import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;

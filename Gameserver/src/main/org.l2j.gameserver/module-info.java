@@ -41,7 +41,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.util;
     exports org.l2j.gameserver.ai;
     exports org.l2j.gameserver.model.effects;
-    exports org.l2j.gameserver.model.item.instance;
     exports org.l2j.gameserver.model.actor.stat;
     exports org.l2j.gameserver.model.stats;
     exports org.l2j.gameserver.model.events.impl.character.player;

@@ -35,7 +35,7 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EtcItem;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;

@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.*;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemData;
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.WorldObject;
@@ -29,7 +30,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
@@ -249,7 +250,7 @@ public abstract class ItemContainer {
     private void addNewItem(Item item) {
         item.setOwnerId(getOwnerId());
         item.setItemLocation(getBaseLocation());
-        item.setLastChange(Item.ADDED);
+        item.setLastChange(ItemChangeType.ADDED);
 
         addItem(item);
         item.updateDatabase();
@@ -257,7 +258,7 @@ public abstract class ItemContainer {
 
     private void changeItemCount(String process, int itemId, long count, Player actor, Object reference, Item item) {
         item.changeCount(process, count, actor, reference);
-        item.setLastChange(Item.MODIFIED);
+        item.setLastChange(ItemChangeType.MODIFIED);
 
         final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
         if ((itemId == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
@@ -397,7 +398,7 @@ public abstract class ItemContainer {
         // Adjust item quantity
         if (item.getCount() > count) {
             item.changeCount(process, -count, actor, reference);
-            item.setLastChange(Item.MODIFIED);
+            item.setLastChange(ItemChangeType.MODIFIED);
 
             // don't update often for untraced item
             if ((process != null) || ((WorldTimeController.getInstance().getGameTicks() % 10) == 0)) {
@@ -421,7 +422,7 @@ public abstract class ItemContainer {
             refreshWeight();
 
             item.deleteMe();
-            item.setLastChange(Item.REMOVED);
+            item.setLastChange(ItemChangeType.MODIFIED);
         }
         return item;
     }

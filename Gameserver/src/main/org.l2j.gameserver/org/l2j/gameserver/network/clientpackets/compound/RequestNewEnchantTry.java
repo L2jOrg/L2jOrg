@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.item.combination.CombinationItem;
 import org.l2j.gameserver.model.item.combination.CombinationItemReward;
 import org.l2j.gameserver.model.item.combination.CombinationItemType;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;

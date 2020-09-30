@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Doppelganger;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.serverpackets.MoveToLocation;
 import org.l2j.gameserver.world.WorldTimeController;

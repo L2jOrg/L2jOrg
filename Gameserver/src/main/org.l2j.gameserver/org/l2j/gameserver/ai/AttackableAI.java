@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableHate;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.util.GameUtils;

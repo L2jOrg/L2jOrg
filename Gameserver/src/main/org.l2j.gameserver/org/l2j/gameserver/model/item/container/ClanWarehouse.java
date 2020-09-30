@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemAdd;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemDestroy;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemTransfer;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 public final class ClanWarehouse extends Warehouse {
     private final Clan _clan;

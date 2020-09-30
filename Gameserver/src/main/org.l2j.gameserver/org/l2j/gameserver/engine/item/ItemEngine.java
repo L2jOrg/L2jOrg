@@ -41,7 +41,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.*;
-import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.item.type.*;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
@@ -465,7 +464,7 @@ public final class ItemEngine extends GameXmlReader {
         item.setItemLocation(ItemLocation.VOID);
         item.setCount(0);
         item.setOwnerId(0);
-        item.setLastChange(Item.REMOVED);
+        item.setLastChange(ItemChangeType.REMOVED);
 
         World.getInstance().removeObject(item);
         IdFactory.getInstance().releaseId(item.getObjectId());

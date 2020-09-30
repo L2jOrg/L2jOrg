@@ -24,7 +24,7 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;

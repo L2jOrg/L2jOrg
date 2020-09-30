@@ -48,7 +48,7 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
 import org.l2j.gameserver.network.NpcStringId;

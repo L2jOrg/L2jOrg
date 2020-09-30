@@ -23,6 +23,7 @@ import org.l2j.gameserver.api.item.InventoryListener;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -31,7 +32,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -117,7 +118,7 @@ public abstract class Inventory extends ItemContainer {
             removeItem(item);
             item.setOwnerId(process, 0, actor, reference);
             item.setItemLocation(ItemLocation.VOID);
-            item.setLastChange(Item.REMOVED);
+            item.setLastChange(ItemChangeType.REMOVED);
 
             item.updateDatabase();
             refreshWeight();
@@ -150,7 +151,7 @@ public abstract class Inventory extends ItemContainer {
             // Directly drop entire item
             if (item.getCount() > count) {
                 item.changeCount(process, -count, actor, reference);
-                item.setLastChange(Item.MODIFIED);
+                item.setLastChange(ItemChangeType.MODIFIED);
                 item.updateDatabase();
 
                 item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
@@ -290,7 +291,7 @@ public abstract class Inventory extends ItemContainer {
                 paperdoll.remove(slot);
 
                 old.setItemLocation(getBaseLocation());
-                old.setLastChange(Item.MODIFIED);
+                old.setLastChange(ItemChangeType.MODIFIED);
 
                 wearedMask &= ~old.getItemMask();
                 listeners.forEach(l -> l.notifyUnequiped(slot, old, this));
@@ -300,7 +301,7 @@ public abstract class Inventory extends ItemContainer {
             if (nonNull(item)) {
                 paperdoll.put(slot, item);
                 item.setItemLocation(getEquipLocation(), slot.getId());
-                item.setLastChange(Item.MODIFIED);
+                item.setLastChange(ItemChangeType.MODIFIED);
                 wearedMask |= item.getItemMask();
                 listeners.forEach(l -> l.notifyEquiped(slot, item, this));
                 item.updateDatabase();

@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;

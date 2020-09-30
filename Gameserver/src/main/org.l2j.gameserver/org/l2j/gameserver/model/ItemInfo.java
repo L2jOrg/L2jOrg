@@ -18,12 +18,13 @@
  */
 package org.l2j.gameserver.model;
 
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -52,10 +53,7 @@ public class ItemInfo {
 
     private int price;
 
-    /**
-     * The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE)
-     */
-    private int _change;
+    private ItemChangeType change;
     private boolean _available = true;
     private int _equipped;
     private int reuse;
@@ -90,12 +88,7 @@ public class ItemInfo {
         // Verify if the Item is equipped
         _equipped = item.isEquipped() ? 1 : 0;
 
-        // Get the action to do clientside
-        switch (item.getLastChange()) {
-            case Item.ADDED -> _change = 1;
-            case Item.MODIFIED -> _change = 2;
-            case Item.REMOVED -> _change = 3;
-        }
+        change = item.getLastChange();
 
         time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
         _available = item.isAvailable();
@@ -111,9 +104,9 @@ public class ItemInfo {
         soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
     }
 
-    public ItemInfo(Item item, int change) {
+    public ItemInfo(Item item, ItemChangeType change) {
         this(item);
-        _change = change;
+        this.change = change;
     }
 
     public ItemInfo(TradeItem item) {
@@ -146,7 +139,7 @@ public class ItemInfo {
         _equipped = 0;
 
         // Get the action to do clientside
-        _change = 0;
+        change = ItemChangeType.NONE;
 
         time = -9999;
 
@@ -191,7 +184,7 @@ public class ItemInfo {
         _equipped = 0;
 
         // Get the action to do clientside
-        _change = 0;
+        change = ItemChangeType.NONE;
 
         time = -9999;
 
@@ -233,8 +226,8 @@ public class ItemInfo {
         return _equipped;
     }
 
-    public int getChange() {
-        return _change;
+    public ItemChangeType getChange() {
+        return change;
     }
 
     public int getTime() {

@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
 import org.l2j.gameserver.model.interfaces.IPositionable;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;

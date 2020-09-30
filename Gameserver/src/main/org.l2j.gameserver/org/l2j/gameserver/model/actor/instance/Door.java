@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.DoorStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.OnEventTrigger;

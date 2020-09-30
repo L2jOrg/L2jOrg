@@ -78,7 +78,7 @@ import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.model.stats.Stat;

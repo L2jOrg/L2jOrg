@@ -43,6 +43,7 @@ import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -82,7 +83,7 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.*;
 import org.l2j.gameserver.model.item.container.Warehouse;
 import org.l2j.gameserver.model.item.container.*;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
@@ -3068,7 +3069,7 @@ public final class Player extends Playable {
             final Item newitem = inventory.addItem(process, item, this, reference);
 
             // If over capacity, drop the item
-            if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != Item.MODIFIED))) {
+            if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != ItemChangeType.MODIFIED))) {
                 dropItem("InvDrop", newitem, null, true, true);
             }
         }
@@ -3116,7 +3117,7 @@ public final class Player extends Playable {
 
                 // If over capacity, drop the item
                 if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, template.isQuestItem()) && item.isDropable()
-                        && (!item.isStackable() || (item.getLastChange() != Item.MODIFIED))) {
+                        && (!item.isStackable() || (item.getLastChange() != ItemChangeType.MODIFIED))) {
 
                     dropItem("InvDrop", item, null, true);
                 }

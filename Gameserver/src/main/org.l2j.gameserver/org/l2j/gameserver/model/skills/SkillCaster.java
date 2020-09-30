@@ -47,7 +47,7 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.holders.SkillUseHolder;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;

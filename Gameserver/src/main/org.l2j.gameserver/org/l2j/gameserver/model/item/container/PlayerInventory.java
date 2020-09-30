@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.IntCollection;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -37,7 +38,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDrop;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemTransfer;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -763,7 +764,7 @@ public class PlayerInventory extends Inventory {
             } else {
                 item.changeCountWithoutTrace(countDelta, creator, reference);
             }
-            item.setLastChange(Item.MODIFIED);
+            item.setLastChange(ItemChangeType.MODIFIED);
             refreshWeight();
         } else {
             destroyItem(process, item, owner, null);

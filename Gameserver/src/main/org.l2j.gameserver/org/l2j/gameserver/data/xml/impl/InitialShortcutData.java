@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.Macro;
 import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;

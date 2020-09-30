@@ -16,21 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.handlers.itemhandlers;
-
-import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.network.serverpackets.costume.ExChooseCostumeItem;
+package org.l2j.gameserver.engine.item;
 
 /**
  * @author JoeAlisson
  */
-public class TransformationBook implements IItemHandler
-{
-	@Override
-	public boolean useItem(Playable playable, Item item, boolean forceUse) {
-		playable.sendPacket(new ExChooseCostumeItem(item.getId()));
-		return true;
-	}
+public enum ItemChangeType {
+    NONE,
+    ADDED,
+    MODIFIED,
+    REMOVED
 }

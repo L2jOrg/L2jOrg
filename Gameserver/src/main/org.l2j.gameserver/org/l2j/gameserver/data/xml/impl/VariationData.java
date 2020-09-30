@@ -23,7 +23,7 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;

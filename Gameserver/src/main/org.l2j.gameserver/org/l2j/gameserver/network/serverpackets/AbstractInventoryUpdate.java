@@ -20,8 +20,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import java.util.Collection;
 import java.util.List;
@@ -60,15 +61,15 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
     }
 
     public final void addNewItem(Item item) {
-        items.put(item.getObjectId(), new ItemInfo(item, 1));
+        items.put(item.getObjectId(), new ItemInfo(item, ItemChangeType.ADDED));
     }
 
     public final void addModifiedItem(Item item) {
-        items.put(item.getObjectId(), new ItemInfo(item, 2));
+        items.put(item.getObjectId(), new ItemInfo(item, ItemChangeType.MODIFIED));
     }
 
     public final void addRemovedItem(Item item) {
-        items.put(item.getObjectId(), new ItemInfo(item, 3));
+        items.put(item.getObjectId(), new ItemInfo(item, ItemChangeType.REMOVED));
     }
 
     public final boolean isEmpty() {
@@ -80,7 +81,7 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
         writeInt(items.size()); // 140
         writeInt(items.size()); // 140
         for (ItemInfo item : items.values()) {
-            writeShort(item.getChange()); // Update type : 01-add, 02-modify, 03-remove
+            writeShort(item.getChange().ordinal());
             writeItem(item);
         }
     }

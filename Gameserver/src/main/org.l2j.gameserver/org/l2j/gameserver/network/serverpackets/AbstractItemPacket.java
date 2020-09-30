@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;

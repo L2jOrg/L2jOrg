@@ -22,7 +22,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.World;
 

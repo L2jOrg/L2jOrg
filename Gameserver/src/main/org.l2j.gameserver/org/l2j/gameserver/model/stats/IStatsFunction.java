@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import java.util.Optional;
 

@@ -20,7 +20,7 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 /**
  * @author JoeAlisson

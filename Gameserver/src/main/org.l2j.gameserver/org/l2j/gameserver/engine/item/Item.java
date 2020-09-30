@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.item.instance;
+package org.l2j.gameserver.engine.item;
 
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
@@ -30,7 +30,6 @@ import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -93,15 +92,15 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public final class Item extends WorldObject {
 
-    public static final int ADDED = 1;
-    public static final int REMOVED = 3;
-    public static final int MODIFIED = 2;
-
-    public static final int[] DEFAULT_ENCHANT_OPTIONS = new int[]{0, 0, 0};
     private static final Logger LOGGER = LoggerFactory.getLogger(Item.class);
     private static final Logger LOG_ITEMS = LoggerFactory.getLogger("item");
+
+    public static final int[] DEFAULT_ENCHANT_OPTIONS = new int[]{0, 0, 0};
 
     private final int itemId;
     private final ItemTemplate template;
@@ -110,6 +109,9 @@ public final class Item extends WorldObject {
     private final List<Options> _enchantOptions = new ArrayList<>();
     private final Map<Integer, EnsoulOption> _ensoulOptions = new LinkedHashMap<>(3);
     private final Map<Integer, EnsoulOption> _ensoulSpecialOptions = new LinkedHashMap<>(3);
+
+    private ItemChangeType lastChange = ItemChangeType.MODIFIED;
+
     /**
      * ID of the owner
      */
@@ -159,7 +161,6 @@ public final class Item extends WorldObject {
     private long _dropTime;
     private boolean _published = false;
     private boolean _protected;
-    private int _lastChange = 2; // 1 ??, 2 modified, 3 removed
     private boolean _existsInDb; // if a record exists in DB.
     private boolean _storedInDb; // if DB data is up-to-date.
     private Map<AttributeType, AttributeHolder> _elementals = null;
@@ -175,10 +176,9 @@ public final class Item extends WorldObject {
     public Item(int objectId, int itemId) {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
-
         template = ItemEngine.getInstance().getTemplate(itemId);
         if (itemId == 0 || isNull(template)) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("itemId is not a valid identifier");
         }
         this.itemId = itemId;
         super.setName(template.getName());
@@ -226,23 +226,6 @@ public final class Item extends WorldObject {
         setProtected(getDropTime() == -1);
         setSpawned(true);
         setXYZ(data.getX(), data.getY(), data.getZ());
-    }
-
-    public Item(ResultSet rs) throws SQLException {
-        this(rs.getInt("object_id"), ItemEngine.getInstance().getTemplate(rs.getInt("item_id")));
-        count = rs.getLong("count");
-        ownerId = rs.getInt("owner_id");
-        loc = ItemLocation.valueOf(rs.getString("loc"));
-        locData = rs.getInt("loc_data");
-        enchantLevel = rs.getInt("enchant_level");
-        time = rs.getLong("time");
-        _existsInDb = true;
-        _storedInDb = true;
-
-        if (isEquipable()) {
-            restoreAttributes();
-            restoreSpecialAbilities();
-        }
     }
 
     public Item(ItemData data) {
@@ -681,20 +664,12 @@ public final class Item extends WorldObject {
         return template.getSharedReuseGroup();
     }
 
-    /**
-     * @return the last change of the item
-     */
-    public int getLastChange() {
-        return _lastChange;
+    public ItemChangeType getLastChange() {
+        return lastChange;
     }
 
-    /**
-     * Sets the last change of the item
-     *
-     * @param lastChange : int
-     */
-    public void setLastChange(int lastChange) {
-        _lastChange = lastChange;
+    public void setLastChange(ItemChangeType lastChange) {
+        this.lastChange = lastChange;
     }
 
     /**

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.AttributeType;
@@ -26,7 +25,7 @@ import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.EffectList;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.SkillConditionScope;

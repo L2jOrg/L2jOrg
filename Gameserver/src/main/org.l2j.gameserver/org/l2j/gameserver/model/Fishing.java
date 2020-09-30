@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerFishing;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;

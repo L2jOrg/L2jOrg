@@ -31,13 +31,11 @@ import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Attachment;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.commission.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionList.CommissionListReplyType;
 import org.l2j.gameserver.util.MathUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.time.Instant;

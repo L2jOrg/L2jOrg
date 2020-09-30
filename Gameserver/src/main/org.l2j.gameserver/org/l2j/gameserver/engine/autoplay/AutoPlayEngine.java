@@ -26,7 +26,7 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
 import org.l2j.gameserver.world.World;

@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectTaskInfo;
 import org.l2j.gameserver.model.effects.EffectTickTask;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;

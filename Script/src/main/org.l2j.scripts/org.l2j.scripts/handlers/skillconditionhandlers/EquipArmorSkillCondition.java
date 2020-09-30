@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ArmorType;
 import org.w3c.dom.Node;
 

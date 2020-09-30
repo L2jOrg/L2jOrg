@@ -23,7 +23,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.item.container.ItemContainer;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.residences.ResidenceFunctionTemplate;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;

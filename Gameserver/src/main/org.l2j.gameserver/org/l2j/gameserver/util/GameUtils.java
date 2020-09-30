@@ -33,7 +33,7 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.Armor;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.settings.GeneralSettings;

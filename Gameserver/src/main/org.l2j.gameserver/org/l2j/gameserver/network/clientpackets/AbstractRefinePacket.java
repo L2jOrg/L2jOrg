@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.item.Armor;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;

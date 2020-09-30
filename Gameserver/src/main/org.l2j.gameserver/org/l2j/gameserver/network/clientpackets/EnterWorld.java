@@ -42,7 +42,7 @@ import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.ConnectionState;

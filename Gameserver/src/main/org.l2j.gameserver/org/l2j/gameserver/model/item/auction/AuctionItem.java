@@ -22,7 +22,7 @@ package org.l2j.gameserver.model.item.auction;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.world.World;
 
 /**

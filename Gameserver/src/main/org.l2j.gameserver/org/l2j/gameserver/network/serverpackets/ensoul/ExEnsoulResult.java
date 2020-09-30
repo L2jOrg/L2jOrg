@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.ensoul;
 
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;

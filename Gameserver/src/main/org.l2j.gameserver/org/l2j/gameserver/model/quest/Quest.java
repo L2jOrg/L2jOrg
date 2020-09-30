@@ -53,7 +53,7 @@ import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.olympiad.CompetitionType;
 import org.l2j.gameserver.model.olympiad.Participant;
 import org.l2j.gameserver.network.NpcStringId;
