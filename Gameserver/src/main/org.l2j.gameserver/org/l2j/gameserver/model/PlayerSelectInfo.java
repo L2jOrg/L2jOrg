@@ -79,7 +79,7 @@ public class PlayerSelectInfo {
                     int option1 = itemVariation.getOption1();
                     int option2 = itemVariation.getOption2();
                     if ((option1 != -1 ) && (option2 != -1)) {
-                        _augmentation = new VariationInstance(targetItem.getObjectId(), mineralId, option1, option2);
+                        _augmentation = new VariationInstance(weapon.getObjectId(), mineralId, option1, option2);
                     }
                 } catch (Exception e) {
                     LOGGER.warn("Could not restore augmentation info", e);

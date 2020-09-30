@@ -20,6 +20,7 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.CommissionItemData;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.database.data.ItemVariationData;
@@ -32,7 +33,7 @@ import java.util.List;
 /**
  * @author JoeAlisson
  */
-public interface ItemDAO extends DAO<ItemData> {
+public interface ItemDAO extends DAO<Object> {
 
     @Query("DELETE FROM items WHERE items.owner_id NOT IN (SELECT charId FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data) AND items.owner_id != -1")
     int deleteWithoutOwner();
@@ -116,6 +117,4 @@ public interface ItemDAO extends DAO<ItemData> {
            WHERE i.loc = 'COMMISSION'
            """)
     List<CommissionItem> findCommissionItems();
-
-    void save(ItemVariationData data);
 }

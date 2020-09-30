@@ -1883,33 +1883,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         sendItemGetMessage(player, item, count);
     }
 
-    public static void giveItems(Player player, int itemId, long count, AttributeType attributeType, int attributeValue) {
-        if (count <= 0) {
-            return;
-        }
-
-        // Add items to player's inventory
-        final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
-        if (item == null) {
-            return;
-        }
-
-        // set enchant level for item if that item is not adena
-        if ((attributeType != null) && (attributeValue > 0)) {
-            item.setAttribute(new AttributeHolder(attributeType, attributeValue), true);
-            if (item.isEquipped()) {
-                // Recalculate all stats
-                player.getStats().recalculateStats(true);
-            }
-
-            final InventoryUpdate iu = new InventoryUpdate();
-            iu.addModifiedItem(item);
-            player.sendInventoryUpdate(iu);
-        }
-
-        sendItemGetMessage(player, item, count);
-    }
-
     /**
      * Give the specified player a set amount of items if he is lucky enough.<br>
      * Not recommended to use this for non-stacking items.
