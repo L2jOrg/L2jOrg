@@ -757,10 +757,6 @@ public final class Item extends WorldObject {
         return template.isHeroItem();
     }
 
-    public boolean isCommonItem() {
-        return template.isCommon();
-    }
-
     /**
      * Returns whether this item is pvp or not
      *

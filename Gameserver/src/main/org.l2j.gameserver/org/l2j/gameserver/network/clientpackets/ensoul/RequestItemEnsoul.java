@@ -106,9 +106,6 @@ public class RequestItemEnsoul extends ClientPacket {
         } else if (!item.isWeapon()) {
             LOGGER.warn("Player: {} attempting to ensoul item that's not a weapon: {}!", player, item);
             return;
-        } else if (item.isCommonItem()) {
-            LOGGER.warn("Player: {} attempting to ensoul common item: {}!", player, item);
-            return;
         } else if (item.isHeroItem()) {
             LOGGER.warn("Player: {} attempting to ensoul hero item: {}!", player, item);
             return;

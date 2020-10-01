@@ -20,7 +20,6 @@ package org.l2j.gameserver.model.item;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemGrade;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.PcCondOverride;
@@ -32,7 +31,6 @@ import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
@@ -46,7 +44,10 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -89,20 +90,18 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     protected int equipReuseDelay;
     private long time;
     private int _autoDestroyTime = -1;
-    private long price;
+    private long price;                                                         
     protected int crystalCount;
     private boolean sellable;
     private boolean dropable;
-    private boolean destroyable;
+    private boolean destroyable;                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     private boolean tradable;
     private boolean depositable;
     protected boolean enchantable;
     protected boolean questItem;
     private boolean freightable;
     private boolean olympiadRestricted;
-    private boolean cocRestricted;
     private boolean forNpc;
-    private boolean _common;
     private boolean _heroItem;
     private boolean _pvpItem;
     protected boolean immediateEffect;
@@ -122,7 +121,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         this.id = id;
         this.name = name;
 
-        _common = ((id >= 11605) && (id <= 12361));
         _heroItem = ((id >= 6611) && (id <= 6621)) || ((id >= 9388) && (id <= 9390)) || (id == 6842);
         _pvpItem = ((id >= 10667) && (id <= 10835)) || ((id >= 12852) && (id <= 12977)) || ((id >= 14363) && (id <= 14525)) || (id == 14528) || (id == 14529) || (id == 14558) || ((id >= 15913) && (id <= 16024)) || ((id >= 16134) && (id <= 16147)) || (id == 16149) || (id == 16151) || (id == 16153) || (id == 16155) || (id == 16157) || (id == 16159) || ((id >= 16168) && (id <= 16176)) || ((id >= 16179) && (id <= 16220));
     }
@@ -372,15 +370,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      */
     public final boolean isEnchantable() {
         return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, id) < 0 && enchantable;
-    }
-
-    /**
-     * Returns if item is common
-     *
-     * @return boolean
-     */
-    public final boolean isCommon() {
-        return _common;
     }
 
     /**
