@@ -65,7 +65,7 @@ import static org.l2j.gameserver.util.GameUtils.*;
  * <li>Weapon</li>
  * </ul>
  */
-public abstract class ItemTemplate extends ListenersContainer implements IIdentifiable {
+public abstract sealed class ItemTemplate extends ListenersContainer implements IIdentifiable permits Weapon, Armor, EtcItem{
     public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
     public static final int TYPE1_SHIELD_ARMOR = 1;
     public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
@@ -102,7 +102,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private boolean freightable;
     private boolean olympiadRestricted;
     private boolean forNpc;
-    private boolean _heroItem;
+    private boolean heroItem;
     protected boolean immediateEffect;
     protected boolean exImmediateEffect;
     protected ActionType _defaultAction = ActionType.NONE;
@@ -119,8 +119,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public ItemTemplate(int id, String name) {
         this.id = id;
         this.name = name;
-
-        _heroItem = ((id >= 6611) && (id <= 6621)) || ((id >= 9388) && (id <= 9390)) || (id == 6842);
     }
 
     /**
@@ -370,13 +368,12 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, id) < 0 && enchantable;
     }
 
-    /**
-     * Returns if item is hero-only
-     *
-     * @return
-     */
     public final boolean isHeroItem() {
-        return _heroItem;
+        return heroItem;
+    }
+
+    public void setHeroItem(boolean hero) {
+        this.heroItem = hero;
     }
 
     public boolean isPotion() {
@@ -476,7 +473,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         }
 
         // Don't allow hero equipment and restricted items during Olympiad
-        if ((isOlyRestrictedItem() || _heroItem) && (isPlayer(activeChar) && activeChar.getActingPlayer().isInOlympiadMode())) {
+        if ((isOlyRestrictedItem() || heroItem) && (isPlayer(activeChar) && activeChar.getActingPlayer().isInOlympiadMode())) {
             if (isEquipable()) {
                 activeChar.sendPacket(SystemMessageId.YOU_CANNOT_EQUIP_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
             } else {

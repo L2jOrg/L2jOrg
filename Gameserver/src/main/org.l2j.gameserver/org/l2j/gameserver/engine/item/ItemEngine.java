@@ -255,6 +255,7 @@ public final class ItemEngine extends GameXmlReader {
         weapon.setCanAttack(parseBoolean(attr, "can-attack"));
         weapon.setRestrictSkills(parseBoolean(attr, "restrict-skills"));
         weapon.setEquipReuseDelay(parseInt(attr, "equip-reuse-delay"));
+        weapon.setHeroItem(parseBoolean(attr, "hero"));
     }
 
     private void parseArmor(Node armorNode) {
@@ -282,6 +283,7 @@ public final class ItemEngine extends GameXmlReader {
         var attr = node.getAttributes();
         armor.setEnchantable(parseBoolean(attr, "enchant-enabled"));
         armor.setEquipReuseDelay(parseInt(attr, "equip-reuse-delay"));
+        armor.setHeroItem(parseBoolean(attr, "hero"));
     }
 
     private void parseItem(Node itemNode) {
