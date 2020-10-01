@@ -3192,9 +3192,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        final InventoryUpdate playerIU = new InventoryUpdate();
-        playerIU.addItem(item);
-        sendInventoryUpdate(playerIU);
+        sendInventoryUpdate(new InventoryUpdate(item));
 
         // Sends message to client if requested
         if (sendMessage) {

@@ -104,18 +104,18 @@ public class RequestItemEnsoul extends ClientPacket {
             LOGGER.warn("Player: {} attempting to ensoul non equippable item: {}!", player, item);
             return;
         } else if (!item.isWeapon()) {
-            LOGGER.warn("Player: " + player + " attempting to ensoul item that's not a weapon: " + item + "!");
+            LOGGER.warn("Player: {} attempting to ensoul item that's not a weapon: {}!", player, item);
             return;
         } else if (item.isCommonItem()) {
-            LOGGER.warn("Player: " + player + " attempting to ensoul common item: " + item + "!");
+            LOGGER.warn("Player: {} attempting to ensoul common item: {}!", player, item);
             return;
         } else if (item.isHeroItem()) {
-            LOGGER.warn("Player: " + player + " attempting to ensoul hero item: " + item + "!");
+            LOGGER.warn("Player: {} attempting to ensoul hero item: {}!", player, item);
             return;
         }
 
         if ((_options == null) || (_options.length == 0)) {
-            LOGGER.warn("Player: " + player + " attempting to ensoul item without any special ability declared!");
+            LOGGER.warn("Player: {} attempting to ensoul item without any special ability declared!", player);
             return;
         }
 

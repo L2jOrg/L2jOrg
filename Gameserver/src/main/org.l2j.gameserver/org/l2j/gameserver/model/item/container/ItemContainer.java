@@ -415,12 +415,9 @@ public abstract class ItemContainer {
             }
 
             ItemEngine.getInstance().destroyItem(process, item, actor, reference);
-
             item.updateDatabase();
             refreshWeight();
-
             item.deleteMe();
-            item.setLastChange(ItemChangeType.MODIFIED);
         }
         return item;
     }

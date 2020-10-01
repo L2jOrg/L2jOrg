@@ -18,7 +18,9 @@
  */
 package org.l2j.gameserver.engine.item;
 
+import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
@@ -31,7 +33,10 @@ import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.*;
+import org.l2j.gameserver.enums.InstanceType;
+import org.l2j.gameserver.enums.InventorySlot;
+import org.l2j.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
@@ -57,7 +62,6 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.*;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.WarehouseType;
-import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
@@ -78,9 +82,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.*;
-import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
@@ -107,8 +109,8 @@ public final class Item extends WorldObject {
     private final ReentrantLock _dbLock = new ReentrantLock();
     private final DropProtection _dropProtection = new DropProtection();
     private final List<Options> _enchantOptions = new ArrayList<>();
-    private final Map<Integer, EnsoulOption> _ensoulOptions = new LinkedHashMap<>(3);
-    private final Map<Integer, EnsoulOption> _ensoulSpecialOptions = new LinkedHashMap<>(3);
+    private final IntMap<EnsoulOption> _ensoulOptions = new HashIntMap<>(3);
+    private final IntMap<EnsoulOption> _ensoulSpecialOptions = new HashIntMap<>(3);
 
     private ItemChangeType lastChange = ItemChangeType.MODIFIED;
     private VariationInstance augmentation = null;
@@ -237,7 +239,7 @@ public final class Item extends WorldObject {
         _storedInDb = true;
 
         if(isEquipable()) {
-            restoreAttributes();
+            restoreAugmentation();
             restoreSpecialAbilities();
         }
 
@@ -885,7 +887,7 @@ public final class Item extends WorldObject {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augment, false), getTemplate());
     }
 
-    public void restoreAttributes() {
+    public void restoreAugmentation() {
         doIfNonNull(getDAO(ItemDAO.class).findItemVariationByItem(objectId), data -> augmentation = new VariationInstance(data));
     }
 
@@ -1444,7 +1446,7 @@ public final class Item extends WorldObject {
     private void updateSpecialAbilities(Connection con) {
         try (PreparedStatement ps = con.prepareStatement("INSERT INTO item_special_abilities (`objectId`, `type`, `optionId`, `position`) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE type = ?, optionId = ?, position = ?")) {
             ps.setInt(1, getObjectId());
-            for (Entry<Integer, EnsoulOption> entry : _ensoulOptions.entrySet()) {
+            for (var entry : _ensoulOptions.entrySet()) {
                 ps.setInt(2, 1); // regular options
                 ps.setInt(3, entry.getValue().getId());
                 ps.setInt(4, entry.getKey());
@@ -1455,7 +1457,7 @@ public final class Item extends WorldObject {
                 ps.execute();
             }
 
-            for (Entry<Integer, EnsoulOption> entry : _ensoulSpecialOptions.entrySet()) {
+            for (var entry : _ensoulSpecialOptions.entrySet()) {
                 ps.setInt(2, 2); // special options
                 ps.setInt(3, entry.getValue().getId());
                 ps.setInt(4, entry.getKey());
@@ -1603,7 +1605,7 @@ public final class Item extends WorldObject {
      */
     public class ItemDropTask implements Runnable {
         private final Creature _dropper;
-        private final Item _itеm;
+        private final Item _item;
         private int _x, _y, _z;
 
         public ItemDropTask(Item item, Creature dropper, int x, int y, int z) {
@@ -1611,7 +1613,7 @@ public final class Item extends WorldObject {
             _y = y;
             _z = z;
             _dropper = dropper;
-            _itеm = item;
+            _item = item;
         }
 
         @Override
@@ -1627,21 +1629,21 @@ public final class Item extends WorldObject {
                 setInstance(null); // No dropper? Make it a global item...
             }
 
-            synchronized (_itеm) {
+            synchronized (_item) {
                 // Set the x,y,z position of the Item dropped and update its _worldregion
-                _itеm.setSpawned(true);
-                _itеm.setXYZ(_x, _y, _z);
+                _item.setSpawned(true);
+                _item.setXYZ(_x, _y, _z);
             }
 
-            _itеm.setDropTime(System.currentTimeMillis());
-            _itеm.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
+            _item.setDropTime(System.currentTimeMillis());
+            _item.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 
             // Add the Item dropped in the world as a visible object
-            World.getInstance().addVisibleObject(_itеm, _itеm.getWorldRegion());
+            World.getInstance().addVisibleObject(_item, _item.getWorldRegion());
             if (getSettings(GeneralSettings.class).saveDroppedItems()) {
-                ItemsOnGroundManager.getInstance().save(_itеm);
+                ItemsOnGroundManager.getInstance().save(_item);
             }
-            _itеm.setDropperObjectId(0); // Set the dropper Id back to 0 so it no longer shows the drop packet
+            _item.setDropperObjectId(0); // Set the dropper Id back to 0 so it no longer shows the drop packet
         }
     }
 }
