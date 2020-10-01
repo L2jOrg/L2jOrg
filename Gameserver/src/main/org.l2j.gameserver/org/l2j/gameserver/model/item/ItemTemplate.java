@@ -90,7 +90,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     protected int equipReuseDelay;
     private long time;
     private int _autoDestroyTime = -1;
-    private long price;                                                         
+    private long price;
     protected int crystalCount;
     private boolean sellable;
     private boolean dropable;
@@ -103,7 +103,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private boolean olympiadRestricted;
     private boolean forNpc;
     private boolean _heroItem;
-    private boolean _pvpItem;
     protected boolean immediateEffect;
     protected boolean exImmediateEffect;
     protected ActionType _defaultAction = ActionType.NONE;
@@ -122,7 +121,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         this.name = name;
 
         _heroItem = ((id >= 6611) && (id <= 6621)) || ((id >= 9388) && (id <= 9390)) || (id == 6842);
-        _pvpItem = ((id >= 10667) && (id <= 10835)) || ((id >= 12852) && (id <= 12977)) || ((id >= 14363) && (id <= 14525)) || (id == 14528) || (id == 14529) || (id == 14558) || ((id >= 15913) && (id <= 16024)) || ((id >= 16134) && (id <= 16147)) || (id == 16149) || (id == 16151) || (id == 16153) || (id == 16155) || (id == 16157) || (id == 16159) || ((id >= 16168) && (id <= 16176)) || ((id >= 16179) && (id <= 16220));
     }
 
     /**
@@ -379,15 +377,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      */
     public final boolean isHeroItem() {
         return _heroItem;
-    }
-
-    /**
-     * Returns if item is pvp
-     *
-     * @return
-     */
-    public final boolean isPvpItem() {
-        return _pvpItem;
     }
 
     public boolean isPotion() {

@@ -131,7 +131,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
     }
 
     private static boolean isValidItem(Item item) {
-        return !item.isAugmented() && !item.isHeroItem() && !item.isEtcItem() && !item.isTimeLimitedItem() && (!item.isPvp() || Config.ALT_ALLOW_AUGMENT_PVP_ITEMS);
+        return !item.isAugmented() && !item.isHeroItem() && !item.isEtcItem() && !item.isTimeLimitedItem();
     }
 
     /**

@@ -60,11 +60,6 @@ public final class RequestConfirmCancelItem extends ClientPacket {
             return;
         }
 
-        if (item.isPvp() && !Config.ALT_ALLOW_AUGMENT_PVP_ITEMS) {
-            activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
-            return;
-        }
-
         final long price = VariationData.getInstance().getCancelFee(item.getId(), item.getAugmentation().getMineralId());
         if (price < 0) {
             activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);

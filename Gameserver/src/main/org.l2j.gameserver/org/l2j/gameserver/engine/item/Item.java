@@ -758,15 +758,6 @@ public final class Item extends WorldObject {
     }
 
     /**
-     * Returns whether this item is pvp or not
-     *
-     * @return boolean
-     */
-    public boolean isPvp() {
-        return template.isPvpItem();
-    }
-
-    /**
      * @return if item is available for manipulation
      */
     public boolean isAvailable(Player player, boolean allowAdena, boolean allowNonTradeable) {

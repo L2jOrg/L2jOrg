@@ -536,7 +536,6 @@ public final class Config {
     public static int[] ENCHANT_BLACKLIST;
     public static boolean DISABLE_OVER_ENCHANTING;
     public static int[] AUGMENTATION_BLACKLIST;
-    public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
 
     // Antharas
     public static int ANTHARAS_WAIT_TIME;
@@ -924,7 +923,6 @@ public final class Config {
         }
 
         Arrays.sort(AUGMENTATION_BLACKLIST);
-        ALT_ALLOW_AUGMENT_PVP_ITEMS = Character.getBoolean("AltAllowAugmentPvPItems", false);
         ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = Character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
         ALT_GAME_KARMA_PLAYER_CAN_SHOP = Character.getBoolean("AltKarmaPlayerCanShop", true);
         ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = Character.getBoolean("AltKarmaPlayerCanTeleport", true);
