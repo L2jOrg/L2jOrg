@@ -88,6 +88,8 @@ public final class Config {
     private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
+    private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
+
 
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
@@ -669,6 +671,19 @@ public final class Config {
     public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
     public static boolean DUALBOX_COUNT_OFFLINE_TRADERS;
     public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
+
+    public static boolean AUTO_POTIONS_ENABLED;
+    public static boolean AUTO_POTIONS_IN_OLYMPIAD;
+    public static int AUTO_POTION_MIN_LVL;
+    public static boolean AUTO_CP_ENABLED;
+    public static boolean AUTO_HP_ENABLED;
+    public static boolean AUTO_MP_ENABLED;
+    public static int AUTO_CP_PERCENTAGE;
+    public static int AUTO_HP_PERCENTAGE;
+    public static int AUTO_MP_PERCENTAGE;
+    public static List<Integer> AUTO_CP_ITEM_IDS;
+    public static List<Integer> AUTO_HP_ITEM_IDS;
+    public static List<Integer> AUTO_MP_ITEM_IDS;
 
     public static boolean CUSTOM_STARTING_LOC;
     public static int CUSTOM_STARTING_LOC_X;
@@ -1557,6 +1572,33 @@ public final class Config {
         }
         if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100) {
             PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
+        }
+
+        // Load AutoPotions config file (if exists)
+        final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
+        AUTO_POTIONS_ENABLED = AutoPotions.getBoolean("AutoPotionsEnabled", false);
+        AUTO_POTIONS_IN_OLYMPIAD = AutoPotions.getBoolean("AutoPotionsInOlympiad", false);
+        AUTO_POTION_MIN_LVL = AutoPotions.getInt("AutoPotionMinimumLevel", 1);
+        AUTO_CP_ENABLED = AutoPotions.getBoolean("AutoCpEnabled", true);
+        AUTO_HP_ENABLED = AutoPotions.getBoolean("AutoHpEnabled", true);
+        AUTO_MP_ENABLED = AutoPotions.getBoolean("AutoMpEnabled", true);
+        AUTO_CP_PERCENTAGE = AutoPotions.getInt("AutoCpPercentage", 70);
+        AUTO_HP_PERCENTAGE = AutoPotions.getInt("AutoHpPercentage", 70);
+        AUTO_MP_PERCENTAGE = AutoPotions.getInt("AutoMpPercentage", 70);
+        AUTO_CP_ITEM_IDS = new ArrayList<>();
+        for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(","))
+        {
+            AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
+        }
+        AUTO_HP_ITEM_IDS = new ArrayList<>();
+        for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(","))
+        {
+            AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
+        }
+        AUTO_MP_ITEM_IDS = new ArrayList<>();
+        for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(","))
+        {
+            AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
 
         // Load PvpAnnounce config file (if exists)

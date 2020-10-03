@@ -608,6 +608,7 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.voicedcommandhandlers.ChatAdmin,
             org.l2j.scripts.handlers.voicedcommandhandlers.Banking,
             org.l2j.scripts.handlers.voicedcommandhandlers.ChangePassword,
+            org.l2j.scripts.handlers.voicedcommandhandlers.AutoPotion,
 
             //custom
             org.l2j.scripts.custom.SellBuff.SellBuff;
