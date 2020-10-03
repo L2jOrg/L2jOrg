@@ -19,16 +19,13 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.data.xml.impl.EnsoulData;
+import org.l2j.gameserver.engine.item.*;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
@@ -57,7 +54,7 @@ public class MultiSellChoose extends ClientPacket {
 
     private int _listId;
     private int _entryId;
-    private long _amount;
+    private long amount;
     private int _enchantLevel;
     private int _augmentOption1;
     private int _augmentOption2;
@@ -68,7 +65,7 @@ public class MultiSellChoose extends ClientPacket {
     public void readImpl() {
         _listId = readInt();
         _entryId = readInt();
-        _amount = readLong();
+        amount = readLong();
         _enchantLevel = readShort();
         _augmentOption1 = readInt();
         _augmentOption2 = readInt();
@@ -80,15 +77,17 @@ public class MultiSellChoose extends ClientPacket {
         readShort(); /*_earthDefence*/
         readShort(); /*_holyDefence*/
         readShort(); /*_darkDefence*/
+
         _soulCrystalOptions = new EnsoulOption[readByte()]; // Ensoul size
         for (int i = 0; i < _soulCrystalOptions.length; i++) {
             final int ensoulId = readInt(); // Ensoul option id
-            _soulCrystalOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
+            _soulCrystalOptions[i] = ItemEnsoulEngine.getInstance().getOption(ensoulId);
         }
+
         _soulCrystalSpecialOptions = new EnsoulOption[readByte()]; // Special ensoul size
         for (int i = 0; i < _soulCrystalSpecialOptions.length; i++) {
             final int ensoulId = readInt(); // Special ensoul option id.
-            _soulCrystalSpecialOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
+            _soulCrystalSpecialOptions[i] = ItemEnsoulEngine.getInstance().getOption(ensoulId);
         }
     }
 
@@ -104,7 +103,7 @@ public class MultiSellChoose extends ClientPacket {
             return;
         }
 
-        if ((_amount < 1) || (_amount > 10000)) // 999 999 is client max.
+        if (amount < 1 || amount > 10000) // 999 999 is client max.
         {
             player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
             return;
@@ -150,7 +149,7 @@ public class MultiSellChoose extends ClientPacket {
             return;
         }
 
-        if (!entry.isStackable() && (_amount > 1)) {
+        if (!entry.isStackable() && (amount > 1)) {
             LOGGER.error("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell. Id: " + _listId + " entry: " + _entryId);
             player.setMultiSell(null);
             return;
@@ -160,14 +159,14 @@ public class MultiSellChoose extends ClientPacket {
 
         // Validate the requested item with its full stats.
         //@formatter:off
-        if ((itemEnchantment != null) && ((_amount > 1)
+        if ((itemEnchantment != null) && ((amount > 1)
                 || (itemEnchantment.getEnchantLevel() != _enchantLevel)
                 || ((itemEnchantment.getAugmentation() == null) && ((_augmentOption1 != 0) || (_augmentOption2 != 0)))
                 || ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getOption1Id() != _augmentOption1) || (itemEnchantment.getAugmentation().getOption2Id() != _augmentOption2)))
-                || ((_soulCrystalOptions != null) && itemEnchantment.getSoulCrystalOptions().stream().anyMatch(e -> !CommonUtil.contains(_soulCrystalOptions, e)))
-                || ((_soulCrystalOptions == null) && !itemEnchantment.getSoulCrystalOptions().isEmpty())
-                || ((_soulCrystalSpecialOptions != null) && itemEnchantment.getSoulCrystalSpecialOptions().stream().anyMatch(e -> !CommonUtil.contains(_soulCrystalSpecialOptions, e)))
-                || ((_soulCrystalSpecialOptions == null) && !itemEnchantment.getSoulCrystalSpecialOptions().isEmpty())
+                || ((_soulCrystalOptions != null) && !CommonUtil.contains(_soulCrystalOptions, itemEnchantment.getSoulCrystalOption()))
+                || ((_soulCrystalOptions == null) && nonNull(itemEnchantment.getSoulCrystalOption()))
+                || ((_soulCrystalSpecialOptions != null) && !CommonUtil.contains(_soulCrystalSpecialOptions, itemEnchantment.getSoulCrystalSpecialOption()))
+                || ((_soulCrystalSpecialOptions == null) && nonNull(itemEnchantment.getSoulCrystalSpecialOption()))
         ))
         //@formatter:on
         {
@@ -199,7 +198,7 @@ public class MultiSellChoose extends ClientPacket {
                     return;
                 }
 
-                final long totalCount = Math.multiplyExact(list.getProductCount(product), _amount);
+                final long totalCount = Math.multiplyExact(list.getProductCount(product), amount);
 
                 if (totalCount <= 0  || totalCount > Integer.MAX_VALUE) {
                     player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
@@ -254,7 +253,7 @@ public class MultiSellChoose extends ClientPacket {
                         player.sendPacket(sm);
                         return;
                     }
-                } else if (!checkIngredients(player, list, inventory, clan, ingredient.getId(), Math.multiplyExact(ingredient.getCount(), _amount))) {
+                } else if (!checkIngredients(player, list, inventory, clan, ingredient.getId(), Math.multiplyExact(ingredient.getCount(), amount))) {
                     return;
                 }
             }
@@ -268,7 +267,7 @@ public class MultiSellChoose extends ClientPacket {
                     continue;
                 }
 
-                final long totalCount = Math.multiplyExact(list.getIngredientCount(ingredient), _amount);
+                final long totalCount = Math.multiplyExact(list.getIngredientCount(ingredient), amount);
                 final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredient.getId());
                 if (specialItem != null) {
                     // Take special item.
@@ -351,7 +350,7 @@ public class MultiSellChoose extends ClientPacket {
             }
 
             for (ItemChanceHolder product : products) {
-                final long totalCount = Math.multiplyExact(list.getProductCount(product), _amount);
+                final long totalCount = Math.multiplyExact(list.getProductCount(product), amount);
                 final SpecialItemType specialItem = SpecialItemType.getByClientId(product.getId());
                 if (specialItem != null) {
                     // Give special item.
@@ -388,15 +387,13 @@ public class MultiSellChoose extends ClientPacket {
                         addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
 
 						if (_soulCrystalOptions != null) {
-							int pos = -1;
-							for (EnsoulOption ensoul : _soulCrystalOptions) {
-								pos++;
-								addedItem.addSpecialAbility(ensoul, pos, 1, false);
+                            for (EnsoulOption ensoul : _soulCrystalOptions) {
+                                addedItem.addSpecialAbility(ensoul, EnsoulType.COMMON, false);
                             }
                         }
 						if (_soulCrystalSpecialOptions != null) {
 							for (EnsoulOption ensoul : _soulCrystalSpecialOptions) {
-								addedItem.addSpecialAbility(ensoul, 0, 2, false);
+								addedItem.addSpecialAbility(ensoul, EnsoulType.SPECIAL, false);
                             }
                         }
                         addedItem.updateDatabase(true);
@@ -434,7 +431,7 @@ public class MultiSellChoose extends ClientPacket {
 
             // finally, give the tax to the castle...
             if ((npc != null) && list.isApplyTaxes()) {
-                final OptionalLong taxPaid = entry.getIngredients().stream().filter(i -> i.getId() == CommonItem.ADENA).mapToLong(i -> Math.round(i.getCount() * list.getIngredientMultiplier() * list.getTaxRate()) * _amount).reduce(Math::multiplyExact);
+                final OptionalLong taxPaid = entry.getIngredients().stream().filter(i -> i.getId() == CommonItem.ADENA).mapToLong(i -> Math.round(i.getCount() * list.getIngredientMultiplier() * list.getTaxRate()) * amount).reduce(Math::multiplyExact);
                 if (taxPaid.isPresent()) {
                     npc.handleTaxPayment(taxPaid.getAsLong());
                 }
@@ -450,15 +447,6 @@ public class MultiSellChoose extends ClientPacket {
         }
     }
 
-    /**
-     * @param player
-     * @param list
-     * @param inventory
-     * @param clan
-     * @param ingredientId
-     * @param totalCount
-     * @return {@code false} if ingredient amount is not enough, {@code true} otherwise.
-     */
     private boolean checkIngredients(Player player, PreparedMultisellListHolder list, PlayerInventory inventory, Clan clan, int ingredientId, long totalCount) {
         final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredientId);
         if (specialItem != null) {

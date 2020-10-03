@@ -22,6 +22,8 @@ import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+import static java.util.Objects.nonNull;
+
 public class DropItem extends ServerPacket {
     private final Item item;
     private final int playerId;
@@ -57,7 +59,7 @@ public class DropItem extends ServerPacket {
 
         writeByte(item.getEnchantLevel());
         writeByte(item.isAugmented());
-        writeByte(item.getSpecialAbilities().size());
+        writeByte(nonNull(item.getSpecialAbility())); // special ability amount
     }
 
 }

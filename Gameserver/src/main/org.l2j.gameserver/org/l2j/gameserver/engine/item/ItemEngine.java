@@ -513,7 +513,7 @@ public final class ItemEngine extends GameXmlReader {
         ItemCrystallizationData.init();
         AugmentationEngine.init();
         VariationData.init();
-        EnsoulData.init();
+        ItemEnsoulEngine.init();
     }
 
     public static ItemEngine getInstance() {

@@ -46,6 +46,10 @@ public class ItemData {
     private int timeOfUse;
     private long time;
 
+    private int ensoul;
+    @Column("special_ensoul")
+    private int specialEnsoul;
+
     public int getOwnerId() {
         return ownerId;
     }
@@ -78,5 +82,13 @@ public class ItemData {
 
     public long getTime() {
         return time;
+    }
+
+    public int getEnsoul() {
+        return ensoul;
+    }
+
+    public int getSpecialEnsoul() {
+        return specialEnsoul;
     }
 }

@@ -16,26 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.ensoul;
-
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
+package org.l2j.gameserver.engine.item;
 
 /**
- * @author Mobius
  * @author JoeAlisson
  */
-public class ExEnSoulExtractionResult extends AbstractEnsoulResult {
+public enum EnsoulType {
+    COMMON,
+    SPECIAL;
 
-    public ExEnSoulExtractionResult(boolean success, Item item) {
-        super(success, item);
+    public static EnsoulType from(int type) {
+        return type == 2 ? SPECIAL : COMMON;
     }
-
-    @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ENSOUL_EXTRACTION_RESULT);
-        writeResult();
-    }
-
 }

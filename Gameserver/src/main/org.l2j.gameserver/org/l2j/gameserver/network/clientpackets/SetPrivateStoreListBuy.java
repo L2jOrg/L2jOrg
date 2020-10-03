@@ -19,13 +19,13 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.EnsoulData;
+import org.l2j.gameserver.engine.item.EnsoulOption;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEnsoulEngine;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -36,8 +36,6 @@ import org.l2j.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
-
-import java.util.Arrays;
 
 public final class SetPrivateStoreListBuy extends ClientPacket {
     private TradeItem[] _items = null;
@@ -84,18 +82,18 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
 
             final EnsoulOption[] soulCrystalOptions = new EnsoulOption[readByte()];
             for (int k = 0; k < soulCrystalOptions.length; k++) {
-                soulCrystalOptions[k] = EnsoulData.getInstance().getOption(readInt());
+                soulCrystalOptions[k] = ItemEnsoulEngine.getInstance().getOption(readInt());
             }
             final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[readByte()];
             for (int k = 0; k < soulCrystalSpecialOptions.length; k++) {
-                soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(readInt());
+                soulCrystalSpecialOptions[k] = ItemEnsoulEngine.getInstance().getOption(readInt());
             }
 
             final TradeItem item = new TradeItem(template, cnt, price);
             item.setEnchant(enchantLevel);
             item.setAugmentation(option1, option2);
-            item.setSoulCrystalOptions(Arrays.asList(soulCrystalOptions));
-            item.setSoulCrystalSpecialOptions(Arrays.asList(soulCrystalSpecialOptions));
+            item.setSoulCrystalOption(soulCrystalOptions[0]);
+            item.setSoulCrystalSpecialOption(soulCrystalSpecialOptions[0]);
             _items[i] = item;
         }
     }

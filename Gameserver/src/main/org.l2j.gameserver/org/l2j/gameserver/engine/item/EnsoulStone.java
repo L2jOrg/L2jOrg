@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,37 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.ensoul;
+package org.l2j.gameserver.engine.item;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author UnAfraid
+ * @author JoeAlisson
  */
-public class EnsoulStone {
-    private final int _id;
-    private final int _slotType;
-    private final List<Integer> _options = new ArrayList<>();
+public record EnsoulStone(int id, EnsoulType type, List<EnsoulOption> options) {
 
-    public EnsoulStone(int id, int slotType) {
-        _id = id;
-        _slotType = slotType;
-    }
-
-    public int getId() {
-        return _id;
-    }
-
-    public int getSlotType() {
-        return _slotType;
-    }
-
-    public List<Integer> getOptions() {
-        return _options;
-    }
-
-    public void addOption(int option) {
-        _options.add(option);
+    public boolean containsOption(int optionId) {
+        for(var option : options) {
+            if(option.id() == optionId) {
+                return true;
+            }
+        }
+        return false;
     }
 }

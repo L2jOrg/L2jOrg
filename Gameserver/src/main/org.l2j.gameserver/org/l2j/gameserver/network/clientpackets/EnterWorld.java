@@ -329,14 +329,15 @@ public class EnterWorld extends ClientPacket {
     private void restoreItems(Player player) {
         player.getInventory().restore();
         player.sendPacket(new ExUserInfoInvenWeight(), new ExAdenaInvenCount(), new ExBloodyCoinCount());
-        for (int i = 0; i < 4; i++) {
-            player.sendPacket(new ExAutoSoulShot(0, true, i));
-        }
         ItemList.sendList(player);
         client.sendPacket(new ExQuestItemList(1, player));
         client.sendPacket(new ExQuestItemList(2, player));
         player.sendPacket(new ExStorageMaxCount(player));
         player.getWarehouse().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
+
+        for (int i = 0; i < 4; i++) {
+            player.sendPacket(new ExAutoSoulShot(0, true, i));
+        }
 
         if (!player.getPremiumItemList().isEmpty()) {
             player.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);

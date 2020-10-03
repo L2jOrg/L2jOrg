@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemListType;
 import org.l2j.gameserver.model.ItemInfo;
@@ -25,9 +26,7 @@ import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
-import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.engine.item.Item;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
@@ -56,8 +55,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         }
 
         // TODO VisualId
-
-        if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty())) {
+        if (nonNull(item.getSoulCrystalOption()) || nonNull(item.getSoulCrystalSpecialOption())) {
             mask |= ItemListType.SOUL_CRYSTAL.getMask();
         }
 
@@ -124,15 +122,17 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
     }
 
     private void writeSoulCrystalInfo(Item item) {
-        writeByte(item.getSpecialAbilities().size());
-        item.getSpecialAbilities().stream()
-                .mapToInt(EnsoulOption::getId)
-                .forEach(this::writeInt);
+        var specialAbility = item.getSpecialAbility();
+        writeByte(nonNull(specialAbility)); // special ability amount only 1 for classic
+        if(nonNull(specialAbility)) {
+            writeInt(specialAbility.id());
+        }
 
-        writeByte(item.getAdditionalSpecialAbilities().size());
-        item.getAdditionalSpecialAbilities().stream()
-                .mapToInt(EnsoulOption::getId)
-                .forEach(this::writeInt);
+        specialAbility = item.getAdditionalSpecialAbility();
+        writeByte(nonNull(specialAbility));
+        if(nonNull(specialAbility)) {
+            writeInt(specialAbility.id());
+        }
     }
 
     private void writeItemEnchantEffect(Item item) {
@@ -170,7 +170,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         }
 
         // TODO VisualId
-        if(!item.getSpecialAbilities().isEmpty() || !item.getAdditionalSpecialAbilities().isEmpty()) {
+        if(nonNull(item.getSpecialAbility()) || nonNull(item.getAdditionalSpecialAbility())) {
             mask |= ItemListType.SOUL_CRYSTAL.getMask();
         }
 
@@ -235,13 +235,16 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
     }
 
     private void writeSoulCrystalInfo(ItemInfo item) {
-        writeByte(item.getSoulCrystalOptions().size());
-        for (EnsoulOption option : item.getSoulCrystalOptions()) {
-            writeInt(option.getId());
+        var soulCrystal = item.getSoulCrystalOption();
+        writeByte(nonNull(soulCrystal)); // soul crystal amount
+        if(nonNull(soulCrystal)) {
+            writeInt(soulCrystal.id());
         }
-        writeByte(item.getSoulCrystalSpecialOptions().size());
-        for (EnsoulOption option : item.getSoulCrystalSpecialOptions()) {
-            writeInt(option.getId());
+
+        soulCrystal = item.getSoulCrystalSpecialOption();
+        writeByte(nonNull(soulCrystal));
+        if(nonNull(soulCrystal)) {
+            writeInt(soulCrystal.id());
         }
     }
 

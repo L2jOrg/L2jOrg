@@ -18,15 +18,13 @@
  */
 package org.l2j.gameserver.model;
 
+import org.l2j.gameserver.engine.item.EnsoulOption;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.model.buylist.Product;
-import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Objects;
 
 /**
@@ -42,8 +40,8 @@ public class ItemInfo {
     private int locationSlot;
     private int type1;
     private int type2;
-    private Collection<EnsoulOption> soulCrystalOptions;
-    private Collection<EnsoulOption> soulCrystalSpecialOptions;
+    private EnsoulOption soulCrystalOption;
+    private EnsoulOption soulCrystalSpecialOption;
     private int[] enchantOption;
     private int time;
     private int price;
@@ -90,8 +88,8 @@ public class ItemInfo {
         locationSlot = item.getLocationSlot();
 
         enchantOption = item.getEnchantOptions();
-        soulCrystalOptions = item.getSpecialAbilities();
-        soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
+        soulCrystalOption = item.getSpecialAbility();
+        soulCrystalSpecialOption = item.getAdditionalSpecialAbility();
     }
 
     public ItemInfo(Item item, ItemChangeType change) {
@@ -136,8 +134,8 @@ public class ItemInfo {
         locationSlot = item.getLocationSlot();
 
         enchantOption = item.getEnchantOptions();
-        soulCrystalOptions = item.getSoulCrystalOptions();
-        soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
+        soulCrystalOption = item.getSoulCrystalOption();
+        soulCrystalSpecialOption = item.getSoulCrystalSpecialOption();
     }
 
     public ItemInfo(Product item) {
@@ -145,37 +143,12 @@ public class ItemInfo {
             return;
         }
 
-        // Get the Identifier of the Item
-        objectId = 0;
-
-        // Get the ItemTemplate of the Item
         template = item.getTemplate();
-
-        // Get the enchant level of the Item
-        enchant = 0;
-
-        // Get the augmentation bonus
-        augmentation = null;
-
-        // Get the quantity of the Item
         count = item.getCount();
-
-        // Get custom item types (used loto, race tickets)
         type1 = template.getType1();
         type2 = template.getType2();
-
-        // Verify if the Item is equipped
-        _equipped = 0;
-
-        // Get the action to do clientside
         change = ItemChangeType.NONE;
-
         time = -9999;
-
-        locationSlot = 0;
-
-        soulCrystalOptions = Collections.emptyList();
-        soulCrystalSpecialOptions = Collections.emptyList();
     }
 
     public int getObjectId() {
@@ -230,12 +203,12 @@ public class ItemInfo {
         return enchantOption;
     }
 
-    public Collection<EnsoulOption> getSoulCrystalOptions() {
-        return soulCrystalOptions != null ? soulCrystalOptions : Collections.emptyList();
+    public EnsoulOption getSoulCrystalOption() {
+        return soulCrystalOption;
     }
 
-    public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
-        return soulCrystalSpecialOptions != null ? soulCrystalSpecialOptions : Collections.emptyList();
+    public EnsoulOption getSoulCrystalSpecialOption() {
+        return soulCrystalSpecialOption;
     }
 
     public int getId() {

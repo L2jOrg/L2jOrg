@@ -16,36 +16,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.ensoul;
 
+import org.l2j.gameserver.engine.item.EnsoulOption;
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.nonNull;
 
-public final class SpawnItem extends ServerPacket {
-    private final Item item;
+/**
+ * @author JoeAlisson
+ */
+abstract class AbstractEnsoulResult extends ServerPacket {
 
-    public SpawnItem(Item item) {
+    private final Item item;
+    private final boolean success;
+
+    AbstractEnsoulResult(boolean success, Item item) {
+        this.success = success;
         this.item = item;
     }
 
-    @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SPAWN_ITEM);
-
-        writeInt(item.getObjectId());
-        writeInt(item.getDisplayId());
-        writeInt(item.getX());
-        writeInt(item.getY());
-        writeInt(item.getZ());
-        writeInt(item.isStackable());
-        writeLong(item.getCount());
-        writeInt(0x00); // c2
-        writeByte(item.getEnchantLevel());
-        writeByte(item.isAugmented());
-        writeByte(nonNull(item.getSpecialAbility())); // special ability amount
+    protected void writeResult() {
+        writeByte(success);
+        writeEnsoul(item.getSpecialAbility());
+        writeEnsoul(item.getAdditionalSpecialAbility());
     }
 
+    private void writeEnsoul(EnsoulOption ensoul) {
+        if(nonNull(ensoul)) {
+            writeByte(0x01); // ensoul amount
+            writeInt(ensoul.id());
+        } else {
+            writeByte(0x00);
+        }
+    }
 }

@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,39 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.ensoul;
+package org.l2j.gameserver.engine.item;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.holders.SkillHolder;
 
 /**
- * @author UnAfraid
+ * @author JoeAlisson
  */
-public class EnsoulOption extends SkillHolder {
-    private final int _id;
-    private final String _name;
-    private final String _desc;
+public record EnsoulOption(int id, String name, String description, SkillHolder skill) {
 
-    public EnsoulOption(int id, String name, String desc, int skillId, int skillLevel) {
-        super(skillId, skillLevel);
-        _id = id;
-        _name = name;
-        _desc = desc;
-    }
-
-    public int getId() {
-        return _id;
-    }
-
-    public String getName() {
-        return _name;
-    }
-
-    public String getDesc() {
-        return _desc;
-    }
-
-    @Override
-    public String toString() {
-        return "Ensoul Id: " + _id + " Name: " + _name + " Desc: " + _desc;
+    public Skill toSkill() {
+        return skill.getSkill();
     }
 }

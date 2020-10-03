@@ -18,13 +18,10 @@
  */
 package org.l2j.gameserver.network.clientpackets.ensoul;
 
-import org.l2j.gameserver.data.xml.impl.EnsoulData;
+import org.l2j.gameserver.engine.item.*;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.ensoul.EnsoulStone;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -34,27 +31,31 @@ import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class RequestItemEnsoul extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestItemEnsoul.class);
-    private int _itemObjectId;
-    private EnsoulItemOption[] _options;
+    private int itemObjectId;
+    private EnsoulItemOption[] options;
 
     @Override
     public void readImpl() {
-        _itemObjectId = readInt();
-        final int options = readByte();
-        if ((options > 0) && (options <= 3)) {
-            _options = new EnsoulItemOption[options];
-            for (int i = 0; i < options; i++) {
-                final int type = readByte(); // 1 = normal ; 2 = mystic
+        itemObjectId = readInt();
+        final int amount = readByte();
+        if (amount > 0 && amount <= 2) {
+            this.options = new EnsoulItemOption[amount];
+            for (int i = 0; i < amount; i++) {
+                final int type = readByte(); // 1 = normal ; 2 = special
                 final int position = readByte();
                 final int soulCrystalObjectId = readInt();
                 final int soulCrystalOption = readInt();
-                if ((position > 0) && (position < 3) && ((type == 1) || (type == 2))) {
-                    _options[i] = new EnsoulItemOption(type, position, soulCrystalObjectId, soulCrystalOption);
+                if (type == 1 || type == 2) {
+                    this.options[i] = new EnsoulItemOption(type, position, soulCrystalObjectId, soulCrystalOption);
                 }
             }
         }
@@ -62,121 +63,58 @@ public class RequestItemEnsoul extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (_options == null) {
-            return;
-        }
-
         final Player player = client.getPlayer();
-        if (player == null) {
+
+        if (isNull(player) || isNull(options) || options.length == 0 || !canEnsoulItem(player)) {
             return;
         }
 
-        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
-            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHEN_PRIVATE_STORE_AND_WORKSHOP_ARE_OPENED);
-            return;
-        } else if (player.hasAbnormalType(AbnormalType.FREEZING)) {
-            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_IN_FROZEN_STATE);
-        } else if (player.isDead()) {
-            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_IF_THE_CHARACTER_IS_DEAD);
-            return;
-        } else if ((player.getActiveTradeList() != null) || player.hasItemRequest()) {
-            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_DURING_EXCHANGE);
-            return;
-        } else if (player.hasAbnormalType(AbnormalType.PARALYZE)) {
-            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_PETRIFIED);
-            return;
-        } else if (player.isFishing()) {
-            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_DURING_FISHING);
-            return;
-        } else if (player.isSitting()) {
-            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_SITTING);
-            return;
-        } else if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player)) {
-            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_IN_COMBAT);
+        final Item item = player.getInventory().getItemByObjectId(itemObjectId);
+        if(!isValid(player, item)) {
             return;
         }
 
-        final Item item = player.getInventory().getItemByObjectId(_itemObjectId);
-        if (item == null) {
-            LOGGER.warn("Player: {} attempting to ensoul item without having it!", player);
-            return;
-        } else if (!item.isEquipable()) {
-            LOGGER.warn("Player: {} attempting to ensoul non equippable item: {}!", player, item);
-            return;
-        } else if (!item.isWeapon()) {
-            LOGGER.warn("Player: {} attempting to ensoul item that's not a weapon: {}!", player, item);
-            return;
-        } else if (item.isHeroItem()) {
-            LOGGER.warn("Player: {} attempting to ensoul hero item: {}!", player, item);
-            return;
-        }
-
-        if ((_options == null) || (_options.length == 0)) {
-            LOGGER.warn("Player: {} attempting to ensoul item without any special ability declared!", player);
-            return;
-        }
-
-        int success = 0;
+        boolean success = false;
         final InventoryUpdate iu = new InventoryUpdate();
-        for (EnsoulItemOption itemOption : _options) {
-            final int position = itemOption.getPosition() - 1;
+        for (EnsoulItemOption itemOption : options) {
             final Item soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
             if (soulCrystal == null) {
                 player.sendPacket(SystemMessageId.THE_RUNE_DOES_NOT_FIT);
                 continue;
             }
 
-            final EnsoulStone stone = EnsoulData.getInstance().getStone(soulCrystal.getId());
-            if (stone == null) {
+            final EnsoulStone stone = ItemEnsoulEngine.getInstance().getStone(soulCrystal.getId());
+            if (isNull(stone)) {
                 continue;
             }
 
-            if (!stone.getOptions().contains(itemOption.getSoulCrystalOption())) {
-                LOGGER.warn("Player: " + player + " attempting to ensoul item option that stone doesn't contains!");
+            if (!stone.containsOption(itemOption.getSoulCrystalOption())) {
+                LOGGER.warn("Player: {} attempting to ensoul item option that stone doesn't contains!", player);
                 continue;
             }
 
-            final EnsoulOption option = EnsoulData.getInstance().getOption(itemOption.getSoulCrystalOption());
-            if (option == null) {
-                LOGGER.warn("Player: " + player + " attempting to ensoul item option that doesn't exists!");
+            final EnsoulOption option = ItemEnsoulEngine.getInstance().getOption(itemOption.getSoulCrystalOption());
+            if (isNull(option)) {
+                LOGGER.warn("Player: {} attempting to ensoul item option that doesn't exists!", player);
                 continue;
             }
 
-            ItemHolder fee;
-            if (itemOption.getType() == 1) {
-                // Normal Soul Crystal
-                fee = EnsoulData.getInstance().getEnsoulFee(item.getTemplate().getCrystalType(), position);
-                if ((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2)) {
-                    if (item.getSpecialAbility(position) != null) {
-                        fee = EnsoulData.getInstance().getResoulFee(item.getTemplate().getCrystalType(), position);
-                    }
-                }
-            } else if (itemOption.getType() == 2) {
-                // Mystic Soul Crystal
-                fee = EnsoulData.getInstance().getEnsoulFee(item.getTemplate().getCrystalType(), position);
-                if (itemOption.getPosition() == 1) {
-                    if (item.getAdditionalSpecialAbility(position) != null) {
-                        fee = EnsoulData.getInstance().getResoulFee(item.getTemplate().getCrystalType(), position);
-                    }
-                }
-            } else {
-                LOGGER.warn("Player: " + player + " attempting to ensoul item option with unhandled type: " + itemOption.getType() + "!");
-                continue;
-            }
+            ItemHolder fee = calculateFee(item, itemOption);
 
-            if (fee == null) {
-                LOGGER.warn("Player: " + player + " attempting to ensoul item option that doesn't exists! (unknown fee)");
+            if (isNull(fee)) {
+                LOGGER.warn("Player: {} attempting to ensoul item option {} that doesn't exists! (unknown fee)", player, option);
                 continue;
             }
 
             final Item gemStones = player.getInventory().getItemByItemId(fee.getId());
-            if ((gemStones == null) || (gemStones.getCount() < fee.getCount())) {
+            if (isNull(gemStones) || gemStones.getCount() < fee.getCount()) {
                 continue;
             }
 
-            if (player.destroyItem("EnsoulOption", soulCrystal, 1, player, true) && player.destroyItem("EnsoulOption", gemStones, fee.getCount(), player, true)) {
-                item.addSpecialAbility(option, position, stone.getSlotType(), true);
-                success = 1;
+            if (player.destroyItem("EnsoulOption", soulCrystal, 1, player, true) &&
+                    player.destroyItem("EnsoulOption", gemStones, fee.getCount(), player, true)) {
+                item.addSpecialAbility(option, stone.type(), true);
+                success = true;
             }
 
             iu.addModifiedItem(soulCrystal);
@@ -192,20 +130,83 @@ public class RequestItemEnsoul extends ClientPacket {
         item.updateDatabase(true);
     }
 
+    private ItemHolder calculateFee(Item item, EnsoulItemOption itemOption) {
+        ItemHolder fee = null;
+        if (itemOption.getType() == EnsoulType.COMMON) {
+            if(nonNull(item.getSpecialAbility())) {
+                fee = ItemEnsoulEngine.getInstance().getReplaceEnsoulFee(item.getCrystalType(), itemOption.getType());
+            } else {
+                fee = ItemEnsoulEngine.getInstance().getEnsoulFee(item.getCrystalType(), itemOption.getType());
+            }
+        } else if (itemOption.getType() == EnsoulType.SPECIAL) {
+            if(nonNull(item.getAdditionalSpecialAbility())) {
+                fee = ItemEnsoulEngine.getInstance().getReplaceEnsoulFee(item.getCrystalType(), itemOption.getType());
+            } else {
+                fee = ItemEnsoulEngine.getInstance().getEnsoulFee(item.getCrystalType(), itemOption.getType());
+            }
+        }
+        return fee;
+    }
+
+    private boolean isValid(Player player, Item item) {
+        if (isNull(item)) {
+            LOGGER.warn("Player: {} attempting to ensoul item without having it!", player);
+            return false;
+        } else if (!item.isEquipable()) {
+            LOGGER.warn("Player: {} attempting to ensoul non equippable item: {}!", player, item);
+            return false;
+        } else if (!item.isWeapon()) {
+            LOGGER.warn("Player: {} attempting to ensoul item that's not a weapon: {}!", player, item);
+            return false;
+        } else if (item.isHeroItem()) {
+            LOGGER.warn("Player: {} attempting to ensoul hero item: {}!", player, item);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean canEnsoulItem(Player player) {
+        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHEN_PRIVATE_STORE_AND_WORKSHOP_ARE_OPENED);
+            return false;
+        } else if (player.hasAbnormalType(AbnormalType.FREEZING)) {
+            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_IN_FROZEN_STATE);
+        } else if (player.isDead()) {
+            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_IF_THE_CHARACTER_IS_DEAD);
+            return false;
+        } else if (nonNull(player.getActiveTradeList()) || player.hasItemRequest()) {
+            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_DURING_EXCHANGE);
+            return false;
+        } else if (player.hasAbnormalType(AbnormalType.PARALYZE)) {
+            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_PETRIFIED);
+            return false;
+        } else if (player.isFishing()) {
+            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_DURING_FISHING);
+            return false;
+        } else if (player.isSitting()) {
+            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_SITTING);
+            return false;
+        } else if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player)) {
+            player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_IN_COMBAT);
+            return false;
+        }
+        return true;
+    }
+
     static class EnsoulItemOption {
-        private final int _type;
+        private final EnsoulType _type;
         private final int _position;
         private final int _soulCrystalObjectId;
         private final int _soulCrystalOption;
 
         EnsoulItemOption(int type, int position, int soulCrystalObjectId, int soulCrystalOption) {
-            _type = type;
+            _type = EnsoulType.from(type);
             _position = position;
             _soulCrystalObjectId = soulCrystalObjectId;
             _soulCrystalOption = soulCrystalOption;
         }
 
-        public int getType() {
+        public EnsoulType getType() {
             return _type;
         }
 

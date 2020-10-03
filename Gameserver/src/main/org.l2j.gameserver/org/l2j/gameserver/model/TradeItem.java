@@ -19,7 +19,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.engine.item.EnsoulOption;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
 import java.util.Collection;
@@ -36,8 +36,8 @@ public class TradeItem {
     private final int locationSlot;
     private final int type1;
     private final int type2;
-    private Collection<EnsoulOption> soulCrystalOptions;
-    private Collection<EnsoulOption> soulCrystalSpecialOptions;
+    private EnsoulOption soulCrystalOption;
+    private EnsoulOption soulCrystalSpecialOption;
     private final int[] enchantOptions;
 
     private long _price;
@@ -57,8 +57,8 @@ public class TradeItem {
         this.count = count;
         _price = price;
         enchantOptions = item.getEnchantOptions();
-        soulCrystalOptions = item.getSpecialAbilities();
-        soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
+        soulCrystalOption = item.getSpecialAbility();
+        soulCrystalSpecialOption = item.getAdditionalSpecialAbility();
 
         augmentation = item.getAugmentation();
         if (item.getAugmentation() != null) {
@@ -79,8 +79,6 @@ public class TradeItem {
         _storeCount = count;
         _price = price;
         enchantOptions = Item.DEFAULT_ENCHANT_OPTIONS;
-        soulCrystalOptions = Collections.emptyList();
-        soulCrystalSpecialOptions = Collections.emptyList();
     }
 
     public TradeItem(TradeItem item, long count, long price) {
@@ -95,8 +93,8 @@ public class TradeItem {
         _storeCount = count;
         _price = price;
         enchantOptions = item.getEnchantOptions();
-        soulCrystalOptions = item.getSoulCrystalOptions();
-        soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
+        soulCrystalOption = item.getSoulCrystalOption();
+        soulCrystalSpecialOption = item.getSoulCrystalSpecialOption();
     }
 
     public int getObjectId() {
@@ -155,20 +153,20 @@ public class TradeItem {
         return enchantOptions;
     }
 
-    public Collection<EnsoulOption> getSoulCrystalOptions() {
-        return soulCrystalOptions == null ? Collections.emptyList() : soulCrystalOptions;
+    public EnsoulOption getSoulCrystalOption() {
+        return soulCrystalOption;
     }
 
-    public void setSoulCrystalOptions(Collection<EnsoulOption> soulCrystalOptions) {
-        this.soulCrystalOptions = soulCrystalOptions;
+    public void setSoulCrystalOption(EnsoulOption soulCrystalOption) {
+        this.soulCrystalOption = soulCrystalOption;
     }
 
-    public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
-        return soulCrystalSpecialOptions == null ? Collections.emptyList() : soulCrystalSpecialOptions;
+    public EnsoulOption getSoulCrystalSpecialOption() {
+        return soulCrystalSpecialOption;
     }
 
-    public void setSoulCrystalSpecialOptions(Collection<EnsoulOption> soulCrystalSpecialOptions) {
-        this.soulCrystalSpecialOptions = soulCrystalSpecialOptions;
+    public void setSoulCrystalSpecialOption(EnsoulOption soulCrystalSpecialOption) {
+        this.soulCrystalSpecialOption = soulCrystalSpecialOption;
     }
 
     public void setAugmentation(int option1, int option2) {

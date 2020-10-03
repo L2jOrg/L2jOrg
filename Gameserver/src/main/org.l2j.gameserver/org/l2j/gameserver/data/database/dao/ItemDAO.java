@@ -114,4 +114,10 @@ public interface ItemDAO extends DAO<Object> {
            WHERE i.loc = 'COMMISSION'
            """)
     List<CommissionItem> findCommissionItems();
+
+    @Query("UPDATE items SET ensoul = :ensoul: WHERE object_id = :objectId:")
+    void updateEnsoul(int objectId, int ensoul);
+
+    @Query("UPDATE items SET special_ensoul = :ensoul: WHERE object_id = :objectId:")
+    void updateSpecialEnsoul(int objectId, int ensoul);
 }
