@@ -48,7 +48,7 @@ public class ItemSkillsTemplate implements IItemHandler {
 
     @Override
     public boolean useItem(Playable playable, Item item, boolean forceUse) {
-        if (!isPlayer(playable) && !isPet(playable)) {
+        if ((!isPlayer(playable) && !isPet(playable)) || !isSkillReducer(item)) {
             return false;
         }
 
@@ -138,6 +138,13 @@ public class ItemSkillsTemplate implements IItemHandler {
         }
 
         return successfulUse;
+    }
+
+    private boolean isSkillReducer(Item item) {
+        return switch (item.getAction()) {
+            case CALL_SKILL, SKILL_REDUCE, SKILL_REDUCE_ON_SKILL_SUCCESS -> true;
+            default -> false;
+        };
     }
 
     private boolean checkUseSkill(Playable playable, Item item, Skill itemSkill) {
