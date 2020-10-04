@@ -82,14 +82,7 @@ public class ExRequestClassChange extends ClientPacket {
         if (canChange)
         {
             player.setClassId(classId);
-            if (player.isSubClassActive())
-            {
-                player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
-            }
-            else
-            {
-                player.setBaseClass(player.getActiveClass());
-            }
+            player.setBaseClass(player.getActiveClass());
 
             var characterSettings = getSettings(CharacterSettings.class);
             if (characterSettings.isAutoLearnSkillEnabled()) {

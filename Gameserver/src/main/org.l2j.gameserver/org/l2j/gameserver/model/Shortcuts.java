@@ -67,7 +67,6 @@ public class Shortcuts {
         }
 
         shortcut.setPlayerId(owner.getObjectId());
-        shortcut.setClassIndex(owner.getClassIndex());
         getDAO(ShortcutDAO.class).save(shortcut);
     }
 
@@ -109,7 +108,7 @@ public class Shortcuts {
     }
     
     private void deleteShortcutFromDb(Shortcut shortcut) {
-        getDAO(ShortcutDAO.class).delete(owner.getObjectId(), shortcut.getClientId(), owner.getClassIndex());
+        getDAO(ShortcutDAO.class).delete(owner.getObjectId(), shortcut.getClientId());
     }
 
     public void deleteShortcuts(Predicate<Shortcut> filter) {
@@ -118,7 +117,7 @@ public class Shortcuts {
 
     public void deleteShortcuts() {
         shortcuts.clear();
-        getDAO(ShortcutDAO.class).deleteFromSubclass(owner.getObjectId(), owner.getClassIndex());
+        getDAO(ShortcutDAO.class).deleteFromPlayer(owner.getObjectId());
     }
 
     public void forEachShortcut(Consumer<Shortcut> action) {
@@ -158,7 +157,7 @@ public class Shortcuts {
 
     public void restoreMe() {
         shortcuts.clear();
-        for (Shortcut shortcut : getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId(), owner.getClassIndex())) {
+        for (Shortcut shortcut : getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId())) {
             if (shortcut.getType() == ShortcutType.ITEM) {
                 final Item item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
                 if (isNull(item)) {

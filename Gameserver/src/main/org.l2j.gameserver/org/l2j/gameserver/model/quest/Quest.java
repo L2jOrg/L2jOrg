@@ -2454,44 +2454,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     /**
-     * Adds a subclass active start condition to the quest.
-     *
-     * @param html the HTML to display if the condition is not met
-     */
-    public void addCondIsSubClassActive(String html) {
-        addCondStart(Player::isSubClassActive, html);
-    }
-
-    /**
-     * Adds a subclass active start condition to the quest.
-     *
-     * @param pairs the HTML to display if the condition is not met per each npc
-     */
-    @SafeVarargs
-    public final void addCondIsSubClassActive(KeyValuePair<Integer, String>... pairs) {
-        addCondStart(Player::isSubClassActive, pairs);
-    }
-
-    /**
-     * Adds a not-subclass active start condition to the quest.
-     *
-     * @param html the HTML to display if the condition is not met
-     */
-    public void addCondIsNotSubClassActive(String html) {
-        addCondStart(p -> !p.isSubClassActive() && !p.isDualClassActive(), html);
-    }
-
-    /**
-     * Adds a not-subclass active start condition to the quest.
-     *
-     * @param pairs the HTML to display if the condition is not met per each npc
-     */
-    @SafeVarargs
-    public final void addCondIsNotSubClassActive(KeyValuePair<Integer, String>... pairs) {
-        addCondStart(p -> !p.isSubClassActive() && !p.isDualClassActive(), pairs);
-    }
-
-    /**
      * Adds a category start condition to the quest.
      *
      * @param categoryType the category type

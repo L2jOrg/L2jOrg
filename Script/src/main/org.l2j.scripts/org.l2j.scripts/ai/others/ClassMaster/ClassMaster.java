@@ -245,14 +245,7 @@ public final class ClassMaster extends AbstractNpcAI
 					}
 					
 					player.setClassId(classId);
-					if (player.isSubClassActive())
-					{
-						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
-					}
-					else
-					{
-						player.setBaseClass(player.getActiveClass());
-					}
+					player.setBaseClass(player.getActiveClass());
 					var characterSettings = getSettings(CharacterSettings.class);
 					if (characterSettings.isAutoLearnSkillEnabled()) {
 						player.giveAvailableSkills(characterSettings.isAutoLearnSkillFSEnabled(), true);
@@ -638,14 +631,7 @@ public final class ClassMaster extends AbstractNpcAI
 			}
 			
 			player.setClassId(newClass.getId());
-			if (player.isSubClassActive())
-			{
-				player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
-			}
-			else
-			{
-				player.setBaseClass(player.getActiveClass());
-			}
+			player.setBaseClass(player.getActiveClass());
 
 			var characterSettings = getSettings(CharacterSettings.class);
 			if (characterSettings.isAutoLearnSkillEnabled())

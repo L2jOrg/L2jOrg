@@ -66,7 +66,6 @@ import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
@@ -1113,14 +1112,14 @@ public final class Player extends Playable {
     public static final int REQUEST_TIMEOUT = 15;
 
     // Character Skill SQL String Definitions:
-    private static final String RESTORE_SKILLS_FOR_CHAR = "SELECT skill_id,skill_level,skill_sub_level FROM character_skills WHERE charId=? AND class_index=?";
-    private static final String UPDATE_CHARACTER_SKILL_LEVEL = "UPDATE character_skills SET skill_level=?, skill_sub_level=?  WHERE skill_id=? AND charId=? AND class_index=?";
-    private static final String ADD_NEW_SKILLS = "REPLACE INTO character_skills (charId,skill_id,skill_level,skill_sub_level,class_index) VALUES (?,?,?,?,?)";
+    private static final String RESTORE_SKILLS_FOR_CHAR = "SELECT skill_id,skill_level,skill_sub_level FROM character_skills WHERE charId=?";
+    private static final String UPDATE_CHARACTER_SKILL_LEVEL = "UPDATE character_skills SET skill_level=?, skill_sub_level=?  WHERE skill_id=? AND charId=?";
+    private static final String ADD_NEW_SKILLS = "REPLACE INTO character_skills (charId,skill_id,skill_level,skill_sub_level) VALUES (?,?,?,?)";
 
     // Character Skill Save SQL String Definitions:
-    private static final String ADD_SKILL_SAVE = "INSERT INTO character_skills_save (charId,skill_id,skill_level,skill_sub_level,remaining_time,reuse_delay,systime,restore_type,class_index,buff_index) VALUES (?,?,?,?,?,?,?,?,?,?)";
-    private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,skill_sub_level,remaining_time, reuse_delay, systime, restore_type FROM character_skills_save WHERE charId=? AND class_index=? ORDER BY buff_index ASC";
-    private static final String DELETE_SKILL_SAVE = "DELETE FROM character_skills_save WHERE charId=? AND class_index=?";
+    private static final String ADD_SKILL_SAVE = "INSERT INTO character_skills_save (charId,skill_id,skill_level,skill_sub_level,remaining_time,reuse_delay,systime,restore_type,buff_index) VALUES (?,?,?,?,?,?,?,?,?)";
+    private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,skill_sub_level,remaining_time, reuse_delay, systime, restore_type FROM character_skills_save WHERE charId=? ORDER BY buff_index ASC";
+    private static final String DELETE_SKILL_SAVE = "DELETE FROM character_skills_save WHERE charId=?";
 
     // Character Item Reuse Time String Definition:
     private static final String ADD_ITEM_REUSE_SAVE = "INSERT INTO character_item_reuse_save (charId,itemId,itemObjId,reuseDelay,systime) VALUES (?,?,?,?,?)";
@@ -1133,12 +1132,10 @@ public final class Player extends Playable {
     // Character Teleport Bookmark:
     private static final String INSERT_TP_BOOKMARK = "INSERT INTO character_tpbookmark (charId,Id,x,y,z,icon,tag,name) values (?,?,?,?,?,?,?,?)";
     private static final String RESTORE_TP_BOOKMARK = "SELECT Id,x,y,z,icon,tag,name FROM character_tpbookmark WHERE charId=?";
-    // Character Subclass SQL String Definitions:
-    private static final String ADD_CHAR_SUBCLASS = "INSERT INTO character_subclasses (charId,class_id,exp,sp,level,vitality_points,class_index,dual_class) VALUES (?,?,?,?,?,?,?,?)";
-    private static final String UPDATE_CHAR_SUBCLASS = "UPDATE character_subclasses SET exp=?,sp=?,level=?,vitality_points=?,class_id=?,dual_class=? WHERE charId=? AND class_index =?";
+
     // Character Henna SQL String Definitions:
-    private static final String RESTORE_CHAR_HENNAS = "SELECT slot,symbol_id FROM character_hennas WHERE charId=? AND class_index=?";
-    private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
+    private static final String RESTORE_CHAR_HENNAS = "SELECT slot,symbol_id FROM character_hennas WHERE charId=?";
+    private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot) VALUES (?,?,?)";
 
 
     private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
@@ -1147,7 +1144,7 @@ public final class Player extends Playable {
     // during fall validations will be disabled for 1000 ms.
     private static final int FALLING_VALIDATION_DELAY = 1000;
 
-    private final ReentrantLock _subclassLock = new ReentrantLock();
+    private final ReentrantLock classLock = new ReentrantLock(); // TODO remove
     private final Map<Integer, TeleportBookmark> _tpbookmarks = new ConcurrentSkipListMap<>();
     /**
      * The table containing all RecipeList of the Player
@@ -1211,7 +1208,6 @@ public final class Player extends Playable {
      */
     private final IntSet friends = CHashIntMap.newKeySet();
     protected int _activeClass;
-    protected int _classIndex = 0;
     protected Future<?> _mountFeedTask;
     /**
      * Recommendation Two Hours bonus
@@ -1234,10 +1230,6 @@ public final class Player extends Playable {
     private int _curFeed;
     private ScheduledFuture<?> _dismountTask;
     private boolean _petItems = false;
-    /**
-     * The list of sub-classes this character has.
-     */
-    private final IntMap<SubClass> _subClasses = new CHashIntMap<>();
 
     /**
      * The number of player killed during a PvP (the player killed was PvP Flagged)
@@ -1781,32 +1773,25 @@ public final class Player extends Playable {
      * @param recipeId The Identifier of the RecipeList to remove from the _recipebook
      */
     public void unregisterRecipeList(int recipeId) {
-        if (_dwarvenRecipeBook.remove(recipeId) != null) {
-            deleteRecipeData(recipeId, true);
-        } else if (_commonRecipeBook.remove(recipeId) != null) {
-            deleteRecipeData(recipeId, false);
+        boolean removed = nonNull(_dwarvenRecipeBook.remove(recipeId)) || nonNull(_commonRecipeBook.remove(recipeId));
+        if(removed) {
+            shortcuts.deleteShortcuts(s -> s.getShortcutId() == recipeId && s.getType() == ShortcutType.RECIPE);
+            getDAO(PlayerDAO.class).deleteRecipe(objectId, recipeId);
         } else {
-            LOGGER.warn("Attempted to remove unknown RecipeList: " + recipeId);
+            LOGGER.warn("Attempted to remove unknown RecipeList {}", recipeId);
         }
-
-        shortcuts.deleteShortcuts(s -> s.getShortcutId() == recipeId && s.getType() == ShortcutType.RECIPE);
     }
 
     private void insertNewRecipeData(int recipeId, boolean isDwarf) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("INSERT INTO character_recipebook (charId, id, classIndex, type) values(?,?,?,?)")) {
+             PreparedStatement statement = con.prepareStatement("INSERT INTO character_recipebook (charId, id, type) values(?,?,?)")) {
             statement.setInt(1, getObjectId());
             statement.setInt(2, recipeId);
-            statement.setInt(3, isDwarf ? _classIndex : 0);
-            statement.setInt(4, isDwarf ? 1 : 0);
+            statement.setInt(3, isDwarf ? 1 : 0);
             statement.execute();
         } catch (SQLException e) {
-            LOGGER.warn("SQL exception while inserting recipe: " + recipeId + " from character " + getObjectId(), e);
+            LOGGER.warn("SQL exception while inserting recipe: {} from character {}", recipeId, this, e);
         }
-    }
-
-    private void deleteRecipeData(int recipeId, boolean isDwarf) {
-        getDAO(PlayerDAO.class).deleteRecipe(objectId, recipeId, isDwarf ? _classIndex : 0);
     }
 
     /**
@@ -2459,7 +2444,7 @@ public final class Player extends Playable {
      * @param Id The Identifier of the PlayerTemplate to set to the Player
      */
     public void setClassId(int Id) {
-        if (!_subclassLock.tryLock()) {
+        if (!classLock.tryLock()) {
             return;
         }
 
@@ -2484,9 +2469,7 @@ public final class Player extends Playable {
                 // receive graduation gift
                 inventory.addItem("Gift", 8181, 1, this, null); // give academy circlet
             }
-            if (isSubClassActive()) {
-                getSubClasses().get(_classIndex).setClassId(Id);
-            }
+
             setTarget(this);
             broadcastPacket(new MagicSkillUse(this, 5103, 1, 1000, 0));
             setClassTemplate(Id);
@@ -2526,7 +2509,7 @@ public final class Player extends Playable {
 
             notifyFriends(FriendStatus.CLASS);
         } finally {
-            _subclassLock.unlock();
+            classLock.unlock();
         }
     }
 
@@ -2695,10 +2678,7 @@ public final class Player extends Playable {
 
     @Override
     public Race getRace() {
-        if (!isSubClassActive()) {
-            return getTemplate().getRace();
-        }
-        return PlayerTemplateData.getInstance().getTemplate(data.getBaseClass()).getRace();
+        return getTemplate().getRace();
     }
 
     public Radar getRadar() {
@@ -5528,13 +5508,10 @@ public final class Player extends Playable {
      * @param loadCommon
      */
     private void restoreRecipeBook(boolean loadCommon) {
-        final String sql = loadCommon ? "SELECT id, type, classIndex FROM character_recipebook WHERE charId=?" : "SELECT id FROM character_recipebook WHERE charId=? AND classIndex=? AND type = 1";
+        final String sql = loadCommon ? "SELECT id, type FROM character_recipebook WHERE charId=?" : "SELECT id FROM character_recipebook WHERE charId=? AND type = 1";
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(sql)) {
             statement.setInt(1, getObjectId());
-            if (!loadCommon) {
-                statement.setInt(2, _classIndex);
-            }
 
             try (ResultSet rset = statement.executeQuery()) {
                 _dwarvenRecipeBook.clear();
@@ -5545,9 +5522,7 @@ public final class Player extends Playable {
                     recipe = rd.getRecipeList(rset.getInt("id"));
                     if (loadCommon) {
                         if (rset.getInt(2) == 1) {
-                            if (rset.getInt(3) == _classIndex) {
-                                registerDwarvenRecipeList(recipe, false);
-                            }
+                            registerDwarvenRecipeList(recipe, false);
                         } else {
                             registerCommonRecipeList(recipe, false);
                         }
@@ -5557,7 +5532,7 @@ public final class Player extends Playable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("Could not restore recipe book data:" + e.getMessage(), e);
+            LOGGER.error("Could not restore recipe book data: {}", e.getMessage(), e);
         }
     }
 
@@ -5615,7 +5590,6 @@ public final class Player extends Playable {
      */
     public synchronized void store(boolean storeActiveEffects) {
         storeCharBase();
-        storeCharSub();
         storeEffect(storeActiveEffects);
         storeItemReuseDelay();
         if (Config.STORE_RECIPE_SHOPLIST) {
@@ -5735,30 +5709,6 @@ public final class Player extends Playable {
         }
     }
 
-    private void storeCharSub() {
-        if (getTotalSubClasses() <= 0) {
-            return;
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(UPDATE_CHAR_SUBCLASS)) {
-            for (SubClass subClass : getSubClasses().values()) {
-                statement.setLong(1, subClass.getExp());
-                statement.setLong(2, subClass.getSp());
-                statement.setInt(3, subClass.getLevel());
-                statement.setInt(4, subClass.getVitalityPoints());
-                statement.setInt(5, subClass.getClassId());
-                statement.setBoolean(6, subClass.isDualClass());
-                statement.setInt(7, getObjectId());
-                statement.setInt(8, subClass.getClassIndex());
-                statement.addBatch();
-            }
-            statement.executeBatch();
-        } catch (Exception e) {
-            LOGGER.warn("Could not store sub class data for " + getName() + ": " + e.getMessage(), e);
-        }
-    }
-
     @Override
     public void storeEffect(boolean storeEffects) {
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
@@ -5766,7 +5716,6 @@ public final class Player extends Playable {
             // Delete all current stored effects for char to avoid dupe
             try (PreparedStatement delete = con.prepareStatement(DELETE_SKILL_SAVE)) {
                 delete.setInt(1, getObjectId());
-                delete.setInt(2, _classIndex);
                 delete.execute();
             }
 
@@ -5822,8 +5771,7 @@ public final class Player extends Playable {
                         statement.setDouble(7, (t != null) && (currentTime < t.getStamp()) ? t.getStamp() : 0);
 
                         statement.setInt(8, 0); // Store type 0, active buffs/debuffs.
-                        statement.setInt(9, _classIndex);
-                        statement.setInt(10, ++buff_index);
+                        statement.setInt(9, ++buff_index);
                         statement.addBatch();
                     }
                     statement.executeBatch();
@@ -5848,7 +5796,7 @@ public final class Player extends Playable {
                         statement.setLong(6, t.getReuse());
                         statement.setDouble(7, t.getStamp());
                         statement.setInt(8, 1); // Restore type 1, skill reuse.
-                        statement.setInt(9, _classIndex);
+                        statement.setInt(9, 0);
                         statement.setInt(10, ++buff_index);
                         statement.addBatch();
                     }
@@ -5951,7 +5899,7 @@ public final class Player extends Playable {
         // Remove a skill from the Creature and its stats
         final Skill oldSkill = super.removeSkill(skill, true);
         if (oldSkill != null) {
-            getDAO(PlayerDAO.class).deleteSkill(objectId, oldSkill.getId(), _classIndex);
+            getDAO(PlayerDAO.class).deleteSkill(objectId, oldSkill.getId());
         }
 
         if (getTransformationId() > 0) {
@@ -5973,7 +5921,7 @@ public final class Player extends Playable {
      * @param newClassIndex
      */
     private void storeSkill(Skill newSkill, Skill oldSkill, int newClassIndex) {
-        final int classIndex = (newClassIndex > -1) ? newClassIndex : _classIndex;
+        final int classIndex = (newClassIndex > -1) ? newClassIndex : 0;
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             if ((oldSkill != null) && (newSkill != null)) {
                 try (PreparedStatement ps = con.prepareStatement(UPDATE_CHARACTER_SKILL_LEVEL)) {
@@ -5981,7 +5929,6 @@ public final class Player extends Playable {
                     ps.setInt(2, newSkill.getSubLevel());
                     ps.setInt(3, oldSkill.getId());
                     ps.setInt(4, getObjectId());
-                    ps.setInt(5, classIndex);
                     ps.execute();
                 }
             } else if (newSkill != null) {
@@ -5990,14 +5937,9 @@ public final class Player extends Playable {
                     ps.setInt(2, newSkill.getId());
                     ps.setInt(3, newSkill.getLevel());
                     ps.setInt(4, newSkill.getSubLevel());
-                    ps.setInt(5, classIndex);
                     ps.execute();
                 }
             }
-            // else
-            // {
-            // LOGGER.warn("Could not store new skill, it's null!");
-            // }
         } catch (Exception e) {
             LOGGER.warn("Error could not store char skills: " + e.getMessage(), e);
         }
@@ -6014,7 +5956,7 @@ public final class Player extends Playable {
             return;
         }
 
-        final int classIndex = (newClassIndex > -1) ? newClassIndex : _classIndex;
+        final int classIndex = (newClassIndex > -1) ? newClassIndex : 0;
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(ADD_NEW_SKILLS)) {
             for (Skill addSkill : newSkills) {
@@ -6022,7 +5964,6 @@ public final class Player extends Playable {
                 ps.setInt(2, addSkill.getId());
                 ps.setInt(3, addSkill.getLevel());
                 ps.setInt(4, addSkill.getSubLevel());
-                ps.setInt(5, classIndex);
                 ps.addBatch();
             }
             ps.executeBatch();
@@ -6039,7 +5980,6 @@ public final class Player extends Playable {
              PreparedStatement statement = con.prepareStatement(RESTORE_SKILLS_FOR_CHAR)) {
             // Retrieve all skills of this Player from the database
             statement.setInt(1, getObjectId());
-            statement.setInt(2, _classIndex);
             try (ResultSet rset = statement.executeQuery()) {
                 while (rset.next()) {
                     final int id = rset.getInt("skill_id");
@@ -6077,7 +6017,6 @@ public final class Player extends Playable {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(RESTORE_SKILL_SAVE)) {
             statement.setInt(1, getObjectId());
-            statement.setInt(2, _classIndex);
             try (ResultSet rset = statement.executeQuery()) {
                 final long currentTime = System.currentTimeMillis();
                 while (rset.next()) {
@@ -6110,11 +6049,10 @@ public final class Player extends Playable {
             // Remove previously restored skills
             try (PreparedStatement delete = con.prepareStatement(DELETE_SKILL_SAVE)) {
                 delete.setInt(1, getObjectId());
-                delete.setInt(2, _classIndex);
                 delete.executeUpdate();
             }
         } catch (Exception e) {
-            LOGGER.warn("Could not restore " + this + " active effect data: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore {} active effect data: {}", this, e.getMessage(), e);
         }
     }
 
@@ -6193,7 +6131,6 @@ public final class Player extends Playable {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNAS)) {
             statement.setInt(1, getObjectId());
-            statement.setInt(2, _classIndex);
             try (ResultSet rset = statement.executeQuery()) {
                 int slot;
                 int symbolId;
@@ -6279,7 +6216,7 @@ public final class Player extends Playable {
 
         _henna[slot - 1] = null;
 
-        getDAO(PlayerDAO.class).deleteHenna(objectId, slot, _classIndex);
+        getDAO(PlayerDAO.class).deleteHenna(objectId, slot);
 
         // Calculate Henna modifiers of this Player
         recalcHennaStats();
@@ -6346,7 +6283,6 @@ public final class Player extends Playable {
                     statement.setInt(1, getObjectId());
                     statement.setInt(2, henna.getDyeId());
                     statement.setInt(3, i);
-                    statement.setInt(4, _classIndex);
                     statement.execute();
                 } catch (Exception e) {
                     LOGGER.error("Failed saving character henna.", e);
@@ -6455,7 +6391,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isSubClassLocked()) {
+        if (isClassLocked()) {
             LOGGER.warn("Player {} tried to restart/logout during class change.", getName());
             return false;
         }
@@ -7450,178 +7386,6 @@ public final class Player extends Playable {
         sendPacket(new AcquireSkillList(this));
     }
 
-    /**
-     * 1. Add the specified class ID as a subclass (up to the maximum number of <b>three</b>) for this character.<BR>
-     * 2. This method no longer changes the active _classIndex of the player. This is only done by the calling of setActiveClass() method as that should be the only way to do so.
-     *
-     * @param classId
-     * @param classIndex
-     * @param isDualClass
-     * @return boolean subclassAdded
-     */
-    public boolean addSubClass(int classId, int classIndex, boolean isDualClass) {
-        if (!_subclassLock.tryLock()) {
-            return false;
-        }
-
-        try {
-            if ((getTotalSubClasses() == Config.MAX_SUBCLASS) || (classIndex == 0)) {
-                return false;
-            }
-
-            if (getSubClasses().containsKey(classIndex)) {
-                return false;
-            }
-
-            // Note: Never change _classIndex in any method other than setActiveClass().
-
-            final SubClass newClass = new SubClass();
-            newClass.setClassId(classId);
-            newClass.setClassIndex(classIndex);
-            newClass.setVitalityPoints(PlayerStats.MAX_VITALITY_POINTS);
-            if (isDualClass) {
-                newClass.setIsDualClass(true);
-                newClass.setExp(LevelData.getInstance().getExpForLevel(Config.BASE_DUALCLASS_LEVEL));
-                newClass.setLevel(Config.BASE_DUALCLASS_LEVEL);
-            }
-
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement statement = con.prepareStatement(ADD_CHAR_SUBCLASS)) {
-                // Store the basic info about this new sub-class.
-                statement.setInt(1, getObjectId());
-                statement.setInt(2, newClass.getClassId());
-                statement.setLong(3, newClass.getExp());
-                statement.setLong(4, newClass.getSp());
-                statement.setInt(5, newClass.getLevel());
-                statement.setInt(6, newClass.getVitalityPoints());
-                statement.setInt(7, newClass.getClassIndex());
-                statement.setBoolean(8, newClass.isDualClass());
-                statement.execute();
-            } catch (Exception e) {
-                LOGGER.warn("WARNING: Could not add character sub class for " + getName() + ": " + e.getMessage(), e);
-                return false;
-            }
-
-            // Commit after database INSERT incase exception is thrown.
-            getSubClasses().put(newClass.getClassIndex(), newClass);
-
-            final ClassId subTemplate = ClassId.getClassId(classId);
-            final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(subTemplate);
-            final Map<Integer, Skill> prevSkillList = new HashMap<>();
-            for (SkillLearn skillInfo : skillTree.values()) {
-                if (skillInfo.getGetLevel() <= newClass.getLevel()) {
-                    final Skill prevSkill = prevSkillList.get(skillInfo.getSkillId());
-                    final Skill newSkill = SkillEngine.getInstance().getSkill(skillInfo.getSkillId(), skillInfo.getSkillLevel());
-
-                    if (((prevSkill != null) && (prevSkill.getLevel() > newSkill.getLevel())) || SkillTreesData.getInstance().isRemoveSkill(subTemplate, skillInfo.getSkillId())) {
-                        continue;
-                    }
-
-                    prevSkillList.put(newSkill.getId(), newSkill);
-                    storeSkill(newSkill, prevSkill, classIndex);
-                }
-            }
-            return true;
-        } finally {
-            _subclassLock.unlock();
-        }
-    }
-
-    /**
-     * 1. Completely erase all existance of the subClass linked to the classIndex.<br>
-     * 2. Send over the newClassId to addSubClass() to create a new instance on this classIndex.<br>
-     * 3. Upon Exception, revert the player to their BaseClass to avoid further problems.
-     *
-     * @param classIndex  the class index to delete
-     * @param newClassId  the new class Id
-     * @param isDualClass is subclass dualclass
-     * @return {@code true} if the sub-class was modified, {@code false} otherwise
-     */
-    public boolean modifySubClass(int classIndex, int newClassId, boolean isDualClass) {
-        if (!_subclassLock.tryLock()) {
-            return false;
-        }
-
-        try {
-            // Notify to scripts before class is removed.
-            if (!getSubClasses().isEmpty()) // also null check
-            {
-                final int classId = getSubClasses().get(classIndex).getClassId();
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
-            }
-
-            final SubClass subClass = getSubClasses().get(classIndex);
-            if (subClass == null) {
-                return false;
-            }
-
-            if (subClass.isDualClass()) {
-                // getVariables().remove(CharacterVariables.ABILITY_POINTS_USED_DUAL_CLASS);
-                setAbilityPointsDualClassUsed(1000); // FIXME: what remove what meaning in character_variables Table
-                int revelationSkill = getRevelationSkillDualClass1();
-                if (revelationSkill != 0) {
-                    removeSkill(revelationSkill);
-                }
-                revelationSkill = getRevelationSkillDualClass2();
-                if (revelationSkill != 0) {
-                    removeSkill(revelationSkill);
-                }
-            }
-
-            // Remove after stats are recalculated.
-            getSubClasses().remove(classIndex);
-
-            shortcuts.deleteShortcuts();
-
-            var playerDAO = getDAO(PlayerDAO.class);
-            playerDAO.deleteHennas(objectId, classIndex);
-            playerDAO.deleteSkillsSave(objectId, classIndex);
-            playerDAO.deleteSkills(objectId, classIndex);
-            playerDAO.deleteSubClass(objectId, classIndex);
-        } finally {
-            _subclassLock.unlock();
-        }
-
-        return addSubClass(newClassId, classIndex, isDualClass);
-    }
-
-    public boolean isSubClassActive() {
-        return _classIndex > 0;
-    }
-
-    public boolean isDualClassActive() {
-
-        if (!isSubClassActive() || _subClasses.isEmpty()) {
-            return false;
-        }
-
-        final SubClass subClass = _subClasses.get(_classIndex);
-
-        return nonNull(subClass) && subClass.isDualClass();
-    }
-
-    public boolean hasDualClass() {
-        return getSubClasses().values().stream().anyMatch(SubClass::isDualClass);
-    }
-
-    public SubClass getDualClass() {
-        return getSubClasses().values().stream().filter(SubClass::isDualClass).findFirst().orElse(null);
-    }
-
-    public void setDualClass(int classIndex) {
-        if (isSubClassActive()) {
-            getSubClasses().get(_classIndex).setIsDualClass(true);
-        }
-    }
-
-    public IntMap<SubClass> getSubClasses() {
-        return _subClasses;
-    }
-
-    public int getTotalSubClasses() {
-        return getSubClasses().size();
-    }
-
     public int getBaseClass() {
         return data.getBaseClass();
     }
@@ -7632,14 +7396,6 @@ public final class Player extends Playable {
 
     public int getActiveClass() {
         return _activeClass;
-    }
-
-    public int getClassIndex() {
-        return _classIndex;
-    }
-
-    protected void setClassIndex(int classIndex) {
-        _classIndex = classIndex;
     }
 
     private void setClassTemplate(int classId) {
@@ -7654,143 +7410,11 @@ public final class Player extends Playable {
         setTemplate(pcTemplate);
 
         // Notify to scripts
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionChange(this, pcTemplate, isSubClassActive()), this);
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionChange(this, pcTemplate), this);
     }
 
-    /**
-     * Changes the character's class based on the given class index.<br>
-     * An index of zero specifies the character's original (base) class, while indexes 1-3 specifies the character's sub-classes respectively.<br>
-     * <font color="00FF00"/>WARNING: Use only on subclase change</font>
-     *
-     * @param classIndex
-     * @return
-     */
-    public void setActiveClass(int classIndex) {
-        if (!_subclassLock.tryLock()) {
-            return;
-        }
-
-        try {
-            // Cannot switch or change subclasses while transformed
-            if (isTransformed()) {
-                return;
-            }
-
-            // Remove active item skills before saving char to database
-            // because next time when choosing this class, weared items can
-            // be different
-            inventory.forEachEquippedItem(item -> item.removeAugmentationBonus(this));
-
-            // abort any kind of cast.
-            abortCast();
-
-            if (isChannelized()) {
-                getSkillChannelized().abortChannelization();
-            }
-
-            // 1. Call store() before modifying _classIndex to avoid skill effects rollover.
-            // 2. Register the correct _classId against applied 'classIndex'.
-            store(false);
-
-            if (_sellingBuffs != null) {
-                _sellingBuffs.clear();
-            }
-
-            resetTimeStamps();
-
-            // clear charges
-            _charges.set(0);
-            stopChargeTask();
-
-            if (hasServitors()) {
-                getServitors().values().forEach(s -> s.unSummon(this));
-            }
-
-            if (classIndex == 0) {
-                setClassTemplate(data.getBaseClass());
-            } else {
-                try {
-                    setClassTemplate(getSubClasses().get(classIndex).getClassId());
-                } catch (Exception e) {
-                    LOGGER.warn("Could not switch " + getName() + "'s sub class to class index " + classIndex + ": " + e.getMessage(), e);
-                    return;
-                }
-            }
-            _classIndex = classIndex;
-
-            if (isInParty()) {
-                _party.recalculatePartyLevel();
-            }
-
-            // Update the character's change in class status.
-            // 1. Remove any active cubics from the player.
-            // 2. Renovate the characters table in the database with the new class info, storing also buff/effect data.
-            // 3. Remove all existing skills.
-            // 4. Restore all the learned skills for the current class from the database.
-            // 5. Restore effect/buff data for the new class.
-            // 6. Restore henna data for the class, applying the new stat modifiers while removing existing ones.
-            // 7. Reset HP/MP/CP stats and send Server->Client character status packet to reflect changes.
-            // 8. Restore shortcut data related to this class.
-            // 9. Resend a class change animation effect to broadcast to all nearby players.
-            for (Skill oldSkill : getAllSkills()) {
-                removeSkill(oldSkill, false, true);
-            }
-
-            stopAllEffectsExceptThoseThatLastThroughDeath();
-            stopAllEffects();
-            stopCubics();
-
-            restoreRecipeBook(false);
-
-            restoreSkills();
-            rewardSkills();
-            regiveTemporarySkills();
-
-            // Prevents some issues when changing between subclases that shares skills
-            resetDisabledSkills();
-
-            restoreEffects();
-
-            sendPacket(new EtcStatusUpdate(this));
-
-            for (int i = 0; i < 4; i++) {
-                _henna[i] = null;
-            }
-
-            restoreHenna();
-            sendPacket(new HennaInfo(this));
-
-            if (getCurrentHp() > getMaxHp()) {
-                setCurrentHp(getMaxHp());
-            }
-            if (getCurrentMp() > getMaxMp()) {
-                setCurrentMp(getMaxMp());
-            }
-            if (getCurrentCp() > getMaxCp()) {
-                setCurrentCp(getMaxCp());
-            }
-
-            refreshOverloaded(true);
-            broadcastUserInfo();
-
-            // Clear resurrect xp calculation
-            data.setExpBeforeDeath(0);
-
-            shortcuts.restoreMe();
-            sendPacket(new ShortCutInit());
-
-            broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
-            sendPacket(new SkillCoolTime(this));
-            sendPacket(new ExStorageMaxCount(this));
-
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
-        } finally {
-            _subclassLock.unlock();
-        }
-    }
-
-    public boolean isSubClassLocked() {
-        return _subclassLock.isLocked();
+    public boolean isClassLocked() {
+        return classLock.isLocked();
     }
 
     public void stopWarnUserTakeBreak() {
@@ -9007,33 +8631,17 @@ public final class Player extends Playable {
                 // Include transformation skills and those skills that are allowed during transformation.
                 currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
 
-                // Revelation skills.
-                if (isDualClassActive())
+                int revelationSkill = getRevelationSkillMainClass1();
+                if (revelationSkill != 0)
                 {
-                    int revelationSkill = getRevelationSkillDualClass1();
-                    if (revelationSkill != 0)
-                    {
-                        addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                    }
-                    revelationSkill = getRevelationSkillDualClass2();
-                    if (revelationSkill != 0)
-                    {
-                        addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                    }
+                    addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
                 }
-                else if (!isSubClassActive())
+                revelationSkill = getRevelationSkillMainClass2();
+                if (revelationSkill != 0)
                 {
-                    int revelationSkill = getRevelationSkillMainClass1();
-                    if (revelationSkill != 0)
-                    {
-                        addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                    }
-                    revelationSkill = getRevelationSkillMainClass2();
-                    if (revelationSkill != 0)
-                    {
-                        addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                    }
+                    addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
                 }
+
                 // Include transformation skills.
                 currentSkills.addAll(transformSkills.values());
             }
@@ -9448,7 +9056,7 @@ public final class Player extends Playable {
     }
 
     public boolean isAllowedToEnchantSkills() {
-        if (isSubClassLocked()) {
+        if (isClassLocked()) {
             return false;
         }
         if (isTransformed()) {
@@ -10191,7 +9799,7 @@ public final class Player extends Playable {
     }
 
     public int getAbilityPointsUsed() {
-        return isDualClassActive() ? getAbilityPointsDualClassUsed() : getAbilityPointsMainClassUsed();
+        return getAbilityPointsMainClassUsed();
     }
 
     /**

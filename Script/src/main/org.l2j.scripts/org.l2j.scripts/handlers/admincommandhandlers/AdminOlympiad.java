@@ -109,12 +109,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 	
 	private boolean checkplayer(Player player, Player activeChar)
 	{
-		if (player.isSubClassActive())
-		{
-			BuilderUtil.sendSysMessage(activeChar, "Player " + player + " subclass active.");
-			return false;
-		}
-		else if (player.getClassId().level() < 3)
+		if (player.getClassId().level() < 3)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Player " + player + " has not 3rd class.");
 			return false;

@@ -19,46 +19,39 @@
  */
 package org.l2j.gameserver.data.sql.impl;
 
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author Nyaran
+ * @author JoeAlisson
  */
 public class SummonEffectsTable {
-    /**
-     * Servitors
-     **/
+
     // Map tree
     // -> key: charObjectId, value: classIndex Map
-    // --> key: classIndex, value: servitors Map
     // ---> key: servitorSkillId, value: Effects list
-    private final Map<Integer, Map<Integer, Map<Integer, Collection<SummonEffect>>>> _servitorEffects = new HashMap<>();
-    /**
-     * Pets
-     **/
-    private final Map<Integer, Collection<SummonEffect>> _petEffects = new HashMap<>(); // key: petItemObjectId, value: Effects list
+    private final IntMap<IntMap<Collection<SummonEffect>>> _servitorEffects = new HashIntMap<>();
+
+    private final IntMap<Collection<SummonEffect>> _petEffects = new HashIntMap<>(); // key: petItemObjectId, value: Effects list
 
     private SummonEffectsTable() {
     }
 
-    public Map<Integer, Map<Integer, Map<Integer, Collection<SummonEffect>>>> getServitorEffectsOwner() {
+    public IntMap<IntMap<Collection<SummonEffect>>> getServitorEffectsOwner() {
         return _servitorEffects;
     }
 
-    public Map<Integer, Collection<SummonEffect>> getServitorEffects(Player owner) {
-        final Map<Integer, Map<Integer, Collection<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
-        if (servitorMap == null) {
-            return null;
-        }
-        return servitorMap.get(owner.getClassIndex());
+    public IntMap<Collection<SummonEffect>> getServitorEffects(Player owner) {
+        return _servitorEffects.getOrDefault(owner.getObjectId(), Containers.emptyIntMap());
     }
 
-    public Map<Integer, Collection<SummonEffect>> getPetEffects() {
+    public IntMap<Collection<SummonEffect>> getPetEffects() {
         return _petEffects;
     }
 

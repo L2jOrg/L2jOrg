@@ -109,16 +109,10 @@ public final class Config {
     public static boolean ENABLE_MODIFY_SKILL_REUSE;
     public static Map<Integer, Integer> SKILL_REUSE_LIST;
 
-    public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
-    public static boolean ALT_GAME_SUBCLASS_EVERYWHERE;
-
     public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
     public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
     public static long MAX_SP;
-    public static byte MAX_SUBCLASS;
-    public static byte BASE_SUBCLASS_LEVEL;
     public static byte BASE_DUALCLASS_LEVEL;
-    public static byte MAX_SUBCLASS_LEVEL;
     public static int MAX_PVTSTORESELL_SLOTS_DWARF;
     public static int MAX_PVTSTORESELL_SLOTS_OTHER;
     public static int MAX_PVTSTOREBUY_SLOTS_DWARF;
@@ -389,7 +383,6 @@ public final class Config {
     public static FloodProtectorConfig FLOOD_PROTECTOR_ITEM_PET_SUMMON;
     public static FloodProtectorConfig FLOOD_PROTECTOR_HERO_VOICE;
     public static FloodProtectorConfig FLOOD_PROTECTOR_GLOBAL_CHAT;
-    public static FloodProtectorConfig FLOOD_PROTECTOR_SUBCLASS;
     public static FloodProtectorConfig FLOOD_PROTECTOR_DROP_ITEM;
     public static FloodProtectorConfig FLOOD_PROTECTOR_SERVER_BYPASS;
     public static FloodProtectorConfig FLOOD_PROTECTOR_MULTISELL;
@@ -777,7 +770,6 @@ public final class Config {
         FLOOD_PROTECTOR_ITEM_PET_SUMMON = new FloodProtectorConfig("ItemPetSummonFloodProtector");
         FLOOD_PROTECTOR_HERO_VOICE = new FloodProtectorConfig("HeroVoiceFloodProtector");
         FLOOD_PROTECTOR_GLOBAL_CHAT = new FloodProtectorConfig("GlobalChatFloodProtector");
-        FLOOD_PROTECTOR_SUBCLASS = new FloodProtectorConfig("SubclassFloodProtector");
         FLOOD_PROTECTOR_DROP_ITEM = new FloodProtectorConfig("DropItemFloodProtector");
         FLOOD_PROTECTOR_SERVER_BYPASS = new FloodProtectorConfig("ServerBypassFloodProtector");
         FLOOD_PROTECTOR_MULTISELL = new FloodProtectorConfig("MultiSellFloodProtector");
@@ -893,17 +885,10 @@ public final class Config {
             }
         }
 
-        // TODO Remove
-        ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
-        ALT_GAME_SUBCLASS_EVERYWHERE = Character.getBoolean("AltSubclassEverywhere", false);
-
         MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
         MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);
         MAX_SP = Character.getLong("MaxSp", 50000000000L) >= 0 ? Character.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;
-        MAX_SUBCLASS = (byte) Math.min(3, Character.getByte("MaxSubclass", (byte) 3));
-        BASE_SUBCLASS_LEVEL = Character.getByte("BaseSubclassLevel", (byte) 40);
         BASE_DUALCLASS_LEVEL = Character.getByte("BaseDualclassLevel", (byte) 85);
-        MAX_SUBCLASS_LEVEL = Character.getByte("MaxSubclassLevel", (byte) 80);
         MAX_PVTSTORESELL_SLOTS_DWARF = Character.getInt("MaxPvtStoreSellSlotsDwarf", 4);
         MAX_PVTSTORESELL_SLOTS_OTHER = Character.getInt("MaxPvtStoreSellSlotsOther", 3);
         MAX_PVTSTOREBUY_SLOTS_DWARF = Character.getInt("MaxPvtStoreBuySlotsDwarf", 5);
@@ -1763,7 +1748,6 @@ public final class Config {
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_ITEM_PET_SUMMON, "ItemPetSummon", 16);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_HERO_VOICE, "HeroVoice", 100);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_GLOBAL_CHAT, "GlobalChat", 5);
-        loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SUBCLASS, "Subclass", 20);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_DROP_ITEM, "DropItem", 10);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SERVER_BYPASS, "ServerBypass", 5);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MULTISELL, "MultiSell", 1);

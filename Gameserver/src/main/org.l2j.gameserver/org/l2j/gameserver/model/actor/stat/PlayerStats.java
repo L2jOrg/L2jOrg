@@ -280,24 +280,6 @@ public class PlayerStats extends PlayableStats {
         return (Player) super.getCreature();
     }
 
-    @Override
-    public final long getExp() {
-        if (getCreature().isSubClassActive()) {
-            return getCreature().getSubClasses().get(getCreature().getClassIndex()).getExp();
-        }
-
-        return super.getExp();
-    }
-
-    @Override
-    public final void setExp(long value) {
-        if (getCreature().isSubClassActive()) {
-            getCreature().getSubClasses().get(getCreature().getClassIndex()).setExp(value);
-        } else {
-            super.setExp(value);
-        }
-    }
-
     public final long getBaseExp() {
         return super.getExp();
     }
@@ -334,70 +316,27 @@ public class PlayerStats extends PlayableStats {
     }
 
     @Override
-    public final byte getLevel() {
-        if (getCreature().isDualClassActive()) {
-            return getCreature().getDualClass().getLevel();
-        }
-        if (getCreature().isSubClassActive()) {
-            return getCreature().getSubClasses().get(getCreature().getClassIndex()).getLevel();
-        }
-        return super.getLevel();
-    }
-
-    @Override
     public final void setLevel(byte value) {
         if (value > LevelData.getInstance().getMaxLevel()) {
             value = LevelData.getInstance().getMaxLevel();
         }
 
-        if (getCreature().isSubClassActive()) {
-            getCreature().getSubClasses().get(getCreature().getClassIndex()).setLevel(value);
-        } else {
-            super.setLevel(value);
-        }
+        super.setLevel(value);
     }
 
     public final byte getBaseLevel() {
         return super.getLevel();
     }
 
-    @Override
-    public final long getSp() {
-        if (getCreature().isSubClassActive()) {
-            return getCreature().getSubClasses().get(getCreature().getClassIndex()).getSp();
-        }
-
-        return super.getSp();
-    }
-
-    @Override
-    public final void setSp(long value) {
-        if (getCreature().isSubClassActive()) {
-            getCreature().getSubClasses().get(getCreature().getClassIndex()).setSp(value);
-        } else {
-            super.setSp(value);
-        }
-    }
-
     public final long getBaseSp() {
         return super.getSp();
     }
 
-    /*
-     * Return current vitality points in integer format
-     */
     public int getVitalityPoints() {
-        if (getCreature().isSubClassActive()) {
-            return Math.min(MAX_VITALITY_POINTS, getCreature().getSubClasses().get(getCreature().getClassIndex()).getVitalityPoints());
-        }
         return Math.min(Math.max(_vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
     }
 
     public void setVitalityPoints(int value) {
-        if (getCreature().isSubClassActive()) {
-            getCreature().getSubClasses().get(getCreature().getClassIndex()).setVitalityPoints(value);
-            return;
-        }
         _vitalityPoints = Math.min(Math.max(value, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
     }
 

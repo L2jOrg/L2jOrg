@@ -32,7 +32,6 @@ import org.l2j.gameserver.model.actor.instance.Fisherman;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.VillageMaster;
 import org.l2j.gameserver.model.base.AcquireSkillType;
-import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -253,13 +252,6 @@ public final class RequestAcquireSkill extends ClientPacket {
                     player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
                     GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + ", level " + player.getLevel() + " is requesting skill Id: " + id + " level " + level + " without having minimum required level, " + skillLearn.getGetLevel() + "!", IllegalActionPunishmentType.NONE);
                     return false;
-                }
-
-                if (skillLearn.getDualClassLevel() > 0) {
-                    final SubClass playerDualClass = player.getDualClass();
-                    if ((playerDualClass == null) || (playerDualClass.getLevel() < skillLearn.getDualClassLevel())) {
-                        return false;
-                    }
                 }
 
                 // First it checks that the skill require SP and the player has enough SP to learn it.

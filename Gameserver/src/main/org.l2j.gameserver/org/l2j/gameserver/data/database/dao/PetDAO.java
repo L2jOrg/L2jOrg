@@ -44,6 +44,6 @@ public interface PetDAO extends DAO<PetData> {
     @Query("UPDATE pets SET fed=:fed: WHERE item_obj_id = :itemId:")
     void updateFed(int itemId, int fed);
 
-    @Query("DELETE FROM character_summon_skills_save WHERE ownerId=:ownerId: AND ownerClassIndex=:classIndex: AND summonSkillId=:skill:")
-    void deleteSkillsSave(int ownerId, int classIndex, int skill);
+    @Query("DELETE FROM character_summon_skills_save WHERE ownerId=:ownerId: AND summonSkillId=:skill:")
+    void deleteSkillsSave(int ownerId, int skill);
 }

@@ -2424,6 +2424,9 @@ public final class SystemMessageId {
     @ClientString(id = 1268, message = "Do you wish to add $s1 as your subclass?")
     public static SystemMessageId DO_YOU_WISH_TO_ADD_S1_AS_YOUR_SUBCLASS;
 
+    @ClientString(id = 1269, message = "The new subclass has been added.")
+    public static SystemMessageId THE_NEW_SUBCLASS_HAS_BEEN_ADDED;
+
     @ClientString(id = 1271, message = "Do you wish to participate? Until the next seal validation period, you will be a member of the Lords of Dawn.")
     public static SystemMessageId DO_YOU_WISH_TO_PARTICIPATE_UNTIL_THE_NEXT_SEAL_VALIDATION_PERIOD_YOU_WILL_BE_A_MEMBER_OF_THE_LORDS_OF_DAWN;
 
@@ -2483,6 +2486,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 1294, message = "The competition has ended in a tie. Therefore, nobody has been awarded the seal.")
     public static SystemMessageId THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL;
+
+    @ClientString(id = 1295, message = "Subclasses may not be created or changed while a skill is in use.")
+    public static SystemMessageId SUBCLASSES_MAY_NOT_BE_CREATED_OR_CHANGED_WHILE_A_SKILL_IS_IN_USE;
 
     @ClientString(id = 1298, message = "You are about to leave Monster Race Track.")
     public static SystemMessageId YOU_ARE_ABOUT_TO_LEAVE_MONSTER_RACE_TRACK;
@@ -3289,6 +3295,9 @@ public final class SystemMessageId {
     @ClientString(id = 1686, message = "Stones and mortar tumble to the earth - the castle wall has taken damage!")
     public static SystemMessageId STONES_AND_MORTAR_TUMBLE_TO_THE_EARTH_THE_CASTLE_WALL_HAS_TAKEN_DAMAGE;
 
+    @ClientString(id = 1692, message = "$c1 does not meet the participation requirements. You cannot participate in the Olympiad because you have changed your class to subclass.")
+    public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_YOU_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD_BECAUSE_YOU_HAVE_CHANGED_YOUR_CLASS_TO_SUBCLASS;
+
     @ClientString(id = 1695, message = "You can only use that during a Siege War!")
     public static SystemMessageId YOU_CAN_ONLY_USE_THAT_DURING_A_SIEGE_WAR;
 
@@ -3370,6 +3379,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 1733, message = "You do not have enough Adena to create a Clan Academy.")
     public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_ADENA_TO_CREATE_A_CLAN_ACADEMY;
+
+    @ClientString(id = 1734, message = "In order to join the clan academy, you must be unaffiliated with a clan and be an unawakened character Lv. 84 or below fpr both main and subclass.")
+    public static SystemMessageId IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS;
 
     @ClientString(id = 1736, message = "The Clan Academy has reached its maximum enrollment.")
     public static SystemMessageId THE_CLAN_ACADEMY_HAS_REACHED_ITS_MAXIMUM_ENROLLMENT;
@@ -3706,6 +3718,9 @@ public final class SystemMessageId {
     @ClientString(id = 1893, message = "This file cannot be replayed.")
     public static SystemMessageId THIS_FILE_CANNOT_BE_REPLAYED;
 
+    @ClientString(id = 1894, message = "A subclass cannot be created or changed while you are over your weight limit.")
+    public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_WHILE_YOU_ARE_OVER_YOUR_WEIGHT_LIMIT;
+
     @ClientString(id = 1896, message = "$c1 has already been summoned.")
     public static SystemMessageId C1_HAS_ALREADY_BEEN_SUMMONED;
 
@@ -3925,6 +3940,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 2032, message = "It is not the right time for purchasing the item.")
     public static SystemMessageId IT_IS_NOT_THE_RIGHT_TIME_FOR_PURCHASING_THE_ITEM;
+
+    @ClientString(id = 2033, message = "A subclass cannot be created or changed because you have exceeded your inventory limit.")
+    public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT;
 
     @ClientString(id = 2034, message = "There are $s1 hour(s) and $s2 minute(s) remaining until the item can be obtained.")
     public static SystemMessageId THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_OBTAINED;
@@ -8871,6 +8889,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 4298, message = "If enchanting fails, your enchant level will drop by 3!")
     public static SystemMessageId IF_ENCHANTING_FAILS_YOUR_ENCHANT_LEVEL_WILL_DROP_BY_3;
+
+    @ClientString(id = 4299, message = "You cannot change your subclass while registering for the Ceremony of Chaos.")
+    public static SystemMessageId YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERING_FOR_THE_CEREMONY_OF_CHAOS;
 
     @ClientString(id = 4301, message = "Character creation successful!")
     public static SystemMessageId CHARACTER_CREATION_SUCCESSFUL;
@@ -15501,9 +15522,6 @@ public final class SystemMessageId {
     @ClientString(id = 1258, message = "$s1 has been crystallized.")
     public static SystemMessageId S1_HAS_BEEN_CRYSTALLIZED;
 
-    @ClientString(id = 1269, message = "The new subclass has been added.")
-    public static SystemMessageId THE_NEW_SUBCLASS_HAS_BEEN_ADDED;
-
     @ClientString(id = 1270, message = "You have successfully switched $s1 to $s2.")
     public static SystemMessageId YOU_HAVE_SUCCESSFULLY_SWITCHED_S1_TO_S2;
 
@@ -15518,9 +15536,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1282, message = "Your Reputation has been changed to $s1.")
     public static SystemMessageId YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1;
-
-    @ClientString(id = 1295, message = "Subclasses may not be created or changed while a skill is in use.")
-    public static SystemMessageId SUBCLASSES_MAY_NOT_BE_CREATED_OR_CHANGED_WHILE_A_SKILL_IS_IN_USE;
 
     @ClientString(id = 1296, message = "You cannot open a Private Store here.")
     public static SystemMessageId YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE;
@@ -15900,9 +15915,6 @@ public final class SystemMessageId {
     @ClientString(id = 1691, message = "$c1 does not meet the participation requirements for Olympiad as the inventory weight/slot exceeds 80%%.")
     public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_FOR_OLYMPIAD_AS_THE_INVENTORY_WEIGHT_SLOT_EXCEEDS_80;
 
-    @ClientString(id = 1692, message = "$c1 does not meet the participation requirements. You cannot participate in the Olympiad because you have changed your class to subclass.")
-    public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_YOU_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD_BECAUSE_YOU_HAVE_CHANGED_YOUR_CLASS_TO_SUBCLASS;
-
     @ClientString(id = 1693, message = "You may not observe a Olympiad Games match while you are on the waiting list.")
     public static SystemMessageId YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST;
 
@@ -15938,9 +15950,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1730, message = "To establish a Clan Academy, your clan must be Level 5 or higher.")
     public static SystemMessageId TO_ESTABLISH_A_CLAN_ACADEMY_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER;
-
-    @ClientString(id = 1734, message = "In order to join the clan academy, you must be unaffiliated with a clan and be an unawakened character Lv. 84 or below fpr both main and subclass.")
-    public static SystemMessageId IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS;
 
     @ClientString(id = 1735, message = "$s1 does not meet the requirements to join a Clan Academy.")
     public static SystemMessageId S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY;
@@ -16091,9 +16100,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1883, message = "There are no offerings I own or I made a bid for.")
     public static SystemMessageId THERE_ARE_NO_OFFERINGS_I_OWN_OR_I_MADE_A_BID_FOR;
-
-    @ClientString(id = 1894, message = "A subclass cannot be created or changed while you are over your weight limit.")
-    public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_WHILE_YOU_ARE_OVER_YOUR_WEIGHT_LIMIT;
 
     @ClientString(id = 1895, message = "$c1 is in an area which blocks summoning or teleporting.")
     public static SystemMessageId C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING;
@@ -16283,9 +16289,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 2028, message = "$c1 is too far away to receive a duel challenge.")
     public static SystemMessageId C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE;
-
-    @ClientString(id = 2033, message = "A subclass cannot be created or changed because you have exceeded your inventory limit.")
-    public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT;
 
     @ClientString(id = 2040, message = "Cannot trade items with the targeted user.")
     public static SystemMessageId CANNOT_TRADE_ITEMS_WITH_THE_TARGETED_USER;
@@ -17434,9 +17437,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 4271, message = "Current location: $s1 / $s2 / $s3")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3;
-
-    @ClientString(id = 4299, message = "You cannot change your subclass while registering for the Ceremony of Chaos.")
-    public static SystemMessageId YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERING_FOR_THE_CEREMONY_OF_CHAOS;
 
     @ClientString(id = 4300, message = "Current location:  $s1 / $s2 / $s3 (Infinite Depths)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_INFINITE_DEPTHS;

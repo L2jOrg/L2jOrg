@@ -51,7 +51,7 @@ public class ExAcquireSkillInfo extends ServerPacket {
     public ExAcquireSkillInfo(Player player, SkillLearn skillLearn) {
         _id = skillLearn.getSkillId();
         _level = skillLearn.getSkillLevel();
-        _dualClassLevel = skillLearn.getDualClassLevel();
+        _dualClassLevel = 0;
         _spCost = skillLearn.getLevelUpSp();
         _minLevel = skillLearn.getGetLevel();
         _itemReq = skillLearn.getRequiredItems();

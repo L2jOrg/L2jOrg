@@ -106,13 +106,6 @@ public final class SkillLearn {
     }
 
     /**
-     * @return the minimum level of a character dual class required to acquire this skill.
-     */
-    public int getDualClassLevel() {
-        return _getDualClassLevel;
-    }
-
-    /**
      * @return the amount of SP/Clan Reputation to acquire this skill.
      */
     public long getLevelUpSp() {

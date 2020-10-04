@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
@@ -53,8 +53,10 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @author UnAfraid
@@ -62,9 +64,9 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 public class Servitor extends Summon implements Runnable {
     protected static final Logger log = LoggerFactory.getLogger(Servitor.class);
 
-    private static final String ADD_SKILL_SAVE = "REPLACE INTO character_summon_skills_save (ownerId,ownerClassIndex,summonSkillId,skill_id,skill_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?,?)";
-    private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,remaining_time,buff_index FROM character_summon_skills_save WHERE ownerId=? AND ownerClassIndex=? AND summonSkillId=? ORDER BY buff_index ASC";
-    private static final String DELETE_SKILL_SAVE = "DELETE FROM character_summon_skills_save WHERE ownerId=? AND ownerClassIndex=? AND summonSkillId=?";
+    private static final String ADD_SKILL_SAVE = "REPLACE INTO character_summon_skills_save (ownerId,summonSkillId,skill_id,skill_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?)";
+    private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,remaining_time,buff_index FROM character_summon_skills_save WHERE ownerId=? AND summonSkillId=? ORDER BY buff_index ASC";
+    private static final String DELETE_SKILL_SAVE = "DELETE FROM character_summon_skills_save WHERE ownerId=? AND summonSkillId=?";
     protected Future<?> _summonLifeTask;
     private float _expMultiplier = 0;
     private ItemHolder _itemConsume;
@@ -210,15 +212,13 @@ public class Servitor extends Summon implements Runnable {
     @Override
     public final void stopSkillEffects(boolean removed, int skillId) {
         super.stopSkillEffects(removed, skillId);
-        final Map<Integer, Collection<SummonEffect>> servitorEffects = SummonEffectsTable.getInstance().getServitorEffects(getOwner());
-        if (servitorEffects != null) {
-            final Collection<SummonEffect> effects = servitorEffects.get(_referenceSkill);
-            if ((effects != null) && !effects.isEmpty()) {
-                for (SummonEffect effect : effects) {
-                    final Skill skill = effect.getSkill();
-                    if ((skill != null) && (skill.getId() == skillId)) {
-                        effects.remove(effect);
-                    }
+        final var servitorEffects = SummonEffectsTable.getInstance().getServitorEffects(getOwner());
+        final Collection<SummonEffect> effects = servitorEffects.get(_referenceSkill);
+        if (!isNullOrEmpty(effects)) {
+            for (SummonEffect effect : effects) {
+                final Skill skill = effect.getSkill();
+                if (nonNull(skill) && (skill.getId() == skillId)) {
+                    effects.remove(effect);
                 }
             }
         }
@@ -248,12 +248,9 @@ public class Servitor extends Summon implements Runnable {
             return;
         }
 
-        // Clear list for overwrite
-        if (SummonEffectsTable.getInstance().getServitorEffectsOwner().getOrDefault(getOwner().getObjectId(), Collections.emptyMap()).containsKey(getOwner().getClassIndex())) {
-            SummonEffectsTable.getInstance().getServitorEffects(getOwner()).getOrDefault(getReferenceSkill(), Collections.emptyList()).clear();
-        }
+        SummonEffectsTable.getInstance().getServitorEffects(getOwner()).getOrDefault(getReferenceSkill(), Collections.emptyList()).clear();
 
-        getDAO(PetDAO.class).deleteSkillsSave(getOwner().getObjectId(), getOwner().getClassIndex(), _referenceSkill);
+        getDAO(PetDAO.class).deleteSkillsSave(getOwner().getObjectId(), _referenceSkill);
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
 
@@ -298,26 +295,17 @@ public class Servitor extends Summon implements Runnable {
                         storedSkills.add(skill.getReuseHashCode());
 
                         ps2.setInt(1, getOwner().getObjectId());
-                        ps2.setInt(2, getOwner().getClassIndex());
-                        ps2.setInt(3, _referenceSkill);
-                        ps2.setInt(4, skill.getId());
-                        ps2.setInt(5, skill.getLevel());
-                        ps2.setInt(6, info.getTime());
-                        ps2.setInt(7, ++buff_index);
+                        ps2.setInt(2, _referenceSkill);
+                        ps2.setInt(3, skill.getId());
+                        ps2.setInt(4, skill.getLevel());
+                        ps2.setInt(5, info.getTime());
+                        ps2.setInt(6, ++buff_index);
                         ps2.addBatch();
 
-                        // XXX: Rework me!
-                        if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().containsKey(getOwner().getObjectId())) {
-                            SummonEffectsTable.getInstance().getServitorEffectsOwner().put(getOwner().getObjectId(), new HashMap<>());
-                        }
-                        if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).containsKey(getOwner().getClassIndex())) {
-                            SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).put(getOwner().getClassIndex(), new HashMap<>());
-                        }
-                        if (!SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
-                            SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), ConcurrentHashMap.newKeySet());
-                        }
-
-                        SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()).add(new SummonEffect(skill, info.getTime()));
+                        var effects = SummonEffectsTable.getInstance().getServitorEffectsOwner();
+                        effects.computeIfAbsent(getOwner().getObjectId(), id -> new HashIntMap<>())
+                               .computeIfAbsent(getReferenceSkill(), referenceSkill -> ConcurrentHashMap.newKeySet())
+                               .add(new SummonEffect(skill, info.getTime()));
                     }
                     ps2.executeBatch();
                 }
@@ -334,11 +322,10 @@ public class Servitor extends Summon implements Runnable {
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().containsKey(getOwner().getObjectId()) || !SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).containsKey(getOwner().getClassIndex()) || !SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
+            if (!SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
                 try (PreparedStatement statement = con.prepareStatement(RESTORE_SKILL_SAVE)) {
                     statement.setInt(1, getOwner().getObjectId());
-                    statement.setInt(2, getOwner().getClassIndex());
-                    statement.setInt(3, _referenceSkill);
+                    statement.setInt(2, _referenceSkill);
                     try (ResultSet rset = statement.executeQuery()) {
                         while (rset.next()) {
                             final int effectCurTime = rset.getInt("remaining_time");
@@ -348,19 +335,11 @@ public class Servitor extends Summon implements Runnable {
                                 continue;
                             }
 
-                            // XXX: Rework me!
                             if (skill.hasEffects(EffectScope.GENERAL)) {
-                                if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().containsKey(getOwner().getObjectId())) {
-                                    SummonEffectsTable.getInstance().getServitorEffectsOwner().put(getOwner().getObjectId(), new HashMap<>());
-                                }
-                                if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).containsKey(getOwner().getClassIndex())) {
-                                    SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).put(getOwner().getClassIndex(), new HashMap<>());
-                                }
-                                if (!SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
-                                    SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), ConcurrentHashMap.newKeySet());
-                                }
-
-                                SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()).add(new SummonEffect(skill, effectCurTime));
+                                var effects = SummonEffectsTable.getInstance().getServitorEffectsOwner();
+                                effects.computeIfAbsent(getOwner().getObjectId(), id -> new HashIntMap<>())
+                                        .computeIfAbsent(getReferenceSkill(), referenceSkill -> ConcurrentHashMap.newKeySet())
+                                        .add(new SummonEffect(skill, effectCurTime));
                             }
                         }
                     }
@@ -369,20 +348,17 @@ public class Servitor extends Summon implements Runnable {
 
             try (PreparedStatement statement = con.prepareStatement(DELETE_SKILL_SAVE)) {
                 statement.setInt(1, getOwner().getObjectId());
-                statement.setInt(2, getOwner().getClassIndex());
-                statement.setInt(3, _referenceSkill);
+                statement.setInt(2, _referenceSkill);
                 statement.executeUpdate();
             }
         } catch (Exception e) {
             LOGGER.warn("Could not restore " + this + " active effect data: " + e.getMessage(), e);
         } finally {
-            if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().containsKey(getOwner().getObjectId()) || !SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).containsKey(getOwner().getClassIndex()) || !SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
-                return;
-            }
-
-            for (SummonEffect se : SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill())) {
-                if (se != null) {
-                    se.getSkill().applyEffects(this, this, false, se.getEffectCurTime());
+            if (SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
+                for (SummonEffect se : SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill())) {
+                    if (se != null) {
+                        se.getSkill().applyEffects(this, this, false, se.getEffectCurTime());
+                    }
                 }
             }
         }

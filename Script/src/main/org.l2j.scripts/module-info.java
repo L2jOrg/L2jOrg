@@ -254,7 +254,6 @@ open module org.l2j.scripts {
                 OpExistNpcSkillCondition.Factory,
                 OpHaveSummonSkillCondition.Factory,
                 OpHomeSkillCondition.Factory,
-                OpMainjobSkillCondition.Factory,
                 OpNeedAgathionSkillCondition.Factory,
                 KillerSkillCondition.Factory,
                 OpPledgeSkillCondition.Factory,

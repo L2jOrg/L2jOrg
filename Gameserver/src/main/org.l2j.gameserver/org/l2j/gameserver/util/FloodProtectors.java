@@ -51,10 +51,7 @@ public final class FloodProtectors {
      * Global-chat flood protector.
      */
     private final FloodProtectorAction _globalChat;
-    /**
-     * Subclass flood protector.
-     */
-    private final FloodProtectorAction _subclass;
+
     /**
      * Drop-item flood protector.
      */
@@ -105,7 +102,6 @@ public final class FloodProtectors {
         _itemPetSummon = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_ITEM_PET_SUMMON);
         _heroVoice = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_HERO_VOICE);
         _globalChat = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_GLOBAL_CHAT);
-        _subclass = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_SUBCLASS);
         _dropItem = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_DROP_ITEM);
         _serverBypass = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_SERVER_BYPASS);
         _multiSell = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MULTISELL);
@@ -169,15 +165,6 @@ public final class FloodProtectors {
      */
     public FloodProtectorAction getGlobalChat() {
         return _globalChat;
-    }
-
-    /**
-     * Returns {@link #_subclass}.
-     *
-     * @return {@link #_subclass}
-     */
-    public FloodProtectorAction getSubclass() {
-        return _subclass;
     }
 
     /**

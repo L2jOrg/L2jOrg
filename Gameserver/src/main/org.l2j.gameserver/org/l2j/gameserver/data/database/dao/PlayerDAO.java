@@ -181,29 +181,17 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("UPDATE characters SET vitality_points = :points:")
     void resetVitality(int points);
 
-    @Query("DELETE FROM character_recipebook WHERE charId=:playerId: AND id=:recipeId: AND classIndex=:classIndex:")
-    void deleteRecipe(int playerId, int recipeId, int classIndex);
+    @Query("DELETE FROM character_recipebook WHERE charId=:playerId: AND id=:recipeId:")
+    void deleteRecipe(int playerId, int recipeId);
 
     @Query("UPDATE characters SET online=:online:, lastAccess=:lastAccess: WHERE charId=:playerId:")
     void updateOnlineStatus(int playerId, boolean online, long lastAccess);
 
-    @Query("DELETE FROM character_skills WHERE skill_id=:skillId: AND charId=:playerId: AND class_index=:classIndex:")
-    void deleteSkill(int playerId, int skillId, int classIndex);
+    @Query("DELETE FROM character_skills WHERE skill_id=:skillId: AND charId=:playerId:")
+    void deleteSkill(int playerId, int skillId);
 
-    @Query("DELETE FROM character_hennas WHERE charId=:playerId: AND slot=:slot: AND class_index=:classIndex:")
-    void deleteHenna(int playerId, int slot, int classIndex);
-
-    @Query("DELETE FROM character_hennas WHERE charId=:playerId: AND class_index=:classIndex:")
-    void deleteHennas(int playerId, int classIndex);
-
-    @Query("DELETE FROM character_skills_save WHERE charId=:playerId: AND class_index=:classIndex:")
-    void deleteSkillsSave(int playerId, int classIndex);
-
-    @Query("DELETE FROM character_skills WHERE charId=? AND class_index=?")
-    void deleteSkills(int playerId, int classIndex);
-
-    @Query("DELETE FROM character_subclasses WHERE charId=:playerId: AND class_index=:classIndex:")
-    void deleteSubClass(int playerId, int classIndex);
+    @Query("DELETE FROM character_hennas WHERE charId=:playerId: AND slot=:slot:")
+    void deleteHenna(int playerId, int slot);
 
     @Query("UPDATE character_tpbookmark SET icon=:icon:,tag=:tag:,name=:name: where charId=:playerId: AND Id=:id:")
     void updateTeleportBookMark(int playerId, int id, int icon, String tag, String name);

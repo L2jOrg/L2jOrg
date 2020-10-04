@@ -178,23 +178,16 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 			{
 				if (Hero.getInstance().isUnclaimedHero(player.getObjectId()))
 				{
-					if (!player.isSubClassActive())
+					if (player.getLevel() >= 55)
 					{
-						if (player.getLevel() >= 55)
-						{
-							Hero.getInstance().claimHero(player);
-							showOnScreenMsg(player, (NpcStringId.getNpcStringId(13357 + player.getClassId().getId())), ExShowScreenMessage.TOP_CENTER, 5000);
-							player.broadcastPacket(PlaySound.music("ns01_f"));
-							htmltext = "MonumentOfHeroes-heroCertificationsDone.html";
-						}
-						else
-						{
-							htmltext = "MonumentOfHeroes-heroCertificationLevel.html";
-						}
+						Hero.getInstance().claimHero(player);
+						showOnScreenMsg(player, (NpcStringId.getNpcStringId(13357 + player.getClassId().getId())), ExShowScreenMessage.TOP_CENTER, 5000);
+						player.broadcastPacket(PlaySound.music("ns01_f"));
+						htmltext = "MonumentOfHeroes-heroCertificationsDone.html";
 					}
 					else
 					{
-						htmltext = "MonumentOfHeroes-heroCertificationSub.html";
+						htmltext = "MonumentOfHeroes-heroCertificationLevel.html";
 					}
 				}
 				else

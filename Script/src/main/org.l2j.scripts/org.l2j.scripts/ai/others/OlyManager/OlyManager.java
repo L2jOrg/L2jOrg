@@ -110,11 +110,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			case "register1v1":
 			{
-				if (player.isSubClassActive())
-				{
-					htmltext = "OlyManager-subclass.html";
-				}
-				else if ((!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55)) // avoid exploits
+				if ((!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55)) // avoid exploits
 				{
 					htmltext = "OlyManager-noNoble.html";
 				}
