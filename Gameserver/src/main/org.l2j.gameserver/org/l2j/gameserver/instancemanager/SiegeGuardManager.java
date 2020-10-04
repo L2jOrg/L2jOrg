@@ -22,6 +22,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.database.dao.SiegeDAO;
 import org.l2j.gameserver.data.xml.impl.CastleDataManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.instance.Defender;
@@ -78,10 +79,8 @@ public final class SiegeGuardManager {
 
                 final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getId(), npcId);
                 if ((holder != null) && !castle.getSiege().isInProgress()) {
-                    final Item dropticket = new Item(holder.getItemId());
-                    dropticket.setItemLocation(ItemLocation.VOID);
+                    final Item dropticket = ItemEngine.getInstance().createItem("SiegeGuard", holder.getItemId(),1,  null, null);
                     dropticket.dropMe(null, x, y, z);
-                    World.getInstance().addObject(dropticket);
                     _droppedTickets.add(dropticket);
                 }
             }
@@ -170,10 +169,8 @@ public final class SiegeGuardManager {
             }
 
             spawnMercenary(player, holder);
-            final Item dropticket = new Item(itemId);
-            dropticket.setItemLocation(ItemLocation.VOID);
+            final Item dropticket = ItemEngine.getInstance().createItem("SiegeGuard", itemId, 1, null, player);
             dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
-            World.getInstance().addObject(dropticket);
             _droppedTickets.add(dropticket);
         }
     }

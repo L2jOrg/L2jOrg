@@ -27,7 +27,6 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.scripting.ManagedScript;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
@@ -77,7 +76,6 @@ import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
@@ -1874,7 +1872,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         // set enchant level for item if that item is not adena
         if ((enchantlevel > 0) && (itemId != CommonItem.ADENA)) {
-            item.setEnchantLevel(enchantlevel);
+            item.changeEnchantLevel(enchantlevel);
         }
 
         if (playSound) {

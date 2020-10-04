@@ -373,6 +373,14 @@ public final class ItemEngine extends GameXmlReader {
         return items.get(id);
     }
 
+    public Item createTempItem(int itemId) {
+        var template = items.get(itemId);
+        requireNonNull(template, "The itemId should be a existent template id");
+        var item = new Item(0, template);
+        item.setCount(1);
+        return item;
+    }
+
     /**
      * Create the Item corresponding to the Item Identifier and quantitiy add logs the activity. <B><U> Actions</U> :</B>
      * <li>Create and Init the Item corresponding to the Item Identifier and quantity</li>
@@ -401,12 +409,12 @@ public final class ItemEngine extends GameXmlReader {
                 final Attackable raid = (Attackable) reference;
                 // if in CommandChannel and was killing a World/RaidBoss
                 if ((raid.getFirstCommandChannelAttacked() != null) && !characterSettings.autoLootRaid()) {
-                    item.setOwnerId(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
+                    item.changeOwner(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
                     itemLootShedule = ThreadPool.schedule(new ResetOwner(item), characterSettings.raidLootPrivilegeTime());
                     item.setItemLootShedule(itemLootShedule);
                 }
             } else if (!characterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
-                item.setOwnerId(actor.getObjectId());
+                item.changeOwner(actor.getObjectId());
                 itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
                 item.setItemLootShedule(itemLootShedule);
             }
@@ -463,9 +471,9 @@ public final class ItemEngine extends GameXmlReader {
      */
     public void destroyItem(String process, Item item, Player actor, Object reference) {
         final long old = item.getCount();
-        item.setItemLocation(ItemLocation.VOID);
+        item.changeItemLocation(ItemLocation.VOID);
         item.setCount(0);
-        item.setOwnerId(0);
+        item.changeOwner(0);
         item.setLastChange(ItemChangeType.REMOVED);
 
         World.getInstance().removeObject(item);
@@ -499,7 +507,7 @@ public final class ItemEngine extends GameXmlReader {
 
         @Override
         public void run() {
-            _item.setOwnerId(0);
+            _item.changeOwner(0);
             _item.setItemLootShedule(null);
         }
 

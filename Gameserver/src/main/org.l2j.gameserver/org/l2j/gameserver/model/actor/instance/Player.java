@@ -3108,12 +3108,12 @@ public final class Player extends Playable {
                 if (handler == null) {
                     LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
                 } else {
-                    handler.useItem(this, new Item(itemId), false);
+                    handler.useItem(this, ItemEngine.getInstance().createTempItem(itemId), false);
                 }
             } else {
                 item = inventory.addItem(process, itemId, count, this, reference, sendUpdate);
                 if(enchant > 0) {
-                    item.setEnchantLevel(enchant);
+                    item.changeEnchantLevel(enchant);
                 }
 
                 // If over capacity, drop the item
@@ -3508,20 +3508,10 @@ public final class Player extends Playable {
             item.getDropProtection().protect(this);
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
-            playerIU.addItem(invitem);
-            sendInventoryUpdate(playerIU);
-        } else {
-            sendItemList();
-        }
+        sendInventoryUpdate( new InventoryUpdate(invitem));
 
-        // Sends message to client if requested
         if (sendMessage) {
-            final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-            sm.addItemName(item);
-            sendPacket(sm);
+            sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(item));
         }
 
         return item;

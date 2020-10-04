@@ -334,7 +334,6 @@ public class PlayerFactory {
 
         var itemDAO = getDAO(ItemDAO.class);
         itemDAO.deleteVariationsByOwner(objId);
-        itemDAO.deleteSpecialAbilitiesByOwner(objId);
         itemDAO.deleteByOwner(objId);
         getDAO(PlayerDAO.class).deleteById(objId);
         PlayerNameTable.getInstance().removeName(objId);

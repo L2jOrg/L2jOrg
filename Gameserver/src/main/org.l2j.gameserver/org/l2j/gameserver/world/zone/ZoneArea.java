@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.world.zone;
 
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.engine.item.Item;
@@ -45,7 +46,7 @@ public abstract class ZoneArea {
     // TODO Drop this
     protected final void dropDebugItem(int itemId, int num, int x, int y, int z) {
 
-        final Item item = new Item(IdFactory.getInstance().getNextId(), itemId);
+        final Item item = ItemEngine.getInstance().createTempItem(itemId);
         item.setCount(num);
         item.spawnMe(x, y, z + 5);
         ZoneManager.getInstance().getDebugItems().add(item);

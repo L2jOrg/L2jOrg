@@ -30,6 +30,7 @@ import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemAdd;
@@ -500,7 +501,7 @@ public class PlayerInventory extends Inventory {
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public Item dropItem(String process, Item item, Player actor, Object reference) {
+    public Item dropItem(String process, Item item, Player actor, WorldObject reference) {
         item = super.dropItem(process, item, actor, reference);
         handleDropItemUpdate(actor, item);
         return item;
@@ -517,7 +518,7 @@ public class PlayerInventory extends Inventory {
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public Item dropItem(String process, int objectId, long count, Player actor, Object reference) {
+    public Item dropItem(String process, int objectId, long count, Player actor, WorldObject reference) {
         final Item item = super.dropItem(process, objectId, count, actor, reference);
 
         handleDropItemUpdate(actor, item);

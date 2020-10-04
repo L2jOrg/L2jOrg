@@ -312,8 +312,8 @@ public final class ItemAuctionInstance {
 
                 LOGGER.info(getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + player.getName() + " for instance " + _instanceId);
             } else {
-                item.setOwnerId(bid.getPlayerObjId());
-                item.setItemLocation(ItemLocation.WAREHOUSE);
+                item.changeOwner(bid.getPlayerObjId());
+                item.changeItemLocation(ItemLocation.WAREHOUSE);
                 item.updateDatabase();
                 World.getInstance().removeObject(item);
 

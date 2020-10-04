@@ -7,17 +7,15 @@ CREATE TABLE IF NOT EXISTS `items`
     `item_id`        INT,
     `count`          BIGINT UNSIGNED NOT NULL DEFAULT 0,
     `enchant_level`  INT,
-    `loc`            VARCHAR(10),                        -- inventory,paperdoll,npc,clan warehouse,pet,and so on TODO ENUM
+    `loc`            ENUM('VOID', 'INVENTORY', 'PAPERDOLL', 'WAREHOUSE', 'CLANWH', 'PET', 'PET_EQUIP', 'LEASE', 'REFUND', 'MAIL', 'FREIGHT', 'COMMISSION'),
     `loc_data`       INT,                                -- depending on location: equiped slot,npc id,pet id,etc
-    `time_of_use`    INT,                                -- time of item use, for calculate of breackages
     `time`           DECIMAL(13)     NOT NULL DEFAULT 0,
     `ensoul`         INT,
     `special_ensoul` INT,
     PRIMARY KEY (`object_id`),
     KEY `owner_id` (`owner_id`),
     KEY `item_id` (`item_id`),
-    KEY `loc` (`loc`),
-    KEY `time_of_use` (`time_of_use`)
+    KEY `loc` (`loc`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
 

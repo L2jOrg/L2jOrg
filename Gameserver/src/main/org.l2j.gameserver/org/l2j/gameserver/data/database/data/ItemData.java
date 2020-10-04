@@ -42,8 +42,6 @@ public class ItemData {
     @Column("loc_data")
     private int locData;
 
-    @Column("time_of_use")
-    private int timeOfUse;
     private long time;
 
     private int ensoul;
@@ -52,6 +50,10 @@ public class ItemData {
 
     public int getOwnerId() {
         return ownerId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
     }
 
     public int getObjectId() {
@@ -66,29 +68,73 @@ public class ItemData {
         return count;
     }
 
+    public void setCount(long count) {
+        this.count = count;
+    }
+
     public int getEnchantLevel() { return enchantLevel; }
+
+    public void setEnchantLevel(int enchantLevel) {
+        this.enchantLevel = enchantLevel;
+    }
 
     public ItemLocation getLoc() {
         return loc;
+    }
+
+    public void setLoc(ItemLocation loc) {
+        this.loc = loc;
     }
 
     public int getLocData() {
         return locData;
     }
 
-    public int getTimeOfUse() {
-        return timeOfUse;
+    public void setLocData(int locData) {
+        this.locData = locData;
     }
 
     public long getTime() {
         return time;
     }
 
+    public void setTime(long time) {
+        this.time = time;
+    }
+
     public int getEnsoul() {
         return ensoul;
     }
 
+    public void setEnsoul(int id) {
+        this.ensoul = id;
+    }
+
     public int getSpecialEnsoul() {
         return specialEnsoul;
+    }
+
+    public void setSpecialEnsoul(int specialEnsoul) {
+        this.specialEnsoul = specialEnsoul;
+    }
+
+    public static ItemData of(int objectId, int itemId) {
+        var data = new ItemData();
+        data.objectId = objectId;
+        data.itemId = itemId;
+        data.loc = ItemLocation.VOID;
+        data.count = 1;
+        return data;
+    }
+
+    public static ItemData of(ItemOnGroundData onGroundData) {
+        var data = new ItemData();
+        data.objectId = onGroundData.getObjectId();
+        data.itemId = onGroundData.getItemId();
+        data.count = onGroundData.getCount();
+        data.enchantLevel = onGroundData.getEnchantLevel();
+        data.ensoul = onGroundData.getEnsoul();
+        data.specialEnsoul = onGroundData.getSpecialEnsoul();
+        return data;
     }
 }

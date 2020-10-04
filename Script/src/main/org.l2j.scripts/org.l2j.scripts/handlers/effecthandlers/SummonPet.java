@@ -106,7 +106,7 @@ public final class SummonPet extends AbstractEffect {
             pet.storeMe();
         }
 
-        collar.setEnchantLevel(pet.getLevel());
+        collar.changeEnchantLevel(pet.getLevel());
         player.setPet(pet);
         pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
         pet.startFeed();

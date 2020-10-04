@@ -117,7 +117,7 @@ public final class RestorationRandom extends AbstractEffect {
             final Item newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
 
             if (nonNull(newItem) && createdItem.getMaxEnchant() > 0) {
-                newItem.setEnchantLevel(Rnd.get(createdItem.getMinEnchant(), createdItem.getMaxEnchant()));
+                newItem.changeEnchantLevel(Rnd.get(createdItem.getMinEnchant(), createdItem.getMaxEnchant()));
             }
 
             if (nonNull(extractedItems.get(newItem))){

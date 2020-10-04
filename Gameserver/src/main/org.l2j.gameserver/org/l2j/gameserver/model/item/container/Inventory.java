@@ -30,6 +30,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.engine.item.Item;
@@ -105,24 +106,23 @@ public abstract class Inventory extends ItemContainer {
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
-    public Item dropItem(String process, Item item, Player actor, Object reference) {
+    public Item dropItem(String process, Item item, Player actor, WorldObject reference) {
         if (item == null) {
             return null;
         }
 
-        synchronized (item) {
-            if (!items.containsKey(item.getObjectId())) {
-                return null;
-            }
-
-            removeItem(item);
-            item.setOwnerId(process, 0, actor, reference);
-            item.setItemLocation(ItemLocation.VOID);
-            item.setLastChange(ItemChangeType.REMOVED);
-
-            item.updateDatabase();
-            refreshWeight();
+        if (!items.containsKey(item.getObjectId())) {
+            return null;
         }
+
+        removeItem(item);
+        item.changeOwner(process, 0, actor, reference);
+        item.changeItemLocation(ItemLocation.VOID);
+        item.setLastChange(ItemChangeType.REMOVED);
+
+        item.updateDatabase();
+        refreshWeight();
+
         return item;
     }
 
@@ -136,30 +136,25 @@ public abstract class Inventory extends ItemContainer {
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
-    public Item dropItem(String process, int objectId, long count, Player actor, Object reference) {
+    public Item dropItem(String process, int objectId, long count, Player actor, WorldObject reference) {
         Item item = getItemByObjectId(objectId);
         if (item == null) {
             return null;
         }
 
-        synchronized (item) {
-            if (!items.containsKey(item.getObjectId())) {
-                return null;
-            }
+        // Adjust item quantity and create new instance to drop
+        // Directly drop entire item
+        if (item.getCount() > count) {
+            item.changeCount(process, -count, actor, reference);
+            item.setLastChange(ItemChangeType.MODIFIED);
+            item.updateDatabase();
 
-            // Adjust item quantity and create new instance to drop
-            // Directly drop entire item
-            if (item.getCount() > count) {
-                item.changeCount(process, -count, actor, reference);
-                item.setLastChange(ItemChangeType.MODIFIED);
-                item.updateDatabase();
-
-                item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
-                item.updateDatabase();
-                refreshWeight();
-                return item;
-            }
+            item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
+            item.updateDatabase();
+            refreshWeight();
+            return item;
         }
+
         return dropItem(process, item, actor, reference);
     }
 
@@ -290,7 +285,7 @@ public abstract class Inventory extends ItemContainer {
             if (nonNull(old)) {
                 paperdoll.remove(slot);
 
-                old.setItemLocation(getBaseLocation());
+                old.changeItemLocation(getBaseLocation());
                 old.setLastChange(ItemChangeType.MODIFIED);
 
                 wearedMask &= ~old.getItemMask();
@@ -300,7 +295,7 @@ public abstract class Inventory extends ItemContainer {
 
             if (nonNull(item)) {
                 paperdoll.put(slot, item);
-                item.setItemLocation(getEquipLocation(), slot.getId());
+                item.changeItemLocation(getEquipLocation(), slot.getId());
                 item.setLastChange(ItemChangeType.MODIFIED);
                 wearedMask |= item.getItemMask();
                 listeners.forEach(l -> l.notifyEquiped(slot, item, this));
@@ -652,7 +647,7 @@ public abstract class Inventory extends ItemContainer {
             final Item item = new Item(data);
             if(getOwner() instanceof Player player) {
                 if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
-                    item.setItemLocation(ItemLocation.INVENTORY);
+                    item.changeItemLocation(ItemLocation.INVENTORY);
                 }
 
                 if(item.isTimeLimitedItem()) {

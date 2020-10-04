@@ -201,7 +201,7 @@ public final class MailEngine {
                 LOGGER.warn("Error adding attachment for player {} (newitem == null)", sender);
                 continue;
             }
-            newItem.setItemLocation(newItem.getItemLocation(), mail.getId());
+            newItem.changeItemLocation(newItem.getItemLocation(), mail.getId());
 
             if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
                 playerIU.addModifiedItem(oldItem);

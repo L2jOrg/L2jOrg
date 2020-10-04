@@ -200,8 +200,8 @@ public final class RequestPostAttachment extends ClientPacket {
                 sender.sendPacket(sm);
             } else {
                 final Item paidAdena = ItemEngine.getInstance().createItem("PayMail", CommonItem.ADENA, adena, player, null);
-                paidAdena.setOwnerId(mail.getSender());
-                paidAdena.setItemLocation(ItemLocation.INVENTORY);
+                paidAdena.changeOwner(mail.getSender());
+                paidAdena.changeItemLocation(ItemLocation.INVENTORY);
                 paidAdena.updateDatabase(true);
                 World.getInstance().removeObject(paidAdena);
             }

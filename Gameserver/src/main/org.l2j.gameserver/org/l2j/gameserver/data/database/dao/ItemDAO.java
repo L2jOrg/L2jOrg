@@ -20,7 +20,6 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.CommissionItemData;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.database.data.ItemVariationData;
@@ -78,9 +77,6 @@ public interface ItemDAO extends DAO<Object> {
 
     @Query("DELETE FROM item_variations WHERE itemId IN (SELECT object_id FROM items WHERE items.owner_id=:playerId:)")
     void deleteVariationsByOwner(int playerId);
-
-    @Query("DELETE FROM item_special_abilities WHERE objectId IN (SELECT object_id FROM items WHERE items.owner_id=:playerId:)")
-    void deleteSpecialAbilitiesByOwner(int playerId);
 
     @Query("DELETE FROM items WHERE owner_id=:playerId:")
     void deleteByOwner(int playerId);

@@ -117,7 +117,7 @@ public class AdminEnchant implements IAdminCommandHandler {
 			final int curEnchant = itemInstance.getEnchantLevel();
 			
 			target.getInventory().unEquipItemInSlot(itemSlot);
-			itemInstance.setEnchantLevel(ench);
+			itemInstance.changeEnchantLevel(ench);
 			target.getInventory().equipItem(itemInstance);
 			
 			final InventoryUpdate iu = new InventoryUpdate();

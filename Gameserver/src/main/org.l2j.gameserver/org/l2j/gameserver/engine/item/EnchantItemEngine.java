@@ -286,7 +286,7 @@ public class EnchantItemEngine extends GameXmlReader {
             }
 
         } else if(scroll.isBlessed()) {
-            item.setEnchantLevel(0);
+            item.changeEnchantLevel(0);
             item.updateDatabase();
             onEnchantEquippedItem(player, item);
 

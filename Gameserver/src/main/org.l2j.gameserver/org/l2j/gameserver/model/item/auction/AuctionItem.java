@@ -73,9 +73,6 @@ public final class AuctionItem {
     }
 
     public final Item createNewItemInstance() {
-        final Item item = new Item(IdFactory.getInstance().getNextId(), _itemId);
-        World.getInstance().addObject(item);
-        item.setCount(_itemCount);
-        return item;
+        return ItemEngine.getInstance().createItem("Auction", _itemId, _itemCount, null, null);
     }
 }

@@ -732,7 +732,7 @@ public class Pet extends Summon {
 
         final Item itemInst = getControlItem();
         if ((itemInst != null) && (itemInst.getEnchantLevel() != getStats().getLevel())) {
-            itemInst.setEnchantLevel(getStats().getLevel());
+            itemInst.changeEnchantLevel(getStats().getLevel());
             itemInst.updateDatabase();
         }
     }

@@ -130,7 +130,7 @@ public final class Evolve {
         player.sendPacket(SystemMessageId.SUMMONING_YOUR_PET);
         petSummon.spawnMe(oldX, oldY, oldZ);
         petSummon.startFeed();
-        item.setEnchantLevel(petSummon.getLevel());
+        item.changeEnchantLevel(petSummon.getLevel());
 
         ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
 
@@ -206,7 +206,7 @@ public final class Evolve {
         player.sendPacket(SystemMessageId.SUMMONING_YOUR_PET);
         petSummon.spawnMe(player.getX(), player.getY(), player.getZ());
         petSummon.startFeed();
-        addedItem.setEnchantLevel(petSummon.getLevel());
+        addedItem.changeEnchantLevel(petSummon.getLevel());
 
         // Inventory update
         final InventoryUpdate iu = new InventoryUpdate();

@@ -248,8 +248,8 @@ public abstract class ItemContainer {
     }
 
     private void addNewItem(Item item) {
-        item.setOwnerId(getOwnerId());
-        item.setItemLocation(getBaseLocation());
+        item.changeOwner(getOwnerId());
+        item.changeItemLocation(getBaseLocation());
         item.setLastChange(ItemChangeType.ADDED);
 
         addItem(item);
@@ -359,9 +359,9 @@ public abstract class ItemContainer {
             item.changeCount(process, -count, actor, reference);
             item.updateDatabase(true);
             item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
-            item.setOwnerId(getOwnerId());
+            item.changeOwner(getOwnerId());
         }
-        item.setItemLocation(newLocation);
+        item.changeItemLocation(newLocation);
         item.updateDatabase(true);
 
         refreshWeight();

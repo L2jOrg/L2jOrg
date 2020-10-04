@@ -57,7 +57,7 @@ public class Attachment extends ItemContainer {
     public void setNewMailId(int mailId) {
         this.mailId = mailId;
         for (Item item : items.values()) {
-            item.setItemLocation(getBaseLocation(), mailId);
+            item.changeItemLocation(getBaseLocation(), mailId);
         }
 
         updateDatabase();
@@ -66,7 +66,7 @@ public class Attachment extends ItemContainer {
     public void returnToWh(ItemContainer wh) {
         for (Item item : items.values()) {
             if (wh == null) {
-                item.setItemLocation(ItemLocation.WAREHOUSE);
+                item.changeItemLocation(ItemLocation.WAREHOUSE);
             } else {
                 transferItem("Expire", item.getObjectId(), item.getCount(), wh, null, null);
             }
@@ -76,7 +76,7 @@ public class Attachment extends ItemContainer {
     @Override
     protected void addItem(Item item) {
         super.addItem(item);
-        item.setItemLocation(getBaseLocation(), mailId);
+        item.changeItemLocation(getBaseLocation(), mailId);
         item.updateDatabase(true);
     }
 

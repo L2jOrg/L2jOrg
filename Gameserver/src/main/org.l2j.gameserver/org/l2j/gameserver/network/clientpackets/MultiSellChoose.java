@@ -383,7 +383,7 @@ public class MultiSellChoose extends ClientPacket {
 
                     // Check if the newly given item should be enchanted.
                     if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getTemplate().getClass().equals(itemEnchantment.getTemplate().getClass())) {
-                        addedItem.setEnchantLevel(itemEnchantment.getEnchantLevel());
+                        addedItem.changeEnchantLevel(itemEnchantment.getEnchantLevel());
                         addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
 
 						if (_soulCrystalOptions != null) {
@@ -401,7 +401,7 @@ public class MultiSellChoose extends ClientPacket {
                         itemEnchantmentProcessed = false;
                     }
                     if (product.getEnchantmentLevel() > 0) {
-                        addedItem.setEnchantLevel(product.getEnchantmentLevel());
+                        addedItem.changeEnchantLevel(product.getEnchantmentLevel());
                         addedItem.updateDatabase(true);
                     }
 

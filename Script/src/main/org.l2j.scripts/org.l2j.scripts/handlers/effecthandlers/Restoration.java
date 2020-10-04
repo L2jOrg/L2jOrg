@@ -70,13 +70,13 @@ public final class Restoration extends AbstractEffect {
         if (isPlayer(effected)) {
             final Item newItem = effected.getActingPlayer().addItem("Skill", itemId, itemCount, effector, true);
             if (nonNull(newItem) && itemEnchantmentLevel > 0) {
-                newItem.setEnchantLevel(itemEnchantmentLevel);
+                newItem.changeEnchantLevel(itemEnchantmentLevel);
             }
         }
         else if (effected instanceof Pet pet) {
             final Item newItem = effected.getInventory().addItem("Skill", itemId, itemCount, effected.getActingPlayer(), effector);
             if (itemEnchantmentLevel > 0) {
-                newItem.setEnchantLevel(itemEnchantmentLevel);
+                newItem.changeEnchantLevel(itemEnchantmentLevel);
             }
             pet.sendItemList();
         }

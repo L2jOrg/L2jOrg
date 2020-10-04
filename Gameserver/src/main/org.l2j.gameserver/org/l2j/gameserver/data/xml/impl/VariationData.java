@@ -208,7 +208,7 @@ public class VariationData extends GameXmlReader {
         VariationWeaponType weaponType;
         if(targetItem.isMagicWeapon() ) {
             weaponType  = VariationWeaponType.MAGE;
-        } else if(targetItem.getWeaponItem() == null && targetItem.isArmor() && targetItem.getItemType() == ArmorType.NONE && targetItem.getEnchantLevel() >= 10) { // Ici le test pour savoir quel type d'item c'est, Pareil j'ai écrit au pif pour l'exemple
+        } else if(targetItem.isArmor() && targetItem.getItemType() == ArmorType.NONE && targetItem.getEnchantLevel() >= 10) {
             weaponType  = VariationWeaponType.CLOAK;
         } else {
             weaponType = VariationWeaponType.WARRIOR;

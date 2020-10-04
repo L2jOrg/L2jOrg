@@ -58,7 +58,7 @@ public final class RequestSaveInventoryOrder extends ClientPacket {
             for (InventoryOrder order : _order) {
                 final Item item = inventory.getItemByObjectId(order.objectID);
                 if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY)) {
-                    item.setItemLocation(ItemLocation.INVENTORY, order.order);
+                    item.changeItemLocation(ItemLocation.INVENTORY, order.order);
                 }
             }
         }
