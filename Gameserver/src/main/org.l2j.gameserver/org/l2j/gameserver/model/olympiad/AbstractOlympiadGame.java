@@ -20,6 +20,7 @@ package org.l2j.gameserver.model.olympiad;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -120,11 +121,11 @@ public abstract class AbstractOlympiadGame {
             player.setTarget(null);
 
             player.setOlympiadGameId(id);
-            player.setIsInOlympiadMode(true);
+            player.setOlympiadMode(OlympiadMode.BLUE);
             player.setIsOlympiadStart(false);
             player.setOlympiadSide(par.getSide());
             player.teleToLocation(loc, instance);
-            player.sendPacket(new ExOlympiadMode(2));
+            player.sendPacket(new ExOlympiadMode(OlympiadMode.BLUE));
         } catch (Exception e) {
             LOGGER.warn(e.getMessage(), e);
             return false;
@@ -270,11 +271,11 @@ public abstract class AbstractOlympiadGame {
                 player.untransform();
             }
 
-            player.setIsInOlympiadMode(false);
+            player.setOlympiadMode(OlympiadMode.NONE);
             player.setIsOlympiadStart(false);
             player.setOlympiadSide(-1);
             player.setOlympiadGameId(-1);
-            player.sendPacket(new ExOlympiadMode(0));
+            player.sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
 
             // Add Clan Skills
             if (player.getClan() != null) {

@@ -16,28 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.olympiad;
-
-import org.l2j.gameserver.engine.olympiad.OlympiadMode;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+package org.l2j.gameserver.engine.olympiad;
 
 /**
- * @author godson
  * @author JoeAlisson
  */
-public class ExOlympiadMode extends ServerPacket {
-    private final OlympiadMode mode;
-
-    public ExOlympiadMode(OlympiadMode mode) {
-        this.mode = mode;
-    }
-
-    @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_MODE);
-        writeByte(mode.ordinal());
-    }
-
+public enum OlympiadMode {
+    NONE,
+    RED,
+    BLUE,
+    SPECTATOR
 }

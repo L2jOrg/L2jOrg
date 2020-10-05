@@ -24,11 +24,12 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchEnd;
+import org.l2j.gameserver.network.serverpackets.olympiad.*;
 
 import java.time.Duration;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
 
 import static org.l2j.gameserver.engine.olympiad.MatchState.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
@@ -65,7 +66,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private void finishBattle() {
         state = FINISHED;
         calculateResults();
-        broadcastPacket(ExOlympiadMatchEnd.STATIC_PACKET);
+                                                                                                                                                                sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
         //broadcastPacket(new ExOlympiadMatchResult());
         countDownIndex = 0;
         countDownTeleportBack();
@@ -76,42 +77,72 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             teleportBack();
             cleanUpMatch();
         } else {
-            broadcastPacket(getSystemMessage(YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
+            sendPacket(getSystemMessage(YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
             scheduled = ThreadPool.schedule(this, COUNT_DOWN_INTERVAL[countDownIndex] - COUNT_DOWN_INTERVAL[++countDownIndex], TimeUnit.SECONDS);
         }
     }
 
     private void cleanUpMatch() {
+        forEachParticipant(this::leaveOlympiadMode);
         arena.destroy();
         Olympiad.getInstance().finishMatch(this);
     }
 
+    private void leaveOlympiadMode(Player player) {
+        player.setOlympiadMode(OlympiadMode.NONE);
+        player.sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
+    }
+
     private void countDown() {
         if(countDownIndex >= COUNT_DOWN_INTERVAL.length - 1) {
-            broadcastPacket(PlaySound.music("ns17_f"));
-            broadcastMessage(THE_MATCH_HAS_STARTED_FIGHT);
-            sendOlympiadUserInfo();
-            sendOlympiadSpellInfo();
+            sendPacket(PlaySound.music("ns17_f"));
+            forRedPlayers(this::sendOlympiadUserInfo);
+            forBluePlayers(this::sendOlympiadUserInfo);
+            sendMessage(THE_MATCH_HAS_STARTED_FIGHT);
             state = IN_BATTLE;
             scheduled = ThreadPool.schedule(this, duration);
         } else {
-            broadcastPacket(getSystemMessage(S1_SECOND_S_TO_MATCH_START).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
+            sendPacket(getSystemMessage(S1_SECOND_S_TO_MATCH_START).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
             scheduled = ThreadPool.schedule(this, COUNT_DOWN_INTERVAL[countDownIndex] - COUNT_DOWN_INTERVAL[++countDownIndex], TimeUnit.SECONDS);
         }
     }
 
+    private void sendOlympiadUserInfo(Player player) {
+        sendPacket(new ExOlympiadUserInfo(player));
+        var spellInfo = new ExOlympiadSpelledInfo(player);
+        player.getEffectList().getEffects().forEach(spellInfo::addSkill);
+        sendPacket(spellInfo);
+    }
+
     private void teleportToArena() {
         state = WARM_UP;
-        broadcastMessage(YOU_WILL_SHORTLY_MOVE_TO_THE_OLYMPIAD_ARENA);
+        sendMessage(YOU_WILL_SHORTLY_MOVE_TO_THE_OLYMPIAD_ARENA);
+        forRedPlayers(player -> setOlympiadMode(player, OlympiadMode.RED));
+        forBluePlayers(player -> setOlympiadMode(player, OlympiadMode.BLUE));
+
         var locations = arena.getEnterLocations();
         teleportPlayers(locations.get(0), locations.get(1), arena);
-        scheduled = ThreadPool.schedule(this, 1, TimeUnit.MINUTES);
+        scheduled = ThreadPool.schedule(this, 10, TimeUnit.SECONDS);
+    }
+
+    private void setOlympiadMode(Player player, OlympiadMode mode) {
+        player.setOlympiadMode(mode);
+        player.sendPacket(new ExOlympiadMode(mode));
     }
 
     private void start() {
         state = MatchState.STARTED;
-        broadcastMessage(AFTER_ABOUT_1_MINUTE_YOU_WILL_MOVE_TO_THE_OLYMPIAD_ARENA);
         scheduled = ThreadPool.schedule(this, 1, TimeUnit.MINUTES);
+        sendMessage(AFTER_ABOUT_1_MINUTE_YOU_WILL_MOVE_TO_THE_OLYMPIAD_ARENA);
+        sendPacket(new ExOlympiadMatchMakingResult(false, getType()));
+    }
+
+    public int getId() {
+        return arena.getId();
+    }
+
+    public boolean isInBattle() {
+        return state == IN_BATTLE;
     }
 
     void setArenaInstance(Instance arena) {
@@ -122,13 +153,21 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         this.duration = duration;
     }
 
+    public abstract OlympiadRuleType getType();
+
     public abstract void addParticipant(Player player);
 
-    protected abstract void teleportPlayers(Location first, Location second, Instance arena);
+    public abstract String getPlayerRedName();
 
-    protected abstract void sendOlympiadUserInfo();
+    public abstract String getPlayerBlueName();
 
-    protected abstract void sendOlympiadSpellInfo();
+    protected abstract void forEachParticipant(Consumer<Player> action);
+
+    protected abstract void forBluePlayers(Consumer<Player> action);
+
+    protected abstract void forRedPlayers(Consumer<Player> action);
+
+    protected abstract void teleportPlayers(Location redLocation, Location blueLocation, Instance arena);
 
     protected abstract void calculateResults();
 

@@ -53,8 +53,7 @@ public class ExOlympiadMatchResult extends ServerPacket {
         writeId(ServerExPacketId.EX_GFX_OLYMPIAD);
 
         writeInt(0x01); // Type 0 = Match List, 1 = Match Result
-
-        writeInt(_tie ? 1 : 0); // 0 - win, 1 - tie
+        writeInt(_tie); // 0 - win, 1 - tie
         writeString(_winnerList.get(0).getName());
         writeInt(_winTeam);
         writeInt(_winnerList.size());

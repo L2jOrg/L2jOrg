@@ -24,8 +24,7 @@ package org.l2j.gameserver.engine.olympiad;
 public enum OlympiadRuleType {
     TEAM,
     CLASSLESS,
-    CLASS,
-    MAX;
+    CLASS;
 
     public int participantCount() {
         return this == TEAM ? 6 : 2;
@@ -34,9 +33,8 @@ public enum OlympiadRuleType {
     public static OlympiadRuleType of(byte ruleType) {
         return switch (ruleType) {
             case 0 -> TEAM;
-            case 1 -> CLASSLESS;
             case 2 -> CLASS;
-            default -> MAX;
+            default -> CLASSLESS;
         };
     }
 }

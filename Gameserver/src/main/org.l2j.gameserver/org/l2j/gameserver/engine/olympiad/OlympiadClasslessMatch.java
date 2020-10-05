@@ -23,12 +23,11 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadSpelledInfo;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadUserInfo;
+
+import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
-import static org.l2j.gameserver.network.SystemMessageId.*;
+import static org.l2j.gameserver.network.SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE;
 
 /**
  * @author JoeAlisson
@@ -53,51 +52,60 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     }
 
     @Override
-    protected void teleportPlayers(Location first, Location second, Instance arena) {
-        redBackLocation = red.getLocation();
-        blueBackLocation = blue.getLocation();
-
-        red.setIsInOlympiadMode(true);
-        red.setOlympiadSide(1);
-        blue.setIsInOlympiadMode(true);
-        blue.setOlympiadSide(2);
-        red.sendPacket(new ExOlympiadMode(1));
-        blue.sendPacket(new ExOlympiadMode(2));
-        red.teleToLocation(first, arena);
-        blue.teleToLocation(second, arena);
+    public String getPlayerRedName() {
+        return red.getAppearance().getVisibleName();
     }
 
     @Override
-    public void broadcastMessage(SystemMessageId messageId) {
+    public String getPlayerBlueName() {
+        return blue.getAppearance().getVisibleName();
+    }
+
+    @Override
+    public OlympiadRuleType getType() {
+        return OlympiadRuleType.CLASSLESS;
+    }
+
+    @Override
+    protected void teleportPlayers(Location redLocation, Location blueLocation, Instance arena) {
+        redBackLocation = red.getLocation();
+        red.teleToLocation(redLocation, arena);
+
+        blueBackLocation = blue.getLocation();
+        blue.teleToLocation(blueLocation, arena);
+    }
+
+    @Override
+    protected void forEachParticipant(Consumer<Player> action) {
+        action.accept(red);
+        action.accept(blue);
+    }
+
+    @Override
+    protected void forBluePlayers(Consumer<Player> action) {
+        action.accept(blue);
+    }
+
+    @Override
+    protected void forRedPlayers(Consumer<Player> action) {
+        action.accept(red);
+    }
+
+    @Override
+    public void sendMessage(SystemMessageId messageId) {
         red.sendPacket(messageId);
         blue.sendPacket(messageId);
     }
 
     @Override
-    public void broadcastPacket(ServerPacket packet) {
-        red.broadcastPacket(packet);
-        blue.broadcastPacket(packet);
-    }
-
-    @Override
-    protected void sendOlympiadUserInfo() {
-        broadcastPacket(new ExOlympiadUserInfo(red));
-        broadcastPacket(new ExOlympiadUserInfo(blue));
-    }
-
-    @Override
-    protected void sendOlympiadSpellInfo() {
-        var spellInfo = new ExOlympiadSpelledInfo(red);
-        red.getEffectList().getEffects().forEach(spellInfo::addSkill);
-        broadcastPacket(spellInfo);
-
-        spellInfo = new ExOlympiadSpelledInfo(blue);
-        blue.getEffectList().getEffects().forEach(spellInfo::addSkill);
+    public void sendPacket(ServerPacket packet) {
+        red.sendPacket(packet);
+        blue.sendPacket(packet);
     }
 
     @Override
     protected void calculateResults() {
-        broadcastMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+        sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
         //broadcastMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
         //broadcastMessage(C1_HAS_LOST_S2_POINTS_IN_THE_OLYMPIAD_GAMES);
     }
@@ -107,4 +115,5 @@ class OlympiadClasslessMatch extends OlympiadMatch {
         red.teleToLocation(redBackLocation, null);
         blue.teleToLocation(blueBackLocation, null);
     }
+
 }
