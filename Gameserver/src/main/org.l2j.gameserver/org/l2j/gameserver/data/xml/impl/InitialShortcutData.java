@@ -20,11 +20,12 @@ package org.l2j.gameserver.data.xml.impl;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.data.database.data.MacroCmdData;
+import org.l2j.gameserver.data.database.data.MacroData;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.enums.MacroType;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Macro;
-import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.engine.item.Item;
@@ -135,54 +136,48 @@ public final class InitialShortcutData extends GameXmlReader {
                 }
 
                 final int macroId = parseInt(attrs, "macroId");
-                final int icon = parseInt(attrs, "icon");
-                final String name = parseString(attrs, "name");
-                final String description = parseString(attrs, "description");
-                final String acronym = parseString(attrs, "acronym");
-                final List<MacroCmd> commands = new ArrayList<>(1);
+
+                MacroData data = new MacroData();
+                data.setId(macroId);
+                data.setIcon( parseInt(attrs, "icon"));
+                data.setName(parseString(attrs, "name"));
+                data.setDescription(parseString(attrs, "description"));
+                data.setAcronym(parseString(attrs, "acronym"));
+
+                final List<MacroCmdData> commands = new ArrayList<>(1);
                 int entry = 0;
+
                 for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling()) {
                     if ("command".equals(b.getNodeName())) {
+                        MacroCmdData cmdData = new MacroCmdData();
+                        cmdData.setMacroId(macroId);
                         attrs = b.getAttributes();
-                        final MacroType type = parseEnum(attrs, MacroType.class, "type");
-                        int d1 = 0;
-                        int d2 = 0;
-                        final String cmd = b.getTextContent();
-                        switch (type) {
-                            case SKILL: {
-                                d1 = parseInt(attrs, "skillId"); // Skill ID
-                                d2 = parseInt(attrs, "skillLvl", 0); // Skill level
-                                break;
-                            }
-                            case ACTION: {
-                                // Not handled by client.
-                                d1 = parseInt(attrs, "actionId");
-                                break;
-                            }
-                            case TEXT: {
-                                // Doesn't have numeric parameters.
-                                break;
-                            }
-                            case SHORTCUT: {
-                                d1 = parseInt(attrs, "page"); // Page
-                                d2 = parseInt(attrs, "slot", 0); // Slot
-                                break;
-                            }
-                            case ITEM: {
-                                // Not handled by client.
-                                d1 = parseInt(attrs, "itemId");
-                                break;
-                            }
-                            case DELAY: {
-                                d1 = parseInt(attrs, "delay"); // Delay in seconds
-                                break;
-                            }
-                        }
-                        commands.add(new MacroCmd(entry++, type, d1, d2, cmd));
+                        cmdData.setType(parseEnum(attrs, MacroType.class, "type"));
+                        cmdData.setCommand(b.getTextContent());
+
+                        setDatas(attrs, cmdData);
+                        cmdData.setIndex(entry++);
+                        commands.add(cmdData);
                     }
                 }
-                _macroPresets.put(macroId, new Macro(macroId, icon, name, description, acronym, commands));
+                _macroPresets.put(macroId, new Macro(data, commands));
             }
+        }
+    }
+
+    private void setDatas(NamedNodeMap attrs, MacroCmdData cmdData) {
+        switch (cmdData.getType()) {
+            case SKILL -> {
+                cmdData.setData1(parseInt(attrs, "skillId")); // Skill ID
+                cmdData.setData2(parseInt(attrs, "skillLvl", 0)); // Skill level
+            }
+            case SHORTCUT -> {
+                cmdData.setData1(parseInt(attrs, "page"));
+                cmdData.setData2(parseInt(attrs, "slot", 0));
+            }
+            case ACTION -> cmdData.setData1(parseInt(attrs, "actionId"));
+            case ITEM -> cmdData.setData1(parseInt(attrs, "itemId"));
+            case DELAY -> cmdData.setData1(parseInt(attrs, "delay"));
         }
     }
 

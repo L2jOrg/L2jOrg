@@ -142,7 +142,8 @@ module org.l2j.gameserver {
             with org.l2j.gameserver.engine.item.container.listener.StatsListener;
 
     provides org.l2j.commons.database.TypeHandler
-            with org.l2j.gameserver.data.database.handler.CommissionItemHandler;
+            with org.l2j.gameserver.data.database.handler.CommissionItemHandler,
+                 org.l2j.gameserver.data.database.handler.MacroHandler;
 
     uses org.l2j.gameserver.handler.IPunishmentHandler;
     uses org.l2j.gameserver.handler.IUserCommandHandler;

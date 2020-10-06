@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
@@ -34,7 +33,6 @@ import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.isAlphaNumeric;
 import static org.l2j.gameserver.network.serverpackets.CharCreateFail.CharacterCreateFailReason.*;
 
 public final class CharacterCreate extends ClientPacket {

@@ -134,13 +134,26 @@ public class QueryDescriptor implements AutoCloseable {
     }
 
     public void execute(Connection con, Object[] args) throws SQLException {
-        var statement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        var statement = createPreparedStatement(con);
         if(isBatch(args)) {
             executeBatch(statement, args);
         } else {
             executeSingle(statement, args);
         }
         statementLocal.set(statement);
+    }
+
+    private PreparedStatement createPreparedStatement(Connection con) throws SQLException {
+        var annotation = method.getAnnotation(Query.class);
+        PreparedStatement st = null;
+        if(nonNull(annotation) && annotation.scrollResult()) {
+            st = con.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        } else if(isUpdate) {
+            st = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        } else {
+            st = con.prepareStatement(query);
+        }
+        return st;
     }
 
     @SuppressWarnings("unchecked")

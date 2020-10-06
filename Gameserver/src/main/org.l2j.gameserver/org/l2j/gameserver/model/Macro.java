@@ -19,100 +19,64 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.model.interfaces.INamable;
+import org.l2j.gameserver.data.database.data.MacroCmdData;
+import org.l2j.gameserver.data.database.data.MacroData;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.List;
 
-public class Macro implements IIdentifiable, INamable {
-    private final int _icon;
-    private final String _name;
-    private final String _descr;
-    private final String _acronym;
-    private final List<MacroCmd> _commands;
-    private int _id;
+/**
+ * @author JoeAlisson
+ */
+public class Macro  {
 
-    /**
-     * Constructor for macros.
-     *
-     * @param id      the macro ID
-     * @param icon    the icon ID
-     * @param name    the macro name
-     * @param descr   the macro description
-     * @param acronym the macro acronym
-     * @param list    the macro command list
-     */
-    public Macro(int id, int icon, String name, String descr, String acronym, List<MacroCmd> list) {
-        _id = id;
-        _icon = icon;
-        _name = name;
-        _descr = descr;
-        _acronym = acronym;
-        _commands = list;
+    private final MacroData data;
+    private final List<MacroCmdData> commands;
+
+    public Macro(MacroData macroData, List<MacroCmdData> commands) {
+        this.data = macroData;
+        this.commands = commands;
     }
 
-    /**
-     * Gets the marco ID.
-     *
-     * @returns the marco ID
-     */
-    @Override
     public int getId() {
-        return _id;
+        return data.getId();
     }
 
-    /**
-     * Sets the marco ID.
-     *
-     * @param id the marco ID
-     */
-    public void setId(int id) {
-        _id = id;
-    }
-
-    /**
-     * Gets the macro icon ID.
-     *
-     * @return the icon
-     */
     public int getIcon() {
-        return _icon;
+        return data.getIcon();
     }
 
-    /**
-     * Gets the macro name.
-     *
-     * @return the name
-     */
-    @Override
     public String getName() {
-        return _name;
+        return data.getName();
     }
 
-    /**
-     * Gets the macro description.
-     *
-     * @return the description
-     */
-    public String getDescr() {
-        return _descr;
+    public String getDescription() {
+        return data.getDescription();
     }
 
-    /**
-     * Gets the macro acronym.
-     *
-     * @return the acronym
-     */
     public String getAcronym() {
-        return _acronym;
+        return data.getAcronym();
     }
 
-    /**
-     * Gets the macro command list.
-     *
-     * @return the macro command list
-     */
-    public List<MacroCmd> getCommands() {
-        return _commands;
+    public List<MacroCmdData> getCommands() {
+        return commands;
+    }
+
+    public MacroData getData() {
+        return data;
+    }
+
+    public void updateId(int id) {
+        data.setId(id);
+        for (MacroCmdData command : commands) {
+            command.setMacroId(id);
+        }
+    }
+
+    public void updatePlayer(Player player) {
+        data.setPlayerId(player.getObjectId());
+        for (MacroCmdData command : commands) {
+            command.setPlayerId(player.getObjectId());
+        }
     }
 }
