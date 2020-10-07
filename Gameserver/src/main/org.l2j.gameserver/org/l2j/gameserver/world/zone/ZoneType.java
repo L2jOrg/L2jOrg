@@ -49,7 +49,8 @@ public enum ZoneType {
     NO_RESTART,
     FISHING,
     UNDYING,
-    TAX;
+    TAX,
+    RAID_LIMIT;
 
     private static final int ZONE_COUNT = values().length;
 
