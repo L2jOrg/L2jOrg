@@ -3072,37 +3072,23 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     @Override
     public void onForcedAttack(Player player) {
-        if (isInsidePeaceZone(player)) {
+        if (isInsidePeaceZone(player) && !player.getAccessLevel().allowPeaceAttack()) {
             player.sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
-        if (player.isInOlympiadMode() && GameUtils.isPlayable(player.getTarget())) {
-            Player target = player.getTarget().getActingPlayer();
 
-            if ((target.isInOlympiadMode() && (!player.isOlympiadStart() || (player.getOlympiadGameId() != target.getOlympiadGameId())))) {
-                player.sendPacket(ActionFailed.STATIC_PACKET);
-                return;
-            }
-        }
-        if ((player.getTarget() != null) && !player.getTarget().canBeAttacked() && !player.getAccessLevel().allowPeaceAttack()) {
+        if (player.getBlockCheckerArena() != -1 || player.isConfused() || !canBeAttacked() ) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
-        if (player.isConfused()) {
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-        // GeoData Los Check or dz > 1000
+
         if (!GeoEngine.getInstance().canSeeTarget(player, this)) {
             player.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
-        if (player.getBlockCheckerArena() != -1) {
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
+
         // Notify AI with AI_INTENTION_ATTACK
         player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
     }

@@ -74,8 +74,8 @@ public abstract class AbstractEvent extends AbstractScript {
         return true;
     }
 
-    public abstract void broadcastMessage(SystemMessageId messageId);
+    public abstract void sendMessage(SystemMessageId messageId);
 
-    public abstract void broadcastPacket(ServerPacket packet);
+    public abstract void sendPacket(ServerPacket packet);
 
 }

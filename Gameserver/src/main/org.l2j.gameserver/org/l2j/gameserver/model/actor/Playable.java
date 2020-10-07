@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model.actor;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.InstanceType;
@@ -29,8 +30,8 @@ import org.l2j.gameserver.model.actor.stat.PlayableStats;
 import org.l2j.gameserver.model.actor.status.PlayableStatus;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * This class represents all Playable characters in the world.<br>
@@ -66,24 +67,73 @@ public abstract class Playable extends Creature {
         setIsInvul(false);
     }
 
-    @Override
-    public PlayableStats getStats() {
-        return (PlayableStats) super.getStats();
+    public boolean checkIfPvP(Player target) {
+        final Player player = getActingPlayer();
+
+        if ((player == null) //
+                || (target == null) //
+                || (player == target) //
+                || (target.getReputation() < 0) //
+                || (target.getPvpFlag() > 0) //
+                || target.isOnDarkSide()) {
+            return true;
+        } else if (player.isInParty() && player.getParty().containsPlayer(target)) {
+            return false;
+        }
+
+        final Clan playerClan = player.getClan();
+
+        if ((playerClan != null) && !player.isAcademyMember() && !target.isAcademyMember()) {
+            final ClanWar war = playerClan.getWarWith(target.getClanId());
+            return (war != null) && (war.getState() == ClanWarState.MUTUAL);
+        }
+        return false;
     }
 
-    @Override
-    public void initCharStat() {
-        setStat(new PlayableStats(this));
+    // Support for Noblesse Blessing skill, where buffs are retained after resurrect
+    public final boolean isNoblesseBlessedAffected() {
+        return isAffected(EffectFlag.NOBLESS_BLESSING);
     }
 
-    @Override
-    public PlayableStatus getStatus() {
-        return (PlayableStatus) super.getStatus();
+    /**
+     * @return {@code true} if char can resurrect by himself, {@code false} otherwise
+     */
+    public final boolean isResurrectSpecialAffected() {
+        return isAffected(EffectFlag.RESURRECTION_SPECIAL);
     }
 
-    @Override
-    public void initCharStatus() {
-        setStatus(new PlayableStatus(this));
+    /**
+     * @return {@code true} if the Silent Moving mode is active, {@code false} otherwise
+     */
+    public boolean isSilentMovingAffected() {
+        return isAffected(EffectFlag.SILENT_MOVE);
+    }
+
+    /**
+     * For Newbie Protection Blessing skill, keeps you safe from an attack by a chaotic character >= 10 levels apart from you.
+     */
+    public final boolean isProtectionBlessingAffected() {
+        return isAffected(EffectFlag.PROTECTION_BLESSING);
+    }
+
+    public boolean isLockedTarget() {
+        return _lockedTarget != null;
+    }
+
+    public Creature getLockedTarget() {
+        return _lockedTarget;
+    }
+
+    public void setLockedTarget(Creature cha) {
+        _lockedTarget = cha;
+    }
+
+    public void setTransferDamageTo(Player val) {
+        transferDmgTo = val;
+    }
+
+    public Player getTransferingDamageTo() {
+        return transferDmgTo;
     }
 
     @Override
@@ -108,9 +158,7 @@ public abstract class Playable extends Creature {
             stopAllEffectsExceptThoseThatLastThroughDeath();
         }
 
-        // Notify Quest of Playable's death
         final Player actingPlayer = getActingPlayer();
-
         if (!actingPlayer.isNotifyQuestOfDeathEmpty()) {
             for (QuestState qs : actingPlayer.getNotifyQuestOfDeath()) {
                 qs.getQuest().notifyDeath((killer == null ? this : killer), this, qs);
@@ -123,67 +171,39 @@ public abstract class Playable extends Creature {
                 killerPlayer.onPlayeableKill(this);
             }
         }
-
         return true;
     }
 
-    public boolean checkIfPvP(Player target) {
-        final Player player = getActingPlayer();
-
-        if ((player == null) //
-                || (target == null) //
-                || (player == target) //
-                || (target.getReputation() < 0) //
-                || (target.getPvpFlag() > 0) //
-                || target.isOnDarkSide()) {
-            return true;
-        } else if (player.isInParty() && player.getParty().containsPlayer(target)) {
-            return false;
-        }
-
-        final Clan playerClan = player.getClan();
-
-        if ((playerClan != null) && !player.isAcademyMember() && !target.isAcademyMember()) {
-            final ClanWar war = playerClan.getWarWith(target.getClanId());
-            return (war != null) && (war.getState() == ClanWarState.MUTUAL);
-        }
-        return false;
-    }
-
-    /**
-     * Return True.
-     */
     @Override
-    public boolean canBeAttacked() {
-        return true;
+    public void onForcedAttack(Player player) {
+        if (player.isInOlympiadMode()) {
+            Player target = getActingPlayer();
+            if (target.isInOlympiadMode() && (!player.isOlympiadStart() || player.getOlympiadGameId() != target.getOlympiadGameId())) {
+                player.sendPacket(ActionFailed.STATIC_PACKET);
+                return;
+            }
+        }
+        super.onForcedAttack(player);
     }
 
-    // Support for Noblesse Blessing skill, where buffs are retained after resurrect
-    public final boolean isNoblesseBlessedAffected() {
-        return isAffected(EffectFlag.NOBLESS_BLESSING);
+    @Override
+    public PlayableStats getStats() {
+        return (PlayableStats) super.getStats();
     }
 
-    /**
-     * @return {@code true} if char can resurrect by himself, {@code false} otherwise
-     */
-    public final boolean isResurrectSpecialAffected() {
-        return isAffected(EffectFlag.RESURRECTION_SPECIAL);
+    @Override
+    public void initCharStat() {
+        setStat(new PlayableStats(this));
     }
 
-    /**
-     * @return {@code true} if the Silent Moving mode is active, {@code false} otherwise
-     */
-    public boolean isSilentMovingAffected() {
-        return isAffected(EffectFlag.SILENT_MOVE);
+    @Override
+    public PlayableStatus getStatus() {
+        return (PlayableStatus) super.getStatus();
     }
 
-    /**
-     * For Newbie Protection Blessing skill, keeps you safe from an attack by a chaotic character >= 10 levels apart from you.
-     *
-     * @return
-     */
-    public final boolean isProtectionBlessingAffected() {
-        return isAffected(EffectFlag.PROTECTION_BLESSING);
+    @Override
+    public void initCharStatus() {
+        setStatus(new PlayableStatus(this));
     }
 
     @Override
@@ -191,24 +211,9 @@ public abstract class Playable extends Creature {
         getEffectList().updateEffectIcons(partyOnly);
     }
 
-    public boolean isLockedTarget() {
-        return _lockedTarget != null;
-    }
-
-    public Creature getLockedTarget() {
-        return _lockedTarget;
-    }
-
-    public void setLockedTarget(Creature cha) {
-        _lockedTarget = cha;
-    }
-
-    public void setTransferDamageTo(Player val) {
-        transferDmgTo = val;
-    }
-
-    public Player getTransferingDamageTo() {
-        return transferDmgTo;
+    @Override
+    public boolean canBeAttacked() {
+        return true;
     }
 
     public abstract void doPickupItem(WorldObject object);

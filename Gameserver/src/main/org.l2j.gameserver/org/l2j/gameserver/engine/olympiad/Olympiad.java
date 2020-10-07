@@ -47,7 +47,9 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Year;
 import java.time.YearMonth;
+import java.util.Collection;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
@@ -256,7 +258,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
 
         matches.add(match);
-        ThreadPool.schedule(match, 1, TimeUnit.MINUTES);
+        ThreadPool.schedule(match, 10, TimeUnit.SECONDS);
     }
 
     void finishMatch(OlympiadMatch olympiadMatch) {
@@ -285,6 +287,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     public int getSeasonYear() {
         return Year.now().getValue();
+    }
+
+    public Collection<OlympiadMatch> getMatches() {
+        return matches;
     }
 
     public static Olympiad getInstance() {

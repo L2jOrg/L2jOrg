@@ -18,24 +18,26 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author godson
+ * @author JoeAlisson
  */
 public class ExOlympiadMode extends ServerPacket {
-    private final int mode;
+    private final OlympiadMode mode;
 
-    public ExOlympiadMode(int mode) {
+    public ExOlympiadMode(OlympiadMode mode) {
         this.mode = mode;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_OLYMPIAD_MODE);
-        writeByte(mode);
+        writeByte(mode.ordinal());
     }
 
 }

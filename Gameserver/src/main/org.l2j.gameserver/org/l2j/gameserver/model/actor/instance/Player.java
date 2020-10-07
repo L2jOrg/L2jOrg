@@ -45,6 +45,7 @@ import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
@@ -1264,10 +1265,8 @@ public final class Player extends Playable {
     private boolean _canFeed;
     private boolean _isInSiege;
     private boolean _isInHideoutSiege = false;
-    /**
-     * Olympiad
-     */
-    private boolean _inOlympiadMode = false;
+
+    private OlympiadMode olympiadMode = OlympiadMode.NONE;
     private boolean _OlympiadStart = false;
     private int _olympiadGameId = -1;
     private int _olympiadSide = -1;
@@ -3693,7 +3692,7 @@ public final class Player extends Playable {
             _party.broadcastToPartyMembers(this, partyWindow);
         }
 
-        if (_inOlympiadMode && _OlympiadStart && (needCpUpdate || needHpUpdate)) {
+        if (isInOlympiadMode() && _OlympiadStart && (needCpUpdate || needHpUpdate)) {
             final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(getOlympiadGameId());
             if ((game != null) && game.isBattleStarted()) {
                 game.getStadium().broadcastStatusUpdate(this);
@@ -4031,7 +4030,7 @@ public final class Player extends Playable {
     }
 
     public boolean canOpenPrivateStore() {
-        return !_isSellingBuffs && !isAlikeDead() && !_inOlympiadMode && !isMounted() && !isInsideZone(ZoneType.NO_STORE) && !isCastingNow();
+        return !_isSellingBuffs && !isAlikeDead() && !isInOlympiadMode() && !isMounted() && !isInsideZone(ZoneType.NO_STORE) && !isCastingNow();
     }
 
     public void tryOpenPrivateBuyStore() {
@@ -6448,7 +6447,7 @@ public final class Player extends Playable {
 
         // Check if the attacker is in olympia and olympia start
         if (GameUtils.isPlayer(attacker) && attacker.getActingPlayer().isInOlympiadMode()) {
-            return _inOlympiadMode && _OlympiadStart && (((Player) attacker).getOlympiadGameId() == getOlympiadGameId());
+            return isInOlympiadMode() && _OlympiadStart && (((Player) attacker).getOlympiadGameId() == getOlympiadGameId());
         }
 
         if (_isOnCustomEvent && (getTeam() == attacker.getTeam())) {
@@ -6532,11 +6531,7 @@ public final class Player extends Playable {
         }
 
         // Check if the Player has Karma
-        if ((getReputation() < 0) || (_pvpFlag > 0)) {
-            return true;
-        }
-
-        return false;
+        return getReputation() < 0 || _pvpFlag > 0;
     }
 
     /**
@@ -7050,7 +7045,7 @@ public final class Player extends Playable {
         setInvisible(true);
         setInstance(OlympiadGameManager.getInstance().getOlympiadTask(id).getStadium().getInstance());
         teleToLocation(loc, false);
-        sendPacket(new ExOlympiadMode(3));
+        sendPacket(new ExOlympiadMode(OlympiadMode.SPECTATOR));
 
         broadcastUserInfo();
     }
@@ -7084,7 +7079,7 @@ public final class Player extends Playable {
         _olympiadGameId = -1;
         _observerMode = false;
         setTarget(null);
-        sendPacket(new ExOlympiadMode(0));
+        sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
         setInstance(null);
         teleToLocation(_lastLoc, true);
         if (!isGM()) {
@@ -7179,8 +7174,12 @@ public final class Player extends Playable {
         return !player.getBlockList().isBlockAll() && !player.getBlockList().isInBlockList(this);
     }
 
-    public void setIsInOlympiadMode(boolean b) {
-        _inOlympiadMode = b;
+    public void setOlympiadMode(OlympiadMode mode) {
+        olympiadMode = mode;
+    }
+
+    public boolean isInOlympiadMode() {
+        return olympiadMode != OlympiadMode.NONE;
     }
 
     public void setIsOlympiadStart(boolean b) {
@@ -7208,10 +7207,6 @@ public final class Player extends Playable {
         _hero = hero;
 
         sendSkillList();
-    }
-
-    public boolean isInOlympiadMode() {
-        return _inOlympiadMode;
     }
 
     public boolean isInDuel() {
@@ -7287,7 +7282,7 @@ public final class Player extends Playable {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL;
             return false;
         }
-        if (_inOlympiadMode) {
+        if (isInOlympiadMode()) {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS;
             return false;
         }
@@ -7699,7 +7694,7 @@ public final class Player extends Playable {
 
         checkItemRestriction();
 
-        if ((Config.PLAYER_TELEPORT_PROTECTION > 0) && !_inOlympiadMode) {
+        if ((Config.PLAYER_TELEPORT_PROTECTION > 0) && !isInOlympiadMode()) {
             setTeleportProtection(true);
         }
 
@@ -8889,7 +8884,7 @@ public final class Player extends Playable {
         } else if (isFlying()) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_FLYING);
             return false;
-        } else if (_inOlympiadMode) {
+        } else if (isInOlympiadMode()) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_IN_AN_OLYMPIAD_MATCH);
             return false;
         } else if (hasBlockActions() && hasAbnormalType(AbnormalType.PARALYZE)) {

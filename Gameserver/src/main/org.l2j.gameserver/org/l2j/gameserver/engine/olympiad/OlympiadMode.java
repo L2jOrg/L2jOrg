@@ -16,22 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.commons.database.annotation;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+package org.l2j.gameserver.engine.olympiad;
 
 /**
  * @author JoeAlisson
  */
-@Target(ElementType.METHOD)
-@Retention(RetentionPolicy.RUNTIME)
-public @interface  Query {
-    String value();
-
-    int batchIndex() default -1;
-
-    boolean scrollResult() default false;
+public enum OlympiadMode {
+    NONE,
+    RED,
+    BLUE,
+    SPECTATOR
 }
