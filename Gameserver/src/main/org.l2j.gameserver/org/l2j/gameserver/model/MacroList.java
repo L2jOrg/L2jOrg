@@ -52,7 +52,10 @@ public class MacroList implements IRestorable {
         macro.updatePlayer(owner);
         MacroUpdateType updateType = macro.getId() == 0 ? MacroUpdateType.ADD : MacroUpdateType.MODIFY;
         if (macro.getId() == 0) {
-            macro.updateId(nextMacroId++);
+            while (macros.containsKey(nextMacroId)) {
+                nextMacroId++;
+            }
+            macro.updateId(nextMacroId);
         }
         macros.put(macro.getId(), macro);
         registerMacroInDb(macro);
