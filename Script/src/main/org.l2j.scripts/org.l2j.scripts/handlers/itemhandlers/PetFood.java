@@ -84,7 +84,7 @@ public class PetFood implements IItemHandler
 				final Player player = activeChar.getActingPlayer();
 				if (player.isMounted())
 				{
-					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
+					final List<Integer> foodIds = PetDataTable.getInstance().getPetTemplate(player.getMountNpcId()).getFood();
 					if (foodIds.contains(item.getId()))
 					{
 						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))

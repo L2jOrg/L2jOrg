@@ -250,7 +250,7 @@ public class Servitor extends Summon implements Runnable {
 
         SummonEffectsTable.getInstance().getServitorEffects(getOwner()).getOrDefault(getReferenceSkill(), Collections.emptyList()).clear();
 
-        getDAO(PetDAO.class).deleteSkillsSave(getOwner().getObjectId(), _referenceSkill);
+        getDAO(PetDAO.class).deleteSummonSkillsSave(getOwner().getObjectId(), _referenceSkill);
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
 

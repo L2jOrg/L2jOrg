@@ -20,7 +20,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.enums.MountType;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.PetLevelData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -50,7 +50,7 @@ import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 public final class PetDataTable extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(PetDataTable.class);
 
-    private final Map<Integer, PetData> pets = new HashMap<>();
+    private final Map<Integer, PetTemplate> pets = new HashMap<>();
 
     private PetDataTable() {
         load();
@@ -89,7 +89,7 @@ public final class PetDataTable extends GameXmlReader {
                 final int npcId = parseInt(d.getAttributes(), "id");
                 final int itemId = parseInt(d.getAttributes(), "itemId");
                 // index ignored for now
-                final PetData data = new PetData(npcId, itemId);
+                final PetTemplate data = new PetTemplate(npcId, itemId);
                 for (Node p = d.getFirstChild(); p != null; p = p.getNextSibling()) {
                     if (p.getNodeName().equals("set")) {
                         attrs = p.getAttributes();
@@ -151,8 +151,8 @@ public final class PetDataTable extends GameXmlReader {
      * @param itemId
      * @return
      */
-    public PetData getPetDataByItemId(int itemId) {
-        for (PetData data : pets.values()) {
+    public PetTemplate getPetDataByItemId(int itemId) {
+        for (PetTemplate data : pets.values()) {
             if (data.getItemId() == itemId) {
                 return data;
             }
@@ -168,7 +168,7 @@ public final class PetDataTable extends GameXmlReader {
      * @return the pet's parameters for the given Id and level.
      */
     public PetLevelData getPetLevelData(int petId, int petLevel) {
-        final PetData pd = getPetData(petId);
+        final PetTemplate pd = getPetTemplate(petId);
         if (pd != null) {
             if (petLevel > pd.getMaxLevel()) {
                 return pd.getPetLevelData(pd.getMaxLevel());
@@ -184,9 +184,9 @@ public final class PetDataTable extends GameXmlReader {
      * @param petId the pet Id.
      * @return the pet data
      */
-    public PetData getPetData(int petId) {
+    public PetTemplate getPetTemplate(int petId) {
         if (!pets.containsKey(petId)) {
-            LOGGER.info(getClass().getSimpleName() + ": Missing pet data for npcid: " + petId);
+            LOGGER.info("Missing pet data for npc id {}", petId);
         }
         return pets.get(petId);
     }
@@ -202,7 +202,7 @@ public final class PetDataTable extends GameXmlReader {
     }
 
     public int getPetItemByNpc(int npcId) {
-        return zeroIfNullOrElse(pets.get(npcId), PetData::getItemId);
+        return zeroIfNullOrElse(pets.get(npcId), PetTemplate::getItemId);
     }
 
     public boolean doesPetNameExist(String name, int petNpcId) {

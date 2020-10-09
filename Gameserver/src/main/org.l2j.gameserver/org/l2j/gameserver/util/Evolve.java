@@ -22,7 +22,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -69,7 +69,7 @@ public final class Evolve {
         final int oldY = currentPet.getY();
         final int oldZ = currentPet.getZ();
 
-        final PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
+        final PetTemplate oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
 
         if (oldData == null) {
             return false;
@@ -81,13 +81,13 @@ public final class Evolve {
             return false;
         }
 
-        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
+        final PetTemplate petTemplate = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
 
-        if (petData == null) {
+        if (petTemplate == null) {
             return false;
         }
 
-        final int npcID = petData.getNpcId();
+        final int npcID = petTemplate.getNpcId();
 
         if (npcID == 0) {
             return false;
@@ -158,17 +158,17 @@ public final class Evolve {
             oldpetlvl = petminlvl;
         }
 
-        final PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
+        final PetTemplate oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
         if (oldData == null) {
             return false;
         }
 
-        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
-        if (petData == null) {
+        final PetTemplate petTemplate = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
+        if (petTemplate == null) {
             return false;
         }
 
-        final int npcId = petData.getNpcId();
+        final int npcId = petTemplate.getNpcId();
         if (npcId == 0) {
             return false;
         }

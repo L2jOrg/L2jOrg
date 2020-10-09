@@ -31,7 +31,7 @@ import java.util.Map;
  *
  * @author JIV
  */
-public class PetData {
+public class PetTemplate {
     private final Map<Integer, PetLevelData> _levelStats = new HashMap<>();
     private final List<PetSkillLearn> _skills = new ArrayList<>();
 
@@ -44,7 +44,7 @@ public class PetData {
     private int _maxlvl = 0;
     private boolean _syncLevel = false;
 
-    public PetData(int npcId, int itemId) {
+    public PetTemplate(int npcId, int itemId) {
         _npcId = npcId;
         _itemId = itemId;
     }

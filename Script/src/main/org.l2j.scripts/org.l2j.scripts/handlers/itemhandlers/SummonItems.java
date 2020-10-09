@@ -20,7 +20,7 @@
 package org.l2j.scripts.handlers.itemhandlers;
 
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.PetItemRequest;
@@ -67,8 +67,8 @@ public class SummonItems extends ItemSkillsTemplate
 			return false;
 		}
 		
-		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
-		if ((petData == null) || (petData.getNpcId() == -1))
+		final PetTemplate petTemplate = PetDataTable.getInstance().getPetDataByItemId(item.getId());
+		if ((petTemplate == null) || (petTemplate.getNpcId() == -1))
 		{
 			return false;
 		}

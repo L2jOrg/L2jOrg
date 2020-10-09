@@ -24,7 +24,7 @@ import org.l2j.gameserver.data.database.dao.SummonDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Servitor;
@@ -82,14 +82,14 @@ public class PlayerSummonTable {
             LOGGER.warn("Null pet summoning item for {}", player);
             return;
         }
-        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
-        if (isNull(petData)) {
+        final PetTemplate petTemplate = PetDataTable.getInstance().getPetDataByItemId(item.getId());
+        if (isNull(petTemplate)) {
             LOGGER.warn("Null pet data for: {} and summoning item: {}", player, item);
             return;
         }
-        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petTemplate.getNpcId());
         if (isNull(npcTemplate)) {
-            LOGGER.warn("Null pet NPC template for: {} and pet Id: {}", player,petData.getNpcId());
+            LOGGER.warn("Null pet NPC template for: {} and pet Id: {}", player, petTemplate.getNpcId());
             return;
         }
 

@@ -61,7 +61,7 @@ public final class PetSkillUse implements IPlayerActionHandler
 		}
 		else
 		{
-			final int skillLevel = PetDataTable.getInstance().getPetData(pet.getId()).getAvailableLevel(action.getOptionId(), pet.getLevel());
+			final int skillLevel = PetDataTable.getInstance().getPetTemplate(pet.getId()).getAvailableLevel(action.getOptionId(), pet.getLevel());
 			if (skillLevel > 0)
 			{
 				pet.setTarget(player.getTarget());

@@ -54,7 +54,7 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
@@ -1226,7 +1226,7 @@ public final class Player extends Playable {
      * data for mounted pets
      */
     private int _controlItemId;
-    private PetData _data;
+    private PetTemplate _data;
     private PetLevelData _leveldata;
     private int _curFeed;
     private ScheduledFuture<?> _dismountTask;
@@ -8683,16 +8683,16 @@ public final class Player extends Playable {
         _data = null;
     }
 
-    public final PetData getPetData(int npcId) {
+    public final PetTemplate getPetData(int npcId) {
         if (_data == null) {
-            _data = PetDataTable.getInstance().getPetData(npcId);
+            _data = PetDataTable.getInstance().getPetTemplate(npcId);
         }
         return _data;
     }
 
     private PetLevelData getPetLevelData(int npcId) {
         if (_leveldata == null) {
-            _leveldata = PetDataTable.getInstance().getPetData(npcId).getPetLevelData(getMountLevel());
+            _leveldata = PetDataTable.getInstance().getPetTemplate(npcId).getPetLevelData(getMountLevel());
         }
         return _leveldata;
     }

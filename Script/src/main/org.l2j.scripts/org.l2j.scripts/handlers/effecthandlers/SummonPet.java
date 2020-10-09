@@ -22,7 +22,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -84,12 +84,12 @@ public final class SummonPet extends AbstractEffect {
             return;
         }
 
-        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
-        if (isNull(petData ) || (petData.getNpcId() == -1)) {
+        final PetTemplate petTemplate = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
+        if (isNull(petTemplate) || (petTemplate.getNpcId() == -1)) {
             return;
         }
 
-        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petTemplate.getNpcId());
         final Pet pet = Pet.spawnPet(npcTemplate, player, collar);
 
         pet.setShowSummonAnimation(true);
