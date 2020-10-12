@@ -3493,7 +3493,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             // Absorb HP from the damage inflicted
-            if (skill == null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
+            if (skill != null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
             {
                 double absorbPercent = getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStats().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
                 if ((absorbPercent > 0) && (Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
