@@ -3492,18 +3492,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 }
             }
 
-            // Absorb HP from the damage inflicted
-            if (skill == null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
+            double absorbPercent = getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStats().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
+            if ((absorbPercent > 0) && (Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
             {
-                double absorbPercent = getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStats().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
-                if ((absorbPercent > 0) && (Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
+                int absorbDamage = (int) Math.min(absorbPercent * damage, stats.getMaxRecoverableHp() - _status.getCurrentHp());
+                absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+                if (absorbDamage > 0)
                 {
-                    int absorbDamage = (int) Math.min(absorbPercent * damage, stats.getMaxRecoverableHp() - _status.getCurrentHp());
-                    absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
-                    if (absorbDamage > 0)
-                    {
-                        setCurrentHp(_status.getCurrentHp() + absorbDamage);
-                    }
+                    setCurrentHp(_status.getCurrentHp() + absorbDamage);
                 }
             }
 
@@ -3512,7 +3508,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             {
                 if (Rnd.get(10) < 3) // Classic: Static 30% change.
                 {
-                    double absorbPercent = stats.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
+                    absorbPercent = stats.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
                     if (absorbPercent > 0)
                     {
                         int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, stats.getMaxRecoverableMp() - _status.getCurrentMp());
