@@ -38,7 +38,7 @@ public class OnEventTrigger extends ServerPacket {
         writeId(ServerPacketId.EVENT_TRIGGER);
 
         writeInt(_emitterId);
-        writeByte((byte) _enabled);
+        writeByte(_enabled);
     }
 
 }

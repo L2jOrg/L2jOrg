@@ -58,6 +58,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -810,22 +811,22 @@ public final class Instance implements IIdentifiable, INamable {
      * @param id ID of doors
      * @param open {@code true} means open door, {@code false} means close door
      */
-    public void openCloseDoor(int id, boolean open)
-    {
+    public void openCloseDoor(int id, boolean open) {
         final Door door = doors.get(id);
-        if (door != null)
-        {
-            if (open)
-            {
-                if (!door.isOpen())
-                {
+        if (nonNull(door)) {
+            if (open) {
+                if (!door.isOpen()) {
                     door.openMe();
                 }
-            }
-            else if (door.isOpen())
-            {
+            } else if (door.isOpen()) {
                 door.closeMe();
             }
+        }
+    }
+
+    public void openAllDoors() {
+        for (Door door : doors.values()) {
+            door.openMe();
         }
     }
 
