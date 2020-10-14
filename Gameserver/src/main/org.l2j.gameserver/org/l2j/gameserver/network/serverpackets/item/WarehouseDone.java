@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.item;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -34,8 +35,8 @@ public class WarehouseDone extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.WAREHOUSE_DONE);
-        writeInt(success);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.WAREHOUSE_DONE, buffer );
+        buffer.writeInt(success);
     }
 }

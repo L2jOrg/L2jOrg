@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -39,22 +40,22 @@ public class ExGetBossRecord extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_GET_BOSS_RECORD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_GET_BOSS_RECORD, buffer );
 
-        writeInt(_ranking);
-        writeInt(_totalPoints);
+        buffer.writeInt(_ranking);
+        buffer.writeInt(_totalPoints);
         if (_bossRecordInfo == null) {
-            writeInt(0x00);
-            writeInt(0x00);
-            writeInt(0x00);
-            writeInt(0x00);
+            buffer.writeInt(0x00);
+            buffer.writeInt(0x00);
+            buffer.writeInt(0x00);
+            buffer.writeInt(0x00);
         } else {
-            writeInt(_bossRecordInfo.size()); // list size
+            buffer.writeInt(_bossRecordInfo.size()); // list size
             for (Entry<Integer, Integer> entry : _bossRecordInfo.entrySet()) {
-                writeInt(entry.getKey());
-                writeInt(entry.getValue());
-                writeInt(0x00); // ??
+                buffer.writeInt(entry.getKey());
+                buffer.writeInt(entry.getValue());
+                buffer.writeInt(0x00); // ??
             }
         }
     }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -39,16 +40,16 @@ public final class Ride extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.RIDE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.RIDE, buffer );
 
-        writeInt(_objectId);
-        writeInt(_mounted);
-        writeInt(_rideType);
-        writeInt(_rideNpcId);
-        writeInt(_loc.getX());
-        writeInt(_loc.getY());
-        writeInt(_loc.getZ());
+        buffer.writeInt(_objectId);
+        buffer.writeInt(_mounted);
+        buffer.writeInt(_rideType);
+        buffer.writeInt(_rideNpcId);
+        buffer.writeInt(_loc.getX());
+        buffer.writeInt(_loc.getY());
+        buffer.writeInt(_loc.getZ());
     }
 
 }

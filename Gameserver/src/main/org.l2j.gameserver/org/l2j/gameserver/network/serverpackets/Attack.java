@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.Hit;
 import org.l2j.gameserver.model.Location;
@@ -72,36 +73,36 @@ public class Attack extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
         final Iterator<Hit> it = hits.iterator();
         final Hit firstHit = it.next();
 
-        writeId(ServerPacketId.ATTACK);
+        writeId(ServerPacketId.ATTACK, buffer );
 
-        writeInt(attackerObjId);
-        writeInt(firstHit.getTargetId());
-        writeInt(additionalSoulshot);
-        writeInt(firstHit.getDamage());
-        writeInt(firstHit.getFlags());
-        writeInt(firstHit.getGrade());
-        writeInt(attackerLoc.getX());
-        writeInt(attackerLoc.getY());
-        writeInt(attackerLoc.getZ());
+        buffer.writeInt(attackerObjId);
+        buffer.writeInt(firstHit.getTargetId());
+        buffer.writeInt(additionalSoulshot);
+        buffer.writeInt(firstHit.getDamage());
+        buffer.writeInt(firstHit.getFlags());
+        buffer.writeInt(firstHit.getGrade());
+        buffer.writeInt(attackerLoc.getX());
+        buffer.writeInt(attackerLoc.getY());
+        buffer.writeInt(attackerLoc.getZ());
 
-        writeShort(hits.size() - 1);
+        buffer.writeShort(hits.size() - 1);
         while (it.hasNext()) {
-            writeHit(it.next());
+            writeHit(it.next(), buffer);
         }
 
-        writeInt(targetLoc.getX());
-        writeInt(targetLoc.getY());
-        writeInt(targetLoc.getZ());
+        buffer.writeInt(targetLoc.getX());
+        buffer.writeInt(targetLoc.getY());
+        buffer.writeInt(targetLoc.getZ());
     }
 
-    private void writeHit(Hit hit) {
-        writeInt(hit.getTargetId());
-        writeInt(hit.getDamage());
-        writeInt(hit.getFlags());
-        writeInt(hit.getGrade());
+    private void writeHit(Hit hit, WritableBuffer buffer) {
+        buffer.writeInt(hit.getTargetId());
+        buffer.writeInt(hit.getDamage());
+        buffer.writeInt(hit.getFlags());
+        buffer.writeInt(hit.getGrade());
     }
 }

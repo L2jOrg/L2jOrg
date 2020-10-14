@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.ItemChangeType;
@@ -76,13 +77,13 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
         return items.isEmpty();
     }
 
-    protected final void writeItems() {
-        writeByte( 0); // 140
-        writeInt(items.size()); // 140
-        writeInt(items.size()); // 140
+    protected final void writeItems(WritableBuffer buffer) {
+        buffer.writeByte( 0); // 140
+        buffer.writeInt(items.size()); // 140
+        buffer.writeInt(items.size()); // 140
         for (ItemInfo item : items.values()) {
-            writeShort(item.getChange().ordinal());
-            writeItem(item);
+            buffer.writeShort(item.getChange().ordinal());
+            writeItem(item, buffer);
         }
     }
 }

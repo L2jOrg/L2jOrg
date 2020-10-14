@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -47,16 +48,16 @@ public final class PledgeShowMemberListAdd extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_ADD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_ADD, buffer );
 
-        writeString(_name);
-        writeInt(_lvl);
-        writeInt(_classId);
-        writeInt(0x00);
-        writeInt(0x01);
-        writeInt(_isOnline); // 1 = online 0 = offline
-        writeInt(_pledgeType);
+        buffer.writeString(_name);
+        buffer.writeInt(_lvl);
+        buffer.writeInt(_classId);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x01);
+        buffer.writeInt(_isOnline); // 1 = online 0 = offline
+        buffer.writeInt(_pledgeType);
     }
 
 }

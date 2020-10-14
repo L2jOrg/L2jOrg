@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -30,22 +31,22 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExOlympiadMatchList extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_GFX_OLYMPIAD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_GFX_OLYMPIAD, buffer );
 
         var matches = Olympiad.getInstance().getMatches();
 
-        writeInt(0x00); // Type 0 = Match List, 1 = Match Result
+        buffer.writeInt(0x00); // Type 0 = Match List, 1 = Match Result
 
-        writeInt(matches.size());
-        writeInt(0x00);
+        buffer.writeInt(matches.size());
+        buffer.writeInt(0x00);
 
         for (var match : matches) {
-            writeInt(match.getId()); // Stadium Id (Arena 1 = 0)
-            writeInt(match.getType().ordinal());
-            writeInt(match.isInBattle() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
-            writeString(match.getPlayerRedName());
-            writeString(match.getPlayerBlueName());
+            buffer.writeInt(match.getId()); // Stadium Id (Arena 1 = 0)
+            buffer.writeInt(match.getType().ordinal());
+            buffer.writeInt(match.isInBattle() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
+            buffer.writeString(match.getPlayerRedName());
+            buffer.writeString(match.getPlayerBlueName());
         }
     }
 

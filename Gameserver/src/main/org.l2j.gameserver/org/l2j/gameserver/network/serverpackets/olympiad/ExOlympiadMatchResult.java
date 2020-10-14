@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.olympiad.OlympiadInfo;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -49,34 +50,34 @@ public class ExOlympiadMatchResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_GFX_OLYMPIAD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_GFX_OLYMPIAD, buffer );
 
-        writeInt(0x01); // Type 0 = Match List, 1 = Match Result
-        writeInt(_tie); // 0 - win, 1 - tie
-        writeString(_winnerList.get(0).getName());
-        writeInt(_winTeam);
-        writeInt(_winnerList.size());
+        buffer.writeInt(0x01); // Type 0 = Match List, 1 = Match Result
+        buffer.writeInt(_tie); // 0 - win, 1 - tie
+        buffer.writeString(_winnerList.get(0).getName());
+        buffer.writeInt(_winTeam);
+        buffer.writeInt(_winnerList.size());
         for (OlympiadInfo info : _winnerList) {
-            writeParticipant(info);
+            writeParticipant(info, buffer);
         }
 
-        writeInt(_loseTeam);
-        writeInt(_loserList.size());
+        buffer.writeInt(_loseTeam);
+        buffer.writeInt(_loserList.size());
         for (OlympiadInfo info : _loserList) {
-            writeParticipant(info);
+            writeParticipant(info, buffer);
         }
     }
 
-    private void writeParticipant(OlympiadInfo info) {
-        writeString(info.getName());
-        writeString(info.getClanName());
-        writeInt(info.getClanId());
-        writeInt(info.getClassId());
-        writeInt(info.getDamage());
-        writeInt(info.getCurrentPoints());
-        writeInt(info.getDiffPoints());
-        writeInt(0x00); // Helios
+    private void writeParticipant(OlympiadInfo info, WritableBuffer buffer) {
+        buffer.writeString(info.getName());
+        buffer.writeString(info.getClanName());
+        buffer.writeInt(info.getClanId());
+        buffer.writeInt(info.getClassId());
+        buffer.writeInt(info.getDamage());
+        buffer.writeInt(info.getCurrentPoints());
+        buffer.writeInt(info.getDiffPoints());
+        buffer.writeInt(0x00); // Helios
     }
 
 }

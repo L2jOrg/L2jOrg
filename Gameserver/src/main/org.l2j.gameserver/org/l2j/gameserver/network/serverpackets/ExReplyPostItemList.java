@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
@@ -40,14 +41,14 @@ public class ExReplyPostItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_REPLY_POST_ITEM_LIST);
-        writeByte((byte) _sendType);
-        writeInt(_itemList.size());
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_REPLY_POST_ITEM_LIST, buffer );
+        buffer.writeByte(_sendType);
+        buffer.writeInt(_itemList.size());
         if (_sendType == 2) {
-            writeInt(_itemList.size());
+            buffer.writeInt(_itemList.size());
             for (Item item : _itemList) {
-                writeItem(item);
+                writeItem(item, buffer);
             }
         }
     }

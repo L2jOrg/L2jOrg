@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -28,31 +29,31 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExOlympiadRankingInfo extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_RANKING_INFO);
-        writeByte(0); // type
-        writeByte(0); // scope
-        writeByte(true); // current season
-        writeInt(12); // class Id
-        writeInt(1); // world id
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_RANKING_INFO, buffer );
+        buffer.writeByte(0); // type
+        buffer.writeByte(0); // scope
+        buffer.writeByte(true); // current season
+        buffer.writeInt(12); // class Id
+        buffer.writeInt(1); // world id
 
-        writeInt(3); // total users
+        buffer.writeInt(3); // total users
 
-        writeInt(2); // rank size
+        buffer.writeInt(2); // rank size
         for (int i = 0; i < 2; i++) {
-            writeSizedString("ranker" + i); // ranker name
-            writeSizedString("rankerclan" + i); // ranker clan name
-            writeInt(i+1); // rank
-            writeInt(i); // prev rank
-            writeInt(1); // ranker world id
-            writeInt(76 +i); // ranker level
-            writeInt(88 + i); // ranker class id
-            writeInt(4); // ranker clan level
-            writeInt( 4 + i); // ranker win count
-            writeInt(5 + i); // ranker lose count
-            writeInt(100 + i); // ranker points
-            writeInt(2 + i); // hero count
-            writeInt(5 + i); // legend count
+            buffer.writeSizedString("ranker" + i); // ranker name
+            buffer.writeSizedString("rankerclan" + i); // ranker clan name
+            buffer.writeInt(i+1); // rank
+            buffer.writeInt(i); // prev rank
+            buffer.writeInt(1); // ranker world id
+            buffer.writeInt(76 +i); // ranker level
+            buffer.writeInt(88 + i); // ranker class id
+            buffer.writeInt(4); // ranker clan level
+            buffer.writeInt( 4 + i); // ranker win count
+            buffer.writeInt(5 + i); // ranker lose count
+            buffer.writeInt(100 + i); // ranker points
+            buffer.writeInt(2 + i); // hero count
+            buffer.writeInt(5 + i); // legend count
         }
     }
 }

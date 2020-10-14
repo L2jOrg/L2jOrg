@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.Config;
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -87,19 +87,19 @@ public class AcquireSkillInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ACQUIRE_SKILL_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ACQUIRE_SKILL_INFO, buffer );
 
-        writeInt(_id);
-        writeInt(_level);
-        writeLong(_spCost);
-        writeInt(_type.getId());
-        writeInt(_reqs.size());
+        buffer.writeInt(_id);
+        buffer.writeInt(_level);
+        buffer.writeLong(_spCost);
+        buffer.writeInt(_type.getId());
+        buffer.writeInt(_reqs.size());
         for (Req temp : _reqs) {
-            writeInt(temp.type);
-            writeInt(temp.itemId);
-            writeLong(temp.count);
-            writeInt(temp.unk);
+            buffer.writeInt(temp.type);
+            buffer.writeInt(temp.itemId);
+            buffer.writeLong(temp.count);
+            buffer.writeInt(temp.unk);
         }
     }
 

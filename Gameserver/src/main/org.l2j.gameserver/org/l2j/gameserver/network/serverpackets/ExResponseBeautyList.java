@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.beautyshop.BeautyItem;
@@ -47,18 +48,18 @@ public class ExResponseBeautyList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_BEAUTY_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_BEAUTY_LIST, buffer );
 
-        writeLong(_activeChar.getAdena());
-        writeLong(_activeChar.getBeautyTickets());
-        writeInt(_type);
-        writeInt(_beautyItem.size());
+        buffer.writeLong(_activeChar.getAdena());
+        buffer.writeLong(_activeChar.getBeautyTickets());
+        buffer.writeInt(_type);
+        buffer.writeInt(_beautyItem.size());
         for (BeautyItem item : _beautyItem.values()) {
-            writeInt(item.getId());
-            writeInt(1); // Limit
+            buffer.writeInt(item.getId());
+            buffer.writeInt(1); // Limit
         }
-        writeInt(0);
+        buffer.writeInt(0);
     }
 
 }

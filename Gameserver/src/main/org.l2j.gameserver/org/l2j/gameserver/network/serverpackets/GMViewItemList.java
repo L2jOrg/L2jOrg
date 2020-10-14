@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
@@ -47,18 +48,18 @@ public class GMViewItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GM_VIEW_ITEMLIST);
-        writeByte(sendType);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.GM_VIEW_ITEMLIST, buffer );
+        buffer.writeByte(sendType);
         if (sendType == 2) {
-            writeInt(items.size());
+            buffer.writeInt(items.size());
         } else {
-            writeString(playerName);
-            writeInt(_limit); // inventory limit
+            buffer.writeString(playerName);
+            buffer.writeInt(_limit); // inventory limit
         }
-        writeInt(items.size());
+        buffer.writeInt(items.size());
         for (Item item : items) {
-            writeItem(item);
+            writeItem(item, buffer);
         }
     }
 

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -33,12 +34,12 @@ public class ExPartyPetWindowDelete extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PARTY_PET_WINDOW_DELETE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PARTY_PET_WINDOW_DELETE, buffer );
 
-        writeInt(_summon.getObjectId());
-        writeByte((byte) _summon.getSummonType());
-        writeInt(_summon.getOwner().getObjectId());
+        buffer.writeInt(_summon.getObjectId());
+        buffer.writeByte(_summon.getSummonType());
+        buffer.writeInt(_summon.getOwner().getObjectId());
     }
 
 }

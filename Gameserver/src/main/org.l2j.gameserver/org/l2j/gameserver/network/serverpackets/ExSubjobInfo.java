@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.enums.SubclassType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -46,18 +47,18 @@ public class ExSubjobInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SUBJOB_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SUBJOB_INFO, buffer );
 
-        writeByte(_type);
-        writeInt(_currClassId);
-        writeInt(_currRace);
-        writeInt(_subs.size());
+        buffer.writeByte(_type);
+        buffer.writeInt(_currClassId);
+        buffer.writeInt(_currRace);
+        buffer.writeInt(_subs.size());
         for (SubInfo sub : _subs) {
-            writeInt(sub.getIndex());
-            writeInt(sub.getClassId());
-            writeInt(sub.getLevel());
-            writeByte(sub.getType());
+            buffer.writeInt(sub.getIndex());
+            buffer.writeInt(sub.getClassId());
+            buffer.writeInt(sub.getLevel());
+            buffer.writeByte(sub.getType());
         }
     }
 

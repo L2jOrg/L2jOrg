@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.gm;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
@@ -39,21 +40,21 @@ public class ExGMViewQuestItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_GM_VIEW_QUEST_ITEMLIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_GM_VIEW_QUEST_ITEMLIST, buffer );
 
-        writeByte(sendType);
+        buffer.writeByte(sendType);
         if (sendType == 2) {
-            writeInt(items.size());
-            writeInt(items.size());
+            buffer.writeInt(items.size());
+            buffer.writeInt(items.size());
             for (Item item : items) {
-                writeItem(item);
+                writeItem(item, buffer);
             }
         } else {
-            writeInt(100);
-            writeInt(items.size());
+            buffer.writeInt(100);
+            buffer.writeInt(items.size());
         }
-        writeShort(0x00);
+        buffer.writeShort(0x00);
     }
 
 }

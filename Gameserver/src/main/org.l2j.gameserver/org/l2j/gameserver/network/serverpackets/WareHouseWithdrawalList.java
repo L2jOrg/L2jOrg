@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
@@ -74,24 +75,24 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.WAREHOUSE_WITHDRAW_LIST);
-        writeByte((byte) _sendType);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.WAREHOUSE_WITHDRAW_LIST, buffer );
+        buffer.writeByte(_sendType);
         if (_sendType == 2) {
-            writeShort((short) 0x00);
-            writeInt(_invSize);
-            writeInt(_items.size());
+            buffer.writeShort(0x00);
+            buffer.writeInt(_invSize);
+            buffer.writeInt(_items.size());
             for (Item item : _items) {
-                writeItem(item);
-                writeInt(item.getObjectId());
-                writeInt(0x00);
-                writeInt(0x00);
+                writeItem(item, buffer);
+                buffer.writeInt(item.getObjectId());
+                buffer.writeInt(0x00);
+                buffer.writeInt(0x00);
             }
         } else {
-            writeShort((short) _whType);
-            writeLong(_playerAdena);
-            writeInt(_invSize);
-            writeInt(_items.size());
+            buffer.writeShort(_whType);
+            buffer.writeLong(_playerAdena);
+            buffer.writeInt(_invSize);
+            buffer.writeInt(_items.size());
         }
     }
 

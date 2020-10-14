@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.maps.IntLongMap;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -44,16 +45,16 @@ public class ExInzoneWaiting extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_INZONE_WAITING_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_INZONE_WAITING_INFO, buffer );
 
-        writeByte((byte) (_hide ? 0x00 : 0x01)); // Grand Crusade
-        writeInt(_currentTemplateId);
-        writeInt(_instanceTimes.size());
+        buffer.writeByte(!_hide); // Grand Crusade
+        buffer.writeInt(_currentTemplateId);
+        buffer.writeInt(_instanceTimes.size());
         for (var entry : _instanceTimes.entrySet()) {
             final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
-            writeInt(entry.getKey());
-            writeInt((int) instanceTime);
+            buffer.writeInt(entry.getKey());
+            buffer.writeInt((int) instanceTime);
         }
     }
 

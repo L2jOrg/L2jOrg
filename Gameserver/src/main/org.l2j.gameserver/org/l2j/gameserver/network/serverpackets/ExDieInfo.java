@@ -17,6 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package org.l2j.gameserver.network.serverpackets;
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.DamageInfo.NpcDamage;
 import org.l2j.gameserver.model.DamageInfo.PlayerDamage;
@@ -40,52 +41,56 @@ public class ExDieInfo extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_DIE_INFO);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_DIE_INFO, buffer );
 
-        writeShort(drop.size());
-        drop.forEach(this::writeDrop);
-
-        writeShort(damages.size());
-        damages.forEach(this::writeDamage);
-    }
-
-    private void writeDrop(Item item) {
-        writeInt(item.getId());
-        writeInt(item.getEnchantLevel());
-        writeInt((int) item.getCount());
-    }
-
-    private void writeDamage(DamageInfo damageInfo) {
-        writeShort(damageInfo.attackerType());
-
-        if(damageInfo instanceof PlayerDamage playerDamage) {
-            writePlayerDamage(playerDamage);
-        } else if(damageInfo instanceof NpcDamage npcDamage) {
-            writeNpcDamage(npcDamage);
-        } else {
-            writeOthersDamage(damageInfo);
+        buffer.writeShort(drop.size());
+        for (Item item : drop) {
+            writeDrop(item, buffer);
         }
 
-        writeDouble(damageInfo.damage());
-        writeShort(damageInfo.damageType());
+        buffer.writeShort(damages.size());
+        for (DamageInfo damage : damages) {
+            writeDamage(damage, buffer);
+        }
     }
 
-    private void writeNpcDamage(NpcDamage npcDamage) {
-        writeInt(npcDamage.attackerId());
-        writeShort(0);
-        writeInt(npcDamage.skillId());
+    private void writeDrop(Item item, WritableBuffer buffer) {
+        buffer.writeInt(item.getId());
+        buffer.writeInt(item.getEnchantLevel());
+        buffer.writeInt((int) item.getCount());
     }
 
-    private void writePlayerDamage(PlayerDamage playerDamage) {
-        writeString(playerDamage.attackerName());
-        writeString(playerDamage.clanName());
-        writeInt(playerDamage.skillId());
+    private void writeDamage(DamageInfo damageInfo, WritableBuffer buffer) {
+        buffer.writeShort(damageInfo.attackerType());
+
+        if(damageInfo instanceof PlayerDamage playerDamage) {
+            writePlayerDamage(playerDamage, buffer);
+        } else if(damageInfo instanceof NpcDamage npcDamage) {
+            writeNpcDamage(npcDamage, buffer);
+        } else {
+            writeOthersDamage(damageInfo, buffer);
+        }
+
+        buffer.writeDouble(damageInfo.damage());
+        buffer.writeShort(damageInfo.damageType());
     }
 
-    private void writeOthersDamage(DamageInfo damageInfo) {
-        writeInt(0);
-        writeInt(0);
+    private void writeNpcDamage(NpcDamage npcDamage, WritableBuffer buffer) {
+        buffer.writeInt(npcDamage.attackerId());
+        buffer.writeShort(0);
+        buffer.writeInt(npcDamage.skillId());
+    }
+
+    private void writePlayerDamage(PlayerDamage playerDamage, WritableBuffer buffer) {
+        buffer.writeString(playerDamage.attackerName());
+        buffer.writeString(playerDamage.clanName());
+        buffer.writeInt(playerDamage.skillId());
+    }
+
+    private void writeOthersDamage(DamageInfo damageInfo, WritableBuffer buffer) {
+        buffer.writeInt(0);
+        buffer.writeInt(0);
     }
 }
 

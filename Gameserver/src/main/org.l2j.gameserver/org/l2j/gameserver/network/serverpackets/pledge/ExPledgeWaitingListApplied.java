@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.PledgeApplicantData;
 import org.l2j.gameserver.data.database.data.PledgeRecruitData;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
@@ -38,17 +39,17 @@ public class ExPledgeWaitingListApplied extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_WAITING_LIST_APPLIED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_WAITING_LIST_APPLIED, buffer );
 
-        writeInt(_pledgeRecruitInfo.getClan().getId());
-        writeString(_pledgeRecruitInfo.getClan().getName());
-        writeString(_pledgeRecruitInfo.getClan().getLeaderName());
-        writeInt(_pledgeRecruitInfo.getClan().getLevel());
-        writeInt(_pledgeRecruitInfo.getClan().getMembersCount());
-        writeInt(_pledgeRecruitInfo.getKarma());
-        writeString(_pledgeRecruitInfo.getInformation());
-        writeString(_pledgePlayerRecruitInfo.getMessage());
+        buffer.writeInt(_pledgeRecruitInfo.getClan().getId());
+        buffer.writeString(_pledgeRecruitInfo.getClan().getName());
+        buffer.writeString(_pledgeRecruitInfo.getClan().getLeaderName());
+        buffer.writeInt(_pledgeRecruitInfo.getClan().getLevel());
+        buffer.writeInt(_pledgeRecruitInfo.getClan().getMembersCount());
+        buffer.writeInt(_pledgeRecruitInfo.getKarma());
+        buffer.writeString(_pledgeRecruitInfo.getInformation());
+        buffer.writeString(_pledgePlayerRecruitInfo.getMessage());
     }
 
 }

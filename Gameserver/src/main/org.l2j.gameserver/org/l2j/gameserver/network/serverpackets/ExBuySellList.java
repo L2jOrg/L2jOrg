@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
@@ -52,34 +53,34 @@ public class ExBuySellList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BUY_SELL_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BUY_SELL_LIST, buffer );
 
-        writeInt(0x01); // Type SELL
-        writeInt(_inventorySlots);
+        buffer.writeInt(0x01); // Type SELL
+        buffer.writeInt(_inventorySlots);
 
         if ((_sellList != null)) {
-            writeShort((short) _sellList.size());
+            buffer.writeShort(_sellList.size());
             for (Item item : _sellList) {
-                writeItem(item);
-                writeLong((long) ((item.getTemplate().getReferencePrice() / 2) * _castleTaxRate));
+                writeItem(item, buffer);
+                buffer.writeLong((long) ((item.getReferencePrice() / 2) * _castleTaxRate));
             }
         } else {
-            writeShort((short) 0x00);
+            buffer.writeShort(0x00);
         }
 
         if ((_refundList != null) && !_refundList.isEmpty()) {
-            writeShort((short) _refundList.size());
+            buffer.writeShort(_refundList.size());
             int i = 0;
             for (Item item : _refundList) {
-                writeItem(item);
-                writeInt(i++);
-                writeLong((item.getTemplate().getReferencePrice() / 2) * item.getCount());
+                writeItem(item, buffer);
+                buffer.writeInt(i++);
+                buffer.writeLong((item.getReferencePrice() / 2) * item.getCount());
             }
         } else {
-            writeShort((short) 0x00);
+            buffer.writeShort(0x00);
         }
-        writeByte((byte)( _done ? 0x01 : 0x00));
+        buffer.writeByte(_done);
     }
 
 }

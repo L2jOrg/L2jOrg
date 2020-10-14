@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -31,11 +32,11 @@ public class StartPledgeWar extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.START_PLEDGE_WAR);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.START_PLEDGE_WAR, buffer );
 
-        writeString(_playerName);
-        writeString(_pledgeName);
+        buffer.writeString(_playerName);
+        buffer.writeString(_pledgeName);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.PremiumItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -40,17 +41,17 @@ public class ExGetPremiumItemList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PREMIUM_ITEM_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PREMIUM_ITEM_LIST, buffer );
 
-        writeInt(_map.size());
+        buffer.writeInt(_map.size());
         for (Entry<Integer, PremiumItem> entry : _map.entrySet()) {
             final PremiumItem item = entry.getValue();
-            writeLong(entry.getKey());
-            writeInt(item.getItemId());
-            writeLong(item.getCount());
-            writeInt(0x00); // ?
-            writeString(item.getSender());
+            buffer.writeLong(entry.getKey());
+            buffer.writeInt(item.getItemId());
+            buffer.writeLong(item.getCount());
+            buffer.writeInt(0x00); // ?
+            buffer.writeString(item.getSender());
         }
     }
 

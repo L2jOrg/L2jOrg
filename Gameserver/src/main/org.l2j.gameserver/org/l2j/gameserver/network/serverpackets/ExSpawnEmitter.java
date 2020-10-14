@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -47,12 +48,12 @@ public class ExSpawnEmitter extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SPAWN_EMITTER);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SPAWN_EMITTER, buffer );
 
-        writeInt(targetId);
-        writeInt(attackerId);
-        writeInt(type.ordinal());
+        buffer.writeInt(targetId);
+        buffer.writeInt(attackerId);
+        buffer.writeInt(type.ordinal());
     }
 
     public enum SpawnEmitterType {

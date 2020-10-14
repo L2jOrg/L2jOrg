@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.client.packet.auth2client;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
@@ -36,22 +37,22 @@ import org.l2j.authserver.network.client.packet.AuthServerPacket;
 public final class Init extends AuthServerPacket {
 
     @Override
-    protected void writeImpl(AuthClient client) {
-        writeByte(0x00);
+    protected void writeImpl(AuthClient client, WritableBuffer buffer) {
+        buffer.writeByte(0x00);
 
-        writeInt(client.getSessionId());
-        writeInt(0xc621);
+        buffer.writeInt(client.getSessionId());
+        buffer.writeInt(0xc621);
 
-        writeBytes(client.getScrambledModulus());
+        buffer.writeBytes(client.getScrambledModulus());
 
         // unk GG related?
-        writeInt(0x29DD954E);
-        writeInt(0x77C39CFC);
-        writeInt(0x97ADB620);
-        writeInt(0x07BDE0F7);
+        buffer.writeInt(0x29DD954E);
+        buffer.writeInt(0x77C39CFC);
+        buffer.writeInt(0x97ADB620);
+        buffer.writeInt(0x07BDE0F7);
 
-        writeBytes(client.getBlowfishKey());
-        writeInt(0x00);
+        buffer.writeBytes(client.getBlowfishKey());
+        buffer.writeInt(0x00);
     }
 
 }

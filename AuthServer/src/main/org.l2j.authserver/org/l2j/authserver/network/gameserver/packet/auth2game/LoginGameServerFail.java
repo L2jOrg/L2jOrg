@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.gameserver.packet.auth2game;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.gameserver.ServerClient;
 
 public class LoginGameServerFail extends GameServerWritablePacket {
@@ -36,9 +37,9 @@ public class LoginGameServerFail extends GameServerWritablePacket {
 	}
 
 	@Override
-	protected void writeImpl(ServerClient client) {
-		writeByte((byte)0x01);
-		writeByte((byte)reason);
+	protected void writeImpl(ServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x01);
+		buffer.writeByte(reason);
 	}
 
 }

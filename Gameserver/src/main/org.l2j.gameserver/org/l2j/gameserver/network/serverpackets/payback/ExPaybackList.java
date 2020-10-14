@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.payback;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -37,27 +38,27 @@ public class ExPaybackList extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) throws Exception {
-        writeId(ServerExPacketId.EX_PAYBACK_LIST);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) throws Exception {
+        writeId(ServerExPacketId.EX_PAYBACK_LIST, buffer );
 
-        writeInt(2); // payback size
+        buffer.writeInt(2); // payback size
         for (int i = 0; i < 2; i++) {
 
-            writeInt(3); // reward set size
+            buffer.writeInt(3); // reward set size
             for (int j = 0; j < 3; j++) {
-                writeInt(57 + j); // item
-                writeInt(1); // amount
+                buffer.writeInt(57 + j); // item
+                buffer.writeInt(1); // amount
             }
 
-            writeByte(i); // set index
-            writeInt(6); // requirement
-            writeByte(5); // received
+            buffer.writeByte(i); // set index
+            buffer.writeInt(6); // requirement
+            buffer.writeByte(5); // received
         }
 
-        writeByte(eventType);
-        writeInt((int) Instant.now().plus(6, ChronoUnit.HOURS).getEpochSecond()); // end datetime
-        writeInt(57); // item consume
-        writeInt(2); // user consumption
+        buffer.writeByte(eventType);
+        buffer.writeInt((int) Instant.now().plus(6, ChronoUnit.HOURS).getEpochSecond()); // end datetime
+        buffer.writeInt(57); // item consume
+        buffer.writeInt(2); // user consumption
 
 
 

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.trade;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
 
@@ -34,12 +35,12 @@ public abstract class TradeAdd extends AbstractItemPacket {
         this.item = item;
     }
 
-    protected void writeItemAdd() {
-        writeByte(type);
+    protected void writeItemAdd(WritableBuffer buffer) {
+        buffer.writeByte(type);
         if (type == 2) {
-            writeInt(0x01);
+            buffer.writeInt(0x01);
         }
-        writeInt(0x01);
-        writeItem(item);
+        buffer.writeInt(0x01);
+        writeItem(item, buffer);
     }
 }

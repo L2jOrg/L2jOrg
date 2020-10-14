@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.network.GameClient;
@@ -39,15 +40,15 @@ public class ExEnchantSkillList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ENCHANT_SKILL_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ENCHANT_SKILL_LIST, buffer );
 
-        writeInt(_type.ordinal());
-        writeInt(_skills.size());
+        buffer.writeInt(_type.ordinal());
+        buffer.writeInt(_skills.size());
         for (Skill skill : _skills) {
-            writeInt(skill.getId());
-            writeShort((short) skill.getLevel());
-            writeShort((short) skill.getSubLevel());
+            buffer.writeInt(skill.getId());
+            buffer.writeShort(skill.getLevel());
+            buffer.writeShort(skill.getSubLevel());
         }
     }
 

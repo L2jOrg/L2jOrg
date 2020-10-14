@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -50,22 +51,22 @@ public class PlaySound extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLAY_SOUND);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLAY_SOUND, buffer );
 
-        writeInt(type.ordinal());
-        writeString(file);
-        writeInt(nonNull(sourceObject));
+        buffer.writeInt(type.ordinal());
+        buffer.writeString(file);
+        buffer.writeInt(nonNull(sourceObject));
         if(isNull(sourceObject)) {
-            writeInt(0);
-            writeInt(0);
-            writeInt(0);
-            writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
         } else {
-            writeInt(sourceObject.getObjectId());
-            writeLocation(sourceObject);
+            buffer.writeInt(sourceObject.getObjectId());
+            writeLocation(sourceObject, buffer);
         }
-        writeInt(delay);
+        buffer.writeInt(delay);
     }
     
     

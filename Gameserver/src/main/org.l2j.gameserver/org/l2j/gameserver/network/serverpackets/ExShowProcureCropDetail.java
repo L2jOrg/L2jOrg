@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
@@ -47,18 +48,18 @@ public class ExShowProcureCropDetail extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_PROCURE_CROP_DETAIL);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_PROCURE_CROP_DETAIL, buffer );
 
-        writeInt(_cropId); // crop id
-        writeInt(_castleCrops.size()); // size
+        buffer.writeInt(_cropId); // crop id
+        buffer.writeInt(_castleCrops.size()); // size
 
         for (Map.Entry<Integer, CropProcure> entry : _castleCrops.entrySet()) {
             final CropProcure crop = entry.getValue();
-            writeInt(entry.getKey()); // manor name
-            writeLong(crop.getAmount()); // buy residual
-            writeLong(crop.getPrice()); // buy price
-            writeByte((byte) crop.getReward()); // reward type
+            buffer.writeInt(entry.getKey()); // manor name
+            buffer.writeLong(crop.getAmount()); // buy residual
+            buffer.writeLong(crop.getPrice()); // buy price
+            buffer.writeByte(crop.getReward()); // reward type
         }
     }
 

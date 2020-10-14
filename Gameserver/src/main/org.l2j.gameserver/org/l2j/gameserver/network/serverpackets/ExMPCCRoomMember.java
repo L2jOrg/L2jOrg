@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.MatchingMemberType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
@@ -38,18 +39,18 @@ public class ExMPCCRoomMember extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_MPCC_ROOM_MEMBER);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_MPCC_ROOM_MEMBER, buffer );
 
-        writeInt(_type.ordinal());
-        writeInt(_room.getMembersCount());
+        buffer.writeInt(_type.ordinal());
+        buffer.writeInt(_room.getMembersCount());
         for (Player member : _room.getMembers()) {
-            writeInt(member.getObjectId());
-            writeString(member.getName());
-            writeInt(member.getLevel());
-            writeInt(member.getClassId().getId());
-            writeInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
-            writeInt(_room.getMemberType(member).ordinal());
+            buffer.writeInt(member.getObjectId());
+            buffer.writeString(member.getName());
+            buffer.writeInt(member.getLevel());
+            buffer.writeInt(member.getClassId().getId());
+            buffer.writeInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
+            buffer.writeInt(_room.getMemberType(member).ordinal());
         }
     }
 

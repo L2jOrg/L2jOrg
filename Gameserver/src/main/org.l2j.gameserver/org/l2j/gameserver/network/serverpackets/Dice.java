@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -39,15 +40,15 @@ public class Dice extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.DICE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.DICE, buffer );
 
-        writeInt(_charObjId); // object id of player
-        writeInt(_itemId); // item id of dice (spade) 4625,4626,4627,4628
-        writeInt(_number); // number rolled
-        writeInt(_x); // x
-        writeInt(_y); // y
-        writeInt(_z); // z
+        buffer.writeInt(_charObjId); // object id of player
+        buffer.writeInt(_itemId); // item id of dice (spade) 4625,4626,4627,4628
+        buffer.writeInt(_number); // number rolled
+        buffer.writeInt(_x); // x
+        buffer.writeInt(_y); // y
+        buffer.writeInt(_z); // z
     }
 
 }

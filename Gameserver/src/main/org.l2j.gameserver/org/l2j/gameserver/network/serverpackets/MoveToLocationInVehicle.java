@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -45,17 +46,17 @@ public class MoveToLocationInVehicle extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MOVE_TO_LOCATION_IN_VEHICLE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MOVE_TO_LOCATION_IN_VEHICLE, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_boatId);
-        writeInt(_destination.getX());
-        writeInt(_destination.getY());
-        writeInt(_destination.getZ());
-        writeInt(_origin.getX());
-        writeInt(_origin.getY());
-        writeInt(_origin.getZ());
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_boatId);
+        buffer.writeInt(_destination.getX());
+        buffer.writeInt(_destination.getY());
+        buffer.writeInt(_destination.getZ());
+        buffer.writeInt(_origin.getX());
+        buffer.writeInt(_origin.getY());
+        buffer.writeInt(_origin.getZ());
     }
 
 }

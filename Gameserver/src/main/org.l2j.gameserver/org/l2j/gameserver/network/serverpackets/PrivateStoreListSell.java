@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.instancemanager.SellBuffsManager;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -34,21 +35,21 @@ public class PrivateStoreListSell extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
         if (_seller.isSellingBuffs()) {
             SellBuffsManager.getInstance().sendBuffMenu(_player, _seller, 0);
         } else {
-            writeId(ServerPacketId.PRIVATE_STORE_LIST);
+            writeId(ServerPacketId.PRIVATE_STORE_LIST, buffer );
 
-            writeInt(_seller.getObjectId());
-            writeInt(_seller.getSellList().isPackaged() ? 1 : 0);
-            writeLong(_player.getAdena());
-            writeInt(0x00);
-            writeInt(_seller.getSellList().getItems().length);
+            buffer.writeInt(_seller.getObjectId());
+            buffer.writeInt(_seller.getSellList().isPackaged() ? 1 : 0);
+            buffer.writeLong(_player.getAdena());
+            buffer.writeInt(0x00);
+            buffer.writeInt(_seller.getSellList().getItems().length);
             for (TradeItem item : _seller.getSellList().getItems()) {
-                writeItem(item);
-                writeLong(item.getPrice());
-                writeLong(item.getItem().getReferencePrice() * 2);
+                writeItem(item, buffer);
+                buffer.writeLong(item.getPrice());
+                buffer.writeLong(item.getItem().getReferencePrice() * 2);
             }
         }
     }

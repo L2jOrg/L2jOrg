@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -34,11 +35,11 @@ public class OnEventTrigger extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EVENT_TRIGGER);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.EVENT_TRIGGER, buffer );
 
-        writeInt(_emitterId);
-        writeByte(_enabled);
+        buffer.writeInt(_emitterId);
+        buffer.writeByte(_enabled);
     }
 
 }

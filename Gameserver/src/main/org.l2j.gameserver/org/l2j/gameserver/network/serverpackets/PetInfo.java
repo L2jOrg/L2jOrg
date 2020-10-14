@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Servitor;
@@ -87,102 +88,102 @@ public class PetInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PET_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PET_INFO, buffer );
 
-        writeByte(summon.getSummonType());
-        writeInt(summon.getObjectId());
-        writeInt(summon.getTemplate().getDisplayId() + 1000000);
+        buffer.writeByte(summon.getSummonType());
+        buffer.writeInt(summon.getObjectId());
+        buffer.writeInt(summon.getTemplate().getDisplayId() + 1000000);
 
-        writeInt(summon.getX());
-        writeInt(summon.getY());
-        writeInt(summon.getZ());
-        writeInt(summon.getHeading());
+        buffer.writeInt(summon.getX());
+        buffer.writeInt(summon.getY());
+        buffer.writeInt(summon.getZ());
+        buffer.writeInt(summon.getHeading());
 
-        writeInt(summon.getStats().getMAtkSpd());
-        writeInt(summon.getStats().getPAtkSpd());
+        buffer.writeInt(summon.getStats().getMAtkSpd());
+        buffer.writeInt(summon.getStats().getPAtkSpd());
 
-        writeShort(runSpd);
-        writeShort(walkSpd);
-        writeShort(swimRunSpd);
-        writeShort(swimWalkSpd);
-        writeShort(runSpd);
-        writeShort(walkSpd);
-        writeShort(flyRunSpd);
-        writeShort(flyWalkSpd);
+        buffer.writeShort(runSpd);
+        buffer.writeShort(walkSpd);
+        buffer.writeShort(swimRunSpd);
+        buffer.writeShort(swimWalkSpd);
+        buffer.writeShort(runSpd);
+        buffer.writeShort(walkSpd);
+        buffer.writeShort(flyRunSpd);
+        buffer.writeShort(flyWalkSpd);
 
-        writeDouble(moveMultiplier);
-        writeDouble(summon.getAttackSpeedMultiplier());
-        writeDouble(summon.getTemplate().getfCollisionRadius());
-        writeDouble(summon.getTemplate().getfCollisionHeight());
+        buffer.writeDouble(moveMultiplier);
+        buffer.writeDouble(summon.getAttackSpeedMultiplier());
+        buffer.writeDouble(summon.getTemplate().getfCollisionRadius());
+        buffer.writeDouble(summon.getTemplate().getfCollisionHeight());
 
-        writeInt(summon.getWeapon());
-        writeInt(summon.getArmor());
-        writeInt(0x00); // left hand
+        buffer.writeInt(summon.getWeapon());
+        buffer.writeInt(summon.getArmor());
+        buffer.writeInt(0x00); // left hand
 
-        writeByte((summon.isShowSummonAnimation() ? 0x02 : animationType)); // 0=teleported 1=default 2=summoned
-        writeInt(-1); // High Five NPCString ID
+        buffer.writeByte((summon.isShowSummonAnimation() ? 0x02 : animationType)); // 0=teleported 1=default 2=summoned
+        buffer.writeInt(-1); // High Five NPCString ID
         if (isPet(summon)) {
-            writeString(summon.getName());
+            buffer.writeString(summon.getName());
         } else {
-            writeString(summon.getTemplate().isUsingServerSideName() ? summon.getName() : "");
+            buffer.writeString(summon.getTemplate().isUsingServerSideName() ? summon.getName() : "");
         }
-        writeInt(-1); // High Five NPCStringID (title)
-        writeString(summon.getTitle());
+        buffer.writeInt(-1); // High Five NPCStringID (title)
+        buffer.writeString(summon.getTitle());
 
-        writeByte(summon.getPvpFlag());
-        writeInt(summon.getReputation());
+        buffer.writeByte(summon.getPvpFlag());
+        buffer.writeInt(summon.getReputation());
 
-        writeInt(currentFed);
-        writeInt(maxFed);
-        writeInt((int) summon.getCurrentHp());
-        writeInt(summon.getMaxHp());
-        writeInt((int) summon.getCurrentMp());
-        writeInt(summon.getMaxMp());
-        writeLong(summon.getStats().getSp());
+        buffer.writeInt(currentFed);
+        buffer.writeInt(maxFed);
+        buffer.writeInt((int) summon.getCurrentHp());
+        buffer.writeInt(summon.getMaxHp());
+        buffer.writeInt((int) summon.getCurrentMp());
+        buffer.writeInt(summon.getMaxMp());
+        buffer.writeLong(summon.getStats().getSp());
 
-        writeShort(summon.getLevel());
-        writeLong(summon.getStats().getExp());
-        writeLong(summon.getExpForThisLevel());
-        writeLong(summon.getExpForNextLevel());
+        buffer.writeShort(summon.getLevel());
+        buffer.writeLong(summon.getStats().getExp());
+        buffer.writeLong(summon.getExpForThisLevel());
+        buffer.writeLong(summon.getExpForNextLevel());
 
-        writeInt(isPet(summon) ? summon.getInventory().getTotalWeight() : 0);
-        writeInt(summon.getMaxLoad());
-        writeInt(summon.getPAtk());
-        writeInt(summon.getPDef());
-        writeInt(summon.getAccuracy());
-        writeInt(summon.getEvasionRate());
-        writeInt(summon.getCriticalHit());
-        writeInt(summon.getMAtk());
-        writeInt(summon.getMDef());
-        writeInt(summon.getMagicAccuracy());
-        writeInt(summon.getMagicEvasionRate());
-        writeInt(summon.getMCriticalHit());
-        writeInt((int) summon.getStats().getMoveSpeed());
-        writeInt(summon.getPAtkSpd());
-        writeInt(summon.getMAtkSpd());
+        buffer.writeInt(isPet(summon) ? summon.getInventory().getTotalWeight() : 0);
+        buffer.writeInt(summon.getMaxLoad());
+        buffer.writeInt(summon.getPAtk());
+        buffer.writeInt(summon.getPDef());
+        buffer.writeInt(summon.getAccuracy());
+        buffer.writeInt(summon.getEvasionRate());
+        buffer.writeInt(summon.getCriticalHit());
+        buffer.writeInt(summon.getMAtk());
+        buffer.writeInt(summon.getMDef());
+        buffer.writeInt(summon.getMagicAccuracy());
+        buffer.writeInt(summon.getMagicEvasionRate());
+        buffer.writeInt(summon.getMCriticalHit());
+        buffer.writeInt((int) summon.getStats().getMoveSpeed());
+        buffer.writeInt(summon.getPAtkSpd());
+        buffer.writeInt(summon.getMAtkSpd());
 
-        writeByte(0); // TODO: Check me, might be ride status
-        writeByte( summon.getTeam().getId());
-        writeByte( summon.getSoulShotsPerHit());
-        writeByte( summon.getSpiritShotsPerHit());
+        buffer.writeByte(0); // TODO: Check me, might be ride status
+        buffer.writeByte( summon.getTeam().getId());
+        buffer.writeByte( summon.getSoulShotsPerHit());
+        buffer.writeByte( summon.getSpiritShotsPerHit());
 
-        writeInt(0x00); // TODO: Find me
-        writeInt(summon.getFormId());
+        buffer.writeInt(0x00); // TODO: Find me
+        buffer.writeInt(summon.getFormId());
 
-        writeByte( summon.getOwner().getSummonPoints());
-        writeByte( summon.getOwner().getMaxSummonPoints());
+        buffer.writeByte( summon.getOwner().getSummonPoints());
+        buffer.writeByte( summon.getOwner().getMaxSummonPoints());
 
         final Set<AbnormalVisualEffect> aves = summon.getEffectList().getCurrentAbnormalVisualEffects();
-        writeShort(aves.size());
+        buffer.writeShort(aves.size());
         for (AbnormalVisualEffect ave : aves) {
-            writeShort(ave.getClientId());
+            buffer.writeShort(ave.getClientId());
         }
 
-        writeByte(statusMask);
-        writeInt(0);
-        writeInt(0);
-        writeInt(0);
+        buffer.writeByte(statusMask);
+        buffer.writeInt(0);
+        buffer.writeInt(0);
+        buffer.writeInt(0);
     }
 
 }

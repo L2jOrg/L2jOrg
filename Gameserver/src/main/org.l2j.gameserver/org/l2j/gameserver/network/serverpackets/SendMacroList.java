@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.MacroUpdateType;
 import org.l2j.gameserver.model.Macro;
 import org.l2j.gameserver.network.GameClient;
@@ -37,30 +38,30 @@ public class SendMacroList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MACRO_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MACRO_LIST, buffer );
 
-        writeByte(updateType.getId());
-        writeInt(updateType != MacroUpdateType.LIST ? macro.getId() : 0x00); // modified, created or deleted macro's id
-        writeByte(count);
-        writeByte(nonNull(macro)); // unknown
+        buffer.writeByte(updateType.getId());
+        buffer.writeInt(updateType != MacroUpdateType.LIST ? macro.getId() : 0x00); // modified, created or deleted macro's id
+        buffer.writeByte(count);
+        buffer.writeByte(nonNull(macro)); // unknown
 
         if (nonNull(macro) && updateType != MacroUpdateType.DELETE) {
-            writeInt(macro.getId());
-            writeString(macro.getName());
-            writeString(macro.getDescription());
-            writeString(macro.getAcronym());
-            writeInt(macro.getIcon());
+            buffer.writeInt(macro.getId());
+            buffer.writeString(macro.getName());
+            buffer.writeString(macro.getDescription());
+            buffer.writeString(macro.getAcronym());
+            buffer.writeInt(macro.getIcon());
 
-            writeByte(macro.getCommands().size()); // count
+            buffer.writeByte(macro.getCommands().size()); // count
 
             int i = 1;
             for (var cmd : macro.getCommands()) {
-                writeByte( i++); // command count
-                writeByte(cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
-                writeInt(cmd.getData1()); // skill id
-                writeByte(cmd.getData2()); // shortcut id
-                writeString(cmd.getCommand()); // command name
+                buffer.writeByte( i++); // command count
+                buffer.writeByte(cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
+                buffer.writeInt(cmd.getData1()); // skill id
+                buffer.writeByte(cmd.getData2()); // shortcut id
+                buffer.writeString(cmd.getCommand()); // command name
             }
         }
     }

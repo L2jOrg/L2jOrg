@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -43,14 +44,14 @@ public class ChangeWaitType extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CHANGE_WAIT_TYPE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CHANGE_WAIT_TYPE, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_moveType);
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_moveType);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
     }
 
 }

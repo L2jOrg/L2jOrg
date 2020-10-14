@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -31,11 +32,11 @@ public class PetDelete extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PET_DELETE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PET_DELETE, buffer );
 
-        writeInt(_petType);
-        writeInt(_petObjId);
+        buffer.writeInt(_petType);
+        buffer.writeInt(_petObjId);
     }
 
 }

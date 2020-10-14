@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -33,25 +34,25 @@ public class RecipeShopSellList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.RECIPE_SHOP_SELL_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.RECIPE_SHOP_SELL_LIST, buffer );
 
-        writeInt(_manufacturer.getObjectId());
-        writeInt((int) _manufacturer.getCurrentMp()); // Creator's MP
-        writeInt(_manufacturer.getMaxMp()); // Creator's MP
-        writeLong(_buyer.getAdena()); // Buyer Adena
+        buffer.writeInt(_manufacturer.getObjectId());
+        buffer.writeInt((int) _manufacturer.getCurrentMp()); // Creator's MP
+        buffer.writeInt(_manufacturer.getMaxMp()); // Creator's MP
+        buffer.writeLong(_buyer.getAdena()); // Buyer Adena
         if (!_manufacturer.hasManufactureShop()) {
-            writeInt(0x00);
+            buffer.writeInt(0x00);
         } else {
-            writeInt(_manufacturer.getManufactureItems().size());
+            buffer.writeInt(_manufacturer.getManufactureItems().size());
             for (ManufactureItem temp : _manufacturer.getManufactureItems().values()) {
-                writeInt(temp.getRecipeId());
-                writeInt(0x00); // unknown
-                writeLong(temp.getCost());
+                buffer.writeInt(temp.getRecipeId());
+                buffer.writeInt(0x00); // unknown
+                buffer.writeLong(temp.getCost());
 
-                writeLong(0x00); // Classic - 166
-                writeLong(0x00); // Classic - 166
-                writeByte(0x00); // Classic - 166
+                buffer.writeLong(0x00); // Classic - 166
+                buffer.writeLong(0x00); // Classic - 166
+                buffer.writeByte(0x00); // Classic - 166
             }
         }
     }

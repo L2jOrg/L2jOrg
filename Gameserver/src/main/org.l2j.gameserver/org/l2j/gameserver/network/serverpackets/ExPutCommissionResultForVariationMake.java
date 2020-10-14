@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -38,14 +39,14 @@ public class ExPutCommissionResultForVariationMake extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PUT_COMMISSION_RESULT_FOR_VARIATION_MAKE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PUT_COMMISSION_RESULT_FOR_VARIATION_MAKE, buffer );
 
-        writeInt(_gemstoneObjId);
-        writeInt(_itemId);
-        writeLong(_gemstoneCount);
-        writeLong(_unk1);
-        writeInt(_unk2);
+        buffer.writeInt(_gemstoneObjId);
+        buffer.writeInt(_itemId);
+        buffer.writeLong(_gemstoneCount);
+        buffer.writeLong(_unk1);
+        buffer.writeInt(_unk2);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.GameClient;
@@ -106,18 +107,18 @@ public final class NpcSay extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.NPC_SAY);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.NPC_SAY, buffer );
 
-        writeInt(_objectId);
-        writeInt(_textType.getClientId());
-        writeInt(_npcId);
-        writeInt(_npcString);
+        buffer.writeInt(_objectId);
+        buffer.writeInt(_textType.getClientId());
+        buffer.writeInt(_npcId);
+        buffer.writeInt(_npcString);
         if (_npcString == -1) {
-            writeString(_text);
+            buffer.writeString(_text);
         } else if (_parameters != null) {
             for (String s : _parameters) {
-                writeString(s);
+                buffer.writeString(s);
             }
         }
     }

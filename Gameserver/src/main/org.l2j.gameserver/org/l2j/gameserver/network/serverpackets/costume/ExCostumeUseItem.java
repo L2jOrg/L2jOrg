@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.costume;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -36,9 +37,9 @@ public class ExCostumeUseItem extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_COSTUME_USE_ITEM);
-        writeByte(success);
-        writeInt(costumeId);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_COSTUME_USE_ITEM, buffer );
+        buffer.writeByte(success);
+        buffer.writeInt(costumeId);
     }
 }

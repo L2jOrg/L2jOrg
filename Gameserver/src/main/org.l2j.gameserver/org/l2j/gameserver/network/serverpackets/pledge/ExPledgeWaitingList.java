@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.data.PledgeApplicantData;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
@@ -36,15 +37,15 @@ public class ExPledgeWaitingList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_WAITING_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_WAITING_LIST, buffer );
 
-        writeInt(pledgePlayerRecruitInfos.size());
+        buffer.writeInt(pledgePlayerRecruitInfos.size());
         for (PledgeApplicantData recruitInfo : pledgePlayerRecruitInfos.values()) {
-            writeInt(recruitInfo.getPlayerId());
-            writeString(recruitInfo.getPlayerName());
-            writeInt(recruitInfo.getClassId());
-            writeInt(recruitInfo.getPlayerLvl());
+            buffer.writeInt(recruitInfo.getPlayerId());
+            buffer.writeString(recruitInfo.getPlayerName());
+            buffer.writeInt(recruitInfo.getClassId());
+            buffer.writeInt(recruitInfo.getPlayerLvl());
         }
     }
 

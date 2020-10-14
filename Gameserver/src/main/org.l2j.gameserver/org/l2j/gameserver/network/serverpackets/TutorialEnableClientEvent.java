@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -29,10 +30,10 @@ public class TutorialEnableClientEvent extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.TUTORIAL_ENABLE_CLIENT_EVENT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.TUTORIAL_ENABLE_CLIENT_EVENT, buffer );
 
-        writeInt(_eventId);
+        buffer.writeInt(_eventId);
     }
 
 }

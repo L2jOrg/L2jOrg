@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.fishing;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
@@ -47,14 +48,14 @@ public class ExFishingStart extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_FISHING_START);
-        writeInt(_player.getObjectId());
-        writeByte((byte) _fishType);
-        writeInt(_baitLocation.getX());
-        writeInt(_baitLocation.getY());
-        writeInt(_baitLocation.getZ());
-        writeByte((byte) _baitType);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_FISHING_START, buffer );
+        buffer.writeInt(_player.getObjectId());
+        buffer.writeByte(_fishType);
+        buffer.writeInt(_baitLocation.getX());
+        buffer.writeInt(_baitLocation.getY());
+        buffer.writeInt(_baitLocation.getZ());
+        buffer.writeByte(_baitType);
     }
 
 }

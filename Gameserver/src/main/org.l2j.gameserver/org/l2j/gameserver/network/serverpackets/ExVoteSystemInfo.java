@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -43,14 +44,14 @@ public class ExVoteSystemInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_VOTE_SYSTEM_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_VOTE_SYSTEM_INFO, buffer );
 
-        writeInt(_recomLeft);
-        writeInt(_recomHave);
-        writeInt(_bonusTime);
-        writeInt(_bonusVal);
-        writeInt(_bonusType);
+        buffer.writeInt(_recomLeft);
+        buffer.writeInt(_recomHave);
+        buffer.writeInt(_bonusTime);
+        buffer.writeInt(_bonusVal);
+        buffer.writeInt(_bonusType);
     }
 
 }

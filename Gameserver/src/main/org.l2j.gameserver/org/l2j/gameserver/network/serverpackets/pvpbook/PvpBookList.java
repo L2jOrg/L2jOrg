@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pvpbook;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.KillerData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -37,22 +38,22 @@ public class PvpBookList extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_PVPBOOK_LIST);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_PVPBOOK_LIST, buffer );
         var player = client.getPlayer();
 
-        writeInt(player.getRevengeUsableLocation());
-        writeInt(player.getRevengeUsableTeleport());
+        buffer.writeInt(player.getRevengeUsableLocation());
+        buffer.writeInt(player.getRevengeUsableTeleport());
 
-        writeInt(killers.size());
+        buffer.writeInt(killers.size());
         for (KillerData killer : killers) {
-            writeSizedString(killer.getName());
-            writeSizedString(killer.getClan());
-            writeInt(killer.getLevel());
-            writeInt(killer.getRace());
-            writeInt(killer.getActiveClass());
-            writeInt(killer.getKillTime());
-            writeByte(killer.isOnline());
+            buffer.writeSizedString(killer.getName());
+            buffer.writeSizedString(killer.getClan());
+            buffer.writeInt(killer.getLevel());
+            buffer.writeInt(killer.getRace());
+            buffer.writeInt(killer.getActiveClass());
+            buffer.writeInt(killer.getKillTime());
+            buffer.writeByte(killer.isOnline());
         }
     }
 }

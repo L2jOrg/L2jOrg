@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -30,11 +31,11 @@ public final class PartySmallWindowDelete extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PARTY_SMALL_WINDOW_DELETE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PARTY_SMALL_WINDOW_DELETE, buffer );
 
-        writeInt(_member.getObjectId());
-        writeString(_member.getName());
+        buffer.writeInt(_member.getObjectId());
+        buffer.writeString(_member.getName());
     }
 
 }

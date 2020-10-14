@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.GameClient;
@@ -52,25 +53,25 @@ public final class ServerObjectInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SERVER_OBJECT_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SERVER_OBJECT_INFO, buffer );
 
-        writeInt(_activeChar.getObjectId());
-        writeInt(_idTemplate + 1000000);
-        writeString(_name); // name
-        writeInt(_isAttackable ? 1 : 0);
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(_heading);
-        writeDouble(1.0); // movement multiplier
-        writeDouble(1.0); // attack speed multiplier
-        writeDouble(_collisionRadius);
-        writeDouble(_collisionHeight);
-        writeInt((int) (_isAttackable ? _activeChar.getCurrentHp() : 0));
-        writeInt(_isAttackable ? _activeChar.getMaxHp() : 0);
-        writeInt(0x01); // object type
-        writeInt(0x00); // special effects
+        buffer.writeInt(_activeChar.getObjectId());
+        buffer.writeInt(_idTemplate + 1000000);
+        buffer.writeString(_name); // name
+        buffer.writeInt(_isAttackable ? 1 : 0);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
+        buffer.writeInt(_heading);
+        buffer.writeDouble(1.0); // movement multiplier
+        buffer.writeDouble(1.0); // attack speed multiplier
+        buffer.writeDouble(_collisionRadius);
+        buffer.writeDouble(_collisionHeight);
+        buffer.writeInt((int) (_isAttackable ? _activeChar.getCurrentHp() : 0));
+        buffer.writeInt(_isAttackable ? _activeChar.getMaxHp() : 0);
+        buffer.writeInt(0x01); // object type
+        buffer.writeInt(0x00); // special effects
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.gameserver.packet.auth2game;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.gameserver.ServerClient;
 
 public class KickPlayer extends GameServerWritablePacket {
@@ -29,9 +30,9 @@ public class KickPlayer extends GameServerWritablePacket {
 	}
 
 	@Override
-	protected void writeImpl(ServerClient client) {
-		writeByte((byte)0x03);
-		writeString(account);
+	protected void writeImpl(ServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x03);
+		buffer.writeString(account);
 	}
 
 }

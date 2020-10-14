@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
@@ -47,19 +48,19 @@ public class MoveToPawn extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MOVE_TO_PAWN);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MOVE_TO_PAWN, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_targetId);
-        writeInt(_distance);
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_targetId);
+        buffer.writeInt(_distance);
 
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(_tx);
-        writeInt(_ty);
-        writeInt(_tz);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
+        buffer.writeInt(_tx);
+        buffer.writeInt(_ty);
+        buffer.writeInt(_tz);
     }
 
 }

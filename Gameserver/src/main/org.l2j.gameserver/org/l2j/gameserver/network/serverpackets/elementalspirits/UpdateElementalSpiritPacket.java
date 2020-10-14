@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.network.GameClient;
 
@@ -33,10 +34,10 @@ public abstract class UpdateElementalSpiritPacket extends AbstractElementalSpiri
         this.update = update;
     }
 
-    protected void writeUpdate(GameClient client) {
+    protected void writeUpdate(GameClient client, WritableBuffer buffer) {
         var player = client.getPlayer();
-        writeByte(update);
-        writeByte(type);
+        buffer.writeByte(update);
+        buffer.writeByte(type);
 
         if(update) {
             var spirit = player.getElementalSpirit(ElementalType.of(type));
@@ -45,8 +46,8 @@ public abstract class UpdateElementalSpiritPacket extends AbstractElementalSpiri
                 return;
             }
 
-            writeByte(type);
-            writeSpiritInfo(spirit);
+            buffer.writeByte(type);
+            writeSpiritInfo(spirit, buffer);
         }
     }
 }

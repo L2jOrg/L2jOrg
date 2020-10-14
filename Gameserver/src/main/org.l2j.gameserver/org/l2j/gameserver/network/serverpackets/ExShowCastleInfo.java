@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -42,28 +43,28 @@ public class ExShowCastleInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_CASTLE_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_CASTLE_INFO, buffer );
 
         final Collection<Castle> castles = CastleManager.getInstance().getCastles();
-        writeInt(castles.size());
+        buffer.writeInt(castles.size());
         for (Castle castle : castles) {
-            writeInt(castle.getId());
+            buffer.writeInt(castle.getId());
             if (castle.getOwnerId() > 0) {
                 if (ClanTable.getInstance().getClan(castle.getOwnerId()) != null) {
-                    writeString(ClanTable.getInstance().getClan(castle.getOwnerId()).getName());
+                    buffer.writeString(ClanTable.getInstance().getClan(castle.getOwnerId()).getName());
                 } else {
                     LOGGER.warn("Castle owner with no name! Castle: " + castle.getName() + " has an OwnerId = " + castle.getOwnerId() + " who does not have a  name!");
-                    writeString("");
+                    buffer.writeString("");
                 }
             } else {
-                writeString("");
+                buffer.writeString("");
             }
-            writeInt(castle.getTaxPercent(TaxType.BUY));
-            writeInt((int) (castle.getSiege().getSiegeDate().atZone(ZoneId.systemDefault()).toEpochSecond()));
+            buffer.writeInt(castle.getTaxPercent(TaxType.BUY));
+            buffer.writeInt((int) (castle.getSiege().getSiegeDate().atZone(ZoneId.systemDefault()).toEpochSecond()));
 
-            writeByte((byte)( castle.getSiege().isInProgress() ? 0x01 : 0x00)); // Grand Crusade
-            writeByte((byte) castle.getSide().ordinal()); // Grand Crusade
+            buffer.writeByte(castle.getSiege().isInProgress()); // Grand Crusade
+            buffer.writeByte(castle.getSide().ordinal()); // Grand Crusade
         }
     }
 

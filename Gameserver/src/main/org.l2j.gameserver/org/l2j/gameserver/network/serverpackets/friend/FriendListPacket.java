@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.friend;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,18 +36,18 @@ public class FriendListPacket extends AbstractFriendListPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.L2_FRIEND_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.L2_FRIEND_LIST, buffer );
 
-        writeInt(info.size());
+        buffer.writeInt(info.size());
         for (FriendInfo info : info) {
-            writeInt(info.objectId);
-            writeString(info.name);
-            writeInt(info.online);
-            writeInt(info.online ? info.objectId : 0x00); // object id if online
-            writeInt(info.level);
-            writeInt(info.classId);
-            writeShort((short) 0x00);
+            buffer.writeInt(info.objectId);
+            buffer.writeString(info.name);
+            buffer.writeInt(info.online);
+            buffer.writeInt(info.online ? info.objectId : 0x00); // object id if online
+            buffer.writeInt(info.level);
+            buffer.writeInt(info.classId);
+            buffer.writeShort(0x00);
         }
     }
 }

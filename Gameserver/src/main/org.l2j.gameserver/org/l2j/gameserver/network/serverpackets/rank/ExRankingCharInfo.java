@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.rank;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -31,20 +32,20 @@ import static java.util.Objects.isNull;
 public class ExRankingCharInfo extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
         var rank = RankEngine.getInstance().getRank(client.getPlayer());
 
-        writeId(ServerExPacketId.EX_RANKING_CHAR_INFO);
+        writeId(ServerExPacketId.EX_RANKING_CHAR_INFO, buffer );
         if(isNull(rank)) {
-            writeInt(0);
-            writeInt(0);
-            writeInt(0);
-            writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
         } else {
-            writeInt(rank.getRank());
-            writeInt(rank.getRankRace());
-            writeInt(rank.getRankSnapshot());
-            writeInt(rank.getRankRaceSnapshot());
+            buffer.writeInt(rank.getRank());
+            buffer.writeInt(rank.getRankRace());
+            buffer.writeInt(rank.getRankSnapshot());
+            buffer.writeInt(rank.getRankRaceSnapshot());
         }
     }
 }

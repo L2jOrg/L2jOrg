@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -28,12 +29,12 @@ import org.l2j.gameserver.network.ServerExPacketId;
 public class ExShowContactList extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ADD_POST_FRIEND);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ADD_POST_FRIEND, buffer );
 
         var contacts = client.getPlayer().getContacts();
-        writeInt(contacts.size());
-        contacts.forEach(this::writeString);
+        buffer.writeInt(contacts.size());
+        contacts.forEach(buffer::writeString);
     }
 
 }

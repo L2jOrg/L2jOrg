@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -38,18 +39,18 @@ public class EtcStatusUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ETC_STATUS_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ETC_STATUS_UPDATE, buffer );
 
-        writeByte(player.getCharges()); // 1-7 increase force, lvl
-        writeInt(player.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
-        writeByte(0); // Weapon Grade Penalty [1-4]
-        writeByte(0); // Armor Grade Penalty [1-4]
-        writeByte(0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
-        writeByte(player.getChargedSouls());
-        writeByte(toggles);
-        writeByte(player.getShadowSouls());
-        writeByte(player.getShineSouls());
+        buffer.writeByte(player.getCharges()); // 1-7 increase force, lvl
+        buffer.writeInt(player.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
+        buffer.writeByte(0); // Weapon Grade Penalty [1-4]
+        buffer.writeByte(0); // Armor Grade Penalty [1-4]
+        buffer.writeByte(0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
+        buffer.writeByte(player.getChargedSouls());
+        buffer.writeByte(toggles);
+        buffer.writeByte(player.getShadowSouls());
+        buffer.writeByte(player.getShineSouls());
     }
 
 }

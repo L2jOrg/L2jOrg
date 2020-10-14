@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,12 +36,12 @@ public class ChangeMoveType extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CHANGE_MOVE_TYPE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CHANGE_MOVE_TYPE, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_running ? RUN : WALK);
-        writeInt(0); // c2
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_running ? RUN : WALK);
+        buffer.writeInt(0); // c2
     }
 
 }

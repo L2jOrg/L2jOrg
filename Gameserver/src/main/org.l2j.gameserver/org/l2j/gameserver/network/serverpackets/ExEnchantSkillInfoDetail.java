@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.EnchantSkillHolder;
@@ -47,22 +48,22 @@ public class ExEnchantSkillInfoDetail extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ENCHANT_SKILL_INFO_DETAIL);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ENCHANT_SKILL_INFO_DETAIL, buffer );
 
-        writeInt(_type.ordinal());
-        writeInt(_skillId);
-        writeShort((short) _skillLvl);
-        writeShort((short) _skillSubLvl);
+        buffer.writeInt(_type.ordinal());
+        buffer.writeInt(_skillId);
+        buffer.writeShort(_skillLvl);
+        buffer.writeShort(_skillSubLvl);
         if (_enchantSkillHolder != null) {
-            writeLong(_enchantSkillHolder.getSp(_type));
-            writeInt(_enchantSkillHolder.getChance(_type));
+            buffer.writeLong(_enchantSkillHolder.getSp(_type));
+            buffer.writeInt(_enchantSkillHolder.getChance(_type));
             final Set<ItemHolder> holders = _enchantSkillHolder.getRequiredItems(_type);
-            writeInt(holders.size());
+            buffer.writeInt(holders.size());
             holders.forEach(holder ->
             {
-                writeInt(holder.getId());
-                writeInt((int) holder.getCount());
+                buffer.writeInt(holder.getId());
+                buffer.writeInt((int) holder.getCount());
             });
         }
     }

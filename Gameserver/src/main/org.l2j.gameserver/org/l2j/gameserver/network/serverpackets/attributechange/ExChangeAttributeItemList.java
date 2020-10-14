@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.attributechange;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -36,12 +37,12 @@ public class ExChangeAttributeItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CHANGE_ATTRIBUTE_ITEM_LIST);
-        writeInt(_itemId);
-        writeInt(_itemsList.length);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CHANGE_ATTRIBUTE_ITEM_LIST, buffer );
+        buffer.writeInt(_itemId);
+        buffer.writeInt(_itemsList.length);
         for (ItemInfo item : _itemsList) {
-            writeItem(item);
+            writeItem(item, buffer);
         }
     }
 

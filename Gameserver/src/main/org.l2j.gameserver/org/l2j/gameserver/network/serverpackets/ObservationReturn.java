@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -30,12 +31,12 @@ public class ObservationReturn extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.OBSERVER_END);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.OBSERVER_END, buffer );
 
-        writeInt(_loc.getX());
-        writeInt(_loc.getY());
-        writeInt(_loc.getZ());
+        buffer.writeInt(_loc.getX());
+        buffer.writeInt(_loc.getY());
+        buffer.writeInt(_loc.getZ());
     }
 
 }

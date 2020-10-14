@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -32,10 +33,10 @@ public class ExRequestChangeNicknameColor extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CHANGE_NICKNAME_COLOR);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CHANGE_NICKNAME_COLOR, buffer );
 
-        writeInt(_itemObjectId);
+        buffer.writeInt(_itemObjectId);
     }
 
 }

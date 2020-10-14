@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.PledgeRecruitData;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
@@ -48,29 +49,29 @@ public class ExPledgeRecruitBoardSearch extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_BOARD_SEARCH);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_BOARD_SEARCH, buffer );
 
-        writeInt(_currentPage);
-        writeInt(_totalNumberOfPage);
-        writeInt(_clanOnCurrentPage);
+        buffer.writeInt(_currentPage);
+        buffer.writeInt(_totalNumberOfPage);
+        buffer.writeInt(_clanOnCurrentPage);
 
         for (int i = _startIndex; i < _endIndex; i++) {
-            writeInt(_clanList.get(i).getClanId());
-            writeInt(_clanList.get(i).getClan().getAllyId());
+            buffer.writeInt(_clanList.get(i).getClanId());
+            buffer.writeInt(_clanList.get(i).getClan().getAllyId());
         }
         for (int i = _startIndex; i < _endIndex; i++) {
             final Clan clan = _clanList.get(i).getClan();
-            writeInt(clan.getCrestId());
-            writeInt(clan.getAllyCrestId());
-            writeString(clan.getName());
-            writeString(clan.getLeaderName());
-            writeInt(clan.getLevel());
-            writeInt(clan.getMembersCount());
-            writeInt(_clanList.get(i).getKarma());
-            writeString(_clanList.get(i).getInformation());
-            writeInt(_clanList.get(i).getApplicationType()); // Helios
-            writeInt(_clanList.get(i).getRecruitType()); // Helios
+            buffer.writeInt(clan.getCrestId());
+            buffer.writeInt(clan.getAllyCrestId());
+            buffer.writeString(clan.getName());
+            buffer.writeString(clan.getLeaderName());
+            buffer.writeInt(clan.getLevel());
+            buffer.writeInt(clan.getMembersCount());
+            buffer.writeInt(_clanList.get(i).getKarma());
+            buffer.writeString(_clanList.get(i).getInformation());
+            buffer.writeInt(_clanList.get(i).getApplicationType()); // Helios
+            buffer.writeInt(_clanList.get(i).getRecruitType()); // Helios
         }
     }
 

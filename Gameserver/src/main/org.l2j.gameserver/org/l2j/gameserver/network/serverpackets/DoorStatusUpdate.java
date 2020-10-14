@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -30,16 +31,16 @@ public final class DoorStatusUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.DOOR_STATUS_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.DOOR_STATUS_UPDATE, buffer );
 
-        writeInt(_door.getObjectId());
-        writeInt(!_door.isOpen());
-        writeInt(_door.getDamage());
-        writeInt(_door.isEnemy());
-        writeInt(_door.getId());
-        writeInt((int) _door.getCurrentHp());
-        writeInt(_door.getMaxHp());
+        buffer.writeInt(_door.getObjectId());
+        buffer.writeInt(!_door.isOpen());
+        buffer.writeInt(_door.getDamage());
+        buffer.writeInt(_door.isEnemy());
+        buffer.writeInt(_door.getId());
+        buffer.writeInt((int) _door.getCurrentHp());
+        buffer.writeInt(_door.getMaxHp());
     }
 
 }

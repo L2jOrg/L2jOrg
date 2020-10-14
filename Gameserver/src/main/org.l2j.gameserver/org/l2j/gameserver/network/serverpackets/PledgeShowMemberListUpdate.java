@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -59,24 +60,24 @@ public final class PledgeShowMemberListUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_UPDATE, buffer );
 
-        writeString(_name);
-        writeInt(_level);
-        writeInt(_classId);
-        writeInt(_sex);
-        writeInt(_race);
+        buffer.writeString(_name);
+        buffer.writeInt(_level);
+        buffer.writeInt(_classId);
+        buffer.writeInt(_sex);
+        buffer.writeInt(_race);
         if (_onlineStatus > 0) {
-            writeInt(_objectId);
-            writeInt(_pledgeType);
+            buffer.writeInt(_objectId);
+            buffer.writeInt(_pledgeType);
         } else {
             // when going offline send as 0
-            writeInt(0);
-            writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
         }
-        writeInt(_hasSponsor);
-        writeByte((byte) _onlineStatus);
+        buffer.writeInt(_hasSponsor);
+        buffer.writeByte(_onlineStatus);
     }
 
 }

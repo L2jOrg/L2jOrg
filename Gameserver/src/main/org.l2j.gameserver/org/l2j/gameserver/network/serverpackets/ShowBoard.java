@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -50,19 +51,19 @@ public class ShowBoard extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOW_BOARD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SHOW_BOARD, buffer );
 
-        writeByte(_showBoard); // c4 1 to show community 00 to hide
-        writeString("bypass _bbshome"); // top
-        writeString("bypass _bbsgetfav"); // favorite
-        writeString("bypass _bbsloc"); // region
-        writeString("bypass _bbsclan"); // clan
-        writeString("bypass _bbsmemo"); // memo
-        writeString("bypass _bbsmail"); // mail
-        writeString("bypass _bbsfriends"); // friends
-        writeString("bypass _bbsgetfav add"); // add fav.
-        writeString(_content);
+        buffer.writeByte(_showBoard); // c4 1 to show community 00 to hide
+        buffer.writeString("bypass _bbshome"); // top
+        buffer.writeString("bypass _bbsgetfav"); // favorite
+        buffer.writeString("bypass _bbsloc"); // region
+        buffer.writeString("bypass _bbsclan"); // clan
+        buffer.writeString("bypass _bbsmemo"); // memo
+        buffer.writeString("bypass _bbsmail"); // mail
+        buffer.writeString("bypass _bbsfriends"); // friends
+        buffer.writeString("bypass _bbsgetfav add"); // add fav.
+        buffer.writeString(_content);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.mission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -39,24 +40,24 @@ public class ExConnectedTimeAndGettableReward extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
         if (!MissionData.getInstance().isAvailable()) {
             return;
         }
 
-        writeId(ServerExPacketId.EX_ONE_DAY_REWARD_INFO);
-        writeInt(0x00);
-        writeInt(oneDayRewardAvailableCount);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
+        writeId(ServerExPacketId.EX_ONE_DAY_REWARD_INFO, buffer );
+        buffer.writeInt(0x00);
+        buffer.writeInt(oneDayRewardAvailableCount);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
     }
 
 }

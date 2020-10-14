@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.Clan;
@@ -55,41 +56,41 @@ public class PledgeShowMemberListAll extends PledgeAbstractPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_ALL);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_ALL, buffer );
 
-        writeInt(!isSubPledge);
-        writeInt(clan.getId());
-        writeInt(getSettings(ServerSettings.class).serverId());
+        buffer.writeInt(!isSubPledge);
+        buffer.writeInt(clan.getId());
+        buffer.writeInt(getSettings(ServerSettings.class).serverId());
 
         var pledgeId = isNull(pledge) ? 0x00 : pledge.getId();
         var leaderName = isNull(pledge) ? clan.getLeaderName() : PlayerNameTable.getInstance().getNameById(pledge.getLeaderId());
 
-        writeInt(pledgeId);
-        writeString(isNull(pledge) ? clan.getName() : pledge.getName());
-        writeString(leaderName);
+        buffer.writeInt(pledgeId);
+        buffer.writeString(isNull(pledge) ? clan.getName() : pledge.getName());
+        buffer.writeString(leaderName);
 
-        writeClanInfo(pledgeId);
+        writeClanInfo(pledgeId, buffer);
 
-        clan.forEachMember(this::writeMemberInfo, m -> m.getPledgeType() == pledgeId);
+        clan.forEachMember(m1 -> writeMemberInfo(m1, buffer), m -> m.getPledgeType() == pledgeId);
     }
 
-    protected void writeMemberInfo(ClanMember m) {
-        writeString(m.getName());
-        writeInt(m.getLevel());
-        writeInt(m.getClassId());
+    protected void writeMemberInfo(ClanMember m, WritableBuffer buffer) {
+        buffer.writeString(m.getName());
+        buffer.writeInt(m.getLevel());
+        buffer.writeInt(m.getClassId());
 
         var player = m.getPlayerInstance();
         if (nonNull(player)) {
-            writeInt(player.getAppearance().isFemale()); // no visible effect
-            writeInt(player.getRace().ordinal()); // packet.putInt(1);
+            buffer.writeInt(player.getAppearance().isFemale()); // no visible effect
+            buffer.writeInt(player.getRace().ordinal()); // packet.putInt(1);
         } else {
-            writeInt(0x01); // no visible effect
-            writeInt(0x01); // packet.putInt(1);
+            buffer.writeInt(0x01); // no visible effect
+            buffer.writeInt(0x01); // packet.putInt(1);
         }
-        writeInt(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
-        writeInt(m.getSponsor() != 0);
-        writeByte(m.getOnlineStatus());
+        buffer.writeInt(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
+        buffer.writeInt(m.getSponsor() != 0);
+        buffer.writeByte(m.getOnlineStatus());
     }
 
 }

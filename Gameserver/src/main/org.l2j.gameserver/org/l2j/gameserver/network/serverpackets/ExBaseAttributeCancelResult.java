@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -34,12 +35,12 @@ public class ExBaseAttributeCancelResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BASE_ATTRIBUTE_CANCEL_RESULT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BASE_ATTRIBUTE_CANCEL_RESULT, buffer );
 
-        writeInt(0x01); // result
-        writeInt(_objId);
-        writeInt(_attribute);
+        buffer.writeInt(0x01); // result
+        buffer.writeInt(_objId);
+        buffer.writeInt(_attribute);
     }
 
 }

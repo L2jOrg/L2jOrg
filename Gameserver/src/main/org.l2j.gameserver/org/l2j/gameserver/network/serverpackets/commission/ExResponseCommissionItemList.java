@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.commission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -38,18 +39,18 @@ public class ExResponseCommissionItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_ITEM_LIST);
-        writeByte((byte) sendType);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_ITEM_LIST, buffer );
+        buffer.writeByte(sendType);
         if (sendType == 2) {
-            writeInt(items.size());
-            writeInt(items.size());
+            buffer.writeInt(items.size());
+            buffer.writeInt(items.size());
             for (Item itemInstance : items) {
-                writeItem(itemInstance);
+                writeItem(itemInstance, buffer);
             }
         } else {
-            writeInt(0);
-            writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
         }
     }
 

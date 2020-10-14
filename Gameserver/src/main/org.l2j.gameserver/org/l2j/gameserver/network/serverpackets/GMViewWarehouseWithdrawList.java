@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
@@ -47,21 +48,21 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GM_VIEW_WAREHOUSE_WITHDRAW_LIST);
-        writeByte(sendType);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.GM_VIEW_WAREHOUSE_WITHDRAW_LIST, buffer );
+        buffer.writeByte(sendType);
 
         if(sendType == 2) {
-            writeInt(_items.size());
-            writeInt(_items.size());
+            buffer.writeInt(_items.size());
+            buffer.writeInt(_items.size());
             for (Item item : _items) {
-                writeItem(item);
-                writeInt(item.getObjectId());
+                writeItem(item, buffer);
+                buffer.writeInt(item.getObjectId());
             }
         } else {
-            writeString(playerName);
-            writeLong(_money);
-            writeInt((short) _items.size());
+            buffer.writeString(playerName);
+            buffer.writeLong(_money);
+            buffer.writeInt((short) _items.size());
         }
     }
 

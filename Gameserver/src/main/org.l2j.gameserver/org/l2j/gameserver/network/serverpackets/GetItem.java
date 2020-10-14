@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -32,15 +33,15 @@ public final class GetItem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GET_ITEM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.GET_ITEM, buffer );
 
-        writeInt(_playerId);
-        writeInt(_item.getObjectId());
+        buffer.writeInt(_playerId);
+        buffer.writeInt(_item.getObjectId());
 
-        writeInt(_item.getX());
-        writeInt(_item.getY());
-        writeInt(_item.getZ());
+        buffer.writeInt(_item.getX());
+        buffer.writeInt(_item.getY());
+        buffer.writeInt(_item.getZ());
     }
 
 }

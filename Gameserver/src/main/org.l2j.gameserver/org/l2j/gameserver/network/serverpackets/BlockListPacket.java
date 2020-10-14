@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.network.GameClient;
@@ -35,14 +36,14 @@ public class BlockListPacket extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.BLOCK_PACKET_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.BLOCK_PACKET_LIST, buffer );
 
-        writeInt(blockedIds.size());
+        buffer.writeInt(blockedIds.size());
         var playerNameTable = PlayerNameTable.getInstance();
         blockedIds.forEach(id -> {
-            writeString(playerNameTable.getNameById(id));
-            writeString(""); // memo ?
+            buffer.writeString(playerNameTable.getNameById(id));
+            buffer.writeString(""); // memo ?
         });
     }
 

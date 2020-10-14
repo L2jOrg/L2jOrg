@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.rank;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -46,11 +47,11 @@ public class ExRankList extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_RANKING_CHAR_RANKERS);
-        writeByte(group);
-        writeByte(scope);
-        writeInt(race);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_RANKING_CHAR_RANKERS, buffer );
+        buffer.writeByte(group);
+        buffer.writeByte(scope);
+        buffer.writeInt(race);
 
         List<RankData> rankers = switch (group) {
             case 0 -> listServerRankers(client.getPlayer(), scope);
@@ -60,17 +61,17 @@ public class ExRankList extends ServerPacket {
             default -> Collections.emptyList();
         };
 
-        writeInt(rankers.size());
+        buffer.writeInt(rankers.size());
 
         for (var ranker : rankers) {
-            writeSizedString(ranker.getPlayerName());
-            writeSizedString(ranker.getClanName());
-            writeInt(ranker.getLevel());
-            writeInt(ranker.getClassId());
-            writeInt(ranker.getRace());
-            writeInt(ranker.getRank());
-            writeInt(ranker.getRankSnapshot());
-            writeInt(ranker.getRankRaceSnapshot());
+            buffer.writeSizedString(ranker.getPlayerName());
+            buffer.writeSizedString(ranker.getClanName());
+            buffer.writeInt(ranker.getLevel());
+            buffer.writeInt(ranker.getClassId());
+            buffer.writeInt(ranker.getRace());
+            buffer.writeInt(ranker.getRank());
+            buffer.writeInt(ranker.getRankSnapshot());
+            buffer.writeInt(ranker.getRankRaceSnapshot());
         }
     }
 
