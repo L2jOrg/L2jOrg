@@ -22,6 +22,7 @@ package org.l2j.gameserver.ai;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.Location;
@@ -36,6 +37,8 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.item.container.Inventory;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.AutoAttackStop;
@@ -264,27 +267,47 @@ public class CreatureAI extends AbstractAI {
      */
     @Override
     protected void onIntentionMoveTo(ILocational loc) {
-        if (getIntention() == AI_INTENTION_REST) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
+        if (getIntention() == AI_INTENTION_REST)
+
+        {
+            // Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
             clientActionFailed();
             return;
         }
+        if ((isPlayer(actor)))
+        {
+            final Item rhand = ((Player) actor).getInventory().getPaperdollItem(InventorySlot.RIGHT_HAND);
 
-        if (actor.isAllSkillsDisabled() || actor.isCastingNow()) {
-            // Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
-            clientActionFailed();
-            return;
+            if ((actor.isAttackingNow() && (rhand != null) && (rhand.getItemType() == WeaponType.BOW)) || (actor.isCastingNow() && !actor.isMoving()))
+            {
+                clientActionFailed();
+                return;
+            }
+            changeIntention(AI_INTENTION_MOVE_TO, loc, null);
+
+            // Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
+            clientStopAutoAttack();
+            if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)))
+
+            {
+                if (!actor.isAttackingNow())
+                {
+                    actor.abortAttack();
+                }
+            }
+            else
+            {
+                actor.abortAttack();
+            }
         }
+        else // case Npc
+        {
+            changeIntention(AI_INTENTION_MOVE_TO, loc, null);
+            // Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
+            clientStopAutoAttack();
+            actor.abortAttack();
 
-        // Set the Intention of this AbstractAI to AI_INTENTION_MOVE_TO
-        changeIntention(AI_INTENTION_MOVE_TO, loc);
-
-        // Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-        clientStopAutoAttack();
-
-        // Abort the attack of the Creature and send Server->Client ActionFailed packet
-        actor.abortAttack();
-
+        }
         // Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
         moveTo(loc.getX(), loc.getY(), loc.getZ());
     }
