@@ -101,7 +101,7 @@ public class VariationData extends GameXmlReader {
                                 final int optionId = parseInt(optionNode.getAttributes(), "id");
                                 final Options opt = AugmentationEngine.getInstance().getOptions(optionId);
                                 if (opt == null) {
-                                    LOGGER.warn(": Null option for id " + optionId);
+                                    LOGGER.warn("Null option for id " + optionId);
                                     return;
                                 }
                                 options.put(opt, optionChance);
@@ -114,8 +114,8 @@ public class VariationData extends GameXmlReader {
                                 for (int id = fromId; id <= toId; id++) {
                                     final Options op = AugmentationEngine.getInstance().getOptions(id);
                                     if (op == null) {
-                                        LOGGER.warn(": Null option for id " + id);
-                                        return;
+                                        LOGGER.warn("Null option for id " + id);
+                                        continue;
                                     }
                                     options.put(op, optionChance);
                                 }

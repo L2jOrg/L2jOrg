@@ -36,7 +36,6 @@ import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -77,7 +76,6 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
-import static org.l2j.gameserver.instancemanager.GlobalVariablesManager.MONSTER_ARENA_VARIABLE;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -1814,7 +1812,11 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public int getArenaProgress() {
-        return GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + getId(), 0);
+        return data.getArenaProgress();
+    }
+
+    public void setArenaProgress(int progress) {
+        data.setArenaProgress((short) progress);
     }
 
     public static class RankPrivs {
