@@ -339,10 +339,6 @@ public class EnterWorld extends ClientPacket {
             player.sendPacket(new ExAutoSoulShot(0, true, i));
         }
 
-        if (!player.getPremiumItemList().isEmpty()) {
-            player.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
-        }
-
         if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType())) {
             player.sendPacket(new ExBeautyItemList(player));
         }

@@ -186,6 +186,8 @@ public final class Player extends Playable {
     private IntSet teleportFavorites;
     private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
+    private final IntMap<RecipeList> dwarvenRecipes = new CHashIntMap<>();
+    private final IntMap<RecipeList> commonRecipes = new CHashIntMap<>();
 
     private byte vipTier;
     private int rank;
@@ -1147,15 +1149,7 @@ public final class Player extends Playable {
 
     private final ReentrantLock classLock = new ReentrantLock();
     private final Map<Integer, TeleportBookmark> _tpbookmarks = new ConcurrentSkipListMap<>();
-    /**
-     * The table containing all RecipeList of the Player
-     */
-    private final IntMap<RecipeList> dwarvenRecipes = new CHashIntMap<>();
-    private final IntMap<RecipeList> commonRecipes = new CHashIntMap<>();
-    /**
-     * Premium Items
-     */
-    private final Map<Integer, PremiumItem> _premiumItems = new ConcurrentSkipListMap<>();
+
     /**
      * Stored from last ValidatePosition
      **/
@@ -5444,9 +5438,6 @@ public final class Player extends Playable {
             restoreRecipeShopList();
         }
 
-        // Load Premium Item List.
-        loadPremiumItemList();
-
         // Restore items in pet inventory.
         restorePetInventoryItems();
 
@@ -5479,53 +5470,6 @@ public final class Player extends Playable {
             dwarvenRecipes.put(recipeId, recipe);
         } else {
             commonRecipes.put(recipeId, recipe);
-        }
-    }
-
-    public Map<Integer, PremiumItem> getPremiumItemList() {
-        return _premiumItems;
-    }
-
-    private void loadPremiumItemList() {
-        final String sql = "SELECT itemNum, itemId, itemCount, itemSender FROM character_premium_items WHERE charId=?";
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(sql)) {
-            statement.setInt(1, getObjectId());
-            try (ResultSet rset = statement.executeQuery()) {
-                while (rset.next()) {
-                    final int itemNum = rset.getInt("itemNum");
-                    final int itemId = rset.getInt("itemId");
-                    final long itemCount = rset.getLong("itemCount");
-                    final String itemSender = rset.getString("itemSender");
-                    _premiumItems.put(itemNum, new PremiumItem(itemId, itemCount, itemSender));
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error("Could not restore premium items: " + e.getMessage(), e);
-        }
-    }
-
-    public void updatePremiumItem(int itemNum, long newcount) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("UPDATE character_premium_items SET itemCount=? WHERE charId=? AND itemNum=? ")) {
-            statement.setLong(1, newcount);
-            statement.setInt(2, getObjectId());
-            statement.setInt(3, itemNum);
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.error("Could not update premium items: " + e.getMessage(), e);
-        }
-    }
-
-    public void deletePremiumItem(int itemNum) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("DELETE FROM character_premium_items WHERE charId=? AND itemNum=? ")) {
-            statement.setInt(1, getObjectId());
-
-            statement.setInt(2, itemNum);
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.error("Could not delete premium item: " + e);
         }
     }
 

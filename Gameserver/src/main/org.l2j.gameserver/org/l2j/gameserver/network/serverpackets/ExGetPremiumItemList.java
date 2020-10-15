@@ -19,40 +19,26 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.PremiumItem;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
-
-import java.util.Map;
-import java.util.Map.Entry;
 
 /**
  * @author Gnacik
  */
 public class ExGetPremiumItemList extends ServerPacket {
-    private final Player _activeChar;
-
-    private final Map<Integer, PremiumItem> _map;
-
-    public ExGetPremiumItemList(Player activeChar) {
-        _activeChar = activeChar;
-        _map = _activeChar.getPremiumItemList();
-    }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_PREMIUM_ITEM_LIST, buffer );
 
-        buffer.writeInt(_map.size());
-        for (Entry<Integer, PremiumItem> entry : _map.entrySet()) {
-            final PremiumItem item = entry.getValue();
-            buffer.writeLong(entry.getKey());
-            buffer.writeInt(item.getItemId());
-            buffer.writeLong(item.getCount());
+        buffer.writeInt(0x00); // count
+
+            /* for each item
+            buffer.writeLong(0x00); // item num (index)
+            buffer.writeInt(0x00); // item id
+            buffer.writeLong(0x00); // count
             buffer.writeInt(0x00); // ?
-            buffer.writeString(item.getSender());
-        }
+            buffer.writeString(""); // sender*/
     }
 
 }
