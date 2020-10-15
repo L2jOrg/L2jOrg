@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -61,38 +62,38 @@ public class SiegeInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CASTLE_SIEGE_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CASTLE_SIEGE_INFO, buffer );
 
         if (nonNull(castle)) {
-            writeInt(castle.getId());
+            buffer.writeInt(castle.getId());
 
             final int ownerId = castle.getOwnerId();
 
-            writeInt(((ownerId == player.getClanId()) && (player.isClanLeader())) ? 0x01 : 0x00);
-            writeInt(ownerId);
+            buffer.writeInt(((ownerId == player.getClanId()) && (player.isClanLeader())) ? 0x01 : 0x00);
+            buffer.writeInt(ownerId);
             if (ownerId > 0) {
                 final Clan owner = ClanTable.getInstance().getClan(ownerId);
                 if (owner != null) {
-                    writeString(owner.getName()); // Clan Name
-                    writeString(owner.getLeaderName()); // Clan Leader Name
-                    writeInt(owner.getAllyId()); // Ally ID
-                    writeString(owner.getAllyName()); // Ally Name
+                    buffer.writeString(owner.getName()); // Clan Name
+                    buffer.writeString(owner.getLeaderName()); // Clan Leader Name
+                    buffer.writeInt(owner.getAllyId()); // Ally ID
+                    buffer.writeString(owner.getAllyName()); // Ally Name
                 } else {
                     LOGGER.warn("Null owner for castle: {}", castle.getName());
                 }
             } else {
-                writeString(""); // Clan Name
-                writeString(""); // Clan Leader Name
-                writeInt(0); // Ally ID
-                writeString(""); // Ally Name
+                buffer.writeString(""); // Clan Name
+                buffer.writeString(""); // Clan Leader Name
+                buffer.writeInt(0); // Ally ID
+                buffer.writeString(""); // Ally Name
             }
 
-            writeInt((int) (System.currentTimeMillis() / 1000));
+            buffer.writeInt((int) (System.currentTimeMillis() / 1000));
 
             var siegeDate = castle.getSiegeDate().atZone(ZoneId.systemDefault());
-            writeInt((int) siegeDate.toEpochSecond());
-            writeInt(0x00);
+            buffer.writeInt((int) siegeDate.toEpochSecond());
+            buffer.writeInt(0x00);
         }
     }
 

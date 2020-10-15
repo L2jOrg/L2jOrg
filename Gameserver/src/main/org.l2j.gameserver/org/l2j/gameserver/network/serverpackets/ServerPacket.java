@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.mmocore.WritablePacket;
 import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -64,9 +65,9 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
     }
 
     @Override
-    protected boolean write(GameClient client) {
+    protected boolean write(GameClient client, WritableBuffer buffer) {
         try {
-            writeImpl(client);
+            writeImpl(client, buffer);
             return true;
         } catch (Exception e) {
             LOGGER.error("[{}] Error writing packet {} to client {}", GameServer.fullVersion, this, client);
@@ -79,29 +80,29 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
 
     }
 
-    protected void writeId(ServerPacketId packet) {
-        writeByte(packet.getId());
+    protected void writeId(ServerPacketId packet, WritableBuffer buffer) {
+        buffer.writeByte(packet.getId());
     }
 
-    protected void writeId(ServerExPacketId exPacket) {
-        writeByte(0xFE);
-        writeShort(exPacket.getId());
+    protected void writeId(ServerExPacketId exPacket, WritableBuffer buffer) {
+        buffer.writeByte(0xFE);
+        buffer.writeShort(exPacket.getId());
     }
 
-    protected void writeOptionalD(int value) {
+    protected void writeOptionalD(int value, WritableBuffer buffer) {
         if (value >= Short.MAX_VALUE) {
-            writeShort(Short.MAX_VALUE);
-            writeInt(value);
+            buffer.writeShort(Short.MAX_VALUE);
+            buffer.writeInt(value);
         } else {
-            writeShort(value);
+            buffer.writeShort(value);
         }
     }
 
-    protected void writeLocation(ILocational location) {
-        writeInt(location.getX());
-        writeInt(location.getY());
-        writeInt(location.getZ());
+    protected void writeLocation(ILocational location, WritableBuffer buffer) {
+        buffer.writeInt(location.getX());
+        buffer.writeInt(location.getY());
+        buffer.writeInt(location.getZ());
     }
 
-    protected abstract void writeImpl(GameClient client) throws Exception;
+    protected abstract void writeImpl(GameClient client, WritableBuffer buffer) throws Exception;
 }

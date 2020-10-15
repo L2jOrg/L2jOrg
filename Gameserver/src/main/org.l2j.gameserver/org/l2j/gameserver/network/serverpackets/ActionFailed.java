@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -50,10 +51,10 @@ public final class ActionFailed extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ACTION_FAIL);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ACTION_FAIL, buffer );
 
-        writeInt(_castingType); // MagicSkillUse castingType
+        buffer.writeInt(_castingType); // MagicSkillUse castingType
     }
 
 }

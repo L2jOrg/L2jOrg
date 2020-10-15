@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.network.GameClient;
@@ -50,16 +51,16 @@ public class ExColosseumFenceInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_COLOSSEUM_FENCE_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_COLOSSEUM_FENCE_INFO, buffer );
 
-        writeInt(_objId);
-        writeInt(_clientState);
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(_width);
-        writeInt(_length);
+        buffer.writeInt(_objId);
+        buffer.writeInt(_clientState);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
+        buffer.writeInt(_width);
+        buffer.writeInt(_length);
     }
 
 }

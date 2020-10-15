@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -35,20 +36,20 @@ public final class KeyPacket extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.VERSION_CHECK);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.VERSION_CHECK, buffer );
 
-        writeByte(_result); // 0 - wrong protocol, 1 - protocol ok
+        buffer.writeByte(_result); // 0 - wrong protocol, 1 - protocol ok
         for (int i = 0; i < 8; i++) {
-            writeByte(_key[i]); // key
+            buffer.writeByte(_key[i]); // key
         }
         var serverSettings = getSettings(ServerSettings.class);
-        writeInt(true); // cipher enabled
-        writeInt(serverSettings.serverId());
-        writeByte(false); // merged server
-        writeInt(0x00); // obfuscation key
-        writeByte((serverSettings.type() & CLASSIC.getMask()) != 0); // isClassic
-        writeByte(0x00); // queued ?
+        buffer.writeInt(true); // cipher enabled
+        buffer.writeInt(serverSettings.serverId());
+        buffer.writeByte(false); // merged server
+        buffer.writeInt(0x00); // obfuscation key
+        buffer.writeByte((serverSettings.type() & CLASSIC.getMask()) != 0); // isClassic
+        buffer.writeByte(0x00); // queued ?
     }
 
 }

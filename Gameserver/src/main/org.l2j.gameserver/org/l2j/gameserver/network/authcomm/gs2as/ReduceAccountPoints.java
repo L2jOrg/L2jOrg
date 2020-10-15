@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
@@ -32,9 +33,9 @@ public class ReduceAccountPoints extends SendablePacket
 		this.count = count;
 	}
 
-	protected void writeImpl(AuthServerClient client) {
-		writeByte((byte)0x12);
-		writeString(account);
-		writeInt(count);
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x12);
+		buffer.writeString(account);
+		buffer.writeInt(count);
 	}
 }

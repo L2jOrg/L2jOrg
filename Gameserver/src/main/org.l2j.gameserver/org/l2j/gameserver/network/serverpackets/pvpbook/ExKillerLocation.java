@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pvpbook;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -35,15 +36,15 @@ public class ExKillerLocation extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_PVPBOOK_KILLER_LOCATION);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_PVPBOOK_KILLER_LOCATION, buffer );
 
-        writeSizedString(killer.getName());
+        buffer.writeSizedString(killer.getName());
 
         var location = killer.getLocation();
-        writeInt(location.getX());
-        writeInt(location.getY());
-        writeInt(location.getZ());
+        buffer.writeInt(location.getX());
+        buffer.writeInt(location.getY());
+        buffer.writeInt(location.getZ());
 
     }
 }

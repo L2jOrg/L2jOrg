@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemListType;
@@ -71,87 +72,87 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         return MASKS;
     }
 
-    protected void writeItem(TradeItem item, long count) {
-        writeItem(new ItemInfo(item), count);
+    protected void writeItem(TradeItem item, long count, WritableBuffer buffer) {
+        writeItem(new ItemInfo(item), count, buffer);
     }
 
-    protected void writeItem(TradeItem item) {
-        writeItem(new ItemInfo(item));
+    protected void writeItem(TradeItem item, WritableBuffer buffer) {
+        writeItem(new ItemInfo(item), buffer);
     }
 
-    protected void writeItem(Item item, Player owner) {
+    protected void writeItem(Item item, Player owner, WritableBuffer buffer) {
         final int mask = calculateMask(item);
-        writeByte(mask);
-        writeInt(item.getObjectId());
-        writeInt(item.getDisplayId());
-        writeByte(item.isQuestItem() || item.isEquipped() ? 0xFF : item.getLocationSlot());
-        writeLong(item.getCount());
-        writeByte(item.getType2());
-        writeByte(0); // Filler (always 0)
-        writeShort(item.isEquipped());
-        writeLong(item.getBodyPart().getId());
-        writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-        writeByte(0x00);
-        writeByte(0x00);
-        writeInt(-1); // mana
-        writeInt(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) :-9999);
-        writeByte(item.isAvailable());
-        writeShort(0x00); // locked
+        buffer.writeByte(mask);
+        buffer.writeInt(item.getObjectId());
+        buffer.writeInt(item.getDisplayId());
+        buffer.writeByte(item.isQuestItem() || item.isEquipped() ? 0xFF : item.getLocationSlot());
+        buffer.writeLong(item.getCount());
+        buffer.writeByte(item.getType2());
+        buffer.writeByte(0); // Filler (always 0)
+        buffer.writeShort(item.isEquipped());
+        buffer.writeLong(item.getBodyPart().getId());
+        buffer.writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
+        buffer.writeByte(0x00);
+        buffer.writeByte(0x00);
+        buffer.writeInt(-1); // mana
+        buffer.writeInt(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) :-9999);
+        buffer.writeByte(item.isAvailable());
+        buffer.writeShort(0x00); // locked
 
         if (containsMask(mask, ItemListType.AUGMENT_BONUS)) {
-            writeItemAugment(item);
+            writeItemAugment(item, buffer);
         }
         if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE)) {
-            writeItemElemental(item);
+            writeItemElemental(item, buffer);
         }
         if (containsMask(mask, ItemListType.ENCHANT_EFFECT)) {
-            writeItemEnchantEffect(item);
+            writeItemEnchantEffect(item, buffer);
         }
 
         if(containsMask(mask, ItemListType.VISUAL_ID)) {
-            writeInt(item.getDisplayId()); //TODO visual id
+            buffer.writeInt(item.getDisplayId()); //TODO visual id
         }
 
         if (containsMask(mask, ItemListType.SOUL_CRYSTAL)) {
-            writeSoulCrystalInfo(item);
+            writeSoulCrystalInfo(item, buffer);
         }
 
         if(containsMask(mask, ItemListType.REUSE_DELAY)) {
-            writeInt((int) owner.getItemRemainingReuseTime(item.getObjectId()) / 1000);
+            buffer.writeInt((int) owner.getItemRemainingReuseTime(item.getObjectId()) / 1000);
         }
     }
 
-    private void writeSoulCrystalInfo(Item item) {
+    private void writeSoulCrystalInfo(Item item, WritableBuffer buffer) {
         var specialAbility = item.getSpecialAbility();
-        writeByte(nonNull(specialAbility)); // special ability amount only 1 for classic
+        buffer.writeByte(nonNull(specialAbility)); // special ability amount only 1 for classic
         if(nonNull(specialAbility)) {
-            writeInt(specialAbility.id());
+            buffer.writeInt(specialAbility.id());
         }
 
         specialAbility = item.getAdditionalSpecialAbility();
-        writeByte(nonNull(specialAbility));
+        buffer.writeByte(nonNull(specialAbility));
         if(nonNull(specialAbility)) {
-            writeInt(specialAbility.id());
+            buffer.writeInt(specialAbility.id());
         }
     }
 
-    private void writeItemEnchantEffect(Item item) {
+    private void writeItemEnchantEffect(Item item, WritableBuffer buffer) {
         for (var op : item.getEnchantOptions()) {
-            writeInt(op);
+            buffer.writeInt(op);
         }
     }
 
-    private void writeItemElemental(Item item) {
-        writeShort(NONE.getClientId());
-        writeShort(0x00);
+    private void writeItemElemental(Item item, WritableBuffer buffer) {
+        buffer.writeShort(NONE.getClientId());
+        buffer.writeShort(0x00);
         for (var type : AttributeType.ATTRIBUTE_TYPES) {
-            writeShort(0);
+            buffer.writeShort(0);
         }
     }
 
-    private void writeItemAugment(Item item) {
-        writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getOption1Id));
-        writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getOption2Id));
+    private void writeItemAugment(Item item, WritableBuffer buffer) {
+        buffer.writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getOption1Id));
+        buffer.writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getOption2Id));
     }
 
     private int calculateMask(Item item) {
@@ -181,116 +182,116 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         return mask;
     }
 
-    protected void writeItem(Item item) {
-        writeItem(new ItemInfo(item));
+    protected void writeItem(Item item, WritableBuffer buffer) {
+        writeItem(new ItemInfo(item), buffer);
     }
 
-    protected void writeItem(Product item) {
-        writeItem(new ItemInfo(item));
+    protected void writeItem(Product item, WritableBuffer buffer) {
+        writeItem(new ItemInfo(item), buffer);
     }
 
-    protected void writeItem(ItemInfo item) {
-        writeItem(item, item.getCount());
+    protected void writeItem(ItemInfo item, WritableBuffer buffer) {
+        writeItem(item, item.getCount(), buffer);
     }
 
-    protected void writeItem(ItemInfo item, long count) {
+    protected void writeItem(ItemInfo item, long count, WritableBuffer buffer) {
         final int mask = calculateMask(item);
-        writeByte(mask);
-        writeInt(item.getObjectId()); // ObjectId
-        writeInt(item.getDisplayId()); // ItemId
-        writeByte(item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocationSlot()); // T1
-        writeLong(count); // Quantity
-        writeByte(item.getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
-        writeByte(0); // Filler (always 0)
-        writeShort(item.getEquipped()); // Equipped : 00-No, 01-yes
-        writeLong(item.getBodyPart().getId()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-        writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-        writeByte(0x00);
-        writeInt(-1); // mana
-        writeInt(item.getTime());
-        writeByte(item.isAvailable()); // GOD Item enabled = 1 disabled (red) = 0
-        writeShort(0x00); // locked
+        buffer.writeByte(mask);
+        buffer.writeInt(item.getObjectId()); // ObjectId
+        buffer.writeInt(item.getDisplayId()); // ItemId
+        buffer.writeByte(item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocationSlot()); // T1
+        buffer.writeLong(count); // Quantity
+        buffer.writeByte(item.getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
+        buffer.writeByte(0); // Filler (always 0)
+        buffer.writeShort(item.getEquipped()); // Equipped : 00-No, 01-yes
+        buffer.writeLong(item.getBodyPart().getId()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+        buffer.writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
+        buffer.writeByte(0x00);
+        buffer.writeInt(-1); // mana
+        buffer.writeInt(item.getTime());
+        buffer.writeByte(item.isAvailable()); // GOD Item enabled = 1 disabled (red) = 0
+        buffer.writeShort(0x00); // locked
 
         if (containsMask(mask, ItemListType.AUGMENT_BONUS)) {
-            writeItemAugment(item);
+            writeItemAugment(item, buffer);
         }
         if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE)) {
-            writeItemElemental(item);
+            writeItemElemental(item, buffer);
         }
         if (containsMask(mask, ItemListType.ENCHANT_EFFECT)) {
-            writeItemEnchantEffect(item);
+            writeItemEnchantEffect(item, buffer);
         }
 
         if(containsMask(mask, ItemListType.VISUAL_ID)) {
-            writeInt(item.getDisplayId()); //TODO visual id
+            buffer.writeInt(item.getDisplayId()); //TODO visual id
         }
 
         if (containsMask(mask, ItemListType.SOUL_CRYSTAL)) {
-            writeItemEnsoulOptions(item);
+            writeItemEnsoulOptions(item, buffer);
         }
 
         if(containsMask(mask, ItemListType.REUSE_DELAY)) {
-            writeInt(item.getReuse());
+            buffer.writeInt(item.getReuse());
         }
     }
 
-    private void writeSoulCrystalInfo(ItemInfo item) {
+    private void writeSoulCrystalInfo(ItemInfo item, WritableBuffer buffer) {
         var soulCrystal = item.getSoulCrystalOption();
-        writeByte(nonNull(soulCrystal)); // soul crystal amount
+        buffer.writeByte(nonNull(soulCrystal)); // soul crystal amount
         if(nonNull(soulCrystal)) {
-            writeInt(soulCrystal.id());
+            buffer.writeInt(soulCrystal.id());
         }
 
         soulCrystal = item.getSoulCrystalSpecialOption();
-        writeByte(nonNull(soulCrystal));
+        buffer.writeByte(nonNull(soulCrystal));
         if(nonNull(soulCrystal)) {
-            writeInt(soulCrystal.id());
+            buffer.writeInt(soulCrystal.id());
         }
     }
 
-    protected void writeItemAugment(ItemInfo item) {
+    protected void writeItemAugment(ItemInfo item, WritableBuffer buffer) {
         if ((item != null) && (item.getAugmentation() != null)) {
-            writeInt(item.getAugmentation().getOption1Id());
-            writeInt(item.getAugmentation().getOption2Id());
+            buffer.writeInt(item.getAugmentation().getOption1Id());
+            buffer.writeInt(item.getAugmentation().getOption2Id());
         } else {
-            writeInt(0);
-            writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
         }
     }
 
-    protected void writeItemElemental(ItemInfo item) {
-        writeShort(-2); // element type
-        writeShort(0); // element power
-        writeShort(0); // defense fire
-        writeShort(0); // defense water
-        writeShort(0); // defense wind
-        writeShort(0); // defense earth
-        writeShort(0); // defense holy
-        writeShort(0); // defense dark
+    protected void writeItemElemental(ItemInfo item, WritableBuffer buffer) {
+        buffer.writeShort(-2); // element type
+        buffer.writeShort(0); // element power
+        buffer.writeShort(0); // defense fire
+        buffer.writeShort(0); // defense water
+        buffer.writeShort(0); // defense wind
+        buffer.writeShort(0); // defense earth
+        buffer.writeShort(0); // defense holy
+        buffer.writeShort(0); // defense dark
     }
 
-    protected void writeItemEnchantEffect(ItemInfo item) {
+    protected void writeItemEnchantEffect(ItemInfo item, WritableBuffer buffer) {
         for (int op : item.getEnchantOptions()) {
-            writeInt(op);
+            buffer.writeInt(op);
         }
     }
 
-    protected void writeItemEnsoulOptions(ItemInfo item) {
+    protected void writeItemEnsoulOptions(ItemInfo item, WritableBuffer buffer) {
         if (item != null) {
-            writeSoulCrystalInfo(item);
+            writeSoulCrystalInfo(item, buffer);
         } else {
-            writeByte(0); // Size of regular soul crystal options.
-            writeByte(0); // Size of special soul crystal options.
+            buffer.writeByte(0); // Size of regular soul crystal options.
+            buffer.writeByte(0); // Size of special soul crystal options.
         }
     }
 
-    protected void writeInventoryBlock(PlayerInventory inventory) {
+    protected void writeInventoryBlock(PlayerInventory inventory, WritableBuffer buffer) {
         if (inventory.hasInventoryBlock()) {
-            writeShort(inventory.getBlockItems().size());
-            writeByte(inventory.getBlockMode().getClientId());
-            inventory.getBlockItems().forEach(this::writeInt);
+            buffer.writeShort(inventory.getBlockItems().size());
+            buffer.writeByte(inventory.getBlockMode().getClientId());
+            inventory.getBlockItems().forEach(buffer::writeInt);
         } else {
-            writeShort(0x00);
+            buffer.writeShort(0x00);
         }
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -29,11 +30,11 @@ public class ShowMiniMap extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOW_MINIMAP);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SHOW_MINIMAP, buffer );
 
-        writeInt(_mapId);
-        writeByte(0x00); // Seven Signs state
+        buffer.writeInt(_mapId);
+        buffer.writeByte(0x00); // Seven Signs state
     }
 
 }

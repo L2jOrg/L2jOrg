@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -30,42 +31,42 @@ public final class ShortCutRegister extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHORTCUT_REG);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SHORTCUT_REG, buffer );
 
-        writeInt(shortcut.getType().ordinal());
-        writeInt(shortcut.getClientId()); // C4 Client
-        writeByte(0);
+        buffer.writeInt(shortcut.getType().ordinal());
+        buffer.writeInt(shortcut.getClientId()); // C4 Client
+        buffer.writeByte(0);
         switch (shortcut.getType()) {
-            case ITEM -> writeShortcutItem();
-            case SKILL -> writeShortcutSkill();
+            case ITEM -> writeShortcutItem(buffer);
+            case SKILL -> writeShortcutSkill(buffer);
             case ACTION, MACRO, RECIPE, BOOKMARK -> {
-                writeInt(shortcut.getShortcutId());
-                writeInt(shortcut.getCharacterType());
+                buffer.writeInt(shortcut.getShortcutId());
+                buffer.writeInt(shortcut.getCharacterType());
             }
         }
     }
 
-    private void writeShortcutSkill() {
-        writeInt(shortcut.getShortcutId());
-        writeShort(shortcut.getLevel());
-        writeShort(shortcut.getSubLevel());
-        writeInt(shortcut.getSharedReuseGroup());
-        writeByte(0x00); // C5
-        writeInt(shortcut.getCharacterType());
-        writeInt(0x00); // TODO: Find me
-        writeInt(0x00); // TODO: Find me
+    private void writeShortcutSkill(WritableBuffer buffer) {
+        buffer.writeInt(shortcut.getShortcutId());
+        buffer.writeShort(shortcut.getLevel());
+        buffer.writeShort(shortcut.getSubLevel());
+        buffer.writeInt(shortcut.getSharedReuseGroup());
+        buffer.writeByte(0x00); // C5
+        buffer.writeInt(shortcut.getCharacterType());
+        buffer.writeInt(0x00); // TODO: Find me
+        buffer.writeInt(0x00); // TODO: Find me
     }
 
-    private void writeShortcutItem() {
-        writeInt(shortcut.getShortcutId());
-        writeInt(shortcut.getCharacterType());
-        writeInt(shortcut.getSharedReuseGroup());
-        writeInt(0x00); // Remaining time
-        writeInt(0x00); // Cool down time
-        writeInt(0x00); // item augment effect 1
-        writeInt(0x00); // item augment effect 2
-        writeInt(0x00); // unk
+    private void writeShortcutItem(WritableBuffer buffer) {
+        buffer.writeInt(shortcut.getShortcutId());
+        buffer.writeInt(shortcut.getCharacterType());
+        buffer.writeInt(shortcut.getSharedReuseGroup());
+        buffer.writeInt(0x00); // Remaining time
+        buffer.writeInt(0x00); // Cool down time
+        buffer.writeInt(0x00); // item augment effect 1
+        buffer.writeInt(0x00); // item augment effect 2
+        buffer.writeInt(0x00); // unk
     }
 
 }

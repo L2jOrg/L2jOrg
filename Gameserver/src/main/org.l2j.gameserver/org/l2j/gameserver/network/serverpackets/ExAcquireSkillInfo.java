@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -59,24 +60,24 @@ public class ExAcquireSkillInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ACQUIRE_SKILL_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ACQUIRE_SKILL_INFO, buffer );
 
-        writeInt(_id);
-        writeInt(_level);
-        writeLong(_spCost);
-        writeShort((short) _minLevel);
-        writeShort((short) _dualClassLevel);
-        writeInt(_itemReq.size());
+        buffer.writeInt(_id);
+        buffer.writeInt(_level);
+        buffer.writeLong(_spCost);
+        buffer.writeShort(_minLevel);
+        buffer.writeShort(_dualClassLevel);
+        buffer.writeInt(_itemReq.size());
         for (ItemHolder holder : _itemReq) {
-            writeInt(holder.getId());
-            writeLong(holder.getCount());
+            buffer.writeInt(holder.getId());
+            buffer.writeLong(holder.getCount());
         }
 
-        writeInt(_skillRem.size());
+        buffer.writeInt(_skillRem.size());
         for (Skill skill : _skillRem) {
-            writeInt(skill.getId());
-            writeInt(skill.getLevel());
+            buffer.writeInt(skill.getId());
+            buffer.writeInt(skill.getLevel());
         }
     }
 

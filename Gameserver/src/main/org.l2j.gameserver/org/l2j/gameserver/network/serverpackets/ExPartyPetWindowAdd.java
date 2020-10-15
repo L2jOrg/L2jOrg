@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -33,17 +34,17 @@ public final class ExPartyPetWindowAdd extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PARTY_PET_WINDOW_ADD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PARTY_PET_WINDOW_ADD, buffer );
 
-        writeInt(_summon.getObjectId());
-        writeInt(_summon.getTemplate().getDisplayId() + 1000000);
-        writeByte((byte) _summon.getSummonType());
-        writeInt(_summon.getOwner().getObjectId());
-        writeInt((int) _summon.getCurrentHp());
-        writeInt(_summon.getMaxHp());
-        writeInt((int) _summon.getCurrentMp());
-        writeInt(_summon.getMaxMp());
+        buffer.writeInt(_summon.getObjectId());
+        buffer.writeInt(_summon.getTemplate().getDisplayId() + 1000000);
+        buffer.writeByte(_summon.getSummonType());
+        buffer.writeInt(_summon.getOwner().getObjectId());
+        buffer.writeInt((int) _summon.getCurrentHp());
+        buffer.writeInt(_summon.getMaxHp());
+        buffer.writeInt((int) _summon.getCurrentMp());
+        buffer.writeInt(_summon.getMaxMp());
     }
 
 }

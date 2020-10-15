@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.PartyMatchingRoomLevelType;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -52,27 +53,27 @@ public class ListPartyWaiting extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.LIST_PARTY_WAITING);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.LIST_PARTY_WAITING, buffer );
 
-        writeInt(_size);
-        writeInt(_rooms.size());
+        buffer.writeInt(_size);
+        buffer.writeInt(_rooms.size());
         for (MatchingRoom room : _rooms) {
-            writeInt(room.getId());
-            writeString(room.getTitle());
-            writeInt(room.getLocation());
-            writeInt(room.getMinLvl());
-            writeInt(room.getMaxLvl());
-            writeInt(room.getMaxMembers());
-            writeString(room.getLeader().getName());
-            writeInt(room.getMembersCount());
+            buffer.writeInt(room.getId());
+            buffer.writeString(room.getTitle());
+            buffer.writeInt(room.getLocation());
+            buffer.writeInt(room.getMinLvl());
+            buffer.writeInt(room.getMaxLvl());
+            buffer.writeInt(room.getMaxMembers());
+            buffer.writeString(room.getLeader().getName());
+            buffer.writeInt(room.getMembersCount());
             for (Player member : room.getMembers()) {
-                writeInt(member.getClassId().getId());
-                writeString(member.getName());
+                buffer.writeInt(member.getClassId().getId());
+                buffer.writeString(member.getName());
             }
         }
-        writeInt(World.getInstance().getPartyCount()); // Helios
-        writeInt(World.getInstance().getPartyMemberCount()); // Helios
+        buffer.writeInt(World.getInstance().getPartyCount()); // Helios
+        buffer.writeInt(World.getInstance().getPartyMemberCount()); // Helios
     }
 
 }

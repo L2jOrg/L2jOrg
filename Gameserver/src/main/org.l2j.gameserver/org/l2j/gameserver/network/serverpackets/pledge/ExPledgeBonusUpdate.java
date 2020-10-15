@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -36,10 +37,10 @@ public class ExPledgeBonusUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_BONUS_UPDATE);
-        writeByte(_type.getClientId());
-        writeInt(_value);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_BONUS_UPDATE, buffer );
+        buffer.writeByte(_type.getClientId());
+        buffer.writeInt(_value);
     }
 
 }

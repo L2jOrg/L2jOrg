@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
@@ -65,17 +66,17 @@ public class Die extends ServerPacket {
 
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.DIE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.DIE, buffer );
 
-        writeInt(objectId);
-        writeInt(flags);
-        writeInt(0);
-        writeInt(isSweepable);
-        writeInt(0);
-        writeInt(0);
-        writeInt(0);
-        writeInt(0);
-        writeByte(0);
+        buffer.writeInt(objectId);
+        buffer.writeInt(flags);
+        buffer.writeInt(0);
+        buffer.writeInt(isSweepable);
+        buffer.writeInt(0);
+        buffer.writeInt(0);
+        buffer.writeInt(0);
+        buffer.writeInt(0);
+        buffer.writeByte(0);
     }
 }

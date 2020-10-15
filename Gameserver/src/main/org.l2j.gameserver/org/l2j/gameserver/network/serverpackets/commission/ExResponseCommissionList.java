@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.commission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -58,31 +59,31 @@ public class ExResponseCommissionList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_LIST, buffer );
 
-        writeInt(_replyType.getClientId());
+        buffer.writeInt(_replyType.getClientId());
         switch (_replyType) {
             case PLAYER_AUCTIONS:
             case AUCTIONS: {
-                writeInt((int) Instant.now().getEpochSecond());
-                writeInt(_chunkId);
+                buffer.writeInt((int) Instant.now().getEpochSecond());
+                buffer.writeInt(_chunkId);
 
                 int chunkSize = _items.size() - _listIndexStart;
                 if (chunkSize > MAX_CHUNK_SIZE) {
                     chunkSize = MAX_CHUNK_SIZE;
                 }
 
-                writeInt(chunkSize);
+                buffer.writeInt(chunkSize);
                 for (int i = _listIndexStart; i < (_listIndexStart + chunkSize); i++) {
                     final CommissionItem commissionItem = _items.get(i);
-                    writeLong(commissionItem.getCommissionId());
-                    writeLong(commissionItem.getPricePerUnit());
-                    writeInt(0); // CommissionItemType seems client does not really need it.
-                    writeInt((commissionItem.getDurationInDays() - 1) / 2);
-                    writeInt((int) commissionItem.getEndTime().getEpochSecond());
-                    writeString(null); // Seller Name its not displayed somewhere so i am not sending it to decrease traffic.
-                    writeItem(commissionItem.getItemInfo());
+                    buffer.writeLong(commissionItem.getCommissionId());
+                    buffer.writeLong(commissionItem.getPricePerUnit());
+                    buffer.writeInt(0); // CommissionItemType seems client does not really need it.
+                    buffer.writeInt((commissionItem.getDurationInDays() - 1) / 2);
+                    buffer.writeInt((int) commissionItem.getEndTime().getEpochSecond());
+                    buffer.writeString(null); // Seller Name its not displayed somewhere so i am not sending it to decrease traffic.
+                    writeItem(commissionItem.getItemInfo(), buffer);
                 }
                 break;
             }

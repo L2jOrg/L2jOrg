@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -109,20 +110,20 @@ public class SpecialCamera extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SPECIAL_CAMERA);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SPECIAL_CAMERA, buffer );
 
-        writeInt(_id);
-        writeInt(_force);
-        writeInt(_angle1);
-        writeInt(_angle2);
-        writeInt(_time);
-        writeInt(_duration);
-        writeInt(_relYaw);
-        writeInt(_relPitch);
-        writeInt(_isWide);
-        writeInt(_relAngle);
-        writeInt(_unk);
+        buffer.writeInt(_id);
+        buffer.writeInt(_force);
+        buffer.writeInt(_angle1);
+        buffer.writeInt(_angle2);
+        buffer.writeInt(_time);
+        buffer.writeInt(_duration);
+        buffer.writeInt(_relYaw);
+        buffer.writeInt(_relPitch);
+        buffer.writeInt(_isWide);
+        buffer.writeInt(_relAngle);
+        buffer.writeInt(_unk);
     }
 
 }

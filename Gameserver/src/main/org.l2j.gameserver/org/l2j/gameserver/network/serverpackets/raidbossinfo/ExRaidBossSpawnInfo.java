@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.raidbossinfo;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.network.GameClient;
@@ -36,14 +37,14 @@ public class ExRaidBossSpawnInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RAID_BOSS_SPAWN_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RAID_BOSS_SPAWN_INFO, buffer );
 
-        writeInt(_bossIds.size());
+        buffer.writeInt(_bossIds.size());
         for(var bossStatus : _bossIds.entrySet()) {
-            writeInt(bossStatus.getKey());
-            writeInt(bossStatus.getValue().ordinal());
-            writeInt(0); // TODO death time
+            buffer.writeInt(bossStatus.getKey());
+            buffer.writeInt(bossStatus.getValue().ordinal());
+            buffer.writeInt(0); // TODO death time
         }
     }
 

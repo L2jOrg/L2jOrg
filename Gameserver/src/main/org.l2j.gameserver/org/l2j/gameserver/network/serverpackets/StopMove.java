@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -49,14 +50,14 @@ public final class StopMove extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.STOP_MOVE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.STOP_MOVE, buffer );
 
-        writeInt(_objectId);
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(_heading);
+        buffer.writeInt(_objectId);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
+        buffer.writeInt(_heading);
     }
 
 }

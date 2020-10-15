@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -43,22 +44,22 @@ public class PrivateStoreListBuy extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PRIVATE_STORE_BUY_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PRIVATE_STORE_BUY_LIST, buffer );
 
-        writeInt(_objId);
-        writeLong(_playerAdena);
-        writeInt(0x00); // Viewer's item count?
-        writeInt(_items.size());
+        buffer.writeInt(_objId);
+        buffer.writeLong(_playerAdena);
+        buffer.writeInt(0x00); // Viewer's item count?
+        buffer.writeInt(_items.size());
 
         int slotNumber = 0;
         for (TradeItem item : _items) {
             slotNumber++;
-            writeItem(item);
-            writeInt(slotNumber); // Slot in shop
-            writeLong(item.getPrice());
-            writeLong(item.getItem().getReferencePrice() * 2);
-            writeLong(item.getStoreCount());
+            writeItem(item, buffer);
+            buffer.writeInt(slotNumber); // Slot in shop
+            buffer.writeLong(item.getPrice());
+            buffer.writeLong(item.getItem().getReferencePrice() * 2);
+            buffer.writeLong(item.getStoreCount());
         }
     }
 

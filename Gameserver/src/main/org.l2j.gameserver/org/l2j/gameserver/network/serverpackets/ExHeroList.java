@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.GameClient;
@@ -36,20 +37,20 @@ public class ExHeroList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_HERO_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_HERO_LIST, buffer );
 
-        writeInt(_heroList.size());
+        buffer.writeInt(_heroList.size());
         for (Integer heroId : _heroList.keySet()) {
             final StatsSet hero = _heroList.get(heroId);
-            writeString(hero.getString(Hero.CHAR_NAME));
-            writeInt(hero.getInt(Hero.CLASS_ID));
-            writeString(hero.getString(Hero.CLAN_NAME, ""));
-            writeInt(hero.getInt(Hero.CLAN_CREST, 0));
-            writeString(hero.getString(Hero.ALLY_NAME, ""));
-            writeInt(hero.getInt(Hero.ALLY_CREST, 0));
-            writeInt(hero.getInt(Hero.COUNT));
-            writeInt(0x00);
+            buffer.writeString(hero.getString(Hero.CHAR_NAME));
+            buffer.writeInt(hero.getInt(Hero.CLASS_ID));
+            buffer.writeString(hero.getString(Hero.CLAN_NAME, ""));
+            buffer.writeInt(hero.getInt(Hero.CLAN_CREST, 0));
+            buffer.writeString(hero.getString(Hero.ALLY_NAME, ""));
+            buffer.writeInt(hero.getInt(Hero.ALLY_CREST, 0));
+            buffer.writeInt(hero.getInt(Hero.COUNT));
+            buffer.writeInt(0x00);
         }
     }
 

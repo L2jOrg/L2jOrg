@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.vip;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -29,21 +30,21 @@ import java.time.temporal.ChronoUnit;
 public class ReceiveVipInfo extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
         var player = client.getPlayer();
         var vipData = VipEngine.getInstance();
         var vipTier = player.getVipTier();
 
         var vipDuration = (int) ChronoUnit.SECONDS.between(Instant.now(), Instant.ofEpochMilli(player.getVipTierExpiration()));
 
-        writeId(ServerExPacketId.EX_VIP_INFO);
-        writeByte(vipTier); // VIP Current level ( MAX 7 )
-        writeLong(player.getVipPoints()); // VIP Current Points
-        writeInt(vipDuration); // VIP Benefit Duration Seconds
-        writeLong(vipData.getPointsToLevel(vipTier + 1)); // VIP Points to next Level
-        writeLong(vipData.getPointsDepreciatedOnLevel(vipTier)); // VIP Points used on  30 days period
-        writeByte(vipTier); // VIP tier
-        writeLong(vipData.getPointsToLevel(vipTier)); // VIP Current Level Requirement Points
+        writeId(ServerExPacketId.EX_VIP_INFO, buffer );
+        buffer.writeByte(vipTier); // VIP Current level ( MAX 7 )
+        buffer.writeLong(player.getVipPoints()); // VIP Current Points
+        buffer.writeInt(vipDuration); // VIP Benefit Duration Seconds
+        buffer.writeLong(vipData.getPointsToLevel(vipTier + 1)); // VIP Points to next Level
+        buffer.writeLong(vipData.getPointsDepreciatedOnLevel(vipTier)); // VIP Points used on  30 days period
+        buffer.writeByte(vipTier); // VIP tier
+        buffer.writeLong(vipData.getPointsToLevel(vipTier)); // VIP Current Level Requirement Points
     }
 
 }

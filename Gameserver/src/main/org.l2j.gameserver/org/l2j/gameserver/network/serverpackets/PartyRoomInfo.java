@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.matching.PartyMatchingRoom;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -33,16 +34,16 @@ public class PartyRoomInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PARTY_ROOM_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PARTY_ROOM_INFO, buffer );
 
-        writeInt(_room.getId());
-        writeInt(_room.getMaxMembers());
-        writeInt(_room.getMinLvl());
-        writeInt(_room.getMaxLvl());
-        writeInt(_room.getLootType());
-        writeInt(_room.getLocation());
-        writeString(_room.getTitle());
+        buffer.writeInt(_room.getId());
+        buffer.writeInt(_room.getMaxMembers());
+        buffer.writeInt(_room.getMinLvl());
+        buffer.writeInt(_room.getMaxLvl());
+        buffer.writeInt(_room.getLootType());
+        buffer.writeInt(_room.getLocation());
+        buffer.writeString(_room.getTitle());
     }
 
 }

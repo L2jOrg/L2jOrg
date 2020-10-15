@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -32,10 +33,10 @@ public class ExPutEnchantScrollItemResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PUT_ENCHANT_SCROLL_ITEM_RESULT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PUT_ENCHANT_SCROLL_ITEM_RESULT, buffer );
 
-        writeInt(_result);
+        buffer.writeInt(_result);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -28,11 +29,11 @@ import org.l2j.gameserver.network.ServerExPacketId;
 public class ExAdenaInvenCount extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ADENA_INVEN_COUNT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ADENA_INVEN_COUNT, buffer );
         var player = client.getPlayer();
-        writeLong(player.getAdena());
-        writeShort(player.getInventory().getSize());
+        buffer.writeLong(player.getAdena());
+        buffer.writeShort(player.getInventory().getSize());
     }
 
 }

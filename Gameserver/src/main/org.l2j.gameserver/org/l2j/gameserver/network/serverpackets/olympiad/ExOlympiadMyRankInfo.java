@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -28,31 +29,31 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExOlympiadMyRankInfo extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_MY_RANKING_INFO);
-        writeInt(2020); // season year
-        writeInt(3); // season month
-        writeInt(1); // season
-        writeInt(2); // rank
-        writeInt(5); // win count
-        writeInt(2); // lose count
-        writeInt(100); // points
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_MY_RANKING_INFO, buffer );
+        buffer.writeInt(2020); // season year
+        buffer.writeInt(3); // season month
+        buffer.writeInt(1); // season
+        buffer.writeInt(2); // rank
+        buffer.writeInt(5); // win count
+        buffer.writeInt(2); // lose count
+        buffer.writeInt(100); // points
 
-        writeInt(3); // prev rank
-        writeInt(8); // prev win count
-        writeInt(1); // prev lose count
-        writeInt(150); // prev points
+        buffer.writeInt(3); // prev rank
+        buffer.writeInt(8); // prev win count
+        buffer.writeInt(1); // prev lose count
+        buffer.writeInt(150); // prev points
 
-        writeInt(5); // hero count
-        writeInt(2); // legend count
+        buffer.writeInt(5); // hero count
+        buffer.writeInt(2); // legend count
 
-        writeInt(3); // recent matches count
+        buffer.writeInt(3); // recent matches count
 
         for (int i = 0; i < 3; i++) {
-            writeSizedString("Enemy" + i); // enemy name
-            writeByte(i %2 == 0); // lost ?
-            writeInt(75 + i); // enemy level
-            writeInt(88 + i); // enemy class
+            buffer.writeSizedString("Enemy" + i); // enemy name
+            buffer.writeByte(i %2 == 0); // lost ?
+            buffer.writeInt(75 + i); // enemy level
+            buffer.writeInt(88 + i); // enemy class
         }
     }
 }

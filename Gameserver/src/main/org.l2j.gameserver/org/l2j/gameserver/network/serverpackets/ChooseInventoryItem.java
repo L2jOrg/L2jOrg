@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -29,10 +30,10 @@ public final class ChooseInventoryItem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CHOOSE_INVENTORY_ITEM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CHOOSE_INVENTORY_ITEM, buffer );
 
-        writeInt(_itemId);
+        buffer.writeInt(_itemId);
     }
 
 }

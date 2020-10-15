@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.Participant;
 import org.l2j.gameserver.network.GameClient;
@@ -67,25 +68,25 @@ public class ExOlympiadUserInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_USER_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_USER_INFO, buffer );
 
         if (_player != null) {
-            writeByte(_player.getOlympiadSide());
-            writeInt(_player.getObjectId());
-            writeString(_player.getName());
-            writeInt(_player.getClassId().getId());
+            buffer.writeByte(_player.getOlympiadSide());
+            buffer.writeInt(_player.getObjectId());
+            buffer.writeString(_player.getName());
+            buffer.writeInt(_player.getClassId().getId());
         } else {
-            writeByte(_par.getSide());
-            writeInt(_par.getObjectId());
-            writeString(_par.getName());
-            writeInt(_par.getBaseClass());
+            buffer.writeByte(_par.getSide());
+            buffer.writeInt(_par.getObjectId());
+            buffer.writeString(_par.getName());
+            buffer.writeInt(_par.getBaseClass());
         }
 
-        writeInt(_curHp);
-        writeInt(_maxHp);
-        writeInt(_curCp);
-        writeInt(_maxCp);
+        buffer.writeInt(_curHp);
+        buffer.writeInt(_maxHp);
+        buffer.writeInt(_curCp);
+        buffer.writeInt(_maxCp);
     }
 
 }

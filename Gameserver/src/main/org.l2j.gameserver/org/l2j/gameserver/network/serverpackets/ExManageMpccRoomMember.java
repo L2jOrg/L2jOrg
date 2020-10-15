@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.ExManagePartyRoomMemberType;
 import org.l2j.gameserver.enums.MatchingMemberType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -41,16 +42,16 @@ public class ExManageMpccRoomMember extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_MANAGE_PARTY_ROOM_MEMBER);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_MANAGE_PARTY_ROOM_MEMBER, buffer );
 
-        writeInt(_type.ordinal());
-        writeInt(_activeChar.getObjectId());
-        writeString(_activeChar.getName());
-        writeInt(_activeChar.getClassId().getId());
-        writeInt(_activeChar.getLevel());
-        writeInt(MapRegionManager.getInstance().getBBs(_activeChar.getLocation()));
-        writeInt(_memberType.ordinal());
+        buffer.writeInt(_type.ordinal());
+        buffer.writeInt(_activeChar.getObjectId());
+        buffer.writeString(_activeChar.getName());
+        buffer.writeInt(_activeChar.getClassId().getId());
+        buffer.writeInt(_activeChar.getLevel());
+        buffer.writeInt(MapRegionManager.getInstance().getBBs(_activeChar.getLocation()));
+        buffer.writeInt(_memberType.ordinal());
     }
 
 }

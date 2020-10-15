@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -34,12 +35,12 @@ public class SocialAction extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SOCIAL_ACTION);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SOCIAL_ACTION, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_actionId);
-        writeInt(0x00); // TODO: Find me!
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_actionId);
+        buffer.writeInt(0x00); // TODO: Find me!
     }
 
 }

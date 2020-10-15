@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.trade;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -33,9 +34,9 @@ public final class TradeOtherAdd extends TradeAdd {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.TRADE_OTHER_ADD);
-        writeItemAdd();
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.TRADE_OTHER_ADD, buffer );
+        writeItemAdd(buffer);
     }
 
 }

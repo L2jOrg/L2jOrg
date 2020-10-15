@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.item;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
@@ -66,12 +67,12 @@ public final class ItemList {
         }
 
         @Override
-        protected void writeImpl(GameClient client) {
-            writeId(ServerPacketId.ITEMLIST);
-            writeByte(ItemPacketType.HEADER.clientId());
-            writeShort(show);
-            writeShort(0x00); // special item count
-            writeInt(itemsAmount);
+        protected void writeImpl(GameClient client, WritableBuffer buffer) {
+            writeId(ServerPacketId.ITEMLIST, buffer );
+            buffer.writeByte(ItemPacketType.HEADER.clientId());
+            buffer.writeShort(show);
+            buffer.writeShort(0x00); // special item count
+            buffer.writeInt(itemsAmount);
         }
     }
 
@@ -84,16 +85,16 @@ public final class ItemList {
         }
 
         @Override
-        protected void writeImpl(GameClient client) {
-            writeId(ServerPacketId.ITEMLIST);
-            writeByte(ItemPacketType.LIST.clientId());
-            writeInt(items.size());
-            writeInt(items.size());
+        protected void writeImpl(GameClient client, WritableBuffer buffer) {
+            writeId(ServerPacketId.ITEMLIST, buffer );
+            buffer.writeByte(ItemPacketType.LIST.clientId());
+            buffer.writeInt(items.size());
+            buffer.writeInt(items.size());
 
             final var player = client.getPlayer();
 
             for (Item item : items) {
-                writeItem(item, player);
+                writeItem(item, player, buffer);
             }
         }
     }

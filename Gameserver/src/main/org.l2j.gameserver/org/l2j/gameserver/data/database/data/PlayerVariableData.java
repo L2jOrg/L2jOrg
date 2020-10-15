@@ -29,17 +29,6 @@ public class PlayerVariableData {
 
     public static final int REVENGE_USABLE_FUNCTIONS = 5;
 
-    public static PlayerVariableData init(int playerId, byte face, byte hairStyle, byte hairColor) {
-        var data = new PlayerVariableData();
-        data.revengeTeleports = REVENGE_USABLE_FUNCTIONS;
-        data.revengeLocations = REVENGE_USABLE_FUNCTIONS;
-        data.playerId = playerId;
-        data.visualFaceId = face;
-        data.visualHairId = hairStyle;
-        data.visualHairColorId = hairColor;
-        return data;
-    }
-
     @Column("player_id")
     private int playerId;
 
@@ -434,5 +423,16 @@ public class PlayerVariableData {
     public void resetRevengeData() {
         revengeTeleports = REVENGE_USABLE_FUNCTIONS;
         revengeLocations = REVENGE_USABLE_FUNCTIONS;
+    }
+
+    public static PlayerVariableData init(int playerId, byte face, byte hairStyle, byte hairColor) {
+        var data = new PlayerVariableData();
+        data.revengeTeleports = REVENGE_USABLE_FUNCTIONS;
+        data.revengeLocations = REVENGE_USABLE_FUNCTIONS;
+        data.playerId = playerId;
+        data.visualFaceId = face;
+        data.visualHairId = hairStyle;
+        data.visualHairColorId = hairColor;
+        return data;
     }
 }

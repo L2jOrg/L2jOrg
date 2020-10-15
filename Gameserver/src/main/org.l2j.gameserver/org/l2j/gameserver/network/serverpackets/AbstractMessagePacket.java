@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Npc;
@@ -291,36 +292,36 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         return (T) this;
     }
 
-    protected void writeParamsSize(int size) {
-        writeByte(size);
+    protected void writeParamsSize(int size, WritableBuffer buffer) {
+        buffer.writeByte(size);
     }
 
-    protected void writeParamType(int type) {
-        writeByte(type);
+    protected void writeParamType(int type, WritableBuffer buffer) {
+        buffer.writeByte(type);
     }
 
-    protected final void writeMe() {
-        writeParamsSize(_params.length);
+    protected final void writeMe(WritableBuffer buffer) {
+        writeParamsSize(_params.length, buffer);
         for (int i = 0; i < _paramIndex; i++) {
             var param = _params[i];
 
-            writeParamType(param.getType());
+            writeParamType(param.getType(), buffer);
             switch (param.getType()) {
-                case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME, TYPE_ELEMENTAL_SPIRIT -> writeByte((byte) param.getIntValue());
-                case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> writeShort((short) param.getIntValue());
-                case TYPE_ITEM_NAME, TYPE_INT_NUMBER, TYPE_NPC_NAME, TYPE_DOOR_NAME -> writeInt(param.getIntValue());
-                case TYPE_LONG_NUMBER -> writeLong(param.getLongValue());
-                case TYPE_TEXT, TYPE_PLAYER_NAME -> writeString(param.getStringValue());
+                case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME, TYPE_ELEMENTAL_SPIRIT -> buffer.writeByte(param.getIntValue());
+                case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> buffer.writeShort(param.getIntValue());
+                case TYPE_ITEM_NAME, TYPE_INT_NUMBER, TYPE_NPC_NAME, TYPE_DOOR_NAME -> buffer.writeInt(param.getIntValue());
+                case TYPE_LONG_NUMBER -> buffer.writeLong(param.getLongValue());
+                case TYPE_TEXT, TYPE_PLAYER_NAME -> buffer.writeString(param.getStringValue());
                 case TYPE_SKILL_NAME -> {
                     final int[] array = param.getIntArrayValue();
-                    writeInt(array[0]); // skill id
-                    writeShort( array[1]); // skill level
+                    buffer.writeInt(array[0]); // skill id
+                    buffer.writeShort( array[1]); // skill level
                 }
                 case TYPE_POPUP_ID, TYPE_ZONE_NAME -> {
                     final int[] array = param.getIntArrayValue();
-                    writeInt(array[0]); // x
-                    writeInt(array[1]); // y
-                    writeInt(array[2]); // z
+                    buffer.writeInt(array[0]); // x
+                    buffer.writeInt(array[1]); // y
+                    buffer.writeInt(array[2]); // z
                 }
             }
         }
@@ -404,11 +405,11 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
         }
 
         public final int getIntValue() {
-            return ((Integer) _value).intValue();
+            return (Integer) _value;
         }
 
         public final long getLongValue() {
-            return ((Long) _value).longValue();
+            return (Long) _value;
         }
 
         public final int[] getIntArrayValue() {

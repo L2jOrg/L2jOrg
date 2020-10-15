@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -32,20 +33,20 @@ public final class SpawnItem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SPAWN_ITEM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SPAWN_ITEM, buffer );
 
-        writeInt(item.getObjectId());
-        writeInt(item.getDisplayId());
-        writeInt(item.getX());
-        writeInt(item.getY());
-        writeInt(item.getZ());
-        writeInt(item.isStackable());
-        writeLong(item.getCount());
-        writeInt(0x00); // c2
-        writeByte(item.getEnchantLevel());
-        writeByte(item.isAugmented());
-        writeByte(nonNull(item.getSpecialAbility())); // special ability amount
+        buffer.writeInt(item.getObjectId());
+        buffer.writeInt(item.getDisplayId());
+        buffer.writeInt(item.getX());
+        buffer.writeInt(item.getY());
+        buffer.writeInt(item.getZ());
+        buffer.writeInt(item.isStackable());
+        buffer.writeLong(item.getCount());
+        buffer.writeInt(0x00); // c2
+        buffer.writeByte(item.getEnchantLevel());
+        buffer.writeByte(item.isAugmented());
+        buffer.writeByte(nonNull(item.getSpecialAbility())); // special ability amount
     }
 
 }

@@ -18,12 +18,10 @@
  */
 package org.l2j.gameserver.network.serverpackets.ensoul;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author UnAfraid
@@ -36,8 +34,8 @@ public class ExEnsoulResult extends AbstractEnsoulResult {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ENSOUL_RESULT);
-        writeResult();
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ENSOUL_RESULT, buffer );
+        writeResult(buffer);
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.SiegeClanType;
 import org.l2j.gameserver.model.Clan;
@@ -57,32 +58,32 @@ public final class SiegeDefenderList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CASTLE_SIEGE_DEFENDER_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CASTLE_SIEGE_DEFENDER_LIST, buffer );
 
-        writeInt(_castle.getId());
-        writeInt(0x00); // Unknown
-        writeInt(0x01); // Unknown
-        writeInt(0x00); // Unknown
+        buffer.writeInt(_castle.getId());
+        buffer.writeInt(0x00); // Unknown
+        buffer.writeInt(0x01); // Unknown
+        buffer.writeInt(0x00); // Unknown
 
         final int size = _castle.getSiege().getDefendersWaiting().size() + _castle.getSiege().getDefenderClans().size() + (_castle.getOwner() != null ? 1 : 0);
 
-        writeInt(size);
-        writeInt(size);
+        buffer.writeInt(size);
+        buffer.writeInt(size);
 
         // Add owners
         final Clan ownerClan = _castle.getOwner();
         if (ownerClan != null) {
-            writeInt(ownerClan.getId());
-            writeString(ownerClan.getName());
-            writeString(ownerClan.getLeaderName());
-            writeInt(ownerClan.getCrestId());
-            writeInt(0x00); // signed time (seconds) (not storated by L2J)
-            writeInt(SiegeClanType.OWNER.ordinal());
-            writeInt(ownerClan.getAllyId());
-            writeString(ownerClan.getAllyName());
-            writeString(""); // AllyLeaderName
-            writeInt(ownerClan.getAllyCrestId());
+            buffer.writeInt(ownerClan.getId());
+            buffer.writeString(ownerClan.getName());
+            buffer.writeString(ownerClan.getLeaderName());
+            buffer.writeInt(ownerClan.getCrestId());
+            buffer.writeInt(0x00); // signed time (seconds) (not storated by L2J)
+            buffer.writeInt(SiegeClanType.OWNER.ordinal());
+            buffer.writeInt(ownerClan.getAllyId());
+            buffer.writeString(ownerClan.getAllyName());
+            buffer.writeString(""); // AllyLeaderName
+            buffer.writeInt(ownerClan.getAllyCrestId());
         }
 
         // List of confirmed defenders
@@ -92,16 +93,16 @@ public final class SiegeDefenderList extends ServerPacket {
                 continue;
             }
 
-            writeInt(defendingClan.getId());
-            writeString(defendingClan.getName());
-            writeString(defendingClan.getLeaderName());
-            writeInt(defendingClan.getCrestId());
-            writeInt(0x00); // signed time (seconds) (not storated by L2J)
-            writeInt(SiegeClanType.DEFENDER.ordinal());
-            writeInt(defendingClan.getAllyId());
-            writeString(defendingClan.getAllyName());
-            writeString(""); // AllyLeaderName
-            writeInt(defendingClan.getAllyCrestId());
+            buffer.writeInt(defendingClan.getId());
+            buffer.writeString(defendingClan.getName());
+            buffer.writeString(defendingClan.getLeaderName());
+            buffer.writeInt(defendingClan.getCrestId());
+            buffer.writeInt(0x00); // signed time (seconds) (not storated by L2J)
+            buffer.writeInt(SiegeClanType.DEFENDER.ordinal());
+            buffer.writeInt(defendingClan.getAllyId());
+            buffer.writeString(defendingClan.getAllyName());
+            buffer.writeString(""); // AllyLeaderName
+            buffer.writeInt(defendingClan.getAllyCrestId());
         }
 
         // List of not confirmed defenders
@@ -111,16 +112,16 @@ public final class SiegeDefenderList extends ServerPacket {
                 continue;
             }
 
-            writeInt(defendingClan.getId());
-            writeString(defendingClan.getName());
-            writeString(defendingClan.getLeaderName());
-            writeInt(defendingClan.getCrestId());
-            writeInt(0x00); // signed time (seconds) (not storated by L2J)
-            writeInt(SiegeClanType.DEFENDER_PENDING.ordinal());
-            writeInt(defendingClan.getAllyId());
-            writeString(defendingClan.getAllyName());
-            writeString(""); // AllyLeaderName
-            writeInt(defendingClan.getAllyCrestId());
+            buffer.writeInt(defendingClan.getId());
+            buffer.writeString(defendingClan.getName());
+            buffer.writeString(defendingClan.getLeaderName());
+            buffer.writeInt(defendingClan.getCrestId());
+            buffer.writeInt(0x00); // signed time (seconds) (not storated by L2J)
+            buffer.writeInt(SiegeClanType.DEFENDER_PENDING.ordinal());
+            buffer.writeInt(defendingClan.getAllyId());
+            buffer.writeString(defendingClan.getAllyName());
+            buffer.writeString(""); // AllyLeaderName
+            buffer.writeInt(defendingClan.getAllyCrestId());
         }
     }
 

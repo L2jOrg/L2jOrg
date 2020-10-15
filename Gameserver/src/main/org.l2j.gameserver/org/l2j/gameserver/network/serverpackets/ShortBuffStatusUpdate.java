@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -37,13 +38,13 @@ public class ShortBuffStatusUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHORT_BUFF_STATUS_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SHORT_BUFF_STATUS_UPDATE, buffer );
 
-        writeInt(_skillId);
-        writeShort((short) _skillLvl);
-        writeShort((short) _skillSubLvl);
-        writeInt(_duration);
+        buffer.writeInt(_skillId);
+        buffer.writeShort(_skillLvl);
+        buffer.writeShort(_skillSubLvl);
+        buffer.writeInt(_duration);
     }
 
 }

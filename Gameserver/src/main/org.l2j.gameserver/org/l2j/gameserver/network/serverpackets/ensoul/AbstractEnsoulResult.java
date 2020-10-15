@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.ensoul;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.EnsoulOption;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -37,18 +38,18 @@ abstract class AbstractEnsoulResult extends ServerPacket {
         this.item = item;
     }
 
-    protected void writeResult() {
-        writeByte(success);
-        writeEnsoul(item.getSpecialAbility());
-        writeEnsoul(item.getAdditionalSpecialAbility());
+    protected void writeResult(WritableBuffer buffer) {
+        buffer.writeByte(success);
+        writeEnsoul(item.getSpecialAbility(), buffer);
+        writeEnsoul(item.getAdditionalSpecialAbility(), buffer);
     }
 
-    private void writeEnsoul(EnsoulOption ensoul) {
+    private void writeEnsoul(EnsoulOption ensoul, WritableBuffer buffer) {
         if(nonNull(ensoul)) {
-            writeByte(0x01); // ensoul amount
-            writeInt(ensoul.id());
+            buffer.writeByte(0x01); // ensoul amount
+            buffer.writeInt(ensoul.id());
         } else {
-            writeByte(0x00);
+            buffer.writeByte(0x00);
         }
     }
 }

@@ -102,6 +102,9 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             state = IN_BATTLE;
             scheduled = ThreadPool.schedule(this, duration);
         } else {
+            if(COUNT_DOWN_INTERVAL[countDownIndex] == 10) {
+                arena.openAllDoors();
+            }
             sendPacket(getSystemMessage(S1_SECOND_S_TO_MATCH_START).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
             scheduled = ThreadPool.schedule(this, COUNT_DOWN_INTERVAL[countDownIndex] - COUNT_DOWN_INTERVAL[++countDownIndex], TimeUnit.SECONDS);
         }

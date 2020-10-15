@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -134,9 +135,9 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
     private void onClansTask(){
         for (Clan clan : ClanTable.getInstance().getClans()) {
             checkNewLeader(clan);
-            ClanRewardManager.getInstance().checkArenaProgress(clan);
+            ClanRewardManager.getInstance().resetArenaProgress(clan);
         }
-        GlobalVariablesManager.getInstance().resetRaidBonus();
+        getDAO(ClanDAO.class).resetArenaProgress();
         LOGGER.info("Clans has been updated");
     }
 

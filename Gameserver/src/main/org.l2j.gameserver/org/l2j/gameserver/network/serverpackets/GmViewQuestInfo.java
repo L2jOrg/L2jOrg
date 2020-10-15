@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -39,18 +40,18 @@ public class GmViewQuestInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GM_VIEW_QUEST_INFO);
-        writeString(_activeChar.getName());
-        writeShort((short) _questList.size()); // quest count
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.GM_VIEW_QUEST_INFO, buffer );
+        buffer.writeString(_activeChar.getName());
+        buffer.writeShort(_questList.size()); // quest count
 
         for (Quest quest : _questList) {
             final QuestState qs = _activeChar.getQuestState(quest.getName());
 
-            writeInt(quest.getId());
-            writeInt(qs == null ? 0 : qs.getCond());
+            buffer.writeInt(quest.getId());
+            buffer.writeInt(qs == null ? 0 : qs.getCond());
         }
-        writeShort((short) 0x00); // some size
+        buffer.writeShort(0x00); // some size
         // for size; ddQQ
     }
 

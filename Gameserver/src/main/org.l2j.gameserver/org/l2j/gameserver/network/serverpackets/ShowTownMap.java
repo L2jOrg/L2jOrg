@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -33,11 +34,11 @@ public class ShowTownMap extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOW_TOWNMAP);
-        writeString(_texture);
-        writeInt(_x);
-        writeInt(_y);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SHOW_TOWNMAP, buffer );
+        buffer.writeString(_texture);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -33,12 +34,12 @@ public class ExAutoSoulShot extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_AUTO_SOULSHOT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_AUTO_SOULSHOT, buffer );
 
-        writeInt(_itemId);
-        writeInt(_enable);
-        writeInt(_type);
+        buffer.writeInt(_itemId);
+        buffer.writeInt(_enable);
+        buffer.writeInt(_type);
     }
 
 }

@@ -18,13 +18,13 @@
  */
 package org.l2j.commons.database;
 
-import org.l2j.commons.cache.CacheFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.cache.Cache;
 import java.lang.reflect.Proxy;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author JoeAlisson
@@ -33,7 +33,7 @@ public class DatabaseAccess {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseAccess.class);
     @SuppressWarnings("rawtypes")
-    private static final Cache<Class, DAO> cache = CacheFactory.getInstance().getCache("dao", Class.class, DAO.class);
+    private static final Map<Class, DAO> CACHE = new HashMap<>();
     private static final JDBCInvocation handler = new JDBCInvocation();
 
     private volatile static boolean initialized = false;
@@ -53,12 +53,12 @@ public class DatabaseAccess {
     }
 
     public static <T extends DAO<?>> T getDAO(Class<T> daoClass) {
-        if(cache.containsKey(daoClass)) {
-            return daoClass.cast(cache.get(daoClass));
+        if(CACHE.containsKey(daoClass)) {
+            return daoClass.cast(CACHE.get(daoClass));
         }
 
         var dao =  daoClass.cast(Proxy.newProxyInstance(daoClass.getClassLoader(), new Class[]{ daoClass }, handler));
-        cache.put(daoClass, dao);
+        CACHE.put(daoClass, dao);
         return dao;
     }
 

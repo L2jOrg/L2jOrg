@@ -18,24 +18,25 @@
  */
 package org.l2j.authserver.network.client.packet.auth2client;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
 public final class LoginOk extends AuthServerPacket {
 
 	@Override
-	protected void writeImpl(AuthClient client) {
+	protected void writeImpl(AuthClient client, WritableBuffer buffer) {
 		var sessionKey = client.getSessionKey();
-		writeByte(0x03);
-		writeInt(sessionKey.getAuthAccountId());
-		writeInt(sessionKey.getAuthKey());
-		writeBytes(new byte[8]);
-		writeInt(0x000003ea); // billing type: 1002 Free, x200 paid time, x500 flat rate pre paid, others subscription
-		writeInt(0x00); // paid time
-		writeInt(0x00);
-		writeInt(0x00); // warning mask
-		writeBytes(new byte[16]); // forbidden servers
-		writeInt(0x00);
+		buffer.writeByte(0x03);
+		buffer.writeInt(sessionKey.getAuthAccountId());
+		buffer.writeInt(sessionKey.getAuthKey());
+		buffer.writeBytes(new byte[8]);
+		buffer.writeInt(0x000003ea); // billing type: 1002 Free, x200 paid time, x500 flat rate pre paid, others subscription
+		buffer.writeInt(0x00); // paid time
+		buffer.writeInt(0x00);
+		buffer.writeInt(0x00); // warning mask
+		buffer.writeBytes(new byte[16]); // forbidden servers
+		buffer.writeInt(0x00);
 	}
 
 }

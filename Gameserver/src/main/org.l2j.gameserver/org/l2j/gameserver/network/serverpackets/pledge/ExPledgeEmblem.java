@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -43,19 +44,19 @@ public class ExPledgeEmblem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_EMBLEM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_EMBLEM, buffer );
 
-        writeInt(getSettings(ServerSettings.class).serverId());
-        writeInt(_clanId);
-        writeInt(_crestId);
-        writeInt(_chunkId);
-        writeInt(TOTAL_SIZE);
+        buffer.writeInt(getSettings(ServerSettings.class).serverId());
+        buffer.writeInt(_clanId);
+        buffer.writeInt(_crestId);
+        buffer.writeInt(_chunkId);
+        buffer.writeInt(TOTAL_SIZE);
         if (_data != null) {
-            writeInt(_data.length);
-            writeBytes(_data);
+            buffer.writeInt(_data.length);
+            buffer.writeBytes(_data);
         } else {
-            writeInt(0);
+            buffer.writeInt(0);
         }
     }
 

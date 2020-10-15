@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.commission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -36,15 +37,15 @@ public class ExResponseCommissionBuyInfo extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_BUY_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_BUY_INFO, buffer );
 
-        writeInt(_commissionItem != null ? 1 : 0);
+        buffer.writeInt(_commissionItem != null ? 1 : 0);
         if (_commissionItem != null) {
-            writeLong(_commissionItem.getPricePerUnit());
-            writeLong(_commissionItem.getCommissionId());
-            writeInt(0); // CommissionItemType seems client does not really need it.
-            writeItem(_commissionItem.getItemInfo());
+            buffer.writeLong(_commissionItem.getPricePerUnit());
+            buffer.writeLong(_commissionItem.getCommissionId());
+            buffer.writeInt(0); // CommissionItemType seems client does not really need it.
+            writeItem(_commissionItem.getItemInfo(), buffer);
         }
     }
 

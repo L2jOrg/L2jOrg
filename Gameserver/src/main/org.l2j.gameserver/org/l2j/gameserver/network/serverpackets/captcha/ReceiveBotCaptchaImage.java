@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.captcha;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.captcha.Captcha;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -34,12 +35,12 @@ public class ReceiveBotCaptchaImage extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CAPTCHA_IMAGE);
-        writeLong(captcha.getId());
-        writeByte((byte) 0x02); // unk
-        writeInt(time);
-        writeBytes(captcha.getData());
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CAPTCHA_IMAGE, buffer );
+        buffer.writeLong(captcha.getId());
+        buffer.writeByte(0x02); // unk
+        buffer.writeInt(time);
+        buffer.writeBytes(captcha.getData());
     }
 
 }

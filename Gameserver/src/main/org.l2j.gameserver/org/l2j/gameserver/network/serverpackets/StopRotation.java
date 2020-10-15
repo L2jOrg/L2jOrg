@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -33,13 +34,13 @@ public class StopRotation extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.FINISH_ROTATING);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.FINISH_ROTATING, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_degree);
-        writeInt(_speed);
-        writeInt(0); // ?
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_degree);
+        buffer.writeInt(_speed);
+        buffer.writeInt(0); // ?
     }
 
 }

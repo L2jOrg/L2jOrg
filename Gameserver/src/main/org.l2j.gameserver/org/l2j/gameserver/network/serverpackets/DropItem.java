@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -40,26 +41,26 @@ public class DropItem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.DROP_ITEM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.DROP_ITEM, buffer );
 
-        writeInt(playerId);
-        writeInt(item.getObjectId());
-        writeInt(item.getDisplayId());
+        buffer.writeInt(playerId);
+        buffer.writeInt(item.getObjectId());
+        buffer.writeInt(item.getDisplayId());
 
-        writeInt(item.getX());
-        writeInt(item.getY());
-        writeInt(item.getZ());
+        buffer.writeInt(item.getX());
+        buffer.writeInt(item.getY());
+        buffer.writeInt(item.getZ());
         // only show item count if it is a stackable item
-        writeByte(item.isStackable());
-        writeLong(item.getCount());
+        buffer.writeByte(item.isStackable());
+        buffer.writeLong(item.getCount());
 
-        writeByte(0x00);
+        buffer.writeByte(0x00);
         // writeInt(0x01); if above C == true (1) then readInt()
 
-        writeByte(item.getEnchantLevel());
-        writeByte(item.isAugmented());
-        writeByte(nonNull(item.getSpecialAbility())); // special ability amount
+        buffer.writeByte(item.getEnchantLevel());
+        buffer.writeByte(item.isAugmented());
+        buffer.writeByte(nonNull(item.getSpecialAbility())); // special ability amount
     }
 
 }

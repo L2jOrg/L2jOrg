@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -81,35 +82,35 @@ public final class MagicSkillUse extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MAGIC_SKILL_USE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MAGIC_SKILL_USE, buffer );
 
-        writeInt(_castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
-        writeInt(_activeChar.getObjectId());
-        writeInt(_target.getObjectId());
-        writeInt(_skillId);
-        writeInt(_skillLevel);
-        writeInt(_hitTime);
-        writeInt(_reuseGroup);
-        writeInt(_reuseDelay);
-        writeInt(_activeChar.getX());
-        writeInt(_activeChar.getY());
-        writeInt(_activeChar.getZ());
-        writeShort((short) _unknown.size()); // TODO: Implement me!
+        buffer.writeInt(_castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
+        buffer.writeInt(_activeChar.getObjectId());
+        buffer.writeInt(_target.getObjectId());
+        buffer.writeInt(_skillId);
+        buffer.writeInt(_skillLevel);
+        buffer.writeInt(_hitTime);
+        buffer.writeInt(_reuseGroup);
+        buffer.writeInt(_reuseDelay);
+        buffer.writeInt(_activeChar.getX());
+        buffer.writeInt(_activeChar.getY());
+        buffer.writeInt(_activeChar.getZ());
+        buffer.writeShort(_unknown.size()); // TODO: Implement me!
         for (int unknown : _unknown) {
-            writeShort((short) unknown);
+            buffer.writeShort(unknown);
         }
-        writeShort((short) _groundLocations.size());
+        buffer.writeShort(_groundLocations.size());
         for (IPositionable target : _groundLocations) {
-            writeInt(target.getX());
-            writeInt(target.getY());
-            writeInt(target.getZ());
+            buffer.writeInt(target.getX());
+            buffer.writeInt(target.getY());
+            buffer.writeInt(target.getZ());
         }
-        writeInt(_target.getX());
-        writeInt(_target.getY());
-        writeInt(_target.getZ());
-        writeInt(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
-        writeInt(max(_actionId, 0)); // ID from RequestActionUse. Used to set cooldown on summon skills.
+        buffer.writeInt(_target.getX());
+        buffer.writeInt(_target.getY());
+        buffer.writeInt(_target.getZ());
+        buffer.writeInt(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
+        buffer.writeInt(max(_actionId, 0)); // ID from RequestActionUse. Used to set cooldown on summon skills.
     }
 
 }

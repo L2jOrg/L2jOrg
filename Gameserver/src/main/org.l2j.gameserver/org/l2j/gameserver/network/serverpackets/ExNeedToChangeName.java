@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -41,12 +42,12 @@ public class ExNeedToChangeName extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_NEED_TO_CHANGE_NAME);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_NEED_TO_CHANGE_NAME, buffer );
 
-        writeInt(_type);
-        writeInt(_subType);
-        writeString(_name);
+        buffer.writeInt(_type);
+        buffer.writeInt(_subType);
+        buffer.writeString(_name);
     }
 
 }

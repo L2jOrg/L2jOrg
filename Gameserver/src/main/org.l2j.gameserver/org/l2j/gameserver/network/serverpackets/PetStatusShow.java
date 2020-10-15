@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,11 +36,11 @@ public class PetStatusShow extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PET_STATUS_SHOW);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PET_STATUS_SHOW, buffer );
 
-        writeInt(_summonType);
-        writeInt(_summonObjectId);
+        buffer.writeInt(_summonType);
+        buffer.writeInt(_summonObjectId);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.MatchingMemberType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -41,24 +42,24 @@ public class ExPartyRoomMember extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PARTY_ROOM_MEMBER);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PARTY_ROOM_MEMBER, buffer );
 
-        writeInt(_type.ordinal());
-        writeInt(_room.getMembersCount());
+        buffer.writeInt(_type.ordinal());
+        buffer.writeInt(_room.getMembersCount());
         for (Player member : _room.getMembers()) {
-            writeInt(member.getObjectId());
-            writeString(member.getName());
-            writeInt(member.getActiveClass());
-            writeInt(member.getLevel());
-            writeInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
-            writeInt(_room.getMemberType(member).ordinal());
+            buffer.writeInt(member.getObjectId());
+            buffer.writeString(member.getName());
+            buffer.writeInt(member.getActiveClass());
+            buffer.writeInt(member.getLevel());
+            buffer.writeInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
+            buffer.writeInt(_room.getMemberType(member).ordinal());
             final var _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(member);
-            writeInt(_instanceTimes.size());
+            buffer.writeInt(_instanceTimes.size());
             for (var entry : _instanceTimes.entrySet()) {
                 final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
-                writeInt(entry.getKey());
-                writeInt((int) instanceTime);
+                buffer.writeInt(entry.getKey());
+                buffer.writeInt((int) instanceTime);
             }
         }
     }

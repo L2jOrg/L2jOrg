@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.enchant.EnchantResultType;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
@@ -48,17 +49,17 @@ public class EnchantResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ENCHANT_RESULT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ENCHANT_RESULT, buffer );
 
-        writeInt(result.ordinal());
-        writeInt(crystal);
-        writeLong(crystalCount);
-        writeInt(stone);
-        writeLong(stoneCount);
-        writeInt(enchantLevel);
+        buffer.writeInt(result.ordinal());
+        buffer.writeInt(crystal);
+        buffer.writeLong(crystalCount);
+        buffer.writeInt(stone);
+        buffer.writeLong(stoneCount);
+        buffer.writeInt(enchantLevel);
         for (int option : enchantOptions) {
-            writeInt(option);
+            buffer.writeInt(option);
         }
     }
 

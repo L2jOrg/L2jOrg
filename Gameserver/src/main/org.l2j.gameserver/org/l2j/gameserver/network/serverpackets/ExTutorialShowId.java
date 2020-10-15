@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -29,8 +30,8 @@ public class ExTutorialShowId extends ServerPacket {
         this._id = id;
     }
 
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_TUTORIAL_SHOW_ID);
-        writeInt(this._id);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_TUTORIAL_SHOW_ID, buffer );
+        buffer.writeInt(this._id);
     }
 }

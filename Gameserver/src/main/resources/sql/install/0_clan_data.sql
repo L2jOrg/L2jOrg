@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS `clan_data`
     `prev_max_online_member`   INT               NOT NULL DEFAULT 0,
     `hunting_points`           INT               NOT NULL DEFAULT 0,
     `prev_hunting_points`      INT               NOT NULL DEFAULT 0,
+    `arena_progress`           INT UNSIGNED      NOT NULL DEFAULT 0,
     PRIMARY KEY (`clan_id`),
     KEY `ally_id` (`ally_id`),
     KEY `leader_id` (`leader_id`),

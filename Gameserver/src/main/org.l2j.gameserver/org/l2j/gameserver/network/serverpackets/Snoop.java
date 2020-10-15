@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -38,15 +39,15 @@ public class Snoop extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SNOOP);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SNOOP, buffer );
 
-        writeInt(_convoId);
-        writeString(_name);
-        writeInt(0x00); // ??
-        writeInt(_type.getClientId());
-        writeString(_speaker);
-        writeString(_msg);
+        buffer.writeInt(_convoId);
+        buffer.writeString(_name);
+        buffer.writeInt(0x00); // ??
+        buffer.writeInt(_type.getClientId());
+        buffer.writeString(_speaker);
+        buffer.writeString(_msg);
     }
 
 }

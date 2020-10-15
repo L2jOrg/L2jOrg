@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.network.GameClient;
@@ -33,13 +34,13 @@ public class ExShowBaseAttributeCancelWindow extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW, buffer );
 
-        writeInt(_items.size());
+        buffer.writeInt(_items.size());
         for (Item item : _items) {
-            writeInt(item.getObjectId());
-            writeLong(getPrice(item));
+            buffer.writeInt(item.getObjectId());
+            buffer.writeLong(getPrice(item));
         }
     }
 

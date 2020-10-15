@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
@@ -32,14 +33,14 @@ import java.util.Comparator;
  */
 public class ExPledgeBonusList extends ServerPacket {
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_BONUS_LIST);
-        writeByte(0x00); // 140
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_BONUS_LIST, buffer );
+        buffer.writeByte(0x00); // 140
         ClanRewardManager.getInstance().getClanRewardBonuses(ClanRewardType.MEMBERS_ONLINE).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
-                writeInt(bonus.getSkillReward().getSkillId()));
-        writeByte(0x01); // 140
+                buffer.writeInt(bonus.getSkillReward().getSkillId()));
+        buffer.writeByte(0x01); // 140
         ClanRewardManager.getInstance().getClanRewardBonuses(ClanRewardType.HUNTING_MONSTERS).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
-                writeInt(bonus.getItemReward().getId()));
+                buffer.writeInt(bonus.getItemReward().getId()));
     }
 
 }

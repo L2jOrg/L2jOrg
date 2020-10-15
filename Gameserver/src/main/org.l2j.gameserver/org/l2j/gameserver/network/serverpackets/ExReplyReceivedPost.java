@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.MailType;
@@ -53,42 +54,42 @@ public class ExReplyReceivedPost extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_REPLY_RECEIVED_POST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_REPLY_RECEIVED_POST, buffer );
 
-        writeInt(_msg.getType().ordinal()); // GOD
+        buffer.writeInt(_msg.getType().ordinal()); // GOD
         if (_msg.getType() == MailType.COMMISSION_ITEM_RETURNED) {
-            writeInt(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
-            writeInt(SystemMessageId.THE_AUCTION_HOUSE_REGISTRATION_PERIOD_HAS_EXPIRED_AND_THE_CORRESPONDING_ITEM_IS_BEING_FORWARDED.getId());
+            buffer.writeInt(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
+            buffer.writeInt(SystemMessageId.THE_AUCTION_HOUSE_REGISTRATION_PERIOD_HAS_EXPIRED_AND_THE_CORRESPONDING_ITEM_IS_BEING_FORWARDED.getId());
         } else if (_msg.getType() == MailType.COMMISSION_ITEM_SOLD) {
-            writeInt(_msg.getItem());
-            writeInt(_msg.getEnchant());
+            buffer.writeInt(_msg.getItem());
+            buffer.writeInt(_msg.getEnchant());
             for (int i = 0; i < AttributeType.ATTRIBUTE_TYPES.length; i++) {
-                writeInt(0);
+                buffer.writeInt(0);
             }
-            writeInt(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
-            writeInt(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
+            buffer.writeInt(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
+            buffer.writeInt(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
         }
-        writeInt(_msg.getId());
-        writeInt(_msg.isLocked());
-        writeInt(0x00); // Unknown
-        writeString(_msg.getSenderName());
-        writeString(_msg.getSubject());
-        writeString(_msg.getContent());
+        buffer.writeInt(_msg.getId());
+        buffer.writeInt(_msg.isLocked());
+        buffer.writeInt(0x00); // Unknown
+        buffer.writeString(_msg.getSenderName());
+        buffer.writeString(_msg.getSubject());
+        buffer.writeString(_msg.getContent());
 
         if (_items != null && !_items.isEmpty()) {
-            writeInt(_items.size());
+            buffer.writeInt(_items.size());
             for (Item item : _items) {
-                writeItem(item);
-                writeInt(item.getObjectId());
+                writeItem(item, buffer);
+                buffer.writeInt(item.getObjectId());
             }
         } else {
-            writeInt(0x00);
+            buffer.writeInt(0x00);
         }
 
-        writeLong(_msg.getFee());
-        writeInt(_msg.hasAttachments());
-        writeInt(_msg.isReturned());
+        buffer.writeLong(_msg.getFee());
+        buffer.writeInt(_msg.hasAttachments());
+        buffer.writeInt(_msg.isReturned());
     }
 
 }

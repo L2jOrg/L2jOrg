@@ -289,7 +289,7 @@ public final class Door extends Creature {
         final DoorStatusUpdate dsu = new DoorStatusUpdate(this);
         final OnEventTrigger oe = getEmitter() <= 0 ? null : new OnEventTrigger(getEmitter(), inverted ^ open);
 
-        World.getInstance().forAnyVisibleObject(this, Player.class, player -> sendUpdateToPlayer(player, su, targetableSu, dsu, oe), this::isVisibleFor);
+        World.getInstance().forEachVisibleObject(this, Player.class,player -> sendUpdateToPlayer(player, su, targetableSu, dsu, oe), this::isVisibleFor);
     }
 
     private void sendUpdateToPlayer(Player player, StaticObject su, StaticObject targetableSu, DoorStatusUpdate dsu, OnEventTrigger oe) {

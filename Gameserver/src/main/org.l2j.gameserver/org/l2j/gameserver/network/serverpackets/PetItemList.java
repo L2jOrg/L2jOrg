@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -34,12 +35,12 @@ public class PetItemList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PET_ITEMLIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PET_ITEMLIST, buffer );
 
         var inventory = pet.getInventory();
-        writeShort(inventory.getSize());
-        inventory.forEachItem(this::writeItem);
+        buffer.writeShort(inventory.getSize());
+        inventory.forEachItem(item -> writeItem(item, buffer));
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -54,33 +55,33 @@ public class RecipeShopManageList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.RECIPE_SHOP_MANAGE_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.RECIPE_SHOP_MANAGE_LIST, buffer );
 
-        writeInt(_seller.getObjectId());
-        writeInt((int) _seller.getAdena());
-        writeInt(_isDwarven ? 0x00 : 0x01);
+        buffer.writeInt(_seller.getObjectId());
+        buffer.writeInt((int) _seller.getAdena());
+        buffer.writeInt(_isDwarven ? 0x00 : 0x01);
 
         if (_recipes == null) {
-            writeInt(0);
+            buffer.writeInt(0);
         } else {
-            writeInt(_recipes.length); // number of items in recipe book
+            buffer.writeInt(_recipes.length); // number of items in recipe book
 
             for (int i = 0; i < _recipes.length; i++) {
                 final RecipeList temp = _recipes[i];
-                writeInt(temp.getId());
-                writeInt(i + 1);
+                buffer.writeInt(temp.getId());
+                buffer.writeInt(i + 1);
             }
         }
 
         if (!_seller.hasManufactureShop()) {
-            writeInt(0x00);
+            buffer.writeInt(0x00);
         } else {
-            writeInt(_seller.getManufactureItems().size());
+            buffer.writeInt(_seller.getManufactureItems().size());
             for (ManufactureItem item : _seller.getManufactureItems().values()) {
-                writeInt(item.getRecipeId());
-                writeInt(0x00);
-                writeLong(item.getCost());
+                buffer.writeInt(item.getRecipeId());
+                buffer.writeInt(0x00);
+                buffer.writeLong(item.getCost());
             }
         }
     }

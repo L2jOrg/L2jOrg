@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -33,11 +34,11 @@ public class ExPrivateStoreBuyingResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PRIVATE_STORE_BUYING_RESULT);
-        writeInt(_objectId);
-        writeLong(_count);
-        writeString(_seller);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PRIVATE_STORE_BUYING_RESULT, buffer );
+        buffer.writeInt(_objectId);
+        buffer.writeLong(_count);
+        buffer.writeString(_seller);
     }
 
 }

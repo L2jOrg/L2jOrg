@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.attendance;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.impl.AttendanceRewardData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -38,26 +39,26 @@ public class ExVipAttendanceItemList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_VIP_ATTENDANCE_ITEM_LIST);
-        writeByte(available ? index + 1 : index); // index to receive?
-        writeByte(index); // last received index?
-        writeInt(0x00);
-        writeInt(0x00);
-        writeByte(0x01);
-        writeByte(available); // player can receive reward today?
-        writeByte(250);
-        writeByte(AttendanceRewardData.getInstance().getRewardsCount()); // reward size
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_VIP_ATTENDANCE_ITEM_LIST, buffer );
+        buffer.writeByte(available ? index + 1 : index); // index to receive?
+        buffer.writeByte(index); // last received index?
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeByte(0x01);
+        buffer.writeByte(available); // player can receive reward today?
+        buffer.writeByte(250);
+        buffer.writeByte(AttendanceRewardData.getInstance().getRewardsCount()); // reward size
         int rewardCounter = 0;
         for (ItemHolder reward : AttendanceRewardData.getInstance().getRewards()) {
             rewardCounter++;
-            writeInt(reward.getId());
-            writeLong(reward.getCount());
-            writeByte(0x01); // is unknown?
-            writeByte(rewardCounter % 7 == 0); // is last in row?
+            buffer.writeInt(reward.getId());
+            buffer.writeLong(reward.getCount());
+            buffer.writeByte(0x01); // is unknown?
+            buffer.writeByte(rewardCounter % 7 == 0); // is last in row?
         }
-        writeByte( 0x00);
-        writeInt(0x00);
+        buffer.writeByte( 0x00);
+        buffer.writeInt(0x00);
     }
 
 }

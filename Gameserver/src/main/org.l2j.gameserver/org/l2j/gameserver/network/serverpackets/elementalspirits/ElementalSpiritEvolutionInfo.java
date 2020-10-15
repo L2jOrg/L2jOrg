@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
@@ -35,29 +36,29 @@ public class ElementalSpiritEvolutionInfo extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO, buffer);
 
         var player = client.getPlayer();
         var spirit = player.getElementalSpirit(ElementalType.of(type));
 
         if(isNull(spirit)) {
-            writeByte(0);
-            writeInt(0);
+            buffer.writeByte(0);
+            buffer.writeInt(0);
             return;
         }
 
-        writeByte(type);
-        writeInt(spirit.getNpcId());
-        writeInt(0x01); // unk
-        writeInt(spirit.getStage());
-        writeDouble(100); // chance ??
+        buffer.writeByte(type);
+        buffer.writeInt(spirit.getNpcId());
+        buffer.writeInt(0x01); // unk
+        buffer.writeInt(spirit.getStage());
+        buffer.writeDouble(100); // chance ??
 
         var items = spirit.getItemsToEvolve();
-        writeInt(items.size());
+        buffer.writeInt(items.size());
         for (ItemHolder item : items) {
-            writeInt(item.getId());
-            writeLong(item.getCount());
+            buffer.writeInt(item.getId());
+            buffer.writeLong(item.getCount());
         }
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.PledgeApplicantData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -34,11 +35,11 @@ public class ExPledgeWaitingUser extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_WAITING_USER);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_WAITING_USER, buffer );
 
-        writeInt(_pledgeRecruitInfo.getPlayerId());
-        writeString(_pledgeRecruitInfo.getMessage());
+        buffer.writeInt(_pledgeRecruitInfo.getPlayerId());
+        buffer.writeString(_pledgeRecruitInfo.getMessage());
     }
 
 }

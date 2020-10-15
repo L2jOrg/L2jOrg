@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.item.upgrade;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.upgrade.CommonUpgrade;
@@ -51,25 +52,25 @@ public class ExUpgradeSystemNormalResult extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_UPGRADE_SYSTEM_NORMAL_RESULT);
-        writeShort(0x01); // result
-        writeInt(upgrade.id()); // id
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_UPGRADE_SYSTEM_NORMAL_RESULT, buffer );
+        buffer.writeShort(0x01); // result
+        buffer.writeInt(upgrade.id()); // id
 
-        writeByte(success);
-        writeInt(items.size());
-        items.forEach(this::writeResultItem);
+        buffer.writeByte(success);
+        buffer.writeInt(items.size());
+        items.forEach((objectId, item) -> writeResultItem(objectId, item, buffer));
 
-        writeByte(!bonus.isEmpty());
-        writeInt(bonus.size());
-        bonus.forEach(this::writeResultItem);
+        buffer.writeByte(!bonus.isEmpty());
+        buffer.writeInt(bonus.size());
+        bonus.forEach((objectId, item) -> writeResultItem(objectId, item, buffer));
     }
 
-    private void writeResultItem(int objectId, ItemHolder item) {
-        writeInt(objectId);
-        writeInt(item.getId());
-        writeInt(item.getEnchantment());
-        writeInt((int) item.getCount());
+    private void writeResultItem(int objectId, ItemHolder item, WritableBuffer buffer) {
+        buffer.writeInt(objectId);
+        buffer.writeInt(item.getId());
+        buffer.writeInt(item.getEnchantment());
+        buffer.writeInt((int) item.getCount());
     }
 
     public static ExUpgradeSystemNormalResult success(CommonUpgrade upgrade) {

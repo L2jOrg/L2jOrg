@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -27,11 +28,11 @@ import org.l2j.gameserver.network.ServerExPacketId;
 public class ExChannelChatPledgeInfo extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CC_PLEDGE_INFO);
-        writeInt(1);
-        writeInt(1); // id
-        writeInt(2); //server
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CC_PLEDGE_INFO, buffer );
+        buffer.writeInt(1);
+        buffer.writeInt(1); // id
+        buffer.writeInt(2); //server
 
     }
 }

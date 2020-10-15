@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
@@ -73,20 +74,20 @@ public final class FlyToLocation extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.FLY_TO_LOCATION);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.FLY_TO_LOCATION, buffer );
 
-        writeInt(_chaObjId);
-        writeInt(_destX);
-        writeInt(_destY);
-        writeInt(_destZ);
-        writeInt(_chaX);
-        writeInt(_chaY);
-        writeInt(_chaZ);
-        writeInt(_type.ordinal());
-        writeInt(_flySpeed);
-        writeInt(_flyDelay);
-        writeInt(_animationSpeed);
+        buffer.writeInt(_chaObjId);
+        buffer.writeInt(_destX);
+        buffer.writeInt(_destY);
+        buffer.writeInt(_destZ);
+        buffer.writeInt(_chaX);
+        buffer.writeInt(_chaY);
+        buffer.writeInt(_chaZ);
+        buffer.writeInt(_type.ordinal());
+        buffer.writeInt(_flySpeed);
+        buffer.writeInt(_flyDelay);
+        buffer.writeInt(_animationSpeed);
     }
 
 

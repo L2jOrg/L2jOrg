@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -28,47 +29,47 @@ import org.l2j.gameserver.network.ServerPacketId;
 public final class ShortCutInit extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.INIT_SHORTCUT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.INIT_SHORTCUT, buffer );
 
         var player = client.getPlayer();
 
-        writeInt(player.getShortcutAmount());
+        buffer.writeInt(player.getShortcutAmount());
 
         player.forEachShortcut(s -> {
-            writeInt(s.getType().ordinal());
-            writeInt(s.getClientId());
-            writeByte(0x00); // 228
+            buffer.writeInt(s.getType().ordinal());
+            buffer.writeInt(s.getClientId());
+            buffer.writeByte(0x00); // 228
 
             switch (s.getType()) {
-                case ITEM -> writeShortcutItem(s);
-                case SKILL -> writeShortcutSkill(s);
+                case ITEM -> writeShortcutItem(s, buffer);
+                case SKILL -> writeShortcutSkill(s, buffer);
                 case ACTION, MACRO, RECIPE, BOOKMARK -> {
-                    writeInt(s.getShortcutId());
-                    writeInt(s.getCharacterType());
+                    buffer.writeInt(s.getShortcutId());
+                    buffer.writeInt(s.getCharacterType());
                 }
             }
         });
     }
 
-    private void writeShortcutSkill(Shortcut sc) {
-        writeInt(sc.getShortcutId());
-        writeShort(sc.getLevel());
-        writeShort(sc.getSubLevel());
-        writeInt(sc.getSharedReuseGroup());
-        writeByte(0x00);
-        writeInt(0x01);
+    private void writeShortcutSkill(Shortcut sc, WritableBuffer buffer) {
+        buffer.writeInt(sc.getShortcutId());
+        buffer.writeShort(sc.getLevel());
+        buffer.writeShort(sc.getSubLevel());
+        buffer.writeInt(sc.getSharedReuseGroup());
+        buffer.writeByte(0x00);
+        buffer.writeInt(0x01);
     }
 
-    private void writeShortcutItem(Shortcut sc) {
-        writeInt(sc.getShortcutId());
-        writeInt(0x01); // Enabled or not
-        writeInt(sc.getSharedReuseGroup());
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00); // Augment effect 1
-        writeInt(0x00); // Augment effect 2
-        writeInt(0x00); // Visual id
+    private void writeShortcutItem(Shortcut sc, WritableBuffer buffer) {
+        buffer.writeInt(sc.getShortcutId());
+        buffer.writeInt(0x01); // Enabled or not
+        buffer.writeInt(sc.getSharedReuseGroup());
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00); // Augment effect 1
+        buffer.writeInt(0x00); // Augment effect 2
+        buffer.writeInt(0x00); // Visual id
     }
 
 }

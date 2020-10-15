@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.costume;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -28,11 +29,11 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExCostumeCollectionSkillActive extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_COSTUME_COLLECTION_SKILL_ACTIVE);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_COSTUME_COLLECTION_SKILL_ACTIVE, buffer );
 
         var collection = client.getPlayer().getActiveCostumeCollection();
-        writeInt(collection.getId());
-        writeInt(collection.getReuseTime());
+        buffer.writeInt(collection.getId());
+        buffer.writeInt(collection.getReuseTime());
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.raidserver;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -28,12 +29,12 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExRaidReserveResult extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RAID_RESERVE_RESULT);
-        writeInt(true); // success?
-        writeBytes(new byte[] {127, 0, 0, 1 }); // dimensional server ip
-        writeInt(1); // server id
-        writeInt(client.getPlayer().getObjectId());
-        writeInt(client.getSessionKey().getGameServerSessionId());
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RAID_RESERVE_RESULT, buffer );
+        buffer.writeInt(true); // success?
+        buffer.writeBytes(new byte[] {127, 0, 0, 1 }); // dimensional server ip
+        buffer.writeInt(1); // server id
+        buffer.writeInt(client.getPlayer().getObjectId());
+        buffer.writeInt(client.getSessionKey().getGameServerSessionId());
     }
 }

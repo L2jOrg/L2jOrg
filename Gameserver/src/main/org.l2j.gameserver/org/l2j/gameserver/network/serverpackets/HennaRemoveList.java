@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.Henna;
 import org.l2j.gameserver.network.GameClient;
@@ -34,20 +35,20 @@ public class HennaRemoveList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.HENNA_UNEQUIP_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.HENNA_UNEQUIP_LIST, buffer );
 
-        writeLong(_player.getAdena());
-        writeInt(0x03); // seems to be max size
-        writeInt(3 - _player.getHennaEmptySlots());
+        buffer.writeLong(_player.getAdena());
+        buffer.writeInt(0x03); // seems to be max size
+        buffer.writeInt(3 - _player.getHennaEmptySlots());
 
         for (Henna henna : _player.getHennaList()) {
             if (henna != null) {
-                writeInt(henna.getDyeId());
-                writeInt(henna.getDyeItemId());
-                writeLong(henna.getCancelCount());
-                writeLong(henna.getCancelFee());
-                writeInt(0x00);
+                buffer.writeInt(henna.getDyeId());
+                buffer.writeInt(henna.getDyeItemId());
+                buffer.writeLong(henna.getCancelCount());
+                buffer.writeLong(henna.getCancelFee());
+                buffer.writeInt(0x00);
             }
         }
     }

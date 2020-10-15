@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -39,20 +40,20 @@ public final class SkillList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SKILL_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SKILL_LIST, buffer );
         _skills.sort(Comparator.comparing(s -> SkillEngine.getInstance().getSkill(s.id, s.level).isToggle() ? 1 : 0));
-        writeInt(_skills.size());
+        buffer.writeInt(_skills.size());
         for (Skill temp : _skills) {
-            writeInt(temp.passive ? 1 : 0);
-            writeShort((short) temp.level);
-            writeShort((short) temp.subLevel);
-            writeInt(temp.id);
-            writeInt(temp.reuseDelayGroup); // GOD ReuseDelayShareGroupID
-            writeByte((byte) (temp.disabled ? 1 : 0)); // iSkillDisabled
-            writeByte((byte) (temp.enchanted ? 1 : 0)); // CanEnchant
+            buffer.writeInt(temp.passive ? 1 : 0);
+            buffer.writeShort(temp.level);
+            buffer.writeShort(temp.subLevel);
+            buffer.writeInt(temp.id);
+            buffer.writeInt(temp.reuseDelayGroup); // GOD ReuseDelayShareGroupID
+            buffer.writeByte(temp.disabled); // iSkillDisabled
+            buffer.writeByte(temp.enchanted); // CanEnchant
         }
-        writeInt(_lastLearnedSkillId);
+        buffer.writeInt(_lastLearnedSkillId);
     }
 
 

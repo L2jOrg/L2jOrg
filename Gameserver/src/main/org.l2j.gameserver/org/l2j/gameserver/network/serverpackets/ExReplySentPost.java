@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.engine.item.Item;
@@ -52,27 +53,27 @@ public class ExReplySentPost extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_REPLY_SENT_POST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_REPLY_SENT_POST, buffer );
 
-        writeInt(0x00); // GOD
-        writeInt(_msg.getId());
-        writeInt(_msg.isLocked());
-        writeString(_msg.getReceiverName());
-        writeString(_msg.getSubject());
-        writeString(_msg.getContent());
+        buffer.writeInt(0x00); // GOD
+        buffer.writeInt(_msg.getId());
+        buffer.writeInt(_msg.isLocked());
+        buffer.writeString(_msg.getReceiverName());
+        buffer.writeString(_msg.getSubject());
+        buffer.writeString(_msg.getContent());
 
         if ((_items != null) && !_items.isEmpty()) {
-            writeInt(_items.size());
+            buffer.writeInt(_items.size());
             for (Item item : _items) {
-                writeItem(item);
-                writeInt(item.getObjectId());
+                writeItem(item, buffer);
+                buffer.writeInt(item.getObjectId());
             }
         } else {
-            writeInt(0x00);
+            buffer.writeInt(0x00);
         }
-        writeLong(_msg.getFee());
-        writeInt(_msg.hasAttachments());
-        writeInt(_msg.isReturned());
+        buffer.writeLong(_msg.getFee());
+        buffer.writeInt(_msg.hasAttachments());
+        buffer.writeInt(_msg.isReturned());
     }
 }

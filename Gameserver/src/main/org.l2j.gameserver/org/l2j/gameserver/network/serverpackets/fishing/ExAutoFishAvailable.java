@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.fishing;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -36,9 +37,9 @@ public class ExAutoFishAvailable extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_AUTOFISH_AVAILABLE);
-        writeByte((byte) (_available ? 1 : 0));
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_AUTOFISH_AVAILABLE, buffer );
+        buffer.writeByte(_available);
     }
 
 }
