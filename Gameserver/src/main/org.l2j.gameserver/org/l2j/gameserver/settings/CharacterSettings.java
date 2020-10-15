@@ -66,6 +66,7 @@ public class CharacterSettings implements Settings {
     private int maxMAtkSpeed;
     private int maxEvasion;
     private boolean teleportInBattle;
+    private boolean craftEnabled;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -121,6 +122,8 @@ public class CharacterSettings implements Settings {
         maxMAtkSpeed = settingsFile.getInteger("MaxMAtkSpeed", 1999);
         maxEvasion = settingsFile.getInteger("MaxEvasion", 250);
         teleportInBattle = settingsFile.getBoolean("TeleportInBattle", true);
+
+        craftEnabled = settingsFile.getBoolean("CraftingEnabled", true);
     }
 
     public int partyRange() {
@@ -277,5 +280,9 @@ public class CharacterSettings implements Settings {
 
     public boolean teleportInBattle() {
         return teleportInBattle;
+    }
+
+    public boolean isCraftEnabled() {
+        return craftEnabled;
     }
 }

@@ -138,7 +138,6 @@ public final class Config {
     public static int CASTLE_ZONE_FAME_TASK_FREQUENCY;
     public static int CASTLE_ZONE_FAME_AQUIRE_POINTS;
     public static boolean FAME_FOR_DEAD_PLAYERS;
-    public static boolean IS_CRAFTING_ENABLED;
     public static boolean CRAFT_MASTERWORK;
     public static int BASE_CRITICAL_CRAFT_RATE;
     public static int DWARF_RECIPE_LIMIT;
@@ -934,7 +933,6 @@ public final class Config {
         CASTLE_ZONE_FAME_TASK_FREQUENCY = Character.getInt("CastleZoneFameTaskFrequency", 300);
         CASTLE_ZONE_FAME_AQUIRE_POINTS = Character.getInt("CastleZoneFameAquirePoints", 125);
         FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);
-        IS_CRAFTING_ENABLED = Character.getBoolean("CraftingEnabled", true);
         CRAFT_MASTERWORK = Character.getBoolean("CraftMasterwork", true);
         BASE_CRITICAL_CRAFT_RATE = Character.getInt("BaseCriticalCraftRate", 3);
         DWARF_RECIPE_LIMIT = Character.getInt("DwarfRecipeLimit", 50);

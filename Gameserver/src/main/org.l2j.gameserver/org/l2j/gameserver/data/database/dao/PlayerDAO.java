@@ -181,8 +181,14 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("UPDATE characters SET vitality_points = :points:")
     void resetVitality(int points);
 
-    @Query("DELETE FROM character_recipebook WHERE charId=:playerId: AND id=:recipeId:")
+    @Query("DELETE FROM recipes WHERE player_id=:playerId: AND id=:recipeId:")
     void deleteRecipe(int playerId, int recipeId);
+
+    @Query("SELECT id FROM recipes WHERE player_id=:playerId:")
+    IntSet findAllRecipes(int playerId);
+
+    @Query("INSERT INTO recipes (player_id, id) values(:playerId:,:id:)")
+    void addRecipe(int playerId, int id);
 
     @Query("UPDATE characters SET online=:online:, lastAccess=:lastAccess: WHERE charId=:playerId:")
     void updateOnlineStatus(int playerId, boolean online, long lastAccess);

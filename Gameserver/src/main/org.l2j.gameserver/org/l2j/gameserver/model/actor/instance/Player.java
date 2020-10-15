@@ -1145,13 +1145,13 @@ public final class Player extends Playable {
     // during fall validations will be disabled for 1000 ms.
     private static final int FALLING_VALIDATION_DELAY = 1000;
 
-    private final ReentrantLock classLock = new ReentrantLock(); // TODO remove
+    private final ReentrantLock classLock = new ReentrantLock();
     private final Map<Integer, TeleportBookmark> _tpbookmarks = new ConcurrentSkipListMap<>();
     /**
      * The table containing all RecipeList of the Player
      */
-    private final Map<Integer, RecipeList> _dwarvenRecipeBook = new ConcurrentSkipListMap<>();
-    private final Map<Integer, RecipeList> _commonRecipeBook = new ConcurrentSkipListMap<>();
+    private final IntMap<RecipeList> dwarvenRecipes = new CHashIntMap<>();
+    private final IntMap<RecipeList> commonRecipes = new CHashIntMap<>();
     /**
      * Premium Items
      */
@@ -1720,42 +1720,23 @@ public final class Player extends Playable {
      * @return a table containing all Common RecipeList of the Player.
      */
     public RecipeList[] getCommonRecipeBook() {
-        return _commonRecipeBook.values().toArray(RecipeList[]::new);
+        return commonRecipes.values().toArray(RecipeList[]::new);
     }
 
     /**
      * @return a table containing all Dwarf RecipeList of the Player.
      */
     public RecipeList[] getDwarvenRecipeBook() {
-        return _dwarvenRecipeBook.values().toArray(RecipeList[]::new);
+        return dwarvenRecipes.values().toArray(RecipeList[]::new);
     }
 
-    /**
-     * Add a new L2RecipList to the table _commonrecipebook containing all RecipeList of the Player
-     *
-     * @param recipe   The RecipeList to add to the _recipebook
-     * @param saveToDb
-     */
-    public void registerCommonRecipeList(RecipeList recipe, boolean saveToDb) {
-        _commonRecipeBook.put(recipe.getId(), recipe);
-
-        if (saveToDb) {
-            insertNewRecipeData(recipe.getId(), false);
+    public void registerRecipe(RecipeList recipe) {
+        if(recipe.isDwarvenRecipe()) {
+            dwarvenRecipes.put(recipe.getId(), recipe);
+        } else {
+            commonRecipes.put(recipe.getId(), recipe);
         }
-    }
-
-    /**
-     * Add a new L2RecipList to the table _recipebook containing all RecipeList of the Player
-     *
-     * @param recipe   The RecipeList to add to the _recipebook
-     * @param saveToDb
-     */
-    public void registerDwarvenRecipeList(RecipeList recipe, boolean saveToDb) {
-        _dwarvenRecipeBook.put(recipe.getId(), recipe);
-
-        if (saveToDb) {
-            insertNewRecipeData(recipe.getId(), true);
-        }
+        getDAO(PlayerDAO.class).addRecipe(objectId, recipe.getId());
     }
 
     /**
@@ -1763,7 +1744,7 @@ public final class Player extends Playable {
      * @return {@code true}if player has the recipe on Common or Dwarven Recipe book else returns {@code false}
      */
     public boolean hasRecipeList(int recipeId) {
-        return _dwarvenRecipeBook.containsKey(recipeId) || _commonRecipeBook.containsKey(recipeId);
+        return dwarvenRecipes.containsKey(recipeId) || commonRecipes.containsKey(recipeId);
     }
 
     /**
@@ -1772,24 +1753,12 @@ public final class Player extends Playable {
      * @param recipeId The Identifier of the RecipeList to remove from the _recipebook
      */
     public void unregisterRecipeList(int recipeId) {
-        boolean removed = nonNull(_dwarvenRecipeBook.remove(recipeId)) || nonNull(_commonRecipeBook.remove(recipeId));
+        boolean removed = nonNull(dwarvenRecipes.remove(recipeId)) || nonNull(commonRecipes.remove(recipeId));
         if(removed) {
             shortcuts.deleteShortcuts(s -> s.getShortcutId() == recipeId && s.getType() == ShortcutType.RECIPE);
             getDAO(PlayerDAO.class).deleteRecipe(objectId, recipeId);
         } else {
             LOGGER.warn("Attempted to remove unknown RecipeList {}", recipeId);
-        }
-    }
-
-    private void insertNewRecipeData(int recipeId, boolean isDwarf) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("INSERT INTO character_recipebook (charId, id, type) values(?,?,?)")) {
-            statement.setInt(1, getObjectId());
-            statement.setInt(2, recipeId);
-            statement.setInt(3, isDwarf ? 1 : 0);
-            statement.execute();
-        } catch (SQLException e) {
-            LOGGER.warn("SQL exception while inserting recipe: {} from character {}", recipeId, this, e);
         }
     }
 
@@ -5468,8 +5437,7 @@ public final class Player extends Playable {
         // Retrieve from the database all teleport bookmark of this Player and add them to _tpbookmark.
         restoreTeleportBookmark();
 
-        // Retrieve from the database the recipe book of this Player.
-        restoreRecipeBook(true);
+        restoreRecipeBook();
 
         // Restore Recipe Shop list.
         if (Config.STORE_RECIPE_SHOPLIST) {
@@ -5501,37 +5469,16 @@ public final class Player extends Playable {
         });
     }
 
-    /**
-     * Restore recipe book data for this Player.
-     *
-     * @param loadCommon
-     */
-    private void restoreRecipeBook(boolean loadCommon) {
-        final String sql = loadCommon ? "SELECT id, type FROM character_recipebook WHERE charId=?" : "SELECT id FROM character_recipebook WHERE charId=? AND type = 1";
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(sql)) {
-            statement.setInt(1, getObjectId());
+    private void restoreRecipeBook() {
+        getDAO(PlayerDAO.class).findAllRecipes(objectId).forEach(this::restoreRecipe);
+    }
 
-            try (ResultSet rset = statement.executeQuery()) {
-                _dwarvenRecipeBook.clear();
-
-                RecipeList recipe;
-                final RecipeData rd = RecipeData.getInstance();
-                while (rset.next()) {
-                    recipe = rd.getRecipeList(rset.getInt("id"));
-                    if (loadCommon) {
-                        if (rset.getInt(2) == 1) {
-                            registerDwarvenRecipeList(recipe, false);
-                        } else {
-                            registerCommonRecipeList(recipe, false);
-                        }
-                    } else {
-                        registerDwarvenRecipeList(recipe, false);
-                    }
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error("Could not restore recipe book data: {}", e.getMessage(), e);
+    private void restoreRecipe(int recipeId) {
+        var recipe = RecipeData.getInstance().getRecipeList(recipeId);
+        if(recipe.isDwarvenRecipe()) {
+            dwarvenRecipes.put(recipeId, recipe);
+        } else {
+            commonRecipes.put(recipeId, recipe);
         }
     }
 
@@ -5795,8 +5742,7 @@ public final class Player extends Playable {
                         statement.setLong(6, t.getReuse());
                         statement.setDouble(7, t.getStamp());
                         statement.setInt(8, 1); // Restore type 1, skill reuse.
-                        statement.setInt(9, 0);
-                        statement.setInt(10, ++buff_index);
+                        statement.setInt(9, ++buff_index);
                         statement.addBatch();
                     }
                 }

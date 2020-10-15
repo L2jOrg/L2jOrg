@@ -41,7 +41,7 @@ public class RecipeBookItemList extends ServerPacket {
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.RECIPE_BOOK_ITEM_LIST, buffer );
 
-        buffer.writeInt(_isDwarvenCraft ? 0x00 : 0x01); // 0 = Dwarven - 1 = Common
+        buffer.writeInt(!_isDwarvenCraft); // 0 = Dwarven - 1 = Common
         buffer.writeInt(_maxMp);
 
         if (_recipes == null) {
