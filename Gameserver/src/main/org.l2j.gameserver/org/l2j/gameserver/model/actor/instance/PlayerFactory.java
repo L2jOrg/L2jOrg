@@ -40,7 +40,7 @@ import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
+import org.l2j.gameserver.model.actor.appearance.Appearance;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -144,10 +144,6 @@ public class PlayerFactory {
         }
 
         player.setTitle(playerData.getTitle());
-
-        if (playerData.getTitleColor() != PlayerAppearance.DEFAULT_TITLE_COLOR) {
-            player.getAppearance().setTitleColor(playerData.getTitleColor());
-        }
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
@@ -266,7 +262,7 @@ public class PlayerFactory {
 
 
         data.setRace(template.getRace().ordinal());
-        data.setTitleColor(PlayerAppearance.DEFAULT_TITLE_COLOR);
+        data.setTitleColor(Appearance.DEFAULT_TITLE_COLOR);
         data.setCreateDate(LocalDate.now());
 
         getDAO(PlayerDAO.class).save(data);

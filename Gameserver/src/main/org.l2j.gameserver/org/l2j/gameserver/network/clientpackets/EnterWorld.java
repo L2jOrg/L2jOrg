@@ -214,8 +214,9 @@ public class EnterWorld extends ClientPacket {
             player.setSpawnProtection(true);
         }
 
-        player.spawnMe();
+        player.sendPacket(new UserInfo(player));
         player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
+        player.spawnMe();
 
         if (Event.isParticipant(player)) {
             Event.restorePlayerEventStatus(player);
@@ -282,7 +283,6 @@ public class EnterWorld extends ClientPacket {
             client.sendPacket(new ElementalSpiritInfo(player.getActiveElementalSpiritType(), (byte) 2));
         }
 
-        player.broadcastUserInfo();
         player.sendPacket(StatusUpdate.of(player, StatusUpdateType.CUR_HP, (int) player.getCurrentHp()).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()));
         player.sendPacket(new ExUserInfoEquipSlot(player));
 

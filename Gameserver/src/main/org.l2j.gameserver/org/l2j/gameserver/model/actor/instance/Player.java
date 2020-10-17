@@ -57,7 +57,7 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.*;
-import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
+import org.l2j.gameserver.model.actor.appearance.Appearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
@@ -169,7 +169,7 @@ public final class Player extends Playable {
 
     private final GameClient client;
     private final PlayerData data;
-    private final PlayerAppearance appearance;
+    private final Appearance appearance;
     private final AccountData account;
     private final Map<ShotType, Integer> activeSoulShots = new EnumMap<>(ShotType.class);
     private final LimitedQueue<DamageInfo> lastDamages = new LimitedQueue<>(30);
@@ -205,7 +205,7 @@ public final class Player extends Playable {
         setInstanceType(InstanceType.L2PcInstance);
         initCharStatusUpdateValues();
 
-        appearance = new PlayerAppearance(this, playerData.getFace(), playerData.getHairColor(), playerData.getHairStyle(), playerData.isFemale());
+        appearance = new Appearance(this, playerData);
 
         getAI();
 
@@ -1662,7 +1662,7 @@ public final class Player extends Playable {
         setStatus(new PlayerStatus(this));
     }
 
-    public final PlayerAppearance getAppearance() {
+    public final Appearance getAppearance() {
         return appearance;
     }
 
@@ -2613,7 +2613,7 @@ public final class Player extends Playable {
             addSkill(skill, false);
             skillsForStore.add(skill);
         }
-        storeSkills(skillsForStore, -1);
+        storeSkills(skillsForStore);
         if (skillCounter > 0 && getSettings(CharacterSettings.class).isAutoLearnSkillEnabled()) {
             sendMessage("You have learned " + skillCounter + " new skills.");
         }
@@ -5751,7 +5751,7 @@ public final class Player extends Playable {
         final Skill oldSkill = addSkill(newSkill);
         // Add or update a Player skill in the character_skills table of the database
         if (store) {
-            storeSkill(newSkill, oldSkill, -1);
+            storeSkill(newSkill, oldSkill);
         }
         return oldSkill;
     }
@@ -5801,16 +5801,7 @@ public final class Player extends Playable {
         return oldSkill;
     }
 
-    /**
-     * Add or update a Player skill in the character_skills table of the database.<br>
-     * If newClassIndex > -1, the skill will be stored with that class index, not the current one.
-     *
-     * @param newSkill
-     * @param oldSkill
-     * @param newClassIndex
-     */
-    private void storeSkill(Skill newSkill, Skill oldSkill, int newClassIndex) {
-        final int classIndex = (newClassIndex > -1) ? newClassIndex : 0;
+    private void storeSkill(Skill newSkill, Skill oldSkill) {
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             if ((oldSkill != null) && (newSkill != null)) {
                 try (PreparedStatement ps = con.prepareStatement(UPDATE_CHARACTER_SKILL_LEVEL)) {
@@ -5836,16 +5827,14 @@ public final class Player extends Playable {
 
     /**
      * Adds or updates player's skills in the database.
+     *  @param newSkills     the list of skills to store
      *
-     * @param newSkills     the list of skills to store
-     * @param newClassIndex if newClassIndex > -1, the skills will be stored for that class index, not the current one
      */
-    private void storeSkills(List<Skill> newSkills, int newClassIndex) {
+    private void storeSkills(List<Skill> newSkills) {
         if (newSkills.isEmpty()) {
             return;
         }
 
-        final int classIndex = (newClassIndex > -1) ? newClassIndex : 0;
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(ADD_NEW_SKILLS)) {
             for (Skill addSkill : newSkills) {

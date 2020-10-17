@@ -214,7 +214,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType> {
             buffer.writeByte(_summon.isAutoAttackable(_attacker));
         }
         if (containsMask(NpcInfoType.RELATIONS)) {
-            buffer.writeInt(0x00); // unknown
+            buffer.writeInt(_summon.getOwner().getRelation(_attacker));
         }
         if (containsMask(NpcInfoType.TITLE)) {
             buffer.writeString(_title);

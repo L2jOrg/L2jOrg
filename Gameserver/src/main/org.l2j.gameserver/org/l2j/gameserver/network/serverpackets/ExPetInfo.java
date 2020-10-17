@@ -211,7 +211,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
             buffer.writeByte(_summon.isAutoAttackable(_attacker));
         }
         if (containsMask(NpcInfoType.RELATIONS)) {
-            buffer.writeInt(0x00); // unknown
+            buffer.writeInt(_summon.getOwner().getRelation(_attacker)); // unknown
         }
         if (containsMask(NpcInfoType.TITLE)) {
             buffer.writeString(_title);
@@ -244,7 +244,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
         if (containsMask(NpcInfoType.EQUIPPED)) {
             buffer.writeInt(_summon.getWeapon());
             buffer.writeInt(_summon.getArmor()); // Armor id?
-            buffer.writeInt(0x00);
+            buffer.writeInt(0x00); // lhand
         }
         if (containsMask(NpcInfoType.ALIVE)) {
             buffer.writeByte(!_summon.isDead());

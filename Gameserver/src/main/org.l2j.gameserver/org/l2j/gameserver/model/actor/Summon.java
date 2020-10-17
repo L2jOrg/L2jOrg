@@ -25,6 +25,7 @@ import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.AggroInfo;
@@ -41,7 +42,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.container.PetInventory;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -176,12 +176,7 @@ public abstract class Summon extends Playable {
                 return;
             }
 
-            final AbstractMaskPacket<NpcInfoType> packet;
-            if (GameUtils.isPet(this)) {
-                packet = new ExPetInfo(this, player, 1);
-            } else {
-                packet = new SummonInfo(this, player, 1);
-            }
+            final AbstractMaskPacket<NpcInfoType> packet =  new ExPetInfo(this, player, 1);
             packet.addComponentType(NpcInfoType.ABNORMALS);
             player.sendPacket(packet);
         });
@@ -703,6 +698,7 @@ public abstract class Summon extends Playable {
         } else {
             player.sendPacket(new ExPetInfo(this, player, 0));
         }
+
     }
 
     @Override

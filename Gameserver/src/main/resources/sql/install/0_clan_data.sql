@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `clan_wars`
     `winnerClan` VARCHAR(35) NOT NULL DEFAULT 0,
     `startTime`  BIGINT      NOT NULL DEFAULT 0,
     `endTime`    BIGINT      NOT NULL DEFAULT 0,
-    `state`      TINYINT     NOT NULL DEFAULT 0,
+    `state`      ENUM('DECLARATION', 'BLOOD_DECLARATION', 'MUTUAL', 'WIN', 'LOSS', 'TIE') NOT NULL,
     FOREIGN KEY (`clan1`) REFERENCES clan_data (clan_id) ON DELETE CASCADE,
     FOREIGN KEY (`clan2`) REFERENCES clan_data (clan_id) ON DELETE CASCADE
 ) ENGINE = InnoDB

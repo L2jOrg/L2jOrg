@@ -473,7 +473,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				return false;
 			}
-			player.getAppearance().setFemale(player.getAppearance().isFemale() ? false : true);
+			player.getAppearance().setFemale(!player.getAppearance().isFemale());
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
 		}
