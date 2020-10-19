@@ -253,7 +253,7 @@ public class GameServer {
 
         var settings = getSettings(ServerSettings.class);
         printSection("Thread Pools");
-        ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize());
+        ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize(), settings.maxThreadPoolSize());
 
         printSection("Identity Factory");
         if (!IdFactory.getInstance().isInitialized()) {

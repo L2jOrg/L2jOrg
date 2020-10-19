@@ -60,6 +60,7 @@ public class ServerSettings implements Settings {
     private String[] scheduleRestartHours;
     private boolean hardwareInfoEnabled;
     private int maxPlayerPerHWID;
+    private int maxThreadPoolSize;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -82,6 +83,7 @@ public class ServerSettings implements Settings {
 
         scheduledPoolSize = determinePoolSize(settingsFile, "ScheduledThreadPoolSize", processors);
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
+        maxThreadPoolSize = determinePoolSize(settingsFile, "MaxThreadPoolSize", threadPoolSize * 10);
         acceptedProtocols =  settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
 
         scheduleRestart = settingsFile.getBoolean("ServerRestartScheduleEnabled", false);
@@ -175,6 +177,10 @@ public class ServerSettings implements Settings {
 
     public int threadPoolSize() {
         return threadPoolSize;
+    }
+
+    public int maxThreadPoolSize() {
+        return maxThreadPoolSize;
     }
 
     public int[] acceptedProtocols() {

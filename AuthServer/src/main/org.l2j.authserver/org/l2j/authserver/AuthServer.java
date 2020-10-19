@@ -81,7 +81,7 @@ public class AuthServer {
         configureDatabase();
         configureNetworkPackets();  
         var processors = Runtime.getRuntime().availableProcessors();
-        ThreadPool.init(processors, Math.max(1, processors/2));
+        ThreadPool.init(processors, Math.max(1, processors/2), 50);
         try {
             _instance = new AuthServer();
             getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown()));
