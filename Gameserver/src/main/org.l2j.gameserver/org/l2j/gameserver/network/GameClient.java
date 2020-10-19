@@ -163,6 +163,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
         account = getDAO(AccountDAO.class).findById(accountName);
         if(isNull(account)) {
             account = AccountData.of(accountName);
+            storeAccountData();
         }
     }
 

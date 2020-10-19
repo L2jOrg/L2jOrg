@@ -52,6 +52,7 @@ public class AccountData {
     public static AccountData of(String accountName) {
         var account = new AccountData();
         account.accountName =  accountName;
+        account.nextAttendance = LocalDateTime.now();
         return account;
     }
 
