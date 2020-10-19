@@ -117,8 +117,6 @@ public class RequestItemEnsoul extends ClientPacket {
                 success = true;
             }
 
-            iu.addModifiedItem(soulCrystal);
-            iu.addModifiedItem(gemStones);
             iu.addModifiedItem(item);
         }
         player.sendInventoryUpdate(iu);
@@ -126,8 +124,8 @@ public class RequestItemEnsoul extends ClientPacket {
             item.applySpecialAbilities();
         }
         player.sendPacket(new ExEnsoulResult(success, item));
-
         item.updateDatabase(true);
+
     }
 
     private ItemHolder calculateFee(Item item, EnsoulItemOption itemOption) {

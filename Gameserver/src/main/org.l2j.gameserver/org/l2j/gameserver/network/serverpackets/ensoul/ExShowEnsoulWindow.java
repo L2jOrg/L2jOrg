@@ -26,7 +26,6 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 /**
  * @author UnAfraid
  */
-
 public class ExShowEnsoulWindow extends ServerPacket {
     public static final ExShowEnsoulWindow STATIC_PACKET = new ExShowEnsoulWindow();
 
