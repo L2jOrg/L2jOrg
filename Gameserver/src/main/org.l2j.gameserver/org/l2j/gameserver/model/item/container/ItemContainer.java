@@ -516,11 +516,12 @@ public abstract class ItemContainer {
     protected void updateItemIdLookUp(Item removed, Collection<Item> items) {
         if(itemIdLookup.get(removed.getId()) == removed.getObjectId()) {
             itemIdLookup.remove(removed.getId());
-
-            for (Item i : items) {
-                if (i.getId() == removed.getId()) {
-                    itemIdLookup.put(removed.getId(), i.getObjectId());
-                    break;
+            if(!removed.isStackable()) {
+                for (Item i : items) {
+                    if (i.getId() == removed.getId()) {
+                        itemIdLookup.put(removed.getId(), i.getObjectId());
+                        break;
+                    }
                 }
             }
         }

@@ -105,7 +105,7 @@ public class RequestCrystallizeEstimate extends ClientPacket {
         // Check if the char can crystallize items and return if false;
         boolean canCrystallize = true;
 
-        switch (item.getTemplate().getCrystalType()) {
+        switch (item.getCrystalType()) {
             case D: {
                 if (skillLevel < 1) {
                     canCrystallize = false;

@@ -65,7 +65,7 @@ import static org.l2j.gameserver.util.GameUtils.*;
  * <li>Weapon</li>
  * </ul>
  */
-public abstract sealed class ItemTemplate extends ListenersContainer implements IIdentifiable permits Weapon, Armor, EtcItem{
+public abstract sealed class ItemTemplate extends ListenersContainer implements IIdentifiable permits Weapon, Armor, EtcItem {
     public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
     public static final int TYPE1_SHIELD_ARMOR = 1;
     public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
@@ -77,13 +77,15 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     public static final int TYPE2_OTHER = 5;
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(ItemTemplate.class);
+
+    private final int id;
+    private final String name;
+
     protected int type1; // needed for item list (inventory)
     protected int type2; // different lists for armor, weapon, etc
     protected List<FuncTemplate> _funcTemplates;
     protected List<Condition> _preConditions;
-    private int id;
     private int displayId;
-    private String name;
     private int weight;
     private boolean stackable;
     protected CrystalType crystalType;

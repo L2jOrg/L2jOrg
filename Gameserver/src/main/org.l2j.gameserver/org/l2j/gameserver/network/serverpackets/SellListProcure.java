@@ -56,7 +56,7 @@ public class SellListProcure extends ServerPacket {
             buffer.writeInt(item.getObjectId());
             buffer.writeInt(item.getDisplayId());
             buffer.writeLong(_sellList.get(item)); // count
-            buffer.writeShort(item.getTemplate().getType2());
+            buffer.writeShort(item.getType2());
             buffer.writeShort(0); // unknown
             buffer.writeLong(0); // price, u shouldnt get any adena for crops, only raw materials
         }

@@ -4408,7 +4408,7 @@ public final class Player extends Playable {
                     // Don't drop
                     if (itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
                             !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
-                            (itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
+                            (itemDrop.getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
                             ((pet != null) && (pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
                             (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
                             (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
@@ -4418,7 +4418,7 @@ public final class Player extends Playable {
 
                     if (itemDrop.isEquipped()) {
                         // Set proper chance according to Item type of equipped Item
-                        itemDropPercent = itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
+                        itemDropPercent = itemDrop.getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
                         inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
                     } else {
                         itemDropPercent = rateDropItem; // Item in inventory

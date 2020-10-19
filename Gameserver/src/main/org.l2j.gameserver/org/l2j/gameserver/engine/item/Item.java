@@ -456,6 +456,8 @@ public final class Item extends WorldObject {
 
     private void insertIntoDb() {
         getDAO(ItemDAO.class).save(data);
+        existsInDb = true;
+        storedInDb = true;
         if (nonNull(augmentation)) {
             updateItemVariation();
         }

@@ -53,7 +53,7 @@ public class ExShowBaseAttributeCancelWindow extends ServerPacket {
      */
     private long getPrice(Item item) {
         long _price = 0;
-        if (item.getTemplate().getCrystalType() == CrystalType.S) {
+        if (item.getCrystalType() == CrystalType.S) {
             if (item.isWeapon()) {
                 _price = 50000;
             } else {

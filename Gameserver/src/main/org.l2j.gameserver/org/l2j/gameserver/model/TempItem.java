@@ -41,7 +41,7 @@ public final class TempItem {
         super();
         _itemId = item.getId();
         _quantity = quantity;
-        _itemName = item.getTemplate().getName();
+        _itemName = item.getName();
         _referencePrice = item.getReferencePrice();
     }
 

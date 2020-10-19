@@ -67,7 +67,7 @@ public final class ConditionUsingItemType extends Condition {
             if (chest == null) {
                 return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }
-            final int chestMask = chest.getTemplate().getItemMask();
+            final int chestMask = chest.getItemMask();
 
             // If chest armor is different from the condition one return false
             if ((_mask & chestMask) == 0) {
