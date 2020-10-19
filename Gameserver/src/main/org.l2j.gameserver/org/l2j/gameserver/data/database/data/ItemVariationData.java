@@ -23,7 +23,7 @@ import org.l2j.commons.database.annotation.Table;
 /**
  * @author JoeAlisson
  */
-@Table("item_variation")
+@Table("item_variations")
 public class ItemVariationData {
 
     private int itemId;
