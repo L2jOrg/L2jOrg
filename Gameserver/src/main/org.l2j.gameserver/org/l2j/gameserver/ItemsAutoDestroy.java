@@ -58,12 +58,10 @@ public final class ItemsAutoDestroy {
                 var generalSettings = getSettings(GeneralSettings.class);
                 long autoDestroyTime;
 
-                if (item.getTemplate().getAutoDestroyTime() > 0) {
-                    autoDestroyTime = item.getTemplate().getAutoDestroyTime();
-                } else if (item.getTemplate().hasExImmediateEffect()) {
+                if (item.getTemplate().hasExImmediateEffect()) {
                     autoDestroyTime = generalSettings.autoDestroyHerbTime();
                 } else {
-                    if( (autoDestroyTime = generalSettings.autoDestroyItemTime()) == 0) {
+                    if( (autoDestroyTime = generalSettings.autoDestroyItemTime()) <= 0) {
                         autoDestroyTime = 3600000;
                     }
                 }

@@ -47,7 +47,6 @@ import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerAugment;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDrop;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemPickup;
 import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
@@ -130,7 +129,7 @@ public final class Item extends WorldObject {
         setName(template.getName());
         data = ItemData.of(objectId, template.getId());
         data.setLoc(ItemLocation.VOID);
-        data.setTime(template.getTime() == -1 ? -1 : System.currentTimeMillis() + (this.template.getTime() * 60 * 1000));
+        data.setTime(template.getDuration() == -1 ? -1 : System.currentTimeMillis() + (this.template.getDuration() * 60 * 1000));
         scheduleLifeTimeTask();
     }
 

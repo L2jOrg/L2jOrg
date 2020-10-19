@@ -88,8 +88,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     private boolean stackable;
     protected CrystalType crystalType;
     protected int equipReuseDelay;
-    private long time;
-    private int _autoDestroyTime = -1;
+    private long duration;
     private long price;
     protected int crystalCount;
     private boolean sellable;
@@ -144,21 +143,8 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
         return equipReuseDelay;
     }
 
-
-    /**
-     * Returns the time of the item
-     *
-     * @return long
-     */
-    public final long getTime() {
-        return time;
-    }
-
-    /**
-     * @return the auto destroy time of the item in seconds: 0 or less - default
-     */
-    public final int getAutoDestroyTime() {
-        return _autoDestroyTime;
+    public final long getDuration() {
+        return duration;
     }
 
     /**
@@ -663,7 +649,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     }
 
     public void setDuration(long duration) {
-        this.time = duration;
+        this.duration = duration;
     }
 
     public void setForNpc(Boolean forNpc) {
