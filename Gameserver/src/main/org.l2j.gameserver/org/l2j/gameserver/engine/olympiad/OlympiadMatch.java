@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.olympiad.*;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.time.Duration;
 import java.util.concurrent.ScheduledFuture;
@@ -65,11 +66,17 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     private void finishBattle() {
         state = FINISHED;
+        forEachParticipant(this::onMatchFinish);
         calculateResults();
-                                                                                                                                                                sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
-        //broadcastPacket(new ExOlympiadMatchResult());
+        sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
         countDownIndex = 0;
         countDownTeleportBack();
+    }
+
+    private void onMatchFinish(Player player) {
+        player.setIsOlympiadStart(false);
+        player.setOlympiadGameId(0);
+        player.setInsideZone(ZoneType.PVP, false);
     }
 
     private void countDownTeleportBack() {
@@ -95,6 +102,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     private void countDown() {
         if(countDownIndex >= COUNT_DOWN_INTERVAL.length - 1) {
+            forEachParticipant(this::onMatchStart);
             sendPacket(PlaySound.music("ns17_f"));
             forRedPlayers(this::sendOlympiadUserInfo);
             forBluePlayers(this::sendOlympiadUserInfo);
@@ -108,6 +116,12 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             sendPacket(getSystemMessage(S1_SECOND_S_TO_MATCH_START).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
             scheduled = ThreadPool.schedule(this, COUNT_DOWN_INTERVAL[countDownIndex] - COUNT_DOWN_INTERVAL[++countDownIndex], TimeUnit.SECONDS);
         }
+    }
+
+    private void onMatchStart(Player player) {
+        player.setOlympiadGameId(getId());
+        player.setIsOlympiadStart(true);
+        player.setInsideZone(ZoneType.PVP, true);
     }
 
     private void sendOlympiadUserInfo(Player player) {
@@ -130,6 +144,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     private void setOlympiadMode(Player player, OlympiadMode mode) {
         player.setOlympiadMode(mode);
+        player.setOlympiadSide(mode.ordinal());
         player.sendPacket(new ExOlympiadMode(mode));
     }
 

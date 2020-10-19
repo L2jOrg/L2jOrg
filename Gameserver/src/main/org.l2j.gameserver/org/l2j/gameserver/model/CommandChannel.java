@@ -199,11 +199,9 @@ public class CommandChannel extends AbstractPlayerGroup {
      */
     @Override
     public boolean containsPlayer(Player player) {
-        if ((_parties != null) && !_parties.isEmpty()) {
-            for (Party party : _parties) {
-                if (party.containsPlayer(player)) {
-                    return true;
-                }
+        for (Party party : _parties) {
+            if (party.isMember(player)) {
+                return true;
             }
         }
         return false;

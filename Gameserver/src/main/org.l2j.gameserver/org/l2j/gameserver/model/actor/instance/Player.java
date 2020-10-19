@@ -4039,7 +4039,7 @@ public final class Player extends Playable {
     @Override
     public void setTarget(WorldObject newTarget) {
         if (newTarget != null) {
-            final boolean isInParty = (GameUtils.isPlayer(newTarget) && isInParty() && _party.containsPlayer(newTarget.getActingPlayer()));
+            final boolean isInParty = (GameUtils.isPlayer(newTarget) && isInParty() && _party.isMember(newTarget.getActingPlayer()));
 
             // Prevents /target exploiting
             if (!isInParty && (Math.abs(newTarget.getZ() - getZ()) > 1000)) {
@@ -6299,73 +6299,63 @@ public final class Player extends Playable {
             return false;
         }
 
-        // Check if the attacker isn't the Player Pet
-        if ((attacker == this) || (attacker == pet) || attacker.hasServitor(attacker.getObjectId())) {
+        if (attacker == this || attacker == pet || attacker.hasServitor(attacker.getObjectId())) {
             return false;
         }
 
-        // Friendly mobs doesnt attack players
         if (attacker instanceof FriendlyMob) {
             return false;
         }
 
-        // Check if the attacker is a Monster
         if (GameUtils.isMonster(attacker)) {
             return true;
         }
 
-        // is AutoAttackable if both players are in the same duel and the duel is still going on
-        if (GameUtils.isPlayable(attacker) && (_duelState == Duel.DUELSTATE_DUELLING) && (getDuelId() == attacker.getActingPlayer().getDuelId())) {
-            return true;
-        }
+        if(GameUtils.isPlayable(attacker)) {
+            final var attackerPlayer = attacker.getActingPlayer();
+            if(_duelState == Duel.DUELSTATE_DUELLING && getDuelId() == attackerPlayer.getDuelId()) {
+                return true;
+            }
 
-        // Check if the attacker is not in the same party. NOTE: Party checks goes before oly checks in order to prevent patry member autoattack at oly.
-        if (isInParty() && _party.getMembers().contains(attacker)) {
-            return false;
-        }
+            if(isInParty() && _party.isMember(attackerPlayer)) {
+                return true;
+            }
 
-        // Check if the attacker is in olympia and olympia start
-        if (GameUtils.isPlayer(attacker) && attacker.getActingPlayer().isInOlympiadMode()) {
-            return isInOlympiadMode() && _OlympiadStart && (((Player) attacker).getOlympiadGameId() == getOlympiadGameId());
-        }
+            if(attackerPlayer.isInOlympiadMode()) {
+                return isInOlympiadMode() && _OlympiadStart && attackerPlayer.getOlympiadGameId() == getOlympiadGameId();
+            }
 
-        if (_isOnCustomEvent && (getTeam() == attacker.getTeam())) {
-            return false;
-        }
+            if (_isOnCustomEvent && (getTeam() == attacker.getTeam())) {
+                return false;
+            }
 
-        // CoC needs this check?
-        if (isOnEvent()) {
-            return true;
-        }
+            if (isOnEvent()) {
+                return true;
+            }
 
-        // Check if the attacker is a Playable
-        if (GameUtils.isPlayable(attacker)) {
             if (isInsideZone(ZoneType.PEACE)) {
                 return false;
             }
 
-            // Get Player
-            final Player attackerPlayer = attacker.getActingPlayer();
-            final Clan clan = getClan();
-            final Clan attackerClan = attackerPlayer.getClan();
-            if (clan != null) {
+            if(nonNull(_clan)) {
                 final Siege siege = SiegeManager.getInstance().getSiege(this);
-                if (siege != null) {
+                final Clan attackerClan = attackerPlayer.getClan();
+                if (nonNull(siege)) {
                     // Check if a siege is in progress and if attacker and the Player aren't in the Defender clan
-                    if (siege.checkIsDefender(attackerClan) && siege.checkIsDefender(clan)) {
+                    if (siege.checkIsDefender(attackerClan) && siege.checkIsDefender(_clan)) {
                         return false;
                     }
 
                     // Check if a siege is in progress and if attacker and the Player aren't in the Attacker clan
-                    if (siege.checkIsAttacker(attackerClan) && siege.checkIsAttacker(clan)) {
+                    if (siege.checkIsAttacker(attackerClan) && siege.checkIsAttacker(_clan)) {
                         return false;
                     }
                 }
 
                 // Check if clan is at war
-                if ((attackerClan != null) && (!wantsPeace()) && (!attackerPlayer.wantsPeace()) && !isAcademyMember()) {
+                if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace()) && !isAcademyMember()) {
                     final ClanWar war = attackerClan.getWarWith(getClanId());
-                    if ((war != null) && (war.getState() == ClanWarState.MUTUAL)) {
+                    if (nonNull(war) && war.getState() == ClanWarState.MUTUAL) {
                         return true;
                     }
                 }
@@ -6378,7 +6368,7 @@ public final class Player extends Playable {
             }
 
             // Check if the attacker is not in the same clan
-            if ((clan != null) && clan.isMember(attacker.getObjectId())) {
+            if (nonNull(_clan) && _clan.isMember(attackerPlayer.getObjectId())) {
                 return false;
             }
 
@@ -6395,18 +6385,13 @@ public final class Player extends Playable {
             if(getPvpFlag() > 0) {
                 return true;
             }
-
-        }
-
-        if (attacker instanceof Defender) {
+        } else if (attacker instanceof Defender) {
             if (_clan != null) {
                 final Siege siege = SiegeManager.getInstance().getSiege(this);
                 return ((siege != null) && siege.checkIsAttacker(_clan));
             }
-        }
-
-        if (attacker instanceof Guard) {
-            return (getReputation() < 0); // Guards attack only PK players.
+        } else if (attacker instanceof Guard) {
+            return getReputation() < 0; // Guards attack only PK players.
         }
 
         // Check if the Player has Karma

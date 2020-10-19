@@ -28,8 +28,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
-public class PlayerAction implements IActionHandler
-{
+public class PlayerAction implements IActionHandler {
 	/**
 	 * Manage actions when a player click on this Player.<BR>
 	 * <BR>
@@ -50,59 +49,36 @@ public class PlayerAction implements IActionHandler
 	 * <BR>
 	 * <li>Client packet : Action, AttackRequest</li><BR>
 	 * <BR>
-	 * @param activeChar The player that start an action on target Player
+	 * @param player The player that start an action on target Player
 	 */
 	@Override
-	public boolean action(Player activeChar, WorldObject target, boolean interact)
-	{
-		// Check if the Player is confused
-		if (activeChar.isControlBlocked())
-		{
+	public boolean action(Player player, WorldObject target, boolean interact) {
+		if (player.isControlBlocked()) {
 			return false;
 		}
 		
-		// Aggression target lock effect
-		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))
-		{
-			activeChar.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
+		if (player.isLockedTarget() && (player.getLockedTarget() != target)) {
+			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
 			return false;
 		}
-		
-		// Check if the activeChar already target this Player
-		if (activeChar.getTarget() != target)
-		{
-			// Set the target of the activeChar
-			activeChar.setTarget(target);
-		}
-		else if (interact)
-		{
-			// Check if this Player has a Private Store
-			if (((Player) target).getPrivateStoreType() != PrivateStoreType.NONE)
-			{
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-			}
-			else
-			{
-				// Check if this Player is autoAttackable
-				if (target.isAutoAttackable(activeChar))
-				{
 
-					if (GeoEngine.getInstance().canSeeTarget(activeChar, target)) {
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-						activeChar.onActionRequest();
-					}
-				}
-				else
-				{
-					// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
-					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
-					}
-				}
+		if(!GeoEngine.getInstance().canSeeTarget(player, target)) {
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return false;
+		}
+		
+		if (player.getTarget() != target) {
+			player.setTarget(target);
+		} else if (interact) {
+			if (((Player) target).getPrivateStoreType() != PrivateStoreType.NONE) {
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
+			} else if (target.isAutoAttackable(player)) {
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+			} else {
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
 			}
 		}
+		player.onActionRequest();
 		return true;
 	}
 	

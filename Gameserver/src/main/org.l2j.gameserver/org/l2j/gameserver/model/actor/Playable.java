@@ -77,7 +77,7 @@ public abstract class Playable extends Creature {
                 || (target.getPvpFlag() > 0) //
                 || target.isOnDarkSide()) {
             return true;
-        } else if (player.isInParty() && player.getParty().containsPlayer(target)) {
+        } else if (player.isInParty() && player.getParty().isMember(target)) {
             return false;
         }
 

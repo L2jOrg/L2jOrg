@@ -159,7 +159,7 @@ public class PlayerStatus extends PlayableStatus {
             }
 
             final Player caster = me.getTransferingDamageTo();
-            if (nonNull(caster) && !caster.isDead() && (me != caster) &&  nonNull(me.getParty()) && me.getParty().contains(caster) && isInsideRadius3D(me, caster, 1000)) {
+            if (nonNull(caster) && !caster.isDead() && (me != caster) &&  nonNull(me.getParty()) && me.getParty().isMember(caster) && isInsideRadius3D(me, caster, 1000)) {
 
                 double transferDmg = value * me.getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0) / 100;
                 transferDmg = Math.min(caster.getCurrentHp() - 1, transferDmg);

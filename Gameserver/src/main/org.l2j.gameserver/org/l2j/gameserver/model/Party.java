@@ -826,7 +826,7 @@ public class Party extends AbstractPlayerGroup {
         return members;
     }
 
-    public boolean contains(Player player) {
+    public boolean isMember(Player player) {
         return members.contains(player);
     }
 
