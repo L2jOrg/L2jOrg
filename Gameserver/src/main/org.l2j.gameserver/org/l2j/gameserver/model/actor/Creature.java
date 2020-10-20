@@ -175,9 +175,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private double _hpUpdateDecCheck = .0;
     private double _hpUpdateInterval = .0;
     private int _reputation = 0;
-    /**
-     * Map containing the skill reuse time stamps.
-     */
+
     private final Map<Long, TimeStamp> _reuseTimeStampsSkills = new ConcurrentHashMap<>();
     /**
      * Map containing the item reuse time stamps.

@@ -217,8 +217,8 @@ public final class Castle extends AbstractResidence {
                 return;
             }
             data.updateTreasury(-amount);
-        } else if (data.getTreasury() + amount > Inventory.MAX_ADENA) {
-            data.setTreasury(Inventory.MAX_ADENA);
+        } else if (data.getTreasury() + amount > getSettings(CharacterSettings.class).maxAdena()) {
+            data.setTreasury(getSettings(CharacterSettings.class).maxAdena());
         } else {
             data.updateTreasury(amount);
         }

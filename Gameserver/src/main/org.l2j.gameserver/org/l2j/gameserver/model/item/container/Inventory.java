@@ -18,11 +18,11 @@
  */
 package org.l2j.gameserver.model.item.container;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.item.InventoryListener;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -33,7 +33,6 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -63,7 +62,6 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public abstract class Inventory extends ItemContainer {
 
     public static final int BEAUTY_TICKET_ID = 36308;
-    public static final long MAX_ADENA = Config.MAX_ADENA;
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
 

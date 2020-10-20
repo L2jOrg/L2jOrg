@@ -103,10 +103,6 @@ public class PlayerFactory {
         player.getStats().setExp(playerData.getExp());
         player.getStats().setLevel(playerData.getLevel());
         player.getStats().setSp(playerData.getSp());
-        player.setFame(playerData.getFame());
-        player.setPvpKills(playerData.getPvP());
-        player.setPkKills(playerData.getPk());
-        player.setOnlineTime(playerData.getOnlineTime());
         player.setNoble(playerData.isNobless());
         player.getStats().setVitalityPoints(playerData.getVitalityPoints());
 

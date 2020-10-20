@@ -53,7 +53,6 @@ import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.*;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.WarehouseType;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.CrystalType;
@@ -64,6 +63,7 @@ import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.world.World;
@@ -298,7 +298,7 @@ public final class Item extends WorldObject {
             return;
         }
         final long old = data.getCount();
-        final long max = data.getItemId() == CommonItem.ADENA ? Inventory.MAX_ADENA : Integer.MAX_VALUE;
+        final long max = data.getItemId() == CommonItem.ADENA ? getSettings(CharacterSettings.class).maxAdena() : Long.MAX_VALUE;
 
         if (count > 0 && data.getCount() > (max - count)) {
             setCount(max);

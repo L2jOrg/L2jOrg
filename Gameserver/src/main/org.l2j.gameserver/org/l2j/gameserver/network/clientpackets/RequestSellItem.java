@@ -20,23 +20,25 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.holders.UniqueItemHolder;
-import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -136,8 +138,8 @@ public final class RequestSellItem extends ClientPacket {
 
             long price = item.getReferencePrice() / 2;
             totalPrice += price * i.getCount();
-            if (((Inventory.MAX_ADENA / i.getCount()) < price) || (totalPrice > Inventory.MAX_ADENA)) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.");
+            if (MathUtil.checkMulOverFlow(price, i.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena() + " adena worth of goods.");
                 return;
             }
 

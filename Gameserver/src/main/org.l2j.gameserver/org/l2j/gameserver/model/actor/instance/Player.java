@@ -175,6 +175,8 @@ public final class Player extends Playable {
     private final LimitedQueue<DamageInfo> lastDamages = new LimitedQueue<>(30);
     private final IntMap<String> accountPlayers = new HashIntMap<>();
     private final ContactList contacts = new ContactList(this);
+    private final IntMap<RecipeList> dwarvenRecipes = new CHashIntMap<>();
+    private final IntMap<RecipeList> commonRecipes = new CHashIntMap<>();
 
     private ElementalSpirit[] spirits;
     private ElementalType activeElementalSpiritType;
@@ -186,8 +188,6 @@ public final class Player extends Playable {
     private IntSet teleportFavorites;
     private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
-    private final IntMap<RecipeList> dwarvenRecipes = new CHashIntMap<>();
-    private final IntMap<RecipeList> commonRecipes = new CHashIntMap<>();
 
     private byte vipTier;
     private int rank;
@@ -1213,8 +1213,6 @@ public final class Player extends Playable {
     private String _lang = null;
     private String _htmlPrefix = null;
     private volatile boolean _isOnline = false;
-    private long _onlineTime;
-    private long _onlineBeginTime;
     private long _uptime;
     /**
      * data for mounted pets
@@ -1227,21 +1225,10 @@ public final class Player extends Playable {
     private boolean _petItems = false;
 
     /**
-     * The number of player killed during a PvP (the player killed was PvP Flagged)
-     */
-    private int _pvpKills;
-    /**
-     * The PK counter of the Player (= Number of non PvP Flagged player killed)
-     */
-    private int _pkKills;
-    /**
      * The PvP Flag state of the Player (0=White, 1=Purple)
      */
     private byte _pvpFlag;
-    /**
-     * The Fame of this Player
-     */
-    private int _fame;
+
     private ScheduledFuture<?> _fameTask;
 
     private volatile ScheduledFuture<?> _teleportWatchdog;
@@ -1321,7 +1308,6 @@ public final class Player extends Playable {
     private TradeList _buyList;
     // Multisell
     private PreparedMultisellListHolder _currentMultiSell = null;
-    private boolean _noble = false;
     private boolean _hero = false;
 
 
@@ -1351,10 +1337,7 @@ public final class Player extends Playable {
     private volatile Set<TamedBeast> tamedBeast = null;
 
     private MatchingRoom _matchingRoom;
-    /**
-     * The Clan Identifier of the Player
-     */
-    private int clanId;
+
     /**
      * The Clan object of the Player
      */
@@ -2136,17 +2119,12 @@ public final class Player extends Playable {
      * @return the PK counter of the Player.
      */
     public int getPkKills() {
-        return _pkKills;
+        return data.getPk();
     }
 
-    /**
-     * Set the PK counter of the Player.
-     *
-     * @param pkKills
-     */
     public void setPkKills(int pkKills) {
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPKChanged(this, _pkKills, pkKills), this);
-        _pkKills = pkKills;
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPKChanged(this, data.getPk(), pkKills), this);
+        data.setPk(pkKills);
     }
 
     /**
@@ -2347,43 +2325,31 @@ public final class Player extends Playable {
      * @return the the PvP Kills of the Player (Number of player killed during a PvP).
      */
     public int getPvpKills() {
-        return _pvpKills;
+        return data.getPvP();
     }
 
     /**
-     * Set the the PvP Kills of the Player (Number of player killed during a PvP).
+     * Set the the PvP Kills of the Player (Number of player killed during a PvP)._pvpKills,
      *
      * @param pvpKills
      */
     public void setPvpKills(int pvpKills) {
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPChanged(this, _pvpKills, pvpKills), this);
-        _pvpKills = pvpKills;
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPChanged(this, data.getPvP(), pvpKills), this);
+        data.setPvP(pvpKills);
     }
 
-    /**
-     * @return the Fame of this Player
-     */
     public int getFame() {
-        return _fame;
+        return data.getFame();
     }
 
-    /**
-     * Set the Fame of this L2PcInstane
-     *
-     * @param fame
-     */
     public void setFame(int fame) {
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, fame), this);
-        _fame = Math.min(fame, Config.MAX_PERSONAL_FAME_POINTS);
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, data.getFame(), fame), this);
+        data.setFame(Math.min(fame, Config.MAX_PERSONAL_FAME_POINTS));
     }
 
-    /**
-     * @return the Raidboss points of this PlayerInstance
-     */
     public int getRaidbossPoints() {
         return data.getRaidBossPoints();
     }
-
 
     public void setRaidbossPoints(int points) {
         data.setRaidbossPoints(points);
@@ -2546,38 +2512,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * Re-give all skills which aren't saved to database, like Noble, Hero, Clan Skills.<br>
-     */
-    public void regiveTemporarySkills() {
-        // Do not call this on enterworld or char load
-
-        // Add noble skills if noble
-        if (isNoble()) {
-            setNoble(true);
-        }
-
-        // Add Hero skills if hero
-        if (_hero) {
-            setHero(true);
-        }
-
-        // Add clan skills
-        if (_clan != null) {
-            _clan.addSkillEffects(this);
-
-            if ((_clan.getLevel() >= SiegeManager.getInstance().getSiegeClanMinLevel()) && isClanLeader()) {
-                SiegeManager.getInstance().addSiegeSkills(this);
-            }
-            if (_clan.getCastleId() > 0) {
-                CastleManager.getInstance().getCastleByOwner(getClan()).giveResidentialSkills(this);
-            }
-        }
-
-        // Reload passive skills from armors / jewels / weapons
-        inventory.reloadEquippedItems();
-    }
-
-    /**
      * Give all available skills to the player.
      *
      * @param includedByFs   if {@code true} forgotten scroll skills present in the skill tree will be added
@@ -2690,7 +2624,7 @@ public final class Player extends Playable {
      */
     @Override
     public int getClanId() {
-        return clanId;
+        return data.getClanId();
     }
 
     /**
@@ -2728,11 +2662,6 @@ public final class Player extends Playable {
 
     public void setClanCreateExpiryTime(long time) {
         data.setClanCreateExpiryTime(time);
-    }
-
-    public void setOnlineTime(long time) {
-        _onlineTime = time;
-        _onlineBeginTime = System.currentTimeMillis();
     }
 
     /**
@@ -4383,7 +4312,7 @@ public final class Player extends Playable {
             double dropPercent = 0;
 
             // Classic calculation.
-            if (GameUtils.isPlayable(killer) && (getReputation() < 0) && (_pkKills >= Config.KARMA_PK_LIMIT)) {
+            if (GameUtils.isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= Config.KARMA_PK_LIMIT)) {
                 isKarmaDrop = true;
                 dropPercent = Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
                 dropEquip = Config.KARMA_RATE_DROP_EQUIP;
@@ -4485,10 +4414,10 @@ public final class Player extends Playable {
                 }
             }
 
-            setPvpKills(_pvpKills + 1);
+            setPvpKills(data.getPvP() + 1);
 
             updatePvpTitleAndColor(true);
-        } else if ((getReputation() > 0) && (_pkKills == 0)) {
+        } else if ((getReputation() > 0) && (data.getPk() == 0)) {
             setReputation(0);
             setPkKills(1);
         } else {
@@ -4504,21 +4433,21 @@ public final class Player extends Playable {
     }
 
     public void updatePvpTitleAndColor(boolean broadcastInfo) {
-        if (Config.PVP_COLOR_SYSTEM_ENABLED)
-        {
-            if ((_pvpKills >= (Config.PVP_AMOUNT1)) && (_pvpKills < (Config.PVP_AMOUNT2))) {
+        if (Config.PVP_COLOR_SYSTEM_ENABLED) {
+            final var pvpKills = data.getPvP();
+            if (pvpKills >= Config.PVP_AMOUNT1 && data.getPvP() < Config.PVP_AMOUNT2) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
-            } else if ((_pvpKills >= (Config.PVP_AMOUNT2)) && (_pvpKills < (Config.PVP_AMOUNT3))) {
+            } else if (pvpKills >= Config.PVP_AMOUNT2 && pvpKills < Config.PVP_AMOUNT3) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
-            } else if ((_pvpKills >= (Config.PVP_AMOUNT3)) && (_pvpKills < (Config.PVP_AMOUNT4))) {
+            } else if (pvpKills >= Config.PVP_AMOUNT3 && pvpKills < Config.PVP_AMOUNT4) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
-            } else if ((_pvpKills >= (Config.PVP_AMOUNT4)) && (_pvpKills < (Config.PVP_AMOUNT5))) {
+            } else if (pvpKills >= Config.PVP_AMOUNT4 && pvpKills < Config.PVP_AMOUNT5) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
-            } else if (_pvpKills >= (Config.PVP_AMOUNT5)) {
+            } else if (pvpKills >= Config.PVP_AMOUNT5) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
             }
@@ -4983,7 +4912,7 @@ public final class Player extends Playable {
 
         if (clan == null) {
             setTitle("");
-            clanId = 0;
+            data.setClanId(0);
             _clanPrivileges = new EnumIntBitmask<>(ClanPrivilege.class, false);
             setPledgeType(0);
             setPowerGrade(0);
@@ -5000,7 +4929,7 @@ public final class Player extends Playable {
             return;
         }
 
-        clanId = clan.getId();
+        data.setClanId(clan.getId());
     }
 
     /**
@@ -5557,26 +5486,25 @@ public final class Player extends Playable {
             statement.setLong(17, data.getExpBeforeDeath());
             statement.setLong(18, sp);
             statement.setInt(19, getReputation());
-            statement.setInt(20, _fame);
+            statement.setInt(20, data.getFame());
             statement.setInt(21, getRaidbossPoints());
-            statement.setInt(22, _pvpKills);
-            statement.setInt(23, _pkKills);
-            statement.setInt(24, clanId);
+            statement.setInt(22, data.getPvP());
+            statement.setInt(23, data.getPk());
+            statement.setInt(24, data.getClanId());
             statement.setInt(25, getRace().ordinal());
             statement.setInt(26, getClassId().getId());
             statement.setString(27, getTitle());
             statement.setInt(28, appearance.getTitleColor());
             statement.setInt(29, isOnline() ? 1 : 0);
             statement.setInt(30, _clanPrivileges.getBitmask());
-            statement.setBoolean(31, wantsPeace());
+            statement.setBoolean(31, data.wantsPeace());
             statement.setInt(32, data.getBaseClass());
 
-            long totalOnlineTime = _onlineTime;
-            if (_onlineBeginTime > 0) {
-                totalOnlineTime += (System.currentTimeMillis() - _onlineBeginTime) / 1000;
+            if (_uptime > 0) {
+                data.addOnlineTime((System.currentTimeMillis() - _uptime) / 1000);
             }
 
-            statement.setLong(33, totalOnlineTime);
+            statement.setLong(33, data.getOnlineTime());
             statement.setInt(34, isNoble() ? 1 : 0);
             statement.setInt(35, getPowerGrade());
             statement.setInt(36, getPledgeType());
@@ -7176,7 +7104,7 @@ public final class Player extends Playable {
     }
 
     public boolean isNoble() {
-        return _noble;
+        return data.isNobless();
     }
 
     public void setNoble(boolean val) {
@@ -7185,7 +7113,7 @@ public final class Player extends Playable {
         } else {
             SkillTreesData.getInstance().getNobleSkillTree().forEach(skill -> removeSkill(skill, false, true));
         }
-        _noble = val;
+        data.setNobless(val);
         sendSkillList();
     }
 
@@ -8067,7 +7995,7 @@ public final class Player extends Playable {
             LOGGER.error("deleteMe()", e);
         }
 
-        if (clanId > 0) {
+        if (data.getClanId() > 0) {
             _clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
             _clan.broadcastToOnlineMembers(new ExPledgeCount(_clan));
             // ClanTable.getInstance().getClan(getClanId()).broadcastToOnlineMembers(new PledgeShowMemberListAdd(this));
@@ -9997,7 +9925,7 @@ public final class Player extends Playable {
     }
 
     public boolean isInSameClan(Player player) {
-        return clanId > 0 && clanId == player.getClanId();
+        return data.getClanId() > 0 && data.getClanId() == player.getClanId();
     }
 
     public boolean isInSameAlly(Player player) {

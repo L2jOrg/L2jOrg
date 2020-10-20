@@ -67,6 +67,7 @@ public class CharacterSettings implements Settings {
     private int maxEvasion;
     private boolean teleportInBattle;
     private boolean craftEnabled;
+    private long maxAdena;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -77,6 +78,10 @@ public class CharacterSettings implements Settings {
         autoLootRaid = settingsFile.getBoolean("AutoLootRaids", false);
         raidLootPrivilegeTime = settingsFile.getInteger("RaidLootRightsInterval", 900) * 1000;
         autoLootHerbs = settingsFile.getBoolean("AutoLootHerbs", false);
+        maxAdena = settingsFile.getLong("MaxAdena", Long.MAX_VALUE);
+        if(maxAdena < 1) {
+            maxAdena = Long.MAX_VALUE;
+        }
 
         initialEquipEvent = settingsFile.getBoolean("InitialEquipmentEvent", false);
 
@@ -148,6 +153,10 @@ public class CharacterSettings implements Settings {
 
     public boolean autoLootHerbs() {
         return autoLootHerbs;
+    }
+
+    public long maxAdena() {
+        return maxAdena;
     }
 
     public boolean initialEquipEvent() {

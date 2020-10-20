@@ -168,7 +168,6 @@ public final class Config {
     public static long STARTING_ADENA;
     public static byte STARTING_LEVEL;
     public static int STARTING_SP;
-    public static long MAX_ADENA;
 
     public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
 
@@ -963,10 +962,6 @@ public final class Config {
         STARTING_ADENA = Character.getLong("StartingAdena", 0);
         STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
         STARTING_SP = Character.getInt("StartingSP", 0);
-        MAX_ADENA = Character.getLong("MaxAdena", 99900000000L);
-        if (MAX_ADENA < 0) {
-            MAX_ADENA = Long.MAX_VALUE;
-        }
 
         LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
 

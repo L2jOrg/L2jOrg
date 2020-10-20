@@ -19,18 +19,19 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSellingResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,7 +42,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static org.l2j.gameserver.util.GameUtils.isItem;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Advi
@@ -66,45 +67,6 @@ public class TradeList {
 
     public TradeList(Player owner) {
         this.owner = owner;
-    }
-
-    public Player getOwner() {
-        return owner;
-    }
-
-    public Player getPartner() {
-        return partner;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public boolean isLocked() {
-        return locked;
-    }
-
-    public boolean isConfirmed() {
-        return confirmed;
-    }
-
-    public boolean isPackaged() {
-        return packaged;
-    }
-
-    public void setPackaged(boolean value) {
-        packaged = value;
-    }
-
-    /**
-     * @return all items from TradeList
-     */
-    public TradeItem[] getItems() {
-        return items.toArray(TradeItem[]::new);
     }
 
     /**
@@ -158,75 +120,64 @@ public class TradeList {
         return addItem(objectId, count, 0);
     }
 
-    /**
-     * Add item to TradeList
-     *
-     * @param objectId : int
-     * @param count    : long
-     * @param price    : long
-     * @return
-     */
     public synchronized TradeItem addItem(int objectId, long count, long price) {
         if (locked) {
             LOGGER.warn("{} Attempt to modify locked TradeList!", owner);
             return null;
         }
 
-        final WorldObject o = World.getInstance().findObject(objectId);
-        if (!isItem(o)) {
+        final WorldObject object = World.getInstance().findObject(objectId);
+
+        if(!(object instanceof Item item)) {
             LOGGER.warn("{} Trying to add something other than an item!: ObjectId {} ", owner, objectId);
             return null;
         }
 
-        final Item item = (Item) o;
+        if (!validateItem(objectId, count, price, item)) {
+            return null;
+        }
+
+        final TradeItem titem = new TradeItem(item, count, price);
+        items.add(titem);
+        invalidateConfirmation();
+        return titem;
+    }
+
+    private boolean validateItem(int objectId, long count, long price, Item item) {
         if (!(item.isTradeable() || (owner.isGM() && Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem()) {
             LOGGER.warn("{} Attempt to add a restricted item!", owner);
-            return null;
+            return false;
         }
 
         if (owner.getInventory().isBlocked(item)) {
             LOGGER.warn("{} Attempt to add an item that can't manipulate!", owner);
-            return null;
+            return false;
         }
 
         if ((count <= 0) || (count > item.getCount())) {
             LOGGER.warn("{} Attempt to add an item with invalid item count!", owner);
-            return null;
+            return false;
         }
 
         if (!item.isStackable() && (count > 1)) {
             LOGGER.warn("{} Attempt to add non-stackable item to TradeList with count > 1!", owner);
-            return null;
+            return false;
         }
 
-        if (Inventory.MAX_ADENA / count < price) {
+        if (MathUtil.checkMulOverFlow(price, count, getSettings(CharacterSettings.class).maxAdena())) {
             LOGGER.warn("{} Attempt to overflow adena !", owner);
-            return null;
+            return false;
         }
 
         for (TradeItem checkitem : items) {
             if (checkitem.getObjectId() == objectId) {
                 LOGGER.warn("{} Attempt to add an item that is already present!", owner);
-                return null;
+                return false;
             }
         }
-
-        final TradeItem titem = new TradeItem(item, count, price);
-        items.add(titem);
-
-        // If Player has already confirmed this trade, invalidate the confirmation
-        invalidateConfirmation();
-        return titem;
+        return true;
     }
 
-    /**
-     * Add item to TradeList
-     *
-     * @param itemId
-     * @param count
-     * @param price
-     * @return
-     */
     public synchronized TradeItem addItemByItemId(int itemId, long count, long price) {
         if (locked) {
             LOGGER.warn("{} Attempt to modify locked TradeList!", owner);
@@ -248,27 +199,17 @@ public class TradeList {
             return null;
         }
 
-        if ((Inventory.MAX_ADENA / count) < price) {
+        if (MathUtil.checkMulOverFlow(price, count, getSettings(CharacterSettings.class).maxAdena())) {
             LOGGER.warn("{} Attempt to overflow adena !", owner);
             return null;
         }
 
         final TradeItem titem = new TradeItem(item, count, price);
         items.add(titem);
-
-        // If Player has already confirmed this trade, invalidate the confirmation
         invalidateConfirmation();
         return titem;
     }
 
-    /**
-     * Remove item from TradeList
-     *
-     * @param objectId : int
-     * @param itemId
-     * @param count    : int
-     * @return
-     */
     private synchronized TradeItem removeItem(int objectId, int itemId, long count) {
         if (locked) {
             LOGGER.warn(owner.getName() + ": Attempt to modify locked TradeList!");
@@ -598,7 +539,7 @@ public class TradeList {
             }
 
             // check for overflow in the single item
-            if ((Inventory.MAX_ADENA / item.getCount()) < item.getPrice()) {
+            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
                 // private store attempting to overflow - disable it
                 lock();
                 return 1;
@@ -606,7 +547,7 @@ public class TradeList {
 
             totalPrice += item.getCount() * item.getPrice();
             // check for overflow of the total price
-            if ((Inventory.MAX_ADENA < totalPrice) || (totalPrice < 0)) {
+            if ((getSettings(CharacterSettings.class).maxAdena() < totalPrice) || (totalPrice < 0)) {
                 // private store attempting to overflow - disable it
                 lock();
                 return 1;
@@ -780,14 +721,13 @@ public class TradeList {
             }
 
             // check for overflow in the single item
-            if ((Inventory.MAX_ADENA / item.getCount()) < item.getPrice()) {
+            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
                 lock();
                 break;
             }
 
             final long _totalPrice = totalPrice + (item.getCount() * item.getPrice());
-            // check for overflow of the total price
-            if ((Inventory.MAX_ADENA < _totalPrice) || (_totalPrice < 0)) {
+            if ((getSettings(CharacterSettings.class).maxAdena() < _totalPrice) || (_totalPrice < 0)) {
                 lock();
                 break;
             }
@@ -901,5 +841,44 @@ public class TradeList {
             player.sendInventoryUpdate(playerIU);
         }
         return ok;
+    }
+
+    public Player getOwner() {
+        return owner;
+    }
+
+    public Player getPartner() {
+        return partner;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public boolean isLocked() {
+        return locked;
+    }
+
+    public boolean isConfirmed() {
+        return confirmed;
+    }
+
+    public boolean isPackaged() {
+        return packaged;
+    }
+
+    public void setPackaged(boolean value) {
+        packaged = value;
+    }
+
+    /**
+     * @return all items from TradeList
+     */
+    public TradeItem[] getItems() {
+        return items.toArray(TradeItem[]::new);
     }
 }

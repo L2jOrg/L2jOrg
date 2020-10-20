@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.util;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.interfaces.ILocational;
 
 import static java.lang.Math.pow;
@@ -183,5 +184,8 @@ public final class MathUtil {
         return ((x ^ r) & (y ^ r)) < 0;
     }
 
+    public static boolean checkMulOverFlow(long value, long mul, long max) {
+        return max / mul < value;
+    }
 
 }

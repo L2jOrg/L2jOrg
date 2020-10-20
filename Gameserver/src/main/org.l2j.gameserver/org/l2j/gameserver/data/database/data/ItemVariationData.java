@@ -40,7 +40,7 @@ public class ItemVariationData {
     }
 
     public int getOption2() {
-        return option1;
+        return option2;
     }
 
     public static ItemVariationData of(int itemObjectId, int mineralId, int option1Id, int option2Id) {
