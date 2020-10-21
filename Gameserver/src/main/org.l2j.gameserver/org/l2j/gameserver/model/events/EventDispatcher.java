@@ -27,6 +27,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Queue;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author UnAfraid
  */
@@ -65,18 +67,13 @@ public final class EventDispatcher {
         return notifyEvent(event, container, null);
     }
 
-    /**
-     * @param <T>
-     * @param event
-     * @param container
-     * @param callbackClass
-     * @return
-     */
     public <T extends AbstractEventReturn> T notifyEvent(IBaseEvent event, ListenersContainer container, Class<T> callbackClass) {
         try {
-            return Listeners.Global().hasListener(event.getType()) || ((container != null) && container.hasListener(event.getType())) ? notifyEventImpl(event, container, callbackClass) : null;
+            if (Listeners.Global().hasListener(event.getType()) || nonNull(container) && container.hasListener(event.getType())) {
+                return notifyEventImpl(event, container, callbackClass);
+            }
         } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
+            LOGGER.warn("Couldn't notify event {}" + event.getClass().getSimpleName(), e);
         }
         return null;
     }

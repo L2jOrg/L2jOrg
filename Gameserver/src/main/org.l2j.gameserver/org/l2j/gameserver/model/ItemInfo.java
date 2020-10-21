@@ -127,7 +127,7 @@ public class ItemInfo {
         _equipped = 0;
 
         // Get the action to do clientside
-        change = ItemChangeType.NONE;
+        change = ItemChangeType.MODIFIED;
 
         time = -9999;
 
@@ -147,7 +147,7 @@ public class ItemInfo {
         count = item.getCount();
         type1 = template.getType1();
         type2 = template.getType2();
-        change = ItemChangeType.NONE;
+        change = ItemChangeType.MODIFIED;
         time = -9999;
     }
 

@@ -1271,12 +1271,12 @@ public final class Player extends Playable {
     private int mountObjectID = 0;
     private AdminTeleportType _teleportType = AdminTeleportType.NORMAL;
     private boolean _inCrystallize;
-    private boolean _isCrafting;
+    private boolean isCrafting;
     private long _offlineShopStart = 0;
     /**
      * True if the Player is sitting
      */
-    private boolean _waitTypeSitting = false;
+    private boolean sitting = false;
     /**
      * Location before entering Observer Mode
      */
@@ -1686,11 +1686,11 @@ public final class Player extends Playable {
     }
 
     public boolean isCrafting() {
-        return _isCrafting;
+        return isCrafting;
     }
 
     public void setIsCrafting(boolean isCrafting) {
-        _isCrafting = isCrafting;
+        this.isCrafting = isCrafting;
     }
 
     /**
@@ -2680,7 +2680,7 @@ public final class Player extends Playable {
      * @return True if the Player is sitting.
      */
     public boolean isSitting() {
-        return _waitTypeSitting;
+        return sitting;
     }
 
     /**
@@ -2689,7 +2689,7 @@ public final class Player extends Playable {
      * @param state
      */
     public void setIsSitting(boolean state) {
-        _waitTypeSitting = state;
+        sitting = state;
     }
 
     /**
@@ -2705,30 +2705,26 @@ public final class Player extends Playable {
             return;
         }
 
-        if (!_waitTypeSitting && !isAttackingDisabled() && !isControlBlocked() && !isImmobilized() && !isFishing()) {
+        if (!sitting && !isAttackingDisabled() && !isControlBlocked() && !isImmobilized() && !isFishing()) {
             breakAttack();
             setIsSitting(true);
             getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
-            broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
+            broadcastPacket(ChangeWaitType.sitting(this));
             // Schedule a sit down task to wait for the animation to finish
             ThreadPool.schedule(new SitDownTask(this), 2500);
             setBlockActions(true);
         }
     }
 
-    /**
-     * Stand up the Player, set the AI Intention to AI_INTENTION_IDLE and send a Server->Client ChangeWaitType packet (broadcast)
-     */
     public void standUp() {
         if (Event.isParticipant(this) && eventStatus.isSitForced()) {
             sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-        } else if (_waitTypeSitting && !isInStoreMode() && !isAlikeDead()) {
+        } else if (sitting && !isInStoreMode() && !isAlikeDead()) {
             if (getEffectList().isAffected(EffectFlag.RELAXING)) {
                 stopEffects(EffectFlag.RELAXING);
             }
 
-            broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
-            // Schedule a stand up task to wait for the animation to finish
+            broadcastPacket(ChangeWaitType.standing(this));
             ThreadPool.schedule(new StandUpTask(this), 2500);
         }
     }
@@ -3932,7 +3928,7 @@ public final class Player extends Playable {
                 setPrivateStoreType(PrivateStoreType.NONE);
             }
             if (privateStoreType == PrivateStoreType.NONE) {
-                if (_waitTypeSitting) {
+                if (sitting) {
                     standUp();
                 }
                 setPrivateStoreType(PrivateStoreType.BUY_MANAGE);
@@ -5077,7 +5073,7 @@ public final class Player extends Playable {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
                 return false;
-            } else if (_waitTypeSitting) {
+            } else if (sitting) {
                 // A strider can be ridden only when standing
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.A_MOUNT_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
@@ -6424,7 +6420,7 @@ public final class Player extends Playable {
         }
 
         // Check if the caster is sitting
-        if (_waitTypeSitting) {
+        if (sitting) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -6824,7 +6820,7 @@ public final class Player extends Playable {
         }
 
         _olympiadGameId = id;
-        if (_waitTypeSitting) {
+        if (sitting) {
             standUp();
         }
         if (!_observerMode) {
@@ -9863,7 +9859,7 @@ public final class Player extends Playable {
 
     @Override
     public MoveType getMoveType() {
-        if (_waitTypeSitting) {
+        if (sitting) {
             return MoveType.SITTING;
         }
         return super.getMoveType();

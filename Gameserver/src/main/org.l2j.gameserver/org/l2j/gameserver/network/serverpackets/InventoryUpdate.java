@@ -38,10 +38,6 @@ public class InventoryUpdate extends AbstractInventoryUpdate {
         super(item);
     }
 
-    public InventoryUpdate(List<ItemInfo> items) {
-        super(items);
-    }
-
     public InventoryUpdate(Collection<Item> items) {
         super(items);
     }

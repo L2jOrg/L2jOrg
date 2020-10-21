@@ -1224,14 +1224,14 @@ public final class Formulas {
     /**
      * Calculates if the specified creature can get its stun effect removed due to damage taken.
      *
-     * @param activeChar the character to be checked
+     * @param creature the character to be checked
      * @return {@code true} if character should get its stun effects removed, {@code false} otherwise.
      */
-    public static boolean calcStunBreak(Creature activeChar) {
+    public static boolean calcStunBreak(Creature creature) {
         // Check if target is stunned and break it with 14% chance. (retail is 14% and 35% on crit?)
-        if (getSettings(CharacterSettings.class).breakStun() && activeChar.hasBlockActions() && Rnd.chance(14)) {
+        if (getSettings(CharacterSettings.class).breakStun() && creature.hasBlockActions() && Rnd.chance(14)) {
             // Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
-            return activeChar.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
+            return creature.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
         }
         return false;
     }

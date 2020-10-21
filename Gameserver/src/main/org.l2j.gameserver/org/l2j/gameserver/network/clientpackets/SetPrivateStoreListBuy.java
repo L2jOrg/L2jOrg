@@ -95,8 +95,12 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
             final TradeItem item = new TradeItem(template, cnt, price);
             item.setEnchant(enchantLevel);
             item.setAugmentation(option1, option2);
-            item.setSoulCrystalOption(soulCrystalOptions[0]);
-            item.setSoulCrystalSpecialOption(soulCrystalSpecialOptions[0]);
+            if(soulCrystalOptions.length > 0) {
+                item.setSoulCrystalOption(soulCrystalOptions[0]);
+            }
+            if(soulCrystalSpecialOptions.length > 0) {
+                item.setSoulCrystalSpecialOption(soulCrystalSpecialOptions[0]);
+            }
             _items[i] = item;
         }
     }

@@ -157,7 +157,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     protected Map<SkillCastingType, SkillCaster> _skillCasters = new ConcurrentHashMap<>();
     private volatile Set<WeakReference<Creature>> _attackByList;
-    private boolean _isDead = false;
+    private boolean isDead = false;
     private boolean _isImmobilized = false;
     private boolean _isOverloaded = false; // the char is carrying too much
     private boolean _isPendingRevive = false;
@@ -1212,7 +1212,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public boolean doDie(Creature killer) {
         // killing is only possible one time
         synchronized (this) {
-            if (_isDead) {
+            if (isDead) {
                 return false;
             }
 
@@ -1223,7 +1223,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             // now reset currentHp to zero
             setCurrentHp(0);
-            _isDead = true;
+            isDead = true;
         }
 
         stopMove(null);
@@ -1309,7 +1309,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Sets HP, MP and CP and revives the Creature.
      */
     public void doRevive() {
-        if (!_isDead) {
+        if (!isDead) {
             return;
         }
         if (!_isTeleporting) {
@@ -1460,22 +1460,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return isAffected(EffectFlag.CONFUSED);
     }
 
-    /**
-     * @return True if the Creature is dead or use fake death.
-     */
     public boolean isAlikeDead() {
-        return _isDead;
+        return isDead;
     }
 
-    /**
-     * @return True if the Creature is dead.
-     */
     public final boolean isDead() {
-        return _isDead;
+        return isDead;
     }
 
     public final void setIsDead(boolean value) {
-        _isDead = value;
+        isDead = value;
     }
 
     public boolean isImmobilized() {
@@ -1520,7 +1514,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public final boolean isPendingRevive() {
-        return _isDead && _isPendingRevive;
+        return isDead && _isPendingRevive;
     }
 
     public final void setIsPendingRevive(boolean value) {
@@ -1796,7 +1790,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         abortCast();
         stopMove(null);
         getAI().notifyEvent(CtrlEvent.EVT_FAKE_DEATH);
-        broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_START_FAKEDEATH));
+        broadcastPacket(ChangeWaitType.startFakeDeath(this));
     }
 
     public final void startParalyze() {
@@ -1870,8 +1864,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (removeEffects) {
             stopEffects(EffectFlag.FAKE_DEATH);
         }
-
-        broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STOP_FAKEDEATH));
+        broadcastPacket(ChangeWaitType.stopFakeDeath(this));
         // TODO: Temp hack: players see FD on ppl that are moving: Teleport to someone who uses FD - if he gets up he will fall down again for that client -
         // even tho he is actually standing... Probably bad info in CharInfo packet?
         broadcastPacket(new Revive(this));
@@ -2923,7 +2916,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param attackTime the time it takes for the whole attack to complete
      */
     public void onHitTimeNotDual(Weapon weapon, Attack attack, int hitTime, int attackTime) {
-        if (_isDead) {
+        if (isDead) {
             getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
             return;
         }
@@ -2945,7 +2938,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void onFirstHitTimeForDual(Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack) {
-        if (_isDead) {
+        if (isDead) {
             getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
             return;
         }
@@ -2969,7 +2962,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void onSecondHitTimeForDual(Weapon weapon, Attack attack, int hitTime1, int hitTime2, int attackTime) {
-        if (_isDead) {
+        if (isDead) {
             getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
             return;
         }

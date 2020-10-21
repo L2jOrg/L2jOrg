@@ -819,7 +819,7 @@ public class TradeList {
                 player.sendPacket(msg);
             }
 
-            owner.sendPacket(new ExPrivateStoreBuyingResult(item.getObjectId(), item.getCount(), player.getAppearance().getVisibleName()));
+            owner.sendPacket(new ExPrivateStoreBuyingResult(newItem.getObjectId(), item.getCount(), player.getAppearance().getVisibleName()));
         }
 
         if (totalPrice > 0) {

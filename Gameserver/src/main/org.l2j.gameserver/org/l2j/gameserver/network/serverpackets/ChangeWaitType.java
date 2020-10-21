@@ -23,35 +23,50 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+/**
+ * @author JoeAlisson
+ */
 public class ChangeWaitType extends ServerPacket {
-    public static final int WT_SITTING = 0;
-    public static final int WT_STANDING = 1;
-    public static final int WT_START_FAKEDEATH = 2;
-    public static final int WT_STOP_FAKEDEATH = 3;
-    private final int _charObjId;
-    private final int _moveType;
-    private final int _x;
-    private final int _y;
-    private final int _z;
 
-    public ChangeWaitType(Creature character, int newMoveType) {
-        _charObjId = character.getObjectId();
-        _moveType = newMoveType;
+    private final int creatureObjectId;
+    private final int type;
+    private final int x;
+    private final int y;
+    private final int z;
 
-        _x = character.getX();
-        _y = character.getY();
-        _z = character.getZ();
+    private ChangeWaitType(Creature creature, int newMoveType) {
+        creatureObjectId = creature.getObjectId();
+        type = newMoveType;
+        x = creature.getX();
+        y = creature.getY();
+        z = creature.getZ();
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.CHANGE_WAIT_TYPE, buffer );
 
-        buffer.writeInt(_charObjId);
-        buffer.writeInt(_moveType);
-        buffer.writeInt(_x);
-        buffer.writeInt(_y);
-        buffer.writeInt(_z);
+        buffer.writeInt(creatureObjectId);
+        buffer.writeInt(type);
+        buffer.writeInt(x);
+        buffer.writeInt(y);
+        buffer.writeInt(z);
+    }
+
+    public static ChangeWaitType sitting(Creature creature) {
+        return new ChangeWaitType(creature, 0);
+    }
+
+    public static ChangeWaitType standing(Creature creature) {
+        return new ChangeWaitType(creature, 1);
+    }
+
+    public static ChangeWaitType startFakeDeath(Creature creature) {
+        return new ChangeWaitType(creature, 2);
+    }
+
+    public static ServerPacket stopFakeDeath(Creature creature) {
+        return new ChangeWaitType(creature, 3);
     }
 
 }
