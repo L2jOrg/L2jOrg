@@ -33,7 +33,9 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -642,14 +644,15 @@ public abstract class Inventory extends ItemContainer {
     @Override
     public void restore() {
         for (ItemData data : getDAO(ItemDAO.class).findInventoryItems(getOwnerId(), getBaseLocation(), getEquipLocation())) {
+            if(data.getTime() > 0 && (data.getTime() - System.currentTimeMillis() <= 1000)) {
+                getOwner().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(data.getItemId()));
+                continue;
+            }
             final Item item = new Item(data);
+
             if(getOwner() instanceof Player player) {
                 if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
                     item.changeItemLocation(ItemLocation.INVENTORY);
-                }
-
-                if(item.isTimeLimitedItem()) {
-                    item.scheduleLifeTimeTask();
                 }
             }
 

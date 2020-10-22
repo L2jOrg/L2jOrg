@@ -517,14 +517,10 @@ public final class Item extends WorldObject {
             return;
         }
 
-        if (getRemainingTime() <= 0) {
-            endOfLife();
-        } else {
-            if (lifeTimeTask != null) {
-                lifeTimeTask.cancel(true);
-            }
-            lifeTimeTask = ThreadPool.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
+        if (nonNull(lifeTimeTask)) {
+            lifeTimeTask.cancel(true);
         }
+        lifeTimeTask = ThreadPool.schedule(new ScheduleLifeTimeTask(this), Math.max(getRemainingTime(), 2000));
     }
 
     @Override
