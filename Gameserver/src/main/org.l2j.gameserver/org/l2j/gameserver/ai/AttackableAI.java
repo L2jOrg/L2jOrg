@@ -132,6 +132,9 @@ public class AttackableAI extends CreatureAI {
             }
 
             if (me instanceof Guard) {
+                if (player.getReputation() < 0) {
+                    return true;
+                }
                 World.getInstance().forEachVisibleObjectInRange(me, Guard.class, 500, guard ->
                 {
                     if (guard.isAttackingNow() && (guard.getTarget() == player)) {
@@ -139,9 +142,6 @@ public class AttackableAI extends CreatureAI {
                         me.addDamageHate(player, 0, 10);
                     }
                 });
-                if (player.getReputation() < 0) {
-                    return true;
-                }
             }
         } else if (isMonster(me)) {
             // depending on config, do not allow mobs to attack _new_ players in peacezones,

@@ -103,39 +103,37 @@ public final class WorldRegion {
         }
 
         if (!active) {
-            for (WorldObject o : objects.values()) {
-                if (isAttackable(o)) {
-                    final Attackable mob = (Attackable) o;
-
+            for (WorldObject object : objects.values()) {
+                if (object instanceof Attackable attackable) {
                     // Set target to null and cancel attack or cast.
-                    mob.setTarget(null);
+                    attackable.setTarget(null);
 
                     // Stop movement.
-                    mob.stopMove(null);
+                    attackable.stopMove(null);
 
                     // Stop all active skills effects in progress on the Creature.
-                    mob.stopAllEffects();
+                    attackable.stopAllEffects();
 
-                    mob.clearAggroList();
-                    mob.getAttackByList().clear();
+                    attackable.clearAggroList();
+                    attackable.getAttackByList().clear();
 
                     // Stop the AI tasks.
-                    if (mob.hasAI()) {
-                        mob.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-                        mob.getAI().stopAITask();
+                    if (attackable.hasAI()) {
+                        attackable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+                        attackable.getAI().stopAITask();
                     }
-                    RandomAnimationTaskManager.getInstance().remove(mob);
-                } else if (isNpc(o)) {
-                    RandomAnimationTaskManager.getInstance().remove((Npc) o);
+                    RandomAnimationTaskManager.getInstance().remove(attackable);
+                } else if (isNpc(object)) {
+                    RandomAnimationTaskManager.getInstance().remove((Npc) object);
                 }
             }
         } else {
-            for (WorldObject o : objects.values()) {
-                if (isAttackable(o)) {
-                    // Start HP/MP/CP regeneration task.
-                    ((Attackable) o).getStatus().startHpMpRegeneration();
-                } else if (isNpc(o)) {
-                    RandomAnimationTaskManager.getInstance().add((Npc) o);
+            for (WorldObject object : objects.values()) {
+                if (object instanceof Attackable attackable) {
+                    attackable.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+                    RandomAnimationTaskManager.getInstance().add(attackable);
+                } else if (isNpc(object)) {
+                    RandomAnimationTaskManager.getInstance().add((Npc) object);
                 }
             }
         }
