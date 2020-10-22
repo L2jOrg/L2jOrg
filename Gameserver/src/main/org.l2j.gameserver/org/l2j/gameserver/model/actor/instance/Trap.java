@@ -88,21 +88,21 @@ public final class Trap extends Npc {
     }
 
     @Override
-    public void broadcastPacket(ServerPacket mov) {
+    public void broadcastPacket(ServerPacket packet) {
         World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (_isTriggered || canBeSeen(player)) {
-                player.sendPacket(mov);
+                player.sendPacket(packet);
             }
         });
     }
 
     @Override
-    public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
-        World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, player ->
+    public void broadcastPacket(ServerPacket packet, int radius) {
+        World.getInstance().forEachVisibleObjectInRange(this, Player.class, radius, player ->
         {
             if (_isTriggered || canBeSeen(player)) {
-                player.sendPacket(mov);
+                player.sendPacket(packet);
             }
         });
     }

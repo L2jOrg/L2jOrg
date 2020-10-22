@@ -263,34 +263,20 @@ public class Attackable extends Npc {
      */
     @Override
     public boolean doDie(Creature killer) {
-        // Kill the Folk (the corpse disappeared after 7 seconds)
         if (!super.doDie(killer)) {
             return false;
         }
 
-        Object payload = null;
-        if (GameUtils.isMonster(this)) {
-            final Monster mob = (Monster) this;
-            if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
-                payload = mob.getLeader();
-        }
+        calculateRewards(killer);
 
         if (nonNull(killer.getActingPlayer())) {
-            // Delayed notification
+            Object payload = null;
+            if (GameUtils.isMonster(this)) {
+                final Monster mob = (Monster) this;
+                if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
+                    payload = mob.getLeader();
+            }
             EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, GameUtils.isSummon(killer), payload), this);
-        }
-
-        // Notify to minions if there are.
-        if (GameUtils.isMonster(this)) {
-            final Monster mob = (Monster) this;
-            if ((mob.getLeader() != null) && mob.getLeader().hasMinions()) {
-                final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1;
-                mob.getLeader().getMinionList().onMinionDie(mob, respawnTime);
-            }
-
-            if (mob.hasMinions()) {
-                mob.getMinionList().onMasterDie(false);
-            }
         }
 
         return true;
@@ -306,8 +292,7 @@ public class Attackable extends Npc {
      *
      * @param lastAttacker The Creature that has killed the Attackable
      */
-    @Override
-    protected void calculateRewards(Creature lastAttacker) {
+    private void calculateRewards(Creature lastAttacker) {
         try {
             if (_aggroList.isEmpty()) {
                 return;

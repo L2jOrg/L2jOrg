@@ -480,15 +480,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<br>
      * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
      *
-     * @param mov
+     * @param packet
      */
-    public void broadcastPacket(ServerPacket mov) {
-        World.getInstance().forEachVisibleObject(this, Player.class, player ->
-        {
-            if (isVisibleFor(player)) {
-                player.sendPacket(mov);
-            }
-        });
+    public void broadcastPacket(ServerPacket packet) {
+        World.getInstance().forEachVisibleObject(this, Player.class, packet::sendTo, this::isVisibleFor);
     }
 
     /**
@@ -497,16 +492,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<br>
      * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
      *
-     * @param mov
-     * @param radiusInKnownlist
+     * @param packet
+     * @param radius
      */
-    public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
-        World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, player ->
-        {
-            if (isVisibleFor(player)) {
-                player.sendPacket(mov);
-            }
-        });
+    public void broadcastPacket(ServerPacket packet, int radius) {
+        World.getInstance().forEachPlayerInRange(this, radius, packet::sendTo, this::isVisibleFor);
     }
 
     /**
@@ -559,11 +549,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             su.addCaster(caster);
         }
 
-        // HP
         su.addUpdate(StatusUpdateType.MAX_HP, stats.getMaxHp());
         su.addUpdate(StatusUpdateType.CUR_HP, (int) _status.getCurrentHp());
 
-        // MP
         computeStatusUpdate(su, StatusUpdateType.MAX_MP);
         computeStatusUpdate(su, StatusUpdateType.CUR_MP);
 
@@ -1210,7 +1198,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return false if the creature hasn't been killed.
      */
     public boolean doDie(Creature killer) {
-        // killing is only possible one time
         synchronized (this) {
             if (isDead) {
                 return false;
@@ -1220,14 +1207,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             if (nonNull(returnBack) && returnBack.terminate()) {
                 return false;
             }
-
-            // now reset currentHp to zero
             setCurrentHp(0);
             isDead = true;
         }
 
         stopMove(null);
-        calculateRewards(killer);
 
         // Notify Creature AI
         if (hasAI()) {
@@ -1238,17 +1222,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Stop HP/MP/CP Regeneration task
         _status.stopHpMpRegeneration();
-
-        if (isMonster(this)) { // TODO move to monster
-            final Spawn spawn = ((Npc) this).getSpawn();
-            if ((spawn != null) && spawn.isRespawnEnabled()) {
-                stopAllEffects();
-            } else {
-                _effectList.stopAllEffectsWithoutExclusions(true, true);
-            }
-        } else {
-            stopAllEffectsExceptThoseThatLastThroughDeath();
-        }
 
         // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         broadcastStatusUpdate();
@@ -1302,12 +1275,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return true;
     }
 
-    protected void calculateRewards(Creature killer) {
-    }
-
-    /**
-     * Sets HP, MP and CP and revives the Creature.
-     */
     public void doRevive() {
         if (!isDead) {
             return;
@@ -2444,7 +2411,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param loc
      */
     public void stopMove(Location loc) {
-        // Delete movement data of the Creature
         _move = null;
         _cursorKeyMovement = false;
 
@@ -2457,9 +2423,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         broadcastPacket(new StopMove(this));
     }
 
-    /**
-     * @return Returns the showSummonAnimation.
-     */
     public boolean isShowSummonAnimation() {
         return _showSummonAnimation;
     }

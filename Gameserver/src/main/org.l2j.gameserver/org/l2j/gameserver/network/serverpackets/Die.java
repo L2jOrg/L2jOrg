@@ -56,27 +56,27 @@ public class Die extends ServerPacket {
                 isInCastleDefense = (siegeClan == null) && castle.getSiege().checkIsDefender(clan);
             }
 
-            flags += nonNull(clan) && clan.getHideoutId() > 0 ? 2 : 0; // clan hall
-            flags += (nonNull(clan) && (clan.getCastleId() > 0)) || isInCastleDefense ? 4 : 0; // castle
+            flags |= nonNull(clan) && clan.getHideoutId() > 0 ? 2 : 0; // clan hall
+            flags |= (nonNull(clan) && (clan.getCastleId() > 0)) || isInCastleDefense ? 4 : 0; // castle
                                                                                               // 8  fortress
-            flags += nonNull(siegeClan) && !siegeClan.getFlags().isEmpty() ? 16 : 0; // outpost
-            flags += creature.getAccessLevel().allowFixedRes() || player.getInventory().haveItemForSelfResurrection() ? 32 : 0; // feather
+            flags |= nonNull(siegeClan) && !siegeClan.getFlags().isEmpty() ? 16 : 0; // outpost
+            flags |= creature.getAccessLevel().allowFixedRes() || player.getInventory().haveItemForSelfResurrection() ? 32 : 0; // feather
+            // 128 adventure's song
         }
     }
 
-
+    
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.DIE, buffer );
 
         buffer.writeInt(objectId);
-        buffer.writeInt(flags);
-        buffer.writeInt(0);
+        buffer.writeLong(flags);
         buffer.writeInt(isSweepable);
+        buffer.writeInt(0); // allow feather item time
+        buffer.writeByte(0); // hide die animation
         buffer.writeInt(0);
         buffer.writeInt(0);
         buffer.writeInt(0);
-        buffer.writeInt(0);
-        buffer.writeByte(0);
     }
 }

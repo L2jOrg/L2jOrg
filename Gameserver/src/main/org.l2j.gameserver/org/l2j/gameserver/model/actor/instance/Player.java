@@ -3656,26 +3656,21 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final void broadcastPacket(ServerPacket mov) {
-        if (mov instanceof ExCharInfo) {
+    public final void broadcastPacket(ServerPacket packet) {
+        if (packet instanceof ExCharInfo) {
             throw new IllegalArgumentException("ExCharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
-
-        sendPacket(mov);
-
-        World.getInstance().forEachVisibleObject(this, Player.class, mov::sendTo, this::isVisibleFor);
+        sendPacket(packet);
+        super.broadcastPacket(packet);
     }
 
     @Override
-    public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
-
-        if (mov instanceof ExCharInfo) {
+    public void broadcastPacket(ServerPacket packet, int radius) {
+        if (packet instanceof ExCharInfo) {
             LOGGER.warn("ExCharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
-
-        sendPacket(mov);
-
-        World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, mov::sendTo, this::isVisibleFor);
+        sendPacket(packet);
+        super.broadcastPacket(packet, radius);
     }
 
     /**

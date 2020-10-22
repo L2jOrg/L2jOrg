@@ -57,12 +57,6 @@ public final class EventDispatcher {
         return notifyEvent(event, null, callbackClass);
     }
 
-    /**
-     * @param <T>
-     * @param event
-     * @param container
-     * @return
-     */
     public <T extends AbstractEventReturn> T notifyEvent(IBaseEvent event, ListenersContainer container) {
         return notifyEvent(event, container, null);
     }

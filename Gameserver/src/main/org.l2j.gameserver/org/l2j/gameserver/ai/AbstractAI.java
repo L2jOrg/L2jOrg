@@ -583,16 +583,9 @@ public abstract class AbstractAI implements Ctrl {
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     protected void clientNotifyDead() {
-        // Send a Server->Client packet Die to the actor and all Player in its _knownPlayers
-        final Die msg = new Die(actor);
-        actor.broadcastPacket(msg);
-
-        // Init AI
+        actor.broadcastPacket(new Die(actor));
         intention = AI_INTENTION_IDLE;
         _target = null;
-
-        // Cancel the follow task if necessary
-        stopFollow();
     }
 
     /**
@@ -647,9 +640,6 @@ public abstract class AbstractAI implements Ctrl {
         }
     }
 
-    /**
-     * Stop an AI Follow Task.
-     */
     public synchronized void stopFollow() {
         CreatureFollowTaskManager.getInstance().remove(actor);
     }
@@ -662,9 +652,6 @@ public abstract class AbstractAI implements Ctrl {
         _target = target;
     }
 
-    /**
-     * Stop all Ai tasks and futures.
-     */
     public void stopAITask() {
         stopFollow();
     }

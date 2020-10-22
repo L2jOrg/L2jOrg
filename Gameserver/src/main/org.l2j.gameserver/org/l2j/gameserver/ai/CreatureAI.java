@@ -724,10 +724,7 @@ public class CreatureAI extends AbstractAI {
      */
     @Override
     protected void onEvtDead() {
-        // Stop an AI Tasks
         stopAITask();
-
-        // Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die (broadcast)
         clientNotifyDead();
 
         if (!isPlayable(actor)) {

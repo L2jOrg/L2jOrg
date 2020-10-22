@@ -775,6 +775,12 @@ public class Npc extends Creature {
             if (npcTemplate != null) {
                 npcTemplate.notifyNpcDeath(this, killer);
             }
+
+            if (_spawn.isRespawnEnabled()) {
+                stopAllEffects();
+            } else {
+                getEffectList().stopAllEffectsWithoutExclusions(true, true);
+            }
         }
 
         // Apply Mp Rewards
