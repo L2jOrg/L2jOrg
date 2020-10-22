@@ -646,6 +646,7 @@ public abstract class Inventory extends ItemContainer {
         for (ItemData data : getDAO(ItemDAO.class).findInventoryItems(getOwnerId(), getBaseLocation(), getEquipLocation())) {
             if(data.getTime() > 0 && (data.getTime() - System.currentTimeMillis() <= 1000)) {
                 getOwner().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(data.getItemId()));
+                getDAO(ItemDAO.class).deleteItem(data.getObjectId());
                 continue;
             }
             final Item item = new Item(data);

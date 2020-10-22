@@ -520,7 +520,7 @@ public final class Item extends WorldObject {
         if (nonNull(lifeTimeTask)) {
             lifeTimeTask.cancel(true);
         }
-        lifeTimeTask = ThreadPool.schedule(new ScheduleLifeTimeTask(this), Math.max(getRemainingTime(), 2000));
+        lifeTimeTask = ThreadPool.schedule(this::endOfLife, Math.max(getRemainingTime(), 2000));
     }
 
     @Override
@@ -1017,26 +1017,6 @@ public final class Item extends WorldObject {
 
     public boolean isInfinite() {
         return template instanceof EtcItem etcItem && etcItem.isInfinite();
-    }
-
-    static class ScheduleLifeTimeTask implements Runnable {
-        private static final Logger LOGGER = LoggerFactory.getLogger(ScheduleLifeTimeTask.class);
-        private final Item _limitedItem;
-
-        ScheduleLifeTimeTask(Item item) {
-            _limitedItem = item;
-        }
-
-        @Override
-        public void run() {
-            try {
-                if (_limitedItem != null) {
-                    _limitedItem.endOfLife();
-                }
-            } catch (Exception e) {
-                LOGGER.error("", e);
-            }
-        }
     }
 
     /**
