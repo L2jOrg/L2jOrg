@@ -19,6 +19,8 @@
  */
 package org.l2j.gameserver.model.olympiad;
 
+import org.l2j.gameserver.model.actor.instance.Player;
+
 /**
  * @author JIV
  */
@@ -39,6 +41,10 @@ public class OlympiadInfo {
         _dmg = dmg;
         _curPoints = curPoints;
         _diffPoints = diffPoints;
+    }
+
+    public static OlympiadInfo of(Player player, int diffPoints) {
+        return new OlympiadInfo(player.getName(), "Clan name", player.getClanId(), player.getClassId().getId(), 100, 100, diffPoints);
     }
 
     /**

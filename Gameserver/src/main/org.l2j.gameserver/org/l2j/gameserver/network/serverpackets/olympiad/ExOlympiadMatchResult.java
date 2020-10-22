@@ -30,23 +30,17 @@ import java.util.List;
  * @author JIV
  */
 public class ExOlympiadMatchResult extends ServerPacket {
+    private static final int LOSER_MASK = 3;
     private final boolean _tie;
     private final List<OlympiadInfo> _winnerList;
     private final List<OlympiadInfo> _loserList;
-    private int _winTeam; // 1,2
-    private int _loseTeam = 2;
+    private final int _winTeam; // 1,2
 
     public ExOlympiadMatchResult(boolean tie, int winTeam, List<OlympiadInfo> winnerList, List<OlympiadInfo> loserList) {
         _tie = tie;
         _winTeam = winTeam;
         _winnerList = winnerList;
         _loserList = loserList;
-
-        if (_winTeam == 2) {
-            _loseTeam = 1;
-        } else if (_winTeam == 0) {
-            _winTeam = 1;
-        }
     }
 
     @Override
@@ -62,7 +56,7 @@ public class ExOlympiadMatchResult extends ServerPacket {
             writeParticipant(info, buffer);
         }
 
-        buffer.writeInt(_loseTeam);
+        buffer.writeInt(_winTeam ^ LOSER_MASK);
         buffer.writeInt(_loserList.size());
         for (OlympiadInfo info : _loserList) {
             writeParticipant(info, buffer);

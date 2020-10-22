@@ -49,7 +49,6 @@ import java.time.Year;
 import java.time.YearMonth;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
@@ -127,16 +126,16 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         state = STARTED;
         Broadcast.toAllOnlinePlayers(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, 300));
         var listeners = Listeners.players();
-        onPlayerLoginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) e -> onPlayerLogin(e.getPlayer()), this);
+        onPlayerLoginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
         listeners.addListener(onPlayerLoginListener);
         Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_OLYMPIAD_MANAGER_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
     }
 
-    private void onPlayerLogin(Player player) {
+    private void onPlayerLogin(OnPlayerLogin event) {
         if(state.matchesInProgress()) {
             var scheduler = getScheduler("stop-match");
             if(nonNull(scheduler)) {
-                player.sendPacket(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, (int) scheduler.getRemainingTime(TimeUnit.SECONDS)));
+                event.getPlayer().sendPacket(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, (int) scheduler.getRemainingTime(TimeUnit.SECONDS)));
             } else {
                 LOGGER.warn("Can't find stop-match scheduler");
             }
@@ -147,7 +146,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     public void onStopMatch() {
         state = SCHEDULED;
         if(nonNull(onPlayerLoginListener)) {
-            Listeners.players().removeListener(onPlayerLoginListener);
+            onPlayerLoginListener.unregisterMe();
         }
         Broadcast.toAllOnlinePlayers(ExOlympiadInfo.hide(OlympiadRuleType.CLASSLESS));
         Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED));

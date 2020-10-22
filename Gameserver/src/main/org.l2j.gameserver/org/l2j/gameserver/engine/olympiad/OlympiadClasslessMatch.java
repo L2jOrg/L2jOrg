@@ -21,13 +21,18 @@ package org.l2j.gameserver.engine.olympiad;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.model.olympiad.OlympiadInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchResult;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
-import static org.l2j.gameserver.network.SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE;
+import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.network.SystemMessageId.*;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author JoeAlisson
@@ -38,6 +43,7 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     private Player blue;
     private Location redBackLocation;
     private Location blueBackLocation;
+    private Player defeated;
 
     OlympiadClasslessMatch() {
     }
@@ -104,10 +110,23 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     }
 
     @Override
+    protected boolean processPlayerDeath(Player player) {
+        defeated = player;
+        finishBattle();
+        return false;
+    }
+
+    @Override
     protected void calculateResults() {
-        sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
-        //broadcastMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
-        //broadcastMessage(C1_HAS_LOST_S2_POINTS_IN_THE_OLYMPIAD_GAMES);
+        if(nonNull(defeated)) {
+            var winner = red == defeated ?  blue : red;
+            sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(winner));
+            sendPacket(getSystemMessage(C1_HAS_LOST_S2_POINTS_IN_THE_OLYMPIAD_GAMES).addPcName(defeated).addInt(10));
+            sendPacket(new ExOlympiadMatchResult(false, winner.getOlympiadSide(), List.of(OlympiadInfo.of(winner, 10)), List.of(OlympiadInfo.of(defeated, -10))));
+        } else {
+            sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+            sendPacket(new ExOlympiadMatchResult(true, 1, List.of(OlympiadInfo.of(red, 0)), List.of(OlympiadInfo.of(blue, 0))));
+        }
     }
 
     @Override

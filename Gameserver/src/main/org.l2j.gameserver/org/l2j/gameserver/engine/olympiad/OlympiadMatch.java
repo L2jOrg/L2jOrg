@@ -22,6 +22,10 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
+import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
+import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.olympiad.*;
@@ -31,6 +35,7 @@ import java.time.Duration;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 import static org.l2j.gameserver.engine.olympiad.MatchState.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
@@ -48,6 +53,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private int countDownIndex = 0;
     private ScheduledFuture<?> scheduled;
     private Duration duration;
+    private FunctionEventListener deathListener;
 
     OlympiadMatch() {
         state = MatchState.CREATED;
@@ -64,7 +70,10 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         }
     }
 
-    private void finishBattle() {
+    protected void finishBattle() {
+        if(!scheduled.isDone()) {
+            scheduled.cancel(true);
+        }
         state = FINISHED;
         forEachParticipant(this::onMatchFinish);
         calculateResults();
@@ -77,6 +86,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         player.setIsOlympiadStart(false);
         player.setOlympiadGameId(0);
         player.setInsideZone(ZoneType.PVP, false);
+        player.removeListener(deathListener);
     }
 
     private void countDownTeleportBack() {
@@ -102,6 +112,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     private void countDown() {
         if(countDownIndex >= COUNT_DOWN_INTERVAL.length - 1) {
+            deathListener = new FunctionEventListener(null, EventType.ON_CREATURE_DEATH, (Function<OnCreatureDeath, TerminateReturn>)this::onDeath, this);
             forEachParticipant(this::onMatchStart);
             sendPacket(PlaySound.music("ns17_f"));
             forRedPlayers(this::sendOlympiadUserInfo);
@@ -122,6 +133,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         player.setOlympiadGameId(getId());
         player.setIsOlympiadStart(true);
         player.setInsideZone(ZoneType.PVP, true);
+        player.addListener(deathListener);
     }
 
     private void sendOlympiadUserInfo(Player player) {
@@ -141,6 +153,17 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         teleportPlayers(locations.get(0), locations.get(1), arena);
         scheduled = ThreadPool.schedule(this, 10, TimeUnit.SECONDS);
     }
+
+    private TerminateReturn onDeath(OnCreatureDeath event) {
+        if(event.getTarget() instanceof Player player) {
+            if(!processPlayerDeath(player)) {
+                return new TerminateReturn(true, true, true);
+            }
+        }
+        return null;
+    }
+
+    protected abstract boolean processPlayerDeath(Player player);
 
     private void setOlympiadMode(Player player, OlympiadMode mode) {
         player.setOlympiadMode(mode);

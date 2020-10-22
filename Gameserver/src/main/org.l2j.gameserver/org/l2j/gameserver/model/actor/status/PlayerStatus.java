@@ -39,7 +39,6 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
@@ -238,15 +237,6 @@ public class PlayerStatus extends PlayableStatus {
         if ((me.getCurrentHp() < 0.5) && !isHPConsumption && !me.isUndying()) {
             me.abortAttack();
             me.abortCast();
-
-            if (me.isInOlympiadMode()) {
-                stopHpMpRegeneration();
-                me.setIsDead(true);
-                me.setIsPendingRevive(true);
-                doIfNonNull(me.getPet(), pet -> pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE));
-                me.getServitors().values().forEach(s -> s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE));
-                return;
-            }
             me.doDie(attacker);
         }
     }
