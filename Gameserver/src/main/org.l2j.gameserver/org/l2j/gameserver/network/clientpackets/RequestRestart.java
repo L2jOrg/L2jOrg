@@ -27,35 +27,30 @@ import org.l2j.gameserver.network.serverpackets.RestartResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.isNull;
+
 public final class RequestRestart extends ClientPacket {
-    protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
+    private static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     @Override
-    public void readImpl() {
-
-    }
+    public void readImpl() { }
 
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
+        if (isNull(player)) {
             return;
         }
 
         if (!player.canLogout()) {
-            client.sendPacket(RestartResponse.FALSE);
-            player.sendPacket(ActionFailed.STATIC_PACKET);
+            client.sendPackets(RestartResponse.FALSE, ActionFailed.STATIC_PACKET);
             return;
         }
 
-        LOGGER_ACCOUNTING.info("{} Logged out",  client);
-
+        LOGGER_ACCOUNTING.info("{} Logging out",  player);
         Disconnection.of(client, player).storeMe().deleteMe();
 
-        // return the client to the authed status
         client.setConnectionState(ConnectionState.AUTHENTICATED);
-
-        client.sendPacket(RestartResponse.TRUE);
-        client.sendPacket(new PlayerSelectionInfo(client));
+        client.sendPackets(RestartResponse.TRUE, new PlayerSelectionInfo(client));
     }
 }

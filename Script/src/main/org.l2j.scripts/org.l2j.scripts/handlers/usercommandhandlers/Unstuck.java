@@ -49,7 +49,7 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		final int unstuckTimer = (player.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
+		final int unstuckTimer = (player.getAccessLevel().isGM() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
 		
 		if (player.isInOlympiadMode())
 		{
@@ -64,7 +64,7 @@ public class Unstuck implements IUserCommandHandler
 		
 		final Skill escape = SkillEngine.getInstance().getSkill(2099, 1); // 5 minutes escape
 		final Skill GM_escape = SkillEngine.getInstance().getSkill(2100, 1); // 1 second escape
-		if (player.getAccessLevel().isGm())
+		if (player.getAccessLevel().isGM())
 		{
 			if (GM_escape != null)
 			{
@@ -83,7 +83,7 @@ public class Unstuck implements IUserCommandHandler
 			final SkillCaster skillCaster = SkillCaster.castSkill(player, player.getTarget(), escape, null, SkillCastingType.NORMAL, false, false, unstuckTimer);
 			if (skillCaster == null)
 			{
-				player.sendPacket(ActionFailed.get(SkillCastingType.NORMAL));
+				player.sendPacket(ActionFailed.of(SkillCastingType.NORMAL));
 				player.getAI().setIntention(AI_INTENTION_ACTIVE);
 				return false;
 			}

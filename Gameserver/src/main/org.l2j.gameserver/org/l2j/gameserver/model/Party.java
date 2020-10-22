@@ -182,7 +182,7 @@ public class Party extends AbstractPlayerGroup {
      */
     public void broadcastToPartyMembersNewLeader() {
         members.forEach(member -> {
-            member.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET, new PartySmallWindowAll(member, this));
+            member.sendPackets(PartySmallWindowDeleteAll.STATIC_PACKET, new PartySmallWindowAll(member, this));
             member.broadcastUserInfo();
         });
     }
@@ -282,7 +282,7 @@ public class Party extends AbstractPlayerGroup {
             sm.addString(target.getName());
             sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
 
-            members.forEach(m -> m.sendPacket(new ExTacticalSign(target, tacticalSignId), sm));
+            members.forEach(m -> m.sendPackets(new ExTacticalSign(target, tacticalSignId), sm));
         } else if (tacticalTarget == target) {
             // Sign already assigned
             // If the sign is applied on the same target, remove it
@@ -294,7 +294,7 @@ public class Party extends AbstractPlayerGroup {
 
             final SystemMessage sm = getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2).addPcName(activeChar).addString(target.getName()).addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
 
-            members.forEach(m -> m.sendPacket(new ExTacticalSign(tacticalTarget, 0), new ExTacticalSign(target, tacticalSignId), sm));
+            members.forEach(m -> m.sendPackets(new ExTacticalSign(tacticalTarget, 0), new ExTacticalSign(target, tacticalSignId), sm));
         }
     }
 

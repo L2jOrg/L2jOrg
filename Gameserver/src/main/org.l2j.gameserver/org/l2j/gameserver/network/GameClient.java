@@ -184,6 +184,14 @@ public final class GameClient extends Client<Connection<GameClient>> {
         packet.runImpl(player);
     }
 
+    public void sendPackets(ServerPacket... packets) {
+        if(nonNull(packets)) {
+            writePackets(List.of(packets));
+            for (ServerPacket packet : packets) {
+                packet.runImpl(player);
+            }
+        }
+    }
 
     public void sendPacket(SystemMessageId smId) {
         sendPacket(SystemMessage.getSystemMessage(smId));

@@ -77,7 +77,7 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
     }
 
     public void runImpl(Player player) {
-
+        // TODO remove this
     }
 
     protected void writeId(ServerPacketId packet, WritableBuffer buffer) {

@@ -610,8 +610,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // Abort any client actions, casting and remove target.
-        sendPacket(ActionFailed.get(SkillCastingType.NORMAL));
-        sendPacket(ActionFailed.get(SkillCastingType.NORMAL_SECOND));
+        sendPacket(ActionFailed.of(SkillCastingType.NORMAL));
+        sendPacket(ActionFailed.of(SkillCastingType.NORMAL_SECOND));
         if (isMoving()) {
             stopMove(null);
         }
@@ -951,7 +951,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         final SkillCaster skillCaster = SkillCaster.castSkill(this, _target, skill, item, castingType, ctrlPressed, shiftPressed);
         if ((skillCaster == null) && isPlayer(this)) {
             // Skill casting failed, notify player.
-            sendPacket(ActionFailed.get(castingType));
+            sendPacket(ActionFailed.of(castingType));
             getAI().setIntention(AI_INTENTION_ACTIVE);
         }
     }

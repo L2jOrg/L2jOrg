@@ -328,7 +328,7 @@ public class EnterWorld extends ClientPacket {
 
     private void restoreItems(Player player) {
         player.getInventory().restore();
-        player.sendPacket(new ExUserInfoInvenWeight(), new ExAdenaInvenCount(), new ExBloodyCoinCount());
+        player.sendPackets(new ExUserInfoInvenWeight(), new ExAdenaInvenCount(), new ExBloodyCoinCount());
         ItemList.sendList(player);
         client.sendPacket(new ExQuestItemList(1, player));
         client.sendPacket(new ExQuestItemList(2, player));

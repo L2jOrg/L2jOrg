@@ -206,9 +206,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     public abstract void sendInfo(Player activeChar);
 
-    public void sendPacket(ServerPacket... packets) {
+    // TODO move to Playable only
+    public void sendPacket(ServerPacket packets) {
     }
 
+    // TODO move to Playable only
     public void sendPacket(SystemMessageId id) {
     }
 

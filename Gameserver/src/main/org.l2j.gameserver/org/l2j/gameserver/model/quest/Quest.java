@@ -1136,7 +1136,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     public boolean showError(Player player, Throwable t) {
         LOGGER.warn(getScriptName(), t);
-        if ((player != null) && player.getAccessLevel().isGm()) {
+        if ((player != null) && player.getAccessLevel().isGM()) {
             final String res = "<html><body><title>Script error</title>" + CommonUtil.getStackTrace(t) + "</body></html>";
             return showResult(player, res);
         }

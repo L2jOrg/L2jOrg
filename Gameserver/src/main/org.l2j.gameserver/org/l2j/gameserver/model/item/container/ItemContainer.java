@@ -558,9 +558,6 @@ public abstract class ItemContainer {
         }
     }
 
-    /**
-     * Get back items in container from database
-     */
     public void restore() {
         for (ItemData itemData : getDAO(ItemDAO.class).findItemsByOwnerAndLoc(getOwnerId(), getBaseLocation())) {
             var item = new Item(itemData);

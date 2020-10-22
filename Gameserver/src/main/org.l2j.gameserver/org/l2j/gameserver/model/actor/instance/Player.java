@@ -831,7 +831,7 @@ public final class Player extends Playable {
 
     public void enableAutoSoulShot(ShotType type, int itemId) {
         activeSoulShots.put(type, itemId);
-        sendPacket(new ExAutoSoulShot(itemId, true, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
+        sendPackets(new ExAutoSoulShot(itemId, true, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
         rechargeShot(type);
     }
 
@@ -878,7 +878,7 @@ public final class Player extends Playable {
     }
 
     private void sendDisableShotPackets(ShotType type, int itemId) {
-        sendPacket(new ExAutoSoulShot(itemId, false, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(itemId));
+        sendPackets(new ExAutoSoulShot(itemId, false, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(itemId));
     }
 
     @Override
@@ -2729,13 +2729,14 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * @return the PcWarehouse object of the Player.
-     */
     public PlayerWarehouse getWarehouse() {
-        if (_warehouse == null) {
-            _warehouse = new PlayerWarehouse(this);
-            _warehouse.restore();
+        if (isNull(_warehouse)) {
+            synchronized (this) {
+                if(isNull(_warehouse)) {
+                    _warehouse = new PlayerWarehouse(this);
+                    _warehouse.restore();
+                }
+            }
         }
         if (Config.WAREHOUSE_CACHE) {
             WarehouseCacheManager.getInstance().addCacheTask(this);
@@ -3693,7 +3694,11 @@ public final class Player extends Playable {
      * Send a Server->Client packet StatusUpdate to the Player.
      */
     @Override
-    public void sendPacket(ServerPacket... packets) {
+    public void sendPacket(ServerPacket packet) {
+        client.sendPacket(packet);
+    }
+
+    public void sendPackets(ServerPacket... packets) {
         for (ServerPacket packet : packets) {
             client.sendPacket(packet);
         }
@@ -4803,7 +4808,7 @@ public final class Player extends Playable {
     }
 
     public boolean hasManufactureShop() {
-        return (_manufactureItems != null) && !_manufactureItems.isEmpty();
+        return Util.isNotEmpty(_manufactureItems);
     }
 
     /**
@@ -5238,12 +5243,9 @@ public final class Player extends Playable {
         return (isInCommandChannel()) ? _party.getCommandChannel() : null;
     }
 
-    /**
-     * Return True if the Player is a GM.
-     */
     @Override
     public boolean isGM() {
-        return accessLevel.isGm();
+        return accessLevel.isGM();
     }
 
 
@@ -5306,28 +5308,11 @@ public final class Player extends Playable {
         });
     }
 
-    /**
-     * Set the online Flag to True or False and update the characters table of the database with online status and lastAccess (called when login and logout).
-     *
-     * @param isOnline
-     * @param updateInDb
-     */
     public void setOnlineStatus(boolean isOnline, boolean updateInDb) {
-        if (_isOnline != isOnline) {
-            _isOnline = isOnline;
-        }
-
-        // Update the characters table of the database with online status and lastAccess (called when login and logout)
+        _isOnline = isOnline;
         if (updateInDb) {
-            updateOnlineStatus();
+            getDAO(PlayerDAO.class).updateOnlineStatus(objectId, isOnline(), System.currentTimeMillis());
         }
-    }
-
-    /**
-     * Update the characters table of the database with online status and lastAccess of this Player (called when login and logout).
-     */
-    public void updateOnlineStatus() {
-        getDAO(PlayerDAO.class).updateOnlineStatus(objectId, isOnline(), System.currentTimeMillis());
     }
 
     /**
@@ -5398,6 +5383,11 @@ public final class Player extends Playable {
         }
     }
 
+    @Override
+    public void storeMe() {
+        store(true);
+    }
+
     /**
      * Update Player stats in the characters table of the database.
      *
@@ -5411,17 +5401,7 @@ public final class Player extends Playable {
             storeRecipeShopList();
         }
 
-        if(nonNull(spirits)) {
-            for (ElementalSpirit spirit : spirits) {
-                if(nonNull(spirit)) {
-                    spirit.save();
-                }
-            }
-
-            if(nonNull(activeElementalSpiritType)) {
-                getDAO(ElementalSpiritDAO.class).updateActiveSpirit(getObjectId(), activeElementalSpiritType.getId());
-            }
-        }
+        storeElementalSpirits();
 
         shortcuts.storeMe();
         getDAO(PlayerVariablesDAO.class).save(variables);
@@ -5447,13 +5427,24 @@ public final class Player extends Playable {
         storeRecommendations();
         if (Config.UPDATE_ITEMS_ON_CHAR_STORE) {
             inventory.updateDatabase();
-            getWarehouse().updateDatabase();
+            if(nonNull(_warehouse)) {
+                _warehouse.updateDatabase();
+            }
         }
     }
 
-    @Override
-    public void storeMe() {
-        store(true);
+    private void storeElementalSpirits() {
+        if(nonNull(spirits)) {
+            for (ElementalSpirit spirit : spirits) {
+                if(nonNull(spirit)) {
+                    spirit.save();
+                }
+            }
+
+            if(nonNull(activeElementalSpiritType)) {
+                getDAO(ElementalSpiritDAO.class).updateActiveSpirit(getObjectId(), activeElementalSpiritType.getId());
+            }
+        }
     }
 
     private void storeCharBase() {
@@ -5519,7 +5510,7 @@ public final class Player extends Playable {
 
             statement.execute();
         } catch (Exception e) {
-            LOGGER.warn("Could not store char base data: " + this + " - " + e.getMessage(), e);
+            LOGGER.warn("Could not store char base data: {}", this, e);
         }
     }
 
@@ -5534,7 +5525,7 @@ public final class Player extends Playable {
             }
 
             int buff_index = 0;
-            final List<Long> storedSkills = new ArrayList<>();
+            final LongSet storedSkills = new HashLongSet();
             final long currentTime = System.currentTimeMillis();
 
             try(PreparedStatement statement = con.prepareStatement(ADD_SKILL_SAVE)) {
@@ -5644,9 +5635,6 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * @return True if the Player is on line.
-     */
     public boolean isOnline() {
         return _isOnline;
     }
@@ -6194,11 +6182,11 @@ public final class Player extends Playable {
         }
 
         if (isClassLocked()) {
-            LOGGER.warn("Player {} tried to restart/logout during class change.", getName());
+            LOGGER.warn("Player {} tried to restart/logout during class change.", this);
             return false;
         }
 
-        if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(this) && !(isGM() && Config.GM_RESTART_FIGHTING)) {
+        if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(this) && !isGM()) {
             return false;
         }
 
@@ -7771,17 +7759,16 @@ public final class Player extends Playable {
                 zone.onPlayerLogoutInside(this);
             }
         } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+            LOGGER.error(e.getMessage(), e);
         }
 
-        // Set the online Flag to True or False and update the characters table of the database with online status and lastAccess (called when login and logout)
         try {
             if (!_isOnline) {
-                LOGGER.error("deleteMe() called on offline character " + this, new RuntimeException());
+                LOGGER.error("deleteMe() called on offline player {}", this);
             }
             setOnlineStatus(false, true);
         } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+            LOGGER.error(e.getMessage(), e);
         }
 
         try {
@@ -7793,7 +7780,6 @@ public final class Player extends Playable {
         }
 
         try {
-            _isOnline = false;
             abortAttack();
             abortCast();
             stopMove(null);
@@ -7994,7 +7980,6 @@ public final class Player extends Playable {
         if (data.getClanId() > 0) {
             _clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
             _clan.broadcastToOnlineMembers(new ExPledgeCount(_clan));
-            // ClanTable.getInstance().getClan(getClanId()).broadcastToOnlineMembers(new PledgeShowMemberListAdd(this));
         }
 
         for (Player player : _snoopedPlayer) {
@@ -8014,7 +7999,7 @@ public final class Player extends Playable {
             notifyFriends(FriendStatus.OFFLINE);
             _blockList.playerLogout();
         } catch (Exception e) {
-            LOGGER.warn("Exception on deleteMe() notifyFriends: " + e.getMessage(), e);
+            LOGGER.warn("Exception on deleteMe() notifyFriends: ", e);
         }
 
         // Stop all passives and augment options
@@ -8940,7 +8925,7 @@ public final class Player extends Playable {
                     con.commit();
                 }
             } catch (Exception e) {
-                LOGGER.error("Could not store recipe shop for playerId " + getObjectId() + ": ", e);
+                LOGGER.error("Could not store recipe shop for player {}", this  , e);
             }
         }
     }
@@ -9458,9 +9443,9 @@ public final class Player extends Playable {
         if (_isOnCustomEvent) {
             return true;
         }
-        if (_events != null) {
-            for (AbstractEvent listener : _events.values()) {
-                if (listener.isOnEvent(this) && listener.isBlockingExit(this)) {
+        if (nonNull(_events)) {
+            for (var event : _events.values()) {
+                if (event.isOnEvent(this) && event.isBlockingExit(this)) {
                     return true;
                 }
             }
@@ -9677,15 +9662,10 @@ public final class Player extends Playable {
         return nonNull(requests) && requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
     }
 
-    /**
-     * @param requestClass
-     * @param classes
-     * @return {@code true} if player has the provided request and processing it, {@code false} otherwise.
-     */
     @SafeVarargs
     public final boolean hasRequest(Class<? extends AbstractRequest> requestClass, Class<? extends AbstractRequest>... classes) {
-        if (requests != null) {
-            for (Class<? extends AbstractRequest> clazz : classes) {
+        if (nonNull(requests)) {
+            for (var clazz : classes) {
                 if (requests.containsKey(clazz)) {
                     return true;
                 }
@@ -9775,7 +9755,7 @@ public final class Player extends Playable {
     }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
-        sendPacket(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(), new ExUserInfoInvenWeight());
+        sendPackets(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(), new ExUserInfoInvenWeight());
     }
 
     public void sendItemList() {

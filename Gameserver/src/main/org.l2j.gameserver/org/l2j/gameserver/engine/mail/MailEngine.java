@@ -136,8 +136,7 @@ public final class MailEngine {
         mails.put(mail.getId(), mail);
 
         doIfNonNull(World.getInstance().findPlayer(mail.getReceiver()), receiver -> {
-            receiver.sendPacket(ExNoticePostArrived.valueOf(true), new ExUnReadMailCount((int) getUnreadCount(receiver)));
-            receiver.sendPacket();
+            receiver.sendPackets(ExNoticePostArrived.valueOf(true), new ExUnReadMailCount((int) getUnreadCount(receiver)));
         });
 
         ThreadPool.schedule(new MessageDeletionTask(mail.getId()), mail.getExpiration() - System.currentTimeMillis());

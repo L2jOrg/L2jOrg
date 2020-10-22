@@ -43,14 +43,14 @@ public final class WarehouseDepositList {
     public static void openOfPlayer(Player player) {
         doIfNonNull(wareHouseOf(player, WarehouseType.PRIVATE), warehouse -> {
             var depositable = player.getDepositableItems(WarehouseType.PRIVATE);
-            player.sendPacket(header(warehouse, WarehouseType.PRIVATE, player, depositable.size()), new DepositableList(depositable));
+            player.sendPackets(header(warehouse, WarehouseType.PRIVATE, player, depositable.size()), new DepositableList(depositable));
         });
     }
 
     public static void openOfClan(Player player) {
         doIfNonNull(wareHouseOf(player, WarehouseType.CLAN), warehouse -> {
             var depositable = player.getDepositableItems(WarehouseType.CLAN);
-            player.sendPacket(header(warehouse, WarehouseType.CLAN, player, depositable.size()), new DepositableList(depositable));
+            player.sendPackets(header(warehouse, WarehouseType.CLAN, player, depositable.size()), new DepositableList(depositable));
         });
     }
 

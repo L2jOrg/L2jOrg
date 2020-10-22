@@ -27,16 +27,16 @@ public final class RestartResponse extends ServerPacket {
     public static final RestartResponse TRUE = new RestartResponse(true);
     public static final RestartResponse FALSE = new RestartResponse(false);
 
-    private final boolean _result;
+    private final boolean result;
 
     private RestartResponse(boolean result) {
-        _result = result;
+        this.result = result;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.RESTART_RESPONSE, buffer );
-        buffer.writeInt(_result ? 1 : 0);
+        buffer.writeInt(result);
     }
 
 }

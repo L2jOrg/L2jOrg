@@ -64,6 +64,10 @@ public class Util {
         return nonNull(value) && !value.isBlank();
     }
 
+    public static <K, V> boolean isNotEmpty(Map<K, V> map) {
+        return nonNull(map) && !map.isEmpty();
+    }
+
     public static boolean isNullOrEmpty(final Collection<?> collection) {
         return isNull(collection) || collection.isEmpty();
     }

@@ -108,7 +108,7 @@ public abstract class Tutorial extends Quest {
             }
             case "8", "question_mark_1" -> {
                 if (state.getMemoState() < 3) {
-                    player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_1, 0), TutorialCloseHtml.STATIC_PACKET);
+                    player.sendPackets(new TutorialShowQuestionMark(QUESTION_MARK_ID_1, 0), TutorialCloseHtml.STATIC_PACKET);
                 }
                 player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
             }

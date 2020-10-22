@@ -51,7 +51,7 @@ public final class Disconnection {
         AntiFeedManager.getInstance().onDisconnect(this.client);
     }
 
-    public static GameClient getClient(GameClient client, Player player) {
+    private GameClient getClient(GameClient client, Player player) {
         if (nonNull(client)) {
             return client;
         }
@@ -61,7 +61,7 @@ public final class Disconnection {
         return null;
     }
 
-    public static Player getPlayer(GameClient client, Player player) {
+    private Player getPlayer(GameClient client, Player player) {
         if (nonNull(player)) {
             return player;
         }
@@ -101,7 +101,7 @@ public final class Disconnection {
 
     public Disconnection deleteMe() {
         try {
-            if ((player != null) && player.isOnline()) {
+            if (nonNull(player) && player.isOnline()) {
                 player.deleteMe();
             }
 

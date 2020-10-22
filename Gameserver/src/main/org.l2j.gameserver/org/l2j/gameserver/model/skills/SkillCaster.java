@@ -365,7 +365,7 @@ public class SkillCaster implements Runnable {
 
         // Check if creature is already casting
         if ((castingType != null) && caster.isCastingNow(castingType)) {
-            caster.sendPacket(ActionFailed.get(castingType));
+            caster.sendPacket(ActionFailed.of(castingType));
             return false;
         }
 
@@ -732,7 +732,7 @@ public class SkillCaster implements Runnable {
         // If aborted, broadcast casting aborted.
         if (aborted) {
             caster.broadcastPacket(new MagicSkillCanceld(caster.getObjectId())); // broadcast packet to stop animations client-side
-            caster.sendPacket(ActionFailed.get(_castingType)); // send an "action failed" packet to the caster
+            caster.sendPacket(ActionFailed.of(_castingType)); // send an "action failed" packet to the caster
         }
 
         // If there is a queued skill, launch it and wipe the queue.

@@ -297,7 +297,7 @@ public final class HandysBlockCheckerManager {
     public void onDisconnect(Player player) {
         final int arena = player.getBlockCheckerArena();
         final int team = getHolder(arena).getPlayerTeam(player);
-        getInstance().removePlayer(player, arena, team);
+        removePlayer(player, arena, team);
         if (player.getTeam() != Team.NONE) {
             player.stopAllEffects();
             // Remove team aura

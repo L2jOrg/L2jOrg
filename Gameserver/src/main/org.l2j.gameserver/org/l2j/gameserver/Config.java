@@ -1016,7 +1016,6 @@ public final class Config {
         GM_ITEM_RESTRICTION = General.getBoolean("GMItemRestriction", true);
         GM_SKILL_RESTRICTION = General.getBoolean("GMSkillRestriction", true);
         GM_TRADE_RESTRICTED_ITEMS = General.getBoolean("GMTradeRestrictedItems", false);
-        GM_RESTART_FIGHTING = General.getBoolean("GMRestartFighting", true);
         GM_ANNOUNCER_NAME = General.getBoolean("GMShowAnnouncerName", false);
         GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
         GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);

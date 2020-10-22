@@ -219,7 +219,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
         registered.add(player);
         player.sendPacket(YOU_VE_BEEN_REGISTERED_IN_THE_WAITING_LIST_OF_ALL_CLASS_BATTLE);
-        player.sendPacket(new ExOlympiadRecord(), new ExOlympiadMatchMakingResult(true, OlympiadRuleType.CLASSLESS));
+        player.sendPackets(new ExOlympiadRecord(), new ExOlympiadMatchMakingResult(true, OlympiadRuleType.CLASSLESS));
 
         if(state != MATCH_MAKING && registered.size() >= minParticipant) {
             state = MATCH_MAKING;

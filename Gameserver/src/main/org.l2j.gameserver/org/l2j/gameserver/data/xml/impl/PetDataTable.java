@@ -58,7 +58,7 @@ public final class PetDataTable extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/PetData.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/stats/pets/pets.xsd");
     }
 
     /**
@@ -147,10 +147,6 @@ public final class PetDataTable extends GameXmlReader {
         }
     }
 
-    /**
-     * @param itemId
-     * @return
-     */
     public PetTemplate getPetDataByItemId(int itemId) {
         for (PetTemplate data : pets.values()) {
             if (data.getItemId() == itemId) {

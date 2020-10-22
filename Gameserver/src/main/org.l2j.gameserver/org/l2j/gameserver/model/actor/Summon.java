@@ -811,10 +811,11 @@ public abstract class Summon extends Playable {
         return !GameUtils.isDoor(target) || (getTemplate().getRace() == Race.SIEGE_WEAPON);
     }
 
+
     @Override
-    public void sendPacket(ServerPacket... packets) {
+    public void sendPacket(ServerPacket packet) {
         if (owner != null) {
-            owner.sendPacket(packets);
+            owner.sendPacket(packet);
         }
     }
 
