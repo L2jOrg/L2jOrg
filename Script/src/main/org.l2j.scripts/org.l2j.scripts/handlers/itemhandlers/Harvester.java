@@ -69,7 +69,7 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		skills.forEach(holder -> activeChar.useMagic(holder.getSkill(), item, false, false));
+		skills.forEach(holder -> activeChar.useSkill(holder.getSkill(), item, false, false));
 		return true;
 	}
 }

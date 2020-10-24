@@ -39,13 +39,13 @@ public class Others implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (selectedTarget == activeChar)
+		if (currentTarget == creature)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
+			creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
 			return null;
 		}
-		return selectedTarget;
+		return currentTarget;
 	}
 }

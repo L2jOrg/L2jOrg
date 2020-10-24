@@ -847,7 +847,7 @@ public class LastImperialTomb extends AbstractInstance
 		final SkillHolder skill = new SkillHolder(5007, random);
 		final SkillHolder skillEffect = new SkillHolder(5008, random);
 		broadCastPacket(world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, SKILL_MSG.get(random), null));
-		broadCastPacket(world, new MagicSkillUse(frintezza, frintezza, skill.getSkillId(), skill.getLevel(), skill.getSkill().getHitTime(), 0));
+		broadCastPacket(world, new MagicSkillUse(frintezza, skill.getSkill(), 0));
 		for (Player player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())

@@ -68,6 +68,7 @@ public class CharacterSettings implements Settings {
     private boolean teleportInBattle;
     private boolean craftEnabled;
     private long maxAdena;
+    private boolean allowPKTeleport;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -129,6 +130,8 @@ public class CharacterSettings implements Settings {
         teleportInBattle = settingsFile.getBoolean("TeleportInBattle", true);
 
         craftEnabled = settingsFile.getBoolean("CraftingEnabled", true);
+
+        allowPKTeleport = settingsFile.getBoolean("AltKarmaPlayerCanTeleport", true);
     }
 
     public int partyRange() {
@@ -293,5 +296,9 @@ public class CharacterSettings implements Settings {
 
     public boolean isCraftEnabled() {
         return craftEnabled;
+    }
+
+    public boolean allowPKTeleport() {
+        return allowPKTeleport;
     }
 }

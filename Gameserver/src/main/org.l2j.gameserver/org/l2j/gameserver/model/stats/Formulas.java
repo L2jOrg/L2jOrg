@@ -358,19 +358,11 @@ public final class Formulas {
         return Rnd.chance(rate);
     }
 
-    /**
-     * Calculate delay (in milliseconds) for skills cast
-     *
-     * @param attacker
-     * @param skill
-     * @param skillTime
-     * @return
-     */
-    public static int calcAtkSpd(Creature attacker, Skill skill, double skillTime) {
+    public static int calcAtkSpd(Creature attacker, Skill skill) {
         if (skill.isMagic()) {
-            return (int) ((skillTime / attacker.getMAtkSpd()) * 333);
+            return (int) (((double)skill.getCoolTime() / attacker.getMAtkSpd()) * 333);
         }
-        return (int) ((skillTime / attacker.getPAtkSpd()) * 300);
+        return (int) (((double)skill.getCoolTime() / attacker.getPAtkSpd()) * 300);
     }
 
     public static double calcAtkSpdMultiplier(Creature creature) {
@@ -396,20 +388,21 @@ public final class Formulas {
      * @return factor divisor for skill hit time and cancel time.
      */
     public static double calcSkillTimeFactor(Creature creature, Skill skill) {
-        if (skill.isChanneling() || (skill.getSkillType() == SkillType.STATIC)) {
+        if (skill.isChanneling() || skill.getSkillType() == SkillType.STATIC) {
             return 1.0d;
         }
 
-        double factor = 0.0;
+        double factor;
         if (skill.getSkillType() == SkillType.MAGIC) {
-            final double spiritshotHitTime = creature.isChargedShot(ShotType.SPIRITSHOTS) ? 0.4 : 0; // TODO: Implement propper values
-            factor = creature.getStats().getMAttackSpeedMultiplier() + (creature.getStats().getMAttackSpeedMultiplier() * spiritshotHitTime); // matkspdmul + (matkspdmul * spiritshot_hit_time)
+            final double spiritshotHitTime = creature.isChargedShot(ShotType.SPIRITSHOTS) ? 0.4 : 0; // TODO: Implement proper values
+            // matkspdmul + (matkspdmul * spiritshot_hit_time)
+            factor = creature.getStats().getMAttackSpeedMultiplier() + (creature.getStats().getMAttackSpeedMultiplier() * spiritshotHitTime);
         } else {
             factor = creature.getAttackSpeedMultiplier();
         }
 
-        if (isNpc(creature)) {
-            double npcFactor = ((Npc) creature).getTemplate().getHitTimeFactorSkill();
+        if (creature instanceof Npc npc ) {
+            double npcFactor = npc.getTemplate().getHitTimeFactorSkill();
             if (npcFactor > 0) {
                 factor /= npcFactor;
             }
@@ -540,7 +533,6 @@ public final class Formulas {
      * @return {@code true} if the effect lands
      */
     public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill) {
-        // StaticObjects can not receive continuous effects.
         if (isDoor(target) || (target instanceof SiegeFlag) || (target instanceof StaticWorldObject)) {
             return false;
         }
@@ -574,7 +566,7 @@ public final class Formulas {
 
         int magicLevel = skill.getMagicLevel();
         if (magicLevel <= -1) {
-            magicLevel = target.getLevel() + 3;
+            magicLevel = attacker.getLevel() + 3;
         }
 
         final double targetBasicProperty = getAbnormalResist(skill.getBasicProperty(), target);
@@ -767,7 +759,7 @@ public final class Formulas {
 
         final double chance = BaseStats.values()[val].calcBonus(actor) * actor.getStats().getValue(Stat.SKILL_CRITICAL_PROBABILITY, 1);
 
-        return ((Rnd.nextDouble() * 100.) < chance);
+        return Rnd.chance(chance);
     }
 
     /**
@@ -841,10 +833,10 @@ public final class Formulas {
      * @return {@code true} if reflect, {@code false} otherwise.
      */
     public static boolean calcBuffDebuffReflection(Creature target, Skill skill) {
-        if (!skill.isDebuff() || (skill.getActivateRate() == -1)) {
+        if (!skill.isDebuff() || skill.getActivateRate() == -1) {
             return false;
         }
-        return target.getStats().getValue(skill.isMagic() ? Stat.REFLECT_SKILL_MAGIC : Stat.REFLECT_SKILL_PHYSIC, 0) > Rnd.get(100);
+        return Rnd.chance(target.getStats().getValue(skill.isMagic() ? Stat.REFLECT_SKILL_MAGIC : Stat.REFLECT_SKILL_PHYSIC, 0));
     }
 
     /**

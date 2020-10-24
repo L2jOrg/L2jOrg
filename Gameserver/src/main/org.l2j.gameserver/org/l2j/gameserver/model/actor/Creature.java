@@ -99,8 +99,7 @@ import static java.lang.Math.max;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.isNullOrEmpty;
-import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
@@ -155,7 +154,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     /**
      * Future Skill Cast
      */
-    protected Map<SkillCastingType, SkillCaster> _skillCasters = new ConcurrentHashMap<>();
+    protected Map<SkillCastingType, SkillCaster> skillCasters = new ConcurrentHashMap<>();
     private volatile Set<WeakReference<Creature>> _attackByList;
     private boolean isDead = false;
     private boolean _isImmobilized = false;
@@ -296,13 +295,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         final Instance instance = getInstanceWorld();
         switch (zone) {
             case PVP: {
-                if ((instance != null) && instance.isPvP()) {
+                if (nonNull(instance) && instance.isPvP()) {
                     return true;
                 }
-                return (_zones[ZoneType.PVP.ordinal()] > 0) && (_zones[ZoneType.PEACE.ordinal()] == 0);
+                return _zones[ZoneType.PVP.ordinal()] > 0 && _zones[ZoneType.PEACE.ordinal()] == 0;
             }
             case PEACE: {
-                if ((instance != null) && instance.isPvP()) {
+                if (nonNull(instance) && instance.isPvP()) {
                     return false;
                 }
             }
@@ -935,10 +934,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param castingType  The SkillCastingType of the skill.
      */
     public synchronized void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed, SkillCastingType castingType) {
-        // Try casting the skill
         final SkillCaster skillCaster = SkillCaster.castSkill(this, _target, skill, item, castingType, ctrlPressed, shiftPressed);
-        if ((skillCaster == null) && isPlayer(this)) {
-            // Skill casting failed, notify player.
+        if (isNull(skillCaster) && isPlayer(this)) {
             sendPacket(ActionFailed.of(castingType));
             getAI().setIntention(AI_INTENTION_ACTIVE);
         }
@@ -1072,8 +1069,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@code true} if the skill is under reuse time, {@code false} otherwise
      */
     public final synchronized boolean hasSkillReuse(long hashCode) {
-        final TimeStamp reuseStamp = _reuseTimeStampsSkills.get(hashCode);
-        return (reuseStamp != null) && reuseStamp.hasNotPassed();
+        return falseIfNullOrElse(_reuseTimeStampsSkills.get(hashCode), TimeStamp::hasNotPassed);
     }
 
     /**
@@ -1115,10 +1111,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param delay delay in milliseconds
      */
     public void disableSkill(Skill skill, long delay) {
-        if (skill == null) {
-            return;
-        }
-
         _disabledSkills.put(skill.getReuseHashCode(), delay > 0 ? System.currentTimeMillis() + delay : Long.MAX_VALUE);
     }
 
@@ -1784,12 +1776,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     /**
      * Stop and remove the effects corresponding to the skill ID.
-     *
-     * @param removed if {@code true} the effect will be set as removed, and a system message will be sent
+     *  @param removed if {@code true} the effect will be set as removed, and a system message will be sent
      * @param skillId the skill Id
+     * @return true if the effect was stopped
      */
-    public void stopSkillEffects(boolean removed, int skillId) {
-        _effectList.stopSkillEffects(removed, skillId);
+    public boolean stopSkillEffects(boolean removed, int skillId) {
+        return _effectList.stopSkillEffects(removed, skillId);
     }
 
     public void stopSkillEffects(Skill skill) {
@@ -2167,15 +2159,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return True if the Creature is casting any kind of skill, including simultaneous skills like potions.
      */
     public final boolean isCastingNow() {
-        return !_skillCasters.isEmpty();
+        return !skillCasters.isEmpty();
     }
 
     public final boolean isCastingNow(SkillCastingType skillCastingType) {
-        return _skillCasters.containsKey(skillCastingType);
+        return skillCasters.containsKey(skillCastingType);
     }
 
     public final boolean isCastingNow(Predicate<SkillCaster> filter) {
-        return _skillCasters.values().stream().anyMatch(filter);
+        for (SkillCaster caster : skillCasters.values()) {
+            if(filter.test(caster)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -2210,7 +2207,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             skillCaster.stopCasting(true);
             if (isPlayer(this))
             {
-                getActingPlayer().setQueuedSkill(null, null, false, false);
+                getActingPlayer().setQueuedSkill(null, false, false);
             }
         }
     }
@@ -2235,7 +2232,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (skillCaster != null) {
             skillCaster.stopCasting(true);
             if (isPlayer(this)) {
-                getActingPlayer().setQueuedSkill(null, null, false, false);
+                getActingPlayer().setQueuedSkill(null, false, false);
             }
             return true;
         }
@@ -3047,17 +3044,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
     }
 
-    /**
-     * @param attacker
-     * @return True if inside peace zone.
-     */
     public boolean isInsidePeaceZone(WorldObject attacker) {
         return isInsidePeaceZone(attacker, this);
     }
 
     public boolean isInsidePeaceZone(WorldObject attacker, WorldObject target) {
         final Instance instanceWorld = getInstanceWorld();
-        if ((target == null) || !( GameUtils.isPlayable(target) && GameUtils.isPlayable(attacker)) || ((instanceWorld != null) && instanceWorld.isPvP())) {
+        if (isNull(target) || !( GameUtils.isPlayable(target) && GameUtils.isPlayable(attacker)) || ((instanceWorld != null) && instanceWorld.isPvP())) {
             return false;
         }
 
@@ -3976,15 +3969,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public Collection<SkillCaster> getSkillCasters() {
-        return _skillCasters.values();
+        return skillCasters.values();
     }
 
     public SkillCaster addSkillCaster(SkillCastingType castingType, SkillCaster skillCaster) {
-        return _skillCasters.put(castingType, skillCaster);
+        return skillCasters.put(castingType, skillCaster);
     }
 
     public SkillCaster removeSkillCaster(SkillCastingType castingType) {
-        return _skillCasters.remove(castingType);
+        return skillCasters.remove(castingType);
     }
 
     @SafeVarargs
@@ -3993,7 +3986,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             filter = filter.and(additionalFilter);
         }
 
-        return _skillCasters.values().stream().filter(filter).collect(Collectors.toList());
+        return skillCasters.values().stream().filter(filter).collect(Collectors.toList());
     }
 
     @SafeVarargs
@@ -4002,7 +3995,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             filter = filter.and(additionalFilter);
         }
 
-        return _skillCasters.values().stream().filter(filter).findAny().orElse(null);
+        return skillCasters.values().stream().filter(filter).findAny().orElse(null);
     }
 
     /**

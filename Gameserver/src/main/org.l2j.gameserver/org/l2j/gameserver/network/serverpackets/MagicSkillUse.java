@@ -19,10 +19,14 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.GameClient;
@@ -33,84 +37,88 @@ import java.util.Collections;
 import java.util.List;
 
 import static java.lang.Math.max;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * MagicSkillUse server packet implementation.
  *
  * @author UnAfraid, NosBit
+ * @author JoeAlisson
  */
 public final class MagicSkillUse extends ServerPacket {
-    private final int _skillId;
-    private final int _skillLevel;
-    private final int _hitTime;
-    private final int _reuseGroup;
-    private final int _reuseDelay;
-    private final int _actionId; // If skill is called from RequestActionUse, use that ID.
-    private final SkillCastingType _castingType; // Defines which client bar is going to use.
-    private final Creature _activeChar;
-    private final WorldObject _target;
-    private final List<Integer> _unknown = Collections.emptyList();
-    private final List<Location> _groundLocations;
 
-    public MagicSkillUse(Creature cha, WorldObject target, int skillId, int skillLevel, int hitTime, int reuseDelay, int reuseGroup, int actionId, SkillCastingType castingType) {
-        _activeChar = cha;
-        _target = target;
-        _skillId = skillId;
-        _skillLevel = skillLevel;
-        _hitTime = hitTime;
-        _reuseGroup = reuseGroup;
-        _reuseDelay = reuseDelay;
-        _actionId = actionId;
-        _castingType = castingType;
+    private final int hitTime;
+    private final int reuseDelay;
+    private final int actionId; // If skill is called from RequestActionUse, use that ID.
+    private final SkillCastingType castingType;
+    private final Creature caster;
+    private final WorldObject target;
+    private final List<Integer> _unknown = Collections.emptyList();
+    private final List<Location> groundLocations;
+    private final Skill skill;
+
+    public MagicSkillUse(Creature caster, WorldObject target, Skill skill, int hitTime, int reuseDelay, int actionId, SkillCastingType castingType) {
+        this.caster = caster;
+        this.target = target;
+        this.skill = skill;
+        this.hitTime = hitTime;
+        this.reuseDelay = reuseDelay;
+        this.actionId = actionId;
+        this.castingType = castingType;
         Location skillWorldPos = null;
-        if (isPlayer(cha)) {
-            final Player player = cha.getActingPlayer();
-            if (player.getCurrentSkillWorldPosition() != null) {
-                skillWorldPos = player.getCurrentSkillWorldPosition();
-            }
+        if(caster instanceof Player player) {
+            skillWorldPos = player.getCurrentSkillWorldPosition();
         }
-        _groundLocations = skillWorldPos != null ? Arrays.asList(skillWorldPos) : Collections.emptyList();
+        groundLocations =  nonNull(skillWorldPos) ? List.of(skillWorldPos) :  Collections.emptyList();
+    }
+
+    public MagicSkillUse(Creature caster, Skill skill, int reuseDelay) {
+        this(caster, caster, skill, skill.getHitTime(), reuseDelay, -1, SkillCastingType.NORMAL);
+    }
+
+    public MagicSkillUse(Creature caster, WorldObject target, Skill skill, int reuseDelay) {
+        this(caster, target, skill, skill.getHitTime(), reuseDelay, -1, SkillCastingType.NORMAL);
     }
 
     public MagicSkillUse(Creature cha, WorldObject target, int skillId, int skillLevel, int hitTime, int reuseDelay) {
-        this(cha, target, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
+        this(cha, target, SkillEngine.getInstance().getSkill(skillId, skillLevel), hitTime, reuseDelay, -1, SkillCastingType.NORMAL);
     }
 
     public MagicSkillUse(Creature cha, int skillId, int skillLevel, int hitTime, int reuseDelay) {
-        this(cha, cha, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
+        this(cha, cha, SkillEngine.getInstance().getSkill(skillId, skillLevel), hitTime, reuseDelay, -1, SkillCastingType.NORMAL);
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.MAGIC_SKILL_USE, buffer );
 
-        buffer.writeInt(_castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
-        buffer.writeInt(_activeChar.getObjectId());
-        buffer.writeInt(_target.getObjectId());
-        buffer.writeInt(_skillId);
-        buffer.writeInt(_skillLevel);
-        buffer.writeInt(_hitTime);
-        buffer.writeInt(_reuseGroup);
-        buffer.writeInt(_reuseDelay);
-        buffer.writeInt(_activeChar.getX());
-        buffer.writeInt(_activeChar.getY());
-        buffer.writeInt(_activeChar.getZ());
+        buffer.writeInt(castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
+        buffer.writeInt(caster.getObjectId());
+        buffer.writeInt(target.getObjectId());
+        buffer.writeInt(skill.getId());
+        buffer.writeInt(skill.getLevel());
+        buffer.writeInt(hitTime);
+        buffer.writeInt(skill.getReuseDelayGroup());
+        buffer.writeInt(reuseDelay);
+        buffer.writeInt(caster.getX());
+        buffer.writeInt(caster.getY());
+        buffer.writeInt(caster.getZ());
         buffer.writeShort(_unknown.size()); // TODO: Implement me!
         for (int unknown : _unknown) {
             buffer.writeShort(unknown);
         }
-        buffer.writeShort(_groundLocations.size());
-        for (IPositionable target : _groundLocations) {
+        buffer.writeShort(groundLocations.size());
+        for (IPositionable target : groundLocations) {
             buffer.writeInt(target.getX());
             buffer.writeInt(target.getY());
             buffer.writeInt(target.getZ());
         }
-        buffer.writeInt(_target.getX());
-        buffer.writeInt(_target.getY());
-        buffer.writeInt(_target.getZ());
-        buffer.writeInt(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
-        buffer.writeInt(max(_actionId, 0)); // ID from RequestActionUse. Used to set cooldown on summon skills.
+        buffer.writeInt(target.getX());
+        buffer.writeInt(target.getY());
+        buffer.writeInt(target.getZ());
+        buffer.writeInt(actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
+        buffer.writeInt(max(actionId, 0)); // ID from RequestActionUse. Used to set cooldown on summon skills.
     }
 
 }

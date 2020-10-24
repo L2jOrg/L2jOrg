@@ -59,8 +59,7 @@ public final class PhysicalAttack extends AbstractEffect {
 	}
 	
 	@Override
-	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
-	{
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
 		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill);
 	}
 	

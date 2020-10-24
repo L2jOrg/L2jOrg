@@ -587,16 +587,18 @@ public class Pet extends Summon {
     }
 
     @Override
-    public final void stopSkillEffects(boolean removed, int skillId) {
-        super.stopSkillEffects(removed, skillId);
+    public final boolean stopSkillEffects(boolean removed, int skillId) {
+        boolean stopped = super.stopSkillEffects(removed, skillId);
         final Collection<SummonEffect> effects = SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId());
         if ((effects != null) && !effects.isEmpty()) {
             for (SummonEffect effect : effects) {
                 if (effect.getSkill().getId() == skillId) {
                     SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()).remove(effect);
+                    stopped = true;
                 }
             }
         }
+        return stopped;
     }
 
     @Override

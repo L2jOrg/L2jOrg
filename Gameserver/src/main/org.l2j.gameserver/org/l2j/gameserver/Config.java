@@ -129,7 +129,6 @@ public final class Config {
 
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_TELEPORT;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_GK;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_TRADE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE;
@@ -262,7 +261,6 @@ public final class Config {
     public static boolean GM_STARTUP_AUTO_LIST;
     public static boolean GM_STARTUP_DIET_MODE;
     public static boolean GM_ITEM_RESTRICTION;
-    public static boolean GM_SKILL_RESTRICTION;
     public static boolean GM_TRADE_RESTRICTED_ITEMS;
     public static boolean GM_RESTART_FIGHTING;
     public static boolean GM_ANNOUNCER_NAME;
@@ -923,7 +921,6 @@ public final class Config {
         Arrays.sort(AUGMENTATION_BLACKLIST);
         ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = Character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
         ALT_GAME_KARMA_PLAYER_CAN_SHOP = Character.getBoolean("AltKarmaPlayerCanShop", true);
-        ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = Character.getBoolean("AltKarmaPlayerCanTeleport", true);
         ALT_GAME_KARMA_PLAYER_CAN_USE_GK = Character.getBoolean("AltKarmaPlayerCanUseGK", false);
         ALT_GAME_KARMA_PLAYER_CAN_TRADE = Character.getBoolean("AltKarmaPlayerCanTrade", true);
         ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = Character.getBoolean("AltKarmaPlayerCanUseWareHouse", true);
@@ -1014,7 +1011,6 @@ public final class Config {
         GM_STARTUP_AUTO_LIST = General.getBoolean("GMStartupAutoList", false);
         GM_STARTUP_DIET_MODE = General.getBoolean("GMStartupDietMode", false);
         GM_ITEM_RESTRICTION = General.getBoolean("GMItemRestriction", true);
-        GM_SKILL_RESTRICTION = General.getBoolean("GMSkillRestriction", true);
         GM_TRADE_RESTRICTED_ITEMS = General.getBoolean("GMTradeRestrictedItems", false);
         GM_ANNOUNCER_NAME = General.getBoolean("GMShowAnnouncerName", false);
         GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);

@@ -94,13 +94,6 @@ public final class GameUtils {
         return new Location(newX, newY, loc.getZ());
     }
 
-    /**
-     * @param range
-     * @param obj1
-     * @param obj2
-     * @param includeZAxis
-     * @return {@code true} if the two objects are within specified range between each other, {@code false} otherwise
-     */
     public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis) {
         if (isAnyNull(obj1, obj2) || (obj1.getInstanceWorld() != obj2.getInstanceWorld())) {
             return false;
@@ -493,6 +486,10 @@ public final class GameUtils {
 
     public static boolean isCreature(WorldObject object) {
         return object instanceof Creature;
+    }
+
+    public static double calcIfIsCreature(WorldObject object, ToDoubleFunction<Creature> function) {
+        return object instanceof Creature creature ? function.applyAsDouble(creature) : 0;
     }
 
     public static void doIfIsCreature(WorldObject object, Consumer<Creature> action) {

@@ -55,7 +55,7 @@ public abstract class AbstractShot implements IItemHandler {
         player.chargeShot(getShotType(), getBonus(player));
         player.sendPacket(getEnabledShotsMessage());
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayeableChargeShots(player, getShotType(), isBlessed()), player);
-        skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, holder.getSkillId(), holder.getLevel(), 0, 0), 600));
+        skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, holder.getSkill(), 0), 600));
         return true;
     }
 

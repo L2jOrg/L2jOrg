@@ -21,6 +21,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -36,8 +37,6 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -52,6 +51,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.ai.CtrlIntention.*;
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -238,20 +239,11 @@ public class CreatureAI extends AbstractAI {
     }
 
     protected void changeIntentionToCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
-        // Set the AI skill used by INTENTION_CAST
         _skill = skill;
-
-        // Set the AI item that triggered this skill
         _item = item;
-
-        // Set the ctrl/shift pressed parameters
         _forceUse = forceUse;
         _dontMove = dontMove;
-
-        // Change the Intention of this AbstractAI to AI_INTENTION_CAST
         changeIntention(AI_INTENTION_CAST, skill);
-
-        // Launch the Think Event
         notifyEvent(CtrlEvent.EVT_THINK, null);
     }
 
@@ -932,36 +924,23 @@ public class CreatureAI extends AbstractAI {
 
     /**
      * Modify current Intention and actions if the target is lost.<br>
-     * <B><U> Actions</U> : <I>If the target is lost</I></B>
-     * <ul>
-     * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
-     * <li>Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)</li>
-     * <li>Set the Intention of this AbstractAI to AI_INTENTION_ACTIVE</li>
-     * </ul>
-     * <B><U> Example of use </U> :</B>
-     * <ul>
-     * <li>L2PLayerAI, SummonAI</li>
-     * </ul>
      *
      * @param target The targeted WorldObject
      * @return True if the target is lost
      */
     protected boolean checkTargetLost(WorldObject target) {
-        // check if player is fakedeath
-        if (isPlayer(target)) {
-            final Player target2 = (Player) target; // convert object to chara
+        if (target instanceof Player target2) {
 
             if (target2.isFakeDeath()) {
                 target2.stopFakeDeath(true);
                 return false;
             }
         }
-        if (target == null) {
-            // Set the Intention of this AbstractAI to AI_INTENTION_ACTIVE
+        if (isNull(target)) {
             setIntention(AI_INTENTION_ACTIVE);
             return true;
         }
-        if ((actor != null) && (_skill != null) && _skill.isBad() && (_skill.getAffectRange() > 0) && !GeoEngine.getInstance().canSeeTarget(actor, target)) {
+        if (nonNull(actor) && nonNull(_skill) && _skill.isBad() && _skill.getAffectRange() > 0 && !GeoEngine.getInstance().canSeeTarget(actor, target)) {
             setIntention(AI_INTENTION_ACTIVE);
             return true;
         }

@@ -70,7 +70,7 @@ public class FishShots implements IItemHandler {
 			return false;
 		}
 		
-		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, holder.getSkillId(), holder.getLevel(), 0, 0), 600));
+		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, holder.getSkill(), 0), 600));
 		player.setTarget(oldTarget);
 		return true;
 	}

@@ -281,9 +281,7 @@ public final class HomeBoard implements IParseBoardHandler {
                     targets.stream().filter(target -> !isSummon(target) || !skill.isSharedWithSummon()).forEach(target -> {
                         skill.applyEffects(activeChar, target);
                         if (Config.COMMUNITYBOARD_CAST_ANIMATIONS) {
-                            activeChar.sendPacket(new MagicSkillUse(activeChar, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
-                            // not recommend broadcast
-                            // activeChar.broadcastPacket(new MagicSkillUse(activeChar, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+                            activeChar.sendPacket(new MagicSkillUse(activeChar, target, skill, skill.getReuseDelay()));
                         }
                     });
                 }

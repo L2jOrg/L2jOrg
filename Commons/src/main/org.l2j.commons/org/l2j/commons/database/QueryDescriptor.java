@@ -145,7 +145,7 @@ public class QueryDescriptor implements AutoCloseable {
 
     private PreparedStatement createPreparedStatement(Connection con) throws SQLException {
         var annotation = method.getAnnotation(Query.class);
-        PreparedStatement st = null;
+        PreparedStatement st;
         if(nonNull(annotation) && annotation.scrollResult()) {
             st = con.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         } else if(isUpdate) {
@@ -193,9 +193,9 @@ public class QueryDescriptor implements AutoCloseable {
     }
 
     public int getGeneratedKey() throws SQLException{
-        var statment = statementLocal.get();
-        if(nonNull(statment)) {
-            var rs = statment.getGeneratedKeys();
+        var statement = statementLocal.get();
+        if(nonNull(statement)) {
+            var rs = statement.getGeneratedKeys();
             if(rs.next()) {
                 return rs.getInt(1);
             }

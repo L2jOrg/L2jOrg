@@ -476,7 +476,7 @@ public abstract class Summon extends Playable {
      * @param dontMove used to prevent movement, if not in range
      */
     @Override
-    public boolean useMagic(Skill skill, Item item, boolean forceUse, boolean dontMove) {
+    public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
         // Null skill, dead summon or null owner are reasons to prevent casting.
         if ((skill == null) || isDead() || (owner == null)) {
             return false;

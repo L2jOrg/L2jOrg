@@ -368,7 +368,7 @@ public class EnchantItemEngine extends GameXmlReader {
                     getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3).addPcName(player).addInt(item.getEnchantLevel()).addItemName(item));
 
             doIfNonNull(CommonSkill.FIREWORK.getSkill(), skill ->
-                    player.broadcastPacket(new MagicSkillUse(player, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay())));
+                    player.broadcastPacket(new MagicSkillUse(player, skill, skill.getReuseDelay())));
         }
     }
 

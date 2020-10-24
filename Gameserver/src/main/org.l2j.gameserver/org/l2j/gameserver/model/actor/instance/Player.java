@@ -149,8 +149,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
+import static java.util.Objects.*;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
@@ -1370,8 +1369,8 @@ public final class Player extends Playable {
     private Player activeRequester;
     private long requestExpireTime = 0;
     // Used for protection after teleport
-    private long _spawnProtectEndTime = 0;
-    private long _teleportProtectEndTime = 0;
+    private long spawnProtectEndTime = 0;
+    private long teleportProtectEndTime = 0;
     private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
     @SuppressWarnings("rawtypes")
     private volatile Map<Class<? extends AbstractEvent>, AbstractEvent> _events;
@@ -1389,7 +1388,7 @@ public final class Player extends Playable {
      */
     private PlayerEventHolder eventStatus = null;
     private byte _handysBlockCheckerEventArena = -1;
-    private volatile Map<Integer, Skill> _transformSkills;
+    private volatile IntMap<Skill> transformSkills;
     private ScheduledFuture<?> _taskRentPet;
     private ScheduledFuture<?> _taskWater;
     private ScheduledFuture<?> _skillListRefreshTask;
@@ -1402,7 +1401,7 @@ public final class Player extends Playable {
     /**
      * Skills queued because a skill is already in progress
      */
-    private SkillUseHolder _queuedSkill;
+    private SkillUseHolder queuedSkill;
     private boolean _canRevive = true;
     private int _reviveRequested = 0;
     private double _revivePower = 0;
@@ -3427,19 +3426,19 @@ public final class Player extends Playable {
     }
 
     public boolean isSpawnProtected() {
-        return _spawnProtectEndTime > 0 && _spawnProtectEndTime > System.currentTimeMillis();
+        return spawnProtectEndTime > 0 && spawnProtectEndTime > System.currentTimeMillis();
     }
 
     public boolean isTeleportProtected() {
-        return _teleportProtectEndTime > 0  && _teleportProtectEndTime > System.currentTimeMillis();
+        return teleportProtectEndTime > 0  && teleportProtectEndTime > System.currentTimeMillis();
     }
 
     public void setSpawnProtection(boolean protect) {
-        _spawnProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_SPAWN_PROTECTION * 1000) : 0;
+        spawnProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_SPAWN_PROTECTION * 1000) : 0;
     }
 
     public void setTeleportProtection(boolean protect) {
-        _teleportProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_TELEPORT_PROTECTION * 1000) : 0;
+        teleportProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_TELEPORT_PROTECTION * 1000) : 0;
     }
 
     public final boolean isFakeDeath() {
@@ -6321,45 +6320,77 @@ public final class Player extends Playable {
      * <li>Notify the AI with AI_INTENTION_CAST and target</li>
      * </ul>
      *
-     * @param skill    The L2Skill to use
+     * @param skill    The Skill to use
      * @param forceUse used to force ATTACK on players
      * @param dontMove used to prevent movement, if not in range
      */
     @Override
-    public boolean useMagic(Skill skill, Item item, boolean forceUse, boolean dontMove) {
-        // Passive skills cannot be used.
-        if (skill.isPassive()) {
+    public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
+        if (!checkUseSkill(skill)) {
+            return false;
+        }
+
+        final WorldObject target = skill.getTarget(this, forceUse, dontMove, true);
+
+        if (isNull(target)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        // If Alternate rule Karma punishment is set to true, forbid skill Return to player with Karma
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
+        if (!checkCastSkillConditions(skill, item, forceUse, dontMove, target)) {
+            return false;
+        }
+        queuedSkill = null;
+        getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target, item, forceUse, dontMove);
+        return true;
+    }
+
+    private boolean checkCastSkillConditions(Skill skill, Item item, boolean forceUse, boolean dontMove, WorldObject target) {
+        // Check if all casting conditions are completed
+        if (!skill.checkCondition(this, target)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+
+            // Upon failed conditions, next action is called.
+            if (skill.getNextAction() != NextActionType.NONE && target != this && target.isAutoAttackable(this)) {
+                if ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO)) {
+                    if (skill.getNextAction() == NextActionType.ATTACK) {
+                        getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+                    } else if (skill.getNextAction() == NextActionType.CAST) {
+                        getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target, item, false, false);
+                    }
+                }
+            }
+            return false;
+        }
+
+        // If a skill is currently being used, queue this one if this is not the same
+        // In case of double casting, check if both slots are occupied, then queue skill.
+        if ((isCastingNow(SkillCastingType.NORMAL) || isCastingNow(SkillCastingType.NORMAL_SECOND))) {
+            if (isNull(item)) {
+                setQueuedSkill(skill, forceUse, dontMove);
+            }
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean checkUseSkill(Skill skill) {
+        if (skill.isPassive() || isDead() || (skill.isToggle() && isMounted())) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        // players mounted on pets cannot use any toggle skills
-        if (skill.isToggle() && isMounted()) {
+        if (!getSettings(CharacterSettings.class).allowPKTeleport() && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        // ************************************* Check Player State *******************************************
-
-        // Abnormal effects(ex : Stun, Sleep...) are checked in Creature useMagic()
         if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions())) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        // Check if the player is dead
-        if (isDead()) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        // Check if fishing and trying to use non-fishing skills.
         if (isFishing() && !skill.hasAnyEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
             sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
             return false;
@@ -6372,111 +6403,56 @@ public final class Player extends Playable {
         }
 
         if (isSkillDisabled(skill)) {
-            final SystemMessage sm;
-            if (hasSkillReuse(skill.getReuseHashCode())) {
-                final int remainingTime = (int) (getSkillRemainingReuseTime(skill.getReuseHashCode()) / 1000);
-                final int hours = remainingTime / 3600;
-                final int minutes = (remainingTime % 3600) / 60;
-                final int seconds = (remainingTime % 60);
-                if (hours > 0) {
-                    sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-                    sm.addSkillName(skill);
-                    sm.addInt(hours);
-                    sm.addInt(minutes);
-                } else if (minutes > 0) {
-                    sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-                    sm.addSkillName(skill);
-                    sm.addInt(minutes);
-                } else {
-                    sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-                    sm.addSkillName(skill);
-                }
-
-                sm.addInt(seconds);
-            } else {
-                sm = getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
-                sm.addSkillName(skill);
-            }
-
-            sendPacket(sm);
+            sendSkillReuseTimeMessage(skill);
             return false;
         }
 
-        // Check if the caster is sitting
         if (sitting) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        // Check if the skill type is toggle and disable it, unless the toggle is necessary to be on.
-        if (skill.isToggle()) {
-            if (isAffectedBySkill(skill.getId())) {
-                stopSkillEffects(true, skill.getId());
-                sendPacket(ActionFailed.STATIC_PACKET);
-                return false;
-            }
+        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
         }
 
-        // Check if the player uses "Fake Death" skill
         // Note: do not check this before TOGGLE reset
         if (isFakeDeath()) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        // ************************************* Check Target *******************************************
-        final Location worldPosition = _currentSkillWorldPosition;
-        if ((skill.getTargetType() == TargetType.GROUND) && (worldPosition == null)) {
+        if (isNull(_currentSkillWorldPosition) && skill.getTargetType() == TargetType.GROUND) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
-
-        // Create and set a WorldObject containing the target of the skill
-        final WorldObject target = skill.getTarget(this, forceUse, dontMove, true);
-        // Check the validity of the target
-        if (target == null) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        // Check if all casting conditions are completed
-        if (!skill.checkCondition(this, target)) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-
-            // Upon failed conditions, next action is called.
-            if ((skill.getNextAction() != NextActionType.NONE) && (target != this) && target.isAutoAttackable(this)) {
-                if ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO)) {
-                    if (skill.getNextAction() == NextActionType.ATTACK) {
-                        getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-                    } else if (skill.getNextAction() == NextActionType.CAST) {
-                        getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target, item, false, false);
-                    }
-                }
-            }
-
-            return false;
-        }
-
-        // If a skill is currently being used, queue this one if this is not the same
-        // In case of double casting, check if both slots are occupied, then queue skill.
-        if (isCastingNow(SkillCaster::isAnyNormalType) || (isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL) && isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL_SECOND))) {
-            // Do not queue skill if called by an item.
-            if (item == null) {
-                // Create a new SkillDat object and queue it in the player _queuedSkill
-                setQueuedSkill(skill, item, forceUse, dontMove);
-            }
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (_queuedSkill != null) {
-            setQueuedSkill(null, null, false, false);
-        }
-
-        // Notify the AI with AI_INTENTION_CAST and target
-        getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target, item, forceUse, dontMove);
         return true;
+    }
+
+    private void sendSkillReuseTimeMessage(Skill skill) {
+        final SystemMessage sm;
+        if (hasSkillReuse(skill.getReuseHashCode())) {
+            final int remainingTime = (int) (getSkillRemainingReuseTime(skill.getReuseHashCode()) / 1000);
+            final int hours = remainingTime / 3600;
+            final int minutes = (remainingTime % 3600) / 60;
+            final int seconds = (remainingTime % 60);
+            if (hours > 0) {
+                sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME)
+                        .addSkillName(skill).addInt(hours).addInt(minutes);
+            } else if (minutes > 0) {
+                sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME)
+                    .addSkillName(skill).addInt(minutes);
+            } else {
+                sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addSkillName(skill);
+            }
+            sm.addInt(seconds);
+        } else {
+            sm = getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE).addSkillName(skill);
+        }
+
+        sendPacket(sm);
     }
 
     public boolean isInLooterParty(int LooterId) {
@@ -8091,23 +8067,15 @@ public final class Player extends Playable {
     }
 
     public SkillUseHolder getQueuedSkill() {
-        return _queuedSkill;
+        return queuedSkill;
     }
 
-    /**
-     * Create a new SkillDat object and queue it in the player _queuedSkill.
-     *
-     * @param queuedSkill
-     * @param item
-     * @param ctrlPressed
-     * @param shiftPressed
-     */
-    public void setQueuedSkill(Skill queuedSkill, Item item, boolean ctrlPressed, boolean shiftPressed) {
+    public void setQueuedSkill(Skill queuedSkill, boolean ctrlPressed, boolean shiftPressed) {
         if (queuedSkill == null) {
-            _queuedSkill = null;
+            this.queuedSkill = null;
             return;
         }
-        _queuedSkill = new SkillUseHolder(queuedSkill, item, ctrlPressed, shiftPressed);
+        this.queuedSkill = new SkillUseHolder(queuedSkill, null, ctrlPressed, shiftPressed);
     }
 
     /**
@@ -8345,31 +8313,26 @@ public final class Player extends Playable {
     }
 
     public void addTransformSkill(Skill skill) {
-        if (_transformSkills == null) {
+        if (isNull(transformSkills)) {
             synchronized (this) {
-                if (_transformSkills == null) {
-                    _transformSkills = new HashMap<>();
+                if (isNull(transformSkills)) {
+                    transformSkills = new HashIntMap<>();
                 }
             }
         }
-        _transformSkills.put(skill.getId(), skill);
-    }
-
-    public boolean hasTransformSkill(Skill skill) {
-        return (_transformSkills != null) && (_transformSkills.get(skill.getId()) == skill);
+        transformSkills.put(skill.getId(), skill);
     }
 
     public boolean hasTransformSkills() {
-        return (_transformSkills != null);
+        return nonNull(transformSkills);
     }
 
     public Collection<Skill> getAllTransformSkills() {
-        final Map<Integer, Skill> transformSkills = _transformSkills;
-        return transformSkills != null ? transformSkills.values() : Collections.emptyList();
+        return nonNull(transformSkills) ? transformSkills.values() : Collections.emptyList();
     }
 
     public synchronized void removeAllTransformSkills() {
-        _transformSkills = null;
+        transformSkills = null;
     }
 
     /**
@@ -8378,8 +8341,11 @@ public final class Player extends Playable {
      */
     @Override
     public final Skill getKnownSkill(int skillId) {
-        final Map<Integer, Skill> transformSkills = _transformSkills;
-        return transformSkills != null ? transformSkills.getOrDefault(skillId, super.getKnownSkill(skillId)) : super.getKnownSkill(skillId);
+        Skill skill = null;
+        if(nonNull(transformSkills)) {
+            skill = transformSkills.get(skillId);
+        }
+        return isNull(skill) ? super.getKnownSkill(skillId) : skill;
     }
 
     /**
@@ -8389,8 +8355,7 @@ public final class Player extends Playable {
         Collection<Skill> currentSkills = getAllSkills();
 
         if (isTransformed()) {
-            final Map<Integer, Skill> transformSkills = _transformSkills;
-            if (transformSkills != null) {
+            if (nonNull(transformSkills)) {
                 // Include transformation skills and those skills that are allowed during transformation.
                 currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
 

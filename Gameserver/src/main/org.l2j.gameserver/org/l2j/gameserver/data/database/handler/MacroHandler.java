@@ -67,6 +67,7 @@ public class MacroHandler implements TypeHandler<Macro> {
                 resultSet.previous();
                 break;
             }
+            commands.add(macroCmd);
         }
         return new Macro(macroData, commands);
     }

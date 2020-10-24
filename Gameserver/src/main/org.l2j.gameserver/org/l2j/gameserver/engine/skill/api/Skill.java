@@ -30,6 +30,7 @@ import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
@@ -195,20 +196,19 @@ public final class Skill implements IIdentifiable, Cloneable {
         maxChance = Config.MAX_ABNORMAL_STATE_SUCCESS_RATE;
     }
 
-    public boolean checkCondition(Creature activeChar, WorldObject object) {
-        if (activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION) {
+    public boolean checkCondition(Creature creature, WorldObject object) {
+        if (creature.canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
             return true;
         }
 
-        if (isPlayer(activeChar) && activeChar.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(id)) {
-            activeChar.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(id));
+        if (creature instanceof Player player && player.isMounted() && isBad() && !MountEnabledSkillList.contains(id)) {
+            creature.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(id));
             return false;
         }
 
-        if (!checkConditions(SkillConditionScope.GENERAL, activeChar, object) || !checkConditions(SkillConditionScope.TARGET, activeChar, object)) {
-            // Self targeted bad skills should not send a message.
-            if (!(activeChar == object && isBad()) ) {
-                activeChar.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(id));
+        if (!checkConditions(SkillConditionScope.GENERAL, creature, object) || !checkConditions(SkillConditionScope.TARGET, creature, object)) {
+            if (!(creature == object && isBad()) ) {
+                creature.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(id));
             }
             return false;
         }
@@ -216,25 +216,28 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, WorldObject target) {
-        return conditions.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
+        for (var condition : conditions.getOrDefault(skillConditionScope, Collections.emptyList())) {
+            if(!condition.canUse(caster, this, target)) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    public WorldObject getTarget(Creature activeChar, boolean forceUse, boolean dontMove, boolean sendMessage) {
-        return getTarget(activeChar, activeChar.getTarget(), forceUse, dontMove, sendMessage);
+    public WorldObject getTarget(Creature creature, boolean forceUse, boolean dontMove, boolean sendMessage) {
+        return getTarget(creature, creature.getTarget(), forceUse, dontMove, sendMessage);
     }
 
-    public WorldObject getTarget(Creature activeChar, WorldObject seletedTarget, boolean forceUse, boolean dontMove, boolean sendMessage) {
+    public WorldObject getTarget(Creature creature, WorldObject currentTarget, boolean forceUse, boolean dontMove, boolean sendMessage) {
         var handler = TargetHandler.getInstance().getHandler(targetType);
         if (nonNull(handler)) {
             try {
-                return handler.getTarget(activeChar, seletedTarget, this, forceUse, dontMove, sendMessage);
+                return handler.getTarget(creature, currentTarget, this, forceUse, dontMove, sendMessage);
             } catch (Exception e) {
                 LOGGER.error("Could not execute target handler {} on skill {}", handler, this, e);
             }
         }
-        if(activeChar.isGM()) {
-            activeChar.sendMessage(format("Target type %s of skill %s is not currently handled.", targetType, this));
-        }
+        LOGGER.warn("Target type {} of skill {} is not currently handled.", targetType, this);
         return null;
     }
 
@@ -430,11 +433,10 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     private void activateSkill(Creature caster, CubicInstance cubic, Item item, WorldObject... targets) {
         for (WorldObject targetObject : targets) {
-            if (!isCreature(targetObject)) {
+            if (!(targetObject instanceof Creature target)) {
                 continue;
             }
 
-            final Creature target = (Creature) targetObject;
             if (Formulas.calcBuffDebuffReflection(target, this)) {
                 // if skill is reflected instant effects should be casted on target
                 // and continuous effects on caster

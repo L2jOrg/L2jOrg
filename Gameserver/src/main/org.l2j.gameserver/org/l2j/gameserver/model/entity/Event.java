@@ -148,12 +148,8 @@ public class Event {
             spawn.getLastSpawn().setTitle(_eventName);
             spawn.getLastSpawn().getVariables().set("eventmob", true);
             spawn.getLastSpawn().setIsInvul(true);
-            // spawn.getLastSpawn().decayMe();
-            // spawn.getLastSpawn().spawnMe(spawn.getLastSpawn().getX(), spawn.getLastSpawn().getY(), spawn.getLastSpawn().getZ());
 
             spawn.getLastSpawn().broadcastPacket(new MagicSkillUse(spawn.getLastSpawn(), spawn.getLastSpawn(), 1034, 1, 1, 1));
-
-            // _npcs.add(spawn.getLastSpawn());
         } catch (Exception e) {
             LOGGER.warn("Exception on spawn(): " + e.getMessage(), e);
         }

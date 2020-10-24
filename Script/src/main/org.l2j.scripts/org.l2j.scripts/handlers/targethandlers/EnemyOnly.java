@@ -44,26 +44,26 @@ public class EnemyOnly implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (selectedTarget == null)
+		if (currentTarget == null)
 		{
 			return null;
 		}
 		
-		if (!isCreature(selectedTarget))
+		if (!isCreature(currentTarget))
 		{
 			return null;
 		}
 		
-		final Creature target = (Creature) selectedTarget;
+		final Creature target = (Creature) currentTarget;
 		
 		// You cannot attack yourself even with force.
-		if (activeChar == target)
+		if (creature == target)
 		{
 			if (sendMessage)
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			
 			return null;
@@ -74,34 +74,34 @@ public class EnemyOnly implements ITargetTypeHandler
 		{
 			if (sendMessage)
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			
 			return null;
 		}
 		
 		// Doors do not care about force attack.
-		if (isDoor(target) && !target.isAutoAttackable(activeChar))
+		if (isDoor(target) && !target.isAutoAttackable(creature))
 		{
 			if (sendMessage)
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			
 			return null;
 		}
 		
 		// Monsters can attack/be attacked anywhere. Players can attack creatures that aren't autoattackable with force attack.
-		if (target.isAutoAttackable(activeChar))
+		if (target.isAutoAttackable(creature))
 		{
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
 			if (dontMove)
 			{
-				if (!MathUtil.isInsideRadius2D(activeChar, target, skill.getCastRange()))
+				if (!MathUtil.isInsideRadius2D(creature, target, skill.getCastRange()))
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
+						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 					}
 					
 					return null;
@@ -109,34 +109,34 @@ public class EnemyOnly implements ITargetTypeHandler
 			}
 			
 			// Geodata check when character is within range.
-			if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
+			if (!GeoEngine.getInstance().canSeeTarget(creature, target))
 			{
 				if (sendMessage)
 				{
-					activeChar.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+					creature.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				}
 				
 				return null;
 			}
 			
 			// Skills with this target type cannot be used by playables on playables in peace zone, but can be used by and on NPCs.
-			if (target.isInsidePeaceZone(activeChar))
+			if (target.isInsidePeaceZone(creature))
 			{
 				if (sendMessage)
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE);
+					creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE);
 				}
 				
 				return null;
 			}
 			
 			// Is this check still actual?
-			if ((target.getActingPlayer() != null) && (activeChar.getActingPlayer() != null))
+			if ((target.getActingPlayer() != null) && (creature.getActingPlayer() != null))
 			{
-				if (activeChar.getActingPlayer().isSiegeFriend(target)) {
+				if (creature.getActingPlayer().isSiegeFriend(target)) {
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
+						creature.sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 					}
 					
 					return null;
@@ -148,7 +148,7 @@ public class EnemyOnly implements ITargetTypeHandler
 		
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+			creature.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 		
 		return null;

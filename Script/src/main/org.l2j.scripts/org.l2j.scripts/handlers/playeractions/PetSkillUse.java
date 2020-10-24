@@ -65,7 +65,7 @@ public final class PetSkillUse implements IPlayerActionHandler
 			if (skillLevel > 0)
 			{
 				pet.setTarget(player.getTarget());
-				pet.useMagic(SkillEngine.getInstance().getSkill(action.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
+				pet.useSkill(SkillEngine.getInstance().getSkill(action.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
 			}
 			
 			if (action.getOptionId() == CommonSkill.PET_SWITCH_STANCE.getId())

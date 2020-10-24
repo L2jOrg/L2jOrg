@@ -300,7 +300,7 @@ public final class AutoPlayEngine {
             }
 
             player.onActionRequest();
-            return player.useMagic(skill, null, false, false);
+            return player.useSkill(skill, null, false, false);
         }
     }
 

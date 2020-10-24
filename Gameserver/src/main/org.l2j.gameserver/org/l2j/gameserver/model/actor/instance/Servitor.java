@@ -210,8 +210,8 @@ public class Servitor extends Summon implements Runnable {
     }
 
     @Override
-    public final void stopSkillEffects(boolean removed, int skillId) {
-        super.stopSkillEffects(removed, skillId);
+    public final boolean stopSkillEffects(boolean removed, int skillId) {
+        boolean stopped = super.stopSkillEffects(removed, skillId);
         final var servitorEffects = SummonEffectsTable.getInstance().getServitorEffects(getOwner());
         final Collection<SummonEffect> effects = servitorEffects.get(_referenceSkill);
         if (!isNullOrEmpty(effects)) {
@@ -219,9 +219,11 @@ public class Servitor extends Summon implements Runnable {
                 final Skill skill = effect.getSkill();
                 if (nonNull(skill) && (skill.getId() == skillId)) {
                     effects.remove(effect);
+                    stopped = true;
                 }
             }
         }
+        return stopped;
     }
 
     @Override

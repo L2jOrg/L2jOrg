@@ -103,7 +103,7 @@ public class AdminTest implements IAdminCommandHandler
 			caster.setTarget(activeChar);
 			if (msu)
 			{
-				caster.broadcastPacket(new MagicSkillUse(caster, activeChar, id, 1, _skill.getHitTime(), _skill.getReuseDelay()));
+				caster.broadcastPacket(new MagicSkillUse(caster, activeChar, _skill, _skill.getReuseDelay()));
 			}
 			else
 			{

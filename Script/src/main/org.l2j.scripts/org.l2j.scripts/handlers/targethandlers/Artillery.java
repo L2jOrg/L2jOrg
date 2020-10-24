@@ -42,13 +42,13 @@ public class Artillery implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		final WorldObject target = activeChar.getTarget();
+		final WorldObject target = creature.getTarget();
 		if (isDoor(target))
 		{
 			final Door targetDoor = (Door) target;
-			if (!targetDoor.isDead() && targetDoor.isAutoAttackable(activeChar) && targetDoor.isEnemy())
+			if (!targetDoor.isDead() && targetDoor.isAutoAttackable(creature) && targetDoor.isEnemy())
 			{
 				return targetDoor;
 			}
@@ -56,7 +56,7 @@ public class Artillery implements ITargetTypeHandler
 		
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			creature.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		}
 		
 		return null;

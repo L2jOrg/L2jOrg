@@ -44,7 +44,6 @@ import static org.l2j.gameserver.util.GameUtils.*;
  * <li>CreatureAI</li>
  */
 public abstract class AbstractAI implements Ctrl {
-    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractAI.class);
 
     /**
      * The character that this AI manages
@@ -161,12 +160,10 @@ public abstract class AbstractAI implements Ctrl {
     @Override
     @SafeVarargs
     public final void setIntention(CtrlIntention intention, Object... args) {
-        // Stop the follow mode if necessary
         if ((intention != AI_INTENTION_FOLLOW) && (intention != AI_INTENTION_ATTACK)) {
             stopFollow();
         }
 
-        // Launch the onIntention method of the CreatureAI corresponding to the new Intention
         switch (intention) {
             case AI_INTENTION_IDLE: {
                 onIntentionIdle();

@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model;
 
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -44,8 +43,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -187,7 +186,7 @@ public final class EffectList {
      * @return {@code true} if the skill ID is present in the effect list (includes active and passive effects), {@code false} otherwise
      */
     public boolean isAffectedBySkill(int skillId) {
-        return (actives.stream().anyMatch(i -> i.getSkill().getId() == skillId)) || (passives.stream().anyMatch(i -> i.getSkill().getId() == skillId));
+        return nonNull(getBuffInfoBySkillId(skillId));
     }
 
     /**
@@ -197,7 +196,17 @@ public final class EffectList {
      * @return {@code BuffInfo} of the first active or passive effect found.
      */
     public BuffInfo getBuffInfoBySkillId(int skillId) {
-        return Stream.concat(actives.stream(), passives.stream()).filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+        for (var active : actives) {
+            if(active.getSkillId() == skillId) {
+                return active;
+            }
+        }
+        for (var passive : passives) {
+            if(passive.getSkillId() == skillId) {
+                return passive;
+            }
+        }
+        return null;
     }
 
     public int remainTimeBySkillIdOrAbnormalType(int skillId, AbnormalType type) {
@@ -454,15 +463,17 @@ public final class EffectList {
      * Updates the effect flags and icons.<br>
      * Presents overload:<br>
      * {@link #stopSkillEffects(boolean, Skill)}<br>
-     *
-     * @param removed {@code true} if the effect is removed, {@code false} otherwise
+     *  @param removed {@code true} if the effect is removed, {@code false} otherwise
      * @param skillId the skill ID
+     * @return
      */
-    public void stopSkillEffects(boolean removed, int skillId) {
+    public boolean stopSkillEffects(boolean removed, int skillId) {
         final BuffInfo info = getBuffInfoBySkillId(skillId);
-        if (info != null) {
+        if (nonNull(info)) {
             remove(info, removed, true, true);
+            return true;
         }
+        return false;
     }
 
     /**
@@ -657,13 +668,10 @@ public final class EffectList {
         }
 
         if (info.getOption() != null) {
-            // Remove separately if its an option.
             removeOption(info, removed);
         } else if (info.getSkill().isPassive()) {
-            // Remove Passive effect.
             removePassive(info, removed);
         } else {
-            // Remove active effect.
             removeActive(info, removed);
             if (isNpc(owner)) // Fix for all NPC debuff animations removed.
             {
@@ -671,7 +679,6 @@ public final class EffectList {
             }
         }
 
-        // Update stats, effect flags and icons.
         if (update) {
             updateEffectList(broadcast);
         }

@@ -394,7 +394,7 @@ public class TvT extends Event
 					{
 						if ((participant != null) && (participant.getInstanceWorld() == PVP_WORLD))
 						{
-							participant.broadcastPacket(new MagicSkillUse(participant, participant, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+							participant.broadcastPacket(new MagicSkillUse(participant, participant, skill, skill.getReuseDelay()));
 							participant.broadcastSocialAction(3);
 							giveItems(participant, REWARD);
 						}
@@ -409,7 +409,7 @@ public class TvT extends Event
 					{
 						if ((participant != null) && (participant.getInstanceWorld() == PVP_WORLD))
 						{
-							participant.broadcastPacket(new MagicSkillUse(participant, participant, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+							participant.broadcastPacket(new MagicSkillUse(participant, skill, skill.getReuseDelay()));
 							participant.broadcastSocialAction(3);
 							giveItems(participant, REWARD);
 						}

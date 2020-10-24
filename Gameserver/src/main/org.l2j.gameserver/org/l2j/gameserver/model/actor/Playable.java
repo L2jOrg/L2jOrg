@@ -218,7 +218,7 @@ public abstract class Playable extends Creature {
 
     public abstract void doPickupItem(WorldObject object);
 
-    public abstract boolean useMagic(Skill skill, Item item, boolean forceUse, boolean dontMove);
+    public abstract boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove);
 
     public abstract void storeMe();
 

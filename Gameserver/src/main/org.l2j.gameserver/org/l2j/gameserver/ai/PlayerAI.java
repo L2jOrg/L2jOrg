@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -241,13 +242,12 @@ public class PlayerAI extends PlayableAI {
             }
         } else {
             if (checkTargetLost(target)) {
-                if (_skill.isBad() && (target != null)) {
-                    // Notify the target
+                if (_skill.isBad() && nonNull(target)) {
                     setTarget(null);
                 }
                 return;
             }
-            if ((target != null) && maybeMoveToPawn(target, actor.getMagicalAttackRange(_skill))) {
+            if (nonNull(target) && maybeMoveToPawn(target, actor.getMagicalAttackRange(_skill))) {
                 return;
             }
         }

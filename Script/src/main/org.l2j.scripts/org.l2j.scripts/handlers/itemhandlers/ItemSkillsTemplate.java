@@ -116,7 +116,7 @@ public class ItemSkillsTemplate implements IItemHandler {
                 }
                 else {
                     playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-                    if (playable.useMagic(itemSkill, item, forceUse, false)) {
+                    if (playable.useSkill(itemSkill, item, forceUse, false)) {
                         successfulUse = true;
                     } else {
                         continue;

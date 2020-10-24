@@ -49,6 +49,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
 import org.l2j.gameserver.network.NpcStringId;
@@ -1098,7 +1099,7 @@ public class Npc extends Creature {
     private void consumeAndRechargeSpiritShots() {
         if(_spiritshotamount > 0 && Rnd.chance(getTemplate().getSpiritShotChance())) {
             _spiritshotamount--;
-            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
+            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, CommonSkill.SPIRITSHOT.getSkill(), 0), 600);
             chargeShot(ShotType.SPIRITSHOTS, 4);
         } else {
             unchargeShot(ShotType.SPIRITSHOTS);
@@ -1108,7 +1109,7 @@ public class Npc extends Creature {
     private void consumeAndRechargeSoulShots() {
         if(_soulshotamount > 0 && Rnd.chance(getTemplate().getSoulShotChance())) {
             _soulshotamount--;
-            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
+            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, CommonSkill.SOULSHOT.getSkill(), 0), 600);
             chargeShot(ShotType.SOULSHOTS, 4);
         } else {
             unchargeShot(ShotType.SOULSHOTS);

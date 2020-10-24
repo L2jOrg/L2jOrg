@@ -42,17 +42,17 @@ public class FortressFlagpole implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		final WorldObject target = activeChar.getTarget();
-		if ((target != null) && activeChar.isInsideZone(ZoneType.HQ) && activeChar.isInsideZone(ZoneType.FORT) && !isPlayable(target) && target.getName().toLowerCase().contains("flagpole"))
+		final WorldObject target = creature.getTarget();
+		if ((target != null) && creature.isInsideZone(ZoneType.HQ) && creature.isInsideZone(ZoneType.FORT) && !isPlayable(target) && target.getName().toLowerCase().contains("flagpole"))
 		{
 			return target;
 		}
 		
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			creature.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		}
 		
 		return null;

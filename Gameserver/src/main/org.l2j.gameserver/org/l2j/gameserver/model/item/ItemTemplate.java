@@ -428,6 +428,17 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
         return nonNull(skills) ? skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : Collections.emptyList();
     }
 
+    public final boolean hasSkill(ItemSkillType type, int skillId) {
+        if(nonNull(skills)) {
+            for (var skill : skills) {
+                if(skill.getType() == type && skill.getSkillId() == skillId) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
         if (nonNull(skills)) {
             skills.stream().filter(sk -> sk.getType() == type).forEach(action);
