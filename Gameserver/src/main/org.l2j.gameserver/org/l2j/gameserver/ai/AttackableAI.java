@@ -99,21 +99,11 @@ public class AttackableAI extends CreatureAI {
         }
 
         // Check if the target isn't invulnerable
-        if (target.isInvul()) {
-            return false;
-        }
-
-        // Check if the target isn't a Folk or a Door
-        if (isDoor(target)) {
+        if (isDoor(target) || target.isInvul() || target.isAlikeDead()) {
             return false;
         }
 
         final Attackable me = getActiveChar();
-
-        // Check if the target isn't dead, is in the Aggro range and is at the same height
-        if (target.isAlikeDead()) {
-            return false;
-        }
 
         // Check if the target is a Playable
         if (isPlayable(target)) {
@@ -132,9 +122,6 @@ public class AttackableAI extends CreatureAI {
             }
 
             if (me instanceof Guard) {
-                if (player.getReputation() < 0) {
-                    return true;
-                }
                 World.getInstance().forEachVisibleObjectInRange(me, Guard.class, 500, guard ->
                 {
                     if (guard.isAttackingNow() && (guard.getTarget() == player)) {
@@ -319,6 +306,12 @@ public class AttackableAI extends CreatureAI {
                             // Add the attacker to the Attackable _aggroList with 0 damage and base amount hate cause prior to FriendlyNpc
                             if (hating == 0) {
                                 npc.addDamageHate(t, 0, ((FriendlyNpc) t).getHateBaseAmount());
+                            }
+                        } else if(t instanceof Monster) {
+                            final int hating = npc.getHating(t);
+                            // Add the attacker to the Attackable _aggroList with 0 damage and base amount hate cause prior to FriendlyNpc
+                            if (hating == 0) {
+                                npc.addDamageHate(t, 0, 1);
                             }
                         }
                     }

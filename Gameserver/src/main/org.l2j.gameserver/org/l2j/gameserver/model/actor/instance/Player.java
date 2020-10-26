@@ -6210,10 +6210,6 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (attacker instanceof FriendlyMob) {
-            return false;
-        }
-
         if (GameUtils.isMonster(attacker)) {
             return true;
         }
@@ -6225,7 +6221,7 @@ public final class Player extends Playable {
             }
 
             if(isInParty() && _party.isMember(attackerPlayer)) {
-                return true;
+                return false;
             }
 
             if(attackerPlayer.isInOlympiadMode()) {
@@ -6297,7 +6293,7 @@ public final class Player extends Playable {
                 final Siege siege = SiegeManager.getInstance().getSiege(this);
                 return ((siege != null) && siege.checkIsAttacker(_clan));
             }
-        } else if (attacker instanceof Guard) {
+        } else if (attacker instanceof Guard || attacker instanceof FriendlyMob) {
             return getReputation() < 0; // Guards attack only PK players.
         }
 
