@@ -86,25 +86,25 @@ public final class Instance implements IIdentifiable, INamable {
     private ScheduledFuture<?> cleanUpTask = null;
     private ScheduledFuture<?> emptyDestroyTask = null;
 
-    public Instance(int id, InstanceTemplate template, Player player) {
+    public Instance(int id, InstanceTemplate template) {
         this.id = id;
         this.template = template;
+        //TODO remove template cloning
         spawns = new ArrayList<>(template.getSpawns().size());
-
-        // Clone and add the spawn templates
-        template.getSpawns().stream().map(SpawnTemplate::clone).forEach(spawns::add);
-
+        for (SpawnTemplate spawn : template.getSpawns()) {
+            spawns.add(spawn.clone());
+        }
         // Set duration, spawns, status, etc..
         setDuration(this.template.getDuration());
         setStatus(0);
-        spawnDoors();
+    }
 
-        // initialize instance spawns
+    public void init(Player player) {
+        spawnDoors();
         spawns.stream().filter(SpawnTemplate::isSpawningByDefault).forEach(spawnTemplate -> spawnTemplate.spawnAll(this));
 
         if (!isDynamic()) {
-            // Notify DP scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnInstanceCreated(this, player), this.template);
+            EventDispatcher.getInstance().notifyEventAsync(new OnInstanceCreated(this, player), template);
         }
     }
 

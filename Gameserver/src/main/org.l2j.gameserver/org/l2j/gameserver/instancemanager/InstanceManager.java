@@ -304,8 +304,9 @@ public final class InstanceManager extends GameXmlReader {
         }
 
         var id= IdFactory.getInstance().getNextId();
-        var instance = new Instance(id, template, player);
-        instanceWorlds.putIfAbsent(id, instance);
+        var instance = new Instance(id, template);
+        instanceWorlds.put(id, instance);
+        instance.init(player);
         return instance;
     }
 
