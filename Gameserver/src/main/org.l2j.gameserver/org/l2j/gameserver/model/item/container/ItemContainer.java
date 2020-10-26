@@ -168,7 +168,7 @@ public abstract class ItemContainer {
         long count = 0;
 
         for (Item item : items.values()) {
-            if ((item.getId() == itemId) && ((item.getEnchantLevel() == enchantLevel) || (enchantLevel < 0)) && (includeEquipped || !item.isEquipped())) {
+            if (item.getId() == itemId && (item.getEnchantLevel() == enchantLevel || enchantLevel < 0) && (includeEquipped || !item.isEquipped())) {
                 if (item.isStackable()) {
                     return item.getCount();
                 }

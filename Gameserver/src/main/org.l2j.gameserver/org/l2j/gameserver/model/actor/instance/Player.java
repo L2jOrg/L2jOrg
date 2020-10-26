@@ -45,6 +45,7 @@ import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
 import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -1306,7 +1307,7 @@ public final class Player extends Playable {
     private TradeList _sellList;
     private TradeList _buyList;
     // Multisell
-    private PreparedMultisellListHolder _currentMultiSell = null;
+    private PreparedMultisellList _currentMultiSell = null;
     private boolean _hero = false;
 
 
@@ -3942,11 +3943,11 @@ public final class Player extends Playable {
         }
     }
 
-    public final PreparedMultisellListHolder getMultiSell() {
+    public final PreparedMultisellList getMultiSell() {
         return _currentMultiSell;
     }
 
-    public final void setMultiSell(PreparedMultisellListHolder list) {
+    public final void setMultiSell(PreparedMultisellList list) {
         _currentMultiSell = list;
     }
 

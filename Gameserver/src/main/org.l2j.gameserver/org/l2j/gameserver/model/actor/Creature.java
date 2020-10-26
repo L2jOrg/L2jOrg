@@ -1203,20 +1203,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             isDead = true;
         }
 
+        _status.stopHpMpRegeneration();
+        broadcastStatusUpdate();
         stopMove(null);
 
-        // Notify Creature AI
         if (hasAI()) {
             getAI().notifyEvent(CtrlEvent.EVT_DEAD);
         }
 
+        onDie(killer);
+        return true;
+    }
+
+    protected void onDie(Creature killer) {
         EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), killer);
-
-        // Stop HP/MP/CP Regeneration task
-        _status.stopHpMpRegeneration();
-
-        // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
-        broadcastStatusUpdate();
 
         ZoneManager.getInstance().getRegion(this).onDeath(this);
 
@@ -1226,7 +1226,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (isChannelized()) {
             getSkillChannelized().abortChannelization();
         }
-        return true;
     }
 
     public void forgetTarget() {

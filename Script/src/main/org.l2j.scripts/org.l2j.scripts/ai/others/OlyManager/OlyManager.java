@@ -21,7 +21,7 @@ package org.l2j.scripts.ai.others.OlyManager;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.BypassHandler;
@@ -164,7 +164,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			case "showEquipmentReward":
 			{
-				MultisellData.getInstance().separateAndSend(EQUIPMENT_MULTISELL, player, npc, false);
+				MultisellEngine.getInstance().separateAndSend(EQUIPMENT_MULTISELL, player, npc, false);
 				break;
 			}
 		}

@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,27 +16,34 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.holders;
+package org.l2j.gameserver.engine.item.shop.multisell;
+
+import org.l2j.commons.util.Rnd;
+
+import java.util.List;
 
 /**
- *
- * @author xban1x
  * @author JoeAlisson
  */
-public class ItemChanceHolder extends ItemHolder {
-    private final double chance;
+public record MultisellItem(List<MultisellIngredient> ingredients, List<MultisellProduct> products, boolean stackable) {
 
-    public ItemChanceHolder(int id, double chance, long count) {
-        super(id, count);
-        this.chance = chance;
+    public boolean containsIngredient(int itemId) {
+        for (var ingredient : ingredients) {
+            if(ingredient.id() == itemId) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public double getChance() {
-        return chance;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + getClass().getSimpleName() + "] ID: " + getId() + ", count: " + getCount() + ", chance: " + chance;
+    public MultisellProduct randomProduct() {
+        double chance = Rnd.nextDouble() * 100;
+        for(var product : products) {
+            if(product.chance() > 0 &&  product.chance() > chance) {
+                return product;
+            }
+            chance -= product.chance();
+        }
+        return null;
     }
 }

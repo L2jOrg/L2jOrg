@@ -27,7 +27,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CommunityDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
-import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -232,12 +232,12 @@ public final class HomeBoard implements IParseBoardHandler {
             final String fullBypass = command.replace("_bbsmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
             final int multisellId = Integer.parseInt(buypassOptions[0]);
-            MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
+            MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, false);
         } else if (command.startsWith("_bbsexcmultisell")) {
             final String fullBypass = command.replace("_bbsexcmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
             final int multisellId = Integer.parseInt(buypassOptions[0]);
-            MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, true);
+            MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, true);
         } else if (command.startsWith("_bbssell")) {
             final String page = command.replace("_bbssell ", "");
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");

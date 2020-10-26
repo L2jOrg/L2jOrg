@@ -18,5 +18,16 @@
  */
 package org.l2j.gameserver.network;
 
+/**
+ * @author JoeAlisson
+ */
 public class InvalidDataPacketException extends Exception {
+
+    public InvalidDataPacketException(){
+
+    }
+
+    public InvalidDataPacketException(String message) {
+        super(message);
+    }
 }

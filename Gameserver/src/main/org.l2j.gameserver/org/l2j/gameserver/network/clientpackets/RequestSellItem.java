@@ -58,7 +58,7 @@ public final class RequestSellItem extends ClientPacket {
         _listId = readInt();
         final int size = readInt();
         if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != available())) {
-            throw new InvalidDataPacketException();
+            throw new InvalidDataPacketException("Invalid Size " + size);
         }
 
         _items = new ArrayList<>(size);
@@ -68,7 +68,7 @@ public final class RequestSellItem extends ClientPacket {
             final long count = readLong();
             if ((objectId < 1) || (itemId < 1) || (count < 1)) {
                 _items = null;
-                throw new InvalidDataPacketException();
+                throw new InvalidDataPacketException("Invalid object id " + objectId + " or item id " + itemId + "or count " + count);
             }
             _items.add(new UniqueItemHolder(itemId, objectId, count));
         }

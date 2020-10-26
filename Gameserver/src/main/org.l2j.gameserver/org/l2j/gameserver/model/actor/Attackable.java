@@ -267,8 +267,6 @@ public class Attackable extends Npc {
             return false;
         }
 
-        calculateRewards(killer);
-
         if (nonNull(killer.getActingPlayer())) {
             Object payload = null;
             if (GameUtils.isMonster(this)) {
@@ -280,6 +278,12 @@ public class Attackable extends Npc {
         }
 
         return true;
+    }
+
+    @Override
+    protected void onDie(Creature killer) {
+        calculateRewards(killer);
+        super.onDie(killer);
     }
 
     /**
@@ -848,8 +852,7 @@ public class Attackable extends Npc {
         final Player player = mainDamageDealer.getActingPlayer();
 
         // Don't drop anything if the last attacker or owner isn't Player
-        // FIXME: Delete this hotfix asap: player.getClient() == null
-        if (player == null || !player.isOnline() || player.getClient() == null) {
+        if (player == null || !player.isOnline()) {
             return;
         }
 

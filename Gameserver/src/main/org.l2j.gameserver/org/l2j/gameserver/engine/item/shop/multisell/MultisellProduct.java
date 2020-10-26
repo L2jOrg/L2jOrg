@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,27 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.holders;
+package org.l2j.gameserver.engine.item.shop.multisell;
 
 /**
- *
- * @author xban1x
  * @author JoeAlisson
  */
-public class ItemChanceHolder extends ItemHolder {
-    private final double chance;
-
-    public ItemChanceHolder(int id, double chance, long count) {
-        super(id, count);
-        this.chance = chance;
-    }
-
-    public double getChance() {
-        return chance;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + getClass().getSimpleName() + "] ID: " + getId() + ", count: " + getCount() + ", chance: " + chance;
-    }
+public record MultisellProduct(int id, long count, int enchant, double chance) {
 }

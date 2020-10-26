@@ -20,7 +20,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
@@ -220,7 +220,7 @@ public final class RequestBypassToServer extends ClientPacket {
                     return;
                 }
                 final int multisellId = Integer.parseInt(bypass.substring(10).trim());
-                MultisellData.getInstance().separateAndSend(multisellId, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(multisellId, player, null, false);
             } else {
                 final IBypassHandler handler = BypassHandler.getInstance().getHandler(bypass);
                 if (handler != null) {

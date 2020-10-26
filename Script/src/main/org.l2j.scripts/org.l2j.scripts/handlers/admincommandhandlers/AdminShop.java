@@ -21,7 +21,7 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 
 import org.l2j.gameserver.data.xml.impl.BuyListData;
-import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
@@ -74,7 +74,7 @@ public class AdminShop implements IAdminCommandHandler
 			try
 			{
 				int listId = Integer.parseInt(command.substring(16).trim());
-				MultisellData.getInstance().separateAndSend(listId, activeChar, null, false);
+				MultisellEngine.getInstance().separateAndSend(listId, activeChar, null, false);
 			}
 			catch (NumberFormatException | IndexOutOfBoundsException e)
 			{
@@ -86,7 +86,7 @@ public class AdminShop implements IAdminCommandHandler
 			try
 			{
 				int listId = Integer.parseInt(command.substring(20).trim());
-				MultisellData.getInstance().separateAndSend(listId, activeChar, null, true);
+				MultisellEngine.getInstance().separateAndSend(listId, activeChar, null, true);
 			}
 			catch (NumberFormatException | IndexOutOfBoundsException e)
 			{

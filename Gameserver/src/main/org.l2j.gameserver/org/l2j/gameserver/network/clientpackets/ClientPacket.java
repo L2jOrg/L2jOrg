@@ -40,7 +40,7 @@ public abstract class ClientPacket extends ReadablePacket<GameClient> {
             readImpl();
             return true;
         } catch (InvalidDataPacketException e) {
-            LOGGER.warn("[{}] Invalid data packet {} from client {}", GameServer.fullVersion, this, client);
+            LOGGER.warn("[{}] Invalid data packet {} from client {}", GameServer.fullVersion, this, client, e);
         } catch (Exception e) {
             LOGGER.error("[{}] Error while reading packet {} from client {}: {}", GameServer.fullVersion, this, client, e.getMessage(), e);
         }

@@ -35,6 +35,7 @@ import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.events.EventEngine;
@@ -122,7 +123,7 @@ public class GameServer {
         GlobalVariablesManager.init();
         ActionManager.init();
         BuyListData.init();
-        MultisellData.getInstance();
+        MultisellEngine.init();
         RecipeData.getInstance();
         ArmorSetsData.getInstance();
         FishingData.getInstance();

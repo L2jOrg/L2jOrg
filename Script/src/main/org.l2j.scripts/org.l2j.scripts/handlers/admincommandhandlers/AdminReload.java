@@ -23,6 +23,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.L2Store;
@@ -119,7 +120,7 @@ public class AdminReload implements IAdminCommandHandler {
                 }
             }
             case "multisell" -> {
-                MultisellData.getInstance().load();
+                MultisellEngine.getInstance().load();
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Multisells.");
             }
             case "buylist" -> {
