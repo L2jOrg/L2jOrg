@@ -46,6 +46,7 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -114,6 +115,7 @@ import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadUserInfo;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
@@ -3476,11 +3478,6 @@ public final class Player extends Playable {
         removeTimeStamp(skill);
     }
 
-    /**
-     * Returns true if cp update should be done, false if not
-     *
-     * @return boolean
-     */
     private boolean needCpUpdate() {
         final double currentCp = getCurrentCp();
 
@@ -3579,13 +3576,6 @@ public final class Player extends Playable {
                 partyWindow.addComponentType(PartySmallWindowUpdateType.MAX_MP);
             }
             _party.broadcastToPartyMembers(this, partyWindow);
-        }
-
-        if (isInOlympiadMode() && _OlympiadStart && (needCpUpdate || needHpUpdate)) {
-            final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(getOlympiadGameId());
-            if ((game != null) && game.isBattleStarted()) {
-                game.getStadium().broadcastStatusUpdate(this);
-            }
         }
 
         // In duel MP updated only with CP or HP
