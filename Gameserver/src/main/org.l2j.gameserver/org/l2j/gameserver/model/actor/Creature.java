@@ -2191,7 +2191,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 hitTask.cancel(false);
                 _hitTask = null;
             }
-
             sendPacket(ActionFailed.STATIC_PACKET);
         }
     }

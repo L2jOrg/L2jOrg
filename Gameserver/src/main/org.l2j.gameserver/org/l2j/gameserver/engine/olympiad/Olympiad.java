@@ -123,12 +123,17 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     @ScheduleTarget
     public void onStartMatch() {
-        state = STARTED;
-        Broadcast.toAllOnlinePlayers(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, 300));
-        var listeners = Listeners.players();
-        onPlayerLoginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
-        listeners.addListener(onPlayerLoginListener);
-        Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_OLYMPIAD_MANAGER_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
+        var scheduler = getScheduler("stop-match");
+        if(nonNull(scheduler)) {
+            state = STARTED;
+            var listeners = Listeners.players();
+            onPlayerLoginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
+            listeners.addListener(onPlayerLoginListener);
+            Broadcast.toAllOnlinePlayers(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, (int) scheduler.getRemainingTime(TimeUnit.SECONDS)));
+            Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_OLYMPIAD_MANAGER_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
+        } else {
+            LOGGER.warn("Can't find stop-match scheduler");
+        }
     }
 
     private void onPlayerLogin(OnPlayerLogin event) {

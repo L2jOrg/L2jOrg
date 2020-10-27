@@ -43,6 +43,8 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     private Player blue;
     private Location redBackLocation;
     private Location blueBackLocation;
+    private double redDamage;
+    private double blueDamage;
     private Player defeated;
 
     OlympiadClasslessMatch() {
@@ -119,20 +121,36 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     @Override
     protected void calculateResults() {
         if(nonNull(defeated)) {
-            var winner = red == defeated ?  blue : red;
-            sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(winner));
-            sendPacket(getSystemMessage(C1_HAS_LOST_S2_POINTS_IN_THE_OLYMPIAD_GAMES).addPcName(defeated).addInt(10));
-            sendPacket(new ExOlympiadMatchResult(false, winner.getOlympiadSide(), List.of(OlympiadInfo.of(winner, 10)), List.of(OlympiadInfo.of(defeated, -10))));
+            processVictory();
+        } else if(redDamage != blueDamage) {
+            defeated = redDamage < blueDamage ? red : blue;
+            processVictory();
         } else {
             sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
             sendPacket(new ExOlympiadMatchResult(true, 1, List.of(OlympiadInfo.of(red, 0)), List.of(OlympiadInfo.of(blue, 0))));
         }
     }
 
+    private void processVictory() {
+        var winner = red == defeated ? blue : red;
+        sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(winner));
+        sendPacket(getSystemMessage(C1_HAS_LOST_S2_POINTS_IN_THE_OLYMPIAD_GAMES).addPcName(defeated).addInt(10));
+        sendPacket(new ExOlympiadMatchResult(false, winner.getOlympiadSide(), List.of(OlympiadInfo.of(winner, 10)), List.of(OlympiadInfo.of(defeated, -10))));
+    }
+
     @Override
     protected void teleportBack() {
         red.teleToLocation(redBackLocation, null);
         blue.teleToLocation(blueBackLocation, null);
+    }
+
+    @Override
+    protected void onDamage(Player attacker, Player target, double damage) {
+        if(attacker == red && target == blue) {
+            redDamage += damage;
+        } else if(attacker == blue && target == red) {
+            blueDamage += damage;
+        }
     }
 
 }

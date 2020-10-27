@@ -19,10 +19,12 @@
 package org.l2j.gameserver.engine.olympiad;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.impl.character.OnCreatureDamageDealt;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCpChange;
@@ -57,6 +59,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private ScheduledFuture<?> scheduled;
     private Duration duration;
     private FunctionEventListener deathListener;
+    private ConsumerEventListener damageListener;
     private ConsumerEventListener hpListener;
     private ConsumerEventListener cpListener;
 
@@ -88,12 +91,17 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     private void onMatchFinish(Player player) {
+        player.forgetTarget();
+        player.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
         player.setIsOlympiadStart(false);
         player.setOlympiadGameId(0);
         player.setInsideZone(ZoneType.PVP, false);
         player.removeListener(deathListener);
+        player.removeListener(damageListener);
         player.removeListener(hpListener);
         player.removeListener(cpListener);
+        player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
+        player.setCurrentCp(player.getMaxCp());
     }
 
     private void countDownTeleportBack() {
@@ -122,10 +130,11 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             deathListener = new FunctionEventListener(null, EventType.ON_CREATURE_DEATH, (Function<OnCreatureDeath, TerminateReturn>)this::onDeath, this);
             hpListener = new ConsumerEventListener(null, EventType.ON_CREATURE_HP_CHANGE,  (Consumer<OnCreatureHpChange>) this::onHpChange, this);
             cpListener = new ConsumerEventListener(null, EventType.ON_PLAYER_CP_CHANGE, (Consumer<OnPlayerCpChange>) this::onCpChange, this);
+            damageListener = new ConsumerEventListener(null, EventType.ON_CREATURE_DAMAGE_DEALT, (Consumer<OnCreatureDamageDealt>) this::onDamageDealt, this);
             forEachParticipant(this::onMatchStart);
             sendPacket(PlaySound.music("ns17_f"));
-            forRedPlayers(this::sendOlympiadUserInfo);
-            forBluePlayers(this::sendOlympiadUserInfo);
+            forRedPlayers(this::sendOlympiadInfo);
+            forBluePlayers(this::sendOlympiadInfo);
             sendMessage(THE_MATCH_HAS_STARTED_FIGHT);
             state = IN_BATTLE;
             scheduled = ThreadPool.schedule(this, duration);
@@ -145,13 +154,24 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         player.addListener(deathListener);
         player.addListener(hpListener);
         player.addListener(cpListener);
+        player.addListener(damageListener);
+        player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
+        player.setCurrentCp(player.getMaxCp());
     }
 
-    private void sendOlympiadUserInfo(Player player) {
-        sendPacket(new ExOlympiadUserInfo(player));
+    private void sendOlympiadInfo(Player player) {
+        sendOlympiadUserInfo(player);
+        sendBuffInfo(player);
+    }
+
+    protected void sendBuffInfo(Player player) {
         var spellInfo = new ExOlympiadSpelledInfo(player);
         player.getEffectList().getEffects().forEach(spellInfo::addSkill);
         sendPacket(spellInfo);
+    }
+
+    protected void sendOlympiadUserInfo(Player player) {
+        sendPacket(new ExOlympiadUserInfo(player));
     }
 
     private void teleportToArena() {
@@ -165,6 +185,11 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         scheduled = ThreadPool.schedule(this, 10, TimeUnit.SECONDS);
     }
 
+    private void onDamageDealt(OnCreatureDamageDealt event) {
+        if(event.getAttacker() instanceof Player attacker && event.getTarget() instanceof Player target) {
+            onDamage(attacker, target, event.getDamage());
+        }
+    }
 
     private void onHpChange(OnCreatureHpChange event) {
         if(event.getCreature() instanceof Player player) {
@@ -239,6 +264,8 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     protected abstract void calculateResults();
 
     protected abstract void teleportBack();
+
+    protected abstract void onDamage(Player attacker, Player target, double damage);
 
     static OlympiadMatch of(OlympiadRuleType type) {
         return new OlympiadClasslessMatch();

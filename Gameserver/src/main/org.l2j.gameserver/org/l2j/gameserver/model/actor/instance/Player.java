@@ -160,6 +160,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -4173,7 +4174,6 @@ public final class Player extends Playable {
             data.setExpBeforeDeath(0);
             Collection<Item> droppedItems = onDieDropItem(killer);
             sendPacket(new ExDieInfo(lastDamages, droppedItems));
-            
 
             final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
 
@@ -4298,7 +4298,7 @@ public final class Player extends Playable {
             double dropPercent = 0;
 
             // Classic calculation.
-            if (GameUtils.isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= Config.KARMA_PK_LIMIT)) {
+            if (isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= Config.KARMA_PK_LIMIT)) {
                 isKarmaDrop = true;
                 dropPercent = Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
                 dropEquip = Config.KARMA_RATE_DROP_EQUIP;
@@ -4522,7 +4522,7 @@ public final class Player extends Playable {
                 percentLost *= getStats().getValue(Stat.REDUCE_EXP_LOST_BY_RAID, 1);
             } else if (GameUtils.isMonster(killer)) {
                 percentLost *= getStats().getValue(Stat.REDUCE_EXP_LOST_BY_MOB, 1);
-            } else if (GameUtils.isPlayable(killer)) {
+            } else if (isPlayable(killer)) {
                 percentLost *= getStats().getValue(Stat.REDUCE_EXP_LOST_BY_PVP, 1);
             }
         }
@@ -4541,7 +4541,7 @@ public final class Player extends Playable {
             }
         }
 
-        if (GameUtils.isPlayable(killer) && atWarWith(killer.getActingPlayer())) {
+        if (isPlayable(killer) && atWarWith(killer.getActingPlayer())) {
             lostExp /= 4.0;
         }
 
@@ -6204,7 +6204,7 @@ public final class Player extends Playable {
             return true;
         }
 
-        if(GameUtils.isPlayable(attacker)) {
+        if(isPlayable(attacker)) {
             final var attackerPlayer = attacker.getActingPlayer();
             if(_duelState == Duel.DUELSTATE_DUELLING && getDuelId() == attackerPlayer.getDuelId()) {
                 return true;
@@ -6320,6 +6320,11 @@ public final class Player extends Playable {
         final WorldObject target = skill.getTarget(this, forceUse, dontMove, true);
 
         if (isNull(target)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+
+        if (isInOlympiadMode() && isPlayable(target) && (!isOlympiadStart() || getOlympiadGameId() != target.getActingPlayer().getOlympiadGameId())) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -9131,7 +9136,7 @@ public final class Player extends Playable {
     public boolean canAttackCharacter(Creature cha) {
         if (GameUtils.isAttackable(cha)) {
             return true;
-        } else if (GameUtils.isPlayable(cha)) {
+        } else if (isPlayable(cha)) {
             if (cha.isInsideZone(ZoneType.PVP) && !cha.isInsideZone(ZoneType.SIEGE)) {
                 return true;
             }
