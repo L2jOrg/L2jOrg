@@ -409,7 +409,7 @@ public class MultiSellChoose extends ClientPacket {
         }
 
         if (!player.isGM() && !list.isNpcAllowed(-1)) {
-            if(isNull(npc) || list.isNpcAllowed(npc.getId()) || player.getInstanceId() != npc.getInstanceId()  || !isInsideRadius3D(player, npc, INTERACTION_DISTANCE)) {
+            if(isNull(npc) || !list.isNpcAllowed(npc.getId()) || player.getInstanceId() != npc.getInstanceId()  || !isInsideRadius3D(player, npc, INTERACTION_DISTANCE)) {
                 player.setMultiSell(null);
                 return false;
             }
