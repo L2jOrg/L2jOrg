@@ -113,7 +113,7 @@ public final class Formulas {
         // Initial damage
         final var ssmod = attacker.chargedShotBonus(ShotType.SOULSHOTS); // + 0.04 for dual weapon?
         final var cdMult = criticalMod * (((criticalPositionMod - 1) / 2) + 1) * (((criticalVulnMod - 1) / 2) + 1);
-        final var cdPatk = criticalAddMod + criticalAddVuln;
+        final var cdPatk = criticalAddMod - criticalAddVuln;
         final var positionMod = position == Position.BACK ? 0.2 : position == Position.SIDE ? 0.05 : 0;
 
         // ........................_____________________________Initial Damage____________________________...___________Position Additional Damage___________..._CriticalAdd_
@@ -286,7 +286,7 @@ public final class Formulas {
             defenceCriticalDamage = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
         }
 
-        return Math.max(1, 2 + (criticalDamage - defenceCriticalDamage) / (75 + Math.min(defenceCriticalDamage, criticalDamage)));
+        return Math.max(1, 2 + (criticalDamage - defenceCriticalDamage));
     }
 
     /**
