@@ -316,9 +316,14 @@ public final class WorldRegion {
         return objects.values();
     }
 
-    /**
-     * Task of AI notification
-     */
+    public int getPlayersCountInSurround() {
+        int playersCount = 0;
+        for (WorldRegion surroundingRegion : surroundingRegions) {
+            playersCount += surroundingRegion.playersInside.get();
+        }
+        return playersCount;
+    }
+
     private class NeighborsTask implements Runnable {
         private final boolean isActivating;
 

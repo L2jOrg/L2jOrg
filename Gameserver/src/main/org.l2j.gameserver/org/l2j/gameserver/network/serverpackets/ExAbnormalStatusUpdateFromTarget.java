@@ -24,24 +24,22 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class ExAbnormalStatusUpdateFromTarget extends ServerPacket {
     private final Creature _character;
     private final List<BuffInfo> _effects;
 
-    public ExAbnormalStatusUpdateFromTarget(Creature character) {
-        //@formatter:off
-        _character = character;
-        _effects = character.getEffectList().getEffects()
-                .stream()
-                .filter(Objects::nonNull)
-                .filter(BuffInfo::isInUse)
-                .filter(b -> !b.getSkill().isToggle())
-                .collect(Collectors.toList());
-        //@formatter:on
+    public ExAbnormalStatusUpdateFromTarget(Creature creature) {
+        _character = creature;
+        var effectList = creature.getEffectList().getEffects();
+        _effects = new ArrayList<>(effectList.size());
+        for (BuffInfo info : effectList) {
+            if(info.isInUse() && !info.getSkill().isToggle()) {
+                _effects.add(info);
+            }
+        }
     }
 
     @Override

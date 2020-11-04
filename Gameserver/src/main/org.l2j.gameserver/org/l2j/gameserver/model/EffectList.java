@@ -33,7 +33,6 @@ import org.l2j.gameserver.network.serverpackets.PartySpelled;
 import org.l2j.gameserver.network.serverpackets.ShortBuffStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadSpelledInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -910,24 +909,22 @@ public final class EffectList {
             final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
 
             if (!actives.isEmpty()) {
-                //@formatter:off
-                actives.stream()
-                        .filter(Objects::nonNull)
-                        .filter(BuffInfo::isInUse)
-                        .forEach(info ->
-                        {
-                            if (info.getSkill().isHealingPotionSkill()) {
-                                shortBuffStatusUpdate(info);
-                            } else {
-                                asu.ifPresent(a -> a.addSkill(info));
-                                ps.filter(p -> !info.getSkill().isToggle()).ifPresent(p -> p.addSkill(info));
-                                os.ifPresent(o -> o.addSkill(info));
+                for (BuffInfo info : actives) {
+                    if(info.isInUse()) {
+                        if(info.getSkill().isHealingPotionSkill()) {
+                            shortBuffStatusUpdate(info);
+                        } else {
+                            asu.ifPresent(a -> a.addSkill(info));
+                            if(!info.getSkill().isToggle()) {
+                                ps.ifPresent(p -> p.addSkill(info));
                             }
-                        });
-                //@formatter:on
+                            os.ifPresent(o -> o.addSkill(info));
+                        }
+                    }
+
+                }
             }
 
-            // Send icon update for player buff bar.
             asu.ifPresent(owner::sendPacket);
 
             // Player or summon is in party. Broadcast packet to everyone in the party.
@@ -951,11 +948,11 @@ public final class EffectList {
         final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(owner);
 
         // @formatter:off
-        owner.getStatus().getStatusListener().stream()
-                .filter(GameUtils::isPlayer)
-                .map(Creature::getActingPlayer)
-                .forEach(upd::sendTo);
-        // @formatter:on
+        for (Creature creature : owner.getStatus().getStatusListener()) {
+            if(creature instanceof Player playerListener) {
+                playerListener.sendPacket(upd);
+            }
+        }
 
         if (isPlayer(owner) && (owner.getTarget() == owner)) {
             owner.sendPacket(upd);

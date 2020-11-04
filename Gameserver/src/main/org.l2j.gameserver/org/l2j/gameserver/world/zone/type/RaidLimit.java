@@ -25,10 +25,8 @@ public class RaidLimit extends Zone {
     @Override
 	public void setParameter(String name, String value)
 	{
-		LOGGER.info("bossId" + name + value);
 		if (name.equals("bossId"))
-				LOGGER.info("bossId" + name);
-	    		_bossId = Integer.parseInt(value);
+			_bossId = Integer.parseInt(value);
     }
 
     @Override

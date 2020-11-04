@@ -24,6 +24,7 @@ import org.l2j.gameserver.util.MathUtil;
 
 import java.util.EnumSet;
 import java.util.Optional;
+import java.util.Set;
 import java.util.function.BiFunction;
 import java.util.stream.Stream;
 
@@ -311,8 +312,8 @@ public enum Stat {
         _mulFunction = mulFunction;
     }
 
-    public static Stream<Stat> stream() {
-        return CACHE.stream();
+    public static Set<Stat> all() {
+        return CACHE;
     }
 
     public static double weaponBaseValue(Creature creature, Stat stat) {

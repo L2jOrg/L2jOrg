@@ -665,7 +665,7 @@ public class SkillCaster implements Runnable {
 
         if (isPlayer(caster)) {
             // Consume Souls if necessary.
-            if ((skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(skill.getMaxSoulConsumeCount(), skill)) {
+            if ((skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(skill.getMaxSoulConsumeCount())) {
                 return false;
             }
 

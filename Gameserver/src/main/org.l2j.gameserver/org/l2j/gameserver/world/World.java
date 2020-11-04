@@ -645,6 +645,14 @@ public final class World {
         return Singleton.INSTANCE;
     }
 
+    public int getPlayersCountInSurroundRegions(WorldObject reference) {
+        var region = reference.getWorldRegion();
+        if(nonNull(region)) {
+            return region.getPlayersCountInSurround();
+        }
+        return 0;
+    }
+
     private static class Singleton {
         private static final World INSTANCE = new World();
     }

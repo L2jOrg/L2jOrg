@@ -29,6 +29,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -41,6 +42,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -191,7 +193,11 @@ public final class AutoPlayEngine {
         }
 
         private void doAutoPlay() {
-            players.parallelStream().filter(AutoPlayEngine.this::canUseAutoPlay).forEach(this::doNextAction);
+            for (Player player : players) {
+                if(canUseAutoPlay(player)) {
+                    doNextAction(player);
+                }
+            }
         }
 
         private void doNextAction(Player player) {
@@ -313,19 +319,29 @@ public final class AutoPlayEngine {
 
         private void useAutoPotion() {
             var toRemove = new HashSet<Player>();
-            autoPotionPlayers.parallelStream().filter(this::canUseAutoPotion).forEach(player -> {
-                var shortcut = player.getShortcut(Shortcut.AUTO_POTION_ROOM) ;
-                if(nonNull(shortcut))  {
-                    var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
-                    if(nonNull(item)) {
-                        useItem(player, item);
+            if(getSettings(ServerSettings.class).parallelismThreshold() < autoPotionPlayers.size()) {
+                autoPotionPlayers.parallelStream().filter(this::canUseAutoPotion).forEach(player -> usePotionShortcut(toRemove, player));
+            } else {
+                for (Player player : autoPotionPlayers) {
+                    if(canUseAutoPotion(player)) {
+                        usePotionShortcut(toRemove, player);
                     }
-                } else {
-                   toRemove.add(player);
                 }
-            });
+            }
             if(!toRemove.isEmpty()) {
                 autoPotionPlayers.removeAll(toRemove);
+            }
+        }
+
+        private void usePotionShortcut(HashSet<Player> toRemove, Player player) {
+            var shortcut = player.getShortcut(Shortcut.AUTO_POTION_ROOM);
+            if (nonNull(shortcut)) {
+                var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
+                if (nonNull(item)) {
+                    useItem(player, item);
+                }
+            } else {
+                toRemove.add(player);
             }
         }
 

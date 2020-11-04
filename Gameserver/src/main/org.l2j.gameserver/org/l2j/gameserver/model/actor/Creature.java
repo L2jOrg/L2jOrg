@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.model.actor;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
@@ -32,6 +34,7 @@ import org.l2j.gameserver.data.xml.impl.TransformData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -66,7 +69,6 @@ import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;
@@ -89,7 +91,10 @@ import org.slf4j.LoggerFactory;
 
 import java.lang.ref.WeakReference;
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
@@ -129,10 +134,8 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 public abstract class Creature extends WorldObject implements ISkillsHolder, IDeletable {
     public static final Logger LOGGER = LoggerFactory.getLogger(Creature.class.getName());
     public static final double MAX_STATUS_BAR_PX = 352.0;
-    /**
-     * Map containing all skills of this character.
-     */
-    private final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<>();
+
+    private final IntMap<Skill> _skills = new CHashIntMap<>();
     private final byte[] _zones = new byte[ZoneType.getZoneCount()];
     private final StampedLock _attackLock = new StampedLock();
     /**
@@ -482,6 +485,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param packet
      */
     public void broadcastPacket(ServerPacket packet) {
+        checkBroadcast(packet);
         World.getInstance().forEachVisibleObject(this, Player.class, packet::sendTo, this::isVisibleFor);
     }
 
@@ -495,7 +499,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param radius
      */
     public void broadcastPacket(ServerPacket packet, int radius) {
+        checkBroadcast(packet);
         World.getInstance().forEachPlayerInRange(this, radius, packet::sendTo, this::isVisibleFor);
+    }
+
+    protected void checkBroadcast(ServerPacket packet) {
+        if(World.getInstance().getPlayersCountInSurroundRegions(this) > 1) {
+            packet.sendInBroadcast(true);
+        }
     }
 
     /**
@@ -3111,7 +3122,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             if (newSkill.isPassive()) {
                 newSkill.applyEffects(this, this, false, true, false, 0, null);
-                stats.recalculateStats(true);
             }
         }
         return oldSkill;
@@ -3153,7 +3163,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return the map containing this character skills.
      */
     @Override
-    public Map<Integer, Skill> getSkills() {
+    public IntMap<Skill> getSkills() {
         return _skills;
     }
 

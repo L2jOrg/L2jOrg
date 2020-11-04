@@ -18,12 +18,10 @@
  */
 package org.l2j.gameserver.model.instancezone;
 
-import io.github.joealisson.primitive.CHashIntMap;
-import io.github.joealisson.primitive.HashIntMap;
-import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.*;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.InstanceDAO;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceTeleportType;
@@ -49,8 +47,6 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
@@ -59,6 +55,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -517,38 +514,22 @@ public final class Instance implements IIdentifiable, INamable {
             return;
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)")) {
-            // Save to database
-            for (Player player : allowed) {
-                if (player != null) {
-                    ps.setInt(1, player.getObjectId());
-                    ps.setInt(2, template.getId());
-                    ps.setLong(3, time);
-                    ps.addBatch();
-                }
-            }
-            ps.executeBatch();
-
-            // Save to memory and send message to player
-            final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-            if (InstanceManager.getInstance().getInstanceName(getTemplateId()) != null) {
-                msg.addInstanceName(template.getId());
-            } else {
-                msg.addString(template.getName());
-            }
-            allowed.forEach(player ->
-            {
-                if (player != null) {
-                    InstanceManager.getInstance().setReenterPenalty(player.getObjectId(), getTemplateId(), time);
-                    if (player.isOnline()) {
-                        player.sendPacket(msg);
-                    }
-                }
-            });
-        } catch (Exception e) {
-            LOGGER.warn("Could not insert character instance reenter data: ", e);
+        final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+        if (InstanceManager.getInstance().getInstanceName(getTemplateId()) != null) {
+            msg.addInstanceName(template.getId());
+        } else {
+            msg.addString(template.getName());
         }
+
+        IntSet allowedIds = new HashIntSet();
+        for (Player player : allowed) {
+            InstanceManager.getInstance().setReenterPenalty(player.getObjectId(), getTemplateId(), time);
+            if (player.isOnline()) {
+                player.sendPacket(msg);
+            }
+            allowedIds.add(player.getObjectId());
+        }
+        getDAO(InstanceDAO.class).saveInstanceTime(allowedIds, template.getId(), time);
     }
 
     /**

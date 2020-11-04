@@ -36,4 +36,9 @@ public interface InstanceDAO extends DAO<Object> {
     @Query("SELECT * FROM character_instance_time")
     void findAllInstancesTime(Consumer<ResultSet> consumer);
 
+    @Query("DELETE FROM character_instance_time WHERE time <= :timestamp:")
+    void deleteExpiredInstances(long timestamp);
+
+    @Query(value = "INSERT INTO character_instance_time (charId,instanceId,time) VALUES (:playerIds:,:instanceId:,:time:) ON DUPLICATE KEY UPDATE time=VALUES(time)", batchIndex = 0)
+    void saveInstanceTime(IntSet playerIds, int instanceId, long time);
 }

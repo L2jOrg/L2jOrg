@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.ConcurrentIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
@@ -31,7 +32,7 @@ import java.util.Collection;
 public interface BossDAO extends DAO<BossData>  {
 
     @Query("SELECT * FROM boss_data")
-    IntMap<BossData> findAllBosses();
+    ConcurrentIntMap<BossData> findAllBosses();
 
     @Query("DELETE FROM boss_data WHERE boss_id = :bossId:")
     void deleteBossData(int bossId);

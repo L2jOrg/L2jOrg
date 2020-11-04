@@ -34,6 +34,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -270,7 +271,8 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
 
     private boolean verifySkillActiveIfAddtionalAgathion(InventorySlot slot, ItemSkillHolder holder) {
         if(slot != InventorySlot.AGATHION1 &&  InventorySlot.agathions().contains(slot)) {
-            return holder.getSkill().isActive();
+            var skill = holder.getSkill();
+            return nonNull(skill) && skill.isActive();
         }
         return false;
     }

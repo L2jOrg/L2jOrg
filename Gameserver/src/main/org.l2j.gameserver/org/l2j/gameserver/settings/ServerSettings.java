@@ -61,6 +61,7 @@ public class ServerSettings implements Settings {
     private boolean hardwareInfoEnabled;
     private int maxPlayerPerHWID;
     private int maxThreadPoolSize;
+    private int parallelismThreshold;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -84,6 +85,7 @@ public class ServerSettings implements Settings {
         scheduledPoolSize = determinePoolSize(settingsFile, "ScheduledThreadPoolSize", processors);
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
         maxThreadPoolSize = determinePoolSize(settingsFile, "MaxThreadPoolSize", threadPoolSize * 10);
+        parallelismThreshold = settingsFile.getInteger("ParallelismThreshold", 1000);
         acceptedProtocols =  settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
 
         scheduleRestart = settingsFile.getBoolean("ServerRestartScheduleEnabled", false);
@@ -181,6 +183,10 @@ public class ServerSettings implements Settings {
 
     public int maxThreadPoolSize() {
         return maxThreadPoolSize;
+    }
+
+    public int parallelismThreshold() {
+        return parallelismThreshold;
     }
 
     public int[] acceptedProtocols() {

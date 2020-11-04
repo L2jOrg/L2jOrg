@@ -55,8 +55,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.hash;
-import static org.l2j.commons.util.Util.isNotEmpty;
+import static org.l2j.commons.util.Util.*;
 
 /**
  * Represents a client connected on Game Server.
@@ -113,9 +112,8 @@ public final class GameClient extends Client<Connection<GameClient>> {
             }
             AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(account.getAccountName()));
         }
-
-        Disconnection.of(this).onDisconnection();
         state = ConnectionState.DISCONNECTED;
+        Disconnection.of(this).onDisconnection();
     }
 
     @Override
@@ -125,7 +123,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     }
 
     public void close(boolean toLoginScreen) {
-        sendPacket(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
+        close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
         state = ConnectionState.DISCONNECTED;
     }
 
@@ -176,7 +174,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     }
 
     public void sendPacket(ServerPacket packet) {
-        if (isNull(packet)) {
+        if (isNull(packet) || state == ConnectionState.DISCONNECTED) {
             return;
         }
 
@@ -337,9 +335,9 @@ public final class GameClient extends Client<Connection<GameClient>> {
             final String address = getHostAddress();
             final ConnectionState state = getConnectionState();
             return switch (state) {
-                case CONNECTED, CLOSING, DISCONNECTED  -> "[IP: " + (address == null ? "disconnected" : address) + "]";
-                case AUTHENTICATED -> "[Account: " + account + " - IP: " + (address == null ? "disconnected" : address) + "]";
-                case IN_GAME, JOINING_GAME -> "[Player: " + (player == null ? "disconnected" : player.getName() + "[" + player.getObjectId() + "]") + " - Account: " + account + " - IP: " + (address == null ? "disconnected" : address) + "]";
+                case CONNECTED, CLOSING, DISCONNECTED  -> "[Account: " + account + " -IP: " + (isNullOrEmpty(address) ? "disconnected" : address) + "]";
+                case AUTHENTICATED -> "[Account: " + account + " - IP: " + (isNullOrEmpty(address) ? "disconnected" : address) + "]";
+                case IN_GAME, JOINING_GAME -> "[Player: " + (isNull(player) ? "disconnected" : player) + " - Account: " + account + " - IP: " + (isNullOrEmpty(address) ? "disconnected" : address) + "]";
             };
         } catch (NullPointerException e) {
             return "[Character read failed due to disconnect]";

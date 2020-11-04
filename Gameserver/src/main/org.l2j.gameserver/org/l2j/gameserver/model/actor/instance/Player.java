@@ -46,7 +46,6 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
-import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -91,7 +90,6 @@ import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentType;
@@ -115,7 +113,6 @@ import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadUserInfo;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
@@ -702,29 +699,14 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * Sets the beauty shop hair
-     *
-     * @param visualHairId
-     */
     public void setVisualHair(int visualHairId) {
         variables.setVisualHairId(visualHairId);
     }
 
-    /**
-     * Sets the beauty shop hair color
-     *
-     * @param visualHairColorId
-     */
     public void setVisualHairColor(int visualHairColorId) {
         variables.setVisualHairColorId(visualHairColorId);
     }
 
-    /**
-     * Sets the beauty shop modified face
-     *
-     * @param visualFaceId
-     */
     public void setVisualFace(int visualFaceId) {
         variables.setVisualFaceId(visualFaceId);
     }
@@ -1124,7 +1106,7 @@ public final class Player extends Playable {
 
     // Character Skill Save SQL String Definitions:
     private static final String ADD_SKILL_SAVE = "INSERT INTO character_skills_save (charId,skill_id,skill_level,skill_sub_level,remaining_time,reuse_delay,systime,restore_type,buff_index) VALUES (?,?,?,?,?,?,?,?,?)";
-    private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,skill_sub_level,remaining_time, reuse_delay, systime, restore_type FROM character_skills_save WHERE charId=? ORDER BY buff_index ASC";
+    private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,skill_sub_level,remaining_time, reuse_delay, systime, restore_type FROM character_skills_save WHERE charId=? ORDER BY buff_index";
     private static final String DELETE_SKILL_SAVE = "DELETE FROM character_skills_save WHERE charId=?";
 
     // Character Item Reuse Time String Definition:
@@ -1185,10 +1167,7 @@ public final class Player extends Playable {
      * Player's cubics.
      */
     private final Map<Integer, CubicInstance> _cubics = new ConcurrentSkipListMap<>();
-    /**
-     * new race ticket
-     **/
-    private final int _race[] = new int[2];
+
     private final BlockList _blockList = new BlockList(this);
     /**
      * Last Html Npcs, 0 = last html was not bound to an npc
@@ -1376,11 +1355,10 @@ public final class Player extends Playable {
     private long spawnProtectEndTime = 0;
     private long teleportProtectEndTime = 0;
     private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
-    @SuppressWarnings("rawtypes")
+
     private volatile Map<Class<? extends AbstractEvent>, AbstractEvent> _events;
     private boolean _isOnCustomEvent = false;
-    // protects a char from aggro mobs when getting up from fake death
-    private long _recentFakeDeathEndTime = 0;
+
     /**
      * The fists Weapon of the Player (used when no weapon is equipped)
      */
@@ -1604,9 +1582,7 @@ public final class Player extends Playable {
                 ClanWar war = clan.getWarWith(target.getClan().getId());
                 if (war != null) {
                     switch (war.getState()) {
-                        case DECLARATION, BLOOD_DECLARATION -> {
-                            result |= RelationChanged.RELATION_DECLARED_WAR;
-                        }
+                        case DECLARATION, BLOOD_DECLARATION -> result |= RelationChanged.RELATION_DECLARED_WAR;
                         case MUTUAL -> {
                             result |= RelationChanged.RELATION_DECLARED_WAR;
                             result |= RelationChanged.RELATION_MUTUAL_WAR;
@@ -1662,13 +1638,6 @@ public final class Player extends Playable {
     @Override
     public final PlayerTemplate getTemplate() {
         return (PlayerTemplate) super.getTemplate();
-    }
-
-    /**
-     * @param newclass
-     */
-    public void setTemplate(ClassId newclass) {
-        super.setTemplate(PlayerTemplateData.getInstance().getTemplate(newclass));
     }
 
     @Override
@@ -1840,9 +1809,7 @@ public final class Player extends Playable {
             return;
         }
 
-        if (!getNotifyQuestOfDeath().contains(qs)) {
-            getNotifyQuestOfDeath().add(qs);
-        }
+        getNotifyQuestOfDeath().add(qs);
     }
 
     /**
@@ -1882,11 +1849,6 @@ public final class Player extends Playable {
         return shortcuts.getShortcut(room);
     }
 
-    /**
-     * Add a L2shortCut to the Player _shortCuts
-     *
-     * @param shortcut
-     */
     public void registerShortCut(Shortcut shortcut) {
         shortcuts.registerShortCut(shortcut);
         sendPacket(new ShortCutRegister(shortcut));
@@ -1944,21 +1906,13 @@ public final class Player extends Playable {
     }
 
     public boolean isRegisteredOnThisSiegeField(int val) {
-        if ((_siegeSide != val) && ((_siegeSide < 81) || (_siegeSide > 89))) {
-            return false;
-        }
-        return true;
+        return (_siegeSide == val) || ((_siegeSide >= 81) && (_siegeSide <= 89));
     }
 
     public int getSiegeSide() {
         return _siegeSide;
     }
 
-    /**
-     * Set the siege Side of the Player.
-     *
-     * @param val
-     */
     public void setSiegeSide(int val) {
         _siegeSide = val;
     }
@@ -1968,11 +1922,6 @@ public final class Player extends Playable {
         return _pvpFlag;
     }
 
-    /**
-     * Set the PvP Flag of the Player.
-     *
-     * @param pvpFlag
-     */
     public void setPvpFlag(int pvpFlag) {
         _pvpFlag = (byte) pvpFlag;
     }
@@ -2139,8 +2088,6 @@ public final class Player extends Playable {
 
     /**
      * Set the number of recommendation obtained by the Player (Max : 255).
-     *
-     * @param value
      */
     public void setRecomHave(int value) {
         _recomHave = min(Math.max(value, 0), 255);
@@ -2164,8 +2111,6 @@ public final class Player extends Playable {
 
     /**
      * Set the number of recommendation obtained by the Player (Max : 255).
-     *
-     * @param value
      */
     public void setRecomLeft(int value) {
         _recomLeft = min(Math.max(value, 0), 255);
@@ -2191,8 +2136,6 @@ public final class Player extends Playable {
 
     /**
      * Set the reputation of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).
-     *
-     * @param reputation
      */
     @Override
     public void setReputation(int reputation) {
@@ -2333,8 +2276,6 @@ public final class Player extends Playable {
 
     /**
      * Set the the PvP Kills of the Player (Number of player killed during a PvP)._pvpKills,
-     *
-     * @param pvpKills
      */
     public void setPvpKills(int pvpKills) {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPChanged(this, data.getPvP(), pvpKills), this);
@@ -2444,18 +2385,10 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * @return the Experience of the Player.
-     */
     public long getExp() {
         return getStats().getExp();
     }
 
-    /**
-     * Set the Experience value of the Player.
-     *
-     * @param exp
-     */
     public void setExp(long exp) {
         if (exp < 0) {
             exp = 0;
@@ -2584,18 +2517,10 @@ public final class Player extends Playable {
         return radar;
     }
 
-    /**
-     * @return the SP amount of the Player.
-     */
     public long getSp() {
         return getStats().getSp();
     }
 
-    /**
-     * Set the SP amount of the Player.
-     *
-     * @param sp
-     */
     public void setSp(long sp) {
         if (sp < 0) {
             sp = 0;
@@ -2605,7 +2530,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param castleId
      * @return true if this Player is a clan leader in ownership of the passed castle
      */
     public boolean isCastleLord(int castleId) {
@@ -2614,9 +2538,7 @@ public final class Player extends Playable {
         if ((_clan != null) && (_clan.getLeader().getPlayerInstance() == this)) {
             // if the clan has a castle and it is actually the queried castle, return true
             final Castle castle = CastleManager.getInstance().getCastleByOwner(_clan);
-            if ((castle != null) && (castle == CastleManager.getInstance().getCastleById(castleId))) {
-                return true;
-            }
+            return (castle != null) && (castle == CastleManager.getInstance().getCastleById(castleId));
         }
 
         return false;
@@ -2686,11 +2608,6 @@ public final class Player extends Playable {
         return sitting;
     }
 
-    /**
-     * Set _waitTypeSitting to given value
-     *
-     * @param state
-     */
     public void setIsSitting(boolean state) {
         sitting = state;
     }
@@ -3048,7 +2965,7 @@ public final class Player extends Playable {
      *
      * @param process     : String Identifier of process triggering this action
      * @param item        : Item to be destroyed
-     * @param count
+     * @param count       : amout to be destroyed
      * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successful
@@ -3524,7 +3441,7 @@ public final class Player extends Playable {
                 final double doubleMulti = currentMp / _mpUpdateInterval;
                 int intMulti = (int) doubleMulti;
 
-                _mpUpdateDecCheck = _mpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
+                _mpUpdateDecCheck = _mpUpdateInterval * (doubleMulti < intMulti ?   intMulti-- : intMulti);
                 _mpUpdateIncCheck = _mpUpdateDecCheck + _mpUpdateInterval;
             }
 
@@ -3609,7 +3526,10 @@ public final class Player extends Playable {
 
     public final void broadcastCharInfo() {
         var charInfo = new ExCharInfo(this);
-        World.getInstance().forEachVisibleObject(this, Player.class, player ->
+        var world = World.getInstance();
+        var playersCount = world.getPlayersCountInSurroundRegions(this);
+        charInfo.sendInBroadcast(playersCount > 2);
+        world.forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
                 if (!isInvisible() || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
@@ -3800,7 +3720,7 @@ public final class Player extends Playable {
         final StopMove sm = new StopMove(this);
         sendPacket(sm);
 
-        SystemMessage smsg = null;
+        SystemMessage smsg;
         synchronized (target) {
             // Check if the target to pick up is visible
             if (!target.isSpawned()) {
@@ -4085,9 +4005,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
-                return true;
-            }
+            return (inventory.getPaperdollItem(CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY);
         }
         return false;
     }
@@ -4102,9 +4020,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
-                return true;
-            }
+            return (inventory.getPaperdollItem(CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT);
         }
         return false;
     }
@@ -4119,9 +4035,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(BodyPart.CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
-                return true;
-            }
+            return (inventory.getPaperdollItem(BodyPart.CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC);
         }
         return false;
     }
@@ -4154,8 +4068,6 @@ public final class Player extends Playable {
      * <li>Manage Karma gain for attacker and Karam loss for the killed Player</li>
      * <li>If the killed Player has Karma, manage Drop Item</li>
      * <li>Kill the Player</li>
-     *
-     * @param killer
      */
     @Override
     public boolean doDie(Creature killer) {
@@ -4216,7 +4128,7 @@ public final class Player extends Playable {
 
         if (hasCharmOfCourage) {
             if (isInSiege()) {
-                reviveRequest(this, null, false, 0);
+                reviveRequest(this, false, 0);
             }
             hasCharmOfCourage = false;
             sendPacket(new EtcStatusUpdate(this));
@@ -4259,7 +4171,7 @@ public final class Player extends Playable {
 
         // announce pvp/pk
         if (Config.ANNOUNCE_PK_PVP && !killer.isGM()) {
-            String msg = "";
+            String msg;
             if (_pvpFlag == 0) {
                 msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
 
@@ -4575,11 +4487,6 @@ public final class Player extends Playable {
         return pet;
     }
 
-    /**
-     * Set the summoned Pet of the Player.
-     *
-     * @param pet
-     */
     public void setPet(Pet pet) {
         this.pet = pet;
     }
@@ -4603,8 +4510,7 @@ public final class Player extends Playable {
     }
 
     public List<Summon> getServitorsAndPets() {
-        final List<Summon> summons = new ArrayList<>();
-        summons.addAll(getServitors().values());
+        final List<Summon> summons = new ArrayList<>(getServitors().values());
 
         if (pet != null) {
             summons.add(pet);
@@ -4638,11 +4544,6 @@ public final class Player extends Playable {
         return tamedBeast;
     }
 
-    /**
-     * Set the Summon of the Player.
-     *
-     * @param tamedBeast
-     */
     public void addTrainedBeast(TamedBeast tamedBeast) {
         if (this.tamedBeast == null) {
             synchronized (this) {
@@ -4707,11 +4608,6 @@ public final class Player extends Playable {
         partner.setActiveRequester(this);
     }
 
-    /**
-     * Return true if last request is expired.
-     *
-     * @return
-     */
     public boolean isRequestExpired() {
         return requestExpireTime <= WorldTimeController.getInstance().getGameTicks();
     }
@@ -4727,11 +4623,6 @@ public final class Player extends Playable {
         return activeWarehouse;
     }
 
-    /**
-     * Select the Warehouse to be used in next activity.
-     *
-     * @param warehouse
-     */
     public void setActiveWarehouse(Warehouse warehouse) {
         activeWarehouse = warehouse;
     }
@@ -4850,49 +4741,19 @@ public final class Player extends Playable {
         return _buyList;
     }
 
-    /**
-     * <B><U> Values </U> :</B>
-     * <li>0 : STORE_PRIVATE_NONE</li>
-     * <li>1 : STORE_PRIVATE_SELL</li>
-     * <li>2 : sellmanage</li><BR>
-     * <li>3 : STORE_PRIVATE_BUY</li><BR>
-     * <li>4 : buymanage</li><BR>
-     * <li>5 : STORE_PRIVATE_MANUFACTURE</li><BR>
-     *
-     * @return the Private Store type of the Player.
-     */
     public PrivateStoreType getPrivateStoreType() {
         return privateStoreType;
     }
 
-    /**
-     * Set the Private Store type of the Player. <B><U> Values </U> :</B>
-     * <li>0 : STORE_PRIVATE_NONE</li>
-     * <li>1 : STORE_PRIVATE_SELL</li>
-     * <li>2 : sellmanage</li><BR>
-     * <li>3 : STORE_PRIVATE_BUY</li><BR>
-     * <li>4 : buymanage</li><BR>
-     * <li>5 : STORE_PRIVATE_MANUFACTURE</li><BR>
-     *
-     * @param privateStoreType
-     */
     public void setPrivateStoreType(PrivateStoreType privateStoreType) {
         this.privateStoreType = privateStoreType;
     }
 
-    /**
-     * @return the _clan object of the Player.
-     */
     @Override
     public Clan getClan() {
         return _clan;
     }
 
-    /**
-     * Set the _clan object, _clanId, _clanLeader Flag and title of the Player.
-     *
-     * @param clan
-     */
     public void setClan(Clan clan) {
         _clan = clan;
 
@@ -5179,11 +5040,6 @@ public final class Player extends Playable {
         return _party != null;
     }
 
-    /**
-     * Set the _party object of the Player AND join it.
-     *
-     * @param party
-     */
     public void joinParty(Party party) {
         if (party != null) {
             // First set the party otherwise this wouldn't be considered
@@ -5203,19 +5059,11 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * Return the _party object of the Player.
-     */
     @Override
     public Party getParty() {
         return _party;
     }
 
-    /**
-     * Set the _party object of the Player (without joining it).
-     *
-     * @param party
-     */
     public void setParty(Party party) {
         _party = party;
     }
@@ -5238,26 +5086,17 @@ public final class Player extends Playable {
         AuthServerCommunication.getInstance().sendPacket(new ChangeAccessLevel(getAccountName(), level, 0));
     }
 
-    /**
-     * @return the _accessLevel of the Player.
-     */
     @Override
     public AccessLevel getAccessLevel() {
         return accessLevel;
     }
 
-    /**
-     * Update Stats of the Player client side by sending Server->Client packet UserInfo/StatusUpdate to this Player and CharInfo/StatusUpdate to all Player in its _KnownPlayers (broadcast).
-     *
-     * @param broadcastType
-     */
     public void updateAndBroadcastStatus(int broadcastType) {
         refreshOverloaded(true);
         // Send a Server->Client packet UserInfo to this Player and CharInfo to all Player in its _KnownPlayers (broadcast)
         if (broadcastType == 1) {
             sendPacket(new UserInfo(this));
-        }
-        if (broadcastType == 2) {
+        } else if (broadcastType == 2) {
             broadcastUserInfo();
         }
     }
@@ -5514,7 +5353,7 @@ public final class Player extends Playable {
             final long currentTime = System.currentTimeMillis();
 
             try(PreparedStatement statement = con.prepareStatement(ADD_SKILL_SAVE)) {
-                // Store all effect data along with calulated remaining
+                // Store all effect data along with calculated remaining
                 // reuse delays for matching skills. 'restore_type'= 0.
                 if (storeEffects) {
                     for (BuffInfo info : getEffectList().getEffects()) {
@@ -5966,18 +5805,13 @@ public final class Player extends Playable {
             }
         }
 
-        if (totalSlots <= 0) {
-            return 0;
-        }
+        return Math.max(totalSlots, 0);
 
-        return totalSlots;
     }
 
     /**
      * Remove a Henna of the Player, save update in the character_hennas table of the database and send Server->Client HennaInfo/UserInfo packet to this Player.
      *
-     * @param slot
-     * @return
      */
     public boolean removeHenna(int slot) {
         if ((slot < 1) || (slot > 3)) {
@@ -6136,10 +5970,6 @@ public final class Player extends Playable {
         return _henna;
     }
 
-    /**
-     * @param stat
-     * @return the henna bonus of specified base stat
-     */
     public int getHennaValue(BaseStats stat) {
         return _hennaBaseStats.getOrDefault(stat, 0);
     }
@@ -6477,15 +6307,11 @@ public final class Player extends Playable {
         // Check if char is in a no landing zone
         if (isInsideZone(ZoneType.NO_LANDING)) {
             return true;
-        } else
-            // if this is a castle that is currently being sieged, and the rider is NOT a castle owner
-            // he cannot land.
-            // castle owner is the leader of the clan that owns the castle where the pc is
-            if (isInsideZone(ZoneType.SIEGE) && !((getClan() != null) && (CastleManager.getInstance().getCastle(this) == CastleManager.getInstance().getCastleByOwner(getClan())) && (this == getClan().getLeader().getPlayerInstance()))) {
-                return true;
-            }
-
-        return false;
+        }
+        // if this is a castle that is currently being sieged, and the rider is NOT a castle owner
+        // he cannot land.
+        // castle owner is the leader of the clan that owns the castle where the pc is
+        return isInsideZone(ZoneType.SIEGE) && !((getClan() != null) && (CastleManager.getInstance().getCastle(this) == CastleManager.getInstance().getCastleByOwner(getClan())) && (this == getClan().getLeader().getPlayerInstance()));
     }
 
     // returns false if the change of mount type fails.
@@ -6580,7 +6406,6 @@ public final class Player extends Playable {
     /**
      * Disable the Inventory and create a new task to enable it after 1.5s.
      *
-     * @param val
      */
     public void setInventoryBlockingStatus(boolean val) {
         _inventoryDisable = val;
@@ -6597,9 +6422,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * Add a cubic to this player.
-     *
-     * @param cubic
      * @return the old cubic for this cubic ID if any, otherwise {@code null}
      */
     public CubicInstance addCubic(CubicInstance cubic) {
@@ -6645,11 +6467,6 @@ public final class Player extends Playable {
         return _lastFolkNpc;
     }
 
-    /**
-     * Set the _lastFolkNpc of the Player corresponding to the last Folk wich one the player talked.
-     *
-     * @param folkNpc
-     */
     public void setLastFolkNPC(Npc folkNpc) {
         _lastFolkNpc = folkNpc;
     }
@@ -6864,10 +6681,6 @@ public final class Player extends Playable {
         _teleportType = type;
     }
 
-    public int getRace(int i) {
-        return _race[i];
-    }
-
     public boolean isMessageRefusing() {
         return messageRefusing;
     }
@@ -6898,7 +6711,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param player
      * @return returns {@code true} if player is target player cannot accepting messages from the current player, {@code false} otherwise
      */
     public boolean isBlocked(Player player) {
@@ -6906,7 +6718,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param player
      * @return returns {@code true} if player is target player can accepting messages from the current player, {@code false} otherwise
      */
     public boolean isNotBlocked(Player player) {
@@ -7180,11 +6991,7 @@ public final class Player extends Playable {
     }
 
     public boolean isRentedPet() {
-        if (_taskRentPet != null) {
-            return true;
-        }
-
-        return false;
+        return nonNull(_taskRentPet);
     }
 
     public void stopWaterTask() {
@@ -7205,11 +7012,7 @@ public final class Player extends Playable {
     }
 
     public boolean isInWater() {
-        if (_taskWater != null) {
-            return true;
-        }
-
-        return false;
+        return nonNull(_taskWater);
     }
 
     public void checkWaterState() {
@@ -7300,7 +7103,7 @@ public final class Player extends Playable {
         restoreExp(revivePower);
     }
 
-    public void reviveRequest(Player reviver, Skill skill, boolean isPet, int power) {
+    public void reviveRequest(Player reviver, boolean isPet, int power) {
         if (isResurrectionBlocked()) {
             return;
         }
@@ -7523,6 +7326,9 @@ public final class Player extends Playable {
     public void broadcastSnoop(ChatType type, String name, String _text) {
         if (!_snoopListener.isEmpty()) {
             final Snoop sn = new Snoop(getObjectId(), getName(), type, name, _text);
+            if(_snoopListener.size() > 1) {
+                sn.sendInBroadcast(true);
+            }
 
             for (Player pci : _snoopListener) {
                 if (pci != null) {
@@ -7533,9 +7339,7 @@ public final class Player extends Playable {
     }
 
     public void addSnooper(Player pci) {
-        if (!_snoopListener.contains(pci)) {
-            _snoopListener.add(pci);
-        }
+        _snoopListener.add(pci);
     }
 
     public void removeSnooper(Player pci) {
@@ -7543,9 +7347,7 @@ public final class Player extends Playable {
     }
 
     public void addSnooped(Player pci) {
-        if (!_snoopedPlayer.contains(pci)) {
-            _snoopedPlayer.add(pci);
-        }
+        _snoopedPlayer.add(pci);
     }
 
     public void removeSnooped(Player pci) {
@@ -7623,7 +7425,6 @@ public final class Player extends Playable {
      *
      * @param objectId item object id
      * @param action   just for login purpose
-     * @return
      */
     public boolean validateItemManipulation(int objectId, String action) {
         final Item item = inventory.getItemByObjectId(objectId);
@@ -7648,9 +7449,6 @@ public final class Player extends Playable {
         return (_vehicle != null) && _vehicle.isBoat();
     }
 
-    /**
-     * @return
-     */
     public Boat getBoat() {
         return (Boat) _vehicle;
     }
@@ -8112,11 +7910,6 @@ public final class Player extends Playable {
         return _souls;
     }
 
-    /**
-     * Increase Souls
-     *
-     * @param count
-     */
     public void increaseSouls(int count) {
         _souls += count;
         final SystemMessage sm = getSystemMessage(SystemMessageId.YOUR_SOUL_COUNT_HAS_INCREASED_BY_S1_IT_IS_NOW_AT_S2);
@@ -8127,14 +7920,7 @@ public final class Player extends Playable {
         sendPacket(new EtcStatusUpdate(this));
     }
 
-    /**
-     * Decreases existing Souls.
-     *
-     * @param count
-     * @param skill
-     * @return
-     */
-    public boolean decreaseSouls(int count, Skill skill) {
+    public boolean decreaseSouls(int count) {
         _souls -= count;
 
         if (_souls < 0) {
@@ -8252,16 +8038,10 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * @return
-     */
     public int getAgathionId() {
         return _agathionId;
     }
 
-    /**
-     * @param npcId
-     */
     public void setAgathionId(int npcId) {
         _agathionId = npcId;
     }
@@ -8428,7 +8208,7 @@ public final class Player extends Playable {
 
     public void setCurrentFeed(int num) {
         final boolean lastHungryState = isHungry();
-        _curFeed = num > getMaxFeed() ? getMaxFeed() : num;
+        _curFeed = Math.min(num, getMaxFeed());
         final SetupGauge sg = new SetupGauge(3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
         sendPacket(sg);
         // broadcast move speed change when strider becomes hungry / full
@@ -8500,11 +8280,6 @@ public final class Player extends Playable {
         return checkTransformed(Transform::isFlying);
     }
 
-    /**
-     * Returns the Number of Charges this Player got.
-     *
-     * @return
-     */
     public int getCharges() {
         return _charges.get();
     }
@@ -8941,7 +8716,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param z
      * @return true if character falling now on the start of fall return false for correct coord sync!
      */
     public final boolean isFalling(int z) {
@@ -9079,7 +8853,7 @@ public final class Player extends Playable {
      */
     public void checkPlayerSkills() {
         SkillLearn learn;
-        for (Entry<Integer, Skill> e : getSkills().entrySet()) {
+        for (var e : getSkills().entrySet()) {
             learn = SkillTreesData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
             if (learn != null) {
                 final int lvlDiff = e.getKey() == CommonSkill.EXPERTISE.getId() ? 0 : 9;
@@ -9149,9 +8923,7 @@ public final class Player extends Playable {
                 if (getParty() == target.getParty()) {
                     return false;
                 }
-                if (((getParty().getCommandChannel() != null) || (target.getParty().getCommandChannel() != null)) && (getParty().getCommandChannel() == target.getParty().getCommandChannel())) {
-                    return false;
-                }
+                return ((getParty().getCommandChannel() == null) && (target.getParty().getCommandChannel() == null)) || (getParty().getCommandChannel() != target.getParty().getCommandChannel());
             } else if ((getClan() != null) && (target.getClan() != null)) {
                 if (getClanId() == target.getClanId()) {
                     return false;
@@ -9162,10 +8934,8 @@ public final class Player extends Playable {
                 if (getClan().isAtWarWith(target.getClan().getId()) && target.getClan().isAtWarWith(getClan().getId())) {
                     return true;
                 }
-            } else if ((getClan() == null) || (target.getClan() == null)) {
-                if ((target.getPvpFlag() == 0) && (target.getReputation() >= 0)) {
-                    return false;
-                }
+            } else {
+                return (target.getPvpFlag() != 0) || (target.getReputation() < 0);
             }
         }
         return true;
@@ -9358,7 +9128,6 @@ public final class Player extends Playable {
     /**
      * This method can prevent from displaying 'To Village' button upon death.
      *
-     * @param val
      */
     @Override
     public void setCanRevive(boolean val) {
@@ -9452,7 +9221,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param act
      * @return {@code true} if action was added successfully, {@code false} otherwise.
      */
     public boolean addAction(PlayerAction act) {
@@ -9464,7 +9232,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param act
      * @return {@code true} if action was removed successfully, {@code false} otherwise.
      */
     public boolean removeAction(PlayerAction act) {
@@ -9476,7 +9243,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param act
      * @return {@code true} if action is present, {@code false} otherwise.
      */
     public boolean hasAction(PlayerAction act) {
@@ -9568,7 +9334,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param request
      * @return {@code true} if the request was registered successfully, {@code false} otherwise.
      */
     public boolean addRequest(AbstractRequest request) {
@@ -9587,7 +9352,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param clazz
      * @return {@code true} if request was successfully removed, {@code false} in case processing set is not created or not containing the request.
      */
     public boolean removeRequest(Class<? extends AbstractRequest> clazz) {
@@ -9595,8 +9359,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param <T>
-     * @param requestClass
      * @return object that is instance of {@code requestClass} param, {@code null} if not instance or not set.
      */
     public <T extends AbstractRequest> T getRequest(Class<T> requestClass) {
@@ -9628,7 +9390,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param objectId
      * @return {@code true} if item object id is currently in use by some request, {@code false} otherwise.
      */
     public boolean isProcessingItem(int objectId) {
@@ -9637,8 +9398,6 @@ public final class Player extends Playable {
 
     /**
      * Removing all requests associated with the item object id provided.
-     *
-     * @param objectId
      */
     public void removeRequestsThatProcessesItem(int objectId) {
         if (requests != null) {
@@ -9720,7 +9479,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param event
      * @return {@code true} if event is successfuly registered, {@code false} in case events map is not initialized yet or event is not registered
      */
     public boolean registerOnEvent(AbstractEvent event) {
@@ -9735,7 +9493,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param event
      * @return {@code true} if event is successfuly removed, {@code false} in case events map is not initialized yet or event is not registered
      */
     public boolean removeFromEvent(AbstractEvent event) {
@@ -9746,8 +9503,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param <T>
-     * @param clazz
      * @return the event instance or null in case events map is not initialized yet or event is not registered
      */
     public <T extends AbstractEvent> T getEvent(Class<T> clazz) {
@@ -9770,7 +9525,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @param clazz
      * @return {@code true} if player is registered on specified event, {@code false} in case events map is not initialized yet or event is not registered
      */
     public boolean isOnEvent(Class<? extends AbstractEvent> clazz) {
@@ -9900,12 +9654,8 @@ public final class Player extends Playable {
         final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
         final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
 
-        switch (zoneId)
-        {
-            case 2: // Ancient Pirates' Tomb.
-            {
-                return (x == 20) && (y == 15);
-            }
+        if (zoneId == 2) { // Ancient Pirates' Tomb.
+            return (x == 20) && (y == 15);
         }
         return false;
     }

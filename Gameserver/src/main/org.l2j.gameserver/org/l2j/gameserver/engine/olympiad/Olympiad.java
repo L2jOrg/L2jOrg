@@ -205,6 +205,16 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return false;
         }
 
+        if(getOlympiadPoints(player) <= 0) {
+
+            return false;
+        }
+
+        if(!player.isInventoryUnder80()) {
+            player.sendPacket(getSystemMessage(C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_FOR_OLYMPIAD_AS_THE_INVENTORY_WEIGHT_SLOT_EXCEEDS_80).addPcName(player));
+            return false;
+        }
+
         if(registered.contains(player)) {
             player.sendPacket(getSystemMessage(C1_YOU_HAVE_ALREADY_REGISTERED_FOR_THE_MATCH).addPcName(player));
             return false;

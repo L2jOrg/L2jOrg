@@ -2917,7 +2917,7 @@ public final class SystemMessageId {
     @ClientString(id = 1478, message = "You can register a 24 bit 256x256 or 32 bit TGA or BMP file.")
     public static SystemMessageId YOU_CAN_REGISTER_A_24_BIT_256X256_OR_32_BIT_TGA_OR_BMP_FILE;
 
-    @ClientString(id = 1480, message = "Are you sure you wish to remove yourself from the Olympiad waiting list?")
+        @ClientString(id = 1480, message = "Are you sure you wish to remove yourself from the Olympiad waiting list?")
     public static SystemMessageId ARE_YOU_SURE_YOU_WISH_TO_REMOVE_YOURSELF_FROM_THE_OLYMPIAD_WAITING_LIST;
 
     @ClientString(id = 1481, message = "You have selected an All-Class Battle. Do you wish to participate?")
