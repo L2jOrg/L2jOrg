@@ -104,6 +104,10 @@ public class PlayableStats extends CreatureStats {
             value = getExp() - 1;
         }
 
+        if(value == 0) {
+            return false;
+        }
+
         setExp(getExp() - value);
 
         byte minimumLevel = 1;
@@ -113,7 +117,7 @@ public class PlayableStats extends CreatureStats {
         }
         byte level = minimumLevel;
 
-        for (byte tmp = level; tmp <= getMaxLevel(); tmp++) {
+        for (byte tmp = level; tmp <= getMaxLevel() + 1; tmp++) {
             if (getExp() >= getExpForLevel(tmp)) {
                 continue;
             }
