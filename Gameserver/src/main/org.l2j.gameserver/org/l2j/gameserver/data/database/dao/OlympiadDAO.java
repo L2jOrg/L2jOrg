@@ -19,12 +19,30 @@
 package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
+import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.OlympiadData;
+import org.l2j.gameserver.data.database.data.OlympiadParticipantData;
+
+import java.util.Collection;
 
 /**
  * @author JoeAlisson
  */
 public interface OlympiadDAO extends DAO<OlympiadData> {
 
+    @Query("SELECT * FROM olympiad_data ORDER BY current_cycle DESC LIMIT 1")
     OlympiadData findData();
+
+    @Query("SELECT * FROM olympiad_participants WHERE player_id = :playerId: AND server = :server:")
+    OlympiadParticipantData findParticipantData(int playerId, int server);
+
+    void save(OlympiadParticipantData data);
+
+    @Query("UPDATE olympiad_participants SET points = :points:, battles_won = :battlesWon: WHERE player_id = :playerId: AND server = :server:")
+    void updateVictory(int playerId, int server, short points, int battlesWon);
+
+    @Query("UPDATE olympiad_participants SET points = :points:, battles_lost = :battlesLost: WHERE player_id = :playerId: AND server = :server:")
+    void updateDefeat(int playerId, int server, short points, short battlesLost);
+
+    void save(Collection<OlympiadParticipantData> data);
 }

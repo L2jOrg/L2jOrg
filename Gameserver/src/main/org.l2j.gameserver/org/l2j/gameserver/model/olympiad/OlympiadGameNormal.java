@@ -304,8 +304,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
         boolean tie = false;
         int winside = 0;
 
-        final List<OlympiadInfo> list1 = new ArrayList<>(1);
-        final List<OlympiadInfo> list2 = new ArrayList<>(1);
+        final List<OlympiadResultInfo> list1 = new ArrayList<>(1);
+        final List<OlympiadResultInfo> list2 = new ArrayList<>(1);
 
         final boolean _pOneCrash = ((_playerOne.getPlayer() == null) || _playerOne.isDisconnected());
         final boolean _pTwoCrash = ((_playerTwo.getPlayer() == null) || _playerTwo.isDisconnected());
@@ -329,7 +329,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                     try {
                         points = Math.min(playerOnePoints / 3, Config.ALT_OLY_MAX_POINTS);
                         removePointsFromParticipant(_playerOne, points);
-                        list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - points, -points));
+                        list1.add(new OlympiadResultInfo(_damageP1, playerOnePoints - points, -points));
 
                         winside = 2;
 
@@ -344,7 +344,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                     try {
                         points = Math.min(playerTwoPoints / 3, Config.ALT_OLY_MAX_POINTS);
                         removePointsFromParticipant(_playerTwo, points);
-                        list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - points, -points));
+                        list2.add(new OlympiadResultInfo(_damageP2, playerTwoPoints - points, -points));
 
                         if (winside == 2) {
                             tie = true;
@@ -382,11 +382,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
                     _playerOne.updateStat(COMP_WON, 1);
                     addPointsToParticipant(_playerOne, pointDiff);
-                    list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints + pointDiff, pointDiff));
+                    list1.add(new OlympiadResultInfo(_damageP1, playerOnePoints + pointDiff, pointDiff));
 
                     _playerTwo.updateStat(COMP_LOST, 1);
                     removePointsFromParticipant(_playerTwo, pointDiff);
-                    list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - pointDiff, -pointDiff));
+                    list2.add(new OlympiadResultInfo(_damageP2, playerTwoPoints - pointDiff, -pointDiff));
 
                     winside = 1;
 
@@ -405,11 +405,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
                     _playerTwo.updateStat(COMP_WON, 1);
                     addPointsToParticipant(_playerTwo, pointDiff);
-                    list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints + pointDiff, pointDiff));
+                    list2.add(new OlympiadResultInfo(_damageP2, playerTwoPoints + pointDiff, pointDiff));
 
                     _playerOne.updateStat(COMP_LOST, 1);
                     removePointsFromParticipant(_playerOne, pointDiff);
-                    list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - pointDiff, -pointDiff));
+                    list1.add(new OlympiadResultInfo(_damageP1, playerOnePoints - pointDiff, -pointDiff));
 
                     winside = 2;
 
@@ -425,11 +425,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
                     _playerOne.updateStat(COMP_LOST, 1);
                     removePointsFromParticipant(_playerOne, pointDiff);
-                    list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - pointDiff, -pointDiff));
+                    list1.add(new OlympiadResultInfo(_damageP1, playerOnePoints - pointDiff, -pointDiff));
 
                     _playerTwo.updateStat(COMP_LOST, 1);
                     removePointsFromParticipant(_playerTwo, pointDiff);
-                    list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - pointDiff, -pointDiff));
+                    list2.add(new OlympiadResultInfo(_damageP2, playerTwoPoints - pointDiff, -pointDiff));
 
                     tie = true;
 
@@ -500,10 +500,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 _playerTwo.updateStat(COMP_LOST, 1);
 
                 addPointsToParticipant(_playerOne, pointDiff);
-                list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints + pointDiff, pointDiff));
+                list1.add(new OlympiadResultInfo(_damageP1, playerOnePoints + pointDiff, pointDiff));
 
                 removePointsFromParticipant(_playerTwo, pointDiff);
-                list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - pointDiff, -pointDiff));
+                list2.add(new OlympiadResultInfo(_damageP2, playerTwoPoints - pointDiff, -pointDiff));
                 winner = _playerOne.getName() + " won";
 
                 winside = 1;
@@ -524,10 +524,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 _playerOne.updateStat(COMP_LOST, 1);
 
                 addPointsToParticipant(_playerTwo, pointDiff);
-                list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints + pointDiff, pointDiff));
+                list2.add(new OlympiadResultInfo(_damageP2, playerTwoPoints + pointDiff, pointDiff));
 
                 removePointsFromParticipant(_playerOne, pointDiff);
-                list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - pointDiff, -pointDiff));
+                list1.add(new OlympiadResultInfo(_damageP1, playerOnePoints - pointDiff, -pointDiff));
 
                 winner = _playerTwo.getName() + " won";
                 winside = 2;
@@ -550,11 +550,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
                 int value = Math.min(playerOnePoints / getDivider(), Config.ALT_OLY_MAX_POINTS);
 
                 removePointsFromParticipant(_playerOne, value);
-                list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - value, -value));
+                list1.add(new OlympiadResultInfo(_damageP1, playerOnePoints - value, -value));
 
                 value = Math.min(playerTwoPoints / getDivider(), Config.ALT_OLY_MAX_POINTS);
                 removePointsFromParticipant(_playerTwo, value);
-                list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - value, -value));
+                list2.add(new OlympiadResultInfo(_damageP2, playerTwoPoints - value, -value));
 
                 tie = true;
             }

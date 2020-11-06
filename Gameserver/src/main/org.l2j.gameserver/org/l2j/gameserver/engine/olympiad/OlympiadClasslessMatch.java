@@ -21,18 +21,15 @@ package org.l2j.gameserver.engine.olympiad;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.olympiad.OlympiadInfo;
+import org.l2j.gameserver.model.olympiad.OlympiadResultInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchResult;
 
 import java.util.List;
 import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.network.SystemMessageId.*;
-import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author JoeAlisson
@@ -119,23 +116,25 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     }
 
     @Override
-    protected void calculateResults() {
+    protected OlympiadResult calcResult() {
+        OlympiadResult result = OlympiadResult.TIE;
         if(nonNull(defeated)) {
-            processVictory();
+            result =  defeated == blue ? OlympiadResult.RED_WIN : OlympiadResult.BLUE_WIN;
         } else if(redDamage != blueDamage) {
-            defeated = redDamage < blueDamage ? red : blue;
-            processVictory();
-        } else {
-            sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
-            sendPacket(new ExOlympiadMatchResult(true, 1, List.of(OlympiadInfo.of(red, 0)), List.of(OlympiadInfo.of(blue, 0))));
+            result =  blueDamage < redDamage ? OlympiadResult.RED_WIN : OlympiadResult.BLUE_WIN;
+            defeated = result == OlympiadResult.RED_WIN ? blue : red;
         }
+        return result;
     }
 
-    private void processVictory() {
-        var winner = red == defeated ? blue : red;
-        sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(winner));
-        sendPacket(getSystemMessage(C1_HAS_LOST_S2_POINTS_IN_THE_OLYMPIAD_GAMES).addPcName(defeated).addInt(10));
-        sendPacket(new ExOlympiadMatchResult(false, winner.getOlympiadSide(), List.of(OlympiadInfo.of(winner, 10)), List.of(OlympiadInfo.of(defeated, -10))));
+    @Override
+    protected List<OlympiadResultInfo> getRedTeamResultInfo() {
+        return List.of(OlympiadResultInfo.of(red, redDamage));
+    }
+
+    @Override
+    protected List<OlympiadResultInfo> getBlueTeamResultInfo() {
+        return List.of(OlympiadResultInfo.of(blue, blueDamage));
     }
 
     @Override

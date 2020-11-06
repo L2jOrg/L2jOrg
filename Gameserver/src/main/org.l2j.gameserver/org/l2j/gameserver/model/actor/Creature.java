@@ -494,9 +494,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * <B><U>Concept</U>:</B><br>
      * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<br>
      * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
-     *
-     * @param packet
-     * @param radius
      */
     public void broadcastPacket(ServerPacket packet, int radius) {
         checkBroadcast(packet);
@@ -504,7 +501,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     protected void checkBroadcast(ServerPacket packet) {
-        if(World.getInstance().getPlayersCountInSurroundRegions(this) > 1) {
+        if(World.getInstance().getPlayersCountInSurroundRegions(this) > 10) {
             packet.sendInBroadcast(true);
         }
     }
