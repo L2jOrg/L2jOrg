@@ -43,9 +43,9 @@ public class ExOlympiadRecord extends ServerPacket {
 
         var olympiad = Olympiad.getInstance();
         // current season
-        buffer.writeInt(participantData.getPoints()); // points
-        buffer.writeInt(participantData.getBattlesWon()); // win count
-        buffer.writeInt(participantData.getBattlesLost()); // lose count
+        buffer.writeInt(participantData.getPoints());
+        buffer.writeInt(participantData.getBattlesWon());
+        buffer.writeInt(participantData.getBattlesLost());
         buffer.writeInt(olympiad.getMaxBattlesPerDay() - participantData.getBattlesToday()); // match left (MAX 5)
 
         // From olympiad history
@@ -55,7 +55,7 @@ public class ExOlympiadRecord extends ServerPacket {
         buffer.writeInt(20); // prev rank count
 
         buffer.writeInt(5); // prev class rank
-        buffer.writeInt(10); // prev class rank coundt
+        buffer.writeInt(10); // prev class rank count
 
         buffer.writeInt(2); // prev class rank by server
         buffer.writeInt(10); // prev class rank by server count
@@ -64,7 +64,7 @@ public class ExOlympiadRecord extends ServerPacket {
         buffer.writeInt(30); // prev win count
         buffer.writeInt(20); // prev lose count
 
-        buffer.writeInt(1); // prev grade
+        buffer.writeInt(100); // prev grade
 
         buffer.writeInt(olympiad.getSeasonYear());
         buffer.writeInt(olympiad.getSeasonMonth());

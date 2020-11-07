@@ -126,7 +126,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
      */
     public Spawn(NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
         super(0, 0, -10000);
-        // Set the _template of the Spawn
+
         _template = template;
 
         if (_template == null) {
@@ -379,14 +379,10 @@ public class Spawn extends Location implements IIdentifiable, INamable {
         }
     }
 
-    /**
-     * @param npc
-     * @return
-     */
     private Npc initializeNpcInstance(Npc npc) {
         int newLocX;
         int newLocY;
-        int newLocZ = -10000;
+        int newLocZ;
 
         // If Locx and Locy are not defined, the Folk must be spawned in an area defined by location or spawn territory
         // New method
@@ -397,16 +393,14 @@ public class Spawn extends Location implements IIdentifiable, INamable {
             newLocZ = loc.getZ();
             setLocation(loc);
         } else if ((getX() == 0) && (getY() == 0)) {
-            LOGGER.warn("NPC " + npc + " doesn't have spawn location!");
+            LOGGER.warn("NPC {} doesn't have spawn location!", npc);
             return null;
         } else {
-            // The Folk is spawned at the exact position (Lox, Locy, Locz)
             newLocX = getX();
             newLocY = getY();
             newLocZ = getZ();
         }
 
-        // If random spawn system is enabled
         if (Config.ENABLE_RANDOM_MONSTER_SPAWNS) {
             final int randX = newLocX + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
             final int randY = newLocY + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);

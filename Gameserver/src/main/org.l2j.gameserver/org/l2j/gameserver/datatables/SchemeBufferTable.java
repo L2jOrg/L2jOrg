@@ -234,7 +234,6 @@ public class SchemeBufferTable {
         getInstance().load();
     }
 
-
     public static SchemeBufferTable getInstance() {
         return Singleton.INSTANCE;
     }
