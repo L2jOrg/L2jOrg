@@ -150,8 +150,8 @@ public final class RequestBypassToServer extends ClientPacket {
                 if (isInteger(id)) {
                     final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
 
-                    if (isNpc(object) && (endOfId > 0) && isInsideRadius2D(player, object, Npc.INTERACTION_DISTANCE)) {
-                        ((Npc) object).onBypassFeedback(player, bypass.substring(endOfId + 1));
+                    if (object instanceof Npc npc && (endOfId > 0) && isInsideRadius2D(player, object, Npc.INTERACTION_DISTANCE)) {
+                        npc.onBypassFeedback(player, bypass.substring(endOfId + 1));
                     }
                 }
 

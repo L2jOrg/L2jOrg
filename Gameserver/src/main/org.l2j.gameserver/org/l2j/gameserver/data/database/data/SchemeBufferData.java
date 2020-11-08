@@ -16,26 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.database.dao;
+package org.l2j.gameserver.data.database.data;
 
-import org.l2j.commons.database.DAO;
-import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.SchemeBufferData;
-
-import java.sql.ResultSet;
-import java.util.List;
-import java.util.function.Consumer;
+import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.Table;
 
 /**
  * @author JoeAlisson
  */
-public interface SchemeBufferDAO extends DAO<SchemeBufferData> {
+@Table("buffer_schemes")
+public class SchemeBufferData {
 
-    @Query("SELECT * FROM buffer_schemes")
-    void loadAll(Consumer<ResultSet> consumer);
+    @Column("object_id")
+    private int playerId;
+    @Column("scheme_name")
+    private String schema;
+    private String skills;
 
-    @Query("TRUNCATE TABLE buffer_schemes")
-    void deleteAll();
-
-    void save(List<SchemeBufferData> data);
+    public static SchemeBufferData of(int playerId, String schema, String skills) {
+        var data = new SchemeBufferData();
+        data.playerId = playerId;
+        data.schema = schema;
+        data.skills = skills;
+        return data;
+    }
 }

@@ -373,7 +373,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 }
 
                 if (canCreateScheme) {
-                    SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayIntList(), true);
+                    SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayIntList());
                     returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1, returnHtml);
                 } else {
                     returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
