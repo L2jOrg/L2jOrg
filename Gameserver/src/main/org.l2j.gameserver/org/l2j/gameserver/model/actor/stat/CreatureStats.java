@@ -799,7 +799,7 @@ public class CreatureStats {
     }
 
     private void activeSummonAbilityChange() {
-        if (isSummon(creature) && creature.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
+        if (isSummon(creature) &&  nonNull(creature.getActingPlayer()) && creature.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
             for (BuffInfo info : creature.getActingPlayer().getEffectList().getEffects()) {
                 if(info.isInUse() && info.isAbnormalType(AbnormalType.ABILITY_CHANGE)) {
                     for (AbstractEffect effect : info.getEffects()) {
