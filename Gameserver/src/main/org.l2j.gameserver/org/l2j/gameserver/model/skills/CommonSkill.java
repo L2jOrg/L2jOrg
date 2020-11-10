@@ -97,6 +97,9 @@ public enum CommonSkill {
     RANKER_BENEFIT_II(60013, 1),
     RANKER_BENEFIT_III(60014, 1),
     RANKER_RACE_BENEFIT(60015, 1),
+    REPUTATION_1(60002, 1),
+    REPUTATION_2(60003,1),
+    REPUTATION_3(60004, 1),
     TELEPORT(60018, 1);
 
     private final SkillHolder _holder;

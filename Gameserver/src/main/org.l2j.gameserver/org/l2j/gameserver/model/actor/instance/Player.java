@@ -2160,6 +2160,25 @@ public final class Player extends Playable {
             });
         }
 
+        if (reputation < -2180) {
+            CommonSkill.REPUTATION_1.getSkill().applyEffects(this, this);
+        }
+        else if (reputation < -3620) {
+            stopSkillEffects(CommonSkill.REPUTATION_1.getSkill());
+            CommonSkill.REPUTATION_2.getSkill().applyEffects(this, this);
+        }
+        else if (reputation < -6500) {
+            stopSkillEffects(CommonSkill.REPUTATION_2.getSkill());
+            CommonSkill.REPUTATION_3.getSkill().applyEffects(this, this);
+        }
+        else if (reputation >= 0){
+            stopSkillEffects(CommonSkill.REPUTATION_1.getSkill());
+            stopSkillEffects(CommonSkill.REPUTATION_2.getSkill());
+            stopSkillEffects(CommonSkill.REPUTATION_3.getSkill());
+        }
+
+
+
         super.setReputation(reputation);
 
         sendPacket(getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1).addInt(getReputation()));
