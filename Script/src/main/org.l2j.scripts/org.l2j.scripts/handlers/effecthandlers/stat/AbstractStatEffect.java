@@ -70,11 +70,20 @@ public abstract class AbstractStatEffect extends AbstractEffect {
 
     @Override
     public void pump(Creature effected, Skill skill) {
-        if (conditions.isEmpty() || conditions.stream().allMatch(cond -> cond.test(effected, effected, skill))) {
+        if (conditions.isEmpty() || checkConditions(effected, skill)) {
             switch (mode) {
                 case DIFF -> effected.getStats().mergeAdd(addStat, power);
                 case PER -> effected.getStats().mergeMul(mulStat, power);
             }
         }
+    }
+
+    private boolean checkConditions(Creature effected, Skill skill) {
+        for (Condition condition : conditions) {
+            if(!condition.test(effected, effected, skill)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

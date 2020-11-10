@@ -278,7 +278,6 @@ public class Shutdown extends Thread {
         GlobalVariablesManager.getInstance().storeMe();
         LOGGER.info("Global Variables Manager: Variables saved.");
 
-        // Schemes save.
         SchemeBufferTable.getInstance().saveSchemes();
         LOGGER.info("SchemeBufferTable data has been saved.");
 

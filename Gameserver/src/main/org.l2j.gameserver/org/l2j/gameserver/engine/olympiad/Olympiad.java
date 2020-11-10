@@ -18,11 +18,14 @@
  */
 package org.l2j.gameserver.engine.olympiad;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.OlympiadDAO;
 import org.l2j.gameserver.data.database.data.OlympiadData;
+import org.l2j.gameserver.data.database.data.OlympiadParticipantData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -37,6 +40,7 @@ import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadInfo;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchMakingResult;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -56,6 +60,7 @@ import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.engine.olympiad.OlympiadState.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
@@ -69,6 +74,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private static final Logger LOGGER = LoggerFactory.getLogger(Olympiad.class);
 
     private final Set<OlympiadMatch> matches = ConcurrentHashMap.newKeySet(10);
+    private final IntMap<OlympiadParticipantData> participantsData = new HashIntMap<>();
+
     private Set<Player> registered = ConcurrentHashMap.newKeySet(20);
     private Set<Player> matchMaking = ConcurrentHashMap.newKeySet(20);
 
@@ -81,6 +88,13 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private boolean forceStartDate;
     private int minParticipant;
     private int[] availableArenas;
+    private short initialPoints;
+    private short maxBattlesPerDay;
+    private short minLoserPoints;
+    private short maxLoserPoints;
+    private short minWinnerPoints;
+    private short maxWinnerPoints;
+    private boolean transferPoints;
 
     private Olympiad() {
     }
@@ -96,6 +110,13 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             startDate = isNull(strDate) ? LocalDate.now() : LocalDate.parse(strDate);
             availableArenas = reader.parseIntArray(attr, "available-arena-instances");
             matchDuration = Duration.ofMinutes(reader.parseInt(attr, "match-duration"));
+            initialPoints = reader.parseShort(attr, "initial-points");
+            minLoserPoints = reader.parseShort(attr, "min-loser-points");
+            maxLoserPoints = reader.parseShort(attr, "max-loser-points");
+            minWinnerPoints = reader.parseShort(attr, "min-winner-points");
+            maxWinnerPoints = reader.parseShort(attr, "max-winner-points");
+            transferPoints = reader.parseBoolean(attr, "transfer-points");
+            maxBattlesPerDay = reader.parseShort(attr, "max-battles-per-day");
         }
     }
 
@@ -108,7 +129,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             data.setNextSeasonDate(startDate);
             data.setId(1);
             getDAO(OlympiadDAO.class).save(data);
-        } else if(forceStartDate) {
+        } else if(forceStartDate || isNull(data.getNextSeasonDate())) {
             data.setNextSeasonDate(startDate);
         }
 
@@ -123,6 +144,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     @ScheduleTarget
     public void onStartMatch() {
+        if(data.getNextSeasonDate().isAfter(LocalDate.now()) || data.getSeason() < 1) {
+            return;
+        }
+
         var scheduler = getScheduler("stop-match");
         if(nonNull(scheduler)) {
             state = STARTED;
@@ -149,12 +174,28 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     @ScheduleTarget
     public void onStopMatch() {
+        if(state.matchesInProgress()) {
+            return;
+        }
         state = SCHEDULED;
         if(nonNull(onPlayerLoginListener)) {
             onPlayerLoginListener.unregisterMe();
         }
         Broadcast.toAllOnlinePlayers(ExOlympiadInfo.hide(OlympiadRuleType.CLASSLESS));
         Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED));
+        matchMaking.clear();
+        registered.clear();
+        updateParticipantsData();
+    }
+
+    private void updateParticipantsData() {
+        if(matches.isEmpty()) {
+            var participants = participantsData.values();
+            participants.forEach(OlympiadParticipantData::resetBattlesToday);
+            getDAO(OlympiadDAO.class).save(participants);
+        } else {
+            ThreadPool.schedule(this::updateParticipantsData, 1, TimeUnit.MINUTES);
+        }
     }
 
     @ScheduleTarget
@@ -182,12 +223,16 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         getDAO(OlympiadDAO.class).save(data);
     }
 
-    public int getOlympiadPoints(Player player) {
-        return 0;
+    public short getOlympiadPoints(Player player) {
+        return participantDataOf(player).getPoints();
     }
 
     public int getRemainingDailyMatches(Player player) {
-        return 5;
+        return maxBattlesPerDay - participantDataOf(player).getBattlesToday();
+    }
+
+    public short getMaxBattlesPerDay() {
+        return maxBattlesPerDay;
     }
 
     public void requestMatchMaking(Player player) {
@@ -205,6 +250,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return false;
         }
 
+        if(player.isInOlympiadMode() || registered.contains(player)) {
+            player.sendPacket(getSystemMessage(C1_YOU_HAVE_ALREADY_REGISTERED_FOR_THE_MATCH).addPcName(player));
+            return false;
+        }
+
         if(getOlympiadPoints(player) <= 0) {
 
             return false;
@@ -215,10 +265,6 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return false;
         }
 
-        if(registered.contains(player)) {
-            player.sendPacket(getSystemMessage(C1_YOU_HAVE_ALREADY_REGISTERED_FOR_THE_MATCH).addPcName(player));
-            return false;
-        }
         return true;
     }
 
@@ -233,7 +279,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
         registered.add(player);
         player.sendPacket(YOU_VE_BEEN_REGISTERED_IN_THE_WAITING_LIST_OF_ALL_CLASS_BATTLE);
-        player.sendPackets(new ExOlympiadRecord(), new ExOlympiadMatchMakingResult(true, OlympiadRuleType.CLASSLESS));
+        showRecord(player);
+        player.sendPackets(new ExOlympiadMatchMakingResult(true, OlympiadRuleType.CLASSLESS));
 
         if(state != MATCH_MAKING && registered.size() >= minParticipant) {
             state = MATCH_MAKING;
@@ -267,8 +314,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         match.setArenaInstance(arena);
         match.setMatchDuration(matchDuration);
         for (int i = 0; i < OlympiadRuleType.CLASSLESS.participantCount(); i++) {
-            match.addParticipant(participants.next());
+            var participant = participants.next();
+            match.addParticipant(participant);
             participants.remove();
+            participantDataOf(participant).increaseBattlesToday();
         }
 
         matches.add(match);
@@ -283,11 +332,12 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         if(registered.remove(player)) {
             player.sendPacket(YOU_HAVE_BEEN_REMOVED_FROM_THE_OLYMPIAD_WAITING_LIST);
             player.sendPacket(new ExOlympiadMatchMakingResult(false, ruleType));
+            showRecord(player);
         }
     }
 
     public boolean isRegistered(Player player) {
-        return registered.contains(player);
+        return player.isInOlympiadMode() || registered.contains(player);
     }
 
     @Override
@@ -305,6 +355,57 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     public Collection<OlympiadMatch> getMatches() {
         return matches;
+    }
+
+    public void showRecord(Player player) {
+        player.sendPacket(new ExOlympiadRecord(participantDataOf(player)));
+    }
+
+    private OlympiadParticipantData participantDataOf(Player player) {
+        var data = participantsData.get(player.getObjectId());
+        if(isNull(data)) {
+            data = loadOrCreateParticipantData(player);
+        }
+        return data;
+    }
+
+    private OlympiadParticipantData loadOrCreateParticipantData(Player player) {
+        OlympiadParticipantData data;
+        data = getDAO(OlympiadDAO.class).findParticipantData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+        if(isNull(data)) {
+            data = OlympiadParticipantData.of(player, initialPoints, getSettings(ServerSettings.class).serverId());
+            getDAO(OlympiadDAO.class).save(data);
+        }
+        participantsData.put(player.getObjectId(), data);
+        return data;
+    }
+
+    short updateDefeat(Player player, int points) {
+        var data = participantDataOf(player);
+        data.updatePoints(points);
+        data.increaseDefeats();
+        getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints(), data.getBattlesLost());
+        return data.getPoints();
+    }
+
+    short updateVictory(Player player, int points) {
+        var data = participantDataOf(player);
+        data.updatePoints(points);
+        data.increaseVictory();
+        getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints(), data.getBattlesWon());
+        return data.getPoints();
+    }
+
+    int getRandomLoserPoints() {
+        return Rnd.get(minLoserPoints, maxLoserPoints);
+    }
+
+    int getRandomWinnerPoints() {
+        return Rnd.get(minWinnerPoints, maxWinnerPoints);
+    }
+
+    boolean isPointTransfer() {
+        return transferPoints;
     }
 
     public static Olympiad getInstance() {

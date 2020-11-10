@@ -18,10 +18,10 @@
  */
 package org.l2j.scripts.handlers.usercommandhandlers;
 
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
 
 /**
  * Olympiad Stat user command.
@@ -39,7 +39,7 @@ public class OlympiadStat implements IUserCommandHandler {
 			player.sendPacket(SystemMessageId.THIS_COMMAND_IS_AVAILABLE_ONLY_WHEN_THE_TARGET_HAS_COMPLETED_THE_2ND_CLASS_TRANSFER);
 			return false;
 		}
-		player.sendPacket(new ExOlympiadRecord());
+		Olympiad.getInstance().showRecord(player);
 		return true;
 	}
 	

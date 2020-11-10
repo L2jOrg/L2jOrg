@@ -32,11 +32,13 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.model.olympiad.OlympiadResultInfo;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.olympiad.*;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
@@ -84,13 +86,87 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         }
         state = FINISHED;
         forEachParticipant(this::onMatchFinish);
-        calculateResults();
+        processResult();
         sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
         countDownIndex = 0;
         countDownTeleportBack();
     }
 
+    private void processResult() {
+        var result = calcResult();
+        switch (result) {
+            case TIE -> processTie();
+            case RED_WIN -> processRedVictory();
+            case BLUE_WIN -> processBlueVictory();
+        }
+    }
+
+    private void processBlueVictory() {
+        var redTeam = getRedTeamResultInfo();
+        var blueTeam = getBlueTeamResultInfo();
+
+        updateParticipants(blueTeam, redTeam);
+        sendPacket(ExOlympiadMatchResult.victory(OlympiadMode.BLUE, blueTeam, redTeam));
+        var leader = blueTeam.get(0);
+        sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(leader.getPlayer()));
+    }
+
+    private void updateParticipants(List<OlympiadResultInfo> winnerTeam, List<OlympiadResultInfo> loserTeam) {
+        var olympiad = Olympiad.getInstance();
+
+        int winnerPoints;
+        var loserPoints = olympiad.getRandomLoserPoints();
+
+        if(loserPoints == 0) {
+            loserPoints = -1;
+        }
+
+        if(olympiad.isPointTransfer()) {
+            if(loserPoints > 0) {
+                loserPoints = -loserPoints;
+            }
+            winnerPoints = -loserPoints;
+        } else {
+            winnerPoints = olympiad.getRandomWinnerPoints();
+        }
+
+        for (var info : winnerTeam) {
+            var points = olympiad.updateVictory(info.getPlayer(), winnerPoints);
+            info.updatePoints(points, winnerPoints);
+        }
+
+        for (var info : loserTeam) {
+            var points = olympiad.updateDefeat(info.getPlayer(), loserPoints);
+            info.updatePoints(points, loserPoints);
+        }
+    }
+
+    private void processRedVictory() {
+        var redTeam = getRedTeamResultInfo();
+        var blueTeam = getBlueTeamResultInfo();
+        updateParticipants(redTeam, blueTeam);
+        sendPacket(ExOlympiadMatchResult.victory(OlympiadMode.RED, redTeam, blueTeam));
+        var leader = redTeam.get(0);
+        sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(leader.getPlayer()));
+    }
+
+    private void processTie() {
+        sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+        var redTeam = getRedTeamResultInfo();
+        for (var info : redTeam) {
+            info.updatePoints(Olympiad.getInstance().getOlympiadPoints(info.getPlayer()), 0);
+        }
+
+        var blueTeam = getBlueTeamResultInfo();
+        for (var info : blueTeam) {
+            info.updatePoints(Olympiad.getInstance().getOlympiadPoints(info.getPlayer()), 0);
+        }
+        sendPacket(ExOlympiadMatchResult.tie(redTeam, blueTeam));
+    }
+
     private void onMatchFinish(Player player) {
+        player.breakAttack();
+        player.breakCast();
         player.forgetTarget();
         player.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
         player.setIsOlympiadStart(false);
@@ -214,8 +290,6 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         return null;
     }
 
-    protected abstract boolean processPlayerDeath(Player player);
-
     private void setOlympiadMode(Player player, OlympiadMode mode) {
         player.setOlympiadMode(mode);
         player.setOlympiadSide(mode.ordinal());
@@ -253,6 +327,10 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     public abstract String getPlayerBlueName();
 
+    protected abstract List<OlympiadResultInfo> getRedTeamResultInfo();
+
+    protected abstract List<OlympiadResultInfo> getBlueTeamResultInfo();
+
     protected abstract void forEachParticipant(Consumer<Player> action);
 
     protected abstract void forBluePlayers(Consumer<Player> action);
@@ -261,11 +339,13 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     protected abstract void teleportPlayers(Location redLocation, Location blueLocation, Instance arena);
 
-    protected abstract void calculateResults();
+    protected abstract OlympiadResult calcResult();
 
     protected abstract void teleportBack();
 
     protected abstract void onDamage(Player attacker, Player target, double damage);
+
+    protected abstract boolean processPlayerDeath(Player player);
 
     static OlympiadMatch of(OlympiadRuleType type) {
         return new OlympiadClasslessMatch();

@@ -59,10 +59,6 @@ public class OlympiadData {
         return season;
     }
 
-    public void setSeason(int season) {
-        this.season = season;
-    }
-
     public int getPeriod() {
         return period;
     }

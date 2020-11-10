@@ -473,7 +473,7 @@ public class Pet extends Summon {
      * @param process   string identifier of process triggering this action
      * @param objectId  Item Identifier of the item to be transfered
      * @param count     Quantity of items to be transfered
-     * @param target
+     * @param  target
      * @param actor     the player requesting the item transfer
      * @param reference Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the new item or the updated item in inventory
@@ -685,7 +685,7 @@ public class Pet extends Summon {
 
         if (nonNull(SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()))) {
             for (SummonEffect se : SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId())) {
-                if (se != null) {
+                if (nonNull(se)) {
                     se.getSkill().applyEffects(this, this, false, se.getEffectCurTime());
                 }
             }

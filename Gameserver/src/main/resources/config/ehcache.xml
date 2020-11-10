@@ -32,10 +32,4 @@
         <heap>200</heap>
     </cache>
 
-    <cache alias="settings" uses-template="baseCache">
-        <key-type>java.lang.Class</key-type>
-        <value-type>org.l2j.commons.configuration.Settings</value-type>
-        <heap>10</heap>
-    </cache>
-
 </config>

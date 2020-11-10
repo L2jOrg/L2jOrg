@@ -19,9 +19,9 @@
 package org.l2j.gameserver.datatables;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.SchemeBufferDAO;
+import org.l2j.gameserver.data.database.data.SchemeBufferData;
 import org.l2j.gameserver.model.holders.BuffSkillHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
@@ -33,8 +33,6 @@ import org.w3c.dom.Node;
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,8 +47,6 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  */
 public class SchemeBufferTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SchemeBufferTable.class);
-
-    private static final String INSERT_SCHEME = "INSERT INTO buffer_schemes (object_id, scheme_name, skills) VALUES (?,?,?)";
 
     private final IntMap<Map<String, IntList>> schemes = new CHashIntMap<>();
     private final IntMap<BuffSkillHolder> availableBuffs = new LinkedHashIntMap<>();
@@ -113,7 +109,7 @@ public class SchemeBufferTable {
                     schemeList.add(Integer.parseInt(skill));
                 }
 
-                setScheme(objectId, schemeName, schemeList, false);
+                setScheme(objectId, schemeName, schemeList);
             }
         } catch (Exception e) {
             LOGGER.warn(e.getMessage(), e);
@@ -121,40 +117,32 @@ public class SchemeBufferTable {
     }
 
     public void saveSchemes() {
-
         getDAO(SchemeBufferDAO.class).deleteAll();
+        List<SchemeBufferData> data = new ArrayList<>(schemes.size() << 1);
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement stInsert = con.prepareStatement(INSERT_SCHEME)) {
-
-            // Save _schemesTable content.
-            for (var player : schemes.entrySet()) {
-                for (var scheme : player.getValue().entrySet()) {
-                    // Build a String composed of skill ids separated by a ",".
-                    final StringBuilder sb = new StringBuilder();
-                    final var it = scheme.getValue().iterator();
-                    while(it.hasNext()) {
-                        sb.append(it.nextInt()).append(",");
-                    }
-
-                    // Delete the last "," : must be called only if there is something to delete !
-                    if (sb.length() > 0) {
-                        sb.setLength(sb.length() - 1);
-                    }
-
-                    stInsert.setInt(1, player.getKey());
-                    stInsert.setString(2, scheme.getKey());
-                    stInsert.setString(3, sb.toString());
-                    stInsert.addBatch();
-                }
+        for(var entry : schemes.entrySet()) {
+            for (var schema : entry.getValue().entrySet()) {
+                data.add(SchemeBufferData.of(entry.getKey(), schema.getKey(), intListToString(schema.getValue())));
             }
-            stInsert.executeBatch();
-        } catch (Exception e) {
-            LOGGER.warn("BufferTableScheme: Error while saving schemes : " + e);
         }
+
+        getDAO(SchemeBufferDAO.class).save(data);
     }
 
-    public void setScheme(int playerId, String schemeName, IntList list, boolean save) {
+    private String intListToString(IntList list) {
+        final StringBuilder sb = new StringBuilder();
+        final var it = list.iterator();
+        while(it.hasNext()) {
+            sb.append(it.nextInt()).append(",");
+        }
+
+        if (sb.length() > 0) {
+            sb.setLength(sb.length() - 1);
+        }
+        return sb.toString();
+    }
+
+    public void setScheme(int playerId, String schemeName, IntList list) {
         if (!schemes.containsKey(playerId)) {
             schemes.put(playerId, new TreeMap<>(String.CASE_INSENSITIVE_ORDER));
         } else if (schemes.get(playerId).size() >= Config.BUFFER_MAX_SCHEMES) {
@@ -162,9 +150,6 @@ public class SchemeBufferTable {
         }
 
         schemes.get(playerId).put(schemeName, list);
-        if(save) {
-            saveSchemes();
-        }
     }
 
     /**
@@ -233,7 +218,6 @@ public class SchemeBufferTable {
     public static void init() {
         getInstance().load();
     }
-
 
     public static SchemeBufferTable getInstance() {
         return Singleton.INSTANCE;

@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `characters`(
-    `charId`                  INT UNSIGNED       NOT NULL DEFAULT 0,
+    `charId`                  INT UNSIGNED       NOT NULL,
     `account_name`            VARCHAR(45)                 DEFAULT NULL,
     `char_name`               VARCHAR(35)        NOT NULL,
     `level`                   TINYINT UNSIGNED            DEFAULT NULL,

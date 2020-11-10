@@ -16,26 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.database.dao;
-
-import org.l2j.commons.database.DAO;
-import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.SchemeBufferData;
-
-import java.sql.ResultSet;
-import java.util.List;
-import java.util.function.Consumer;
+package org.l2j.gameserver.engine.olympiad;
 
 /**
  * @author JoeAlisson
  */
-public interface SchemeBufferDAO extends DAO<SchemeBufferData> {
-
-    @Query("SELECT * FROM buffer_schemes")
-    void loadAll(Consumer<ResultSet> consumer);
-
-    @Query("TRUNCATE TABLE buffer_schemes")
-    void deleteAll();
-
-    void save(List<SchemeBufferData> data);
+public enum OlympiadResult {
+    TIE,
+    RED_WIN,
+    BLUE_WIN
 }
