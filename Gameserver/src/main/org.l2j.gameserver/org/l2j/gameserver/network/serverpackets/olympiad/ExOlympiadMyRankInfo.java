@@ -19,41 +19,61 @@
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.OlympiadRankData;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
+import org.l2j.gameserver.engine.olympiad.OlympiadBattleRecord;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+
+import java.util.Collection;
+import java.util.Collections;
+
+import static java.util.Objects.requireNonNullElse;
+import static java.util.Objects.requireNonNullElseGet;
 
 /**
  * @author JoeAlisson
  */
 public class ExOlympiadMyRankInfo extends ServerPacket {
 
+    private static final OlympiadRankData DEFAULT_OLYMPIAD_RANK_DATA = new OlympiadRankData();
+    private final OlympiadRankData data;
+    private final OlympiadRankData previousData;
+    private final Collection<OlympiadBattleRecord> battleRecords;
+
+    public ExOlympiadMyRankInfo(OlympiadRankData data, OlympiadRankData previousData, Collection<OlympiadBattleRecord> battleRecords) {
+        this.data = data;
+        this.previousData = requireNonNullElse(previousData, DEFAULT_OLYMPIAD_RANK_DATA);
+        this.battleRecords = requireNonNullElseGet(battleRecords, Collections::emptyList);
+    }
+
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_OLYMPIAD_MY_RANKING_INFO, buffer );
-        buffer.writeInt(2020); // season year
-        buffer.writeInt(3); // season month
-        buffer.writeInt(1); // season
-        buffer.writeInt(2); // rank
-        buffer.writeInt(5); // win count
-        buffer.writeInt(2); // lose count
-        buffer.writeInt(100); // points
+        final var olympiad = Olympiad.getInstance();
+        buffer.writeInt(olympiad.getSeasonYear());
+        buffer.writeInt(olympiad.getSeasonMonth());
+        buffer.writeInt(olympiad.getCurrentSeason());
+        buffer.writeInt(data.getRank());
+        buffer.writeInt(data.getBattlesWon());
+        buffer.writeInt(data.getBattlesLost());
+        buffer.writeInt(data.getPoints());
+        buffer.writeInt(previousData.getRank());
+        buffer.writeInt(previousData.getBattlesWon());
+        buffer.writeInt(previousData.getBattlesLost());
+        buffer.writeInt(previousData.getPoints());
 
-        buffer.writeInt(3); // prev rank
-        buffer.writeInt(8); // prev win count
-        buffer.writeInt(1); // prev lose count
-        buffer.writeInt(150); // prev points
+        buffer.writeInt(data.getHeroCount());
+        buffer.writeInt(data.getLegendCount());
 
-        buffer.writeInt(5); // hero count
-        buffer.writeInt(2); // legend count
+        buffer.writeInt(battleRecords.size());
 
-        buffer.writeInt(3); // recent matches count
-
-        for (int i = 0; i < 3; i++) {
-            buffer.writeSizedString("Enemy" + i); // enemy name
-            buffer.writeByte(i %2 == 0); // lost ?
-            buffer.writeInt(75 + i); // enemy level
-            buffer.writeInt(88 + i); // enemy class
+        for (OlympiadBattleRecord record : battleRecords) {
+            buffer.writeSizedString(record.name());
+            buffer.writeByte(record.lose());
+            buffer.writeInt(record.level());
+            buffer.writeInt(record.classId());
         }
     }
 }

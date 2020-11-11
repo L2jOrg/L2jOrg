@@ -103,7 +103,7 @@ CREATE OR REPLACE VIEW rankers_race AS
     )
     SELECT * FROM ranked_race WHERE `rank` <= 100;
 
-CREATE VIEW rankers AS
+CREATE OR REPLACE VIEW rankers AS
 SELECT c.charId as id,
        c.char_name as name,
        c.exp,
@@ -126,8 +126,8 @@ SELECT c.charId as id,
         IFNULL(rs.`rank`, 0) as `rank_snapshot`,
         IFNULL(rs.rank_race, 0) as `rank_race_snapshot`
 
-from characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
-where c.level >= 76
+FROM characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
+WHERE c.level >= 76
   AND c.accesslevel = 0
   AND (c.base_class BETWEEN 88 AND 118 OR c.base_class IN (131, 134, 195))
     WINDOW w as (ORDER BY c.exp desc );

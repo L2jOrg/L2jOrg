@@ -130,13 +130,16 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             winnerPoints = olympiad.getRandomWinnerPoints();
         }
 
+        final var loserLeader = loserTeam.get(0);
+        final var winnerLeader = winnerTeam.get(0);
+
         for (var info : winnerTeam) {
-            var points = olympiad.updateVictory(info.getPlayer(), winnerPoints);
+            var points = olympiad.updateVictory(info.getPlayer(), winnerPoints, loserLeader);
             info.updatePoints(points, winnerPoints);
         }
 
         for (var info : loserTeam) {
-            var points = olympiad.updateDefeat(info.getPlayer(), loserPoints);
+            var points = olympiad.updateDefeat(info.getPlayer(), loserPoints,  winnerLeader);
             info.updatePoints(points, loserPoints);
         }
     }

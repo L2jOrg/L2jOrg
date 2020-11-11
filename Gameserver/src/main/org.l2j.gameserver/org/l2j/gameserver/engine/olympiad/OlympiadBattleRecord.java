@@ -16,23 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.rank;
-
-import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.rank.ExRankingCharInfo;
+package org.l2j.gameserver.engine.olympiad;
 
 /**
  * @author JoeAlisson
  */
-public class ExRankCharInfo extends ClientPacket {
+public record OlympiadBattleRecord(String name, int classId, int level, boolean lose) {
 
-    @Override
-    protected void readImpl() throws Exception {
-        // dummy byte
-    }
-
-    @Override
-    protected void runImpl() {
-        client.sendPacket(new ExRankingCharInfo(client.getPlayer()));
-    }
 }

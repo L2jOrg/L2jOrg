@@ -22,10 +22,12 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.collection.LimitedQueue;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.OlympiadDAO;
 import org.l2j.gameserver.data.database.data.OlympiadData;
 import org.l2j.gameserver.data.database.data.OlympiadParticipantData;
+import org.l2j.gameserver.data.database.data.OlympiadRankData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -35,11 +37,10 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.model.olympiad.OlympiadResultInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadInfo;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchMakingResult;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
+import org.l2j.gameserver.network.serverpackets.olympiad.*;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -53,6 +54,7 @@ import java.time.Year;
 import java.time.YearMonth;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
@@ -75,6 +77,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private final Set<OlympiadMatch> matches = ConcurrentHashMap.newKeySet(10);
     private final IntMap<OlympiadParticipantData> participantsData = new HashIntMap<>();
+    private final IntMap<LimitedQueue<OlympiadBattleRecord>> recentBattlesRecord = new HashIntMap<>();
 
     private Set<Player> registered = ConcurrentHashMap.newKeySet(20);
     private Set<Player> matchMaking = ConcurrentHashMap.newKeySet(20);
@@ -358,7 +361,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public void showRecord(Player player) {
-        player.sendPacket(new ExOlympiadRecord(participantDataOf(player)));
+        player.sendPacket(new ExOlympiadRecord(participantDataOf(player), null));
     }
 
     private OlympiadParticipantData participantDataOf(Player player) {
@@ -380,19 +383,21 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return data;
     }
 
-    short updateDefeat(Player player, int points) {
+    short updateDefeat(Player player, int points, OlympiadResultInfo winnerLeader) {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseDefeats();
         getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints(), data.getBattlesLost());
+        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(winnerLeader.getName(), winnerLeader.getClassId(), winnerLeader.getLevel(), true));
         return data.getPoints();
     }
 
-    short updateVictory(Player player, int points) {
+    short updateVictory(Player player, int points, OlympiadResultInfo loserLeader) {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseVictory();
         getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints(), data.getBattlesWon());
+        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(loserLeader.getName(), loserLeader.getClassId(), loserLeader.getLevel(), false));
         return data.getPoints();
     }
 
@@ -406,6 +411,36 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     boolean isPointTransfer() {
         return transferPoints;
+    }
+
+    public void showPersonalRank(Player player) {
+        final var rankData = getDAO(OlympiadDAO.class).findRankData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+        final var previousData = getDAO(OlympiadDAO.class).findPreviousRankData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+        player.sendPacket(new ExOlympiadMyRankInfo(rankData, previousData, recentBattlesRecord.get(player.getObjectId())));
+    }
+
+    public void showRanking(Player player, byte type, byte scope, boolean currentSeason, int classId, int server) {
+        final List<OlympiadRankData> data = currentSeason ? getCurrentRankers(player, type, scope, classId, server) : getPreviousRankers(player, type, scope, classId, server);
+        final int participants = currentSeason ? getDAO(OlympiadDAO.class).countParticipants() : getDAO(OlympiadDAO.class).countPreviousParticipants();
+        player.sendPacket(new ExOlympiadRankingInfo(type, scope, currentSeason, classId, server, data, participants));
+    }
+
+    private List<OlympiadRankData> getPreviousRankers(Player player, byte type, byte scope, int classId, int server) {
+        final var dao = getDAO(OlympiadDAO.class);
+        if(type == 1) {
+            return scope == 1 ? dao.findPreviousRankersNextToPlayerByClass(player.getObjectId(), classId) : dao.findPreviousRankersByClass(classId, server);
+        }
+        return scope == 1 ? dao.findPreviousRankersNextToPlayer(player.getObjectId()) : dao.findPreviousRankers();
+    }
+
+    private List<OlympiadRankData> getCurrentRankers(Player player, byte type, byte scope, int classId, int server) {
+        final var dao = getDAO(OlympiadDAO.class);
+
+        if(type == 1) {
+            return scope == 1 ? dao.findRankersNextToPlayerByClass(player.getObjectId(), classId) : dao.findRankersByClass(classId, server);
+        }
+
+        return scope == 1 ? dao.findRankersNextToPlayer(player.getObjectId()) : dao.findRankers();
     }
 
     public static Olympiad getInstance() {

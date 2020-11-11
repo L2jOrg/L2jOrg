@@ -22,8 +22,10 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.OlympiadData;
 import org.l2j.gameserver.data.database.data.OlympiadParticipantData;
+import org.l2j.gameserver.data.database.data.OlympiadRankData;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * @author JoeAlisson
@@ -45,4 +47,56 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     void updateDefeat(int playerId, int server, short points, short battlesLost);
 
     void save(Collection<OlympiadParticipantData> data);
+
+    @Query("SELECT * FROM olympiad_rankers LIMIT 100")
+    List<OlympiadRankData> findRankers();
+
+    @Query("""
+            SELECT olympiad_rankers.*
+            FROM olympiad_rankers, ( SELECT @base_rank := CONVERT( (SELECT olympiad_rankers.`rank` FROM olympiad_rankers WHERE player_id = :playerId:), SIGNED ) ) dummy
+            WHERE @base_rank IS NOT NULL AND olympiad_rankers.`rank` BETWEEN  @base_rank - 10 AND @base_rank + 10
+            """)
+    List<OlympiadRankData> findRankersNextToPlayer(int playerId);
+
+    @Query("SELECT * FROM olympiad_rankers_class WHERE class_id = :classId: AND (:server: = 0 OR server = :server:) LIMIT 50")
+    List<OlympiadRankData> findRankersByClass(int classId, int server);
+
+    @Query("""
+            SELECT rc.*
+            FROM olympiad_rankers_class rc, ( SELECT @base_rank := CONVERT( (SELECT olympiad_rankers_class.`rank` FROM olympiad_rankers_class WHERE player_id = :playerId:), SIGNED ) ) dummy
+            WHERE @base_rank IS NOT NULL AND  rc.class_id = :classId:  AND rc.`rank` BETWEEN  @base_rank - 10 AND @base_rank + 10
+            """)
+    List<OlympiadRankData> findRankersNextToPlayerByClass(int playerId, int classId);
+
+    @Query("""
+            SELECT rc.*
+            FROM olympiad_rankers_class_snapshot rc, ( SELECT @base_rank := CONVERT( (SELECT olympiad_rankers_class_snapshot.`rank` FROM olympiad_rankers_class_snapshot WHERE player_id = :playerId:), SIGNED ) ) dummy
+            WHERE @base_rank IS NOT NULL AND  rc.class_id = :classId:  AND rc.`rank` BETWEEN  @base_rank - 10 AND @base_rank + 10
+            """)
+    List<OlympiadRankData> findPreviousRankersNextToPlayerByClass(int playerId, int classId);
+
+    @Query("SELECT * FROM olympiad_rankers_class_snapshot WHERE class_id = :classId: AND (:server: = 0 OR server = :server: ) LIMIT 50")
+    List<OlympiadRankData> findPreviousRankersByClass(int classId, int server);
+
+    @Query("SELECT * FROM olympiad_rankers_snapshot LIMIT 100")
+    List<OlympiadRankData> findPreviousRankers();
+
+    @Query("""
+            SELECT olympiad_rankers_snapshot.*
+            FROM olympiad_rankers_snapshot, ( SELECT @base_rank := CONVERT( (SELECT olympiad_rankers_snapshot.`rank` FROM olympiad_rankers_snapshot WHERE player_id = :playerId:), SIGNED ) ) dummy
+            WHERE @base_rank IS NOT NULL AND olympiad_rankers_snapshot.`rank` BETWEEN  @base_rank - 10 AND @base_rank + 10
+            """)
+    List<OlympiadRankData> findPreviousRankersNextToPlayer(int playerId);
+
+    @Query("SELECT COUNT(1) FROM olympiad_participants")
+    int countParticipants();
+
+    @Query("SELECT COUNT(1) FROM olympiad_rankers_snapshot")
+    int countPreviousParticipants();
+
+    @Query("SELECT * FROM olympiad_rankers WHERE player_id = :playerId: AND  server = :server:")
+    OlympiadRankData findRankData(int playerId, int server);
+
+    @Query("SELECT * FROM olympiad_rankers_snapshot WHERE player_id = :playerId: AND  server = :server:")
+    OlympiadRankData findPreviousRankData(int playerId, int server);
 }

@@ -52,6 +52,10 @@ public class OlympiadResultInfo {
         return player.getAppearance().getVisibleName();
     }
 
+    public int getLevel() {
+        return player.getLevel();
+    }
+
     public String getClanName() {
         return emptyIfNullOrElse(player.getClan(), Clan::getName);
     }

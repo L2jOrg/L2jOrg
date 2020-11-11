@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.OlympiadHistoryData;
 import org.l2j.gameserver.data.database.data.OlympiadParticipantData;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
@@ -26,15 +27,21 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
+import java.util.Objects;
+
 /**
  * @author JoeAlisson
  */
 public class ExOlympiadRecord extends ServerPacket {
 
-    private final OlympiadParticipantData participantData;
+    private static final OlympiadHistoryData EMPTY_LAST_CYCLE = new OlympiadHistoryData();
 
-    public ExOlympiadRecord(OlympiadParticipantData data) {
+    private final OlympiadParticipantData participantData;
+    private final OlympiadHistoryData lastCycleData;
+
+    public ExOlympiadRecord(OlympiadParticipantData data, OlympiadHistoryData lastCycleData) {
         participantData = data;
+        this.lastCycleData = Objects.requireNonNullElse(lastCycleData, EMPTY_LAST_CYCLE);
     }
 
     @Override
@@ -42,29 +49,29 @@ public class ExOlympiadRecord extends ServerPacket {
         writeId(ServerExPacketId.EX_OLYMPIAD_RECORD, buffer );
 
         var olympiad = Olympiad.getInstance();
-        // current season
+
         buffer.writeInt(participantData.getPoints());
         buffer.writeInt(participantData.getBattlesWon());
         buffer.writeInt(participantData.getBattlesLost());
         buffer.writeInt(olympiad.getMaxBattlesPerDay() - participantData.getBattlesToday()); // match left (MAX 5)
 
-        // From olympiad history
-        buffer.writeInt(127); // prev class type
 
-        buffer.writeInt(10);  // prev rank (non classed all servers)
-        buffer.writeInt(20); // prev rank count
+        buffer.writeInt(lastCycleData.getClassId());
 
-        buffer.writeInt(5); // prev class rank
-        buffer.writeInt(10); // prev class rank count
+        buffer.writeInt(lastCycleData.getOverallRank());
+        buffer.writeInt(lastCycleData.getOverallCount());
 
-        buffer.writeInt(2); // prev class rank by server
-        buffer.writeInt(10); // prev class rank by server count
+        buffer.writeInt(lastCycleData.getOverallClassRank());
+        buffer.writeInt(lastCycleData.getOverallClassCount());
 
-        buffer.writeInt(230); // prev point
-        buffer.writeInt(30); // prev win count
-        buffer.writeInt(20); // prev lose count
+        buffer.writeInt(lastCycleData.getServerClassRank());
+        buffer.writeInt(lastCycleData.getServerClassCount());
 
-        buffer.writeInt(100); // prev grade
+        buffer.writeInt(lastCycleData.getPoints());
+        buffer.writeInt(lastCycleData.getBattlesOwn());
+        buffer.writeInt(lastCycleData.getBattlesLost());
+
+        buffer.writeInt(0); // prev grade
 
         buffer.writeInt(olympiad.getSeasonYear());
         buffer.writeInt(olympiad.getSeasonMonth());
