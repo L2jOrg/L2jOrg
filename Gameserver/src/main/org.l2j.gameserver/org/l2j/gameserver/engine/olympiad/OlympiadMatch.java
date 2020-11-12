@@ -134,12 +134,12 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         final var winnerLeader = winnerTeam.get(0);
 
         for (var info : winnerTeam) {
-            var points = olympiad.updateVictory(info.getPlayer(), winnerPoints, loserLeader);
+            var points = olympiad.updateVictory(info.getPlayer(), winnerPoints, loserLeader.getPlayer());
             info.updatePoints(points, winnerPoints);
         }
 
         for (var info : loserTeam) {
-            var points = olympiad.updateDefeat(info.getPlayer(), loserPoints,  winnerLeader);
+            var points = olympiad.updateDefeat(info.getPlayer(), loserPoints,  winnerLeader.getPlayer());
             info.updatePoints(points, loserPoints);
         }
     }
@@ -154,16 +154,25 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     private void processTie() {
-        sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
-        var redTeam = getRedTeamResultInfo();
+        final var olympiad = Olympiad.getInstance();
+        final var tiePoints = olympiad.getRandomTiePoints();
+
+        final var redTeam = getRedTeamResultInfo();
+        final var blueTeam = getBlueTeamResultInfo();
+        final var blueLeader = blueTeam.get(0);
+        final var redLeader = redTeam.get(0);
+
         for (var info : redTeam) {
-            info.updatePoints(Olympiad.getInstance().getOlympiadPoints(info.getPlayer()), 0);
+            var points = olympiad.updateTie(info.getPlayer(), blueLeader.getPlayer(), tiePoints);
+            info.updatePoints(points, tiePoints);
         }
 
-        var blueTeam = getBlueTeamResultInfo();
+
         for (var info : blueTeam) {
-            info.updatePoints(Olympiad.getInstance().getOlympiadPoints(info.getPlayer()), 0);
+            var points = olympiad.updateTie(info.getPlayer(), redLeader.getPlayer(), tiePoints);
+            info.updatePoints(points, tiePoints);
         }
+        sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
         sendPacket(ExOlympiadMatchResult.tie(redTeam, blueTeam));
     }
 

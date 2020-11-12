@@ -37,7 +37,6 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2j.gameserver.model.olympiad.OlympiadResultInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.olympiad.*;
@@ -98,6 +97,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private short minWinnerPoints;
     private short maxWinnerPoints;
     private boolean transferPoints;
+    private short minTiePoints;
+    private short maxTiePoints;
 
     private Olympiad() {
     }
@@ -118,6 +119,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             maxLoserPoints = reader.parseShort(attr, "max-loser-points");
             minWinnerPoints = reader.parseShort(attr, "min-winner-points");
             maxWinnerPoints = reader.parseShort(attr, "max-winner-points");
+            minTiePoints = reader.parseShort(attr, "min-tie-points");
+            maxTiePoints = reader.parseShort(attr, "max-tie-points");
             transferPoints = reader.parseBoolean(attr, "transfer-points");
             maxBattlesPerDay = reader.parseShort(attr, "max-battles-per-day");
         }
@@ -383,21 +386,28 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return data;
     }
 
-    short updateDefeat(Player player, int points, OlympiadResultInfo winnerLeader) {
+    short updateDefeat(Player player, int points, Player winnerLeader) {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseDefeats();
         getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints(), data.getBattlesLost());
-        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(winnerLeader.getName(), winnerLeader.getClassId(), winnerLeader.getLevel(), true));
+        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(winnerLeader.getName(), winnerLeader.getClassId().getId(), winnerLeader.getLevel(), (byte) 1));
         return data.getPoints();
     }
 
-    short updateVictory(Player player, int points, OlympiadResultInfo loserLeader) {
+    short updateVictory(Player player, int points, Player loserLeader) {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseVictory();
         getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints(), data.getBattlesWon());
-        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(loserLeader.getName(), loserLeader.getClassId(), loserLeader.getLevel(), false));
+        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(loserLeader.getName(), loserLeader.getClassId().getId(), loserLeader.getLevel(), (byte) 0));
+        return data.getPoints();
+    }
+
+    short updateTie(Player player, Player enemy, int points) {
+        var data = participantDataOf(player);
+        data.updatePoints(points);
+        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(enemy.getName(), enemy.getClassId().getId(), enemy.getLevel(), (byte) 2));
         return data.getPoints();
     }
 
@@ -407,6 +417,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     int getRandomWinnerPoints() {
         return Rnd.get(minWinnerPoints, maxWinnerPoints);
+    }
+
+    int getRandomTiePoints() {
+        return Rnd.get(minTiePoints, maxTiePoints);
     }
 
     boolean isPointTransfer() {

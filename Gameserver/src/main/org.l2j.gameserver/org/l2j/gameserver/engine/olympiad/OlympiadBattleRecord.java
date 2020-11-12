@@ -21,6 +21,6 @@ package org.l2j.gameserver.engine.olympiad;
 /**
  * @author JoeAlisson
  */
-public record OlympiadBattleRecord(String name, int classId, int level, boolean lose) {
+public record OlympiadBattleRecord(String name, int classId, int level, byte result) {
 
 }

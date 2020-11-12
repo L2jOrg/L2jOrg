@@ -69,9 +69,9 @@ public class ExOlympiadMyRankInfo extends ServerPacket {
 
         buffer.writeInt(battleRecords.size());
 
-        for (OlympiadBattleRecord record : battleRecords) {
+        for (var record : battleRecords) {
             buffer.writeSizedString(record.name());
-            buffer.writeByte(record.lose());
+            buffer.writeByte(record.result());
             buffer.writeInt(record.level());
             buffer.writeInt(record.classId());
         }
