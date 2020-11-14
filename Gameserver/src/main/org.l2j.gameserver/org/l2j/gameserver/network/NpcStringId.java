@@ -6973,8 +6973,7 @@ public final class NpcStringId {
 
     @ClientString(id = 91412, message = "West and east area near the Talking Island Village")
     public static NpcStringId WEST_AND_EAST_AREA_NEAR_THE_TALKING_ISLAND_VILLAGE;
-    @ClientString(id = 93301, message = "|Lv. 40-44| Exploring the West Outskirts of the Dungeon of Abyss")
-    public static NpcStringId LV_40_44_EXPLORING_THE_WEST_OUTSKIRTS_OF_THE_DUNGEON_OF_ABYSS;
+
     @ClientString(id = 93302, message = "|Lv. 40-44| Exploring the West Outskirts of the Dungeon of Abyss (In Progress)")
     public static NpcStringId LV_40_44_EXPLORING_THE_WEST_OUTSKIRTS_OF_THE_DUNGEON_OF_ABYSS_IN_PROGRESS;
     @ClientString(id = 93303, message = "|Lv. 40-44| Exploring the West Outskirts of the Dungeon of Abyss (Done)")
@@ -24400,6 +24399,9 @@ public final class NpcStringId {
 
     @ClientString(id = 42247, message = "Oh, this is dragging on too long... At this rate I won't make it home before the seven seals are broken.")
     public static NpcStringId OH_THIS_IS_DRAGGING_ON_TOO_LONG_AT_THIS_RATE_I_WON_T_MAKE_IT_HOME_BEFORE_THE_SEVEN_SEALS_ARE_BROKEN;
+
+    @ClientString(id = 93301, message = "|Lv. 40-44| Exploring the West Outskirts of the Dungeon of Abyss")
+    public static NpcStringId LV_40_44_EXPLORING_THE_WEST_OUTSKIRTS_OF_THE_DUNGEON_OF_ABYSS;
 
     @ClientString(id = 99702, message = "What are you looking at?")
     public static NpcStringId WHAT_ARE_YOU_LOOKING_AT;

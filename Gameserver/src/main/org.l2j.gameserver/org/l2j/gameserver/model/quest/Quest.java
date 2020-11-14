@@ -174,10 +174,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
         return questNameNpcStringId != null ? questNameNpcStringId.getId() / 100 : (questId > 10000 ? questId - 5000 : questId);
     }
 
-    public NpcStringId getQuestNameNpcStringId() {
-        return questNameNpcStringId;
-    }
-
     public void setQuestNameNpcStringId(NpcStringId npcStringId) {
         questNameNpcStringId = npcStringId;
     }
