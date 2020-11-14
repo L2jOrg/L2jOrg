@@ -3624,9 +3624,7 @@ public final class Player extends Playable {
     }
 
     public void sendPackets(ServerPacket... packets) {
-        for (ServerPacket packet : packets) {
-            client.sendPacket(packet);
-        }
+        client.sendPackets(packets);
     }
 
     /**

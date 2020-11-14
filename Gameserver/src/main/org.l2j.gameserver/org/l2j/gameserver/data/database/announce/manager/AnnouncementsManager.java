@@ -104,8 +104,8 @@ public final class AnnouncementsManager {
      * @param announce
      */
     public void addAnnouncement(Announce announce) {
-        if(announce instanceof AnnounceData) {
-            getDAO(AnnounceDAO.class).save((AnnounceData) announce);
+        if(announce instanceof AnnounceData data) {
+            getDAO(AnnounceDAO.class).save(data);
         }
         announcements.put(announce.getId(), announce);
     }

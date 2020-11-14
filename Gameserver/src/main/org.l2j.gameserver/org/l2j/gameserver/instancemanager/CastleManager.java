@@ -111,7 +111,12 @@ public final class CastleManager implements InstanceListManager {
     }
 
     public final Castle getCastle(int x, int y, int z) {
-        return castles.values().stream().filter(c -> c.checkIfInZone(x, y, z)).findFirst().orElse(null);
+        for (Castle castle : castles.values()) {
+            if(castle.checkIfInZone(x, y, z)) {
+                return castle;
+            }
+        }
+        return null;
     }
 
     public final Castle getCastle(ILocational loc) {

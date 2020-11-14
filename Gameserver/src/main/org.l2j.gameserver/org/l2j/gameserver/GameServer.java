@@ -201,7 +201,7 @@ public class GameServer {
         CastleManager.getInstance().activateInstances();
         SiegeScheduleData.getInstance();
         CastleManorManager.getInstance();
-        SiegeGuardManager.getInstance();
+        SiegeGuardManager.init();
         QuestManager.getInstance().report();
 
         var generalSettings = getSettings(GeneralSettings.class);
