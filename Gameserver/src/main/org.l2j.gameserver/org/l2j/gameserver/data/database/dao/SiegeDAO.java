@@ -18,11 +18,14 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.IntKeyIntValue;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.CastleSiegeGuardData;
 
+import java.sql.ResultSet;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * @author JoeAlisson
@@ -43,4 +46,7 @@ public interface SiegeDAO extends DAO<Object> {
 
     @Query("SELECT * FROM castle_siege_guards WHERE castleId = :castleId: And isHired = :hired:")
     List<CastleSiegeGuardData> loadGuardOfCastle(int castleId, int hired);
+
+    @Query("SELECT tower_index, level FROM castle_trap_upgrade WHERE castle_id=:castleId:")
+    List<IntKeyIntValue> loadTrapsUpgrade(int castleId);
 }

@@ -197,7 +197,7 @@ public class GameServer {
         VoteSystem.initialize();
 
         printSection("Siege");
-        SiegeManager.getInstance().getSieges();
+        SiegeManager.init();
         CastleManager.getInstance().activateInstances();
         SiegeScheduleData.getInstance();
         CastleManorManager.getInstance();
