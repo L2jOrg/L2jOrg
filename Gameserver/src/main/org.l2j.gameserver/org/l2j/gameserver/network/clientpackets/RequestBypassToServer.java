@@ -46,6 +46,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isInteger;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
@@ -117,7 +118,6 @@ public final class RequestBypassToServer extends ClientPacket {
             }
 
             if ((bypassOriginId > 0) && !GameUtils.isInsideRangeOfObjectId(player, bypassOriginId, Npc.INTERACTION_DISTANCE)) {
-                // No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action
                 return;
             }
         }
@@ -174,15 +174,6 @@ public final class RequestBypassToServer extends ClientPacket {
                 } catch (NumberFormatException nfe) {
                     LOGGER.warn("NFE for command [" + bypass + "]", nfe);
                 }
-            } else if (bypass.startsWith("_match")) {
-                final String params = bypass.substring(bypass.indexOf("?") + 1);
-                final StringTokenizer st = new StringTokenizer(params, "&");
-                final int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
-                final int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
-                final int heroid = Hero.getInstance().getHeroByClass(heroclass);
-                if (heroid > 0) {
-                    Hero.getInstance().showHeroFights(player, heroclass, heroid, heropage);
-                }
             } else if (bypass.startsWith("_diary")) {
                 final String params = bypass.substring(bypass.indexOf("?") + 1);
                 final StringTokenizer st = new StringTokenizer(params, "&");
@@ -191,12 +182,6 @@ public final class RequestBypassToServer extends ClientPacket {
                 final int heroid = Hero.getInstance().getHeroByClass(heroclass);
                 if (heroid > 0) {
                     Hero.getInstance().showHeroDiary(player, heroclass, heroid, heropage);
-                }
-            } else if (bypass.startsWith("_olympiad?command")) {
-                final int arenaId = Integer.parseInt(bypass.split("=")[2]);
-                final IBypassHandler handler = BypassHandler.getInstance().getHandler("arenachange");
-                if (handler != null) {
-                    handler.useBypass("arenachange " + (arenaId - 1), player, null);
                 }
             } else if (bypass.startsWith("menu_select")) {
                 final Npc lastNpc = player.getLastFolkNPC();
@@ -222,8 +207,9 @@ public final class RequestBypassToServer extends ClientPacket {
                 final int multisellId = Integer.parseInt(bypass.substring(10).trim());
                 MultisellEngine.getInstance().separateAndSend(multisellId, player, null, false);
             } else {
+                bypass = bypass.replace("?", " ");
                 final IBypassHandler handler = BypassHandler.getInstance().getHandler(bypass);
-                if (handler != null) {
+                if (nonNull(handler)) {
                     if (bypassOriginId > 0) {
                         final WorldObject bypassOrigin = World.getInstance().findObject(bypassOriginId);
                         if (isCreature(bypassOrigin)) {
@@ -235,7 +221,7 @@ public final class RequestBypassToServer extends ClientPacket {
                         handler.useBypass(bypass, player, null);
                     }
                 } else {
-                    LOGGER.warn(client + " sent not handled RequestBypassToServer: [" + bypass + "]");
+                    LOGGER.warn("{} sent not handled RequestBypassToServer: [{}]", client, bypass);
                 }
             }
         } catch (Exception e) {

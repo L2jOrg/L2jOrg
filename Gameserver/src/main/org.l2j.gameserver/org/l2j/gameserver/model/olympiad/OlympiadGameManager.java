@@ -33,12 +33,12 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-
 /**
  * @author GodKratos, DS
  */
 public class OlympiadGameManager implements Runnable {
     private static final Logger LOGGER = LoggerFactory.getLogger(OlympiadGameManager.class);
+
     private static final int STADIUM_COUNT = 80; // TODO dynamic
     private final List<OlympiadStadium> _tasks;
     private volatile boolean _battleStarted = false;
@@ -186,7 +186,7 @@ public class OlympiadGameManager implements Runnable {
             return;
         }
 
-        final int id = attacker.getOlympiadGameId();
+        final int id = attacker.getOlympiadMatchId();
         if ((id < 0) || (id >= _tasks.size())) {
             return;
         }

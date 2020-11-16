@@ -66,7 +66,7 @@ public final class SummonNpc extends AbstractEffect {
 
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-        if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode()) {
+        if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().isInObserverMode()) {
             return;
         }
 

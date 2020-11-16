@@ -23,7 +23,7 @@ package org.l2j.gameserver.engine.olympiad;
  */
 public enum OlympiadMode {
     NONE,
-    RED,
     BLUE,
+    RED,
     SPECTATOR
 }

@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.commons.util.Util.parseNextInt;
+
 /**
  * @author JoeAlisson
  */
@@ -32,21 +34,21 @@ public class OlympiadHandler implements IBypassHandler {
 
     @Override
     public boolean useBypass(String bypass, Player player, Creature bypassOrigin) {
-        var tokens = new StringTokenizer(bypass);
-        tokens.nextToken();
+        bypass = bypass.substring(10).replaceAll("[\\w_]+=", "").trim();
+
+        var tokens = new StringTokenizer(bypass, "&");
         if(tokens.hasMoreTokens()) {
-            String command = tokens.nextToken();
-            if(command.equalsIgnoreCase("start_match_making")) {
-                Olympiad.getInstance().startMatchMaking(player);
+
+            switch (tokens.nextToken()) {
+                case "start_match_making" -> Olympiad.getInstance().startMatchMaking(player);
+                case "move_op_field" -> Olympiad.getInstance().addSpectator(player, parseNextInt(tokens, 0));
             }
         }
-
-
-        return false;
+        return true;
     }
 
     @Override
     public String[] getBypassList() {
-        return new String[] {"Olympiad"};
+        return new String[] {"_olympiad"};
     }
 }

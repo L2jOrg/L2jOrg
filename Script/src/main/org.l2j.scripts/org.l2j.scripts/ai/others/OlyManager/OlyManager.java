@@ -30,10 +30,8 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.olympiad.CompetitionType;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
 import org.l2j.scripts.ai.AbstractNpcAI;
@@ -91,46 +89,6 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			case "index":
 			{
 				htmltext = onFirstTalk(npc, player);
-				break;
-			}
-			case "joinMatch":
-			{
-				if (OlympiadManager.getInstance().isRegistered(player))
-				{
-					htmltext = "OlyManager-registred.html";
-				}
-				else
-				{
-					htmltext = getHtml(player, "OlyManager-joinMatch.html");
-					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(Olympiad.getInstance().getPeriod()));
-					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(Olympiad.getInstance().getCurrentSeason()));
-					htmltext = htmltext.replace("%olympiad_participant%", String.valueOf(OlympiadManager.getInstance().getCountOpponents()));
-				}
-				break;
-			}
-			case "register1v1":
-			{
-				if ((!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55)) // avoid exploits
-				{
-					htmltext = "OlyManager-noNoble.html";
-				}
-				else if (Olympiad.getInstance().getOlympiadPoints(player) <= 0)
-				{
-					htmltext = "OlyManager-noPoints.html";
-				}
-				else if (!player.isInventoryUnder80())
-				{
-					player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
-				}
-				else
-				{
-					OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
-				}
-				break;
-			}
-			case "unregister":
-			{
-				OlympiadManager.getInstance().unRegisterNoble(player);
 				break;
 			}
 			case "calculatePoints":
@@ -193,11 +151,11 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				
 				player.sendPacket(new ExOlympiadMatchList());
 			}
-			else if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!player.inObserverMode() && !isInsideRadius2D(player, olymanager, 300)))
+			else if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!player.isInObserverMode() && !isInsideRadius2D(player, olymanager, 300)))
 			{
 				return false;
 			}
-			else if (OlympiadManager.getInstance().isRegisteredInComp(player))
+			else if (Olympiad.getInstance().isRegistered(player))
 			{
 				player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 				return false;

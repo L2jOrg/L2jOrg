@@ -2042,7 +2042,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     public static void playSound(Instance world, String sound) {
-        world.broadcastPacket(PlaySound.sound(sound));
+        world.sendPacket(PlaySound.sound(sound));
     }
 
     /**
@@ -2117,7 +2117,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     public static void specialCamera(Instance world, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
-        world.broadcastPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
+        world.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
     }
 
     public static void addRadar(Player player, ILocational loc) {

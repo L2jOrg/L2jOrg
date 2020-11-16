@@ -283,34 +283,8 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
         return exitLocationType;
     }
 
-    /**
-     * Get exit location from instance world.
-     *
-     * @param player player who wants to leave instance
-     * @return exit location if instance has any, otherwise {@code null}
-     */
-    public Location getExitLocation(Player player) {
-        Location location = null;
-
-        switch (exitLocationType) {
-            case RANDOM: {
-                location = exitLocations.get(Rnd.get(exitLocations.size()));
-                break;
-            }
-            case FIXED: {
-                location = exitLocations.get(0);
-                break;
-            }
-            case ORIGIN: {
-                final int[] loc = player.getInstanceOrigin();
-                if (loc.length == 3) {
-                    location = new Location(loc[0], loc[1], loc[2]);
-                    player.setInstanceOrigin("");
-                }
-                break;
-            }
-        }
-        return location;
+    List<Location> getExitLocations() {
+        return exitLocations;
     }
 
     /**

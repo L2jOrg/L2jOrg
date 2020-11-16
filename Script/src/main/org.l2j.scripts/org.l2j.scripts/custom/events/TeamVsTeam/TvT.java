@@ -20,6 +20,7 @@
 package org.l2j.scripts.custom.events.TeamVsTeam;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.Team;
@@ -41,7 +42,6 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -328,7 +328,7 @@ public class TvT extends Event
 				BLUE_SCORE = 0;
 				RED_SCORE = 0;
 				// Initialize scoreboard.
-				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.INITIALIZE, GameUtils.sortByValue(PLAYER_SCORES)));
+				PVP_WORLD.sendPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.INITIALIZE, GameUtils.sortByValue(PLAYER_SCORES)));
 				// Schedule start.
 				startQuestTimer("5", (WAIT_TIME * 60000) - 5000, null, null);
 				startQuestTimer("4", (WAIT_TIME * 60000) - 4000, null, null);
@@ -430,7 +430,7 @@ public class TvT extends Event
 			}
 			case "ScoreBoard":
 			{
-				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.FINISH, GameUtils.sortByValue(PLAYER_SCORES)));
+				PVP_WORLD.sendPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.FINISH, GameUtils.sortByValue(PLAYER_SCORES)));
 				break;
 			}
 			case "TeleportOut":
@@ -667,7 +667,7 @@ public class TvT extends Event
 			player.sendMessage("You cannot register while on a duel.");
 			return false;
 		}
-		if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
+		if (Olympiad.getInstance().isRegistered(player))
 		{
 			player.sendMessage("You cannot participate while registered on the Olympiad.");
 			return false;
@@ -697,17 +697,17 @@ public class TvT extends Event
 	
 	private void broadcastScreenMessage(String message, int duration)
 	{
-		PVP_WORLD.broadcastPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, false));
+		PVP_WORLD.sendPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, false));
 	}
 	
 	private void broadcastScreenMessageWithEffect(String message, int duration)
 	{
-		PVP_WORLD.broadcastPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, true));
+		PVP_WORLD.sendPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, true));
 	}
 	
 	private void broadcastScoreMessage()
 	{
-		PVP_WORLD.broadcastPacket(new ExShowScreenMessage("Blue: " + BLUE_SCORE + " - Red: " + RED_SCORE, ExShowScreenMessage.BOTTOM_RIGHT, 15000, 0, true, false));
+		PVP_WORLD.sendPacket(new ExShowScreenMessage("Blue: " + BLUE_SCORE + " - Red: " + RED_SCORE, ExShowScreenMessage.BOTTOM_RIGHT, 15000, 0, true, false));
 	}
 	
 	private void addLogoutListener(Player player)
@@ -793,7 +793,7 @@ public class TvT extends Event
 				PLAYER_SCORES.put(killer, PLAYER_SCORES.get(killer) + 1);
 				BLUE_SCORE++;
 				broadcastScoreMessage();
-				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, GameUtils.sortByValue(PLAYER_SCORES)));
+				PVP_WORLD.sendPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, GameUtils.sortByValue(PLAYER_SCORES)));
 			}
 			// Confirm Red team kill.
 			if ((killer.getTeam() == Team.RED) && (killedPlayer.getTeam() == Team.BLUE))
@@ -801,7 +801,7 @@ public class TvT extends Event
 				PLAYER_SCORES.put(killer, PLAYER_SCORES.get(killer) + 1);
 				RED_SCORE++;
 				broadcastScoreMessage();
-				PVP_WORLD.broadcastPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, GameUtils.sortByValue(PLAYER_SCORES)));
+				PVP_WORLD.sendPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, GameUtils.sortByValue(PLAYER_SCORES)));
 			}
 			// Auto release after 10 seconds.
 			startQuestTimer("ResurrectPlayer", 10000, null, killedPlayer);

@@ -56,8 +56,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
         _playerOne = opponents[0];
         _playerTwo = opponents[1];
 
-        _playerOne.getPlayer().setOlympiadGameId(id);
-        _playerTwo.getPlayer().setOlympiadGameId(id);
+        _playerOne.getPlayer().setOlympiadMatchId(id);
+        _playerTwo.getPlayer().setOlympiadMatchId(id);
     }
 
     protected static Participant[] createListOfParticipants(Set<Integer> set) {
@@ -202,11 +202,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
     @Override
     protected final void cleanEffects() {
-        if ((_playerOne.getPlayer() != null) && !_playerOne.isDefaulted() && !_playerOne.isDisconnected() && (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId)) {
+        if ((_playerOne.getPlayer() != null) && !_playerOne.isDefaulted() && !_playerOne.isDisconnected() && (_playerOne.getPlayer().getOlympiadMatchId() == _stadiumId)) {
             cleanEffects(_playerOne.getPlayer());
         }
 
-        if ((_playerTwo.getPlayer() != null) && !_playerTwo.isDefaulted() && !_playerTwo.isDisconnected() && (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId)) {
+        if ((_playerTwo.getPlayer() != null) && !_playerTwo.isDefaulted() && !_playerTwo.isDisconnected() && (_playerTwo.getPlayer().getOlympiadMatchId() == _stadiumId)) {
             cleanEffects(_playerTwo.getPlayer());
         }
     }
@@ -223,11 +223,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
     @Override
     protected final void playersStatusBack() {
-        if ((_playerOne.getPlayer() != null) && !_playerOne.isDefaulted() && !_playerOne.isDisconnected() && (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId)) {
+        if ((_playerOne.getPlayer() != null) && !_playerOne.isDefaulted() && !_playerOne.isDisconnected() && (_playerOne.getPlayer().getOlympiadMatchId() == _stadiumId)) {
             playerStatusBack(_playerOne.getPlayer());
         }
 
-        if ((_playerTwo.getPlayer() != null) && !_playerTwo.isDefaulted() && !_playerTwo.isDisconnected() && (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId)) {
+        if ((_playerTwo.getPlayer() != null) && !_playerTwo.isDefaulted() && !_playerTwo.isDisconnected() && (_playerTwo.getPlayer().getOlympiadMatchId() == _stadiumId)) {
             playerStatusBack(_playerTwo.getPlayer());
         }
     }
@@ -274,7 +274,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
         boolean playerOneLost = true;
         try {
-            if (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId) {
+            if (_playerOne.getPlayer().getOlympiadMatchId() == _stadiumId) {
                 playerOneLost = _playerOne.getPlayer().isDead();
             }
         } catch (Exception e) {
@@ -283,7 +283,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame {
 
         boolean playerTwoLost = true;
         try {
-            if (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId) {
+            if (_playerTwo.getPlayer().getOlympiadMatchId() == _stadiumId) {
                 playerTwoLost = _playerTwo.getPlayer().isDead();
             }
         } catch (Exception e) {

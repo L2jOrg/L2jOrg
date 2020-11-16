@@ -24,16 +24,20 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.impl.character.OnCreatureDamageDealt;
+import org.l2j.gameserver.model.events.impl.character.OnCreatureDamageReceived;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
+import org.l2j.gameserver.model.events.impl.character.OnCreatureTeleported;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCpChange;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.olympiad.OlympiadResultInfo;
+import org.l2j.gameserver.network.serverpackets.ObservationReturn;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.olympiad.*;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -45,6 +49,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 import static org.l2j.gameserver.engine.olympiad.MatchState.*;
+import static org.l2j.gameserver.model.Party.MessageType;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
@@ -64,6 +69,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private ConsumerEventListener damageListener;
     private ConsumerEventListener hpListener;
     private ConsumerEventListener cpListener;
+    private ConsumerEventListener spectatorListener;
 
     OlympiadMatch() {
         state = MatchState.CREATED;
@@ -87,7 +93,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         state = FINISHED;
         forEachParticipant(this::onMatchFinish);
         processResult();
-        sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
+        arena.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
         countDownIndex = 0;
         countDownTeleportBack();
     }
@@ -106,9 +112,9 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         var blueTeam = getBlueTeamResultInfo();
 
         updateParticipants(blueTeam, redTeam);
-        sendPacket(ExOlympiadMatchResult.victory(OlympiadMode.BLUE, blueTeam, redTeam));
+        arena.sendPacket(ExOlympiadMatchResult.victory(OlympiadMode.BLUE, blueTeam, redTeam));
         var leader = blueTeam.get(0);
-        sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(leader.getPlayer()));
+        arena.sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(leader.getPlayer()));
     }
 
     private void updateParticipants(List<OlympiadResultInfo> winnerTeam, List<OlympiadResultInfo> loserTeam) {
@@ -148,9 +154,9 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         var redTeam = getRedTeamResultInfo();
         var blueTeam = getBlueTeamResultInfo();
         updateParticipants(redTeam, blueTeam);
-        sendPacket(ExOlympiadMatchResult.victory(OlympiadMode.RED, redTeam, blueTeam));
+        arena.sendPacket(ExOlympiadMatchResult.victory(OlympiadMode.RED, redTeam, blueTeam));
         var leader = redTeam.get(0);
-        sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(leader.getPlayer()));
+        arena.sendPacket(getSystemMessage(CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addPcName(leader.getPlayer()));
     }
 
     private void processTie() {
@@ -173,7 +179,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             info.updatePoints(points, tiePoints);
         }
         sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
-        sendPacket(ExOlympiadMatchResult.tie(redTeam, blueTeam));
+        arena.sendPacket(ExOlympiadMatchResult.tie(redTeam, blueTeam));
     }
 
     private void onMatchFinish(Player player) {
@@ -182,7 +188,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         player.forgetTarget();
         player.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
         player.setIsOlympiadStart(false);
-        player.setOlympiadGameId(0);
+        player.setOlympiadMatchId(0);
         player.setInsideZone(ZoneType.PVP, false);
         player.removeListener(deathListener);
         player.removeListener(damageListener);
@@ -194,23 +200,29 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     private void countDownTeleportBack() {
         if(countDownIndex >= COUNT_DOWN_INTERVAL.length - 1) {
-            teleportBack();
             cleanUpMatch();
         } else {
-            sendPacket(getSystemMessage(YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
+            arena.sendPacket(getSystemMessage(YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
             scheduled = ThreadPool.schedule(this, COUNT_DOWN_INTERVAL[countDownIndex] - COUNT_DOWN_INTERVAL[++countDownIndex], TimeUnit.SECONDS);
         }
     }
 
     private void cleanUpMatch() {
-        forEachParticipant(this::leaveOlympiadMode);
+        arena.forEachPlayer(this::leaveOlympiadMode);
         arena.destroy();
         Olympiad.getInstance().finishMatch(this);
     }
 
     private void leaveOlympiadMode(Player player) {
+        player.setOlympiadMatchId(-1);
         player.setOlympiadMode(OlympiadMode.NONE);
         player.sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
+        arena.ejectPlayer(player);
+        if(player.isInObserverMode()) {
+            player.setObserving(false);
+            player.sendPackets(new ObservationReturn(player.getLocation()), new UserInfo(player), ExOlympiadInfo.hide(getType()));
+            Olympiad.getInstance().showOlympiadUI(player);
+        }
     }
 
     private void countDown() {
@@ -218,11 +230,12 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             deathListener = new FunctionEventListener(null, EventType.ON_CREATURE_DEATH, (Function<OnCreatureDeath, TerminateReturn>)this::onDeath, this);
             hpListener = new ConsumerEventListener(null, EventType.ON_CREATURE_HP_CHANGE,  (Consumer<OnCreatureHpChange>) this::onHpChange, this);
             cpListener = new ConsumerEventListener(null, EventType.ON_PLAYER_CP_CHANGE, (Consumer<OnPlayerCpChange>) this::onCpChange, this);
-            damageListener = new ConsumerEventListener(null, EventType.ON_CREATURE_DAMAGE_DEALT, (Consumer<OnCreatureDamageDealt>) this::onDamageDealt, this);
+            damageListener = new ConsumerEventListener(null, EventType.ON_CREATURE_DAMAGE_RECEIVED, (Consumer<OnCreatureDamageReceived>) this::onDamageReceived, this);
+            spectatorListener = new ConsumerEventListener(null, EventType.ON_CREATURE_TELEPORTED, (Consumer<OnCreatureTeleported>) this::onSpectatorEnter, this);
             forEachParticipant(this::onMatchStart);
-            sendPacket(PlaySound.music("ns17_f"));
-            forRedPlayers(this::sendOlympiadInfo);
-            forBluePlayers(this::sendOlympiadInfo);
+            arena.sendPacket(PlaySound.music("ns17_f"));
+            forEachParticipant(this::sendOlympiadUserInfo);
+            forEachParticipant(this::sendBuffInfo);
             sendMessage(THE_MATCH_HAS_STARTED_FIGHT);
             state = IN_BATTLE;
             scheduled = ThreadPool.schedule(this, duration);
@@ -230,13 +243,13 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             if(COUNT_DOWN_INTERVAL[countDownIndex] == 10) {
                 arena.openAllDoors();
             }
-            sendPacket(getSystemMessage(S1_SECOND_S_TO_MATCH_START).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
+            arena.sendPacket(getSystemMessage(S1_SECOND_S_TO_MATCH_START).addInt(COUNT_DOWN_INTERVAL[countDownIndex]));
             scheduled = ThreadPool.schedule(this, COUNT_DOWN_INTERVAL[countDownIndex] - COUNT_DOWN_INTERVAL[++countDownIndex], TimeUnit.SECONDS);
         }
     }
 
     private void onMatchStart(Player player) {
-        player.setOlympiadGameId(getId());
+        player.setOlympiadMatchId(getId());
         player.setIsOlympiadStart(true);
         player.setInsideZone(ZoneType.PVP, true);
         player.addListener(deathListener);
@@ -247,19 +260,14 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         player.setCurrentCp(player.getMaxCp());
     }
 
-    private void sendOlympiadInfo(Player player) {
-        sendOlympiadUserInfo(player);
-        sendBuffInfo(player);
-    }
-
     protected void sendBuffInfo(Player player) {
         var spellInfo = new ExOlympiadSpelledInfo(player);
         player.getEffectList().getEffects().forEach(spellInfo::addSkill);
-        sendPacket(spellInfo);
+        arena.sendPacket(spellInfo);
     }
 
     protected void sendOlympiadUserInfo(Player player) {
-        sendPacket(new ExOlympiadUserInfo(player));
+        arena.sendPacket(new ExOlympiadUserInfo(player));
     }
 
     private void teleportToArena() {
@@ -273,8 +281,8 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         scheduled = ThreadPool.schedule(this, 10, TimeUnit.SECONDS);
     }
 
-    private void onDamageDealt(OnCreatureDamageDealt event) {
-        if(event.getAttacker() instanceof Player attacker && event.getTarget() instanceof Player target) {
+    private void onDamageReceived(OnCreatureDamageReceived event) {
+        if(event.getAttacker().getActingPlayer() instanceof Player attacker && event.getTarget() instanceof Player target) {
             onDamage(attacker, target, event.getDamage());
         }
     }
@@ -290,7 +298,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     private void onStatusChange(Player player) {
-        sendPacket(new ExOlympiadUserInfo(player));
+        arena.sendPacket(new ExOlympiadUserInfo(player));
     }
 
     private TerminateReturn onDeath(OnCreatureDeath event) {
@@ -312,7 +320,36 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         state = MatchState.STARTED;
         scheduled = ThreadPool.schedule(this, 1, TimeUnit.MINUTES);
         sendMessage(AFTER_ABOUT_1_MINUTE_YOU_WILL_MOVE_TO_THE_OLYMPIAD_ARENA);
-        sendPacket(new ExOlympiadMatchMakingResult(false, getType()));
+        var makingResult = new ExOlympiadMatchMakingResult(false, getType());
+        forEachParticipant(makingResult::sendTo);
+    }
+
+    void addSpectator(Player player) {
+        if(player.isInParty()) {
+            player.getParty().removePartyMember(player, MessageType.EXPELLED);
+        }
+        player.setOlympiadMatchId(getId());
+        player.addListener(spectatorListener);
+        player.setObserving(true);
+        player.setOlympiadMode(OlympiadMode.SPECTATOR);
+        player.sendPacket(new ExOlympiadMode(OlympiadMode.SPECTATOR));
+        player.teleToLocation(arena.getEnterLocations().get(2), arena);
+        forEachParticipant(this::sendOlympiadUserInfo);
+    }
+
+    private void onSpectatorEnter(OnCreatureTeleported event) {
+        var creature = event.getCreature();
+        creature.removeListener(spectatorListener);
+        forEachParticipant(this::sendBuffInfo);
+    }
+
+    void removeSpetator(Player player) {
+        leaveOlympiadMode(player);
+    }
+
+    @Override
+    public void sendPacket(ServerPacket packet) {
+        arena.sendPacket(packet);
     }
 
     public int getId() {
@@ -352,8 +389,6 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     protected abstract void teleportPlayers(Location redLocation, Location blueLocation, Instance arena);
 
     protected abstract OlympiadResult calcResult();
-
-    protected abstract void teleportBack();
 
     protected abstract void onDamage(Player attacker, Player target, double damage);
 

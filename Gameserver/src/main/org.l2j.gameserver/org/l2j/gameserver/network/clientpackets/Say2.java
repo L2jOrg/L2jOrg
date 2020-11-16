@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.ChatHandler;
 import org.l2j.gameserver.handler.IChatHandler;
@@ -27,8 +29,6 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerChat;
 import org.l2j.gameserver.model.events.returns.ChatFilterReturn;
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.ChatSettings;
@@ -104,7 +104,7 @@ public final class Say2 extends ClientPacket {
             return;
         }
 
-        if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player)) {
+        if (Olympiad.getInstance().isRegistered(player)) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
             return;
         }

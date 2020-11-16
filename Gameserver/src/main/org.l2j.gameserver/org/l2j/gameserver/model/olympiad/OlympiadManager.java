@@ -242,7 +242,7 @@ public class OlympiadManager {
     }
 
     public final void removeDisconnectedCompetitor(Player player) {
-        final OlympiadGameTask task = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
+        final OlympiadGameTask task = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadMatchId());
         if ((task != null) && task.isGameStarted()) {
             task.getGame().handleDisconnect(player);
         }

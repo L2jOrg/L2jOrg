@@ -62,7 +62,7 @@ public final class Hide extends AbstractEffect {
 	public void onExit(Creature effector, Creature effected, Skill skill) {
 		if (isPlayer(effected)) {
 			final Player activeChar = effected.getActingPlayer();
-			if (!activeChar.inObserverMode()) {
+			if (!activeChar.isInObserverMode()) {
 				activeChar.setInvisible(false);
 			}
 		}

@@ -42,7 +42,7 @@ public class ExOlympiadMatchList extends ServerPacket {
         buffer.writeInt(0x00);
 
         for (var match : matches) {
-            buffer.writeInt(match.getId()); // Stadium Id (Arena 1 = 0)
+            buffer.writeInt(match.getId() -1); // the client use index based starting with 1 but we are using id instead so need to decrease 1
             buffer.writeInt(match.getType().ordinal());
             buffer.writeInt(match.isInBattle() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
             buffer.writeString(match.getPlayerRedName());

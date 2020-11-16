@@ -84,7 +84,7 @@ public abstract class AbstractInstance extends AbstractNpcAI {
 	 */
 	public void showOnScreenMsg(Instance instance, NpcStringId npcStringId, int position, int time, String... params)
 	{
-		instance.broadcastPacket(new ExShowScreenMessage(npcStringId, position, time, params));
+		instance.sendPacket(new ExShowScreenMessage(npcStringId, position, time, params));
 	}
 	
 	/**
@@ -98,7 +98,7 @@ public abstract class AbstractInstance extends AbstractNpcAI {
 	 */
 	public void showOnScreenMsg(Instance instance, NpcStringId npcStringId, int position, int time, boolean showEffect, String... params)
 	{
-		instance.broadcastPacket(new ExShowScreenMessage(npcStringId, position, time, showEffect, params));
+		instance.sendPacket(new ExShowScreenMessage(npcStringId, position, time, showEffect, params));
 	}
 	
 	/**

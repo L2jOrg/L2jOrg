@@ -178,7 +178,7 @@ public abstract class Playable extends Creature {
     public void onForcedAttack(Player player) {
         if (player.isInOlympiadMode()) {
             Player target = getActingPlayer();
-            if (target.isInOlympiadMode() && (!player.isOlympiadStart() || player.getOlympiadGameId() != target.getOlympiadGameId())) {
+            if (target.isInOlympiadMode() && (!player.isOlympiadStart() || player.getOlympiadMatchId() != target.getOlympiadMatchId())) {
                 player.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

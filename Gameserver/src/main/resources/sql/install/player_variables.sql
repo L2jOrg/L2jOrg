@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
 	`visual_hair_id` INT,
 	`visual_hair_color_id` INT,
 	`visual_face_id` INT,
-	`instance_origin` VARCHAR(255),
 	`instance_restore` INT DEFAULT 0,
 	`claimed_clan_rewards` INT DEFAULT 0,
 	`cond_override_key` VARCHAR(255),

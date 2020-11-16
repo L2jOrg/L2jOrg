@@ -86,7 +86,7 @@ public abstract class AbstractOlympiadGame {
         }
 
         // safety precautions
-        if (player.inObserverMode()) {
+        if (player.isInObserverMode()) {
             return SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_DOES_NOT_MEET_THE_REQUIREMENTS_TO_DO_BATTLE_THE_MATCH_HAS_BEEN_CANCELLED);
         }
 
@@ -120,7 +120,7 @@ public abstract class AbstractOlympiadGame {
             }
             player.setTarget(null);
 
-            player.setOlympiadGameId(id);
+            player.setOlympiadMatchId(id);
             player.setOlympiadMode(OlympiadMode.BLUE);
             player.setIsOlympiadStart(false);
             player.setOlympiadSide(par.getSide());
@@ -274,7 +274,7 @@ public abstract class AbstractOlympiadGame {
             player.setOlympiadMode(OlympiadMode.NONE);
             player.setIsOlympiadStart(false);
             player.setOlympiadSide(-1);
-            player.setOlympiadGameId(-1);
+            player.setOlympiadMatchId(-1);
             player.sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
 
             // Add Clan Skills

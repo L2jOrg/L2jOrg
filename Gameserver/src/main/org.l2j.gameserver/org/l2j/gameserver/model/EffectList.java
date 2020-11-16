@@ -19,13 +19,12 @@
 package org.l2j.gameserver.model;
 
 
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
@@ -936,11 +935,8 @@ public final class EffectList {
             }
 
             // Send icon update to all olympiad observers.
-            if (os.isPresent()) {
-                final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
-                if ((game != null) && game.isBattleStarted()) {
-                    os.ifPresent(game.getStadium()::broadcastPacketToObservers);
-                }
+            if (os.isPresent() && Olympiad.getInstance().isMatchInBattle(player.getOlympiadMatchId())) {
+                Olympiad.getInstance().sendPacketToMatch(player.getOlympiadMatchId(), os.get());
             }
         }
 

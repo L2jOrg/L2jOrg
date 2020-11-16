@@ -20,6 +20,7 @@ package org.l2j.gameserver.model.instancezone;
 
 import io.github.joealisson.primitive.*;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.InstanceDAO;
 import org.l2j.gameserver.data.xml.DoorDataManager;
@@ -51,6 +52,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
@@ -68,20 +70,20 @@ public final class Instance implements IIdentifiable, INamable {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Instance.class);
 
-    private final int id;
     private final InstanceTemplate template;
-
     private final Set<Player> allowed = ConcurrentHashMap.newKeySet();
     private final Set<Player> players = ConcurrentHashMap.newKeySet();
     private final Set<Npc> npcs = ConcurrentHashMap.newKeySet();
     private final IntMap<Door> doors = new HashIntMap<>();
     private final StatsSet parameters = new StatsSet();
-
     private final IntMap<ScheduledFuture<?>> ejectDeadTasks = new CHashIntMap<>();
     private final List<SpawnTemplate> spawns;
-    private long endTime;
+    private final int id;
+
     private ScheduledFuture<?> cleanUpTask = null;
     private ScheduledFuture<?> emptyDestroyTask = null;
+    private Map<Player, Location> originLocations;
+    private long endTime;
 
     public Instance(int id, InstanceTemplate template) {
         this.id = id;
@@ -92,8 +94,11 @@ public final class Instance implements IIdentifiable, INamable {
             spawns.add(spawn.clone());
         }
         // Set duration, spawns, status, etc..
-        setDuration(this.template.getDuration());
+        setDuration(template.getDuration());
         setStatus(0);
+        if(template.getExitLocationType() == InstanceTeleportType.ORIGIN) {
+            originLocations = new HashMap<>();
+        }
     }
 
     public void init(Player player) {
@@ -244,6 +249,11 @@ public final class Instance implements IIdentifiable, INamable {
     public Set<Player> getPlayers() {
         return players;
     }
+
+    public void forEachPlayer(Consumer<Player> action) {
+        players.forEach(action);
+    }
+
 
     /**
      * Get count of players inside instance.
@@ -455,11 +465,14 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void ejectPlayer(Player player) {
         if (player.getInstanceWorld().equals(this)) {
-            final Location loc = template.getExitLocation(player);
+            final Location loc = getExitLocation(player);
             if (loc != null) {
                 player.teleToLocation(loc, null);
             } else {
                 player.teleToLocation(TeleportWhereType.TOWN, null);
+            }
+            if(template.getExitLocationType() == InstanceTeleportType.ORIGIN) {
+                originLocations.remove(player);
             }
         }
     }
@@ -469,7 +482,7 @@ public final class Instance implements IIdentifiable, INamable {
      *
      * @param packets packets to be send
      */
-    public void broadcastPacket(ServerPacket... packets) {
+    public void sendPacket(ServerPacket... packets) {
         for (Player player : players) {
             for (ServerPacket packet : packets) {
                 player.sendPacket(packet);
@@ -598,9 +611,8 @@ public final class Instance implements IIdentifiable, INamable {
             if (enter) {
                 addPlayer(player);
 
-                // Set origin return location if enabled
                 if (template.getExitLocationType() == InstanceTeleportType.ORIGIN) {
-                    player.setInstanceOrigin(player.getX() + ";" + player.getY() + ";" + player.getZ());
+                    originLocations.put(player, player.getLocation());
                 }
 
                 // Remove player buffs
@@ -716,12 +728,14 @@ public final class Instance implements IIdentifiable, INamable {
      * @return {@link Location} object if instance has exit location defined, otherwise {@code null}
      */
     public Location getExitLocation(Player player) {
-        return template.getExitLocation(player);
+        return switch (template.getExitLocationType()) {
+            case RANDOM -> Rnd.get(template.getExitLocations());
+            case FIXED -> template.getExitLocations().get(0);
+            case ORIGIN -> originLocations.get(player);
+            case NONE -> null;
+        };
     }
 
-    /**
-     * @return the exp rate of the instance
-     */
     public float getExpRate() {
         return template.getExpRate();
     }
@@ -773,7 +787,7 @@ public final class Instance implements IIdentifiable, INamable {
         }
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_INSTANT_ZONE_WILL_BE_TERMINATED_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
         sm.addInt(delay);
-        broadcastPacket(sm);
+        sendPacket(sm);
     }
 
     @Override

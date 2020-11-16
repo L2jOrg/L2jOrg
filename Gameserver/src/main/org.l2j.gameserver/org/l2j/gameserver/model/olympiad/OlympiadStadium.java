@@ -94,19 +94,19 @@ public class OlympiadStadium {
     public final void broadcastStatusUpdate(Player player) {
         final ExOlympiadUserInfo packet = new ExOlympiadUserInfo(player);
         for (Player target : _instance.getPlayers()) {
-            if (target.inObserverMode() || (target.getOlympiadSide() != player.getOlympiadSide())) {
+            if (target.isInObserverMode() || (target.getOlympiadSide() != player.getOlympiadSide())) {
                 target.sendPacket(packet);
             }
         }
     }
 
     public final void broadcastPacket(ServerPacket packet) {
-        _instance.broadcastPacket(packet);
+        _instance.sendPacket(packet);
     }
 
     public final void broadcastPacketToObservers(ServerPacket packet) {
         for (Player target : _instance.getPlayers()) {
-            if (target.inObserverMode()) {
+            if (target.isInObserverMode()) {
                 target.sendPacket(packet);
             }
         }
@@ -126,7 +126,7 @@ public class OlympiadStadium {
         }
 
         for (Player player : _instance.getPlayers()) {
-            if (player.inObserverMode()) {
+            if (player.isInObserverMode()) {
                 return;
             }
 
@@ -147,18 +147,18 @@ public class OlympiadStadium {
         }
 
         for (Player player : _instance.getPlayers()) {
-            if (!player.inObserverMode()) {
+            if (!player.isInObserverMode()) {
                 return;
             }
 
-            final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
+            final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadMatchId());
             final List<Location> spectatorSpawns = nextArena.getStadium().getZone().getSpectatorSpawns();
             if (spectatorSpawns.isEmpty()) {
                 LOGGER.warn(": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
                 return;
             }
             final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
-            player.enterOlympiadObserverMode(loc, player.getOlympiadGameId());
+            player.enterOlympiadObserverMode(loc, player.getOlympiadMatchId());
         }
     }
 }

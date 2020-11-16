@@ -38,8 +38,6 @@ class OlympiadClasslessMatch extends OlympiadMatch {
 
     private Player red;
     private Player blue;
-    private Location redBackLocation;
-    private Location blueBackLocation;
     private double redDamage;
     private double blueDamage;
     private Player defeated;
@@ -73,10 +71,7 @@ class OlympiadClasslessMatch extends OlympiadMatch {
 
     @Override
     protected void teleportPlayers(Location redLocation, Location blueLocation, Instance arena) {
-        redBackLocation = red.getLocation();
         red.teleToLocation(redLocation, arena);
-
-        blueBackLocation = blue.getLocation();
         blue.teleToLocation(blueLocation, arena);
     }
 
@@ -100,12 +95,6 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     public void sendMessage(SystemMessageId messageId) {
         red.sendPacket(messageId);
         blue.sendPacket(messageId);
-    }
-
-    @Override
-    public void sendPacket(ServerPacket packet) {
-        red.sendPacket(packet);
-        blue.sendPacket(packet);
     }
 
     @Override
@@ -135,12 +124,6 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     @Override
     protected List<OlympiadResultInfo> getBlueTeamResultInfo() {
         return List.of(OlympiadResultInfo.of(blue, blueDamage));
-    }
-
-    @Override
-    protected void teleportBack() {
-        red.teleToLocation(redBackLocation, null);
-        blue.teleToLocation(blueBackLocation, null);
     }
 
     @Override

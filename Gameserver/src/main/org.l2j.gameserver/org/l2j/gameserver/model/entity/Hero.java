@@ -52,7 +52,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.Objects.nonNull;
 
-
 /**
  * Hero entity.
  *

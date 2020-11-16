@@ -42,7 +42,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.container.PetInventory;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -592,10 +591,6 @@ public abstract class Summon extends Playable {
                 } else {
                     sendPacket(SystemMessageId.PET_S_CRITICAL_HIT);
                 }
-            }
-
-            if (owner.isInOlympiadMode() && GameUtils.isPlayer(target) && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == owner.getOlympiadGameId())) {
-                OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
             }
 
             final SystemMessage sm;

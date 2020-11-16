@@ -668,7 +668,7 @@ public class Siege implements Siegable {
 
     private void teleportNotOwnerInZone(TeleportWhereType teleportWhere) {
         castle.getZone().forEachPlayer(p -> p.teleToLocation(teleportWhere),
-                p -> !p.inObserverMode() && (p.getClanId() <= 0 || p.getClanId() != castle.getOwnerId()) && !p.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) && !p.isJailed());
+                p -> !p.isInObserverMode() && (p.getClanId() <= 0 || p.getClanId() != castle.getOwnerId()) && !p.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) && !p.isJailed());
     }
 
     private void teleportOnwersInZone(TeleportWhereType teleportWhere) {

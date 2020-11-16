@@ -107,9 +107,6 @@ public class PlayerVariableData {
     @Column("visual_face_id")
     private int visualFaceId;
 
-    @Column("instance_origin")
-    private String instanceOrigin;
-
     @Column("instance_restore")
     private int instanceRestore;
 
@@ -228,16 +225,6 @@ public class PlayerVariableData {
 
     public int getVisualFaceId() {
         return visualFaceId;
-    }
-
-    public int[] getInstanceOrigin() {
-        String[] instanceOriginString = instanceOrigin.split(";");
-        int[] instanceOriginInt = new int [instanceOriginString.length];
-
-        for (int i = 0; i < instanceOriginString.length ; i++)
-            instanceOriginInt[i] = Integer.parseInt(instanceOriginString[i]);
-
-        return instanceOriginInt;
     }
 
     public int getInstanceRestore() {
@@ -366,10 +353,6 @@ public class PlayerVariableData {
 
     public void setVisualFaceId(int visualFaceId) {
         this.visualFaceId = visualFaceId;
-    }
-
-    public void setInstanceOrigin(String instanceOrigin) {
-        this.instanceOrigin = instanceOrigin;
     }
 
     public void setInstanceRestore(int instanceRestore) {

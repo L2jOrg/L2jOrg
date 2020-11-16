@@ -63,7 +63,7 @@ public final class SummonCubic extends AbstractEffect {
 
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-        if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode()) {
+        if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().isInObserverMode()) {
             return;
         }
 
@@ -73,7 +73,7 @@ public final class SummonCubic extends AbstractEffect {
         }
 
         final Player player = effected.getActingPlayer();
-        if (player.inObserverMode() || player.isMounted()) {
+        if (player.isInObserverMode() || player.isMounted()) {
             return;
         }
 

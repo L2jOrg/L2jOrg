@@ -19,8 +19,8 @@
 package org.l2j.gameserver.network.clientpackets.sessionzones;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
@@ -54,7 +54,7 @@ public class ExTimedHuntingZoneEnter extends ClientPacket {
 			player.sendMessage("Cannot use time-limited hunting zones during a duel.");
 			return;
 		}
-		if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
+		if (Olympiad.getInstance().isRegistered(player))
 		{
 			player.sendMessage("Cannot use time-limited hunting zones while waiting for the Olympiad.");
 			return;

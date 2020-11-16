@@ -467,7 +467,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.admincommandhandlers.AdminMessages,
             org.l2j.scripts.handlers.admincommandhandlers.AdminMissingHtmls,
             org.l2j.scripts.handlers.admincommandhandlers.AdminMobGroup,
-            org.l2j.scripts.handlers.admincommandhandlers.AdminOlympiad,
             org.l2j.scripts.handlers.admincommandhandlers.AdminPcCafePoints,
             org.l2j.scripts.handlers.admincommandhandlers.AdminPcCondOverride,
             org.l2j.scripts.handlers.admincommandhandlers.AdminPetition,

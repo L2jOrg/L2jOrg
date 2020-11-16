@@ -90,7 +90,6 @@ import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.quest.Quest;
@@ -573,10 +572,6 @@ public final class Player extends Playable {
         return variables.getVisualFaceId();
     }
 
-    public int[] getInstanceOrigin() {
-        return variables.getInstanceOrigin();
-    }
-
     public int getInstanceRestore() {
         return variables.getInstanceRestore();
     }
@@ -709,10 +704,6 @@ public final class Player extends Playable {
 
     public void setVisualFace(int visualFaceId) {
         variables.setVisualFaceId(visualFaceId);
-    }
-
-    public void setInstanceOrigin(String instanceOrigin) {
-        variables.setInstanceOrigin(instanceOrigin);
     }
 
     public void setInstanceRestore(int instanceRestore) {
@@ -1231,7 +1222,7 @@ public final class Player extends Playable {
 
     private OlympiadMode olympiadMode = OlympiadMode.NONE;
     private boolean _OlympiadStart = false;
-    private int _olympiadGameId = -1;
+    private int olympiadMatchId = -1;
     private int _olympiadSide = -1;
     /**
      * Duel
@@ -6062,7 +6053,7 @@ public final class Player extends Playable {
             }
 
             if(attackerPlayer.isInOlympiadMode()) {
-                return isInOlympiadMode() && _OlympiadStart && attackerPlayer.getOlympiadGameId() == getOlympiadGameId();
+                return isInOlympiadMode() && _OlympiadStart && attackerPlayer.getOlympiadMatchId() == getOlympiadMatchId();
             }
 
             if (_isOnCustomEvent && (getTeam() == attacker.getTeam())) {
@@ -6171,7 +6162,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isInOlympiadMode() && isPlayable(target) && (!isOlympiadStart() || getOlympiadGameId() != target.getActingPlayer().getOlympiadGameId())) {
+        if (isInOlympiadMode() && isPlayable(target) && (!isOlympiadStart() || getOlympiadMatchId() != target.getActingPlayer().getOlympiadMatchId())) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -6552,7 +6543,6 @@ public final class Player extends Playable {
     public void setObserving(boolean state) {
         _observerMode = state;
         setTarget(null);
-        setBlockActions(state);
         setIsInvul(state);
         setInvisible(state);
         if (hasAI() && !state) {
@@ -6604,7 +6594,7 @@ public final class Player extends Playable {
             _party.removePartyMember(this, Party.MessageType.EXPELLED);
         }
 
-        _olympiadGameId = id;
+        olympiadMatchId = id;
         if (sitting) {
             standUp();
         }
@@ -6645,27 +6635,6 @@ public final class Player extends Playable {
         broadcastUserInfo();
     }
 
-    public void leaveOlympiadObserverMode() {
-        if (_olympiadGameId == -1) {
-            return;
-        }
-        _olympiadGameId = -1;
-        _observerMode = false;
-        setTarget(null);
-        sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
-        setInstance(null);
-        teleToLocation(_lastLoc, true);
-        if (!isGM()) {
-            setInvisible(false);
-            setIsInvul(false);
-        }
-        if (hasAI()) {
-            getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-        }
-        unsetLastLocation();
-        broadcastUserInfo();
-    }
-
     public int getOlympiadSide() {
         return _olympiadSide;
     }
@@ -6674,19 +6643,19 @@ public final class Player extends Playable {
         _olympiadSide = i;
     }
 
-    public int getOlympiadGameId() {
-        return _olympiadGameId;
+    public int getOlympiadMatchId() {
+        return olympiadMatchId;
     }
 
-    public void setOlympiadGameId(int id) {
-        _olympiadGameId = id;
+    public void setOlympiadMatchId(int id) {
+        olympiadMatchId = id;
     }
 
     public Location getLastLocation() {
         return _lastLoc;
     }
 
-    public boolean inObserverMode() {
+    public boolean isInObserverMode() {
         return _observerMode;
     }
 
@@ -7641,10 +7610,6 @@ public final class Player extends Playable {
             }
         }
 
-        if (OlympiadManager.getInstance().isRegistered(this) || (getOlympiadGameId() != -1)) {
-            OlympiadManager.getInstance().removeDisconnectedCompetitor(this);
-        }
-
         // If the Player has Pet, unsummon it
         if (hasSummon()) {
             try {
@@ -8023,10 +7988,6 @@ public final class Player extends Playable {
             if (skill != null) {
                 sendPacket(new ExMagicAttackInfo(getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL));
             }
-        }
-
-        if (isInOlympiadMode() && GameUtils.isPlayer(target) && target.getActingPlayer().isInOlympiadMode() && (target.getActingPlayer().getOlympiadGameId() == getOlympiadGameId())) {
-            OlympiadGameManager.getInstance().notifyCompetitorDamage(this, damage);
         }
 
         SystemMessage sm = null;

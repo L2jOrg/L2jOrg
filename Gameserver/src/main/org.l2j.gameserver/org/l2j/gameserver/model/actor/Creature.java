@@ -644,8 +644,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         if (!isPlayer(this)) {
             onTeleported();
+            revalidateZone(true);
         }
-        revalidateZone(true);
     }
 
     public void teleToLocation(int x, int y, int z) {
@@ -737,7 +737,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             var player = getActingPlayer();
             if (nonNull(player)) {
-                if (player.inObserverMode()) {
+                if (player.isInObserverMode()) {
                     sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -3491,15 +3491,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect, DamageType damageType) {
-        final var damageReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, value, skill, critical, isDOT, reflect), this, DamageReturn.class);
-        if (damageReturn != null) {
-            if (damageReturn.terminate()) {
-                return;
-            } else if (damageReturn.override()) {
-                value = damageReturn.getDamage();
-            }
-        }
-
         double elementalDamage = 0;
 
         // Calculate PvP/PvE damage received. It is a post-attack stat.
@@ -3536,6 +3527,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         value = max(0, value);
+
+        final var damageReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, value, skill, critical, isDOT, reflect), this, DamageReturn.class);
+        if (damageReturn != null) {
+            if (damageReturn.terminate()) {
+                return;
+            } else if (damageReturn.override()) {
+                value = damageReturn.getDamage();
+            }
+        }
+
         onReceiveDamage(attacker, skill, value, damageType);
         if (isPlayer(this)) {
             getActingPlayer().getStatus().reduceHp(value, attacker, isNull(skill) || !skill.isToggle(), isDOT, false, directlyToHp);

@@ -381,7 +381,7 @@ public class SkillCaster implements Runnable {
         }
 
         if (caster instanceof Player player) {
-            if (player.inObserverMode()) {
+            if (player.isInObserverMode()) {
                 return false;
             }
 

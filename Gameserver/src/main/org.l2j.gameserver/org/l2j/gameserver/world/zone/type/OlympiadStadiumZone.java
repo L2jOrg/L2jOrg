@@ -89,7 +89,7 @@ public class OlympiadStadiumZone extends SpawnZone {
             final Player player = creature.getActingPlayer();
             if (nonNull(player)) {
                 // only participants, observers and GMs allowed
-                if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.inObserverMode()) {
+                if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.isInObserverMode()) {
                     ThreadPool.execute(new KickPlayer(player));
                 } else {
                     // check for pet
