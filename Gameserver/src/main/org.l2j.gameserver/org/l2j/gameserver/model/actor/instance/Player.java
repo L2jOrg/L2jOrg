@@ -2151,16 +2151,16 @@ public final class Player extends Playable {
             });
         }
 
-        if (reputation < -2180) {
-            CommonSkill.REPUTATION_1.getSkill().applyEffects(this, this);
+        if (reputation <= -6500) {
+            stopSkillEffects(CommonSkill.REPUTATION_2.getSkill());
+            CommonSkill.REPUTATION_3.getSkill().applyEffects(this, this);
         }
-        else if (reputation < -3620) {
+        else if (reputation <= -3620) {
             stopSkillEffects(CommonSkill.REPUTATION_1.getSkill());
             CommonSkill.REPUTATION_2.getSkill().applyEffects(this, this);
         }
-        else if (reputation < -6500) {
-            stopSkillEffects(CommonSkill.REPUTATION_2.getSkill());
-            CommonSkill.REPUTATION_3.getSkill().applyEffects(this, this);
+        else if (reputation <= -2180) {
+            CommonSkill.REPUTATION_1.getSkill().applyEffects(this, this);
         }
         else if (reputation >= 0){
             stopSkillEffects(CommonSkill.REPUTATION_1.getSkill());
