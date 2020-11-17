@@ -18,34 +18,34 @@
  */
 package org.l2j.gameserver.model.events.impl.olympiad;
 
+import org.l2j.gameserver.engine.olympiad.OlympiadResultInfo;
+import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.olympiad.CompetitionType;
-import org.l2j.gameserver.model.olympiad.Participant;
 
 /**
  * @author UnAfraid
  */
 public class OnOlympiadMatchResult implements IBaseEvent {
-    private final Participant _winner;
-    private final Participant _loser;
-    private final CompetitionType _type;
+    private final OlympiadResultInfo _winner;
+    private final OlympiadResultInfo _loser;
+    private final OlympiadRuleType _type;
 
-    public OnOlympiadMatchResult(Participant winner, Participant looser, CompetitionType type) {
+    public OnOlympiadMatchResult(OlympiadResultInfo winner, OlympiadResultInfo loser, OlympiadRuleType type) {
         _winner = winner;
-        _loser = looser;
+        _loser = loser;
         _type = type;
     }
 
-    public Participant getWinner() {
+    public OlympiadResultInfo getWinner() {
         return _winner;
     }
 
-    public Participant getLoser() {
+    public OlympiadResultInfo getLoser() {
         return _loser;
     }
 
-    public CompetitionType getCompetitionType() {
+    public OlympiadRuleType getCompetitionType() {
         return _type;
     }
 

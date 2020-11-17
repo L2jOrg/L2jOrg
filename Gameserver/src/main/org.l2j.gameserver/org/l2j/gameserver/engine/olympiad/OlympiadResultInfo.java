@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.olympiad;
+package org.l2j.gameserver.engine.olympiad;
 
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -31,17 +31,11 @@ import static org.l2j.commons.util.Util.zeroIfNullOrElse;
  */
 public class OlympiadResultInfo {
 
+    private final Player player;
     private final int damage;
 
-    private Player player;
     private int currentPoints;
     private int diffPoints;
-
-    public OlympiadResultInfo(int dmg, int curPoints, int diffPoints) {
-        damage = dmg;
-        currentPoints = curPoints;
-        this.diffPoints = diffPoints;
-    }
 
     private OlympiadResultInfo(Player player, double damage) {
         this.player = player;

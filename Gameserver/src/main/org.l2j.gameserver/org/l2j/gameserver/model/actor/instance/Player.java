@@ -89,7 +89,6 @@ import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.matching.MatchingRoom;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.quest.Quest;
@@ -6570,47 +6569,6 @@ public final class Player extends Playable {
 
     public void unsetLastLocation() {
         _lastLoc = null;
-    }
-
-    public void enterOlympiadObserverMode(Location loc, int id) {
-        if (pet != null) {
-            pet.unSummon(this);
-        }
-
-        if (hasServitors()) {
-            getServitors().values().forEach(s -> s.unSummon(this));
-        }
-
-        // Remove Hide.
-        getEffectList().stopEffects(AbnormalType.HIDE);
-
-        if (!_cubics.isEmpty()) {
-            _cubics.values().forEach(CubicInstance::deactivate);
-            _cubics.clear();
-            sendPacket(new ExUserInfoCubic(this));
-        }
-
-        if (_party != null) {
-            _party.removePartyMember(this, Party.MessageType.EXPELLED);
-        }
-
-        olympiadMatchId = id;
-        if (sitting) {
-            standUp();
-        }
-        if (!_observerMode) {
-            setLastLocation();
-        }
-
-        _observerMode = true;
-        setTarget(null);
-        setIsInvul(true);
-        setInvisible(true);
-        setInstance(OlympiadGameManager.getInstance().getOlympiadTask(id).getStadium().getInstance());
-        teleToLocation(loc, false);
-        sendPacket(new ExOlympiadMode(OlympiadMode.SPECTATOR));
-
-        broadcastUserInfo();
     }
 
     public void leaveObserverMode() {

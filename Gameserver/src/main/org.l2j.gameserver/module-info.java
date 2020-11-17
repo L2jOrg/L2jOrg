@@ -52,7 +52,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.item.container;
     exports org.l2j.gameserver.engine.geo;
     exports org.l2j.gameserver.model.events.impl.character.npc;
-    exports org.l2j.gameserver.model.olympiad;
     exports org.l2j.gameserver.model.html;
     exports org.l2j.gameserver.model.html.styles;
     exports org.l2j.gameserver.model.html.formatters;

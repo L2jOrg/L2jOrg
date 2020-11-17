@@ -11347,21 +11347,6 @@ public final class SystemMessageId {
     @ClientString(id = 5293, message = "Automatically use HP Potions when it's below $s1%%.")
     public static SystemMessageId AUTOMATICALLY_USE_HP_POTIONS_WHEN_IT_S_BELOW_S1;
 
-    @ClientString(id = 5294, message = "You must level 70 or higher and have completed the 2nd Class Transfer in order to participate in a match.")
-    public static SystemMessageId YOU_MUST_LEVEL_70_OR_HIGHER_AND_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_IN_ORDER_TO_PARTICIPATE_IN_A_MATCH;
-
-    @ClientString(id = 5295, message = "Cannot apply to participate in a match while in an instanced zone.")
-    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_IN_AN_INSTANCED_ZONE;
-
-    @ClientString(id = 5296, message = "Cannot apply to participate in a match while dead.")
-    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_DEAD;
-
-    @ClientString(id = 5297, message = "You've used up all your matches.")
-    public static SystemMessageId YOU_VE_USED_UP_ALL_YOUR_MATCHES;
-
-    @ClientString(id = 5298, message = "Cannot apply to participate because your inventory slots or weight exceeded 80%%.")
-    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_BECAUSE_YOUR_INVENTORY_SLOTS_OR_WEIGHT_EXCEEDED_80;
-
     @ClientString(id = 5299, message = "Sub class and Dual class characters cannot apply to participate in a match.")
     public static SystemMessageId SUB_CLASS_AND_DUAL_CLASS_CHARACTERS_CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH;
 
@@ -17614,6 +17599,21 @@ public final class SystemMessageId {
 
     @ClientString(id = 5211, message = "No Artifact Book equipped. You cannot equip $s1.")
     public static SystemMessageId NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1;
+
+    @ClientString(id = 5294, message = "You must level 70 or higher and have completed the 2nd Class Transfer in order to participate in a match.")
+    public static SystemMessageId YOU_MUST_LEVEL_70_OR_HIGHER_AND_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_IN_ORDER_TO_PARTICIPATE_IN_A_MATCH;
+
+    @ClientString(id = 5295, message = "Cannot apply to participate in a match while in an instanced zone.")
+    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_IN_AN_INSTANCED_ZONE;
+
+    @ClientString(id = 5296, message = "Cannot apply to participate in a match while dead.")
+    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_DEAD;
+
+    @ClientString(id = 5297, message = "You've used up all your matches.")
+    public static SystemMessageId YOU_VE_USED_UP_ALL_YOUR_MATCHES;
+
+    @ClientString(id = 5298, message = "Cannot apply to participate because your inventory slots or weight exceeded 80%%.")
+    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_BECAUSE_YOUR_INVENTORY_SLOTS_OR_WEIGHT_EXCEEDED_80;
 
     @ClientString(id = 6004, message = "Enchant failed. The enchant skill for the corresponding item will be exactly retained.")
     public static SystemMessageId ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED;

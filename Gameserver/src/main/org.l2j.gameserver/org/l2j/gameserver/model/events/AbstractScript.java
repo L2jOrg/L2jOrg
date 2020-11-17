@@ -55,7 +55,6 @@ import org.l2j.gameserver.model.events.impl.character.player.*;
 import org.l2j.gameserver.model.events.impl.instance.*;
 import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
-import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
@@ -776,13 +775,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      */
     protected final List<AbstractEventListener> setItemTalkId(Consumer<OnItemTalk> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_ITEM_TALK, ListenerRegisterType.ITEM, npcIds);
-    }
-
-    /**
-     * Provides instant callback operation when Olympiad match finishes.
-     */
-    protected final List<AbstractEventListener> setOlympiadMatchResult(Consumer<OnOlympiadMatchResult> callback) {
-        return registerConsumer(callback, EventType.ON_OLYMPIAD_MATCH_RESULT, ListenerRegisterType.OLYMPIAD);
     }
 
     /**

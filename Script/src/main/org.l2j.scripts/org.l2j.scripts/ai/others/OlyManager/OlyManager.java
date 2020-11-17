@@ -19,53 +19,26 @@
  */
 package org.l2j.scripts.ai.others.OlyManager;
 
-import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
-import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.CategoryType;
-import org.l2j.gameserver.handler.BypassHandler;
-import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
 import org.l2j.scripts.ai.AbstractNpcAI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.List;
-
-import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
  * Olympiad Manager AI.
  * @author St3eT
  */
-public final class OlyManager extends AbstractNpcAI implements IBypassHandler
-{
-	// NPC
+public final class OlyManager extends AbstractNpcAI {
 	private static final int MANAGER = 31688;
-	// Misc
 	private static final int EQUIPMENT_MULTISELL = 3168801;
-	
-	private static final String[] BYPASSES =
-	{
-		"watchmatch",
-		"arenachange"
-	};
-	private static final Logger LOGGER = LoggerFactory.getLogger(OlyManager.class);
 
-	private OlyManager()
-	{
+	private OlyManager() {
 		addStartNpc(MANAGER);
 		addFirstTalkId(MANAGER);
 		addTalkId(MANAGER);
-		BypassHandler.getInstance().registerHandler(this);
 	}
 	
 	@Override
@@ -132,73 +105,6 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	@Override
 	public String onFirstTalk(Npc npc, Player player) {
 		return (!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55) ? "OlyManager-noNoble.html" : "OlyManager-noble.html";
-	}
-	
-	@Override
-	public boolean useBypass(String command, Player player, Creature bypassOrigin)
-	{
-		try
-		{
-			final Npc olymanager = player.getLastFolkNPC();
-			
-			if (command.startsWith(BYPASSES[0])) // list
-			{
-				if (!Olympiad.getInstance().isMatchesInProgress())
-				{
-					player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
-					return false;
-				}
-				
-				player.sendPacket(new ExOlympiadMatchList());
-			}
-			else if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!player.isInObserverMode() && !isInsideRadius2D(player, olymanager, 300)))
-			{
-				return false;
-			}
-			else if (Olympiad.getInstance().isRegistered(player))
-			{
-				player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
-				return false;
-			}
-			else if (!Olympiad.getInstance().isMatchesInProgress())
-			{
-				player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
-				return false;
-			}
-			else if (player.isOnEvent())
-			{
-				player.sendMessage("You can not observe games while registered on an event");
-				return false;
-			}
-			else
-			{
-				final int arenaId = Integer.parseInt(command.substring(12).trim());
-				final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(arenaId);
-				if (nextArena != null)
-				{
-					final List<Location> spectatorSpawns = nextArena.getStadium().getZone().getSpectatorSpawns();
-					if (spectatorSpawns.isEmpty())
-					{
-						LOGGER.warn(": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
-						return false;
-					}
-					final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
-					player.enterOlympiadObserverMode(loc, arenaId);
-				}
-			}
-			return true;
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("Exception in " + getClass().getSimpleName(), e);
-		}
-		return false;
-	}
-	
-	@Override
-	public String[] getBypassList()
-	{
-		return BYPASSES;
 	}
 	
 	public static AbstractNpcAI provider()

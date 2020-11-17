@@ -21,9 +21,7 @@ package org.l2j.gameserver.engine.olympiad;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.olympiad.OlympiadResultInfo;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.List;
 import java.util.function.Consumer;

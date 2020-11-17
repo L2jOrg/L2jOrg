@@ -260,6 +260,32 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private boolean validateMatchMaking(Player player) {
         if(!state.matchesInProgress())  {
+            player.sendPacket(THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+            return false;
+        }
+
+        if(getRemainingDailyMatches(player) < 1) {
+            player.sendPacket(YOU_VE_USED_UP_ALL_YOUR_MATCHES);
+            return false;
+        }
+
+        if(player.getLevel() < 70 || player.getClassId().level() < 2) {
+            player.sendPacket(YOU_MUST_LEVEL_70_OR_HIGHER_AND_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_IN_ORDER_TO_PARTICIPATE_IN_A_MATCH);
+            return false;
+        }
+
+        if(player.isInInstance() || player.isInTimedHuntingZone()) {
+            player.sendPacket(CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_IN_AN_INSTANCED_ZONE);
+            return false;
+        }
+
+        if(player.isDead()) {
+            player.sendPacket(CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_DEAD);
+            return false;
+        }
+
+        if(player.isOnEvent()) {
+
             return false;
         }
 
@@ -268,13 +294,14 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return false;
         }
 
+
         if(getOlympiadPoints(player) <= 0) {
 
             return false;
         }
 
         if(!player.isInventoryUnder80()) {
-            player.sendPacket(getSystemMessage(C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_FOR_OLYMPIAD_AS_THE_INVENTORY_WEIGHT_SLOT_EXCEEDS_80).addPcName(player));
+            player.sendPacket(CANNOT_APPLY_TO_PARTICIPATE_BECAUSE_YOUR_INVENTORY_SLOTS_OR_WEIGHT_EXCEEDED_80);
             return false;
         }
 
@@ -337,8 +364,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             participantDataOf(participant).increaseBattlesToday();
         }
 
-        matches.put(match.getId(), match);
         ThreadPool.schedule(match, 10, TimeUnit.SECONDS);
+    }
+
+    void startMatch(OlympiadMatch match) {
+        matches.put(match.getId(), match);
     }
 
     void finishMatch(OlympiadMatch match) {
@@ -485,6 +515,18 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public void addSpectator(Player player, int matchId) {
+        if(matchId == player.getOlympiadMatchId()) {
+            return;
+        }
+
+        if(player.isInOlympiadMode()) {
+            if(!player.isInObserverMode()) {
+                return;
+            }
+            var previousMatch = matches.get(player.getOlympiadMatchId());
+            previousMatch.removeSpetator(player);
+        }
+
         var match = matches.get(matchId);
         if(nonNull(match)) {
             match.addSpectator(player);
