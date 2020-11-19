@@ -9,6 +9,7 @@ import org.l2j.scripts.handlers.effecthandlers.*;
 import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
+import org.l2j.scripts.quests.Q10871_DeathToThePirateKing.Q10871_DeathToThePirateKing;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
 import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
 import org.l2j.scripts.quests.tutorial.elf.Q203_Tutorial;
@@ -742,7 +743,9 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q10988_Conspiracy.Q10988_Conspiracy,
              org.l2j.scripts.quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
              org.l2j.scripts.quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction,
-             org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets;
+             org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets,
+             org.l2j.scripts.quests.Q00630_PirateTreasureHunt.Q00630_PirateTreasureHunt,
+             org.l2j.scripts.quests.Q10871_DeathToThePirateKing.Q10871_DeathToThePirateKing;
 
 
     provides org.l2j.gameserver.engine.mission.MissionHandlerFactory
