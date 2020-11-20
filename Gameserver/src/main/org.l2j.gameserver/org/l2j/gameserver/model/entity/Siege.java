@@ -42,6 +42,7 @@ import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarSiegeInfo;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.MathUtil;
@@ -217,6 +218,7 @@ public class Siege implements Siegable {
 
             endTime = Instant.now().plus(SiegeManager.getInstance().getSiegeLength(), ChronoUnit.MINUTES);
             ThreadPool.schedule(new ScheduleEndSiegeTask(), 1000);
+            Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle.getId()));
         }
     }
 
@@ -878,6 +880,7 @@ public class Siege implements Siegable {
 
                 if (regTimeRemaining.compareTo(Duration.ZERO) > 0) {
                     scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), regTimeRemaining);
+                    Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle.getId()));
                     return;
                 }
                 endTimeRegistration(true);

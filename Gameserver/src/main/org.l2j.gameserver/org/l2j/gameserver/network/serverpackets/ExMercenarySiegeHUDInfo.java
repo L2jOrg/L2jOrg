@@ -19,16 +19,41 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.SiegeManager;
+import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
-public class ExMercenarySiegeHUDInfo extends ServerPacket {
+import java.time.Duration;
+import java.time.Instant;
 
+
+public class ExMercenarySiegeHUDInfo extends ServerPacket {
+    private final int _castleId;
+
+    public ExMercenarySiegeHUDInfo(int castleId)
+    {
+        _castleId = castleId;
+    }
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer) throws Exception {
         writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO, buffer );
-        buffer.writeInt(3);
-        buffer.writeInt(0);
-        buffer.writeLong(System.currentTimeMillis()); // unk  DA D0 59 5D A6 15 00 00
+        Castle castle = CastleManager.getInstance().getCastleById(_castleId);
+        buffer.writeInt(_castleId);
+        if (castle.getSiege().isInProgress())
+        {
+            buffer.writeInt(0x01);
+            buffer.writeInt(0x00);
+            buffer.writeInt(300);
+            //buffer.writeInt((int) (CastleManager.getInstance().getCastleById(_castleId).getSiegeDate().getSecond() + (SiegeManager.getInstance().getSiegeLength() * 60 * 1000)));
+        }
+        else
+        {
+            buffer.writeInt(0x00);
+            buffer.writeInt(0x00);
+            buffer.writeInt((int) ((CastleManager.getInstance().getCastleById(_castleId).getSiegeDate().getSecond() - System.currentTimeMillis()) / 1000)); // Countdown seconds
+        }
+
     }
 }
