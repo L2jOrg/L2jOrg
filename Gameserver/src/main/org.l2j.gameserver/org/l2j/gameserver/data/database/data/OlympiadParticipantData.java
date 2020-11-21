@@ -73,6 +73,7 @@ public class OlympiadParticipantData {
 
     public void increaseBattlesToday() {
         battlesToday++;
+        battles++;
     }
 
     public void increaseDefeats() {

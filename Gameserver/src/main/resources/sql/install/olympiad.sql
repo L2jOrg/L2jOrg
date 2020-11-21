@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS `olympiad_participants`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
 
-
 DROP TABLE IF EXISTS olympiad_history;
 CREATE TABLE olympiad_history
 (
@@ -50,24 +49,20 @@ CREATE TABLE olympiad_history
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
 
-
 DROP TABLE IF EXISTS olympiad_rankers_snapshot;
 CREATE TABLE olympiad_rankers_snapshot(
     `player_id` INT UNSIGNED NOT NULL,
     `server` INT NOT NULL,
-    `player_name` VARCHAR(35) NOT NULL,
-    `clan_name` VARCHAR(45) NOT NULL,
     `rank` BIGINT NOT NULL,
     `previous_rank` BIGINT NOT NULL,
-    `level` TINYINT NOT NULL,
     `class_id` TINYINT NOT NULL,
-    `clan_level` INT NOT NULL,
+    `battles` MEDIUMINT NOT NULL,
     `battles_won` MEDIUMINT NOT NULL,
     `battles_lost` MEDIUMINT NOT NULL,
     `points` INT NOT NULL,
-    `hero_count` INT NOT NULL,
-    `legend_count` INT NOT NULL,
-    PRIMARY KEY (`player_id`, `server`)
+    `update_date` DATE NOT NULL,
+    PRIMARY KEY (`player_id`, `server`),
+    KEY (`rank`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = UTF8MB4;
 
@@ -75,22 +70,43 @@ DROP TABLE IF EXISTS olympiad_rankers_class_snapshot;
 CREATE TABLE olympiad_rankers_class_snapshot(
   `player_id` INT UNSIGNED NOT NULL,
   `server` INT NOT NULL,
-  `player_name` VARCHAR(35) NOT NULL,
-  `clan_name` VARCHAR(45) NOT NULL,
   `rank` BIGINT NOT NULL,
   `previous_rank` BIGINT NOT NULL,
-  `level` TINYINT NOT NULL,
   `class_id` TINYINT NOT NULL,
-  `clan_level` INT NOT NULL,
+  `battles` MEDIUMINT NOT NULL,
   `battles_won` MEDIUMINT NOT NULL,
   `battles_lost` MEDIUMINT NOT NULL,
   `points` INT NOT NULL,
-  `hero_count` INT NOT NULL,
-  `legend_count` INT NOT NULL,
-  PRIMARY KEY (`player_id`, `server`)
+  `update_date` DATE NOT NULL,
+  PRIMARY KEY (`player_id`, `server`),
+  KEY (`class_id`, `rank`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
 
+DROP TABLE IF EXISTS olympiad_heroes_history;
+CREATE TABLE olympiad_heroes_history (
+ `player_id` INT UNSIGNED NOT NULL,
+ `server` INT NOT NULL,
+ `class_id` TINYINT NOT NULL,
+ `hero_count` INT NOT NULL DEFAULT 1,
+ `legend_count` INT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`player_id`, `server`),
+  FOREIGN KEY (`player_id`) REFERENCES characters(`charId`) ON DELETE CASCADE
+) ENGINE = InnoDB
+ DEFAULT CHARSET = UTF8MB4;
+
+DROP TABLE IF EXISTS olympiad_heroes;
+CREATE TABLE olympiad_heroes (
+ `player_id` INT UNSIGNED NOT NULL,
+ `server` INT NOT NULL,
+ `class_id` TINYINT NOT NULL,
+ `legend` BOOL NOT NULL DEFAULT FALSE,
+ `claimed` BOOL NOT NULL DEFAULT FALSE,
+ PRIMARY KEY (`player_id`, `server`),
+ FOREIGN KEY (`player_id`) REFERENCES characters(`charId`) ON DELETE CASCADE,
+ UNIQUE KEY (`class_id`)
+)ENGINE = InnoDB
+ DEFAULT CHARSET = UTF8MB4;
 
 CREATE OR REPLACE VIEW olympiad_rankers AS
 SELECT
@@ -103,16 +119,18 @@ SELECT
        player.level,
        player.classid AS class_id,
        IFNULL(clan.clan_level, 0) AS clan_level,
+       participant.battles,
        participant.battles_won,
        participant.battles_lost,
        participant.points,
-       IFNULL(hero.count, 0) AS hero_count,
-       0 AS legend_count
+       IFNULL(hero.hero_count, 0) AS hero_count,
+       IFNULL(hero.legend_count, 0) AS legend_count
 FROM olympiad_participants participant
-JOIN characters player ON player.charId = participant.player_id
+JOIN characters player ON player.charId = participant.player_id -- AND player.accesslevel = 0
 LEFT JOIN olympiad_rankers_snapshot snapshot on participant.player_id = snapshot.player_id and participant.server = snapshot.server
 LEFT JOIN clan_data clan ON clan.clan_id = player.clanid
-LEFT JOIN heroes hero on player.charId = hero.charId;
+LEFT JOIN olympiad_heroes_history hero on participant.player_id = hero.player_id AND participant.server = hero.server
+WHERE participant.battles > 0;
 
 CREATE OR REPLACE VIEW olympiad_rankers_class AS
 SELECT
@@ -125,13 +143,15 @@ SELECT
     player.level,
     player.classid AS class_id,
     IFNULL(clan.clan_level, 0) AS clan_level,
+    participant.battles,
     participant.battles_won,
     participant.battles_lost,
     participant.points,
-    IFNULL(hero.count, 0) AS hero_count,
-    0 AS legend_count
+    IFNULL(hero.hero_count, 0) AS hero_count,
+    IFNULL(hero.legend_count, 0) AS legend_count
 FROM olympiad_participants participant
-JOIN characters player on participant.player_id = player.charId
+JOIN characters player on participant.player_id = player.charId -- AND player.accesslevel = 0
 LEFT JOIN olympiad_rankers_class_snapshot snapshot on participant.player_id = snapshot.player_id and participant.server = snapshot.server
 LEFT JOIN clan_data clan on clan.clan_id  = player.clanid
-LEFT JOIN heroes hero on player.charId = hero.charId;
+LEFT JOIN olympiad_heroes_history hero on participant.player_id = hero.player_id AND participant.server = hero.server
+WHERE participant.battles > 0;

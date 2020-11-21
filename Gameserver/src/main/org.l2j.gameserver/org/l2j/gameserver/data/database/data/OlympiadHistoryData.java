@@ -25,6 +25,7 @@ import org.l2j.commons.database.annotation.Column;
  */
 public class OlympiadHistoryData {
 
+    public static final OlympiadHistoryData DEFAULT = new OlympiadHistoryData();
     @Column("player_id")
     private int playerId;
     private int server;

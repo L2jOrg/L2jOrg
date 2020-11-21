@@ -27,21 +27,17 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.util.Objects;
-
 /**
  * @author JoeAlisson
  */
 public class ExOlympiadRecord extends ServerPacket {
-
-    private static final OlympiadHistoryData EMPTY_LAST_CYCLE = new OlympiadHistoryData();
 
     private final OlympiadParticipantData participantData;
     private final OlympiadHistoryData lastCycleData;
 
     public ExOlympiadRecord(OlympiadParticipantData data, OlympiadHistoryData lastCycleData) {
         participantData = data;
-        this.lastCycleData = Objects.requireNonNullElse(lastCycleData, EMPTY_LAST_CYCLE);
+        this.lastCycleData = lastCycleData;
     }
 
     @Override

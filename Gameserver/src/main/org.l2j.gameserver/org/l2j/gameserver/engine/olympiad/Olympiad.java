@@ -27,6 +27,7 @@ import org.l2j.commons.util.collection.LimitedQueue;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.OlympiadDAO;
 import org.l2j.gameserver.data.database.data.OlympiadData;
+import org.l2j.gameserver.data.database.data.OlympiadHistoryData;
 import org.l2j.gameserver.data.database.data.OlympiadParticipantData;
 import org.l2j.gameserver.data.database.data.OlympiadRankData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
@@ -79,6 +80,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private final IntMap<OlympiadMatch> matches = new CHashIntMap<>(10);
     private final IntMap<OlympiadParticipantData> participantsData = new HashIntMap<>();
+    private final IntMap<OlympiadHistoryData> history = new HashIntMap<>();
     private final IntMap<LimitedQueue<OlympiadBattleRecord>> recentBattlesRecord = new HashIntMap<>();
 
     private Set<Player> registered = ConcurrentHashMap.newKeySet(20);
@@ -214,10 +216,31 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     @ScheduleTarget
     public void onNewSeason(){
         if(LocalDate.now().compareTo(data.getNextSeasonDate()) >= 0) {
+            final var olympiadDAO = getDAO(OlympiadDAO.class);
+
+            olympiadDAO.deleteHeroes();
+            removeOnlineHeroes();
+            olympiadDAO.saveHeroes();
+            olympiadDAO.updateHeroesHistory();
+            olympiadDAO.saveRankSnapshot();
+            olympiadDAO.deletePreviousRankSnapshot();
+            olympiadDAO.saveRankClassSnapshot();
+            olympiadDAO.deletePreviousRankClassSnapshot();
+            olympiadDAO.updateLegend();
+            olympiadDAO.updateLegendHistory();
+            olympiadDAO.updateOlympiadHistory(data.getSeason());
+            olympiadDAO.deleteParticipants();
+            participantsData.clear();
+            history.clear();
+
             data.increaseSeason();
-            getDAO(OlympiadDAO.class).save(data);
+            olympiadDAO.save(data);
             Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_GAMES_HAS_STARTED).addInt(data.getSeason()));
         }
+    }
+
+    private void removeOnlineHeroes() {
+        // TODO
     }
 
     public boolean isMatchesInProgress() {
@@ -258,19 +281,23 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         player.sendPacket(htmlMessage);
     }
 
+    public boolean checkLevelAndClassResction(Player player) {
+        return player.getLevel() >= 70 && player.getClassId().level() >= 2;
+    }
+
     private boolean validateMatchMaking(Player player) {
         if(!state.matchesInProgress())  {
             player.sendPacket(THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
             return false;
         }
 
-        if(getRemainingDailyMatches(player) < 1) {
-            player.sendPacket(YOU_VE_USED_UP_ALL_YOUR_MATCHES);
+        if(!checkLevelAndClassResction(player)) {
+            player.sendPacket(YOU_MUST_LEVEL_70_OR_HIGHER_AND_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_IN_ORDER_TO_PARTICIPATE_IN_A_MATCH);
             return false;
         }
 
-        if(player.getLevel() < 70 || player.getClassId().level() < 2) {
-            player.sendPacket(YOU_MUST_LEVEL_70_OR_HIGHER_AND_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_IN_ORDER_TO_PARTICIPATE_IN_A_MATCH);
+        if(getRemainingDailyMatches(player) < 1) {
+            player.sendPacket(YOU_VE_USED_UP_ALL_YOUR_MATCHES);
             return false;
         }
 
@@ -410,7 +437,24 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public void showRecord(Player player) {
-        player.sendPacket(new ExOlympiadRecord(participantDataOf(player), null));
+        player.sendPacket(new ExOlympiadRecord(participantDataOf(player), lastCycleDataOf(player)));
+    }
+
+    private OlympiadHistoryData lastCycleDataOf(Player player) {
+        var data = history.get(player.getObjectId());
+        if(isNull(data)) {
+            data = loadOrDefaultHistory(player);
+        }
+        return data;
+    }
+
+    private OlympiadHistoryData loadOrDefaultHistory(Player player) {
+        OlympiadHistoryData historyData = getDAO(OlympiadDAO.class).findHistory(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getSeason() -1);
+        if(isNull(historyData)) {
+            historyData = OlympiadHistoryData.DEFAULT;
+        }
+        history.put(player.getObjectId(), historyData);
+        return historyData;
     }
 
     private OlympiadParticipantData participantDataOf(Player player) {
@@ -422,8 +466,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private OlympiadParticipantData loadOrCreateParticipantData(Player player) {
-        OlympiadParticipantData data;
-        data = getDAO(OlympiadDAO.class).findParticipantData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+        OlympiadParticipantData data = getDAO(OlympiadDAO.class).findParticipantData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
         if(isNull(data)) {
             data = OlympiadParticipantData.of(player, initialPoints, getSettings(ServerSettings.class).serverId());
             getDAO(OlympiadDAO.class).save(data);
@@ -436,7 +479,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseDefeats();
-        getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints(), data.getBattlesLost());
+        data.increaseBattlesToday();
+        getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints());
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(winnerLeader.getName(), winnerLeader.getClassId().getId(), winnerLeader.getLevel(), (byte) 1));
         return data.getPoints();
     }
@@ -445,7 +489,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseVictory();
-        getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints(), data.getBattlesWon());
+        data.increaseBattlesToday();
+        getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints());
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(loserLeader.getName(), loserLeader.getClassId().getId(), loserLeader.getLevel(), (byte) 0));
         return data.getPoints();
     }
@@ -453,6 +498,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     short updateTie(Player player, Player enemy, int points) {
         var data = participantDataOf(player);
         data.updatePoints(points);
+        data.increaseBattlesToday();
+        getDAO(OlympiadDAO.class).updateTie(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints());
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(enemy.getName(), enemy.getClassId().getId(), enemy.getLevel(), (byte) 2));
         return data.getPoints();
     }
@@ -501,6 +548,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
 
         return scope == 1 ? dao.findRankersNextToPlayer(player.getObjectId()) : dao.findRankers();
+    }
+
+    public void showHeroes(Player player) {
+        final var dao = getDAO(OlympiadDAO.class);
+        player.sendPacket(new ExOlympiadHeroesInfo(dao.findRankLegend(), dao.findRankHeroes()));
     }
 
     public boolean isMatchInBattle(int matchId) {

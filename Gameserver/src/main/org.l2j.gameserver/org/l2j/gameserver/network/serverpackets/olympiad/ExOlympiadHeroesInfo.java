@@ -19,53 +19,56 @@
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.OlympiadHeroData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+
+import java.util.List;
+import java.util.Objects;
+
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
 /**
  * @author JoeAlisson
  */
 public class ExOlympiadHeroesInfo extends ServerPacket {
 
+    private static final OlympiadHeroData DEFAULT_LEGEND = new OlympiadHeroData();
+    private final OlympiadHeroData legend;
+    private final List<OlympiadHeroData> heroes;
+
+    public ExOlympiadHeroesInfo(OlympiadHeroData legend, List<OlympiadHeroData> heroes) {
+        this.legend = Objects.requireNonNullElse(legend, DEFAULT_LEGEND);
+        this.heroes = heroes;
+    }
+
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_OLYMPIAD_HERO_AND_LEGEND_INFO, buffer );
 
-        buffer.writeShort(1024); // size ??
-        //Legend Info
-        buffer.writeSizedString("Legend name");
-        buffer.writeSizedString("Legend clan name");
-        buffer.writeInt(1); // legend world id
-        buffer.writeInt(0); // legend race
-        buffer.writeInt(0); // legend sex
-        buffer.writeInt(88); // legend class id
-        buffer.writeInt(85); // legend level
+        buffer.writeShort(1024);
+        writeHeroInfo(buffer, legend, legend.getLegendCount());
 
-        buffer.writeInt(5); // count
-        buffer.writeInt(4); // win count
-        buffer.writeInt(1); // lose count
-        buffer.writeInt(100); // olympiad points
-        buffer.writeInt(4); // clan level
-
-        buffer.writeInt(40); // heroes size
-
-        for (int i = 0; i < 40; i++) {
-            buffer.writeSizedString("Hero name" + i);
-            buffer.writeSizedString("Hero clan name" + i);
-            buffer.writeInt((i % 2) + 1); // hero world id
-            buffer.writeInt(0); // hero race
-            buffer.writeInt(i % 2); // hero sex
-            buffer.writeInt(88 + i); // hero class id
-            buffer.writeInt(85); // hero level
-
-            buffer.writeInt( (i % 4) + 1); // count
-            buffer.writeInt(4 + i); // win count
-            buffer.writeInt(1 + i); // lose count
-            buffer.writeInt(100 + i); // olympiad points
-            buffer.writeInt(5); // clan level
+        buffer.writeInt(heroes.size());
+        for (var hero : heroes) {
+            writeHeroInfo(buffer, hero, hero.getHeroCount());
         }
+    }
 
+    private void writeHeroInfo(WritableBuffer buffer, OlympiadHeroData hero, int count) {
+        buffer.writeSizedString(hero.getName());
+        buffer.writeSizedString(hero.getClanName());
+        buffer.writeInt(hero.getServer());
+        buffer.writeInt(hero.getRace());
+        buffer.writeInt(hero.getSex());
+        buffer.writeInt(hero.getClassId());
+        buffer.writeInt(hero.getLevel());
 
+        buffer.writeInt(count);
+        buffer.writeInt(hero.getBattlesWon());
+        buffer.writeInt(hero.getBattlesLost());
+        buffer.writeInt(hero.getPoints());
+        buffer.writeInt(hero.getClanLevel());
     }
 }
