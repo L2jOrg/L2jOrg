@@ -27,6 +27,7 @@ import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 
 public class ExMercenarySiegeHUDInfo extends ServerPacket {
@@ -45,15 +46,15 @@ public class ExMercenarySiegeHUDInfo extends ServerPacket {
         {
             buffer.writeInt(0x01);
             buffer.writeInt(0x00);
-            buffer.writeInt(300);
-            //buffer.writeInt((int) (CastleManager.getInstance().getCastleById(_castleId).getSiegeDate().getSecond() + (SiegeManager.getInstance().getSiegeLength() * 60 * 1000)));
+            //buffer.writeInt(300);
+            buffer.writeInt((int) ((Duration.between(LocalDateTime.now(), CastleManager.getInstance().getCastleById(_castleId).getSiegeDate()).toMillis() + (SiegeManager.getInstance().getSiegeLength() * 60 * 1000))));
         }
         else
         {
             buffer.writeInt(0x00);
             buffer.writeInt(0x00);
-            buffer.writeInt((int) ((CastleManager.getInstance().getCastleById(_castleId).getSiegeDate().getSecond() - System.currentTimeMillis()) / 1000)); // Countdown seconds
+            buffer.writeInt((int) ((Duration.between(LocalDateTime.now(), CastleManager.getInstance().getCastleById(_castleId).getSiegeDate()).toMillis() - System.currentTimeMillis()) / 1000));
+           // buffer.writeInt((int) ((CastleManager.getInstance().getCastleById(_castleId).getSiegeDate().getSecond() - System.currentTimeMillis()) / 1000)); // Countdown seconds
         }
-
     }
 }

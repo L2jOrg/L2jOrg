@@ -42,7 +42,6 @@ import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarSiegeInfo;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.MathUtil;
