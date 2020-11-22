@@ -80,7 +80,6 @@ public class Hero {
     private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (30392, 30393, 30394, 30395, 30396, 30397, 30398, 30399, 30400, 30401, 30402, 30403, 30404, 30405, 30372, 30373, 6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621, 9388, 9389, 9390) AND owner_id NOT IN (SELECT charId FROM characters WHERE accesslevel > 0)";
     private static final Map<Integer, StatsSet> HEROES = new ConcurrentHashMap<>();
     private static final Map<Integer, StatsSet> COMPLETE_HEROS = new ConcurrentHashMap<>();
-    private static final Map<Integer, StatsSet> HERO_COUNTS = new ConcurrentHashMap<>();
     private static final Map<Integer, List<StatsSet>> HERO_DIARY = new ConcurrentHashMap<>();
     private static final Map<Integer, String> HERO_MESSAGE = new ConcurrentHashMap<>();
     public static final String CHAR_ID = "charId";
@@ -93,7 +92,6 @@ public class Hero {
     private void load() {
         HEROES.clear();
         COMPLETE_HEROS.clear();
-        HERO_COUNTS.clear();
         HERO_DIARY.clear();
         HERO_MESSAGE.clear();
 
@@ -229,10 +227,6 @@ public class Hero {
         }
     }
 
-    public Map<Integer, StatsSet> getHeroes() {
-        return HEROES;
-    }
-
     public int getHeroByClass(int classid) {
         for (Entry<Integer, StatsSet> e : HEROES.entrySet()) {
             if (e.getValue().getInt(CLASS_ID) == classid) {
@@ -244,7 +238,6 @@ public class Hero {
 
     public void resetData() {
         HERO_DIARY.clear();
-        HERO_COUNTS.clear();
         HERO_MESSAGE.clear();
     }
 

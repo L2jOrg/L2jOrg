@@ -40,6 +40,7 @@ import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.ExHeroList;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.olympiad.*;
@@ -241,6 +242,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private void removeOnlineHeroes() {
         // TODO
+    }
+
+    public void showHeroList(Player player) {
+        player.sendPacket(new ExHeroList(getDAO(OlympiadDAO.class).findRankHeroes()));
     }
 
     public boolean isMatchesInProgress() {
@@ -550,7 +555,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return scope == 1 ? dao.findRankersNextToPlayer(player.getObjectId()) : dao.findRankers();
     }
 
-    public void showHeroes(Player player) {
+    public void showRankingHeroes(Player player) {
         final var dao = getDAO(OlympiadDAO.class);
         player.sendPacket(new ExOlympiadHeroesInfo(dao.findRankLegend(), dao.findRankHeroes()));
     }

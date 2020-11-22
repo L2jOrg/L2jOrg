@@ -25,7 +25,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExHeroList;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.scripts.ai.AbstractNpcAI;
@@ -78,11 +77,6 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 			case "index":
 			{
 				htmltext = onFirstTalk(npc, player);
-				break;
-			}
-			case "heroList":
-			{
-				player.sendPacket(new ExHeroList());
 				break;
 			}
 			case "receiveCloak":

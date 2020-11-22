@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.clientpackets.olympiad;
 
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadHeroesInfo;
 
 /**
  * @author JoeAlisson
@@ -34,7 +33,7 @@ public class ExRequestOlympiadHeroes extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        Olympiad.getInstance().showHeroes(client.getPlayer());
+        Olympiad.getInstance().showRankingHeroes(client.getPlayer());
     }
 
 }

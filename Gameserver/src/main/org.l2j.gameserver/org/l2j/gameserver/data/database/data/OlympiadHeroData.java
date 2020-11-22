@@ -22,6 +22,14 @@ public class OlympiadHeroData {
     @Column("clan_name")
     private String clanName;
 
+    @Column("ally_name")
+    private String allyName;
+
+    private int crest;
+
+    @Column("ally_crest")
+    private int allyCrest;
+
     @Column("clan_level")
     private int clanLevel;
     private byte sex;
@@ -71,6 +79,18 @@ public class OlympiadHeroData {
 
     public int getClanLevel() {
         return clanLevel;
+    }
+
+    public String getAllyName() {
+        return allyName;
+    }
+
+    public int getCrest() {
+        return crest;
+    }
+
+    public int getAllyCrest() {
+        return allyCrest;
     }
 
     public byte getSex() {

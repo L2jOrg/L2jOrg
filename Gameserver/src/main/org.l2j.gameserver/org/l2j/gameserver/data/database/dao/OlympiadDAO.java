@@ -238,7 +238,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     OlympiadHeroData findRankLegend();
 
     @Query(""" 
-    SELECT h.player_id, h.server, h.class_id, c.char_name AS name, IFNULL(cl.clan_name, '') AS clan_name, IFNULL(cl.clan_level, 0) AS clan_level, c.sex, c.race, c.level, ohh.hero_count, ohh.legend_count, orcs.battles_won, orcs.battles_lost, orcs.points
+    SELECT h.player_id, h.server, h.class_id, h.legend, c.char_name AS name, IFNULL(cl.clan_name, '') AS clan_name, IFNULL(cl.clan_level, 0) AS clan_level, c.sex, c.race, c.level, ohh.hero_count, ohh.legend_count, orcs.battles_won, orcs.battles_lost, orcs.points
     FROM olympiad_heroes h
     JOIN characters c ON h.player_id = c.charId
     JOIN olympiad_heroes_history ohh on h.server = ohh.server AND h.player_id = ohh.player_id
