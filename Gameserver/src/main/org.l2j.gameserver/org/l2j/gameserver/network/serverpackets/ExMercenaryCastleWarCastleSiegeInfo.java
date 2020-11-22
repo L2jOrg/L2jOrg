@@ -6,12 +6,16 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
-public class ExMercenaryCastleWarCastleSiegeInfo extends ServerPacket {
-    private final int _castleId;
+import java.util.Objects;
 
-    public ExMercenaryCastleWarCastleSiegeInfo(int castleId)
-    {
-        _castleId = castleId;
+import static java.util.Objects.nonNull;
+
+public class ExMercenaryCastleWarCastleSiegeInfo extends ServerPacket {
+
+    private final Castle castle;
+
+    public ExMercenaryCastleWarCastleSiegeInfo(int castleId) {
+        castle = Objects.requireNonNull(CastleManager.getInstance().getCastleById(castleId));
     }
 
     @Override
@@ -19,30 +23,23 @@ public class ExMercenaryCastleWarCastleSiegeInfo extends ServerPacket {
     {
         writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO, buffer );
 
-        Castle castle = CastleManager.getInstance().getCastleById(_castleId);
+        buffer.writeInt(castle.getId());
 
-        buffer.writeInt(_castleId);
-        if (castle == null)
-        {
-            buffer.writeInt(0x00);
-            buffer.writeInt(0x00);
-            buffer.writeString("-");
-            buffer.writeString("-");
-            buffer.writeInt(0x00);
-            buffer.writeInt(0x00);
-            buffer.writeInt(0x00);
+        final var owner = castle.getOwner();
+        if(nonNull(owner)) {
+            buffer.writeInt(owner.getId());
+            buffer.writeInt(owner.getCrestId());
+            buffer.writeSizedString(owner.getName());
+            buffer.writeSizedString(owner.getLeaderName());
+        } else {
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeSizedString("-");
+            buffer.writeSizedString("-");
         }
-        else
-        {
-            buffer.writeInt(0x00); // seconds ?
-            buffer.writeInt(0x00); // Is that crest?
 
-            buffer.writeString(castle.getOwner() != null ? castle.getOwner().getName() : "-");
-            buffer.writeString(castle.getOwner() != null ? castle.getOwner().getLeaderName() : "-");
-
-            buffer.writeInt(0x00); // Is that crest?
-            buffer.writeInt(castle.getSiege().getAttackerClans().size());
-            buffer.writeInt(castle.getSiege().getDefenderClans().size());
-        }
+        buffer.writeInt(castle.getSiege().isInProgress()); // siege state
+        buffer.writeInt(castle.getSiege().getAttackerClans().size());
+        buffer.writeInt(castle.getSiege().getDefenderClans().size());
     }
 }
