@@ -26,13 +26,12 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.collection.LimitedQueue;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.OlympiadDAO;
-import org.l2j.gameserver.data.database.data.OlympiadData;
-import org.l2j.gameserver.data.database.data.OlympiadHistoryData;
-import org.l2j.gameserver.data.database.data.OlympiadParticipantData;
-import org.l2j.gameserver.data.database.data.OlympiadRankData;
+import org.l2j.gameserver.data.database.data.*;
+import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.ClassInfo;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.ScheduleTarget;
 import org.l2j.gameserver.model.events.EventType;
@@ -55,6 +54,8 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Year;
 import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -67,7 +68,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.falseIfNullOrElse;
+import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.engine.olympiad.OlympiadState.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -78,6 +79,13 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
 public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Olympiad.class);
+
+    private static final DateTimeFormatter HISTORY_DATE_FORMATTER = new DateTimeFormatterBuilder()
+            .appendPattern("uuuu").appendLiteral("year ")
+            .appendPattern("MM").appendLiteral("month ")
+            .appendPattern("dd").appendLiteral("day ")
+            .appendPattern("hh").appendLiteral("hour ")
+            .appendPattern("mm").appendLiteral("minute").toFormatter();
 
     private final IntMap<OlympiadMatch> matches = new CHashIntMap<>(10);
     private final IntMap<OlympiadParticipantData> participantsData = new HashIntMap<>();
@@ -223,6 +231,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             removeOnlineHeroes();
             olympiadDAO.saveHeroes();
             olympiadDAO.updateHeroesHistory();
+            olympiadDAO.deleteHeroesMatches();
+            olympiadDAO.saveHeroesMatches();
+            olympiadDAO.deleteMatches();
             olympiadDAO.saveRankSnapshot();
             olympiadDAO.deletePreviousRankSnapshot();
             olympiadDAO.saveRankClassSnapshot();
@@ -454,12 +465,16 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private OlympiadHistoryData loadOrDefaultHistory(Player player) {
-        OlympiadHistoryData historyData = getDAO(OlympiadDAO.class).findHistory(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getSeason() -1);
+        OlympiadHistoryData historyData = getLastCycleInfo(player.getObjectId());
         if(isNull(historyData)) {
             historyData = OlympiadHistoryData.DEFAULT;
         }
         history.put(player.getObjectId(), historyData);
         return historyData;
+    }
+
+    private OlympiadHistoryData getLastCycleInfo(int playerId) {
+        return getDAO(OlympiadDAO.class).findHistory(playerId, getSettings(ServerSettings.class).serverId(), data.getSeason() - 1);
     }
 
     private OlympiadParticipantData participantDataOf(Player player) {
@@ -480,31 +495,39 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return data;
     }
 
-    short updateDefeat(Player player, int points, Player winnerLeader) {
+    short updateDefeat(Player player, int points, Player winnerLeader, Duration battleDuration) {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseDefeats();
         data.increaseBattlesToday();
-        getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints());
+
+        final int server =  getSettings(ServerSettings.class).serverId();
+        getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), server, data.getPoints());
+        getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, winnerLeader, PlayerMatchResult.LOSS, data, battleDuration));
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(winnerLeader.getName(), winnerLeader.getClassId().getId(), winnerLeader.getLevel(), (byte) 1));
         return data.getPoints();
     }
 
-    short updateVictory(Player player, int points, Player loserLeader) {
+    short updateVictory(Player player, int points, Player loserLeader, Duration battleDuration) {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseVictory();
         data.increaseBattlesToday();
-        getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints());
+        final int server = getSettings(ServerSettings.class).serverId();
+        getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), server, data.getPoints());
+        getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, loserLeader, PlayerMatchResult.VICTORY, data, battleDuration));
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(loserLeader.getName(), loserLeader.getClassId().getId(), loserLeader.getLevel(), (byte) 0));
         return data.getPoints();
     }
 
-    short updateTie(Player player, Player enemy, int points) {
+    short updateTie(Player player, Player enemy, int points, Duration battleDuration) {
         var data = participantDataOf(player);
         data.updatePoints(points);
         data.increaseBattlesToday();
-        getDAO(OlympiadDAO.class).updateTie(player.getObjectId(), getSettings(ServerSettings.class).serverId(), data.getPoints());
+
+        final int server = getSettings(ServerSettings.class).serverId();
+        getDAO(OlympiadDAO.class).updateTie(player.getObjectId(), server, data.getPoints());
+        getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, enemy, PlayerMatchResult.DRAW, data, battleDuration));
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(enemy.getName(), enemy.getClassId().getId(), enemy.getLevel(), (byte) 2));
         return data.getPoints();
     }
@@ -569,6 +592,57 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         if(nonNull(match)) {
             match.sendPacket(packet);
         }
+    }
+
+    public void showMatchList(Player player) {
+        player.sendPacket(new ExOlympiadMatchList(matches.values()));
+    }
+
+    public void showHeroHistory(Player player, int classId, int page) {
+        final var matchesResult = getDAO(OlympiadDAO.class).findHeroHistoryByClassId(classId);
+        if(!isNullOrEmpty(matchesResult)) {
+            player.sendPacket( createHeroHistory(player, matchesResult) );
+        } else {
+            LOGGER.warn("No matches result to class id {} requested by {}", classId, player);
+        }
+    }
+
+    private NpcHtmlMessage createHeroHistory(Player player, List<OlympiadMatchResultData> matchesResult) {
+        final var sb = new StringBuilder();
+        final var battleTemplate = HtmCache.getInstance().getHtm(player, "data/html/olympiad/hero-history-battle.htm");
+
+        for (OlympiadMatchResultData battle : matchesResult) {
+            sb.append(battleTemplate.replace("%date%", battle.getDate().format(HISTORY_DATE_FORMATTER))
+                .replace("%opponent%", battle.getOpponentName())
+                .replace("%class_name%", emptyIfNullOrElse(ClassListData.getInstance().getClass(battle.getOpponentClassId()), ClassInfo::getClassName))
+                .replace("%duration%", battle.getDuration().toMinutes() + " minutes " + battle.getDuration().toSecondsPart() + "seconds")
+                .replace("%result%", formattedResult(battle.getResult()))
+                .replace("%win%", String.valueOf(battle.getWin()))
+                .replace("%tie%", String.valueOf(battle.getTie()))
+                .replace("%loss%", String.valueOf(battle.getLoss()))
+            );
+        }
+
+        final var heroId = matchesResult.get(0).getPlayerId();
+        var heroHistory = history.get(heroId);
+        if(isNull(heroHistory)) {
+            heroHistory = getLastCycleInfo(heroId);
+        }
+
+        final var message = new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/html/olympiad/hero-history.htm"));
+        message.replace("%battles%", sb.toString());
+        message.replace("%win%", heroHistory.getBattlesOwn());
+        message.replace("%tie%", heroHistory.getBattles() - heroHistory.getBattlesOwn() + heroHistory.getBattlesLost());
+        message.replace("%loss%", heroHistory.getBattlesLost());
+        return message;
+    }
+
+    private String formattedResult(PlayerMatchResult result) {
+        return switch(result) {
+            case VICTORY -> "<font color=\"0000CC\">victory</font>";
+            case LOSS -> "<font color=\"CC0000\">loss</font>";
+            case DRAW -> "draw";
+        };
     }
 
     public void addSpectator(Player player, int matchId) {

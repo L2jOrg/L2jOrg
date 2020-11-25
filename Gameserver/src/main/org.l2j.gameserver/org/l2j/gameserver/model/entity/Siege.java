@@ -43,6 +43,7 @@ import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.siege.ExMercenarySiegeHUDInfo;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
@@ -217,13 +218,8 @@ public class Siege implements Siegable {
 
             endTime = Instant.now().plus(SiegeManager.getInstance().getSiegeLength(), ChronoUnit.MINUTES);
             ThreadPool.schedule(new ScheduleEndSiegeTask(), 1000);
-            Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle.getId()));
+            Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
         }
-    }
-
-    @Override
-    public final IntMap<SiegeClanData> getAttackerClans() {
-        return attackers;
     }
 
     private void saveCastleSiege() {
@@ -824,6 +820,25 @@ public class Siege implements Siegable {
         stream.map(siegeClan -> ClanTable.getInstance().getClan(siegeClan.getClanId())).filter(Objects::nonNull).forEach(clan -> clan.forEachOnlineMember(message::sendTo));
     }
 
+    @Override
+    public final IntMap<SiegeClanData> getAttackerClans() {
+        return attackers;
+    }
+
+    public long currentStateRemainTimeInSeconds() {
+        if(isInProgress) {
+            return Duration.between(Instant.now(), endTime).toSeconds();
+        } else if(isInPreparationPeriod()) {
+            return Duration.between(Instant.now(), getSiegeDate()).toSeconds();
+        }
+        return 0;
+    }
+
+    private boolean isInPreparationPeriod() {
+        final var duration = Duration.between(LocalDateTime.now(), getSiegeDate());
+        return duration.compareTo(Duration.ofHours(2)) < 0 && duration.compareTo(Duration.ZERO) > 0;
+    }
+
     private class ScheduleEndSiegeTask implements Runnable {
 
         @Override
@@ -879,7 +894,7 @@ public class Siege implements Siegable {
 
                 if (regTimeRemaining.compareTo(Duration.ZERO) > 0) {
                     scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), regTimeRemaining);
-                    Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle.getId()));
+                    Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
                     return;
                 }
                 endTimeRegistration(true);

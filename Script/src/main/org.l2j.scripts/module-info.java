@@ -9,7 +9,6 @@ import org.l2j.scripts.handlers.effecthandlers.*;
 import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
-import org.l2j.scripts.quests.Q10871_DeathToThePirateKing.Q10871_DeathToThePirateKing;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
 import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
 import org.l2j.scripts.quests.tutorial.elf.Q203_Tutorial;
@@ -502,6 +501,7 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.bypasshandlers.Multisell,
             org.l2j.scripts.handlers.bypasshandlers.Observation,
             org.l2j.scripts.handlers.bypasshandlers.OlympiadHandler,
+            org.l2j.scripts.handlers.bypasshandlers.MatchHandler,
             org.l2j.scripts.handlers.bypasshandlers.PlayerHelp,
             org.l2j.scripts.handlers.bypasshandlers.PrivateWarehouse,
             org.l2j.scripts.handlers.bypasshandlers.QuestLink,

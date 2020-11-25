@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `olympiad_data`
 
 
 DROP TABLE IF EXISTS `olympiad_participants`;
-CREATE TABLE IF NOT EXISTS `olympiad_participants`
+CREATE TABLE `olympiad_participants`
 (
     `player_id`     INT UNSIGNED NOT NULL,
     `server`        INT          NOT NULL,
@@ -24,6 +24,43 @@ CREATE TABLE IF NOT EXISTS `olympiad_participants`
     `battles_today` MEDIUMINT    NOT NULL DEFAULT 0,
     PRIMARY KEY (`player_id`, `server`),
     FOREIGN KEY (`player_id`) REFERENCES characters (`charId`) ON DELETE CASCADE
+) ENGINE = InnoDB
+  DEFAULT CHARSET = UTF8MB4;
+
+DROP TABLE IF EXISTS `olympiad_matches`;
+CREATE TABLE `olympiad_matches`(
+   `num` INT NOT NULL AUTO_INCREMENT,
+   `player_id`     INT UNSIGNED NOT NULL,
+   `server`        INT          NOT NULL,
+   `class_id`   INT NOT NULL,
+   `opponent`      INT UNSIGNED NOT NULL,
+   `date`    DATETIME NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+   `duration` INT NOT NULL,
+   `result`  ENUM('VICTORY', 'DRAW', 'LOSS'),
+   `win`  INT NOT NULL DEFAULT 0,
+   `loss` INT NOT NULL DEFAULT 0,
+   `tie`  INT NOT NULL DEFAULT 0,
+   PRIMARY KEY (`num`),
+   FOREIGN KEY (`player_id`) REFERENCES characters (`charId`) ON DELETE CASCADE
+) ENGINE = InnoDB
+  DEFAULT CHARSET = UTF8MB4;
+
+DROP TABLE IF EXISTS `olympiad_heroes_matches`;
+CREATE TABLE `olympiad_heroes_matches`(
+   `num` INT NOT NULL,
+   `player_id`     INT UNSIGNED NOT NULL,
+   `server`        INT          NOT NULL,
+   `class_id`   INT NOT NULL,
+   `opponent`      INT UNSIGNED NOT NULL,
+   `date`    DATETIME NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+   `duration` INT NOT NULL,
+   `result`  ENUM('VICTORY', 'DRAW', 'LOSS'),
+   `win`  INT NOT NULL DEFAULT 0,
+   `loss` INT NOT NULL DEFAULT 0,
+   `tie`  INT NOT NULL DEFAULT 0,
+   PRIMARY KEY (`num`),
+   FOREIGN KEY (`player_id`) REFERENCES characters (`charId`) ON DELETE CASCADE,
+   KEY(`class_id`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
 

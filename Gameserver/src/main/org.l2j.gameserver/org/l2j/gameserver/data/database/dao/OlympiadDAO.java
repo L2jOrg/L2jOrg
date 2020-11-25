@@ -217,7 +217,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
          class_count AS ( SELECT COUNT(1) AS c FROM olympiad_rankers_class_snapshot),
          server_count AS (SELECT COUNT(1) AS c FROM scr)
     SELECT r.player_id, r.server, :season:, r.class_id, r.points, r.battles, r.battles_won, r.battles_lost, r.`rank`, overall_count.c, rc.`rank`, class_count.c, scr.`rank`, server_count.c
-    FROM olympiad_rankers_snapshot r
+    FROM overall_count, class_count, server_count, olympiad_rankers_snapshot r
     JOIN olympiad_rankers_class_snapshot rc on r.player_id = rc.player_id AND r.server = rc.server
     JOIN scr ON scr.player_id = r.player_id AND scr.server = r.server
     """)
@@ -246,4 +246,26 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     LEFT JOIN clan_data cl ON c.clanid = cl.clan_id
     """)
     List<OlympiadHeroData> findRankHeroes();
+
+    void save(OlympiadMatchResultData matchResult);
+
+    @Query("""
+    SELECT h.*, c.char_name as opponent_name, c.classid as opponent_class_id FROM olympiad_heroes_matches h
+    JOIN characters c ON h.opponent = c.charId
+    WHERE h.class_id = :classId:
+    """)
+    List<OlympiadMatchResultData> findHeroHistoryByClassId(int classId);
+
+    @Query("""
+    INSERT INTO olympiad_heroes_matches(num, player_id, server, class_id, opponent, date, duration, result, win, loss, tie)
+    SELECT m.* FROM olympiad_matches m
+    JOIN olympiad_heroes oh on m.player_id = oh.player_id AND  m.server = oh.server;
+    """)
+    void saveHeroesMatches();
+
+    @Query("TRUNCATE olympiad_heroes_matches")
+    void deleteHeroesMatches();
+
+    @Query("TRUNCATE olympiad_matches")
+    void deleteMatches();
 }
