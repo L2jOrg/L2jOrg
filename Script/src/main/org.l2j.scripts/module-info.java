@@ -330,6 +330,7 @@ open module org.l2j.scripts {
                 QueenAnt,
                 Zaken,
             org.l2j.scripts.ai.bosses.LimitBarrier,
+            org.l2j.scripts.ai.bosses.RaidZone,
 
 
             org.l2j.scripts.ai.others.ArenaManager.ArenaManager,

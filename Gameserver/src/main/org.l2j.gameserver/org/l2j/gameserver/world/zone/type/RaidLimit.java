@@ -1,23 +1,28 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.RaidBoss;
 import org.l2j.gameserver.model.actor.tasks.player.PvPFlagTask;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class RaidLimit extends Zone {
 	private static final Logger LOGGER = LoggerFactory.getLogger(RaidLimit.class);
 	private int _bossId;
-
-    public RaidLimit(int id) {
+	private RaidLimit(int id) {
         super(id);
     }
 
@@ -39,7 +44,8 @@ public class RaidLimit extends Zone {
 		if (isPlayer(character)) {
 			final Player player = character.getActingPlayer();
 			player.setInsideZone(ZoneType.RAID_LIMIT, true);
-			player.startPvPFlag();
+			player.setInsideZone(ZoneType.PVP, true);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 			LOGGER.info("on rentre zone ");
 		}
 	}
@@ -50,8 +56,12 @@ public class RaidLimit extends Zone {
 		if (isPlayer(character)) {
 			final Player player = character.getActingPlayer();
 			character.setInsideZone(ZoneType.RAID_LIMIT, false);
+			character.setInsideZone(ZoneType.PVP, false);
+			character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 			LOGGER.info("on sort zone ");
-			player.stopPvpRegTask();
+			if (player.getPvpFlag() == 0) {
+				player.startPvPFlag();
+			}
 			if (character instanceof RaidBoss)
 			{
 				final RaidBoss raidboss = ((RaidBoss) character);
