@@ -38,7 +38,9 @@ import org.l2j.gameserver.network.serverpackets.olympiad.*;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.time.Duration;
+import java.time.Instant;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
@@ -68,6 +70,8 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private ConsumerEventListener damageListener;
     private ConsumerEventListener hpListener;
     private ConsumerEventListener cpListener;
+    private Instant start;
+    private Duration battleDuration;
 
     OlympiadMatch() {
         state = MatchState.CREATED;
@@ -139,14 +143,18 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         final var winnerLeader = winnerTeam.get(0);
 
         for (var info : winnerTeam) {
-            var points = olympiad.updateVictory(info.getPlayer(), winnerPoints, loserLeader.getPlayer());
+            var points = olympiad.updateVictory(info.getPlayer(), winnerPoints, loserLeader.getPlayer(), getBattleDuration());
             info.updatePoints(points, winnerPoints);
         }
 
         for (var info : loserTeam) {
-            var points = olympiad.updateDefeat(info.getPlayer(), loserPoints,  winnerLeader.getPlayer());
+            var points = olympiad.updateDefeat(info.getPlayer(), loserPoints,  winnerLeader.getPlayer(), getBattleDuration());
             info.updatePoints(points, loserPoints);
         }
+    }
+
+    private Duration getBattleDuration() {
+        return Objects.requireNonNullElseGet(battleDuration, () -> Duration.between(start, Instant.now()));
     }
 
     private void processRedVictory() {
@@ -168,12 +176,12 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         final var redLeader = redTeam.get(0);
 
         for (var info : redTeam) {
-            var points = olympiad.updateTie(info.getPlayer(), blueLeader.getPlayer(), tiePoints);
+            var points = olympiad.updateTie(info.getPlayer(), blueLeader.getPlayer(), tiePoints, getBattleDuration());
             info.updatePoints(points, tiePoints);
         }
 
         for (var info : blueTeam) {
-            var points = olympiad.updateTie(info.getPlayer(), redLeader.getPlayer(), tiePoints);
+            var points = olympiad.updateTie(info.getPlayer(), redLeader.getPlayer(), tiePoints, getBattleDuration());
             info.updatePoints(points, tiePoints);
         }
         sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
@@ -236,6 +244,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             sendMessage(THE_MATCH_HAS_STARTED_FIGHT);
             state = IN_BATTLE;
             scheduled = ThreadPool.schedule(this, duration);
+            start = Instant.now();
         } else {
             if(COUNT_DOWN_INTERVAL[countDownIndex] == 10) {
                 arena.openAllDoors();

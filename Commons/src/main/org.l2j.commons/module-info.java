@@ -41,6 +41,7 @@ module org.l2j.commons {
              org.l2j.commons.database.handler.DateHandler,
              org.l2j.commons.database.handler.DateTimeHandler,
              org.l2j.commons.database.handler.InstantHandler,
+            org.l2j.commons.database.handler.DurationHandler,
              org.l2j.commons.database.handler.EnumHandler,
              org.l2j.commons.database.handler.EntityHandler;
 }

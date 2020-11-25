@@ -55,6 +55,10 @@ public class OlympiadParticipantData {
         return battlesToday;
     }
 
+    public short getBattles() {
+        return battles;
+    }
+
     public short getPoints() {
         return points;
     }
