@@ -6161,7 +6161,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isInOlympiadMode() && isPlayable(target) && (!isOlympiadStart() || getOlympiadMatchId() != target.getActingPlayer().getOlympiadMatchId())) {
+        if (isInOlympiadMode() && isPlayable(target) && ( (!isOlympiadStart() && skill.isBad()) || getOlympiadMatchId() != target.getActingPlayer().getOlympiadMatchId())) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }

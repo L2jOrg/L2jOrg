@@ -410,11 +410,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         var arena = InstanceManager.getInstance().createInstance(Rnd.get(availableArenas));
         match.setArenaInstance(arena);
         match.setMatchDuration(matchDuration);
+
         for (int i = 0; i < OlympiadRuleType.CLASSLESS.participantCount(); i++) {
             var participant = participants.next();
             match.addParticipant(participant);
             participants.remove();
-            participantDataOf(participant).increaseBattlesToday();
         }
 
         ThreadPool.schedule(match, 10, TimeUnit.SECONDS);

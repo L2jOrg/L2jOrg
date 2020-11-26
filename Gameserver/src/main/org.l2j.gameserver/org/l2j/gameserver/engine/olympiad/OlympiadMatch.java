@@ -94,6 +94,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             scheduled.cancel(true);
         }
         state = FINISHED;
+        battleDuration = Duration.between(Instant.now(), start);
         forEachParticipant(this::onMatchFinish);
         processResult();
         arena.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
