@@ -6699,7 +6699,6 @@ public final class Player extends Playable {
             }
         }
         _hero = hero;
-
         sendSkillList();
     }
 

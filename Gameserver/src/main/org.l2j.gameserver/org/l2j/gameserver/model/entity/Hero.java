@@ -20,7 +20,6 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
@@ -28,15 +27,10 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.network.serverpackets.SocialAction;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -371,7 +365,7 @@ public class Hero {
         updateHeroes(false);
     }
 
-    public void updateHeroes(boolean setDefault) {
+    private void updateHeroes(boolean setDefault) {
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             if (setDefault) {
                 try (Statement s = con.createStatement()) {
@@ -441,10 +435,6 @@ public class Hero {
         }
     }
 
-    public void setHeroGained(int charId) {
-        setDiaryData(charId, ACTION_HERO_GAINED, 0);
-    }
-
     public void setRBkilled(int charId, int npcId) {
         setDiaryData(charId, ACTION_RAID_KILLED, npcId);
 
@@ -479,7 +469,7 @@ public class Hero {
         list.add(diaryEntry);
     }
 
-    public void setDiaryData(int charId, int action, int param) {
+    private void setDiaryData(int charId, int action, int param) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)")) {
             ps.setInt(1, charId);
@@ -507,7 +497,7 @@ public class Hero {
      *
      * @param charId character objid
      */
-    public void saveHeroMessage(int charId) {
+    private void saveHeroMessage(int charId) {
         if (HERO_MESSAGE.containsKey(charId)) {
             return;
         }
@@ -539,61 +529,6 @@ public class Hero {
         for (int charId : HERO_MESSAGE.keySet()) {
             saveHeroMessage(charId);
         }
-    }
-
-    /**
-     * Verifies if the given object ID belongs to a claimed hero.
-     *
-     * @param objectId the player's object ID to verify
-     * @return {@code true} if there are heros and the player is in the list, {@code false} otherwise
-     */
-    public boolean isHero(int objectId) {
-        return HEROES.containsKey(objectId) && HEROES.get(objectId).getBoolean(CLAIMED);
-    }
-
-    /**
-     * Verifies if the given object ID belongs to an unclaimed hero.
-     *
-     * @param objectId the player's object ID to verify
-     * @return {@code true} if player is unclaimed hero
-     */
-    public boolean isUnclaimedHero(int objectId) {
-        return HEROES.containsKey(objectId) && !HEROES.get(objectId).getBoolean(CLAIMED);
-    }
-
-    /**
-     * Claims the hero status for the given player.
-     *
-     * @param player the player to become hero
-     */
-    public void claimHero(Player player) {
-        StatsSet hero = HEROES.get(player.getObjectId());
-        if (hero == null) {
-            hero = new StatsSet();
-            HEROES.put(player.getObjectId(), hero);
-        }
-
-        hero.set(CLAIMED, true);
-
-        final Clan clan = player.getClan();
-        if ((clan != null) && (clan.getLevel() >= 5)) {
-            clan.addReputationScore(Config.HERO_POINTS, true);
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION);
-            sm.addString(PlayerNameTable.getInstance().getNameById(player.getObjectId()));
-            sm.addInt(Config.HERO_POINTS);
-            clan.broadcastToOnlineMembers(sm);
-        }
-
-        player.setHero(true);
-        player.broadcastPacket(new SocialAction(player.getObjectId(), 20016)); // Hero Animation
-        player.sendPacket(new UserInfo(player));
-        player.broadcastUserInfo();
-        // Set Gained hero and reload data
-        setHeroGained(player.getObjectId());
-        loadDiary(player.getObjectId());
-        HERO_MESSAGE.put(player.getObjectId(), "");
-
-        updateHeroes(false);
     }
 
     public static void init() {

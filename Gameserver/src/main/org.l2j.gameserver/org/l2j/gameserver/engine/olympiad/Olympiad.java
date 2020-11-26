@@ -28,8 +28,10 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.OlympiadDAO;
 import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassInfo;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
@@ -39,8 +41,7 @@ import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExHeroList;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.olympiad.*;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -70,6 +71,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.engine.olympiad.OlympiadState.*;
+import static org.l2j.gameserver.network.NpcStringId.CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
@@ -113,6 +115,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private boolean transferPoints;
     private short minTiePoints;
     private short maxTiePoints;
+    private int heroReputation;
 
     private Olympiad() {
     }
@@ -122,10 +125,13 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         final var olympiadConfig= configNode.getFirstChild();
         if(nonNull(olympiadConfig) && olympiadConfig.getNodeName().equals("olympiad-config")) {
             final var attr = olympiadConfig.getAttributes();
+
             minParticipant = reader.parseInt(attr, "min-participant");
             forceStartDate = reader.parseBoolean(attr, "force-start-date");
+
             String strDate = reader.parseString(attr, "start-date");
             startDate = isNull(strDate) ? LocalDate.now() : LocalDate.parse(strDate);
+
             availableArenas = reader.parseIntArray(attr, "available-arena-instances");
             matchDuration = Duration.ofMinutes(reader.parseInt(attr, "match-duration"));
             initialPoints = reader.parseShort(attr, "initial-points");
@@ -137,6 +143,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             maxTiePoints = reader.parseShort(attr, "max-tie-points");
             transferPoints = reader.parseBoolean(attr, "transfer-points");
             maxBattlesPerDay = reader.parseShort(attr, "max-battles-per-day");
+
+            final var rewards = olympiadConfig.getFirstChild();
+            heroReputation = reader.parseInt(rewards.getAttributes(), "hero-reputation");
+
         }
     }
 
@@ -594,11 +604,46 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
     }
 
+    public boolean claimHero(Player player) {
+        if(isUnclaimedHero(player)) {
+            player.setHero(true);
+
+            player.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.HERO_CLAIMED));
+            final var className =  ClassListData.getInstance().getClass(player.getClassId()).getClassName();
+            showOnScreenMsg(player, CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS, ExShowScreenMessage.TOP_CENTER, 5000, player.getName(), className);
+            player.broadcastPacket(PlaySound.music("ns01_f"));
+            player.broadcastUserInfo(UserInfoType.SOCIAL);
+
+            addClanReputation(player);
+            getDAO(OlympiadDAO.class).claimHero(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isUnclaimedHero(Player player) {
+        return getDAO(OlympiadDAO.class).isUnclaimedHero(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+    }
+
+    public boolean isHero(int playerId) {
+        return getDAO(OlympiadDAO.class).isHero(playerId, getSettings(ServerSettings.class).serverId());
+    }
+
+    private void addClanReputation(Player player) {
+        final Clan clan = player.getClan();
+        if (heroReputation > 0 && nonNull(clan) && clan.getLevel() >= 5) {
+            clan.addReputationScore(heroReputation, true);
+            clan.broadcastToOnlineMembers(getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION)
+                    .addString(player.getName()).addInt(heroReputation));
+        }
+    }
+
     public void showMatchList(Player player) {
         player.sendPacket(new ExOlympiadMatchList(matches.values()));
     }
 
     public void showHeroHistory(Player player, int classId, int page) {
+        // TODO pagination
         final var matchesResult = getDAO(OlympiadDAO.class).findHeroHistoryByClassId(classId);
         if(!isNullOrEmpty(matchesResult)) {
             player.sendPacket( createHeroHistory(player, matchesResult) );

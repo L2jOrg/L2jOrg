@@ -268,4 +268,13 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
 
     @Query("TRUNCATE olympiad_matches")
     void deleteMatches();
+
+    @Query("SELECT EXISTS(SELECT 1 FROM olympiad_heroes WHERE player_id = :playerId: AND server = :server: AND claimed = FALSE)")
+    boolean isUnclaimedHero(int playerId, int server);
+
+    @Query("UPDATE olympiad_heroes SET claimed = TRUE WHERE player_id = :playerId: AND server = :server:")
+    void claimHero(int playerId, int server);
+
+    @Query("SELECT EXISTS(SELECT 1 FROM olympiad_heroes WHERE player_id = :playerId: AND server = :server: AND claimed = TRUE)")
+    boolean isHero(int playerId, int server);
 }

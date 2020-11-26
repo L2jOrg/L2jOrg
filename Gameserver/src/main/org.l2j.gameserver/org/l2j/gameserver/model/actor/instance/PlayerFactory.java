@@ -33,6 +33,7 @@ import org.l2j.gameserver.data.xml.impl.InitialShortcutData;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Clan;
@@ -42,7 +43,6 @@ import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.appearance.Appearance;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
@@ -106,7 +106,9 @@ public class PlayerFactory {
         player.setNoble(playerData.isNobless());
         player.getStats().setVitalityPoints(playerData.getVitalityPoints());
 
-        player.setHero(Hero.getInstance().isHero(playerId));
+        if(Olympiad.getInstance().isHero(playerId)) {
+            player.setHero(true);
+        }
 
         if(player.getLevel() >= 40) {
             player.initElementalSpirits();

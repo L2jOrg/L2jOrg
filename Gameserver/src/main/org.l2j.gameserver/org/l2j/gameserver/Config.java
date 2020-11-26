@@ -238,7 +238,6 @@ public final class Config {
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
 
-    public static int HERO_POINTS;
     public static int ROYAL_GUARD_COST;
     public static int KNIGHT_UNIT_COST;
     public static int REPUTATION_SCORE_PER_KILL;
@@ -825,7 +824,6 @@ public final class Config {
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
 
-        HERO_POINTS = Feature.getInt("HeroPoints", 1000);
         ROYAL_GUARD_COST = Feature.getInt("CreateRoyalGuardCost", 5000);
         KNIGHT_UNIT_COST = Feature.getInt("CreateKnightUnitCost", 10000);
         REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
