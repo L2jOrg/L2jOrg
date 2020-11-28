@@ -63,14 +63,6 @@ public class OlympiadParticipantData {
         return points;
     }
 
-    public static OlympiadParticipantData of(Player player, short points, int server) {
-        var data = new OlympiadParticipantData();
-        data.playerId = player.getObjectId();
-        data.points = points;
-        data.server = server;
-        return data;
-    }
-
     public void updatePoints(int points) {
         this.points = (short) Math.max(0, this.points + points);
     }
@@ -90,5 +82,13 @@ public class OlympiadParticipantData {
 
     public void resetBattlesToday() {
         battlesToday = 0;
+    }
+
+    public static OlympiadParticipantData of(Player player, short points, int server) {
+        var data = new OlympiadParticipantData();
+        data.playerId = player.getObjectId();
+        data.points = points;
+        data.server = server;
+        return data;
     }
 }

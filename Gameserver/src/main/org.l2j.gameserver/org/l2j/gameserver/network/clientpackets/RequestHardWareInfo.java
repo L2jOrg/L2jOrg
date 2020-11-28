@@ -90,7 +90,7 @@ public final class RequestHardWareInfo extends ClientPacket {
                 }
             }
             if (count >= serverSettings.maxPlayerPerHWID()) {
-                Disconnection.of(client).defaultSequence(false);
+                Disconnection.of(client).logout(false);
             }
         }
     }

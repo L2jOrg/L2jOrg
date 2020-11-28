@@ -436,7 +436,6 @@ public class Siege implements Siegable {
                     clan.increaseBloodAllianceCount();
                 } else {
                     castle.setTicketBuyCount(0);
-                    clan.forEachOnlineMember(noble -> Hero.getInstance().setCastleTaken(noble.getObjectId(), castle.getId()), Player::isNoble);
                 }
             } else {
                 Broadcast.toAllOnlinePlayers( getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addCastleId(castle.getId()));

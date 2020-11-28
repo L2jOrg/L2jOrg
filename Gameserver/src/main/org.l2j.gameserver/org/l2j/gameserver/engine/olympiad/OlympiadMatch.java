@@ -29,10 +29,12 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureTeleported;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCpChange;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.olympiad.*;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -60,10 +62,10 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private static final byte[] COUNT_DOWN_INTERVAL = {20, 10, 5, 4, 3, 2, 1, 0};
 
     private final ConsumerEventListener spectatorListener;
+    private final ConsumerEventListener logoutListener;
 
     private MatchState state;
     private Instance arena;
-    private int countDownIndex = 0;
     private ScheduledFuture<?> scheduled;
     private Duration duration;
     private FunctionEventListener deathListener;
@@ -72,10 +74,14 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private ConsumerEventListener cpListener;
     private Instant start;
     private Duration battleDuration;
+    private int countDownIndex = 0;
+
+    protected boolean runAway;
 
     OlympiadMatch() {
         state = MatchState.CREATED;
         spectatorListener = new ConsumerEventListener(null, EventType.ON_CREATURE_TELEPORTED, (Consumer<OnCreatureTeleported>) this::onSpectatorEnter, this);
+        logoutListener = new ConsumerEventListener(null, EventType.ON_PLAYER_LOGOUT, (Consumer<OnPlayerLogout>) this::onPlayerLogout, this);
     }
 
     @Override
@@ -124,33 +130,19 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private void updateParticipants(List<OlympiadResultInfo> winnerTeam, List<OlympiadResultInfo> loserTeam) {
         var olympiad = Olympiad.getInstance();
 
-        int winnerPoints;
-        var loserPoints = olympiad.getRandomLoserPoints();
-
-        if(loserPoints == 0) {
-            loserPoints = -1;
-        }
-
-        if(olympiad.isPointTransfer()) {
-            if(loserPoints > 0) {
-                loserPoints = -loserPoints;
-            }
-            winnerPoints = -loserPoints;
-        } else {
-            winnerPoints = olympiad.getRandomWinnerPoints();
-        }
+        var battlePoints = olympiad.getBattlePoints(loserTeam);
 
         final var loserLeader = loserTeam.get(0);
         final var winnerLeader = winnerTeam.get(0);
 
         for (var info : winnerTeam) {
-            var points = olympiad.updateVictory(info.getPlayer(), winnerPoints, loserLeader.getPlayer(), getBattleDuration());
-            info.updatePoints(points, winnerPoints);
+            var points = olympiad.updateVictory(info.getPlayer(), battlePoints, loserLeader.getPlayer(), getBattleDuration());
+            info.updatePoints(points, battlePoints);
         }
 
         for (var info : loserTeam) {
-            var points = olympiad.updateDefeat(info.getPlayer(), loserPoints,  winnerLeader.getPlayer(), getBattleDuration());
-            info.updatePoints(points, loserPoints);
+            var points = olympiad.updateDefeat(info.getPlayer(), -battlePoints,  winnerLeader.getPlayer(), getBattleDuration());
+            info.updatePoints(points, -battlePoints);
         }
     }
 
@@ -169,7 +161,6 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     private void processTie() {
         final var olympiad = Olympiad.getInstance();
-        final var tiePoints = olympiad.getRandomTiePoints();
 
         final var redTeam = getRedTeamResultInfo();
         final var blueTeam = getBlueTeamResultInfo();
@@ -177,13 +168,13 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         final var redLeader = redTeam.get(0);
 
         for (var info : redTeam) {
-            var points = olympiad.updateTie(info.getPlayer(), blueLeader.getPlayer(), tiePoints, getBattleDuration());
-            info.updatePoints(points, tiePoints);
+            var points = olympiad.updateTie(info.getPlayer(), blueLeader.getPlayer(), getBattleDuration());
+            info.updatePoints(points, 0);
         }
 
         for (var info : blueTeam) {
-            var points = olympiad.updateTie(info.getPlayer(), redLeader.getPlayer(), tiePoints, getBattleDuration());
-            info.updatePoints(points, tiePoints);
+            var points = olympiad.updateTie(info.getPlayer(), redLeader.getPlayer(), getBattleDuration());
+            info.updatePoints(points, 0);
         }
         sendMessage(THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
         arena.sendPacket(ExOlympiadMatchResult.tie(redTeam, blueTeam));
@@ -201,6 +192,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         player.removeListener(damageListener);
         player.removeListener(hpListener);
         player.removeListener(cpListener);
+        player.removeListener(logoutListener);
         player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
         player.setCurrentCp(player.getMaxCp());
     }
@@ -220,16 +212,16 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         Olympiad.getInstance().finishMatch(this);
     }
 
-    private void leaveOlympiadMode(Player player) {
+    protected void leaveOlympiadMode(Player player) {
         player.setOlympiadMatchId(-1);
         player.setOlympiadMode(OlympiadMode.NONE);
         player.sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
         arena.ejectPlayer(player);
         if(player.isInObserverMode()) {
             player.setObserving(false);
-            player.sendPackets(new ObservationReturn(player.getLocation()), new UserInfo(player), ExOlympiadInfo.hide(getType()));
-            Olympiad.getInstance().showOlympiadUI(player);
+            player.sendPackets(new ObservationReturn(player.getLocation()), new UserInfo(player));
         }
+        Olympiad.getInstance().showOlympiadUI(player);
     }
 
     private void countDown() {
@@ -290,17 +282,18 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     private void onParticipantEnter(Player player) {
-        player.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
-
-        player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
-        player.setCurrentCp(player.getMaxCp());
-
+        player.addListener(logoutListener);
+        player.sendPackets(new ExOlympiadMatchMakingResult(false, getType()), ExOlympiadInfo.hide(getType()));
+        player.getEffectList().stopEffects(this::notAllowedInOlympiad, true, true);
         player.checkItemRestriction();
 
         final var party = player.getParty();
         if (nonNull(party)) {
             party.removePartyMember(player, MessageType.EXPELLED);
         }
+
+        player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
+        player.setCurrentCp(player.getMaxCp());
 
         for (var skill : player.getAllSkills()) {
             if (skill.getReuseDelay() > 10 && skill.getReuseDelay() <= Duration.ofSeconds(15).toMillis()) {
@@ -310,6 +303,11 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
         player.sendSkillList();
         player.sendPacket(new SkillCoolTime(player));
+    }
+
+    private boolean notAllowedInOlympiad(BuffInfo info) {
+        final var skill = info.getSkill();
+        return skill.isBlockedInOlympiad() || skill.isDance();
     }
 
     private void onDamageReceived(OnCreatureDamageReceived event) {
@@ -341,6 +339,10 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         return null;
     }
 
+    private void onPlayerLogout(OnPlayerLogout event) {
+        processPlayerLogout(event.getPlayer());
+    }
+
     private void setOlympiadMode(Player player, OlympiadMode mode) {
         player.setOlympiadMode(mode);
         player.setOlympiadSide(mode.ordinal());
@@ -351,8 +353,6 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         state = MatchState.STARTED;
         scheduled = ThreadPool.schedule(this, 1, TimeUnit.MINUTES);
         sendMessage(AFTER_ABOUT_1_MINUTE_YOU_WILL_MOVE_TO_THE_OLYMPIAD_ARENA);
-        var makingResult = new ExOlympiadMatchMakingResult(false, getType());
-        forEachParticipant(makingResult::sendTo);
     }
 
     void addSpectator(Player player) {
@@ -370,6 +370,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     private void onSpectatorEnter(OnCreatureTeleported event) {
         var creature = event.getCreature();
+        creature.sendPacket(ExOlympiadInfo.hide(getType()));
         creature.removeListener(spectatorListener);
         forEachParticipant(this::sendOlympiadUserInfo);
         forEachParticipant(this::sendBuffInfo);
@@ -425,6 +426,8 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     protected abstract void onDamage(Player attacker, Player target, double damage);
 
     protected abstract boolean processPlayerDeath(Player player);
+
+    protected abstract void processPlayerLogout(Player player);
 
     static OlympiadMatch of(OlympiadRuleType type) {
         return new OlympiadClasslessMatch();

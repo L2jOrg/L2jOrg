@@ -80,7 +80,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
 
                 if(nonNull(activeChar )) {
                     activeChar.sendPacket(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE);
-                    Disconnection.of(activeChar).defaultSequence(false);
+                    Disconnection.of(activeChar).logout(false);
                 } else  {
                     oldClient.close(ServerClose.STATIC_PACKET);
                 }

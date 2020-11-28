@@ -23,7 +23,6 @@ import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.PlayerSelectInfo;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.RateSettings;

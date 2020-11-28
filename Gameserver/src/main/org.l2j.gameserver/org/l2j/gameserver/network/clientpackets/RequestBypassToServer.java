@@ -29,7 +29,6 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
@@ -43,8 +42,6 @@ import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.StringTokenizer;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isInteger;
@@ -68,7 +65,6 @@ public final class RequestBypassToServer extends ClientPacket {
         "_mail",
         "_friend",
         "_match",
-        "_diary",
         "_olympiad?command",
         "menu_select",
         "manor_menu_select",
@@ -97,7 +93,7 @@ public final class RequestBypassToServer extends ClientPacket {
 
         if (bypass.isEmpty()) {
             LOGGER.warn("Player {} sent empty bypass!", player);
-            Disconnection.of(client, player).defaultSequence(false);
+            Disconnection.of(client, player).logout(false);
             return;
         }
 
@@ -173,15 +169,6 @@ public final class RequestBypassToServer extends ClientPacket {
                     player.sendPacket(ActionFailed.STATIC_PACKET);
                 } catch (NumberFormatException nfe) {
                     LOGGER.warn("NFE for command [" + bypass + "]", nfe);
-                }
-            } else if (bypass.startsWith("_diary")) {
-                final String params = bypass.substring(bypass.indexOf("?") + 1);
-                final StringTokenizer st = new StringTokenizer(params, "&");
-                final int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
-                final int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
-                final int heroid = Hero.getInstance().getHeroByClass(heroclass);
-                if (heroid > 0) {
-                    Hero.getInstance().showHeroDiary(player, heroclass, heroid, heropage);
                 }
             } else if (bypass.startsWith("menu_select")) {
                 final Npc lastNpc = player.getLastFolkNPC();

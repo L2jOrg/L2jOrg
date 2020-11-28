@@ -255,7 +255,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
             }
             if (player.getClient() != null)
             {
-                Disconnection.of(player).defaultSequence(false);
+                Disconnection.of(player).logout(false);
             }
             else
             {
@@ -351,7 +351,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     public boolean saveSecondPassword(String password) {
         if (hasSecondPassword()) {
             LOGGER.warn("{} forced savePassword", this);
-            Disconnection.of(this).defaultSequence(false);
+            Disconnection.of(this).logout(false);
             return false;
         }
 
@@ -386,7 +386,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     public boolean changeSecondPassword(String password, String newPassword) {
         if (!hasSecondPassword()) {
             LOGGER.warn("{} forced changePassword", this);
-            Disconnection.of(this).defaultSequence(false);
+            Disconnection.of(this).logout(false);
             return false;
         }
 

@@ -24,6 +24,7 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.RestartResponse;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,15 +43,14 @@ public final class RequestRestart extends ClientPacket {
             return;
         }
 
-        if (!player.canLogout()) {
+        if (!GameUtils.canLogout(player)) {
             client.sendPackets(RestartResponse.FALSE, ActionFailed.STATIC_PACKET);
             return;
         }
 
-        LOGGER_ACCOUNTING.info("{} Logging out",  player);
-        Disconnection.of(client, player).storeMe().deleteMe();
-
-        client.setConnectionState(ConnectionState.AUTHENTICATED);
+        LOGGER_ACCOUNTING.info("{} Restarting",  player);
+        Disconnection.of(client, player).restart();
         client.sendPackets(RestartResponse.TRUE, new PlayerSelectionInfo(client));
+        client.setConnectionState(ConnectionState.AUTHENTICATED);
     }
 }
