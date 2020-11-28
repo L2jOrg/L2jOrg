@@ -180,8 +180,6 @@ public class SkillCaster implements Runnable {
                 triggerSkills(caster, skill, creature);
             }
 
-            skill.activateSkill(caster, item, targets.toArray(new WorldObject[0]));
-
             final Player player = caster.getActingPlayer();
             if (nonNull(player)) {
                 for (WorldObject obj : targets) {
@@ -192,6 +190,8 @@ public class SkillCaster implements Runnable {
                 }
                 notifyNpcSkillSee(caster, targets, skill, player);
             }
+
+            skill.activateSkill(caster, item, targets.toArray(new WorldObject[0]));
         } catch (Exception e) {
             LOGGER.warn(caster + " callSkill() failed.", e);
         }
