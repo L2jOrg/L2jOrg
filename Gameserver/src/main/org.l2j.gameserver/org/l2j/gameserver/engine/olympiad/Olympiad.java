@@ -39,6 +39,7 @@ import org.l2j.gameserver.model.eventengine.ScheduleTarget;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -98,7 +99,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private Set<Player> registered = ConcurrentHashMap.newKeySet(20);
     private Set<Player> matchMaking = ConcurrentHashMap.newKeySet(20);
 
-    private ConsumerEventListener onPlayerLoginListener;
+    private ConsumerEventListener loginListener;
+    private ConsumerEventListener logoutListener;
     private OlympiadData data = new OlympiadData();
     private OlympiadState state = OlympiadState.SCHEDULED;
     private LocalDate startDate;
@@ -173,8 +175,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         if(nonNull(scheduler)) {
             state = STARTED;
             var listeners = Listeners.players();
-            onPlayerLoginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
-            listeners.addListener(onPlayerLoginListener);
+            loginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
+            logoutListener = new ConsumerEventListener(null, EventType.ON_PLAYER_LOGOUT, (Consumer<OnPlayerLogout>) this::onPlayerLogout, this);
+            listeners.addListener(loginListener);
 
             Broadcast.toAllOnlinePlayers(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, (int) scheduler.getRemainingTime(TimeUnit.SECONDS)),
                                     getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_OLYMPIAD_MANAGER_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
@@ -204,8 +207,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return;
         }
         state = SCHEDULED;
-        if(nonNull(onPlayerLoginListener)) {
-            onPlayerLoginListener.unregisterMe();
+        if(nonNull(loginListener)) {
+            loginListener.unregisterMe();
         }
         Broadcast.toAllOnlinePlayers(ExOlympiadInfo.hide(OlympiadRuleType.CLASSLESS), getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED));
         matchMaking.clear();
@@ -369,6 +372,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
 
         registered.add(player);
+        player.addListener(logoutListener);
         player.sendPacket(YOU_VE_BEEN_REGISTERED_IN_THE_WAITING_LIST_OF_ALL_CLASS_BATTLE);
         showRecord(player);
         player.sendPackets(new ExOlympiadMatchMakingResult(true, OlympiadRuleType.CLASSLESS));
@@ -416,6 +420,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     void startMatch(OlympiadMatch match) {
         matches.put(match.getId(), match);
+        match.forEachParticipant(this::removeLogoutListener);
+    }
+
+    private void removeLogoutListener(Player player) {
+        player.removeListener(logoutListener);
     }
 
     void finishMatch(OlympiadMatch match) {
@@ -427,6 +436,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public void unregisterPlayer(Player player, OlympiadRuleType ruleType) {
+        player.removeListener(logoutListener);
         if(registered.remove(player)) {
             player.sendPacket(YOU_HAVE_BEEN_REMOVED_FROM_THE_OLYMPIAD_WAITING_LIST);
             player.sendPacket(new ExOlympiadMatchMakingResult(false, ruleType));
@@ -438,9 +448,18 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return player.isInOlympiadMode() || registered.contains(player);
     }
 
-    protected void onPlayerLogout(Player player) {
+    protected void onPlayerLogout(OnPlayerLogout event) {
+        final var player = event.getPlayer();
         LOGGER.warn("player has logged out while in Olympiad");
         unregisterPlayer(player, OlympiadRuleType.CLASSLESS);
+        matchMaking.remove(player);
+        applyDismissPenalty(player);
+    }
+
+    void applyDismissPenalty(Player player) {
+        final var data = participantDataOf(player);
+        data.updatePoints(data.getPoints() / -5);
+        getDAO(OlympiadDAO.class).save(data);
     }
 
     public int getSeasonMonth() {
@@ -510,9 +529,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         data.increaseBattlesToday();
 
         final int server =  getSettings(ServerSettings.class).serverId();
-        getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), server, data.getPoints());
+        getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), server, data.getPoints(), data.getBattlesToday());
         getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, winnerLeader, PlayerMatchResult.LOSS, data, battleDuration));
-        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(winnerLeader.getName(), winnerLeader.getClassId().getId(), winnerLeader.getLevel(), (byte) 1));
+        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(winnerLeader.getName(), winnerLeader.getClassId().getId(), winnerLeader.getLevel(), (byte) 0));
         return data.getPoints();
     }
 
@@ -522,9 +541,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         data.increaseVictory();
         data.increaseBattlesToday();
         final int server = getSettings(ServerSettings.class).serverId();
-        getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), server, data.getPoints());
+        getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), server, data.getPoints(), data.getBattlesToday());
         getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, loserLeader, PlayerMatchResult.VICTORY, data, battleDuration));
-        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(loserLeader.getName(), loserLeader.getClassId().getId(), loserLeader.getLevel(), (byte) 0));
+        recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(loserLeader.getName(), loserLeader.getClassId().getId(), loserLeader.getLevel(), (byte) 1));
         return data.getPoints();
     }
 
@@ -533,7 +552,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         data.increaseBattlesToday();
 
         final int server = getSettings(ServerSettings.class).serverId();
-        getDAO(OlympiadDAO.class).updateTie(player.getObjectId(), server, data.getPoints());
+        getDAO(OlympiadDAO.class).updateTie(player.getObjectId(), server, data.getPoints(), data.getBattlesToday());
         getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, enemy, PlayerMatchResult.DRAW, data, battleDuration));
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(enemy.getName(), enemy.getClassId().getId(), enemy.getLevel(), (byte) 2));
         return data.getPoints();

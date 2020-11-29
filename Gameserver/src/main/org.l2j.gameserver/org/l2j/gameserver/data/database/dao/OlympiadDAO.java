@@ -38,14 +38,14 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
 
     void save(OlympiadParticipantData data);
 
-    @Query("UPDATE olympiad_participants SET points = :points:, battles = battles+1, battles_today = battles_today+1,  battles_won = battles_won+1 WHERE player_id = :playerId: AND server = :server:")
-    void updateVictory(int playerId, int server, short points);
+    @Query("UPDATE olympiad_participants SET points = :points:, battles = battles+1, battles_today = :battlesToday:,  battles_won = battles_won+1 WHERE player_id = :playerId: AND server = :server:")
+    void updateVictory(int playerId, int server, short points, short battlesToday);
 
-    @Query("UPDATE olympiad_participants SET points = :points:, battles_lost = battles_lost+1, battles = battles+1, battles_today=battles_today+1 WHERE player_id = :playerId: AND server = :server:")
-    void updateDefeat(int playerId, int server, short points);
+    @Query("UPDATE olympiad_participants SET points = :points:, battles_lost = battles_lost+1, battles = battles+1, battles_today=:battlesToday: WHERE player_id = :playerId: AND server = :server:")
+    void updateDefeat(int playerId, int server, short points, short battlesToday);
 
-    @Query("UPDATE olympiad_participants SET points = :points:, battles = battles+1, battles_today=battles_today+1 WHERE player_id = :playerId: AND server = :server:")
-    void updateTie(int playerId, int server, int points);
+    @Query("UPDATE olympiad_participants SET points = :points:, battles = battles+1, battles_today=:battlesToday: WHERE player_id = :playerId: AND server = :server:")
+    void updateTie(int playerId, int server, int points, short battlesToday);
 
     void save(Collection<OlympiadParticipantData> data);
 
@@ -78,6 +78,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
     LEFT JOIN olympiad_heroes_history h ON rc.player_id = h.player_id AND rc.server = h.server  
     WHERE base_rank IS NOT NULL AND  rc.class_id = :classId:  AND rc.`rank` BETWEEN  base_rank - 10 AND base_rank + 10
+    ORDER BY rc.`rank`
     """)
     List<OlympiadRankData> findPreviousRankersNextToPlayerByClass(int playerId, int classId);
 
@@ -87,7 +88,9 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     JOIN characters c ON c.charId = r.player_id  
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
     LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server
-    WHERE r.class_id = :classId: AND (:server: = 0 OR r.server = :server: ) LIMIT 50
+    WHERE r.class_id = :classId: AND (:server: = 0 OR r.server = :server: )
+    ORDER BY r.`rank` 
+    LIMIT 50
     """)
     List<OlympiadRankData> findPreviousRankersByClass(int classId, int server);
 
@@ -97,6 +100,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     JOIN characters c ON c.charId = r.player_id  
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
     LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server
+    ORDER BY r.`rank`
     LIMIT 100
     """)
     List<OlympiadRankData> findPreviousRankers();
@@ -109,6 +113,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
     LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server
     WHERE base_rank IS NOT NULL AND r.`rank` BETWEEN  base_rank - 10 AND base_rank + 10
+    ORDER BY r.`rank`
     """)
     List<OlympiadRankData> findPreviousRankersNextToPlayer(int playerId);
 
@@ -128,6 +133,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
     LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server 
     WHERE r.player_id = :playerId: AND  r.server = :server:
+    ORDER BY r.`rank`
     """)
     OlympiadRankData findPreviousRankData(int playerId, int server);
 

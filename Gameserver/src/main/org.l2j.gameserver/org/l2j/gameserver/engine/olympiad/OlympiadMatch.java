@@ -96,6 +96,10 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     protected void finishBattle() {
+        if(state == FINISHED) {
+            return;
+        }
+
         if(!scheduled.isDone()) {
             scheduled.cancel(true);
         }
@@ -186,13 +190,12 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         player.forgetTarget();
         player.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
         player.setIsOlympiadStart(false);
-        player.setOlympiadMatchId(0);
+        player.setOlympiadMatchId(-1);
         player.setInsideZone(ZoneType.PVP, false);
         player.removeListener(deathListener);
         player.removeListener(damageListener);
         player.removeListener(hpListener);
         player.removeListener(cpListener);
-        player.removeListener(logoutListener);
         player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
         player.setCurrentCp(player.getMaxCp());
     }
@@ -215,8 +218,9 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     protected void leaveOlympiadMode(Player player) {
         player.setOlympiadMatchId(-1);
         player.setOlympiadMode(OlympiadMode.NONE);
-        player.sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
+        player.sendPackets(new ExOlympiadMode(OlympiadMode.NONE), new ExOlympiadMatchMakingResult(false, getType()));
         arena.ejectPlayer(player);
+        player.removeListener(logoutListener);
         if(player.isInObserverMode()) {
             player.setObserving(false);
             player.sendPackets(new ObservationReturn(player.getLocation()), new UserInfo(player));
@@ -248,7 +252,6 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     private void onMatchStart(Player player) {
-        player.setOlympiadMatchId(getId());
         player.setIsOlympiadStart(true);
         player.setInsideZone(ZoneType.PVP, true);
         player.addListener(deathListener);
@@ -270,10 +273,20 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     private void teleportToArena() {
         state = WARM_UP;
         sendMessage(YOU_WILL_SHORTLY_MOVE_TO_THE_OLYMPIAD_ARENA);
+
+        forEachParticipant(this::checkRequirements);
+
+        if(state == FINISHED) {
+            cleanUpMatch();
+            final var packet = new ExOlympiadMatchMakingResult(false, getType());
+            forEachParticipant(packet::sendTo);
+            return;
+        }
+
         forRedPlayers(player -> setOlympiadMode(player, OlympiadMode.RED));
         forBluePlayers(player -> setOlympiadMode(player, OlympiadMode.BLUE));
-
         var locations = arena.getEnterLocations();
+
         teleportPlayers(locations.get(0), locations.get(1), arena);
         scheduled = ThreadPool.schedule(this, 10, TimeUnit.SECONDS);
         Olympiad.getInstance().startMatch(this);
@@ -281,9 +294,42 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         forEachParticipant(this::onParticipantEnter);
     }
 
+    private void checkRequirements(Player player) {
+        boolean valid = true;
+
+        if(player.isTeleporting()) {
+            final var msg = getSystemMessage(C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD).addPcName(player);
+            forEachParticipant(msg::sendTo);
+            valid = false;
+        } else if(player.isDead()) {
+            final var msg = getSystemMessage(C1_IS_CURRENTLY_DEAD_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD).addPcName(player);
+            forEachParticipant(msg::sendTo);
+            valid = false;
+        } else if(!player.isInventoryUnder80()) {
+            final var msg = getSystemMessage(C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_FOR_OLYMPIAD_AS_THE_INVENTORY_WEIGHT_SLOT_EXCEEDS_80).addPcName(player);
+            forEachParticipant(msg::sendTo);
+            valid = false;
+        } else if(player.isFishing()) {
+            final var msg = getSystemMessage(S1_ON_SCREEN).addString(player.getName() + " is currently fishing and cannot participate in the Olympiad");
+            forEachParticipant(msg::sendTo);
+            valid = false;
+        } else if(player.isInTimedHuntingZone() || player.isInInstance()) {
+            final var msg = getSystemMessage(S1_ON_SCREEN).addString(player.getName() + " is currently in timed hunting zone and cannot participate in the Olympiad");
+            forEachParticipant(msg::sendTo);
+            valid = false;
+        }
+
+
+        if(!valid) {
+            state = FINISHED;
+            Olympiad.getInstance().applyDismissPenalty(player);
+        }
+    }
+
     private void onParticipantEnter(Player player) {
         player.addListener(logoutListener);
-        player.sendPackets(new ExOlympiadMatchMakingResult(false, getType()), ExOlympiadInfo.hide(getType()));
+        player.setOlympiadMatchId(getId());
+        player.sendPackets(ExOlympiadInfo.hide(getType()));
         player.getEffectList().stopEffects(this::notAllowedInOlympiad, true, true);
         player.checkItemRestriction();
 

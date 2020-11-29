@@ -2917,7 +2917,7 @@ public final class SystemMessageId {
     @ClientString(id = 1478, message = "You can register a 24 bit 256x256 or 32 bit TGA or BMP file.")
     public static SystemMessageId YOU_CAN_REGISTER_A_24_BIT_256X256_OR_32_BIT_TGA_OR_BMP_FILE;
 
-        @ClientString(id = 1480, message = "Are you sure you wish to remove yourself from the Olympiad waiting list?")
+    @ClientString(id = 1480, message = "Are you sure you wish to remove yourself from the Olympiad waiting list?")
     public static SystemMessageId ARE_YOU_SURE_YOU_WISH_TO_REMOVE_YOURSELF_FROM_THE_OLYMPIAD_WAITING_LIST;
 
     @ClientString(id = 1481, message = "You have selected an All-Class Battle. Do you wish to participate?")
@@ -3928,9 +3928,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 2026, message = "$c1 cannot duel because $c1 is participating in a siege war.")
     public static SystemMessageId C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_A_SIEGE_WAR;
-
-    @ClientString(id = 2029, message = "$c1 is currently teleporting and cannot participate in the Olympiad.")
-    public static SystemMessageId C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
 
     @ClientString(id = 2030, message = "Logging in…")
     public static SystemMessageId LOGGING_IN;
@@ -6423,9 +6420,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 3271, message = "Current Progress: $s1")
     public static SystemMessageId CURRENT_PROGRESS_S1;
-
-    @ClientString(id = 3272, message = "$s1")
-    public static SystemMessageId S1_ON_SCREEN;
 
     @ClientString(id = 3273, message = "Trap is not installed, therefore the skill can't be used.")
     public static SystemMessageId TRAP_IS_NOT_INSTALLED_THEREFORE_THE_SKILL_CAN_T_BE_USED;
@@ -16251,6 +16245,9 @@ public final class SystemMessageId {
     @ClientString(id = 2027, message = "$c1 cannot duel because $c1 is currently riding a boat, fenrir, or strider.")
     public static SystemMessageId C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
 
+    @ClientString(id = 2029, message = "$c1 is currently teleporting and cannot participate in the Olympiad.")
+    public static SystemMessageId C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
+
     @ClientString(id = 2028, message = "$c1 is too far away to receive a duel challenge.")
     public static SystemMessageId C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE;
 
@@ -17221,6 +17218,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 3765, message = "Current Location: $s1 / $s2 / $s3 (inside the Seed of Hellfire)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_INSIDE_THE_SEED_OF_HELLFIRE;
+
+    @ClientString(id = 3272, message = "$s1")
+    public static SystemMessageId S1_ON_SCREEN;
 
     @ClientString(id = 3774, message = "Only characters who are a part of a clan of level 3 or above may participate.")
     public static SystemMessageId ONLY_CHARACTERS_WHO_ARE_A_PART_OF_A_CLAN_OF_LEVEL_3_OR_ABOVE_MAY_PARTICIPATE;
