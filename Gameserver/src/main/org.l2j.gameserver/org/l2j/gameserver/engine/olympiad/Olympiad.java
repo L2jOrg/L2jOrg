@@ -21,6 +21,7 @@ package org.l2j.gameserver.engine.olympiad;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.collection.LimitedQueue;
@@ -48,6 +49,7 @@ import org.l2j.gameserver.network.serverpackets.olympiad.*;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
@@ -231,21 +233,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         if(LocalDate.now().compareTo(data.getNextSeasonDate()) >= 0) {
             final var olympiadDAO = getDAO(OlympiadDAO.class);
 
-            olympiadDAO.deleteHeroes();
-            removeOnlineHeroes();
-            olympiadDAO.saveHeroes();
-            olympiadDAO.updateHeroesHistory();
-            olympiadDAO.deleteHeroesMatches();
-            olympiadDAO.saveHeroesMatches();
-            olympiadDAO.deleteMatches();
-            olympiadDAO.saveRankSnapshot();
-            olympiadDAO.deletePreviousRankSnapshot();
-            olympiadDAO.saveRankClassSnapshot();
-            olympiadDAO.deletePreviousRankClassSnapshot();
-            olympiadDAO.updateLegend();
-            olympiadDAO.updateLegendHistory();
-            olympiadDAO.updateOlympiadHistory(data.getSeason());
-            olympiadDAO.deleteParticipants();
+            processHeroes(olympiadDAO);
+            processRank(olympiadDAO);
+
             participantsData.clear();
             history.clear();
 
@@ -255,8 +245,38 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
     }
 
-    private void removeOnlineHeroes() {
-        // TODO
+    private void processRank(OlympiadDAO olympiadDAO) {
+        olympiadDAO.saveRankSnapshot();
+        olympiadDAO.deletePreviousRankSnapshot();
+        olympiadDAO.saveRankClassSnapshot();
+        olympiadDAO.deletePreviousRankClassSnapshot();
+        olympiadDAO.updateLegend();
+        olympiadDAO.updateLegendHistory();
+        olympiadDAO.updateOlympiadHistory(data.getSeason());
+        olympiadDAO.deleteParticipants();
+    }
+
+    private void processHeroes(OlympiadDAO olympiadDAO) {
+        removeOnlineHeroes(olympiadDAO);
+        olympiadDAO.deleteHeroes();
+        olympiadDAO.saveHeroes();
+        olympiadDAO.updateHeroesHistory();
+        olympiadDAO.deleteHeroesMatches();
+        olympiadDAO.saveHeroesMatches();
+        olympiadDAO.deleteMatches();
+    }
+
+    private void removeOnlineHeroes(OlympiadDAO olympiadDAO) {
+        IntSet heroesIds = olympiadDAO.findHeroesId(getSettings(ServerSettings.class).serverId());
+        heroesIds.forEach(this::removeHero);
+    }
+
+    private void removeHero(int heroId) {
+        final var player = World.getInstance().findPlayer(heroId);
+        if(nonNull(player)) {
+            player.setHero(false);
+            player.broadcastUserInfo(UserInfoType.SOCIAL);
+        }
     }
 
     public void showHeroList(Player player) {

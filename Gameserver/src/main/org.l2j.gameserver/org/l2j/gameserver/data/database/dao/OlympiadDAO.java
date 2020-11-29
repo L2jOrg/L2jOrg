@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.*;
@@ -283,4 +284,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
 
     @Query("SELECT EXISTS(SELECT 1 FROM olympiad_heroes WHERE player_id = :playerId: AND server = :server: AND claimed = TRUE)")
     boolean isHero(int playerId, int server);
+
+    @Query("SELECT player_id FROM olympiad_heroes WHERE server = :server:")
+    IntSet findHeroesId(int serverId);
 }
