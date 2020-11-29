@@ -29,6 +29,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.OlympiadDAO;
 import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
@@ -105,44 +106,14 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private ConsumerEventListener logoutListener;
     private OlympiadData data = new OlympiadData();
     private OlympiadState state = OlympiadState.SCHEDULED;
-    private LocalDate startDate;
-    private Duration matchDuration;
-
-    private boolean forceStartDate;
-    private int minParticipant;
-    private int[] availableArenas;
-    private short initialPoints;
-    private short maxBattlesPerDay;
-    private short minBattlePoints;
-    private short maxBattlePoints;
-    private int heroReputation;
+    private OlympiadSettings settings;
 
     private Olympiad() {
     }
 
     @Override
     public void config(GameXmlReader reader, Node configNode) {
-        final var olympiadConfig= configNode.getFirstChild();
-        if(nonNull(olympiadConfig) && olympiadConfig.getNodeName().equals("olympiad-config")) {
-            final var attr = olympiadConfig.getAttributes();
-
-            minParticipant = reader.parseInt(attr, "min-participant");
-            forceStartDate = reader.parseBoolean(attr, "force-start-date");
-
-            String strDate = reader.parseString(attr, "start-date");
-            startDate = isNull(strDate) ? LocalDate.now() : LocalDate.parse(strDate);
-
-            availableArenas = reader.parseIntArray(attr, "available-arena-instances");
-            matchDuration = Duration.ofMinutes(reader.parseInt(attr, "match-duration"));
-            initialPoints = reader.parseShort(attr, "initial-points");
-            minBattlePoints = reader.parseShort(attr, "min-points");
-            maxBattlePoints = reader.parseShort(attr, "max-points");
-            maxBattlesPerDay = reader.parseShort(attr, "max-battles-per-day");
-
-            final var rewards = olympiadConfig.getFirstChild();
-            heroReputation = reader.parseInt(rewards.getAttributes(), "hero-reputation");
-
-        }
+        settings = OlympiadSettings.parse(reader, configNode);
     }
 
     @Override
@@ -151,11 +122,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
         if(isNull(data)) {
             data = new OlympiadData();
-            data.setNextSeasonDate(startDate);
+            data.setNextSeasonDate(settings.startDate);
             data.setId(1);
             getDAO(OlympiadDAO.class).save(data);
-        } else if(forceStartDate || isNull(data.getNextSeasonDate())) {
-            data.setNextSeasonDate(startDate);
+        } else if(settings.forceStartDate || isNull(data.getNextSeasonDate())) {
+            data.setNextSeasonDate(settings.startDate);
         }
 
         if(data.getNextSeasonDate().isAfter(LocalDate.now())) {
@@ -165,6 +136,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
 
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.OLYMPIAD_ID);
+
+        var listeners = Listeners.players();
+        loginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
+        listeners.addListener(loginListener);
     }
 
     @ScheduleTarget
@@ -176,10 +151,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         var scheduler = getScheduler("stop-match");
         if(nonNull(scheduler)) {
             state = STARTED;
-            var listeners = Listeners.players();
-            loginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
             logoutListener = new ConsumerEventListener(null, EventType.ON_PLAYER_LOGOUT, (Consumer<OnPlayerLogout>) this::onPlayerLogout, this);
-            listeners.addListener(loginListener);
 
             Broadcast.toAllOnlinePlayers(ExOlympiadInfo.show(OlympiadRuleType.CLASSLESS, (int) scheduler.getRemainingTime(TimeUnit.SECONDS)),
                                     getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_OLYMPIAD_MANAGER_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
@@ -189,7 +161,12 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private void onPlayerLogin(OnPlayerLogin event) {
-        showOlympiadUI(event.getPlayer());
+        final var player = event.getPlayer();
+        showOlympiadUI(player);
+        if(player.isHero()) {
+            giveHeroSkills(player);
+        }
+
     }
 
     void showOlympiadUI(Player player) {
@@ -209,9 +186,6 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return;
         }
         state = SCHEDULED;
-        if(nonNull(loginListener)) {
-            loginListener.unregisterMe();
-        }
         Broadcast.toAllOnlinePlayers(ExOlympiadInfo.hide(OlympiadRuleType.CLASSLESS), getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED));
         matchMaking.clear();
         registered.clear();
@@ -276,6 +250,10 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         if(nonNull(player)) {
             player.setHero(false);
             player.broadcastUserInfo(UserInfoType.SOCIAL);
+
+            for (Skill skill : settings.heroSkills) {
+                player.removeSkill(skill, false);
+            }
         }
     }
 
@@ -303,12 +281,12 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return participantDataOf(player).getPoints();
     }
 
-    public int getRemainingDailyMatches(Player player) {
-        return maxBattlesPerDay - participantDataOf(player).getBattlesToday();
+    private int getRemainingDailyMatches(Player player) {
+        return settings.maxBattlesPerDay - participantDataOf(player).getBattlesToday();
     }
 
     public short getMaxBattlesPerDay() {
-        return maxBattlesPerDay;
+        return settings.maxBattlesPerDay;
     }
 
     public void requestMatchMaking(Player player) {
@@ -397,7 +375,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         showRecord(player);
         player.sendPackets(new ExOlympiadMatchMakingResult(true, OlympiadRuleType.CLASSLESS));
 
-        if(state != MATCH_MAKING && registered.size() >= minParticipant) {
+        if(state != MATCH_MAKING && registered.size() >= settings.minParticipant) {
             state = MATCH_MAKING;
             ThreadPool.schedule(this::distributeAndStartMatches, 1, TimeUnit.MINUTES);
         }
@@ -425,9 +403,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private void newMatch(Iterator<Player> participants) {
         OlympiadMatch match = OlympiadMatch.of(OlympiadRuleType.CLASSLESS);
-        var arena = InstanceManager.getInstance().createInstance(Rnd.get(availableArenas));
+        var arena = InstanceManager.getInstance().createInstance(Rnd.get(settings.availableArenas));
         match.setArenaInstance(arena);
-        match.setMatchDuration(matchDuration);
+        match.setMatchDuration(settings.matchDuration);
 
         for (int i = 0; i < OlympiadRuleType.CLASSLESS.participantCount(); i++) {
             var participant = participants.next();
@@ -535,7 +513,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private OlympiadParticipantData loadOrCreateParticipantData(Player player) {
         OlympiadParticipantData data = getDAO(OlympiadDAO.class).findParticipantData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
         if(isNull(data)) {
-            data = OlympiadParticipantData.of(player, initialPoints, getSettings(ServerSettings.class).serverId());
+            data = OlympiadParticipantData.of(player, settings.initialPoints, getSettings(ServerSettings.class).serverId());
             getDAO(OlympiadDAO.class).save(data);
         }
         participantsData.put(player.getObjectId(), data);
@@ -579,7 +557,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     int getBattlePoints(List<OlympiadResultInfo> loserTeam) {
-        int points =  Rnd.get(minBattlePoints, maxBattlePoints);
+        int points =  Rnd.get(settings.minBattlePoints, settings.maxBattlePoints);
         for (OlympiadResultInfo resultInfo : loserTeam) {
             var data = participantDataOf(resultInfo.getPlayer());
             points = Math.min(data.getPoints(), points);
@@ -645,9 +623,22 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             final var className =  ClassListData.getInstance().getClass(player.getClassId()).getClassName();
             showOnScreenMsg(player, CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS, ExShowScreenMessage.TOP_CENTER, 5000, player.getName(), className);
             player.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.HERO_CLAIMED));
+
+            for (var reward : settings.heroRewards) {
+                player.getInventory().addItem("Olympiad", reward.getId(), reward.getCount(), null, null);
+            }
+
+            giveHeroSkills(player);
+
             return true;
         }
         return false;
+    }
+
+    private void giveHeroSkills(Player player) {
+        for (var skill : settings.heroSkills) {
+            player.addSkill(skill, false);
+        }
     }
 
     public boolean isUnclaimedHero(Player player) {
@@ -660,11 +651,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private void addClanReputation(Player player) {
         final Clan clan = player.getClan();
-        if (heroReputation > 0 && nonNull(clan) && clan.getLevel() >= 5) {
-            clan.addReputationScore(heroReputation, true);
-            player.sendPacket(getSystemMessage(YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION).addInt(heroReputation));
+        if (settings.heroReputation > 0 && nonNull(clan) && clan.getLevel() >= 5) {
+            clan.addReputationScore(settings.heroReputation, true);
+            player.sendPacket(getSystemMessage(YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION).addInt(settings.heroReputation));
             clan.broadcastToOtherOnlineMembers(getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION)
-                    .addString(player.getName()).addInt(heroReputation), player);
+                    .addString(player.getName()).addInt(settings.heroReputation), player);
         }
     }
 
@@ -746,9 +737,28 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
     }
 
+    void giveWinnerRewards(Player player) {
+        for (var reward : settings.winnerRewards) {
+            player.getInventory().addItem("Olympiad", reward.getId(), reward.getCount(), null, null);
+        }
+    }
+
+    public void giveLoserRewards(Player player) {
+        for (var reward : settings.loserRewards) {
+            player.getInventory().addItem("Olympiad", reward.getId(), reward.getCount(), null, null);
+        }
+    }
+
+    public void giveTieRewards(Player player) {
+        for (var reward : settings.tieRewards) {
+            player.getInventory().addItem("Olympiad", reward.getId(), reward.getCount(), null, null);
+        }
+    }
+
     public static Olympiad getInstance() {
         return Singleton.INSTANCE;
     }
+
 
     private static class Singleton {
         private static final Olympiad INSTANCE = new Olympiad();

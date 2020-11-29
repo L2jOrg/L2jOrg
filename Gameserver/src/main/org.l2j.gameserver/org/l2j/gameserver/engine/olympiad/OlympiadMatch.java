@@ -113,7 +113,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     private void processResult() {
-        var result = calcResult();
+        var result = battleResult();
         switch (result) {
             case TIE -> processTie();
             case RED_WIN -> processRedVictory();
@@ -213,6 +213,25 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         arena.forEachPlayer(this::leaveOlympiadMode);
         arena.destroy();
         Olympiad.getInstance().finishMatch(this);
+        if(!runAway) {
+            giveRewards();
+        }
+    }
+
+    private void giveRewards() {
+        final var result = battleResult();
+        final var olympiad = Olympiad.getInstance();
+        switch (result) {
+            case BLUE_WIN -> {
+                forBluePlayers(olympiad::giveWinnerRewards);
+                forRedPlayers(olympiad::giveLoserRewards);
+            }
+            case RED_WIN -> {
+                forRedPlayers(olympiad::giveWinnerRewards);
+                forBluePlayers(olympiad::giveLoserRewards);
+            }
+            case TIE -> forEachParticipant(olympiad::giveTieRewards);
+        };
     }
 
     protected void leaveOlympiadMode(Player player) {
@@ -467,7 +486,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     protected abstract void teleportPlayers(Location redLocation, Location blueLocation, Instance arena);
 
-    protected abstract OlympiadResult calcResult();
+    protected abstract OlympiadResult battleResult();
 
     protected abstract void onDamage(Player attacker, Player target, double damage);
 

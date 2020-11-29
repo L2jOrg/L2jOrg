@@ -111,7 +111,7 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     }
 
     @Override
-    protected OlympiadResult calcResult() {
+    protected OlympiadResult battleResult() {
         OlympiadResult result = OlympiadResult.TIE;
         if(nonNull(defeated)) {
             result =  defeated == blue ? OlympiadResult.RED_WIN : OlympiadResult.BLUE_WIN;
