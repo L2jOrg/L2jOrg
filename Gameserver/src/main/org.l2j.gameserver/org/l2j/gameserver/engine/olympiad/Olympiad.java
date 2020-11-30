@@ -299,8 +299,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         player.sendPacket(htmlMessage);
     }
 
-    public boolean checkLevelAndClassResction(Player player) {
-        return player.getLevel() >= 70 && player.getClassId().level() >= 2;
+    public boolean checkLevelAndClassRestriction(Player player) {
+        return player.getLevel() >= settings.minLevel && player.getClassId().level() >= settings.minClassLevel;
     }
 
     private boolean validateMatchMaking(Player player) {
@@ -309,7 +309,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return false;
         }
 
-        if(!checkLevelAndClassResction(player)) {
+        if(!checkLevelAndClassRestriction(player)) {
             player.sendPacket(YOU_MUST_LEVEL_70_OR_HIGHER_AND_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_IN_ORDER_TO_PARTICIPATE_IN_A_MATCH);
             return false;
         }

@@ -23,8 +23,6 @@ import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import static org.l2j.gameserver.network.SystemMessageId.FOR_THE_CURRENT_OLYMPIAD_YOU_HAVE_PARTICIPATED_IN_S1_MATCH_ES_AND_HAD_S2_WIN_S_AND_S3_DEFEAT_S_YOU_CURRENTLY_HAVE_S4_OLYMPIAD_POINT_S;
-
 /**
  * Olympiad Stat user command.
  * @author JoeAlisson
@@ -37,7 +35,7 @@ public class OlympiadStat implements IUserCommandHandler {
 	
 	@Override
 	public boolean useUserCommand(int id, Player player) {
-		if (!Olympiad.getInstance().checkLevelAndClassResction(player)) {
+		if (!Olympiad.getInstance().checkLevelAndClassRestriction(player)) {
 			player.sendPacket(SystemMessageId.THIS_COMMAND_IS_AVAILABLE_ONLY_WHEN_THE_TARGET_HAS_COMPLETED_THE_2ND_CLASS_TRANSFER);
 			return false;
 		}
