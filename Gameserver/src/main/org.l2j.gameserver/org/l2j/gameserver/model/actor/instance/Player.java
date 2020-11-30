@@ -5998,24 +5998,6 @@ public final class Player extends Playable {
         return false;
     }
 
-    public boolean canLogout() {
-        if (hasItemRequest() || hasRequest(CaptchaRequest.class)) {
-            return false;
-        }
-
-        if (isClassLocked()) {
-            LOGGER.warn("Player {} tried to restart/logout during class change.", this);
-            return false;
-        }
-
-        if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(this) && !isGM()) {
-            return false;
-        }
-
-        return !isBlockedFromExit();
-
-    }
-
     /**
      * Return True if the Player is autoAttackable.<br>
      * <B><U>Actions</U>:</B>
@@ -6161,7 +6143,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isInOlympiadMode() && isPlayable(target) && (!isOlympiadStart() || getOlympiadMatchId() != target.getActingPlayer().getOlympiadMatchId())) {
+        if (isInOlympiadMode() && isPlayable(target) && ( (!isOlympiadStart() && skill.isBad()) || getOlympiadMatchId() != target.getActingPlayer().getOlympiadMatchId())) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -6699,7 +6681,6 @@ public final class Player extends Playable {
             }
         }
         _hero = hero;
-
         sendSkillList();
     }
 
@@ -7457,7 +7438,6 @@ public final class Player extends Playable {
      */
     @Override
     public boolean deleteMe() {
-        EventDispatcher.getInstance().notifyEvent(new OnPlayerLogout(this), this);
         AutoPlayEngine.getInstance().stopTasks(this);
         try {
             for (Zone zone : ZoneManager.getInstance().getZones(this)) {

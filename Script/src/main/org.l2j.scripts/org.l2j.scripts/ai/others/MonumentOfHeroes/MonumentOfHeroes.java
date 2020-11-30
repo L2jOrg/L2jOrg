@@ -19,14 +19,11 @@
  */
 package org.l2j.scripts.ai.others.MonumentOfHeroes;
 
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 /**
@@ -110,82 +107,52 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 				}
 				break;
 			}
-			case "heroWeapon":
-			{
-				if (Hero.getInstance().isHero(player.getObjectId()))
-				{
-					if (player.isInventoryUnder80())
-					{
+			case "heroWeapon": {
+				if (player.isHero()) {
+					if (player.isInventoryUnder80()) {
 						htmltext = hasAtLeastOneQuestItem(player, WEAPONS) ? "MonumentOfHeroes-weaponHave.html" : "MonumentOfHeroes-weaponList.html";
-					}
-					else
-					{
+					} else {
 						player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 					}
-				}
-				else
-				{
+				} else {
 					htmltext = "MonumentOfHeroes-weaponNo.html";
 				}
 				break;
 			}
 			case "heroCirclet":
 			{
-				if (Hero.getInstance().isHero(player.getObjectId()))
-				{
-					if (hasQuestItems(player, WINGS_OF_DESTINY_CIRCLET))
-					{
+				if (player.isHero()) {
+					if (hasQuestItems(player, WINGS_OF_DESTINY_CIRCLET)) {
 						htmltext = "MonumentOfHeroes-circletHave.html";
 					}
-					else if (!player.isInventoryUnder80())
-					{
+					else if (!player.isInventoryUnder80()) {
 						player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
-					}
-					else
-					{
+					} else {
 						giveItems(player, WINGS_OF_DESTINY_CIRCLET, 1);
 					}
-				}
-				else
-				{
+				} else {
 					htmltext = "MonumentOfHeroes-circletNo.html";
 				}
 				break;
 			}
-			case "heroCertification":
-			{
-				if (Hero.getInstance().isUnclaimedHero(player.getObjectId()))
-				{
-					htmltext = "MonumentOfHeroes-heroCertification.html";
-				}
-				else if (Hero.getInstance().isHero(player.getObjectId()))
-				{
+			case "heroCertification": {
+				if(player.isHero()) {
 					htmltext = "MonumentOfHeroes-heroCertificationAlready.html";
-				}
-				else
-				{
+
+				} else if(Olympiad.getInstance().isUnclaimedHero(player)) {
+					htmltext = "MonumentOfHeroes-heroCertification.html";
+
+				} else {
 					htmltext = "MonumentOfHeroes-heroCertificationNo.html";
 				}
 				break;
 			}
-			case "heroConfirm":
-			{
-				if (Hero.getInstance().isUnclaimedHero(player.getObjectId()))
-				{
-					if (player.getLevel() >= 55)
-					{
-						Hero.getInstance().claimHero(player);
-						showOnScreenMsg(player, (NpcStringId.getNpcStringId(13357 + player.getClassId().getId())), ExShowScreenMessage.TOP_CENTER, 5000);
-						player.broadcastPacket(PlaySound.music("ns01_f"));
-						htmltext = "MonumentOfHeroes-heroCertificationsDone.html";
-					}
-					else
-					{
-						htmltext = "MonumentOfHeroes-heroCertificationLevel.html";
-					}
-				}
-				else
-				{
+			case "heroConfirm": {
+				if(player.isHero()) {
+					htmltext = "MonumentOfHeroes-heroCertificationAlready.html";
+				} else if(Olympiad.getInstance().claimHero(player)) {
+					htmltext = "MonumentOfHeroes-heroCertificationsDone.html";
+				} else {
 					htmltext = "MonumentOfHeroes-heroCertificationNo.html";
 				}
 				break;

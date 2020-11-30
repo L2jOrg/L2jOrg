@@ -25,6 +25,7 @@ import org.l2j.gameserver.network.ServerPacketId;
 public class SocialAction extends ServerPacket {
     // TODO: Enum
     public static final int LEVEL_UP = 2122;
+    public static final int HERO_CLAIMED = 20016;
 
     private final int _charObjId;
     private final int _actionId;

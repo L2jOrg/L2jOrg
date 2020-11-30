@@ -20,9 +20,9 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.impl.LevelData;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.PlayerSelectInfo;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.RateSettings;
@@ -174,7 +174,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeInt(playerInfo.getVitalityItemsUsed()); // Remaining vitality item uses
             buffer.writeInt(data.getAccessLevel() != -100); // Char is active or not
             buffer.writeByte(data.isNobless());
-            buffer.writeByte(Hero.getInstance().isHero(data.getCharId()) ? 0x02 : 0x00); // Hero glow
+            buffer.writeByte(Olympiad.getInstance().isHero(data.getCharId()) ? 0x02 : 0x00); // Hero glow
             buffer.writeByte(playerInfo.isHairAccessoryEnabled()); // Show hair accessory if enabled
             buffer.writeInt(playerInfo.getRemainBanExpireTime()); // ban time in secs
             buffer.writeInt((int) (playerInfo.getLastAccess() / 1000));

@@ -48,7 +48,7 @@ public class AdminKick implements IAdminCommandHandler
 				final Player plyr = World.getInstance().findPlayer(player);
 				if (plyr != null)
 				{
-					Disconnection.of(plyr).defaultSequence(false);
+					Disconnection.of(plyr).logout(false);
 					BuilderUtil.sendSysMessage(activeChar, "You kicked " + plyr.getName() + " from the game.");
 				}
 			}
@@ -61,7 +61,7 @@ public class AdminKick implements IAdminCommandHandler
 				if (!player.isGM())
 				{
 					counter++;
-					Disconnection.of(player).defaultSequence(false);
+					Disconnection.of(player).logout(false);
 				}
 			}
 			BuilderUtil.sendSysMessage(activeChar, "Kicked " + counter + " players.");

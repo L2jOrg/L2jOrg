@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.Armor;
@@ -37,6 +38,7 @@ import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
@@ -580,5 +582,22 @@ public final class GameUtils {
     public static boolean canTeleport(Player player) {
         return !( isNull(player) || player.isInDuel() || !player.teleportInBattle() || player.isControlBlocked() || player.isConfused() || player.isFlying() || player.isFlyingMounted() ||
                 player.isInOlympiadMode() || player.isAlikeDead() || player.isOnCustomEvent() || player.getPvpFlag() > 0 || player.isInsideZone(ZoneType.JAIL) || player.isInTimedHuntingZone());
+    }
+
+    public static boolean canLogout(Player player) {
+        if (player.hasItemRequest() || player.hasRequest(CaptchaRequest.class)) {
+            return false;
+        }
+
+        if (player.isClassLocked()) {
+            LOGGER.warn("Player {} tried to restart/logout during class change.", player);
+            return false;
+        }
+
+        if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && !player.isGM()) {
+            return false;
+        }
+
+        return !player.isBlockedFromExit();
     }
 }

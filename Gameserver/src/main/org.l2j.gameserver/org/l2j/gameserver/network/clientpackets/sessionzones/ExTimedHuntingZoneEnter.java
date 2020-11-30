@@ -23,6 +23,8 @@ import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
+import static org.l2j.gameserver.network.SystemMessageId.CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;
+
 /**
  * @author Mobius
  */
@@ -54,11 +56,12 @@ public class ExTimedHuntingZoneEnter extends ClientPacket {
 			player.sendMessage("Cannot use time-limited hunting zones during a duel.");
 			return;
 		}
-		if (Olympiad.getInstance().isRegistered(player))
-		{
-			player.sendMessage("Cannot use time-limited hunting zones while waiting for the Olympiad.");
+
+		if (Olympiad.getInstance().isRegistered(player)) {
+			player.sendPacket(CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD);
 			return;
 		}
+
 		if (player.isOnEvent() || (player.getBlockCheckerArena() > -1))
 		{
 			player.sendMessage("Cannot use time-limited hunting zones while registered on an event.");

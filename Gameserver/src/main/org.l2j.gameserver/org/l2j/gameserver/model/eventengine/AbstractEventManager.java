@@ -81,15 +81,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent> extends Abst
         //@formatter:on
     }
 
-    @RegisterEvent(EventType.ON_PLAYER_LOGOUT)
-    @RegisterType(ListenerRegisterType.GLOBAL)
-    public void playerLogout(OnPlayerLogout event) {
-        onPlayerLogout(event.getPlayer());
-    }
-
-    protected void onPlayerLogout(Player player) {
-    }
-
     public void config(GameXmlReader reader, Node configNode) {
     }
 

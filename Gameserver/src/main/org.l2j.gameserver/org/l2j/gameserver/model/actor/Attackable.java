@@ -44,7 +44,6 @@ import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.status.AttackableStatus;
 import org.l2j.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAggroRangeEnter;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAttack;
@@ -358,18 +357,11 @@ public class Attackable extends Npc {
                         final int points = Math.max(raidbossPoints / members.size(), 1);
                         p.increaseRaidbossPoints(points);
                         p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
-
-                        if (p.isNoble()) {
-                            Hero.getInstance().setRBkilled(p.getObjectId(), getId());
-                        }
                     });
                 } else {
                     final int points = Math.max(raidbossPoints, 1);
                     player.increaseRaidbossPoints(points);
                     player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
-                    if (player.isNoble()) {
-                        Hero.getInstance().setRBkilled(player.getObjectId(), getId());
-                    }
                 }
             }
 

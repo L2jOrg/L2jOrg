@@ -106,7 +106,7 @@ public class EnterWorld extends ClientPacket {
         final Player player = client.getPlayer();
         if (player == null) {
             LOGGER.warn("EnterWorld failed! player returned 'null'.");
-            Disconnection.of(client).defaultSequence(false);
+            Disconnection.of(client).logout(false);
             return;
         }
 
@@ -304,7 +304,7 @@ public class EnterWorld extends ClientPacket {
         if (getSettings(ServerSettings.class).isHardwareInfoEnabled()) {
             ThreadPool.schedule(() -> {
                 if (client.getHardwareInfo() == null) {
-                    Disconnection.of(client).defaultSequence(false);
+                    Disconnection.of(client).logout(false);
                 }
             }, 5000);
         }

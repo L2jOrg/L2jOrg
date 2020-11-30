@@ -44,6 +44,7 @@ public class OlympiadHandler implements IBypassHandler {
                 case "op_field_list" -> Olympiad.getInstance().showMatchList(player);
                 case "move_op_field" -> Olympiad.getInstance().addSpectator(player, parseNextInt(tokens, 0));
                 case "hero_list" -> Olympiad.getInstance().showHeroList(player);
+                case "claim_hero" -> Olympiad.getInstance().claimHero(player);
                 default -> {
                     return false;
                 }

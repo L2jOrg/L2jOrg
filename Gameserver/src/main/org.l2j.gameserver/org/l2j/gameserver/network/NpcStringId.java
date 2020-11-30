@@ -21003,8 +21003,7 @@ public final class NpcStringId {
     public static NpcStringId DAMN_IT_GIANTS_CAVE_IS_NOT_SAFE_AFTER_THE_INVASION;
     @ClientString(id = 1803454, message = "I won't wait for too long! I'll be gone in one minute!")
     public static NpcStringId I_WON_T_WAIT_FOR_TOO_LONG_I_LL_BE_GONE_IN_ONE_MINUTE;
-    @ClientString(id = 1803455, message = "Character $s1 has become a hero. Class: $s2. Congratulations!")
-    public static NpcStringId CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS;
+
     @ClientString(id = 1803456, message = "Gladiator")
     public static NpcStringId GLADIATOR;
     @ClientString(id = 1803457, message = "Warlord")
@@ -24759,6 +24758,9 @@ public final class NpcStringId {
 
     @ClientString(id = 1803290, message = "My servants can keep me safe! I have nothing to fear!")
     public static NpcStringId MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR;
+
+    @ClientString(id = 1803455, message = "Character $s1 has become a hero. Class: $s2. Congratulations!")
+    public static NpcStringId CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS;
 
     @ClientString(id = 1803770, message = "Glory to the heroes who have defeated Lord Ishka!")
     public static NpcStringId GLORY_TO_THE_HEROES_WHO_HAVE_DEFEATED_LORD_ISHKA;

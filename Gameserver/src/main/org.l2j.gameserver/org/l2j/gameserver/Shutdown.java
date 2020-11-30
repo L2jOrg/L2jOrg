@@ -28,7 +28,6 @@ import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
@@ -260,9 +259,6 @@ public class Shutdown extends Thread {
         Olympiad.getInstance().saveOlympiadStatus();
         LOGGER.info("Olympiad System: Data saved.");
 
-        Hero.getInstance().shutdown();
-        LOGGER.info("Hero System: Data saved.");
-
         ClanTable.getInstance().shutdown();
         LOGGER.info("Clan System: Data saved.");
 
@@ -300,7 +296,7 @@ public class Shutdown extends Thread {
      * This disconnects all clients from the server.
      */
     private void disconnectAllCharacters() {
-        World.getInstance().forEachPlayer(player -> Disconnection.of(player).defaultSequence(true));
+        World.getInstance().forEachPlayer(player -> Disconnection.of(player).logout(true));
     }
 
     private enum  ShutdownMode {

@@ -103,7 +103,15 @@ class OlympiadClasslessMatch extends OlympiadMatch {
     }
 
     @Override
-    protected OlympiadResult calcResult() {
+    protected void processPlayerLogout(Player player) {
+        defeated = player;
+        runAway = true;
+        finishBattle();
+        leaveOlympiadMode(player);
+    }
+
+    @Override
+    protected OlympiadResult battleResult() {
         OlympiadResult result = OlympiadResult.TIE;
         if(nonNull(defeated)) {
             result =  defeated == blue ? OlympiadResult.RED_WIN : OlympiadResult.BLUE_WIN;

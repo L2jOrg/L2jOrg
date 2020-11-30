@@ -103,7 +103,7 @@ public class CharacterSelect extends ClientPacket {
 
                     final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(player, player.getObjectId(), player.getName(), client), Listeners.players(), TerminateReturn.class);
                     if ((terminate != null) && terminate.terminate()) {
-                        Disconnection.of(player).defaultSequence(false);
+                        Disconnection.of(player).logout(false);
                         return;
                     }
 

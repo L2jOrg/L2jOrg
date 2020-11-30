@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.ChatHandler;
 import org.l2j.gameserver.handler.IChatHandler;
@@ -71,13 +70,13 @@ public final class Say2 extends ClientPacket {
 
         if (isNull(chatType)) {
             LOGGER.warn("player {} send invalid type {} with text {}", player, type, text);
-            Disconnection.of(player).defaultSequence(false);
+            Disconnection.of(player).logout(false);
             return;
         }
 
         if (text.isEmpty()) {
             LOGGER.warn("{} sending empty text. Possible packet hack!", player);
-            Disconnection.of(player).defaultSequence(false);
+            Disconnection.of(player).logout(false);
             return;
         }
 
@@ -104,7 +103,7 @@ public final class Say2 extends ClientPacket {
             return;
         }
 
-        if (Olympiad.getInstance().isRegistered(player)) {
+        if (player.isInOlympiadMode()) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
             return;
         }
