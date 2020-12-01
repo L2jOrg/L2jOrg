@@ -148,9 +148,9 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
             FROM olympiad_participants op
             JOIN characters c on c.charId = op.player_id
             LEFT JOIN olympiad_rankers_snapshot ors on op.player_id = ors.player_id AND op.server = ors.server
-            WHERE op.battles >= 10) AS r;
+            WHERE op.battles >= :minBattles:) AS r;
     """)
-    void saveRankSnapshot();
+    void saveRankSnapshot(byte minBattles);
 
     @Query("DELETE FROM olympiad_rankers_snapshot WHERE update_date < CURRENT_DATE")
     void deletePreviousRankSnapshot();
@@ -166,9 +166,9 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
            FROM olympiad_participants op
            JOIN characters c on c.charId = op.player_id
            LEFT JOIN olympiad_rankers_snapshot ors on op.player_id = ors.player_id AND op.server = ors.server
-           WHERE op.battles >= 10) AS r;
+           WHERE op.battles >= :minBattles:) AS r;
     """)
-    void saveRankClassSnapshot();
+    void saveRankClassSnapshot(byte minBattles);
 
     @Query("DELETE FROM olympiad_rankers_class_snapshot WHERE update_date < CURRENT_DATE")
     void deletePreviousRankClassSnapshot();
@@ -193,11 +193,11 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
                RANK() over (PARTITION BY c.classid ORDER BY points DESC) AS `rank`
         FROM olympiad_participants op
         JOIN characters c on c.charId = op.player_id
-        WHERE battles_won >= 10
+        WHERE battles_won >= :minBattlesWon:
         ) AS rh
     WHERE rh.`rank` = 1
     """)
-    void saveHeroes();
+    void saveHeroes(byte minBattlesWon);
 
     @Query("TRUNCATE olympiad_participants")
     void deleteParticipants();
@@ -286,5 +286,5 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     boolean isHero(int playerId, int server);
 
     @Query("SELECT player_id FROM olympiad_heroes WHERE server = :server:")
-    IntSet findHeroesId(int serverId);
+    IntSet findHeroesId(int server);
 }

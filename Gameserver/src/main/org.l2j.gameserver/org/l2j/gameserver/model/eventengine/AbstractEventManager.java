@@ -18,13 +18,7 @@
  */
 package org.l2j.gameserver.model.eventengine;
 
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
-import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.ListenerRegisterType;
-import org.l2j.gameserver.model.events.annotations.RegisterEvent;
-import org.l2j.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Node;
 

@@ -70,8 +70,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
+import static java.util.Objects.*;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
@@ -220,12 +219,16 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private void processRank(OlympiadDAO olympiadDAO) {
-        olympiadDAO.saveRankSnapshot();
+        olympiadDAO.saveRankSnapshot(settings.saveCycleMinBattles);
         olympiadDAO.deletePreviousRankSnapshot();
-        olympiadDAO.saveRankClassSnapshot();
+        olympiadDAO.saveRankClassSnapshot(settings.saveCycleMinBattles);
         olympiadDAO.deletePreviousRankClassSnapshot();
-        olympiadDAO.updateLegend();
-        olympiadDAO.updateLegendHistory();
+
+        if(settings.enableLegend) {
+            olympiadDAO.updateLegend();
+            olympiadDAO.updateLegendHistory();
+        }
+
         olympiadDAO.updateOlympiadHistory(data.getSeason());
         olympiadDAO.deleteParticipants();
     }
@@ -233,7 +236,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private void processHeroes(OlympiadDAO olympiadDAO) {
         removeOnlineHeroes(olympiadDAO);
         olympiadDAO.deleteHeroes();
-        olympiadDAO.saveHeroes();
+        olympiadDAO.saveHeroes(settings.minBattlesWonToBeHero);
         olympiadDAO.updateHeroesHistory();
         olympiadDAO.deleteHeroesMatches();
         olympiadDAO.saveHeroesMatches();
@@ -340,6 +343,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
 
         if(getOlympiadPoints(player) <= 0) {
+            // TODO is there some message in this condition ?
+            return false;
+        }
+
+        if(player.getReputation() < 0) {
             // TODO is there some message in this condition ?
             return false;
         }
@@ -482,6 +490,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private OlympiadHistoryData lastCycleDataOf(Player player) {
+        if(!checkLevelAndClassRestriction(player)) {
+            return OlympiadHistoryData.DEFAULT;
+        }
         var data = history.get(player.getObjectId());
         if(isNull(data)) {
             data = loadOrDefaultHistory(player);
@@ -503,6 +514,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private OlympiadParticipantData participantDataOf(Player player) {
+        if(!checkLevelAndClassRestriction(player)) {
+            return OlympiadParticipantData.DEFAULT;
+        }
         var data = participantsData.get(player.getObjectId());
         if(isNull(data)) {
             data = loadOrCreateParticipantData(player);
@@ -566,8 +580,9 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public void showPersonalRank(Player player) {
-        final var rankData = getDAO(OlympiadDAO.class).findRankData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
-        final var previousData = getDAO(OlympiadDAO.class).findPreviousRankData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+        final var server = getSettings(ServerSettings.class).serverId();
+        final var rankData = getDAO(OlympiadDAO.class).findRankData(player.getObjectId(), server);
+        final var previousData = getDAO(OlympiadDAO.class).findPreviousRankData(player.getObjectId(), server);
         player.sendPacket(new ExOlympiadMyRankInfo(rankData, previousData, recentBattlesRecord.get(player.getObjectId())));
     }
 
@@ -664,48 +679,70 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public void showHeroHistory(Player player, int classId, int page) {
-        // TODO pagination
         final var matchesResult = getDAO(OlympiadDAO.class).findHeroHistoryByClassId(classId);
         if(!isNullOrEmpty(matchesResult)) {
-            player.sendPacket( createHeroHistory(player, matchesResult) );
+            player.sendPacket( createHeroHistory(player, matchesResult, classId, page) );
         } else {
             LOGGER.warn("No matches result to class id {} requested by {}", classId, player);
         }
     }
 
-    private NpcHtmlMessage createHeroHistory(Player player, List<OlympiadMatchResultData> matchesResult) {
-        final var sb = new StringBuilder();
-        final var battleTemplate = HtmCache.getInstance().getHtm(player, "data/html/olympiad/hero-history-battle.htm");
-
-        for (OlympiadMatchResultData battle : matchesResult) {
-            sb.append(battleTemplate.replace("%date%", battle.getDate().format(HISTORY_DATE_FORMATTER))
-                .replace("%opponent%", battle.getOpponentName())
-                .replace("%class_name%", emptyIfNullOrElse(ClassListData.getInstance().getClass(battle.getOpponentClassId()), ClassInfo::getClassName))
-                .replace("%duration%", battle.getDuration().toMinutes() + " minutes " + battle.getDuration().toSecondsPart() + "seconds")
-                .replace("%result%", formattedResult(battle.getResult()))
-                .replace("%win%", String.valueOf(battle.getWin()))
-                .replace("%tie%", String.valueOf(battle.getTie()))
-                .replace("%loss%", String.valueOf(battle.getLoss()))
-            );
-        }
+    private NpcHtmlMessage createHeroHistory(Player player, List<OlympiadMatchResultData> matchesResult, int classId, int page) {
+        final int pageSize = 20;
+        final StringBuilder sb = formatMatches(player, matchesResult, page, pageSize);
 
         final var heroId = matchesResult.get(0).getPlayerId();
         var heroHistory = history.get(heroId);
         if(isNull(heroHistory)) {
-            heroHistory = getLastCycleInfo(heroId);
+            heroHistory = requireNonNullElse(getLastCycleInfo(heroId), OlympiadHistoryData.DEFAULT);
         }
 
         final var message = new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/html/olympiad/hero-history.htm"));
         message.replace("%battles%", sb.toString());
         message.replace("%win%", heroHistory.getBattlesOwn());
-        message.replace("%tie%", heroHistory.getBattles() - heroHistory.getBattlesOwn() + heroHistory.getBattlesLost());
+        message.replace("%tie%", heroHistory.getBattles() - heroHistory.getBattlesOwn() - heroHistory.getBattlesLost());
         message.replace("%loss%", heroHistory.getBattlesLost());
+
+        if (page > 1) {
+            message.replace("%previous%", "<button value=\"Prev\" action=\"bypass _match?class=" + classId + "&page=" + (page - 1) + "\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+        } else {
+            message.replace("%previous%", "");
+        }
+
+        if (matchesResult.size() > (page - 1) * pageSize + pageSize) {
+            message.replace("%next%", "<button value=\"Next\" action=\"bypass _match?class=" + classId + "&page=" + (page + 1) + "\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+        } else {
+            message.replace("%next%", "");
+        }
+
+
+
         return message;
+    }
+
+    private StringBuilder formatMatches(Player player, List<OlympiadMatchResultData> matchesResult, int page, int pageSize) {
+        final var sb = new StringBuilder();
+        final var battleTemplate = HtmCache.getInstance().getHtm(player, "data/html/olympiad/hero-history-battle.htm");
+
+        final int initial = (page -1) * pageSize;
+        for (int i = initial; i < Math.min(initial + pageSize, matchesResult.size()) ; i++) {
+            var battle = matchesResult.get(i);
+            sb.append(battleTemplate.replace("%date%", battle.getDate().format(HISTORY_DATE_FORMATTER))
+                    .replace("%opponent%", battle.getOpponentName())
+                    .replace("%class_name%", emptyIfNullOrElse(ClassListData.getInstance().getClass(battle.getOpponentClassId()), ClassInfo::getClassName))
+                    .replace("%duration%", battle.getDuration().toMinutes() + " minutes " + battle.getDuration().toSecondsPart() + "seconds")
+                    .replace("%result%", formattedResult(battle.getResult()))
+                    .replace("%win%", String.valueOf(battle.getWin()))
+                    .replace("%tie%", String.valueOf(battle.getTie()))
+                    .replace("%loss%", String.valueOf(battle.getLoss()))
+            );
+        }
+        return sb;
     }
 
     private String formattedResult(PlayerMatchResult result) {
         return switch(result) {
-            case VICTORY -> "<font color=\"0000CC\">victory</font>";
+            case VICTORY -> "<font color=\"#125AC7\">victory</font>";
             case LOSS -> "<font color=\"CC0000\">loss</font>";
             case DRAW -> "draw";
         };
