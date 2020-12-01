@@ -215,14 +215,11 @@ public class Attackable extends Npc {
             addDamage(attacker, (int) value, skill);
 
             // Check Raidboss attack. Character will be petrified if attacking a raid that's more than 8 levels lower. In retail you deal damage to raid before curse.
-            if (_isRaid && giveRaidCurse() && !Config.RAID_DISABLE_CURSE) {
+            /*if (_isRaid){
                 if (attacker.getLevel() > (getLevel() + 8)) {
-                    final Skill raidCurse = CommonSkill.RAID_CURSE2.getSkill();
-                    if (raidCurse != null) {
-                        raidCurse.applyEffects(this, attacker);
-                    }
+                    //TODO adding a rule tocreate a boolean flag on Attackable something like, mustGiveReward and set it to false when some higher level player attacks him so in the calculateRewards check this flag and returns when it is false
                 }
-            }
+            }*/
         }
 
         // If this Attackable is a Monster and it has spawned minions, call its minions to battle
