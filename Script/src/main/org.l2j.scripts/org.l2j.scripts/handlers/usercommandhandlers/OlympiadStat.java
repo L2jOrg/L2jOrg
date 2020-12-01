@@ -35,10 +35,6 @@ public class OlympiadStat implements IUserCommandHandler {
 	
 	@Override
 	public boolean useUserCommand(int id, Player player) {
-		if (!Olympiad.getInstance().checkLevelAndClassRestriction(player)) {
-			player.sendPacket(SystemMessageId.THIS_COMMAND_IS_AVAILABLE_ONLY_WHEN_THE_TARGET_HAS_COMPLETED_THE_2ND_CLASS_TRANSFER);
-			return false;
-		}
 		Olympiad.getInstance().showRecord(player);
 		return true;
 	}

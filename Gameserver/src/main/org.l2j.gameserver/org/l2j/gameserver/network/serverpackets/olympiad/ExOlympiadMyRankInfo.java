@@ -43,7 +43,7 @@ public class ExOlympiadMyRankInfo extends ServerPacket {
     private final Collection<OlympiadBattleRecord> battleRecords;
 
     public ExOlympiadMyRankInfo(OlympiadRankData data, OlympiadRankData previousData, Collection<OlympiadBattleRecord> battleRecords) {
-        this.data = data;
+        this.data = requireNonNullElse(data, DEFAULT_OLYMPIAD_RANK_DATA);
         this.previousData = requireNonNullElse(previousData, DEFAULT_OLYMPIAD_RANK_DATA);
         this.battleRecords = requireNonNullElseGet(battleRecords, Collections::emptyList);
     }

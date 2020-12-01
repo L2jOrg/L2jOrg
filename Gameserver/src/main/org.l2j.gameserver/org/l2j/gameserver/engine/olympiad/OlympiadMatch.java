@@ -21,6 +21,7 @@ package org.l2j.gameserver.engine.olympiad;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventType;
@@ -104,7 +105,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             scheduled.cancel(true);
         }
         state = FINISHED;
-        battleDuration = Duration.between(Instant.now(), start);
+        battleDuration = Duration.between(start, Instant.now());
         forEachParticipant(this::onMatchFinish);
         processResult();
         arena.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
@@ -185,19 +186,27 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     private void onMatchFinish(Player player) {
-        player.breakAttack();
-        player.breakCast();
-        player.forgetTarget();
-        player.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+        stopAttack(player);
+        for (Summon summon : player.getServitors().values()) {
+            stopAttack(summon);
+        }
+
         player.setIsOlympiadStart(false);
         player.setOlympiadMatchId(-1);
-        player.setInsideZone(ZoneType.PVP, false);
         player.removeListener(deathListener);
         player.removeListener(damageListener);
         player.removeListener(hpListener);
         player.removeListener(cpListener);
         player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
         player.setCurrentCp(player.getMaxCp());
+    }
+
+    private void stopAttack(org.l2j.gameserver.model.actor.Playable playable) {
+        playable.breakAttack();
+        playable.breakCast();
+        playable.forgetTarget();
+        playable.setInsideZone(ZoneType.PVP, false);
+        playable.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
     }
 
     private void countDownTeleportBack() {
@@ -231,7 +240,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
                 forBluePlayers(olympiad::giveLoserRewards);
             }
             case TIE -> forEachParticipant(olympiad::giveTieRewards);
-        };
+        }
     }
 
     protected void leaveOlympiadMode(Player player) {

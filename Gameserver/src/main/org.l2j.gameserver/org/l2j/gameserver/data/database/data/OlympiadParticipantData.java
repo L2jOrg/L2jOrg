@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 @Table("olympiad_participants")
 public class OlympiadParticipantData {
 
+    public static final OlympiadParticipantData DEFAULT = new OlympiadParticipantData();
+
     @Column("player_id")
     private int playerId;
 

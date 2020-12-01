@@ -55,6 +55,9 @@ class OlympiadSettings {
     int heroReputation;
     short minLevel;
     byte minClassLevel;
+    byte minBattlesWonToBeHero;
+    byte saveCycleMinBattles;
+    boolean enableLegend;
 
     private OlympiadSettings() {
 
@@ -79,6 +82,9 @@ class OlympiadSettings {
             settings.maxBattlesPerDay = reader.parseShort(attr, "max-battles-per-day");
             settings.minLevel = reader.parseShort(attr, "min-level");
             settings.minClassLevel = reader.parseByte(attr, "min-class-level");
+            settings.minBattlesWonToBeHero = reader.parseByte(attr, "hero-min-battles-won");
+            settings.saveCycleMinBattles = reader.parseByte(attr,"previous-info-min-battles");
+            settings.enableLegend = reader.parseBoolean(attr, "enable-legend");
 
             parseRewards(reader, settings, olympiadConfig);
         }
@@ -91,7 +97,7 @@ class OlympiadSettings {
         final var attr = rewards.getAttributes();
         settings.heroReputation = reader.parseInt(attr, "hero-reputation");
         settings.minBattlePoints = reader.parseShort(attr, "min-olympiad-points");
-        settings.minBattlePoints = reader.parseShort(attr, "min-olympiad-points");
+        settings.maxBattlePoints = reader.parseShort(attr, "max-olympiad-points");
 
         for(var rewardNode = rewards.getFirstChild(); nonNull(rewardNode); rewardNode = rewardNode.getNextSibling()) {
 

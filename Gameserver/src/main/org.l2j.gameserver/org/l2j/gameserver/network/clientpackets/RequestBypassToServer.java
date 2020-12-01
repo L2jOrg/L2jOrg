@@ -212,7 +212,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 }
             }
         } catch (Exception e) {
-            LOGGER.warn("Exception processing bypass from player " + player.getName() + ": " + bypass, e);
+            LOGGER.error("Exception processing bypass from player {} : {}", player, bypass, e);
 
             if (player.isGM()) {
                 final StringBuilder sb = new StringBuilder(200);
