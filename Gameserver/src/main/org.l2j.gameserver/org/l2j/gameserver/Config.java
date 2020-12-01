@@ -448,6 +448,7 @@ public final class Config {
     public static boolean ANTIFEED_DUALBOX;
     public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
     public static int ANTIFEED_INTERVAL;
+    public static boolean ACTIVATE_PVP_BOSS_FLAG;
 
     // --------------------------------------------------
     // Rate Settings
@@ -1318,6 +1319,7 @@ public final class Config {
         PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
         MAX_REPUTATION = PVPSettings.getInt("MaxReputation", 500);
         REPUTATION_INCREASE = PVPSettings.getInt("ReputationIncrease", 100);
+        ACTIVATE_PVP_BOSS_FLAG = PVPSettings.getBoolean("ActivatePvPBossFlag", false);
 
         // Load Olympiad config file (if exists)
         final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
