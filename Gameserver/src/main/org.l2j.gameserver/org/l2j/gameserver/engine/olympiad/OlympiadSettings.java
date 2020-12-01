@@ -53,6 +53,8 @@ class OlympiadSettings {
     short minBattlePoints;
     short maxBattlePoints;
     int heroReputation;
+    short minLevel;
+    byte minClassLevel;
 
     private OlympiadSettings() {
 
@@ -75,6 +77,8 @@ class OlympiadSettings {
             settings.matchDuration = Duration.ofMinutes(reader.parseInt(attr, "match-duration"));
             settings.initialPoints = reader.parseShort(attr, "initial-points");
             settings.maxBattlesPerDay = reader.parseShort(attr, "max-battles-per-day");
+            settings.minLevel = reader.parseShort(attr, "min-level");
+            settings.minClassLevel = reader.parseByte(attr, "min-class-level");
 
             parseRewards(reader, settings, olympiadConfig);
         }
