@@ -41,14 +41,15 @@ public class ExVipAttendanceItemList extends ServerPacket {
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_VIP_ATTENDANCE_ITEM_LIST, buffer );
-        buffer.writeByte(available ? index + 1 : index); // index to receive?
+        int rewardCount = AttendanceRewardData.getInstance().getRewardsCount();
+        buffer.writeByte(available ? (index + 1) % rewardCount : index); // index to receive?
         buffer.writeByte(index); // last received index?
         buffer.writeInt(0x00);
         buffer.writeInt(0x00);
         buffer.writeByte(0x01);
         buffer.writeByte(available); // player can receive reward today?
         buffer.writeByte(250);
-        buffer.writeByte(AttendanceRewardData.getInstance().getRewardsCount()); // reward size
+        buffer.writeByte(rewardCount); // reward size
         int rewardCounter = 0;
         for (ItemHolder reward : AttendanceRewardData.getInstance().getRewards()) {
             rewardCounter++;

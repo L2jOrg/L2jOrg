@@ -58,6 +58,7 @@ class OlympiadSettings {
     byte minBattlesWonToBeHero;
     byte saveCycleMinBattles;
     boolean enableLegend;
+    boolean keepDance;
 
     private OlympiadSettings() {
 
@@ -85,6 +86,7 @@ class OlympiadSettings {
             settings.minBattlesWonToBeHero = reader.parseByte(attr, "hero-min-battles-won");
             settings.saveCycleMinBattles = reader.parseByte(attr,"previous-info-min-battles");
             settings.enableLegend = reader.parseBoolean(attr, "enable-legend");
+            settings.keepDance = reader.parseBoolean(attr, "keep-dance");
 
             parseRewards(reader, settings, olympiadConfig);
         }

@@ -80,7 +80,7 @@ public class RequestVipAttendanceCheck extends ClientPacket {
         if (isRewardAvailable) {
             rewardIndex++;
             // Save date and index.
-            player.updateAttendanceReward(rewardIndex);
+            player.updateAttendanceReward((byte) (rewardIndex % AttendanceRewardData.getInstance().getRewardsCount()));
             // Add items to player.
             player.addItem("Attendance Reward", reward, player, true);
             // Send message.

@@ -34,22 +34,9 @@ public class OlympiadData {
 
     @Column("current_cycle")
     private int season;
-    private int period;
 
-    @Column("olympiad_end")
-    private long olympiadEnd;
-
-    @Column("validation_end")
-    private long validationEnd;
-
-    @Column("next_weekly_change")
-    private long nextWeeklyChange;
     @NonUpdatable
     private LocalDate nextSeasonDate;
-
-    public int getId() {
-        return id;
-    }
 
     public void setId(int id) {
         this.id = id;
@@ -59,40 +46,8 @@ public class OlympiadData {
         return season;
     }
 
-    public int getPeriod() {
-        return period;
-    }
-
-    public void setPeriod(int period) {
-        this.period = period;
-    }
-
-    public long getOlympiadEnd() {
-        return olympiadEnd;
-    }
-
-    public void setOlympiadEnd(long olympiadEnd) {
-        this.olympiadEnd = olympiadEnd;
-    }
-
-    public long getNextWeeklyChange() {
-        return nextWeeklyChange;
-    }
-
-    public void setNextWeeklyChange(long nextWeeklyChange) {
-        this.nextWeeklyChange = nextWeeklyChange;
-    }
-
     public void increaseSeason() {
         season++;
-    }
-
-    public long getValidationEnd() {
-        return validationEnd;
-    }
-
-    public void setValidationEnd(long validationEnd) {
-        this.validationEnd = validationEnd;
     }
 
     public void setNextSeasonDate(LocalDate nextSeasonDate) {

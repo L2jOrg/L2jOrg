@@ -101,7 +101,6 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     private Set<Player> registered = ConcurrentHashMap.newKeySet(20);
     private Set<Player> matchMaking = ConcurrentHashMap.newKeySet(20);
 
-    private ConsumerEventListener loginListener;
     private ConsumerEventListener logoutListener;
     private OlympiadData data = new OlympiadData();
     private OlympiadState state = OlympiadState.SCHEDULED;
@@ -137,7 +136,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.OLYMPIAD_ID);
 
         var listeners = Listeners.players();
-        loginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
+        ConsumerEventListener loginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
         listeners.addListener(loginListener);
     }
 
@@ -272,10 +271,6 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return data.getSeason();
     }
 
-    public int getPeriod() {
-        return data.getPeriod();
-    }
-
     public void saveOlympiadStatus() {
         getDAO(OlympiadDAO.class).save(data);
     }
@@ -342,13 +337,8 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return false;
         }
 
-        if(getOlympiadPoints(player) <= 0) {
-            // TODO is there some message in this condition ?
-            return false;
-        }
-
-        if(player.getReputation() < 0) {
-            // TODO is there some message in this condition ?
+        if(player.getReputation() < 0 || getOlympiadPoints(player) <= 0) {
+            player.sendPacket(YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);// TODO find the retail message
             return false;
         }
 
@@ -742,7 +732,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private String formattedResult(PlayerMatchResult result) {
         return switch(result) {
-            case VICTORY -> "<font color=\"#125AC7\">victory</font>";
+            case VICTORY -> "<font color=\"125AC7\">victory</font>";
             case LOSS -> "<font color=\"CC0000\">loss</font>";
             case DRAW -> "draw";
         };
@@ -792,10 +782,13 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         }
     }
 
+    boolean keepDances() {
+        return settings.keepDance;
+    }
+
     public static Olympiad getInstance() {
         return Singleton.INSTANCE;
     }
-
 
     private static class Singleton {
         private static final Olympiad INSTANCE = new Olympiad();

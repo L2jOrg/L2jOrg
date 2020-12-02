@@ -42,7 +42,6 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class AttendanceRewardData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(AttendanceRewardData.class);
     private final List<ItemHolder> _rewards = new ArrayList<>();
-    private int _rewardsCount = 0;
 
     private AttendanceRewardData() {
         load();
@@ -58,8 +57,7 @@ public class AttendanceRewardData extends GameXmlReader {
         if (getSettings(AttendanceSettings.class).enabled()) {
             _rewards.clear();
             parseDatapackFile("data/AttendanceRewards.xml");
-            _rewardsCount = _rewards.size();
-            LOGGER.info("Loaded {}  rewards.", _rewardsCount );
+            LOGGER.info("Loaded {}  rewards.", _rewards.size() );
             releaseResources();
         } else {
             LOGGER.info("Disabled.");
@@ -86,7 +84,7 @@ public class AttendanceRewardData extends GameXmlReader {
     }
 
     public int getRewardsCount() {
-        return _rewardsCount;
+        return _rewards.size();
     }
 
     public static AttendanceRewardData getInstance() {

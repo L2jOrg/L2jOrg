@@ -107,19 +107,19 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         state = FINISHED;
         battleDuration = Duration.between(start, Instant.now());
         forEachParticipant(this::onMatchFinish);
-        processResult();
-        arena.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
-        countDownIndex = 0;
-        countDownTeleportBack();
+        ThreadPool.schedule(this::processResult, 2, TimeUnit.SECONDS);
     }
 
     private void processResult() {
+        arena.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
+        countDownIndex = 0;
         var result = battleResult();
         switch (result) {
             case TIE -> processTie();
             case RED_WIN -> processRedVictory();
             case BLUE_WIN -> processBlueVictory();
         }
+        countDownTeleportBack();
     }
 
     private void processBlueVictory() {
@@ -381,7 +381,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
 
     private boolean notAllowedInOlympiad(BuffInfo info) {
         final var skill = info.getSkill();
-        return skill.isBlockedInOlympiad() || skill.isDance();
+        return skill.isBlockedInOlympiad() || (skill.isDance() && !Olympiad.getInstance().keepDances());
     }
 
     private void onDamageReceived(OnCreatureDamageReceived event) {

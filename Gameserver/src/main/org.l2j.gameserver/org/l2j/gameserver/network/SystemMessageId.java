@@ -5231,10 +5231,7 @@ public final class SystemMessageId {
     @ClientString(id = 2705, message = "The match waiting time was extended by 1 minute.")
     public static SystemMessageId THE_MATCH_WAITING_TIME_WAS_EXTENDED_BY_1_MINUTE;
 
-    @ClientString(id = 2706, message = "You cannot enter because you do not meet the requirements.")
-    public static SystemMessageId YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS;
-
-        @ClientString(id = 2713, message = "------------------------------------------------------")
+    @ClientString(id = 2713, message = "------------------------------------------------------")
     public static SystemMessageId SEPARATOR_DASHES_MEDIUM;
 
     @ClientString(id = 2714, message = "----------------------------------------------------------------------")
@@ -16668,6 +16665,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 2703, message = "Team members were modified because the teams were unbalanced.")
     public static SystemMessageId TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED;
+
+    @ClientString(id = 2706, message = "You cannot enter because you do not meet the requirements.")
+    public static SystemMessageId YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS;
 
     @ClientString(id = 2707, message = "You must wait 10 seconds before attempting to register again.")
     public static SystemMessageId YOU_MUST_WAIT_10_SECONDS_BEFORE_ATTEMPTING_TO_REGISTER_AGAIN;

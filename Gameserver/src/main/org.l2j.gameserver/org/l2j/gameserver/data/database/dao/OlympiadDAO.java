@@ -216,16 +216,18 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
 
     @Query("""
     INSERT INTO olympiad_history(player_id, server, cycle, class_id, points, battles, battles_won, battles_lost, overall_rank, overall_count, overall_class_rank, overall_class_count, server_class_rank, server_class_count)
-    WITH scr AS ( SELECT player_id, server, RANK() over (PARTITION BY server, c.classid ORDER BY points DESC) as `rank`
+    WITH scr AS ( SELECT player_id, server, c.classid as class_id, RANK() over (PARTITION BY server, c.classid ORDER BY points DESC) as `rank`
                   FROM olympiad_participants
                            JOIN characters c on olympiad_participants.player_id = c.charId
                   WHERE battles >= 10 ),
          overall_count AS ( SELECT COUNT(1) AS c FROM olympiad_rankers_snapshot),
-         class_count AS ( SELECT COUNT(1) AS c FROM olympiad_rankers_class_snapshot),
-         server_count AS (SELECT COUNT(1) AS c FROM scr)
-    SELECT r.player_id, r.server, :season:, r.class_id, r.points, r.battles, r.battles_won, r.battles_lost, r.`rank`, overall_count.c, rc.`rank`, class_count.c, scr.`rank`, server_count.c
-    FROM overall_count, class_count, server_count, olympiad_rankers_snapshot r
+         class_count AS ( SELECT class_id, COUNT(1) AS `count` FROM olympiad_rankers_class_snapshot GROUP BY class_id),
+         server_count AS (SELECT server, class_id, COUNT(1) AS `count` FROM scr GROUP BY server, class_id)
+    SELECT r.player_id, r.server, :season:, r.class_id, r.points, r.battles, r.battles_won, r.battles_lost, r.`rank`, overall_count.c, rc.`rank`, cc.count, scr.`rank`, sc.count
+    FROM overall_count, olympiad_rankers_snapshot r
     JOIN olympiad_rankers_class_snapshot rc on r.player_id = rc.player_id AND r.server = rc.server
+    JOIN class_count cc ON r.class_id = cc.class_id
+    JOIN server_count sc ON r.class_id = sc.class_id AND r.server = sc.server
     JOIN scr ON scr.player_id = r.player_id AND scr.server = r.server
     """)
     void updateOlympiadHistory(int season);

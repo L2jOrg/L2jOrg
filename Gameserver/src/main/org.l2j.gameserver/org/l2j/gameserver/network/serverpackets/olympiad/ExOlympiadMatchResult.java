@@ -51,7 +51,7 @@ public class ExOlympiadMatchResult extends ServerPacket {
 
         buffer.writeInt(0x01); // Type 0 = Match List, 1 = Match Result
 
-        buffer.writeInt(tie); // 0 - win, 1 - tie
+        buffer.writeInt(tie);
         buffer.writeString(winnerList.get(0).getName());
 
         buffer.writeInt(winTeam);
@@ -79,7 +79,7 @@ public class ExOlympiadMatchResult extends ServerPacket {
     }
 
     public static ExOlympiadMatchResult tie(List<OlympiadResultInfo> redTeam, List<OlympiadResultInfo> blueTeam) {
-        return new ExOlympiadMatchResult(true, 0, redTeam, blueTeam);
+        return new ExOlympiadMatchResult(true, OlympiadMode.RED.ordinal(), redTeam, blueTeam);
     }
 
     public static ExOlympiadMatchResult victory(OlympiadMode winnerMode, List<OlympiadResultInfo> winnerTeam, List<OlympiadResultInfo> loserTeam) {
