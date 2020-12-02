@@ -37,9 +37,13 @@ import org.l2j.gameserver.model.actor.instance.ControlTower;
 import org.l2j.gameserver.model.actor.instance.FlameTower;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
+import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -58,6 +62,7 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
@@ -73,6 +78,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
 public class Siege implements Siegable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Siege.class);
 
+    private ConsumerEventListener loginListener;
     private final IntMap<SiegeClanData> attackers = new CHashIntMap<>();
     private final IntMap<SiegeClanData> defenders = new CHashIntMap<>();
     private final IntMap<SiegeClanData> defendersWaiting = new CHashIntMap<>();
@@ -93,17 +99,28 @@ public class Siege implements Siegable {
         startAutoTask();
     }
 
+
     private void startAutoTask() {
         correctSiegeDateTime();
         LOGGER.info("Siege of {} : {}", castle, castle.getSiegeDate());
 
         loadSiegeClan();
 
+        var listeners = Listeners.players();
+        loginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
+        listeners.addListener(loginListener);
+
         if (nonNull(scheduledStartSiegeTask)) {
             scheduledStartSiegeTask.cancel(false);
         }
         scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(castle), 1000);
     }
+
+        private void onPlayerLogin(OnPlayerLogin event) {
+            final var player = event.getPlayer();
+            player.sendPacket(new ExMercenarySiegeHUDInfo(castle));
+        }
+
 
     private void correctSiegeDateTime() {
         if (isNull(castle.getSiegeDate()) || LocalDateTime.now().isAfter(castle.getSiegeDate())) {
@@ -896,6 +913,8 @@ public class Siege implements Siegable {
                     Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
                     return;
                 }
+
+
                 endTimeRegistration(true);
             }
 
