@@ -86,6 +86,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Olympiad.class);
 
+    private static final int MATCH_HISTORY_PAGE_SIZE = 20;
     private static final DateTimeFormatter HISTORY_DATE_FORMATTER = new DateTimeFormatterBuilder()
             .appendPattern("uuuu").appendLiteral("year ")
             .appendPattern("MM").appendLiteral("month ")
@@ -164,7 +165,6 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         if(player.isHero()) {
             giveHeroSkills(player);
         }
-
     }
 
     void showOlympiadUI(Player player) {
@@ -678,8 +678,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private NpcHtmlMessage createHeroHistory(Player player, List<OlympiadMatchResultData> matchesResult, int classId, int page) {
-        final int pageSize = 20;
-        final StringBuilder sb = formatMatches(player, matchesResult, page, pageSize);
+        final StringBuilder sb = formatMatches(player, matchesResult, page);
 
         final var heroId = matchesResult.get(0).getPlayerId();
         var heroHistory = history.get(heroId);
@@ -699,23 +698,20 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             message.replace("%previous%", "");
         }
 
-        if (matchesResult.size() > (page - 1) * pageSize + pageSize) {
+        if (matchesResult.size() > (page - 1) * MATCH_HISTORY_PAGE_SIZE + MATCH_HISTORY_PAGE_SIZE) {
             message.replace("%next%", "<button value=\"Next\" action=\"bypass _match?class=" + classId + "&page=" + (page + 1) + "\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
         } else {
             message.replace("%next%", "");
         }
-
-
-
         return message;
     }
 
-    private StringBuilder formatMatches(Player player, List<OlympiadMatchResultData> matchesResult, int page, int pageSize) {
+    private StringBuilder formatMatches(Player player, List<OlympiadMatchResultData> matchesResult, int page) {
         final var sb = new StringBuilder();
         final var battleTemplate = HtmCache.getInstance().getHtm(player, "data/html/olympiad/hero-history-battle.htm");
 
-        final int initial = (page -1) * pageSize;
-        for (int i = initial; i < Math.min(initial + pageSize, matchesResult.size()) ; i++) {
+        final int initial = (page -1) * MATCH_HISTORY_PAGE_SIZE;
+        for (int i = initial; i < Math.min(initial + MATCH_HISTORY_PAGE_SIZE, matchesResult.size()) ; i++) {
             var battle = matchesResult.get(i);
             sb.append(battleTemplate.replace("%date%", battle.getDate().format(HISTORY_DATE_FORMATTER))
                     .replace("%opponent%", battle.getOpponentName())
@@ -784,6 +780,47 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
     boolean keepDances() {
         return settings.keepDance;
+    }
+
+    public int getUnclaimedPoints(Player player) {
+        return getDAO(OlympiadDAO.class).unclaimedPoints(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+    }
+
+    public void changePoints(Player player) {
+        if(!player.isInventoryUnder80()) {
+            player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+            return;
+        }
+
+        int points = getUnclaimedPoints(player);
+
+        if(points <= 0) {
+            return;
+        }
+
+        points += getRankingPoints(player);
+
+        giveItems(player, settings.markOfBattle, points * settings.markOfBattlePerPoint);
+        getDAO(OlympiadDAO.class).claimPoints(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+    }
+
+    private int getRankingPoints(Player player) {
+        final var history = lastCycleDataOf(player);
+        final double ranking = history.getOverallRank() / (double) history.getOverallCount() * 100;
+        int points = 0;
+
+        for (var rankingReward : settings.rankingRewards) {
+            if(rankingReward.contains(ranking)) {
+                points = (int) rankingReward.value();
+                break;
+            }
+        }
+        if(isHero(player.getObjectId())) {
+            points += settings.markOfBattleIfHero;
+        } else if(history.getBattlesOwn() > 1) {
+            points += settings.markOfBattleIfWin;
+        }
+        return points;
     }
 
     public static Olympiad getInstance() {

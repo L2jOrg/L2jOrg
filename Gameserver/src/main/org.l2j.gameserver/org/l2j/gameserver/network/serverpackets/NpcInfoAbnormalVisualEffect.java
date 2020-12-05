@@ -44,7 +44,7 @@ public class NpcInfoAbnormalVisualEffect extends ServerPacket {
         buffer.writeInt(_npc.getTransformationDisplayId());
 
         final Set<AbnormalVisualEffect> abnormalVisualEffects = _npc.getEffectList().getCurrentAbnormalVisualEffects();
-        buffer.writeInt(abnormalVisualEffects.size());
+        buffer.writeShort(abnormalVisualEffects.size());
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
             buffer.writeShort(abnormalVisualEffect.getClientId());
         }

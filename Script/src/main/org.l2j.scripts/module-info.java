@@ -346,6 +346,7 @@ open module org.l2j.scripts {
             org.l2j.scripts.ai.others.ClassMaster.ClassMaster,
             org.l2j.scripts.ai.others.DimensionalMerchant.DimensionalMerchant,
             org.l2j.scripts.ai.others.MonumentOfHeroes.MonumentOfHeroes,
+            org.l2j.scripts.ai.others.OlyManager.OlympiadManager,
             org.l2j.scripts.ai.others.guide.NewbieGuide,
             org.l2j.scripts.ai.others.OlyBuffer.OlyBuffer,
             org.l2j.scripts.ai.others.Proclaimer.Proclaimer,

@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
 	`ui_key_mapping` VARCHAR(255),
 	`attendance_date` BIGINT DEFAULT 0,
 	`attendance_index` INT DEFAULT 0,
-	`unclaimed_olympiad_points` INT DEFAULT 0,
 	`monster_return` INT DEFAULT -1,
     PRIMARY KEY (`player_id`),
     FOREIGN KEY (`player_id`) REFERENCES characters(`charId`) ON DELETE CASCADE

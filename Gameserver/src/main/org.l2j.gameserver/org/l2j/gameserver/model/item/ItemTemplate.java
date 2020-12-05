@@ -529,7 +529,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     }
 
     public boolean isOlyRestrictedItem() {
-        return olympiadRestricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(id);
+        return olympiadRestricted;
     }
 
     public boolean isForNpc() {

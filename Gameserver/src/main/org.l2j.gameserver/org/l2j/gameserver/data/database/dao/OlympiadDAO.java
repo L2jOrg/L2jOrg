@@ -139,8 +139,8 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     OlympiadRankData findPreviousRankData(int playerId, int server);
 
     @Query("""
-    REPLACE INTO olympiad_rankers_snapshot(player_id, server, `rank`, previous_rank, class_id, battles, battles_won, battles_lost, points, update_date)
-    SELECT player_id, server, `rank`, previous_rank, classid, battles, battles_won, battles_lost, points, CURRENT_DATE
+    REPLACE INTO olympiad_rankers_snapshot(player_id, server, `rank`, previous_rank, class_id, battles, battles_won, battles_lost, points, update_date, points_claimed)
+    SELECT player_id, server, `rank`, previous_rank, classid, battles, battles_won, battles_lost, points, CURRENT_DATE, FALSE
     FROM ( SELECT op.player_id, op.server,
                   RANK() over (ORDER BY op.points DESC) AS `rank`,
                   IFNULL(ors.`rank`, 0) AS previous_rank,
@@ -289,4 +289,10 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
 
     @Query("SELECT player_id FROM olympiad_heroes WHERE server = :server:")
     IntSet findHeroesId(int server);
+
+    @Query("SELECT points FROM olympiad_rankers_snapshot WHERE player_id =:playerId: AND server = :server: AND  points_claimed = FALSE")
+    int unclaimedPoints(int playerId, int server);
+
+    @Query("UPDATE olympiad_rankers_snapshot SET points_claimed = TRUE WHERE player_id = :playerId: AND server = :server:")
+    void claimPoints(int playerId, int server);
 }

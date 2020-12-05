@@ -102,7 +102,7 @@ public class Siege implements Siegable {
 
     private void startAutoTask() {
         correctSiegeDateTime();
-        LOGGER.info("Siege of {} : {}", castle, castle.getSiegeDate());
+        LOGGER.info("Siege of{} : {}", castle, castle.getSiegeDate());
 
         loadSiegeClan();
 
@@ -883,7 +883,6 @@ public class Siege implements Siegable {
             } else if(timeRemaining.toSeconds() > 0) {
                 announceToPlayer(getSystemMessage(SystemMessageId.THIS_CASTLE_SIEGE_WILL_END_IN_S1_SECOND_S).addInt((int) timeRemaining.toSeconds()), true);
                 ThreadPool.schedule(this, 1, TimeUnit.SECONDS);
-
             } else {
                 castle.getSiege().endSiege();
             }

@@ -575,7 +575,6 @@ public class Npc extends Creature {
             return temp;
         }
 
-        // If the file is not found, the standard message "I have nothing to say to you" is returned
         return "data/html/npcdefault.htm";
     }
 
@@ -585,12 +584,8 @@ public class Npc extends Creature {
 
     /**
      * Returns true if html exists
-     *
-     * @param player
-     * @param type
-     * @return boolean
      */
-    private boolean showPkDenyChatWindow(Player player, String type) {
+    protected boolean showPkDenyChatWindow(Player player, String type) {
         String html = HtmCache.getInstance().getHtm(player, "data/html/" + type + "/" + getId() + "-pk.htm");
         if (html != null) {
             html = html.replaceAll("%objectId%", String.valueOf(getObjectId()));
@@ -619,26 +614,6 @@ public class Npc extends Creature {
             return;
         }
 
-        if (player.getReputation() < 0) {
-            if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof Merchant)) {
-                if (showPkDenyChatWindow(player, "merchant")) {
-                    return;
-                }
-            } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (this instanceof Teleporter)) {
-                if (showPkDenyChatWindow(player, "teleporter")) {
-                    return;
-                }
-            } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (this instanceof Warehouse)) {
-                if (showPkDenyChatWindow(player, "warehouse")) {
-                    return;
-                }
-            } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof Fisherman)) {
-                if (showPkDenyChatWindow(player, "fisherman")) {
-                    return;
-                }
-            }
-        }
-
         if (getTemplate().isType("Auctioneer") && (val == 0)) {
             return;
         }
@@ -646,44 +621,17 @@ public class Npc extends Creature {
         final int npcId = getTemplate().getId();
 
         String filename;
-        switch (npcId) {
-            case 31688: {
-                if (player.isNoble()) {
-                    filename = OLYMPIAD_HTML_PATH + "noble_main.htm";
-                } else {
-                    filename = (getHtmlPath(npcId, val));
-                }
-                break;
+        if (npcId == 30298) { // Blacksmith Pinter
+            if (player.isAcademyMember()) {
+                filename = getHtmlPath(npcId, 1);
+            } else {
+                filename = getHtmlPath(npcId, val);
             }
-            case 31690:
-            case 31769:
-            case 31770:
-            case 31771:
-            case 31772: {
-                if (player.isHero() || player.isNoble()) {
-                    filename = OLYMPIAD_HTML_PATH + "hero_main.htm";
-                } else {
-                    filename = (getHtmlPath(npcId, val));
-                }
-                break;
+        } else {
+            if (((npcId >= 31093) && (npcId <= 31094)) || ((npcId >= 31172) && (npcId <= 31201)) || ((npcId >= 31239) && (npcId <= 31254))) {
+                return;
             }
-            case 30298: // Blacksmith Pinter
-            {
-                if (player.isAcademyMember()) {
-                    filename = (getHtmlPath(npcId, 1));
-                } else {
-                    filename = (getHtmlPath(npcId, val));
-                }
-                break;
-            }
-            default: {
-                if (((npcId >= 31093) && (npcId <= 31094)) || ((npcId >= 31172) && (npcId <= 31201)) || ((npcId >= 31239) && (npcId <= 31254))) {
-                    return;
-                }
-                // Get the text of the selected HTML file in function of the npcId and of the page number
-                filename = (getHtmlPath(npcId, val));
-                break;
-            }
+            filename = getHtmlPath(npcId, val);
         }
 
         // Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player
@@ -701,14 +649,10 @@ public class Npc extends Creature {
      * @param filename The filename that contains the text to send
      */
     public void showChatWindow(Player player, String filename) {
-        // Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         html.setFile(player, filename);
         html.replace("%objectId%", String.valueOf(getObjectId()));
         player.sendPacket(html);
-
-        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
-        player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
     /**

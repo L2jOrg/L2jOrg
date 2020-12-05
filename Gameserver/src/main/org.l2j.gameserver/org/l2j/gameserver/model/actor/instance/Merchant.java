@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TaxType;
@@ -30,12 +31,8 @@ import org.l2j.gameserver.network.serverpackets.BuyList;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.util.GameUtils;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.10.4.9 $ $Date: 2005/04/11 10:06:08 $
- */
 public class Merchant extends Folk {
+
     public Merchant(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2MerchantInstance);
@@ -83,5 +80,13 @@ public class Merchant extends Folk {
 
         player.sendPacket(new BuyList(buyList, player, (applyCastleTax) ? getCastleTaxRate(TaxType.BUY) : 0));
         player.sendPacket(new ExBuySellList(player, false, (applyCastleTax) ? getCastleTaxRate(TaxType.SELL) : 0));
+    }
+
+    @Override
+    public void showChatWindow(Player player, int val) {
+        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && showPkDenyChatWindow(player, "merchant")) {
+            return;
+        }
+        super.showChatWindow(player, val);
     }
 }

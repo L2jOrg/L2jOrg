@@ -60,7 +60,6 @@ public final class Config {
     // Config File Definitions
     // --------------------------------------------------
 
-    public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
@@ -68,7 +67,6 @@ public final class Config {
     private static final String GENERAL_CONFIG_FILE = "config/general.properties";
 
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-
 
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
@@ -321,24 +319,6 @@ public final class Config {
     public static String BBS_DEFAULT;
 
     public static int WORLD_CHAT_POINTS_PER_DAY;
-    public static long ALT_OLY_BATTLE;
-    public static int ALT_OLY_CLASSED;
-    public static int ALT_OLY_NONCLASSED;
-    public static List<ItemHolder> ALT_OLY_WINNER_REWARD;
-    public static List<ItemHolder> ALT_OLY_LOSER_REWARD;
-
-    public static int ALT_OLY_COMP_RITEM;
-    public static int ALT_OLY_MIN_MATCHES;
-    public static int ALT_OLY_MARK_PER_POINT;
-    public static int ALT_OLY_MAX_POINTS;
-    public static int ALT_OLY_DIVIDER_CLASSED;
-    public static int ALT_OLY_DIVIDER_NON_CLASSED;
-
-    public static boolean ALT_OLY_LOG_FIGHTS;
-    public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
-    public static List<Integer> LIST_OLY_RESTRICTED_ITEMS;
-    public static int ALT_OLY_ENCHANT_LIMIT;
-    public static int ALT_OLY_WAIT_TIME;
 
     public static int ALT_MANOR_REFRESH_TIME;
     public static int ALT_MANOR_REFRESH_MIN;
@@ -1320,33 +1300,6 @@ public final class Config {
         MAX_REPUTATION = PVPSettings.getInt("MaxReputation", 500);
         REPUTATION_INCREASE = PVPSettings.getInt("ReputationIncrease", 100);
         ACTIVATE_PVP_BOSS_FLAG = PVPSettings.getBoolean("ActivatePvPBossFlag", false);
-
-        // Load Olympiad config file (if exists)
-        final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
-
-        ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
-        ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 20);
-        ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 20);
-        ALT_OLY_WINNER_REWARD = parseItemsList(Olympiad.getString("AltOlyWinReward", ""));
-        ALT_OLY_LOSER_REWARD = parseItemsList(Olympiad.getString("AltOlyLoserReward", ""));
-
-        ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 45584);
-        ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
-        ALT_OLY_MARK_PER_POINT = Olympiad.getInt("AltOlyMarkPerPoint", 20);
-        ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
-        ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
-        ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
-
-        ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
-        ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
-
-        final String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
-        LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItems.length);
-        for (String id : olyRestrictedItems) {
-            LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
-        }
-        ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
-        ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 60);
 
         // Grand bosses
         final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
