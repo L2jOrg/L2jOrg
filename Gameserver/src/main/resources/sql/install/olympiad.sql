@@ -94,6 +94,7 @@ CREATE TABLE olympiad_rankers_snapshot(
     `battles_lost` MEDIUMINT NOT NULL,
     `points` INT NOT NULL,
     `update_date` DATE NOT NULL,
+    `points_claimed` BOOL NOT NULL DEFAULT FALSE,
     PRIMARY KEY (`player_id`, `server`),
     KEY (`rank`)
 ) ENGINE = InnoDB

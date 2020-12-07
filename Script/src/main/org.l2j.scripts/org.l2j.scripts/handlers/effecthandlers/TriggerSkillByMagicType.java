@@ -70,7 +70,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect {
             return;
         }
 
-        if (Rnd.chance(chance)) {
+        if (!Rnd.chance(chance)) {
             return;
         }
 

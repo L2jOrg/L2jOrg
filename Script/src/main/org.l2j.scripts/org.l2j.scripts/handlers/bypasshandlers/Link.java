@@ -24,26 +24,21 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 
-public class Link implements IBypassHandler
-{
-	private static final String[] COMMANDS =
-	{
-		"Link"
-	};
+public class Link implements IBypassHandler {
+
+	private static final String[] COMMANDS = { "Link" };
 	
 	@Override
-	public boolean useBypass(String command, Player player, Creature target)
-	{
+	public boolean useBypass(String command, Player player, Creature target) {
 		final String htmlPath = command.substring(4).trim();
-		if (htmlPath.isEmpty())
-		{
-			LOGGER.warn("Player " + player.getName() + " sent empty link html!");
+
+		if (htmlPath.isEmpty()) {
+			LOGGER.warn("Player {} sent empty link html!", player);
 			return false;
 		}
 		
-		if (htmlPath.contains(".."))
-		{
-			LOGGER.warn("Player " + player.getName() + " sent invalid link html: " + htmlPath);
+		if (htmlPath.contains("..")) {
+			LOGGER.warn("Player {} sent invalid link html: {}", player, htmlPath);
 			return false;
 		}
 		

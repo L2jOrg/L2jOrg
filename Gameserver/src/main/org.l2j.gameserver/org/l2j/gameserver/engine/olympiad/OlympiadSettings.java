@@ -22,6 +22,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.util.IntervalValue;
 import org.w3c.dom.Node;
 
 import java.time.Duration;
@@ -44,6 +45,7 @@ class OlympiadSettings {
     List<ItemHolder> tieRewards = new ArrayList<>();
     List<ItemHolder> heroRewards = new ArrayList<>();
     List<Skill> heroSkills = new ArrayList<>();
+    List<IntervalValue> rankingRewards = new ArrayList<>();
     int[] availableArenas = Util.INT_ARRAY_EMPTY;
 
     boolean forceStartDate;
@@ -59,6 +61,10 @@ class OlympiadSettings {
     byte saveCycleMinBattles;
     boolean enableLegend;
     boolean keepDance;
+    int markOfBattle;
+    long markOfBattlePerPoint;
+    int markOfBattleIfHero;
+    int markOfBattleIfWin;
 
     private OlympiadSettings() {
 
@@ -100,6 +106,10 @@ class OlympiadSettings {
         settings.heroReputation = reader.parseInt(attr, "hero-reputation");
         settings.minBattlePoints = reader.parseShort(attr, "min-olympiad-points");
         settings.maxBattlePoints = reader.parseShort(attr, "max-olympiad-points");
+        settings.markOfBattle = reader.parseInt(attr, "mark-of-battle");
+        settings.markOfBattlePerPoint = reader.parseInt(attr,"mark-of-battle-per-point");
+        settings.markOfBattleIfHero = reader.parseInt(attr,"mark-of-battle-if-hero");
+        settings.markOfBattleIfWin = reader.parseInt(attr,"mark-of-battle-if-win");
 
         for(var rewardNode = rewards.getFirstChild(); nonNull(rewardNode); rewardNode = rewardNode.getNextSibling()) {
 
@@ -109,8 +119,17 @@ class OlympiadSettings {
                 case "tie" -> settings.tieRewards.add(reader.parseItemHolder(rewardNode));
                 case "hero" -> settings.heroRewards.add(reader.parseItemHolder(rewardNode));
                 case "hero-skills" -> parseSkill(reader, settings, rewardNode);
+                case "mark-of-battle-by-ranking" -> parseRankingReward(reader, settings, rewardNode);
             }
         }
+    }
+
+    private static void parseRankingReward(GameXmlReader reader, OlympiadSettings settings, Node rewardNode) {
+        final var attrs = rewardNode.getAttributes();
+        final var from = reader.parseFloat(attrs, "from");
+        final var until = reader.parseFloat(attrs, "until");
+        final var value = reader.parseFloat(attrs, "value");
+        settings.rankingRewards.add(new IntervalValue(from, until, value));
     }
 
     private static void parseSkill(GameXmlReader reader, OlympiadSettings settings, Node rewardNode) {

@@ -69,6 +69,7 @@ public class CharacterSettings implements Settings {
     private boolean craftEnabled;
     private long maxAdena;
     private boolean allowPKTeleport;
+    private int maxFreeTeleportLevel;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -127,11 +128,13 @@ public class CharacterSettings implements Settings {
         maxPAtkSpeed = settingsFile.getInteger("MaxPAtkSpeed", 1500);
         maxMAtkSpeed = settingsFile.getInteger("MaxMAtkSpeed", 1999);
         maxEvasion = settingsFile.getInteger("MaxEvasion", 250);
+
         teleportInBattle = settingsFile.getBoolean("TeleportInBattle", true);
+        allowPKTeleport = settingsFile.getBoolean("AltKarmaPlayerCanTeleport", true);
+        maxFreeTeleportLevel = settingsFile.getInteger("MaxFreeTeleportLevel", 40);
 
         craftEnabled = settingsFile.getBoolean("CraftingEnabled", true);
 
-        allowPKTeleport = settingsFile.getBoolean("AltKarmaPlayerCanTeleport", true);
     }
 
     public int partyRange() {
@@ -300,5 +303,9 @@ public class CharacterSettings implements Settings {
 
     public boolean allowPKTeleport() {
         return allowPKTeleport;
+    }
+
+    public int maxFreeTeleportLevel() {
+        return maxFreeTeleportLevel;
     }
 }

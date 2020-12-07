@@ -591,10 +591,6 @@ public final class Player extends Playable {
         return variables.getAttendanceIndex();
     }
 
-    public int getUnclaimedOlympiadPoints() {
-        return variables.getUnclaimedOlympiadPoints();
-    }
-
     public int getMonsterReturn() {
         return variables.getMonsterReturn();
     }
@@ -723,10 +719,6 @@ public final class Player extends Playable {
 
     public void setAttendanceIndex(int attendanceIndex) {
         variables.setAttendanceIndex(attendanceIndex);
-    }
-
-    public void setUnclaimedOlympiadPoints(int unclaimedOlympiadPoints) {
-        variables.setUnclaimedOlympiadPoints(unclaimedOlympiadPoints);
     }
 
     public void setMonsterReturn(int monsterReturn) {
@@ -7293,14 +7285,6 @@ public final class Player extends Playable {
         }
 
         _htmlActionOriginObjectIds[scope.ordinal()] = npcObjId;
-    }
-
-    public int getLastHtmlActionOriginId() {
-        return _lastHtmlActionOriginObjId;
-    }
-
-    public void setLastHtmlActionOriginId(int objId) {
-        _lastHtmlActionOriginObjId = objId;
     }
 
     private boolean validateHtmlAction(Iterable<String> actionIter, String action) {

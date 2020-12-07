@@ -116,12 +116,6 @@ public interface IStatsFunction {
             return 0;
         }
 
-        int enchant = item.getEnchantLevel();
-
-        if (creature.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ENCHANT_LIMIT)) {
-            enchant = Config.ALT_OLY_ENCHANT_LIMIT;
-        }
-
         return switch (stat) {
             case MAGICAL_DEFENCE, PHYSICAL_DEFENCE -> calcEnchantDefBonus(item);
             default -> 0;

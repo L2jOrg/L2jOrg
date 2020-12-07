@@ -125,9 +125,6 @@ public class PlayerVariableData {
     @Column("attendance_index")
     private int attendanceIndex;
 
-    @Column("unclaimed_olympiad_points")
-    private int unclaimedOlympiadPoints;
-
     @Column("monster_return")
     private int monsterReturn;
 
@@ -251,10 +248,6 @@ public class PlayerVariableData {
         return attendanceIndex;
     }
 
-    public int getUnclaimedOlympiadPoints() {
-        return unclaimedOlympiadPoints;
-    }
-
     public int getMonsterReturn() {
         return monsterReturn;
     }
@@ -373,10 +366,6 @@ public class PlayerVariableData {
 
     public void setAttendanceIndex(int attendanceIndex) {
         this.attendanceIndex = attendanceIndex;
-    }
-
-    public void setUnclaimedOlympiadPoints(int unclaimedOlympiadPoints) {
-        this.unclaimedOlympiadPoints = unclaimedOlympiadPoints;
     }
 
     public void setMonsterReturn(int monsterReturn) {
