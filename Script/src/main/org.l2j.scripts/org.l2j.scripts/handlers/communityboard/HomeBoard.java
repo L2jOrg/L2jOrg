@@ -44,6 +44,8 @@ import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.function.BiPredicate;
@@ -64,6 +66,8 @@ public final class HomeBoard implements IParseBoardHandler {
 
     private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/new/navigation.html";
     private static final int PAGE_LIMIT = 6;
+    private static final Logger LOGGER = LoggerFactory.getLogger(HomeBoard.class);
+
 
     private static final String[] COMMANDS = {
         "_bbshome",
@@ -211,7 +215,6 @@ public final class HomeBoard implements IParseBoardHandler {
             activeChar.sendMessage("You can't use the Community Board right now.");
             return false;
         }
-
         if (KARMA_CHECK.test(activeChar)) {
             activeChar.sendMessage("Players with Karma cannot use the Community Board.");
             return false;
@@ -229,10 +232,13 @@ public final class HomeBoard implements IParseBoardHandler {
                 returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
             }
         } else if (command.startsWith("_bbsmultisell")) {
+            LOGGER.info("call multisell engine homeboard");
             final String fullBypass = command.replace("_bbsmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
             final int multisellId = Integer.parseInt(buypassOptions[0]);
             MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, false);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-gmshop" + ".html");
+
         } else if (command.startsWith("_bbsexcmultisell")) {
             final String fullBypass = command.replace("_bbsexcmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");

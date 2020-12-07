@@ -70,10 +70,6 @@ public final class Antharas extends AbstractNpcAI
 	private static final SkillHolder ANTH_BREATH = new SkillHolder(4111, 1); // Antharas Fossilization
 	private static final SkillHolder ANTH_NORM_ATTACK = new SkillHolder(4112, 1); // Ordinary Attack
 	private static final SkillHolder ANTH_NORM_ATTACK_EX = new SkillHolder(4113, 1); // Animal doing ordinary attack
-	private static final SkillHolder ANTH_REGEN_1 = new SkillHolder(4125, 1); // Antharas Regeneration
-	private static final SkillHolder ANTH_REGEN_2 = new SkillHolder(4239, 1); // Antharas Regeneration
-	private static final SkillHolder ANTH_REGEN_3 = new SkillHolder(4240, 1); // Antharas Regeneration
-	private static final SkillHolder ANTH_REGEN_4 = new SkillHolder(4241, 1); // Antharas Regeneration
 	private static final SkillHolder DISPEL_BOM = new SkillHolder(5042, 1); // NPC Dispel Bomb
 	private static final SkillHolder ANTH_ANTI_STRIDER = new SkillHolder(4258, 1); // Hinder Strider
 	private static final SkillHolder ANTH_FEAR_SHORT = new SkillHolder(5092, 1); // Antharas Terror
@@ -157,38 +153,6 @@ public final class Antharas extends AbstractNpcAI
 				startQuestTimer("CAMERA_1", 23, _antharas, null);
 				break;
 			}
-			case "CAMERA_1":
-			{
-				zone.broadcastPacket(new SpecialCamera(npc, 700, 13, -19, 0, 10000, 20000, 0, 0, 0, 0, 0));
-				startQuestTimer("CAMERA_2", 3000, npc, null);
-				break;
-			}
-			case "CAMERA_2":
-			{
-				zone.broadcastPacket(new SpecialCamera(npc, 700, 13, 0, 6000, 10000, 20000, 0, 0, 0, 0, 0));
-				startQuestTimer("CAMERA_3", 10000, npc, null);
-				break;
-			}
-			case "CAMERA_3":
-			{
-				zone.broadcastPacket(new SpecialCamera(npc, 3700, 0, -3, 0, 10000, 10000, 0, 0, 0, 0, 0));
-				zone.broadcastPacket(new SocialAction(npc.getObjectId(), 1));
-				startQuestTimer("CAMERA_4", 200, npc, null);
-				startQuestTimer("SOCIAL", 5200, npc, null);
-				break;
-			}
-			case "CAMERA_4":
-			{
-				zone.broadcastPacket(new SpecialCamera(npc, 1100, 0, -3, 22000, 10000, 30000, 0, 0, 0, 0, 0));
-				startQuestTimer("CAMERA_5", 10800, npc, null);
-				break;
-			}
-			case "CAMERA_5":
-			{
-				zone.broadcastPacket(new SpecialCamera(npc, 1100, 0, -3, 300, 10000, 7000, 0, 0, 0, 0, 0));
-				startQuestTimer("START_MOVE", 1900, npc, null);
-				break;
-			}
 			case "SOCIAL":
 			{
 				zone.broadcastPacket(new SocialAction(npc.getObjectId(), 2));
@@ -204,39 +168,6 @@ public final class Antharas extends AbstractNpcAI
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(179011, 114871, -7704));
 				startQuestTimer("CHECK_ATTACK", 60000, npc, null);
 				startQuestTimer("SPAWN_MINION", 300000, npc, null);
-				break;
-			}
-			case "SET_REGEN":
-			{
-				if (npc != null)
-				{
-					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.25))
-					{
-						if (!npc.isAffectedBySkill(ANTH_REGEN_4.getSkillId()))
-						{
-							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, ANTH_REGEN_4.getSkill(), npc);
-						}
-					}
-					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.5))
-					{
-						if (!npc.isAffectedBySkill(ANTH_REGEN_3.getSkillId()))
-						{
-							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, ANTH_REGEN_3.getSkill(), npc);
-						}
-					}
-					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))
-					{
-						if (!npc.isAffectedBySkill(ANTH_REGEN_2.getSkillId()))
-						{
-							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, ANTH_REGEN_2.getSkill(), npc);
-						}
-					}
-					else if (!npc.isAffectedBySkill(ANTH_REGEN_1.getSkillId()))
-					{
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, ANTH_REGEN_1.getSkill(), npc);
-					}
-					startQuestTimer("SET_REGEN", 60000, npc, null);
-				}
 				break;
 			}
 			case "CHECK_ATTACK":
@@ -299,58 +230,6 @@ public final class Antharas extends AbstractNpcAI
 				startQuestTimer("SPAWN_MINION", 300000, npc, null);
 				break;
 			}
-			case "CLEAR_ZONE":
-			{
-				zone.forEachCreature(creature -> {
-					if(isNpc(creature)) {
-						creature.deleteMe();
-					} else if(isPlayer(creature)) {
-						//creature.teleToLocation(79800 + Rnd.get(600), 151200 + Rnd.get(1100), -3534);
-					}
-				});
-				break;
-			}
-			case "TID_USED_FEAR":
-			{
-				if ((npc != null) && (sandStorm == 0))
-				{
-					sandStorm = 1;
-					npc.disableCoreAI(true);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(177648, 114816, -7735));
-					startQuestTimer("TID_FEAR_MOVE_TIMEOVER", 2000, npc, null);
-					startQuestTimer("TID_FEAR_COOLTIME", 300000, npc, null);
-				}
-				break;
-			}
-			case "TID_FEAR_COOLTIME":
-			{
-				sandStorm = 0;
-				break;
-			}
-			case "TID_FEAR_MOVE_TIMEOVER":
-			{
-				if ((sandStorm == 1) && (npc.getX() == 177648) && (npc.getY() == 114816))
-				{
-					sandStorm = 2;
-					moveChance = 0;
-					npc.disableCoreAI(false);
-				}
-				else if (sandStorm == 1)
-				{
-					if (moveChance <= 3)
-					{
-						moveChance++;
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(177648, 114816, -7735));
-						startQuestTimer("TID_FEAR_MOVE_TIMEOVER", 5000, npc, null);
-					}
-					else
-					{
-						//npc.teleToLocation(177648, 114816, -7735, npc.getHeading());
-						startQuestTimer("TID_FEAR_MOVE_TIMEOVER", 1000, npc, null);
-					}
-				}
-				break;
-			}
 			case "CLEAR_STATUS":
 			{
 				_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
@@ -392,23 +271,6 @@ public final class Antharas extends AbstractNpcAI
 				}
 				break;
 			}
-			case "ABORT_FIGHT":
-			{
-				if (getStatus() == BossStatus.FIGHTING)
-				{
-					setStatus(BossStatus.ALIVE);
-					cancelQuestTimer("CHECK_ATTACK", _antharas, null);
-					cancelQuestTimer("SPAWN_MINION", _antharas, null);
-
-					//oustCreatures();
-					player.sendMessage(getClass().getSimpleName() + ": Fight has been aborted!");
-				}
-				else
-				{
-					player.sendMessage(getClass().getSimpleName() + ": You can't abort fight right now!");
-				}
-				break;
-			}
 			case "MANAGE_SKILL":
 			{
 				manageSkills(npc);
@@ -416,20 +278,6 @@ public final class Antharas extends AbstractNpcAI
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
-	}
-
-	private void oustCreatures() {
-		zone.forEachCreature(creature -> {
-			if(isNpc(creature)) {
-				if(creature.getId() == ANTHARAS) {
-					//creature.teleToLocation(185708, 114298, -8221);
-				} else {
-					creature.deleteMe();
-				}
-			} else if(isPlayer(creature)) {
-				//creature.teleToLocation(79800 + Rnd.get(600), 151200 + Rnd.get(1100), -3534);
-			}
-		});
 	}
 
 	@Override
@@ -455,12 +303,6 @@ public final class Antharas extends AbstractNpcAI
 		}
 		else if (npc.getId() == ANTHARAS)
 		{
-			if (!zone.isCreatureInZone(attacker) || (getStatus() != BossStatus.FIGHTING))
-			{
-				LOGGER.warn(": Player " + attacker.getName() + " attacked Antharas in invalid conditions!");
-				//attacker.teleToLocation(80464, 152294, -3534);
-			}
-
 			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTH_ANTI_STRIDER.getSkillId()) && SkillCaster.checkUseConditions(npc, ANTH_ANTI_STRIDER.getSkill()))
 			{
 				addSkillCastDesire(npc, attacker, ANTH_ANTI_STRIDER.getSkill(), 100);
