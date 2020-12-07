@@ -65,7 +65,7 @@ public class RequestNewEnchantRemoveTwo extends ClientPacket {
             return;
         }
         request.setItemTwo(0);
-
+        activeChar.removeRequest(request.getClass());
         client.sendPacket(ExEnchantTwoRemoveOK.STATIC_PACKET);
     }
 }
