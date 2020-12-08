@@ -23,6 +23,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.engine.item.AttendanceEngine;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -180,7 +181,7 @@ public class AdminReload implements IAdminCommandHandler {
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fishing data.");
             }
             case "attendance" -> {
-                AttendanceRewardData.getInstance().load();
+                AttendanceEngine.getInstance().load();
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Attendance Reward data.");
             }
             case "instance" -> {

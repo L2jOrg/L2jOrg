@@ -27,21 +27,24 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author Mobius
  */
 public class ExConfirmVipAttendanceCheck extends ServerPacket {
-    boolean _available;
-    int _index;
+    private final boolean available;
+    private final int index;
+    private final boolean hasCafePoints;
+    private final boolean isVip;
 
-    public ExConfirmVipAttendanceCheck(boolean rewardAvailable, int rewardIndex) {
-        _available = rewardAvailable;
-        _index = rewardIndex;
+    public ExConfirmVipAttendanceCheck(boolean available, int index, boolean hasCafePoints, boolean isVip) {
+        this.available = available;
+        this.index = index;
+        this.hasCafePoints = hasCafePoints;
+        this.isVip = isVip;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_CONFIRM_VIP_ATTENDANCE_CHECK, buffer );
-        buffer.writeByte(_available); // can receive reward today? 1 else 0
-        buffer.writeByte(_index); // active reward index
-        buffer.writeInt(0);
-        buffer.writeInt(0);
+        buffer.writeByte(available);
+        buffer.writeByte(index);
+        buffer.writeInt(hasCafePoints);
+        buffer.writeInt(isVip);
     }
-
 }

@@ -12166,9 +12166,6 @@ public final class SystemMessageId {
     @ClientString(id = 6187, message = "Cannot continue because another report is being processed. Please try again after entering the verification number.")
     public static SystemMessageId CANNOT_CONTINUE_BECAUSE_ANOTHER_REPORT_IS_BEING_PROCESSED_PLEASE_TRY_AGAIN_AFTER_ENTERING_THE_VERIFICATION_NUMBER;
 
-    @ClientString(id = 6188, message = "You do not meet the level requirements to receive the Attendance Reward. Please check the required level. (You can redeem your reward 30 minutes after logging in.)")
-    public static SystemMessageId YOU_DO_NOT_MEET_THE_LEVEL_REQUIREMENTS_TO_RECEIVE_THE_ATTENDANCE_REWARD_PLEASE_CHECK_THE_REQUIRED_LEVEL_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
-
     @ClientString(id = 6189, message = "You must receive the reward in a given day to receive the next day's reward.\\nRewards received once cannot be reverted back.")
     public static SystemMessageId YOU_MUST_RECEIVE_THE_REWARD_IN_A_GIVEN_DAY_TO_RECEIVE_THE_NEXT_DAY_S_REWARDNREWARDS_RECEIVED_ONCE_CANNOT_BE_REVERTED_BACK;
 
@@ -17644,6 +17641,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 6183, message = "Your VIP level is too low to receive the reward.")
     public static SystemMessageId YOUR_VIP_LEVEL_IS_TOO_LOW_TO_RECEIVE_THE_REWARD;
+
+    @ClientString(id = 6188, message = "You do not meet the level requirements to receive the Attendance Reward. Please check the required level. (You can redeem your reward 30 minutes after logging in.)")
+    public static SystemMessageId YOU_DO_NOT_MEET_THE_LEVEL_REQUIREMENTS_TO_RECEIVE_THE_ATTENDANCE_REWARD_PLEASE_CHECK_THE_REQUIRED_LEVEL_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
 
     @ClientString(id = 6501, message = "You cannot bookmark this location because you do not have a My Teleport Flag.")
     public static SystemMessageId YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG;

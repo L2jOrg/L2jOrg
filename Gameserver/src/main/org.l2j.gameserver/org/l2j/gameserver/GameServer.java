@@ -35,6 +35,7 @@ import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
+import org.l2j.gameserver.engine.item.AttendanceEngine;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
@@ -142,7 +143,7 @@ public class GameServer {
         LCoinShop.init();
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
-        AttendanceRewardData.getInstance();
+        AttendanceEngine.init();
         CostumeEngine.init();
         UpgradeItemEngine.init();
         CombinationItemsManager.init();

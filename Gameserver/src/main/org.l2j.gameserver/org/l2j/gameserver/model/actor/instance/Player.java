@@ -9492,7 +9492,11 @@ public final class Player extends Playable {
         return account.lastAttendanceReward();
     }
 
-    public void updateAttendanceReward(byte rewardIndex) {
+    public int getVipAttendanceReward() {
+        return account.vipAttendanceReward();
+    }
+
+    public void updateAttendance(byte rewardIndex, boolean updateVip) {
         var now = LocalDateTime.now();
         if(now.getHour() > 6 || (now.getHour() == 6 && now.getMinute() > 30) ) {
             now = now.plusDays(1);
@@ -9500,6 +9504,12 @@ public final class Player extends Playable {
 
         account.setLastAttendanceReward(rewardIndex);
         account.setNextAttendance(now.withHour(6).withMinute(30).withSecond(0));
+        if(rewardIndex == 1) {
+            account.setVipAttendanceReward(0);
+        }
+        if(updateVip) {
+            account.updateAttendanceVipReward((rewardIndex - 1) / 7);
+        }
     }
 
     public boolean isFriend(Player player) {
