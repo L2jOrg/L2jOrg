@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -29,11 +30,11 @@ public final class CSShowComBoard extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOW_BOARD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SHOW_BOARD, buffer );
 
-        writeByte((byte) 0x01); // c4 1 to show community 00 to hide
-        writeBytes(_html);
+        buffer.writeByte(0x01); // c4 1 to show community 00 to hide
+        buffer.writeBytes(_html);
     }
 
 }

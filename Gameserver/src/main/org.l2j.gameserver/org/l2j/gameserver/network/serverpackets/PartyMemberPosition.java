@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -48,16 +49,16 @@ public class PartyMemberPosition extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PARTY_MEMBER_POSITION);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PARTY_MEMBER_POSITION, buffer );
 
-        writeInt(locations.size());
+        buffer.writeInt(locations.size());
         for (Map.Entry<Integer, Location> entry : locations.entrySet()) {
             final Location loc = entry.getValue();
-            writeInt(entry.getKey());
-            writeInt(loc.getX());
-            writeInt(loc.getY());
-            writeInt(loc.getZ());
+            buffer.writeInt(entry.getKey());
+            buffer.writeInt(loc.getX());
+            buffer.writeInt(loc.getY());
+            buffer.writeInt(loc.getZ());
         }
     }
 

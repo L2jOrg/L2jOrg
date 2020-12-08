@@ -19,66 +19,22 @@
  */
 package org.l2j.gameserver.model.stats.finalizers;
 
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayable;
-
 /**
  * @author UnAfraid
  */
 public class AttributeFinalizer implements IStatsFunction {
-    private final AttributeType _type;
-    private final boolean _isWeapon;
-
-    public AttributeFinalizer(AttributeType type, boolean isWeapon) {
-        _type = type;
-        _isWeapon = isWeapon;
-    }
 
     @Override
     public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
-        if (isPlayable(creature)) {
-            if (_isWeapon) {
-                final Item weapon = creature.getActiveWeaponInstance();
-                if (weapon != null) {
-                    final AttributeHolder weaponInstanceHolder = weapon.getAttribute(_type);
-                    if (weaponInstanceHolder != null) {
-                        baseValue += weaponInstanceHolder.getValue();
-                    }
-
-                    final AttributeHolder weaponHolder = weapon.getTemplate().getAttribute(_type);
-                    if (weaponHolder != null) {
-                        baseValue += weaponHolder.getValue();
-                    }
-                }
-            } else {
-                final Inventory inventory = creature.getInventory();
-                if (inventory != null) {
-                    for (Item item : inventory.getPaperdollItems(Item::isArmor)) {
-                        final AttributeHolder weaponInstanceHolder = item.getAttribute(_type);
-                        if (weaponInstanceHolder != null) {
-                            baseValue += weaponInstanceHolder.getValue();
-                        }
-
-                        final AttributeHolder weaponHolder = item.getTemplate().getAttribute(_type);
-                        if (weaponHolder != null) {
-                            baseValue += weaponHolder.getValue();
-                        }
-                    }
-                }
-            }
-        }
         return Stat.defaultValue(creature, stat, baseValue);
     }
 }

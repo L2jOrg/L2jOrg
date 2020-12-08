@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -30,11 +31,11 @@ public final class DoorInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.DOOR_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.DOOR_INFO, buffer );
 
-        writeInt(_door.getObjectId());
-        writeInt(_door.getId());
+        buffer.writeInt(_door.getObjectId());
+        buffer.writeInt(_door.getId());
     }
 
 }

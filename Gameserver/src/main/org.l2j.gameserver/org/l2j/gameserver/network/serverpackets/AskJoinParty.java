@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -36,11 +37,11 @@ public class AskJoinParty extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ASK_JOIN_PARTY);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ASK_JOIN_PARTY, buffer );
 
-        writeString(_requestorName);
-        writeInt(_partyDistributionType.getId());
+        buffer.writeString(_requestorName);
+        buffer.writeInt(_partyDistributionType.getId());
     }
 
 }

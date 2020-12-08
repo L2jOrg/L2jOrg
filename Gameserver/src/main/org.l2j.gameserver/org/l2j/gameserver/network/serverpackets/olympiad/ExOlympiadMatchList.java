@@ -18,59 +18,41 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
-import org.l2j.gameserver.model.olympiad.*;
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.olympiad.OlympiadMatch;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 /**
  * @author mrTJO
+ * @author JoeAlisson
  */
 public class ExOlympiadMatchList extends ServerPacket {
-    private final List<OlympiadGameTask> _games = new ArrayList<>();
 
-    public ExOlympiadMatchList() {
-        OlympiadGameTask task;
-        for (int i = 0; i < OlympiadGameManager.getInstance().getNumberOfStadiums(); i++) {
-            task = OlympiadGameManager.getInstance().getOlympiadTask(i);
-            if (task != null) {
-                if (!task.isGameStarted() || task.isBattleFinished()) {
-                    continue; // initial or finished state not shown
-                }
-                _games.add(task);
-            }
-        }
+    private final Collection<OlympiadMatch> matches;
+
+    public ExOlympiadMatchList(Collection<OlympiadMatch> matches) {
+        this.matches = matches;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_GFX_OLYMPIAD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_GFX_OLYMPIAD, buffer );
 
-        writeInt(0x00); // Type 0 = Match List, 1 = Match Result
+        buffer.writeInt(0x00); // Type 0 = Match List, 1 = Match Result
 
-        writeInt(_games.size());
-        writeInt(0x00);
+        buffer.writeInt(matches.size());
+        buffer.writeInt(0x00);
 
-        for (OlympiadGameTask curGame : _games) {
-            final AbstractOlympiadGame game = curGame.getGame();
-            if (game != null) {
-                writeInt(game.getStadiumId()); // Stadium Id (Arena 1 = 0)
-
-                if (game instanceof OlympiadGameNonClassed) {
-                    writeInt(1);
-                } else if (game instanceof OlympiadGameClassed) {
-                    writeInt(2);
-                } else {
-                    writeInt(0);
-                }
-
-                writeInt(curGame.isRunning() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
-                writeString(game.getPlayerNames()[0]); // Player 1 Name
-                writeString(game.getPlayerNames()[1]); // Player 2 Name
-            }
+        for (var match : matches) {
+            buffer.writeInt(match.getId() -1); // the client use index based starting with 1 but we are using id instead so need to decrease 1
+            buffer.writeInt(match.getType().ordinal());
+            buffer.writeInt(match.isInBattle() ? 0x02 : 0x01); // (0 = starting, 1 = Standby, 2 = Playing)
+            buffer.writeString(match.getPlayerRedName());
+            buffer.writeString(match.getPlayerBlueName());
         }
     }
 

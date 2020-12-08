@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -63,23 +64,23 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_USER_INFO_EQUIPSLOT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_USER_INFO_EQUIPSLOT, buffer );
 
-        writeInt(player.getObjectId());
-        writeShort(InventorySlot.values().length); // 152
-        writeBytes(masks);
+        buffer.writeInt(player.getObjectId());
+        buffer.writeShort(InventorySlot.values().length); // 152
+        buffer.writeBytes(masks);
 
         final PlayerInventory inventory = player.getInventory();
         for (var slot : getPaperdollOrder()) {
             if (containsMask(slot)) {
                 final VariationInstance augment = inventory.getPaperdollAugmentation(slot);
-                writeShort(22); // 10 + 4 * 3
-                writeInt(inventory.getPaperdollObjectId(slot));
-                writeInt(inventory.getPaperdollItemId(slot));
-                writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
-                writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
-                writeInt(0x00); // Visual ID not used on classic
+                buffer.writeShort(22); // 10 + 4 * 3
+                buffer.writeInt(inventory.getPaperdollObjectId(slot));
+                buffer.writeInt(inventory.getPaperdollItemId(slot));
+                buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
+                buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
+                buffer.writeInt(0x00); // Visual ID not used on classic
             }
         }
     }

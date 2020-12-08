@@ -19,14 +19,14 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.MatchingRoomType;
-import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.serverpackets.ExMPCCPartymasterList;
 
-import java.util.Objects;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author Sdw
@@ -39,15 +39,21 @@ public class RequestExMpccPartymasterList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
-        final MatchingRoom room = activeChar.getMatchingRoom();
+        final MatchingRoom room = player.getMatchingRoom();
         if ((room != null) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL)) {
-            final Set<String> leadersName = room.getMembers().stream().map(Player::getParty).filter(Objects::nonNull).map(Party::getLeader).map(Player::getName).collect(Collectors.toSet());
-            activeChar.sendPacket(new ExMPCCPartymasterList(leadersName));
+            Set<String> leadersName = new HashSet<>();
+            for (Player member : room.getMembers()) {
+                var party = member.getParty();
+                if(nonNull(party)) {
+                    leadersName.add(party.getLeader().getName());
+                }
+            }
+            player.sendPacket(new ExMPCCPartymasterList(leadersName));
         }
     }
 }

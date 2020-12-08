@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.commission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.network.GameClient;
@@ -37,15 +38,15 @@ public class ExResponseCommissionBuyItem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_BUY_ITEM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_BUY_ITEM, buffer );
 
-        writeInt(_commissionItem != null ? 1 : 0);
+        buffer.writeInt(_commissionItem != null ? 1 : 0);
         if (_commissionItem != null) {
             final ItemInfo itemInfo = _commissionItem.getItemInfo();
-            writeInt(itemInfo.getEnchantLevel());
-            writeInt(itemInfo.getId());
-            writeLong(itemInfo.getCount());
+            buffer.writeInt(itemInfo.getEnchantLevel());
+            buffer.writeInt(itemInfo.getId());
+            buffer.writeLong(itemInfo.getCount());
         }
     }
 

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TeleportType;
@@ -123,6 +124,14 @@ public final class Teleporter extends Folk {
             filename = "data/html/teleporter/castleteleporter-busy.htm"; // Busy because of siege
         }
         sendHtmlMessage(player, filename);
+    }
+
+    @Override
+    public void showChatWindow(Player player, int val) {
+        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && showPkDenyChatWindow(player, "teleporter")) {
+            return;
+        }
+        super.showChatWindow(player, val);
     }
 
     private void sendHtmlMessage(Player player, String filename) {

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.html;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -41,10 +42,10 @@ public final class TutorialShowHtml extends AbstractHtmlPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.TUTORIAL_SHOW_HTML);
-        writeInt(type.getId());
-        writeString(getHtml());
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.TUTORIAL_SHOW_HTML, buffer );
+        buffer.writeInt(type.getId());
+        buffer.writeString(getHtml());
     }
 
     @Override

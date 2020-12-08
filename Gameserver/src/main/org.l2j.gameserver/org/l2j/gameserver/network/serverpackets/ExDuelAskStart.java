@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -34,11 +35,11 @@ public class ExDuelAskStart extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_DUEL_ASK_START);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_DUEL_ASK_START, buffer );
 
-        writeString(_requestorName);
-        writeInt(_partyDuel);
+        buffer.writeString(_requestorName);
+        buffer.writeInt(_partyDuel);
     }
 
 }

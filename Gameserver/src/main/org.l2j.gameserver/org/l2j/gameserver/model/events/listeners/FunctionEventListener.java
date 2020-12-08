@@ -49,7 +49,7 @@ public class FunctionEventListener extends AbstractEventListener {
         try {
             return returnBackClass.cast(_callback.apply(event));
         } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Error while invoking " + event + " on " + getOwner(), e);
+            LOGGER.warn("Error while invoking {} on {}", event , getOwner(), e);
         }
         return null;
     }

@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.client.packet.auth2client;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
@@ -34,10 +35,10 @@ public final class AccountKicked extends AuthServerPacket {
 	}
 	
 	@Override
-	protected void writeImpl(AuthClient client)
+	protected void writeImpl(AuthClient client, WritableBuffer buffer)
 	{
-		writeByte((byte)0x02);
-		writeInt(_reason.getCode());
+		buffer.writeByte(0x02);
+		buffer.writeInt(_reason.getCode());
 	}
 
 

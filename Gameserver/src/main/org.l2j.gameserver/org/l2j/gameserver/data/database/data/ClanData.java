@@ -90,6 +90,9 @@ public class ClanData {
     @Column("prev_hunting_points")
     private int prevHuntingPoints;
 
+    @Column("arena_progress")
+    private short arenaProgress;
+
     public int getId() {
         return id;
     }
@@ -260,6 +263,14 @@ public class ClanData {
 
     public void setHuntingPoints(int huntingPoints) {
         this.huntingPoints = huntingPoints;
+    }
+
+    public short getArenaProgress() {
+        return arenaProgress;
+    }
+
+    public void setArenaProgress(short arenaProgress) {
+        this.arenaProgress = arenaProgress;
     }
 
     public String toString() {

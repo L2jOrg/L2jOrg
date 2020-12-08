@@ -18,11 +18,14 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.SiegeDAO;
+import org.l2j.gameserver.data.database.data.CastleSiegeGuardData;
 import org.l2j.gameserver.data.xml.impl.CastleDataManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -30,21 +33,16 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
 import org.l2j.gameserver.model.interfaces.IPositionable;
-import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.util.MathUtil;
-import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-
 
 /**
  * Siege Guard Manager.
@@ -52,42 +50,33 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author St3eT
  */
 public final class SiegeGuardManager {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeGuardManager.class);
-    private static final Set<Item> _droppedTickets = ConcurrentHashMap.newKeySet();
-    private static final Map<Integer, Set<Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
+
+    private final Set<Item> _droppedTickets = ConcurrentHashMap.newKeySet();
+    private final IntMap<Set<Spawn>> _siegeGuardSpawn = new CHashIntMap<>();
 
     private SiegeGuardManager() {
         _droppedTickets.clear();
-        load();
     }
 
     private void load() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             ResultSet rs = con.createStatement().executeQuery("SELECT * FROM castle_siege_guards Where isHired = 1")) {
-            while (rs.next()) {
-                final int npcId = rs.getInt("npcId");
-                final int x = rs.getInt("x");
-                final int y = rs.getInt("y");
-                final int z = rs.getInt("z");
+        getDAO(SiegeDAO.class).loadHiredGuards().forEach(this::loadHiredGuard);
+        LOGGER.info("Loaded {} siege guards tickets.", _droppedTickets.size());
+    }
 
-                final Castle castle = CastleManager.getInstance().getCastle(x, y, z);
-                if (castle == null) {
-                    LOGGER.warn("Siege guard ticket cannot be placed! Castle is null at X: " + x + ", Y: " + y + ", Z: " + z);
-                    continue;
-                }
+    private void loadHiredGuard(CastleSiegeGuardData data) {
+        final Castle castle = CastleManager.getInstance().getCastle(data.getX(), data.getY(), data.getZ());
+        if (isNull(castle)) {
+            LOGGER.warn("Siege guard ticket cannot be placed! Castle is null at x: {}, y: {}, z:{}", data.getX(), data.getY(), data.getZ());
+            return;
+        }
 
-                final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getId(), npcId);
-                if ((holder != null) && !castle.getSiege().isInProgress()) {
-                    final Item dropticket = new Item(holder.getItemId());
-                    dropticket.setItemLocation(ItemLocation.VOID);
-                    dropticket.dropMe(null, x, y, z);
-                    World.getInstance().addObject(dropticket);
-                    _droppedTickets.add(dropticket);
-                }
-            }
-            LOGGER.info(getClass().getSimpleName() + ": Loaded " + _droppedTickets.size() + " siege guards tickets.");
-        } catch (Exception e) {
-            LOGGER.warn(e.getMessage(), e);
+        final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getId(), data.getNpcId());
+        if (nonNull(holder) && !castle.getSiege().isInProgress()) {
+            final Item dropticket = ItemEngine.getInstance().createItem("SiegeGuard", holder.getItemId(),1,  null, null);
+            dropticket.dropMe(null, data.getX(), data.getY(), data.getZ());
+            _droppedTickets.add(dropticket);
         }
     }
 
@@ -153,27 +142,12 @@ public final class SiegeGuardManager {
         }
 
         final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getId(), itemId);
-        if (holder != null) {
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)")) {
-                statement.setInt(1, castle.getId());
-                statement.setInt(2, holder.getNpcId());
-                statement.setInt(3, player.getX());
-                statement.setInt(4, player.getY());
-                statement.setInt(5, player.getZ());
-                statement.setInt(6, player.getHeading());
-                statement.setInt(7, 0);
-                statement.setInt(8, 1);
-                statement.execute();
-            } catch (Exception e) {
-                LOGGER.warn("Error adding siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
-            }
-
+        if (nonNull(holder)) {
+            CastleSiegeGuardData data = CastleSiegeGuardData.of(castle.getId(), holder.getNpcId(), player.getLocation(), 1);
+            getDAO(SiegeDAO.class).save(data);
             spawnMercenary(player, holder);
-            final Item dropticket = new Item(itemId);
-            dropticket.setItemLocation(ItemLocation.VOID);
+            final Item dropticket = ItemEngine.getInstance().createItem("SiegeGuard", itemId, 1, null, player);
             dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
-            World.getInstance().addObject(dropticket);
             _droppedTickets.add(dropticket);
         }
     }
@@ -237,25 +211,20 @@ public final class SiegeGuardManager {
      * @param castle the castle instance
      */
     private void loadSiegeGuard(Castle castle) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?")) {
-            ps.setInt(1, castle.getId());
-            ps.setInt(2, castle.getOwnerId() > 0 ? 1 : 0);
+        for (CastleSiegeGuardData data : getDAO(SiegeDAO.class).loadGuardOfCastle(castle.getId(), castle.getOwnerId() > 0 ? 1 : 0)) {
+            final Spawn spawn;
+            try {
+                spawn = new Spawn(data.getNpcId());
+                spawn.setAmount(1);
+                spawn.setXYZ(data.getX(), data.getY(), data.getZ());
+                spawn.setHeading(data.getHeading());
+                spawn.setRespawnDelay(data.getRespawnDelay());
+                spawn.setLocationId(0);
 
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    final Spawn spawn = new Spawn(rs.getInt("npcId"));
-                    spawn.setAmount(1);
-                    spawn.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
-                    spawn.setHeading(rs.getInt("heading"));
-                    spawn.setRespawnDelay(rs.getInt("respawnDelay"));
-                    spawn.setLocationId(0);
-
-                    getSpawnedGuards(castle.getId()).add(spawn);
-                }
+                getSpawnedGuards(castle.getId()).add(spawn);
+            } catch (ClassNotFoundException | NoSuchMethodException e) {
+                LOGGER.warn("Error loading siege guard for castle {}", castle.getName(), e);
             }
-        } catch (Exception e) {
-            LOGGER.warn("Error loading siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
         }
     }
 
@@ -275,7 +244,7 @@ public final class SiegeGuardManager {
      * @param castle the castle instance
      */
     public void removeSiegeGuards(Castle castle) {
-        getDAO(SiegeDAO.class).deleteGuardsOfCastle(castle.getId());
+        getDAO(SiegeDAO.class).deleteHiredGuardsOfCastle(castle.getId());
     }
 
     /**
@@ -325,6 +294,10 @@ public final class SiegeGuardManager {
 
     public Set<Spawn> getSpawnedGuards(int castleId) {
         return _siegeGuardSpawn.computeIfAbsent(castleId, key -> ConcurrentHashMap.newKeySet());
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static SiegeGuardManager getInstance() {

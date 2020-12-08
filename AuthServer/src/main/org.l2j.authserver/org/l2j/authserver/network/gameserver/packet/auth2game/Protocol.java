@@ -18,18 +18,19 @@
  */
 package org.l2j.authserver.network.gameserver.packet.auth2game;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.AuthServer;
 import org.l2j.authserver.network.gameserver.ServerClient;
 
 public class Protocol extends GameServerWritablePacket {
 
     @Override
-    protected void writeImpl(ServerClient client)  {
-        writeByte((byte)0x00);
-        writeInt(AuthServer.PROTOCOL_REV);
+    protected void writeImpl(ServerClient client, WritableBuffer buffer)  {
+        buffer.writeByte(0x00);
+        buffer.writeInt(AuthServer.PROTOCOL_REV);
         var publickey = client.getPublicKey().getModulus().toByteArray();
-        writeInt(publickey.length);
-        writeBytes(publickey);
+        buffer.writeInt(publickey.length);
+        buffer.writeBytes(publickey);
     }
 
 }

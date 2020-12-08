@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
@@ -43,16 +44,16 @@ public final class ExShowTrace extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_TRACE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_TRACE, buffer );
 
-        writeShort((short) 0); // type broken in H5
-        writeInt(0); // time broken in H5
-        writeShort((short) _locations.size());
+        buffer.writeShort(0); // type broken in H5
+        buffer.writeInt(0); // time broken in H5
+        buffer.writeShort(_locations.size());
         for (Location loc : _locations) {
-            writeInt(loc.getX());
-            writeInt(loc.getY());
-            writeInt(loc.getZ());
+            buffer.writeInt(loc.getX());
+            buffer.writeInt(loc.getY());
+            buffer.writeInt(loc.getZ());
         }
     }
 

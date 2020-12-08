@@ -198,7 +198,7 @@ public class CubicInstance {
 
     private void activateCubicSkill(Skill skill, WorldObject target) {
         if (!_owner.hasSkillReuse(skill.getReuseHashCode())) {
-            _caster.broadcastPacket(new MagicSkillUse(_owner, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), skill.getReuseDelay()));
+            _caster.broadcastPacket(new MagicSkillUse(_owner, target, skill, skill.getReuseDelay()));
             skill.activateSkill(this, target);
 
             _owner.addTimeStamp(skill, skill.getReuseDelay());

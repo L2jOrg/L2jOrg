@@ -18,16 +18,19 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.Config;
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Acquire Skill Info server packet implementation.
@@ -53,9 +56,10 @@ public class AcquireSkillInfo extends ServerPacket {
         _spCost = skillLearn.getLevelUpSp();
         _type = skillType;
         _reqs = new ArrayList<>();
-        if ((skillType != AcquireSkillType.PLEDGE) || Config.LIFE_CRYSTAL_NEEDED) {
+        var characterSettings = getSettings(CharacterSettings.class);
+        if ((skillType != AcquireSkillType.PLEDGE) || characterSettings.isPledgeSkillsItemNeeded()) {
             for (ItemHolder item : skillLearn.getRequiredItems()) {
-                if (!Config.DIVINE_SP_BOOK_NEEDED && (_id == CommonSkill.DIVINE_INSPIRATION.getId())) {
+                if (_id == CommonSkill.DIVINE_INSPIRATION.getId() && !characterSettings.isDivineInspirationBookNeeded()) {
                     continue;
                 }
                 _reqs.add(new Req(99, item.getId(), item.getCount(), 50));
@@ -83,19 +87,19 @@ public class AcquireSkillInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ACQUIRE_SKILL_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ACQUIRE_SKILL_INFO, buffer );
 
-        writeInt(_id);
-        writeInt(_level);
-        writeLong(_spCost);
-        writeInt(_type.getId());
-        writeInt(_reqs.size());
+        buffer.writeInt(_id);
+        buffer.writeInt(_level);
+        buffer.writeLong(_spCost);
+        buffer.writeInt(_type.getId());
+        buffer.writeInt(_reqs.size());
         for (Req temp : _reqs) {
-            writeInt(temp.type);
-            writeInt(temp.itemId);
-            writeLong(temp.count);
-            writeInt(temp.unk);
+            buffer.writeInt(temp.type);
+            buffer.writeInt(temp.itemId);
+            buffer.writeLong(temp.count);
+            buffer.writeInt(temp.unk);
         }
     }
 

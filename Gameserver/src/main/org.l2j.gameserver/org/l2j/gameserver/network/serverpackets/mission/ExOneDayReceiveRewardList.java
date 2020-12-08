@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.mission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -51,26 +52,26 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
         if (!MissionData.getInstance().isAvailable()) {
             return;
         }
 
-        writeId(ServerExPacketId.EX_ONE_DAY_REWARD_LIST);
+        writeId(ServerExPacketId.EX_ONE_DAY_REWARD_LIST, buffer );
 
-        writeInt((int) dayRemainTime);
-        writeInt((int) weekRemainTime);
-        writeInt((int) monthRemainTime);
-        writeByte(0x17);
-        writeInt(player.getClassId().getId());
-        writeInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK)); // Day of week
-        writeInt(missions.size());
+        buffer.writeInt((int) dayRemainTime);
+        buffer.writeInt((int) weekRemainTime);
+        buffer.writeInt((int) monthRemainTime);
+        buffer.writeByte(0x17);
+        buffer.writeInt(player.getClassId().getId());
+        buffer.writeInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK)); // Day of week
+        buffer.writeInt(missions.size());
         for (MissionDataHolder mission : missions) {
-            writeShort(mission.getId());
-            writeByte(mission.getStatus(player));
-            writeByte((mission.getRequiredCompletions() > 1));
-            writeInt(mission.getProgress(player));
-            writeInt(mission.getRequiredCompletions());
+            buffer.writeShort(mission.getId());
+            buffer.writeByte(mission.getStatus(player));
+            buffer.writeByte((mission.getRequiredCompletions() > 1));
+            buffer.writeInt(mission.getProgress(player));
+            buffer.writeInt(mission.getRequiredCompletions());
         }
     }
 

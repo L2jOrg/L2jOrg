@@ -118,6 +118,8 @@ public enum TraitType {
         SPIRIT_WEAKNESS
     );
 
+    private static final TraitType[] CACHE = values();
+
     TraitType(int type) {
         _type = type;
     }
@@ -129,5 +131,9 @@ public enum TraitType {
     public static EnumSet<TraitType> getAllWeakness()
     {
         return WEAKNESSES;
+    }
+
+    public static TraitType[] all() {
+        return CACHE;
     }
 }

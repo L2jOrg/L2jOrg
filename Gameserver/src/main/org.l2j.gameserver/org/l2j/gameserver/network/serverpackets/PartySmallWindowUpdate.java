@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -37,40 +38,40 @@ public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallW
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PARTY_SMALL_WINDOW_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PARTY_SMALL_WINDOW_UPDATE, buffer );
 
-        writeInt(_member.getObjectId());
-        writeShort((short) _flags);
+        buffer.writeInt(_member.getObjectId());
+        buffer.writeShort(_flags);
         if (containsMask(PartySmallWindowUpdateType.CURRENT_CP)) {
-            writeInt((int) _member.getCurrentCp()); // c4
+            buffer.writeInt((int) _member.getCurrentCp()); // c4
         }
         if (containsMask(PartySmallWindowUpdateType.MAX_CP)) {
-            writeInt(_member.getMaxCp()); // c4
+            buffer.writeInt(_member.getMaxCp()); // c4
         }
         if (containsMask(PartySmallWindowUpdateType.CURRENT_HP)) {
-            writeInt((int) _member.getCurrentHp());
+            buffer.writeInt((int) _member.getCurrentHp());
         }
         if (containsMask(PartySmallWindowUpdateType.MAX_HP)) {
-            writeInt(_member.getMaxHp());
+            buffer.writeInt(_member.getMaxHp());
         }
         if (containsMask(PartySmallWindowUpdateType.CURRENT_MP)) {
-            writeInt((int) _member.getCurrentMp());
+            buffer.writeInt((int) _member.getCurrentMp());
         }
         if (containsMask(PartySmallWindowUpdateType.MAX_MP)) {
-            writeInt(_member.getMaxMp());
+            buffer.writeInt(_member.getMaxMp());
         }
         if (containsMask(PartySmallWindowUpdateType.LEVEL)) {
-            writeByte((byte) _member.getLevel());
+            buffer.writeByte(_member.getLevel());
         }
         if (containsMask(PartySmallWindowUpdateType.CLASS_ID)) {
-            writeShort((short) _member.getClassId().getId());
+            buffer.writeShort(_member.getClassId().getId());
         }
         if (containsMask(PartySmallWindowUpdateType.PARTY_SUBSTITUTE)) {
-            writeByte((byte) 0x00);
+            buffer.writeByte(0x00);
         }
         if (containsMask(PartySmallWindowUpdateType.VITALITY_POINTS)) {
-            writeInt(_member.getVitalityPoints());
+            buffer.writeInt(_member.getVitalityPoints());
         }
     }
 

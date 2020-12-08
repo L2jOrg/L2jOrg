@@ -21,8 +21,10 @@ package org.l2j.gameserver.network;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,28 +32,31 @@ import static java.util.Objects.nonNull;
 
 /**
  * @author NB4L1
+ * @author JoeAlisson
  */
 public final class Disconnection {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Disconnection.class);
+
     private final GameClient client;
     private final Player player;
 
     private Disconnection(GameClient client) {
         this(client, client.getPlayer());
     }
-    private Disconnection(Player activeChar) {
-        this(activeChar.getClient(), activeChar);
+
+    private Disconnection(Player player) {
+        this(player.getClient(), player);
     }
 
     private Disconnection(GameClient client, Player player) {
         this.client = getClient(client, player);
         this.player = getPlayer(client, player);
 
-        // Anti Feed
         AntiFeedManager.getInstance().onDisconnect(this.client);
     }
 
-    public static GameClient getClient(GameClient client, Player player) {
+    private GameClient getClient(GameClient client, Player player) {
         if (nonNull(client)) {
             return client;
         }
@@ -61,7 +66,7 @@ public final class Disconnection {
         return null;
     }
 
-    public static Player getPlayer(GameClient client, Player player) {
+    private Player getPlayer(GameClient client, Player player) {
         if (nonNull(player)) {
             return player;
         }
@@ -70,6 +75,69 @@ public final class Disconnection {
             return client.getPlayer();
         }
         return null;
+    }
+
+    public void logout(boolean toLoginScreen) {
+        defaultSequence();
+        close(toLoginScreen);
+    }
+
+    private void close(boolean toLoginScreen) {
+        if (nonNull(client)) {
+            client.close(toLoginScreen);
+        }
+    }
+
+    public void restart() {
+        defaultSequence();
+    }
+
+    private void defaultSequence() {
+        if(nonNull(player)) {
+            EventDispatcher.getInstance().notifyEvent(new OnPlayerLogout(player), player);
+        }
+        storeMe();
+        deleteMe();
+    }
+
+    private void storeMe() {
+        if (nonNull(player)) {
+            try {
+                player.storeMe();
+            } catch (Exception e) {
+                LOGGER.error(e.getMessage(), e);
+            }
+        }
+        if(nonNull(client)) {
+            try{
+                client.storeAccountData();
+            } catch (Exception e) {
+                LOGGER.error(e.getMessage(), e);
+            }
+        }
+    }
+
+    private void deleteMe() {
+        if (nonNull(player) && player.isOnline()) {
+            try {
+                player.deleteMe();
+            } catch (Exception e) {
+                LOGGER.warn(e.getMessage());
+            }
+        }
+        detachPlayerFromClient();
+    }
+
+    private void detachPlayerFromClient() {
+        if (nonNull(client)) {
+            client.setPlayer(null);
+        }
+    }
+
+    public void onDisconnection() {
+        if (player != null) {
+            ThreadPool.schedule(this::defaultSequence, GameUtils.canLogout(player) ? 0 : AttackStanceTaskManager.COMBAT_TIME);
+        }
     }
 
     public static Disconnection of(GameClient client) {
@@ -82,77 +150,5 @@ public final class Disconnection {
 
     public static Disconnection of(GameClient client, Player player) {
         return new Disconnection(client, player);
-    }
-
-    public Disconnection storeMe() {
-        try {
-            if(nonNull(player)) {
-                player.storeMe();
-            }
-
-            if(nonNull(client)) {
-                client.storeAccountData();
-            }
-        } catch (RuntimeException e) {
-            LOGGER.error(e.getMessage(), e);
-        }
-        return this;
-    }
-
-    public Disconnection deleteMe() {
-        try {
-            if ((player != null) && player.isOnline()) {
-                player.deleteMe();
-            }
-
-            detachPlayerFromClient();
-        } catch (RuntimeException e) {
-            LOGGER.warn(e.getMessage());
-        }
-
-        return this;
-    }
-
-    private void detachPlayerFromClient() {
-        if (this.client != null) {
-            this.client.setPlayer(null);
-        }
-    }
-
-    public Disconnection close(boolean toLoginScreen) {
-        if (client != null) {
-            client.close(toLoginScreen);
-        }
-        detachPlayerFromClient();
-        return this;
-    }
-
-    public Disconnection close(ServerPacket packet) {
-        if (client != null) {
-            client.close(packet);
-        }
-        detachPlayerFromClient();
-        return this;
-    }
-
-    public void defaultSequence(boolean toLoginScreen) {
-        defaultSequence();
-        close(toLoginScreen);
-    }
-
-    public void defaultSequence(ServerPacket packet) {
-        defaultSequence();
-        close(packet);
-    }
-
-    private void defaultSequence() {
-        storeMe();
-        deleteMe();
-    }
-
-    public void onDisconnection() {
-        if (player != null) {
-            ThreadPool.schedule(this::defaultSequence, player.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
-        }
     }
 }

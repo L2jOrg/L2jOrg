@@ -152,7 +152,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
             setWorldRegion(World.getInstance().getRegion(this));
 
             World.getInstance().addObject(this);
-            worldRegion.addVisibleObject(this);
         }
 
         // this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
@@ -207,9 +206,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     public abstract void sendInfo(Player activeChar);
 
-    public void sendPacket(ServerPacket... packets) {
+    // TODO move to Playable only
+    public void sendPacket(ServerPacket packets) {
     }
 
+    // TODO move to Playable only
     public void sendPacket(SystemMessageId id) {
     }
 

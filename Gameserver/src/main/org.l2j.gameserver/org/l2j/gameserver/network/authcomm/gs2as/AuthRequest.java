@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
@@ -26,25 +27,25 @@ import org.l2j.gameserver.settings.ServerSettings;
 
 public class AuthRequest extends SendablePacket {
 
-	protected void writeImpl(AuthServerClient client) {
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
 		var serverSettings = Configurator.getSettings(ServerSettings.class);
-		writeByte(0x00);
-		writeByte(serverSettings.serverId());
-		writeByte(serverSettings.acceptAlternativeId());
-		writeInt(serverSettings.type());
-		writeInt(serverSettings.maximumOnlineUsers());
-		writeByte(serverSettings.ageLimit());
+		buffer.writeByte(0x00);
+		buffer.writeByte(serverSettings.serverId());
+		buffer.writeByte(serverSettings.acceptAlternativeId());
+		buffer.writeInt(serverSettings.type());
+		buffer.writeInt(serverSettings.maximumOnlineUsers());
+		buffer.writeByte(serverSettings.ageLimit());
 
-		writeByte(serverSettings.isShowingBrackets());
-		writeByte(serverSettings.isPvP());
+		buffer.writeByte(serverSettings.isShowingBrackets());
+		buffer.writeByte(serverSettings.isPvP());
 
 		var hosts = Config.GAME_SERVER_HOSTS.size();
-		writeShort(hosts);
+		buffer.writeShort(hosts);
 
 		for (int i = 0; i < Config.GAME_SERVER_HOSTS.size(); i++) {
-			writeString(Config.GAME_SERVER_HOSTS.get(i));
-			writeString(Config.GAME_SERVER_SUBNETS.get(i));
+			buffer.writeString(Config.GAME_SERVER_HOSTS.get(i));
+			buffer.writeString(Config.GAME_SERVER_SUBNETS.get(i));
 		}
-		writeShort(serverSettings.port());
+		buffer.writeShort(serverSettings.port());
 	}
 }

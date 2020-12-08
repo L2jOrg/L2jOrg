@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `characters`(
-    `charId`                  INT UNSIGNED       NOT NULL DEFAULT 0,
+    `charId`                  INT UNSIGNED       NOT NULL,
     `account_name`            VARCHAR(45)                 DEFAULT NULL,
     `char_name`               VARCHAR(35)        NOT NULL,
     `level`                   TINYINT UNSIGNED            DEFAULT NULL,
@@ -90,7 +90,7 @@ CREATE OR REPLACE VIEW rankers_race AS
 
                rank() over (
                    PARTITION BY c.race
-                   ORDER BY c.exp desc
+                   ORDER BY c.exp desc, c.onlinetime desc
                    ) as `rank`,
 
                IFNULL(rs.`rank`, 0) as `rank_snapshot`,
@@ -103,7 +103,7 @@ CREATE OR REPLACE VIEW rankers_race AS
     )
     SELECT * FROM ranked_race WHERE `rank` <= 100;
 
-CREATE VIEW rankers AS
+CREATE OR REPLACE VIEW rankers AS
 SELECT c.charId as id,
        c.char_name as name,
        c.exp,
@@ -126,11 +126,11 @@ SELECT c.charId as id,
         IFNULL(rs.`rank`, 0) as `rank_snapshot`,
         IFNULL(rs.rank_race, 0) as `rank_race_snapshot`
 
-from characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
-where c.level >= 76
+FROM characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
+WHERE c.level >= 76
   AND c.accesslevel = 0
   AND (c.base_class BETWEEN 88 AND 118 OR c.base_class IN (131, 134, 195))
-    WINDOW w as (ORDER BY c.exp desc );
+    WINDOW w as (ORDER BY c.exp desc, onlinetime desc );
 
 CREATE TABLE  IF NOT EXISTS `rankers_history`
 (

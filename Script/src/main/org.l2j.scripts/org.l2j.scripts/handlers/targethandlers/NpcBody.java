@@ -44,44 +44,44 @@ public class NpcBody implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (!isCreature(selectedTarget))
+		if (!isCreature(currentTarget))
 		{
 			return null;
 		}
 		
-		if (!isNpc(selectedTarget) && !isSummon(selectedTarget))
+		if (!isNpc(currentTarget) && !isSummon(currentTarget))
 		{
 			if (sendMessage)
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			return null;
 		}
 		
-		final Creature cha = (Creature) selectedTarget;
+		final Creature cha = (Creature) currentTarget;
 		if (cha.isDead())
 		{
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
 			if (dontMove)
 			{
-				if (!MathUtil.isInsideRadius2D(activeChar, cha, skill.getCastRange()))
+				if (!MathUtil.isInsideRadius2D(creature, cha, skill.getCastRange()))
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
+						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 					}
 					return null;
 				}
 			}
 			
 			// Geodata check when character is within range.
-			if (!GeoEngine.getInstance().canSeeTarget(activeChar, cha))
+			if (!GeoEngine.getInstance().canSeeTarget(creature, cha))
 			{
 				if (sendMessage)
 				{
-					activeChar.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+					creature.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				}
 				return null;
 			}
@@ -91,7 +91,7 @@ public class NpcBody implements ITargetTypeHandler
 		// If target is not dead or not player/pet it will not even bother to walk within range, unlike Enemy target type.
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+			creature.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 		return null;
 	}

@@ -33,6 +33,7 @@ import org.l2j.gameserver.data.xml.impl.InitialShortcutData;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Clan;
@@ -40,9 +41,8 @@ import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
+import org.l2j.gameserver.model.actor.appearance.Appearance;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
@@ -103,15 +103,12 @@ public class PlayerFactory {
         player.getStats().setExp(playerData.getExp());
         player.getStats().setLevel(playerData.getLevel());
         player.getStats().setSp(playerData.getSp());
-        player.setReputation(playerData.getReputation());
-        player.setFame(playerData.getFame());
-        player.setPvpKills(playerData.getPvP());
-        player.setPkKills(playerData.getPk());
-        player.setOnlineTime(playerData.getOnlineTime());
         player.setNoble(playerData.isNobless());
         player.getStats().setVitalityPoints(playerData.getVitalityPoints());
 
-        player.setHero(Hero.getInstance().isHero(playerId));
+        if(Olympiad.getInstance().isHero(playerId)) {
+            player.setHero(true);
+        }
 
         if(player.getLevel() >= 40) {
             player.initElementalSpirits();
@@ -146,13 +143,8 @@ public class PlayerFactory {
 
         player.setTitle(playerData.getTitle());
 
-        if (playerData.getTitleColor() != PlayerAppearance.DEFAULT_TITLE_COLOR) {
-            player.getAppearance().setTitleColor(playerData.getTitleColor());
-        }
-
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
-        player.setClassIndex(0);
         player._activeClass = playerData.getClassId();
 
         player.setXYZInvisible(playerData.getX(), playerData.getY(), playerData.getZ());
@@ -166,8 +158,6 @@ public class PlayerFactory {
             player.setOverrideCond(masks);
         }
 
-        // Retrieve from the database all items of this Player and add them to _inventory
-        player.getInventory().restore();
         // Retrieve from the database all secondary data of this Player
         // Note that Clan, Noblesse and Hero skills are given separately and not here.
         // Retrieve from the database all skills of this Player and add them to _skills
@@ -185,10 +175,6 @@ public class PlayerFactory {
             player.getWarehouse();
         }
 
-        player.restoreItemReuse();
-
-        // Restore player shortcuts
-        player.restoreShortCuts();
         EventDispatcher.getInstance().notifyEvent(new OnPlayerLoad(player), Listeners.players());
 
         // Initialize status update cache
@@ -274,7 +260,7 @@ public class PlayerFactory {
 
 
         data.setRace(template.getRace().ordinal());
-        data.setTitleColor(PlayerAppearance.DEFAULT_TITLE_COLOR);
+        data.setTitleColor(Appearance.DEFAULT_TITLE_COLOR);
         data.setCreateDate(LocalDate.now());
 
         getDAO(PlayerDAO.class).save(data);
@@ -341,7 +327,6 @@ public class PlayerFactory {
 
         var itemDAO = getDAO(ItemDAO.class);
         itemDAO.deleteVariationsByOwner(objId);
-        itemDAO.deleteSpecialAbilitiesByOwner(objId);
         itemDAO.deleteByOwner(objId);
         getDAO(PlayerDAO.class).deleteById(objId);
         PlayerNameTable.getInstance().removeName(objId);

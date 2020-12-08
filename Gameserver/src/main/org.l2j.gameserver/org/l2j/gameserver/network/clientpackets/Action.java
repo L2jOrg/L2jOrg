@@ -57,7 +57,7 @@ public final class Action extends ClientPacket {
     public void runImpl() {
         var player = client.getPlayer();
 
-        if (player.inObserverMode()) {
+        if (player.isInObserverMode()) {
             player.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

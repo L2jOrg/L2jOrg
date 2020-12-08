@@ -18,19 +18,18 @@
  */
 package org.l2j.gameserver.model.holders;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author UnAfraid
  */
 public class PlayerSkillHolder implements ISkillsHolder {
-    private final Map<Integer, Skill> _skills = new HashMap<>();
+    private final IntMap<Skill> _skills = new HashIntMap<>();
 
     public PlayerSkillHolder(Player player) {
         for (Skill skill : player.getSkills().values()) {
@@ -45,15 +44,10 @@ public class PlayerSkillHolder implements ISkillsHolder {
      * @return the map containing this character skills.
      */
     @Override
-    public Map<Integer, Skill> getSkills() {
+    public IntMap<Skill> getSkills() {
         return _skills;
     }
 
-    /**
-     * Add a skill to the skills map.<br>
-     *
-     * @param skill
-     */
     @Override
     public Skill addSkill(Skill skill) {
         return _skills.put(skill.getId(), skill);

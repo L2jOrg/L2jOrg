@@ -24,38 +24,33 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.RestartResponse;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.isNull;
+
 public final class RequestRestart extends ClientPacket {
-    protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
+    private static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     @Override
-    public void readImpl() {
-
-    }
+    public void readImpl() { }
 
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
+        if (isNull(player)) {
             return;
         }
 
-        if (!player.canLogout()) {
-            client.sendPacket(RestartResponse.FALSE);
-            player.sendPacket(ActionFailed.STATIC_PACKET);
+        if (!GameUtils.canLogout(player)) {
+            client.sendPackets(RestartResponse.FALSE, ActionFailed.STATIC_PACKET);
             return;
         }
 
-        LOGGER_ACCOUNTING.info("{} Logged out",  client);
-
-        Disconnection.of(client, player).storeMe().deleteMe();
-
-        // return the client to the authed status
+        LOGGER_ACCOUNTING.info("{} Restarting",  player);
+        Disconnection.of(client, player).restart();
+        client.sendPackets(RestartResponse.TRUE, new PlayerSelectionInfo(client));
         client.setConnectionState(ConnectionState.AUTHENTICATED);
-
-        client.sendPacket(RestartResponse.TRUE);
-        client.sendPacket(new PlayerSelectionInfo(client));
     }
 }

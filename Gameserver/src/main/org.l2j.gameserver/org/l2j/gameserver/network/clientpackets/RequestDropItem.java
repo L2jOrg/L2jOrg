@@ -26,9 +26,10 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -131,7 +132,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        if ((ItemTemplate.TYPE2_QUEST == item.getTemplate().getType2()) && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) {
+        if ((ItemTemplate.TYPE2_QUEST == item.getType2()) && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) {
             player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
             return;
         }
@@ -147,16 +148,15 @@ public final class RequestDropItem extends ClientPacket {
         }
 
         if (item.isEquipped()) {
-            player.getInventory().unEquipItemInSlot(InventorySlot.fromId(item.getLocationSlot()));
-            player.broadcastUserInfo();
-            player.sendItemList();
+            var modifiedItems = player.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
+            player.sendInventoryUpdate(new InventoryUpdate(modifiedItems));
         }
 
         final Item dropedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
 
         if (player.isGM()) {
             final String target = (player.getTarget() != null ? player.getTarget().getName() : "no-target");
-            GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", "Drop", target, "(id: " + dropedItem.getId() + " name: " + dropedItem.getItemName() + " objId: " + dropedItem.getObjectId() + " x: " + player.getX() + " y: " + player.getY() + " z: " + player.getZ() + ")");
+            GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", "Drop", target, "(id: " + dropedItem.getId() + " name: " + dropedItem.getName() + " objId: " + dropedItem.getObjectId() + " x: " + player.getX() + " y: " + player.getY() + " z: " + player.getZ() + ")");
         }
 
         if ((dropedItem != null) && (dropedItem.getId() == CommonItem.ADENA) && (dropedItem.getCount() >= 1000000)) {

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.commission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -51,14 +52,14 @@ public class ExResponseCommissionInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_INFO, buffer );
 
-        writeInt(_result);
-        writeInt(_itemId);
-        writeLong(_presetPricePerUnit);
-        writeLong(_presetAmount);
-        writeInt(_presetDurationType);
+        buffer.writeInt(_result);
+        buffer.writeInt(_itemId);
+        buffer.writeLong(_presetPricePerUnit);
+        buffer.writeLong(_presetAmount);
+        buffer.writeInt(_presetDurationType);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.PledgeWaitingData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -36,16 +37,16 @@ public class ExPledgeDraftListSearch extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_DRAFT_LIST_SEARCH);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_DRAFT_LIST_SEARCH, buffer );
 
-        writeInt(_pledgeRecruitList.size());
+        buffer.writeInt(_pledgeRecruitList.size());
         for (PledgeWaitingData prl : _pledgeRecruitList) {
-            writeInt(prl.getPlayerId());
-            writeString(prl.getPlayerName());
-            writeInt(prl.getKarma());
-            writeInt(prl.getPlayerClassId());
-            writeInt(prl.getPlayerLvl());
+            buffer.writeInt(prl.getPlayerId());
+            buffer.writeString(prl.getPlayerName());
+            buffer.writeInt(prl.getKarma());
+            buffer.writeInt(prl.getPlayerClassId());
+            buffer.writeInt(prl.getPlayerLvl());
         }
     }
 

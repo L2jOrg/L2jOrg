@@ -30,12 +30,10 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
 public class OnPlayerProfessionChange implements IBaseEvent {
     private final Player _activeChar;
     private final PlayerTemplate _template;
-    private final boolean _isSubClass;
 
-    public OnPlayerProfessionChange(Player activeChar, PlayerTemplate template, boolean isSubClass) {
+    public OnPlayerProfessionChange(Player activeChar, PlayerTemplate template) {
         _activeChar = activeChar;
         _template = template;
-        _isSubClass = isSubClass;
     }
 
     public Player getActiveChar() {
@@ -44,10 +42,6 @@ public class OnPlayerProfessionChange implements IBaseEvent {
 
     public PlayerTemplate getTemplate() {
         return _template;
-    }
-
-    public boolean isSubClass() {
-        return _isSubClass;
     }
 
     @Override

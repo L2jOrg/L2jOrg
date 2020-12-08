@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -27,8 +28,8 @@ import org.l2j.gameserver.network.ServerPacketId;
 public class AcquireSkillDone extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ACQUIRE_SKILL_DONE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ACQUIRE_SKILL_DONE, buffer );
     }
 
 }

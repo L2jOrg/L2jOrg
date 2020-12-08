@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.adenadistribution;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -33,8 +34,8 @@ public class ExDivideAdenaStart extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_DIVIDE_ADENA_START);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_DIVIDE_ADENA_START, buffer );
     }
 
 }

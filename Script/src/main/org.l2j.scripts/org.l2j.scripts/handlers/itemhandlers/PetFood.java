@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -84,7 +84,7 @@ public class PetFood implements IItemHandler
 				final Player player = activeChar.getActingPlayer();
 				if (player.isMounted())
 				{
-					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
+					final List<Integer> foodIds = PetDataTable.getInstance().getPetTemplate(player.getMountNpcId()).getFood();
 					if (foodIds.contains(item.getId()))
 					{
 						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))

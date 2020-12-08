@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.engine.elemental.AbsorbItem;
 import org.l2j.gameserver.network.GameClient;
@@ -36,34 +37,34 @@ public class ElementalSpiritAbsorbInfo extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(EX_ELEMENTAL_SPIRIT_ABSORB_INFO);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(EX_ELEMENTAL_SPIRIT_ABSORB_INFO, buffer);
 
         var player = client.getPlayer();
         var spirit = player.getElementalSpirit(ElementalType.of(type));
 
         if(isNull(spirit)) {
-            writeByte(0x00);
-            writeByte(0x00);
+            buffer.writeByte(0x00);
+            buffer.writeByte(0x00);
             return;
         }
 
-        writeByte(0x01);
-        writeByte(type);
-        writeByte(spirit.getStage());
-        writeLong(spirit.getExperience());
-        writeLong(spirit.getExperienceToNextLevel()); //NextExp
-        writeLong(spirit.getExperienceToNextLevel()); //MaxExp
-        writeInt(spirit.getLevel());
-        writeInt(spirit.getMaxLevel());
+        buffer.writeByte(0x01);
+        buffer.writeByte(type);
+        buffer.writeByte(spirit.getStage());
+        buffer.writeLong(spirit.getExperience());
+        buffer.writeLong(spirit.getExperienceToNextLevel()); //NextExp
+        buffer.writeLong(spirit.getExperienceToNextLevel()); //MaxExp
+        buffer.writeInt(spirit.getLevel());
+        buffer.writeInt(spirit.getMaxLevel());
 
         var absorbItems = spirit.getAbsorbItems();
 
-        writeInt(absorbItems.size()); //AbsorbCount
+        buffer.writeInt(absorbItems.size()); //AbsorbCount
         for (AbsorbItem absorbItem : absorbItems) {
-            writeInt(absorbItem.getId());
-            writeInt(zeroIfNullOrElse( player.getInventory().getItemByItemId(absorbItem.getId()), item -> (int) item.getCount()));
-            writeInt(absorbItem.getExperience());
+            buffer.writeInt(absorbItem.getId());
+            buffer.writeInt(zeroIfNullOrElse( player.getInventory().getItemByItemId(absorbItem.getId()), item -> (int) item.getCount()));
+            buffer.writeInt(absorbItem.getExperience());
         }
     }
 }

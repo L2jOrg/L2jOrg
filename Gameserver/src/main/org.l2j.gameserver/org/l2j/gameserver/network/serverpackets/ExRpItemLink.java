@@ -18,7 +18,8 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.item.instance.Item;
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -33,10 +34,10 @@ public final class ExRpItemLink extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RP_ITEM_LINK);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RP_ITEM_LINK, buffer );
 
-        writeItem(_item);
+        writeItem(_item, buffer);
     }
 
 }

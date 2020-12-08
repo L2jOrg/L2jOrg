@@ -25,6 +25,7 @@ import org.l2j.gameserver.data.database.data.ItemVariationData;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.enums.InventorySlot;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentType;
@@ -63,7 +64,7 @@ public class PlayerSelectInfo {
     }
 
     private void restoreVisibleInventory() {
-        for (ItemData itemData : getDAO(ItemDAO.class).findEquipedItemsByOwner(data.getCharId())) {
+        for (ItemData itemData : getDAO(ItemDAO.class).findItemsByOwnerAndLoc(data.getCharId(), ItemLocation.PAPERDOLL)) {
             paperdoll.put(InventorySlot.fromId(itemData.getLocData()), itemData);
         }
     }
@@ -71,14 +72,14 @@ public class PlayerSelectInfo {
     private void restoreAugmentation() {
         var weapon = paperdoll.get(RIGHT_HAND);
         if (nonNull(weapon)) {
-            ItemVariationData itemVariation = getDAO(ItemDAO.class).findItemVariationByItemId(weapon.getObjectId());
+            ItemVariationData itemVariation = getDAO(ItemDAO.class).findItemVariationByItem(weapon.getObjectId());
             if(nonNull(itemVariation)) {
                 try {
                     int mineralId = itemVariation.getMineralId();
                     int option1 = itemVariation.getOption1();
                     int option2 = itemVariation.getOption2();
                     if ((option1 != -1 ) && (option2 != -1)) {
-                        _augmentation = new VariationInstance(mineralId, option1, option2);
+                        _augmentation = new VariationInstance(weapon.getObjectId(), mineralId, option1, option2);
                     }
                 } catch (Exception e) {
                     LOGGER.warn("Could not restore augmentation info", e);

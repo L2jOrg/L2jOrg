@@ -18,10 +18,10 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.clientpackets.RequestSaveKeyMapping;
 
 import java.util.Objects;
 
@@ -42,13 +42,13 @@ public class ExUISetting extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_UI_SETTING);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_UI_SETTING, buffer );
         if (_uiKeyMapping != null) {
-            writeInt(_uiKeyMapping.length);
-            writeBytes(_uiKeyMapping);
+            buffer.writeInt(_uiKeyMapping.length);
+            buffer.writeBytes(_uiKeyMapping);
         } else {
-            writeInt(0);
+            buffer.writeInt(0);
         }
     }
 

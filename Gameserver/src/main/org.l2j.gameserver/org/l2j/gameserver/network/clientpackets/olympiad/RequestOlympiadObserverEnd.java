@@ -18,8 +18,11 @@
  */
 package org.l2j.gameserver.network.clientpackets.olympiad;
 
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
+
+import static java.util.Objects.isNull;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x12
@@ -28,19 +31,17 @@ import org.l2j.gameserver.network.clientpackets.ClientPacket;
  */
 public final class RequestOlympiadObserverEnd extends ClientPacket {
     @Override
-    public void readImpl() {
-
-    }
+    public void readImpl() {  }
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (isNull(player)) {
             return;
         }
 
-        if (activeChar.inObserverMode()) {
-            activeChar.leaveOlympiadObserverMode();
+        if (player.isInObserverMode()) {
+            Olympiad.getInstance().removeSpectator(player);
         }
     }
 }

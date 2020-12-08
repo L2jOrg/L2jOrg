@@ -27,10 +27,18 @@ import org.l2j.commons.configuration.SettingsFile;
 public class RateSettings implements Settings {
 
     private float xp;
+    private float rateVitalityExpMul;
+    private int maxItemsVitality;
+    private float rateVitalityLoss;
+    private float rateVitalityGain;
 
     @Override
     public void load(SettingsFile settingsFile) {
         xp = settingsFile.getFloat("RateXp", 1f);
+        rateVitalityExpMul = settingsFile.getFloat("RateVitalityExpMultiplier", 2);
+        maxItemsVitality = settingsFile.getInteger("VitalityMaxItemsAllowed", 999);
+        rateVitalityLoss = settingsFile.getFloat("RateVitalityLost", 1f);
+        rateVitalityGain = settingsFile.getFloat("RateVitalityGain", 1f);
     }
 
     public float xp() {
@@ -39,5 +47,21 @@ public class RateSettings implements Settings {
 
     public void setXp(float xp) {
         this.xp = xp;
+    }
+
+    public float rateVitalityExpMul() {
+        return rateVitalityExpMul;
+    }
+
+    public int maxItemsVitality() {
+        return maxItemsVitality;
+    }
+
+    public float rateVitalityLoss() {
+        return rateVitalityLoss;
+    }
+
+    public float rateVitalityGain() {
+        return rateVitalityGain;
     }
 }

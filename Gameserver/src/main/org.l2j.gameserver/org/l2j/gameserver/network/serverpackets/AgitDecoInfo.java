@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.network.GameClient;
@@ -34,22 +35,22 @@ public class AgitDecoInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.AGIT_DECO_INFO);
-        writeInt(_residense.getId());
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.AGIT_DECO_INFO, buffer );
+        buffer.writeInt(_residense.getId());
         for (ResidenceFunctionType type : ResidenceFunctionType.values()) {
             if (type == ResidenceFunctionType.NONE) {
                 continue;
             }
-            writeByte((byte) (_residense.hasFunction(type) ? 0x01 : 0x00));
+            buffer.writeByte(_residense.hasFunction(type));
         }
 
         // Unknown
-        writeInt(0); // TODO: Find me!
-        writeInt(0); // TODO: Find me!
-        writeInt(0); // TODO: Find me!
-        writeInt(0); // TODO: Find me!
-        writeInt(0); // TODO: Find me!
+        buffer.writeInt(0); // TODO: Find me!
+        buffer.writeInt(0); // TODO: Find me!
+        buffer.writeInt(0); // TODO: Find me!
+        buffer.writeInt(0); // TODO: Find me!
+        buffer.writeInt(0); // TODO: Find me!
     }
 
 }

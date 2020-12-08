@@ -148,7 +148,7 @@ public final class Orfen extends AbstractNpcAI
 	public void spawnBoss(GrandBoss npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
-		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(PlaySound.music("BS01_A", npc));
 		startQuestTimer("check_orfen_pos", 10000, npc, null, true);
 		// Spawn minions
 		final int x = npc.getX();
@@ -316,7 +316,7 @@ public final class Orfen extends AbstractNpcAI
 	{
 		if (npc.getId() == ORFEN)
 		{
-			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+			npc.broadcastPacket(PlaySound.music("BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, BossStatus.DEAD);
 			// Calculate Min and Max respawn times randomly.
 			long respawnTime = Config.ORFEN_SPAWN_INTERVAL + Rnd.get(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM);

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanInfo;
@@ -63,23 +64,23 @@ public class AllianceInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ALLIANCE_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ALLIANCE_INFO, buffer );
 
-        writeString(_name);
-        writeInt(_total);
-        writeInt(_online);
-        writeString(_leaderC);
-        writeString(_leaderP);
+        buffer.writeString(_name);
+        buffer.writeInt(_total);
+        buffer.writeInt(_online);
+        buffer.writeString(_leaderC);
+        buffer.writeString(_leaderP);
 
-        writeInt(_allies.length);
+        buffer.writeInt(_allies.length);
         for (ClanInfo aci : _allies) {
-            writeString(aci.getClan().getName());
-            writeInt(0x00);
-            writeInt(aci.getClan().getLevel());
-            writeString(aci.getClan().getLeaderName());
-            writeInt(aci.getTotal());
-            writeInt(aci.getOnline());
+            buffer.writeString(aci.getClan().getName());
+            buffer.writeInt(0x00);
+            buffer.writeInt(aci.getClan().getLevel());
+            buffer.writeString(aci.getClan().getLeaderName());
+            buffer.writeInt(aci.getTotal());
+            buffer.writeInt(aci.getOnline());
         }
     }
 

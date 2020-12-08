@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
@@ -50,20 +51,34 @@ public final class VipEngine extends GameXmlReader {
 
     private static final byte VIP_MAX_TIER = 10;
     private final IntMap<VipInfo> vipTiers = new HashIntMap<>(11);
+    private final ConsumerEventListener vipLoginListener = new ConsumerEventListener(null, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onVipLogin, this);
 
     private VipEngine() {
         var listeners = Listeners.players();
 
-        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOAD, (Consumer<OnPlayerLoad>) (event) -> {
-            final var player = event.getPlayer();
-            player.setVipTier(getVipTier(player));
-            if(player.getVipTier() > 0) {
-                manageTier(player);
-            } else {
-                player.sendPacket(new ReceiveVipInfo());
-                player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
-            }
-        }, this));
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOAD, (Consumer<OnPlayerLoad>) this::onPlayerLoaded, this));
+    }
+
+    private void onPlayerLoaded(OnPlayerLoad event) {
+        final var player = event.getPlayer();
+        player.setVipTier(getVipTier(player));
+        if(player.getVipTier() > 0) {
+            manageTier(player);
+            player.addListener(vipLoginListener);
+        } else {
+            player.sendPacket(new ReceiveVipInfo());
+            player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
+        }
+    }
+
+    private void onVipLogin(OnPlayerLogin event) {
+        final var player = event.getPlayer();
+        if(L2Store.getInstance().canReceiveVipGift(player)) {
+            player.sendPacket(ExBRNewIconCashBtnWnd.SHOW);
+        } else {
+            player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
+        }
+        player.removeListener(vipLoginListener);
     }
 
     public void manageTier(Player player) {
@@ -87,11 +102,6 @@ public final class VipEngine extends GameXmlReader {
             if(nonNull(skill)) {
                 player.addSkill(skill);
             }
-        }
-        if(L2Store.getInstance().canReceiveVipGift(player)) {
-            player.sendPacket(ExBRNewIconCashBtnWnd.SHOW);
-        } else {
-            player.sendPacket(ExBRNewIconCashBtnWnd.NOT_SHOW);
         }
     }
 

@@ -132,7 +132,7 @@ public final class FloodProtectorAction {
      * Kick player from game (close network connection).
      */
     private void kickPlayer() {
-        Disconnection.of(_client).defaultSequence(false);
+        Disconnection.of(_client).logout(false);
         log("kicked for flooding");
     }
 

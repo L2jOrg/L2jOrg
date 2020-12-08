@@ -357,14 +357,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
 					player.setClassId(classidval);
-					if (player.isSubClassActive())
-					{
-						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
-					}
-					else
-					{
-						player.setBaseClass(player.getActiveClass());
-					}
+					player.setBaseClass(player.getActiveClass());
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 
@@ -372,7 +365,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
-					player.sendPacket(new ExUserInfoInvenWeight(player));
+					player.sendPacket(new ExUserInfoInvenWeight());
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
 				}
@@ -480,7 +473,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				return false;
 			}
-			player.getAppearance().setFemale(player.getAppearance().isFemale() ? false : true);
+			player.getAppearance().setFemale(!player.getAppearance().isFemale());
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
 		}

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.item.upgrade;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -28,11 +29,16 @@ import java.util.Collection;
  */
 public abstract class AbstractUpgradeSystem extends ServerPacket {
 
-    protected void writeMaterial(Collection<ItemHolder> materials) {
-        writeInt(materials.size());
-        materials.stream().mapToInt(ItemHolder::getId).forEach(this::writeInt);
+    protected void writeMaterial(Collection<ItemHolder> materials, WritableBuffer buffer) {
+        buffer.writeInt(materials.size());
+        for (ItemHolder material : materials) {
+            buffer.writeInt(material.getId());
+        }
 
-        writeInt(materials.size());
-        materials.forEach(i -> writeInt(5)); // material ratio
+        buffer.writeInt(materials.size());
+        // material ratio
+        for (ItemHolder i : materials) {
+            buffer.writeInt(5);
+        }
     }
 }

@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -38,6 +38,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
+import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -45,6 +47,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.Math.round;
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
 import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStatType;
 
@@ -124,7 +127,7 @@ public class PlayerStats extends PlayableStats {
         addToExp *= bonusExp;
         addToSp *= bonusSp;
 
-        double ratioTakenByPlayer = 0;
+        double ratioTakenByPlayer;
 
         // if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
         final Pet pet = activeChar.getPet();
@@ -151,7 +154,7 @@ public class PlayerStats extends PlayableStats {
         final boolean expAdded = addExp(finalExp);
         final boolean spAdded = addSp(finalSp);
 
-        SystemMessage sm = null;
+        SystemMessage sm;
         if (!expAdded && spAdded) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_SP);
             sm.addLong(finalSp);
@@ -231,15 +234,14 @@ public class PlayerStats extends PlayableStats {
         // Synchronize level with pet if possible.
         final Pet sPet = player.getPet();
         if (sPet != null) {
-            final Pet pet = sPet;
-            if (pet.getPetData().isSynchLevel() && (pet.getLevel() != getLevel())) {
-                final byte availableLevel = (byte) Math.min(pet.getPetData().getMaxLevel(), getLevel());
-                pet.getStats().setLevel(availableLevel);
-                pet.getStats().getExpForLevel(availableLevel);
-                pet.setCurrentHp(pet.getMaxHp());
-                pet.setCurrentMp(pet.getMaxMp());
-                pet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
-                pet.updateAndBroadcastStatus(1);
+            if (sPet.getPetData().isSynchLevel() && (sPet.getLevel() != getLevel())) {
+                final byte availableLevel = (byte) Math.min(sPet.getPetData().getMaxLevel(), getLevel());
+                sPet.getStats().setLevel(availableLevel);
+                sPet.getStats().getExpForLevel(availableLevel);
+                sPet.setCurrentHp(sPet.getMaxHp());
+                sPet.setCurrentMp(sPet.getMaxMp());
+                sPet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
+                sPet.updateAndBroadcastStatus(1);
             }
         }
 
@@ -278,24 +280,6 @@ public class PlayerStats extends PlayableStats {
         return (Player) super.getCreature();
     }
 
-    @Override
-    public final long getExp() {
-        if (getCreature().isSubClassActive()) {
-            return getCreature().getSubClasses().get(getCreature().getClassIndex()).getExp();
-        }
-
-        return super.getExp();
-    }
-
-    @Override
-    public final void setExp(long value) {
-        if (getCreature().isSubClassActive()) {
-            getCreature().getSubClasses().get(getCreature().getClassIndex()).setExp(value);
-        } else {
-            super.setExp(value);
-        }
-    }
-
     public final long getBaseExp() {
         return super.getExp();
     }
@@ -332,70 +316,27 @@ public class PlayerStats extends PlayableStats {
     }
 
     @Override
-    public final byte getLevel() {
-        if (getCreature().isDualClassActive()) {
-            return getCreature().getDualClass().getLevel();
-        }
-        if (getCreature().isSubClassActive()) {
-            return getCreature().getSubClasses().get(getCreature().getClassIndex()).getLevel();
-        }
-        return super.getLevel();
-    }
-
-    @Override
     public final void setLevel(byte value) {
         if (value > LevelData.getInstance().getMaxLevel()) {
             value = LevelData.getInstance().getMaxLevel();
         }
 
-        if (getCreature().isSubClassActive()) {
-            getCreature().getSubClasses().get(getCreature().getClassIndex()).setLevel(value);
-        } else {
-            super.setLevel(value);
-        }
+        super.setLevel(value);
     }
 
     public final byte getBaseLevel() {
         return super.getLevel();
     }
 
-    @Override
-    public final long getSp() {
-        if (getCreature().isSubClassActive()) {
-            return getCreature().getSubClasses().get(getCreature().getClassIndex()).getSp();
-        }
-
-        return super.getSp();
-    }
-
-    @Override
-    public final void setSp(long value) {
-        if (getCreature().isSubClassActive()) {
-            getCreature().getSubClasses().get(getCreature().getClassIndex()).setSp(value);
-        } else {
-            super.setSp(value);
-        }
-    }
-
     public final long getBaseSp() {
         return super.getSp();
     }
 
-    /*
-     * Return current vitality points in integer format
-     */
     public int getVitalityPoints() {
-        if (getCreature().isSubClassActive()) {
-            return Math.min(MAX_VITALITY_POINTS, getCreature().getSubClasses().get(getCreature().getClassIndex()).getVitalityPoints());
-        }
         return Math.min(Math.max(_vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
     }
 
     public void setVitalityPoints(int value) {
-        if (getCreature().isSubClassActive()) {
-            getCreature().getSubClasses().get(getCreature().getClassIndex()).setVitalityPoints(value);
-            return;
-        }
         _vitalityPoints = Math.min(Math.max(value, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
     }
 
@@ -404,7 +345,7 @@ public class PlayerStats extends PlayableStats {
     }
 
     public double getVitalityExpBonus() {
-        return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
+        return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, getSettings(RateSettings.class).rateVitalityExpMul()) : 1.0;
     }
 
     /*
@@ -443,8 +384,8 @@ public class PlayerStats extends PlayableStats {
         }
     }
 
-    public synchronized void updateVitalityPoints(int points, boolean useRates, boolean quiet) {
-        if ((points == 0) || !Config.ENABLE_VITALITY) {
+    public void updateVitalityPoints(int points, boolean useRates) {
+        if (points == 0 || !getSettings(CharacterSettings.class).isVitalityEnabled()) {
             return;
         }
 
@@ -467,10 +408,10 @@ public class PlayerStats extends PlayableStats {
 
             if (points > 0) {
                 // vitality increased
-                points *= Config.RATE_VITALITY_GAIN;
+                points *= getSettings(RateSettings.class).rateVitalityGain();
             } else {
                 // vitality decreased
-                points *= Config.RATE_VITALITY_LOST;
+                points *= getSettings(RateSettings.class).rateVitalityLoss();
             }
         }
 
@@ -489,8 +430,8 @@ public class PlayerStats extends PlayableStats {
 
     public double getExpBonusMultiplier() {
         double bonus = 1.0;
-        double vitality = 1.0;
-        double bonusExp = 1.0;
+        double vitality;
+        double bonusExp;
 
         // Bonus from Vitality System
         vitality = getVitalityExpBonus();
@@ -508,17 +449,14 @@ public class PlayerStats extends PlayableStats {
 
         // Check for abnormal bonuses
         bonus = Math.max(bonus, 1);
-        if (Config.MAX_BONUS_EXP > 0) {
-            bonus = Math.min(bonus, Config.MAX_BONUS_EXP);
-        }
 
         return bonus;
     }
 
     public double getSpBonusMultiplier() {
         double bonus = 1.0;
-        double vitality = 1.0;
-        double bonusSp = 1.0;
+        double vitality;
+        double bonusSp;
 
         // Bonus from Vitality System
         vitality = getVitalityExpBonus();
@@ -534,13 +472,7 @@ public class PlayerStats extends PlayableStats {
             bonus += (bonusSp - 1);
         }
 
-        // Check for abnormal bonuses
-        bonus = Math.max(bonus, 1);
-        if (Config.MAX_BONUS_SP > 0) {
-            bonus = Math.min(bonus, Config.MAX_BONUS_SP);
-        }
-
-        return bonus;
+        return Math.max(bonus, 1);
     }
 
     /**

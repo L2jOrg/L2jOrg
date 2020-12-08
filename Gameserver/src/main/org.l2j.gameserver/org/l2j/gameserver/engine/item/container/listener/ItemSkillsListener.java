@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 import org.slf4j.Logger;
@@ -34,6 +34,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -57,9 +58,7 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         final AtomicBoolean update = new AtomicBoolean();
         final AtomicBoolean updateTimestamp = new AtomicBoolean();
 
-        if (item.isAugmented()) {
-            item.getAugmentation().removeBonus(player);
-        }
+        item.removeAugmentationBonus(player);
 
         player.getStats().recalculateStats(true);
 
@@ -186,12 +185,8 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         final AtomicBoolean update = new AtomicBoolean();
         final AtomicBoolean updateTimestamp = new AtomicBoolean();
 
-        // Apply augmentation bonuses on equip
-        if (item.isAugmented()) {
-            item.getAugmentation().applyBonus(player);
-        }
+        item.applyAugmentationBonus(player);
 
-        // Recalculate all stats
         player.getStats().recalculateStats(true);
 
         item.getTemplate().forEachSkill(ItemSkillType.ON_ENCHANT, holder -> {
@@ -276,7 +271,8 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
 
     private boolean verifySkillActiveIfAddtionalAgathion(InventorySlot slot, ItemSkillHolder holder) {
         if(slot != InventorySlot.AGATHION1 &&  InventorySlot.agathions().contains(slot)) {
-            return holder.getSkill().isActive();
+            var skill = holder.getSkill();
+            return nonNull(skill) && skill.isActive();
         }
         return false;
     }

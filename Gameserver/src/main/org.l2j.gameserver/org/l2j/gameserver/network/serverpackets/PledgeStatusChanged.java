@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -30,17 +31,17 @@ public final class PledgeStatusChanged extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_STATUS_CHANGED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLEDGE_STATUS_CHANGED, buffer );
 
-        writeInt(0x00);
-        writeInt(_clan.getLeaderId());
-        writeInt(_clan.getId());
-        writeInt(_clan.getCrestId());
-        writeInt(_clan.getAllyId());
-        writeInt(_clan.getAllyCrestId());
-        writeInt(_clan.getCrestLargeId());
-        writeInt(0x00); // pledge type ?
+        buffer.writeInt(0x00);
+        buffer.writeInt(_clan.getLeaderId());
+        buffer.writeInt(_clan.getId());
+        buffer.writeInt(_clan.getCrestId());
+        buffer.writeInt(_clan.getAllyId());
+        buffer.writeInt(_clan.getAllyCrestId());
+        buffer.writeInt(_clan.getCrestLargeId());
+        buffer.writeInt(0x00); // pledge type ?
     }
 
 }

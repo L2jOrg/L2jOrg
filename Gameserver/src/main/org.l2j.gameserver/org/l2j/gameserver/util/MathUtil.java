@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.util;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.interfaces.ILocational;
 
 import static java.lang.Math.pow;
@@ -103,7 +104,7 @@ public final class MathUtil {
     }
 
     public static double calculateDistanceSq2D(int x1, int y1, int x2, int y2) {
-        return (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
+        return Math.pow(x1 - x2, 2)  + Math.pow(y1 - y2, 2);
     }
 
     public static double calculateDistance2D(ILocational loc, ILocational other) {
@@ -123,7 +124,7 @@ public final class MathUtil {
     }
 
     public static double calculateDistanceSq3D(int x1, int y1, int z1, int x2, int y2, int z2) {
-        return (x1 -x2) * (x1 -x2) + (y1 - y2) * (y1 - y2)  + (z1 - z2) * (z1 - z2);
+        return Math.pow(x1 -x2, 2) + Math.pow(y1 - y2, 2)  + Math.pow(z1 - z2, 2);
     }
 
     public static double calculateDistanceSq3D(ILocational object, ILocational other) {
@@ -183,5 +184,8 @@ public final class MathUtil {
         return ((x ^ r) & (y ^ r)) < 0;
     }
 
+    public static boolean checkMulOverFlow(long value, long mul, long max) {
+        return max / mul < value;
+    }
 
 }

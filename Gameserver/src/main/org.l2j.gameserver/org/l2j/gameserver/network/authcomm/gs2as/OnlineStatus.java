@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
@@ -30,8 +31,8 @@ public class OnlineStatus extends SendablePacket
 		_online = online;
 	}
 
-	protected void writeImpl(AuthServerClient client) {
-		writeByte(0x01);
-		writeByte(_online);
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x01);
+		buffer.writeByte(_online);
 	}
 }

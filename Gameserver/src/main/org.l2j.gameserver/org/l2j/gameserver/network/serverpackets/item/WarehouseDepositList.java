@@ -18,12 +18,13 @@
  */
 package org.l2j.gameserver.network.serverpackets.item;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.model.item.container.WarehouseType;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
@@ -42,14 +43,14 @@ public final class WarehouseDepositList {
     public static void openOfPlayer(Player player) {
         doIfNonNull(wareHouseOf(player, WarehouseType.PRIVATE), warehouse -> {
             var depositable = player.getDepositableItems(WarehouseType.PRIVATE);
-            player.sendPacket(header(warehouse, WarehouseType.PRIVATE, player, depositable.size()), new DepositableList(depositable));
+            player.sendPackets(header(warehouse, WarehouseType.PRIVATE, player, depositable.size()), new DepositableList(depositable));
         });
     }
 
     public static void openOfClan(Player player) {
         doIfNonNull(wareHouseOf(player, WarehouseType.CLAN), warehouse -> {
             var depositable = player.getDepositableItems(WarehouseType.CLAN);
-            player.sendPacket(header(warehouse, WarehouseType.CLAN, player, depositable.size()), new DepositableList(depositable));
+            player.sendPackets(header(warehouse, WarehouseType.CLAN, player, depositable.size()), new DepositableList(depositable));
         });
     }
 
@@ -83,15 +84,15 @@ public final class WarehouseDepositList {
         }
 
         @Override
-        protected void writeImpl(GameClient client) {
-            writeId(ServerPacketId.WAREHOUSE_DEPOSIT_LIST);
-            writeByte(ItemPacketType.HEADER.clientId());
-            writeShort(type.clientId());
-            writeLong(adenaAmount);
-            writeInt(depositedAmount);
-            writeShort(stackableDeposited.size());
-            stackableDeposited.forEach(this::writeInt);
-            writeInt(depositableAmount);
+        protected void writeImpl(GameClient client, WritableBuffer buffer) {
+            writeId(ServerPacketId.WAREHOUSE_DEPOSIT_LIST, buffer );
+            buffer.writeByte(ItemPacketType.HEADER.clientId());
+            buffer.writeShort(type.clientId());
+            buffer.writeLong(adenaAmount);
+            buffer.writeInt(depositedAmount);
+            buffer.writeShort(stackableDeposited.size());
+            stackableDeposited.forEach(buffer::writeInt);
+            buffer.writeInt(depositableAmount);
         }
     }
 
@@ -103,14 +104,14 @@ public final class WarehouseDepositList {
         }
 
         @Override
-        protected void writeImpl(GameClient client) {
-            writeId(ServerPacketId.WAREHOUSE_DEPOSIT_LIST);
-            writeByte(ItemPacketType.LIST.clientId());
-            writeInt(depositableItems.size());
-            writeInt(depositableItems.size());
+        protected void writeImpl(GameClient client, WritableBuffer buffer) {
+            writeId(ServerPacketId.WAREHOUSE_DEPOSIT_LIST, buffer );
+            buffer.writeByte(ItemPacketType.LIST.clientId());
+            buffer.writeInt(depositableItems.size());
+            buffer.writeInt(depositableItems.size());
             for (Item item : depositableItems) {
-                writeItem(item, client.getPlayer());
-                writeInt(item.getObjectId());
+                writeItem(item, client.getPlayer(), buffer);
+                buffer.writeInt(item.getObjectId());
             }
         }
     }

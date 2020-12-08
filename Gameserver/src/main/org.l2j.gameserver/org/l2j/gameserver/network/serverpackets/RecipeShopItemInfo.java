@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -32,17 +33,17 @@ public class RecipeShopItemInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.RECIPE_SHOP_ITEM_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.RECIPE_SHOP_ITEM_INFO, buffer );
 
-        writeInt(_player.getObjectId());
-        writeInt(_recipeId);
-        writeInt((int) _player.getCurrentMp());
-        writeInt(_player.getMaxMp());
-        writeInt(0xffffffff);
-        writeLong(0x00);
-        writeByte((byte) 0x00); // Trigger offering window if 1
-        writeLong(0x00);
+        buffer.writeInt(_player.getObjectId());
+        buffer.writeInt(_recipeId);
+        buffer.writeInt((int) _player.getCurrentMp());
+        buffer.writeInt(_player.getMaxMp());
+        buffer.writeInt(0xffffffff);
+        buffer.writeLong(0x00);
+        buffer.writeByte(0x00); // Trigger offering window if 1
+        buffer.writeLong(0x00);
     }
 
 }

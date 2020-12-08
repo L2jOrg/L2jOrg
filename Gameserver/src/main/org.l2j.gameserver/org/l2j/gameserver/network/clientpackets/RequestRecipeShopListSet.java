@@ -28,6 +28,7 @@ import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.RecipeShopMsg;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
@@ -36,7 +37,7 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.l2j.gameserver.model.item.container.Inventory.MAX_ADENA;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * RequestRecipeShopListSet client packet class.
@@ -95,6 +96,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
 
         player.getManufactureItems().clear();
 
+        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
         for (ManufactureItem i : _items) {
             final RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
             if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {
@@ -102,8 +104,8 @@ public final class RequestRecipeShopListSet extends ClientPacket {
                 return;
             }
 
-            if (i.getCost() > MAX_ADENA) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + MAX_ADENA + " adena in Private Manufacture.");
+            if (i.getCost() > maxAdena) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + maxAdena + " adena in Private Manufacture.");
                 return;
             }
 

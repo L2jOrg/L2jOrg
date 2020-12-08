@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -34,12 +35,12 @@ public class ManagePledgePower extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MANAGE_PLEDGE_POWER);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MANAGE_PLEDGE_POWER, buffer );
 
-        writeInt(_rank);
-        writeInt(_action);
-        writeInt(_clan.getRankPrivs(_rank).getBitmask());
+        buffer.writeInt(_rank);
+        buffer.writeInt(_action);
+        buffer.writeInt(_clan.getRankPrivs(_rank).getBitmask());
     }
 
 }

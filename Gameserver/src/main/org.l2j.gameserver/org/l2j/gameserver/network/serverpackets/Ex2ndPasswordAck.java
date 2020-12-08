@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -38,12 +39,12 @@ public class Ex2ndPasswordAck extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_2ND_PASSWORD_ACK);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_2ND_PASSWORD_ACK, buffer );
 
-        writeByte((byte) _status);
-        writeInt(_response == WRONG_PATTERN ? 0x01 : 0x00);
-        writeInt(0x00);
+        buffer.writeByte(_status);
+        buffer.writeInt(_response == WRONG_PATTERN);
+        buffer.writeInt(0x00);
     }
 
 }

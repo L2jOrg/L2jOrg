@@ -162,22 +162,18 @@ public abstract class XmlReader extends XmlParser {
     /**
      * Executes action for each child that matches nodeName
      */
-    protected void forEach(Node node, String nodeName, Consumer<Node> action)
-    {
+    protected void forEach(Node node, String nodeName, Consumer<Node> action) {
         forEach(node, innerNode -> nodeName.equalsIgnoreCase(innerNode.getNodeName()), action);
     }
 
     /**
      * Executes action for each child of node if matches the filter specified
      */
-    protected void forEach(Node node, Predicate<Node> filter, Consumer<Node> action)
-    {
+    protected void forEach(Node node, Predicate<Node> filter, Consumer<Node> action) {
         final NodeList list = node.getChildNodes();
-        for (int i = 0; i < list.getLength(); i++)
-        {
+        for (int i = 0; i < list.getLength(); i++) {
             final Node targetNode = list.item(i);
-            if (filter.test(targetNode))
-            {
+            if (filter.test(targetNode)) {
                 action.accept(targetNode);
             }
         }

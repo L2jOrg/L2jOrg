@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -31,11 +32,11 @@ public final class SetSummonRemainTime extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SET_SUMMON_REMAIN_TIME);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SET_SUMMON_REMAIN_TIME, buffer );
 
-        writeInt(_maxTime);
-        writeInt(_remainingTime);
+        buffer.writeInt(_maxTime);
+        buffer.writeInt(_remainingTime);
     }
 
 }

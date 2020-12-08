@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -29,10 +30,10 @@ public final class JoinPledge extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.JOIN_PLEDGE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.JOIN_PLEDGE, buffer );
 
-        writeInt(_pledgeId);
+        buffer.writeInt(_pledgeId);
     }
 
 }

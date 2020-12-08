@@ -47,39 +47,39 @@ public class PcBody implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (selectedTarget == null)
+		if (currentTarget == null)
 		{
 			return null;
 		}
 		
-		if (!isCreature(selectedTarget))
+		if (!isCreature(currentTarget))
 		{
 			return null;
 		}
 		
-		if (!isPlayer(selectedTarget) && !isPet(selectedTarget))
+		if (!isPlayer(currentTarget) && !isPet(currentTarget))
 		{
 			if (sendMessage)
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			
 			return null;
 		}
 		
-		final Playable target = (Playable) selectedTarget;
+		final Playable target = (Playable) currentTarget;
 		
 		if (target.isDead())
 		{
 			if (skill.hasAnyEffectType(EffectType.RESURRECTION))
 			{
-				if (activeChar.isResurrectionBlocked() || target.isResurrectionBlocked())
+				if (creature.isResurrectionBlocked() || target.isResurrectionBlocked())
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
+						creature.sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
 						target.sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
 					}
 					
@@ -91,7 +91,7 @@ public class PcBody implements ITargetTypeHandler
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+						creature.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 					}
 					
 					return null;
@@ -101,11 +101,11 @@ public class PcBody implements ITargetTypeHandler
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
 			if (dontMove)
 			{
-				if (!MathUtil.isInsideRadius2D(activeChar, target, skill.getCastRange()))
+				if (!MathUtil.isInsideRadius2D(creature, target, skill.getCastRange()))
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
+						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 					}
 					
 					return null;
@@ -113,11 +113,11 @@ public class PcBody implements ITargetTypeHandler
 			}
 			
 			// Geodata check when character is within range.
-			if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
+			if (!GeoEngine.getInstance().canSeeTarget(creature, target))
 			{
 				if (sendMessage)
 				{
-					activeChar.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+					creature.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				}
 				
 				return null;
@@ -129,7 +129,7 @@ public class PcBody implements ITargetTypeHandler
 		// If target is not dead or not player/pet it will not even bother to walk within range, unlike Enemy target type.
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+			creature.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 		
 		return null;

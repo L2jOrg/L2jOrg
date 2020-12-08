@@ -18,15 +18,16 @@
  */
 package org.l2j.gameserver.model.stats.finalizers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Optional;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -44,7 +45,7 @@ public class MCritRateFinalizer implements IStatsFunction {
         }
 
         final double witBonus = creature.getWIT() > 0 ? BaseStats.WIT.calcBonus(creature) : 1.;
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * witBonus * 10), 0, Config.MAX_MCRIT_RATE);
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * witBonus * 10), 0, getSettings(CharacterSettings.class).maxMcritRate());
     }
 
     @Override

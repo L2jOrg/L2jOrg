@@ -66,7 +66,7 @@ public final class AuthLogin extends ClientPacket {
 
             client.loadAccount(account);
             final SessionKey key = new SessionKey(authAccountId, authKey, sessionId, accountId);
-            client.setSessionId(key);
+            client.setSessionKey(key);
 
             GameClient oldClient = AuthServerCommunication.getInstance().addWaitingClient(client);
             if(oldClient != null)

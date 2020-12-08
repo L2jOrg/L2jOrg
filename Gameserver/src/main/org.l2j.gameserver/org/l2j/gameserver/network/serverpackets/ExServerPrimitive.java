@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -382,42 +383,42 @@ public class ExServerPrimitive extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SERVER_PRIMITIVE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SERVER_PRIMITIVE, buffer );
 
-        writeString(_name);
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(65535); // has to do something with display range and angle
-        writeInt(65535); // has to do something with display range and angle
+        buffer.writeString(_name);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
+        buffer.writeInt(65535); // has to do something with display range and angle
+        buffer.writeInt(65535); // has to do something with display range and angle
 
-        writeInt(_points.size() + _lines.size());
+        buffer.writeInt(_points.size() + _lines.size());
 
         for (Point point : _points) {
-            writeByte((byte) 1); // Its the type in this case Point
-            writePoint(point);
+            buffer.writeByte(1); // Its the type in this case Point
+            writePoint(point, buffer);
         }
 
         for (Line line : _lines) {
-            writeByte((byte) 2); // Its the type in this case Line
-            writePoint(line);
-            writeInt(line.getX2());
-            writeInt(line.getY2());
-            writeInt(line.getZ2());
+            buffer.writeByte(2); // Its the type in this case Line
+            writePoint(line, buffer);
+            buffer.writeInt(line.getX2());
+            buffer.writeInt(line.getY2());
+            buffer.writeInt(line.getZ2());
         }
     }
 
-    private void writePoint(Point line) {
-        writeString(line.getName());
+    private void writePoint(Point line, WritableBuffer buffer) {
+        buffer.writeString(line.getName());
         final int color = line.getColor();
-        writeInt((color >> 16) & 0xFF); // R
-        writeInt((color >> 8) & 0xFF); // G
-        writeInt(color & 0xFF); // B
-        writeInt(line.isNameColored() ? 1 : 0);
-        writeInt(line.getX());
-        writeInt(line.getY());
-        writeInt(line.getZ());
+        buffer.writeInt((color >> 16) & 0xFF); // R
+        buffer.writeInt((color >> 8) & 0xFF); // G
+        buffer.writeInt(color & 0xFF); // B
+        buffer.writeInt(line.isNameColored() ? 1 : 0);
+        buffer.writeInt(line.getX());
+        buffer.writeInt(line.getY());
+        buffer.writeInt(line.getZ());
     }
 
 

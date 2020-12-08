@@ -24,7 +24,7 @@ import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 
 import java.util.BitSet;
@@ -67,7 +67,6 @@ public class Shortcuts {
         }
 
         shortcut.setPlayerId(owner.getObjectId());
-        shortcut.setClassIndex(owner.getClassIndex());
         getDAO(ShortcutDAO.class).save(shortcut);
     }
 
@@ -109,7 +108,7 @@ public class Shortcuts {
     }
     
     private void deleteShortcutFromDb(Shortcut shortcut) {
-        getDAO(ShortcutDAO.class).delete(owner.getObjectId(), shortcut.getClientId(), owner.getClassIndex());
+        getDAO(ShortcutDAO.class).delete(owner.getObjectId(), shortcut.getClientId());
     }
 
     public void deleteShortcuts(Predicate<Shortcut> filter) {
@@ -118,7 +117,7 @@ public class Shortcuts {
 
     public void deleteShortcuts() {
         shortcuts.clear();
-        getDAO(ShortcutDAO.class).deleteFromSubclass(owner.getObjectId(), owner.getClassIndex());
+        getDAO(ShortcutDAO.class).deleteFromPlayer(owner.getObjectId());
     }
 
     public void forEachShortcut(Consumer<Shortcut> action) {
@@ -158,22 +157,24 @@ public class Shortcuts {
 
     public void restoreMe() {
         shortcuts.clear();
-        getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId(), owner.getClassIndex()).forEach(s -> shortcuts.put(s.getClientId(), s));
-
-        // Verify shortcuts
-        forEachShortcut(s -> {
-            if (s.getType() == ShortcutType.ITEM) {
-                final Item item = owner.getInventory().getItemByObjectId(s.getShortcutId());
+        for (Shortcut shortcut : getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId())) {
+            if (shortcut.getType() == ShortcutType.ITEM) {
+                final Item item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
                 if (isNull(item)) {
-                    deleteShortcut(s.getClientId());
-                } else if (item.isEtcItem()) {
-                    s.setSharedReuseGroup(item.getSharedReuseGroup());
+                    deleteShortcutFromDb(shortcut);
+                    continue;
+                }
+
+                if (item.isEtcItem()) {
+                    shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
                 }
             }
-            if(s.isActive()) {
-                activeShortcuts.set(s.getClientId());
+
+            shortcuts.put(shortcut.getClientId(), shortcut);
+            if(shortcut.isActive()) {
+                activeShortcuts.set(shortcut.getClientId());
             }
-        });
+        }
     }
 
     public void storeMe() {

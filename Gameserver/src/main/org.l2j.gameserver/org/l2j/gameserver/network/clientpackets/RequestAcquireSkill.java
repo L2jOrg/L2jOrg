@@ -32,7 +32,6 @@ import org.l2j.gameserver.model.actor.instance.Fisherman;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.VillageMaster;
 import org.l2j.gameserver.model.base.AcquireSkillType;
-import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -41,6 +40,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,6 +48,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
@@ -123,13 +124,6 @@ public final class RequestAcquireSkill extends ClientPacket {
                 break;
             }
             case TRANSFORM: {
-                // Hack check.
-                if (!canTransform(player)) {
-                    player.sendPacket(SystemMessageId.YOU_HAVE_NOT_COMPLETED_THE_NECESSARY_QUEST_FOR_SKILL_ACQUISITION);
-                    GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " is requesting skill Id: " + id + " level " + level + " without required quests!", IllegalActionPunishmentType.NONE);
-                    return;
-                }
-
                 if (checkPlayerSkill(player, trainer, skillLearn)) {
                     giveSkill(player, trainer, skill);
                 }
@@ -149,7 +143,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                 final Clan clan = player.getClan();
                 final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
                 if (clan.getReputationScore() >= repCost) {
-                    if (Config.LIFE_CRYSTAL_NEEDED) {
+                    if (getSettings(CharacterSettings.class).isPledgeSkillsItemNeeded()) {
                         for (ItemHolder item : skillLearn.getRequiredItems()) {
                             if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
                                 // Doesn't have required item.
@@ -260,13 +254,6 @@ public final class RequestAcquireSkill extends ClientPacket {
                     return false;
                 }
 
-                if (skillLearn.getDualClassLevel() > 0) {
-                    final SubClass playerDualClass = player.getDualClass();
-                    if ((playerDualClass == null) || (playerDualClass.getLevel() < skillLearn.getDualClassLevel())) {
-                        return false;
-                    }
-                }
-
                 // First it checks that the skill require SP and the player has enough SP to learn it.
                 final long levelUpSp = skillLearn.getLevelUpSp();
                 if ((levelUpSp > 0) && (levelUpSp > player.getSp())) {
@@ -275,7 +262,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                     return false;
                 }
 
-                if (!Config.DIVINE_SP_BOOK_NEEDED && (id == CommonSkill.DIVINE_INSPIRATION.getId())) {
+                if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !getSettings(CharacterSettings.class).isDivineInspirationBookNeeded()) {
                     return true;
                 }
 
@@ -405,14 +392,5 @@ public final class RequestAcquireSkill extends ClientPacket {
         } else {
             activeChar.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.SUBPLEDGE));
         }
-    }
-
-    // TODO remove this
-    private boolean canTransform(Player player) {
-        if (Config.ALLOW_TRANSFORM_WITHOUT_QUEST) {
-            return true;
-        }
-        final QuestState qs = player.getQuestState("Q00136_MoreThanMeetsTheEye");
-        return (qs != null) && qs.isCompleted();
     }
 }

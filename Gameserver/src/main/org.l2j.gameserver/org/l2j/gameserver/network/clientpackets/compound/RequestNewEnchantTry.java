@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.item.combination.CombinationItem;
 import org.l2j.gameserver.model.item.combination.CombinationItemReward;
 import org.l2j.gameserver.model.item.combination.CombinationItemType;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -90,7 +90,10 @@ public class RequestNewEnchantTry extends ClientPacket {
 
         final InventoryUpdate iu = new InventoryUpdate();
         iu.addRemovedItem(itemOne);
-        iu.addRemovedItem(itemTwo);
+
+        if (!itemTwo.isStackable()) {
+            iu.addRemovedItem(itemTwo);
+        }
 
         if (activeChar.destroyItem("Compound-Item-One", itemOne, 1, null, true) && activeChar.destroyItem("Compound-Item-Two", itemTwo, 1, null, true)) {
             final double random = (Rnd.nextDouble() * 100);

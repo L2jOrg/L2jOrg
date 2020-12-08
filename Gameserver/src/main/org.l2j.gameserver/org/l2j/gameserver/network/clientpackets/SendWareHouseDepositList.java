@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.item.container.Warehouse;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;

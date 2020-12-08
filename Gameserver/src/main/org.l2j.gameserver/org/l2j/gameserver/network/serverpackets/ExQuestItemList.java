@@ -18,8 +18,9 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -36,22 +37,22 @@ public class ExQuestItemList extends AbstractItemPacket {
     public ExQuestItemList(int sendType, Player activeChar) {
         _sendType = sendType;
         _activeChar = activeChar;
-        _items = activeChar.getInventory().getItems(Item::isQuestItem);
+        _items = activeChar.getInventory().getQuestItems();
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_QUEST_ITEMLIST);
-        writeByte((byte) _sendType);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_QUEST_ITEMLIST, buffer );
+        buffer.writeByte(_sendType);
         if (_sendType == 2) {
-            writeInt(_items.size());
+            buffer.writeInt(_items.size());
         } else {
-            writeShort((short) 0);
+            buffer.writeShort(0);
         }
-        writeInt(_items.size());
+        buffer.writeInt(_items.size());
         for (Item item : _items) {
-            writeItem(item);
+            writeItem(item, buffer);
         }
-        writeInventoryBlock(_activeChar.getInventory());
+        writeInventoryBlock(_activeChar.getInventory(), buffer);
     }
 }

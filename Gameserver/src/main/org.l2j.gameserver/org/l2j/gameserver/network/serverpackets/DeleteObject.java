@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -34,11 +35,11 @@ public final class DeleteObject extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.DELETE_OBJECT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.DELETE_OBJECT, buffer );
 
-        writeInt(_objectId);
-        writeByte((byte) 0x00); // c2
+        buffer.writeInt(_objectId);
+        buffer.writeByte(0x00); // c2
     }
 
 }

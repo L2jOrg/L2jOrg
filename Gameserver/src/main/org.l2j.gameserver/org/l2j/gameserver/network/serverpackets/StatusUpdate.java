@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.network.GameClient;
@@ -64,16 +65,16 @@ public final class StatusUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.STATUS_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.STATUS_UPDATE, buffer );
 
-        writeInt(objectId); // casterId
-        writeInt(isVisible ? casterObjectId : 0x00);
-        writeByte(isVisible);
-        writeByte(updates.size());
+        buffer.writeInt(objectId); // casterId
+        buffer.writeInt(isVisible ? casterObjectId : 0x00);
+        buffer.writeByte(isVisible);
+        buffer.writeByte(updates.size());
         for (var entry : updates.entrySet()) {
-            writeByte(entry.getKey().getClientId());
-            writeInt(entry.getValue());
+            buffer.writeByte(entry.getKey().getClientId());
+            buffer.writeInt(entry.getValue());
         }
     }
 

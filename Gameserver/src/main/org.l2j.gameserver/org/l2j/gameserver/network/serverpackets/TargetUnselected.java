@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -39,14 +40,14 @@ public class TargetUnselected extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.TARGET_UNSELECTED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.TARGET_UNSELECTED, buffer );
 
-        writeInt(_targetObjId);
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(0x00); // ??
+        buffer.writeInt(_targetObjId);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
+        buffer.writeInt(0x00); // ??
     }
 
 }

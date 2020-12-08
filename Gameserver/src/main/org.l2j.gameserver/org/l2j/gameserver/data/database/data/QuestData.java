@@ -30,8 +30,6 @@ public class QuestData {
     private String name;
     private String var;
     private String value;
-    @Column("class_index")
-    private int classIndex;
 
     public int getPlayerId() {
         return playerId;
@@ -47,9 +45,5 @@ public class QuestData {
 
     public String getValue() {
         return value;
-    }
-
-    public int getClassIndex() {
-        return classIndex;
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -42,14 +43,14 @@ public class GetOnVehicle extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GETON_VEHICLE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.GETON_VEHICLE, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_boatObjId);
-        writeInt(_pos.getX());
-        writeInt(_pos.getY());
-        writeInt(_pos.getZ());
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_boatObjId);
+        buffer.writeInt(_pos.getX());
+        buffer.writeInt(_pos.getY());
+        buffer.writeInt(_pos.getZ());
     }
 
 }

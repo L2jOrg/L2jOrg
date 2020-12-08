@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
@@ -31,8 +32,8 @@ public class PlayerLogout extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client) {
-		writeByte((byte)0x04);
-		writeString(account);
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x04);
+		buffer.writeString(account);
 	}
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -37,11 +38,11 @@ public class ExShowChannelingEffect extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_CHANNELING_EFFECT);
-        writeInt(_caster.getObjectId());
-        writeInt(_target.getObjectId());
-        writeInt(_state);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_CHANNELING_EFFECT, buffer );
+        buffer.writeInt(_caster.getObjectId());
+        buffer.writeInt(_target.getObjectId());
+        buffer.writeInt(_state);
     }
 
 }

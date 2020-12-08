@@ -99,7 +99,7 @@ public final class Fence extends WorldObject {
                 deleteObjects[i] = new DeleteObject(_heightFences[i]);
             }
 
-            World.getInstance().forEachVisibleObject(this, Player.class, player -> player.sendPacket(deleteObjects));
+            World.getInstance().forEachVisibleObject(this, Player.class, player -> player.sendPackets(deleteObjects));
         }
 
         return super.decayMe();

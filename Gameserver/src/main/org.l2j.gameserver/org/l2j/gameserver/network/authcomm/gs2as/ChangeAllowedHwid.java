@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
@@ -33,9 +34,9 @@ public class ChangeAllowedHwid extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client) {
-		writeByte((byte)0x09);
-		writeString(account);
-		writeString(hwid);
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x09);
+		buffer.writeString(account);
+		buffer.writeString(hwid);
 	}
 }

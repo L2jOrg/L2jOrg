@@ -36,7 +36,7 @@ public final class Armor extends ItemTemplate implements EquipableItem {
         this.type = type;
         this.bodyPart = bodyPart;
 
-        if(bodyPart.isAnyOf(NECK, EAR, FINGER, RIGHT_BRACELET, LEFT_BRACELET, ARTIFACT_BOOK)) {
+        if(bodyPart.isAnyOf(NECK, EAR, FINGER, RIGHT_BRACELET, LEFT_BRACELET, ARTIFACT_BOOK, AGATHION)) {
             type1 = TYPE1_WEAPON_RING_EARRING_NECKLACE;
             type2 = TYPE2_ACCESSORY;
         } else {

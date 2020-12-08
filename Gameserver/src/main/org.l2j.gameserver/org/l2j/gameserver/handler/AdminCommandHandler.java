@@ -79,7 +79,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
         final String commandNoPrefix = command.substring(6);
 
         if (!AdminData.getInstance().hasAccess(command, player.getAccessLevel())) {
-            LOGGER.warn("Player {} tried to use admin command '{}', without proper access level!", player.getName(), command);
+            LOGGER.warn("Player {} tried to use admin command '{}', without proper access level!", player, command);
             return;
         }
 

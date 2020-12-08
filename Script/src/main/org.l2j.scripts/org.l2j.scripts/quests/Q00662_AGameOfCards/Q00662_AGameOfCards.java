@@ -45,7 +45,7 @@ public final class Q00662_AGameOfCards extends Quest
 	private static final int RED_GEM = 8765;
 	private static final int ZIGGOS_GEMSTONE = 8868;
 	// Misc
-	private static final int MIN_LEVEL = 61;
+	private static final int MIN_LEVEL = 55;
 	private static final int REQUIRED_CHIP_COUNT = 50;
 	// Monsters
 	private static final IntIntMap MONSTERS = new HashIntIntMap();

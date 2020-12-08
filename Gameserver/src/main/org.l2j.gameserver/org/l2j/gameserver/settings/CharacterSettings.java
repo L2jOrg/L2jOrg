@@ -37,8 +37,39 @@ public class CharacterSettings implements Settings {
     private float weightLimitMultiplier;
     private boolean removeCastleCirclets;
     private boolean restoreSummonOnReconnect;
-    private int minimumEnchantAnnounceWeapon;
-    private int minimumEnchantAnnounceArmor;
+    private int minEnchantAnnounceWeapon;
+    private int minEnchantAnnounceArmor;
+    private float restoreCPPercent;
+    private float restoreHPPercent;
+    private float restoreMPPercent;
+    private boolean autoLearnSkillEnabled;
+    private boolean autoLearnSkillFSEnabled;
+    private byte maxBuffs;
+    private byte maxTriggeredBuffs;
+    private byte maxDances;
+    private boolean dispelDanceAllowed;
+    private boolean storeDances;
+    private boolean breakCast;
+    private boolean breakBowAttack;
+    private boolean magicFailureAllowed;
+    private boolean breakStun;
+    private int effectTickRatio;
+    private boolean autoLootHerbs;
+    private boolean pledgeSkillsItemNeeded;
+    private boolean divineInspirationBookNeeded;
+    private boolean vitalityEnabled;
+    private boolean raidBossUseVitality;
+    private int maxRunSpeed;
+    private int maxPcritRate;
+    private int maxMcritRate;
+    private int maxPAtkSpeed;
+    private int maxMAtkSpeed;
+    private int maxEvasion;
+    private boolean teleportInBattle;
+    private boolean craftEnabled;
+    private long maxAdena;
+    private boolean allowPKTeleport;
+    private int maxFreeTeleportLevel;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -48,6 +79,11 @@ public class CharacterSettings implements Settings {
         autoLootItems = settingsFile.getIntSet("AutoLootItemIds", ",");
         autoLootRaid = settingsFile.getBoolean("AutoLootRaids", false);
         raidLootPrivilegeTime = settingsFile.getInteger("RaidLootRightsInterval", 900) * 1000;
+        autoLootHerbs = settingsFile.getBoolean("AutoLootHerbs", false);
+        maxAdena = settingsFile.getLong("MaxAdena", Long.MAX_VALUE);
+        if(maxAdena < 1) {
+            maxAdena = Long.MAX_VALUE;
+        }
 
         initialEquipEvent = settingsFile.getBoolean("InitialEquipmentEvent", false);
 
@@ -58,8 +94,47 @@ public class CharacterSettings implements Settings {
         removeCastleCirclets = settingsFile.getBoolean("RemoveCastleCirclets", true);
         restoreSummonOnReconnect = settingsFile.getBoolean("RestoreSummonOnReconnect", true);
 
-        minimumEnchantAnnounceWeapon = settingsFile.getInteger("MinimumEnchantAnnounceWeapon", 7);
-        minimumEnchantAnnounceArmor = settingsFile.getInteger("MinimumEnchantAnnounceArmor", 6);
+        minEnchantAnnounceWeapon = settingsFile.getInteger("MinimumEnchantAnnounceWeapon", 7);
+        minEnchantAnnounceArmor = settingsFile.getInteger("MinimumEnchantAnnounceArmor", 6);
+
+        restoreCPPercent = settingsFile.getInteger("RespawnRestoreCP", 0) / 100f;
+        restoreHPPercent = settingsFile.getInteger("RespawnRestoreHP", 65) / 100f;
+        restoreMPPercent = settingsFile.getInteger("RespawnRestoreMP", 0) / 100f;
+
+        autoLearnSkillEnabled = settingsFile.getBoolean("AutoLearnSkills", false);
+        autoLearnSkillFSEnabled = settingsFile.getBoolean("AutoLearnForgottenScrollSkills", false);
+        pledgeSkillsItemNeeded = settingsFile.getBoolean("PledgeSkillsItemNeeded", true);
+        divineInspirationBookNeeded = settingsFile.getBoolean("DivineInspirationSpBookNeeded", true);
+
+        maxBuffs = settingsFile.getByte("MaxBuffAmount", (byte) 20);
+        maxTriggeredBuffs = settingsFile.getByte("MaxTriggeredBuffAmount", (byte) 12);
+        maxDances = settingsFile.getByte("MaxDanceAmount", (byte) 12);
+        dispelDanceAllowed = settingsFile.getBoolean("DanceCancelBuff", false);
+        storeDances = settingsFile.getBoolean("AltStoreDances", false);
+        effectTickRatio = settingsFile.getInteger("EffectTickRatio", 666);
+
+        var cancelAttackType = settingsFile.getString("AltGameCancelByHit", "Cast");
+        breakCast = cancelAttackType.equalsIgnoreCase("Cast") || cancelAttackType.equalsIgnoreCase("all");
+        breakBowAttack = cancelAttackType.equalsIgnoreCase("Bow") || cancelAttackType.equalsIgnoreCase("all");
+        breakStun = settingsFile.getBoolean("BreakStun", true);
+        magicFailureAllowed = settingsFile.getBoolean("MagicFailures", true);
+
+        vitalityEnabled = settingsFile.getBoolean("EnableVitality", false);
+        raidBossUseVitality = settingsFile.getBoolean("RaidbossUseVitality", false);
+
+        maxRunSpeed = settingsFile.getInteger("MaxRunSpeed", 300);
+        maxPcritRate = settingsFile.getInteger("MaxPCritRate", 500);
+        maxMcritRate = settingsFile.getInteger("MaxMCritRate", 200);
+        maxPAtkSpeed = settingsFile.getInteger("MaxPAtkSpeed", 1500);
+        maxMAtkSpeed = settingsFile.getInteger("MaxMAtkSpeed", 1999);
+        maxEvasion = settingsFile.getInteger("MaxEvasion", 250);
+
+        teleportInBattle = settingsFile.getBoolean("TeleportInBattle", true);
+        allowPKTeleport = settingsFile.getBoolean("AltKarmaPlayerCanTeleport", true);
+        maxFreeTeleportLevel = settingsFile.getInteger("MaxFreeTeleportLevel", 40);
+
+        craftEnabled = settingsFile.getBoolean("CraftingEnabled", true);
+
     }
 
     public int partyRange() {
@@ -82,6 +157,14 @@ public class CharacterSettings implements Settings {
         return raidLootPrivilegeTime;
     }
 
+    public boolean autoLootHerbs() {
+        return autoLootHerbs;
+    }
+
+    public long maxAdena() {
+        return maxAdena;
+    }
+
     public boolean initialEquipEvent() {
         return initialEquipEvent;
     }
@@ -102,11 +185,127 @@ public class CharacterSettings implements Settings {
         return restoreSummonOnReconnect;
     }
 
-    public int minimumEnchantAnnounceWeapon() {
-        return minimumEnchantAnnounceWeapon;
+    public int minEnchantAnnounceWeapon() {
+        return minEnchantAnnounceWeapon;
     }
 
-    public int minimumEnchantAnnounceArmor() {
-        return minimumEnchantAnnounceArmor;
+    public int minEnchantAnnounceArmor() {
+        return minEnchantAnnounceArmor;
+    }
+
+    public float restoreCPPercent() {
+        return restoreCPPercent;
+    }
+
+    public float restoreHPPercent() {
+        return restoreHPPercent;
+    }
+
+    public float restoreMPPercent() {
+        return restoreMPPercent;
+    }
+
+    public boolean isAutoLearnSkillEnabled() {
+        return autoLearnSkillEnabled;
+    }
+
+    public boolean isPledgeSkillsItemNeeded() {
+        return pledgeSkillsItemNeeded;
+    }
+
+    public boolean isDivineInspirationBookNeeded() {
+        return divineInspirationBookNeeded;
+    }
+
+    public boolean isAutoLearnSkillFSEnabled() {
+        return autoLearnSkillFSEnabled;
+    }
+
+    public byte maxBuffs() {
+        return maxBuffs;
+    }
+
+    public byte maxTriggeredBuffs() {
+        return maxTriggeredBuffs;
+    }
+
+    public byte maxDances() {
+        return maxDances;
+    }
+
+    public boolean isDispelDanceAllowed() {
+        return dispelDanceAllowed;
+    }
+
+    public boolean storeDances() {
+        return storeDances;
+    }
+
+    public boolean breakCast() {
+        return breakCast;
+    }
+
+    public boolean breakBowAttack() {
+        return breakBowAttack;
+    }
+
+    public boolean breakStun() {
+        return breakStun;
+    }
+
+    public boolean isMagicFailureAllowed() {
+        return magicFailureAllowed;
+    }
+
+    public int effectTickRatio() {
+        return effectTickRatio;
+    }
+
+    public boolean isVitalityEnabled() {
+        return vitalityEnabled;
+    }
+
+    public boolean raidBossUseVitality() {
+        return raidBossUseVitality;
+    }
+
+    public int maxRunSpeed() {
+        return maxRunSpeed;
+    }
+
+    public int maxPcritRate() {
+        return maxPcritRate;
+    }
+
+    public int maxMcritRate() {
+        return maxMcritRate;
+    }
+
+    public int maxPAtkSpeed() {
+        return maxPAtkSpeed;
+    }
+
+    public int maxMAtkSpeed() {
+        return maxMAtkSpeed;
+    }
+
+    public int maxEvasion() {
+        return maxEvasion;
+    }
+
+    public boolean teleportInBattle() {
+        return teleportInBattle;
+    }
+
+    public boolean isCraftEnabled() {
+        return craftEnabled;
+    }
+
+    public boolean allowPKTeleport() {
+        return allowPKTeleport;
+    }
+
+    public int maxFreeTeleportLevel() {
+        return maxFreeTeleportLevel;
     }
 }

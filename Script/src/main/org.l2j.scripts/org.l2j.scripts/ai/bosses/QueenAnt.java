@@ -25,7 +25,6 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
@@ -35,6 +34,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.util.MathUtil;
@@ -146,7 +146,7 @@ public final class QueenAnt extends AbstractNpcAI
 		GrandBossManager.getInstance().addBoss(npc);
 		startQuestTimer("action", 10000, npc, null, true);
 		startQuestTimer("heal", 1000, null, null, true);
-		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(PlaySound.music("BS01_A", npc));
 		_queen = npc;
 		_larva = (Monster) addSpawn(LARVA, -21600, 179482, -5846, Rnd.get(360), false, 0);
 	}
@@ -341,7 +341,7 @@ public final class QueenAnt extends AbstractNpcAI
 			
 			if (curse != null)
 			{
-				npc.broadcastPacket(new MagicSkillUse(npc, character, curse.getId(), curse.getLevel(), 300, 0));
+				npc.broadcastPacket(new MagicSkillUse(npc, character, curse, 300, 0, -1, SkillCastingType.NORMAL));
 				curse.applyEffects(npc, character);
 			}
 			
@@ -358,7 +358,7 @@ public final class QueenAnt extends AbstractNpcAI
 		final int npcId = npc.getId();
 		if (npcId == QUEEN)
 		{
-			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+			npc.broadcastPacket(PlaySound.music("BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.DEAD);
 			// Calculate Min and Max respawn times randomly.
 			final long respawnTime = (Config.QUEEN_ANT_SPAWN_INTERVAL + Rnd.get(-Config.QUEEN_ANT_SPAWN_RANDOM, Config.QUEEN_ANT_SPAWN_RANDOM)) * 3600000;

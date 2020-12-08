@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.gameserver.packet.auth2game;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.mmocore.WritablePacket;
 import org.l2j.authserver.network.gameserver.ServerClient;
 import org.slf4j.Logger;
@@ -28,9 +29,9 @@ public abstract class GameServerWritablePacket extends WritablePacket<ServerClie
     private static final Logger logger = LoggerFactory.getLogger(GameServerWritablePacket.class);
 
 	@Override
-	protected boolean write(ServerClient client) {
+	protected boolean write(ServerClient client, WritableBuffer buffer) {
 	    try {
-            writeImpl(client);
+            writeImpl(client, buffer);
             return  true;
         } catch (Exception e) {
 	        logger.error(e.getMessage(), e);
@@ -39,6 +40,6 @@ public abstract class GameServerWritablePacket extends WritablePacket<ServerClie
 
 	}
 
-	protected abstract void writeImpl(ServerClient client) throws Exception ;
+	protected abstract void writeImpl(ServerClient client, WritableBuffer buffer) throws Exception ;
 
 }

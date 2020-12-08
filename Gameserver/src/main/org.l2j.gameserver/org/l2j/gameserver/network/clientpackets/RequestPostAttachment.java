@@ -26,7 +26,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.container.ItemContainer;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -112,11 +112,6 @@ public final class RequestPostAttachment extends ClientPacket {
         int slots = 0;
 
         for (Item item : attachments.getItems()) {
-            if (item == null) {
-                continue;
-            }
-
-            // Calculate needed slots
             if (item.getOwnerId() != mail.getSender()) {
                 GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get wrong item (ownerId != senderId) from attachment!");
                 return;
@@ -161,10 +156,6 @@ public final class RequestPostAttachment extends ClientPacket {
         // Proceed to the transfer
         final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
         for (Item item : attachments.getItems()) {
-            if (item == null) {
-                continue;
-            }
-
             if (item.getOwnerId() != mail.getSender()) {
                 GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get item with owner != sender !");
                 return;
@@ -209,8 +200,8 @@ public final class RequestPostAttachment extends ClientPacket {
                 sender.sendPacket(sm);
             } else {
                 final Item paidAdena = ItemEngine.getInstance().createItem("PayMail", CommonItem.ADENA, adena, player, null);
-                paidAdena.setOwnerId(mail.getSender());
-                paidAdena.setItemLocation(ItemLocation.INVENTORY);
+                paidAdena.changeOwner(mail.getSender());
+                paidAdena.changeItemLocation(ItemLocation.INVENTORY);
                 paidAdena.updateDatabase(true);
                 World.getInstance().removeObject(paidAdena);
             }

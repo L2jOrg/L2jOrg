@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -38,8 +39,8 @@ import static java.util.Objects.isNull;
 /**
  * Cultured Adventurer (10967)
  * @author RobikBobik
- * Note: Based on NA server September 2019
- * TODO: Maybe wrong NpcStringId when you killing monsters in Abandoned Camp
+ * Notee: Fixes and Debugging by Bru7aLMike. // Based on EU-classic server November 2020
+ * TODO: OnKill optimisation
  */
 public class Q10967_CulturedAdventurer extends Quest
 {
@@ -58,7 +59,7 @@ public class Q10967_CulturedAdventurer extends Quest
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final int MAX_LEVEL = 30;
 	private static final int MIN_LEVEL = 25;
-	
+
 	public Q10967_CulturedAdventurer()
 	{
 		super(10967);
@@ -69,7 +70,7 @@ public class Q10967_CulturedAdventurer extends Quest
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 	}
-	
+
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
@@ -78,7 +79,7 @@ public class Q10967_CulturedAdventurer extends Quest
 		{
 			return null;
 		}
-		
+
 		String htmltext = null;
 		switch (event)
 		{
@@ -114,7 +115,7 @@ public class Q10967_CulturedAdventurer extends Quest
 		}
 		return htmltext;
 	}
-	
+
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
@@ -149,44 +150,76 @@ public class Q10967_CulturedAdventurer extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onKill(Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if (player.getParty() != null)
 		{
-			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			
-			if (killer.isGM())
+			for (Player partyMember : player.getParty().getMembers())
 			{
-				qs.setCond(2, true);
-				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO, 2, 5000));
-			}
-			else if (killCount < 300)
-			{
-				qs.set(KILL_COUNT_VAR, killCount);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
-			}
-			else
-			{
-				qs.setCond(2, true);
-				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO, 2, 5000));
+				if (MathUtil.isInsideRadius3D(npc, player, 1200))
+				{
+					final QuestState qs = getQuestState(partyMember, false);
+					if ((qs != null) && qs.isCond(1))
+					{
+						final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
+						if (killCount <= 299)
+						{
+							qs.set(KILL_COUNT_VAR, killCount);
+							playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							sendNpcLogList(partyMember);
+						}
+						else
+						{
+							qs.setCond(2, true);
+							qs.unset(KILL_COUNT_VAR);
+							partyMember.sendPacket(new ExShowScreenMessage("You have killed the required number of monsters in the Abandoned Camp. You can now return to Bathis in Gludio.", 5000));
+						}
+					}
+
+				}
+				else if (!MathUtil.isInsideRadius3D(npc, player, 1200))
+				{
+					return null;
+				}
 			}
 		}
-		return super.onKill(npc, killer, isSummon);
+		else
+		{
+			final QuestState qs = getQuestState(player, false);
+			if (qs == null)
+			{
+				return null;
+			}
+			else if ((qs != null) && qs.isCond(1))
+			{
+				final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
+				if (killCount <= 299)
+				{
+					qs.set(KILL_COUNT_VAR, killCount);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					sendNpcLogList(player);
+				}
+				else
+				{
+					qs.setCond(2, true);
+					qs.unset(KILL_COUNT_VAR);
+					player.sendPacket(new ExShowScreenMessage("You have killed the required number of monsters in the Abandoned Camp. You can now return to Bathis in Gludio.", 5000));
+				}
+			}
+
+		}
+		return super.onKill(npc, player, isSummon);
 	}
-	
+
 	@Override
 	public Set<NpcLogListHolder> getNpcLogList(Player player)
 	{
-		
+
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(1))
 		{
@@ -194,10 +227,10 @@ public class Q10967_CulturedAdventurer extends Quest
 			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_ABANDONED_CAMP.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
-		
+
 		return super.getNpcLogList(player);
 	}
-	
+
 	@Override
 	public boolean checkPartyMember(Player member, Npc npc)
 	{

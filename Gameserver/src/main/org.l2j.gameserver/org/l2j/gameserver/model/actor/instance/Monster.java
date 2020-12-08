@@ -19,17 +19,19 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MinionList;
 
 import java.util.concurrent.ScheduledFuture;
+
+import static java.util.Objects.nonNull;
 
 /**
  * This class manages all Monsters. Monster:
@@ -75,6 +77,10 @@ public class Monster extends Attackable {
 
         if (GameUtils.isMonster(attacker)) {
             return false;
+        }
+
+        if(attacker instanceof FriendlyMob && isAggressive() && !getAggroList().isEmpty() && GameUtils.isPlayable(getTarget())) {
+            return true;
         }
 
         // Anything considers monsters friendly except Players, Attackables (Guards, Friendly NPC), Traps and EffectPoints.
@@ -129,6 +135,15 @@ public class Monster extends Attackable {
     public boolean doDie(Creature killer) {
         if (!super.doDie(killer)) {
             return false;
+        }
+
+        if (nonNull(_master) && _master.hasMinions()) {
+            final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1;
+            _master.getMinionList().onMinionDie(this, respawnTime);
+        }
+
+        if (hasMinions()) {
+            getMinionList().onMasterDie(false);
         }
 
         if (_maintenanceTask != null) {

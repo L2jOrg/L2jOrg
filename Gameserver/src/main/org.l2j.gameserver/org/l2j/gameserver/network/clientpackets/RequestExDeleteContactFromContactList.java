@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.GeneralSettings;
 
@@ -29,11 +30,12 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author UnAfraid & mrTJO
  */
 public class RequestExDeleteContactFromContactList extends ClientPacket {
-    private String _name;
+
+    private String name;
 
     @Override
     public void readImpl() {
-        _name = readString();
+        name = readString();
     }
 
     @Override
@@ -42,15 +44,11 @@ public class RequestExDeleteContactFromContactList extends ClientPacket {
             return;
         }
 
-        if (_name == null) {
+        if (Util.isNullOrEmpty(name)) {
             return;
         }
 
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
-            return;
-        }
-
-        activeChar.getContactList().remove(_name);
+        final Player player = client.getPlayer();
+        player.getContacts().remove(name);
     }
 }

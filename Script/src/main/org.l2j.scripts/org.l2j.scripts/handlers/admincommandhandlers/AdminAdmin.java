@@ -26,7 +26,6 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
@@ -134,27 +133,23 @@ public class AdminAdmin implements IAdminCommandHandler
 			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
 		}
-		else if (command.startsWith("admin_givehero"))
-		{
-			if (activeChar.getTarget() == null)
-			{
+		else if (command.startsWith("admin_givehero")) {
+
+			if (activeChar.getTarget() == null) {
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			
 			final Player target = isPlayer(activeChar.getTarget()) ? activeChar.getTarget().getActingPlayer() : activeChar;
-			if (Hero.getInstance().isHero(target.getObjectId()))
-			{
+			if (target.isHero()) {
 				BuilderUtil.sendSysMessage(activeChar, "This player has already claimed the hero status.");
 				return false;
 			}
-			
-			if (!Hero.getInstance().isUnclaimedHero(target.getObjectId()))
-			{
+
+			if(!Olympiad.getInstance().claimHero(target)) {
 				BuilderUtil.sendSysMessage(activeChar, "This player cannot claim the hero status.");
 				return false;
 			}
-			Hero.getInstance().claimHero(target);
 		}
 		else if (command.startsWith("admin_diet"))
 		{

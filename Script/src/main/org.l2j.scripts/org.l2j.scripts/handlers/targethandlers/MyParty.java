@@ -41,18 +41,18 @@ public class MyParty implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (isPlayer(selectedTarget) && (selectedTarget != activeChar))
+		if (isPlayer(currentTarget) && (currentTarget != creature))
 		{
-			final Party party = activeChar.getParty();
-			final Party targetParty = selectedTarget.getActingPlayer().getParty();
+			final Party party = creature.getParty();
+			final Party targetParty = currentTarget.getActingPlayer().getParty();
 			if ((party != null) && (targetParty != null) && (party.getLeaderObjectId() == targetParty.getLeaderObjectId()))
 			{
-				return selectedTarget;
+				return currentTarget;
 			}
 		}
 		
-		return activeChar;
+		return creature;
 	}
 }

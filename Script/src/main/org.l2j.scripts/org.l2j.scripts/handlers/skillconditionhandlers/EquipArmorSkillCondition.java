@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ArmorType;
 import org.w3c.dom.Node;
 
@@ -62,7 +62,7 @@ public class EquipArmorSkillCondition implements SkillCondition {
 			return false;
 		}
 
-		final int chestMask = chest.getTemplate().getItemMask();
+		final int chestMask = chest.getItemMask();
 		
 		// If chest armor is different from the condition one return false
 		if ((armorsMask & chestMask) == 0) {
@@ -81,8 +81,7 @@ public class EquipArmorSkillCondition implements SkillCondition {
 		if (isNull(legs)) {
 			return false;
 		}
-		final int legMask = legs.getTemplate().getItemMask();
-		// return true if legs armor matches too
+		final int legMask = legs.getItemMask();
 		return (armorsMask & legMask) != 0;
 	}
 

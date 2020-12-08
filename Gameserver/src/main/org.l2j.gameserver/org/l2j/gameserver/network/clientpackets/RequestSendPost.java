@@ -27,11 +27,11 @@ import org.l2j.gameserver.model.AccessLevel;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExNoticePostSent;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -153,7 +153,7 @@ public final class RequestSendPost extends ClientPacket {
             return;
         }
 
-        if ((_reqAdena < 0) || (_reqAdena > Inventory.MAX_ADENA)) {
+        if ((_reqAdena < 0) || (_reqAdena > getSettings(CharacterSettings.class).maxAdena())) {
             return;
         }
 
@@ -182,7 +182,7 @@ public final class RequestSendPost extends ClientPacket {
         final int level = PlayerNameTable.getInstance().getAccessLevelById(receiverId);
         final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 
-        if ((accessLevel != null) && accessLevel.isGm() && !player.getAccessLevel().isGm()) {
+        if ((accessLevel != null) && accessLevel.isGM() && !player.getAccessLevel().isGM()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
             sm.addString(_receiver);
             player.sendPacket(sm);

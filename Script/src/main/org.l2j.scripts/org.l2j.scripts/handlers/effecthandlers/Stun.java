@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.*;

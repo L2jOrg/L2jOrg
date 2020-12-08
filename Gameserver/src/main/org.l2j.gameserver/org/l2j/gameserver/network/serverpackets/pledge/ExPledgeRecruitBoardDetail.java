@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.PledgeRecruitData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -34,15 +35,15 @@ public class ExPledgeRecruitBoardDetail extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_BOARD_DETAIL);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_BOARD_DETAIL, buffer );
 
-        writeInt(_pledgeRecruitInfo.getClanId());
-        writeInt(_pledgeRecruitInfo.getKarma());
-        writeString(_pledgeRecruitInfo.getInformation());
-        writeString(_pledgeRecruitInfo.getDetailedInformation());
-        writeInt(_pledgeRecruitInfo.getApplicationType());
-        writeInt(_pledgeRecruitInfo.getRecruitType());
+        buffer.writeInt(_pledgeRecruitInfo.getClanId());
+        buffer.writeInt(_pledgeRecruitInfo.getKarma());
+        buffer.writeString(_pledgeRecruitInfo.getInformation());
+        buffer.writeString(_pledgeRecruitInfo.getDetailedInformation());
+        buffer.writeInt(_pledgeRecruitInfo.getApplicationType());
+        buffer.writeInt(_pledgeRecruitInfo.getRecruitType());
     }
 
 }

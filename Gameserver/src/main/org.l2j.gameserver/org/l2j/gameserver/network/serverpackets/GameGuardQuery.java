@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -36,13 +37,13 @@ public class GameGuardQuery extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GAMEGUARD_QUERY);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.GAMEGUARD_QUERY, buffer );
 
-        writeInt(0x27533DD9);
-        writeInt(0x2E72A51D);
-        writeInt(0x2017038B);
-        writeInt(0xC35B1EA3);
+        buffer.writeInt(0x27533DD9);
+        buffer.writeInt(0x2E72A51D);
+        buffer.writeInt(0x2017038B);
+        buffer.writeInt(0xC35B1EA3);
     }
 
 }

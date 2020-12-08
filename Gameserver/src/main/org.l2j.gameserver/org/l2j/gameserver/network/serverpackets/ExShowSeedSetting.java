@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.Seed;
@@ -56,40 +57,40 @@ public class ExShowSeedSetting extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_SEED_SETTING);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_SEED_SETTING, buffer );
 
-        writeInt(_manorId); // manor id
-        writeInt(_seeds.size()); // size
+        buffer.writeInt(_manorId); // manor id
+        buffer.writeInt(_seeds.size()); // size
 
         for (Seed s : _seeds) {
-            writeInt(s.getSeedId()); // seed id
-            writeInt(s.getLevel()); // level
-            writeByte((byte) 1);
-            writeInt(s.getReward(1)); // reward 1 id
-            writeByte(1);
-            writeInt(s.getReward(2)); // reward 2 id
-            writeInt(s.getSeedLimit()); // next sale limit
-            writeInt((int) s.getSeedReferencePrice()); // price for castle to produce 1
-            writeInt(s.getSeedMinPrice()); // min seed price
-            writeInt((int) s.getSeedMaxPrice()); // max seed price
+            buffer.writeInt(s.getSeedId()); // seed id
+            buffer.writeInt(s.getLevel()); // level
+            buffer.writeByte(1);
+            buffer.writeInt(s.getReward(1)); // reward 1 id
+            buffer.writeByte(1);
+            buffer.writeInt(s.getReward(2)); // reward 2 id
+            buffer.writeInt(s.getSeedLimit()); // next sale limit
+            buffer.writeInt((int) s.getSeedReferencePrice()); // price for castle to produce 1
+            buffer.writeInt(s.getSeedMinPrice()); // min seed price
+            buffer.writeInt((int) s.getSeedMaxPrice()); // max seed price
             // Current period
             if (_current.containsKey(s.getSeedId())) {
                 final SeedProduction sp = _current.get(s.getSeedId());
-                writeLong(sp.getStartAmount()); // sales
-                writeLong(sp.getPrice()); // price
+                buffer.writeLong(sp.getStartAmount()); // sales
+                buffer.writeLong(sp.getPrice()); // price
             } else {
-                writeLong(0);
-                writeLong(0);
+                buffer.writeLong(0);
+                buffer.writeLong(0);
             }
             // Next period
             if (_next.containsKey(s.getSeedId())) {
                 final SeedProduction sp = _next.get(s.getSeedId());
-                writeLong(sp.getStartAmount()); // sales
-                writeLong(sp.getPrice()); // price
+                buffer.writeLong(sp.getStartAmount()); // sales
+                buffer.writeLong(sp.getPrice()); // price
             } else {
-                writeLong(0);
-                writeLong(0);
+                buffer.writeLong(0);
+                buffer.writeLong(0);
             }
         }
         _current.clear();

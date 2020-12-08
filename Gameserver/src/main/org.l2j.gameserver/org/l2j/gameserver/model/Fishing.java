@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerFishing;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -244,7 +244,7 @@ public class Fishing {
         player.stopMove(null);
         player.broadcastPacket(new ExFishingStart(player, -1, baitData.getLevel(), baitLocation));
         player.sendPacket(new ExUserInfoFishing(player, true, baitLocation));
-        player.sendPacket(new PlaySound("SF_P_01"));
+        player.sendPacket(PlaySound.sound("SF_P_01"));
         player.sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
     }
 

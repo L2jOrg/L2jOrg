@@ -77,7 +77,7 @@ public final class IllegalPlayerActionTask implements Runnable {
                     return;
                 }
                 case KICK: {
-                    Disconnection.of(_actor).defaultSequence(false);
+                    Disconnection.of(_actor).logout(false);
                     break;
                 }
                 case KICKBAN: {

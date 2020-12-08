@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -32,10 +33,10 @@ public class ExChangeMpCost extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CHANGE_MP_COST);
-        writeInt(skillType);
-        writeDouble(modifier);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CHANGE_MP_COST, buffer );
+        buffer.writeInt(skillType);
+        buffer.writeDouble(modifier);
     }
 
 }

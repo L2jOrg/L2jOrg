@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Castle;
@@ -55,38 +56,38 @@ public final class SiegeAttackerList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CASTLE_SIEGE_ATTACKER_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CASTLE_SIEGE_ATTACKER_LIST, buffer );
 
-        writeInt(_castle.getId());
-        writeInt(0x00); // 0
-        writeInt(0x01); // 1
-        writeInt(0x00); // 0
+        buffer.writeInt(_castle.getId());
+        buffer.writeInt(0x00); // 0
+        buffer.writeInt(0x01); // 1
+        buffer.writeInt(0x00); // 0
         final int size = _castle.getSiege().getAttackerClans().size();
         if (size > 0) {
             Clan clan;
 
-            writeInt(size);
-            writeInt(size);
+            buffer.writeInt(size);
+            buffer.writeInt(size);
             for (var siegeclan : _castle.getSiege().getAttackerClans().values()) {
                 clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
                 if (clan == null) {
                     continue;
                 }
 
-                writeInt(clan.getId());
-                writeString(clan.getName());
-                writeString(clan.getLeaderName());
-                writeInt(clan.getCrestId());
-                writeInt(0x00); // signed time (seconds) (not storated by L2J)
-                writeInt(clan.getAllyId());
-                writeString(clan.getAllyName());
-                writeString(""); // AllyLeaderName
-                writeInt(clan.getAllyCrestId());
+                buffer.writeInt(clan.getId());
+                buffer.writeString(clan.getName());
+                buffer.writeString(clan.getLeaderName());
+                buffer.writeInt(clan.getCrestId());
+                buffer.writeInt(0x00); // signed time (seconds) (not storated by L2J)
+                buffer.writeInt(clan.getAllyId());
+                buffer.writeString(clan.getAllyName());
+                buffer.writeString(""); // AllyLeaderName
+                buffer.writeInt(clan.getAllyCrestId());
             }
         } else {
-            writeInt(0x00);
-            writeInt(0x00);
+            buffer.writeInt(0x00);
+            buffer.writeInt(0x00);
         }
     }
 

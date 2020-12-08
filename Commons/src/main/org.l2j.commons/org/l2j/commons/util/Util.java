@@ -21,6 +21,7 @@ package org.l2j.commons.util;
 
 
 import io.github.joealisson.primitive.IntCollection;
+import org.l2j.commons.configuration.CommonSettings;
 
 import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
@@ -34,11 +35,13 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -51,6 +54,7 @@ public class Util {
     public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
     public static final String[] STRING_ARRAY_EMPTY = new String[0];
     public static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    public static final Predicate<String> ANY_PATTERN = Pattern.compile(".*").asMatchPredicate();
 
     public static boolean isNullOrEmpty(final CharSequence value) {
         return isNull(value) || value.length() == 0;
@@ -58,6 +62,10 @@ public class Util {
 
     public static boolean isNotEmpty(final String value) {
         return nonNull(value) && !value.isBlank();
+    }
+
+    public static <K, V> boolean isNotEmpty(Map<K, V> map) {
+        return nonNull(map) && !map.isEmpty();
     }
 
     public static boolean isNullOrEmpty(final Collection<?> collection) {
@@ -117,7 +125,7 @@ public class Util {
     }
 
     public static String hash(final String value) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance("SHA3-256");
+        MessageDigest md = MessageDigest.getInstance(getSettings(CommonSettings.class).hashAlgorithm());
         byte[] raw = value.getBytes(StandardCharsets.UTF_8);
         return Base64.getEncoder().encodeToString(md.digest(raw));
     }

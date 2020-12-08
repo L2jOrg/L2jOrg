@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -29,10 +30,10 @@ public class PledgeShowMemberListDelete extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_DELETE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLEDGE_SHOW_MEMBER_LIST_DELETE, buffer );
 
-        writeString(_player);
+        buffer.writeString(_player);
     }
 
 }

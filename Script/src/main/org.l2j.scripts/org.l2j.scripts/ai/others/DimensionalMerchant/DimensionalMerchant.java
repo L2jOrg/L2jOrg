@@ -18,7 +18,7 @@
  */
 package org.l2j.scripts.ai.others.DimensionalMerchant;
 
-import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
@@ -106,35 +106,35 @@ public class DimensionalMerchant extends AbstractNpcAI
             }
             case "shop":
             {
-                MultisellData.getInstance().separateAndSend(ATTENDANCE_REWARD_MULTISELL, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(ATTENDANCE_REWARD_MULTISELL, player, null, false);
                 break;
             }
             case "hair":{
-                MultisellData.getInstance().separateAndSend(HAIR_MULTISELL, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(HAIR_MULTISELL, player, null, false);
                 break;
             }
             case "ticket":{
-                MultisellData.getInstance().separateAndSend(TICKET_MULTISELL, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(TICKET_MULTISELL, player, null, false);
                 break;
             }
             case "enhancement":{
-                MultisellData.getInstance().separateAndSend(ENHANCEMENT_MULTISELL, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(ENHANCEMENT_MULTISELL, player, null, false);
                 break;
             }
             case "kingdomcloak":{
-                MultisellData.getInstance().separateAndSend(CLOAK_MULTISELL, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(CLOAK_MULTISELL, player, null, false);
                 break;
             }
             case "herosweapon":{
-                MultisellData.getInstance().separateAndSend(HERO_MULTISELL, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(HERO_MULTISELL, player, null, false);
                 break;
             }
             case "timedweapond":{
-                MultisellData.getInstance().separateAndSend(WEAPON_D_MULTISELL, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(WEAPON_D_MULTISELL, player, null, false);
                 break;
             }
             case "timedweaponc":{
-                MultisellData.getInstance().separateAndSend(WEAPON_C_MULTISELL, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(WEAPON_C_MULTISELL, player, null, false);
                 break;
             }
 

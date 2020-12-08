@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -46,12 +47,12 @@ public final class SetupGauge extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SETUP_GAUGE);
-        writeInt(_charObjId);
-        writeInt(_dat1);
-        writeInt(_time);
-        writeInt(_time2);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SETUP_GAUGE, buffer );
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_dat1);
+        buffer.writeInt(_time);
+        buffer.writeInt(_time2);
     }
 
 }

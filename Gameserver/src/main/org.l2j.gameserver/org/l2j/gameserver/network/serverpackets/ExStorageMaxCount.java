@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stat;
@@ -53,22 +54,22 @@ public class ExStorageMaxCount extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_STORAGE_MAX_COUNT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_STORAGE_MAX_COUNT, buffer );
 
-        writeInt(_inventory);
-        writeInt(_warehouse);
+        buffer.writeInt(_inventory);
+        buffer.writeInt(_warehouse);
         // writeInt(_freight); // Removed with 152.
-        writeInt(_clan);
-        writeInt(_privateSell);
-        writeInt(_privateBuy);
-        writeInt(_receipeD);
-        writeInt(_recipe);
-        writeInt(_inventoryExtraSlots); // Belt inventory slots increase count
-        writeInt(_inventoryQuestItems);
-        writeInt(40); // TODO: Find me!
-        writeInt(40); // TODO: Find me!
-        writeInt(0x64); // Artifact slots (Fixed)
+        buffer.writeInt(_clan);
+        buffer.writeInt(_privateSell);
+        buffer.writeInt(_privateBuy);
+        buffer.writeInt(_receipeD);
+        buffer.writeInt(_recipe);
+        buffer.writeInt(_inventoryExtraSlots); // Belt inventory slots increase count
+        buffer.writeInt(_inventoryQuestItems);
+        buffer.writeInt(40); // TODO: Find me!
+        buffer.writeInt(40); // TODO: Find me!
+        buffer.writeInt(0x64); // Artifact slots (Fixed)
     }
 
 }

@@ -28,12 +28,12 @@ import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.network.serverpackets.ShopPreviewInfo;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,6 +41,7 @@ import org.slf4j.LoggerFactory;
 import java.util.EnumMap;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
@@ -149,8 +150,8 @@ public final class RequestPreviewItem extends ClientPacket {
 
             items.put(slot, itemId);
             totalPrice += Config.WEAR_PRICE;
-            if (totalPrice > Inventory.MAX_ADENA) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.");
+            if (totalPrice > getSettings(CharacterSettings.class).maxAdena()) {
+                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena() + " adena worth of goods.");
                 return;
             }
         }

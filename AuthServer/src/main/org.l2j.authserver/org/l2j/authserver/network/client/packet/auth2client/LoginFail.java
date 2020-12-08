@@ -19,6 +19,7 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
@@ -35,9 +36,9 @@ public final class LoginFail extends AuthServerPacket {
 	}
 	
 	@Override
-	protected void writeImpl(AuthClient client) {
-		writeByte(0x01);
-		writeInt(_reason.getCode());
+	protected void writeImpl(AuthClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x01);
+		buffer.writeInt(_reason.getCode());
 	}
 
 	@Override

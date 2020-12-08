@@ -19,12 +19,13 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.Spawn;
@@ -48,12 +49,12 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.isDigit;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
 /**
  * This class handles following admin commands: - show_spawns = shows menu - spawn_index lvl = shows menu for monsters with respective level - spawn_monster id = spawns monster id on target
- * @version $Revision: 1.2.2.5.2.5 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminSpawn implements IAdminCommandHandler
 {
@@ -83,20 +84,20 @@ public class AdminSpawn implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
+	public boolean useAdminCommand(String command, Player gm)
 	{
 		if (command.equals("admin_show_spawns"))
 		{
-			AdminHtml.showAdminHtml(activeChar, "spawns.htm");
+			AdminHtml.showAdminHtml(gm, "spawns.htm");
 		}
 		else if (command.equalsIgnoreCase("admin_spawn_debug_menu"))
 		{
-			AdminHtml.showAdminHtml(activeChar, "spawns_debug.htm");
+			AdminHtml.showAdminHtml(gm, "spawns_debug.htm");
 		}
 		else if (command.startsWith("admin_spawn_debug_print"))
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
-			final WorldObject target = activeChar.getTarget();
+			final WorldObject target = gm.getTarget();
 			if (target instanceof Npc)
 			{
 				try
@@ -106,7 +107,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					printSpawn((Npc) target, type);
 					if (command.contains("_menu"))
 					{
-						AdminHtml.showAdminHtml(activeChar, "spawns_debug.htm");
+						AdminHtml.showAdminHtml(gm, "spawns_debug.htm");
 					}
 				}
 				catch (Exception e)
@@ -115,7 +116,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				gm.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_spawn_index"))
@@ -133,16 +134,16 @@ public class AdminSpawn implements IAdminCommandHandler
 				catch (NoSuchElementException nsee)
 				{
 				}
-				showMonsters(activeChar, level, from);
+				showMonsters(gm, level, from);
 			}
 			catch (Exception e)
 			{
-				AdminHtml.showAdminHtml(activeChar, "spawns.htm");
+				AdminHtml.showAdminHtml(gm, "spawns.htm");
 			}
 		}
 		else if (command.equals("admin_show_npcs"))
 		{
-			AdminHtml.showAdminHtml(activeChar, "npcs.htm");
+			AdminHtml.showAdminHtml(gm, "npcs.htm");
 		}
 		else if (command.startsWith("admin_npc_index"))
 		{
@@ -159,11 +160,11 @@ public class AdminSpawn implements IAdminCommandHandler
 				catch (NoSuchElementException nsee)
 				{
 				}
-				showNpcs(activeChar, letter, from);
+				showNpcs(gm, letter, from);
 			}
 			catch (Exception e)
 			{
-				AdminHtml.showAdminHtml(activeChar, "npcs.htm");
+				AdminHtml.showAdminHtml(gm, "npcs.htm");
 			}
 		}
 		else if (command.startsWith("admin_instance_spawns"))
@@ -201,21 +202,21 @@ public class AdminSpawn implements IAdminCommandHandler
 						html.append("<tr><td>Skipped:</td><td>" + skiped + "</td></tr></table></body></html>");
 						final NpcHtmlMessage ms = new NpcHtmlMessage(0, 1);
 						ms.setHtml(html.toString());
-						activeChar.sendPacket(ms);
+						gm.sendPacket(ms);
 					}
 					else
 					{
-						BuilderUtil.sendSysMessage(activeChar, "Cannot find instance " + instance);
+						BuilderUtil.sendSysMessage(gm, "Cannot find instance " + instance);
 					}
 				}
 				else
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Invalid instance number.");
+					BuilderUtil.sendSysMessage(gm, "Invalid instance number.");
 				}
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage //instance_spawns <instance_number>");
+				BuilderUtil.sendSysMessage(gm, "Usage //instance_spawns <instance_number>");
 			}
 		}
 		else if (command.startsWith("admin_unspawnall"))
@@ -226,15 +227,15 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Unload all zones.
 			ZoneManager.getInstance().unload();
 			// Delete all spawns.
-			for (Npc npc : DBSpawnManager.getInstance().getNpcs().values())
+			for (Npc npc : BossManager.getInstance().getNpcs().values())
 			{
 				if (npc != null)
 				{
-					DBSpawnManager.getInstance().deleteSpawn(npc.getSpawn(), true);
+					BossManager.getInstance().deleteSpawn(npc.getSpawn(), true);
 					npc.deleteMe();
 				}
 			}
-			DBSpawnManager.getInstance().cleanUp();
+			BossManager.getInstance().cleanUp();
 			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
 				if (isNpc(obj))
@@ -261,15 +262,15 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Unload all zones.
 			ZoneManager.getInstance().unload();
 			// Delete all spawns.
-			for (Npc npc : DBSpawnManager.getInstance().getNpcs().values())
+			for (Npc npc : BossManager.getInstance().getNpcs().values())
 			{
 				if (npc != null)
 				{
-					DBSpawnManager.getInstance().deleteSpawn(npc.getSpawn(), true);
+					BossManager.getInstance().deleteSpawn(npc.getSpawn(), true);
 					npc.deleteMe();
 				}
 			}
-			DBSpawnManager.getInstance().cleanUp();
+			BossManager.getInstance().cleanUp();
 			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
 				if (isNpc(obj))
@@ -286,7 +287,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			// Reload.
 			SpawnsData.getInstance().init();
-			DBSpawnManager.init();
+			BossManager.init();
 			ZoneManager.getInstance().reload();
 			QuestManager.getInstance().reloadAllScripts();
 			AdminData.getInstance().broadcastMessageToGMs("NPC respawn completed!");
@@ -302,43 +303,30 @@ public class AdminSpawn implements IAdminCommandHandler
 				final String x = st.nextToken();
 				final String y = st.nextToken();
 				final String z = st.nextToken();
-				int h = activeChar.getHeading();
+				int h = gm.getHeading();
 				if (st.hasMoreTokens())
 				{
 					h = Integer.parseInt(st.nextToken());
 				}
-				spawnMonster(activeChar, Integer.parseInt(id), Integer.parseInt(x), Integer.parseInt(y), Integer.parseInt(z), h);
+				spawnMonster(gm, Integer.parseInt(id), Integer.parseInt(x), Integer.parseInt(y), Integer.parseInt(z), h);
 			}
 			catch (Exception e)
 			{ // Case of wrong or missing monster data
-				AdminHtml.showAdminHtml(activeChar, "spawns.htm");
+				AdminHtml.showAdminHtml(gm, "spawns.htm");
 			}
 		}
-		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn"))
-		{
+		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn")) {
 			final StringTokenizer st = new StringTokenizer(command, " ");
-			try
-			{
+			try {
 				final String cmd = st.nextToken();
 				final String id = st.nextToken();
-				int respawnTime = 60;
-				int mobCount = 1;
+				final int mobCount = Util.parseNextInt(st, 1);
+				final int respawnTime = Util.parseNextInt(st, 60);
 				
-				if (st.hasMoreTokens())
-				{
-					mobCount = Integer.parseInt(st.nextToken());
-				}
-				
-				if (st.hasMoreTokens())
-				{
-					respawnTime = Integer.parseInt(st.nextToken());
-				}
-				
-				spawnMonster(activeChar, id, respawnTime, mobCount, (!cmd.equalsIgnoreCase("admin_spawn_once")));
+				spawnMonster(gm, id, respawnTime, mobCount, (!cmd.equalsIgnoreCase("admin_spawn_once")));
 			}
-			catch (Exception e)
-			{ // Case of wrong or missing monster data
-				AdminHtml.showAdminHtml(activeChar, "spawns.htm");
+			catch (Exception e) { // Case of wrong or missing monster data
+				AdminHtml.showAdminHtml(gm, "spawns.htm");
 			}
 		}
 		else if (command.startsWith("admin_list_spawns") || command.startsWith("admin_list_positions"))
@@ -366,15 +354,15 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Command format is //list_spawns <npcId|npc_name> [tele_index]");
+				BuilderUtil.sendSysMessage(gm, "Command format is //list_spawns <npcId|npc_name> [tele_index]");
 			}
 			if (command.startsWith("admin_list_positions"))
 			{
-				findNPCInstances(activeChar, npcId, teleportIndex, true);
+				findNPCInstances(gm, npcId, teleportIndex, true);
 			}
 			else
 			{
-				findNPCInstances(activeChar, npcId, teleportIndex, false);
+				findNPCInstances(gm, npcId, teleportIndex, false);
 			}
 		}
 		else if (command.startsWith("admin_topspawncount") || command.startsWith("admin_top_spawn_count"))
@@ -411,7 +399,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					npcsFound.put(npcId, 1);
 				}
 			}
-			BuilderUtil.sendSysMessage(activeChar, "Top " + count + " spawn count.");
+			BuilderUtil.sendSysMessage(gm, "Top " + count + " spawn count.");
 			for (Map.Entry<Integer, Integer> entry : GameUtils.sortByValue(npcsFound, true).entrySet())
 			{
 				count--;
@@ -420,7 +408,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					break;
 				}
 				final int npcId = entry.getKey();
-				BuilderUtil.sendSysMessage(activeChar, NpcData.getInstance().getTemplate(npcId).getName() + " (" + npcId + "): " + entry.getValue());
+				BuilderUtil.sendSysMessage(gm, NpcData.getInstance().getTemplate(npcId).getName() + " (" + npcId + "): " + entry.getValue());
 			}
 		}
 		return true;
@@ -504,39 +492,31 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 	}
 	
-	private void spawnMonster(Player activeChar, String monsterId, int respawnTime, int mobCount, boolean permanent)
-	{
-		WorldObject target = activeChar.getTarget();
-		if (target == null)
-		{
-			target = activeChar;
+	private void spawnMonster(Player gm, String npc, int respawnTime, int mobCount, boolean permanent) {
+		WorldObject target = gm.getTarget();
+
+		if (isNull(target)) {
+			target = gm;
 		}
 		
-		final NpcTemplate template1;
-		if (monsterId.matches("[0-9]*"))
-		{
-			// First parameter was an ID number
-			final int monsterTemplate = Integer.parseInt(monsterId);
-			template1 = NpcData.getInstance().getTemplate(monsterTemplate);
-		}
-		else
-		{
-			// First parameter wasn't just numbers so go by name not ID
-			monsterId = monsterId.replace('_', ' ');
-			template1 = NpcData.getInstance().getTemplateByName(monsterId);
+		final NpcTemplate template;
+		if (Util.isInteger(npc)) {
+			template = NpcData.getInstance().getTemplate(Integer.parseInt(npc));
+		} else {
+			npc = npc.replace('_', ' ');
+			template = NpcData.getInstance().getTemplateByName(npc);
 		}
 
 		
-		try
-		{
-			final Spawn spawn = new Spawn(template1);
+		try {
+			final Spawn spawn = new Spawn(template);
 			spawn.setXYZ(target);
 			spawn.setAmount(mobCount);
-			spawn.setHeading(activeChar.getHeading());
+			spawn.setHeading(gm.getHeading());
 			spawn.setRespawnDelay(respawnTime);
-			if (activeChar.isInInstance())
-			{
-				spawn.setInstanceId(activeChar.getInstanceId());
+
+			if (gm.isInInstance()) {
+				spawn.setInstanceId(gm.getInstanceId());
 				permanent = false;
 			}
 			
@@ -549,16 +529,15 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			
 			spawn.getLastSpawn().broadcastInfo();
-			BuilderUtil.sendSysMessage(activeChar, "Created " + template1.getName() + " on " + target.getObjectId());
+			BuilderUtil.sendSysMessage(gm, "Created " + template.getName() + " on " + target.getObjectId());
 		}
 		catch (Exception e)
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
+			gm.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 		}
 	}
 	
-	private void spawnMonster(Player activeChar, int id, int x, int y, int z, int h)
-	{
+	private void spawnMonster(Player activeChar, int id, int x, int y, int z, int h) {
 		WorldObject target = activeChar.getTarget();
 		if (target == null)
 		{

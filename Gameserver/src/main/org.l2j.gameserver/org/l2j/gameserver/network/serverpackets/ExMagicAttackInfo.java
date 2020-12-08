@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -46,12 +47,12 @@ public class ExMagicAttackInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_MAGIC_ATTACK_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_MAGIC_ATTACK_INFO, buffer );
 
-        writeInt(_caster);
-        writeInt(_target);
-        writeInt(_type);
+        buffer.writeInt(_caster);
+        buffer.writeInt(_target);
+        buffer.writeInt(_type);
     }
 
 }

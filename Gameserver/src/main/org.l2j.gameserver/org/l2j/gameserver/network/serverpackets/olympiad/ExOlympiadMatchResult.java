@@ -18,7 +18,9 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
-import org.l2j.gameserver.model.olympiad.OlympiadInfo;
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.olympiad.OlympiadMode;
+import org.l2j.gameserver.engine.olympiad.OlympiadResultInfo;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -27,57 +29,60 @@ import java.util.List;
 
 /**
  * @author JIV
+ * @author JoeAlisson
  */
 public class ExOlympiadMatchResult extends ServerPacket {
-    private final boolean _tie;
-    private final List<OlympiadInfo> _winnerList;
-    private final List<OlympiadInfo> _loserList;
-    private int _winTeam; // 1,2
-    private int _loseTeam = 2;
+    private static final int LOSER_MASK = 3;
+    private final boolean tie;
+    private final List<OlympiadResultInfo> winnerList;
+    private final List<OlympiadResultInfo> loserList;
+    private final int winTeam; // 1,2
 
-    public ExOlympiadMatchResult(boolean tie, int winTeam, List<OlympiadInfo> winnerList, List<OlympiadInfo> loserList) {
-        _tie = tie;
-        _winTeam = winTeam;
-        _winnerList = winnerList;
-        _loserList = loserList;
-
-        if (_winTeam == 2) {
-            _loseTeam = 1;
-        } else if (_winTeam == 0) {
-            _winTeam = 1;
-        }
+    public ExOlympiadMatchResult(boolean tie, int winTeam, List<OlympiadResultInfo> winnerList, List<OlympiadResultInfo> loserList) {
+        this.tie = tie;
+        this.winTeam = winTeam;
+        this.winnerList = winnerList;
+        this.loserList = loserList;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_GFX_OLYMPIAD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_GFX_OLYMPIAD, buffer );
 
-        writeInt(0x01); // Type 0 = Match List, 1 = Match Result
+        buffer.writeInt(0x01); // Type 0 = Match List, 1 = Match Result
 
-        writeInt(_tie ? 1 : 0); // 0 - win, 1 - tie
-        writeString(_winnerList.get(0).getName());
-        writeInt(_winTeam);
-        writeInt(_winnerList.size());
-        for (OlympiadInfo info : _winnerList) {
-            writeParticipant(info);
+        buffer.writeInt(tie);
+        buffer.writeString(winnerList.get(0).getName());
+
+        buffer.writeInt(winTeam);
+        buffer.writeInt(winnerList.size());
+        for (OlympiadResultInfo info : winnerList) {
+            writeParticipant(info, buffer);
         }
 
-        writeInt(_loseTeam);
-        writeInt(_loserList.size());
-        for (OlympiadInfo info : _loserList) {
-            writeParticipant(info);
+        buffer.writeInt(winTeam ^ LOSER_MASK);
+        buffer.writeInt(loserList.size());
+        for (OlympiadResultInfo info : loserList) {
+            writeParticipant(info, buffer);
         }
     }
 
-    private void writeParticipant(OlympiadInfo info) {
-        writeString(info.getName());
-        writeString(info.getClanName());
-        writeInt(info.getClanId());
-        writeInt(info.getClassId());
-        writeInt(info.getDamage());
-        writeInt(info.getCurrentPoints());
-        writeInt(info.getDiffPoints());
-        writeInt(0x00); // Helios
+    private void writeParticipant(OlympiadResultInfo info, WritableBuffer buffer) {
+        buffer.writeString(info.getName());
+        buffer.writeString(info.getClanName());
+        buffer.writeInt(info.getClanId());
+        buffer.writeInt(info.getClassId());
+        buffer.writeInt(info.getDamage());
+        buffer.writeInt(info.getCurrentPoints());
+        buffer.writeInt(info.getDiffPoints());
+        buffer.writeInt(0x01); // Helios
     }
 
+    public static ExOlympiadMatchResult tie(List<OlympiadResultInfo> redTeam, List<OlympiadResultInfo> blueTeam) {
+        return new ExOlympiadMatchResult(true, OlympiadMode.RED.ordinal(), redTeam, blueTeam);
+    }
+
+    public static ExOlympiadMatchResult victory(OlympiadMode winnerMode, List<OlympiadResultInfo> winnerTeam, List<OlympiadResultInfo> loserTeam) {
+        return new ExOlympiadMatchResult(false, winnerMode.ordinal(), winnerTeam, loserTeam);
+    }
 }

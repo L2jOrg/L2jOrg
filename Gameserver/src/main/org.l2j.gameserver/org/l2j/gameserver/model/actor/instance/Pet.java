@@ -18,16 +18,19 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.database.dao.PetDAO;
+import org.l2j.gameserver.data.database.data.PetData;
+import org.l2j.gameserver.data.database.data.PetSkillData;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -38,8 +41,8 @@ import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.PetLevelData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
@@ -50,7 +53,6 @@ import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PetInventory;
-import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.EffectScope;
@@ -65,30 +67,34 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
+/**
+ * @author JoeAlisson
+ */
 public class Pet extends Summon {
     protected static final Logger LOGGER_PET = LoggerFactory.getLogger(Pet.class.getName());
 
-    private static final String ADD_SKILL_SAVE = "INSERT INTO character_pet_skills_save (petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?)";
-    private static final String RESTORE_SKILL_SAVE = "SELECT petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index FROM character_pet_skills_save WHERE petObjItemId=? ORDER BY buff_index ASC";
-    private static final String DELETE_SKILL_SAVE = "DELETE FROM character_pet_skills_save WHERE petObjItemId=?";
-    final PetInventory _inventory;
+    private final PetTemplate petTemplate;
+    private final PetInventory _inventory;
     private final int _controlObjectId;
     private final boolean _mountable;
-    int _curFed;
-    private boolean _respawned;
-    private Future<?> _feedTask;
-    private PetData _data;
+
     private PetLevelData _leveldata;
+    private Future<?> _feedTask;
+    private int _curFed;
+    private boolean _respawned;
 
     /**
      * The Experience before the last Death Penalty
@@ -96,119 +102,32 @@ public class Pet extends Summon {
     private long _expBeforeDeath = 0;
     private int _curWeightPenalty = 0;
 
-    /**
-     * Constructor for new pet
-     *
-     * @param template
-     * @param owner
-     * @param control
-     */
     public Pet(NpcTemplate template, Player owner, Item control) {
         this(template, owner, control, (byte) (template.getDisplayId() == 12564 ? owner.getLevel() : template.getLevel()));
     }
 
-    /**
-     * Constructor for restored pet
-     *
-     * @param template
-     * @param owner
-     * @param control
-     * @param level
-     */
     public Pet(NpcTemplate template, Player owner, Item control, byte level) {
         super(template, owner);
         setInstanceType(InstanceType.L2PetInstance);
+        final int npcId = template.getId();
+        petTemplate = PetDataTable.getInstance().getPetTemplate(npcId);
 
+        level = (byte) Math.max(level, petTemplate.getMinLevel());
+        getStats().setLevel(level);
+
+        _leveldata = PetDataTable.getInstance().getPetLevelData(npcId, level);
         _controlObjectId = control.getObjectId();
-
-        getStats().setLevel((byte) Math.max(level, PetDataTable.getInstance().getPetMinLevel(template.getId())));
-
         _inventory = new PetInventory(this);
         _inventory.restore();
-
-        final int npcId = template.getId();
         _mountable = PetDataTable.isMountable(npcId);
-        getPetData();
-        getPetLevelData();
-    }
-
-    public static synchronized Pet spawnPet(NpcTemplate template, Player owner, Item control) {
-        if (World.getInstance().findPet(owner.getObjectId()) != null) {
-            return null; // owner has a pet listed in world
-        }
-        final PetData data = PetDataTable.getInstance().getPetData(template.getId());
-
-        final Pet pet = restore(control, template, owner);
-        // add the pet instance to world
-        if (pet != null) {
-            pet.setTitle(owner.getName());
-            if (data.isSynchLevel() && (pet.getLevel() != owner.getLevel())) {
-                final byte availableLevel = (byte) Math.min(data.getMaxLevel(), owner.getLevel());
-                pet.getStats().setLevel(availableLevel);
-                pet.getStats().setExp(pet.getStats().getExpForLevel(availableLevel));
-            }
-            World.getInstance().addPet(owner.getObjectId(), pet);
-        }
-        return pet;
-    }
-
-    private static Pet restore(Item control, NpcTemplate template, Player owner) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, fed FROM pets WHERE item_obj_id=?")) {
-            Pet pet;
-            statement.setInt(1, control.getObjectId());
-            try (ResultSet rset = statement.executeQuery()) {
-                if (!rset.next()) {
-                    return new Pet(template, owner, control);
-                }
-
-                pet = new Pet(template, owner, control, rset.getByte("level"));
-
-                pet._respawned = true;
-                pet.setName(rset.getString("name"));
-
-                long exp = rset.getLong("exp");
-                final PetLevelData info = PetDataTable.getInstance().getPetLevelData(pet.getId(), pet.getLevel());
-                // DS: update experience based by level
-                // Avoiding pet delevels due to exp per level values changed.
-                if ((info != null) && (exp < info.getPetMaxExp())) {
-                    exp = info.getPetMaxExp();
-                }
-
-                pet.getStats().setExp(exp);
-                pet.getStats().setSp(rset.getInt("sp"));
-
-                pet.getStatus().setCurrentHp(rset.getInt("curHp"));
-                pet.getStatus().setCurrentMp(rset.getInt("curMp"));
-                pet.getStatus().setCurrentCp(pet.getMaxCp());
-                if (rset.getDouble("curHp") < 1) {
-                    pet.setIsDead(true);
-                    pet.stopHpMpRegeneration();
-                }
-
-                pet.setCurrentFed(rset.getInt("fed"));
-            }
-            return pet;
-        } catch (Exception e) {
-            LOGGER.warn("Could not restore pet data for owner: " + owner + " - " + e.getMessage(), e);
-        }
-        return null;
     }
 
     public final PetLevelData getPetLevelData() {
-        if (_leveldata == null) {
-            _leveldata = PetDataTable.getInstance().getPetLevelData(getTemplate().getId(), getStats().getLevel());
-        }
-
         return _leveldata;
     }
 
-    public final PetData getPetData() {
-        if (_data == null) {
-            _data = PetDataTable.getInstance().getPetData(getTemplate().getId());
-        }
-
-        return _data;
+    public final PetTemplate getPetData() {
+        return petTemplate;
     }
 
     public final void setPetData(PetLevelData value) {
@@ -250,10 +169,10 @@ public class Pet extends Summon {
     public void setCurrentFed(int num) {
         if (num <= 0) {
             sendPacket(new ExChangeNpcState(getObjectId(), 0x64));
-        } else if ((_curFed <= 0) && (num > 0)) {
+        } else if (_curFed <= 0) {
             sendPacket(new ExChangeNpcState(getObjectId(), 0x65));
         }
-        _curFed = num > getMaxFed() ? getMaxFed() : num;
+        _curFed = Math.min(num, getMaxFed());
     }
 
     /**
@@ -400,7 +319,7 @@ public class Pet extends Summon {
         final boolean follow = getFollowStatus();
         final Item target = (Item) object;
 
-        SystemMessage smsg = null;
+        SystemMessage smsg;
         synchronized (target) {
             // Check if the target to pick up is visible
             if (!target.isSpawned()) {
@@ -489,9 +408,8 @@ public class Pet extends Summon {
                 getOwner().getParty().distributeItem(getOwner(), target);
             } else {
                 final Item item = _inventory.addItem("Pickup", target, getOwner(), this);
-                if (item != null)
-                {
-                    getOwner().sendPacket(new PetItemList(getInventory().getItems()));
+                if (item != null) {
+                    sendItemList();
                 }
             }
         }
@@ -555,7 +473,7 @@ public class Pet extends Summon {
      * @param process   string identifier of process triggering this action
      * @param objectId  Item Identifier of the item to be transfered
      * @param count     Quantity of items to be transfered
-     * @param target
+     * @param  target
      * @param actor     the player requesting the item transfer
      * @param reference Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the new item or the updated item in inventory
@@ -626,14 +544,7 @@ public class Pet extends Summon {
             LOGGER.warn("Error while destroying control item: " + e.getMessage(), e);
         }
 
-        // pet control item no longer exists, delete the pet from the db
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id = ?")) {
-            statement.setInt(1, _controlObjectId);
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER_PET.error("Failed to delete Pet [ObjectId: " + getObjectId() + "]", e);
-        }
+        getDAO(PetDAO.class).deleteByItem(_controlObjectId);
     }
 
     public void dropAllItems() {
@@ -676,16 +587,18 @@ public class Pet extends Summon {
     }
 
     @Override
-    public final void stopSkillEffects(boolean removed, int skillId) {
-        super.stopSkillEffects(removed, skillId);
+    public final boolean stopSkillEffects(boolean removed, int skillId) {
+        boolean stopped = super.stopSkillEffects(removed, skillId);
         final Collection<SummonEffect> effects = SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId());
         if ((effects != null) && !effects.isEmpty()) {
             for (SummonEffect effect : effects) {
                 if (effect.getSkill().getId() == skillId) {
                     SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()).remove(effect);
+                    stopped = true;
                 }
             }
         }
+        return stopped;
     }
 
     @Override
@@ -699,149 +612,80 @@ public class Pet extends Summon {
             _restoreSummon = false;
         }
 
-        String req;
-        if (!_respawned) {
-            req = "INSERT INTO pets (name,level,curHp,curMp,exp,sp,fed,ownerId,restore,item_obj_id) VALUES (?,?,?,?,?,?,?,?,?,?)";
+        getDAO(PetDAO.class).save(PetData.of(this, _restoreSummon));
+        _respawned = true;
+
+        if (_restoreSummon) {
+            PlayerSummonTable.getInstance().getPets().put(getOwner().getObjectId(), getControlObjectId());
         } else {
-            req = "UPDATE pets SET name=?,level=?,curHp=?,curMp=?,exp=?,sp=?,fed=?,ownerId=?,restore=? WHERE item_obj_id = ?";
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(req)) {
-            statement.setString(1, getName());
-            statement.setInt(2, getStats().getLevel());
-            statement.setDouble(3, getStatus().getCurrentHp());
-            statement.setDouble(4, getStatus().getCurrentMp());
-            statement.setLong(5, getStats().getExp());
-            statement.setLong(6, getStats().getSp());
-            statement.setInt(7, _curFed);
-            statement.setInt(8, getOwner().getObjectId());
-            statement.setString(9, String.valueOf(_restoreSummon)); // True restores pet on login
-            statement.setInt(10, _controlObjectId);
-            statement.executeUpdate();
-
-            _respawned = true;
-
-            if (_restoreSummon) {
-                PlayerSummonTable.getInstance().getPets().put(getOwner().getObjectId(), getControlObjectId());
-            } else {
-                PlayerSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
-            }
-        } catch (Exception e) {
-            LOGGER_PET.error("Failed to store Pet [ObjectId: " + getObjectId() + "] data", e);
+            PlayerSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
         }
 
         final Item itemInst = getControlItem();
         if ((itemInst != null) && (itemInst.getEnchantLevel() != getStats().getLevel())) {
-            itemInst.setEnchantLevel(getStats().getLevel());
+            itemInst.changeEnchantLevel(getStats().getLevel());
             itemInst.updateDatabase();
         }
     }
 
     @Override
     public void storeEffect(boolean storeEffects) {
-        if (!Config.SUMMON_STORE_SKILL_COOLTIME) {
-            return;
-        }
-
-        // Clear list for overwrite
         SummonEffectsTable.getInstance().getPetEffects().getOrDefault(getControlObjectId(), Collections.emptyList()).clear();
+        getDAO(PetDAO.class).deletePetSkillsSave(_controlObjectId);
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps1 = con.prepareStatement(DELETE_SKILL_SAVE);
-             PreparedStatement ps2 = con.prepareStatement(ADD_SKILL_SAVE)) {
-            // Delete all current stored effects for summon to avoid dupe
-            ps1.setInt(1, _controlObjectId);
-            ps1.execute();
+        if (storeEffects) {
+            int buffIndex = 0;
 
-            int buff_index = 0;
+            var effects = getEffectList().getEffects();
 
-            final Set<Long> storedSkills = new HashSet<>();
-
-            // Store all effect data along with calculated remaining
-            if (storeEffects) {
-                for (BuffInfo info : getEffectList().getEffects()) {
-                    if (info == null) {
-                        continue;
-                    }
-
-                    final Skill skill = info.getSkill();
-
-                    // Do not store those effects.
-                    if (skill.isDeleteAbnormalOnLeave()) {
-                        continue;
-                    }
-
-                    // Do not save heals.
-                    if (skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS) {
-                        continue;
-                    }
-
-                    // Toggles are skipped, unless they are necessary to be always on.
-                    if (skill.isToggle()) {
-                        continue;
-                    }
-
-                    // Dances and songs are not kept in retail.
-                    if (skill.isDance() && !Config.ALT_STORE_DANCES) {
-                        continue;
-                    }
-
-                    if (!storedSkills.add(skill.getReuseHashCode())) {
-                        continue;
-                    }
-
-                    ps2.setInt(1, _controlObjectId);
-                    ps2.setInt(2, skill.getId());
-                    ps2.setInt(3, skill.getLevel());
-                    ps2.setInt(4, skill.getSubLevel());
-                    ps2.setInt(5, info.getTime());
-                    ps2.setInt(6, ++buff_index);
-                    ps2.addBatch();
-
-                    SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, info.getTime()));
-                }
-                ps2.executeBatch();
+            if(effects.isEmpty()) {
+                return;
             }
-        } catch (Exception e) {
-            LOGGER.warn("Could not store pet effect data: ", e);
+
+            final List<PetSkillData> storedSkills = new ArrayList<>(effects.size());
+
+            for (BuffInfo info : effects) {
+                final Skill skill = info.getSkill();
+
+                // Do not store those effects.
+                if (skill.isDeleteAbnormalOnLeave() || skill.isToggle() || skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS) {
+                    continue;
+                }
+
+
+                // Dances and songs are not kept in retail.
+                if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances()) {
+                    continue;
+                }
+
+                storedSkills.add(PetSkillData.of(_controlObjectId, skill.getId(), skill.getLevel(), info.getTime(), ++buffIndex));
+                SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(_controlObjectId, k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, info.getTime()));
+            }
+
+            if(!storedSkills.isEmpty()) {
+                getDAO(PetDAO.class).save(storedSkills);
+            }
+
         }
     }
 
     @Override
     public void restoreEffects() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps1 = con.prepareStatement(RESTORE_SKILL_SAVE);
-             PreparedStatement ps2 = con.prepareStatement(DELETE_SKILL_SAVE)) {
-            if (!SummonEffectsTable.getInstance().getPetEffects().containsKey(getControlObjectId())) {
-                ps1.setInt(1, _controlObjectId);
-                try (ResultSet rset = ps1.executeQuery()) {
-                    while (rset.next()) {
-                        final int effectCurTime = rset.getInt("remaining_time");
-
-                        final Skill skill = SkillEngine.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
-                        if (skill == null) {
-                            continue;
-                        }
-
-                        if (skill.hasEffects(EffectScope.GENERAL)) {
-                            SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, effectCurTime));
-                        }
-                    }
-                }
+        for (PetSkillData data : getDAO(PetDAO.class).restorePetSkills(_controlObjectId)) {
+            final Skill skill = SkillEngine.getInstance().getSkill(data.getSkillId(), data.getSkillLevel());
+            if (skill == null) {
+                continue;
             }
 
-            ps2.setInt(1, _controlObjectId);
-            ps2.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.warn("Could not restore " + this + " active effect data: " + e.getMessage(), e);
-        } finally {
-            if (SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()) == null) {
-                return;
+            if (skill.hasEffects(EffectScope.GENERAL)) {
+                SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, data.getRemainingTime()));
             }
+        }
+        getDAO(PetDAO.class).deletePetSkillsSave(_controlObjectId);
 
+        if (nonNull(SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId()))) {
             for (SummonEffect se : SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId())) {
-                if (se != null) {
+                if (nonNull(se)) {
                     se.getSkill().applyEffects(this, this, false, se.getEffectCurTime());
                 }
             }
@@ -881,8 +725,6 @@ public class Pet extends Summon {
     /**
      * Restore the specified % of experience this Pet has lost.<BR>
      * <BR>
-     *
-     * @param restorePercent
      */
     public void restoreExp(double restorePercent) {
         if (_expBeforeDeath > 0) {
@@ -1017,6 +859,18 @@ public class Pet extends Summon {
     }
 
     @Override
+    public void sendInfo(Player player) {
+        super.sendInfo(player);
+        if(player == getOwner()) {
+            sendItemList();
+        }
+    }
+
+    public void sendItemList() {
+        sendPacket(new PetItemList(this));
+    }
+
+    @Override
     public final boolean isHungry() {
         return _curFed < ((getPetData().getHungryLimit() / 100f) * getPetLevelData().getPetMaxFeed());
     }
@@ -1084,7 +938,7 @@ public class Pet extends Summon {
     }
 
     public boolean canEatFoodId(int itemId) {
-        return _data.getFood().contains(itemId);
+        return petTemplate.getFood().contains(itemId);
     }
 
     @Override
@@ -1121,7 +975,7 @@ public class Pet extends Summon {
         public void run() {
             try {
                 final Summon pet = getOwner().getPet();
-                if ((getOwner() == null) || (pet == null) || (pet.getObjectId() != getObjectId())) {
+                if (pet == null || pet.getObjectId() != getObjectId()) {
                     stopFeed();
                     return;
                 } else if (_curFed > getFeedConsume()) {
@@ -1181,4 +1035,57 @@ public class Pet extends Summon {
             return getPetLevelData().getPetFeedNormal();
         }
     }
+
+    public static Pet spawnPet(NpcTemplate template, Player owner, Item control) {
+        if (World.getInstance().findPet(owner.getObjectId()) != null) {
+            return null; // owner has a pet listed in world
+        }
+        final PetTemplate petTemplate = PetDataTable.getInstance().getPetTemplate(template.getId());
+
+        final Pet pet = restore(control, template, owner);
+        // add the pet instance to world
+        pet.setTitle(owner.getName());
+        if (petTemplate.isSynchLevel() && (pet.getLevel() != owner.getLevel())) {
+            final byte availableLevel = (byte) Math.min(petTemplate.getMaxLevel(), owner.getLevel());
+            pet.getStats().setLevel(availableLevel);
+            pet.getStats().setExp(pet.getStats().getExpForLevel(availableLevel));
+        }
+        World.getInstance().addPet(owner.getObjectId(), pet);
+        return pet;
+    }
+
+    private static Pet restore(Item control, NpcTemplate template, Player owner) {
+        var data = getDAO(PetDAO.class).findPetByControlItem(control.getObjectId());
+        if(isNull(data)) {
+            return new Pet(template, owner, control);
+        }
+
+        Pet pet = new Pet(template, owner, control, data.getLevel());
+
+        pet._respawned = true;
+        pet.setName(data.getName());
+
+        long exp = data.getExp();
+        final PetLevelData info = PetDataTable.getInstance().getPetLevelData(pet.getId(), pet.getLevel());
+        // DS: update experience based by level
+        // Avoiding pet delevels due to exp per level values changed.
+        if (nonNull(info) && (exp < info.getPetMaxExp())) {
+            exp = info.getPetMaxExp();
+        }
+
+        pet.getStats().setExp(exp);
+        pet.getStats().setSp(data.getSp());
+
+        pet.getStatus().setCurrentHp(data.getCurHp());
+        pet.getStatus().setCurrentMp(data.getCurMp());
+        pet.getStatus().setCurrentCp(pet.getMaxCp());
+        if (data.getCurHp() < 1) {
+            pet.setIsDead(true);
+            pet.stopHpMpRegeneration();
+        }
+
+        pet.setCurrentFed(data.getFed());
+        return pet;
+    }
+
 }

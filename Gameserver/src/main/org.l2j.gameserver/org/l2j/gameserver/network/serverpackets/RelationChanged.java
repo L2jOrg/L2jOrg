@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -87,29 +88,29 @@ public final class RelationChanged extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.RELATION_CHANGED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.RELATION_CHANGED, buffer );
 
-        writeByte(_mask);
+        buffer.writeByte(_mask);
         if (_multi == null) {
-            writeRelation(_singled);
+            writeRelation(_singled, buffer);
         } else {
-            writeShort((short) _multi.size());
+            buffer.writeShort(_multi.size());
             for (Relation r : _multi) {
-                writeRelation(r);
+                writeRelation(r, buffer);
             }
         }
     }
 
 
-    private void writeRelation(Relation relation) {
-        writeInt(relation._objId);
+    private void writeRelation(Relation relation, WritableBuffer buffer) {
+        buffer.writeInt(relation._objId);
 
         if ((_mask & SEND_DEFAULT) == 0) {
-            writeInt(relation._relation);
-            writeByte((byte) relation._autoAttackable);
-            writeInt(relation._reputation);
-            writeByte((byte) relation._pvpFlag);
+            buffer.writeInt(relation._relation);
+            buffer.writeByte(relation._autoAttackable);
+            buffer.writeInt(relation._reputation);
+            buffer.writeByte(relation._pvpFlag);
         }
     }
 

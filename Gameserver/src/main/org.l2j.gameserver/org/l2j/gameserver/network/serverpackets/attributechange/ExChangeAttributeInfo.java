@@ -18,8 +18,9 @@
  */
 package org.l2j.gameserver.network.serverpackets.attributechange;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.AttributeType;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -49,18 +50,18 @@ public class ExChangeAttributeInfo extends ServerPacket {
         _crystalItemId = crystalItemId;
         _attributes = 0;
         for (AttributeType e : AttributeType.ATTRIBUTE_TYPES) {
-            if (e != item.getAttackAttributeType()) {
+            if (e != AttributeType.NONE) {
                 _attributes |= ATTRIBUTE_MASKS.get(e);
             }
         }
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CHANGE_ATTRIBUTE_INFO);
-        writeInt(_crystalItemId);
-        writeInt(_attributes);
-        writeInt(_itemObjId);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CHANGE_ATTRIBUTE_INFO, buffer );
+        buffer.writeInt(_crystalItemId);
+        buffer.writeInt(_attributes);
+        buffer.writeInt(_itemObjId);
     }
 
 }

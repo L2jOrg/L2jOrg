@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -38,13 +39,13 @@ public class MyTargetSelected extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MY_TARGET_SELECTED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MY_TARGET_SELECTED, buffer );
 
-        writeInt(0x01); // Grand Crusade
-        writeInt(_objectId);
-        writeShort((short) _color);
-        writeInt(0x00); // Mode 0x00 - Standard; 0x03 Context Menu
+        buffer.writeInt(0x01); // Grand Crusade
+        buffer.writeInt(_objectId);
+        buffer.writeShort(_color);
+        buffer.writeInt(0x00); // Mode 0x00 - Standard; 0x03 Context Menu
     }
 
 }

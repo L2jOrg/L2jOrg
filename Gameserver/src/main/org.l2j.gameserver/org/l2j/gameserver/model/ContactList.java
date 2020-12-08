@@ -24,128 +24,112 @@ import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
- * TODO: System messages:<br>
- * ADD: 3223: The previous name is being registered. Please try again later.<br>
- * DEL 3219: $s1 was successfully deleted from your Contact List.<br>
- * DEL 3217: The name is not currently registered.
- *
  * @author UnAfraid, mrTJO
+ * @author JoeAlisson
  */
-public class ContactList {
+public class ContactList implements Iterable<String> {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(ContactList.class);
-    private static final String QUERY_ADD = "INSERT INTO character_contacts (charId, contactId) VALUES (?, ?)";
-    private static final String QUERY_REMOVE = "DELETE FROM character_contacts WHERE charId = ? and contactId = ?";
-    private static final String QUERY_LOAD = "SELECT contactId FROM character_contacts WHERE charId = ?";
-    private final Player activeChar;
-    private final Set<String> _contacts = ConcurrentHashMap.newKeySet();
+
+    private final Player player;
+    private final Set<String> contacts = ConcurrentHashMap.newKeySet();
 
     public ContactList(Player player) {
-        activeChar = player;
-        restore();
+        this.player = player;
     }
 
     public void restore() {
-        _contacts.clear();
+        getDAO(PlayerDAO.class).findContacts(player.getObjectId(), this::restore);
+    }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(QUERY_LOAD)) {
-            statement.setInt(1, activeChar.getObjectId());
-            try (ResultSet rset = statement.executeQuery()) {
-                int contactId;
-                String contactName;
-                while (rset.next()) {
-                    contactId = rset.getInt(1);
-                    contactName = PlayerNameTable.getInstance().getNameById(contactId);
-                    if ((contactName == null) || contactName.equals(activeChar.getName()) || (contactId == activeChar.getObjectId())) {
-                        continue;
-                    }
-
-                    _contacts.add(contactName);
+    private void restore(ResultSet resultSet) {
+        try {
+            while (resultSet.next()) {
+                var contactId = resultSet.getInt(1);
+                String contactName = PlayerNameTable.getInstance().getNameById(contactId);
+                if (isNull(contactName)) {
+                    continue;
                 }
+                contacts.add(contactName);
             }
-        } catch (Exception e) {
-            LOGGER.warn("Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
+        } catch (SQLException e) {
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
     public boolean add(String name) {
-        SystemMessage sm;
+        if (verifyContact(name)) {
+            return false;
+        }
 
         final int contactId = PlayerNameTable.getInstance().getIdByName(name);
-        if (_contacts.contains(name)) {
-            activeChar.sendPacket(SystemMessageId.THE_NAME_ALREADY_EXISTS_ON_THE_ADDED_LIST);
+
+        if (contactId < 1) {
+            player.sendPacket(getSystemMessage(SystemMessageId.THE_NAME_S1_DOESN_T_EXIST_PLEASE_TRY_ANOTHER_NAME).addString(name));
             return false;
-        } else if (activeChar.getName().equals(name)) {
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_ADD_YOUR_OWN_NAME);
-            return false;
-        } else if (_contacts.size() >= 100) {
-            activeChar.sendPacket(SystemMessageId.THE_MAXIMUM_NUMBER_OF_NAMES_100_HAS_BEEN_REACHED_YOU_CANNOT_REGISTER_ANY_MORE);
-            return false;
-        } else if (contactId < 1) {
-            sm = SystemMessage.getSystemMessage(SystemMessageId.THE_NAME_S1_DOESN_T_EXIST_PLEASE_TRY_ANOTHER_NAME);
-            sm.addString(name);
-            activeChar.sendPacket(sm);
-            return false;
-        } else {
-            for (String contactName : _contacts) {
-                if (contactName.equalsIgnoreCase(name)) {
-                    activeChar.sendPacket(SystemMessageId.THE_NAME_ALREADY_EXISTS_ON_THE_ADDED_LIST);
-                    return false;
-                }
-            }
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(QUERY_ADD)) {
-            statement.setInt(1, activeChar.getObjectId());
-            statement.setInt(2, contactId);
-            statement.execute();
-
-            _contacts.add(name);
-
-            sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_ADDED_TO_YOUR_CONTACT_LIST);
-            sm.addString(name);
-            activeChar.sendPacket(sm);
-        } catch (Exception e) {
-            LOGGER.warn("Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
-        }
+        getDAO(PlayerDAO.class).addContact(player.getObjectId(), contactId);
+        player.sendPacket(getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_ADDED_TO_YOUR_CONTACT_LIST).addString(name));
         return true;
     }
 
-    public void remove(String name) {
-        final int contactId = PlayerNameTable.getInstance().getIdByName(name);
+    private boolean verifyContact(String name) {
+        var verified = true;
 
-        if (!_contacts.contains(name)) {
-            activeChar.sendPacket(SystemMessageId.THE_NAME_IS_NOT_CURRENTLY_REGISTERED);
-            return;
-        } else if (contactId < 1) {
-            // TODO: Message?
+        if (contacts.contains(name)) {
+            player.sendPacket(SystemMessageId.THE_NAME_ALREADY_EXISTS_ON_THE_ADDED_LIST);
+            verified = false;
+        } else if (player.getName().equals(name)) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_YOUR_OWN_NAME);
+            verified = false;
+        } else if (contacts.size() >= 100) {
+            player.sendPacket(SystemMessageId.THE_MAXIMUM_NUMBER_OF_NAMES_100_HAS_BEEN_REACHED_YOU_CANNOT_REGISTER_ANY_MORE);
+            verified = false;
+        }
+        return verified;
+    }
+
+    public void remove(String name) {
+        if (!contacts.contains(name)) {
+            player.sendPacket(SystemMessageId.THE_NAME_IS_NOT_CURRENTLY_REGISTERED);
             return;
         }
 
-        _contacts.remove(name);
+        final int contactId = PlayerNameTable.getInstance().getIdByName(name);
+         if (contactId < 1) {
+             player.sendPacket(getSystemMessage(SystemMessageId.THE_NAME_S1_DOESN_T_EXIST_PLEASE_TRY_ANOTHER_NAME).addString(name));
+            return;
+        }
 
-        getDAO(PlayerDAO.class).deleteContact(activeChar.getObjectId(), contactId);
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
-        sm.addString(name);
-        activeChar.sendPacket(sm);
+        contacts.remove(name);
+
+        getDAO(PlayerDAO.class).deleteContact(player.getObjectId(), contactId);
+        player.sendPacket(getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST).addString(name));
     }
 
-    public Set<String> getAllContacts() {
-        return _contacts;
+    public int size() {
+        return contacts.size();
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        return contacts.iterator();
     }
 }

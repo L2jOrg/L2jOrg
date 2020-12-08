@@ -46,6 +46,7 @@ import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
@@ -54,6 +55,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Calendar;
 import java.util.StringTokenizer;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.parseNextInt;
 
 /**
@@ -654,7 +656,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
 					final long amount = (st.hasMoreTokens()) ? Long.parseLong(st.nextToken()) : 0;
-					if ((amount > 0) && (amount < Inventory.MAX_ADENA))
+					if ((amount > 0) && (amount < getSettings(CharacterSettings.class).maxAdena()))
 					{
 						if (player.getAdena() >= amount)
 						{

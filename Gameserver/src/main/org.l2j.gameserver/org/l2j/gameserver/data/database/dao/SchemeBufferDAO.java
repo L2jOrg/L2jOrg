@@ -20,18 +20,22 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.SchemeBufferData;
 
 import java.sql.ResultSet;
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
  * @author JoeAlisson
  */
-public interface SchemeBufferDAO extends DAO<Object> {
+public interface SchemeBufferDAO extends DAO<SchemeBufferData> {
 
     @Query("SELECT * FROM buffer_schemes")
     void loadAll(Consumer<ResultSet> consumer);
 
     @Query("TRUNCATE TABLE buffer_schemes")
     void deleteAll();
+
+    void save(List<SchemeBufferData> data);
 }

@@ -18,10 +18,11 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -73,33 +74,33 @@ public final class TradeStart extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) throws InvalidDataPacketException {
+    public void writeImpl(GameClient client, WritableBuffer buffer) throws InvalidDataPacketException {
         if ((client.getPlayer().getActiveTradeList() == null)) {
             throw new InvalidDataPacketException();
         }
 
-        writeId(ServerPacketId.TRADE_START);
-        writeByte(type);
+        writeId(ServerPacketId.TRADE_START, buffer );
+        buffer.writeByte(type);
         if (type == ITEMS_INFO) {
-            writeItems();
+            writeItems(buffer);
         } else {
-            writePatner();
+            writePatner(buffer);
         }
     }
 
-    private void writePatner() {
-        writeInt(partner.getObjectId());
-        writeByte(mask);
+    private void writePatner(WritableBuffer buffer) {
+        buffer.writeInt(partner.getObjectId());
+        buffer.writeByte(mask);
         if ((mask & 0x10) == 0) {
-            writeByte(partner.getLevel());
+            buffer.writeByte(partner.getLevel());
         }
     }
 
-    private void writeItems() {
-        writeInt(items.size());
-        writeInt(items.size());
+    private void writeItems(WritableBuffer buffer) {
+        buffer.writeInt(items.size());
+        buffer.writeInt(items.size());
         for (Item item : items) {
-            writeItem(item);
+            writeItem(item, buffer);
         }
     }
 

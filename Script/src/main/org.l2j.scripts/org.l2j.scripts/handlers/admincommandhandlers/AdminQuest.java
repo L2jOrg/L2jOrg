@@ -201,7 +201,6 @@ public class AdminQuest implements IAdminCommandHandler
 			String events = "";
 			String npcs = "";
 			String items = "";
-			String timers = "";
 			int counter = 0;
 			if (quest == null)
 			{
@@ -252,19 +251,6 @@ public class AdminQuest implements IAdminCommandHandler
 				items = quest.getRegisteredItemIds().length + ":" + items.substring(2);
 			}
 			
-			for (List<QuestTimer> list : quest.getQuestTimers().values())
-			{
-				for (QuestTimer timer : list)
-				{
-					timers += "<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">" + timer.getName() + ":</font> <font color=00FF00>Active: " + timer.getIsActive() + " Repeatable: " + timer.getIsRepeating() + " Player: " + timer.getPlayer() + " Npc: " + timer.getNpc() + "</font></td></tr></table></td></tr>";
-					counter++;
-					if (counter > 10)
-					{
-						break;
-					}
-				}
-			}
-			
 			final StringBuilder sb = new StringBuilder();
 			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">ID:</font> <font color=00FF00>" + quest.getId() + "</font></td></tr></table></td></tr>");
 			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Name:</font> <font color=00FF00>" + quest.getName() + "</font></td></tr></table></td></tr>");
@@ -277,11 +263,6 @@ public class AdminQuest implements IAdminCommandHandler
 			if (!items.isEmpty())
 			{
 				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Items:</font> <font color=00FF00>" + items + "</font></td></tr></table></td></tr>");
-			}
-			if (!timers.isEmpty())
-			{
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Timers:</font> <font color=00FF00></font></td></tr></table></td></tr>");
-				sb.append(timers);
 			}
 			
 			final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);

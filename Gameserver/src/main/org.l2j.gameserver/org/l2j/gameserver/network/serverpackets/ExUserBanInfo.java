@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -38,11 +39,11 @@ public class ExUserBanInfo extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_USER_BAN_INFO);
-        writeInt(type.ordinal());
-        writeLong(expiration > 0 ? System.currentTimeMillis() : 0);
-        writeLong(expiration);
-        writeString(reason);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_USER_BAN_INFO, buffer );
+        buffer.writeInt(type.ordinal());
+        buffer.writeLong(expiration > 0 ? System.currentTimeMillis() : 0);
+        buffer.writeLong(expiration);
+        buffer.writeString(reason);
     }
 }

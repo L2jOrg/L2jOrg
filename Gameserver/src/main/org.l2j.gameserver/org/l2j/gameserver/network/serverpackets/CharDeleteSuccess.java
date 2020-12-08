@@ -18,13 +18,14 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class CharDeleteSuccess extends ServerPacket {
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CHARACTER_DELETE_SUCCESS);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CHARACTER_DELETE_SUCCESS, buffer );
     }
 
 }

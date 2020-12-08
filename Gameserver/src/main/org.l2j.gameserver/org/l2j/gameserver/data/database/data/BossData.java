@@ -2,34 +2,23 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.gameserver.instancemanager.BossStatus;
+import org.l2j.gameserver.model.Spawn;
+import org.l2j.gameserver.model.actor.Npc;
 
-/**
- * @author JoeAlisson
- */
-@Table("grandboss_data")
+@Table("boss_data")
 public class BossData {
-
     @Column("boss_id")
     private int bossId;
-
-    @Column("loc_x")
-    private int x;
-
-    @Column("loc_y")
-    private int y;
-
-    @Column("loc_z")
-    private int z;
 
     @Column("respawn_time")
     private long respawnTime;
 
+    private int x;
+    private int y;
+    private int z;
     private int heading;
     private double hp;
     private double mp;
-    private BossStatus status;
-
 
     public int getBossId() {
         return bossId;
@@ -91,11 +80,13 @@ public class BossData {
         this.mp = mp;
     }
 
-    public BossStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(BossStatus status) {
-        this.status = status;
+    public static BossData of(int id, Spawn spawn) {
+        var data = new BossData();
+        data.bossId = id;
+        data.x = spawn.getX();
+        data.y = spawn.getY();
+        data.z = spawn.getZ();
+        data.heading = spawn.getHeading();
+        return data;
     }
 }

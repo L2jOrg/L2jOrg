@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -38,10 +39,10 @@ public class ExNoticePostSent extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_REPLY_WRITE_POST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_REPLY_WRITE_POST, buffer );
 
-        writeInt(_showAnim ? 0x01 : 0x00);
+        buffer.writeInt(_showAnim ? 0x01 : 0x00);
     }
 
 }

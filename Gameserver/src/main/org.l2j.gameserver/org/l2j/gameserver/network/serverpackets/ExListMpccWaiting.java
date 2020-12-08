@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.GameClient;
@@ -49,20 +50,20 @@ public class ExListMpccWaiting extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_LIST_MPCC_WAITING);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_LIST_MPCC_WAITING, buffer );
 
-        writeInt(_size);
-        writeInt(_rooms.size());
+        buffer.writeInt(_size);
+        buffer.writeInt(_rooms.size());
         for (MatchingRoom room : _rooms) {
-            writeInt(room.getId());
-            writeString(room.getTitle());
-            writeInt(room.getMembersCount());
-            writeInt(room.getMinLvl());
-            writeInt(room.getMaxLvl());
-            writeInt(room.getLocation());
-            writeInt(room.getMaxMembers());
-            writeString(room.getLeader().getName());
+            buffer.writeInt(room.getId());
+            buffer.writeString(room.getTitle());
+            buffer.writeInt(room.getMembersCount());
+            buffer.writeInt(room.getMinLvl());
+            buffer.writeInt(room.getMaxLvl());
+            buffer.writeInt(room.getLocation());
+            buffer.writeInt(room.getMaxMembers());
+            buffer.writeString(room.getLeader().getName());
         }
     }
 

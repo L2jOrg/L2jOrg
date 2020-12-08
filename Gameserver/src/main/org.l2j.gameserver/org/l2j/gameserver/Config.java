@@ -60,21 +60,18 @@ public final class Config {
     // Config File Definitions
     // --------------------------------------------------
 
-    public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
     private static final String GENERAL_CONFIG_FILE = "config/general.properties";
-    private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
-    private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
+    private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
-    private static final String SERVER_CONFIG_FILE = "config/server.properties";
 
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
     private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
@@ -89,6 +86,8 @@ public final class Config {
     private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
+    private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
+
 
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
@@ -102,58 +101,16 @@ public final class Config {
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
 
-    // --------------------------------------------------
-    // Variable Definitions
-    // --------------------------------------------------
-    public static double RESPAWN_RESTORE_CP;
-    public static double RESPAWN_RESTORE_HP;
-    public static double RESPAWN_RESTORE_MP;
+
     public static boolean ENABLE_MODIFY_SKILL_DURATION;
     public static Map<Integer, Integer> SKILL_DURATION_LIST;
     public static boolean ENABLE_MODIFY_SKILL_REUSE;
     public static Map<Integer, Integer> SKILL_REUSE_LIST;
-    public static boolean AUTO_LEARN_SKILLS;
-    public static boolean AUTO_LEARN_FS_SKILLS;
-    public static boolean AUTO_LOOT_HERBS;
-    public static byte BUFFS_MAX_AMOUNT;
-    public static byte TRIGGERED_BUFFS_MAX_AMOUNT;
-    public static byte DANCES_MAX_AMOUNT;
-    public static boolean DANCE_CANCEL_BUFF;
-    public static boolean DANCE_CONSUME_ADDITIONAL_MP;
-    public static boolean ALT_STORE_DANCES;
 
-    public static boolean ALT_GAME_CANCEL_BOW;
-    public static boolean ALT_GAME_CANCEL_CAST;
-    public static boolean ALT_GAME_MAGICFAILURES;
-    public static boolean ALT_GAME_STUN_BREAK;
-    public static int PLAYER_FAKEDEATH_UP_PROTECTION;
-    public static boolean STORE_SKILL_COOLTIME;
-    public static boolean SUBCLASS_STORE_SKILL_COOLTIME;
-    public static boolean SUMMON_STORE_SKILL_COOLTIME;
-    public static long EFFECT_TICK_RATIO;
-    public static boolean LIFE_CRYSTAL_NEEDED;
-    public static boolean DIVINE_SP_BOOK_NEEDED;
-    public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
-    public static boolean ALT_GAME_SUBCLASS_EVERYWHERE;
-    public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
-
-    public static double MAX_BONUS_EXP;
-    public static double MAX_BONUS_SP;
-    public static int MAX_RUN_SPEED;
-    public static int MAX_PATK;
-    public static int MAX_MATK;
-    public static int MAX_PCRIT_RATE;
-    public static int MAX_MCRIT_RATE;
-    public static int MAX_PATK_SPEED;
-    public static int MAX_MATK_SPEED;
-    public static int MAX_EVASION;
     public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
     public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
     public static long MAX_SP;
-    public static byte MAX_SUBCLASS;
-    public static byte BASE_SUBCLASS_LEVEL;
     public static byte BASE_DUALCLASS_LEVEL;
-    public static byte MAX_SUBCLASS_LEVEL;
     public static int MAX_PVTSTORESELL_SLOTS_DWARF;
     public static int MAX_PVTSTORESELL_SLOTS_OTHER;
     public static int MAX_PVTSTOREBUY_SLOTS_DWARF;
@@ -170,7 +127,6 @@ public final class Config {
 
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_TELEPORT;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_GK;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_TRADE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE;
@@ -179,7 +135,6 @@ public final class Config {
     public static int CASTLE_ZONE_FAME_TASK_FREQUENCY;
     public static int CASTLE_ZONE_FAME_AQUIRE_POINTS;
     public static boolean FAME_FOR_DEAD_PLAYERS;
-    public static boolean IS_CRAFTING_ENABLED;
     public static boolean CRAFT_MASTERWORK;
     public static int BASE_CRITICAL_CRAFT_RATE;
     public static int DWARF_RECIPE_LIMIT;
@@ -210,9 +165,7 @@ public final class Config {
     public static long STARTING_ADENA;
     public static byte STARTING_LEVEL;
     public static int STARTING_SP;
-    public static long MAX_ADENA;
 
-    public static boolean AUTO_LOOT_SLOT_LIMIT;
     public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
 
     public static boolean ENABLE_KEYBOARD_MOVEMENT;
@@ -226,7 +179,6 @@ public final class Config {
     public static boolean PETITIONING_ALLOWED;
     public static int MAX_PETITIONS_PER_PLAYER;
     public static int MAX_PETITIONS_PENDING;
-    public static int MAX_FREE_TELEPORT_LEVEL;
     public static int MAX_NEWBIE_BUFF_LEVEL;
     public static int DELETE_DAYS;
     public static String PARTY_XP_CUTOFF_METHOD;
@@ -283,7 +235,6 @@ public final class Config {
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
 
-    public static int HERO_POINTS;
     public static int ROYAL_GUARD_COST;
     public static int KNIGHT_UNIT_COST;
     public static int REPUTATION_SCORE_PER_KILL;
@@ -306,7 +257,6 @@ public final class Config {
     public static boolean GM_STARTUP_AUTO_LIST;
     public static boolean GM_STARTUP_DIET_MODE;
     public static boolean GM_ITEM_RESTRICTION;
-    public static boolean GM_SKILL_RESTRICTION;
     public static boolean GM_TRADE_RESTRICTED_ITEMS;
     public static boolean GM_RESTART_FIGHTING;
     public static boolean GM_ANNOUNCER_NAME;
@@ -335,8 +285,6 @@ public final class Config {
     public static boolean DESTROY_ALL_ITEMS;
 
     public static boolean AUTODELETE_INVALID_QUEST_DATA;
-    public static boolean ENABLE_STORY_QUEST_BUFF_REWARD;
-    public static boolean MULTIPLE_ITEM_DROP;
     public static boolean FORCE_INVENTORY_UPDATE;
 
     public static int MIN_NPC_ANIMATION;
@@ -370,24 +318,6 @@ public final class Config {
     public static String BBS_DEFAULT;
 
     public static int WORLD_CHAT_POINTS_PER_DAY;
-    public static long ALT_OLY_BATTLE;
-    public static int ALT_OLY_CLASSED;
-    public static int ALT_OLY_NONCLASSED;
-    public static List<ItemHolder> ALT_OLY_WINNER_REWARD;
-    public static List<ItemHolder> ALT_OLY_LOSER_REWARD;
-
-    public static int ALT_OLY_COMP_RITEM;
-    public static int ALT_OLY_MIN_MATCHES;
-    public static int ALT_OLY_MARK_PER_POINT;
-    public static int ALT_OLY_MAX_POINTS;
-    public static int ALT_OLY_DIVIDER_CLASSED;
-    public static int ALT_OLY_DIVIDER_NON_CLASSED;
-
-    public static boolean ALT_OLY_LOG_FIGHTS;
-    public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
-    public static List<Integer> LIST_OLY_RESTRICTED_ITEMS;
-    public static int ALT_OLY_ENCHANT_LIMIT;
-    public static int ALT_OLY_WAIT_TIME;
 
     public static int ALT_MANOR_REFRESH_TIME;
     public static int ALT_MANOR_REFRESH_MIN;
@@ -427,7 +357,6 @@ public final class Config {
     public static FloodProtectorConfig FLOOD_PROTECTOR_ITEM_PET_SUMMON;
     public static FloodProtectorConfig FLOOD_PROTECTOR_HERO_VOICE;
     public static FloodProtectorConfig FLOOD_PROTECTOR_GLOBAL_CHAT;
-    public static FloodProtectorConfig FLOOD_PROTECTOR_SUBCLASS;
     public static FloodProtectorConfig FLOOD_PROTECTOR_DROP_ITEM;
     public static FloodProtectorConfig FLOOD_PROTECTOR_SERVER_BYPASS;
     public static FloodProtectorConfig FLOOD_PROTECTOR_MULTISELL;
@@ -498,6 +427,7 @@ public final class Config {
     public static boolean ANTIFEED_DUALBOX;
     public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
     public static int ANTIFEED_INTERVAL;
+    public static boolean ACTIVATE_PVP_BOSS_FLAG;
 
     // --------------------------------------------------
     // Rate Settings
@@ -557,33 +487,6 @@ public final class Config {
     public static int KARMA_RATE_DROP_EQUIP;
     public static int KARMA_RATE_DROP_EQUIP_WEAPON;
 
-    // --------------------------------------------------
-    // Server Settings
-    // --------------------------------------------------
-
-    public static boolean HARDWARE_INFO_ENABLED;
-    public static int MAX_PLAYERS_PER_HWID;
-    public static String PET_NAME_TEMPLATE;
-    public static String CLAN_NAME_TEMPLATE;
-    public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
-    public static File DATAPACK_ROOT;
-    public static int SERVER_LIST_AGE;
-    public static boolean SERVER_LIST_BRACKET;
-
-    public static boolean SERVER_RESTART_SCHEDULE_MESSAGE;
-    public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
-    public static String[] SERVER_RESTART_SCHEDULE;
-
-    // --------------------------------------------------
-    // Vitality Settings
-    // --------------------------------------------------
-    public static boolean ENABLE_VITALITY;
-    public static int STARTING_VITALITY_POINTS;
-    public static boolean RAIDBOSS_USE_VITALITY;
-    public static float RATE_VITALITY_EXP_MULTIPLIER;
-    public static int VITALITY_MAX_ITEMS_ALLOWED;
-    public static float RATE_VITALITY_LOST;
-    public static float RATE_VITALITY_GAIN;
 
     // --------------------------------------------------
     // No classification assigned to the following yet
@@ -603,7 +506,6 @@ public final class Config {
     public static int[] ENCHANT_BLACKLIST;
     public static boolean DISABLE_OVER_ENCHANTING;
     public static int[] AUGMENTATION_BLACKLIST;
-    public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
 
     // Antharas
     public static int ANTHARAS_WAIT_TIME;
@@ -625,9 +527,7 @@ public final class Config {
     // Zaken
     public static int ZAKEN_SPAWN_INTERVAL;
     public static int ZAKEN_SPAWN_RANDOM;
-    // Gracia Seeds Settings
-    public static int SOD_TIAT_KILL_COUNT;
-    public static long SOD_STAGE_2_LENGTH;
+
     // chatfilter
     public static List<String> FILTER_LIST;
 
@@ -740,6 +640,19 @@ public final class Config {
     public static boolean DUALBOX_COUNT_OFFLINE_TRADERS;
     public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
 
+    public static boolean AUTO_POTIONS_ENABLED;
+    public static boolean AUTO_POTIONS_IN_OLYMPIAD;
+    public static int AUTO_POTION_MIN_LVL;
+    public static boolean AUTO_CP_ENABLED;
+    public static boolean AUTO_HP_ENABLED;
+    public static boolean AUTO_MP_ENABLED;
+    public static int AUTO_CP_PERCENTAGE;
+    public static int AUTO_HP_PERCENTAGE;
+    public static int AUTO_MP_PERCENTAGE;
+    public static List<Integer> AUTO_CP_ITEM_IDS;
+    public static List<Integer> AUTO_HP_ITEM_IDS;
+    public static List<Integer> AUTO_MP_ITEM_IDS;
+
     public static boolean CUSTOM_STARTING_LOC;
     public static int CUSTOM_STARTING_LOC_X;
     public static int CUSTOM_STARTING_LOC_Y;
@@ -754,6 +667,7 @@ public final class Config {
     public static boolean COMMUNITYBOARD_ENABLE_TELEPORTS;
     public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
     public static boolean COMMUNITYBOARD_ENABLE_HEAL;
+    public static boolean COMMUNITYBOARD_ENABLE_CLEANUP;
     public static boolean COMMUNITYBOARD_ENABLE_PREMIUM;
     public static boolean COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP;
     public static int COMMUNITYBOARD_TELEPORT_PRICE;
@@ -822,7 +736,7 @@ public final class Config {
 
     /**
      * This class initializes all global variables for configuration.<br>
-     * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
+     * If the key doesn't appear in properties file, a default value is set by this class. (properties file) for configuring your server.
      */
     public static void load() {
         FLOOD_PROTECTOR_USE_ITEM = new FloodProtectorConfig("UseItemFloodProtector");
@@ -831,7 +745,6 @@ public final class Config {
         FLOOD_PROTECTOR_ITEM_PET_SUMMON = new FloodProtectorConfig("ItemPetSummonFloodProtector");
         FLOOD_PROTECTOR_HERO_VOICE = new FloodProtectorConfig("HeroVoiceFloodProtector");
         FLOOD_PROTECTOR_GLOBAL_CHAT = new FloodProtectorConfig("GlobalChatFloodProtector");
-        FLOOD_PROTECTOR_SUBCLASS = new FloodProtectorConfig("SubclassFloodProtector");
         FLOOD_PROTECTOR_DROP_ITEM = new FloodProtectorConfig("DropItemFloodProtector");
         FLOOD_PROTECTOR_SERVER_BYPASS = new FloodProtectorConfig("ServerBypassFloodProtector");
         FLOOD_PROTECTOR_MULTISELL = new FloodProtectorConfig("MultiSellFloodProtector");
@@ -842,36 +755,10 @@ public final class Config {
         FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
         FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
 
-        final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
-
-        try {
-            DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
-        } catch (IOException e) {
-            LOGGER.warn("Error setting datapack root!", e);
-            DATAPACK_ROOT = new File(".");
-        }
-
-        PET_NAME_TEMPLATE = serverSettings.getString("PetNameTemplate", ".*");
-        CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
-
-        MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
-
-        HARDWARE_INFO_ENABLED = serverSettings.getBoolean("EnableHardwareInfo", false);
-        MAX_PLAYERS_PER_HWID = serverSettings.getInt("MaxPlayersPerHWID", 0);
-
-        SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
-        SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
-
-        SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
-        SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 600);
-        SERVER_RESTART_SCHEDULE = serverSettings.getString("ServerRestartSchedule", "08:00").split(",");
-
         // Hosts and Subnets
         final IPConfigData ipcd = new IPConfigData();
         GAME_SERVER_SUBNETS = ipcd.getSubnets();
         GAME_SERVER_HOSTS = ipcd.getHosts();
-
-
 
         // Load Feature config file (if exists)
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
@@ -917,7 +804,6 @@ public final class Config {
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
 
-        HERO_POINTS = Feature.getInt("HeroPoints", 1000);
         ROYAL_GUARD_COST = Feature.getInt("CreateRoyalGuardCost", 5000);
         KNIGHT_UNIT_COST = Feature.getInt("CreateKnightUnitCost", 10000);
         REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
@@ -930,9 +816,7 @@ public final class Config {
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 
-        RESPAWN_RESTORE_CP = Character.getDouble("RespawnRestoreCP", 0) / 100;
-        RESPAWN_RESTORE_HP = Character.getDouble("RespawnRestoreHP", 65) / 100;
-        RESPAWN_RESTORE_MP = Character.getDouble("RespawnRestoreMP", 0) / 100;
+        // TODO move to skill property or custom
         ENABLE_MODIFY_SKILL_DURATION = Character.getBoolean("EnableModifySkillDuration", false);
 
         // Create Map only if enabled
@@ -975,50 +859,10 @@ public final class Config {
             }
         }
 
-        AUTO_LEARN_SKILLS = Character.getBoolean("AutoLearnSkills", false);
-        AUTO_LEARN_FS_SKILLS = Character.getBoolean("AutoLearnForgottenScrollSkills", false);
-        AUTO_LOOT_HERBS = Character.getBoolean("AutoLootHerbs", false);
-        BUFFS_MAX_AMOUNT = Character.getByte("MaxBuffAmount", (byte) 20);
-        TRIGGERED_BUFFS_MAX_AMOUNT = Character.getByte("MaxTriggeredBuffAmount", (byte) 12);
-        DANCES_MAX_AMOUNT = Character.getByte("MaxDanceAmount", (byte) 12);
-        DANCE_CANCEL_BUFF = Character.getBoolean("DanceCancelBuff", false);
-        DANCE_CONSUME_ADDITIONAL_MP = Character.getBoolean("DanceConsumeAdditionalMP", true);
-        ALT_STORE_DANCES = Character.getBoolean("AltStoreDances", false);
-        ALT_GAME_CANCEL_BOW = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("bow") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
-        ALT_GAME_CANCEL_CAST = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("cast") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
-        ALT_GAME_MAGICFAILURES = Character.getBoolean("MagicFailures", true);
-        ALT_GAME_STUN_BREAK = Character.getBoolean("BreakStun", false);
-        PLAYER_FAKEDEATH_UP_PROTECTION = Character.getInt("PlayerFakeDeathUpProtection", 0);
-        STORE_SKILL_COOLTIME = Character.getBoolean("StoreSkillCooltime", true);
-        SUBCLASS_STORE_SKILL_COOLTIME = Character.getBoolean("SubclassStoreSkillCooltime", false);
-        SUMMON_STORE_SKILL_COOLTIME = Character.getBoolean("SummonStoreSkillCooltime", true);
-        EFFECT_TICK_RATIO = Character.getLong("EffectTickRatio", 666);
-        LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
-        DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
-        ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
-        ALT_GAME_SUBCLASS_EVERYWHERE = Character.getBoolean("AltSubclassEverywhere", false);
-
-        ALLOW_TRANSFORM_WITHOUT_QUEST = Character.getBoolean("AltTransformationWithoutQuest", false);
-        ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
-        STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
-        RAIDBOSS_USE_VITALITY = Character.getBoolean("RaidbossUseVitality", true);
-        MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 0);
-        MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 0);
-        MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 300);
-        MAX_PATK = Character.getInt("MaxPAtk", 999999);
-        MAX_MATK = Character.getInt("MaxMAtk", 999999);
-        MAX_PCRIT_RATE = Character.getInt("MaxPCritRate", 500);
-        MAX_MCRIT_RATE = Character.getInt("MaxMCritRate", 200);
-        MAX_PATK_SPEED = Character.getInt("MaxPAtkSpeed", 1500);
-        MAX_MATK_SPEED = Character.getInt("MaxMAtkSpeed", 1999);
-        MAX_EVASION = Character.getInt("MaxEvasion", 250);
         MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
         MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);
         MAX_SP = Character.getLong("MaxSp", 50000000000L) >= 0 ? Character.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;
-        MAX_SUBCLASS = (byte) Math.min(3, Character.getByte("MaxSubclass", (byte) 3));
-        BASE_SUBCLASS_LEVEL = Character.getByte("BaseSubclassLevel", (byte) 40);
         BASE_DUALCLASS_LEVEL = Character.getByte("BaseDualclassLevel", (byte) 85);
-        MAX_SUBCLASS_LEVEL = Character.getByte("MaxSubclassLevel", (byte) 80);
         MAX_PVTSTORESELL_SLOTS_DWARF = Character.getInt("MaxPvtStoreSellSlotsDwarf", 4);
         MAX_PVTSTORESELL_SLOTS_OTHER = Character.getInt("MaxPvtStoreSellSlotsOther", 3);
         MAX_PVTSTOREBUY_SLOTS_DWARF = Character.getInt("MaxPvtStoreBuySlotsDwarf", 5);
@@ -1053,10 +897,8 @@ public final class Config {
         }
 
         Arrays.sort(AUGMENTATION_BLACKLIST);
-        ALT_ALLOW_AUGMENT_PVP_ITEMS = Character.getBoolean("AltAllowAugmentPvPItems", false);
         ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = Character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
         ALT_GAME_KARMA_PLAYER_CAN_SHOP = Character.getBoolean("AltKarmaPlayerCanShop", true);
-        ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = Character.getBoolean("AltKarmaPlayerCanTeleport", true);
         ALT_GAME_KARMA_PLAYER_CAN_USE_GK = Character.getBoolean("AltKarmaPlayerCanUseGK", false);
         ALT_GAME_KARMA_PLAYER_CAN_TRADE = Character.getBoolean("AltKarmaPlayerCanTrade", true);
         ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = Character.getBoolean("AltKarmaPlayerCanUseWareHouse", true);
@@ -1065,7 +907,6 @@ public final class Config {
         CASTLE_ZONE_FAME_TASK_FREQUENCY = Character.getInt("CastleZoneFameTaskFrequency", 300);
         CASTLE_ZONE_FAME_AQUIRE_POINTS = Character.getInt("CastleZoneFameAquirePoints", 125);
         FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);
-        IS_CRAFTING_ENABLED = Character.getBoolean("CraftingEnabled", true);
         CRAFT_MASTERWORK = Character.getBoolean("CraftMasterwork", true);
         BASE_CRITICAL_CRAFT_RATE = Character.getInt("BaseCriticalCraftRate", 3);
         DWARF_RECIPE_LIMIT = Character.getInt("DwarfRecipeLimit", 50);
@@ -1096,12 +937,7 @@ public final class Config {
         STARTING_ADENA = Character.getLong("StartingAdena", 0);
         STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
         STARTING_SP = Character.getInt("StartingSP", 0);
-        MAX_ADENA = Character.getLong("MaxAdena", 99900000000L);
-        if (MAX_ADENA < 0) {
-            MAX_ADENA = Long.MAX_VALUE;
-        }
 
-        AUTO_LOOT_SLOT_LIMIT = Character.getBoolean("AutoLootSlotLimit", false);
         LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
 
         ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
@@ -1115,7 +951,7 @@ public final class Config {
         PETITIONING_ALLOWED = Character.getBoolean("PetitioningAllowed", true);
         MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
         MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
-        MAX_FREE_TELEPORT_LEVEL = Character.getInt("MaxFreeTeleportLevel", 0);
+
         MAX_NEWBIE_BUFF_LEVEL = Character.getInt("MaxNewbieBuffLevel", 0);
         DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
         PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "highfive").toLowerCase();
@@ -1153,9 +989,7 @@ public final class Config {
         GM_STARTUP_AUTO_LIST = General.getBoolean("GMStartupAutoList", false);
         GM_STARTUP_DIET_MODE = General.getBoolean("GMStartupDietMode", false);
         GM_ITEM_RESTRICTION = General.getBoolean("GMItemRestriction", true);
-        GM_SKILL_RESTRICTION = General.getBoolean("GMSkillRestriction", true);
         GM_TRADE_RESTRICTED_ITEMS = General.getBoolean("GMTradeRestrictedItems", false);
-        GM_RESTART_FIGHTING = General.getBoolean("GMRestartFighting", true);
         GM_ANNOUNCER_NAME = General.getBoolean("GMShowAnnouncerName", false);
         GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
         GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
@@ -1180,8 +1014,7 @@ public final class Config {
         UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
         DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
         AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
-        ENABLE_STORY_QUEST_BUFF_REWARD = General.getBoolean("StoryQuestRewardBuff", true);
-        MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
+
         FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 
         MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
@@ -1353,10 +1186,6 @@ public final class Config {
         RATE_QUEST_REWARD_MATERIAL = RatesSettings.getFloat("RateQuestRewardMaterial", 1);
         RATE_RAIDBOSS_POINTS = RatesSettings.getFloat("RateRaidbossPointsReward", 1);
 
-        RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 2);
-        VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
-        RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
-        RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
         RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
         if (RATE_KARMA_LOST == -1) {
             RATE_KARMA_LOST = getSettings(RateSettings.class).xp();
@@ -1469,33 +1298,7 @@ public final class Config {
         PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
         MAX_REPUTATION = PVPSettings.getInt("MaxReputation", 500);
         REPUTATION_INCREASE = PVPSettings.getInt("ReputationIncrease", 100);
-
-        // Load Olympiad config file (if exists)
-        final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
-
-        ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
-        ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 20);
-        ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 20);
-        ALT_OLY_WINNER_REWARD = parseItemsList(Olympiad.getString("AltOlyWinReward", ""));
-        ALT_OLY_LOSER_REWARD = parseItemsList(Olympiad.getString("AltOlyLoserReward", ""));
-
-        ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 45584);
-        ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
-        ALT_OLY_MARK_PER_POINT = Olympiad.getInt("AltOlyMarkPerPoint", 20);
-        ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
-        ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
-        ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
-
-        ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
-        ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
-
-        final String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
-        LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItems.length);
-        for (String id : olyRestrictedItems) {
-            LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
-        }
-        ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
-        ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 60);
+        ACTIVATE_PVP_BOSS_FLAG = PVPSettings.getBoolean("ActivatePvPBossFlag", false);
 
         // Grand bosses
         final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
@@ -1517,13 +1320,6 @@ public final class Config {
 
         ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 168);
         ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 48);
-
-        // Gracia Seeds
-        final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
-
-        // Seed of Destruction
-        SOD_TIAT_KILL_COUNT = GraciaSeedsSettings.getInt("TiatKillCountForNextState", 10);
-        SOD_STAGE_2_LENGTH = GraciaSeedsSettings.getLong("Stage2Length", 720) * 60000;
 
         try(var lines = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
             //@formatter:off
@@ -1615,6 +1411,7 @@ public final class Config {
         COMMUNITYBOARD_ENABLE_TELEPORTS = CommunityBoard.getBoolean("CommunityEnableTeleports", false);
         COMMUNITYBOARD_ENABLE_BUFFS = CommunityBoard.getBoolean("CommunityEnableBuffs", false);
         COMMUNITYBOARD_ENABLE_HEAL = CommunityBoard.getBoolean("CommunityEnableHeal", false);
+        COMMUNITYBOARD_ENABLE_CLEANUP = CommunityBoard.getBoolean("CommunityEnableCleanUp", false);
         COMMUNITYBOARD_ENABLE_PREMIUM = CommunityBoard.getBoolean("CommunityEnablePremium", false);
         COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP = CommunityBoard.getBoolean("CommunityEnableAutoHpMpCp", false);
         COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
@@ -1668,9 +1465,7 @@ public final class Config {
         MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
         final String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
         MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
-        for (String lang : allowed) {
-            MULTILANG_ALLOWED.add(lang);
-        }
+        Collections.addAll(MULTILANG_ALLOWED, allowed);
         if (!MULTILANG_ALLOWED.contains(MULTILANG_DEFAULT)) {
             LOGGER.warn("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
         }
@@ -1702,6 +1497,33 @@ public final class Config {
         }
         if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100) {
             PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
+        }
+
+        // Load AutoPotions config file (if exists)
+        final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
+        AUTO_POTIONS_ENABLED = AutoPotions.getBoolean("AutoPotionsEnabled", false);
+        AUTO_POTIONS_IN_OLYMPIAD = AutoPotions.getBoolean("AutoPotionsInOlympiad", false);
+        AUTO_POTION_MIN_LVL = AutoPotions.getInt("AutoPotionMinimumLevel", 1);
+        AUTO_CP_ENABLED = AutoPotions.getBoolean("AutoCpEnabled", true);
+        AUTO_HP_ENABLED = AutoPotions.getBoolean("AutoHpEnabled", true);
+        AUTO_MP_ENABLED = AutoPotions.getBoolean("AutoMpEnabled", true);
+        AUTO_CP_PERCENTAGE = AutoPotions.getInt("AutoCpPercentage", 70);
+        AUTO_HP_PERCENTAGE = AutoPotions.getInt("AutoHpPercentage", 70);
+        AUTO_MP_PERCENTAGE = AutoPotions.getInt("AutoMpPercentage", 70);
+        AUTO_CP_ITEM_IDS = new ArrayList<>();
+        for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(","))
+        {
+            AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
+        }
+        AUTO_HP_ITEM_IDS = new ArrayList<>();
+        for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(","))
+        {
+            AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
+        }
+        AUTO_MP_ITEM_IDS = new ArrayList<>();
+        for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(","))
+        {
+            AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
 
         // Load PvpAnnounce config file (if exists)
@@ -1866,7 +1688,6 @@ public final class Config {
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_ITEM_PET_SUMMON, "ItemPetSummon", 16);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_HERO_VOICE, "HeroVoice", 100);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_GLOBAL_CHAT, "GlobalChat", 5);
-        loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SUBCLASS, "Subclass", 20);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_DROP_ITEM, "DropItem", 10);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SERVER_BYPASS, "ServerBypass", 5);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MULTISELL, "MultiSell", 1);

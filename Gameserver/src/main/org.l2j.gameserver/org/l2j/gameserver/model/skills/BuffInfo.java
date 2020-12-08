@@ -19,19 +19,21 @@
 package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.EffectList;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectTaskInfo;
 import org.l2j.gameserver.model.effects.EffectTickTask;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.WorldTimeController;
 
 import java.util.ArrayList;
@@ -40,6 +42,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
@@ -48,10 +51,10 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  * Complex DTO that holds all the information for a given buff (or debuff or dance/song) set of effects issued by an skill.
  *
  * @author Zoey76
+ * @author JoeAlisson
  */
 public final class BuffInfo {
 
-    private final int _effectorObjectId;
     private final Creature _effector;
     private final Creature _effected;
     private final Skill _skill;
@@ -86,18 +89,7 @@ public final class BuffInfo {
      */
     private volatile boolean _isInUse = true;
 
-    /**
-     * Buff Info constructor.
-     *
-     * @param effector         the effector
-     * @param effected         the effected
-     * @param skill            the skill
-     * @param hideStartMessage hides start message
-     * @param item
-     * @param option
-     */
     public BuffInfo(Creature effector, Creature effected, Skill skill, boolean hideStartMessage, Item item, Options option) {
-        _effectorObjectId = (effector != null) ? effector.getObjectId() : 0;
         _effector = effector;
         _effected = effected;
         _skill = skill;
@@ -270,7 +262,7 @@ public final class BuffInfo {
      * @return the object id of the effector.
      */
     public int getEffectorObjectId() {
-        return _effectorObjectId;
+        return Util.zeroIfNullOrElse(_effector, WorldObject::getObjectId);
     }
 
     /**
@@ -335,8 +327,8 @@ public final class BuffInfo {
             if (effect.getTicks() > 0) {
                 // The task for the effect ticks.
                 final EffectTickTask effectTask = new EffectTickTask(this, effect);
-                final ScheduledFuture<?> scheduledFuture = ThreadPool.scheduleAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
-                // Adds the task for ticking.
+                var effectTickRatio = getSettings(CharacterSettings.class).effectTickRatio() * effect.getTicks();
+                final ScheduledFuture<?> scheduledFuture = ThreadPool.scheduleAtFixedRate(effectTask, effectTickRatio, effectTickRatio);
                 addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
             }
         }
@@ -412,5 +404,9 @@ public final class BuffInfo {
 
     public boolean isAbnormalType(AbnormalType type) {
         return _skill.getAbnormalType() == type;
+    }
+
+    public int getSkillId() {
+        return _skill.getId();
     }
 }

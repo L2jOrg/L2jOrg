@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.rank;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -29,15 +30,15 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExRankingCharHistory extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
         var history = RankEngine.getInstance().getPlayerHistory(client.getPlayer());
 
-        writeId(ServerExPacketId.EX_RANKING_CHAR_HISTORY);
-        writeInt(history.size());
+        writeId(ServerExPacketId.EX_RANKING_CHAR_HISTORY, buffer );
+        buffer.writeInt(history.size());
         for (var data : history) {
-            writeInt(data.getDate());
-            writeInt(data.getRank());
-            writeLong(data.getExp());
+            buffer.writeInt(data.getDate());
+            buffer.writeInt(data.getRank());
+            buffer.writeLong(data.getExp());
         }
     }
 }

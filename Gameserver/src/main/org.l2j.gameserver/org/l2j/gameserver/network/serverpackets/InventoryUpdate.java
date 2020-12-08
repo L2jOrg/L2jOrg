@@ -18,8 +18,9 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -37,17 +38,13 @@ public class InventoryUpdate extends AbstractInventoryUpdate {
         super(item);
     }
 
-    public InventoryUpdate(List<ItemInfo> items) {
-        super(items);
-    }
-
     public InventoryUpdate(Collection<Item> items) {
         super(items);
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.INVENTORY_UPDATE);
-        writeItems();
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.INVENTORY_UPDATE, buffer );
+        writeItems(buffer);
     }
 }

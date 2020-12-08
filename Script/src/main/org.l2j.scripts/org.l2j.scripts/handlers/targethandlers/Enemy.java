@@ -28,125 +28,78 @@ import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.MathUtil;
 
-import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isDoor;
 
 /**
  * Target enemy or ally if force attacking.
  * @author Nik
  */
-public class Enemy implements ITargetTypeHandler
-{
-	@Override
-	public Enum<TargetType> getTargetType()
-	{
-		return TargetType.ENEMY;
-	}
+public class Enemy implements ITargetTypeHandler {
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
-	{
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage) {
 
-		if (!isCreature(selectedTarget))
-		{
-			return null;
-		}
-		
-		final Creature target = (Creature) selectedTarget;
-		
-		// You cannot attack yourself even with force.
-		if (activeChar == target)
-		{
-			if (sendMessage)
-			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+		if(creature == currentTarget || !(currentTarget instanceof Creature target) || target.isDead()) {
+			if(sendMessage) {
+				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-			
 			return null;
 		}
-		
-		// You cannot attack dead targets.
-		if (target.isDead())
-		{
-			if (sendMessage)
-			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+
+		if (isDoor(target) && !target.isAutoAttackable(creature)) {
+			if (sendMessage) {
+				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-			
 			return null;
 		}
-		
-		// Doors do not care about force attack.
-		if (isDoor(target) && !target.isAutoAttackable(activeChar))
-		{
-			if (sendMessage)
-			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-			}
-			
-			return null;
-		}
-		
-		// Monsters can attack/be attacked anywhere. Players can attack creatures that aren't autoattackable with force attack.
-		if (target.isAutoAttackable(activeChar) || forceUse)
-		{
+
+		if (target.isAutoAttackable(creature) || forceUse) {
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
-			if (dontMove)
-			{
-				if (!MathUtil.isInsideRadius2D(activeChar, target, skill.getCastRange()))
-				{
-					if (sendMessage)
-					{
-						activeChar.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
+			if (dontMove) {
+				if (!MathUtil.isInsideRadius3D(creature, target, skill.getCastRange())) {
+					if (sendMessage) {
+						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 					}
-					
 					return null;
 				}
 			}
-			
-			// Geodata check when character is within range.
-			if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
-			{
-				if (sendMessage)
-				{
-					activeChar.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+
+			if (!GeoEngine.getInstance().canSeeTarget(creature, target)) {
+				if (sendMessage) {
+					creature.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				}
-				
 				return null;
 			}
 			
 			// Skills with this target type cannot be used by playables on playables in peace zone, but can be used by and on NPCs.
-			if (target.isInsidePeaceZone(activeChar))
-			{
-				if (sendMessage)
-				{
-					activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE);
+			if (target.isInsidePeaceZone(creature)) {
+				if (sendMessage) {
+					creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE);
 				}
-				
 				return null;
 			}
-			
+
 			// Is this check still actual?
-			if (forceUse && (target.getActingPlayer() != null) && (activeChar.getActingPlayer() != null))
-			{
-				if (activeChar.getActingPlayer().isSiegeFriend(target)) {
-					if (sendMessage)
-					{
-						activeChar.sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
-					}
-					
-					return null;
+			if (forceUse && nonNull(creature.getActingPlayer()) && creature.getActingPlayer().isSiegeFriend(target)) {
+				if (sendMessage) {
+					creature.sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 				}
+				return null;
 			}
 			
 			return target;
 		}
 		
-		if (sendMessage)
-		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+		if (sendMessage) {
+			creature.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
-		
 		return null;
+	}
+
+	@Override
+	public Enum<TargetType> getTargetType()
+	{
+		return TargetType.ENEMY;
 	}
 }

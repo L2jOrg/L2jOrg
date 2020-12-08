@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.friend;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -35,11 +36,11 @@ public class FriendRemove extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.FRIEND_REMOVE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.FRIEND_REMOVE, buffer );
 
-        writeInt(_responce);
-        writeString(_charName);
+        buffer.writeInt(_responce);
+        buffer.writeString(_charName);
     }
 
 }

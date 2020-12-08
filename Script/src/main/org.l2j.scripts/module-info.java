@@ -254,7 +254,6 @@ open module org.l2j.scripts {
                 OpExistNpcSkillCondition.Factory,
                 OpHaveSummonSkillCondition.Factory,
                 OpHomeSkillCondition.Factory,
-                OpMainjobSkillCondition.Factory,
                 OpNeedAgathionSkillCondition.Factory,
                 KillerSkillCondition.Factory,
                 OpPledgeSkillCondition.Factory,
@@ -330,6 +329,7 @@ open module org.l2j.scripts {
                 QueenAnt,
                 Zaken,
             org.l2j.scripts.ai.bosses.LimitBarrier,
+            org.l2j.scripts.ai.bosses.RaidZone,
 
 
             org.l2j.scripts.ai.others.ArenaManager.ArenaManager,
@@ -346,6 +346,7 @@ open module org.l2j.scripts {
             org.l2j.scripts.ai.others.ClassMaster.ClassMaster,
             org.l2j.scripts.ai.others.DimensionalMerchant.DimensionalMerchant,
             org.l2j.scripts.ai.others.MonumentOfHeroes.MonumentOfHeroes,
+            org.l2j.scripts.ai.others.OlyManager.OlympiadManager,
             org.l2j.scripts.ai.others.guide.NewbieGuide,
             org.l2j.scripts.ai.others.OlyBuffer.OlyBuffer,
             org.l2j.scripts.ai.others.Proclaimer.Proclaimer,
@@ -444,7 +445,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.admincommandhandlers.AdminDisconnect,
             org.l2j.scripts.handlers.admincommandhandlers.AdminDoorControl,
             org.l2j.scripts.handlers.admincommandhandlers.AdminEffects,
-            org.l2j.scripts.handlers.admincommandhandlers.AdminElement,
             org.l2j.scripts.handlers.admincommandhandlers.AdminEventEngine,
             org.l2j.scripts.handlers.admincommandhandlers.AdminEvents,
             org.l2j.scripts.handlers.admincommandhandlers.AdminExpSp,
@@ -454,7 +454,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.admincommandhandlers.AdminGm,
             org.l2j.scripts.handlers.admincommandhandlers.AdminGmChat,
             org.l2j.scripts.handlers.admincommandhandlers.AdminGmSpeed,
-            org.l2j.scripts.handlers.admincommandhandlers.AdminGraciaSeeds,
             org.l2j.scripts.handlers.admincommandhandlers.AdminGrandBoss,
             org.l2j.scripts.handlers.admincommandhandlers.AdminHeal,
             org.l2j.scripts.handlers.admincommandhandlers.AdminHide,
@@ -470,7 +469,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.admincommandhandlers.AdminMessages,
             org.l2j.scripts.handlers.admincommandhandlers.AdminMissingHtmls,
             org.l2j.scripts.handlers.admincommandhandlers.AdminMobGroup,
-            org.l2j.scripts.handlers.admincommandhandlers.AdminOlympiad,
             org.l2j.scripts.handlers.admincommandhandlers.AdminPcCafePoints,
             org.l2j.scripts.handlers.admincommandhandlers.AdminPcCondOverride,
             org.l2j.scripts.handlers.admincommandhandlers.AdminPetition,
@@ -503,10 +501,11 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.bypasshandlers.Link,
             org.l2j.scripts.handlers.bypasshandlers.Multisell,
             org.l2j.scripts.handlers.bypasshandlers.Observation,
+            org.l2j.scripts.handlers.bypasshandlers.OlympiadHandler,
+            org.l2j.scripts.handlers.bypasshandlers.MatchHandler,
             org.l2j.scripts.handlers.bypasshandlers.PlayerHelp,
             org.l2j.scripts.handlers.bypasshandlers.PrivateWarehouse,
             org.l2j.scripts.handlers.bypasshandlers.QuestLink,
-            org.l2j.scripts.handlers.bypasshandlers.ReleaseAttribute,
             org.l2j.scripts.handlers.bypasshandlers.SkillList,
             org.l2j.scripts.handlers.bypasshandlers.SupportBlessing,
             org.l2j.scripts.handlers.bypasshandlers.TerritoryStatus,
@@ -559,7 +558,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.itemhandlers.Book,
             org.l2j.scripts.handlers.itemhandlers.Bypass,
             org.l2j.scripts.handlers.itemhandlers.Calculator,
-            org.l2j.scripts.handlers.itemhandlers.ChangeAttributeCrystal,
             org.l2j.scripts.handlers.itemhandlers.CharmOfCourage,
             org.l2j.scripts.handlers.itemhandlers.Elixir,
             org.l2j.scripts.handlers.itemhandlers.EnchantScrolls,
@@ -611,6 +609,7 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.voicedcommandhandlers.ChatAdmin,
             org.l2j.scripts.handlers.voicedcommandhandlers.Banking,
             org.l2j.scripts.handlers.voicedcommandhandlers.ChangePassword,
+            org.l2j.scripts.handlers.voicedcommandhandlers.AutoPotion,
 
             //custom
             org.l2j.scripts.custom.SellBuff.SellBuff;
@@ -746,7 +745,9 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q10988_Conspiracy.Q10988_Conspiracy,
              org.l2j.scripts.quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
              org.l2j.scripts.quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction,
-             org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets;
+             org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets,
+             org.l2j.scripts.quests.Q00630_PirateTreasureHunt.Q00630_PirateTreasureHunt,
+             org.l2j.scripts.quests.Q10871_DeathToThePirateKing.Q10871_DeathToThePirateKing;
 
 
     provides org.l2j.gameserver.engine.mission.MissionHandlerFactory

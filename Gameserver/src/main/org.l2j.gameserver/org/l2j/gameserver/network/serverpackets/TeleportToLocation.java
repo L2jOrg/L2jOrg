@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -38,16 +39,16 @@ public final class TeleportToLocation extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.TELEPORT_TO_LOCATION);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.TELEPORT_TO_LOCATION, buffer );
 
-        writeInt(_targetObjId);
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(0x00); // isValidation ??
-        writeInt(_heading);
-        writeInt(0x00); // Unknown
+        buffer.writeInt(_targetObjId);
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
+        buffer.writeInt(0x00); // isValidation ??
+        buffer.writeInt(_heading);
+        buffer.writeInt(0x00); // Unknown
     }
 
 }

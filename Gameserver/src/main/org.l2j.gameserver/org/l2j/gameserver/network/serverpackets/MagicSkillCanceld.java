@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -29,10 +30,10 @@ public final class MagicSkillCanceld extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MAGIC_SKILL_CANCELED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MAGIC_SKILL_CANCELED, buffer );
 
-        writeInt(_objectId);
+        buffer.writeInt(_objectId);
     }
 
 }

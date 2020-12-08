@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -249,25 +250,25 @@ public class ExShowScreenMessage extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_SCREEN_MESSAGE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_SCREEN_MESSAGE, buffer );
 
-        writeInt(_type);
-        writeInt(_sysMessageId);
-        writeInt(_position);
-        writeInt(_unk1);
-        writeInt(_size);
-        writeInt(_unk2);
-        writeInt(_unk3);
-        writeInt(_effect ? 0x01 : 0x00);
-        writeInt(_time);
-        writeInt(_fade ? 0x01 : 0x00);
-        writeInt(_npcString);
+        buffer.writeInt(_type);
+        buffer.writeInt(_sysMessageId);
+        buffer.writeInt(_position);
+        buffer.writeInt(_unk1);
+        buffer.writeInt(_size);
+        buffer.writeInt(_unk2);
+        buffer.writeInt(_unk3);
+        buffer.writeInt(_effect ? 0x01 : 0x00);
+        buffer.writeInt(_time);
+        buffer.writeInt(_fade ? 0x01 : 0x00);
+        buffer.writeInt(_npcString);
         if (_npcString == -1) {
-            writeString(_text);
+            buffer.writeString(_text);
         } else if (_parameters != null) {
             for (String s : _parameters) {
-                writeString(s);
+                buffer.writeString(s);
             }
         }
     }

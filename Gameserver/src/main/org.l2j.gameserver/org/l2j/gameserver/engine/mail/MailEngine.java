@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.container.Attachment;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2j.gameserver.network.serverpackets.ExUnReadMailCount;
@@ -136,8 +136,7 @@ public final class MailEngine {
         mails.put(mail.getId(), mail);
 
         doIfNonNull(World.getInstance().findPlayer(mail.getReceiver()), receiver -> {
-            receiver.sendPacket(ExNoticePostArrived.valueOf(true), new ExUnReadMailCount((int) getUnreadCount(receiver)));
-            receiver.sendPacket();
+            receiver.sendPackets(ExNoticePostArrived.valueOf(true), new ExUnReadMailCount((int) getUnreadCount(receiver)));
         });
 
         ThreadPool.schedule(new MessageDeletionTask(mail.getId()), mail.getExpiration() - System.currentTimeMillis());
@@ -201,7 +200,7 @@ public final class MailEngine {
                 LOGGER.warn("Error adding attachment for player {} (newitem == null)", sender);
                 continue;
             }
-            newItem.setItemLocation(newItem.getItemLocation(), mail.getId());
+            newItem.changeItemLocation(newItem.getItemLocation(), mail.getId());
 
             if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
                 playerIU.addModifiedItem(oldItem);

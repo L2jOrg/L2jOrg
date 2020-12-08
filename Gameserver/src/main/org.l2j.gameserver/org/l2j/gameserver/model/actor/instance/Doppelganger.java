@@ -30,7 +30,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -124,10 +123,6 @@ public class Doppelganger extends Npc {
 
         // Prevents the double spam of system messages, if the target is the owning player.
         if (target.getObjectId() != getSummoner().getObjectId()) {
-            if (getActingPlayer().isInOlympiadMode() && GameUtils.isPlayer(target) && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == getActingPlayer().getOlympiadGameId())) {
-                OlympiadGameManager.getInstance().notifyCompetitorDamage(getSummoner().getActingPlayer(), damage);
-            }
-
             final SystemMessage sm;
 
             if ((target.isHpBlocked() && !GameUtils.isNpc(target)) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !getActingPlayer().isAffected(EffectFlag.FACEOFF))) {
@@ -169,9 +164,9 @@ public class Doppelganger extends Npc {
     }
 
     @Override
-    public void sendPacket(ServerPacket... packets) {
+    public void sendPacket(ServerPacket packet) {
         if (getSummoner() != null) {
-            getSummoner().sendPacket(packets);
+            getSummoner().sendPacket(packet);
         }
     }
 

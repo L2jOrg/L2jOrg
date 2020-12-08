@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
@@ -42,11 +43,11 @@ public class ChangePassword extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client) {
-		writeByte((byte)0x08);
-		writeString(_account);
-		writeString(_oldPass);
-		writeString(_newPass);
-		writeString(_hwid);
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x08);
+		buffer.writeString(_account);
+		buffer.writeString(_oldPass);
+		buffer.writeString(_newPass);
+		buffer.writeString(_hwid);
 	}
 }

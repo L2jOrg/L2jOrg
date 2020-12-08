@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -52,15 +53,15 @@ public class ExPCCafePointInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PCCAFE_POINT_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PCCAFE_POINT_INFO, buffer );
 
-        writeInt(_points); // num points
-        writeInt(_mAddPoint); // points inc display
-        writeByte((byte) _mPeriodType); // period(0=don't show window,1=acquisition,2=use points)
-        writeInt(_remainTime); // period hours left
-        writeByte((byte) _pointType); // points inc display color(0=yellow, 1=cyan-blue, 2=red, all other black)
-        writeInt(_time * 3); // value is in seconds * 3
+        buffer.writeInt(_points); // num points
+        buffer.writeInt(_mAddPoint); // points inc display
+        buffer.writeByte(_mPeriodType); // period(0=don't show window,1=acquisition,2=use points)
+        buffer.writeInt(_remainTime); // period hours left
+        buffer.writeByte(_pointType); // points inc display color(0=yellow, 1=cyan-blue, 2=red, all other black)
+        buffer.writeInt(_time * 3); // value is in seconds * 3
     }
 
 }

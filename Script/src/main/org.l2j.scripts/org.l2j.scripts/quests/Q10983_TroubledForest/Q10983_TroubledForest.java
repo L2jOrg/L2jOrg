@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -38,7 +39,8 @@ import static java.util.Objects.isNull;
 /**
  * Troubled Forest (10983)
  * @author RobikBobik
- * @Notee: Based on NA server September 2019
+ * @Notee: Debugging by Bru7aLMike. // Based on EU-classic server November 2020
+ * TODO: OnKill optimisation
  */
 public class Q10983_TroubledForest extends Quest
 {
@@ -57,7 +59,7 @@ public class Q10983_TroubledForest extends Quest
 	// Misc
 	private static final int MAX_LEVEL = 20;
 	private static final String KILL_COUNT_VAR = "KillCount";
-	
+
 	public Q10983_TroubledForest()
 	{
 		super(10983);
@@ -67,14 +69,14 @@ public class Q10983_TroubledForest extends Quest
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_2_20_TROUBLED_FOREST);
 	}
-	
+
 	@Override
 	public boolean checkPartyMember(Player member, Npc npc)
 	{
 		final QuestState qs = getQuestState(member, false);
 		return ((qs != null) && qs.isStarted());
 	}
-	
+
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
@@ -83,7 +85,7 @@ public class Q10983_TroubledForest extends Quest
 		{
 			return null;
 		}
-		
+
 		String htmltext = null;
 		switch (event)
 		{
@@ -115,32 +117,71 @@ public class Q10983_TroubledForest extends Quest
 		}
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onKill(Npc npc, Player killer, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if (player.getParty() != null)
 		{
-			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < 20)
+			for (Player partyMember : player.getParty().getMembers())
 			{
-				qs.set(KILL_COUNT_VAR, killCount);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
-				
-			}
-			else
-			{
-				qs.setCond(2, true);
-				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage("You hunted all monsters.#Use the Scroll of Escape in you inventory to return to Trader Herbiel.", 5000));
-				giveItems(killer, SOE_TO_HERBIEL);
+				if (MathUtil.isInsideRadius3D(npc, player, 1200))
+				{
+					final QuestState qs = getQuestState(partyMember, false);
+					if ((qs != null) && qs.isCond(1))
+					{
+						final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
+						if (killCount <= 19)
+						{
+							qs.set(KILL_COUNT_VAR, killCount);
+							playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							sendNpcLogList(partyMember);
+						}
+						else
+						{
+							qs.setCond(2, true);
+							qs.unset(KILL_COUNT_VAR);
+							partyMember.sendPacket(new ExShowScreenMessage("You hunted all monsters.#Use the Scroll of Escape from your inventory to return to Trader Herbiel.", 5000));
+							giveItems(partyMember, SOE_TO_HERBIEL);
+						}
+					}
+
+				}
+				else if (!MathUtil.isInsideRadius3D(npc, player, 1200))
+				{
+					return null;
+				}
 			}
 		}
-		return super.onKill(npc, killer, isSummon);
+		else
+		{
+			final QuestState qs = getQuestState(player, false);
+			if (qs == null)
+			{
+				return null;
+			}
+			else if ((qs != null) && qs.isCond(1))
+			{
+				final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
+				if (killCount <= 19)
+				{
+					qs.set(KILL_COUNT_VAR, killCount);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					sendNpcLogList(player);
+				}
+				else
+				{
+					qs.setCond(2, true);
+					qs.unset(KILL_COUNT_VAR);
+					player.sendPacket(new ExShowScreenMessage("You hunted all monsters.#Use the Scroll of Escape from your inventory to return to Trader Herbiel.", 5000));
+					giveItems(player, SOE_TO_HERBIEL);
+				}
+			}
+
+		}
+		return super.onKill(npc, player, isSummon);
 	}
-	
+
 	@Override
 	public Set<NpcLogListHolder> getNpcLogList(Player player)
 	{
@@ -153,7 +194,7 @@ public class Q10983_TroubledForest extends Quest
 		}
 		return super.getNpcLogList(player);
 	}
-	
+
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{

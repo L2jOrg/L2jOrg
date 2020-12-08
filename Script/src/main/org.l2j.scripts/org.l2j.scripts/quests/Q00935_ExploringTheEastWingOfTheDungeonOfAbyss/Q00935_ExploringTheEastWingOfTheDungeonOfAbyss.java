@@ -20,86 +20,59 @@
 package org.l2j.scripts.quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
 
 import org.l2j.gameserver.enums.QuestType;
+import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
+import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
- * @author QuangNguyen
+ *  Complete overhaul by Bru7aLMike!
+ *  Original @author QuangNguyen.
  */
 public class Q00935_ExploringTheEastWingOfTheDungeonOfAbyss extends Quest
 {
-	// NPCs
+	private static final ItemHolder IMAGE_OF_EVIL = new ItemHolder(90009, 1);
+	private static final ItemHolder DIMENSIONAL_GIFT = new ItemHolder(90136, 1);
+
 	private static final int IRIS = 31776;
 	private static final int ROSAMMY = 31777;
-	// Monsters
-	public final int MERTT = 21644;
-	public final int DUHT = 21645;
-	public final int PRIZT = 21646;
-	public final int KOVART = 21647;
-	// Items
-	public final ItemHolder OSKZLA = new ItemHolder(90009, 1);
-	public final ItemHolder POD = new ItemHolder(90136, 1);
-	
-	public Q00935_ExploringTheEastWingOfTheDungeonOfAbyss()
-	{
+	private static final int WANDERING_DEAD = 21644;
+	private static final int WANDERING_SPIRIT = 21645;
+	private static final int WANDERING_GHOST = 21646;
+	private static final int WANDERING_EVIL = 21647;
+
+	public Q00935_ExploringTheEastWingOfTheDungeonOfAbyss() {
 		super(935);
 		addStartNpc(IRIS, ROSAMMY);
 		addTalkId(IRIS, ROSAMMY);
-		addKillId(MERTT, DUHT, PRIZT, KOVART);
-		registerQuestItems(OSKZLA.getId());
+		addKillId(WANDERING_DEAD, WANDERING_SPIRIT, WANDERING_GHOST, WANDERING_EVIL);
+		registerQuestItems(IMAGE_OF_EVIL.getId());
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
 		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
-		{
+		if (qs == null) {
 			return null;
 		}
 		
 		String htmltext = null;
-		switch (event)
-		{
-			case "31776-01.htm":
-			case "31776-02.htm":
-			case "31776-03.htm":
-			case "31777-01.htm":
-			case "31777-02.htm":
-			case "31777-03.htm":
-			{
-				htmltext = event;
-				break;
-			}
-			
-			case "31776-04.htm":
-			{
-				if (player.getLevel() >= 45)
-				{
+		switch (event) {
+			case "31776-01.htm", "31776-02.htm", "31776-03.htm", "31777-01.htm", "31777-02.htm", "31777-03.htm" -> htmltext = event;
+			case "31776-04.htm", "31777-04.htm" -> {
+				if ((player.getLevel() >= 45) && (player.getLevel() <= 49)) {
 					qs.startQuest();
 					htmltext = event;
 				}
-				break;
 			}
-			case "31777-04.htm":
-			{
-				if (player.getLevel() >= 45)
-				{
-					qs.startQuest();
-					htmltext = event;
-				}
-				break;
-			}
-			case "end.htm":
-			{
+			case "end.htm" -> {
 				player.addExpAndSp(250000, 7700);
-				rewardItems(player, POD);
+				rewardItems(player, DIMENSIONAL_GIFT);
 				qs.exitQuest(QuestType.DAILY, true);
-				break;
 			}
 		}
 		
@@ -107,123 +80,70 @@ public class Q00935_ExploringTheEastWingOfTheDungeonOfAbyss extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, Player talker)
-	{
+	public String onTalk(Npc npc, Player talker) {
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
-		switch (qs.getState())
-		{
-			case State.CREATED:
-			{
-				htmltext = (talker.getLevel() < 45) ? "nolvl.htm" : "31776-01.htm";
-				break;
-			}
-			case State.STARTED:
-			{
-				if (npc.getId() == IRIS)
-				{
-					switch (qs.getCond())
-					{
-						case 0:
-						{
-							if ((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 49))
-							{
+		switch (qs.getState()) {
+			case State.CREATED -> htmltext = (talker.getLevel() < 45) ? "nolvl.htm" : "31776-01.htm";
+			case State.STARTED -> {
+				if (npc.getId() == IRIS) {
+					switch (qs.getCond()) {
+						case 0 -> {
+							if ((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 49)) {
 								htmltext = "31776-01.htm";
-							}
-							else
-							{
+							} else {
 								htmltext = "31776-01a.htm";
 							}
-							break;
 						}
-						case 1:
-						{
-							htmltext = "31776-04.htm";
-							break;
-						}
-						case 2:
-						{
-							htmltext = "31776-05.htm";
-							break;
-						}
+						case 1 -> htmltext = "31776-04.htm";
+						case 2 -> htmltext = "31776-05.htm";
 					}
-					break;
-				}
-				else if (npc.getId() == ROSAMMY)
-				{
-					switch (qs.getCond())
-					{
-						case 0:
-						{
-							if ((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 49))
-							{
+				} else if (npc.getId() == ROSAMMY) {
+					switch (qs.getCond()) {
+						case 0 -> {
+							if ((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 49)) {
 								htmltext = "31777-01.htm";
 								qs.startQuest();
-							}
-							else
-							{
+							} else {
 								htmltext = "31777-01a.htm";
 							}
-							break;
 						}
-						case 1:
-						{
-							htmltext = "31777-04.htm";
-							break;
-						}
-						case 2:
-						{
-							htmltext = "31777-05.htm";
-							break;
+						case 1 -> htmltext = "31777-04.htm";
+						case 2 -> htmltext = "31777-05.htm";
 						}
 					}
 				}
-				break;
-			}
-			case State.COMPLETED:
-			{
-				if (qs.isNowAvailable())
-				{
+			case State.COMPLETED -> {
+				if (qs.isNowAvailable()) {
 					qs.setState(State.CREATED);
-					if ((npc.getId() == IRIS) && (qs.getPlayer().getLevel() < 45))
-					{
+					if ((npc.getId() == IRIS) && (((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 49)))) {
 						htmltext = "31776-01.htm";
-					}
-					else if ((npc.getId() == ROSAMMY) && (qs.getPlayer().getLevel() < 45))
-					{
+					} else if ((npc.getId() == ROSAMMY) && (((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 49)))) {
 						htmltext = "31777-01.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "nolvl.htm";
 					}
-				}
-				else
-				{
+				} else {
 					htmltext = getAlreadyCompletedMsg(talker);
 				}
-				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(Npc npc, Player killer, boolean isSummon)
-	{
+	public String onKill(Npc npc, Player killer, boolean isSummon) {
 		final QuestState qs = getQuestState(killer, false);
-		if (qs.getCond() == 1)
-		{
-			if (getQuestItemsCount(killer, OSKZLA.getId()) < 50)
-			{
-				giveItems(killer, OSKZLA);
+		if (qs.getCond() == 1) {
+			if (getQuestItemsCount(killer, IMAGE_OF_EVIL.getId()) < 50) {
+				giveItems(killer, IMAGE_OF_EVIL);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if (getQuestItemsCount(killer, OSKZLA.getId()) >= 50)
-			{
+			else if (getQuestItemsCount(killer, IMAGE_OF_EVIL.getId()) >= 50) {
 				qs.setCond(2);
+				killer.sendPacket(new ExShowScreenMessage("Iris and Rosammy are awaiting your return!", 5000));
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 }

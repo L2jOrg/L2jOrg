@@ -54,7 +54,7 @@ public class ValidatePosition extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if ((player == null) || player.isTeleporting() || player.inObserverMode()) {
+        if ((player == null) || player.isTeleporting() || player.isInObserverMode()) {
             return;
         }
 
