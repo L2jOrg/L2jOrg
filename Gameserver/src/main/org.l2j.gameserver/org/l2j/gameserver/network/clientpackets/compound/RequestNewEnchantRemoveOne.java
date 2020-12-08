@@ -65,7 +65,9 @@ public class RequestNewEnchantRemoveOne extends ClientPacket {
             return;
         }
         request.setItemOne(0);
-
+        if (request.getItemTwo() == null) {
+            activeChar.removeRequest(request.getClass());
+        }
         client.sendPacket(ExEnchantOneRemoveOK.STATIC_PACKET);
     }
 }
