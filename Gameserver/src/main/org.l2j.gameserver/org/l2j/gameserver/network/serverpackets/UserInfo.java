@@ -380,8 +380,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         }
         
         if(containsMask(UserInfoType.UNK)) {
-          writeShort(0);
-          writeSizedString(""); // some string or craft points
+            buffer.writeShort(0);
+            buffer.writeSizedString(""); // some string or craft points
         }
     }
 

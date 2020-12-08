@@ -48,7 +48,7 @@ import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.craft.ExRequestCraftRandom;
+//import org.l2j.gameserver.network.clientpackets.craft.ExRequestCraftRandom;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
@@ -262,7 +262,7 @@ public class EnterWorld extends ClientPacket {
 
         client.sendPacket(new SkillCoolTime(player));
         client.sendPacket(new ExVoteSystemInfo(player));
-        client.sendPacket(new ReceiveCraftInfo(player));
+        //client.sendPacket(new ReceiveCraftInfo(player));
 
 
         if (player.getClanJoinExpiryTime() > System.currentTimeMillis()) {
