@@ -39,11 +39,20 @@ public class ExRankList extends ServerPacket {
     private final int race;
     private final byte group;
     private final byte scope;
+    private final List<RankData> rankers;
 
-    public ExRankList(byte group, byte scope, int race) {
+    public ExRankList(Player player, byte group, byte scope, int race) {
         this.group = group;
         this.scope = scope;
         this.race = race;
+
+        rankers = switch (group) {
+            case 0 -> listServerRankers(player, scope);
+            case 1 -> listRaceRankers(player, scope, race);
+            case 2 -> listClanRankers(player);
+            case 3 -> listFriendsRankers(player);
+            default -> Collections.emptyList();
+        };
     }
 
     @Override
@@ -52,14 +61,6 @@ public class ExRankList extends ServerPacket {
         buffer.writeByte(group);
         buffer.writeByte(scope);
         buffer.writeInt(race);
-
-        List<RankData> rankers = switch (group) {
-            case 0 -> listServerRankers(client.getPlayer(), scope);
-            case 1 -> listRaceRankers(client.getPlayer(), scope, race);
-            case 2 -> listClanRankers(client.getPlayer());
-            case 3 -> listFriendsRankers(client.getPlayer());
-            default -> Collections.emptyList();
-        };
 
         buffer.writeInt(rankers.size());
 
@@ -77,14 +78,14 @@ public class ExRankList extends ServerPacket {
 
     private List<RankData> listRaceRankers(Player player, byte scope, int race) {
         if(scope == 0) {
-            return RankEngine.getInstance().getRaceRankers(race);
+            return RankEngine.getInstance().getTopRaceRankers(race);
         }
         return RankEngine.getInstance().getRaceRankersByPlayer(player);
     }
 
     private List<RankData> listServerRankers(Player player, byte scope) {
         if(scope == 0) {
-            return RankEngine.getInstance().getRankers();
+            return RankEngine.getInstance().getTopRankers();
         }
         return RankEngine.getInstance().getRankersByPlayer(player);
     }

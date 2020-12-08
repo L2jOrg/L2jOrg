@@ -34,11 +34,11 @@ public interface RankDAO extends DAO<RankData> {
     @Query("TRUNCATE rankers_snapshot")
     void clearSnapshot();
 
-    @Query("INSERT INTO rankers_snapshot SELECT id, exp, `rank`, rank_race FROM rankers LIMIT 150")
+    @Query("INSERT INTO rankers_snapshot SELECT id, exp, `rank`, rank_race FROM rankers")
     void updateSnapshot();
 
-    @Query("SELECT * FROM rankers")
-    List<RankData> findAll();
+    @Query("SELECT * FROM rankers LIMIT 150")
+    List<RankData> findTopRankers();
 
     @Query("SELECT * FROM rankers_snapshot")
     IntMap<RankData> findAllSnapshot();
@@ -46,8 +46,8 @@ public interface RankDAO extends DAO<RankData> {
     @Query("SELECT * FROM rankers  WHERE id = :playerId:")
     RankData findPlayerRank(int playerId);
 
-    @Query("SELECT * FROM rankers_race WHERE race = :race:")
-    List<RankData> findAllByRace(int race);
+    @Query("SELECT * FROM rankers_race WHERE race = :race: LIMIT 100")
+    List<RankData> findTopByRace(int race);
 
     @Query("SELECT * FROM rankers WHERE clan_id = :clanId:")
     List<RankData> findByClan(int clanId);

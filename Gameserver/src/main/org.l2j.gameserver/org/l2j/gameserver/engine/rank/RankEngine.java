@@ -89,34 +89,56 @@ public class RankEngine {
         player.setRank(rankData.getRank());
         player.setRankRace(rankData.getRankRace());
 
+        addRankersSkill(player);
+        addRaceRankersSkill(player);
+
+        if(player.getRank() == 1 || player.getRankRace() == 1){
+            player.sendPacket(new UserInfo(player, UserInfoType.RANKER));
+        }
+    }
+
+    private void addRaceRankersSkill(Player player) {
+        if(player.getRankRace() == 1) {
+            final var skill = getRaceRankerSkill(player);
+            if(nonNull(skill)) {
+                skill.getSkill().applyEffects(player, player);
+            }
+        }
+
+        if(player.getRankRace() <= 3) {
+            final var skill = getRankersTransformSkill(player);
+            if(nonNull(skill)) {
+                player.addSkill(skill.getSkill(), false);
+            }
+        }
+    }
+
+    private CommonSkill getRankersTransformSkill(Player player) {
+        return switch (player.getRace()) {
+            case HUMAN -> CommonSkill.RANKER_HUMAN_TRANSFORM;
+            case ELF -> CommonSkill.RANKER_ELF_TRANSFORM;
+            case DARK_ELF -> CommonSkill.RANKER_DARK_ELF_TRANSFORM;
+            case ORC -> CommonSkill.RANKER_ORC_TRANSFORM;
+            case DWARF -> CommonSkill.RANKER_DWARF_TRANSFORM;
+            case JIN_KAMAEL -> CommonSkill.RANKER_JIN_KAMAEL_TRANSFORM;
+            default -> null;
+        };
+    }
+
+    private void addRankersSkill(Player player) {
         var rank = player.getRank();
 
         CommonSkill skill = null;
-        if(rank <= 100) {
-            player.addSkill(CommonSkill.RANKER_BENEFIT_I.getSkill());
-            skill = CommonSkill.RANKER_THIRD_CLASS;
-        }
-
-        if(rank <= 30) {
-            player.addSkill(CommonSkill.RANKER_BENEFIT_II.getSkill());
-            skill = CommonSkill.RANKER_SECOND_CLASS;
-        }
-
         if(rank == 1) {
-            player.addSkill(CommonSkill.RANKER_BENEFIT_III.getSkill());
             skill = CommonSkill.RANKER_FIRST_CLASS;
+        } else if(rank <= 30) {
+            skill = CommonSkill.RANKER_SECOND_CLASS;
+        } else if(rank <= 100) {
+            skill = CommonSkill.RANKER_THIRD_CLASS;
         }
 
         if(nonNull(skill)) {
             skill.getSkill().applyEffects(player, player);
-        }
-
-        if(player.getRankRace() == 1) {
-            player.addSkill(CommonSkill.RANKER_RACE_BENEFIT.getSkill());
-            doIfNonNull(getRaceRankerSkill(player), s -> s.getSkill().applyEffects(player, player));
-        }
-        if(player.getRank() == 1 || player.getRankRace() == 1){
-            player.sendPacket(new UserInfo(player, UserInfoType.RANKER));
         }
     }
 
@@ -144,40 +166,31 @@ public class RankEngine {
     }
 
     private void removeRankersSkill(Player player) {
-        player.removeSkill(CommonSkill.RANKER_BENEFIT_I.getId(), true);
-        player.removeSkill(CommonSkill.RANKER_BENEFIT_II.getId(), true);
-        player.removeSkill(CommonSkill.RANKER_BENEFIT_III.getId(), true);
-        player.removeSkill(CommonSkill.RANKER_RACE_BENEFIT.getId(), true);
         player.stopSkillEffects(true, CommonSkill.RANKER_FIRST_CLASS.getId());
         player.stopSkillEffects(true, CommonSkill.RANKER_SECOND_CLASS.getId());
         player.stopSkillEffects(true, CommonSkill.RANKER_THIRD_CLASS.getId());
-        doIfNonNull(getRaceRankerSkill(player), s -> player.stopSkillEffects(true, s.getId()));
+
+        var commonSkill = getRaceRankerSkill(player);
+        if(nonNull(commonSkill)) {
+            player.stopSkillEffects(true, commonSkill.getId());
+        }
+
+        commonSkill = getRankersTransformSkill(player);
+        if(nonNull(commonSkill)) {
+            player.removeSkill(commonSkill.getSkill(), false, true);
+        }
     }
 
     private CommonSkill getRaceRankerSkill(Player player) {
-        if(player.getRankRace() == 1) {
-           return switch (player.getRace()) {
-               case HUMAN -> CommonSkill.RANKER_HUMAN;
-               case ELF -> CommonSkill.RANKER_ELF;
-               case DARK_ELF -> CommonSkill.RANKER_DARK_ELF;
-               case ORC -> CommonSkill.RANKER_ORC;
-               case DWARF -> CommonSkill.RANKER_DWARF;
-               case JIN_KAMAEL -> CommonSkill.RANKER_JIN_KAMAEL;
-               default -> null;
-            };
-        }
-        if (player.getRankRace() <= 3) {
-            return switch (player.getRace()) {
-                case HUMAN -> CommonSkill.RANKER_HUMAN_TRANSFORM;
-                case ELF -> CommonSkill.RANKER_ELF_TRANSFORM;
-                case DARK_ELF -> CommonSkill.RANKER_DARK_ELF_TRANSFORM;
-                case ORC -> CommonSkill.RANKER_ORC_TRANSFORM;
-                case DWARF -> CommonSkill.RANKER_DWARF_TRANSFORM;
-                case JIN_KAMAEL -> CommonSkill.RANKER_JIN_KAMAEL_TRANSFORM;
-                default -> null;
-            };
-        }
-        return null;
+       return switch (player.getRace()) {
+           case HUMAN -> CommonSkill.RANKER_HUMAN;
+           case ELF -> CommonSkill.RANKER_ELF;
+           case DARK_ELF -> CommonSkill.RANKER_DARK_ELF;
+           case ORC -> CommonSkill.RANKER_ORC;
+           case DWARF -> CommonSkill.RANKER_DWARF;
+           case JIN_KAMAEL -> CommonSkill.RANKER_JIN_KAMAEL;
+           default -> null;
+        };
     }
 
     private void updateDatabase() {
@@ -194,12 +207,12 @@ public class RankEngine {
         return getDAO(RankDAO.class).findPlayerRank(player.getObjectId());
     }
 
-    public List<RankData> getRankers() {
-        return getDAO(RankDAO.class).findAll();
+    public List<RankData> getTopRankers() {
+        return getDAO(RankDAO.class).findTopRankers();
     }
 
-    public List<RankData> getRaceRankers(int race) {
-        return getDAO(RankDAO.class).findAllByRace(race);
+    public List<RankData> getTopRaceRankers(int race) {
+        return getDAO(RankDAO.class).findTopByRace(race);
     }
 
     public List<RankData> getClanRankers(int clanId) {

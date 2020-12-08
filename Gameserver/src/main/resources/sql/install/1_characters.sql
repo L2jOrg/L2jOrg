@@ -90,7 +90,7 @@ CREATE OR REPLACE VIEW rankers_race AS
 
                rank() over (
                    PARTITION BY c.race
-                   ORDER BY c.exp desc
+                   ORDER BY c.exp desc, c.onlinetime desc
                    ) as `rank`,
 
                IFNULL(rs.`rank`, 0) as `rank_snapshot`,
@@ -130,7 +130,7 @@ FROM characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
 WHERE c.level >= 76
   AND c.accesslevel = 0
   AND (c.base_class BETWEEN 88 AND 118 OR c.base_class IN (131, 134, 195))
-    WINDOW w as (ORDER BY c.exp desc );
+    WINDOW w as (ORDER BY c.exp desc, onlinetime desc );
 
 CREATE TABLE  IF NOT EXISTS `rankers_history`
 (
