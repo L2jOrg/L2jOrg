@@ -508,7 +508,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_RAID_TELEPORT_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_TELEPORT_TO_RAID_POSITION(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_EXTRACT(null, ConnectionState.IN_GAME_STATES),
-    //EX_CRAFT_RANDOM_INFO(ExRequestCraftRandom::new, ConnectionState.IN_GAME_STATES),
+    EX_CRAFT_RANDOM_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_LOCK_SLOT(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_REFRESH(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_MAKE(null, ConnectionState.IN_GAME_STATES),
@@ -532,7 +532,6 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_EVOLVE_PET(null, ConnectionState.IN_GAME_STATES),
     EX_ENCHANT_HOMUNCULUS_SKILL(null, ConnectionState.IN_GAME_STATES),
     EX_HOMUNCULUS_ENCHANT_EXP(null, ConnectionState.IN_GAME_STATES),
-    EX_UNK(null, ConnectionState.IN_GAME_STATES), // added 1 packet idk whats packet :/ teleport crash without this
     EX_TELEPORT_FAVORITES_LIST(ExRequestTeleportFavoriteList::new, ConnectionState.IN_GAME_STATES),
     EX_TELEPORT_FAVORITES_UI_TOGGLE(ExRequestTeleportFavoritesUIToggle::new, ConnectionState.IN_GAME_STATES),
     EX_TELEPORT_FAVORITES_ADD_DEL(ExRequestTeleportFavoritesAddDel::new, ConnectionState.IN_GAME_STATES),
