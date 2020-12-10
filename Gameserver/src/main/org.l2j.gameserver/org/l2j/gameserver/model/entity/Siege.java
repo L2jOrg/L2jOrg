@@ -85,6 +85,7 @@ public class Siege implements Siegable {
     private final List<ControlTower> controlTowers = new ArrayList<>();
     private final List<FlameTower> flameTowers = new ArrayList<>();
     private final Castle castle;
+    protected ScheduledFuture<?> _scheduledSiegePrepHUDTask = null;
 
     private Instant endTime;
     private int controlTowerCount;
@@ -114,12 +115,23 @@ public class Siege implements Siegable {
             scheduledStartSiegeTask.cancel(false);
         }
         scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(castle), 1000);
+        startPrepHudTask();
+
     }
 
-        private void onPlayerLogin(OnPlayerLogin event) {
-            final var player = event.getPlayer();
-            player.sendPacket(new ExMercenarySiegeHUDInfo(castle));
+    private void startPrepHudTask()
+    {
+        if (_scheduledSiegePrepHUDTask != null)
+        {
+            _scheduledSiegePrepHUDTask.cancel(false);
         }
+        _scheduledSiegePrepHUDTask = ThreadPool.schedule(new ScheduleSiegePrepHUDTask(castle.getId()), Math.max(0, (Duration.between(LocalDateTime.now(), CastleManager.getInstance().getCastleById(castle.getId()).getSiegeDate()).toMillis() - Calendar.getInstance().getTimeInMillis() - (60 * 60 * 1000))));
+    }
+
+    private void onPlayerLogin(OnPlayerLogin event) {
+        final var player = event.getPlayer();
+        SiegeManager.getInstance().sendSiegeHUDInfo(player);
+    }
 
 
     private void correctSiegeDateTime() {
@@ -134,7 +146,7 @@ public class Siege implements Siegable {
             scheduledStartSiegeTask.cancel(true);
             scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(castle), 1000);
         }
-
+        startPrepHudTask();
         castle.updateSiegeDate();
     }
 
@@ -210,6 +222,11 @@ public class Siege implements Siegable {
                 return;
             }
 
+            for (Player player : World.getInstance().getPlayers())
+            {
+                SiegeManager.getInstance().sendSiegeHUDInfo(player);
+            }
+
             isInProgress = true;
 
             loadSiegeClan();
@@ -235,7 +252,7 @@ public class Siege implements Siegable {
 
             endTime = Instant.now().plus(SiegeManager.getInstance().getSiegeLength(), ChronoUnit.MINUTES);
             ThreadPool.schedule(new ScheduleEndSiegeTask(), 1000);
-            Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
+            Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle.getId()));
         }
     }
 
@@ -845,7 +862,7 @@ public class Siege implements Siegable {
         if(isInProgress) {
             return Duration.between(Instant.now(), endTime).toSeconds();
         } else if(isInPreparationPeriod()) {
-            return Duration.between(Instant.now(), getSiegeDate()).toSeconds();
+            return Duration.between(LocalDateTime.now(), getSiegeDate()).getSeconds();
         }
         return 0;
     }
@@ -889,6 +906,25 @@ public class Siege implements Siegable {
         }
     }
 
+    public static class ScheduleSiegePrepHUDTask implements Runnable
+    {
+        private final int _castleId;
+
+        public ScheduleSiegePrepHUDTask(int castleId)
+        {
+            _castleId = castleId;
+        }
+
+        @Override
+        public void run()
+        {
+            for (Player player : World.getInstance().getPlayers())
+            {
+                SiegeManager.getInstance().sendSiegeHUDInfo(player, _castleId);
+            }
+        }
+    }
+
     private class ScheduleStartSiegeTask implements Runnable {
         private final Castle _castleInst;
 
@@ -903,13 +939,11 @@ public class Siege implements Siegable {
             if (isInProgress) {
                 return;
             }
-
             if (castle.isSiegeTimeRegistrationSeason()) {
-                var regTimeRemaining = Duration.between(Instant.now(), castle.getSiegeTimeRegistrationEnd());
-
+                var regTimeRemaining = Duration.between(LocalDateTime.now(), castle.getSiegeTimeRegistrationEnd());
                 if (regTimeRemaining.compareTo(Duration.ZERO) > 0) {
                     scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), regTimeRemaining);
-                    Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
+                    Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle.getId()));
                     return;
                 }
 
@@ -933,5 +967,7 @@ public class Siege implements Siegable {
                 _castleInst.getSiege().startSiege();
             }
         }
+
+
     }
 }

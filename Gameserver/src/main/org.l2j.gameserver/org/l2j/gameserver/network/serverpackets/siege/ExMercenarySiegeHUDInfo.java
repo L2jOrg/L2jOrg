@@ -19,30 +19,40 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
-
-import static java.util.Objects.requireNonNull;
 
 /**
  * @author JoeAlisson
  */
 public class ExMercenarySiegeHUDInfo extends ServerPacket {
 
-    private final Castle castle;
+    private final int _castleId;
 
-    public ExMercenarySiegeHUDInfo(Castle castle) {
-        this.castle = requireNonNull(castle);
+    public ExMercenarySiegeHUDInfo(int castleId)
+    {
+        _castleId = castleId;
     }
+
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer)  {
         writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO, buffer );
-
+        Castle castle = CastleManager.getInstance().getCastleById(_castleId);
         buffer.writeInt(castle.getId());
-        buffer.writeInt(castle.isInSiege());
-        buffer.writeInt((int) (System.currentTimeMillis() / 1000));
-        buffer.writeInt((int) castle.getSiege().currentStateRemainTimeInSeconds());
+        if (castle.getSiege().isInProgress())
+        {
+            buffer.writeInt(0x01);
+            buffer.writeInt((int) (System.currentTimeMillis() / 1000));
+            buffer.writeInt((int) castle.getSiege().currentStateRemainTimeInSeconds());        }
+        else
+        {
+            buffer.writeInt(0x00);
+            buffer.writeInt((int) (System.currentTimeMillis() / 1000));
+            buffer.writeInt((int) castle.getSiege().currentStateRemainTimeInSeconds());
+        }
     }
+
 }

@@ -31,9 +31,12 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.interfaces.ILocational;
+import org.l2j.gameserver.network.serverpackets.siege.ExMercenarySiegeHUDInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.*;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -191,6 +194,23 @@ public final class SiegeManager {
             sieges.add(castle.getSiege());
         }
         return sieges;
+    }
+
+    public void sendSiegeHUDInfo(Player player)
+    {
+        for (Castle castle : CastleManager.getInstance().getCastles())
+        {
+            int diff = (int)  castle.getSiege().currentStateRemainTimeInSeconds();
+            if (diff < (24 * 60 * 60 * 1000))
+            {
+                player.sendPacket(new ExMercenarySiegeHUDInfo(castle.getId()));
+            }
+        }
+    }
+
+    public void sendSiegeHUDInfo(Player player, int castleId)
+    {
+        player.sendPacket(new ExMercenarySiegeHUDInfo(castleId));
     }
 
     private void loadTrapUpgrade(int castleId) {
