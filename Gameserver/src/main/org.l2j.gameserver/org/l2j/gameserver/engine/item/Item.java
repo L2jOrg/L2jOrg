@@ -107,6 +107,7 @@ public final class Item extends WorldObject {
     private EnsoulOption ensoulSpecialOption;
     private ScheduledFuture<?> itemLootShedule;
     private ScheduledFuture<?> lifeTimeTask;
+    private int isBlessed;
 
     private int dropperObjectId;
 
@@ -160,6 +161,9 @@ public final class Item extends WorldObject {
             restoreAugmentation();
             restoreSpecialAbilities(data);
         }
+
+        setIsBlessed(data.getIsBlessed());
+
         scheduleLifeTimeTask();
 
     }
@@ -580,6 +584,20 @@ public final class Item extends WorldObject {
 
     public EnsoulOption getAdditionalSpecialAbility() {
         return ensoulSpecialOption;
+    }
+
+    /**
+     * Return blessed weapon or not
+     *
+     * @return boolean
+     */
+    public int getIsBlessed() {
+        return this.isBlessed;
+    }
+
+    public void setIsBlessed(int blessed) {
+        getDAO(ItemDAO.class).updateIsBlessed(objectId, blessed);
+        this.isBlessed = blessed;
     }
 
     public void addSpecialAbility(EnsoulOption option, EnsoulType type, boolean updateInDB) {

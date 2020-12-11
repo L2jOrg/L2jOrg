@@ -116,4 +116,7 @@ public interface ItemDAO extends DAO<Object> {
 
     @Query("UPDATE items SET special_ensoul = :ensoul: WHERE object_id = :objectId:")
     void updateSpecialEnsoul(int objectId, int ensoul);
+
+    @Query("UPDATE items SET is_blessed = :isBlessed: WHERE object_id = :objectId:")
+    void updateIsBlessed(int objectId, int isBlessed);
 }

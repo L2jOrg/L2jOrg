@@ -45,6 +45,9 @@ public class ItemOnGroundData {
     @Column("special_ensoul")
     private int specialEnsoul;
 
+    @Column("is_blessed")
+    private int isBlessed;
+
     private long count;
     private int x;
     private int y;
@@ -110,6 +113,11 @@ public class ItemOnGroundData {
         if(nonNull(item.getAdditionalSpecialAbility())) {
             data.specialEnsoul = item.getAdditionalSpecialAbility().id();
         }
+        data.isBlessed = item.getIsBlessed();
         return data;
+    }
+
+    public int getIsBlessed() {
+        return isBlessed;
     }
 }

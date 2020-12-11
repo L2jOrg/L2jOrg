@@ -64,6 +64,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
             mask |= ItemListType.REUSE_DELAY.getMask();
         }
 
+        if (item.getIsBlessed() == 1) {
+            mask |= ItemListType.BLESSED_EFFECT.getMask();
+        }
+
         return mask;
     }
 
@@ -119,6 +123,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 
         if(containsMask(mask, ItemListType.REUSE_DELAY)) {
             buffer.writeInt((int) owner.getItemRemainingReuseTime(item.getObjectId()) / 1000);
+        }
+
+        if(containsMask(mask, ItemListType.BLESSED_EFFECT)) {
+            buffer.writeByte(1);
         }
     }
 
@@ -179,6 +187,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
             mask |= ItemListType.REUSE_DELAY.getMask();
         }
 
+        if (item.getIsBlessed() == 1) {
+            mask |= ItemListType.BLESSED_EFFECT.getMask();
+        }
+
         return mask;
     }
 
@@ -232,6 +244,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 
         if(containsMask(mask, ItemListType.REUSE_DELAY)) {
             buffer.writeInt(item.getReuse());
+        }
+
+        if(containsMask(mask, ItemListType.BLESSED_EFFECT)) {
+            buffer.writeByte(1);
         }
     }
 

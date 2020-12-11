@@ -45,6 +45,7 @@ public class ItemInfo {
     private int[] enchantOption;
     private int time;
     private int price;
+    private int isBlessed;
 
     private ItemChangeType change;
     private boolean _available = true;
@@ -70,6 +71,9 @@ public class ItemInfo {
 
         // Get the augmentation bonus
         augmentation = item.getAugmentation();
+
+        // Get the blessed
+        isBlessed = item.getIsBlessed();
 
         // Get the quantity of the Item
         count = item.getCount();
@@ -110,6 +114,9 @@ public class ItemInfo {
 
         // Get the enchant level of the Item
         enchant = item.getEnchant();
+
+        // Get the blessed
+        isBlessed = item.getIsBlessed();
 
         // Get the augmentation bonus
         if ((item.getAugmentationOption1() >= 0) && (item.getAugmentationOption2() >= 0)) {
@@ -242,5 +249,9 @@ public class ItemInfo {
 
     public int getReuse() {
         return reuse;
+    }
+
+    public int getIsBlessed() {
+        return isBlessed;
     }
 }
