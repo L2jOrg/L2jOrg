@@ -179,6 +179,28 @@ public abstract class ItemContainer {
     }
 
     /**
+     * Gets the inventory item count by item Id and enchant level, may include equipped items.
+     *
+     * @param itemId          the item Id
+     * @param enchantLevel    the item enchant level, use -1 to match any enchant level
+     * @param includeEquipped if {@code true} includes equipped items in the result
+     * @return the inventory item count
+     */
+    public long getInventoryItemCount(int itemId, int enchantLevel, boolean includeEquipped, int isBlessed) {
+        long count = 0;
+
+        for (Item item : items.values()) {
+            if (item.getId() == itemId && (item.getEnchantLevel() == enchantLevel || enchantLevel < 0) && (item.getIsBlessed() == isBlessed) && (includeEquipped || !item.isEquipped())) {
+                if (item.isStackable()) {
+                    return item.getCount();
+                }
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /**
      * Adds item to inventory
      *
      * @param process   : String Identifier of process triggering this action

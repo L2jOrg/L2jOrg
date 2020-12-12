@@ -596,6 +596,7 @@ public final class Item extends WorldObject {
     }
 
     public void setIsBlessed(int blessed) {
+        this.data.setIsBlessed(blessed);
         getDAO(ItemDAO.class).updateIsBlessed(objectId, blessed);
         this.isBlessed = blessed;
     }

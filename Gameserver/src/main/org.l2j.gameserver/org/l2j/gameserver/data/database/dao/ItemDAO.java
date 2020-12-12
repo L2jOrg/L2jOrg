@@ -73,6 +73,9 @@ public interface ItemDAO extends DAO<Object> {
     @Query("SELECT * FROM items WHERE owner_id=:ownerId: AND (loc=:baseLoc: OR loc=:equipLoc:) ORDER BY loc_data")
     List<ItemData> findInventoryItems(int ownerId,  ItemLocation baseLoc, ItemLocation equipLoc);
 
+    @Query("SELECT * FROM items WHERE object_id = :objectId:")
+    int getIsBlessedWeapon(int objectId);
+
     void save(Collection<ItemOnGroundData> datas);
 
     @Query("DELETE FROM item_variations WHERE itemId IN (SELECT object_id FROM items WHERE items.owner_id=:playerId:)")

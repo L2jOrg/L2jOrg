@@ -164,7 +164,11 @@ public final class MultisellEngine extends GameXmlReader {
         }
         long count = parseLong(attrs, "count");
         int enchant = parseInt(attrs, "enchant");
-        return new MultisellProduct(id, count, enchant, chance);
+        int isBlessed = parseInt(attrs, "is_blessed");
+        if(itemNotExists(isBlessed)) {
+            isBlessed = 0;
+        }
+        return new MultisellProduct(id, count, enchant, chance, isBlessed);
     }
 
     private MultisellIngredient parseIngredient(Node ingredientNode) {
@@ -177,7 +181,11 @@ public final class MultisellEngine extends GameXmlReader {
         long count = parseLong(attrs, "count");
         int enchant = parseInt(attrs, "enchant");
         boolean consume = parseBoolean(attrs, "consume");
-        return new MultisellIngredient(id, count, enchant, consume);
+        int isBlessed = parseInt(attrs, "is_blessed");
+        if(itemNotExists(isBlessed)) {
+            isBlessed = 0;
+        }
+        return new MultisellIngredient(id, count, enchant, consume, isBlessed);
     }
 
     private boolean itemNotExists(int itemId) {
