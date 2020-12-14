@@ -46,6 +46,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
+ * fine-tunning by Bru7aLMike
  */
 public final class AutoPlayEngine {
 
@@ -63,7 +64,7 @@ public final class AutoPlayEngine {
     private final DoAutoPotion doAutoPotion = new DoAutoPotion();
     private final Object autoPotionTaskLocker = new Object();
     private ScheduledFuture<?> autoPotionTask;
-    
+
     private final AutoPlayTargetFinder tauntFinder = new TauntFinder();
     private final AutoPlayTargetFinder monsterFinder = new MonsterFinder();
     private final AutoPlayTargetFinder playerFinder = new PlayerFinder();
@@ -241,16 +242,21 @@ public final class AutoPlayEngine {
             };
         }
 
-        private void tryUseAutoShortcut(Player player) {
+        private void tryUseAutoShortcut(Player player)
+        {
             var nextShortcut = player.nextAutoShortcut();
-            if(nonNull(nextShortcut)) {
+            if(nonNull(nextShortcut))
+            {
                 var  shortcut = nextShortcut;
-                do {
-                    if(useShortcut(player, shortcut)) {
+                do
+                {
+                    if(useShortcut(player, shortcut))
+                    {
                         return;
                     }
                     shortcut = player.nextAutoShortcut();
-                } while (!nextShortcut.equals(shortcut));
+                }
+                while (!nextShortcut.equals(shortcut));
             }
             autoUseAction(player, DEFAULT_ACTION);
         }
@@ -291,19 +297,21 @@ public final class AutoPlayEngine {
             return false;
         }
 
-        private boolean autoUseSkill(Player player, Shortcut shortcut) {
+        private boolean autoUseSkill(Player player, Shortcut shortcut)
+        {
             var skill = player.getKnownSkill(shortcut.getShortcutId());
 
-            if (skill.isBlockActionUseSkill()) {
-                return false;
-            }
+            if (skill.isBlockActionUseSkill() || player.isSkillDisabled(skill))
+            { return true; }
 
-            if(skill.isAutoTransformation() && player.isTransformed()) {
-                return false;
-            }
-            if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3) {
-                return false;
-            }
+            if(skill.isAutoTransformation() && player.isTransformed())
+            { return false; }
+
+            if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3)
+            { return false; }
+
+            if(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.isAttackingDisabled())
+            { return true; }
 
             player.onActionRequest();
             return player.useSkill(skill, null, false, false);
