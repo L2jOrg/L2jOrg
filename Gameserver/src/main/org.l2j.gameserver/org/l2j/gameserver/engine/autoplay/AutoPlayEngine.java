@@ -310,7 +310,7 @@ public final class AutoPlayEngine {
             if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3)
             { return false; }
 
-            if(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.isAttackingDisabled())
+            if(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled())
             { return true; }
 
             player.onActionRequest();
