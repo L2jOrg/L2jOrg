@@ -781,6 +781,11 @@ public final class Skill implements IIdentifiable, Cloneable {
         return affectObject;
     }
 
+    public AffectScope getAffectScope()
+    {
+        return affectScope;
+    }
+
     void setAffectObject(AffectObject object) {
         affectObject = object;
     }

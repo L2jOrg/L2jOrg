@@ -87,6 +87,7 @@ public final class Config {
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
     private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
+    private static final String  CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
 
 
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
@@ -100,6 +101,7 @@ public final class Config {
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
+
 
 
     public static boolean ENABLE_MODIFY_SKILL_DURATION;
@@ -652,7 +654,10 @@ public final class Config {
     public static List<Integer> AUTO_CP_ITEM_IDS;
     public static List<Integer> AUTO_HP_ITEM_IDS;
     public static List<Integer> AUTO_MP_ITEM_IDS;
+    public static boolean AUTO_USE_ITEM;
+    public static boolean AUTO_USE_BUFF;
 
+    public static boolean ENABLE_DONATION;
     public static boolean CUSTOM_STARTING_LOC;
     public static int CUSTOM_STARTING_LOC_X;
     public static int CUSTOM_STARTING_LOC_Y;
@@ -1525,6 +1530,12 @@ public final class Config {
         {
             AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
+
+        AUTO_USE_BUFF = General.getBoolean("EnableAutoBuff", true);
+        AUTO_USE_ITEM = General.getBoolean("EnableAutoItem", true);
+
+        final PropertiesParser Donations = new PropertiesParser(CUSTOM_DONATION_CONFIG_FILE);
+        ENABLE_DONATION = Donations.getBoolean("EnableDonate", false);
 
         // Load PvpAnnounce config file (if exists)
         final PropertiesParser PvpAnnounce = new PropertiesParser(CUSTOM_PVP_ANNOUNCE_CONFIG_FILE);

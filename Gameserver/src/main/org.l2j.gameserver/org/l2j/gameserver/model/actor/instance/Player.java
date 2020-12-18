@@ -119,6 +119,7 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.gameserver.taskmanager.AutoUseTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.util.*;
 import org.l2j.gameserver.world.MapRegionManager;
@@ -193,6 +194,7 @@ public final class Player extends Playable {
     private byte shineSouls;
     private byte shadowSouls;
     private int additionalSoulshot;
+    private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
 
     Player(GameClient client, PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -1826,6 +1828,10 @@ public final class Player extends Playable {
         return (_notifyQuestOfDeathList == null) || _notifyQuestOfDeathList.isEmpty();
     }
 
+    public AutoUseSettingsHolder getAutoUseSettings()
+    {
+        return _autoUseSettings;
+    }
 
     public Shortcut getShortcut(int room) {
         return shortcuts.getShortcut(room);

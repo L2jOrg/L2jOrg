@@ -1,5 +1,6 @@
 package org.l2j.scripts.handlers.voicedcommandhandlers;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.DonationDAO;
 import org.l2j.gameserver.data.database.data.DonationData;
@@ -27,7 +28,7 @@ public class Donate implements IVoicedCommandHandler {
     public boolean useVoicedCommand(String command, Player activeChar, String params) {
         LOGGER.info("Using voice handler: " + command + " params: " + params);
 
-        if(false /*Config.ENABLE_DONATION*/) {
+        if(!Config.ENABLE_DONATION) {
             activeChar.sendMessage("Donation system not activated!");
             return true;
         }
