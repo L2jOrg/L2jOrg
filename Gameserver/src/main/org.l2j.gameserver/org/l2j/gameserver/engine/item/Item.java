@@ -26,9 +26,11 @@ import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
+import org.l2j.gameserver.data.xml.impl.BlessedItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -54,10 +56,8 @@ import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.*;
 import org.l2j.gameserver.model.item.container.WarehouseType;
-import org.l2j.gameserver.model.item.type.ActionType;
-import org.l2j.gameserver.model.item.type.CrystalType;
-import org.l2j.gameserver.model.item.type.EtcItemType;
-import org.l2j.gameserver.model.item.type.ItemType;
+import org.l2j.gameserver.model.item.type.*;
+import org.l2j.gameserver.model.options.BlessedOptions;
 import org.l2j.gameserver.model.options.EnchantOptions;
 import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.stats.Stat;
@@ -72,6 +72,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
@@ -108,7 +109,7 @@ public final class Item extends WorldObject {
     private ScheduledFuture<?> itemLootShedule;
     private ScheduledFuture<?> lifeTimeTask;
     private int isBlessed;
-
+    private final List<BlessedOptions> blessedOptions = Collections.synchronizedList(new ArrayList<BlessedOptions>());
     private int dropperObjectId;
 
     private long dropTime;
@@ -656,6 +657,51 @@ public final class Item extends WorldObject {
         clearSpecialAbility(ensoulSpecialOption);
     }
 
+    public void applyBlessedOptions(int enchant) {
+        if (!isEquipped() || getIsBlessed() != 1) {
+            return;
+        }
+
+        var options = BlessedItemOptionsData.getInstance().getBlessedOptions(this.template.getItemGrade(), (WeaponType) this.getItemType(), enchant);
+
+        for(BlessedOptions blessedOption : options) {
+            this.blessedOptions.add(blessedOption);
+            applyBlessedOption(blessedOption);
+        }
+    }
+
+    public void clearBlessedOptions() {
+        synchronized(blessedOptions)
+        {
+            for(BlessedOptions blessedOption : blessedOptions) {
+                clearBlessedOption(blessedOption);
+            }
+            blessedOptions.clear();
+        }
+    }
+
+    public void applyBlessedOption(BlessedOptions option) {
+        final Skill skill = option.getSkill().getSkill();
+
+        if (skill != null) {
+            final Player player = getActingPlayer();
+            if (player != null) {
+                if (player.getSkillLevel(skill.getId()) != skill.getLevel()) {
+                    player.addSkill(skill, false);
+                }
+            }
+        }
+    }
+
+    private void clearBlessedOption(BlessedOptions option) {
+        final Skill skill = option.getSkill().getSkill();
+        if (skill != null) {
+            final Player player = getActingPlayer();
+            if (player != null) {
+                player.removeSkill(skill, false, true);
+            }
+        }
+    }
     public void applySpecialAbilities() {
         if (!isEquipped()) {
             return;

@@ -193,7 +193,7 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
         buffer.writeShort(0x00); // notoriety
 
-        buffer.writeInt(-1); // fix unk
+        buffer.writeInt(-1); // fix unk new (286 protocol)
 
         buffer.writeShort(0x16 + appearence.getVisibleName().length() * 2);
         buffer.writeByte(0x00); // create or update

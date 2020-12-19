@@ -30,6 +30,9 @@ import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAtt
 import org.l2j.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
 import org.l2j.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
 import org.l2j.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
+import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionCancel;
+import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionEnchant;
+import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionPutItem;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;
 import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarInfo;
@@ -545,9 +548,9 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MABLE_GAME_RESET(null, ConnectionState.IN_GAME_STATES),
     EX_MABLE_GAME_CLOSE(null, ConnectionState.IN_GAME_STATES),
     EX_RETURN_TO_ORIGIN(null, ConnectionState.IN_GAME_STATES),
-    EX_BLESS_OPTION_PUT_ITEM(null, ConnectionState.IN_GAME_STATES),
-    EX_BLESS_OPTION_ENCHANT(null, ConnectionState.IN_GAME_STATES),
-    EX_BLESS_OPTION_CANCEL(null, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_PUT_ITEM(RequestBlessOptionPutItem::new, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_ENCHANT(RequestBlessOptionEnchant::new, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_CANCEL(RequestBlessOptionCancel::new, ConnectionState.IN_GAME_STATES),
     EX_PVP_RANKING_MY_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_PVP_RANKING_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_ACQUIRE_PET_SKILL(null, ConnectionState.IN_GAME_STATES),

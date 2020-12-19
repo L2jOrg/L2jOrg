@@ -88,7 +88,7 @@ public final class MultisellListPacket extends AbstractItemPacket {
         writeItemElemental(itemEnchantment, buffer);
         writeItemEnsoulOptions(itemEnchantment, buffer);
 
-        buffer.writeByte(0); // new 286
+        buffer.writeByte(0); // 286
 
         buffer.writeShort(entry.products().size());
         buffer.writeShort(entry.ingredients().size());
