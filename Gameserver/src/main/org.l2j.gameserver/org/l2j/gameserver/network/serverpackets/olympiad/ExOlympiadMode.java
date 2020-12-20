@@ -18,28 +18,27 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author godson
+ * @author JoeAlisson
  */
 public class ExOlympiadMode extends ServerPacket {
-    private final int _mode;
+    private final OlympiadMode mode;
 
-    /**
-     * @param mode (0 = return, 3 = spectate)
-     */
-    public ExOlympiadMode(int mode) {
-        _mode = mode;
+    public ExOlympiadMode(OlympiadMode mode) {
+        this.mode = mode;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_MODE);
-
-        writeByte((byte) _mode);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_MODE, buffer );
+        buffer.writeByte(mode.ordinal());
     }
 
 }

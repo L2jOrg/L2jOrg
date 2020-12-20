@@ -27,20 +27,22 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -164,15 +166,16 @@ public final class RequestBuyItem extends ClientPacket {
                 }
             }
 
-            if ((Inventory.MAX_ADENA / i.getCount()) < price) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.");
+            var maxAdena = getSettings(CharacterSettings.class).maxAdena();
+            if (MathUtil.checkMulOverFlow(price, i.getCount(), maxAdena)) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + maxAdena + " adena worth of goods.");
                 return;
             }
             // first calculate price per item with tax, then multiply by count
             price = (long) (price * (1 + castleTaxRate + product.getBaseTaxRate()));
             subTotal += i.getCount() * price;
-            if (subTotal > Inventory.MAX_ADENA) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.");
+            if (subTotal > maxAdena) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + maxAdena + " adena worth of goods.");
                 return;
             }
 
@@ -223,7 +226,7 @@ public final class RequestBuyItem extends ClientPacket {
             merchant.handleTaxPayment((long) (subTotal * castleTaxRate));
         }
 
-        client.sendPacket(new ExUserInfoInvenWeight(player));
+        client.sendPacket(new ExUserInfoInvenWeight());
         client.sendPacket(new ExBuySellList(player, true));
         player.sendPacket(SystemMessageId.EXCHANGE_IS_SUCCESSFUL);
     }

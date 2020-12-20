@@ -35,6 +35,8 @@ import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
+import org.l2j.gameserver.engine.item.AttendanceEngine;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.events.EventEngine;
@@ -115,20 +117,19 @@ public class GameServer {
         printSection("Spawns");
         SpawnsData.init();
         GrandBossManager.getInstance();
-        DBSpawnManager.init();
+        BossManager.init();
         ThreadPool.executeForked(SpawnsData.getInstance()::spawnAll);
 
         printSection("Server Data");
         GlobalVariablesManager.init();
         ActionManager.init();
         BuyListData.init();
-        MultisellData.getInstance();
+        MultisellEngine.init();
         RecipeData.getInstance();
         ArmorSetsData.getInstance();
         FishingData.getInstance();
         HennaData.getInstance();
         ShuttleData.getInstance();
-        GraciaSeedsManager.getInstance();
 
         printSection("Features");
         AnnouncementsManager.init();
@@ -142,7 +143,7 @@ public class GameServer {
         LCoinShop.init();
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
-        AttendanceRewardData.getInstance();
+        AttendanceEngine.init();
         CostumeEngine.init();
         UpgradeItemEngine.init();
         CombinationItemsManager.init();
@@ -197,11 +198,11 @@ public class GameServer {
         VoteSystem.initialize();
 
         printSection("Siege");
-        SiegeManager.getInstance().getSieges();
+        SiegeManager.init();
         CastleManager.getInstance().activateInstances();
         SiegeScheduleData.getInstance();
         CastleManorManager.getInstance();
-        SiegeGuardManager.getInstance();
+        SiegeGuardManager.init();
         QuestManager.getInstance().report();
 
         var generalSettings = getSettings(GeneralSettings.class);
@@ -254,7 +255,7 @@ public class GameServer {
 
         var settings = getSettings(ServerSettings.class);
         printSection("Thread Pools");
-        ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize());
+        ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize(), settings.maxThreadPoolSize());
 
         printSection("Identity Factory");
         if (!IdFactory.getInstance().isInitialized()) {
@@ -270,6 +271,9 @@ public class GameServer {
 
         ThreadPool.execute(AuthServerCommunication.getInstance());
         scheduleDeadLockDetector(settings);
+
+        printSection("Extensions Pos Loaders");
+        ExtensionBoot.posLoaders();
     }
 
     private static void scheduleDeadLockDetector(ServerSettings settings) {

@@ -140,9 +140,10 @@ public class AdminLogin implements IAdminCommandHandler
 				try
 				{
 					age = Integer.parseInt(mode);
-					if (Config.SERVER_LIST_AGE != age)
+					var serverSettings = getSettings(ServerSettings.class);
+					if (serverSettings.ageLimit() != age)
 					{
-						Config.SERVER_LIST_AGE = age;
+						serverSettings.setAgeLimit((byte) age);
 						// TODO Implement AuthServerCommunication.getInstance().sendServerStatus(ServerStatus.SERVER_AGE, age);
 						BuilderUtil.sendSysMessage(activeChar, "Server Age changed to " + age);
 						showMainPage(activeChar);
@@ -176,8 +177,9 @@ public class AdminLogin implements IAdminCommandHandler
 		html.setFile(activeChar, "data/html/admin/login.htm");
 		// TODO Implement html.replace("%server_name%", AuthServerCommunication.getInstance().getServerName());
 		// TODO Implment html.replace("%status%", AuthServerCommunication.getInstance().getStatusString());
-		html.replace("%type%", getServerTypeName(getSettings(ServerSettings.class).type()));
-		html.replace("%brackets%", String.valueOf(Config.SERVER_LIST_BRACKET));
+		var serverSettings = getSettings(ServerSettings.class);
+		html.replace("%type%", getServerTypeName(serverSettings.type()));
+		html.replace("%brackets%", String.valueOf(serverSettings.isShowingBrackets()));
 		// TODO implement html.replace("%max_players%", String.valueOf(AuthServerCommunication.getInstance().getMaxPlayer()));
 		activeChar.sendPacket(html);
 	}

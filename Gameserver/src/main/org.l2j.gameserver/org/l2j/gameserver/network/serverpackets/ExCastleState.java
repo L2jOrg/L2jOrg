@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
@@ -36,11 +37,11 @@ public class ExCastleState extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CASTLE_STATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CASTLE_STATE, buffer );
 
-        writeInt(_castleId);
-        writeInt(_castleSide.ordinal());
+        buffer.writeInt(_castleId);
+        buffer.writeInt(_castleSide.ordinal());
     }
 
 }

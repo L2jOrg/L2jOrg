@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -44,30 +45,30 @@ public class PrivateStoreManageListSell extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PRIVATE_STORE_MANAGE_LIST);
-        writeByte((byte) _sendType);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PRIVATE_STORE_MANAGE_LIST, buffer );
+        buffer.writeByte(_sendType);
         if (_sendType == 2) {
-            writeInt(_itemList.size());
-            writeInt(_itemList.size());
+            buffer.writeInt(_itemList.size());
+            buffer.writeInt(_itemList.size());
             for (TradeItem item : _itemList) {
-                writeItem(item);
-                writeLong(item.getItem().getReferencePrice() * 2);
+                writeItem(item, buffer);
+                buffer.writeLong(item.getItem().getReferencePrice() * 2);
             }
         } else {
-            writeInt(_objId);
-            writeInt(_packageSale ? 1 : 0);
-            writeLong(_playerAdena);
-            writeInt(0x00);
+            buffer.writeInt(_objId);
+            buffer.writeInt(_packageSale ? 1 : 0);
+            buffer.writeLong(_playerAdena);
+            buffer.writeInt(0x00);
             for (TradeItem item : _itemList) {
-                writeItem(item);
-                writeLong(item.getItem().getReferencePrice() * 2);
+                writeItem(item, buffer);
+                buffer.writeLong(item.getItem().getReferencePrice() * 2);
             }
-            writeInt(0x00);
+            buffer.writeInt(0x00);
             for (TradeItem item2 : _sellList) {
-                writeItem(item2);
-                writeLong(item2.getPrice());
-                writeLong(item2.getItem().getReferencePrice() * 2);
+                writeItem(item2, buffer);
+                buffer.writeLong(item2.getPrice());
+                buffer.writeLong(item2.getItem().getReferencePrice() * 2);
             }
         }
     }

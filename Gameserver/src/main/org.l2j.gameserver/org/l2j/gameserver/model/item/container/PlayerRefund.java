@@ -21,7 +21,7 @@ package org.l2j.gameserver.model.item.container;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 /**
  * @author DS

@@ -20,6 +20,7 @@ package org.l2j.gameserver.settings;
 
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ServerType;
 
 import java.nio.file.Path;
@@ -53,7 +54,14 @@ public class ServerSettings implements Settings {
     private int deadLockDetectorInterval;
     private boolean restartOnDeadLock;
     private int maxPlayers;
-    private Predicate<String> playerNameTemplate;
+    private Predicate<String> playerNamePattern;
+    private Predicate<String> petNamePattern;
+    private Predicate<String> clanNamePattern;
+    private String[] scheduleRestartHours;
+    private boolean hardwareInfoEnabled;
+    private int maxPlayerPerHWID;
+    private int maxThreadPoolSize;
+    private int parallelismThreshold;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -62,9 +70,7 @@ public class ServerSettings implements Settings {
 
         authServerAddress = settingsFile.getString("LoginHost", "127.0.0.1");
         authServerPort = settingsFile.getShort("LoginPort", (short) 9014);
-
         port = settingsFile.getShort("GameserverPort", (short) 7777);
-
         type = ServerType.maskOf(settingsFile.getStringArray("ServerListType"));
 
         maximumOnlineUsers = Math.max(1, settingsFile.getInteger("MaximumOnlineUsers", 20));
@@ -78,22 +84,31 @@ public class ServerSettings implements Settings {
 
         scheduledPoolSize = determinePoolSize(settingsFile, "ScheduledThreadPoolSize", processors);
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
+        maxThreadPoolSize = determinePoolSize(settingsFile, "MaxThreadPoolSize", threadPoolSize * 10);
+        parallelismThreshold = settingsFile.getInteger("ParallelismThreshold", 1000);
         acceptedProtocols =  settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
 
         scheduleRestart = settingsFile.getBoolean("ServerRestartScheduleEnabled", false);
+        scheduleRestartHours = settingsFile.getStringArray("ServerRestartSchedule");
 
         useDeadLockDetector = settingsFile.getBoolean("DeadLockDetector", true);
         deadLockDetectorInterval = settingsFile.getInteger("DeadLockCheckInterval", 1800);
         restartOnDeadLock = settingsFile.getBoolean("RestartOnDeadlock", false);
 
-        determinePlayerNamePattern(settingsFile);
+        playerNamePattern = determineNamePattern(settingsFile, "CnameTemplate");
+        petNamePattern = determineNamePattern(settingsFile, "PetNameTemplate");
+        clanNamePattern = determineNamePattern(settingsFile, "ClanNameTemplate");
+
+        maxPlayers = settingsFile.getInteger("CharMaxNumber", 7);
+        hardwareInfoEnabled = settingsFile.getBoolean("EnableHardwareInfo", false);
+        maxPlayerPerHWID = settingsFile.getInteger("MaxPlayersPerHWID", 0);
     }
 
-    private void determinePlayerNamePattern(SettingsFile settingsFile) {
+    private Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
         try {
-            playerNameTemplate = Pattern.compile(settingsFile.getString("CnameTemplate", ".*")).asMatchPredicate();
+            return Pattern.compile(settingsFile.getString(key, ".*")).asMatchPredicate();
         } catch (PatternSyntaxException e) {
-            playerNameTemplate = Pattern.compile(".*").asMatchPredicate();
+            return Util.ANY_PATTERN;
         }
     }
 
@@ -166,12 +181,24 @@ public class ServerSettings implements Settings {
         return threadPoolSize;
     }
 
+    public int maxThreadPoolSize() {
+        return maxThreadPoolSize;
+    }
+
+    public int parallelismThreshold() {
+        return parallelismThreshold;
+    }
+
     public int[] acceptedProtocols() {
         return acceptedProtocols;
     }
 
     public boolean scheduleRestart() {
         return scheduleRestart;
+    }
+
+    public String[] scheduleRestartHours() {
+        return scheduleRestartHours;
     }
 
     public boolean useDeadLockDetector() {
@@ -187,6 +214,34 @@ public class ServerSettings implements Settings {
     }
 
     public boolean acceptPlayerName(String name) {
-        return playerNameTemplate.test(name);
+        return playerNamePattern.test(name);
+    }
+
+    public boolean acceptPetName(String name) {
+        return petNamePattern.test(name);
+    }
+
+    public boolean acceptClanName(String name) {
+        return clanNamePattern.test(name);
+    }
+
+    public int maxPlayersAllowed() {
+        return maxPlayers;
+    }
+
+    public boolean allowPlayersCount(int playerCount) {
+        return maxPlayers <= 0 || maxPlayers >= playerCount;
+    }
+
+    public void setAgeLimit(byte age) {
+        this.ageLimit = age;
+    }
+
+    public boolean isHardwareInfoEnabled() {
+        return hardwareInfoEnabled;
+    }
+
+    public int maxPlayerPerHWID() {
+        return maxPlayerPerHWID;
     }
 }

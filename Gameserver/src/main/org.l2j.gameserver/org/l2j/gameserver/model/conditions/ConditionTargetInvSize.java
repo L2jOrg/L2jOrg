@@ -24,31 +24,21 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
-
 /**
  * The Class ConditionTargetInvSize.
  *
  * @author Zoey76
+ * @author JoeAlisson
  */
 public class ConditionTargetInvSize extends Condition {
-    private final int _size;
+    private final int size;
 
-    /**
-     * Instantiates a new condition player inv size.
-     *
-     * @param size the size
-     */
     public ConditionTargetInvSize(int size) {
-        _size = size;
+        this.size = size;
     }
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if (isPlayer(effected)) {
-            final Player target = effected.getActingPlayer();
-            return target.getInventory().getSize(i -> !i.isQuestItem()) <= (target.getInventoryLimit() - _size);
-        }
-        return false;
+        return effected instanceof Player player && player.getInventory().getSize() <= player.getInventoryLimit() - size;
     }
 }

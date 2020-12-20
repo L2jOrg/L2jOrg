@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.TimeStamp;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -48,15 +49,15 @@ public class SkillCoolTime extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SKILL_COOL_TIME);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SKILL_COOL_TIME, buffer );
 
-        writeInt(_skillReuseTimeStamps.size());
+        buffer.writeInt(_skillReuseTimeStamps.size());
         for (TimeStamp ts : _skillReuseTimeStamps) {
-            writeInt(ts.getSkillId());
-            writeInt(0x00); // ?
-            writeInt((int) ts.getReuse() / 1000);
-            writeInt((int) Math.max(ts.getStamp() - _currentTime, 0) / 1000);
+            buffer.writeInt(ts.getSkillId());
+            buffer.writeInt(0x00); // ?
+            buffer.writeInt((int) ts.getReuse() / 1000);
+            buffer.writeInt((int) Math.max(ts.getStamp() - _currentTime, 0) / 1000);
         }
     }
 

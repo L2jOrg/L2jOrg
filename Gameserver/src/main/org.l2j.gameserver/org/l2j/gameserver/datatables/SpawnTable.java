@@ -18,47 +18,41 @@
  */
 package org.l2j.gameserver.datatables;
 
-import org.l2j.gameserver.Config;
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.world.MapRegionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.Collections;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
-import static java.util.Objects.nonNull;
-
+import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Spawn data retriever.
  *
  * @author Zoey76, Mobius
- *
- *
+ * @author JoeAlisson
  * TODO move edited spawns to Database.
  */
 public final class SpawnTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpawnTable.class);
-    private static final Map<Integer, Set<Spawn>> _spawnTable = new ConcurrentHashMap<>();
-    private static final String OTHER_XML_FOLDER = "data/spawns/Others";
+    private static final IntMap<Set<Spawn>> _spawnTable = new CHashIntMap<>();
+    private static final String CUSTOM_XML_FOLDER = "data/spawns/custom";
 
     private SpawnTable() {}
-
-
-    /**
-     * Gets the spawn data.
-     *
-     * @return the spawn data
-     */
-    public Map<Integer, Set<Spawn>> getSpawnTable() {
-        return _spawnTable;
-    }
 
     /**
      * Gets the spawns for the NPC Id.
@@ -100,74 +94,72 @@ public final class SpawnTable {
         addSpawn(spawn);
 
         if (store) {
-            // Create output directory if it doesn't exist
-            final File outputDirectory = new File(OTHER_XML_FOLDER);
-            if (!outputDirectory.exists()) {
-                boolean result = false;
-                try {
-                    outputDirectory.mkdir();
-                    result = true;
-                } catch (SecurityException se) {
-                    // empty
-                }
-                if (result) {
-                    LOGGER.info(getClass().getSimpleName() + ": Created directory: " + OTHER_XML_FOLDER);
-                }
+            try {
+                storeNewSpawn(spawn);
+            } catch (IOException e) {
+                LOGGER.error("Spawn {} couldn't be created ", spawn, e);
             }
+        }
+    }
 
-            // XML file for spawn
-            final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-            final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-            final File spawnFile = new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
+    private void storeNewSpawn(Spawn spawn) throws IOException {
+        Path outputFolder = getSettings(ServerSettings.class).dataPackDirectory().resolve(CUSTOM_XML_FOLDER);
+        Files.createDirectories(outputFolder);
 
-            // Write info to XML
-            final String spawnId = String.valueOf(spawn.getId());
-            final String spawnCount = String.valueOf(spawn.getAmount());
-            final String spawnX = String.valueOf(spawn.getX());
-            final String spawnY = String.valueOf(spawn.getY());
-            final String spawnZ = String.valueOf(spawn.getZ());
-            final String spawnHeading = String.valueOf(spawn.getHeading());
-            final String spawnDelay = String.valueOf(spawn.getRespawnDelay() / 1000);
-            if (spawnFile.exists()) // update
-            {
-                final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
+        final int x = MapRegionManager.getInstance().getMapRegionX(spawn.getX());
+        final int y = MapRegionManager.getInstance().getMapRegionY(spawn.getY());
 
-                try(final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
-                    final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));) {
+        var filePath = outputFolder.resolve(x + "_" + y + ".xml");
 
-                    String currentLine;
-                    while ((currentLine = reader.readLine()) != null) {
-                        if (currentLine.contains("</group>")) {
-                            writer.write("			<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnTime=\"" + spawnDelay + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + System.lineSeparator());
-                            writer.write(currentLine + System.lineSeparator());
-                            continue;
-                        }
-                        writer.write(currentLine + System.lineSeparator());
-                    }
+        if (Files.exists(filePath)) {
+            addSpawnInFile(spawn, filePath);
+        } else {
+            createSpawnFile(spawn, x, y, filePath);
+        }
+    }
 
-                    spawnFile.delete();
-                    tempFile.renameTo(spawnFile);
-                } catch (Exception e) {
-                    LOGGER.warn(": Could not store spawn in the spawn XML files: " + e);
+    private synchronized void createSpawnFile(Spawn spawn, int x, int y, Path filePath) {
+        try(final var writer = Files.newBufferedWriter(filePath, StandardOpenOption.CREATE_NEW)) {
+            writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + System.lineSeparator());
+            writer.write("<list xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"../../xsd/spawns.xsd\">" + System.lineSeparator());
+            writer.write("	<spawn name=\"" + x + "_" + y + "\">" + System.lineSeparator());
+            writer.write("		<group>" + System.lineSeparator());
+            writeSpawnInfo(spawn, writer);
+            writer.write("		</group>" + System.lineSeparator());
+            writer.write("	</spawn>" + System.lineSeparator());
+            writer.write("</list>" + System.lineSeparator());
+            writer.close();
+            LOGGER.info("Created file: {}", filePath);
+        } catch (Exception e) {
+            LOGGER.warn("Spawn {} could not be added to the spawn XML files: ", spawn,  e);
+        }
+    }
+
+    private void writeSpawnInfo(Spawn spawn, BufferedWriter writer) throws IOException {
+        writer.write("			<npc id=\"" + spawn.getId() + (spawn.getAmount() > 1 ? "\" count=\"" + spawn.getAmount() : "")
+                + "\" x=\"" + spawn.getX() + "\" y=\"" + spawn.getY() + "\" z=\"" + spawn.getZ() + (spawn.getHeading() > 0 ? "\" heading=\"" + spawn.getHeading() : "")
+                + "\" respawnTime=\"" + (spawn.getRespawnDelay() / 1000) + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + System.lineSeparator());
+    }
+
+    private synchronized void addSpawnInFile(Spawn spawn, Path filePath) throws IOException {
+        final var tmpFilePath = filePath.resolveSibling(filePath.getFileName().toString() + ".tmp");
+        Files.move(filePath, tmpFilePath);
+
+        try(final var reader = Files.newBufferedReader(tmpFilePath);
+            final var writer = Files.newBufferedWriter(filePath, StandardOpenOption.CREATE_NEW)) {
+
+            String currentLine;
+            while ((currentLine = reader.readLine()) != null) {
+                if (currentLine.contains("</group>")) {
+                    writeSpawnInfo(spawn, writer);
+                    writer.write(currentLine + System.lineSeparator());
+                    continue;
                 }
-            } else // new file
-            {
-                try {
-                    final BufferedWriter writer = new BufferedWriter(new FileWriter(spawnFile));
-                    writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + System.lineSeparator());
-                    writer.write("<list xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"../../xsd/spawns.xsd\">" + System.lineSeparator());
-                    writer.write("	<spawn name=\"" + x + "_" + y + "\">" + System.lineSeparator());
-                    writer.write("		<group>" + System.lineSeparator());
-                    writer.write("			<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnTime=\"" + spawnDelay + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + System.lineSeparator());
-                    writer.write("		</group>" + System.lineSeparator());
-                    writer.write("	</spawn>" + System.lineSeparator());
-                    writer.write("</list>" + System.lineSeparator());
-                    writer.close();
-                    LOGGER.info(getClass().getSimpleName() + ": Created file: " + OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
-                } catch (Exception e) {
-                    LOGGER.warn(": Spawn " + spawn + " could not be added to the spawn XML files: " + e);
-                }
+                writer.write(currentLine + System.lineSeparator());
             }
+            Files.delete(tmpFilePath);
+        } catch (Exception e) {
+            LOGGER.warn("Could not store spawn in the spawn XML files {}", filePath, e);
         }
     }
 
@@ -177,64 +169,88 @@ public final class SpawnTable {
      * @param spawn  the spawn to delete
      * @param update if {@code true} the spawn XML files will be updated
      */
-    public synchronized void deleteSpawn(Spawn spawn, boolean update) {
+    public void deleteSpawn(Spawn spawn, boolean update) {
         if (!removeSpawn(spawn)) {
             return;
         }
 
         if (update) {
-            final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-            final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-            final File spawnFile = new File( nonNull(spawn.getNpcSpawnTemplate()) ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFilePath() : OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
-            final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
-            try (final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
-                 final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))){
-
-                final String spawnId = String.valueOf(spawn.getId());
-                final String spawnX = String.valueOf(spawn.getX());
-                final String spawnY = String.valueOf(spawn.getY());
-                final String spawnZ = String.valueOf(spawn.getZ());
-                boolean found = false; // in XML you can have more than one spawn with same coords
-                boolean isMultiLine = false; // in case spawn has more stats
-                boolean lastLineFound = false; // used to check for empty file
-                int lineCount = 0;
-                String currentLine;
-                while ((currentLine = reader.readLine()) != null) {
-                    if (!found) {
-                        if (isMultiLine) {
-                            if (currentLine.contains("</npc>")) {
-                                found = true;
-                            }
-                            continue;
-                        }
-                        if (currentLine.contains(spawnId) && currentLine.contains(spawnX) && currentLine.contains(spawnY) && currentLine.contains(spawnZ)) {
-                            if (!currentLine.contains("/>") && !currentLine.contains("</npc>")) {
-                                isMultiLine = true;
-                            } else {
-                                found = true;
-                            }
-                            continue;
-                        }
-                    }
-                    writer.write(currentLine + System.lineSeparator());
-                    if (currentLine.contains("</list>")) {
-                        lastLineFound = true;
-                    }
-                    if (!lastLineFound) {
-                        lineCount++;
-                    }
-                }
-                spawnFile.delete();
-                tempFile.renameTo(spawnFile);
-                // Delete empty file
-                if (lineCount < 7) {
-                    LOGGER.info(getClass().getSimpleName() + ": Deleted empty file: " + spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/'));
-                    spawnFile.delete();
-                }
-            } catch (Exception e) {
-                LOGGER.warn(": Spawn " + spawn + " could not be removed from the spawn XML files: " + e);
+            try {
+                removeSpawnFromFile(spawn);
+            } catch (IOException e) {
+                LOGGER.warn("Couldn't remove spawn from file", e);
             }
         }
+    }
+
+    private synchronized void removeSpawnFromFile(Spawn spawn) throws IOException {
+        Path filePath = spawnFilePath(spawn);
+
+        if(Files.notExists(filePath)) {
+            LOGGER.warn("Spawn file not found {}", filePath);
+            return;
+        }
+        
+        final var tmpPath = filePath.resolveSibling(filePath.getFileName().toString() + ".tmp");
+        Files.move(filePath, tmpPath);
+        try(final var reader = Files.newBufferedReader(tmpPath);
+            final var writer = Files.newBufferedWriter(filePath, StandardOpenOption.CREATE_NEW)) {
+
+            final String spawnId = String.valueOf(spawn.getId());
+            final String spawnX = String.valueOf(spawn.getX());
+            final String spawnY = String.valueOf(spawn.getY());
+            final String spawnZ = String.valueOf(spawn.getZ());
+            boolean found = false; // in XML you can have more than one spawn with same coords
+            boolean isMultiLine = false; // in case spawn has more stats
+            boolean lastLineFound = false; // used to check for empty file
+            int lineCount = 0;
+            String currentLine;
+
+            while ((currentLine = reader.readLine()) != null) {
+                if (!found) {
+                    if (isMultiLine) {
+                        if (currentLine.contains("</npc>")) {
+                            found = true;
+                        }
+                        continue;
+                    }
+                    if (currentLine.contains(spawnId) && currentLine.contains(spawnX) && currentLine.contains(spawnY) && currentLine.contains(spawnZ)) {
+                        if (!currentLine.contains("/>") && !currentLine.contains("</npc>")) {
+                            isMultiLine = true;
+                        } else {
+                            found = true;
+                        }
+                        continue;
+                    }
+                }
+                writer.write(currentLine + System.lineSeparator());
+                if (currentLine.contains("</list>")) {
+                    lastLineFound = true;
+                }
+                if (!lastLineFound) {
+                    lineCount++;
+                }
+            }
+            Files.delete(tmpPath);
+            if (lineCount < 7) {
+                LOGGER.info("Deleted empty file {}", filePath);
+                Files.delete(filePath);
+            }
+        } catch (Exception e) {
+            LOGGER.warn("Spawn {} could not be removed from the spawn XML file", spawn, e);
+        }
+    }
+
+    private Path spawnFilePath(Spawn spawn) {
+        Path filePath;
+        if(isNull(spawn.getNpcSpawnTemplate())) {
+            final int x = MapRegionManager.getInstance().getMapRegionX(spawn.getX());
+            final int y = MapRegionManager.getInstance().getMapRegionY(spawn.getY());
+            filePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(CUSTOM_XML_FOLDER + "/" + x + "_" + y + ".xml");
+        } else {
+            filePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(spawn.getNpcSpawnTemplate().getSpawnTemplate().getFilePath());
+        }
+        return filePath;
     }
 
     /**

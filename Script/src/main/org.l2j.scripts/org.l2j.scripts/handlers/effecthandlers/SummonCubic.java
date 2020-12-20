@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.CubicTemplate;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.slf4j.Logger;
@@ -63,7 +63,7 @@ public final class SummonCubic extends AbstractEffect {
 
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-        if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode()) {
+        if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().isInObserverMode()) {
             return;
         }
 
@@ -73,7 +73,7 @@ public final class SummonCubic extends AbstractEffect {
         }
 
         final Player player = effected.getActingPlayer();
-        if (player.inObserverMode() || player.isMounted()) {
+        if (player.isInObserverMode() || player.isMounted()) {
             return;
         }
 

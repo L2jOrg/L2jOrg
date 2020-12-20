@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.mentoring;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -39,24 +40,24 @@ public class ListMenteeWaiting extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_MENTEE_WAITING_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_MENTEE_WAITING_LIST, buffer );
 
-        writeInt(0x01); // always 1 in retail
+        buffer.writeInt(0x01); // always 1 in retail
         if (_possibleCandiates.isEmpty()) {
-            writeInt(0x00);
-            writeInt(0x00);
+            buffer.writeInt(0x00);
+            buffer.writeInt(0x00);
             return;
         }
 
-        writeInt(_possibleCandiates.size());
-        writeInt(_possibleCandiates.size() % PLAYERS_PER_PAGE);
+        buffer.writeInt(_possibleCandiates.size());
+        buffer.writeInt(_possibleCandiates.size() % PLAYERS_PER_PAGE);
 
         for (Player player : _possibleCandiates) {
             if ((1 <= (PLAYERS_PER_PAGE * _page)) && (1 > (PLAYERS_PER_PAGE * (_page - 1)))) {
-                writeString(player.getName());
-                writeInt(player.getActiveClass());
-                writeInt(player.getLevel());
+                buffer.writeString(player.getName());
+                buffer.writeInt(player.getActiveClass());
+                buffer.writeInt(player.getLevel());
             }
         }
     }

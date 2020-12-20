@@ -283,7 +283,12 @@ public abstract class Zone extends ListenersContainer {
         if (creatures.isEmpty()) {
             return;
         }
-       toPlayerStream(creatures.values().parallelStream()).forEach(packet::sendTo);
+
+        for (Creature creature : creatures.values()) {
+            if(creature instanceof Player player) {
+                packet.sendTo(player);
+            }
+        }
     }
 
     private Stream<Player> toPlayerStream(Stream<Creature> stream) {
@@ -298,16 +303,22 @@ public abstract class Zone extends ListenersContainer {
         if(creatures.isEmpty()) {
             return;
         }
-
-        toPlayerStream(creatures.values().parallelStream()).forEach(player -> player.teleToLocation(TeleportWhereType.TOWN));
+        for (Creature creature : creatures.values()) {
+            if(creature instanceof Player) {
+                creature.teleToLocation(TeleportWhereType.TOWN);
+            }
+        }
     }
 
     public void movePlayersTo(Location loc) {
         if (creatures.isEmpty()) {
             return;
         }
-
-        toPlayerStream(creatures.values().parallelStream()).forEach(p -> p.teleToLocation(loc));
+        for (Creature creature : creatures.values()) {
+            if(isPlayer(creature)) {
+                creature.teleToLocation(loc);
+            }
+        }
     }
 
     public ZoneArea getArea() {

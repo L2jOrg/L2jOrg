@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import java.util.Optional;
 
@@ -114,12 +114,6 @@ public interface IStatsFunction {
              }
         } else if(item.getStats(stat, 0) <= 0) {
             return 0;
-        }
-
-        int enchant = item.getEnchantLevel();
-
-        if (creature.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ENCHANT_LIMIT)) {
-            enchant = Config.ALT_OLY_ENCHANT_LIMIT;
         }
 
         return switch (stat) {

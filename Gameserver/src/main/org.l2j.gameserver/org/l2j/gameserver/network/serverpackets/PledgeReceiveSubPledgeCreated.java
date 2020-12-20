@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
@@ -40,13 +41,13 @@ public class PledgeReceiveSubPledgeCreated extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SUBPLEDGE_UPDATED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SUBPLEDGE_UPDATED, buffer );
 
-        writeInt(0x01);
-        writeInt(_subPledge.getId());
-        writeString(_subPledge.getName());
-        writeString(getLeaderName());
+        buffer.writeInt(0x01);
+        buffer.writeInt(_subPledge.getId());
+        buffer.writeString(_subPledge.getName());
+        buffer.writeString(getLeaderName());
     }
 
 

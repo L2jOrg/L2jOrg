@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.timedhunter;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -28,33 +29,33 @@ import java.util.List;
 public class TimedHuntingZoneList extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_LIST);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_LIST, buffer );
 
         List<TimeRestrictedFieldInfo> infos = new ArrayList<>();
 
         addField(infos);
 
-        writeInt(infos.size());
+        buffer.writeInt(infos.size());
 
         for(var info : infos) {
-            writeInt(info.requiredItems.size());
+            buffer.writeInt(info.requiredItems.size());
 
             for (var item : info.requiredItems) {
-                writeInt(item.itemId);
-                writeLong(item.count);
+                buffer.writeInt(item.itemId);
+                buffer.writeLong(item.count);
             }
 
-            writeInt(info.resetCycle);
-            writeInt(info.fieldId);
-            writeInt(info.minLevel);
-            writeInt(info.maxLevel);
-            writeInt(info.remainTimeBase);
-            writeInt(info.remainTime);
-            writeInt(info.remainTimeMax);
-            writeInt(info.remainRefillTime);
-            writeInt(info.refillTimeMax);
-            writeByte(info.fieldActivated);
+            buffer.writeInt(info.resetCycle);
+            buffer.writeInt(info.fieldId);
+            buffer.writeInt(info.minLevel);
+            buffer.writeInt(info.maxLevel);
+            buffer.writeInt(info.remainTimeBase);
+            buffer.writeInt(info.remainTime);
+            buffer.writeInt(info.remainTimeMax);
+            buffer.writeInt(info.remainRefillTime);
+            buffer.writeInt(info.refillTimeMax);
+            buffer.writeByte(info.fieldActivated);
         }
     }
 

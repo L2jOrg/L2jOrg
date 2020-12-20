@@ -52,8 +52,9 @@ public class Duel {
     public static final int DUELSTATE_DEAD = 2;
     public static final int DUELSTATE_WINNER = 3;
     public static final int DUELSTATE_INTERRUPTED = 4;
-    protected static final Logger LOGGER = LoggerFactory.getLogger(Duel.class);
-    private static final PlaySound B04_S01 = new PlaySound(1, "B04_S01", 0, 0, 0, 0, 0);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Duel.class);
+    private static final PlaySound B04_S01 = PlaySound.music("B04_S01");
 
     private static final int PARTY_DUEL_DURATION = 300;
     private static final int PLAYER_DUEL_DURATION = 120;
@@ -374,7 +375,7 @@ public class Duel {
         }
 
         final List<Location> spawns = zone.getSpawns();
-        _duelInstance = InstanceManager.getInstance().createInstance(InstanceManager.getInstance().getInstanceTemplate(instanceId), null);
+        _duelInstance = InstanceManager.getInstance().createInstance(instanceId, null);
 
         final Location spawn1 = spawns.get(Rnd.get(spawns.size() / 2));
         for (Player temp : _playerA.getParty().getMembers()) {

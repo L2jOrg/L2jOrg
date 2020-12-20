@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.world.WorldTimeController;
@@ -30,11 +31,11 @@ public class ClientSetTime extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CLIENT_SETTIME);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CLIENT_SETTIME, buffer );
 
-        writeInt(WorldTimeController.getInstance().getGameTime()); // time in client minutes
-        writeInt(6); // constant to match the server time( this determines the speed of the client clock)
+        buffer.writeInt(WorldTimeController.getInstance().getGameTime()); // time in client minutes
+        buffer.writeInt(6); // constant to match the server time( this determines the speed of the client clock)
     }
 
 }

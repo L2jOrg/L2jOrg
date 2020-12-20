@@ -63,7 +63,7 @@ public class HtmCache {
         return CACHE.remove(path);
     }
 
-    public String loadFile(String filePath) {
+    private String loadFile(String filePath) {
         var path =  getSettings(ServerSettings.class).dataPackDirectory().resolve(filePath);
         if(FilterUtil.htmlFile(path)) {
             try {
@@ -156,7 +156,7 @@ public class HtmCache {
                 // Replace the entire extend block
                 result = result.replace(extendMatcher.group(0), template);
             } else {
-                LOGGER.warn(": Missing template: " + templateName + "-template.htm !");
+                LOGGER.warn("Missing template: {}-template.htm !", templateName);
             }
         }
 

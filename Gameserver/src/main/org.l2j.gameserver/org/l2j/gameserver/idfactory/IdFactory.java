@@ -67,9 +67,8 @@ public abstract class IdFactory {
 
     private void cleanUpTimeStamps() {
         var timestamp = System.currentTimeMillis();
-        var characterDAO = getDAO(PlayerDAO.class);
-        characterDAO.deleteExpiredInstances(timestamp);
-        characterDAO.deleteExpiredSavedSkills(timestamp);
+        getDAO(InstanceDAO.class).deleteExpiredInstances(timestamp);
+        getDAO(PlayerDAO.class).deleteExpiredSavedSkills(timestamp);
     }
 
     protected final IntSet extractUsedObjectIDTable()  {

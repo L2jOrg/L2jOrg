@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -41,13 +42,13 @@ public class ExBrBuffEventState extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_BUFF_EVENT_STATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BR_BUFF_EVENT_STATE, buffer );
 
-        writeInt(_type);
-        writeInt(_value);
-        writeInt(_state);
-        writeInt(_endtime);
+        buffer.writeInt(_type);
+        buffer.writeInt(_value);
+        buffer.writeInt(_state);
+        buffer.writeInt(_endtime);
     }
 
 }

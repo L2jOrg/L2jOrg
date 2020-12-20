@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -39,6 +40,7 @@ import org.l2j.gameserver.model.eventengine.ScheduleTarget;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
@@ -133,9 +135,9 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
     private void onClansTask(){
         for (Clan clan : ClanTable.getInstance().getClans()) {
             checkNewLeader(clan);
-            ClanRewardManager.getInstance().checkArenaProgress(clan);
+            ClanRewardManager.getInstance().resetArenaProgress(clan);
         }
-        GlobalVariablesManager.getInstance().resetRaidBonus();
+        getDAO(ClanDAO.class).resetArenaProgress();
         LOGGER.info("Clans has been updated");
     }
 
@@ -150,7 +152,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     private void onVitalityReset() {
-        if (!Config.ENABLE_VITALITY) {
+        if (!getSettings(CharacterSettings.class).isVitalityEnabled()) {
             return;
         }
 

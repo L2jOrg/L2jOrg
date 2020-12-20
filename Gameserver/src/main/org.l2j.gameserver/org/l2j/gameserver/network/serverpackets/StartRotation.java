@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -35,13 +36,13 @@ public final class StartRotation extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.START_ROTATING);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.START_ROTATING, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_degree);
-        writeInt(_side);
-        writeInt(_speed);
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_degree);
+        buffer.writeInt(_side);
+        buffer.writeInt(_speed);
     }
 
 }

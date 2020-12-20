@@ -25,7 +25,7 @@ import org.l2j.gameserver.enums.CrystallizationType;
 import org.l2j.gameserver.model.holders.CrystallizationDataHolder;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;

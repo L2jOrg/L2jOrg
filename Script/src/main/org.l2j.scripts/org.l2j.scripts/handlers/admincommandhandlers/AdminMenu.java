@@ -163,7 +163,7 @@ public class AdminMenu implements IAdminCommandHandler {
 				final Player plyr = World.getInstance().findPlayer(player);
 				String text;
 				if (plyr != null) {
-					Disconnection.of(plyr).defaultSequence(false);
+					Disconnection.of(plyr).logout(false);
 					text = "You kicked " + plyr.getName() + " from the game.";
 				} else {
 					text = "Player " + player + " was not found in the game.";

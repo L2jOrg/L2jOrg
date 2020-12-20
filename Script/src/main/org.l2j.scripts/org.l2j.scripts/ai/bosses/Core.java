@@ -125,7 +125,7 @@ public final class Core extends AbstractNpcAI
 	public void spawnBoss(GrandBoss npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
-		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		npc.broadcastPacket(PlaySound.music("BS01_A", npc));
 		// Spawn minions
 		Attackable mob;
 		Location spawnLocation;
@@ -188,7 +188,7 @@ public final class Core extends AbstractNpcAI
 	{
 		if (npc.getId() == CORE)
 		{
-			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+			npc.broadcastPacket(PlaySound.music("BS02_D", npc));
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.A_FATAL_ERROR_HAS_OCCURRED);
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.SYSTEM_IS_BEING_SHUT_DOWN);
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.EMPTY);

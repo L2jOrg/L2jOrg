@@ -35,10 +35,11 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EtcItem;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,6 +49,7 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isBetween;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -132,9 +134,9 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getReputation() < 0)) {
+        if (!getSettings(CharacterSettings.class).allowPKTeleport() && player.getReputation() < 0) {
             final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-            if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
+            if (nonNull(skills) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
                 return;
             }
         }

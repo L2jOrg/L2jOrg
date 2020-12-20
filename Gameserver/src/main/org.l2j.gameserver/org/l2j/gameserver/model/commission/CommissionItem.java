@@ -19,8 +19,10 @@
  */
 package org.l2j.gameserver.model.commission;
 
+import org.l2j.gameserver.data.database.data.CommissionItemData;
+import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -30,21 +32,20 @@ import java.util.concurrent.ScheduledFuture;
  * @author NosBit
  */
 public class CommissionItem {
-    private final long _commissionId;
-    private final Item _itemInstance;
+    private final Item itemInstance;
     private final ItemInfo _itemInfo;
-    private final long _pricePerUnit;
-    private final Instant _startTime;
-    private final byte _durationInDays;
+    private final CommissionItemData data;
     private ScheduledFuture<?> _saleEndTask;
 
-    public CommissionItem(long commissionId, Item itemInstance, long pricePerUnit, Instant startTime, byte durationInDays) {
-        _commissionId = commissionId;
-        _itemInstance = itemInstance;
-        _itemInfo = new ItemInfo(_itemInstance);
-        _pricePerUnit = pricePerUnit;
-        _startTime = startTime;
-        _durationInDays = durationInDays;
+    public CommissionItem(CommissionItemData data, ItemData itemData) {
+        this(data, new Item(itemData));
+
+    }
+
+    public CommissionItem(CommissionItemData data, Item itemInstance) {
+        this.itemInstance = itemInstance;
+        this.data = data;
+        _itemInfo = new ItemInfo(itemInstance);
     }
 
     /**
@@ -53,7 +54,7 @@ public class CommissionItem {
      * @return the commission id
      */
     public long getCommissionId() {
-        return _commissionId;
+        return data.getCommissionId();
     }
 
     /**
@@ -62,7 +63,7 @@ public class CommissionItem {
      * @return the item instance
      */
     public Item getItemInstance() {
-        return _itemInstance;
+        return itemInstance;
     }
 
     /**
@@ -80,7 +81,7 @@ public class CommissionItem {
      * @return the price per unit
      */
     public long getPricePerUnit() {
-        return _pricePerUnit;
+        return data.getPrice();
     }
 
     /**
@@ -89,7 +90,7 @@ public class CommissionItem {
      * @return the start time
      */
     public Instant getStartTime() {
-        return _startTime;
+        return data.getStartTime();
     }
 
     /**
@@ -98,7 +99,7 @@ public class CommissionItem {
      * @return the duration in days
      */
     public byte getDurationInDays() {
-        return _durationInDays;
+        return data.getDuration();
     }
 
     /**
@@ -107,7 +108,7 @@ public class CommissionItem {
      * @return the end time
      */
     public Instant getEndTime() {
-        return _startTime.plus(_durationInDays, ChronoUnit.DAYS);
+        return data.getStartTime().plus(data.getDuration(), ChronoUnit.DAYS);
     }
 
     /**

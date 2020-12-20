@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -33,14 +34,14 @@ public class VehicleCheckLocation extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.VEHICLE_CHECK_LOCATION);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.VEHICLE_CHECK_LOCATION, buffer );
 
-        writeInt(_boat.getObjectId());
-        writeInt(_boat.getX());
-        writeInt(_boat.getY());
-        writeInt(_boat.getZ());
-        writeInt(_boat.getHeading());
+        buffer.writeInt(_boat.getObjectId());
+        buffer.writeInt(_boat.getX());
+        buffer.writeInt(_boat.getY());
+        buffer.writeInt(_boat.getZ());
+        buffer.writeInt(_boat.getHeading());
     }
 
 }

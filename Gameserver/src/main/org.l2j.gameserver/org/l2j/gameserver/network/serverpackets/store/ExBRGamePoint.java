@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.store;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -28,13 +29,13 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExBRGamePoint extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_NOTIFY_GAME_POINT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BR_NOTIFY_GAME_POINT, buffer );
 
         var player = client.getPlayer();
-        writeInt(player.getObjectId());
-        writeLong(player.getNCoins());
-        writeInt(0x00);
+        buffer.writeInt(player.getObjectId());
+        buffer.writeLong(player.getNCoins());
+        buffer.writeInt(0x00);
     }
 
 }

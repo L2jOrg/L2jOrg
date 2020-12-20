@@ -81,7 +81,7 @@ public final class RequestExMagicSkillUseGround extends ClientPacket {
             activeChar.setHeading(calculateHeadingFrom(activeChar.getX(), activeChar.getY(), _x, _y));
             Broadcast.toKnownPlayers(activeChar, new ValidateLocation(activeChar));
 
-            activeChar.useMagic(skill, null, _ctrlPressed, _shiftPressed);
+            activeChar.useSkill(skill, null, _ctrlPressed, _shiftPressed);
         } else {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             LOGGER.warn("No skill found with id " + _skillId + " and level " + level + " !!");

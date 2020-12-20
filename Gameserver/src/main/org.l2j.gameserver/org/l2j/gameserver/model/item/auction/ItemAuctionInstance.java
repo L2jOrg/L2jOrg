@@ -27,7 +27,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
@@ -312,8 +312,8 @@ public final class ItemAuctionInstance {
 
                 LOGGER.info(getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + player.getName() + " for instance " + _instanceId);
             } else {
-                item.setOwnerId(bid.getPlayerObjId());
-                item.setItemLocation(ItemLocation.WAREHOUSE);
+                item.changeOwner(bid.getPlayerObjId());
+                item.changeItemLocation(ItemLocation.WAREHOUSE);
                 item.updateDatabase();
                 World.getInstance().removeObject(item);
 

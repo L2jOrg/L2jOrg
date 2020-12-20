@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -40,14 +41,14 @@ public class TradeUpdate extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.TRADE_UPDATE);
-        writeByte((byte) sendType);
-        writeInt(0x01);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.TRADE_UPDATE, buffer );
+        buffer.writeByte(sendType);
+        buffer.writeInt(0x01);
         if (sendType == 2) {
-            writeInt(0x01);
-            writeShort((short) ((newCount > 0) && item.getItem().isStackable() ? 3 : 2));
-            writeItem(item, count);
+            buffer.writeInt(0x01);
+            buffer.writeShort(((newCount > 0) && item.getItem().isStackable() ? 3 : 2));
+            writeItem(item, count, buffer);
         }
     }
 

@@ -28,7 +28,7 @@ dependencies {
     implementation project(':Commons')
 
     runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.13.3'
-    runtimeOnly 'org.ehcache:ehcache:3.8.1'
+    runtimeOnly 'org.ehcache:ehcache:3.9.0'
 }
 
 jar {
@@ -50,7 +50,7 @@ run {
     inputs.property("moduleName", moduleName)
     doFirst {
         def args = jvmArgs
-        args << "--enable-preview" << "--module-path" << classpath.asPath << '--class-path' << classpath.asPath << '--add-exports' << 'java.base/jdk.internal.misc=io.github.joealisson.primitive' << '--module' << "$moduleName/$mainClassName".toString()
+        args << "--enable-preview"  << "-Dfile.encoding=UTF-8" << "-XX:+UseZGC" << "--module-path" << classpath.asPath << '--class-path' << classpath.asPath << '--add-exports' << 'java.base/jdk.internal.misc=io.github.joealisson.primitive' << '--module' << "$moduleName/$mainClassName".toString()
         jvmArgs = args
     }
 }
@@ -61,6 +61,8 @@ startScripts {
         classpath = files()
         defaultJvmOpts = [
                 '--enable-preview',
+                '-Dfile.encoding=UTF-8',
+                '-XX:+UseZGC',
                 '--module-path', 'APP_HOME_LIBS',
                 '--module', "$moduleName/$mainClassName",
                 '--source', sourceCompatibility,

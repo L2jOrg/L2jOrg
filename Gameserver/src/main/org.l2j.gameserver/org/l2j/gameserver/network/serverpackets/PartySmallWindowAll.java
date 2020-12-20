@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -36,51 +37,51 @@ public final class PartySmallWindowAll extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PARTY_SMALL_WINDOW_ALL);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PARTY_SMALL_WINDOW_ALL, buffer );
 
-        writeInt(_party.getLeaderObjectId());
-        writeByte((byte) _party.getDistributionType().getId());
-        writeByte((byte) (_party.getMemberCount() - 1));
+        buffer.writeInt(_party.getLeaderObjectId());
+        buffer.writeByte(_party.getDistributionType().getId());
+        buffer.writeByte(_party.getMemberCount() - 1);
 
         for (Player member : _party.getMembers()) {
             if ((member != null) && (member != _exclude)) {
-                writeInt(member.getObjectId());
-                writeString(member.getName());
+                buffer.writeInt(member.getObjectId());
+                buffer.writeString(member.getName());
 
-                writeInt((int) member.getCurrentCp()); // c4
-                writeInt(member.getMaxCp()); // c4
+                buffer.writeInt((int) member.getCurrentCp()); // c4
+                buffer.writeInt(member.getMaxCp()); // c4
 
-                writeInt((int) member.getCurrentHp());
-                writeInt(member.getMaxHp());
-                writeInt((int) member.getCurrentMp());
-                writeInt(member.getMaxMp());
-                writeInt(member.getVitalityPoints());
-                writeByte(member.getLevel());
-                writeShort(member.getClassId().getId());
-                writeByte(0x01); // Unk
-                writeShort(member.getRace().ordinal());
-                writeInt(0x00);
+                buffer.writeInt((int) member.getCurrentHp());
+                buffer.writeInt(member.getMaxHp());
+                buffer.writeInt((int) member.getCurrentMp());
+                buffer.writeInt(member.getMaxMp());
+                buffer.writeInt(member.getVitalityPoints());
+                buffer.writeByte(member.getLevel());
+                buffer.writeShort(member.getClassId().getId());
+                buffer.writeByte(0x01); // Unk
+                buffer.writeShort(member.getRace().ordinal());
+                buffer.writeInt(0x00);
 
                 final Summon pet = member.getPet();
-                writeInt(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
+                buffer.writeInt(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
 
-                doIfNonNull(pet, this::writeSummonStatus);
-                member.getServitors().values().forEach(this::writeSummonStatus);
+                doIfNonNull(pet, summon -> writeSummonStatus(summon, buffer));
+                member.getServitors().values().forEach(summon -> writeSummonStatus(summon, buffer));
             }
         }
     }
 
-    private void writeSummonStatus(Summon summon) {
-        writeInt(summon.getObjectId());
-        writeInt(summon.getId() + 1000000);
-        writeByte(summon.getSummonType());
-        writeString(summon.getName());
-        writeInt((int) summon.getCurrentHp());
-        writeInt(summon.getMaxHp());
-        writeInt((int) summon.getCurrentMp());
-        writeInt(summon.getMaxMp());
-        writeByte(summon.getLevel());
+    private void writeSummonStatus(Summon summon, WritableBuffer buffer) {
+        buffer.writeInt(summon.getObjectId());
+        buffer.writeInt(summon.getId() + 1000000);
+        buffer.writeByte(summon.getSummonType());
+        buffer.writeString(summon.getName());
+        buffer.writeInt((int) summon.getCurrentHp());
+        buffer.writeInt(summon.getMaxHp());
+        buffer.writeInt((int) summon.getCurrentMp());
+        buffer.writeInt(summon.getMaxMp());
+        buffer.writeByte(summon.getLevel());
     }
 
 }

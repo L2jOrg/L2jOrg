@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
 
@@ -59,8 +59,7 @@ public final class PhysicalAttack extends AbstractEffect {
 	}
 	
 	@Override
-	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
-	{
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
 		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill);
 	}
 	

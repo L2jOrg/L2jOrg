@@ -29,15 +29,12 @@ import java.util.List;
  */
 public interface ShortcutDAO extends DAO<Shortcut> {
 
-    @Query("DELETE FROM character_shortcuts WHERE player_id=:playerId: AND client_id=:clientId: AND class_index=:classIndex:")
-    void delete(int playerId, int clientId, int classIndex);
+    @Query("DELETE FROM character_shortcuts WHERE player_id=:playerId: AND client_id=:clientId:")
+    void delete(int playerId, int clientId);
 
-    @Query("SELECT * FROM character_shortcuts WHERE player_id=:playerId: AND class_index=:classIndex:")
-    List<Shortcut> findByPlayer(int playerId, int classIndex);
-
-    @Query("DELETE FROM character_shortcuts WHERE player_id=:playerId: AND class_index=:classIndex:")
-    void deleteFromSubclass(int playerId, int classIndex);
+    @Query("SELECT * FROM character_shortcuts WHERE player_id=:playerId:")
+    List<Shortcut> findByPlayer(int playerId);
 
     @Query("DELETE FROM character_shortcuts WHERE player_id=:playerId:")
-    void deleteAll(int playerId);
+    void deleteFromPlayer(int playerId);
 }

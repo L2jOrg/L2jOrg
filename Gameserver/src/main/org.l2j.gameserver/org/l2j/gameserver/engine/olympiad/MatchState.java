@@ -24,5 +24,7 @@ package org.l2j.gameserver.engine.olympiad;
 public enum MatchState  {
     CREATED,
     STARTED,
-    WARM_UP
+    WARM_UP,
+    IN_BATTLE,
+    FINISHED
 }

@@ -18,7 +18,10 @@
  */
 package org.l2j.gameserver.network.serverpackets.rank;
 
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.engine.rank.RankEngine;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -30,21 +33,25 @@ import static java.util.Objects.isNull;
  */
 public class ExRankingCharInfo extends ServerPacket {
 
-    @Override
-    protected void writeImpl(GameClient client) {
-        var rank = RankEngine.getInstance().getRank(client.getPlayer());
+    private final RankData rank;
 
-        writeId(ServerExPacketId.EX_RANKING_CHAR_INFO);
+    public ExRankingCharInfo(Player player) {
+        rank = RankEngine.getInstance().getRank(player);
+    }
+
+    @Override
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RANKING_CHAR_INFO, buffer );
         if(isNull(rank)) {
-            writeInt(0);
-            writeInt(0);
-            writeInt(0);
-            writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
         } else {
-            writeInt(rank.getRank());
-            writeInt(rank.getRankRace());
-            writeInt(rank.getRankSnapshot());
-            writeInt(rank.getRankRaceSnapshot());
+            buffer.writeInt(rank.getRank());
+            buffer.writeInt(rank.getRankRace());
+            buffer.writeInt(rank.getRankSnapshot());
+            buffer.writeInt(rank.getRankRaceSnapshot());
         }
     }
 }

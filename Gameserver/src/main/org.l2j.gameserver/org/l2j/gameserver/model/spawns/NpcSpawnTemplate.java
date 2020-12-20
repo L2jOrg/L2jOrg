@@ -21,7 +21,7 @@ package org.l2j.gameserver.model.spawns;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.model.ChanceLocation;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Spawn;
@@ -317,8 +317,8 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         spawn.setSpawnTemplate(this);
 
         if (saveInDB) {
-            if (!DBSpawnManager.getInstance().isDefined(id)) {
-                final Npc spawnedNpc = DBSpawnManager.getInstance().addNewSpawn(spawn, true);
+            if (!BossManager.getInstance().isDefined(id)) {
+                final Npc spawnedNpc = BossManager.getInstance().addNewSpawn(spawn, true);
                 if (isMonster(spawnedNpc) && (_minions != null)) {
                     ((Monster) spawnedNpc).getMinionList().spawnMinions(_minions);
                 }

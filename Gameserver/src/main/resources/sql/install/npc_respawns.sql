@@ -1,12 +1,12 @@
-DROP TABLE IF EXISTS `npc_respawns`;
-CREATE TABLE IF NOT EXISTS `npc_respawns` (
-  `id` int(10) NOT NULL,
-  `x` int(10) NOT NULL,
-  `y` int(10) NOT NULL,
-  `z` int(10) NOT NULL,
-  `heading` int(10) NOT NULL,
-  `respawnTime` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `currentHp` double unsigned NOT NULL,
-  `currentMp` double unsigned NOT NULL,
-  PRIMARY KEY (`id`)
+DROP TABLE IF EXISTS boss_data;
+CREATE TABLE IF NOT EXISTS boss_data (
+  `boss_id` INT NOT NULL,
+  `x` INT NOT NULL,
+  `y` INT NOT NULL,
+  `z` INT NOT NULL,
+  `heading` MEDIUMINT NOT NULL DEFAULT 0,
+  `respawn_time` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  `hp` DOUBLE NOT NULL,
+  `mp` DOUBLE NOT NULL,
+  PRIMARY KEY (`boss_id`)
 )  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

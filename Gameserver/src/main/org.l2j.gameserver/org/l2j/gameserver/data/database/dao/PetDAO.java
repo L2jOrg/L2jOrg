@@ -21,6 +21,7 @@ package org.l2j.gameserver.data.database.dao;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.PetData;
+import org.l2j.gameserver.data.database.data.PetSkillData;
 
 import java.util.List;
 
@@ -44,6 +45,14 @@ public interface PetDAO extends DAO<PetData> {
     @Query("UPDATE pets SET fed=:fed: WHERE item_obj_id = :itemId:")
     void updateFed(int itemId, int fed);
 
-    @Query("DELETE FROM character_summon_skills_save WHERE ownerId=:ownerId: AND ownerClassIndex=:classIndex: AND summonSkillId=:skill:")
-    void deleteSkillsSave(int ownerId, int classIndex, int skill);
+    @Query("DELETE FROM pet_skills_save WHERE item_id = :itemId:")
+    void deletePetSkillsSave(int itemId);
+
+    @Query("SELECT * FROM pets WHERE item_obj_id=:itemId:")
+    PetData findPetByControlItem(int itemId);
+
+    void save(List<PetSkillData> storedSkills);
+
+    @Query("SELECT * FROM pet_skills_save WHERE item_id=:itemId: ORDER BY buff_index")
+    List<PetSkillData> restorePetSkills(int itemId);
 }

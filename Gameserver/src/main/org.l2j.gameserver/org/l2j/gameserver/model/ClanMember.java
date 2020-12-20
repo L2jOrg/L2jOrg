@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
@@ -26,11 +25,6 @@ import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -38,7 +32,6 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * This class holds the clan members data.
  */
 public class ClanMember {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClanMember.class);
 
     private final Clan clan;
     private int _objectId;
@@ -54,7 +47,6 @@ public class ClanMember {
     private int _apprentice;
     private int _sponsor;
     private long _onlineTime;
-
 
     public ClanMember(Clan clan, PlayerData memberData) {
         this.clan = clan;
@@ -90,8 +82,6 @@ public class ClanMember {
         _pledgeType = player.getPledgeType();
         _powerGrade = player.getPowerGrade();
         _title = player.getTitle();
-        _sponsor = 0;
-        _apprentice = 0;
         _sex = player.getAppearance().isFemale();
         _raceOrdinal = player.getRace().ordinal();
     }

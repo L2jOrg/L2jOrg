@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.GameClient;
@@ -47,14 +48,14 @@ public class QuestList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.QUESTLIST);
-        writeShort(_activeQuests.size());
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.QUESTLIST, buffer );
+        buffer.writeShort(_activeQuests.size());
         for (QuestState qs : _activeQuests) {
-            writeInt(qs.getQuest().getId());
-            writeInt(qs.getCond());
+            buffer.writeInt(qs.getQuest().getId());
+            buffer.writeInt(qs.getCond());
         }
-        writeBytes(_oneTimeQuestMask);
+        buffer.writeBytes(_oneTimeQuestMask);
     }
 
 }

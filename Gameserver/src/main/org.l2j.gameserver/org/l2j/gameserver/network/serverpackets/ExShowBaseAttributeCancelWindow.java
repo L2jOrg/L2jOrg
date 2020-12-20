@@ -18,8 +18,9 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -27,20 +28,19 @@ import java.util.Collection;
 
 public class ExShowBaseAttributeCancelWindow extends ServerPacket {
     private final Collection<Item> _items;
-    private long _price;
 
-    public ExShowBaseAttributeCancelWindow(Player player) {
-        _items = player.getInventory().getItems(Item::hasAttributes);
+    public ExShowBaseAttributeCancelWindow(Collection<Item> items) {
+        this._items = items;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW, buffer );
 
-        writeInt(_items.size());
+        buffer.writeInt(_items.size());
         for (Item item : _items) {
-            writeInt(item.getObjectId());
-            writeLong(getPrice(item));
+            buffer.writeInt(item.getObjectId());
+            buffer.writeLong(getPrice(item));
         }
     }
 
@@ -52,14 +52,12 @@ public class ExShowBaseAttributeCancelWindow extends ServerPacket {
      * @return
      */
     private long getPrice(Item item) {
-        switch (item.getTemplate().getCrystalType()) {
-            case S: {
-                if (item.isWeapon()) {
-                    _price = 50000;
-                } else {
-                    _price = 40000;
-                }
-                break;
+        long _price = 0;
+        if (item.getCrystalType() == CrystalType.S) {
+            if (item.isWeapon()) {
+                _price = 50000;
+            } else {
+                _price = 40000;
             }
         }
         return _price;

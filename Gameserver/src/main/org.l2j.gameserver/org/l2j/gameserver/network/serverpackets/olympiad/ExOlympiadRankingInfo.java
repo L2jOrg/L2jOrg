@@ -18,41 +18,62 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.OlympiadRankData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+
+import java.util.List;
 
 /**
  * @author JoeAlisson
  */
 public class ExOlympiadRankingInfo extends ServerPacket {
 
+    private final List<OlympiadRankData> rankers;
+    private final byte type;
+    private final byte scope;
+    private final boolean currentSeason;
+    private final int classId;
+    private final int server;
+    private final int participants;
+
+    public ExOlympiadRankingInfo(byte type, byte scope, boolean currentSeason, int classId, int server, List<OlympiadRankData> rankers, int participants) {
+        this.type = type;
+        this.scope = scope;
+        this.currentSeason = currentSeason;
+        this.classId = classId;
+        this.server = server;
+        this.rankers = rankers;
+        this.participants = participants;
+    }
+
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_RANKING_INFO);
-        writeByte(0); // type
-        writeByte(0); // scope
-        writeByte(true); // current season
-        writeInt(12); // class Id
-        writeInt(1); // world id
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_RANKING_INFO, buffer );
+        buffer.writeByte(type);
+        buffer.writeByte(scope);
+        buffer.writeByte(currentSeason);
+        buffer.writeInt(classId);
+        buffer.writeInt(server);
 
-        writeInt(3); // total users
-
-        writeInt(2); // rank size
-        for (int i = 0; i < 2; i++) {
-            writeSizedString("ranker" + i); // ranker name
-            writeSizedString("rankerclan" + i); // ranker clan name
-            writeInt(i+1); // rank
-            writeInt(i); // prev rank
-            writeInt(1); // ranker world id
-            writeInt(76 +i); // ranker level
-            writeInt(88 + i); // ranker class id
-            writeInt(4); // ranker clan level
-            writeInt( 4 + i); // ranker win count
-            writeInt(5 + i); // ranker lose count
-            writeInt(100 + i); // ranker points
-            writeInt(2 + i); // hero count
-            writeInt(5 + i); // legend count
+        buffer.writeInt(participants);
+        buffer.writeInt(rankers.size());
+        for (var ranker : rankers) {
+            buffer.writeSizedString(ranker.getName());
+            buffer.writeSizedString(ranker.getClanName());
+            buffer.writeInt(ranker.getRank());
+            buffer.writeInt(ranker.getPreviousRank());
+            buffer.writeInt(ranker.getServer());
+            buffer.writeInt(ranker.getLevel());
+            buffer.writeInt(ranker.getClassId());
+            buffer.writeInt(ranker.getClanLevel());
+            buffer.writeInt(ranker.getBattlesWon());
+            buffer.writeInt(ranker.getBattlesLost());
+            buffer.writeInt(ranker.getPoints());
+            buffer.writeInt(ranker.getHeroCount());
+            buffer.writeInt(ranker.getLegendCount());
         }
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.friend;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -48,14 +49,14 @@ public class FriendPacket extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.L2_FRIEND);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.L2_FRIEND, buffer );
 
-        writeInt(_action ? 1 : 3); // 1-add 3-remove
-        writeInt(_objid);
-        writeString(_name);
-        writeInt(_online ? 1 : 0);
-        writeInt(_online ? _objid : 0);
+        buffer.writeInt(_action ? 1 : 3); // 1-add 3-remove
+        buffer.writeInt(_objid);
+        buffer.writeString(_name);
+        buffer.writeInt(_online ? 1 : 0);
+        buffer.writeInt(_online ? _objid : 0);
     }
 
 }

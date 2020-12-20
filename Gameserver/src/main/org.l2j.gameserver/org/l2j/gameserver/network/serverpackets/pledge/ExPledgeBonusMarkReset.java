@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -33,8 +34,8 @@ public class ExPledgeBonusMarkReset extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_ACTIVITY_MARK_RESET);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_ACTIVITY_MARK_RESET, buffer );
     }
 
 }

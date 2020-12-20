@@ -89,14 +89,13 @@ public final class AnnouncementsManager {
 
     /**
      * Sends all announcements to the player by the specified type
-     *
-     * @param player
-     * @param type
      */
     private void sendAnnouncements(Player player, AnnouncementType type) {
-        announcements.values().stream().filter(a -> a.getType() == type && a.isValid())
-                .map(a -> new CreatureSay(0, type == CRITICAL ? CRITICAL_ANNOUNCE : ANNOUNCEMENT, player.getName(), a.getContent()))
-                .forEach(player::sendPacket);
+        for (Announce announce : announcements.values()) {
+            if(announce.getType() == type && announce.isValid()) {
+                player.sendPacket(new CreatureSay(0, type == CRITICAL ? CRITICAL_ANNOUNCE : ANNOUNCEMENT, player.getName(), announce.getContent()));
+            }
+        }
     }
 
     /**
@@ -105,8 +104,8 @@ public final class AnnouncementsManager {
      * @param announce
      */
     public void addAnnouncement(Announce announce) {
-        if(announce instanceof AnnounceData) {
-            getDAO(AnnounceDAO.class).save((AnnounceData) announce);
+        if(announce instanceof AnnounceData data) {
+            getDAO(AnnounceDAO.class).save(data);
         }
         announcements.put(announce.getId(), announce);
     }

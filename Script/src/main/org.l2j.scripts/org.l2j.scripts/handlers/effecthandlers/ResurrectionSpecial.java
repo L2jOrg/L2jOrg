@@ -83,10 +83,10 @@ public final class ResurrectionSpecial extends AbstractEffect {
 		}
 		
 		if (isPlayer(effected)) {
-			effected.getActingPlayer().reviveRequest(caster, skill, false, power);
+			effected.getActingPlayer().reviveRequest(caster, false, power);
 		} else if (isPet(effected)) {
 			final Pet pet = (Pet) effected;
-			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, power);
+			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), true, power);
 		}
 	}
 

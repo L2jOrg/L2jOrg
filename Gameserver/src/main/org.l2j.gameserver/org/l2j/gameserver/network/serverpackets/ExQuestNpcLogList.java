@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
@@ -50,15 +51,15 @@ public class ExQuestNpcLogList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_QUEST_NPC_LOG_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_QUEST_NPC_LOG_LIST, buffer );
 
-        writeInt(_questId);
-        writeByte((byte) _npcLogList.size());
+        buffer.writeInt(_questId);
+        buffer.writeByte(_npcLogList.size());
         for (NpcLogListHolder holder : _npcLogList) {
-            writeInt(holder.isNpcString() ? holder.getId() : holder.getId() + 1000000);
-            writeByte((byte)( holder.isNpcString() ? 0x01 : 0x00));
-            writeInt(holder.getCount());
+            buffer.writeInt(holder.isNpcString() ? holder.getId() : holder.getId() + 1000000);
+            buffer.writeByte(holder.isNpcString());
+            buffer.writeInt(holder.getCount());
         }
     }
 

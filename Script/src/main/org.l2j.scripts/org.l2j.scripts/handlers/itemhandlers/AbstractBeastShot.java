@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayeableChargeShots;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
@@ -103,7 +103,7 @@ public abstract class AbstractBeastShot implements IItemHandler {
         sendUsesMessage(owner);
         s.chargeShot(shotType, getBonus(s));
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayeableChargeShots(s, shotType, isBlessed()), owner);
-        skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(s, s, holder.getSkillId(), holder.getLevel(), 0, 0), 600));
+        skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(s, holder.getSkill(), 0), 600));
     }
 
     protected abstract boolean isBlessed();

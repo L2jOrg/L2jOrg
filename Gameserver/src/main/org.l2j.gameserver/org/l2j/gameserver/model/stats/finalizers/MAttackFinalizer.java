@@ -20,7 +20,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
@@ -57,7 +57,7 @@ public class MAttackFinalizer implements IStatsFunction {
         // Calculate modifiers Magic Attack
         final double intBonus = BaseStats.INT.calcBonus(creature);
         baseValue *= Math.pow(intBonus, 2) * Math.pow(creature.getLevelMod(), 2);
-        return Math.min(Stat.defaultValue(creature, stat, baseValue), Config.MAX_MATK);
+        return Stat.defaultValue(creature, stat, baseValue);
     }
 
     private double calcEnchantMAtkBonus(Item item) {

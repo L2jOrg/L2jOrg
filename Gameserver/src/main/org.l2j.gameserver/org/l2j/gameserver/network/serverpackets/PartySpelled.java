@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -48,28 +49,27 @@ public class PartySpelled extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PARTY_SPELLED_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PARTY_SPELLED_INFO, buffer );
 
-        writeInt(GameUtils.isServitor(_activeChar) ? 2 : isPet(_activeChar) ? 1 : 0);
-        writeInt(_activeChar.getObjectId());
-        writeInt(_effects.size() + _effects2.size());
+        buffer.writeInt(GameUtils.isServitor(_activeChar) ? 2 : isPet(_activeChar) ? 1 : 0);
+        buffer.writeInt(_activeChar.getObjectId());
+        buffer.writeInt(_effects.size() + _effects2.size());
         for (BuffInfo info : _effects) {
             if ((info != null) && info.isInUse()) {
-                writeInt(info.getSkill().getDisplayId());
-                writeShort((short) info.getSkill().getDisplayLevel());
-                writeInt(info.getSkill().getAbnormalType().getClientId());
-                writeOptionalD(info.getTime());
+                buffer.writeInt(info.getSkill().getDisplayId());
+                buffer.writeShort(info.getSkill().getDisplayLevel());
+                buffer.writeInt(info.getSkill().getAbnormalType().getClientId());
+                writeOptionalD(info.getTime(), buffer);
             }
         }
         for (Skill skill : _effects2) {
             if (skill != null) {
-                writeInt(skill.getDisplayId());
-                writeShort((short) skill.getDisplayLevel());
-                writeInt(skill.getAbnormalType().getClientId());
-                writeShort((short) -1);
+                buffer.writeInt(skill.getDisplayId());
+                buffer.writeShort(skill.getDisplayLevel());
+                buffer.writeInt(skill.getAbnormalType().getClientId());
+                buffer.writeShort(-1);
             }
         }
     }
-
 }

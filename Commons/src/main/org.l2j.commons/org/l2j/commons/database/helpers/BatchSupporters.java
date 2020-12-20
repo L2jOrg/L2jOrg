@@ -20,7 +20,8 @@ package org.l2j.commons.database.helpers;
 
 import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.IntIterable;
-import org.l2j.commons.database.handler.TypeHandler;
+import org.l2j.commons.database.HandlersSupport;
+import org.l2j.commons.database.TypeHandler;
 
 import java.util.Iterator;
 import java.util.PrimitiveIterator;
@@ -32,7 +33,7 @@ public final class BatchSupporters {
 
     private static final IntIterableBatchSupport intIterableSupporter = new IntIterableBatchSupport();
 
-    interface BatchSupport {
+    public interface BatchSupport {
         Iterator<?> getIterator(Object iterable);
         TypeHandler getHandler();
     }

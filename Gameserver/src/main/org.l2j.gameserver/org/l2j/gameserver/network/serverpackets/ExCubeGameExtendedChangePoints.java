@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -53,18 +54,18 @@ public class ExCubeGameExtendedChangePoints extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BLOCK_UPSET_STATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BLOCK_UPSET_STATE, buffer );
 
-        writeInt(0x00);
+        buffer.writeInt(0x00);
 
-        writeInt(_timeLeft);
-        writeInt(_bluePoints);
-        writeInt(_redPoints);
+        buffer.writeInt(_timeLeft);
+        buffer.writeInt(_bluePoints);
+        buffer.writeInt(_redPoints);
 
-        writeInt(_isRedTeam ? 0x01 : 0x00);
-        writeInt(_player.getObjectId());
-        writeInt(_playerPoints);
+        buffer.writeInt(_isRedTeam ? 0x01 : 0x00);
+        buffer.writeInt(_player.getObjectId());
+        buffer.writeInt(_playerPoints);
     }
 
 }

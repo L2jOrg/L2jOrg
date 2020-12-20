@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -38,13 +39,13 @@ public class ExUseSharedGroupItem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_USE_SHARED_GROUP_ITEM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_USE_SHARED_GROUP_ITEM, buffer );
 
-        writeInt(_itemId);
-        writeInt(_grpId);
-        writeInt(_remainingTime);
-        writeInt(_totalTime);
+        buffer.writeInt(_itemId);
+        buffer.writeInt(_grpId);
+        buffer.writeInt(_remainingTime);
+        buffer.writeInt(_totalTime);
     }
 
 }

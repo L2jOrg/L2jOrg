@@ -32,6 +32,7 @@ import org.l2j.gameserver.world.World;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
+import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_SEND_A_WHISPER_TO_A_USER_WHO_IS_PARTICIPATING_IN_THE_OLYMPIAD;
 
 /**
  * Tell chat handler.
@@ -73,6 +74,11 @@ public final class ChatWhisper implements IChatHandler {
 				// Allow receiver to send PMs to this char, which is in silence mode.
 				if (chatSettings.silenceModeExclude() && player.isSilenceMode()) {
 					player.addSilenceModeExcluded(receiver.getObjectId());
+				}
+
+				if(receiver.isInOlympiadMode()) {
+					player.sendPacket(YOU_CANNOT_SEND_A_WHISPER_TO_A_USER_WHO_IS_PARTICIPATING_IN_THE_OLYMPIAD);
+					return;
 				}
 				
 				receiver.getWhisperers().add(player.getObjectId());

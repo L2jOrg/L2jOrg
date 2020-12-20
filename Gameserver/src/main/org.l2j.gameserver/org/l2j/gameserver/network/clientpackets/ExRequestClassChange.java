@@ -23,10 +23,12 @@ import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Mobius
@@ -80,23 +82,16 @@ public class ExRequestClassChange extends ClientPacket {
         if (canChange)
         {
             player.setClassId(classId);
-            if (player.isSubClassActive())
-            {
-                player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
-            }
-            else
-            {
-                player.setBaseClass(player.getActiveClass());
-            }
+            player.setBaseClass(player.getActiveClass());
 
-            if (Config.AUTO_LEARN_SKILLS)
-            {
-                player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+            var characterSettings = getSettings(CharacterSettings.class);
+            if (characterSettings.isAutoLearnSkillEnabled()) {
+                player.giveAvailableSkills(characterSettings.isAutoLearnSkillFSEnabled(), true);
             }
             player.store(false); // Save player cause if server crashes before this char is saved, he will lose class.
             player.broadcastUserInfo();
             player.sendSkillList();
-            player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
+            player.sendPacket(PlaySound.sound("ItemSound.quest_fanfare_2"));
         }
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.mentoring;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -34,12 +35,12 @@ public class ExMentorAdd extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_MENTOR_ADD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_MENTOR_ADD, buffer );
 
-        writeString(_mentor.getName());
-        writeInt(_mentor.getActiveClass());
-        writeInt(_mentor.getLevel());
+        buffer.writeString(_mentor.getName());
+        buffer.writeInt(_mentor.getActiveClass());
+        buffer.writeInt(_mentor.getLevel());
     }
 
 }

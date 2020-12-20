@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
@@ -36,21 +37,21 @@ public class PledgeSkillList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_SKILL_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_SKILL_LIST, buffer );
 
-        writeInt(_skills.length);
-        writeInt(_subSkills.length); // Squad skill length
+        buffer.writeInt(_skills.length);
+        buffer.writeInt(_subSkills.length); // Squad skill length
         for (Skill sk : _skills) {
-            writeInt(sk.getDisplayId());
-            writeShort((short) sk.getDisplayLevel());
-            writeShort((short) 0x00); // Sub level
+            buffer.writeInt(sk.getDisplayId());
+            buffer.writeShort(sk.getDisplayLevel());
+            buffer.writeShort(0x00); // Sub level
         }
         for (SubPledgeSkill sk : _subSkills) {
-            writeInt(sk._subType); // Clan Sub-unit types
-            writeInt(sk._skillId);
-            writeShort((short) sk._skillLvl);
-            writeShort((short) 0x00); // Sub level
+            buffer.writeInt(sk._subType); // Clan Sub-unit types
+            buffer.writeInt(sk._skillId);
+            buffer.writeShort(sk._skillLvl);
+            buffer.writeShort(0x00); // Sub level
         }
     }
 

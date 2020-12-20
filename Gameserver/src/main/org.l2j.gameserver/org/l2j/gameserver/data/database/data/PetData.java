@@ -20,6 +20,7 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.gameserver.model.actor.instance.Pet;
 
 /**
  * @author JoeAlisson
@@ -30,11 +31,11 @@ public class PetData {
     @Column("item_obj_id")
     private int itemObjectId;
     private String name;
-    private int level;
+    private byte level;
     private int curHp;
     private int curMp;
-    private int exp;
-    private int sp;
+    private long exp;
+    private long sp;
     private int fed;
     private int ownerId;
     private boolean restore;
@@ -47,7 +48,7 @@ public class PetData {
         return name;
     }
 
-    public int getLevel() {
+    public byte getLevel() {
         return level;
     }
 
@@ -59,11 +60,11 @@ public class PetData {
         return curMp;
     }
 
-    public int getExp() {
+    public long getExp() {
         return exp;
     }
 
-    public int getSp() {
+    public long getSp() {
         return sp;
     }
 
@@ -77,5 +78,20 @@ public class PetData {
 
     public boolean isRestore() {
         return restore;
+    }
+
+    public static PetData of(Pet pet, boolean restore) {
+        var data = new PetData();
+        data.name = pet.getName();
+        data.level = (byte) pet.getLevel();
+        data.curHp = (int) pet.getCurrentHp();
+        data.curMp = (int) pet.getCurrentMp();
+        data.exp = pet.getStats().getExp();
+        data.sp = pet.getStats().getSp();
+        data.fed = pet.getCurrentFed();
+        data.ownerId = pet.getOwner().getObjectId();
+        data.restore = restore;
+        data.itemObjectId = pet.getCON();
+        return data;
     }
 }

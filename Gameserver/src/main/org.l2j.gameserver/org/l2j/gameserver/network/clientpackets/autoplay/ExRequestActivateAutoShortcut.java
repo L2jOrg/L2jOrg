@@ -18,9 +18,15 @@
  */
 package org.l2j.gameserver.network.clientpackets.autoplay;
 
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
+import org.l2j.gameserver.taskmanager.AutoUseTaskManager;
 
 /**
  * @author JoeAlisson
@@ -38,10 +44,52 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
 
     @Override
     protected void runImpl() {
+        final Player player = client.getPlayer();
+        if (player == null)
+        {
+            return;
+        }
+        final Shortcut shortcut = player.getShortcut(room);
+        if (shortcut == null)
+        {
+            return;
+        }
+        final Item item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
+        Skill skill = null;
+        if (item == null)
+        {
+            skill = player.getKnownSkill(shortcut.getShortcutId());
+        }
         if(AutoPlayEngine.getInstance().setActiveAutoShortcut(client.getPlayer(), room, activate)) {
             client.sendPacket(new ExActivateAutoShortcut(room, activate));
         } else {
             client.sendPacket(new ExActivateAutoShortcut(room, false));
+        }
+        if (!activate)
+        {
+            if (skill != null)
+            {
+                AutoUseTaskManager.getInstance().removeAutoSkill(player, skill.getId());
+            }
+            if (item != null) {
+                if (!item.isPotion()) {
+                    AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, item.getId());
+                }
+            }
+        }
+        else {
+            if ((item != null) && !item.isPotion())
+            {
+                // auto supply
+                 if (Config.AUTO_USE_ITEM)
+                {
+                    AutoUseTaskManager.getInstance().addAutoSupplyItem(player, item.getId());
+                }
+            }
+            if (Config.AUTO_USE_BUFF && (skill != null))
+            {
+                AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
+            }
         }
     }
 }

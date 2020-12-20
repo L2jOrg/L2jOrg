@@ -46,6 +46,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -65,33 +66,6 @@ public class SpawnsData extends GameXmlReader {
         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/spawns.xsd");
     }
 
-    public void spawnByName(String spawnName) {
-        spawns.parallelStream().filter(spawnTemplate -> spawnTemplate.getName() != null && spawnTemplate.getName().equals(spawnName)).forEach(template -> {
-            template.spawn(spawnTemplate -> spawnTemplate.getName() != null && spawnTemplate.getName().equals(spawnName),null);
-            template.notifyActivate();
-        });
-    }
-
-    public void deSpawnByName(String spawnName) {
-        spawns.parallelStream().filter(spawnTemplate -> spawnTemplate.getName() != null && spawnTemplate.getName().equals(spawnName)).forEach(template -> {
-            template.despawn(spawnTemplate -> spawnTemplate.getName() != null && spawnTemplate.getName().equals(spawnName));
-            template.notifyActivate();
-        });
-    }
-
-    public void spawnAll() {
-        if (Config.ALT_DEV_NO_SPAWNS) {
-            return;
-        }
-
-        LOGGER.info("Initializing spawns...");
-        spawns.parallelStream().filter(SpawnTemplate::isSpawningByDefault).forEach(template -> {
-            template.spawnAll(null);
-            template.notifyActivate();
-        });
-        LOGGER.info("All spawns has been initialized!");
-    }
-
     @Override
     public void load() {
         parseDatapackDirectory("data/spawns", true);
@@ -101,14 +75,14 @@ public class SpawnsData extends GameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc, "list", listNode -> forEach(listNode, "spawn", spawnNode ->
-        {
+        var listNode = doc.getFirstChild();
+        for(var spawnNode = listNode.getFirstChild(); nonNull(spawnNode); spawnNode = spawnNode.getNextSibling()) {
             try {
                 parseSpawn(spawnNode, f, spawns);
             } catch (Exception e) {
                 LOGGER.warn("Error while processing spawn in file {}", f.getAbsolutePath(), e);
             }
-        }));
+        }
     }
 
     public List<SpawnTemplate> getSpawns() {
@@ -227,11 +201,60 @@ public class SpawnsData extends GameXmlReader {
     }
 
     private void parseMinions(Node n, NpcSpawnTemplate npcTemplate) {
-        forEach(n, "minion", minionNode ->
-        {
-            npcTemplate.addMinion(new MinionHolder(new StatsSet(parseAttributes(minionNode))));
-        });
+        forEach(n, "minion", minionNode -> npcTemplate.addMinion(new MinionHolder(new StatsSet(parseAttributes(minionNode)))));
     }
+
+    public void spawnByName(String spawnName) {
+        if(getSettings(ServerSettings.class).parallelismThreshold() < spawns.size()) {
+            spawns.parallelStream().filter(template -> spawnName.equals(template.getName())).forEach(template -> {
+                template.spawn(group -> spawnName.equals(group.getName()), null);
+                template.notifyActivate();
+            });
+        } else {
+            for (SpawnTemplate spawn : spawns) {
+                if(spawnName.equals(spawn.getName())) {
+                    spawn.spawn(group -> spawnName.equals(group.getName()), null);
+                    spawn.notifyActivate();
+                }
+            }
+        }
+    }
+
+    public void deSpawnByName(String spawnName) {
+        if(getSettings(ServerSettings.class).parallelismThreshold() < spawns.size()) {
+            spawns.parallelStream().filter(spawnTemplate -> spawnName.equals(spawnTemplate.getName())).forEach(template ->
+                    template.despawn(spawnTemplate -> spawnName.equals(spawnTemplate.getName())));
+        } else {
+            for (SpawnTemplate spawn : spawns) {
+                if(spawnName.equals(spawn.getName())) {
+                    spawn.despawn(group -> spawnName.equals(spawn.getName()));
+                }
+            }
+        }
+    }
+
+    public void spawnAll() {
+        if (Config.ALT_DEV_NO_SPAWNS) {
+            return;
+        }
+
+        LOGGER.info("Initializing spawns...");
+        if(getSettings(ServerSettings.class).parallelismThreshold() < spawns.size()) {
+            spawns.parallelStream().filter(SpawnTemplate::isSpawningByDefault).forEach(template -> {
+                template.spawnAll(null);
+                template.notifyActivate();
+            });
+        } else {
+            for (SpawnTemplate spawn : spawns) {
+                if(spawn.isSpawningByDefault()) {
+                    spawn.spawnAll(null);
+                    spawn.notifyActivate();
+                }
+            }
+        }
+        LOGGER.info("All spawns has been initialized!");
+    }
+
 
     public static void init() {
         getInstance().load();

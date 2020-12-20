@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -38,13 +39,13 @@ public class ExShowBeautyMenu extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_BEAUTY_MENU);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_BEAUTY_MENU, buffer );
 
-        writeInt(_type);
-        writeInt(_activeChar.getVisualHair());
-        writeInt(_activeChar.getVisualHairColor());
-        writeInt(_activeChar.getVisualFace());
+        buffer.writeInt(_type);
+        buffer.writeInt(_activeChar.getVisualHair());
+        buffer.writeInt(_activeChar.getVisualHairColor());
+        buffer.writeInt(_activeChar.getVisualFace());
     }
 
 }

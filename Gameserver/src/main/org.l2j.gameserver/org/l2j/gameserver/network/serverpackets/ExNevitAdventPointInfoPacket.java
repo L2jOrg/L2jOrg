@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -32,10 +33,10 @@ public class ExNevitAdventPointInfoPacket extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_AGATHION_ENERGY_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BR_AGATHION_ENERGY_INFO, buffer );
 
-        writeInt(_points); // 72 = 1%, max 7200 = 100%
+        buffer.writeInt(_points); // 72 = 1%, max 7200 = 100%
     }
 
 }

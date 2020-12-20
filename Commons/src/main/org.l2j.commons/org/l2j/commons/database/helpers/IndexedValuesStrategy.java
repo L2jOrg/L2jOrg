@@ -20,6 +20,8 @@ package org.l2j.commons.database.helpers;
 
 import io.github.joealisson.primitive.IntKeyValue;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.database.HandlersSupport;
+import org.l2j.commons.database.TypeHandler;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -47,7 +49,7 @@ public class IndexedValuesStrategy implements MapParameterStrategy {
             } else {
                 var type = parameterInfo.getValue().getValue();
                 var argumentIndex = parameterInfo.getValue().getKey();
-                var handler = HandlersSupport.handlerFromClass(type);
+                var handler = (TypeHandler<Object>) HandlersSupport.handlerFromClass(type);
                 if(argumentIndex < args.length) {
                     handler.setParameter(statement, parameterIndex, args[argumentIndex]);
                 } else {

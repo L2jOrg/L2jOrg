@@ -47,7 +47,7 @@ public class OpCallPcSkillCondition implements SkillCondition {
 			player.sendPacket(SystemMessageId.A_USER_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_USE_SUMMONING_OR_TELEPORTING);
 			canCallPlayer = false;
 		}
-		else if (player.inObserverMode())
+		else if (player.isInObserverMode())
 		{
 			canCallPlayer = false;
 		}

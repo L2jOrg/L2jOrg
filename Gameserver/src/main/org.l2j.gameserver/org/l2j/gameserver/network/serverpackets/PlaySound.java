@@ -18,57 +18,78 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
+/**
+ * @author JoeAlisson
+ */
 public class PlaySound extends ServerPacket {
-    private final int _unknown1;
-    private final String _soundFile;
-    private final int _unknown3;
-    private final int _unknown4;
-    private final int _unknown5;
-    private final int _unknown6;
-    private final int _unknown7;
-    private final int _unknown8;
+    private final SoundType type;
+    private final String file;
+    private final WorldObject sourceObject;
+    private int delay;
 
-    public PlaySound(String soundFile) {
-        _unknown1 = 0;
-        _soundFile = soundFile;
-        _unknown3 = 0;
-        _unknown4 = 0;
-        _unknown5 = 0;
-        _unknown6 = 0;
-        _unknown7 = 0;
-        _unknown8 = 0;
+    private PlaySound(SoundType type, String soundFile) {
+        this(type, soundFile, null);
     }
 
-    public PlaySound(int unknown1, String soundFile, int unknown3, int unknown4, int unknown5, int unknown6, int unknown7) {
-        _unknown1 = unknown1;
-        _soundFile = soundFile;
-        _unknown3 = unknown3;
-        _unknown4 = unknown4;
-        _unknown5 = unknown5;
-        _unknown6 = unknown6;
-        _unknown7 = unknown7;
-        _unknown8 = 0;
+    private PlaySound(SoundType type, String soundFile, WorldObject object) {
+        this.type = type;
+        this.file = soundFile;
+        this.sourceObject = object;
     }
 
-    public String getSoundName() {
-        return _soundFile;
+    public PlaySound delayed(int delay) {
+        this.delay = delay;
+        return this;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLAY_SOUND);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLAY_SOUND, buffer );
 
-        writeInt(_unknown1); // unknown 0 for quest and ship;
-        writeString(_soundFile);
-        writeInt(_unknown3); // unknown 0 for quest; 1 for ship;
-        writeInt(_unknown4); // 0 for quest; objectId of ship
-        writeInt(_unknown5); // x
-        writeInt(_unknown6); // y
-        writeInt(_unknown7); // z
-        writeInt(_unknown8);
+        buffer.writeInt(type.ordinal());
+        buffer.writeString(file);
+        buffer.writeInt(nonNull(sourceObject));
+        if(isNull(sourceObject)) {
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+        } else {
+            buffer.writeInt(sourceObject.getObjectId());
+            writeLocation(sourceObject, buffer);
+        }
+        buffer.writeInt(delay);
+    }
+    
+    
+    public static PlaySound music(String soundFile) {
+        return new PlaySound(SoundType.MUSIC, soundFile);
+    }
+    
+    public static PlaySound music(String soundFile, WorldObject object) {
+        return new PlaySound(SoundType.MUSIC, soundFile, object);
+    }
+
+    public static PlaySound sound(String sound) {
+        return new PlaySound(SoundType.SOUND, sound);
+    }
+
+    public static PlaySound voice(String voice) {
+        return new PlaySound(SoundType.VOICE, voice);
+    }
+
+    public enum SoundType {
+        SOUND,
+        MUSIC,
+        VOICE
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -38,13 +39,13 @@ public class FriendSay extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.L2_FRIEND_SAY);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.L2_FRIEND_SAY, buffer );
 
-        writeInt(0); // ??
-        writeString(_receiver);
-        writeString(_sender);
-        writeString(_message);
+        buffer.writeInt(0); // ??
+        buffer.writeString(_receiver);
+        buffer.writeString(_sender);
+        buffer.writeString(_message);
     }
 
 }

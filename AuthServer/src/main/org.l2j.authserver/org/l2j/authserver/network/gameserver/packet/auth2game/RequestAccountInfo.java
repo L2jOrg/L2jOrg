@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.gameserver.packet.auth2game;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.gameserver.ServerClient;
 
 public class RequestAccountInfo extends GameServerWritablePacket {
@@ -29,9 +30,9 @@ public class RequestAccountInfo extends GameServerWritablePacket {
     }
 
     @Override
-    protected void writeImpl(ServerClient client) {
-        writeByte((byte)0x04);
-        writeString(account);
+    protected void writeImpl(ServerClient client, WritableBuffer buffer) {
+        buffer.writeByte(0x04);
+        buffer.writeString(account);
     }
 
 }

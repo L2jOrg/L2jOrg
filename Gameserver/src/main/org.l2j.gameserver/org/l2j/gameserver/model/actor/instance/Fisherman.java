@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.SkillLearn;
@@ -73,5 +74,13 @@ public final class Fisherman extends Merchant {
         } else {
             super.onBypassFeedback(player, command);
         }
+    }
+
+    @Override
+    public void showChatWindow(Player player, int val) {
+        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && showPkDenyChatWindow(player, "fisherman")) {
+            return;
+        }
+        super.showChatWindow(player, val);
     }
 }

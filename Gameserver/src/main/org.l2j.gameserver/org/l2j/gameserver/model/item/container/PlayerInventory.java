@@ -18,16 +18,19 @@
  */
 package org.l2j.gameserver.model.item.container;
 
+import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntCollection;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemAdd;
@@ -36,10 +39,11 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDrop;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemTransfer;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.world.World;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -55,6 +59,7 @@ import static org.l2j.gameserver.model.item.type.EtcItemType.BOLT;
 public class PlayerInventory extends Inventory {
 
     private final Player owner;
+    private final IntMap<Item> questItems = new CHashIntMap<>();
     private Item _adena;
     private Item _beautyTickets;
     private Item silverCoin;
@@ -119,8 +124,8 @@ public class PlayerInventory extends Inventory {
             }
 
             boolean isDuplicate = false;
-            for (Item litem : list) {
-                if (litem.getId() == item.getId()) {
+            for (Item i : list) {
+                if (i.getId() == item.getId()) {
                     isDuplicate = true;
                     break;
                 }
@@ -292,35 +297,7 @@ public class PlayerInventory extends Inventory {
     @Override
     public Item addItem(String process, Item item, Player actor, Object reference) {
         item = super.addItem(process, item, actor, reference);
-
-        if (item != null) {
-            if ((item.getId() == CommonItem.ADENA) && !item.equals(_adena)) {
-                _adena = item;
-            } else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets)) {
-                _beautyTickets = item;
-            } else if( item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
-                silverCoin = item;
-            } else if(item.getId() == CommonItem.GOLD_COIN && !item.equals(goldCoin)) {
-                goldCoin = item;
-            }
-             else if(item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
-                l2Coin = item;
-            }
-            if (actor != null) {
-                // Send inventory update packet
-                if (!Config.FORCE_INVENTORY_UPDATE) {
-                    final InventoryUpdate playerIU = new InventoryUpdate();
-                    playerIU.addItem(item);
-                    actor.sendInventoryUpdate(playerIU);
-                } else {
-                    actor.sendItemList();
-                }
-
-                // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
-            }
-        }
-
+        handleItemUpdate(actor, item, true);
         return item;
     }
 
@@ -352,7 +329,12 @@ public class PlayerInventory extends Inventory {
      */
     public Item addItem(String process, int itemId, long count, Player actor, Object reference, boolean update) {
         final Item item = super.addItem(process, itemId, count, actor, reference);
-        if (item != null) {
+        handleItemUpdate(actor, item, update);
+        return item;
+    }
+
+    private void handleItemUpdate(Player actor, Item item, boolean sendUpdate) {
+        if (nonNull(item)) {
             if ((item.getId() == CommonItem.ADENA) && !item.equals(_adena)) {
                 _adena = item;
             } else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets)) {
@@ -364,18 +346,32 @@ public class PlayerInventory extends Inventory {
             } else if (item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
                 l2Coin = item;
             }
-        }
 
-        if ((item != null) && (actor != null)) {
-            // Send inventory update packet
-            if (update) {
-                final InventoryUpdate playerIU = new InventoryUpdate();
-                playerIU.addItem(item);
-                actor.sendInventoryUpdate(playerIU);
+            if(nonNull(actor)) {
+                if(sendUpdate) {
+                    actor.sendInventoryUpdate(new InventoryUpdate(item));
+                }
+                // Notify to scripts
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
             }
+        }
+    }
 
-            // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
+    @Override
+    protected void addItem(Item item) {
+        if(item.isQuestItem()) {
+            questItems.put(item.getObjectId(), item);
+            itemIdLookup.putIfAbsent(item.getId(), item.getObjectId());
+        } else {
+            super.addItem(item);
+        }
+    }
+
+    @Override
+    public Item getItemByItemId(int itemId) {
+        var item = super.getItemByItemId(itemId);
+        if(isNull(item) && itemIdLookup.containsKey(itemId)) {
+            return questItems.get(itemIdLookup.get(itemId));
         }
         return item;
     }
@@ -505,17 +501,9 @@ public class PlayerInventory extends Inventory {
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public Item dropItem(String process, Item item, Player actor, Object reference) {
+    public Item dropItem(String process, Item item, Player actor, WorldObject reference) {
         item = super.dropItem(process, item, actor, reference);
-
-        if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId()))) {
-            _adena = null;
-        }
-
-        // Notify to scripts
-        if (item != null) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getTemplate());
-        }
+        handleDropItemUpdate(actor, item);
         return item;
     }
 
@@ -530,9 +518,14 @@ public class PlayerInventory extends Inventory {
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
     @Override
-    public Item dropItem(String process, int objectId, long count, Player actor, Object reference) {
+    public Item dropItem(String process, int objectId, long count, Player actor, WorldObject reference) {
         final Item item = super.dropItem(process, objectId, count, actor, reference);
 
+        handleDropItemUpdate(actor, item);
+        return item;
+    }
+
+    private void handleDropItemUpdate(Player actor, Item item) {
         if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId()))) {
             _adena = null;
         }
@@ -541,7 +534,6 @@ public class PlayerInventory extends Inventory {
         if (item != null) {
             EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getTemplate());
         }
-        return item;
     }
 
     /**
@@ -565,6 +557,14 @@ public class PlayerInventory extends Inventory {
             _beautyTickets = null;
         }
 
+        if(item.isQuestItem()) {
+            Item removed = questItems.remove(item.getObjectId());
+            if(nonNull(removed)) {
+                updateItemIdLookUp(removed, questItems.values());
+                return true;
+            }
+            return false;
+        }
         return super.removeItem(item);
     }
 
@@ -588,6 +588,18 @@ public class PlayerInventory extends Inventory {
         goldCoin = getItemByItemId(CommonItem.GOLD_COIN);
          silverCoin = getItemByItemId(CommonItem.SILVER_COIN);
          l2Coin = getItemByItemId(CommonItem.L2_COIN);
+        applyItemSkills();
+    }
+
+    @Override
+    public void deleteMe() {
+        super.deleteMe();
+        for (Item item : questItems.values()) {
+            item.updateDatabase(true);
+            item.deleteMe();
+            World.getInstance().removeObject(item);
+        }
+        questItems.clear();
     }
 
     /**
@@ -654,7 +666,7 @@ public class PlayerInventory extends Inventory {
     }
 
     public boolean validateCapacity(long slots, boolean questItem) {
-        return (slots == 0 && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getSize(Item::isQuestItem) + slots) <= owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= owner.getInventoryLimit();
+        return slots == 0 || questItem ? questItems.size() + slots <= owner.getQuestInventoryLimit() : getSize() + slots <= owner.getInventoryLimit();
     }
 
     @Override
@@ -753,7 +765,7 @@ public class PlayerInventory extends Inventory {
             } else {
                 item.changeCountWithoutTrace(countDelta, creator, reference);
             }
-            item.setLastChange(Item.MODIFIED);
+            item.setLastChange(ItemChangeType.MODIFIED);
             refreshWeight();
         } else {
             destroyItem(process, item, owner, null);
@@ -821,5 +833,9 @@ public class PlayerInventory extends Inventory {
 
         return (ammunition.getItemType() == ARROW && itemType == WeaponType.BOW) ||
                (ammunition.getItemType() == BOLT && itemType == WeaponType.CROSSBOW || itemType == WeaponType.TWO_HAND_CROSSBOW);
+    }
+
+    public Collection<Item> getQuestItems() {
+        return questItems.values();
     }
 }

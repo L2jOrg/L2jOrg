@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemAdd;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemDestroy;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemTransfer;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 public final class ClanWarehouse extends Warehouse {
     private final Clan _clan;
@@ -71,7 +71,6 @@ public final class ClanWarehouse extends Warehouse {
 
     @Override
     public Item addItem(String process, Item item, Player actor, Object reference) {
-        // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemAdd(process, actor, item, this), item.getTemplate());
         return super.addItem(process, item, actor, reference);
     }

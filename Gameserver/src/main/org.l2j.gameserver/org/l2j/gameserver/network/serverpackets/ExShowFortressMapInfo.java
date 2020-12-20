@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -29,12 +30,12 @@ import org.l2j.gameserver.network.ServerExPacketId;
 public class ExShowFortressMapInfo extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_FORTRESS_MAP_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_FORTRESS_MAP_INFO, buffer );
 
-        writeInt(0); // fortress id
-        writeInt(0); // fortress siege in progress ?
-        writeInt(0); // barracks count
+        buffer.writeInt(0); // fortress id
+        buffer.writeInt(0); // fortress siege in progress ?
+        buffer.writeInt(0); // barracks count
         /* foreach barrack
          * writeInt(0);
          */

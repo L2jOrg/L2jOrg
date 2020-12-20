@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.client.packet.auth2client;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.AuthServerPacket;
 import org.slf4j.Logger;
@@ -38,13 +39,13 @@ public final class GGAuth extends AuthServerPacket {
     }
 
     @Override
-    protected void writeImpl(AuthClient client) {
-        writeByte(0x0b);
-        writeInt(_response);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
-        writeInt(0x00);
+    protected void writeImpl(AuthClient client, WritableBuffer buffer) {
+        buffer.writeByte(0x0b);
+        buffer.writeInt(_response);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
+        buffer.writeInt(0x00);
     }
 
 }

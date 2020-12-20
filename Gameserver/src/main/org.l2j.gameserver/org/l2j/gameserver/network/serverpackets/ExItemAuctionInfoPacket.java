@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.item.auction.ItemAuction;
 import org.l2j.gameserver.model.item.auction.ItemAuctionBid;
 import org.l2j.gameserver.model.item.auction.ItemAuctionState;
@@ -50,22 +51,22 @@ public final class ExItemAuctionInfoPacket extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ITEM_AUCTION_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ITEM_AUCTION_INFO, buffer );
 
-        writeByte((byte) (_refresh ? 0x00 : 0x01));
-        writeInt(_currentAuction.getInstanceId());
+        buffer.writeByte(!_refresh);
+        buffer.writeInt(_currentAuction.getInstanceId());
 
         final ItemAuctionBid highestBid = _currentAuction.getHighestBid();
-        writeLong(highestBid != null ? highestBid.getLastBid() : _currentAuction.getAuctionInitBid());
+        buffer.writeLong(highestBid != null ? highestBid.getLastBid() : _currentAuction.getAuctionInitBid());
 
-        writeInt(_timeRemaining);
-        writeItem(_currentAuction.getItemInfo());
+        buffer.writeInt(_timeRemaining);
+        writeItem(_currentAuction.getItemInfo(), buffer);
 
         if (_nextAuction != null) {
-            writeLong(_nextAuction.getAuctionInitBid());
-            writeInt((int) (_nextAuction.getStartingTime() / 1000)); // unix time in seconds
-            writeItem(_nextAuction.getItemInfo());
+            buffer.writeLong(_nextAuction.getAuctionInitBid());
+            buffer.writeInt((int) (_nextAuction.getStartingTime() / 1000)); // unix time in seconds
+            writeItem(_nextAuction.getItemInfo(), buffer);
         }
     }
 

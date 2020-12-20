@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -41,16 +42,16 @@ public class ExResponseBeautyRegistReset extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_BEAUTY_REGIST_RESET);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_BEAUTY_REGIST_RESET, buffer );
 
-        writeLong(_activeChar.getAdena());
-        writeLong(_activeChar.getBeautyTickets());
-        writeInt(_type);
-        writeInt(_result);
-        writeInt(_activeChar.getVisualHair());
-        writeInt(_activeChar.getVisualFace());
-        writeInt(_activeChar.getVisualHairColor());
+        buffer.writeLong(_activeChar.getAdena());
+        buffer.writeLong(_activeChar.getBeautyTickets());
+        buffer.writeInt(_type);
+        buffer.writeInt(_result);
+        buffer.writeInt(_activeChar.getVisualHair());
+        buffer.writeInt(_activeChar.getVisualFace());
+        buffer.writeInt(_activeChar.getVisualHairColor());
     }
 
 }

@@ -24,6 +24,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
 import org.l2j.gameserver.model.interfaces.ITerritorized;
 import org.l2j.gameserver.model.quest.Quest;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 
@@ -34,6 +35,8 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -133,7 +136,15 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
     }
 
     public void spawn(Predicate<SpawnGroup> groupFilter, Instance instance) {
-        groups.parallelStream().filter(groupFilter).forEach(group -> group.spawnAll(instance));
+        if(getSettings(ServerSettings.class).parallelismThreshold() < groups.size()) {
+            groups.parallelStream().filter(groupFilter).forEach(group -> group.spawnAll(instance));
+        } else {
+            for (SpawnGroup group : groups) {
+                if(groupFilter.test(group)){
+                    group.spawnAll(instance);
+                }
+            }
+        }
     }
 
     public void spawnAll(Instance instance) {

@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -37,7 +37,6 @@ import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
-
 
 /**
  * RequestRefundItem client packet class.
@@ -54,7 +53,7 @@ public final class RequestRefundItem extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _listId = readInt();
         final int count = readInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -76,14 +75,14 @@ public final class RequestRefundItem extends ClientPacket {
             return;
         }
 
-        if ((_items == null) || !player.hasRefund()) {
+        if (_items == null || !player.hasRefund()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         final WorldObject target = player.getTarget();
         Merchant merchant = null;
-        if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST)) {
+        if (!player.isGM() && _listId != CUSTOM_CB_SELL_LIST) {
             if (!(target instanceof Merchant) || !isInsideRadius3D(player, target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId())) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
@@ -91,7 +90,7 @@ public final class RequestRefundItem extends ClientPacket {
             merchant = (Merchant) target;
         }
 
-        if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST)) {
+        if (merchant == null && !player.isGM() && _listId != CUSTOM_CB_SELL_LIST) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -102,7 +101,7 @@ public final class RequestRefundItem extends ClientPacket {
             return;
         }
 
-        if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId())) {
+        if (merchant != null && !buyList.isNpcAllowed(merchant.getId())) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -178,7 +177,7 @@ public final class RequestRefundItem extends ClientPacket {
         }
 
         // Update current load status on player
-        client.sendPacket(new ExUserInfoInvenWeight(player));
+        client.sendPacket(new ExUserInfoInvenWeight());
         client.sendPacket(new ExBuySellList(player, true));
     }
 }

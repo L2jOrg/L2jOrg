@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.DoorStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.OnEventTrigger;
@@ -289,7 +289,7 @@ public final class Door extends Creature {
         final DoorStatusUpdate dsu = new DoorStatusUpdate(this);
         final OnEventTrigger oe = getEmitter() <= 0 ? null : new OnEventTrigger(getEmitter(), inverted ^ open);
 
-        World.getInstance().forAnyVisibleObject(this, Player.class, player -> sendUpdateToPlayer(player, su, targetableSu, dsu, oe), this::isVisibleFor);
+        World.getInstance().forEachVisibleObject(this, Player.class,player -> sendUpdateToPlayer(player, su, targetableSu, dsu, oe), this::isVisibleFor);
     }
 
     private void sendUpdateToPlayer(Player player, StaticObject su, StaticObject targetableSu, DoorStatusUpdate dsu, OnEventTrigger oe) {

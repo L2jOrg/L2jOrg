@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -27,11 +28,11 @@ import org.l2j.gameserver.network.ServerExPacketId;
 public class ExBrPremiumState extends ServerPacket {
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_NOTIFY_PREMIUM_STATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BR_NOTIFY_PREMIUM_STATE, buffer );
         var activeChar = client.getPlayer();
-        writeInt(activeChar.getObjectId());
-        writeByte((byte) (activeChar.getVipTier() > 0 ? 0x01 : 0x00));
+        buffer.writeInt(activeChar.getObjectId());
+        buffer.writeByte(activeChar.getVipTier() > 0);
     }
 
 }

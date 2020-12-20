@@ -18,13 +18,7 @@
  */
 package org.l2j.gameserver.model.eventengine;
 
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
-import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.ListenerRegisterType;
-import org.l2j.gameserver.model.events.annotations.RegisterEvent;
-import org.l2j.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Node;
 
@@ -79,15 +73,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent> extends Abst
                 .filter(IConditionalEventScheduler::test)
                 .forEach(IConditionalEventScheduler::run);
         //@formatter:on
-    }
-
-    @RegisterEvent(EventType.ON_PLAYER_LOGOUT)
-    @RegisterType(ListenerRegisterType.GLOBAL)
-    public void playerLogout(OnPlayerLogout event) {
-        onPlayerLogout(event.getPlayer());
-    }
-
-    protected void onPlayerLogout(Player player) {
     }
 
     public void config(GameXmlReader reader, Node configNode) {

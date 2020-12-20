@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
 import static java.util.Objects.isNull;
@@ -66,7 +66,7 @@ public final class SummonNpc extends AbstractEffect {
 
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-        if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode()) {
+        if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().isInObserverMode()) {
             return;
         }
 

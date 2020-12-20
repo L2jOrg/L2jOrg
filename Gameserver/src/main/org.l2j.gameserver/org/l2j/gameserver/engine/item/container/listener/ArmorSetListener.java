@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 import org.slf4j.Logger;

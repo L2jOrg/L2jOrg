@@ -24,12 +24,10 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2j.gameserver.network.serverpackets.Revive;
-
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Fake Death effect implementation.
@@ -70,12 +68,7 @@ public final class FakeDeath extends AbstractEffect {
 	
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill) {
-		if (isPlayer(effected)) {
-			effected.getActingPlayer().setRecentFakeDeath(true);
-		}
-		
-		effected.broadcastPacket(new ChangeWaitType(effected, ChangeWaitType.WT_STOP_FAKEDEATH));
-		effected.broadcastPacket(new Revive(effected));
+		effected.stopFakeDeath(false);
 	}
 	
 	@Override

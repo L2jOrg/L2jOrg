@@ -22,7 +22,9 @@ import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.auction.ItemAuction;
 import org.l2j.gameserver.model.item.auction.ItemAuctionInstance;
-import org.l2j.gameserver.model.item.container.Inventory;
+import org.l2j.gameserver.settings.CharacterSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Forsaiken
@@ -50,7 +52,7 @@ public final class RequestBidItemAuction extends ClientPacket {
             return;
         }
 
-        if ((_bid < 0) || (_bid > Inventory.MAX_ADENA)) {
+        if ((_bid < 0) || (_bid > getSettings(CharacterSettings.class).maxAdena())) {
             return;
         }
 

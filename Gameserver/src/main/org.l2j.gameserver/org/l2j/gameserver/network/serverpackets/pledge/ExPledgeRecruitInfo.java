@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
@@ -35,18 +36,18 @@ public class ExPledgeRecruitInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_INFO, buffer );
 
         final var subPledges = _clan.getAllSubPledges();
-        writeString(_clan.getName());
-        writeString(_clan.getLeaderName());
-        writeInt(_clan.getLevel());
-        writeInt(_clan.getMembersCount());
-        writeInt(subPledges.length);
+        buffer.writeString(_clan.getName());
+        buffer.writeString(_clan.getLeaderName());
+        buffer.writeInt(_clan.getLevel());
+        buffer.writeInt(_clan.getMembersCount());
+        buffer.writeInt(subPledges.length);
         for (var subPledge : subPledges) {
-            writeInt(subPledge.getId());
-            writeString(subPledge.getName());
+            buffer.writeInt(subPledge.getId());
+            buffer.writeString(subPledge.getName());
         }
     }
 

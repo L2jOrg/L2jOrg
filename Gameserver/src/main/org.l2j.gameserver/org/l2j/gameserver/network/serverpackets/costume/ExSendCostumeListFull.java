@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.costume;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -29,24 +30,24 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExSendCostumeListFull extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_SEND_COSTUME_LIST_FULL);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_SEND_COSTUME_LIST_FULL, buffer );
         var player = client.getPlayer();
 
-        writeInt(player.getCostumeAmount());
-        player.forEachCostume(this::writeCostume);
+        buffer.writeInt(player.getCostumeAmount());
+        player.forEachCostume(costume -> writeCostume(costume, buffer));
 
-        writeInt(0); // shortcut disabled
+        buffer.writeInt(0); // shortcut disabled
 
         var activeCollection  = player.getActiveCostumeCollection();
-        writeInt(activeCollection.getId());
-        writeInt(activeCollection.getReuseTime());
+        buffer.writeInt(activeCollection.getId());
+        buffer.writeInt(activeCollection.getReuseTime());
     }
 
-    private void writeCostume(CostumeData costume) {
-        writeInt(costume.getId());
-        writeLong(costume.getAmount());
-        writeByte(costume.isLocked());
-        writeByte(costume.checkIsNewAndChange());
+    private void writeCostume(CostumeData costume, WritableBuffer buffer) {
+        buffer.writeInt(costume.getId());
+        buffer.writeLong(costume.getAmount());
+        buffer.writeByte(costume.isLocked());
+        buffer.writeByte(costume.checkIsNewAndChange());
     }
 }

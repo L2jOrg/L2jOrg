@@ -25,7 +25,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillCaster;
 
 import java.util.concurrent.Future;

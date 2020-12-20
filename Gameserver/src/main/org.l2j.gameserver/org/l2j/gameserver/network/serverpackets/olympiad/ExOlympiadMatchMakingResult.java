@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -37,9 +38,9 @@ public class ExOlympiadMatchMakingResult extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_MATCH_MAKING_RESULT);
-        writeByte(registered);
-        writeByte(ruleType.ordinal());
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_MATCH_MAKING_RESULT, buffer );
+        buffer.writeByte(registered);
+        buffer.writeByte(ruleType.ordinal());
     }
 }

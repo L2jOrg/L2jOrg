@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.network.GameClient;
@@ -46,34 +47,34 @@ public final class BuyListSeed extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.BUY_LIST_SEED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.BUY_LIST_SEED, buffer );
 
-        writeLong(_money); // current money
-        writeInt(0x00); // TODO: Find me!
-        writeInt(_manorId); // manor id
+        buffer.writeLong(_money); // current money
+        buffer.writeInt(0x00); // TODO: Find me!
+        buffer.writeInt(_manorId); // manor id
 
         if (!_list.isEmpty()) {
-            writeShort((short) _list.size()); // list length
+            buffer.writeShort(_list.size()); // list length
             for (SeedProduction s : _list) {
-                writeByte((byte) 0x00); // mask item 0 to print minimal item information
-                writeInt(s.getSeedId()); // ObjectId
-                writeInt(s.getSeedId()); // ItemId
-                writeByte((byte) 0xFF); // T1
-                writeLong(s.getAmount()); // Quantity
-                writeByte((byte) 0x05); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
-                writeByte((byte) 0x00); // Filler (always 0)
-                writeShort((short) 0x00); // Equipped : 00-No, 01-yes
-                writeLong(0x00); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-                writeShort((short) 0x00); // Enchant level (pet level shown in control item)
-                writeInt(-1);
-                writeInt(-9999);
-                writeByte((byte) 0x01); // GOD Item enabled = 1 disabled (red) = 0
-                writeLong(s.getPrice()); // price
+                buffer.writeByte(0x00); // mask item 0 to print minimal item information
+                buffer.writeInt(s.getSeedId()); // ObjectId
+                buffer.writeInt(s.getSeedId()); // ItemId
+                buffer.writeByte(0xFF); // T1
+                buffer.writeLong(s.getAmount()); // Quantity
+                buffer.writeByte(0x05); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
+                buffer.writeByte(0x00); // Filler (always 0)
+                buffer.writeShort(0x00); // Equipped : 00-No, 01-yes
+                buffer.writeLong(0x00); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+                buffer.writeShort(0x00); // Enchant level (pet level shown in control item)
+                buffer.writeInt(-1);
+                buffer.writeInt(-9999);
+                buffer.writeByte(0x01); // GOD Item enabled = 1 disabled (red) = 0
+                buffer.writeLong(s.getPrice()); // price
             }
             _list.clear();
         } else {
-            writeShort((short) 0x00);
+            buffer.writeShort(0x00);
         }
     }
 

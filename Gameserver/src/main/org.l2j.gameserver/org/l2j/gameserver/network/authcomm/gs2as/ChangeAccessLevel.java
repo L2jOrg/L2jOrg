@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
@@ -34,10 +35,10 @@ public class ChangeAccessLevel extends SendablePacket
 		this.banExpire = banExpire;
 	}
 
-	protected void writeImpl(AuthServerClient client) {
-		writeByte((byte)0x11);
-		writeString(account);
-		writeInt(level);
-		writeInt(banExpire);
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x11);
+		buffer.writeString(account);
+		buffer.writeInt(level);
+		buffer.writeInt(banExpire);
 	}
 }

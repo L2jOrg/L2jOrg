@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -66,11 +67,11 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage> {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SYSTEM_MSG);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SYSTEM_MSG, buffer );
 
-        writeShort(getId());
-        writeMe();
+        buffer.writeShort(getId());
+        writeMe(buffer);
     }
 
 }

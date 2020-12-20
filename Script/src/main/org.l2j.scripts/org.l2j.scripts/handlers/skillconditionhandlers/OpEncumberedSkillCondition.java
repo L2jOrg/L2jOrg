@@ -50,13 +50,12 @@ public class OpEncumberedSkillCondition implements SkillCondition {
 		}
 		
 		final Player player = caster.getActingPlayer();
-		final int currentSlotsPercent = calcPercent(player.getInventoryLimit(), player.getInventory().getSize(item -> !item.isQuestItem()));
+		final int currentSlotsPercent = calcPercent(player.getInventoryLimit(), player.getInventory().getSize());
 		final int currentWeightPercent = calcPercent(player.getMaxLoad(), player.getCurrentLoad());
 		return (currentSlotsPercent >= slotsPercent) && (currentWeightPercent >= weightPercent);
 	}
 	
-	private int calcPercent(int max, int current)
-	{
+	private int calcPercent(int max, int current) {
 		return 100 - ((current * 100) / max);
 	}
 

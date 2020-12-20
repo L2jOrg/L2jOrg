@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -39,11 +40,11 @@ public class ExOlympiadInfo extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_INFO);
-        writeByte(open);
-        writeInt(remainTime);
-        writeByte(type.ordinal());
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_INFO, buffer );
+        buffer.writeByte(open);
+        buffer.writeInt(remainTime);
+        buffer.writeByte(type.ordinal());
     }
 
     public static ExOlympiadInfo show(OlympiadRuleType type, int remainTime) {

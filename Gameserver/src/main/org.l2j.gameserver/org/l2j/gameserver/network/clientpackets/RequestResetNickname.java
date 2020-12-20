@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.model.actor.appearance.Appearance;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
@@ -36,7 +37,7 @@ public class RequestResetNickname extends ClientPacket {
             return;
         }
 
-        activeChar.getAppearance().setTitleColor(0xFFFF77);
+        activeChar.getAppearance().setTitleColor(Appearance.DEFAULT_TITLE_COLOR);
         activeChar.setTitle("");
         activeChar.broadcastTitleInfo();
     }

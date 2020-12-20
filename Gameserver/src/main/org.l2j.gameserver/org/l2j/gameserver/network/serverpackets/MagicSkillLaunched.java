@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.SkillCastingType;
@@ -62,16 +63,16 @@ public class MagicSkillLaunched extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MAGIC_SKILL_LAUNCHED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MAGIC_SKILL_LAUNCHED, buffer );
 
-        writeInt(_castingType.getClientBarId()); // MagicSkillUse castingType
-        writeInt(_charObjId);
-        writeInt(_skillId);
-        writeInt(_skillLevel);
-        writeInt(_targets.size());
+        buffer.writeInt(_castingType.getClientBarId()); // MagicSkillUse castingType
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_skillId);
+        buffer.writeInt(_skillLevel);
+        buffer.writeInt(_targets.size());
         for (WorldObject target : _targets) {
-            writeInt(target.getObjectId());
+            buffer.writeInt(target.getObjectId());
         }
     }
 

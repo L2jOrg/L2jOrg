@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
@@ -118,22 +119,22 @@ public class ExSendUIEvent extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SEND_UI_EVENT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SEND_UI_EVENT, buffer );
 
-        writeInt(_objectId);
-        writeInt(_type); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
-        writeInt(0); // unknown
-        writeInt(0); // unknown
-        writeString(String.valueOf(_countUp)); // 0 = count down, 1 = count up timer always disappears 10 seconds before end
-        writeString(String.valueOf(_startTime));
-        writeString(String.valueOf(_startTime2));
-        writeString(String.valueOf(_endTime));
-        writeString(String.valueOf(_endTime2));
-        writeInt(_npcstringId);
+        buffer.writeInt(_objectId);
+        buffer.writeInt(_type); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
+        buffer.writeInt(0); // unknown
+        buffer.writeInt(0); // unknown
+        buffer.writeString(String.valueOf(_countUp)); // 0 = count down, 1 = count up timer always disappears 10 seconds before end
+        buffer.writeString(String.valueOf(_startTime));
+        buffer.writeString(String.valueOf(_startTime2));
+        buffer.writeString(String.valueOf(_endTime));
+        buffer.writeString(String.valueOf(_endTime2));
+        buffer.writeInt(_npcstringId);
         if (_params != null) {
             for (String param : _params) {
-                writeString(param);
+                buffer.writeString(param);
             }
         }
     }

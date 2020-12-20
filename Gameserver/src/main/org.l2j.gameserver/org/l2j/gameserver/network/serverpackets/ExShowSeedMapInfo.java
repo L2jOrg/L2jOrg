@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.instancemanager.GraciaSeedsManager;
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -30,19 +30,19 @@ public class ExShowSeedMapInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_SEED_MAP_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_SEED_MAP_INFO, buffer );
 
-        writeInt(2); // seed count
+        buffer.writeInt(2); // seed count
 
         // Seed of Destruction
-        writeInt(1); // id 1? Grand Crusade
-        writeInt(2770 + GraciaSeedsManager.getInstance().getSoDState()); // sys msg id
+        buffer.writeInt(1); // id 1? Grand Crusade
+        buffer.writeInt(2770); // sys msg id + sod state
 
         // Seed of Infinity
-        writeInt(2); // id 2? Grand Crusade
+        buffer.writeInt(2); // id 2? Grand Crusade
         // Manager not implemented yet
-        writeInt(2766); // sys msg id
+        buffer.writeInt(2766); // sys msg id
     }
 
 }

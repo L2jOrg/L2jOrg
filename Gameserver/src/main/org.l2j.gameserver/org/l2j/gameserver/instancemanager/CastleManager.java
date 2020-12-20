@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -111,7 +111,12 @@ public final class CastleManager implements InstanceListManager {
     }
 
     public final Castle getCastle(int x, int y, int z) {
-        return castles.values().stream().filter(c -> c.checkIfInZone(x, y, z)).findFirst().orElse(null);
+        for (Castle castle : castles.values()) {
+            if(castle.checkIfInZone(x, y, z)) {
+                return castle;
+            }
+        }
+        return null;
     }
 
     public final Castle getCastle(ILocational loc) {

@@ -46,38 +46,38 @@ public class Ground implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (isPlayer(activeChar))
+		if (isPlayer(creature))
 		{
-			final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
+			final Location worldPosition = creature.getActingPlayer().getCurrentSkillWorldPosition();
 			if (worldPosition != null)
 			{
-				if (dontMove && !isInsideRadius2D(activeChar, worldPosition.getX(), worldPosition.getY(), skill.getCastRange() + activeChar.getTemplate().getCollisionRadius()))
+				if (dontMove && !isInsideRadius2D(creature, worldPosition.getX(), worldPosition.getY(), skill.getCastRange() + creature.getTemplate().getCollisionRadius()))
 				{
 					return null;
 				}
 				
-				if (!GeoEngine.getInstance().canSeeTarget(activeChar, worldPosition))
+				if (!GeoEngine.getInstance().canSeeTarget(creature, worldPosition))
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+						creature.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 					}
 					return null;
 				}
 				
-				final ZoneRegion zoneRegion = ZoneManager.getInstance().getRegion(activeChar);
+				final ZoneRegion zoneRegion = ZoneManager.getInstance().getRegion(creature);
 				if (skill.isBad() && !zoneRegion.checkEffectRangeInsidePeaceZone(skill, worldPosition.getX(), worldPosition.getY(), worldPosition.getZ()))
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE);
+						creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE);
 					}
 					return null;
 				}
 				
-				return activeChar; // Return yourself to know that your ground location is legit.
+				return creature; // Return yourself to know that your ground location is legit.
 			}
 		}
 		

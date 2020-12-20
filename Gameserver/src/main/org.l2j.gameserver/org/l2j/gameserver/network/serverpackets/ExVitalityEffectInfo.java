@@ -18,10 +18,13 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.Config;
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.settings.RateSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Sdw
@@ -34,18 +37,19 @@ public class ExVitalityEffectInfo extends ServerPacket {
     public ExVitalityEffectInfo(Player cha) {
         _points = cha.getVitalityPoints();
         _vitalityBonus = (int) cha.getStats().getVitalityExpBonus() * 100;
-        _vitalityItemsRemaining = Config.VITALITY_MAX_ITEMS_ALLOWED - cha.getVitalityItemsUsed();
+        _vitalityItemsRemaining = getSettings(RateSettings.class).maxItemsVitality() - cha.getVitalityItemsUsed();
+
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_VITALITY_EFFECT_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_VITALITY_EFFECT_INFO, buffer );
 
-        writeInt(_points);
-        writeInt(_vitalityBonus); // Vitality Bonus
-        writeShort((short) 0x00); // Vitality additional bonus in %
-        writeShort((short) _vitalityItemsRemaining); // How much vitality items remaining for use
-        writeShort((short) Config.VITALITY_MAX_ITEMS_ALLOWED); // Max number of items for use
+        buffer.writeInt(_points);
+        buffer.writeInt(_vitalityBonus); // Vitality Bonus
+        buffer.writeShort(0x00); // Vitality additional bonus in %
+        buffer.writeShort(_vitalityItemsRemaining); // How much vitality items remaining for use
+        buffer.writeShort(getSettings(RateSettings.class).maxItemsVitality()); // Max number of items for use
     }
 
 }

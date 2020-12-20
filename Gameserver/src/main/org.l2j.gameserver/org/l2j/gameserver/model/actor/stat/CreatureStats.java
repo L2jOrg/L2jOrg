@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.AttributeType;
@@ -26,11 +25,11 @@ import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.EffectList;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.model.stats.*;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -40,10 +39,9 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import static org.l2j.commons.util.Util.falseIfNullOrElse;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
@@ -73,7 +71,7 @@ public class CreatureStats {
     /**
      * Creature's maximum buff count.
      */
-    private int _maxBuffCount = Config.BUFFS_MAX_AMOUNT;
+    private int _maxBuffCount = getSettings(CharacterSettings.class).maxBuffs();
     private double _vampiricSum = 0;
     /**
      * Values to be recalculated after every stat update
@@ -81,9 +79,9 @@ public class CreatureStats {
     private double _attackSpeedMultiplier = 1;
     private double _mAttackSpeedMultiplier = 1;
 
-    public CreatureStats(Creature activeChar) {
-        creature = activeChar;
-        for (int i = 0; i < TraitType.values().length; i++) {
+    public CreatureStats(Creature creature) {
+        this.creature = creature;
+        for (int i = 0; i < TraitType.all().length; i++) {
             _attackTraitValues[i] = 1;
             _defenceTraitValues[i] = 0;
         }
@@ -391,7 +389,7 @@ public class CreatureStats {
         double mpConsume = skill.getMpConsume();
         final double nextDanceMpCost = Math.ceil(skill.getMpConsume() / 2.);
         if (skill.isDance()) {
-            if (Config.DANCE_CONSUME_ADDITIONAL_MP && (creature != null) && (creature.getDanceCount() > 0)) {
+            if (nonNull(creature) && creature.getDanceCount() > 0) {
                 mpConsume += creature.getDanceCount() * nextDanceMpCost;
             }
         }
@@ -412,12 +410,6 @@ public class CreatureStats {
     }
 
     public AttributeType getAttackElement() {
-        final Item weaponInstance = creature.getActiveWeaponInstance();
-        // 1st order - weapon element
-        if ((weaponInstance != null) && (weaponInstance.getAttackAttributeType() != AttributeType.NONE)) {
-            return weaponInstance.getAttackAttributeType();
-        }
-
         // temp fix starts
         int tempVal = 0;
         final int stats[] =
@@ -770,32 +762,22 @@ public class CreatureStats {
             // Wipe all the data
             resetStats();
 
-            // Collect all necessary effects
-            final EffectList effectList = creature.getEffectList();
-            final Stream<BuffInfo> passives = effectList.getPassives().stream().filter(BuffInfo::isInUse).filter(info -> info.getSkill().checkConditions(SkillConditionScope.PASSIVE, creature, creature));
-            final Stream<BuffInfo> options = effectList.getOptions().stream().filter(BuffInfo::isInUse);
-            final Stream<BuffInfo> effectsStream = Stream.concat(effectList.getEffects().stream().filter(BuffInfo::isInUse), Stream.concat(passives, options));
+            activeEffectsInUse();
 
-            // Call pump to each effect
-            //@formatter:off
-            effectsStream.forEach(info -> info.getEffects().stream()
-                    .filter(effect -> canActivate(info, effect))
-                    .forEach(effect -> effect.pump(info.getEffected(), info.getSkill())));
-            //@formatter:on
-
-            if (isSummon(creature) && falseIfNullOrElse(creature.getActingPlayer(), player -> player.hasAbnormalType(AbnormalType.ABILITY_CHANGE))) {
-                //@formatter:off
-                creature.getActingPlayer().getEffectList().getEffects().stream().filter(BuffInfo::isInUse)
-                        .filter(info -> info.isAbnormalType(AbnormalType.ABILITY_CHANGE))
-                        .forEach(info -> info.getEffects().stream()
-                                .filter(effect -> canActivate(info, effect))
-                                .forEach(effect -> effect.pump(creature, info.getSkill())));
-                //@formatter:on
-            }
+            activeSummonAbilityChange();
 
             // Merge with additional stats
-            _additionalAdd.stream().filter(holder -> holder.verifyCondition(creature)).forEach(holder -> mergeAdd(holder.getStat(), holder.getValue()));
-            _additionalMul.stream().filter(holder -> holder.verifyCondition(creature)).forEach(holder -> mergeMul(holder.getStat(), holder.getValue()));
+            for (StatsHolder holder : _additionalAdd) {
+                if(holder.verifyCondition(creature)) {
+                    mergeAdd(holder.getStat(), holder.getValue());
+                }
+            }
+
+            for (StatsHolder holder : _additionalMul) {
+                if(holder.verifyCondition(creature)) {
+                    mergeMul(holder.getStat(), holder.getValue());
+                }
+            }
 
             _attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(creature);
             _mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(creature);
@@ -806,8 +788,58 @@ public class CreatureStats {
         onRecalculateStats(broadcast);
 
         if (broadcast) {
-            final var modified = Stat.stream().filter(stat -> isStatChanged(oldAdds, oldMuls, stat)).collect(Collectors.toSet());
+            Set<Stat> modified = EnumSet.noneOf(Stat.class);
+            for (Stat stat : Stat.all()) {
+                if(isStatChanged(oldAdds, oldMuls, stat)){
+                    modified.add(stat);
+                }
+            }
             creature.broadcastModifiedStats(modified);
+        }
+    }
+
+    private void activeSummonAbilityChange() {
+        if (isSummon(creature) &&  nonNull(creature.getActingPlayer()) && creature.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
+            for (BuffInfo info : creature.getActingPlayer().getEffectList().getEffects()) {
+                if(info.isInUse() && info.isAbnormalType(AbnormalType.ABILITY_CHANGE)) {
+                    for (AbstractEffect effect : info.getEffects()) {
+                        if(canActivate(info, effect)) {
+                            effect.pump(creature, info.getSkill());
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void activeEffectsInUse() {
+        final EffectList effectList = creature.getEffectList();
+        Set<BuffInfo> infos = new HashSet<>();
+
+        for (BuffInfo passive : effectList.getPassives()) {
+            if(passive.isInUse() && passive.getSkill().checkConditions(SkillConditionScope.PASSIVE, creature, creature)) {
+                infos.add(passive);
+            }
+        }
+
+        for (BuffInfo option : effectList.getOptions()) {
+            if(option.isInUse()) {
+                infos.add(option);
+            }
+        }
+
+        for (BuffInfo effect : effectList.getEffects()) {
+            if(effect.isInUse()) {
+                infos.add(effect);
+            }
+        }
+
+        for (BuffInfo info : infos) {
+            for (AbstractEffect effect : info.getEffects()) {
+                if(canActivate(info, effect)) {
+                    effect.pump(info.getEffected(), info.getSkill());
+                }
+            }
         }
     }
 

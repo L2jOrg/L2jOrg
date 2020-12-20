@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
@@ -39,12 +40,12 @@ public class ShopPreviewList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.BUY_PREVIEW_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.BUY_PREVIEW_LIST, buffer );
 
-        writeInt(5056);
-        writeLong(_money); // current money
-        writeInt(_listId);
+        buffer.writeInt(5056);
+        buffer.writeLong(_money); // current money
+        buffer.writeInt(_listId);
 
         int newlength = 0;
         for (Product product : _list) {
@@ -52,20 +53,20 @@ public class ShopPreviewList extends ServerPacket {
                 newlength++;
             }
         }
-        writeShort((short) newlength);
+        buffer.writeShort(newlength);
 
         for (Product product : _list) {
             if (product.isEquipable()) {
-                writeInt(product.getItemId());
-                writeShort(product.getType2()); // item type2
+                buffer.writeInt(product.getItemId());
+                buffer.writeShort(product.getType2()); // item type2
 
                 if (product.getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA) {
-                    writeLong(product.getBodyPart().getId()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+                    buffer.writeLong(product.getBodyPart().getId()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
                 } else {
-                    writeLong(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+                    buffer.writeLong(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
                 }
 
-                writeLong(Config.WEAR_PRICE);
+                buffer.writeLong(Config.WEAR_PRICE);
             }
         }
     }

@@ -24,7 +24,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -37,7 +37,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
 
 /**
  * @author Forsaiken

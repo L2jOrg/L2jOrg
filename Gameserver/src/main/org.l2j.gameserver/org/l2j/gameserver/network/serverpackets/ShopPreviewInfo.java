@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -36,14 +37,14 @@ public class ShopPreviewInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.BUY_PREVIEW_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.BUY_PREVIEW_INFO, buffer );
 
-        writeInt(InventorySlot.TOTAL_SLOTS);
+        buffer.writeInt(InventorySlot.TOTAL_SLOTS);
 
         var paperdool = getPaperdollOrder();
         for (int i = 0; i < 19; i++) {
-            writeInt(getFromList(paperdool[i]));
+            buffer.writeInt(getFromList(paperdool[i]));
         }
     }
 

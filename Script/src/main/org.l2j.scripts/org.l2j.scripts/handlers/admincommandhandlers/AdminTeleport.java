@@ -25,7 +25,7 @@ import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.AdminTeleportType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
@@ -538,7 +538,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				LOGGER.warn("ERROR: NPC Id" + target.getId() + " has a 'null' spawn.");
 				return;
 			}
-			DBSpawnManager.getInstance().deleteSpawn(spawn, true);
+			BossManager.getInstance().deleteSpawn(spawn, true);
 			try
 			{
 				final Spawn spawnDat = new Spawn(target.getId());
@@ -548,7 +548,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				spawnDat.setRespawnMinDelay(43200);
 				spawnDat.setRespawnMaxDelay(129600);
 				
-				DBSpawnManager.getInstance().addNewSpawn(spawnDat, 0, curHP, curMP, true);
+				BossManager.getInstance().addNewSpawn(spawnDat, 0, curHP, curMP, true);
 			}
 			catch (Exception e)
 			{

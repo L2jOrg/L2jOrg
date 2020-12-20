@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -37,19 +38,19 @@ public class RecipeBookItemList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.RECIPE_BOOK_ITEM_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.RECIPE_BOOK_ITEM_LIST, buffer );
 
-        writeInt(_isDwarvenCraft ? 0x00 : 0x01); // 0 = Dwarven - 1 = Common
-        writeInt(_maxMp);
+        buffer.writeInt(!_isDwarvenCraft); // 0 = Dwarven - 1 = Common
+        buffer.writeInt(_maxMp);
 
         if (_recipes == null) {
-            writeInt(0);
+            buffer.writeInt(0);
         } else {
-            writeInt(_recipes.length); // number of items in recipe book
+            buffer.writeInt(_recipes.length); // number of items in recipe book
             for (int i = 0; i < _recipes.length; i++) {
-                writeInt(_recipes[i].getId());
-                writeInt(i + 1);
+                buffer.writeInt(_recipes[i].getId());
+                buffer.writeInt(i + 1);
             }
         }
     }

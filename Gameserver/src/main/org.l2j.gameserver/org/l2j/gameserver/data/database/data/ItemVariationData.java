@@ -20,15 +20,16 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Table;
 
-@Table("item_variation")
+/**
+ * @author JoeAlisson
+ */
+@Table("item_variations")
 public class ItemVariationData {
 
+    private int itemId;
     private int mineralId;
-
     private int option1;
-
     private int option2;
-
 
     public int getMineralId() {
         return mineralId;
@@ -39,6 +40,15 @@ public class ItemVariationData {
     }
 
     public int getOption2() {
-        return option1;
+        return option2;
+    }
+
+    public static ItemVariationData of(int itemObjectId, int mineralId, int option1Id, int option2Id) {
+        var data = new ItemVariationData();
+        data.itemId = itemObjectId;
+        data.mineralId = mineralId;
+        data.option1 = option1Id;
+        data.option2 = option2Id;
+        return data;
     }
 }

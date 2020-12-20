@@ -26,9 +26,10 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -41,9 +42,11 @@ import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
+ * fine-tunning by Bru7aLMike
  */
 public final class AutoPlayEngine {
 
@@ -61,7 +64,7 @@ public final class AutoPlayEngine {
     private final DoAutoPotion doAutoPotion = new DoAutoPotion();
     private final Object autoPotionTaskLocker = new Object();
     private ScheduledFuture<?> autoPotionTask;
-    
+
     private final AutoPlayTargetFinder tauntFinder = new TauntFinder();
     private final AutoPlayTargetFinder monsterFinder = new MonsterFinder();
     private final AutoPlayTargetFinder playerFinder = new PlayerFinder();
@@ -191,7 +194,11 @@ public final class AutoPlayEngine {
         }
 
         private void doAutoPlay() {
-            players.parallelStream().filter(AutoPlayEngine.this::canUseAutoPlay).forEach(this::doNextAction);
+            for (Player player : players) {
+                if(canUseAutoPlay(player)) {
+                    doNextAction(player);
+                }
+            }
         }
 
         private void doNextAction(Player player) {
@@ -235,16 +242,21 @@ public final class AutoPlayEngine {
             };
         }
 
-        private void tryUseAutoShortcut(Player player) {
+        private void tryUseAutoShortcut(Player player)
+        {
             var nextShortcut = player.nextAutoShortcut();
-            if(nonNull(nextShortcut)) {
+            if(nonNull(nextShortcut))
+            {
                 var  shortcut = nextShortcut;
-                do {
-                    if(useShortcut(player, shortcut)) {
+                do
+                {
+                    if(useShortcut(player, shortcut))
+                    {
                         return;
                     }
                     shortcut = player.nextAutoShortcut();
-                } while (!nextShortcut.equals(shortcut));
+                }
+                while (!nextShortcut.equals(shortcut));
             }
             autoUseAction(player, DEFAULT_ACTION);
         }
@@ -285,22 +297,24 @@ public final class AutoPlayEngine {
             return false;
         }
 
-        private boolean autoUseSkill(Player player, Shortcut shortcut) {
+        private boolean autoUseSkill(Player player, Shortcut shortcut)
+        {
             var skill = player.getKnownSkill(shortcut.getShortcutId());
 
-            if (skill.isBlockActionUseSkill()) {
-                return false;
-            }
+            if (skill.isBlockActionUseSkill() || player.isSkillDisabled(skill))
+            { return true; }
 
-            if(skill.isAutoTransformation() && player.isTransformed()) {
-                return false;
-            }
-            if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3) {
-                return false;
-            }
+            if(skill.isAutoTransformation() && player.isTransformed())
+            { return false; }
+
+            if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3)
+            { return false; }
+
+            if(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled())
+            { return true; }
 
             player.onActionRequest();
-            return player.useMagic(skill, null, false, false);
+            return player.useSkill(skill, null, false, false);
         }
     }
 
@@ -313,19 +327,29 @@ public final class AutoPlayEngine {
 
         private void useAutoPotion() {
             var toRemove = new HashSet<Player>();
-            autoPotionPlayers.parallelStream().filter(this::canUseAutoPotion).forEach(player -> {
-                var shortcut = player.getShortcut(Shortcut.AUTO_POTION_ROOM) ;
-                if(nonNull(shortcut))  {
-                    var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
-                    if(nonNull(item)) {
-                        useItem(player, item);
+            if(getSettings(ServerSettings.class).parallelismThreshold() < autoPotionPlayers.size()) {
+                autoPotionPlayers.parallelStream().filter(this::canUseAutoPotion).forEach(player -> usePotionShortcut(toRemove, player));
+            } else {
+                for (Player player : autoPotionPlayers) {
+                    if(canUseAutoPotion(player)) {
+                        usePotionShortcut(toRemove, player);
                     }
-                } else {
-                   toRemove.add(player);
                 }
-            });
+            }
             if(!toRemove.isEmpty()) {
                 autoPotionPlayers.removeAll(toRemove);
+            }
+        }
+
+        private void usePotionShortcut(HashSet<Player> toRemove, Player player) {
+            var shortcut = player.getShortcut(Shortcut.AUTO_POTION_ROOM);
+            if (nonNull(shortcut)) {
+                var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
+                if (nonNull(item)) {
+                    useItem(player, item);
+                }
+            } else {
+                toRemove.add(player);
             }
         }
 
@@ -357,7 +381,7 @@ public final class AutoPlayEngine {
                 !player.isControlBlocked() &&
                 !player.isAlikeDead() &&
                 !player.isInsideZone(ZoneType.PEACE) &&
-                !player.inObserverMode() &&
+                !player.isInObserverMode() &&
                 !player.isCastingNow();
     }
 }

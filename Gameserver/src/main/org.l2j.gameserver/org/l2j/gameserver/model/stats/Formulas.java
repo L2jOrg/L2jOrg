@@ -47,12 +47,15 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.Math.*;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
@@ -110,7 +113,7 @@ public final class Formulas {
         // Initial damage
         final var ssmod = attacker.chargedShotBonus(ShotType.SOULSHOTS); // + 0.04 for dual weapon?
         final var cdMult = criticalMod * (((criticalPositionMod - 1) / 2) + 1) * (((criticalVulnMod - 1) / 2) + 1);
-        final var cdPatk = criticalAddMod + criticalAddVuln;
+        final var cdPatk = criticalAddMod - criticalAddVuln;
         final var positionMod = position == Position.BACK ? 0.2 : position == Position.SIDE ? 0.05 : 0;
 
         // ........................_____________________________Initial Damage____________________________...___________Position Additional Damage___________..._CriticalAdd_
@@ -136,7 +139,7 @@ public final class Formulas {
         double damage = ( (77 *  attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, power)  * Math.sqrt(mAtk) ) / mDef) * shotsBonus;
 
         // Failure calculation
-        if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
+        if (getSettings(CharacterSettings.class).isMagicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 if (calcMagicSuccess(attacker, target, skill)) {
                     if (skill.hasAnyEffectType(EffectType.HP_DRAIN)) {
@@ -283,7 +286,7 @@ public final class Formulas {
             defenceCriticalDamage = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
         }
 
-        return Math.max(1, 2 + (criticalDamage - defenceCriticalDamage) / (75 + Math.min(defenceCriticalDamage, criticalDamage)));
+        return Math.max(1, 2 + (criticalDamage - defenceCriticalDamage));
     }
 
     /**
@@ -320,23 +323,23 @@ public final class Formulas {
      * @return true in case when ATTACK is canceled due to hit
      */
     public static boolean calcAtkBreak(Creature target, double dmg) {
-        if (target.isChanneling()) {
+        if (target.isChanneling() || target.isRaid() || target.isHpBlocked()) {
             return false;
         }
 
         double init = 0;
 
-        if (Config.ALT_GAME_CANCEL_CAST && target.isCastingNow(SkillCaster::canAbortCast)) {
+        var characterSettings = getSettings(CharacterSettings.class);
+        if (characterSettings.breakCast() && target.isCastingNow(SkillCaster::canAbortCast)) {
             init = 15;
-        }
-        if (Config.ALT_GAME_CANCEL_BOW && target.isAttackingNow()) {
+        } else if (characterSettings.breakBowAttack() && target.isAttackingNow()) {
             final Weapon wpn = target.getActiveWeaponItem();
-            if ((wpn != null) && (wpn.getItemType() == WeaponType.BOW)) {
+            if (nonNull(wpn) && wpn.getItemType() == WeaponType.BOW) {
                 init = 15;
             }
         }
 
-        if (target.isRaid() || target.isHpBlocked() || (init <= 0)) {
+        if (init <= 0) {
             return false; // No attack break
         }
 
@@ -352,22 +355,14 @@ public final class Formulas {
         // Adjust the rate to be between 1 and 99
         rate = max(Math.min(rate, 99), 1);
 
-        return Rnd.get(100) < rate;
+        return Rnd.chance(rate);
     }
 
-    /**
-     * Calculate delay (in milliseconds) for skills cast
-     *
-     * @param attacker
-     * @param skill
-     * @param skillTime
-     * @return
-     */
-    public static int calcAtkSpd(Creature attacker, Skill skill, double skillTime) {
+    public static int calcAtkSpd(Creature attacker, Skill skill) {
         if (skill.isMagic()) {
-            return (int) ((skillTime / attacker.getMAtkSpd()) * 333);
+            return (int) (((double)skill.getCoolTime() / attacker.getMAtkSpd()) * 333);
         }
-        return (int) ((skillTime / attacker.getPAtkSpd()) * 300);
+        return (int) (((double)skill.getCoolTime() / attacker.getPAtkSpd()) * 300);
     }
 
     public static double calcAtkSpdMultiplier(Creature creature) {
@@ -393,20 +388,21 @@ public final class Formulas {
      * @return factor divisor for skill hit time and cancel time.
      */
     public static double calcSkillTimeFactor(Creature creature, Skill skill) {
-        if (skill.isChanneling() || (skill.getSkillType() == SkillType.STATIC)) {
+        if (skill.isChanneling() || skill.getSkillType() == SkillType.STATIC) {
             return 1.0d;
         }
 
-        double factor = 0.0;
+        double factor;
         if (skill.getSkillType() == SkillType.MAGIC) {
-            final double spiritshotHitTime = creature.isChargedShot(ShotType.SPIRITSHOTS) ? 0.4 : 0; // TODO: Implement propper values
-            factor = creature.getStats().getMAttackSpeedMultiplier() + (creature.getStats().getMAttackSpeedMultiplier() * spiritshotHitTime); // matkspdmul + (matkspdmul * spiritshot_hit_time)
+            final double spiritshotHitTime = creature.isChargedShot(ShotType.SPIRITSHOTS) ? 0.4 : 0; // TODO: Implement proper values
+            // matkspdmul + (matkspdmul * spiritshot_hit_time)
+            factor = creature.getStats().getMAttackSpeedMultiplier() + (creature.getStats().getMAttackSpeedMultiplier() * spiritshotHitTime);
         } else {
             factor = creature.getAttackSpeedMultiplier();
         }
 
-        if (isNpc(creature)) {
-            double npcFactor = ((Npc) creature).getTemplate().getHitTimeFactorSkill();
+        if (creature instanceof Npc npc ) {
+            double npcFactor = npc.getTemplate().getHitTimeFactorSkill();
             if (npcFactor > 0) {
                 factor /= npcFactor;
             }
@@ -537,7 +533,6 @@ public final class Formulas {
      * @return {@code true} if the effect lands
      */
     public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill) {
-        // StaticObjects can not receive continuous effects.
         if (isDoor(target) || (target instanceof SiegeFlag) || (target instanceof StaticWorldObject)) {
             return false;
         }
@@ -571,7 +566,7 @@ public final class Formulas {
 
         int magicLevel = skill.getMagicLevel();
         if (magicLevel <= -1) {
-            magicLevel = target.getLevel() + 3;
+            magicLevel = attacker.getLevel() + 3;
         }
 
         final double targetBasicProperty = getAbnormalResist(skill.getBasicProperty(), target);
@@ -692,7 +687,7 @@ public final class Formulas {
         damage *= calculatePvpPveBonus(attacker, target, skill, mcrit);
 
         // Failure calculation
-        if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
+        if (getSettings(CharacterSettings.class).isMagicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
                 sm.addString(target.getName());
@@ -764,7 +759,7 @@ public final class Formulas {
 
         final double chance = BaseStats.values()[val].calcBonus(actor) * actor.getStats().getValue(Stat.SKILL_CRITICAL_PROBABILITY, 1);
 
-        return ((Rnd.nextDouble() * 100.) < chance);
+        return Rnd.chance(chance);
     }
 
     /**
@@ -838,10 +833,10 @@ public final class Formulas {
      * @return {@code true} if reflect, {@code false} otherwise.
      */
     public static boolean calcBuffDebuffReflection(Creature target, Skill skill) {
-        if (!skill.isDebuff() || (skill.getActivateRate() == -1)) {
+        if (!skill.isDebuff() || skill.getActivateRate() == -1) {
             return false;
         }
-        return target.getStats().getValue(skill.isMagic() ? Stat.REFLECT_SKILL_MAGIC : Stat.REFLECT_SKILL_PHYSIC, 0) > Rnd.get(100);
+        return Rnd.chance(target.getStats().getValue(skill.isMagic() ? Stat.REFLECT_SKILL_MAGIC : Stat.REFLECT_SKILL_PHYSIC, 0));
     }
 
     /**
@@ -1221,14 +1216,14 @@ public final class Formulas {
     /**
      * Calculates if the specified creature can get its stun effect removed due to damage taken.
      *
-     * @param activeChar the character to be checked
+     * @param creature the character to be checked
      * @return {@code true} if character should get its stun effects removed, {@code false} otherwise.
      */
-    public static boolean calcStunBreak(Creature activeChar) {
+    public static boolean calcStunBreak(Creature creature) {
         // Check if target is stunned and break it with 14% chance. (retail is 14% and 35% on crit?)
-        if (Config.ALT_GAME_STUN_BREAK && activeChar.hasBlockActions() && (Rnd.get(14) == 0)) {
+        if (getSettings(CharacterSettings.class).breakStun() && creature.hasBlockActions() && Rnd.chance(14)) {
             // Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
-            return activeChar.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
+            return creature.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
         }
         return false;
     }

@@ -18,11 +18,12 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -53,33 +54,33 @@ public final class ExShowSellCropList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_SELL_CROP_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_SELL_CROP_LIST, buffer );
 
-        writeInt(_manorId); // manor id
-        writeInt(_cropsItems.size()); // size
+        buffer.writeInt(_manorId); // manor id
+        buffer.writeInt(_cropsItems.size()); // size
         for (Item item : _cropsItems.values()) {
             final Seed seed = CastleManorManager.getInstance().getSeedByCrop(item.getId());
-            writeInt(item.getObjectId()); // Object id
-            writeInt(item.getId()); // crop id
-            writeInt(seed.getLevel()); // seed level
-            writeByte((byte) 0x01);
-            writeInt(seed.getReward(1)); // reward 1 id
-            writeByte((byte) 0x01);
-            writeInt(seed.getReward(2)); // reward 2 id
+            buffer.writeInt(item.getObjectId()); // Object id
+            buffer.writeInt(item.getId()); // crop id
+            buffer.writeInt(seed.getLevel()); // seed level
+            buffer.writeByte(0x01);
+            buffer.writeInt(seed.getReward(1)); // reward 1 id
+            buffer.writeByte(0x01);
+            buffer.writeInt(seed.getReward(2)); // reward 2 id
             if (_castleCrops.containsKey(item.getId())) {
                 final CropProcure crop = _castleCrops.get(item.getId());
-                writeInt(_manorId); // manor
-                writeLong(crop.getAmount()); // buy residual
-                writeLong(crop.getPrice()); // buy price
-                writeByte((byte) crop.getReward()); // reward
+                buffer.writeInt(_manorId); // manor
+                buffer.writeLong(crop.getAmount()); // buy residual
+                buffer.writeLong(crop.getPrice()); // buy price
+                buffer.writeByte(crop.getReward()); // reward
             } else {
-                writeInt(0xFFFFFFFF); // manor
-                writeLong(0x00); // buy residual
-                writeLong(0x00); // buy price
-                writeByte((byte) 0x00); // reward
+                buffer.writeInt(0xFFFFFFFF); // manor
+                buffer.writeLong(0x00); // buy residual
+                buffer.writeLong(0x00); // buy price
+                buffer.writeByte(0x00); // reward
             }
-            writeLong(item.getCount()); // my crops
+            buffer.writeLong(item.getCount()); // my crops
         }
     }
 

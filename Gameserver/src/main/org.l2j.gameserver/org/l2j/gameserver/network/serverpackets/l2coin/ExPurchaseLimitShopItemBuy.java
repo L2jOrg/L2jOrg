@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.l2coin;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.shop.lcoin.LCoinShopProduct;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
@@ -40,22 +41,22 @@ public class ExPurchaseLimitShopItemBuy extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_BUY);
-        writeByte(fail);
-        writeByte(tab);
-        writeInt(product.id());
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_BUY, buffer );
+        buffer.writeByte(fail);
+        buffer.writeByte(tab);
+        buffer.writeInt(product.id());
 
         ItemHolder production = product.production();
         int size = 1;
-        writeInt(size); // size
+        buffer.writeInt(size); // size
         for (int i = 0; i < size ; i++) {
-            writeByte(i);
-            writeInt(production.getId()); //item id
-            writeInt((int) production.getCount()); // count
+            buffer.writeByte(i);
+            buffer.writeInt(production.getId()); //item id
+            buffer.writeInt((int) production.getCount()); // count
         }
 
-        writeInt(product.getRemainAmount()); // remain item count
+        buffer.writeInt(product.getRemainAmount()); // remain item count
     }
 
     public static ServerPacket fail(LCoinShopProduct product, byte tab) {

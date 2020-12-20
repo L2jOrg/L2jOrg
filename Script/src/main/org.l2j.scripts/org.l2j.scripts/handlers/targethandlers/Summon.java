@@ -40,13 +40,13 @@ public class Summon implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (isPlayer(activeChar) && activeChar.hasSummon())
+		if (isPlayer(creature) && creature.hasSummon())
 		{
-			return activeChar.getActingPlayer().getAnyServitor();
+			return creature.getActingPlayer().getAnyServitor();
 		}
 		
-		return activeChar.getPet();
+		return creature.getPet();
 	}
 }

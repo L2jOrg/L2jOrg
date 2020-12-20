@@ -32,4 +32,6 @@ public @interface  Query {
     String value();
 
     int batchIndex() default -1;
+
+    boolean scrollResult() default false;
 }

@@ -29,10 +29,12 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.text.NumberFormat;
 import java.util.*;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_DO_NOT_HAVE_A_PET;
 
 public class SchemeBuffer extends Folk {
@@ -40,69 +42,6 @@ public class SchemeBuffer extends Folk {
 
     public SchemeBuffer(NpcTemplate template) {
         super(template);
-    }
-
-    /**
-     * @param groupType  : The group of skills to select.
-     * @param schemeName : The scheme to make check.
-     * @return a string representing all groupTypes available. The group currently on selection isn't linkable.
-     */
-    private static String getTypesFrame(String groupType, String schemeName) {
-        final StringBuilder sb = new StringBuilder(500);
-        sb.append("<table>");
-
-        int count = 0;
-        for (String type : SchemeBufferTable.getInstance().getSkillTypes()) {
-            if (count == 0) {
-                sb.append("<tr>");
-            }
-
-            if (groupType.equalsIgnoreCase(type)) {
-                sb.append("<td width=65>").append(type).append("</td>");
-            } else {
-                sb.append("<td width=65><a action=\"bypass -h npc_%objectId%_editschemes;").append(type).append(";").append(schemeName).append(";1\">").append(type).append("</a></td>");
-            }
-
-            count++;
-            if (count == 4) {
-                sb.append("</tr>");
-                count = 0;
-            }
-        }
-
-        if (!sb.toString().endsWith("</tr>")) {
-            sb.append("</tr>");
-        }
-
-        sb.append("</table>");
-
-        return sb.toString();
-    }
-
-    /**
-     * @param list : A list of skill ids.
-     * @return a global fee for all skills contained in list.
-     */
-    private static int getFee(IntList list) {
-        if (Config.BUFFER_STATIC_BUFF_COST > 0) {
-            return list.size() * Config.BUFFER_STATIC_BUFF_COST;
-        }
-
-        int fee = 0;
-        final var it = list.iterator();
-        while (it.hasNext()) {
-            fee += SchemeBufferTable.getInstance().getAvailableBuff(it.nextInt()).getPrice();
-        }
-
-        return fee;
-    }
-
-    private static int countPagesNumber(int objectsSize, int pageSize) {
-        return (objectsSize / pageSize) + ((objectsSize % pageSize) == 0 ? 0 : 1);
-    }
-
-    private static long getCountOf(IntList skills, boolean dances) {
-        return skills.stream().filter(sId -> SkillEngine.getInstance().getSkill(sId, 1).isDance() == dances).count();
     }
 
     @Override
@@ -147,14 +86,12 @@ public class SchemeBuffer extends Folk {
             final String schemeName = st.nextToken();
             final int cost = Integer.parseInt(st.nextToken());
 
-            Creature target = null;
+            Creature target = player;
             if (st.hasMoreTokens()) {
                 final String targetType = st.nextToken();
                 if ((targetType != null) && targetType.equalsIgnoreCase("pet")) {
                     target = player.getPet();
                 }
-            } else {
-                target = player;
             }
 
             if (target == null) {
@@ -182,7 +119,7 @@ public class SchemeBuffer extends Folk {
             if (currentCommand.startsWith("skillselect") && !schemeName.equalsIgnoreCase("none")) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
                 if (skill.isDance()) {
-                    if (getCountOf(skills, true) < Config.DANCES_MAX_AMOUNT) {
+                    if (getCountOf(skills, true) < getSettings(CharacterSettings.class).maxDances()) {
                         skills.add(skillId);
                     } else {
                         player.sendMessage("This scheme has reached the maximum amount of dances/songs.");
@@ -225,7 +162,7 @@ public class SchemeBuffer extends Folk {
                     }
                 }
 
-                SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName.trim(), new ArrayIntList(), false);
+                SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName.trim(), new ArrayIntList());
                 showGiveBuffsWindow(player);
             } catch (Exception e) {
                 player.sendMessage("Scheme's name must contain up to 14 chars.");
@@ -245,9 +182,13 @@ public class SchemeBuffer extends Folk {
         }
     }
 
+    private long getCountOf(IntList skills, boolean dances) {
+        return skills.stream().filter(sId -> SkillEngine.getInstance().getSkill(sId, 1).isDance() == dances).count();
+    }
+
     @Override
     public String getHtmlPath(int npcId, int val) {
-        String filename = "";
+        String filename;
         if (val == 0) {
             filename = Integer.toString(npcId);
         } else {
@@ -271,11 +212,11 @@ public class SchemeBuffer extends Folk {
         } else {
             for (var scheme : schemes.entrySet()) {
                 final int cost = getFee(scheme.getValue());
-                sb.append("<font color=\"LEVEL\">" + scheme.getKey() + " [" + scheme.getValue().size() + " skill(s)]" + ((cost > 0) ? " - cost: " + NumberFormat.getInstance(Locale.ENGLISH).format(cost) : "") + "</font><br1>");
-                sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs;" + scheme.getKey() + ";" + cost + "\">Use on Me</a>&nbsp;|&nbsp;");
-                sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs;" + scheme.getKey() + ";" + cost + ";pet\">Use on Pet</a>&nbsp;|&nbsp;");
-                sb.append("<a action=\"bypass -h npc_%objectId%_editschemes;Buffs;" + scheme.getKey() + ";1\">Edit</a>&nbsp;|&nbsp;");
-                sb.append("<a action=\"bypass -h npc_%objectId%_deletescheme;" + scheme.getKey() + "\">Delete</a><br>");
+                sb.append("<font color=\"LEVEL\">").append(scheme.getKey()).append(" [").append(scheme.getValue().size()).append(" skill(s)]").append(((cost > 0) ? " - cost: " + NumberFormat.getInstance(Locale.ENGLISH).format(cost) : "")).append("</font><br1>");
+                sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs;").append(scheme.getKey()).append(";").append(cost).append("\">Use on Me</a>&nbsp;|&nbsp;");
+                sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs;").append(scheme.getKey()).append(";").append(cost).append(";pet\">Use on Pet</a>&nbsp;|&nbsp;");
+                sb.append("<a action=\"bypass -h npc_%objectId%_editschemes;Buffs;").append(scheme.getKey()).append(";1\">Edit</a>&nbsp;|&nbsp;");
+                sb.append("<a action=\"bypass -h npc_%objectId%_deletescheme;").append(scheme.getKey()).append("\">Delete</a><br>");
             }
         }
 
@@ -286,6 +227,25 @@ public class SchemeBuffer extends Folk {
         html.replace("%objectId%", getObjectId());
         player.sendPacket(html);
     }
+
+    /**
+     * @param list : A list of skill ids.
+     * @return a global fee for all skills contained in list.
+     */
+    private int getFee(IntList list) {
+        if (Config.BUFFER_STATIC_BUFF_COST > 0) {
+            return list.size() * Config.BUFFER_STATIC_BUFF_COST;
+        }
+
+        int fee = 0;
+        final var it = list.iterator();
+        while (it.hasNext()) {
+            fee += SchemeBufferTable.getInstance().getAvailableBuff(it.nextInt()).getPrice();
+        }
+
+        return fee;
+    }
+
 
     /**
      * This sends an html packet to player with Edit Scheme Menu info. This allows player to edit each created scheme (add/delete skills)
@@ -301,11 +261,48 @@ public class SchemeBuffer extends Folk {
 
         html.setFile(player, getHtmlPath(getId(), 2));
         html.replace("%schemename%", schemeName);
-        html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStats().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
+        html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStats().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + getSettings(CharacterSettings.class).maxDances() + " dances/songs");
         html.replace("%typesframe%", getTypesFrame(groupType, schemeName));
         html.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
         html.replace("%objectId%", getObjectId());
         player.sendPacket(html);
+    }
+
+    /**
+     * @param groupType  : The group of skills to select.
+     * @param schemeName : The scheme to make check.
+     * @return a string representing all groupTypes available. The group currently on selection isn't linkable.
+     */
+    private  String getTypesFrame(String groupType, String schemeName) {
+        final StringBuilder sb = new StringBuilder(500);
+        sb.append("<table>");
+
+        int count = 0;
+        for (String type : SchemeBufferTable.getInstance().getSkillTypes()) {
+            if (count == 0) {
+                sb.append("<tr>");
+            }
+
+            if (groupType.equalsIgnoreCase(type)) {
+                sb.append("<td width=65>").append(type).append("</td>");
+            } else {
+                sb.append("<td width=65><a action=\"bypass -h npc_%objectId%_editschemes;").append(type).append(";").append(schemeName).append(";1\">").append(type).append("</a></td>");
+            }
+
+            count++;
+            if (count == 4) {
+                sb.append("</tr>");
+                count = 0;
+            }
+        }
+
+        if (!sb.toString().endsWith("</tr>")) {
+            sb.append("</tr>");
+        }
+
+        sb.append("</table>");
+
+        return sb.toString();
     }
 
     /**
@@ -368,5 +365,9 @@ public class SchemeBuffer extends Folk {
         sb.append("</tr></table><img src=\"L2UI.SquareGray\" width=277 height=1>");
 
         return sb.toString();
+    }
+
+    private int countPagesNumber(int objectsSize, int pageSize) {
+        return (objectsSize / pageSize) + ((objectsSize % pageSize) == 0 ? 0 : 1);
     }
 }

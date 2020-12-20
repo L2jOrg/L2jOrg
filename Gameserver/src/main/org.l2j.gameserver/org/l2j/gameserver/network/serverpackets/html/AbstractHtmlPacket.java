@@ -127,13 +127,13 @@ public abstract class AbstractHtmlPacket extends ServerPacket {
     }
 
     public final void setHtml(String html) {
-        if (html.length() > 17200) {
-            LOGGER.warn("Html is too long! this will crash the client!", new Throwable());
-            this.html = html.substring(0, 17200);
-        }
-
         if (!html.contains("<html") && !html.startsWith("..\\L2")) {
             html = "<html><body>" + html + "</body></html>";
+        }
+
+        if (html.length() > 17200) {
+            LOGGER.warn("Html is too long! this will crash the client!", new Throwable());
+            html = "Html is too long!";
         }
 
         this.html = html;

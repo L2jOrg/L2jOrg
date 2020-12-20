@@ -18,8 +18,9 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -42,21 +43,21 @@ public class PackageSendableList extends AbstractItemPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PACKAGE_SENDABLE_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PACKAGE_SENDABLE_LIST, buffer );
 
-        writeByte((byte) _sendType);
+        buffer.writeByte(_sendType);
         if (_sendType == 2) {
-            writeInt(_items.size());
-            writeInt(_items.size());
+            buffer.writeInt(_items.size());
+            buffer.writeInt(_items.size());
             for (Item item : _items) {
-                writeItem(item);
-                writeInt(item.getObjectId());
+                writeItem(item, buffer);
+                buffer.writeInt(item.getObjectId());
             }
         } else {
-            writeInt(_objectId);
-            writeLong(_adena);
-            writeInt(_items.size());
+            buffer.writeInt(_objectId);
+            buffer.writeLong(_adena);
+            buffer.writeInt(_items.size());
         }
     }
 

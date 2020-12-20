@@ -18,13 +18,14 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
 public class PingResponse extends SendablePacket {
 
-	protected void writeImpl(AuthServerClient client) {
-		writeByte((byte)0xff);
-		writeLong(System.currentTimeMillis());
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0xff);
+		buffer.writeLong(System.currentTimeMillis());
 	}
 }
