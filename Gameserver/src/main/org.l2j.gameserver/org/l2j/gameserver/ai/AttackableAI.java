@@ -49,6 +49,8 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
@@ -389,6 +391,7 @@ public class AttackableAI extends CreatureAI {
                 }
             }
         }
+
         // Order to the Monster to random walk (1/100)
         else if (npc.getSpawn() != null && Rnd.chance(RANDOM_WALK_RATE) && npc.isRandomWalkingEnabled()) {
             int x1;

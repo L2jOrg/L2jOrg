@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2021 L2JOrg
+ * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -19,31 +19,32 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
-
-import static java.util.Objects.requireNonNull;
 
 /**
  * @author JoeAlisson
  */
-public class ExMercenarySiegeHUDInfo extends ServerPacket {
+public class ExMCWCastleSiegeAttackerList extends AbstractSiegeClanList {
 
-    private final Castle castle;
-
-    public ExMercenarySiegeHUDInfo(Castle castle) {
-        this.castle = requireNonNull(castle);
+    public ExMCWCastleSiegeAttackerList(Castle castle) {
+        super(castle);
     }
 
     @Override
-    protected void writeImpl(GameClient client, WritableBuffer buffer) {
-        writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO, buffer);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) throws Exception {
+        writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST, buffer);
 
-        buffer.writeInt(castle.getId());
-        buffer.writeInt(castle.isInSiege());
-        buffer.writeInt((int) (System.currentTimeMillis() / 1000));
-        buffer.writeInt((int) castle.getSiege().currentStateRemainTimeInSeconds());
+        var attackers = castle.getSiege().getAttackerClans();
+        writeHeader(buffer, attackers.size());
+
+        for (SiegeClanData attacker : attackers.values()) {
+            var clan = ClanEngine.getInstance().getClan(attacker.getClanId());
+            writeClanInfo(buffer, clan);
+            writeAllianceInfo(buffer, clan);
+        }
     }
 }

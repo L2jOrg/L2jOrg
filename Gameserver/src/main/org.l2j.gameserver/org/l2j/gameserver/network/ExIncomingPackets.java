@@ -34,7 +34,7 @@ import org.l2j.gameserver.network.clientpackets.shortcut.ExRequestActivateAutoSh
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;
 import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarInfo;
-import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeAttacker;
+import org.l2j.gameserver.network.clientpackets.siege.ExRequestMercenaryCastleWarCastleSiegeAttacker;
 import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeDefender;
 import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeInfo;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
@@ -470,9 +470,9 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MAGICLAMP_GAME_INFO(ExMagicLampGameInfo::new, ConnectionState.IN_GAME_STATES),
     EX_MAGICLAMP_GAME_START(ExMagicLampGameStart::new, ConnectionState.IN_GAME_STATES),
     EX_ACTIVATE_AUTO_SHORTCUT(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
-    EX_PREMIUM_MANAGER_LINK_HTML(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
-    EX_PREMIUM_MANAGER_PASS_CMD_TO_SERVER(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
-    EX_ACTIVATED_CURSED_TREASURE_BOX_LOCATION(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
+    EX_PREMIUM_MANAGER_LINK_HTML(null, ConnectionState.IN_GAME_STATES),
+    EX_PREMIUM_MANAGER_PASS_CMD_TO_SERVER(null, ConnectionState.IN_GAME_STATES),
+    EX_ACTIVATED_CURSED_TREASURE_BOX_LOCATION(null, ConnectionState.IN_GAME_STATES),
     EX_PAYBACK_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_PAYBACK_GIVE_REWARD(null, ConnectionState.IN_GAME_STATES),
     EX_AUTOPLAY_SETTING(ExAutoPlaySetting::new, ConnectionState.IN_GAME_STATES),

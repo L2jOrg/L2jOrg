@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author UnAfraid
  */
@@ -59,22 +61,12 @@ public abstract class AbstractEventListener implements Comparable<AbstractEventL
         return _priority;
     }
 
-    /**
-     * Sets priority of execution.
-     *
-     * @param priority
-     */
     public void setPriority(int priority) {
         _priority = priority;
     }
 
     /**
      * Method invoked by EventDispatcher that will use the callback.
-     *
-     * @param <R>
-     * @param event
-     * @param returnBackClass
-     * @return
      */
     public abstract <R extends AbstractEventReturn> R executeEvent(IBaseEvent event, Class<R> returnBackClass);
 
@@ -82,7 +74,9 @@ public abstract class AbstractEventListener implements Comparable<AbstractEventL
      * Unregisters detaches and unregisters current listener.
      */
     public void unregisterMe() {
-        _container.removeListener(this);
+        if(nonNull(_container)) {
+            _container.removeListener(this);
+        }
     }
 
     @Override

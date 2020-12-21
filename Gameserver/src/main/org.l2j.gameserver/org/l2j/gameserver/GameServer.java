@@ -198,10 +198,10 @@ public class GameServer {
         VoteSystem.initialize();
 
         printSection("Siege");
-        SiegeManager.init();
+        //SiegeManager.init();
         CastleManager.getInstance().activateInstances();
-        SiegeScheduleData.getInstance();
-        SiegeGuardManager.init();
+        //SiegeScheduleData.getInstance();
+        //SiegeGuardManager.init();
         QuestManager.getInstance().report();
 
         if (GeneralSettings.saveDroppedItems()) {

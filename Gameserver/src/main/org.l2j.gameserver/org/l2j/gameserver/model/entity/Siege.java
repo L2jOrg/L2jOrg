@@ -81,7 +81,6 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
 public class Siege implements Siegable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Siege.class);
 
-    private ConsumerEventListener loginListener;
     private final IntMap<SiegeClanData> attackers = new CHashIntMap<>();
     private final IntMap<SiegeClanData> defenders = new CHashIntMap<>();
     private final IntMap<SiegeClanData> defendersWaiting = new CHashIntMap<>();
@@ -111,7 +110,7 @@ public class Siege implements Siegable {
         loadSiegeClan();
 
         var listeners = Listeners.players();
-        loginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
+        ConsumerEventListener loginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
         listeners.addListener(loginListener);
 
         if (nonNull(scheduledStartSiegeTask)) {
@@ -128,7 +127,7 @@ public class Siege implements Siegable {
         {
             _scheduledSiegePrepHUDTask.cancel(false);
         }
-        _scheduledSiegePrepHUDTask = ThreadPool.schedule(new ScheduleSiegePrepHUDTask(castle.getId()),Math.max(0, Duration.between(LocalDateTime.now(),  LocalDateTime.now().minusHours(1)).toMillis()));
+        _scheduledSiegePrepHUDTask = ThreadPool.schedule(new ScheduleSiegePrepHUDTask(),Math.max(0, Duration.between(LocalDateTime.now(),  LocalDateTime.now().minusHours(1)).toMillis()));
     }
 
     private void onPlayerLogin(OnPlayerLogin event) {
@@ -250,7 +249,7 @@ public class Siege implements Siegable {
             Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.17"));
             EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeStart(this), getCastle());
             endTime = Instant.now().plus(SiegeManager.getInstance().getSiegeLength(), ChronoUnit.MINUTES);
-            Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle.getId()));
+            Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
             ThreadPool.schedule(new ScheduleEndSiegeTask(), 1000);
         }
     }
@@ -881,13 +880,10 @@ public class Siege implements Siegable {
         }
     }
 
-    public static class ScheduleSiegePrepHUDTask implements Runnable
+    private class ScheduleSiegePrepHUDTask implements Runnable
     {
-        private final int _castleId;
-
-        public ScheduleSiegePrepHUDTask(int castleId)
+        public ScheduleSiegePrepHUDTask()
         {
-            _castleId = castleId;
         }
 
         @Override
@@ -895,7 +891,7 @@ public class Siege implements Siegable {
         {
             for (Player player : World.getInstance().getPlayers())
             {
-                SiegeManager.getInstance().sendSiegeHUDInfo(player, _castleId);
+                SiegeManager.getInstance().sendSiegeHUDInfo(player, castle);
             }
         }
     }
@@ -918,7 +914,7 @@ public class Siege implements Siegable {
                 var regTimeRemaining = Duration.between(LocalDateTime.now(), castle.getSiegeTimeRegistrationEnd());
                 if (regTimeRemaining.compareTo(Duration.ZERO) > 0) {
                     scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), regTimeRemaining);
-                    Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle.getId()));
+                    Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
                     return;
                 }
 

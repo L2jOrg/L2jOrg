@@ -27,6 +27,7 @@ import org.l2j.gameserver.network.serverpackets.SiegeAttackerList;
  *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
+@Deprecated(forRemoval = true)
 public final class RequestSiegeAttackerList extends ClientPacket {
     private int _castleId;
 

@@ -17,11 +17,7 @@ CREATE TABLE IF NOT EXISTS `castle`
   DEFAULT CHARSET = utf8MB4;
 
 INSERT IGNORE INTO `castle`(`id`, `name`)
-VALUES (1, 'Gludio'),
-       (2, 'Dion'),
-       (3, 'Giran'),
-       (4, 'Oren'),
-       (5, 'Aden');
+VALUES (3, 'Giran');
 
 CREATE TABLE IF NOT EXISTS `castle_functions`
 (

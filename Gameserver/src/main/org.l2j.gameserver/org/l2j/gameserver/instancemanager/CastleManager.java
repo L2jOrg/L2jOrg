@@ -24,7 +24,6 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.InstanceListManager;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
-import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -69,11 +68,19 @@ public final class CastleManager implements InstanceListManager {
     private CastleManager() {
     }
 
-    public final Castle findNearestCastle(WorldObject obj) {
+    @Override
+    public void loadInstances() {
+        for (var data : getDAO(CastleDAO.class).findAll()) {
+            castles.put(data.getId(), new Castle(data));
+        }
+        LOGGER.info("Loaded {} castles", castles.size());
+    }
+
+    public Castle findNearestCastle(WorldObject obj) {
         return findNearestCastle(obj, Long.MAX_VALUE);
     }
 
-    public final Castle findNearestCastle(WorldObject obj, long maxDistance) {
+    public Castle findNearestCastle(WorldObject obj, long maxDistance) {
         Castle nearestCastle = getCastle(obj);
 
         if (nearestCastle == null) {
@@ -89,11 +96,11 @@ public final class CastleManager implements InstanceListManager {
         return nearestCastle;
     }
 
-    public final Castle getCastleById(int castleId) {
+    public Castle getCastleById(int castleId) {
         return castles.get(castleId);
     }
 
-    public final Castle getCastleByOwner(Clan clan) {
+    public Castle getCastleByOwner(Clan clan) {
         for (Castle temp : castles.values()) {
             if (temp.getOwnerId() == clan.getId()) {
                 return temp;
@@ -102,7 +109,7 @@ public final class CastleManager implements InstanceListManager {
         return null;
     }
 
-    public final Castle getCastle(String name) {
+    public Castle getCastle(String name) {
         for (Castle temp : castles.values()) {
             if (temp.getName().equalsIgnoreCase(name.trim())) {
                 return temp;
@@ -111,7 +118,7 @@ public final class CastleManager implements InstanceListManager {
         return null;
     }
 
-    public final Castle getCastle(int x, int y, int z) {
+    public Castle getCastle(int x, int y, int z) {
         for (Castle castle : castles.values()) {
             if(castle.checkIfInZone(x, y, z)) {
                 return castle;
@@ -120,11 +127,11 @@ public final class CastleManager implements InstanceListManager {
         return null;
     }
 
-    public final Castle getCastle(ILocational loc) {
+    public Castle getCastle(ILocational loc) {
         return getCastle(loc.getX(), loc.getY(), loc.getZ());
     }
 
-    public final Collection<Castle> getCastles() {
+    public Collection<Castle> getCastles() {
         return castles.values();
     }
 
@@ -168,14 +175,6 @@ public final class CastleManager implements InstanceListManager {
             }
             getDAO(ItemDAO.class).deleteByIdAndOwner(circletId, member.getObjectId());
         }
-    }
-
-    @Override
-    public void loadInstances() {
-        for (CastleData data : getDAO(CastleDAO.class).findAll()) {
-            castles.put(data.getId(), new Castle(data));
-        }
-        LOGGER.info("Loaded {} castles", castles.size());
     }
 
     @Override

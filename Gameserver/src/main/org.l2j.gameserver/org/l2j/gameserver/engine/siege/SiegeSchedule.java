@@ -1,6 +1,5 @@
 /*
- * Copyright © 2019 L2J Mobius
- * Copyright © 2019-2021 L2JOrg
+ * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -17,33 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.eventengine;
+package org.l2j.gameserver.engine.siege;
 
-import org.l2j.gameserver.model.events.AbstractScript;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
-
-import java.nio.file.Path;
+import java.time.DayOfWeek;
 
 /**
- * @author UnAfraid
+ * @author JoeAlisson
  */
-public abstract class AbstractEvent extends AbstractScript {
-
-    @Override
-    public final String getScriptName() {
-        return getClass().getSimpleName();
-    }
-
-    @Override
-    public final Path getScriptPath() {
-        return null;
-    }
-
-    public abstract void sendMessage(SystemMessageId messageId);
-
-    public void sendPacket(ServerPacket packet) {
-
-    }
-
+public record SiegeSchedule(DayOfWeek day, int hour) {
 }
