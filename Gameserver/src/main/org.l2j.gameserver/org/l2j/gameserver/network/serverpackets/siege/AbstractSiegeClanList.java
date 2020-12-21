@@ -19,9 +19,8 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.requireNonNull;
@@ -29,21 +28,38 @@ import static java.util.Objects.requireNonNull;
 /**
  * @author JoeAlisson
  */
-public class ExMercenarySiegeHUDInfo extends ServerPacket {
+public abstract class AbstractSiegeClanList extends ServerPacket {
 
-    private final Castle castle;
+    protected final Castle castle;
 
-    public ExMercenarySiegeHUDInfo(Castle castle) {
+    protected AbstractSiegeClanList(Castle castle) {
         this.castle = requireNonNull(castle);
     }
 
-    @Override
-    protected void writeImpl(GameClient client, WritableBuffer buffer) {
-        writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO, buffer);
-
+    protected void writeHeader(WritableBuffer buffer, int clanAmount) {
         buffer.writeInt(castle.getId());
-        buffer.writeInt(castle.isInSiege());
-        buffer.writeInt((int) (System.currentTimeMillis() / 1000));
-        buffer.writeInt((int) castle.getSiege().currentStateRemainTimeInSeconds());
+        buffer.writeInt(0);
+        buffer.writeInt(1);
+        buffer.writeInt(0);
+        buffer.writeInt(clanAmount);
+        buffer.writeInt(clanAmount);
+    }
+
+    protected void writeClanInfo(WritableBuffer buffer, Clan clan) {
+        buffer.writeInt(clan.getId());
+        buffer.writeString(clan.getName());
+        buffer.writeString(clan.getLeaderName());
+        buffer.writeInt(clan.getCrestId());
+        buffer.writeInt(0); // register time
+    }
+
+    protected void writeAllianceInfo(WritableBuffer buffer, Clan clan) {
+        buffer.writeInt(0);
+        buffer.writeLong(0);
+        buffer.writeInt(0);
+        buffer.writeInt(clan.getAllyId());
+        buffer.writeString(clan.getAllyName());
+        buffer.writeString(""); // ally leader name
+        buffer.writeInt(clan.getAllyCrestId());
     }
 }

@@ -35,9 +35,10 @@ import org.l2j.gameserver.network.serverpackets.siege.ExMercenarySiegeHUDInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -63,7 +64,6 @@ public final class SiegeManager {
 
     public final void addSiegeSkills(Player player) {
         SkillEngine.getInstance().addSiegeSkills(player);
-
     }
 
     public final boolean checkIsRegistered(Clan clan, int castleId) {
@@ -136,7 +136,7 @@ public final class SiegeManager {
 
                     flameTowers.add(new TowerSpawn(npcId, new Location(x, y, z), zoneList));
                 } catch (Exception e) {
-                    LOGGER.warn(": Error while loading flame tower(s) for " + castle.getName() + " castle.");
+                    LOGGER.warn("Error while loading flame tower(s) for " + castle.getName() + " castle.");
                 }
             }
             _controlTowers.put(castle.getId(), controlTowers);
@@ -203,12 +203,12 @@ public final class SiegeManager {
             int diff = (int)  castle.getSiege().currentStateRemainTimeInSeconds();
             if (diff < (24 * 60 * 60 * 1000))
             {
-                player.sendPacket(new ExMercenarySiegeHUDInfo(castle.getId()));
+                player.sendPacket(new ExMercenarySiegeHUDInfo(castle));
             }
         }
     }
 
-    public void sendSiegeHUDInfo(Player player, int castleId)
+    public void sendSiegeHUDInfo(Player player, Castle castleId)
     {
         player.sendPacket(new ExMercenarySiegeHUDInfo(castleId));
     }

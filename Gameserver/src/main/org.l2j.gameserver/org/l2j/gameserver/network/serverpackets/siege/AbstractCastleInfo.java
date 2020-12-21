@@ -49,8 +49,8 @@ public abstract class AbstractCastleInfo extends ServerPacket {
         } else {
             buffer.writeInt(0);
             buffer.writeInt(0);
-            buffer.writeSizedString("-");
-            buffer.writeSizedString("-");
+            buffer.writeSizedString("");
+            buffer.writeSizedString("");
         }
     }
 }

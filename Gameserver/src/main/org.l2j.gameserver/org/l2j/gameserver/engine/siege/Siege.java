@@ -16,31 +16,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.engine.siege;
 
-import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.network.serverpackets.SiegeAttackerList;
+import org.l2j.gameserver.model.eventengine.AbstractEvent;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * This class ...
- *
- * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
+ * @author JoeAlisson
  */
-@Deprecated(forRemoval = true)
-public final class RequestSiegeAttackerList extends ClientPacket {
-    private int _castleId;
+public class Siege extends AbstractEvent {
 
-    @Override
-    public void readImpl() {
-        _castleId = readInt();
+    private final Castle castle;
+
+    public Siege(Castle castle) {
+        this.castle = castle;
     }
 
     @Override
-    public void runImpl() {
-        final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
-        if (castle != null) {
-            client.sendPacket(new SiegeAttackerList(castle));
-        }
+    public void sendMessage(SystemMessageId messageId) {
+
+    }
+
+    @Override
+    public void sendPacket(ServerPacket packet) {
+
+    }
+
+    public Castle getCastle() {
+        return castle;
     }
 }

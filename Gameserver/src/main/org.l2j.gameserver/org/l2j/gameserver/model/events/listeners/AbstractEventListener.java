@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author UnAfraid
  */
@@ -89,7 +91,9 @@ public abstract class AbstractEventListener implements Comparable<AbstractEventL
      * Unregisters detaches and unregisters current listener.
      */
     public void unregisterMe() {
-        _container.removeListener(this);
+        if(nonNull(_container)) {
+            _container.removeListener(this);
+        }
     }
 
     @Override

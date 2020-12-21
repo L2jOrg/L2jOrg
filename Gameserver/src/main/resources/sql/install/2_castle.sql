@@ -13,8 +13,4 @@ CREATE TABLE IF NOT EXISTS `castle` (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8MB4;
 
 INSERT IGNORE INTO `castle`(`id`, `name`) VALUES
-(1,'Gludio'),
-(2,'Dion'),
-(3,'Giran'),
-(4,'Oren'),
-(5,'Aden');
+(3,'Giran');

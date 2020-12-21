@@ -133,7 +133,9 @@ public final class Castle extends AbstractResidence {
     }
 
     private void spawnSideNpcs() {
-        sideNpcs.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
+        for (Npc npc : sideNpcs) {
+            npc.deleteMe();
+        }
         sideNpcs.clear();
 
         for (CastleSpawnHolder holder : getSideSpawns()) {
@@ -390,7 +392,12 @@ public final class Castle extends AbstractResidence {
     }
 
     private void loadDoor() {
-        DoorDataManager.getInstance().getDoors().stream().filter(d -> falseIfNullOrElse(d.getCastle(), c -> c.getId() == getId())).forEach(d -> doors.put(d.getId(), d));
+        for (Door door : DoorDataManager.getInstance().getDoors()) {
+            var castle = door.getCastle();
+            if(nonNull(castle) && castle.getId() == getId()) {
+                doors.put(door.getId(), door);
+            }
+        }
     }
 
     private void loadDoorUpgrade() {

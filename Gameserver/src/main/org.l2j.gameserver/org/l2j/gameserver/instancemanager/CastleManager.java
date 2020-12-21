@@ -24,6 +24,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.InstanceListManager;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
@@ -66,6 +67,14 @@ public final class CastleManager implements InstanceListManager {
     private final IntMap<LocalDateTime> castleSiegesDate = new CHashIntMap<>();
 
     private CastleManager() {
+    }
+
+    @Override
+    public void loadInstances() {
+        for (var data : getDAO(CastleDAO.class).findAll()) {
+            castles.put(data.getId(), new Castle(data));
+        }
+        LOGGER.info("Loaded {} castles", castles.size());
     }
 
     public final Castle findNearestCastle(WorldObject obj) {
@@ -167,12 +176,6 @@ public final class CastleManager implements InstanceListManager {
             }
             getDAO(ItemDAO.class).deleteByIdAndOwner(circletId, member.getObjectId());
         }
-    }
-
-    @Override
-    public void loadInstances() {
-        getDAO(CastleDAO.class).findAll().stream().map(Castle::new).forEach(c -> castles.put(c.getId(), c));
-        LOGGER.info("Loaded {} castles", castles.size());
     }
 
     @Override

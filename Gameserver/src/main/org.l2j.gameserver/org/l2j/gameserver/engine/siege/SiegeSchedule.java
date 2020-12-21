@@ -16,27 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.castle;
+package org.l2j.gameserver.engine.siege;
 
-import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.siege.ExMCWCastleSiegeDefenderList;
-
-import static org.l2j.commons.util.Util.doIfNonNull;
+import java.time.DayOfWeek;
 
 /**
  * @author JoeAlisson
  */
-public class ExRequestMercenaryCastleWarCastleSiegeDefender extends ClientPacket {
-    private int castleId;
-
-    @Override
-    protected void readImpl() throws Exception {
-        castleId = readInt();
-    }
-
-    @Override
-    protected void runImpl() {
-        doIfNonNull(CastleManager.getInstance().getCastleById(castleId), castle -> client.sendPacket(new ExMCWCastleSiegeDefenderList(castle)));
-    }
+public record SiegeSchedule(DayOfWeek day, int hour) {
 }

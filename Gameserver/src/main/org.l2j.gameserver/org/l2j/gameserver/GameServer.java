@@ -179,9 +179,6 @@ public class GameServer {
         printSection("Instance");
         InstanceManager.init();
 
-        /*printSection("Olympiad");
-        Hero.getInstance();*/
-
         // Call to load caches
         printSection("Cache");
         HtmCache.getInstance();
@@ -198,11 +195,11 @@ public class GameServer {
         VoteSystem.initialize();
 
         printSection("Siege");
-        SiegeManager.init();
+        //SiegeManager.init();
         CastleManager.getInstance().activateInstances();
-        SiegeScheduleData.getInstance();
+        //SiegeScheduleData.getInstance();
         CastleManorManager.getInstance();
-        SiegeGuardManager.init();
+        //SiegeGuardManager.init();
         QuestManager.getInstance().report();
 
         var generalSettings = getSettings(GeneralSettings.class);

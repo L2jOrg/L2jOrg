@@ -48,6 +48,7 @@ import org.l2j.gameserver.network.ServerPacketId;
  *
  * @author KenM
  */
+@Deprecated(forRemoval = true)
 public final class SiegeAttackerList extends ServerPacket {
     private final Castle _castle;
 
