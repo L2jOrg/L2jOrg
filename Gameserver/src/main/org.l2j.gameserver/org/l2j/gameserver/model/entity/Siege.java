@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2021 L2JOrg
+ * Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -249,7 +249,6 @@ public class Siege implements Siegable {
             Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.17"));
             EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeStart(this), getCastle());
             endTime = Instant.now().plus(SiegeManager.getInstance().getSiegeLength(), ChronoUnit.MINUTES);
-            Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
             ThreadPool.schedule(new ScheduleEndSiegeTask(), 1000);
         }
     }
@@ -287,7 +286,6 @@ public class Siege implements Siegable {
 
     private void broadcastMemberInfo(Player member) {
         member.broadcastUserInfo();
-        member.sendPacket(new UserInfo(member));
     }
 
     private void teleportPlayer(SiegeTeleportWhoType teleportWho, TeleportWhereType teleportWhere) {
@@ -914,7 +912,6 @@ public class Siege implements Siegable {
                 var regTimeRemaining = Duration.between(LocalDateTime.now(), castle.getSiegeTimeRegistrationEnd());
                 if (regTimeRemaining.compareTo(Duration.ZERO) > 0) {
                     scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), regTimeRemaining);
-                    Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(castle));
                     return;
                 }
 

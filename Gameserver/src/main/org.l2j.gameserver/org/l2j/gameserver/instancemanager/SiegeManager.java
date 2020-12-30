@@ -31,7 +31,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.network.serverpackets.siege.ExMercenarySiegeHUDInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -94,6 +93,7 @@ public final class SiegeManager {
         _siegeLength = siegeSettings.getInt("SiegeLength", 120);
         _bloodAllianceReward = siegeSettings.getInt("BloodAllianceReward", 1);
 
+        // TODO before start Siege
         for (Castle castle : CastleManager.getInstance().getCastles()) {
             final List<TowerSpawn> controlTowers = new ArrayList<>();
             for (int i = 1; i < 0xFF; i++) {
@@ -203,14 +203,14 @@ public final class SiegeManager {
             int diff = (int)  castle.getSiege().currentStateRemainTimeInSeconds();
             if (diff < (24 * 60 * 60 * 1000))
             {
-                player.sendPacket(new ExMercenarySiegeHUDInfo(castle));
+                //player.sendPacket(new ExMercenarySiegeHUDInfo(castle));
             }
         }
     }
 
     public void sendSiegeHUDInfo(Player player, Castle castleId)
     {
-        player.sendPacket(new ExMercenarySiegeHUDInfo(castleId));
+        //player.sendPacket(new ExMercenarySiegeHUDInfo(castleId));
     }
 
     private void loadTrapUpgrade(int castleId) {
