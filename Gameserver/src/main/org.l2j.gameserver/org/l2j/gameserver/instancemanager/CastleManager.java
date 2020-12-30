@@ -24,7 +24,6 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.InstanceListManager;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
-import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;

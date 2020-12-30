@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.engine.siege.Siege;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -31,19 +31,19 @@ import static java.util.Objects.requireNonNull;
  */
 public class ExMercenarySiegeHUDInfo extends ServerPacket {
 
-    private final Castle castle;
+    private final Siege siege;
 
-    public ExMercenarySiegeHUDInfo(Castle castle) {
-        this.castle = requireNonNull(castle);
+    public ExMercenarySiegeHUDInfo(Siege siege) {
+        this.siege = requireNonNull(siege);
     }
 
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO, buffer);
 
-        buffer.writeInt(castle.getId());
-        buffer.writeInt(castle.isInSiege());
+        buffer.writeInt(siege.getCastle().getId());
+        buffer.writeInt(siege.getState().ordinal());
         buffer.writeInt((int) (System.currentTimeMillis() / 1000));
-        buffer.writeInt((int) castle.getSiege().currentStateRemainTimeInSeconds());
+        buffer.writeInt(siege.currentStateRemainTime());
     }
 }

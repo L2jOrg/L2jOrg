@@ -22,7 +22,7 @@ package org.l2j.gameserver.engine.siege;
  * @author JoeAlisson
  */
 public enum SiegeState {
-    NONE,
     PREPARATION,
-    STARTED
+    STARTED,
+    NONE
 }

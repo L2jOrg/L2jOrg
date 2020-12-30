@@ -21,7 +21,7 @@ package org.l2j.gameserver.network.serverpackets.siege;
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.engine.siege.Siege;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -30,18 +30,18 @@ import org.l2j.gameserver.network.ServerExPacketId;
  */
 public class ExMCWCastleSiegeAttackerList extends AbstractSiegeClanList {
 
-    public ExMCWCastleSiegeAttackerList(Castle castle) {
-        super(castle);
+    public ExMCWCastleSiegeAttackerList(Siege siege) {
+        super(siege);
     }
 
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer) throws Exception {
         writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST, buffer);
 
-        var attackers = castle.getSiege().getAttackerClans();
+        var attackers = siege.getAttackerClans();
         writeHeader(buffer, attackers.size());
 
-        for (SiegeClanData attacker : attackers.values()) {
+        for (SiegeClanData attacker : attackers) {
             var clan = ClanTable.getInstance().getClan(attacker.getClanId());
             writeClanInfo(buffer, clan);
             writeAllianceInfo(buffer, clan);

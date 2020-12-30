@@ -23,6 +23,7 @@ import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Node;
 
 import java.nio.file.Path;
+import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.Set;
 
@@ -44,7 +45,12 @@ public abstract class AbstractEventManager<T extends AbstractEvent> extends Abst
     }
 
     public EventScheduler getScheduler(String name) {
-        return schedulers.stream().filter(scheduler -> scheduler.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
+        for (EventScheduler scheduler : schedulers) {
+            if(scheduler.getName().equalsIgnoreCase(name)) {
+                return scheduler;
+            }
+        }
+        return null;
     }
 
     public void setSchedulers(Set<EventScheduler> schedulers) {

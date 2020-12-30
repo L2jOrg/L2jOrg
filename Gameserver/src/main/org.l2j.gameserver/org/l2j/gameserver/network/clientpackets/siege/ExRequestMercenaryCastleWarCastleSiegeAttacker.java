@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.siege;
 
+import org.l2j.gameserver.engine.siege.SiegeEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.siege.ExMCWCastleSiegeAttackerList;
@@ -19,6 +20,6 @@ public class ExRequestMercenaryCastleWarCastleSiegeAttacker extends ClientPacket
 
     @Override
     protected void runImpl() {
-        doIfNonNull(CastleManager.getInstance().getCastleById(castleId), castle -> client.sendPacket(new ExMCWCastleSiegeAttackerList(castle)));
+        SiegeEngine.getInstance().showAttackerList(client.getPlayer(), castleId);
     }
 }

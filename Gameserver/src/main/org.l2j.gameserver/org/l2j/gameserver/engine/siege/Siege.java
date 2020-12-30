@@ -18,10 +18,22 @@
  */
 package org.l2j.gameserver.engine.siege;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.data.database.dao.CastleDAO;
+import org.l2j.gameserver.data.database.dao.SiegeDAO;
+import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.enums.SiegeClanType;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+
+import java.util.Collection;
+
+import static java.util.Objects.requireNonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author JoeAlisson
@@ -29,9 +41,12 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class Siege extends AbstractEvent {
 
     private final Castle castle;
+    private SiegeState state = SiegeState.NONE;
+    private final IntMap<SiegeClanData> attackers = new HashIntMap<>();
+    private final IntMap<SiegeClanData> defenders = new HashIntMap<>();
 
     public Siege(Castle castle) {
-        this.castle = castle;
+        this.castle = requireNonNull(castle);
     }
 
     @Override
@@ -39,12 +54,71 @@ public class Siege extends AbstractEvent {
 
     }
 
+    void registerAttacker(Clan clan) {
+        var siegeClan = new SiegeClanData(clan.getId(), SiegeClanType.ATTACKER, castle.getId());
+        attackers.put(clan.getId(), siegeClan);
+        getDAO(SiegeDAO.class).save(siegeClan);
+    }
+
+    void registerDefender(Clan clan) {
+        var siegeClan = new SiegeClanData(clan.getId(), SiegeClanType.DEFENDER_PENDING, castle.getId());
+        defenders.put(clan.getId(), siegeClan);
+        getDAO(SiegeDAO.class).save(siegeClan);
+    }
+
+
+    void removeSiegeClan(Clan clan) {
+        attackers.remove(clan.getId());
+        defenders.remove(clan.getId());
+        getDAO(CastleDAO.class).deleteSiegeClanByCastle(clan.getId(), castle.getId());
+    }
+
     @Override
     public void sendPacket(ServerPacket packet) {
 
     }
 
+    public boolean isRegistered(Clan clan) {
+        return attackers.containsKey(clan.getId()) || defenders.containsKey(clan.getId());
+    }
+
     public Castle getCastle() {
         return castle;
+    }
+
+    public SiegeState getState() {
+        return state;
+    }
+
+    public boolean isInPreparation() {
+        return state == SiegeState.PREPARATION;
+    }
+
+    public int registeredAttackersAmount() {
+        return attackers.size();
+    }
+
+    public int registeredDefendersAmount() {
+        return defenders.size();
+    }
+
+    public void setState(SiegeState state) {
+        this.state = state;
+    }
+
+    public int currentStateRemainTime() {
+        return switch (state) {
+            case PREPARATION -> SiegeEngine.getInstance().remainTimeToStart();
+            case STARTED -> SiegeEngine.getInstance().remainTimeToFinish();
+            default -> 0;
+        };
+    }
+
+    public Collection<SiegeClanData> getDefenderClans() {
+        return defenders.values();
+    }
+
+    public Collection<SiegeClanData> getAttackerClans() {
+        return attackers.values();
     }
 }

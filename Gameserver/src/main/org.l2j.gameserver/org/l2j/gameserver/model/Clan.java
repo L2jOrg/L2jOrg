@@ -1819,6 +1819,10 @@ public class Clan implements IIdentifiable, INamable {
         data.setArenaProgress((short) progress);
     }
 
+    public boolean isAlly(Clan clan) {
+        return getAllyId() != 0 && clan.getAllyId() == getAllyId();
+    }
+
     public static class RankPrivs {
         private final int _rankId;
         private final int _party; // TODO find out what this stuff means and implement it
