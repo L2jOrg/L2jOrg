@@ -37,24 +37,36 @@ import static org.l2j.gameserver.enums.InventorySlot.*;
  * @author JoeAlisson
  */
 public class AdminEnchant implements IAdminCommandHandler {
-	
+
 	private static final String[] ADMIN_COMMANDS = {
-		"admin_seteh", // 6
-		"admin_setec", // 10
-		"admin_seteg", // 9
-		"admin_setel", // 11
-		"admin_seteb", // 12
-		"admin_setew", // 7
-		"admin_setes", // 8
-		"admin_setle", // 1
-		"admin_setre", // 2
-		"admin_setlf", // 4
-		"admin_setrf", // 5
-		"admin_seten", // 3
-		"admin_setun", // 0
-		"admin_setba", // 13
-		"admin_setbe",
-		"admin_enchant"
+			"admin_seteh", // 6
+			"admin_setec", // 10
+			"admin_seteg", // 9
+			"admin_setel", // 11
+			"admin_seteb", // 12
+			"admin_setew", // 7
+			"admin_setes", // 8
+			"admin_setle", // 1
+			"admin_setre", // 2
+			"admin_setlf", // 4
+			"admin_setrf", // 5
+			"admin_seten", // 3
+			"admin_setun", // 0
+			"admin_setba", // 13
+			"admin_setbe",
+			"admin_setha",
+			"admin_setta1",
+			"admin_setta2",
+			"admin_setta3",
+			"admin_setta4",
+			"admin_setta5",
+			"admin_setta6",
+			"admin_setagm",
+			"admin_setag1",
+			"admin_setag2",
+			"admin_setag3",
+			"admin_setag4",
+			"admin_enchant"
 	};
 
 	@Override
@@ -77,6 +89,18 @@ public class AdminEnchant implements IAdminCommandHandler {
 				case "admin_setun" -> PENDANT;
 				case "admin_setba" -> CLOAK;
 				case "admin_setbe" -> BELT;
+				case "admin_setha" -> HAIR;
+				case "admin_setta1" -> TALISMAN1;
+				case "admin_setta2" -> TALISMAN2;
+				case "admin_setta3" -> TALISMAN3;
+				case "admin_setta4" -> TALISMAN4;
+				case "admin_setta5" -> TALISMAN5;
+				case "admin_setta6" -> TALISMAN6;
+				case "admin_setagm" -> AGATHION1;
+				case "admin_setag1" -> AGATHION2;
+				case "admin_setag2" -> AGATHION3;
+				case "admin_setag3" -> AGATHION4;
+				case "admin_setag4" -> AGATHION5;
 				default -> null;
 			};
 
@@ -94,46 +118,46 @@ public class AdminEnchant implements IAdminCommandHandler {
 		showMainPage(player);
 		return true;
 	}
-	
+
 	private void setEnchant(Player player, int ench, InventorySlot itemSlot) {
 		// get the target
 		final Player target = nonNull(player.getTarget()) ? player.getTarget().getActingPlayer() : player;
-		
+
 		if (isNull(target)) {
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
-		
+
 		// now we need to find the equipped weapon of the targeted character...
 		Item itemInstance = null;
-		
+
 		// only attempt to enchant if there is a weapon equipped
 		final Item item = target.getInventory().getPaperdollItem(itemSlot);
 		if (nonNull(item ) && (item.getLocationSlot() == itemSlot.getId())) {
 			itemInstance = item;
 		}
-		
+
 		if (nonNull(itemInstance)) {
 			final int curEnchant = itemInstance.getEnchantLevel();
-			
+
 			target.getInventory().unEquipItemInSlot(itemSlot);
 			itemInstance.changeEnchantLevel(ench);
 			target.getInventory().equipItem(itemInstance);
-			
+
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
 			target.sendInventoryUpdate(iu);
 			target.broadcastUserInfo();
-			
+
 			BuilderUtil.sendSysMessage(player, String.format("Changed enchantment of %s's %s from %d  to %d.", target.getName(), itemInstance.getName(), curEnchant, ench));
 			target.sendMessage(String.format("Admin has changed the enchantment of your %s from %d to %d.", itemInstance.getName(),curEnchant, ench));
 		}
 	}
-	
+
 	private void showMainPage(Player activeChar) {
 		AdminHtml.showAdminHtml(activeChar, "enchant.htm");
 	}
-	
+
 	@Override
 	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
