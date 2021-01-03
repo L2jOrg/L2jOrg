@@ -23,6 +23,7 @@ import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
@@ -81,14 +82,18 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
             if ((item != null) && !item.isPotion())
             {
                 // auto supply
-                 if (Config.AUTO_USE_ITEM)
+                if (Config.AUTO_USE_ITEM)
                 {
                     AutoUseTaskManager.getInstance().addAutoSupplyItem(player, item.getId());
                 }
             }
-            if (Config.AUTO_USE_BUFF && (skill != null))
-            {
-                AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
+            else {
+                if (Config.AUTO_USE_BUFF && (shortcut.getType() == ShortcutType.SKILL)) {
+                    assert skill != null;
+                    if (skill.isAutoUse() && skill.isAutoBuff()) {
+                        AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
+                    }
+                }
             }
         }
     }
