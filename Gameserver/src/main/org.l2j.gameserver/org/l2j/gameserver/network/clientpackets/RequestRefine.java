@@ -23,8 +23,10 @@ import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.Variation;
 import org.l2j.gameserver.model.options.VariationFee;
+import org.l2j.gameserver.model.options.VariationWeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExVariationResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -58,6 +60,15 @@ public final class RequestRefine extends AbstractRefinePacket {
         final Item targetItem = player.getInventory().getItemByObjectId(_targetItemObjId);
         if (targetItem == null) {
             return;
+        }
+
+       final Item cloak = player.getInventory().getItemByObjectId(_targetItemObjId);
+        if (VariationData.getInstance().getVariationWeaponType(targetItem) == VariationWeaponType.CLOAK) {
+            if (cloak.getEnchantLevel() < 10){
+                player.sendPacket(new ExVariationResult(0, 0, false));
+                player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
+                return;
+            }
         }
 
         final Item mineralItem = player.getInventory().getItemByObjectId(_mineralItemObjId);
