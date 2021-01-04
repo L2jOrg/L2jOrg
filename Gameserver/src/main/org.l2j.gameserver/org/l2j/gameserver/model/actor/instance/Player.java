@@ -43,6 +43,7 @@ import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
@@ -55,12 +56,10 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.Appearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
-import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.actor.status.PlayerStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
@@ -84,7 +83,6 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.*;
 import org.l2j.gameserver.model.item.container.Warehouse;
 import org.l2j.gameserver.model.item.container.*;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
@@ -93,7 +91,10 @@ import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.model.skills.*;
+import org.l2j.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.model.skills.BuffInfo;
+import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -110,7 +111,6 @@ import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionI
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
@@ -119,7 +119,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
-import org.l2j.gameserver.taskmanager.AutoUseTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.util.*;
 import org.l2j.gameserver.world.MapRegionManager;
@@ -148,7 +147,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
-import static java.util.Objects.*;
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
@@ -163,6 +163,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
  * There is always a client-thread connected to this.
  *
  * @author JoeAlisson
+ * && fixes by Bru7aLMike
  */
 public final class Player extends Playable {
 
@@ -987,7 +988,7 @@ public final class Player extends Playable {
             activeCostumesCollection = CostumeCollectionData.DEFAULT;
         }
     }
-    
+
     public int getCostumeCollectionAmount() {
         return costumesCollections.size();
     }
@@ -3083,7 +3084,7 @@ public final class Player extends Playable {
         final InventoryUpdate playerIU = new InventoryUpdate();
         playerIU.addItem(item);
         sendInventoryUpdate(playerIU);
-        
+
         // Sends message to client if requested
         if (sendMessage) {
             if (count > 1) {
@@ -6252,7 +6253,7 @@ public final class Player extends Playable {
                         .addSkillName(skill).addInt(hours).addInt(minutes);
             } else if (minutes > 0) {
                 sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME)
-                    .addSkillName(skill).addInt(minutes);
+                        .addSkillName(skill).addInt(minutes);
             } else {
                 sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addSkillName(skill);
             }
@@ -7159,7 +7160,7 @@ public final class Player extends Playable {
 
         checkItemRestriction();
 
-        if ((Config.PLAYER_TELEPORT_PROTECTION > 0) && !isInOlympiadMode()) {
+        if ((Config.PLAYER_TELEPORT_PROTECTION > 0) && !isInOlympiadMode() && !getActingPlayer().isInBattle()) {
             setTeleportProtection(true);
         }
 
@@ -7196,7 +7197,7 @@ public final class Player extends Playable {
         if (_movieHolder != null) {
             sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
         }
-        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive()) {
+        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive() && !getActingPlayer().isInBattle()) {
             AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
     }
