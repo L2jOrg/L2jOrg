@@ -53,6 +53,7 @@ import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.network.SystemMessageId.*;
 
 /**
  * @author JoeAlisson
@@ -184,41 +185,66 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
         }
     }
 
-    public void joinSiege(Player player, int castleId, boolean isAttacker, boolean isJoining) {
+    public void registerAttacker(Player player, int castleId) {
         var siege = sieges.get(castleId);
         final Clan clan = player.getClan();
 
-        if(isNull(siege) || isNull(clan)) {
+        if (!hasSiegeManagerRights(player, siege, clan))
             return;
+
+        if (System.currentTimeMillis() < clan.getDissolvingExpiryTime()) {
+            player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
+            return;
+        }
+
+        registerAttacker(player, clan, siege);
+    }
+
+    private boolean hasSiegeManagerRights(Player player, Siege siege, Clan clan) {
+        if(isNull(siege) || isNull(clan)) {
+            return false;
         }
 
         if (!player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE)) {
             player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+            return false;
+        }
+        return true;
+    }
+
+    public void registerDefender(Player player, int castleId) {
+        var siege = sieges.get(castleId);
+        final Clan clan = player.getClan();
+
+        if (!hasSiegeManagerRights(player, siege, clan))
             return;
-        }
 
-        if(isJoining) {
-            if (System.currentTimeMillis() < clan.getDissolvingExpiryTime()) {
-                player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
-                return;
-            }
+        registerDefender(player, clan, siege);
 
-            if (isAttacker) {
-                registerAttacker(player, clan, siege);
-            } else {
-                registerDefender(player, clan, siege);
-            }
-        } else {
-            if(clan.getCastleId() == castleId || !isRegisteredInSiege(clan)) {
-                return;
-            }
-            siege.removeSiegeClan(clan);
-            if(isAttacker) {
-                player.sendPacket(new ExMCWCastleSiegeAttackerList(siege));
-            } else {
-                player.sendPacket(new ExMCWCastleSiegeDefenderList(siege));
-            }
-        }
+    }
+
+    public void cancelAttacker(Player player, int castleId) {
+        var siege = sieges.get(castleId);
+        final Clan clan = player.getClan();
+
+        if (!hasSiegeManagerRights(player, siege, clan) || !isRegisteredInSiege(clan))
+            return;
+
+        siege.removeSiegeClan(clan);
+        player.sendPacket(new ExMCWCastleSiegeAttackerList(siege));
+
+    }
+
+    public void cancelDefender(Player player, int castleId) {
+        var siege = sieges.get(castleId);
+        final Clan clan = player.getClan();
+
+        if (!hasSiegeManagerRights(player, siege, clan) || clan.getCastleId() == castleId || !isRegisteredInSiege(clan))
+            return;
+
+        siege.removeSiegeClan(clan);
+        player.sendPacket(new ExMCWCastleSiegeDefenderList(siege));
+
     }
 
     private void registerDefender(Player player, Clan clan, Siege siege) {
@@ -311,6 +337,56 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
         if(nonNull(siege)) {
             player.sendPacket(new ExMCWCastleSiegeAttackerList(siege));
         }
+    }
+
+    public void recruitMercenary(Player player, int castleId, long reward) {
+        final var siege = sieges.get(castleId);
+        final Clan clan = player.getClan();
+
+        if (!validateRecruitmentRights(player, siege, clan))
+            return;
+
+        if(!siege.isRegistered(clan)) {
+            player.sendPacket(TO_RECRUIT_MERCENARIES_CLANS_MUST_PARTICIPATE_IN_THE_CASTLE_SIEGE);
+            return;
+        }
+
+        if(siege.isRecruitingMercenary(clan)) {
+            player.sendPacket(ALREADY_RECRUITING_MERCENARIES);
+            return;
+        }
+
+        siege.registerMercenaryRecruitment(clan, reward);
+        sendParticipantSameTypeList(player, clan, siege);
+    }
+
+    private void sendParticipantSameTypeList(Player player, Clan clan, Siege siege) {
+        if(siege.isAttacker(clan)) {
+            player.sendPacket(new ExMCWCastleSiegeAttackerList(siege));
+        } else if(siege.isDefender(clan)) {
+            player.sendPacket(new ExMCWCastleSiegeDefenderList(siege));
+        }
+    }
+
+    public void cancelMercenaryRecruitment(Player player, int castleId) {
+        final var siege = sieges.get(castleId);
+        final Clan clan = player.getClan();
+
+        if (validateRecruitmentRights(player, siege, clan)) {
+            siege.removeMercenaryRecruitment(clan);
+            sendParticipantSameTypeList(player, clan, siege);
+        }
+    }
+
+    private boolean validateRecruitmentRights(Player player, Siege siege, Clan clan) {
+        if (!hasSiegeManagerRights(player, siege, clan))
+            return false;
+
+        if (!siege.isInPreparation()) {
+            player.sendPacket(IT_IS_NOT_A_MERCENARY_RECRUITMENT_PERIOD);
+            return false;
+        }
+        return true;
     }
 
     public int remainTimeToStart() {

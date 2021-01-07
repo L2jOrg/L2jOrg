@@ -74,11 +74,11 @@ public abstract class AbstractEventManager<T extends AbstractEvent> extends Abst
     }
 
     public void startConditionalSchedulers() {
-        //@formatter:off
-        conditionalSchedulers.stream()
-                .filter(IConditionalEventScheduler::test)
-                .forEach(IConditionalEventScheduler::run);
-        //@formatter:on
+        for (IConditionalEventScheduler scheduler : conditionalSchedulers) {
+            if(scheduler.test()) {
+                scheduler.run();
+            }
+        }
     }
 
     public void config(GameXmlReader reader, Node configNode) {

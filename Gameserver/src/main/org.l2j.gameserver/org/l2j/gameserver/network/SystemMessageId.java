@@ -13909,16 +13909,7 @@ public final class SystemMessageId {
     public static SystemMessageId MERCENARY_APPLICATION_APPLICATION_CANCELLATION_IS_BEING_PROCESSED_TRY_AGAIN_AFTER_THE_PROCESS_ENDS;
 
     @ClientString(id = 13035, message = "Your clan’s castle siege task is being processed. Try again after the process ends.")
-    public static SystemMessageId YOUR_CLANS_CASTLE_SIEGE_TASK_IS_BEING_PROCESSED_TRY_AGAIN_AFTER_THE_PROCESS_ENDS;
-
-    @ClientString(id = 13036, message = "It is not a mercenary recruitment period.")
-    public static SystemMessageId IT_IS_NOT_A_MERCENARY_RECRUITMENT_PERIOD;
-
-    @ClientString(id = 13037, message = "To recruit mercenaries, clans must participate in the castle siege.")
-    public static SystemMessageId TO_RECRUIT_MERCENARIES_CLANS_MUST_PARTICIPATE_IN_THE_CASTLE_SIEGE;
-
-    @ClientString(id = 13038, message = "Already recruiting mercenaries.")
-    public static SystemMessageId ALREADY_RECRUITING_MERCENARIES;
+    public static SystemMessageId YOUR_CLANS_CASTLE_SIEGE_TASK_IS_BEING_PROCESSED_TRY_AGAIN_AFTER_THE_PROCESS_ENDS
 
     @ClientString(id = 13039, message = "You cannot apply for mercenary now.")
     public static SystemMessageId YOU_CANNOT_APPLY_FOR_MERCENARY_NOW;
@@ -17737,6 +17728,15 @@ public final class SystemMessageId {
 
     @ClientString(id = 13019, message = "Cannot use timed hunting zones while waiting for the Olympiad.")
     public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;
+
+    @ClientString(id = 13036, message = "It is not a mercenary recruitment period.")
+    public static SystemMessageId IT_IS_NOT_A_MERCENARY_RECRUITMENT_PERIOD;
+
+    @ClientString(id = 13037, message = "To recruit mercenaries, clans must participate in the castle siege.")
+    public static SystemMessageId TO_RECRUIT_MERCENARIES_CLANS_MUST_PARTICIPATE_IN_THE_CASTLE_SIEGE;
+
+    @ClientString(id = 13038, message = "Already recruiting mercenaries.")
+    public static SystemMessageId ALREADY_RECRUITING_MERCENARIES;
 
     private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 

@@ -38,12 +38,13 @@ public class ExMCWCastleSiegeAttackerList extends AbstractSiegeClanList {
     protected void writeImpl(GameClient client, WritableBuffer buffer) throws Exception {
         writeId(ServerExPacketId.EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST, buffer);
 
-        var attackers = siege.getAttackerClans();
-        writeHeader(buffer, attackers.size());
+        final var attackers = siege.getAttackerClans();
+        writeHeader(buffer, attackers.size(), client.getPlayer());
 
         for (SiegeClanData attacker : attackers) {
             var clan = ClanTable.getInstance().getClan(attacker.getClanId());
             writeClanInfo(buffer, clan);
+            writeMercenaryInfo(buffer, attacker);
             writeAllianceInfo(buffer, clan);
         }
     }

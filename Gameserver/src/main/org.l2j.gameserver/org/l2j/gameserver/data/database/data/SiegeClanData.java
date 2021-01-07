@@ -21,7 +21,7 @@ package org.l2j.gameserver.data.database.data;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.gameserver.enums.SiegeClanType;
+import org.l2j.gameserver.engine.siege.SiegeClanStatus;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 
@@ -45,31 +45,21 @@ public class SiegeClanData {
     @Column("clan_id")
     private int clanId;
 
-    private SiegeClanType type;
+    @Column("recruit_mercenary")
+    private boolean recruitingMercenary;
+
+    @Column("mercenary_reward")
+    private long mercenaryReward;
+
+    private SiegeClanStatus status;
 
     public SiegeClanData() {
     }
 
-    public SiegeClanData(int id, SiegeClanType type, int castleId) {
+    public SiegeClanData(int id, SiegeClanStatus status, int castleId) {
         this.clanId = id;
-        this.type = type;
+        this.status = status;
         this.castleId = castleId;
-    }
-
-    public int getCastleId() {
-        return castleId;
-    }
-
-    public int getClanId() {
-        return clanId;
-    }
-
-    public SiegeClanType getType() {
-        return type;
-    }
-
-    public void setType(SiegeClanType type) {
-        this.type = type;
     }
 
     public Set<Npc> getFlags() {
@@ -96,5 +86,37 @@ public class SiegeClanData {
 
     public int getNumFlags() {
         return flags.size();
+    }
+
+    public int getCastleId() {
+        return castleId;
+    }
+
+    public int getClanId() {
+        return clanId;
+    }
+
+    public SiegeClanStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(SiegeClanStatus status) {
+        this.status = status;
+    }
+
+    public void setMercenaryReward(long reward) {
+        this.mercenaryReward = reward;
+    }
+
+    public long getMercenaryReward() {
+        return mercenaryReward;
+    }
+
+    public void setRecruitingMercenary(boolean recruiting) {
+        this.recruitingMercenary = recruiting;
+    }
+
+    public boolean isRecruitingMercenary() {
+        return recruitingMercenary;
     }
 }
