@@ -38,6 +38,27 @@ public final class RequestJoinSiege extends ClientPacket {
 
     @Override
     public void runImpl() {
-        SiegeEngine.getInstance().joinSiege(client.getPlayer(), castleId, isAttacker, isJoining);
+        final var siegeEngine = SiegeEngine.getInstance();
+        if(isJoining) {
+            joinSiege(siegeEngine);
+        } else {
+            leaveSiege(siegeEngine);
+        }
+    }
+
+    private void joinSiege(SiegeEngine siegeEngine) {
+        if(isAttacker) {
+            siegeEngine.registerAttacker(client.getPlayer(), castleId);
+        } else {
+            siegeEngine.registerDefender(client.getPlayer(), castleId);
+        }
+    }
+
+    private void leaveSiege(SiegeEngine siegeEngine) {
+        if(isAttacker) {
+            siegeEngine.cancelAttacker(client.getPlayer(), castleId);
+        } else {
+            siegeEngine.cancelDefender(client.getPlayer(), castleId);
+        }
     }
 }
