@@ -16,16 +16,13 @@ import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.world.zone.ZoneType;
 
-import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
-import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 public class AutoUseTaskManager {
     private static final Set<Player> PLAYERS = ConcurrentHashMap.newKeySet();
-    private final Collection<Integer> _autoSkills = ConcurrentHashMap.newKeySet();
     private static boolean _working = false;
 
     public AutoUseTaskManager()
@@ -46,6 +43,13 @@ public class AutoUseTaskManager {
                     continue;
                 }
 
+                final WorldObject target = player.getTarget();
+                if (isCreature(target)) {
+                    if (((Creature) target).isDead()) {
+                        continue;
+                    }
+                }
+
                 if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead() || player.isInsideZone(ZoneType.PEACE))
                 {
                     continue;
@@ -58,7 +62,7 @@ public class AutoUseTaskManager {
                         if (item == null)
                         {
                             player.getAutoUseSettings().getAutoSupplyItems().remove(itemId);
-                            continue ITEMS; // TODO: break?
+                            continue; // TODO: break?
                         }
 
                         for (ItemSkillHolder itemSkillHolder : (item.getSkills(ItemSkillType.NORMAL)))
@@ -84,60 +88,32 @@ public class AutoUseTaskManager {
                 }
                 if (Config.AUTO_USE_BUFF)
                 {
-                    BUFFS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
-                    {
+                    for (Integer skillId : player.getAutoUseSettings().getAutoSkills()) {
                         final Skill skill = player.getKnownSkill(skillId);
-                        if (skill == null)
-                        {
+                        if (skill == null) {
                             player.getAutoUseSettings().getAutoSkills().remove(skillId);
-                            continue BUFFS; // TODO: break?
+                            continue; // TODO: break?
                         }
 
-                        // Check bad skill target.
-                        final WorldObject target = player.getTarget();
-                        if (isCreature(target)) {
-                            if (((Creature) target).isDead()) {
-                                continue;
-                            }
-                        }
-                        if ((skill.isBad() && (target == null)) || (target == player))
-                        {
-                            continue BUFFS;
-                        }
-
-                        if (!player.isAffectedBySkill(skillId) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, player))
-                        {
-                            final WorldObject[] targets = skill.getTargetsAffected(player, target).toArray(new WorldObject[0]);
+                        if (!player.isAffectedBySkill(skillId) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, player)) {
                             // Summon check.
-                            if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
-                            {
+                            if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER) {
                                 if (!player.hasServitors()) // Is this check truly needed?
                                 {
-                                    continue BUFFS;
+                                    continue;
                                 }
                                 int occurrences = 0;
-                                for (Summon servitor : player.getServitors().values())
-                                {
-                                    if (servitor.isAffectedBySkill(skillId.intValue()))
-                                    {
+                                for (Summon servitor : player.getServitors().values()) {
+                                    if (servitor.isAffectedBySkill(skillId)) {
                                         occurrences++;
                                     }
                                 }
-                                if (occurrences == player.getServitors().size())
-                                {
-                                    continue BUFFS;
+                                if (occurrences == player.getServitors().size()) {
+                                    continue;
                                 }
                             }
 
-                            // Check non bad skill target.
-                            if (!skill.isBad() && (!isPlayable(target)))
-                            {
-                                player.setTarget(player);
-                                player.doCast(skill);
-                                player.setTarget(target);
-                            }
-                            else
-                            {
+                            if (skill.isAutoUse() && skill.isAutoBuff() && !(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled())) {
                                 player.doCast(skill);
                             }
                         }

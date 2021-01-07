@@ -22,11 +22,13 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.data.xml.ActionManager;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -46,7 +48,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
- * fine-tunning by Bru7aLMike
+ * && fine-tunning by Bru7aLMike
  */
 public final class AutoPlayEngine {
 
@@ -299,6 +301,7 @@ public final class AutoPlayEngine {
 
         private boolean autoUseSkill(Player player, Shortcut shortcut)
         {
+            final WorldObject oldTarget = player.getTarget();
             var skill = player.getKnownSkill(shortcut.getShortcutId());
 
             if (skill.isBlockActionUseSkill() || player.isSkillDisabled(skill))
@@ -312,6 +315,14 @@ public final class AutoPlayEngine {
 
             if(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled())
             { return true; }
+
+            if (skill.hasAnyEffectType(EffectType.HEAL))
+            {
+                player.onActionRequest();
+                player.setTarget(player);
+                player.doCast(skill);
+                player.setTarget(oldTarget);
+            }
 
             player.onActionRequest();
             return player.useSkill(skill, null, false, false);

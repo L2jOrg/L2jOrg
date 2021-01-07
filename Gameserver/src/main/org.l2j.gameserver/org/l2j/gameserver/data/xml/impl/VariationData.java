@@ -24,6 +24,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -204,11 +205,11 @@ public class VariationData extends GameXmlReader {
 
     }
 
-    private VariationWeaponType getVariationWeaponType(Item targetItem) {
+    public VariationWeaponType getVariationWeaponType(Item targetItem) {
         VariationWeaponType weaponType;
         if(targetItem.isMagicWeapon() ) {
             weaponType  = VariationWeaponType.MAGE;
-        } else if(targetItem.isArmor() && targetItem.getItemType() == ArmorType.NONE && targetItem.getEnchantLevel() >= 10) {
+        } else if(targetItem.getBodyPart() == BodyPart.BACK && targetItem.getEnchantLevel() < 10) {
             weaponType  = VariationWeaponType.CLOAK;
         } else {
             weaponType = VariationWeaponType.WARRIOR;

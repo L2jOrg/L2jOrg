@@ -67,9 +67,9 @@ public final class TriggerSkillByAttack extends AbstractEffect {
         skill = new SkillHolder(params.getInt("skill"), params.getInt("power", 1));
         targetType = params.getEnum("target", TargetType.class, TargetType.SELF);
 
-        criticalOnly = params.getBoolean("critical-only");
-        triggerByNormalAttack = params.getBoolean("trigger-by-normal-attack");
-        triggerBySkill = params.getBoolean("trigger-by-skill");
+        criticalOnly = params.getBoolean("critical-only", false);
+        triggerByNormalAttack = params.getBoolean("trigger-by-normal-attack", true);
+        triggerBySkill = params.getBoolean("trigger-by-skill", false);
         allowReflect = params.getBoolean("allow-reflect", false);
         weaponsAllowed = params.getStringAsEnumSet("weapons", WeaponType.class);
     }

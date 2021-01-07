@@ -80,7 +80,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
     }
 
     @ScheduleTarget
-    private void onReset() {
+    public void onReset() {
         ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
         resetDailyMissionRewards();
         resetDailySkills();
