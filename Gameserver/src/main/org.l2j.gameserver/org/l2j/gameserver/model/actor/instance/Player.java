@@ -289,6 +289,7 @@ public final class Player extends Playable {
         }
     }
 
+
     public ElementalSpirit getElementalSpirit(ElementalType type) {
         if(isNull(spirits) || isNull(type) || type == ElementalType.NONE) {
             return null;

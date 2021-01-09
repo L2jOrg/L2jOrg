@@ -36,6 +36,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.commission.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionList.CommissionListReplyType;
 import org.l2j.gameserver.util.MathUtil;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -80,11 +81,11 @@ public final class CommissionManager {
      * @return {@code true} if the player is allowed to interact, {@code false} otherwise
      */
     public static boolean isPlayerAllowedToInteract(Player player) {
-        final Npc npc = player.getLastFolkNPC();
+        return  player.isInsideZone(ZoneType.PEACE);
+       /* final Npc npc = player.getLastFolkNPC();
         if (npc instanceof org.l2j.gameserver.model.actor.instance.CommissionManager) {
             return MathUtil.isInsideRadius3D(npc,player, INTERACTION_DISTANCE);
-        }
-        return false;
+        }*/
     }
 
     /**

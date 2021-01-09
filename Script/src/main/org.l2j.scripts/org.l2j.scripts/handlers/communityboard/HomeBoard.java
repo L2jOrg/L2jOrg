@@ -27,21 +27,27 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CommunityDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
+import org.l2j.gameserver.instancemanager.CommissionManager;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.BuyList;
-import org.l2j.gameserver.network.serverpackets.ExBuySellList;
-import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2j.gameserver.network.serverpackets.ShowBoard;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.commission.ExShowCommission;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
@@ -51,9 +57,12 @@ import java.util.*;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
+import static java.lang.Math.min;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.parseNextInt;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
@@ -89,7 +98,10 @@ public final class HomeBoard implements IParseBoardHandler {
             Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null,
             Config.COMMUNITYBOARD_ENABLE_CLEANUP ? "_bbscleanup" : null,
             Config.COMMUNITYBOARD_ENABLE_PREMIUM ? "_bbspremium" : null,
-            Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null
+            Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null,
+            "_cbbsobtlevel",
+            "_cbbsobtadena",
+            "_bbsauction"
     };
 
     private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {
@@ -478,6 +490,42 @@ public final class HomeBoard implements IParseBoardHandler {
 
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
         }
+        else if (command.startsWith("_cbbsobtlevel")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            var level = parseNextInt(st, 0);
+            final var playableTarget = (Playable) activeChar;
+            final var maxAddLevel = LevelData.getInstance().getMaxLevel() - playableTarget.getLevel();
+                if (actualCommand.equalsIgnoreCase("_cbbsobtlevel")) {
+                    level = level - playableTarget.getLevel();
+                    playableTarget.getStats().addLevel((byte) min(maxAddLevel, level));
+                    removeAllSkills(activeChar);
+                    giveAllSkills(activeChar, true);
+                }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
+            }
+        else if (command.startsWith("_cbbsobtadena")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            if (actualCommand.equalsIgnoreCase("_cbbsobtadena")) {
+                activeChar.addItem("Adena", 57, 100000000, activeChar, true);
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
+        }
+        else if (command.startsWith("_bbsauction")) {
+            final StringTokenizer st = new StringTokenizer(command, "");
+            final var cmd = st.nextToken();
+            if (cmd.equalsIgnoreCase("_bbsauction show_commission")) {
+                      activeChar.sendPacket(ExShowCommission.STATIC_PACKET);
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
+        }
 
         if (nonNull(returnHtml)) {
             if (Config.CUSTOM_CB_ENABLED) {
@@ -506,6 +554,31 @@ public final class HomeBoard implements IParseBoardHandler {
         }
 
         return false;
+    }
+
+    private void removeAllSkills (Player activeChar){
+        for (Skill skill : activeChar.getAllSkills()) {
+            activeChar.removeSkill(skill);
+        }
+        BuilderUtil.sendSysMessage(activeChar, "You have removed all skills from " + activeChar.getName() + ".");
+        activeChar.sendMessage("Admin removed all skills from you.");
+        activeChar.sendSkillList();
+        activeChar.broadcastUserInfo();
+        activeChar.sendPacket(new AcquireSkillList(activeChar));
+        }
+
+    private void giveAllSkills(Player activeChar, boolean includedByFs)
+    {
+        if (!isPlayer(activeChar))
+        {
+            activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+            return;
+        }
+        final Player player = activeChar.getActingPlayer();
+        // Notify player and admin
+        BuilderUtil.sendSysMessage(activeChar, "You gave " + player.giveAvailableSkills(includedByFs, true) + " skills to " + player.getName());
+        player.sendSkillList();
+        player.sendPacket(new AcquireSkillList(player));
     }
 
     private String setHtmlSchemeBuffList(Player player, String groupType, String schemeName, IntList skills, int page,  String returnHtml) {

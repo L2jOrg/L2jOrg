@@ -113,12 +113,13 @@ public class ElementalSpirit {
     }
 
     public int getExtractAmount() {
-        return Math.round( (data.getExperience() - getExperienceToPreviousLevel()) / ElementalSpiritEngine.FRAGMENT_XP_CONSUME);
+        //must be Math.abs, else it glitches out
+        return (int) Math.abs((data.getExperience() - getExperienceToPreviousLevel()) / ElementalSpiritEngine.FRAGMENT_XP_CONSUME);
     }
 
     public void resetLevel() {
-        data.setLevel((byte) Math.max(1, data.getLevel() -1));
-        data.setExperience(0);
+        //TODO refine the calculation so that it returns the same percentage
+        data.setExperience((int) (getExperienceToPreviousLevel() + ((data.getExperience() - getExperienceToPreviousLevel()) % ElementalSpiritEngine.FRAGMENT_XP_CONSUME)));
         resetCharacteristics();
     }
 

@@ -118,6 +118,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.engine.olympiad;
     exports org.l2j.gameserver.engine.item.shop;
     exports org.l2j.gameserver.engine.rank;
+    exports org.l2j.gameserver.network.serverpackets.commission;
 
     uses org.l2j.gameserver.handler.IActionHandler;
     uses org.l2j.gameserver.handler.IActionShiftHandler;
