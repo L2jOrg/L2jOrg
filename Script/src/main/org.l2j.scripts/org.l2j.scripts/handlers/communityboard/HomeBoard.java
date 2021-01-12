@@ -248,9 +248,12 @@ public final class HomeBoard implements IParseBoardHandler {
             final String fullBypass = command.replace("_bbsmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
             final int multisellId = Integer.parseInt(buypassOptions[0]);
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, false);
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-gmshop" + ".html");
-
+            if ((fullBypass.length() > 0) && fullBypass.endsWith(".html")) {
+                final String path = buypassOptions[1];
+                returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
+            }
         } else if (command.startsWith("_bbsexcmultisell")) {
             final String fullBypass = command.replace("_bbsexcmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
