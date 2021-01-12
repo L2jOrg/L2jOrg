@@ -99,9 +99,9 @@ public final class HomeBoard implements IParseBoardHandler {
             Config.COMMUNITYBOARD_ENABLE_CLEANUP ? "_bbscleanup" : null,
             Config.COMMUNITYBOARD_ENABLE_PREMIUM ? "_bbspremium" : null,
             Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null,
-            "_cbbsobtlevel",
-            "_cbbsobtadena",
-            "_bbsauction"
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtlevel" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtadena" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_bbsauction" : null
     };
 
     private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {

@@ -675,6 +675,7 @@ public final class Config {
     public static boolean COMMUNITYBOARD_ENABLE_CLEANUP;
     public static boolean COMMUNITYBOARD_ENABLE_PREMIUM;
     public static boolean COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP;
+    public static boolean COMMUNITYBOARD_ENABLE_BETA;
     public static int COMMUNITYBOARD_TELEPORT_PRICE;
     public static int COMMUNITYBOARD_BUFF_PRICE;
     public static int COMMUNITYBOARD_HEAL_PRICE;
@@ -1419,6 +1420,7 @@ public final class Config {
         COMMUNITYBOARD_ENABLE_CLEANUP = CommunityBoard.getBoolean("CommunityEnableCleanUp", false);
         COMMUNITYBOARD_ENABLE_PREMIUM = CommunityBoard.getBoolean("CommunityEnablePremium", false);
         COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP = CommunityBoard.getBoolean("CommunityEnableAutoHpMpCp", false);
+        COMMUNITYBOARD_ENABLE_BETA = CommunityBoard.getBoolean("CommunityEnableBeta", false);
         COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
         COMMUNITYBOARD_BUFF_PRICE = CommunityBoard.getInt("CommunityBuffPrice", 0);
         COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);

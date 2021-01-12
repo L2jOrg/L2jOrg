@@ -19,6 +19,7 @@ public interface MacroDAO extends DAO<MacroData> {
     @Query(value = """
            SELECT * FROM macros
            JOIN macro_commands mc on macros.id = mc.macro_id
+                AND macros.player_id = mc.macro_player_id
            WHERE player_id = :playerId:
            """, scrollResult = true)
     IntMap<Macro> findAllByPlayer(int playerId);
