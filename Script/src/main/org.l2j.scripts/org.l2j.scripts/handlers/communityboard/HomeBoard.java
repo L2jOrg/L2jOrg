@@ -27,12 +27,14 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CommunityDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
+import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.instancemanager.CommissionManager;
@@ -42,6 +44,7 @@ import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExShowCommission;
@@ -50,6 +53,7 @@ import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.l2j.scripts.handlers.admincommandhandlers.AdminHtml;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -101,7 +105,8 @@ public final class HomeBoard implements IParseBoardHandler {
             Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtlevel" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtadena" : null,
-            Config.COMMUNITYBOARD_ENABLE_BETA ? "_bbsauction" : null
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_bbsauction" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtclass" : null,
     };
 
     private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {
@@ -522,12 +527,56 @@ public final class HomeBoard implements IParseBoardHandler {
         else if (command.startsWith("_bbsauction")) {
             final StringTokenizer st = new StringTokenizer(command, "");
             final var cmd = st.nextToken();
-            if (cmd.equalsIgnoreCase("_bbsauction show_commission")) {
+            if ((cmd.equalsIgnoreCase("_bbsauction show_commission")) && activeChar.isInsideZone(ZoneType.PEACE)) {
                       activeChar.sendPacket(ExShowCommission.STATIC_PACKET);
+            }
+            else {
+                BuilderUtil.sendSysMessage(activeChar, "You cannot use Auction House outside Town ");
             }
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
+        }
+        else if (command.startsWith("_cbbsobtclass"))
+        {
+            try
+            {
+                final String val = command.substring(14).trim();
+                final int classidval = Integer.parseInt(val);
+                final WorldObject target = activeChar.getTarget();
+                if ((target == null) || !isPlayer(target))
+                {
+                    return false;
+                }
+                final Player player = target.getActingPlayer();
+                if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
+                {
+                    player.setClassId(classidval);
+                    player.setBaseClass(player.getActiveClass());
+
+                    final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
+
+                    player.store(false);
+                    player.broadcastUserInfo();
+                    player.sendSkillList();
+                    player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+                    player.sendPacket(new ExUserInfoInvenWeight());
+                    player.sendMessage("A GM changed your class to " + newclass + ".");
+                    activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
+                }
+                else
+                {
+                    BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <valid_new_classid>");
+                }
+            }
+            catch (StringIndexOutOfBoundsException e)
+            {
+                //AdminHtml.showAdminHtml(activeChar, "setclass/human_fighter.htm");
+            }
+            catch (NumberFormatException e)
+            {
+                BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <valid_new_classid>");
+            }
         }
 
         if (nonNull(returnHtml)) {
