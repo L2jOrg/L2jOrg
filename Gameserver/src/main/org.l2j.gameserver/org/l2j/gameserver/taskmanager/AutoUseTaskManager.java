@@ -20,6 +20,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 public class AutoUseTaskManager {
     private static final Set<Player> PLAYERS = ConcurrentHashMap.newKeySet();
@@ -113,7 +114,8 @@ public class AutoUseTaskManager {
                                 }
                             }
 
-                            if (skill.isAutoUse() && skill.isAutoBuff() && !(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled())) {
+                            if (!skill.isBad() && (!isPlayable(player))){
+                            //if (skill.isAutoUse() && skill.isAutoBuff() && !(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled())) {
                                 player.doCast(skill);
                             }
                         }

@@ -44,11 +44,7 @@ public enum ClanRewardType {
     }
 
     public static int getDefaultMask() {
-        int mask = 0;
-        for (ClanRewardType type : values()) {
-            mask |= type.getMask();
-        }
-        return mask;
+        return 0;
     }
 
     public int getClientId() {

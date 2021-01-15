@@ -1798,7 +1798,7 @@ public class Clan implements IIdentifiable, INamable {
 
     public boolean canClaimBonusReward(Player player, ClanRewardType type) {
         final ClanMember clanMember = getClanMember(player.getObjectId());
-        return (clanMember != null) && (type.getAvailableBonus(this) != null) && !clanMember.isRewardClaimed(type);
+        return clanMember != null && type.getAvailableBonus(this) != null && !clanMember.isRewardClaimed(type);
     }
 
     public void resetClanBonus() {

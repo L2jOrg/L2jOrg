@@ -105,8 +105,12 @@ public final class HomeBoard implements IParseBoardHandler {
             Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtlevel" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtadena" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtl2coin" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtvipcoin" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_bbsauction" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtclass" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtgiveskill" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtremoveskill" : null,
     };
 
     private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {
@@ -512,8 +516,20 @@ public final class HomeBoard implements IParseBoardHandler {
                 }
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
             }
+        else if (command.startsWith("_cbbsobtgiveskill")) {
+            giveAllSkills(activeChar, true);
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
+        else if (command.startsWith("_cbbsobtremoveskill")) {
+            removeAllSkills(activeChar);
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
         else if (command.startsWith("_cbbsobtadena")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
             final var actualCommand = st.nextToken();
@@ -522,7 +538,27 @@ public final class HomeBoard implements IParseBoardHandler {
             }
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
+        else if (command.startsWith("_cbbsobtl2coin")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            if (actualCommand.equalsIgnoreCase("_cbbsobtl2coin")) {
+                activeChar.addItem("L2Coins", 91663, 100000000, activeChar, true);
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
+        else if (command.startsWith("_cbbsobtvipcoin")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            if (actualCommand.equalsIgnoreCase("_cbbsobtvipcoin")) {
+                activeChar.addItem("Vip Coins", 29520, 100000000, activeChar, true);
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
         }
         else if (command.startsWith("_bbsauction")) {
             final StringTokenizer st = new StringTokenizer(command, "");
