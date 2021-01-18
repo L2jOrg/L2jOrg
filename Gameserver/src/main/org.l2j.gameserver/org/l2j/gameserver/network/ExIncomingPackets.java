@@ -72,6 +72,7 @@ import org.l2j.gameserver.network.clientpackets.pvpbook.ExTeleportToKiller;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
 import org.l2j.gameserver.network.clientpackets.raidserver.ExConnectToRaidServer;
+import org.l2j.gameserver.network.clientpackets.randomcraft.*;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankingCharRankers;
 import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;
@@ -512,11 +513,11 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_CASTLEWAR_OBSERVER_START(null, ConnectionState.IN_GAME_STATES),
     EX_RAID_TELEPORT_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_TELEPORT_TO_RAID_POSITION(null, ConnectionState.IN_GAME_STATES),
-    EX_CRAFT_EXTRACT(null, ConnectionState.IN_GAME_STATES),
-    EX_CRAFT_RANDOM_INFO(null, ConnectionState.IN_GAME_STATES),
-    EX_CRAFT_RANDOM_LOCK_SLOT(null, ConnectionState.IN_GAME_STATES),
-    EX_CRAFT_RANDOM_REFRESH(null, ConnectionState.IN_GAME_STATES),
-    EX_CRAFT_RANDOM_MAKE(null, ConnectionState.IN_GAME_STATES),
+    EX_CRAFT_EXTRACT(ExRequestRandomCraftExtract::new, ConnectionState.IN_GAME_STATES),
+    EX_CRAFT_RANDOM_INFO(ExRequestRandomCraftInfo::new, ConnectionState.IN_GAME_STATES),
+    EX_CRAFT_RANDOM_LOCK_SLOT(ExRequestRandomCraftLockSlot::new, ConnectionState.IN_GAME_STATES),
+    EX_CRAFT_RANDOM_REFRESH(ExRequestRandomCraftRefresh::new, ConnectionState.IN_GAME_STATES),
+    EX_CRAFT_RANDOM_MAKE(ExRequestRandomCraftMake::new, ConnectionState.IN_GAME_STATES),
     EX_MULTI_SELL_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_SAVE_ITEM_ANNOUNCE_SETTING(null, ConnectionState.IN_GAME_STATES),
     EX_OLYMPIAD_UI(null, ConnectionState.IN_GAME_STATES),

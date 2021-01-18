@@ -17738,6 +17738,33 @@ public final class SystemMessageId {
     @ClientString(id = 13019, message = "Cannot use timed hunting zones while waiting for the Olympiad.")
     public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;
 
+    @ClientString(id = 13095, message = "Free limit is charged. Try again.")
+    public static SystemMessageId FREE_LIMIT_IS_CHARGED_TRY_AGAIN;
+
+    @ClientString(id = 13096, message = "$s1 has obtained $s2 using random craft!")
+    public static SystemMessageId S1_HAS_OBTAINED_S2_USING_RANDOM_CRAFT;
+
+    @ClientString(id = 13097, message = "$s1 has obtained an item using random craft!")
+    public static SystemMessageId S1_HAS_OBTAINED_AN_ITEM_USING_RANDOM_CRAFT;
+
+    @ClientString(id = 13098, message = "Do you really want to create this item?")
+    public static SystemMessageId DO_YOU_REALLY_WANT_TO_CREATE_THIS_ITEM;
+
+    @ClientString(id = 13099, message = "Creation is complete.")
+    public static SystemMessageId CREATION_IS_COMPLETE;
+
+    @ClientString(id = 13100, message = "You have acquired $s1 craft scale points.")
+    public static SystemMessageId YOU_HAVE_ACQUIRED_S1_CRAFT_SCALE_POINTS;
+
+    @ClientString(id = 13101, message = "No more items can be registered.")
+    public static SystemMessageId NO_MORE_ITEMS_CAN_BE_REGISTERED;
+
+    @ClientString(id = 13102, message = "You can do it if inventory weight is lower than 80%%.")
+    public static SystemMessageId YOU_CAN_DO_IT_IF_INVENTORY_WEIGHT_IS_LOWER_THAN_80;
+
+    @ClientString(id = 13103, message = "Not enough resources to renew the list.")
+    public static SystemMessageId NOT_ENOUGH_RESOURCES_TO_RENEW_THE_LIST;
+
     private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 
     static {

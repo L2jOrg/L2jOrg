@@ -189,6 +189,8 @@ public final class Player extends Playable {
     private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
 
+    private PlayerRandomCraft _randomCraft = null;
+
     private byte vipTier;
     private int rank;
     private int rankRace;
@@ -5255,6 +5257,11 @@ public final class Player extends Playable {
 
         storeElementalSpirits();
 
+        if (_randomCraft != null)
+        {
+            _randomCraft.store();
+        }
+
         shortcuts.storeMe();
         getDAO(PlayerVariablesDAO.class).save(variables);
 
@@ -9634,5 +9641,16 @@ public final class Player extends Playable {
             return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
         }
         return 0;
+    }
+
+    public void restoreRandomCraft()
+    {
+        _randomCraft = new PlayerRandomCraft(this);
+        _randomCraft.restore();
+    }
+
+    public PlayerRandomCraft getRandomCraft()
+    {
+        return _randomCraft;
     }
 }

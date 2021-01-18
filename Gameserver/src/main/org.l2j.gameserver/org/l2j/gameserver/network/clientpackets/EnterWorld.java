@@ -59,6 +59,7 @@ import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettab
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeWaitingListAlarm;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
+import org.l2j.gameserver.network.serverpackets.randomcraft.ExCraftInfo;
 import org.l2j.gameserver.settings.*;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.MapRegionManager;
@@ -154,6 +155,11 @@ public class EnterWorld extends ClientPacket {
         if (Config.ENABLE_MAGIC_LAMP)
         {
             player.sendPacket(new ExMagicLampExpInfoUI(player));
+        }
+
+        if (Config.ENABLE_RANDOM_CRAFT)
+        {
+            player.sendPacket(new ExCraftInfo(player));
         }
 
         client.sendPacket(new ExEnterWorld());

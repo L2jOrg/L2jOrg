@@ -1,0 +1,28 @@
+DROP TABLE IF EXISTS `character_random_craft`;
+CREATE TABLE IF NOT EXISTS `character_random_craft` (
+  `charId` INT UNSIGNED NOT NULL DEFAULT 0,
+  `random_craft_full_points` INT NOT NULL DEFAULT 0,
+  `random_craft_points` INT NOT NULL DEFAULT 0,
+  `sayha_roll` TINYINT NOT NULL DEFAULT 0,
+  `item_1_id` INT NOT NULL DEFAULT 0,
+  `item_1_count` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  `item_1_locked` TINYINT NOT NULL DEFAULT 0,
+  `item_1_lock_left` INT NOT NULL DEFAULT 0,
+  `item_2_id` INT NOT NULL DEFAULT 0,
+  `item_2_count` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  `item_2_locked` TINYINT NOT NULL DEFAULT 0,
+  `item_2_lock_left` INT NOT NULL DEFAULT 0,
+  `item_3_id` INT NOT NULL DEFAULT 0,
+  `item_3_count` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  `item_3_locked` TINYINT NOT NULL DEFAULT 0,
+  `item_3_lock_left` INT NOT NULL DEFAULT 0,
+  `item_4_id` INT NOT NULL DEFAULT 0,
+  `item_4_count` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  `item_4_locked` TINYINT NOT NULL DEFAULT 0,
+  `item_4_lock_left` INT NOT NULL DEFAULT 0,
+  `item_5_id` INT NOT NULL DEFAULT 0,
+  `item_5_count` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  `item_5_locked` TINYINT NOT NULL DEFAULT 0,
+  `item_5_lock_left` INT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`charId`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

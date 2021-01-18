@@ -212,6 +212,8 @@ public class PlayerFactory {
         player.refreshOverloaded(false);
         player.restoreFriendList();
 
+        player.restoreRandomCraft();
+
         player.loadRecommendations();
         player.startRecoGiveTask();
         player.startOnlineTimeUpdateTask();
