@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.StatusUpdateType;
@@ -578,6 +579,7 @@ public class Party extends AbstractPlayerGroup {
                     }
                     member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true);
                     PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
+                    MagicLampData.getInstance().addLampExp(member, exp, true);
                 }
             } else {
                 member.addExpAndSp(0, 0);

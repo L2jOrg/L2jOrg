@@ -26,6 +26,7 @@ import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
 import org.l2j.gameserver.datatables.drop.EventDropList;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -441,6 +442,7 @@ public class Attackable extends Npc {
                                     }
                                     attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true);
                                     PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+                                    MagicLampData.getInstance().addLampExp(attacker, exp, true);
                                 }
 
                                 rewardAttributeExp(attacker, damage, totalDamage);

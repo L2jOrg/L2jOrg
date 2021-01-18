@@ -607,6 +607,27 @@ public final class Player extends Playable {
         variables.setHairAccessoryEnabled(hairAccessory_Enabled);
     }
 
+    public int getLampExp()
+    {
+        return variables.getLampExp();
+    }
+
+    public int getLampCount()
+    {
+        return variables.getLampCount();
+    }
+
+    public void setLampExp(int exp)
+    {
+        variables.setLampXp(exp);
+    }
+
+    public void setLampCount(int count)
+    {
+        variables.setLampCount(count);
+    }
+
+
     /**
      * Sets the amount of times player can use world chat
      *

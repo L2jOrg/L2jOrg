@@ -133,6 +133,7 @@ open module org.l2j.scripts {
                 ManaHealByLevel.Factory,
                 ManaHealOverTime.Factory,
                 ManaHealPercent.Factory,
+                ModifyMagicLampPoints.Factory,
                 VitalStatModify.Factory,
                 ModifyVital.Factory,
                 Mp.Factory,

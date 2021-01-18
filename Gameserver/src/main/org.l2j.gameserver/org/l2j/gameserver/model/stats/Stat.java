@@ -227,6 +227,9 @@ public enum Stat {
     VITALITY_CONSUME_RATE,
     VITALITY_EXP_RATE,
 
+    // Magic Lamp
+    MAGIC_LAMP_EXP_RATE,
+
     // Souls
     MAX_SOULS,
 

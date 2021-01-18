@@ -101,6 +101,7 @@ public final class Config {
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
+    private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
 
 
@@ -489,6 +490,16 @@ public final class Config {
     public static int KARMA_RATE_DROP_EQUIP;
     public static int KARMA_RATE_DROP_EQUIP_WEAPON;
 
+    // --------------------------------------------------
+    // Magic Lamp
+    // --------------------------------------------------
+
+    public static boolean ENABLE_MAGIC_LAMP;
+    public static int MAGIC_LAMP_MAX_GAME_COUNT;
+    public static int MAGIC_LAMP_REWARD_COUNT;
+    public static int MAGIC_LAMP_GREATER_REWARD_COUNT;
+    public static int MAGIC_LAMP_MAX_LEVEL_EXP;
+    public static double MAGIC_LAMP_CHARGE_RATE;
 
     // --------------------------------------------------
     // No classification assigned to the following yet
@@ -1679,6 +1690,13 @@ public final class Config {
         TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
         TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
 
+        final PropertiesParser magicLampSettings = new PropertiesParser(MAGIC_LAMP_CONFIG_FILE);
+        ENABLE_MAGIC_LAMP = magicLampSettings.getBoolean("MagicLampEnabled", false);
+        MAGIC_LAMP_MAX_GAME_COUNT = magicLampSettings.getInt("MagicLampMaxGames", 127);
+        MAGIC_LAMP_REWARD_COUNT = magicLampSettings.getInt("MagicLampRewardCount", 1);
+        MAGIC_LAMP_GREATER_REWARD_COUNT = magicLampSettings.getInt("MagicLampGreaterRewardCount", 10);
+        MAGIC_LAMP_MAX_LEVEL_EXP = magicLampSettings.getInt("MagicLampMaxLevelExp", 10000000);
+        MAGIC_LAMP_CHARGE_RATE = magicLampSettings.getDouble("MagicLampChargeRate", 0.1);
 
         // Load althars config
         final PropertiesParser althars = new PropertiesParser(ALTHARS_CONFIG_FILE);

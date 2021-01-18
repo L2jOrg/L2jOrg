@@ -23,6 +23,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.DoorDataManager;
+import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.scripting.ManagedScript;
@@ -2067,6 +2068,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public static void addExpAndSp(Player player, long exp, int sp) {
         player.addExpAndSp((long) player.getStats().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStats().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
         PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
+        MagicLampData.getInstance().addLampExp(player, exp, true);
     }
 
     /**

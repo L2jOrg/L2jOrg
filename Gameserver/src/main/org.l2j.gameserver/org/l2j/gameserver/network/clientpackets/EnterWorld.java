@@ -54,6 +54,7 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
+import org.l2j.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeWaitingListAlarm;
@@ -148,6 +149,11 @@ public class EnterWorld extends ClientPacket {
 
         if (getSettings(CharacterSettings.class).isVitalityEnabled()) {
             player.sendPacket(new ExVitalityEffectInfo(player));
+        }
+
+        if (Config.ENABLE_MAGIC_LAMP)
+        {
+            player.sendPacket(new ExMagicLampExpInfoUI(player));
         }
 
         client.sendPacket(new ExEnterWorld());

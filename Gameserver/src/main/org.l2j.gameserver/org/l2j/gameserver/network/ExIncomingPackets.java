@@ -52,6 +52,8 @@ import org.l2j.gameserver.network.clientpackets.l2coin.RequestPurchaseLimitShopI
 import org.l2j.gameserver.network.clientpackets.l2store.*;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
+import org.l2j.gameserver.network.clientpackets.magiclamp.ExMagicLampGameInfo;
+import org.l2j.gameserver.network.clientpackets.magiclamp.ExMagicLampGameStart;
 import org.l2j.gameserver.network.clientpackets.mentoring.*;
 import org.l2j.gameserver.network.clientpackets.mission.RequestOneDayRewardReceive;
 import org.l2j.gameserver.network.clientpackets.mission.RequestTodoList;
@@ -464,8 +466,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_COSTUME_EXTRACT(ExRequestCostumeExtract::new, ConnectionState.IN_GAME_STATES),
     EX_COSTUME_LOCK(ExRequestCostumeLock::new, ConnectionState.IN_GAME_STATES),
     EX_COSTUME_CHANGE_SHORTCUT(null, ConnectionState.IN_GAME_STATES),
-    EX_MAGICLAMP_GAME_INFO(null, ConnectionState.IN_GAME_STATES),
-    EX_MAGICLAMP_GAME_START(null, ConnectionState.IN_GAME_STATES),
+    EX_MAGICLAMP_GAME_INFO(ExMagicLampGameInfo::new, ConnectionState.IN_GAME_STATES),
+    EX_MAGICLAMP_GAME_START(ExMagicLampGameStart::new, ConnectionState.IN_GAME_STATES),
     EX_ACTIVATE_AUTO_SHORTCUT(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
     EX_PREMIUM_MANAGER_LINK_HTML(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
     EX_PREMIUM_MANAGER_PASS_CMD_TO_SERVER(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
