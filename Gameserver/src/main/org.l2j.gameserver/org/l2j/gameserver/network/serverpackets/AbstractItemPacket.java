@@ -82,7 +82,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 
     protected void writeItem(Item item, Player owner, WritableBuffer buffer) {
         final int mask = calculateMask(item);
-        buffer.writeByte(mask);
+        buffer.writeShort(mask);
         buffer.writeInt(item.getObjectId());
         buffer.writeInt(item.getDisplayId());
         buffer.writeByte(item.isQuestItem() || item.isEquipped() ? 0xFF : item.getLocationSlot());
