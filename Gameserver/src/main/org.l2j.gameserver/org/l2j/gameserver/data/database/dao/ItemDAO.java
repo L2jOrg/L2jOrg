@@ -73,6 +73,9 @@ public interface ItemDAO extends DAO<Object> {
     @Query("SELECT * FROM items WHERE owner_id=:ownerId: AND (loc=:baseLoc: OR loc=:equipLoc:) ORDER BY loc_data")
     List<ItemData> findInventoryItems(int ownerId,  ItemLocation baseLoc, ItemLocation equipLoc);
 
+    @Query("SELECT * FROM items WHERE object_id = :objectId:")
+    int getIsBlessedWeapon(int objectId);
+
     void save(Collection<ItemOnGroundData> datas);
 
     @Query("DELETE FROM item_variations WHERE itemId IN (SELECT object_id FROM items WHERE items.owner_id=:playerId:)")
@@ -116,4 +119,7 @@ public interface ItemDAO extends DAO<Object> {
 
     @Query("UPDATE items SET special_ensoul = :ensoul: WHERE object_id = :objectId:")
     void updateSpecialEnsoul(int objectId, int ensoul);
+
+    @Query("UPDATE items SET is_blessed = :isBlessed: WHERE object_id = :objectId:")
+    void updateIsBlessed(int objectId, int isBlessed);
 }

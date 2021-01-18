@@ -21,5 +21,5 @@ package org.l2j.gameserver.engine.item.shop.multisell;
 /**
  * @author JoeAlisson
  */
-public record MultisellProduct(int id, long count, int enchant, double chance) {
+public record MultisellProduct(int id, long count, int enchant, double chance, int isBlessed) {
 }

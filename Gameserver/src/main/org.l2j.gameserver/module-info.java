@@ -117,6 +117,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.util.exp4j;
     exports org.l2j.gameserver.engine.olympiad;
     exports org.l2j.gameserver.engine.item.shop;
+    exports org.l2j.gameserver.network.serverpackets.bless;
     exports org.l2j.gameserver.engine.rank;
     exports org.l2j.gameserver.network.serverpackets.commission;
 

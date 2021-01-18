@@ -117,7 +117,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         buffer.writeInt(player.getObjectId());
         buffer.writeInt(initSize);
-        buffer.writeShort(0x1B);
+        buffer.writeShort(0x1C);
         buffer.writeBytes(mask);
 
         if (containsMask(UserInfoType.RELATION)) {
@@ -133,6 +133,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeInt(player.getBaseTemplate().getClassId().getRootClassId().getId());
             buffer.writeInt(player.getClassId().getId());
             buffer.writeInt(player.getLevel());
+            buffer.writeInt(-1); // unk
         }
 
         if (containsMask(UserInfoType.BASE_STATS)) {
@@ -376,6 +377,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_MEN) + player.getHennaValue(BaseStats.MEN));
             buffer.writeShort(0x01);
             buffer.writeShort(0x01);
+        }
+        
+        if(containsMask(UserInfoType.UNK)) {
+            buffer.writeShort(0);
+            buffer.writeSizedString(""); // some string or craft points
         }
     }
 

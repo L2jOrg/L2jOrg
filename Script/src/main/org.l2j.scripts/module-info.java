@@ -578,7 +578,8 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.itemhandlers.SpecialXMas,
             org.l2j.scripts.handlers.itemhandlers.SpiritShot,
             org.l2j.scripts.handlers.itemhandlers.SummonItems,
-                TransformationBook;
+                TransformationBook,
+                org.l2j.scripts.handlers.itemhandlers.BlessedScroll;
 
     provides org.l2j.gameserver.handler.IPunishmentHandler
         with org.l2j.scripts.handlers.punishmenthandlers.BanHandler,

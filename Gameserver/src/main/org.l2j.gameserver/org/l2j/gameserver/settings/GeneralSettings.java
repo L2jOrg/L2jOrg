@@ -51,6 +51,7 @@ public class GeneralSettings implements Settings {
     private boolean destroyEquipableItem;
     private IntSet protectedItems;
     private boolean clearDroppedItemsAfterLoad;
+    private double blessItemChance;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -83,6 +84,8 @@ public class GeneralSettings implements Settings {
         defaultAccessLevel = settingsFile.getInteger("DefaultAccessLevel", 0);
 
         autoSavePlayerTime = settingsFile.getInteger("PlayerDataStoreInterval", 20);
+
+        blessItemChance = settingsFile.getDouble("BlessItemChance", 1.5);
      }
 
     public int banChatAdenaAdsReportCount() {
@@ -167,5 +170,9 @@ public class GeneralSettings implements Settings {
 
     public int autoSavePlayerTime() {
         return autoSavePlayerTime;
+    }
+
+    public double getBlessItemChance() {
+        return blessItemChance;
     }
 }

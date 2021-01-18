@@ -57,7 +57,9 @@ public class ExCharInfo extends ServerPacket {
     protected void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_CHAR_INFO, buffer );
 
-        buffer.writeShort(0x151 + dynamicSize);
+        //0x151 272 protocol
+        //0x155 286 protocol or +4 it's from unk dynamic size
+        buffer.writeShort(0x155 + dynamicSize);
 
         var appearence = player.getAppearance();
         buffer.writeInt(player.getObjectId());
@@ -190,6 +192,8 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeInt(0x00); // wait action id
         buffer.writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
         buffer.writeShort(0x00); // notoriety
+
+        buffer.writeInt(-1); // fix unk new (286 protocol)
 
         buffer.writeShort(0x16 + appearence.getVisibleName().length() * 2);
         buffer.writeByte(0x00); // create or update

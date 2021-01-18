@@ -186,6 +186,9 @@ public class MultiSellChoose extends ClientPacket {
                     addedItem.changeEnchantLevel(product.enchant());
                     addedItem.updateDatabase(true);
                 }
+                if (product.isBlessed() == 1) {
+                    addedItem.setIsBlessed(1);
+                }
 
                 if (addedItem.getCount() > 1) {
                     player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(addedItem.getId()).addLong(totalCount));
@@ -214,6 +217,7 @@ public class MultiSellChoose extends ClientPacket {
                 addedItem.addSpecialAbility(ensoul, EnsoulType.SPECIAL, false);
             }
         }
+
         addedItem.updateDatabase(true);
     }
 
@@ -301,20 +305,21 @@ public class MultiSellChoose extends ClientPacket {
         IntMap<Long> itemsAmount = new HashIntMap<>();
         for (var ingredient : entry.ingredients()) {
             var amount = itemsAmount.compute(ingredient.id(), (k, v) -> nonNull(v) ? v + ingredient.count() : ingredient.count());
-            if (ingredient.enchant() > 0) {
+
+            if (ingredient.enchant() > 0 || ingredient.isBlessed() == 1) {
                 int found = 0;
-                for (Item item : inventory.getAllItemsByItemId(ingredient.id(), ingredient.enchant())) {
-                    if (item.getEnchantLevel() == ingredient.enchant()) {
+                for (Item item : inventory.getAllItemsByItemId(ingredient.id(), ingredient.enchant(), ingredient.isBlessed())) {
+                    if (item.getEnchantLevel() == ingredient.enchant() && item.getIsBlessed() == ingredient.isBlessed()) {
                         found++;
                     }
                 }
 
                 if (found < amount) {
                     player.sendPacket(getSystemMessage(SystemMessageId.YOU_NEED_A_N_S1)
-                            .addString("+" + ingredient.enchant() + " " + ItemEngine.getInstance().getTemplate(ingredient.id()).getName()));
+                            .addString((ingredient.isBlessed() == 1 ? "Blessed ":"")+ "+" + ingredient.enchant() + " " + ItemEngine.getInstance().getTemplate(ingredient.id()).getName()));
                     return false;
                 }
-            } else if (!checkIngredients(player, clan, list, ingredient.id(), Math.multiplyExact(amount, count))) {
+            } else if (!checkIngredients(player, clan, list, ingredient.id(), Math.multiplyExact(amount, count), ingredient.isBlessed())) {
                 return false;
             }
         }
@@ -434,14 +439,14 @@ public class MultiSellChoose extends ClientPacket {
         return true;
     }
 
-    private boolean checkIngredients(Player player, Clan clan, PreparedMultisellList list, int ingredientId, long totalCount) {
+    private boolean checkIngredients(Player player, Clan clan, PreparedMultisellList list, int ingredientId, long totalCount, int isBlessed) {
         final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredientId);
         if (nonNull(specialItem)) {
             return validateSpecialItem(player, clan, totalCount, specialItem);
         }
 
         // Check if the necessary items are there. If list maintains enchantment, allow all enchanted items, otherwise only unenchanted. TODO: Check how retail does it.
-        if (player.getInventory().getInventoryItemCount(ingredientId, list.maintainEnchantment() ? -1 : 0, false) < totalCount) {
+        if (player.getInventory().getInventoryItemCount(ingredientId, list.maintainEnchantment() ? -1 : 0, false, isBlessed) < totalCount) {
             player.sendPacket(getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S).addItemName(ingredientId).addLong(totalCount));
             return false;
         }

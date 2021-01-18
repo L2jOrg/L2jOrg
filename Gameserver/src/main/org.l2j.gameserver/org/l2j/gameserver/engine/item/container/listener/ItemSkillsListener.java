@@ -74,6 +74,7 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
 
         item.clearEnchantStats();
         item.clearSpecialAbilities();
+        item.clearBlessedOptions();
 
         it.forEachSkill(ItemSkillType.NORMAL, holder -> {
             if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
@@ -208,6 +209,9 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
 
         // Apply SA skill
         item.applySpecialAbilities();
+
+        // Apply blessed options
+        item.applyBlessedOptions(item.getEnchantLevel());
 
         item.getTemplate().forEachSkill(ItemSkillType.NORMAL, holder ->
         {

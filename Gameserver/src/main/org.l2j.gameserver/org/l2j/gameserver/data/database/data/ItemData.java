@@ -48,6 +48,9 @@ public class ItemData {
     @Column("special_ensoul")
     private int specialEnsoul;
 
+    @Column("is_blessed")
+    private int isBlessed;
+
     public int getOwnerId() {
         return ownerId;
     }
@@ -114,6 +117,13 @@ public class ItemData {
         return specialEnsoul;
     }
 
+    public int getIsBlessed() {
+        return isBlessed;
+    }
+    public void setIsBlessed(int blessed) {
+        isBlessed = blessed;
+    }
+
     public void setSpecialEnsoul(int specialEnsoul) {
         this.specialEnsoul = specialEnsoul;
     }
@@ -135,6 +145,7 @@ public class ItemData {
         data.enchantLevel = onGroundData.getEnchantLevel();
         data.ensoul = onGroundData.getEnsoul();
         data.specialEnsoul = onGroundData.getSpecialEnsoul();
+        data.isBlessed = onGroundData.getIsBlessed();
         return data;
     }
 }

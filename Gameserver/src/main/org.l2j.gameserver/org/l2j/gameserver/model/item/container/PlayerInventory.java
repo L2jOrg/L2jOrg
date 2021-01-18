@@ -143,6 +143,9 @@ public class PlayerInventory extends Inventory {
         return getAllItemsByItemId(itemId, enchantment, true);
     }
 
+    public Collection<Item> getAllItemsByItemId(int itemId, int enchantment, int isBlessed) {
+        return getAllItemsByItemId(itemId, enchantment, true, isBlessed);
+    }
     /**
      * Returns the list of all items in inventory that have a given item id AND a given enchantment level.
      *
@@ -153,6 +156,18 @@ public class PlayerInventory extends Inventory {
      */
     public Collection<Item> getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped) {
         return getItems(i -> (i.getId() == itemId) && (i.getEnchantLevel() == enchantment) && (includeEquipped || !i.isEquipped()));
+    }
+
+    /**
+     * Returns the list of all items in inventory that have a given item id AND a given enchantment level + blessed.
+     *
+     * @param itemId          : ID of item
+     * @param enchantment     : enchant level of item
+     * @param includeEquipped : include equipped items
+     * @return Item[] : matching items from inventory
+     */
+    public Collection<Item> getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped, int isBlessed) {
+        return getItems(i -> (i.getId() == itemId) && (i.getEnchantLevel() == enchantment) && (i.getIsBlessed() == isBlessed) && (includeEquipped || !i.isEquipped()));
     }
 
     /**

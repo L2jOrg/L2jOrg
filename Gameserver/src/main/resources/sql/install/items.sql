@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `items`
     `time`           DECIMAL(13)     NOT NULL DEFAULT 0,
     `ensoul`         INT,
     `special_ensoul` INT,
+    `is_blessed` TINYINT(1)  NOT NULL DEFAULT 0,
     PRIMARY KEY (`object_id`),
     KEY `owner_id` (`owner_id`),
     KEY `item_id` (`item_id`),

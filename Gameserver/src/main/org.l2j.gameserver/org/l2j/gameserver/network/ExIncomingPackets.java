@@ -30,6 +30,9 @@ import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAtt
 import org.l2j.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
 import org.l2j.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
 import org.l2j.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
+import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionCancel;
+import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionEnchant;
+import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionPutItem;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;
 import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarInfo;
@@ -42,7 +45,7 @@ import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCurio
 import org.l2j.gameserver.network.clientpackets.commission.*;
 import org.l2j.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.costume.*;
-import org.l2j.gameserver.network.clientpackets.craft.ExRequestCraftRandom;
+//import org.l2j.gameserver.network.clientpackets.craft.ExRequestCraftRandom;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2j.gameserver.network.clientpackets.elementalspirits.*;
@@ -510,7 +513,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_RAID_TELEPORT_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_TELEPORT_TO_RAID_POSITION(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_EXTRACT(null, ConnectionState.IN_GAME_STATES),
-    EX_CRAFT_RANDOM_INFO(ExRequestCraftRandom::new, ConnectionState.IN_GAME_STATES),
+    EX_CRAFT_RANDOM_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_LOCK_SLOT(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_REFRESH(null, ConnectionState.IN_GAME_STATES),
     EX_CRAFT_RANDOM_MAKE(null, ConnectionState.IN_GAME_STATES),
@@ -547,9 +550,9 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MABLE_GAME_RESET(null, ConnectionState.IN_GAME_STATES),
     EX_MABLE_GAME_CLOSE(null, ConnectionState.IN_GAME_STATES),
     EX_RETURN_TO_ORIGIN(null, ConnectionState.IN_GAME_STATES),
-    EX_BLESS_OPTION_PUT_ITEM(null, ConnectionState.IN_GAME_STATES),
-    EX_BLESS_OPTION_ENCHANT(null, ConnectionState.IN_GAME_STATES),
-    EX_BLESS_OPTION_CANCEL(null, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_PUT_ITEM(RequestBlessOptionPutItem::new, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_ENCHANT(RequestBlessOptionEnchant::new, ConnectionState.IN_GAME_STATES),
+    EX_BLESS_OPTION_CANCEL(RequestBlessOptionCancel::new, ConnectionState.IN_GAME_STATES),
     EX_PVP_RANKING_MY_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_PVP_RANKING_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_ACQUIRE_PET_SKILL(null, ConnectionState.IN_GAME_STATES),

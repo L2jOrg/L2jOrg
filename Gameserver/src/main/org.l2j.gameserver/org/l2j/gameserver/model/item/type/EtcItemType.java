@@ -114,7 +114,8 @@ public enum EtcItemType implements ItemType {
     CURSED_ENCHANT_ARMOR,
     VITAL_LEGACY_ITEM_1D,
     VITAL_LEGACY_ITEM_7D,
-    VITAL_LEGACY_ITEM_30D;
+    VITAL_LEGACY_ITEM_30D,
+    BLESSED_SCROLL;
 
 
     @Override

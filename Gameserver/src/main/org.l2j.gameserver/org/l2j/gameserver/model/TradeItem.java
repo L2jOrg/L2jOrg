@@ -39,6 +39,7 @@ public class TradeItem {
     private EnsoulOption soulCrystalOption;
     private EnsoulOption soulCrystalSpecialOption;
     private final int[] enchantOptions;
+    private int isBlessed;
 
     private long _price;
 
@@ -59,6 +60,7 @@ public class TradeItem {
         enchantOptions = item.getEnchantOptions();
         soulCrystalOption = item.getSpecialAbility();
         soulCrystalSpecialOption = item.getAdditionalSpecialAbility();
+        isBlessed = item.getIsBlessed();
 
         augmentation = item.getAugmentation();
         if (item.getAugmentation() != null) {
@@ -95,6 +97,7 @@ public class TradeItem {
         enchantOptions = item.getEnchantOptions();
         soulCrystalOption = item.getSoulCrystalOption();
         soulCrystalSpecialOption = item.getSoulCrystalSpecialOption();
+        isBlessed = item.getIsBlessed();
     }
 
     public int getObjectId() {
@@ -180,5 +183,13 @@ public class TradeItem {
 
     public int getAugmentationOption2() {
         return _augmentationOption2;
+    }
+
+    public int getIsBlessed() {
+        return isBlessed;
+    }
+
+    public void setIsBlessed(int blessed) {
+        isBlessed = blessed;
     }
 }

@@ -53,11 +53,13 @@ public class PlayerSelectInfo {
     private final long banExpireTime;
 
     private VariationInstance _augmentation;
+    private int isBlessed;
 
     public PlayerSelectInfo(PlayerData data) {
         this.data = data;
         restoreVisibleInventory();
         restoreAugmentation();
+        restoreBlessed();
 
         _vars = getDAO(PlayerVariablesDAO.class).findById(data.getCharId());
         banExpireTime = PunishmentManager.getInstance().getPunishmentExpiration(data.getCharId(), PunishmentAffect.CHARACTER, PunishmentType.BAN);
@@ -84,6 +86,17 @@ public class PlayerSelectInfo {
                 } catch (Exception e) {
                     LOGGER.warn("Could not restore augmentation info", e);
                 }
+            }
+        }
+    }
+    private void restoreBlessed() {
+        var weapon = paperdoll.get(RIGHT_HAND);
+        if (nonNull(weapon)) {
+            int isBlessedWeapon = getDAO(ItemDAO.class).getIsBlessedWeapon(weapon.getObjectId());
+            try {
+                isBlessed = isBlessedWeapon;
+            } catch (Exception e) {
+                LOGGER.warn("Could not restore blessed info", e);
             }
         }
     }
@@ -159,5 +172,9 @@ public class PlayerSelectInfo {
 
     public void setDeleteTime(long deleteTime) {
         this.data.setDeleteTime(deleteTime);
+    }
+
+    public int getIsBlessed() {
+        return isBlessed;
     }
 }

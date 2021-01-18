@@ -88,6 +88,8 @@ public final class MultisellListPacket extends AbstractItemPacket {
         writeItemElemental(itemEnchantment, buffer);
         writeItemEnsoulOptions(itemEnchantment, buffer);
 
+        buffer.writeByte(0); // 286
+
         buffer.writeShort(entry.products().size());
         buffer.writeShort(entry.ingredients().size());
 
@@ -111,6 +113,7 @@ public final class MultisellListPacket extends AbstractItemPacket {
         writeItemAugment(displayItemEnchantment, buffer);
         writeItemElemental(displayItemEnchantment, buffer);
         writeItemEnsoulOptions(displayItemEnchantment, buffer);
+        buffer.writeByte(ingredient.isBlessed()); // isBlessed
     }
 
     private void writeMultisellProduct(WritableBuffer buffer, ItemInfo itemEnchantment, MultisellProduct product) {
@@ -126,5 +129,6 @@ public final class MultisellListPacket extends AbstractItemPacket {
         writeItemAugment(displayItemEnchantment, buffer);
         writeItemElemental(displayItemEnchantment, buffer);
         writeItemEnsoulOptions(displayItemEnchantment, buffer);
+        buffer.writeByte(product.isBlessed()); // isBlessed
     }
 }
