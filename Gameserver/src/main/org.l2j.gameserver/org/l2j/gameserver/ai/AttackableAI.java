@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableHate;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.util.GameUtils;
@@ -99,21 +99,11 @@ public class AttackableAI extends CreatureAI {
         }
 
         // Check if the target isn't invulnerable
-        if (target.isInvul()) {
-            return false;
-        }
-
-        // Check if the target isn't a Folk or a Door
-        if (isDoor(target)) {
+        if (isDoor(target) || target.isInvul() || target.isAlikeDead()) {
             return false;
         }
 
         final Attackable me = getActiveChar();
-
-        // Check if the target isn't dead, is in the Aggro range and is at the same height
-        if (target.isAlikeDead()) {
-            return false;
-        }
 
         // Check if the target is a Playable
         if (isPlayable(target)) {
@@ -131,11 +121,6 @@ public class AttackableAI extends CreatureAI {
                 return false;
             }
 
-            // check if the target is within the grace period for JUST getting up from fake death
-            if (player.isRecentFakeDeath()) {
-                return false;
-            }
-
             if (me instanceof Guard) {
                 World.getInstance().forEachVisibleObjectInRange(me, Guard.class, 500, guard ->
                 {
@@ -144,9 +129,6 @@ public class AttackableAI extends CreatureAI {
                         me.addDamageHate(player, 0, 10);
                     }
                 });
-                if (player.getReputation() < 0) {
-                    return true;
-                }
             }
         } else if (isMonster(me)) {
             // depending on config, do not allow mobs to attack _new_ players in peacezones,
@@ -324,6 +306,12 @@ public class AttackableAI extends CreatureAI {
                             // Add the attacker to the Attackable _aggroList with 0 damage and base amount hate cause prior to FriendlyNpc
                             if (hating == 0) {
                                 npc.addDamageHate(t, 0, ((FriendlyNpc) t).getHateBaseAmount());
+                            }
+                        } else if(t instanceof Monster) {
+                            final int hating = npc.getHating(t);
+                            // Add the attacker to the Attackable _aggroList with 0 damage and base amount hate cause prior to FriendlyNpc
+                            if (hating == 0) {
+                                npc.addDamageHate(t, 0, 1);
                             }
                         }
                     }

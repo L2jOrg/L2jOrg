@@ -18,7 +18,8 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.SiegeDAO;
@@ -30,12 +31,12 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.interfaces.ILocational;
+import org.l2j.gameserver.network.serverpackets.siege.ExMercenarySiegeHUDInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.*;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -46,8 +47,8 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 public final class SiegeManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeManager.class);
 
-    private final Map<Integer, List<TowerSpawn>> _controlTowers = new HashMap<>();
-    private final Map<Integer, List<TowerSpawn>> _flameTowers = new HashMap<>();
+    private final IntMap<List<TowerSpawn>> _controlTowers = new HashIntMap<>();
+    private final IntMap<List<TowerSpawn>> _flameTowers = new HashIntMap<>();
 
     private int _attackerMaxClans = 500; // Max number of clans
     private int _attackerRespawnDelay = 0; // Time in ms. Changeable in siege.config
@@ -58,7 +59,6 @@ public final class SiegeManager {
     private int _bloodAllianceReward = 0; // Number of Blood Alliance items reward for successful castle defending
 
     private SiegeManager() {
-        load();
     }
 
     public final void addSiegeSkills(Player player) {
@@ -196,18 +196,32 @@ public final class SiegeManager {
         return sieges;
     }
 
-    private void loadTrapUpgrade(int castleId) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_trap_upgrade WHERE castle_id=?")) {
-            ps.setInt(1, castleId);
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    _flameTowers.get(castleId).get(rs.getInt("towerIndex")).setUpgradeLevel(rs.getInt("level"));
-                }
+    public void sendSiegeHUDInfo(Player player)
+    {
+        for (Castle castle : CastleManager.getInstance().getCastles())
+        {
+            int diff = (int)  castle.getSiege().currentStateRemainTimeInSeconds();
+            if (diff < (24 * 60 * 60 * 1000))
+            {
+                player.sendPacket(new ExMercenarySiegeHUDInfo(castle.getId()));
             }
-        } catch (Exception e) {
-            LOGGER.warn("Exception: loadTrapUpgrade(): " + e.getMessage(), e);
         }
+    }
+
+    public void sendSiegeHUDInfo(Player player, int castleId)
+    {
+        player.sendPacket(new ExMercenarySiegeHUDInfo(castleId));
+    }
+
+    private void loadTrapUpgrade(int castleId) {
+        for (var data : getDAO(SiegeDAO.class).loadTrapsUpgrade(castleId)) {
+            _flameTowers.get(castleId).get(data.getKey()).setUpgradeLevel(data.getValue());
+        }
+    }
+
+    public static void init() {
+        getInstance().load();
+        getInstance().getSieges();
     }
 
     public static SiegeManager getInstance() {

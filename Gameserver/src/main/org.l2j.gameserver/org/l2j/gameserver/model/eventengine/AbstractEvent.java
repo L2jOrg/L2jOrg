@@ -22,6 +22,8 @@ package org.l2j.gameserver.model.eventengine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.nio.file.Path;
 
@@ -73,4 +75,7 @@ public abstract class AbstractEvent extends AbstractScript {
     }
 
     public abstract void sendMessage(SystemMessageId messageId);
+
+    public abstract void sendPacket(ServerPacket packet);
+
 }

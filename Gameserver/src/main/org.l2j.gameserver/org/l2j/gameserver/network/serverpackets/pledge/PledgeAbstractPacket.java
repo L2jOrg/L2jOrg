@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -32,22 +33,22 @@ public abstract class PledgeAbstractPacket extends ServerPacket {
         this.clan = clan;
     }
 
-    protected void writeClanInfo(int pledgeId) {
-        writeInt(clan.getCrestId());
-        writeInt(clan.getLevel());
-        writeInt(clan.getCastleId());
-        writeInt(0x00);
-        writeInt(clan.getHideoutId());
-        writeInt(0x00); // fort Id
-        writeInt(clan.getRank());
-        writeInt(clan.getReputationScore());
-        writeInt(0x00); // 0
-        writeInt(0x00); // 0
-        writeInt(clan.getAllyId());
-        writeString(clan.getAllyName());
-        writeInt(clan.getAllyCrestId());
-        writeInt(clan.isAtWar()); // new c3
-        writeInt(0x00); // Territory castle ID
-        writeInt(clan.getSubPledgeMembersCount(pledgeId));
+    protected void writeClanInfo(int pledgeId, WritableBuffer buffer) {
+        buffer.writeInt(clan.getCrestId());
+        buffer.writeInt(clan.getLevel());
+        buffer.writeInt(clan.getCastleId());
+        buffer.writeInt(0x00);
+        buffer.writeInt(clan.getHideoutId());
+        buffer.writeInt(0x00); // fort Id
+        buffer.writeInt(clan.getRank());
+        buffer.writeInt(clan.getReputationScore());
+        buffer.writeInt(0x00); // 0
+        buffer.writeInt(0x00); // 0
+        buffer.writeInt(clan.getAllyId());
+        buffer.writeString(clan.getAllyName());
+        buffer.writeInt(clan.getAllyCrestId());
+        buffer.writeInt(clan.isAtWar()); // new c3
+        buffer.writeInt(0x00); // Territory castle ID
+        buffer.writeInt(clan.getSubPledgeMembersCount(pledgeId));
     }
 }

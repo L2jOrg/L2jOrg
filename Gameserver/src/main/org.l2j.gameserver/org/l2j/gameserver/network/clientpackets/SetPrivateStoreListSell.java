@@ -22,18 +22,20 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import org.l2j.gameserver.network.serverpackets.PrivateStoreMsgSell;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class ...
@@ -116,15 +118,16 @@ public class SetPrivateStoreListSell extends ClientPacket {
         tradeList.setPackaged(_packageSale);
 
         long totalCost = player.getAdena();
+        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
         for (Item i : _items) {
             if (!i.addToTradeList(tradeList)) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + Inventory.MAX_ADENA + " adena in Private Store - Sell.");
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + maxAdena + " adena in Private Store - Sell.");
                 return;
             }
 
             totalCost += i.getPrice();
-            if (totalCost > Inventory.MAX_ADENA) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set total price more than " + Inventory.MAX_ADENA + " adena in Private Store - Sell.");
+            if (totalCost > maxAdena) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set total price more than " + maxAdena + " adena in Private Store - Sell.");
                 return;
             }
         }
@@ -157,7 +160,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
         }
 
         public boolean addToTradeList(TradeList list) {
-            if ((Inventory.MAX_ADENA / _count) < _price) {
+            if (MathUtil.checkMulOverFlow(_price, _count, getSettings(CharacterSettings.class).maxAdena())) {
                 return false;
             }
 

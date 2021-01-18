@@ -49,9 +49,6 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("UPDATE characters SET clanid=0, clan_privs=0, wantspeace=0, subpledge=0, title='', lvl_joined_academy=0, apprentice=0, sponsor=0, clan_join_expiry_time=:clanJoinExpiryTime:, clan_create_expiry_time=:clanCreateExpiryTime: WHERE charId = :playerId:")
     void deleteClanInfoOfMember(int playerId, long clanJoinExpiryTime, long clanCreateExpiryTime);
 
-    @Query("DELETE FROM character_instance_time WHERE time <= :timestamp:")
-    void deleteExpiredInstances(long timestamp);
-
     @Query("DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= :timestamp:")
     void deleteExpiredSavedSkills(long timestamp);
 
@@ -181,29 +178,23 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("UPDATE characters SET vitality_points = :points:")
     void resetVitality(int points);
 
-    @Query("DELETE FROM character_recipebook WHERE charId=:playerId: AND id=:recipeId: AND classIndex=:classIndex:")
-    void deleteRecipe(int playerId, int recipeId, int classIndex);
+    @Query("DELETE FROM recipes WHERE player_id=:playerId: AND id=:recipeId:")
+    void deleteRecipe(int playerId, int recipeId);
+
+    @Query("SELECT id FROM recipes WHERE player_id=:playerId:")
+    IntSet findAllRecipes(int playerId);
+
+    @Query("INSERT INTO recipes (player_id, id) values(:playerId:,:id:)")
+    void addRecipe(int playerId, int id);
 
     @Query("UPDATE characters SET online=:online:, lastAccess=:lastAccess: WHERE charId=:playerId:")
     void updateOnlineStatus(int playerId, boolean online, long lastAccess);
 
-    @Query("DELETE FROM character_skills WHERE skill_id=:skillId: AND charId=:playerId: AND class_index=:classIndex:")
-    void deleteSkill(int playerId, int skillId, int classIndex);
+    @Query("DELETE FROM character_skills WHERE skill_id=:skillId: AND charId=:playerId:")
+    void deleteSkill(int playerId, int skillId);
 
-    @Query("DELETE FROM character_hennas WHERE charId=:playerId: AND slot=:slot: AND class_index=:classIndex:")
-    void deleteHenna(int playerId, int slot, int classIndex);
-
-    @Query("DELETE FROM character_hennas WHERE charId=:playerId: AND class_index=:classIndex:")
-    void deleteHennas(int playerId, int classIndex);
-
-    @Query("DELETE FROM character_skills_save WHERE charId=:playerId: AND class_index=:classIndex:")
-    void deleteSkillsSave(int playerId, int classIndex);
-
-    @Query("DELETE FROM character_skills WHERE charId=? AND class_index=?")
-    void deleteSkills(int playerId, int classIndex);
-
-    @Query("DELETE FROM character_subclasses WHERE charId=:playerId: AND class_index=:classIndex:")
-    void deleteSubClass(int playerId, int classIndex);
+    @Query("DELETE FROM character_hennas WHERE charId=:playerId: AND slot=:slot:")
+    void deleteHenna(int playerId, int slot);
 
     @Query("UPDATE character_tpbookmark SET icon=:icon:,tag=:tag:,name=:name: where charId=:playerId: AND Id=:id:")
     void updateTeleportBookMark(int playerId, int id, int icon, String tag, String name);
@@ -226,8 +217,11 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("DELETE FROM character_contacts WHERE charId =:playeId: and contactId = :contactId:")
     void deleteContact(int playerId, int contactId);
 
-    @Query("DELETE FROM character_macroses WHERE charId=:playerId: AND id=:id:")
-    void deleteMacro(int playerId, int id);
+    @Query("INSERT INTO character_contacts (charId, contactId) VALUES (:playerId:, :contactId:)")
+    void addContact(int playerId, int contactId);
+
+    @Query("SELECT contactId FROM character_contacts WHERE charId = :objectId:")
+    void findContacts(int objectId, Consumer<ResultSet> resultSet);
 
     @Query("DELETE FROM character_instance_time WHERE charId=:playerId: AND instanceId=:id:")
     void deleteInstanceTime(int playerId, int id);

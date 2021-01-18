@@ -21,6 +21,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.PrivateStoreType;
@@ -28,7 +29,6 @@ import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
@@ -361,7 +361,7 @@ public final class SellBuffsManager extends GameXmlReader {
         if (player.isAlikeDead()) {
             player.sendMessage("You can't sell buffs in fake death!");
             return false;
-        } else if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player)) {
+        } else if (Olympiad.getInstance().isRegistered(player)) {
             player.sendMessage("You can't sell buffs with Olympiad status!");
             return false;
         } else if (player.isOnEvent()) // custom event message

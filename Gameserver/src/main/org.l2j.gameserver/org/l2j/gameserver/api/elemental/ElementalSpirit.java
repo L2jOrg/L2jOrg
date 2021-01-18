@@ -45,7 +45,6 @@ import static org.l2j.gameserver.network.SystemMessageId.YOU_HAVE_ACQUIRED_S1S_S
  */
 public class ElementalSpirit {
 
-
     private static final int[] DEFENSE_MOD_POINTS = {15, 10, 5, 0};
     private static final int[] DEFENSE_MOD_VALUES = {9, 8, 7, 6};
 
@@ -100,7 +99,7 @@ public class ElementalSpirit {
     public int getAvailableCharacteristicsPoints() {
         var stage = data.getStage();
         var level = data.getLevel();
-        var points = ((stage -1) * 11) +  ( stage > 2 ? (level -1) * 2 : level -1);
+        var points = 1 + ((stage -1) * 11) +  ( stage > 2 ? (level -1) * 2 : level -1);
         return max(points - data.getAttackPoints() - data.getDefensePoints() - data.getCritDamagePoints() - data.getCritRatePoints(), 0);
     }
 
@@ -114,12 +113,13 @@ public class ElementalSpirit {
     }
 
     public int getExtractAmount() {
-        return Math.round( (data.getExperience() - getExperienceToPreviousLevel()) / ElementalSpiritEngine.FRAGMENT_XP_CONSUME);
+        //must be Math.abs, else it glitches out
+        return (int) Math.abs((data.getExperience() - getExperienceToPreviousLevel()) / ElementalSpiritEngine.FRAGMENT_XP_CONSUME);
     }
 
     public void resetLevel() {
-        data.setLevel((byte) Math.max(1, data.getLevel() -1));
-        data.setExperience(0);
+        //TODO refine the calculation so that it returns the same percentage
+        data.setExperience((int) (getExperienceToPreviousLevel() + ((data.getExperience() - getExperienceToPreviousLevel()) % ElementalSpiritEngine.FRAGMENT_XP_CONSUME)));
         resetCharacteristics();
     }
 

@@ -19,6 +19,8 @@
 package org.l2j.commons.database.helpers;
 
 import io.github.joealisson.primitive.IntKeyValue;
+import org.l2j.commons.database.HandlersSupport;
+import org.l2j.commons.database.TypeHandler;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -26,6 +28,7 @@ import java.util.Map;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.findField;
 
 /**
  * @author JoeAlisson
@@ -52,12 +55,12 @@ public class EntityBasedStrategy implements MapParameterStrategy {
         try {
             var clazz = entity.getClass();
             for (var parameterInfo : parametersInfo.entrySet()) {
-                var field = clazz.getDeclaredField(parameterInfo.getKey());
-                if(field.trySetAccessible()) {
+                var field = findField(clazz, parameterInfo.getKey());
+                if(nonNull(field) && field.trySetAccessible()) {
                     var argumentIndex = parameterInfo.getValue().getKey();
                     var value = field.get(entity);
                     var type = parameterInfo.getValue().getValue();
-                    var handler = HandlersSupport.handlerFromClass(type);
+                    var handler = (TypeHandler<Object>) HandlersSupport.handlerFromClass(type);
                     if(nonNull(value)) {
                         handler.setParameter(statement, argumentIndex, value);
                     } else {
@@ -67,7 +70,7 @@ public class EntityBasedStrategy implements MapParameterStrategy {
                     throw new SQLException("No accessible field " + field.getName() + " On type " + clazz );
                 }
             }
-        } catch (NoSuchFieldException | IllegalAccessException e) {
+        } catch (IllegalAccessException e) {
             throw new SQLException(e);
         }
 

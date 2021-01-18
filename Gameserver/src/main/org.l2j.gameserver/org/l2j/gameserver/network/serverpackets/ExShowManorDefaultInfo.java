@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.network.GameClient;
@@ -38,20 +39,20 @@ public final class ExShowManorDefaultInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_MANOR_DEFAULT_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_MANOR_DEFAULT_INFO, buffer );
 
-        writeByte((byte) (_hideButtons ? 0x01 : 0x00)); // Hide "Seed Purchase" and "Crop Sales" buttons
-        writeInt(_crops.size());
+        buffer.writeByte(_hideButtons); // Hide "Seed Purchase" and "Crop Sales" buttons
+        buffer.writeInt(_crops.size());
         for (Seed crop : _crops) {
-            writeInt(crop.getCropId()); // crop Id
-            writeInt(crop.getLevel()); // level
-            writeInt((int) crop.getSeedReferencePrice()); // seed price
-            writeInt((int) crop.getCropReferencePrice()); // crop price
-            writeByte((byte) 1); // Reward 1 type
-            writeInt(crop.getReward(1)); // Reward 1 itemId
-            writeByte((byte) 1); // Reward 2 type
-            writeInt(crop.getReward(2)); // Reward 2 itemId
+            buffer.writeInt(crop.getCropId()); // crop Id
+            buffer.writeInt(crop.getLevel()); // level
+            buffer.writeInt((int) crop.getSeedReferencePrice()); // seed price
+            buffer.writeInt((int) crop.getCropReferencePrice()); // crop price
+            buffer.writeByte(1); // Reward 1 type
+            buffer.writeInt(crop.getReward(1)); // Reward 1 itemId
+            buffer.writeByte(1); // Reward 2 type
+            buffer.writeInt(crop.getReward(2)); // Reward 2 itemId
         }
     }
 

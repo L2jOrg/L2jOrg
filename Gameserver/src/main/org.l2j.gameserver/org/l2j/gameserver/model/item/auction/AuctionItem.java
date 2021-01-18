@@ -22,7 +22,7 @@ package org.l2j.gameserver.model.item.auction;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.world.World;
 
 /**
@@ -73,9 +73,6 @@ public final class AuctionItem {
     }
 
     public final Item createNewItemInstance() {
-        final Item item = new Item(IdFactory.getInstance().getNextId(), _itemId);
-        World.getInstance().addObject(item);
-        item.setCount(_itemCount);
-        return item;
+        return ItemEngine.getInstance().createItem("Auction", _itemId, _itemCount, null, null);
     }
 }

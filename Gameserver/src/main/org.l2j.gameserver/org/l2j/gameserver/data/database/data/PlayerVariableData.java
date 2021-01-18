@@ -28,17 +28,8 @@ import org.l2j.commons.database.annotation.Table;
 public class PlayerVariableData {
 
     public static final int REVENGE_USABLE_FUNCTIONS = 5;
-
-    public static PlayerVariableData init(int playerId, byte face, byte hairStyle, byte hairColor) {
-        var data = new PlayerVariableData();
-        data.revengeTeleports = REVENGE_USABLE_FUNCTIONS;
-        data.revengeLocations = REVENGE_USABLE_FUNCTIONS;
-        data.playerId = playerId;
-        data.visualFaceId = face;
-        data.visualHairId = hairStyle;
-        data.visualHairColorId = hairColor;
-        return data;
-    }
+    public static final String MAGIC_LAMP_EXP = "MAGIC_LAMP_EXP";
+    public static final String MAGIC_LAMP_COUNT = "MAGIC_LAMP_COUNT";
 
     @Column("player_id")
     private int playerId;
@@ -118,9 +109,6 @@ public class PlayerVariableData {
     @Column("visual_face_id")
     private int visualFaceId;
 
-    @Column("instance_origin")
-    private String instanceOrigin;
-
     @Column("instance_restore")
     private int instanceRestore;
 
@@ -139,11 +127,14 @@ public class PlayerVariableData {
     @Column("attendance_index")
     private int attendanceIndex;
 
-    @Column("unclaimed_olympiad_points")
-    private int unclaimedOlympiadPoints;
-
     @Column("monster_return")
     private int monsterReturn;
+
+    @Column("lamp_xp")
+    private int lampXp;
+
+    @Column("lamp_count")
+    private int lampCount;
 
     public boolean isHairAccessoryEnabled() {
         return hairAccessoryEnabled;
@@ -241,16 +232,6 @@ public class PlayerVariableData {
         return visualFaceId;
     }
 
-    public int[] getInstanceOrigin() {
-        String[] instanceOriginString = instanceOrigin.split(";");
-        int[] instanceOriginInt = new int [instanceOriginString.length];
-
-        for (int i = 0; i < instanceOriginString.length ; i++)
-            instanceOriginInt[i] = Integer.parseInt(instanceOriginString[i]);
-
-        return instanceOriginInt;
-    }
-
     public int getInstanceRestore() {
         return instanceRestore;
     }
@@ -273,10 +254,6 @@ public class PlayerVariableData {
 
     public int getAttendanceIndex() {
         return attendanceIndex;
-    }
-
-    public int getUnclaimedOlympiadPoints() {
-        return unclaimedOlympiadPoints;
     }
 
     public int getMonsterReturn() {
@@ -379,10 +356,6 @@ public class PlayerVariableData {
         this.visualFaceId = visualFaceId;
     }
 
-    public void setInstanceOrigin(String instanceOrigin) {
-        this.instanceOrigin = instanceOrigin;
-    }
-
     public void setInstanceRestore(int instanceRestore) {
         this.instanceRestore = instanceRestore;
     }
@@ -401,10 +374,6 @@ public class PlayerVariableData {
 
     public void setAttendanceIndex(int attendanceIndex) {
         this.attendanceIndex = attendanceIndex;
-    }
-
-    public void setUnclaimedOlympiadPoints(int unclaimedOlympiadPoints) {
-        this.unclaimedOlympiadPoints = unclaimedOlympiadPoints;
     }
 
     public void setMonsterReturn(int monsterReturn) {
@@ -434,5 +403,32 @@ public class PlayerVariableData {
     public void resetRevengeData() {
         revengeTeleports = REVENGE_USABLE_FUNCTIONS;
         revengeLocations = REVENGE_USABLE_FUNCTIONS;
+    }
+
+    public int getLampExp(){
+        return lampXp;
+    }
+
+    public int getLampCount(){
+        return lampCount;
+    }
+
+    public void setLampXp(int exp) {
+        this.lampXp = exp;
+    }
+
+    public void setLampCount(int count) {
+        this.lampCount = count;
+    }
+
+    public static PlayerVariableData init(int playerId, byte face, byte hairStyle, byte hairColor) {
+        var data = new PlayerVariableData();
+        data.revengeTeleports = REVENGE_USABLE_FUNCTIONS;
+        data.revengeLocations = REVENGE_USABLE_FUNCTIONS;
+        data.playerId = playerId;
+        data.visualFaceId = face;
+        data.visualHairId = hairStyle;
+        data.visualHairColorId = hairColor;
+        return data;
     }
 }

@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.model.punishment;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.PunishmentDAO;
+import org.l2j.gameserver.data.database.data.PunishmentData;
 import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.handler.PunishmentHandler;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
@@ -30,7 +30,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.*;
 import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -42,14 +41,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 public class PunishmentTask implements Runnable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(PunishmentTask.class);
 
-    private static final String INSERT_QUERY = "INSERT INTO punishments (`key`, `affect`, `type`, `expiration`, `reason`, `punishedBy`) VALUES (?, ?, ?, ?, ?, ?)";
-    private final String _key;
-    private final PunishmentAffect _affect;
-    private final PunishmentType _type;
-    private final long _expirationTime;
-    private final String _reason;
-    private final String _punishedBy;
-    private int _id;
+    private final PunishmentData data;
     private boolean _isStored;
     private ScheduledFuture<?> _task = null;
 
@@ -57,16 +49,14 @@ public class PunishmentTask implements Runnable {
         this(0, key, affect, type, expirationTime, reason, punishedBy, false);
     }
 
-    public PunishmentTask(int id, Object key, PunishmentAffect affect, PunishmentType type, long expirationTime, String reason, String punishedBy, boolean isStored) {
-        _id = id;
-        _key = String.valueOf(key);
-        _affect = affect;
-        _type = type;
-        _expirationTime = expirationTime;
-        _reason = reason;
-        _punishedBy = punishedBy;
-        _isStored = isStored;
+    public PunishmentTask(PunishmentData data, boolean stored) {
+        this.data = data;
+        this._isStored = stored;
+    }
 
+    public PunishmentTask(int id, Object key, PunishmentAffect affect, PunishmentType type, long expirationTime, String reason, String punishedBy, boolean isStored) {
+        this(PunishmentData.of(String.valueOf(key), affect, type, expirationTime, reason, punishedBy), isStored);
+        this.data.setId(id);
         startPunishment();
     }
 
@@ -74,42 +64,42 @@ public class PunishmentTask implements Runnable {
      * @return affection value charId, account, ip, etc..
      */
     public Object getKey() {
-        return _key;
+        return data.getKey();
     }
 
     /**
      * @return {@link PunishmentAffect} affection type, account, character, ip, etc..
      */
     public PunishmentAffect getAffect() {
-        return _affect;
+        return data.getAffect();
     }
 
     /**
      * @return {@link PunishmentType} type of current punishment.
      */
     public PunishmentType getType() {
-        return _type;
+        return data.getType();
     }
 
     /**
      * @return milliseconds to the end of the current punishment, -1 for infinity.
      */
     public final long getExpirationTime() {
-        return _expirationTime;
+        return data.getExpiration();
     }
 
     /**
      * @return the reason for this punishment.
      */
     public String getReason() {
-        return _reason;
+        return data.getReason();
     }
 
     /**
      * @return name of the punishment issuer.
      */
     public String getPunishedBy() {
-        return _punishedBy;
+        return data.getPunisher();
     }
 
     /**
@@ -123,7 +113,7 @@ public class PunishmentTask implements Runnable {
      * @return {@code true} if current punishment task has expired, {@code false} otherwise.
      */
     public final boolean isExpired() {
-        return (_expirationTime > 0) && (System.currentTimeMillis() > _expirationTime);
+        return (data.getExpiration() > 0) && (System.currentTimeMillis() > data.getExpiration());
     }
 
     /**
@@ -135,9 +125,9 @@ public class PunishmentTask implements Runnable {
         }
 
         onStart();
-        if (_expirationTime > 0) // Has expiration?
+        if (data.getExpiration() > 0) // Has expiration?
         {
-            _task = ThreadPool.schedule(this, (_expirationTime - System.currentTimeMillis()));
+            _task = ThreadPool.schedule(this, (data.getExpiration() - System.currentTimeMillis()));
         }
     }
 
@@ -166,27 +156,10 @@ public class PunishmentTask implements Runnable {
      */
     private void onStart() {
         if (!_isStored) {
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement st = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS)) {
-                st.setString(1, _key);
-                st.setString(2, _affect.name());
-                st.setString(3, _type.name());
-                st.setLong(4, _expirationTime);
-                st.setString(5, _reason);
-                st.setString(6, _punishedBy);
-                st.execute();
-                try (ResultSet rset = st.getGeneratedKeys()) {
-                    if (rset.next()) {
-                        _id = rset.getInt(1);
-                    }
-                }
-                _isStored = true;
-            } catch (SQLException e) {
-                LOGGER.warn(getClass().getSimpleName() + ": Couldn't store punishment task for: " + _affect + " " + _key, e);
-            }
+            _isStored = getDAO(PunishmentDAO.class).save(data);
         }
 
-        final IPunishmentHandler handler = PunishmentHandler.getInstance().getHandler(_type);
+        final IPunishmentHandler handler = PunishmentHandler.getInstance().getHandler(data.getType());
         if (handler != null) {
             handler.onStart(this);
         }
@@ -197,17 +170,17 @@ public class PunishmentTask implements Runnable {
      */
     private void onEnd() {
         if (_isStored) {
-            getDAO(PunishmentDAO.class).updateExpiration(_id, System.currentTimeMillis());
+            getDAO(PunishmentDAO.class).updateExpiration(data.getId(), System.currentTimeMillis());
         }
 
-        if (_type == PunishmentType.CHAT_BAN && _affect == PunishmentAffect.CHARACTER) {
-            final Player player = World.getInstance().findPlayer(Integer.parseInt(_key));
+        if (data.getType() == PunishmentType.CHAT_BAN && data.getAffect() == PunishmentAffect.CHARACTER) {
+            final Player player = World.getInstance().findPlayer(Integer.parseInt(data.getKey()));
             if (player != null) {
                 player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
             }
         }
 
-        final IPunishmentHandler handler = PunishmentHandler.getInstance().getHandler(_type);
+        final IPunishmentHandler handler = PunishmentHandler.getInstance().getHandler(data.getType());
         if (handler != null) {
             handler.onEnd(this);
         }
@@ -218,6 +191,6 @@ public class PunishmentTask implements Runnable {
      */
     @Override
     public final void run() {
-        PunishmentManager.getInstance().stopPunishment(_key, _affect, _type);
+        PunishmentManager.getInstance().stopPunishment(data.getKey(), data.getAffect(), data.getType());
     }
 }

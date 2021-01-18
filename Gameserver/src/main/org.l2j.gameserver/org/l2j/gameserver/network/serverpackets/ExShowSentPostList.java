@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.network.GameClient;
@@ -37,24 +38,24 @@ public class ExShowSentPostList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_SENT_POST_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_SENT_POST_LIST, buffer );
 
-        writeInt((int) (System.currentTimeMillis() / 1000));
-        writeInt(outbox.size());
-        outbox.forEach(this::writeMail);
+        buffer.writeInt((int) (System.currentTimeMillis() / 1000));
+        buffer.writeInt(outbox.size());
+        outbox.forEach(mail -> writeMail(mail, buffer));
     }
 
-    private void writeMail(MailData mail) {
-        writeInt(mail.getId());
-        writeString(mail.getSubject());
-        writeString(mail.getReceiverName());
-        writeInt(mail.isLocked());
-        writeInt((int) (mail.getExpiration() / 1000));
-        writeInt(mail.isUnread());
-        writeInt(0x01);
-        writeInt(mail.hasAttachments());
-        writeInt(0x00);
+    private void writeMail(MailData mail, WritableBuffer buffer) {
+        buffer.writeInt(mail.getId());
+        buffer.writeString(mail.getSubject());
+        buffer.writeString(mail.getReceiverName());
+        buffer.writeInt(mail.isLocked());
+        buffer.writeInt((int) (mail.getExpiration() / 1000));
+        buffer.writeInt(mail.isUnread());
+        buffer.writeInt(0x01);
+        buffer.writeInt(mail.hasAttachments());
+        buffer.writeInt(0x00);
     }
 
 }

@@ -19,13 +19,15 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.Shutdown;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -41,10 +43,10 @@ public class ServerRestartManager {
             final Calendar currentTime = Calendar.getInstance();
             final Calendar restartTime = Calendar.getInstance();
             Calendar lastRestart = null;
-            long delay = 0;
+            long delay;
             long lastDelay = 0;
 
-            for (String scheduledTime : Config.SERVER_RESTART_SCHEDULE) {
+            for (String scheduledTime : getSettings(ServerSettings.class).scheduleRestartHours()) {
                 final String[] splitTime = scheduledTime.trim().split(":");
                 restartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTime[0]));
                 restartTime.set(Calendar.MINUTE, Integer.parseInt(splitTime[1]));
@@ -67,7 +69,7 @@ public class ServerRestartManager {
 
             if (lastRestart != null) {
                 nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
-                ThreadPool.schedule(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
+                ThreadPool.schedule(new ServerRestartTask(), lastDelay - 600000);
                 LOGGER.info("Scheduled server restart at " + lastRestart.getTime() + ".");
             }
         } catch (Exception e) {
@@ -87,10 +89,10 @@ public class ServerRestartManager {
         private static final ServerRestartManager INSTANCE = new ServerRestartManager();
     }
 
-    class ServerRestartTask implements Runnable {
+    static class ServerRestartTask implements Runnable {
         @Override
         public void run() {
-            Shutdown.getInstance().startShutdown(null, Config.SERVER_RESTART_SCHEDULE_COUNTDOWN, true);
+            Shutdown.getInstance().startShutdown(null, 600, true);
         }
     }
 }

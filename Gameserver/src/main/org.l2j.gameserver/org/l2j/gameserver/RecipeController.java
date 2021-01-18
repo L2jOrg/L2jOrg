@@ -21,6 +21,7 @@ package org.l2j.gameserver;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.StatType;
@@ -29,11 +30,11 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
@@ -45,6 +46,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.model.DamageInfo.DamageType;
 
 
@@ -253,7 +255,7 @@ public class RecipeController {
 
         @Override
         public void run() {
-            if (!Config.IS_CRAFTING_ENABLED) {
+            if (!getSettings(CharacterSettings.class).isCraftEnabled()) {
                 _target.sendMessage("Item creation is currently disabled.");
                 abort();
                 return;
@@ -384,7 +386,7 @@ public class RecipeController {
         }
 
         private void updateCurLoad() {
-            _target.sendPacket(new ExUserInfoInvenWeight(_target));
+            _target.sendPacket(new ExUserInfoInvenWeight());
         }
 
         private void updateCurMp() {

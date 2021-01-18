@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.network.GameClient;
@@ -68,20 +69,20 @@ public class StaticObject extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.STATIC_OBJECT_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.STATIC_OBJECT_INFO, buffer );
 
-        writeInt(_staticObjectId);
-        writeInt(_objectId);
-        writeInt(_type);
-        writeInt(_isTargetable ? 1 : 0);
-        writeInt(_meshIndex);
-        writeInt(_isClosed ? 1 : 0);
-        writeInt(_isEnemy ? 1 : 0);
-        writeInt(_currentHp);
-        writeInt(_maxHp);
-        writeInt(_showHp ? 1 : 0);
-        writeInt(_damageGrade);
+        buffer.writeInt(_staticObjectId);
+        buffer.writeInt(_objectId);
+        buffer.writeInt(_type);
+        buffer.writeInt(_isTargetable ? 1 : 0);
+        buffer.writeInt(_meshIndex);
+        buffer.writeInt(_isClosed ? 1 : 0);
+        buffer.writeInt(_isEnemy ? 1 : 0);
+        buffer.writeInt(_currentHp);
+        buffer.writeInt(_maxHp);
+        buffer.writeInt(_showHp ? 1 : 0);
+        buffer.writeInt(_damageGrade);
     }
 
 }

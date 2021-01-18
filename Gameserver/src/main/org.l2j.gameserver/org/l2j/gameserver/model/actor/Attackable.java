@@ -26,6 +26,7 @@ import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
 import org.l2j.gameserver.datatables.drop.EventDropList;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -44,14 +45,13 @@ import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.status.AttackableStatus;
 import org.l2j.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAggroRangeEnter;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAttack;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.stats.Stat;
@@ -216,14 +216,11 @@ public class Attackable extends Npc {
             addDamage(attacker, (int) value, skill);
 
             // Check Raidboss attack. Character will be petrified if attacking a raid that's more than 8 levels lower. In retail you deal damage to raid before curse.
-            if (_isRaid && giveRaidCurse() && !Config.RAID_DISABLE_CURSE) {
+            /*if (_isRaid){
                 if (attacker.getLevel() > (getLevel() + 8)) {
-                    final Skill raidCurse = CommonSkill.RAID_CURSE2.getSkill();
-                    if (raidCurse != null) {
-                        raidCurse.applyEffects(this, attacker);
-                    }
+                    //TODO adding a rule tocreate a boolean flag on Attackable something like, mustGiveReward and set it to false when some higher level player attacks him so in the calculateRewards check this flag and returns when it is false
                 }
-            }
+            }*/
         }
 
         // If this Attackable is a Monster and it has spawned minions, call its minions to battle
@@ -263,37 +260,27 @@ public class Attackable extends Npc {
      */
     @Override
     public boolean doDie(Creature killer) {
-        // Kill the Folk (the corpse disappeared after 7 seconds)
         if (!super.doDie(killer)) {
             return false;
         }
 
-        Object payload = null;
-        if (GameUtils.isMonster(this)) {
-            final Monster mob = (Monster) this;
-            if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
-                payload = mob.getLeader();
-        }
-
         if (nonNull(killer.getActingPlayer())) {
-            // Delayed notification
+            Object payload = null;
+            if (GameUtils.isMonster(this)) {
+                final Monster mob = (Monster) this;
+                if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
+                    payload = mob.getLeader();
+            }
             EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, GameUtils.isSummon(killer), payload), this);
         }
 
-        // Notify to minions if there are.
-        if (GameUtils.isMonster(this)) {
-            final Monster mob = (Monster) this;
-            if ((mob.getLeader() != null) && mob.getLeader().hasMinions()) {
-                final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1;
-                mob.getLeader().getMinionList().onMinionDie(mob, respawnTime);
-            }
-
-            if (mob.hasMinions()) {
-                mob.getMinionList().onMasterDie(false);
-            }
-        }
-
         return true;
+    }
+
+    @Override
+    protected void onDie(Creature killer) {
+        calculateRewards(killer);
+        super.onDie(killer);
     }
 
     /**
@@ -306,8 +293,7 @@ public class Attackable extends Npc {
      *
      * @param lastAttacker The Creature that has killed the Attackable
      */
-    @Override
-    protected void calculateRewards(Creature lastAttacker) {
+    private void calculateRewards(Creature lastAttacker) {
         try {
             if (_aggroList.isEmpty()) {
                 return;
@@ -369,18 +355,11 @@ public class Attackable extends Npc {
                         final int points = Math.max(raidbossPoints / members.size(), 1);
                         p.increaseRaidbossPoints(points);
                         p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
-
-                        if (p.isNoble()) {
-                            Hero.getInstance().setRBkilled(p.getObjectId(), getId());
-                        }
                     });
                 } else {
                     final int points = Math.max(raidbossPoints, 1);
                     player.increaseRaidbossPoints(points);
                     player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
-                    if (player.isNoble()) {
-                        Hero.getInstance().setRBkilled(player.getObjectId(), getId());
-                    }
                 }
             }
 
@@ -461,8 +440,9 @@ public class Attackable extends Npc {
                                         }
                                         clan.addHuntingPoints(attacker, this, finalExp);
                                     }
-                                    attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
+                                    attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true);
                                     PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+                                    MagicLampData.getInstance().addLampExp(attacker, exp, true);
                                 }
 
                                 rewardAttributeExp(attacker, damage, totalDamage);
@@ -863,8 +843,7 @@ public class Attackable extends Npc {
         final Player player = mainDamageDealer.getActingPlayer();
 
         // Don't drop anything if the last attacker or owner isn't Player
-        // FIXME: Delete this hotfix asap: player.getClient() == null
-        if (player == null || !player.isOnline() || player.getClient() == null) {
+        if (player == null || !player.isOnline()) {
             return;
         }
 
@@ -879,7 +858,8 @@ public class Attackable extends Npc {
             final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
             // Check if the autoLoot mode is active
             var characterSettings = getSettings(CharacterSettings.class);
-            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot()) || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS)) {
+            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot())
+                    || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && characterSettings.autoLootHerbs())) {
                 player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
             } else {
                 dropItem(player, drop); // drop the item on the ground

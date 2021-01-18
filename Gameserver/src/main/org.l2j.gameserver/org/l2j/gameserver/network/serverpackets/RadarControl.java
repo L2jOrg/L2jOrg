@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -37,14 +38,14 @@ public class RadarControl extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.RADAR_CONTROL);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.RADAR_CONTROL, buffer );
 
-        writeInt(_showRadar);
-        writeInt(_type); // maybe type
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
+        buffer.writeInt(_showRadar);
+        buffer.writeInt(_type); // maybe type
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
     }
 
 }

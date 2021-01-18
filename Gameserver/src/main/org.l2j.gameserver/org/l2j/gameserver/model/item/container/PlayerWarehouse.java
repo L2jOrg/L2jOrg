@@ -45,7 +45,7 @@ public class PlayerWarehouse extends Warehouse {
 
     @Override
     public boolean validateCapacity(long slots) {
-        return ((items.size() + slots) <= _owner.getWareHouseLimit());
+        return items.size() + slots <= _owner.getWareHouseLimit();
     }
 
     @Override

@@ -29,6 +29,7 @@ import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceRemoveBuffType;
 import org.l2j.gameserver.enums.InstanceTeleportType;
+import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -55,6 +56,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -73,7 +75,6 @@ public final class InstanceManager extends GameXmlReader {
     private final IntMap<InstanceTemplate> instanceTemplates = new HashIntMap<>();
     private final IntMap<Instance> instanceWorlds = new CHashIntMap<>();
     private final IntMap<IntLongMap> playerInstanceTimes = new CHashIntMap<>();
-    private int currentInstanceId = 0;
 
     private InstanceManager() {
     }
@@ -290,39 +291,23 @@ public final class InstanceManager extends GameXmlReader {
         return locations;
     }
 
-    /**
-     * Create new instance with default template.
-     *
-     * @return newly created default instance.
-     */
-    public Instance createInstance() {
-        return new Instance(getNewInstanceId(), DEFAULT_TEMPLATE, null);
+    public Instance createInstance(int templateId) {
+        return createInstance(templateId, null);
     }
 
-    /**
-     * Create new instance from given template.
-     *
-     * @param template template used for instance creation
-     * @param player   player who create instance.
-     * @return newly created instance if success, otherwise {@code null}
-     */
-    public Instance createInstance(InstanceTemplate template, Player player) {
-        return (template != null) ? new Instance(getNewInstanceId(), template, player) : null;
-    }
+    public Instance createInstance(int templateId, Player player) {
+        var template= instanceTemplates.get(templateId);
 
-    /**
-     * Create new instance with template defined in datapack.
-     *
-     * @param id     template id of instance
-     * @param player player who create instance
-     * @return newly created instance if template was found, otherwise {@code null}
-     */
-    public Instance createInstance(int id, Player player) {
-        if (!instanceTemplates.containsKey(id)) {
-            LOGGER.warn(": Missing template for instance with id " + id + "!");
-            return null;
+        if(isNull(template)) {
+            LOGGER.warn("Missing template for instance with id {}!", templateId);
+            template = DEFAULT_TEMPLATE;
         }
-        return new Instance(getNewInstanceId(), instanceTemplates.get(id), player);
+
+        var id= IdFactory.getInstance().getNextId();
+        var instance = new Instance(id, template);
+        instanceWorlds.put(id, instance);
+        instance.init(player);
+        return instance;
     }
 
     /**
@@ -356,34 +341,6 @@ public final class InstanceManager extends GameXmlReader {
     }
 
     /**
-     * Get ID for newly created instance.
-     *
-     * @return instance id
-     */
-    private synchronized int getNewInstanceId() {
-        do {
-            if (currentInstanceId == Integer.MAX_VALUE) {
-                currentInstanceId = 0;
-            }
-            currentInstanceId++;
-        }
-        while (instanceWorlds.containsKey(currentInstanceId));
-        return currentInstanceId;
-    }
-
-    /**
-     * Register instance world.<br>
-     *
-     * @param instance instance which should be registered
-     */
-    public void register(Instance instance) {
-        final int instanceId = instance.getId();
-        if (!instanceWorlds.containsKey(instanceId)) {
-            instanceWorlds.put(instanceId, instance);
-        }
-    }
-
-    /**
      * Unregister instance world.<br>
      * <b><font color=red>To remove instance world properly use {@link Instance#destroy()}.</font></b>
      *
@@ -392,6 +349,7 @@ public final class InstanceManager extends GameXmlReader {
     public void unregister(int instanceId) {
         if (instanceWorlds.containsKey(instanceId)) {
             instanceWorlds.remove(instanceId);
+            IdFactory.getInstance().releaseId(instanceId);
         }
     }
 
@@ -511,6 +469,10 @@ public final class InstanceManager extends GameXmlReader {
      */
     public InstanceTemplate getInstanceTemplate(int id) {
         return instanceTemplates.get(id);
+    }
+
+    public boolean hasInstanceTemplate(int templateId) {
+        return instanceTemplates.containsKey(templateId);
     }
 
     /**

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -51,23 +52,23 @@ public class ConfirmDlg extends AbstractMessagePacket<ConfirmDlg> {
     }
 
     @Override
-    protected void writeParamsSize(int size) {
-        writeInt(size);
+    protected void writeParamsSize(int size, WritableBuffer buffer) {
+        buffer.writeInt(size);
     }
 
     @Override
-    protected void writeParamType(int type) {
-        writeInt(type);
+    protected void writeParamType(int type, WritableBuffer buffer) {
+        buffer.writeInt(type);
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CONFIRM_DLG);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CONFIRM_DLG, buffer );
 
-        writeInt(getId());
-        writeMe();
-        writeInt(_time);
-        writeInt(_requesterId);
+        buffer.writeInt(getId());
+        writeMe(buffer);
+        buffer.writeInt(_time);
+        buffer.writeInt(_requesterId);
     }
 
 }

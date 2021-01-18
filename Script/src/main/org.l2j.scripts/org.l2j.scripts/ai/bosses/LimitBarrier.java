@@ -149,46 +149,38 @@ public final class LimitBarrier extends AbstractNpcAI {
     @Override
     public String onAdvEvent(String event, Npc npc, Player player)
     {
-        switch (event)
-        {
-            case "RESTORE_FULL_HP":
-            {
-                final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
-                if(!npc.isDead()) {
-                    if (hits < Config.RAIDBOSS_LIMIT_BARRIER) {
-                        if (player != null)
-                            npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_TO_DESTROY_THE_LIMIT_BARRIER_NTHE_RAID_BOSS_FULLY_RECOVERS_ITS_HEALTH, 2, 5000, true));
-                        npc.setCurrentHp(npc.getStats().getMaxHp(), true);
-                    } else if (hits > Config.RAIDBOSS_LIMIT_BARRIER) {
-                        if (player != null)
-                            npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_DESTROYED_THE_LIMIT_BARRIER, 2, 5000, true));
-                    }
-                    npc.stopSkillEffects(true, LIMIT_BARRIER.getSkillId());
+        if ("RESTORE_FULL_HP".equals(event)) {
+            final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
+            if (!npc.isDead()) {
+                if (hits < Config.RAIDBOSS_LIMIT_BARRIER) {
+                    if (player != null)
+                        npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_TO_DESTROY_THE_LIMIT_BARRIER_NTHE_RAID_BOSS_FULLY_RECOVERS_ITS_HEALTH, 2, 5000, true));
+                    npc.setCurrentHp(npc.getStats().getMaxHp(), true);
+                } else if (hits > Config.RAIDBOSS_LIMIT_BARRIER) {
+                    if (player != null)
+                        npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_DESTROYED_THE_LIMIT_BARRIER, 2, 5000, true));
                 }
-                RAIDBOSS_HITS.put(npc, 0);
-                break;
+                npc.stopSkillEffects(true, LIMIT_BARRIER.getSkillId());
             }
+            RAIDBOSS_HITS.put(npc, 0);
         }
         return super.onAdvEvent(event, npc, player);
     }
 
     @Override
-    public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
-    {
-        if (npc.isAffectedBySkill(LIMIT_BARRIER.getSkillId()))
-        {
+    public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill) {
+        if (npc.isAffectedBySkill(LIMIT_BARRIER.getSkillId())) {
             final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
             RAIDBOSS_HITS.put(npc, hits + 1);
+
+        } else if (canCastBarrier(npc) && !hasQuestTimer("RESTORE_FULL_HP", null, npc)) {
+            startQuestTimer("RESTORE_FULL_HP", 15000, npc, null);
+            npc.setTarget(npc);
+            npc.abortAttack();
+            npc.abortCast();
+            npc.doCast(LIMIT_BARRIER.getSkill(), SkillCastingType.SIMULTANEOUS);
+            npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SEC, 2, 5000, true));
         }
-        if (!npc.isAffectedBySkill(LIMIT_BARRIER.getSkillId()) && (getQuestTimers().get("RESTORE_FULL_HP") == null || getQuestTimers().get("RESTORE_FULL_HP").size() == 0))
-            if (canCastBarrier(npc)) {
-                startQuestTimer("RESTORE_FULL_HP", 15000, npc, attacker);
-                npc.setTarget(npc);
-                npc.abortAttack();
-                npc.abortCast();
-                npc.doCast(LIMIT_BARRIER.getSkill(), SkillCastingType.SIMULTANEOUS);
-                npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SEC, 2, 5000, true));
-            }
 
         return super.onAttack(npc, attacker, damage, isSummon, skill);
     }

@@ -21,19 +21,24 @@ package org.l2j.gameserver.settings;
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
+/**
+ * @author JoeAlisson
+ */
 public class AttendanceSettings implements Settings {
 
     private boolean enabled;
     private boolean vipOnly;
     private int delay;
     private boolean popUpWindow;
+    private int minimumLevel;
 
     @Override
     public void load(SettingsFile settingsFile) {
-        enabled = settingsFile.getBoolean("EnableAttendanceRewards", false);
-        vipOnly = settingsFile.getBoolean("VipOnlyAttendanceRewards", false);
-        delay =  settingsFile.getInteger("AttendanceRewardDelay", 30);
-        popUpWindow = settingsFile.getBoolean("AttendancePopupWindow", false);
+        enabled = settingsFile.getBoolean("Enable", false);
+        vipOnly = settingsFile.getBoolean("VipOnly", false);
+        delay =  settingsFile.getInteger("Delay", 30);
+        popUpWindow = settingsFile.getBoolean("PopupWindow", false);
+        minimumLevel = settingsFile.getInteger("MinimumLevel", 40);
     }
 
     public boolean enabled() {
@@ -50,5 +55,9 @@ public class AttendanceSettings implements Settings {
 
     public boolean popUpWindow() {
         return popUpWindow;
+    }
+
+    public int minimumLevel() {
+        return minimumLevel;
     }
 }

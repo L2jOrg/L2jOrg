@@ -18,46 +18,92 @@
  */
 package org.l2j.gameserver.network.serverpackets.attendance;
 
-import org.l2j.gameserver.data.xml.impl.AttendanceRewardData;
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.item.AttendanceEngine;
+import org.l2j.gameserver.engine.item.AttendanceItem;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.settings.AttendanceSettings;
+
+import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Mobius
+ * @author JoeAlisson
  */
 public class ExVipAttendanceItemList extends ServerPacket {
-    boolean available;
-    byte index;
+
+    private final List<AttendanceItem> rewards;
+    private final List<AttendanceItem> vipRewards;
+
+    private final boolean available;
+    private final byte lastReceived;
+    private final byte nextReceive;
+    private final int pcCafeMask;
+    private final boolean vipAvailable;
+    private final int minLevel;
+    private final int vipRewardedMask;
 
     public ExVipAttendanceItemList(Player player) {
-        available = player.canReceiveAttendance();
-        index = player.lastAttendanceReward();
+        final var engine = AttendanceEngine.getInstance();
+        rewards = engine.getRewards();
+        vipRewards = engine.getVipRewards();
+
+        available = player.canReceiveAttendance() && !rewards.isEmpty();
+        vipAvailable = player.getVipTier() > 0 && !vipRewards.isEmpty();
+        minLevel = getSettings(AttendanceSettings.class).minimumLevel();
+
+        pcCafeMask = engine.getPcCafeMask();
+
+        if(available) {
+            lastReceived = (byte) (player.lastAttendanceReward() % rewards.size());
+            nextReceive = (byte) (lastReceived + 1);
+        } else {
+            lastReceived = player.lastAttendanceReward();
+            nextReceive = lastReceived;
+        }
+        if(nextReceive == 1) {
+            vipRewardedMask = 0;
+        } else {
+            vipRewardedMask = player.getVipAttendanceReward();
+        }
+
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_VIP_ATTENDANCE_ITEM_LIST);
-        writeByte(available ? index + 1 : index); // index to receive?
-        writeByte(index); // last received index?
-        writeInt(0x00);
-        writeInt(0x00);
-        writeByte(0x01);
-        writeByte(available); // player can receive reward today?
-        writeByte(250);
-        writeByte(AttendanceRewardData.getInstance().getRewardsCount()); // reward size
-        int rewardCounter = 0;
-        for (ItemHolder reward : AttendanceRewardData.getInstance().getRewards()) {
-            rewardCounter++;
-            writeInt(reward.getId());
-            writeLong(reward.getCount());
-            writeByte(0x01); // is unknown?
-            writeByte(rewardCounter % 7 == 0); // is last in row?
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_VIP_ATTENDANCE_ITEM_LIST, buffer );
+
+        buffer.writeByte(nextReceive);
+        buffer.writeByte(lastReceived);
+        buffer.writeInt(pcCafeMask);
+        buffer.writeInt(vipRewardedMask);
+        buffer.writeByte(0x00); // type ignored by client
+        buffer.writeByte(available);
+        buffer.writeByte(vipAvailable);
+
+        buffer.writeByte(rewards.size());
+        for (var reward : rewards) {
+            buffer.writeInt(reward.id());
+            buffer.writeLong(reward.count());
+            buffer.writeByte(0x01); // multiple ignored by client
+            buffer.writeByte(reward.highlight());
         }
-        writeByte( 0x00);
-        writeInt(0x00);
+
+        buffer.writeByte(vipRewards.size());
+        for (var vipReward : vipRewards) {
+            buffer.writeByte(0x01); // vip day info
+            buffer.writeInt(vipReward.id());
+            buffer.writeInt((int) vipReward.count()); // there is a client bug, the count shown on client will be the count of last non vip reward
+            buffer.writeByte(vipReward.vipLevel());
+            buffer.writeByte(!vipReward.highlight());
+        }
+
+        buffer.writeInt(minLevel);
     }
 
 }

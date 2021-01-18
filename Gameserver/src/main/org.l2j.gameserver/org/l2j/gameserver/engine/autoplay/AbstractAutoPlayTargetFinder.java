@@ -54,7 +54,7 @@ abstract class AbstractAutoPlayTargetFinder implements AutoPlayTargetFinder {
     private boolean checkFriendlyTarget(Monster monster, Player player) {
         var target = monster.getTarget();
         return target == player.getPet() || (target instanceof Summon s && player.getServitors().containsValue(s))
-                || (target instanceof Player targetPlayer && player.isInParty() && player.getParty().containsPlayer(targetPlayer));
+                || (target instanceof Player targetPlayer && player.isInParty() && player.getParty().isMember(targetPlayer));
     }
 
     protected Creature findNextTarget(Player player, Class<? extends Creature> targetClass, int range) {

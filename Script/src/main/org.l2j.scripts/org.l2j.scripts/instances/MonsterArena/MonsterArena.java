@@ -20,9 +20,9 @@ package org.l2j.scripts.instances.MonsterArena;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -33,21 +33,17 @@ import org.l2j.scripts.instances.AbstractInstance;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static org.l2j.commons.util.Util.doIfNonNull;
-import static org.l2j.gameserver.instancemanager.GlobalVariablesManager.MONSTER_ARENA_VARIABLE;
-
 /**
  * @author Mobius
  * https://l2wiki.com/classic/Clan_-_Clan_Arena
  */
-public class MonsterArena extends AbstractInstance
-{
-	// NPCs
+public class MonsterArena extends AbstractInstance {
+
 	private static final int LEO = 30202;
 	private static final int MACHINE = 30203;
 	private static final int SUPPLIES = 30204;
-	private static final int[] BOSSES =
-	{
+
+	private static final int[] BOSSES = {
 		25794, // Kutis
 		25795, // Garan
 		25796, // Batur
@@ -69,7 +65,7 @@ public class MonsterArena extends AbstractInstance
 		25812, // Kosnak
 		25813, // Garaki
 	};
-	// Rewards
+
 	private static final int BATTLE_BOX_1 = 70917;
 	private static final int BATTLE_BOX_2 = 70918;
 	private static final int BATTLE_BOX_3 = 70919;
@@ -77,12 +73,11 @@ public class MonsterArena extends AbstractInstance
 	private static final int TICKET_L = 90945;
 	private static final int TICKET_M = 90946;
 	private static final int TICKET_H = 90947;
-	// Misc
+
 	private static final Collection<Player> REWARDED_PLAYERS = ConcurrentHashMap.newKeySet();
 	private static final int TEMPLATE_ID = 192;
 
-	private MonsterArena()
-	{
+	private MonsterArena() {
 		super(TEMPLATE_ID);
 		addStartNpc(LEO, MACHINE, SUPPLIES);
 		addFirstTalkId(LEO, MACHINE, SUPPLIES);
@@ -92,19 +87,15 @@ public class MonsterArena extends AbstractInstance
 	}
 
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		switch (event)
-		{
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		switch (event) {
 			case "30202-01.htm":
 			case "30202-02.htm":
 			case "30202-03.htm":
-			case "30203-01.htm":
-			{
+			case "30203-01.htm": {
 				return event;
 			}
-			case "enter_monster_arena":
-			{
+			case "enter_monster_arena": {
 				// If you died, you may return to the arena.
 				if ((player.getClan() != null) && (player.getCommandChannel() != null))
 				{
@@ -150,17 +141,11 @@ public class MonsterArena extends AbstractInstance
 					final Npc machine = world.getNpc(MACHINE);
 					machine.setScriptValue(player.getClanId());
 
-					// Initialize progress if it does not exist.
-					if (GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), -1) == -1)
-					{
-						GlobalVariablesManager.getInstance().set(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
-					}
-
-					// On max progress, set last four bosses.
-					final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
-					if (progress > 17)
-					{
-						GlobalVariablesManager.getInstance().set(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 17);
+					var clan = player.getClan();
+					if(clan.getArenaProgress() <= 0) {
+						clan.setArenaProgress(1);
+					} else if(clan.getArenaProgress() > 17) {
+						clan.setArenaProgress(17);
 					}
 
 					startQuestTimer("machine_talk", 10000, machine, null);
@@ -196,7 +181,7 @@ public class MonsterArena extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				if (world != null)
 				{
-					world.spawnGroup("boss_" + GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + npc.getScriptValue()));
+					world.spawnGroup("boss_" + ClanTable.getInstance().getClan(npc.getScriptValue()).getArenaProgress());
 				}
 				break;
 			}
@@ -214,7 +199,7 @@ public class MonsterArena extends AbstractInstance
 
 						// Mandatory reward.
 						final Npc machine = world.getNpc(MACHINE);
-						final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
+						final int progress = ClanTable.getInstance().getClan(machine.getScriptValue()).getArenaProgress();
 						if (progress > 16)
 						{
 							giveItems(player, BATTLE_BOX_4, 1);
@@ -288,8 +273,9 @@ public class MonsterArena extends AbstractInstance
 			machine.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HA_NOT_BAD);
 
 			// Save progress to global variables.
-			GlobalVariablesManager.getInstance().increaseInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
-			doIfNonNull(player.getClan(), clan -> ClanRewardManager.getInstance().checkArenaProgress(clan));
+			var clan = ClanTable.getInstance().getClan(machine.getScriptValue());
+			clan.setArenaProgress(clan.getArenaProgress() + 1);
+			ClanRewardManager.getInstance().checkArenaProgress(clan);
 
 			// Spawn reward chests.
 			world.spawnGroup("supplies");

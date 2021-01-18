@@ -27,12 +27,9 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 
-public class ChatLink implements IBypassHandler
-{
-	private static final String[] COMMANDS =
-	{
-		"Chat"
-	};
+public class ChatLink implements IBypassHandler {
+
+	private static final String[] COMMANDS = { "Chat" };
 	
 	@Override
 	public boolean useBypass(String command, Player player, Creature target) {

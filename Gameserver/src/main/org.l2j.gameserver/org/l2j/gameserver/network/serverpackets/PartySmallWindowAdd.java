@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -33,26 +34,26 @@ public final class PartySmallWindowAdd extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PARTY_SMALL_WINDOW_ADD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PARTY_SMALL_WINDOW_ADD, buffer );
 
-        writeInt(party.getLeaderObjectId()); // c3
-        writeInt(party.getDistributionType().getId()); // c3
-        writeInt(member.getObjectId());
-        writeString(member.getName());
+        buffer.writeInt(party.getLeaderObjectId()); // c3
+        buffer.writeInt(party.getDistributionType().getId()); // c3
+        buffer.writeInt(member.getObjectId());
+        buffer.writeString(member.getName());
 
-        writeInt((int) member.getCurrentCp()); // c4
-        writeInt(member.getMaxCp()); // c4
-        writeInt((int) member.getCurrentHp());
-        writeInt(member.getMaxHp());
-        writeInt((int) member.getCurrentMp());
-        writeInt(member.getMaxMp());
-        writeInt(member.getVitalityPoints());
-        writeByte(member.getLevel());
-        writeShort(member.getClassId().getId());
-        writeByte(0x00);
-        writeShort(member.getRace().ordinal());
-        writeInt(0x00);
+        buffer.writeInt((int) member.getCurrentCp()); // c4
+        buffer.writeInt(member.getMaxCp()); // c4
+        buffer.writeInt((int) member.getCurrentHp());
+        buffer.writeInt(member.getMaxHp());
+        buffer.writeInt((int) member.getCurrentMp());
+        buffer.writeInt(member.getMaxMp());
+        buffer.writeInt(member.getVitalityPoints());
+        buffer.writeByte(member.getLevel());
+        buffer.writeShort(member.getClassId().getId());
+        buffer.writeByte(0x00);
+        buffer.writeShort(member.getRace().ordinal());
+        buffer.writeInt(0x00);
     }
 
 }

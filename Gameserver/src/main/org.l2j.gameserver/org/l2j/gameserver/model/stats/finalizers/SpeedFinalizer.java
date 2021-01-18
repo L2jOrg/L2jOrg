@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.stats.finalizers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.PetLevelData;
 import org.l2j.gameserver.model.actor.Creature;
@@ -27,12 +26,14 @@ import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.SwampZone;
 
 import java.util.Optional;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -57,7 +58,7 @@ public class SpeedFinalizer implements IStatsFunction {
             baseValue += bonusDex;
         }
 
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, Config.MAX_RUN_SPEED);
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, getSettings(CharacterSettings.class).maxRunSpeed());
     }
 
     @Override

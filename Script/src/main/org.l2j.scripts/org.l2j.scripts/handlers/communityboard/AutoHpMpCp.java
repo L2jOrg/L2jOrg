@@ -22,12 +22,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.Listeners;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCpChange;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerHpChange;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMpChange;
-import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,7 +30,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Consumer;
 
 /**
  * @author Thoss
@@ -48,12 +41,7 @@ public class AutoHpMpCp implements IParseBoardHandler {
     private static Map<Integer, List<String>> _listenedPlayer = new ConcurrentHashMap<>();
 
     private AutoHpMpCp() {
-        var listeners = Listeners.players();
-        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_CP_CHANGE, (Consumer<OnPlayerCpChange>) e -> onPlayerCpChange(e.getActiveChar()), this));
-        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_HP_CHANGE, (Consumer<OnPlayerHpChange>) e -> onPlayerHpChange(e.getActiveChar()), this));
-        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_MP_CHANGE, (Consumer<OnPlayerMpChange>) e -> onPlayerMpChange(e.getActiveChar()), this));
 
-        // TODO: add a listener on player enter and add player that have var auto to _listenedPlayer // CharListenerList.addGlobal(PLAYER_ENTER_LISTENER);
     }
 
     @Override

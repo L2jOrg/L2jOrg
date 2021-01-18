@@ -18,22 +18,20 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.enums.AttributeType;
+import org.l2j.gameserver.engine.item.EnsoulOption;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.model.buylist.Product;
-import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Objects;
 
 /**
  * Get all information from Item to generate ItemInfo.
  */
 public class ItemInfo {
-    private final int[] attributeDefense = { 0, 0, 0, 0, 0, 0 };
+
     private ItemTemplate template;
     private int objectId;
     private long count;
@@ -42,20 +40,13 @@ public class ItemInfo {
     private int locationSlot;
     private int type1;
     private int type2;
-    private Collection<EnsoulOption> soulCrystalOptions;
-    private Collection<EnsoulOption> soulCrystalSpecialOptions;
+    private EnsoulOption soulCrystalOption;
+    private EnsoulOption soulCrystalSpecialOption;
     private int[] enchantOption;
-    private byte elemAtkType = -2;
-    private int elemAtkPower = 0;
-
     private int time;
-
     private int price;
 
-    /**
-     * The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE)
-     */
-    private int _change;
+    private ItemChangeType change;
     private boolean _available = true;
     private int _equipped;
     private int reuse;
@@ -90,30 +81,20 @@ public class ItemInfo {
         // Verify if the Item is equipped
         _equipped = item.isEquipped() ? 1 : 0;
 
-        // Get the action to do clientside
-        switch (item.getLastChange()) {
-            case Item.ADDED -> _change = 1;
-            case Item.MODIFIED -> _change = 2;
-            case Item.REMOVED -> _change = 3;
-        }
+        change = item.getLastChange();
 
         time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
         _available = item.isAvailable();
         locationSlot = item.getLocationSlot();
 
-        elemAtkType = item.getAttackAttributeType().getClientId();
-        elemAtkPower = item.getAttackAttributePower();
-        for (AttributeType type : AttributeType.ATTRIBUTE_TYPES) {
-            attributeDefense[type.getClientId()] = item.getDefenceAttribute(type);
-        }
         enchantOption = item.getEnchantOptions();
-        soulCrystalOptions = item.getSpecialAbilities();
-        soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
+        soulCrystalOption = item.getSpecialAbility();
+        soulCrystalSpecialOption = item.getAdditionalSpecialAbility();
     }
 
-    public ItemInfo(Item item, int change) {
+    public ItemInfo(Item item, ItemChangeType change) {
         this(item);
-        _change = change;
+        this.change = change;
     }
 
     public ItemInfo(TradeItem item) {
@@ -132,7 +113,7 @@ public class ItemInfo {
 
         // Get the augmentation bonus
         if ((item.getAugmentationOption1() >= 0) && (item.getAugmentationOption2() >= 0)) {
-            augmentation = new VariationInstance(0, item.getAugmentationOption1(), item.getAugmentationOption2());
+            augmentation = new VariationInstance(item.getObjectId(), 0, item.getAugmentationOption1(), item.getAugmentationOption2());
         }
 
         // Get the quantity of the Item
@@ -146,21 +127,15 @@ public class ItemInfo {
         _equipped = 0;
 
         // Get the action to do clientside
-        _change = 0;
+        change = ItemChangeType.MODIFIED;
 
         time = -9999;
 
         locationSlot = item.getLocationSlot();
 
-        elemAtkType = item.getAttackElementType();
-        elemAtkPower = item.getAttackElementPower();
-        for (byte i = 0; i < 6; i++) {
-            attributeDefense[i] = item.getElementDefAttr(i);
-        }
-
         enchantOption = item.getEnchantOptions();
-        soulCrystalOptions = item.getSoulCrystalOptions();
-        soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
+        soulCrystalOption = item.getSoulCrystalOption();
+        soulCrystalSpecialOption = item.getSoulCrystalSpecialOption();
     }
 
     public ItemInfo(Product item) {
@@ -168,37 +143,12 @@ public class ItemInfo {
             return;
         }
 
-        // Get the Identifier of the Item
-        objectId = 0;
-
-        // Get the ItemTemplate of the Item
         template = item.getTemplate();
-
-        // Get the enchant level of the Item
-        enchant = 0;
-
-        // Get the augmentation bonus
-        augmentation = null;
-
-        // Get the quantity of the Item
         count = item.getCount();
-
-        // Get custom item types (used loto, race tickets)
         type1 = template.getType1();
         type2 = template.getType2();
-
-        // Verify if the Item is equipped
-        _equipped = 0;
-
-        // Get the action to do clientside
-        _change = 0;
-
+        change = ItemChangeType.MODIFIED;
         time = -9999;
-
-        locationSlot = 0;
-
-        soulCrystalOptions = Collections.emptyList();
-        soulCrystalSpecialOptions = Collections.emptyList();
     }
 
     public int getObjectId() {
@@ -233,8 +183,8 @@ public class ItemInfo {
         return _equipped;
     }
 
-    public int getChange() {
-        return _change;
+    public ItemChangeType getChange() {
+        return change;
     }
 
     public int getTime() {
@@ -249,28 +199,16 @@ public class ItemInfo {
         return locationSlot;
     }
 
-    public int getAttackElementType() {
-        return elemAtkType;
-    }
-
-    public int getAttackElementPower() {
-        return elemAtkPower;
-    }
-
-    public int getAttributeDefence(AttributeType attribute) {
-        return attributeDefense[attribute.getClientId()];
-    }
-
     public int[] getEnchantOptions() {
         return enchantOption;
     }
 
-    public Collection<EnsoulOption> getSoulCrystalOptions() {
-        return soulCrystalOptions != null ? soulCrystalOptions : Collections.emptyList();
+    public EnsoulOption getSoulCrystalOption() {
+        return soulCrystalOption;
     }
 
-    public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
-        return soulCrystalSpecialOptions != null ? soulCrystalSpecialOptions : Collections.emptyList();
+    public EnsoulOption getSoulCrystalSpecialOption() {
+        return soulCrystalSpecialOption;
     }
 
     public int getId() {

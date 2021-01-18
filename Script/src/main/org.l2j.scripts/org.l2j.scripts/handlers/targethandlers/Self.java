@@ -40,17 +40,17 @@ public class Self implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (activeChar.isInsideZone(ZoneType.PEACE) && skill.isBad())
+		if (creature.isInsideZone(ZoneType.PEACE) && skill.isBad())
 		{
 			if (sendMessage)
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE);
+				creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_HERE);
 			}
 			
 			return null;
 		}
-		return activeChar;
+		return creature;
 	}
 }

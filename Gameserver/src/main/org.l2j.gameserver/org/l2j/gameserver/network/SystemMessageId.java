@@ -2424,6 +2424,9 @@ public final class SystemMessageId {
     @ClientString(id = 1268, message = "Do you wish to add $s1 as your subclass?")
     public static SystemMessageId DO_YOU_WISH_TO_ADD_S1_AS_YOUR_SUBCLASS;
 
+    @ClientString(id = 1269, message = "The new subclass has been added.")
+    public static SystemMessageId THE_NEW_SUBCLASS_HAS_BEEN_ADDED;
+
     @ClientString(id = 1271, message = "Do you wish to participate? Until the next seal validation period, you will be a member of the Lords of Dawn.")
     public static SystemMessageId DO_YOU_WISH_TO_PARTICIPATE_UNTIL_THE_NEXT_SEAL_VALIDATION_PERIOD_YOU_WILL_BE_A_MEMBER_OF_THE_LORDS_OF_DAWN;
 
@@ -2483,6 +2486,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 1294, message = "The competition has ended in a tie. Therefore, nobody has been awarded the seal.")
     public static SystemMessageId THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL;
+
+    @ClientString(id = 1295, message = "Subclasses may not be created or changed while a skill is in use.")
+    public static SystemMessageId SUBCLASSES_MAY_NOT_BE_CREATED_OR_CHANGED_WHILE_A_SKILL_IS_IN_USE;
 
     @ClientString(id = 1298, message = "You are about to leave Monster Race Track.")
     public static SystemMessageId YOU_ARE_ABOUT_TO_LEAVE_MONSTER_RACE_TRACK;
@@ -3289,6 +3295,9 @@ public final class SystemMessageId {
     @ClientString(id = 1686, message = "Stones and mortar tumble to the earth - the castle wall has taken damage!")
     public static SystemMessageId STONES_AND_MORTAR_TUMBLE_TO_THE_EARTH_THE_CASTLE_WALL_HAS_TAKEN_DAMAGE;
 
+    @ClientString(id = 1692, message = "$c1 does not meet the participation requirements. You cannot participate in the Olympiad because you have changed your class to subclass.")
+    public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_YOU_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD_BECAUSE_YOU_HAVE_CHANGED_YOUR_CLASS_TO_SUBCLASS;
+
     @ClientString(id = 1695, message = "You can only use that during a Siege War!")
     public static SystemMessageId YOU_CAN_ONLY_USE_THAT_DURING_A_SIEGE_WAR;
 
@@ -3370,6 +3379,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 1733, message = "You do not have enough Adena to create a Clan Academy.")
     public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_ADENA_TO_CREATE_A_CLAN_ACADEMY;
+
+    @ClientString(id = 1734, message = "In order to join the clan academy, you must be unaffiliated with a clan and be an unawakened character Lv. 84 or below fpr both main and subclass.")
+    public static SystemMessageId IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS;
 
     @ClientString(id = 1736, message = "The Clan Academy has reached its maximum enrollment.")
     public static SystemMessageId THE_CLAN_ACADEMY_HAS_REACHED_ITS_MAXIMUM_ENROLLMENT;
@@ -3706,6 +3718,9 @@ public final class SystemMessageId {
     @ClientString(id = 1893, message = "This file cannot be replayed.")
     public static SystemMessageId THIS_FILE_CANNOT_BE_REPLAYED;
 
+    @ClientString(id = 1894, message = "A subclass cannot be created or changed while you are over your weight limit.")
+    public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_WHILE_YOU_ARE_OVER_YOUR_WEIGHT_LIMIT;
+
     @ClientString(id = 1896, message = "$c1 has already been summoned.")
     public static SystemMessageId C1_HAS_ALREADY_BEEN_SUMMONED;
 
@@ -3914,9 +3929,6 @@ public final class SystemMessageId {
     @ClientString(id = 2026, message = "$c1 cannot duel because $c1 is participating in a siege war.")
     public static SystemMessageId C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_A_SIEGE_WAR;
 
-    @ClientString(id = 2029, message = "$c1 is currently teleporting and cannot participate in the Olympiad.")
-    public static SystemMessageId C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
-
     @ClientString(id = 2030, message = "Logging in…")
     public static SystemMessageId LOGGING_IN;
 
@@ -3925,6 +3937,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 2032, message = "It is not the right time for purchasing the item.")
     public static SystemMessageId IT_IS_NOT_THE_RIGHT_TIME_FOR_PURCHASING_THE_ITEM;
+
+    @ClientString(id = 2033, message = "A subclass cannot be created or changed because you have exceeded your inventory limit.")
+    public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT;
 
     @ClientString(id = 2034, message = "There are $s1 hour(s) and $s2 minute(s) remaining until the item can be obtained.")
     public static SystemMessageId THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_OBTAINED;
@@ -5216,10 +5231,7 @@ public final class SystemMessageId {
     @ClientString(id = 2705, message = "The match waiting time was extended by 1 minute.")
     public static SystemMessageId THE_MATCH_WAITING_TIME_WAS_EXTENDED_BY_1_MINUTE;
 
-    @ClientString(id = 2706, message = "You cannot enter because you do not meet the requirements.")
-    public static SystemMessageId YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS;
-
-        @ClientString(id = 2713, message = "------------------------------------------------------")
+    @ClientString(id = 2713, message = "------------------------------------------------------")
     public static SystemMessageId SEPARATOR_DASHES_MEDIUM;
 
     @ClientString(id = 2714, message = "----------------------------------------------------------------------")
@@ -6405,9 +6417,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 3271, message = "Current Progress: $s1")
     public static SystemMessageId CURRENT_PROGRESS_S1;
-
-    @ClientString(id = 3272, message = "$s1")
-    public static SystemMessageId S1_ON_SCREEN;
 
     @ClientString(id = 3273, message = "Trap is not installed, therefore the skill can't be used.")
     public static SystemMessageId TRAP_IS_NOT_INSTALLED_THEREFORE_THE_SKILL_CAN_T_BE_USED;
@@ -7703,8 +7712,6 @@ public final class SystemMessageId {
     @ClientString(id = 3754, message = "$s1 second(s) to match end!")
     public static SystemMessageId S1_SECOND_S_TO_MATCH_END;
 
-    @ClientString(id = 3755, message = "$s1 second(s) to match start!")
-    public static SystemMessageId S1_SECOND_S_TO_MATCH_START;
 
     @ClientString(id = 3756, message = "Are you sure you want to quit?")
     public static SystemMessageId ARE_YOU_SURE_YOU_WANT_TO_QUIT;
@@ -7756,9 +7763,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 3773, message = "The Clan Flag, the symbol of your clan, is no longer.")
     public static SystemMessageId THE_CLAN_FLAG_THE_SYMBOL_OF_YOUR_CLAN_IS_NO_LONGER;
-
-    @ClientString(id = 3776, message = "You may not participate as you are currently participating in another PvP match.")
-    public static SystemMessageId YOU_MAY_NOT_PARTICIPATE_AS_YOU_ARE_CURRENTLY_PARTICIPATING_IN_ANOTHER_PVP_MATCH;
 
     @ClientString(id = 3778, message = "You may not register as a participant.")
     public static SystemMessageId YOU_MAY_NOT_REGISTER_AS_A_PARTICIPANT;
@@ -8558,9 +8562,6 @@ public final class SystemMessageId {
     @ClientString(id = 4171, message = "A member has excessive Adena. Distribution has been cancelled.")
     public static SystemMessageId A_MEMBER_HAS_EXCESSIVE_ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED;
 
-    @ClientString(id = 4173, message = "You cannot send a whisper to a user who is participating in the Olympiad.")
-    public static SystemMessageId YOU_CANNOT_SEND_A_WHISPER_TO_A_USER_WHO_IS_PARTICIPATING_IN_THE_OLYMPIAD;
-
     @ClientString(id = 4176, message = "It seemed as if everything had returned to normal.")
     public static SystemMessageId IT_SEEMED_AS_IF_EVERYTHING_HAD_RETURNED_TO_NORMAL;
 
@@ -8659,9 +8660,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 4214, message = "$c1 has increased Clan Reputation by $s2 points.")
     public static SystemMessageId C1_HAS_INCREASED_CLAN_REPUTATION_BY_S2_POINTS;
-
-    @ClientString(id = 4216, message = "You cannot participate in the Olympiad while fishing.")
-    public static SystemMessageId YOU_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD_WHILE_FISHING;
 
     @ClientString(id = 4218, message = "No equipment slot available.")
     public static SystemMessageId NO_EQUIPMENT_SLOT_AVAILABLE;
@@ -8865,14 +8863,14 @@ public final class SystemMessageId {
     @ClientString(id = 4295, message = "My children…beware the influence of darkness.")
     public static SystemMessageId MY_CHILDRENBEWARE_THE_INFLUENCE_OF_DARKNESS;
 
-    @ClientString(id = 4296, message = "You cannot use or reset Ability Points while participating in the Olympiad or Ceremony of Chaos.")
-    public static SystemMessageId YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS;
-
     @ClientString(id = 4297, message = "Soulshot/Spiritshot Damage")
     public static SystemMessageId SOULSHOT_SPIRITSHOT_DAMAGE;
 
     @ClientString(id = 4298, message = "If enchanting fails, your enchant level will drop by 3!")
     public static SystemMessageId IF_ENCHANTING_FAILS_YOUR_ENCHANT_LEVEL_WILL_DROP_BY_3;
+
+    @ClientString(id = 4299, message = "You cannot change your subclass while registering for the Ceremony of Chaos.")
+    public static SystemMessageId YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERING_FOR_THE_CEREMONY_OF_CHAOS;
 
     @ClientString(id = 4301, message = "Character creation successful!")
     public static SystemMessageId CHARACTER_CREATION_SUCCESSFUL;
@@ -10998,9 +10996,6 @@ public final class SystemMessageId {
     @ClientString(id = 5181, message = "You have obtained a Skill. Please check in Character Information window.")
     public static SystemMessageId YOU_HAVE_OBTAINED_A_SKILL_PLEASE_CHECK_IN_CHARACTER_INFORMATION_WINDOW;
 
-    @ClientString(id = 5182, message = "During battle or viewing, Olympiad window cannot be opened.")
-    public static SystemMessageId DURING_BATTLE_OR_VIEWING_OLYMPIAD_WINDOW_CANNOT_BE_OPENED;
-
     @ClientString(id = 5183, message = "Olympiad viewing is only possible in the Peace Zone.")
     public static SystemMessageId OLYMPIAD_VIEWING_IS_ONLY_POSSIBLE_IN_THE_PEACE_ZONE;
 
@@ -11304,9 +11299,6 @@ public final class SystemMessageId {
     @ClientString(id = 5284, message = "You can't teleport while flying.")
     public static SystemMessageId YOU_CAN_T_TELEPORT_WHILE_FLYING;
 
-    @ClientString(id = 5285, message = "You can't teleport during an Olympiad match.")
-    public static SystemMessageId YOU_CAN_T_TELEPORT_DURING_AN_OLYMPIAD_MATCH;
-
     @ClientString(id = 5286, message = "You can't teleport while petrified or paralyzed.")
     public static SystemMessageId YOU_CAN_T_TELEPORT_WHILE_PETRIFIED_OR_PARALYZED;
 
@@ -11327,21 +11319,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 5293, message = "Automatically use HP Potions when it's below $s1%%.")
     public static SystemMessageId AUTOMATICALLY_USE_HP_POTIONS_WHEN_IT_S_BELOW_S1;
-
-    @ClientString(id = 5294, message = "You must level 70 or higher and have completed the 2nd Class Transfer in order to participate in a match.")
-    public static SystemMessageId YOU_MUST_LEVEL_70_OR_HIGHER_AND_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_IN_ORDER_TO_PARTICIPATE_IN_A_MATCH;
-
-    @ClientString(id = 5295, message = "Cannot apply to participate in a match while in an instanced zone.")
-    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_IN_AN_INSTANCED_ZONE;
-
-    @ClientString(id = 5296, message = "Cannot apply to participate in a match while dead.")
-    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_DEAD;
-
-    @ClientString(id = 5297, message = "You've used up all your matches.")
-    public static SystemMessageId YOU_VE_USED_UP_ALL_YOUR_MATCHES;
-
-    @ClientString(id = 5298, message = "Cannot apply to participate because your inventory slots or weight exceeded 80%%.")
-    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_BECAUSE_YOUR_INVENTORY_SLOTS_OR_WEIGHT_EXCEEDED_80;
 
     @ClientString(id = 5299, message = "Sub class and Dual class characters cannot apply to participate in a match.")
     public static SystemMessageId SUB_CLASS_AND_DUAL_CLASS_CHARACTERS_CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH;
@@ -12188,9 +12165,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 6187, message = "Cannot continue because another report is being processed. Please try again after entering the verification number.")
     public static SystemMessageId CANNOT_CONTINUE_BECAUSE_ANOTHER_REPORT_IS_BEING_PROCESSED_PLEASE_TRY_AGAIN_AFTER_ENTERING_THE_VERIFICATION_NUMBER;
-
-    @ClientString(id = 6188, message = "You do not meet the level requirements to receive the Attendance Reward. Please check the required level. (You can redeem your reward 30 minutes after logging in.)")
-    public static SystemMessageId YOU_DO_NOT_MEET_THE_LEVEL_REQUIREMENTS_TO_RECEIVE_THE_ATTENDANCE_REWARD_PLEASE_CHECK_THE_REQUIRED_LEVEL_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
 
     @ClientString(id = 6189, message = "You must receive the reward in a given day to receive the next day's reward.\\nRewards received once cannot be reverted back.")
     public static SystemMessageId YOU_MUST_RECEIVE_THE_REWARD_IN_A_GIVEN_DAY_TO_RECEIVE_THE_NEXT_DAY_S_REWARDNREWARDS_RECEIVED_ONCE_CANNOT_BE_REVERTED_BACK;
@@ -13889,9 +13863,6 @@ public final class SystemMessageId {
     @ClientString(id = 13018, message = "Respect to $c1, who is 1st in the level ranking.")
     public static SystemMessageId RESPECT_TO_C1_WHO_IS_1ST_IN_THE_LEVEL_RANKING;
 
-    @ClientString(id = 13019, message = "Cannot use timed hunting zones while waiting for the Olympiad.")
-    public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;
-
     @ClientString(id = 13020, message = "Cannot use timed hunting zones while waiting for the Ceremony of Chaos.")
     public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_CEREMONY_OF_CHAOS;
 
@@ -15503,9 +15474,6 @@ public final class SystemMessageId {
     @ClientString(id = 1258, message = "$s1 has been crystallized.")
     public static SystemMessageId S1_HAS_BEEN_CRYSTALLIZED;
 
-    @ClientString(id = 1269, message = "The new subclass has been added.")
-    public static SystemMessageId THE_NEW_SUBCLASS_HAS_BEEN_ADDED;
-
     @ClientString(id = 1270, message = "You have successfully switched $s1 to $s2.")
     public static SystemMessageId YOU_HAVE_SUCCESSFULLY_SWITCHED_S1_TO_S2;
 
@@ -15520,9 +15488,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1282, message = "Your Reputation has been changed to $s1.")
     public static SystemMessageId YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1;
-
-    @ClientString(id = 1295, message = "Subclasses may not be created or changed while a skill is in use.")
-    public static SystemMessageId SUBCLASSES_MAY_NOT_BE_CREATED_OR_CHANGED_WHILE_A_SKILL_IS_IN_USE;
 
     @ClientString(id = 1296, message = "You cannot open a Private Store here.")
     public static SystemMessageId YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE;
@@ -15902,9 +15867,6 @@ public final class SystemMessageId {
     @ClientString(id = 1691, message = "$c1 does not meet the participation requirements for Olympiad as the inventory weight/slot exceeds 80%%.")
     public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_FOR_OLYMPIAD_AS_THE_INVENTORY_WEIGHT_SLOT_EXCEEDS_80;
 
-    @ClientString(id = 1692, message = "$c1 does not meet the participation requirements. You cannot participate in the Olympiad because you have changed your class to subclass.")
-    public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_YOU_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD_BECAUSE_YOU_HAVE_CHANGED_YOUR_CLASS_TO_SUBCLASS;
-
     @ClientString(id = 1693, message = "You may not observe a Olympiad Games match while you are on the waiting list.")
     public static SystemMessageId YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST;
 
@@ -15940,9 +15902,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1730, message = "To establish a Clan Academy, your clan must be Level 5 or higher.")
     public static SystemMessageId TO_ESTABLISH_A_CLAN_ACADEMY_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER;
-
-    @ClientString(id = 1734, message = "In order to join the clan academy, you must be unaffiliated with a clan and be an unawakened character Lv. 84 or below fpr both main and subclass.")
-    public static SystemMessageId IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS;
 
     @ClientString(id = 1735, message = "$s1 does not meet the requirements to join a Clan Academy.")
     public static SystemMessageId S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY;
@@ -16093,9 +16052,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1883, message = "There are no offerings I own or I made a bid for.")
     public static SystemMessageId THERE_ARE_NO_OFFERINGS_I_OWN_OR_I_MADE_A_BID_FOR;
-
-    @ClientString(id = 1894, message = "A subclass cannot be created or changed while you are over your weight limit.")
-    public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_WHILE_YOU_ARE_OVER_YOUR_WEIGHT_LIMIT;
 
     @ClientString(id = 1895, message = "$c1 is in an area which blocks summoning or teleporting.")
     public static SystemMessageId C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING;
@@ -16283,11 +16239,11 @@ public final class SystemMessageId {
     @ClientString(id = 2027, message = "$c1 cannot duel because $c1 is currently riding a boat, fenrir, or strider.")
     public static SystemMessageId C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
 
+    @ClientString(id = 2029, message = "$c1 is currently teleporting and cannot participate in the Olympiad.")
+    public static SystemMessageId C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
+
     @ClientString(id = 2028, message = "$c1 is too far away to receive a duel challenge.")
     public static SystemMessageId C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE;
-
-    @ClientString(id = 2033, message = "A subclass cannot be created or changed because you have exceeded your inventory limit.")
-    public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT;
 
     @ClientString(id = 2040, message = "Cannot trade items with the targeted user.")
     public static SystemMessageId CANNOT_TRADE_ITEMS_WITH_THE_TARGETED_USER;
@@ -16706,6 +16662,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 2703, message = "Team members were modified because the teams were unbalanced.")
     public static SystemMessageId TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED;
+
+    @ClientString(id = 2706, message = "You cannot enter because you do not meet the requirements.")
+    public static SystemMessageId YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS;
 
     @ClientString(id = 2707, message = "You must wait 10 seconds before attempting to register again.")
     public static SystemMessageId YOU_MUST_WAIT_10_SECONDS_BEFORE_ATTEMPTING_TO_REGISTER_AGAIN;
@@ -17251,14 +17210,23 @@ public final class SystemMessageId {
     @ClientString(id = 3749, message = "In $s1 second(s), you will be moved to where you were before participating in the Ceremony of Chaos.")
     public static SystemMessageId IN_S1_SECOND_S_YOU_WILL_BE_MOVED_TO_WHERE_YOU_WERE_BEFORE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS;
 
+    @ClientString(id = 3755, message = "$s1 second(s) to match start!")
+    public static SystemMessageId S1_SECOND_S_TO_MATCH_START;
+
     @ClientString(id = 3765, message = "Current Location: $s1 / $s2 / $s3 (inside the Seed of Hellfire)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_INSIDE_THE_SEED_OF_HELLFIRE;
+
+    @ClientString(id = 3272, message = "$s1")
+    public static SystemMessageId S1_ON_SCREEN;
 
     @ClientString(id = 3774, message = "Only characters who are a part of a clan of level 3 or above may participate.")
     public static SystemMessageId ONLY_CHARACTERS_WHO_ARE_A_PART_OF_A_CLAN_OF_LEVEL_3_OR_ABOVE_MAY_PARTICIPATE;
 
     @ClientString(id = 3775, message = "Only characters who have completed the 3rd Class Transfer may participate.")
     public static SystemMessageId ONLY_CHARACTERS_WHO_HAVE_COMPLETED_THE_3RD_CLASS_TRANSFER_MAY_PARTICIPATE;
+
+    @ClientString(id = 3776, message = "You may not participate as you are currently participating in another PvP match.")
+    public static SystemMessageId YOU_MAY_NOT_PARTICIPATE_AS_YOU_ARE_CURRENTLY_PARTICIPATING_IN_ANOTHER_PVP_MATCH;
 
     @ClientString(id = 3777, message = "You are on the waiting list for the Ceremony of Chaos.")
     public static SystemMessageId YOU_ARE_ON_THE_WAITING_LIST_FOR_THE_CEREMONY_OF_CHAOS;
@@ -17371,6 +17339,9 @@ public final class SystemMessageId {
     @ClientString(id = 4172, message = "You cannot chat while participating in the Olympiad.")
     public static SystemMessageId YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD;
 
+    @ClientString(id = 4173, message = "You cannot send a whisper to a user who is participating in the Olympiad.")
+    public static SystemMessageId YOU_CANNOT_SEND_A_WHISPER_TO_A_USER_WHO_IS_PARTICIPATING_IN_THE_OLYMPIAD;
+
     @ClientString(id = 4174, message = "After about 1 minute, you will move to the Olympiad arena.")
     public static SystemMessageId AFTER_ABOUT_1_MINUTE_YOU_WILL_MOVE_TO_THE_OLYMPIAD_ARENA;
 
@@ -17397,6 +17368,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 4215, message = "You cannot participate in the Ceremony of Chaos while fishing.")
     public static SystemMessageId YOU_CANNOT_PARTICIPATE_IN_THE_CEREMONY_OF_CHAOS_WHILE_FISHING;
+
+    @ClientString(id = 4216, message = "You cannot participate in the Olympiad while fishing.")
+    public static SystemMessageId YOU_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD_WHILE_FISHING;
 
     @ClientString(id = 4217, message = "You cannot do that while in a private store or private workshop.")
     public static SystemMessageId YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP;
@@ -17434,8 +17408,8 @@ public final class SystemMessageId {
     @ClientString(id = 4271, message = "Current location: $s1 / $s2 / $s3")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3;
 
-    @ClientString(id = 4299, message = "You cannot change your subclass while registering for the Ceremony of Chaos.")
-    public static SystemMessageId YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERING_FOR_THE_CEREMONY_OF_CHAOS;
+    @ClientString(id = 4296, message = "You cannot use or reset Ability Points while participating in the Olympiad or Ceremony of Chaos.")
+    public static SystemMessageId YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS;
 
     @ClientString(id = 4300, message = "Current location:  $s1 / $s2 / $s3 (Infinite Depths)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_INFINITE_DEPTHS;
@@ -17611,8 +17585,32 @@ public final class SystemMessageId {
     @ClientString(id = 5176, message = "$s1 has inflicted $s3 ($s4 attribute damge) damage to $s2.")
     public static SystemMessageId S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 
+    @ClientString(id = 5182, message = "During battle or viewing, Olympiad window cannot be opened.")
+    public static SystemMessageId DURING_BATTLE_OR_VIEWING_OLYMPIAD_WINDOW_CANNOT_BE_OPENED;
+
+    @ClientString(id = 5285, message = "You can't teleport during an Olympiad match.")
+    public static SystemMessageId YOU_CAN_T_TELEPORT_DURING_AN_OLYMPIAD_MATCH;
+
     @ClientString(id = 5211, message = "No Artifact Book equipped. You cannot equip $s1.")
     public static SystemMessageId NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1;
+
+    @ClientString(id = 5288, message = "You can't teleport in this area.")
+    public static SystemMessageId YOU_CAN_T_TELEPORT_IN_THIS_AREA;
+
+    @ClientString(id = 5294, message = "You must level 70 or higher and have completed the 2nd Class Transfer in order to participate in a match.")
+    public static SystemMessageId YOU_MUST_LEVEL_70_OR_HIGHER_AND_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_IN_ORDER_TO_PARTICIPATE_IN_A_MATCH;
+
+    @ClientString(id = 5295, message = "Cannot apply to participate in a match while in an instanced zone.")
+    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_IN_AN_INSTANCED_ZONE;
+
+    @ClientString(id = 5296, message = "Cannot apply to participate in a match while dead.")
+    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_DEAD;
+
+    @ClientString(id = 5297, message = "You've used up all your matches.")
+    public static SystemMessageId YOU_VE_USED_UP_ALL_YOUR_MATCHES;
+
+    @ClientString(id = 5298, message = "Cannot apply to participate because your inventory slots or weight exceeded 80%%.")
+    public static SystemMessageId CANNOT_APPLY_TO_PARTICIPATE_BECAUSE_YOUR_INVENTORY_SLOTS_OR_WEIGHT_EXCEEDED_80;
 
     @ClientString(id = 6004, message = "Enchant failed. The enchant skill for the corresponding item will be exactly retained.")
     public static SystemMessageId ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED;
@@ -17643,6 +17641,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 6183, message = "Your VIP level is too low to receive the reward.")
     public static SystemMessageId YOUR_VIP_LEVEL_IS_TOO_LOW_TO_RECEIVE_THE_REWARD;
+
+    @ClientString(id = 6188, message = "You do not meet the level requirements to receive the Attendance Reward. Please check the required level. (You can redeem your reward 30 minutes after logging in.)")
+    public static SystemMessageId YOU_DO_NOT_MEET_THE_LEVEL_REQUIREMENTS_TO_RECEIVE_THE_ATTENDANCE_REWARD_PLEASE_CHECK_THE_REQUIRED_LEVEL_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
 
     @ClientString(id = 6501, message = "You cannot bookmark this location because you do not have a My Teleport Flag.")
     public static SystemMessageId YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG;
@@ -17734,8 +17735,8 @@ public final class SystemMessageId {
     @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
     public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
 
-    @ClientString(id = 5288, message = "You can't teleport in this area.")
-    public static SystemMessageId YOU_CAN_T_TELEPORT_IN_THIS_AREA;
+    @ClientString(id = 13019, message = "Cannot use timed hunting zones while waiting for the Olympiad.")
+    public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;
 
     private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 

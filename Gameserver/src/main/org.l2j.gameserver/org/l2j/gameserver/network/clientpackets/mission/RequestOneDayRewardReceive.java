@@ -23,6 +23,7 @@ import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
@@ -47,10 +48,16 @@ public class RequestOneDayRewardReceive extends ClientPacket {
             return;
         }
 
+        if(!player.isInventoryUnder80() || player.getWeightPenalty() >= 3) {
+            player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+            return;
+        }
+
         var missionData = MissionData.getInstance();
 
         final Collection<MissionDataHolder> missions = missionData.getMissions(id);
-        if (Util.isNullOrEmpty(missions)) { return;
+        if (Util.isNullOrEmpty(missions)) {
+            return;
         }
 
         missions.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));

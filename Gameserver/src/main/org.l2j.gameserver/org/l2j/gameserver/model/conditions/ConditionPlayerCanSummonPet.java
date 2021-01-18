@@ -56,7 +56,7 @@ public class ConditionPlayerCanSummonPet extends Condition {
         } else if (player.hasPet()) {
             player.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_MULTIPLE_PETS_AT_THE_SAME_TIME);
             canSummon = false;
-        } else if (player.isFlyingMounted() || player.isMounted() || player.inObserverMode() || player.isTeleporting()) {
+        } else if (player.isFlyingMounted() || player.isMounted() || player.isInObserverMode() || player.isTeleporting()) {
             canSummon = false;
         }
         return (_val == canSummon);

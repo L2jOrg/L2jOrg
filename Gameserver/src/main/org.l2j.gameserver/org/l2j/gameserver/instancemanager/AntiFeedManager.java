@@ -18,15 +18,19 @@
  */
 package org.l2j.gameserver.instancemanager;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.function.IntBiFunction;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.world.World;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static java.util.Objects.isNull;
 
 public final class AntiFeedManager {
     public static final int GAME_ID = 0;
@@ -34,8 +38,8 @@ public final class AntiFeedManager {
     public static final int TVT_ID = 2;
     public static final int L2EVENT_ID = 3;
 
-    private final Map<Integer, Long> _lastDeathTimes = new ConcurrentHashMap<>();
-    private final Map<Integer, Map<Integer, AtomicInteger>> _eventIPs = new ConcurrentHashMap<>();
+    private final IntMap<Long> _lastDeathTimes = new CHashIntMap<>();
+    private final IntMap<IntMap<AtomicInteger>> _eventIPs = new CHashIntMap<>();
 
     private AntiFeedManager() {
     }
@@ -104,11 +108,9 @@ public final class AntiFeedManager {
 
     /**
      * Register new event for dualbox check. Should be called only once.
-     *
-     * @param eventId
      */
     public void registerEvent(int eventId) {
-        _eventIPs.putIfAbsent(eventId, new ConcurrentHashMap<>());
+        _eventIPs.putIfAbsent(eventId, new CHashIntMap<>());
     }
 
     /**
@@ -134,12 +136,12 @@ public final class AntiFeedManager {
             return false; // unable to determine IP address
         }
 
-        final Map<Integer, AtomicInteger> event = _eventIPs.get(eventId);
+        final var event = _eventIPs.get(eventId);
         if (event == null) {
             return false; // no such event registered
         }
 
-        final Integer addrHash = client.getHostAddress().hashCode();
+        final int addrHash = client.getHostAddress().hashCode();
         final AtomicInteger connectionCount = event.computeIfAbsent(addrHash, k -> new AtomicInteger());
 
         if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS) {
@@ -160,56 +162,36 @@ public final class AntiFeedManager {
 
     /**
      * Decreasing number of active connection from player's IP address
-     *
-     * @param eventId
-     * @param player
-     * @return true if success and false if any problem detected.
      */
     public boolean removePlayer(int eventId, Player player) {
         return removeClient(eventId, player.getClient());
     }
 
-    /**
-     * Decreasing number of active connection from player's IP address
-     *
-     * @param eventId
-     * @param client
-     * @return true if success and false if any problem detected.
-     */
-    public boolean removeClient(int eventId, GameClient client) {
-        if (client == null) {
-            return false; // unable to determine IP address
+    private boolean removeClient(int eventId, GameClient client) {
+        if (isNull(client)) {
+            return false;
         }
 
-        final Map<Integer, AtomicInteger> event = _eventIPs.get(eventId);
-        if (event == null) {
+        final var event = _eventIPs.get(eventId);
+        if (isNull(event)) {
             return false; // no such event registered
         }
-
-        final Integer addrHash = client.getHostAddress().hashCode();
-
-        return event.computeIfPresent(addrHash, (k, v) ->
-        {
-            if ((v == null) || (v.decrementAndGet() == 0)) {
-                return null;
-            }
-            return v;
-        }) != null;
+        return event.computeIfPresent(client.getHostAddress().hashCode(), this::decrementIpEvents) != null;
     }
 
-    /**
-     * Remove player connection IP address from all registered events lists.
-     *
-     * @param client
-     */
+    private AtomicInteger decrementIpEvents(int key, AtomicInteger value) {
+        if (isNull(value) || value.decrementAndGet() == 0) {
+            return null;
+        }
+        return value;
+    }
+
     public void onDisconnect(GameClient client) {
-        if ((client == null) || (client.getHostAddress() == null) || (client.getPlayer() == null)) {
+        if (isNull(client) || Util.isNullOrEmpty(client.getHostAddress())) {
             return;
         }
-
-        _eventIPs.forEach((k, v) -> {
-            removeClient(k, client);
-        });
+        
+        _eventIPs.forEach((k, v) -> removeClient(k, client));
     }
 
     /**
@@ -218,15 +200,13 @@ public final class AntiFeedManager {
      * @param eventId
      */
     public void clear(int eventId) {
-        final Map<Integer, AtomicInteger> event = _eventIPs.get(eventId);
+        final var event = _eventIPs.get(eventId);
         if (event != null) {
             event.clear();
         }
     }
 
     /**
-     * @param player
-     * @param max
      * @return maximum number of allowed connections (whitelist + max)
      */
     public int getLimit(Player player, int max) {
@@ -234,8 +214,6 @@ public final class AntiFeedManager {
     }
 
     /**
-     * @param client
-     * @param max
      * @return maximum number of allowed connections (whitelist + max)
      */
     public int getLimit(GameClient client, int max) {

@@ -19,6 +19,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TrapAction;
@@ -31,8 +32,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnTrapAction;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -88,21 +87,21 @@ public final class Trap extends Npc {
     }
 
     @Override
-    public void broadcastPacket(ServerPacket mov) {
+    public void broadcastPacket(ServerPacket packet) {
         World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (_isTriggered || canBeSeen(player)) {
-                player.sendPacket(mov);
+                player.sendPacket(packet);
             }
         });
     }
 
     @Override
-    public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
-        World.getInstance().forEachVisibleObjectInRange(this, Player.class, radiusInKnownlist, player ->
+    public void broadcastPacket(ServerPacket packet, int radius) {
+        World.getInstance().forEachVisibleObjectInRange(this, Player.class, radius, player ->
         {
             if (_isTriggered || canBeSeen(player)) {
-                player.sendPacket(mov);
+                player.sendPacket(packet);
             }
         });
     }
@@ -127,7 +126,7 @@ public final class Trap extends Npc {
 
         if (GameUtils.isPlayer(cha)) {
             // observers can't see trap
-            if (((Player) cha).inObserverMode()) {
+            if (((Player) cha).isInObserverMode()) {
                 return false;
             }
 
@@ -227,10 +226,6 @@ public final class Trap extends Npc {
     public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
         if (miss || (_owner == null)) {
             return;
-        }
-
-        if (_owner.isInOlympiadMode() && GameUtils.isPlayer(target) && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == _owner.getOlympiadGameId())) {
-            OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
         }
 
         if (target.isHpBlocked() && !GameUtils.isNpc(target)) {

@@ -38,10 +38,7 @@ public final class GlobalVariablesManager extends AbstractVariables {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GlobalVariablesManager.class);
 
-    public static final String MONSTER_ARENA_VARIABLE = "MA_C";
-
     private static final String SELECT_QUERY = "SELECT * FROM global_variables";
-    private static final String DELETE_QUERY = "DELETE FROM global_variables";
     private static final String INSERT_QUERY = "INSERT INTO global_variables (var, value) VALUES (?, ?)";
 
     private GlobalVariablesManager() {
@@ -73,11 +70,10 @@ public final class GlobalVariablesManager extends AbstractVariables {
             return false;
         }
 
+        deleteMe();
+
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement del = con.createStatement();
              PreparedStatement st = con.prepareStatement(INSERT_QUERY)) {
-            // Clear previous entries.
-            del.execute(DELETE_QUERY);
 
             // Insert all variables.
             for (Entry<String, Object> entry : getSet().entrySet()) {
@@ -99,10 +95,6 @@ public final class GlobalVariablesManager extends AbstractVariables {
     @Override
     public boolean deleteMe() {
         return getDAO(GlobalVariableDAO.class).deleteAll();
-    }
-
-    public void resetRaidBonus() {
-        getDAO(GlobalVariableDAO.class).deleteRaidBonus();
     }
 
     public static void init() {

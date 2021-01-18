@@ -21,7 +21,7 @@ package org.l2j.gameserver.model.item;
 import io.github.joealisson.primitive.HashLongMap;
 import io.github.joealisson.primitive.LongMap;
 import org.l2j.gameserver.enums.InventorySlot;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import static java.util.Objects.isNull;
 

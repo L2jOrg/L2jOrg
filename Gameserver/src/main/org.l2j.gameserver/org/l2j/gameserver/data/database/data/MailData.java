@@ -26,7 +26,7 @@ import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.item.container.Attachment;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

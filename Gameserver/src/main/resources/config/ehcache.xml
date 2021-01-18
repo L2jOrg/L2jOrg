@@ -14,21 +14,15 @@
         <heap>100</heap>
     </cache-template>
 
-    <cache alias="dao" uses-template="baseCache">
-        <key-type>java.lang.Class</key-type>
-        <value-type>org.l2j.commons.database.DAO</value-type>
-        <heap>50</heap>
-    </cache>
-
     <cache alias="sql-descriptors" uses-template="baseCache">
         <key-type>java.lang.reflect.Method</key-type>
-        <value-type>org.l2j.commons.database.helpers.QueryDescriptor</value-type>
+        <value-type>org.l2j.commons.database.QueryDescriptor</value-type>
         <heap>100</heap>
     </cache>
 
     <cache alias="sql-save-descriptors" uses-template="baseCache">
         <key-type>java.lang.Class</key-type>
-        <value-type>org.l2j.commons.database.helpers.QueryDescriptor</value-type>
+        <value-type>org.l2j.commons.database.QueryDescriptor</value-type>
         <heap>50</heap>
     </cache>
 
@@ -36,12 +30,6 @@
         <key-type>java.lang.String</key-type>
         <value-type>java.lang.String</value-type>
         <heap>200</heap>
-    </cache>
-
-    <cache alias="settings" uses-template="baseCache">
-        <key-type>java.lang.Class</key-type>
-        <value-type>org.l2j.commons.configuration.Settings</value-type>
-        <heap>10</heap>
     </cache>
 
 </config>

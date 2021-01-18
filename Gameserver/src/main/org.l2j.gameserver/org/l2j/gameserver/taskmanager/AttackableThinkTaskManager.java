@@ -32,21 +32,19 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class AttackableThinkTaskManager
 {
-    private static final Set<Attackable> ATTACKABLES = ConcurrentHashMap.newKeySet();
-    private static boolean _working = false;
+    private final Set<Attackable> attackables = ConcurrentHashMap.newKeySet();
+    private boolean working = false;
 
-    public AttackableThinkTaskManager()
-    {
+    public AttackableThinkTaskManager() {
         ThreadPool.scheduleAtFixedRate(() ->
         {
-            if (_working)
-            {
+            if (working) {
                 return;
             }
-            _working = true;
+            working = true;
 
             CreatureAI ai;
-            for (Attackable attackable : ATTACKABLES)
+            for (Attackable attackable : attackables)
             {
                 if (attackable.hasAI())
                 {
@@ -66,21 +64,17 @@ public class AttackableThinkTaskManager
                 }
             }
 
-            _working = false;
+            working = false;
         }, 1000, 1000);
     }
 
-    public void add(Attackable attackable)
-    {
-        if (!ATTACKABLES.contains(attackable))
-        {
-            ATTACKABLES.add(attackable);
-        }
+    public void add(Attackable attackable) {
+        attackables.add(attackable);
     }
 
     public void remove(Attackable attackable)
     {
-        ATTACKABLES.remove(attackable);
+        attackables.remove(attackable);
     }
 
     public static AttackableThinkTaskManager getInstance()

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -43,13 +44,13 @@ public class ExMPCCPartyInfoUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_MPCC_PARTY_INFO_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_MPCC_PARTY_INFO_UPDATE, buffer );
 
-        writeString(_name);
-        writeInt(_LeaderOID);
-        writeInt(_memberCount);
-        writeInt(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
+        buffer.writeString(_name);
+        buffer.writeInt(_LeaderOID);
+        buffer.writeInt(_memberCount);
+        buffer.writeInt(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
     }
 
 }

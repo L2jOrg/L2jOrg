@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.commission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -37,10 +38,10 @@ public class ExResponseCommissionRegister extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_REGISTER);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_REGISTER, buffer );
 
-        writeInt(_result);
+        buffer.writeInt(_result);
     }
 
 }

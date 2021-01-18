@@ -33,6 +33,6 @@ public class ExRankCharInfo extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        client.sendPacket(new ExRankingCharInfo());
+        client.sendPacket(new ExRankingCharInfo(client.getPlayer()));
     }
 }

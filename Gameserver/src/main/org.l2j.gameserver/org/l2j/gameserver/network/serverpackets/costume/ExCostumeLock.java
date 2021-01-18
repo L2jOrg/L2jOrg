@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.costume;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -38,10 +39,10 @@ public class ExCostumeLock extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_COSTUME_LOCK);
-        writeByte(result);
-        writeInt(costumeId);
-        writeByte(lock);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_COSTUME_LOCK, buffer );
+        buffer.writeByte(result);
+        buffer.writeInt(costumeId);
+        buffer.writeByte(lock);
     }
 }

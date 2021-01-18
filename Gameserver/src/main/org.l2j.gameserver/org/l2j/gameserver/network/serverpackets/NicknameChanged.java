@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,11 +36,11 @@ public class NicknameChanged extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.NICKNAME_CHANGED);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.NICKNAME_CHANGED, buffer );
 
-        writeInt(_objectId);
-        writeString(_title);
+        buffer.writeInt(_objectId);
+        buffer.writeString(_title);
     }
 
 }

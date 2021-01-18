@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -39,30 +40,30 @@ public class MonRaceInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MONRACE_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MONRACE_INFO, buffer );
 
-        writeInt(_unknown1);
-        writeInt(_unknown2);
-        writeInt(0x08);
+        buffer.writeInt(_unknown1);
+        buffer.writeInt(_unknown2);
+        buffer.writeInt(0x08);
 
         for (int i = 0; i < 8; i++) {
-            writeInt(_monsters[i].getObjectId()); // npcObjectID
-            writeInt(_monsters[i].getTemplate().getId() + 1000000); // npcID
-            writeInt(14107); // origin X
-            writeInt(181875 + (58 * (7 - i))); // origin Y
-            writeInt(-3566); // origin Z
-            writeInt(12080); // end X
-            writeInt(181875 + (58 * (7 - i))); // end Y
-            writeInt(-3566); // end Z
-            writeDouble(_monsters[i].getTemplate().getfCollisionHeight()); // coll. height
-            writeDouble(_monsters[i].getTemplate().getfCollisionRadius()); // coll. radius
-            writeInt(120); // ?? unknown
+            buffer.writeInt(_monsters[i].getObjectId()); // npcObjectID
+            buffer.writeInt(_monsters[i].getTemplate().getId() + 1000000); // npcID
+            buffer.writeInt(14107); // origin X
+            buffer.writeInt(181875 + (58 * (7 - i))); // origin Y
+            buffer.writeInt(-3566); // origin Z
+            buffer.writeInt(12080); // end X
+            buffer.writeInt(181875 + (58 * (7 - i))); // end Y
+            buffer.writeInt(-3566); // end Z
+            buffer.writeDouble(_monsters[i].getTemplate().getfCollisionHeight()); // coll. height
+            buffer.writeDouble(_monsters[i].getTemplate().getfCollisionRadius()); // coll. radius
+            buffer.writeInt(120); // ?? unknown
             for (int j = 0; j < 20; j++) {
                 if (_unknown1 == 0) {
-                    writeByte((byte) _speeds[i][j]);
+                    buffer.writeByte(_speeds[i][j]);
                 } else {
-                    writeByte((byte) 0x00);
+                    buffer.writeByte(0x00);
                 }
             }
         }

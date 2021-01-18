@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.raidbossinfo;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -30,8 +31,8 @@ public class ExRaidServerInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RAID_SERVER_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RAID_SERVER_INFO, buffer );
     }
 
 }

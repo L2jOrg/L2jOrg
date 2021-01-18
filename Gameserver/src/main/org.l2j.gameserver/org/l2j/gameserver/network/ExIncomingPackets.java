@@ -32,6 +32,10 @@ import org.l2j.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
 import org.l2j.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;
+import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarInfo;
+import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeAttacker;
+import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeDefender;
+import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeInfo;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
@@ -49,6 +53,8 @@ import org.l2j.gameserver.network.clientpackets.l2coin.RequestPurchaseLimitShopI
 import org.l2j.gameserver.network.clientpackets.l2store.*;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
+import org.l2j.gameserver.network.clientpackets.magiclamp.ExMagicLampGameInfo;
+import org.l2j.gameserver.network.clientpackets.magiclamp.ExMagicLampGameStart;
 import org.l2j.gameserver.network.clientpackets.mentoring.*;
 import org.l2j.gameserver.network.clientpackets.mission.RequestOneDayRewardReceive;
 import org.l2j.gameserver.network.clientpackets.mission.RequestTodoList;
@@ -62,6 +68,7 @@ import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestPvpBookList;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExTeleportToKiller;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
+import org.l2j.gameserver.network.clientpackets.raidserver.ExConnectToRaidServer;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankingCharRankers;
 import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;
@@ -205,7 +212,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_SHOW_PETITION(null, ConnectionState.IN_GAME_STATES),
     EX_REQUEST_SHOWSTEP_TWO(null, ConnectionState.IN_GAME_STATES),
     EX_REQUEST_SHOWSTEP_THREE(null, ConnectionState.IN_GAME_STATES),
-    EX_CONNECT_TO_RAID_SERVER(null, ConnectionState.IN_GAME_STATES),
+    EX_CONNECT_TO_RAID_SERVER(ExConnectToRaidServer::new, ConnectionState.IN_GAME_STATES),
     EX_RETURN_FROM_RAID(null, ConnectionState.IN_GAME_STATES),
     EX_REFUND_REQ(RequestRefundItem::new, ConnectionState.IN_GAME_STATES),
     EX_BUY_SELL_UI_CLOSE_REQ(RequestBuySellUIClose::new, ConnectionState.IN_GAME_STATES),
@@ -460,8 +467,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_COSTUME_EXTRACT(ExRequestCostumeExtract::new, ConnectionState.IN_GAME_STATES),
     EX_COSTUME_LOCK(ExRequestCostumeLock::new, ConnectionState.IN_GAME_STATES),
     EX_COSTUME_CHANGE_SHORTCUT(null, ConnectionState.IN_GAME_STATES),
-    EX_MAGICLAMP_GAME_INFO(null, ConnectionState.IN_GAME_STATES),
-    EX_MAGICLAMP_GAME_START(null, ConnectionState.IN_GAME_STATES),
+    EX_MAGICLAMP_GAME_INFO(ExMagicLampGameInfo::new, ConnectionState.IN_GAME_STATES),
+    EX_MAGICLAMP_GAME_START(ExMagicLampGameStart::new, ConnectionState.IN_GAME_STATES),
     EX_ACTIVATE_AUTO_SHORTCUT(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
     EX_PREMIUM_MANAGER_LINK_HTML(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
     EX_PREMIUM_MANAGER_PASS_CMD_TO_SERVER(ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME_STATES),
@@ -484,10 +491,10 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_RANKING_CHAR_SPAWN_BUFFZONE_NPC(null, ConnectionState.IN_GAME_STATES),
     EX_RANKING_CHAR_BUFFZONE_NPC_POSITION(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_MERCENARY_RECRUIT_INFO_SET(null, ConnectionState.IN_GAME_STATES),
-    EX_MERCENARY_CASTLEWAR_CASTLE_INFO(null, ConnectionState.IN_GAME_STATES),
-    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(null, ConnectionState.IN_GAME_STATES),
-    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(null, ConnectionState.IN_GAME_STATES),
-    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_DEFENDER_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_MERCENARY_CASTLEWAR_CASTLE_INFO(ExCastleWarInfo::new, ConnectionState.IN_GAME_STATES),
+    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(ExRequestMercenaryCastleWarCastleSiegeInfo::new, ConnectionState.IN_GAME_STATES),
+    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(ExRequestMercenaryCastleWarCastleSiegeAttacker::new, ConnectionState.IN_GAME_STATES),
+    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_DEFENDER_LIST(ExRequestMercenaryCastleWarCastleSiegeDefender::new, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_MERCENARY_MEMBER_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_MERCENARY_MEMBER_JOIN(null, ConnectionState.IN_GAME_STATES),
     EX_PVPBOOK_LIST(ExRequestPvpBookList::new, ConnectionState.IN_GAME_STATES),

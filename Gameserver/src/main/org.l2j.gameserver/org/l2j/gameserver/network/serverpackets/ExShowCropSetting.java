@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.Seed;
@@ -56,44 +57,44 @@ public class ExShowCropSetting extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_CROP_SETTING);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_CROP_SETTING, buffer );
 
-        writeInt(_manorId); // manor id
-        writeInt(_seeds.size()); // size
+        buffer.writeInt(_manorId); // manor id
+        buffer.writeInt(_seeds.size()); // size
 
         for (Seed s : _seeds) {
-            writeInt(s.getCropId()); // crop id
-            writeInt(s.getLevel()); // seed level
-            writeByte((byte) 1);
-            writeInt(s.getReward(1)); // reward 1 id
-            writeByte((byte) 1);
-            writeInt(s.getReward(2)); // reward 2 id
-            writeInt(s.getCropLimit()); // next sale limit
-            writeInt(0); // ???
-            writeInt(s.getCropMinPrice()); // min crop price
-            writeInt((int) s.getCropMaxPrice()); // max crop price
+            buffer.writeInt(s.getCropId()); // crop id
+            buffer.writeInt(s.getLevel()); // seed level
+            buffer.writeByte(1);
+            buffer.writeInt(s.getReward(1)); // reward 1 id
+            buffer.writeByte(1);
+            buffer.writeInt(s.getReward(2)); // reward 2 id
+            buffer.writeInt(s.getCropLimit()); // next sale limit
+            buffer.writeInt(0); // ???
+            buffer.writeInt(s.getCropMinPrice()); // min crop price
+            buffer.writeInt((int) s.getCropMaxPrice()); // max crop price
             // Current period
             if (_current.containsKey(s.getCropId())) {
                 final CropProcure cp = _current.get(s.getCropId());
-                writeLong(cp.getStartAmount()); // buy
-                writeLong(cp.getPrice()); // price
-                writeByte((byte) cp.getReward()); // reward
+                buffer.writeLong(cp.getStartAmount()); // buy
+                buffer.writeLong(cp.getPrice()); // price
+                buffer.writeByte(cp.getReward()); // reward
             } else {
-                writeLong(0);
-                writeLong(0);
-                writeByte((byte) 0);
+                buffer.writeLong(0);
+                buffer.writeLong(0);
+                buffer.writeByte(0);
             }
             // Next period
             if (_next.containsKey(s.getCropId())) {
                 final CropProcure cp = _next.get(s.getCropId());
-                writeLong(cp.getStartAmount()); // buy
-                writeLong(cp.getPrice()); // price
-                writeByte((byte) cp.getReward()); // reward
+                buffer.writeLong(cp.getStartAmount()); // buy
+                buffer.writeLong(cp.getPrice()); // price
+                buffer.writeByte(cp.getReward()); // reward
             } else {
-                writeLong(0);
-                writeLong(0);
-                writeByte((byte) 0);
+                buffer.writeLong(0);
+                buffer.writeLong(0);
+                buffer.writeByte(0);
             }
         }
         _next.clear();

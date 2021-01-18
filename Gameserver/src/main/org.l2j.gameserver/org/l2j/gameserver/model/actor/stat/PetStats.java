@@ -68,7 +68,7 @@ public class PetStats extends SummonStats {
         getCreature().updateAndBroadcastStatus(1);
 
         if (getCreature().getControlItem() != null) {
-            getCreature().getControlItem().setEnchantLevel(getLevel());
+            getCreature().getControlItem().changeEnchantLevel(getLevel());
         }
 
         return levelIncreased;
@@ -111,7 +111,7 @@ public class PetStats extends SummonStats {
         getCreature().startFeed();
 
         if (getCreature().getControlItem() != null) {
-            getCreature().getControlItem().setEnchantLevel(getLevel());
+            getCreature().getControlItem().changeEnchantLevel(getLevel());
         }
     }
 

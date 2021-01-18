@@ -37,7 +37,6 @@ public class ExOlympiadMatchMaking extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        Olympiad.getInstance().registerPlayer(client.getPlayer(), OlympiadRuleType.of(ruleType));
-        client.sendPacket(new ExOlympiadRecord());
+        Olympiad.getInstance().requestMatchMaking(client.getPlayer());
     }
 }

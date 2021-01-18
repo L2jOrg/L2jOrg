@@ -42,9 +42,9 @@ public class DoorTreasure implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		final WorldObject target = activeChar.getTarget();
+		final WorldObject target = creature.getTarget();
 		if ((target != null) && (isDoor(target) || (target instanceof Chest)))
 		{
 			return target;
@@ -52,7 +52,7 @@ public class DoorTreasure implements ITargetTypeHandler
 		
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			creature.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		}
 		
 		return null;

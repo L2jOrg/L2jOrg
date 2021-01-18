@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.costume;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -42,15 +43,15 @@ public class ExSendCostumeList extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_SEND_COSTUME_LIST);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_SEND_COSTUME_LIST, buffer );
 
-        writeInt(costumes.size());
+        buffer.writeInt(costumes.size());
         for (var costume : costumes) {
-            writeInt(costume.getId());
-            writeLong(costume.getAmount());
-            writeByte(costume.isLocked());
-            writeByte(costume.checkIsNewAndChange());
+            buffer.writeInt(costume.getId());
+            buffer.writeLong(costume.getAmount());
+            buffer.writeByte(costume.isLocked());
+            buffer.writeByte(costume.checkIsNewAndChange());
         }
     }
 }

@@ -42,9 +42,6 @@ public class Shortcut {
     @Column("client_id")
     private int clientId;
 
-    @Column("class_index")
-    private int classIndex;
-
     private ShortcutType type;
 
     @Column("shortcut_id")
@@ -186,10 +183,6 @@ public class Shortcut {
 
     public void setPlayerId(int playerId) {
         this.playerId = playerId;
-    }
-
-    public void setClassIndex(int classIndex) {
-        this.classIndex = classIndex;
     }
 
     public void setActive(boolean active) {

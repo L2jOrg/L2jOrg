@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.commission;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -25,7 +26,6 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 /**
  * @author NosBit
  */
-
 public class ExCloseCommission extends ServerPacket {
     public static final ExCloseCommission STATIC_PACKET = new ExCloseCommission();
 
@@ -33,8 +33,8 @@ public class ExCloseCommission extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CLOSE_COMMISSION);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CLOSE_COMMISSION, buffer );
     }
 
 }

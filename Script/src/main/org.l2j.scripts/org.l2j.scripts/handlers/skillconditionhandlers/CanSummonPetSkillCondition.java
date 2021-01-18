@@ -73,7 +73,7 @@ public class CanSummonPetSkillCondition implements SkillCondition {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
 			canSummon = false;
 		}
-		else if (player.isFlyingMounted() || player.isMounted() || player.inObserverMode() || player.isTeleporting())
+		else if (player.isFlyingMounted() || player.isMounted() || player.isInObserverMode() || player.isTeleporting())
 		{
 			canSummon = false;
 		}

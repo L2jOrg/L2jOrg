@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.Clan;
@@ -43,7 +44,7 @@ public class ExPledgeBonusOpen extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) throws InvalidDataPacketException {
+    public void writeImpl(GameClient client, WritableBuffer buffer) throws InvalidDataPacketException {
         final Clan clan = player.getClan();
         if (clan == null) {
             LOGGER.warn("Player: {} attempting to write to a null clan!", player);
@@ -70,23 +71,23 @@ public class ExPledgeBonusOpen extends ServerPacket {
         }
 
         // General OP Code
-        writeId(ServerExPacketId.EX_PLEDGE_BONUS_UI_OPEN);
+        writeId(ServerExPacketId.EX_PLEDGE_BONUS_UI_OPEN, buffer );
 
         // Members online bonus
-        writeInt(highestMembersOnlineBonus.getRequiredAmount());
-        writeInt(clan.getMaxOnlineMembers());
-        writeByte( 0x00); // progress ?
-        writeInt(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0x00);
-        writeByte((membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00));
-        writeByte((membersOnlineBonus != null ? 0x01 : 0x00));
+        buffer.writeInt(highestMembersOnlineBonus.getRequiredAmount());
+        buffer.writeInt(clan.getMaxOnlineMembers());
+        buffer.writeByte( 0x00); // progress ?
+        buffer.writeInt(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0x00);
+        buffer.writeByte((membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00));
+        buffer.writeByte((membersOnlineBonus != null ? 0x01 : 0x00));
 
         // Hunting bonus
-        writeInt(highestHuntingBonus.getRequiredAmount());
-        writeInt(clan.getHuntingPoints());
-        writeByte(0x00); // progress
-        writeInt(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
-        writeByte((huntingBonus != null ? huntingBonus.getLevel() : 0x00));
-        writeByte((huntingBonus != null ? 0x01 : 0x00));
+        buffer.writeInt(highestHuntingBonus.getRequiredAmount());
+        buffer.writeInt(clan.getHuntingPoints());
+        buffer.writeByte(0x00); // progress
+        buffer.writeInt(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
+        buffer.writeByte((huntingBonus != null ? huntingBonus.getLevel() : 0x00));
+        buffer.writeByte((huntingBonus != null ? 0x01 : 0x00));
     }
 
 }

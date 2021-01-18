@@ -37,9 +37,8 @@ public final class ObserverReturn extends ClientPacket {
             return;
         }
 
-        if (activeChar.inObserverMode()) {
+        if (activeChar.isInObserverMode()) {
             activeChar.leaveObserverMode();
-            // activeChar.teleToLocation(activeChar.getObsX(), activeChar.getObsY(), activeChar.getObsZ());
         }
     }
 }

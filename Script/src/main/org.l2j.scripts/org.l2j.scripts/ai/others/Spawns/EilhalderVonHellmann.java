@@ -18,7 +18,7 @@
  */
 package org.l2j.scripts.ai.others.Spawns;
 
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
@@ -73,7 +73,7 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc)
 	{
 		LOGGER.info("Spawning Night Raid Boss " + npc.getName());
-		DBSpawnManager.getInstance().notifySpawnNightNpc(npc);
+		BossManager.getInstance().notifySpawnNightNpc(npc);
 	}
 	
 	@Override

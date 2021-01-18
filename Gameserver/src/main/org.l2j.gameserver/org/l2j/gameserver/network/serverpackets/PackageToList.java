@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,12 +36,12 @@ public class PackageToList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PACKAGE_TO_LIST);
-        writeInt(players.size());
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PACKAGE_TO_LIST, buffer );
+        buffer.writeInt(players.size());
         for (IntMap.Entry<String> entry : players.entrySet()) {
-            writeInt(entry.getKey());
-            writeString(entry.getValue());
+            buffer.writeInt(entry.getKey());
+            buffer.writeString(entry.getValue());
         }
     }
 

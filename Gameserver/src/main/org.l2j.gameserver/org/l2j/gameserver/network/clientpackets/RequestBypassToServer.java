@@ -20,7 +20,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
@@ -29,13 +29,12 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -44,8 +43,7 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.StringTokenizer;
-
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isInteger;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
@@ -67,7 +65,6 @@ public final class RequestBypassToServer extends ClientPacket {
         "_mail",
         "_friend",
         "_match",
-        "_diary",
         "_olympiad?command",
         "menu_select",
         "manor_menu_select",
@@ -96,7 +93,7 @@ public final class RequestBypassToServer extends ClientPacket {
 
         if (bypass.isEmpty()) {
             LOGGER.warn("Player {} sent empty bypass!", player);
-            Disconnection.of(client, player).defaultSequence(false);
+            Disconnection.of(client, player).logout(false);
             return;
         }
 
@@ -117,7 +114,6 @@ public final class RequestBypassToServer extends ClientPacket {
             }
 
             if ((bypassOriginId > 0) && !GameUtils.isInsideRangeOfObjectId(player, bypassOriginId, Npc.INTERACTION_DISTANCE)) {
-                // No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action
                 return;
             }
         }
@@ -150,8 +146,8 @@ public final class RequestBypassToServer extends ClientPacket {
                 if (isInteger(id)) {
                     final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
 
-                    if (isNpc(object) && (endOfId > 0) && isInsideRadius2D(player, object, Npc.INTERACTION_DISTANCE)) {
-                        ((Npc) object).onBypassFeedback(player, bypass.substring(endOfId + 1));
+                    if (object instanceof Npc npc && (endOfId > 0) && isInsideRadius2D(player, object, Npc.INTERACTION_DISTANCE)) {
+                        npc.onBypassFeedback(player, bypass.substring(endOfId + 1));
                     }
                 }
 
@@ -173,30 +169,6 @@ public final class RequestBypassToServer extends ClientPacket {
                     player.sendPacket(ActionFailed.STATIC_PACKET);
                 } catch (NumberFormatException nfe) {
                     LOGGER.warn("NFE for command [" + bypass + "]", nfe);
-                }
-            } else if (bypass.startsWith("_match")) {
-                final String params = bypass.substring(bypass.indexOf("?") + 1);
-                final StringTokenizer st = new StringTokenizer(params, "&");
-                final int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
-                final int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
-                final int heroid = Hero.getInstance().getHeroByClass(heroclass);
-                if (heroid > 0) {
-                    Hero.getInstance().showHeroFights(player, heroclass, heroid, heropage);
-                }
-            } else if (bypass.startsWith("_diary")) {
-                final String params = bypass.substring(bypass.indexOf("?") + 1);
-                final StringTokenizer st = new StringTokenizer(params, "&");
-                final int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
-                final int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
-                final int heroid = Hero.getInstance().getHeroByClass(heroclass);
-                if (heroid > 0) {
-                    Hero.getInstance().showHeroDiary(player, heroclass, heroid, heropage);
-                }
-            } else if (bypass.startsWith("_olympiad?command")) {
-                final int arenaId = Integer.parseInt(bypass.split("=")[2]);
-                final IBypassHandler handler = BypassHandler.getInstance().getHandler("arenachange");
-                if (handler != null) {
-                    handler.useBypass("arenachange " + (arenaId - 1), player, null);
                 }
             } else if (bypass.startsWith("menu_select")) {
                 final Npc lastNpc = player.getLastFolkNPC();
@@ -220,10 +192,11 @@ public final class RequestBypassToServer extends ClientPacket {
                     return;
                 }
                 final int multisellId = Integer.parseInt(bypass.substring(10).trim());
-                MultisellData.getInstance().separateAndSend(multisellId, player, null, false);
+                MultisellEngine.getInstance().separateAndSend(multisellId, player, null, false);
             } else {
+                bypass = bypass.replace("?", " ");
                 final IBypassHandler handler = BypassHandler.getInstance().getHandler(bypass);
-                if (handler != null) {
+                if (nonNull(handler)) {
                     if (bypassOriginId > 0) {
                         final WorldObject bypassOrigin = World.getInstance().findObject(bypassOriginId);
                         if (isCreature(bypassOrigin)) {
@@ -235,11 +208,11 @@ public final class RequestBypassToServer extends ClientPacket {
                         handler.useBypass(bypass, player, null);
                     }
                 } else {
-                    LOGGER.warn(client + " sent not handled RequestBypassToServer: [" + bypass + "]");
+                    LOGGER.warn("{} sent not handled RequestBypassToServer: [{}]", client, bypass);
                 }
             }
         } catch (Exception e) {
-            LOGGER.warn("Exception processing bypass from player " + player.getName() + ": " + bypass, e);
+            LOGGER.error("Exception processing bypass from player {} : {}", player, bypass, e);
 
             if (player.isGM()) {
                 final StringBuilder sb = new StringBuilder(200);

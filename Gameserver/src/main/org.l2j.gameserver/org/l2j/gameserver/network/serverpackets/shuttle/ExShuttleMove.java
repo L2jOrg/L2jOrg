@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.shuttle;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -40,15 +41,15 @@ public class ExShuttleMove extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHUTTLE_MOVE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHUTTLE_MOVE, buffer );
 
-        writeInt(_shuttle.getObjectId());
-        writeInt((int) _shuttle.getStats().getMoveSpeed());
-        writeInt((int) _shuttle.getStats().getRotationSpeed());
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
+        buffer.writeInt(_shuttle.getObjectId());
+        buffer.writeInt((int) _shuttle.getStats().getMoveSpeed());
+        buffer.writeInt((int) _shuttle.getStats().getRotationSpeed());
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
     }
 
 }

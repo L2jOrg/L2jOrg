@@ -18,13 +18,13 @@
  */
 package org.l2j.gameserver.model.stats;
 
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.finalizers.*;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.EnumSet;
 import java.util.Optional;
+import java.util.Set;
 import java.util.function.BiFunction;
 import java.util.stream.Stream;
 
@@ -170,12 +170,12 @@ public enum Stat {
     RESIST_ABNORMAL_DEBUFF,
 
     // RESISTANCES
-    FIRE_RES(new AttributeFinalizer(AttributeType.FIRE, false)),
-    WIND_RES(new AttributeFinalizer(AttributeType.WIND, false)),
-    WATER_RES(new AttributeFinalizer(AttributeType.WATER, false)),
-    EARTH_RES(new AttributeFinalizer(AttributeType.EARTH, false)),
-    HOLY_RES(new AttributeFinalizer(AttributeType.HOLY, false)),
-    DARK_RES(new AttributeFinalizer(AttributeType.DARK, false)),
+    FIRE_RES(new AttributeFinalizer()),
+    WIND_RES(new AttributeFinalizer()),
+    WATER_RES(new AttributeFinalizer()),
+    EARTH_RES(new AttributeFinalizer()),
+    HOLY_RES(new AttributeFinalizer()),
+    DARK_RES(new AttributeFinalizer()),
     BASE_ATTRIBUTE_RES,
     MAGIC_SUCCESS_RES,
     // BUFF_IMMUNITY, //TODO: Implement me
@@ -184,12 +184,12 @@ public enum Stat {
     REAL_DAMAGE_RESIST,
 
     // ELEMENT POWER
-    FIRE_POWER(new AttributeFinalizer(AttributeType.FIRE, true)),
-    WATER_POWER(new AttributeFinalizer(AttributeType.WATER, true)),
-    WIND_POWER(new AttributeFinalizer(AttributeType.WIND, true)),
-    EARTH_POWER(new AttributeFinalizer(AttributeType.EARTH, true)),
-    HOLY_POWER(new AttributeFinalizer(AttributeType.HOLY, true)),
-    DARK_POWER(new AttributeFinalizer(AttributeType.DARK, true)),
+    FIRE_POWER(new AttributeFinalizer()),
+    WATER_POWER(new AttributeFinalizer()),
+    WIND_POWER(new AttributeFinalizer()),
+    EARTH_POWER(new AttributeFinalizer()),
+    HOLY_POWER(new AttributeFinalizer()),
+    DARK_POWER(new AttributeFinalizer()),
 
     // PROFICIENCY
     REFLECT_DAMAGE_PERCENT,
@@ -226,6 +226,9 @@ public enum Stat {
     // Vitality
     VITALITY_CONSUME_RATE,
     VITALITY_EXP_RATE,
+
+    // Magic Lamp
+    MAGIC_LAMP_EXP_RATE,
 
     // Souls
     MAX_SOULS,
@@ -312,8 +315,8 @@ public enum Stat {
         _mulFunction = mulFunction;
     }
 
-    public static Stream<Stat> stream() {
-        return CACHE.stream();
+    public static Set<Stat> all() {
+        return CACHE;
     }
 
     public static double weaponBaseValue(Creature creature, Stat stat) {

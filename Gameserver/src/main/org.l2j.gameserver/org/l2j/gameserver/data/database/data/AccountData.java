@@ -49,9 +49,13 @@ public class AccountData {
     @Column("last_attendance_reward")
     private byte lastAttendanceReward;
 
+    @Column("vip_attendance_reward")
+    private int vipAttendanceReward;
+
     public static AccountData of(String accountName) {
         var account = new AccountData();
         account.accountName =  accountName;
+        account.nextAttendance = LocalDateTime.now();
         return account;
     }
 
@@ -121,6 +125,18 @@ public class AccountData {
 
     public void setLastAttendanceReward(byte reward) {
         lastAttendanceReward = reward;
+    }
+
+    public void updateAttendanceVipReward(int reward) {
+        vipAttendanceReward |= 1 << reward;
+    }
+
+    public void setVipAttendanceReward(int vipAttendanceReward) {
+        this.vipAttendanceReward = vipAttendanceReward;
+    }
+
+    public int vipAttendanceReward() {
+        return vipAttendanceReward;
     }
 
     @Override

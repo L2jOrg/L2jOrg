@@ -18,12 +18,14 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class SocialAction extends ServerPacket {
     // TODO: Enum
     public static final int LEVEL_UP = 2122;
+    public static final int HERO_CLAIMED = 20016;
 
     private final int _charObjId;
     private final int _actionId;
@@ -34,12 +36,12 @@ public class SocialAction extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SOCIAL_ACTION);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SOCIAL_ACTION, buffer );
 
-        writeInt(_charObjId);
-        writeInt(_actionId);
-        writeInt(0x00); // TODO: Find me!
+        buffer.writeInt(_charObjId);
+        buffer.writeInt(_actionId);
+        buffer.writeInt(0x00); // TODO: Find me!
     }
 
 }

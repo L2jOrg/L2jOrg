@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -42,16 +43,16 @@ public class ExAttributeEnchantResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ATTRIBUTE_ENCHANT_RESULT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ATTRIBUTE_ENCHANT_RESULT, buffer );
 
-        writeInt(_result);
-        writeByte((byte) _isWeapon);
-        writeShort((short) _type);
-        writeShort((short) _before);
-        writeShort((short) _after);
-        writeShort((short) _successCount);
-        writeShort((short) _failedCount);
+        buffer.writeInt(_result);
+        buffer.writeByte(_isWeapon);
+        buffer.writeShort(_type);
+        buffer.writeShort(_before);
+        buffer.writeShort(_after);
+        buffer.writeShort(_successCount);
+        buffer.writeShort(_failedCount);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.autoplay;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -28,17 +29,17 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ExAutoPlaySettingResponse extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_AUTOPLAY_SETTING);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_AUTOPLAY_SETTING, buffer );
 
         final var settings = client.getPlayer().getAutoPlaySettings();
-        writeShort(settings.getSize());
-        writeByte(settings.isActive());
-        writeByte(settings.isAutoPickUpOn());
-        writeShort(settings.getNextTargetMode());
-        writeByte(settings.isNearTarget());
-        writeInt(settings.getUsableHpPotionPercent());
-        writeInt(settings.getUsableHpPetPotionPercent());
-        writeByte(settings.isRespectfulMode());
+        buffer.writeShort(settings.getSize());
+        buffer.writeByte(settings.isActive());
+        buffer.writeByte(settings.isAutoPickUpOn());
+        buffer.writeShort(settings.getNextTargetMode());
+        buffer.writeByte(settings.isNearTarget());
+        buffer.writeInt(settings.getUsableHpPotionPercent());
+        buffer.writeInt(settings.getUsableHpPetPotionPercent());
+        buffer.writeByte(settings.isRespectfulMode());
     }
 }

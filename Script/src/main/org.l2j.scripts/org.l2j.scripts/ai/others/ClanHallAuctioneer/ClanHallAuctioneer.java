@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.ai.others.ClanHallAuctioneer;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
@@ -33,9 +34,9 @@ import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
 import org.l2j.gameserver.model.html.pagehandlers.NextPrevPageHandler;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.BypassParser;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
@@ -48,6 +49,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Clan Hall Auctioneer AI.
@@ -360,7 +363,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
             else
             {
                 player.sendPacket(SystemMessageId.YOU_HAVE_REGISTERED_FOR_A_CLAN_HALL_AUCTION);
-                if (bid > Inventory.MAX_ADENA)
+                if (bid > getSettings(CharacterSettings.class).maxAdena())
                 {
                     player.sendPacket(SystemMessageId.THE_HIGHEST_BID_IS_OVER_999_9_BILLION_THEREFORE_YOU_CANNOT_PLACE_A_BID);
                     return;

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -34,11 +35,11 @@ public class ExShowQuestMark extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_QUEST_MARK);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_QUEST_MARK, buffer );
 
-        writeInt(_questId);
-        writeInt(_questState);
+        buffer.writeInt(_questId);
+        buffer.writeInt(_questState);
     }
 
 }

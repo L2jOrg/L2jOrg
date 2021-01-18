@@ -29,7 +29,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.skills.CommonSkill;
@@ -287,7 +286,7 @@ public class EnchantItemEngine extends GameXmlReader {
             }
 
         } else if(scroll.isBlessed()) {
-            item.setEnchantLevel(0);
+            item.changeEnchantLevel(0);
             item.updateDatabase();
             onEnchantEquippedItem(player, item);
 
@@ -313,7 +312,7 @@ public class EnchantItemEngine extends GameXmlReader {
 
             EnchantResult result;
             if(crystalId != 0 && count > 0) {
-                var crystal = player.getInventory().addItem("Enchant", crystalId, count, player, item);
+                var crystal = player.getInventory().addItem("Enchant", crystalId, count, player, item, false);
                 player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(crystal).addLong(count));
                 inventoryUpdate.addItem(crystal);
                 result = EnchantResult.fail(crystalId, count);
@@ -324,7 +323,7 @@ public class EnchantItemEngine extends GameXmlReader {
             doIfNonNull(item.isWeapon() ? weaponRewards.get(item.getCrystalType()) : armorRewards.get(item.getCrystalType()), failReward -> {
                 long rewardAmount = failReward.amount(item.getEnchantLevel());
                 if(rewardAmount > 0) {
-                    var reward = player.getInventory().addItem("Enchant",  failReward.id(), rewardAmount, player, item);
+                    var reward = player.getInventory().addItem("Enchant",  failReward.id(), rewardAmount, player, item, false);
                     player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(reward).addLong(rewardAmount));
                     inventoryUpdate.addItem(reward);
                     result.withStone(failReward.id(), rewardAmount);
@@ -362,14 +361,14 @@ public class EnchantItemEngine extends GameXmlReader {
     }
 
     private void announceEnchantment(Player player, Item item) {
-        final int minEnchantAnnounce = item.isArmor() ? getSettings(CharacterSettings.class).minimumEnchantAnnounceArmor() : getSettings(CharacterSettings.class).minimumEnchantAnnounceWeapon();
+        final int minEnchantAnnounce = item.isArmor() ? getSettings(CharacterSettings.class).minEnchantAnnounceArmor() : getSettings(CharacterSettings.class).minEnchantAnnounceWeapon();
         if (minEnchantAnnounce > 0 && item.getEnchantLevel() >= minEnchantAnnounce) {
 
             Broadcast.toAllOnlinePlayers(new ExItemAnnounce(ENHANCEMENT, player, item),
                     getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3).addPcName(player).addInt(item.getEnchantLevel()).addItemName(item));
 
             doIfNonNull(CommonSkill.FIREWORK.getSkill(), skill ->
-                    player.broadcastPacket(new MagicSkillUse(player, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay())));
+                    player.broadcastPacket(new MagicSkillUse(player, skill, skill.getReuseDelay())));
         }
     }
 

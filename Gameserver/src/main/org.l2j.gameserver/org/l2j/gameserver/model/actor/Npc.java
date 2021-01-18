@@ -31,7 +31,7 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.*;
@@ -48,7 +48,8 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
 import org.l2j.gameserver.network.NpcStringId;
@@ -574,7 +575,6 @@ public class Npc extends Creature {
             return temp;
         }
 
-        // If the file is not found, the standard message "I have nothing to say to you" is returned
         return "data/html/npcdefault.htm";
     }
 
@@ -584,12 +584,8 @@ public class Npc extends Creature {
 
     /**
      * Returns true if html exists
-     *
-     * @param player
-     * @param type
-     * @return boolean
      */
-    private boolean showPkDenyChatWindow(Player player, String type) {
+    protected boolean showPkDenyChatWindow(Player player, String type) {
         String html = HtmCache.getInstance().getHtm(player, "data/html/" + type + "/" + getId() + "-pk.htm");
         if (html != null) {
             html = html.replaceAll("%objectId%", String.valueOf(getObjectId()));
@@ -618,26 +614,6 @@ public class Npc extends Creature {
             return;
         }
 
-        if (player.getReputation() < 0) {
-            if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof Merchant)) {
-                if (showPkDenyChatWindow(player, "merchant")) {
-                    return;
-                }
-            } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (this instanceof Teleporter)) {
-                if (showPkDenyChatWindow(player, "teleporter")) {
-                    return;
-                }
-            } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (this instanceof Warehouse)) {
-                if (showPkDenyChatWindow(player, "warehouse")) {
-                    return;
-                }
-            } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof Fisherman)) {
-                if (showPkDenyChatWindow(player, "fisherman")) {
-                    return;
-                }
-            }
-        }
-
         if (getTemplate().isType("Auctioneer") && (val == 0)) {
             return;
         }
@@ -645,44 +621,17 @@ public class Npc extends Creature {
         final int npcId = getTemplate().getId();
 
         String filename;
-        switch (npcId) {
-            case 31688: {
-                if (player.isNoble()) {
-                    filename = OLYMPIAD_HTML_PATH + "noble_main.htm";
-                } else {
-                    filename = (getHtmlPath(npcId, val));
-                }
-                break;
+        if (npcId == 30298) { // Blacksmith Pinter
+            if (player.isAcademyMember()) {
+                filename = getHtmlPath(npcId, 1);
+            } else {
+                filename = getHtmlPath(npcId, val);
             }
-            case 31690:
-            case 31769:
-            case 31770:
-            case 31771:
-            case 31772: {
-                if (player.isHero() || player.isNoble()) {
-                    filename = OLYMPIAD_HTML_PATH + "hero_main.htm";
-                } else {
-                    filename = (getHtmlPath(npcId, val));
-                }
-                break;
+        } else {
+            if (((npcId >= 31093) && (npcId <= 31094)) || ((npcId >= 31172) && (npcId <= 31201)) || ((npcId >= 31239) && (npcId <= 31254))) {
+                return;
             }
-            case 30298: // Blacksmith Pinter
-            {
-                if (player.isAcademyMember()) {
-                    filename = (getHtmlPath(npcId, 1));
-                } else {
-                    filename = (getHtmlPath(npcId, val));
-                }
-                break;
-            }
-            default: {
-                if (((npcId >= 31093) && (npcId <= 31094)) || ((npcId >= 31172) && (npcId <= 31201)) || ((npcId >= 31239) && (npcId <= 31254))) {
-                    return;
-                }
-                // Get the text of the selected HTML file in function of the npcId and of the page number
-                filename = (getHtmlPath(npcId, val));
-                break;
-            }
+            filename = getHtmlPath(npcId, val);
         }
 
         // Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player
@@ -700,14 +649,10 @@ public class Npc extends Creature {
      * @param filename The filename that contains the text to send
      */
     public void showChatWindow(Player player, String filename) {
-        // Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         html.setFile(player, filename);
         html.replace("%objectId%", String.valueOf(getObjectId()));
         player.sendPacket(html);
-
-        // Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
-        player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 
     /**
@@ -775,6 +720,12 @@ public class Npc extends Creature {
             if (npcTemplate != null) {
                 npcTemplate.notifyNpcDeath(this, killer);
             }
+
+            if (_spawn.isRespawnEnabled()) {
+                stopAllEffects();
+            } else {
+                getEffectList().stopAllEffectsWithoutExclusions(true, true);
+            }
         }
 
         // Apply Mp Rewards
@@ -799,7 +750,7 @@ public class Npc extends Creature {
             }
         }
 
-        DBSpawnManager.getInstance().updateStatus(this, true);
+        BossManager.getInstance().updateStatus(this, true);
         return true;
     }
 
@@ -1092,7 +1043,7 @@ public class Npc extends Creature {
     private void consumeAndRechargeSpiritShots() {
         if(_spiritshotamount > 0 && Rnd.chance(getTemplate().getSpiritShotChance())) {
             _spiritshotamount--;
-            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
+            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, CommonSkill.SPIRITSHOT.getSkill(), 0), 600);
             chargeShot(ShotType.SPIRITSHOTS, 4);
         } else {
             unchargeShot(ShotType.SPIRITSHOTS);
@@ -1102,7 +1053,7 @@ public class Npc extends Creature {
     private void consumeAndRechargeSoulShots() {
         if(_soulshotamount > 0 && Rnd.chance(getTemplate().getSoulShotChance())) {
             _soulshotamount--;
-            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
+            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, CommonSkill.SOULSHOT.getSkill(), 0), 600);
             chargeShot(ShotType.SOULSHOTS, 4);
         } else {
             unchargeShot(ShotType.SOULSHOTS);
@@ -1236,9 +1187,6 @@ public class Npc extends Creature {
             }
 
             item = ItemEngine.getInstance().createItem("Loot", itemId, itemCount, character, this);
-            if (item == null) {
-                return null;
-            }
 
             if (character != null) {
                 item.getDropProtection().protect(character);
@@ -1255,7 +1203,7 @@ public class Npc extends Creature {
             item.setProtected(false);
 
             // If stackable, end loop as entire count is included in 1 instance of item.
-            if (item.isStackable() || !Config.MULTIPLE_ITEM_DROP) {
+            if (item.isStackable()) {
                 break;
             }
         }

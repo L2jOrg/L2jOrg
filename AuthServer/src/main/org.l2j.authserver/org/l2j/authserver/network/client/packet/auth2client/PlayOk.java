@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.client.packet.auth2client;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.AuthServerPacket;
 
@@ -29,12 +30,12 @@ public final class PlayOk extends AuthServerPacket {
     }
 
     @Override
-    protected void writeImpl(AuthClient client) {
+    protected void writeImpl(AuthClient client, WritableBuffer buffer) {
         var sessionKey = client.getSessionKey();
-        writeByte((byte)0x07);
-        writeInt(sessionKey.getGameServerSessionId());
-        writeInt(sessionKey.getGameServerAccountId());
-        writeByte((byte)serverId);
+        buffer.writeByte(0x07);
+        buffer.writeInt(sessionKey.getGameServerSessionId());
+        buffer.writeInt(sessionKey.getGameServerAccountId());
+        buffer.writeByte(serverId);
     }
 
 }

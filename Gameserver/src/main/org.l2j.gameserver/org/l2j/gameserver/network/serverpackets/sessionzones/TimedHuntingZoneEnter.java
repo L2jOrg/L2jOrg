@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.sessionzones;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -35,8 +36,8 @@ public class TimedHuntingZoneEnter extends ServerPacket
 	}
 
 	@Override
-	protected void writeImpl(GameClient client)  {
-		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_ENTER);
-		writeInt(_remainingTime);
+	protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_ENTER, buffer );
+		buffer.writeInt(_remainingTime);
 	}
 }

@@ -27,7 +27,7 @@ import static org.l2j.authserver.network.client.packet.auth2client.LoginFail.Log
 import static org.l2j.authserver.network.client.packet.auth2client.PlayFail.PlayFailReason.REASON_TOO_MANY_PLAYERS;
 
 /**
- * Fromat is ddc d: first part of session id d: second part of session id c: server ID
+ * Format is ddc d: first part of session id d: second part of session id c: server ID
  */
 public class RequestServerLogin extends AuthClientPacket {
 

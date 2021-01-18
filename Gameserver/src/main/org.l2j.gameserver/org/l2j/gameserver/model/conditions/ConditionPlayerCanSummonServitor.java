@@ -45,7 +45,7 @@ public class ConditionPlayerCanSummonServitor extends Condition {
 
         boolean canSummon = true;
 
-        if (player.isFlyingMounted() || player.isMounted() || player.inObserverMode() || player.isTeleporting()) {
+        if (player.isFlyingMounted() || player.isMounted() || player.isInObserverMode() || player.isTeleporting()) {
             canSummon = false;
         } else if (player.getServitors().size() >= 4) {
             canSummon = false;

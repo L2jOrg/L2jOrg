@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.PlayerEventHolder;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,6 +40,8 @@ import java.io.FileReader;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -145,12 +148,8 @@ public class Event {
             spawn.getLastSpawn().setTitle(_eventName);
             spawn.getLastSpawn().getVariables().set("eventmob", true);
             spawn.getLastSpawn().setIsInvul(true);
-            // spawn.getLastSpawn().decayMe();
-            // spawn.getLastSpawn().spawnMe(spawn.getLastSpawn().getX(), spawn.getLastSpawn().getY(), spawn.getLastSpawn().getZ());
 
             spawn.getLastSpawn().broadcastPacket(new MagicSkillUse(spawn.getLastSpawn(), spawn.getLastSpawn(), 1034, 1, 1, 1));
-
-            // _npcs.add(spawn.getLastSpawn());
         } catch (Exception e) {
             LOGGER.warn("Exception on spawn(): " + e.getMessage(), e);
         }
@@ -310,7 +309,7 @@ public class Event {
                 return "Cannot start event, invalid npc id.";
             }
 
-            try (FileReader fr = new FileReader(Config.DATAPACK_ROOT + "/data/events/" + _eventName);
+            try (FileReader fr = new FileReader(getSettings(ServerSettings.class).dataPackDirectory().resolve("/data/events/" + _eventName).toFile());
                  BufferedReader br = new BufferedReader(fr)) {
                 _eventCreator = br.readLine();
                 _eventInfo = br.readLine();

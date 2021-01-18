@@ -18,40 +18,41 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.entity.Hero;
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.OlympiadHeroData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
-import java.util.Map;
+import java.util.List;
 
 /**
  * @author -Wooden-, KenM, godson
+ * @author JoeAlisson
  */
 public class ExHeroList extends ServerPacket {
-    private final Map<Integer, StatsSet> _heroList;
 
-    public ExHeroList() {
-        _heroList = Hero.getInstance().getHeroes();
+    private final List<OlympiadHeroData> heroes;
+
+    public ExHeroList(List<OlympiadHeroData> heroes) {
+        this.heroes = heroes;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_HERO_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_HERO_LIST, buffer );
 
-        writeInt(_heroList.size());
-        for (Integer heroId : _heroList.keySet()) {
-            final StatsSet hero = _heroList.get(heroId);
-            writeString(hero.getString(Hero.CHAR_NAME));
-            writeInt(hero.getInt(Hero.CLASS_ID));
-            writeString(hero.getString(Hero.CLAN_NAME, ""));
-            writeInt(hero.getInt(Hero.CLAN_CREST, 0));
-            writeString(hero.getString(Hero.ALLY_NAME, ""));
-            writeInt(hero.getInt(Hero.ALLY_CREST, 0));
-            writeInt(hero.getInt(Hero.COUNT));
-            writeInt(0x00);
+        buffer.writeInt(heroes.size());
+
+        for (var hero : heroes) {
+            buffer.writeString(hero.getName());
+            buffer.writeInt(hero.getClassId());
+            buffer.writeString(hero.getClanName());
+            buffer.writeInt(0); // clan crest not used in classic
+            buffer.writeString(""); // ally name not used in classic
+            buffer.writeInt(0); // ally crest not used in classic
+            buffer.writeInt(hero.getHeroCount());
+            buffer.writeInt(hero.getServer());
+            buffer.writeByte(hero.isLegend());
         }
     }
-
-
 }

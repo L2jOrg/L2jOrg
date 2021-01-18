@@ -61,11 +61,11 @@ public final class PetSkillUse implements IPlayerActionHandler
 		}
 		else
 		{
-			final int skillLevel = PetDataTable.getInstance().getPetData(pet.getId()).getAvailableLevel(action.getOptionId(), pet.getLevel());
+			final int skillLevel = PetDataTable.getInstance().getPetTemplate(pet.getId()).getAvailableLevel(action.getOptionId(), pet.getLevel());
 			if (skillLevel > 0)
 			{
 				pet.setTarget(player.getTarget());
-				pet.useMagic(SkillEngine.getInstance().getSkill(action.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
+				pet.useSkill(SkillEngine.getInstance().getSkill(action.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
 			}
 			
 			if (action.getOptionId() == CommonSkill.PET_SWITCH_STANCE.getId())

@@ -161,8 +161,8 @@ public final class World {
         final Player existingPlayer = players.putIfAbsent(player.getObjectId(), player);
 
         if (nonNull(existingPlayer)) {
-            Disconnection.of(existingPlayer).defaultSequence(false);
-            Disconnection.of(player).defaultSequence(false);
+            Disconnection.of(existingPlayer).logout(false);
+            Disconnection.of(player).logout(false);
             LOGGER.warn("Duplicate character!? Disconnected both characters {})", player);
         }
     }
@@ -643,6 +643,14 @@ public final class World {
 
     public static World getInstance() {
         return Singleton.INSTANCE;
+    }
+
+    public int getPlayersCountInSurroundRegions(WorldObject reference) {
+        var region = reference.getWorldRegion();
+        if(nonNull(region)) {
+            return region.getPlayersCountInSurround();
+        }
+        return 0;
     }
 
     private static class Singleton {

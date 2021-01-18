@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -53,23 +54,23 @@ public class ExListPartyMatchingWaitingRoom extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_LIST_PARTY_MATCHING_WAITING_ROOM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_LIST_PARTY_MATCHING_WAITING_ROOM, buffer );
 
-        writeInt(_size);
-        writeInt(_players.size());
+        buffer.writeInt(_size);
+        buffer.writeInt(_players.size());
         for (Player player : _players) {
-            writeString(player.getName());
-            writeInt(player.getClassId().getId());
-            writeInt(player.getLevel());
+            buffer.writeString(player.getName());
+            buffer.writeInt(player.getClassId().getId());
+            buffer.writeInt(player.getLevel());
             final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
-            writeInt((instance != null) && (instance.getTemplateId() >= 0) ? instance.getTemplateId() : -1);
+            buffer.writeInt((instance != null) && (instance.getTemplateId() >= 0) ? instance.getTemplateId() : -1);
             final var _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
-            writeInt(_instanceTimes.size());
+            buffer.writeInt(_instanceTimes.size());
             for (var entry : _instanceTimes.entrySet()) {
                 final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
-                writeInt(entry.getKey());
-                writeInt((int) instanceTime);
+                buffer.writeInt(entry.getKey());
+                buffer.writeInt((int) instanceTime);
             }
         }
     }

@@ -23,7 +23,8 @@ import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.BossDAO;
-import org.l2j.gameserver.data.database.data.BossData;
+import org.l2j.gameserver.data.database.dao.GrandBossDAO;
+import org.l2j.gameserver.data.database.data.GrandBossData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
@@ -46,27 +47,27 @@ public final class GrandBossManager implements IStorable {
     protected static Logger LOGGER = LoggerFactory.getLogger(GrandBossManager.class.getName());
 
     protected static IntMap<GrandBoss> bosses = new CHashIntMap<>();
-    private IntMap<BossData> grandBossesData = Containers.emptyIntMap();
+    private IntMap<GrandBossData> grandBossesData = Containers.emptyIntMap();
 
     private GrandBossManager() {
         init();
     }
 
     private void init() {
-        grandBossesData = getDAO(BossDAO.class).loadGrandBosses();
+        grandBossesData = getDAO(GrandBossDAO.class).loadGrandBosses();
         LOGGER.info("Loaded {} Grand Bosses.", grandBossesData.size());
         ThreadPool.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
     }
 
     public BossStatus getBossStatus(int bossId) {
-        return computeIfNonNull(grandBossesData.get(bossId), BossData::getStatus);
+        return computeIfNonNull(grandBossesData.get(bossId), GrandBossData::getStatus);
     }
 
     public void setBossStatus(int bossId, BossStatus status) {
         var bossData = grandBossesData.get(bossId);
         if(nonNull(bossData)) {
             bossData.setStatus(status);
-            getDAO(BossDAO.class).updateGrandBossStatus(bossId, status);
+            getDAO(GrandBossDAO.class).updateGrandBossStatus(bossId, status);
             LOGGER.info("Updated {} ({}) status to {}", NpcData.getInstance().getTemplate(bossId).getName(), bossId, status );
         }
     }
@@ -85,7 +86,7 @@ public final class GrandBossManager implements IStorable {
         return grandBossesData.containsKey(bossId);
     }
 
-    public BossData getBossData(int bossId) {
+    public GrandBossData getBossData(int bossId) {
         return grandBossesData.get(bossId);
     }
 
@@ -107,7 +108,7 @@ public final class GrandBossManager implements IStorable {
             }
         }
 
-        return getDAO(BossDAO.class).save(grandBossesData.values());
+        return getDAO(GrandBossDAO.class).save(grandBossesData.values());
     }
 
     /**

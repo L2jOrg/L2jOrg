@@ -44,7 +44,7 @@ import java.util.*;
  */
 public class DropSearchBoard implements IParseBoardHandler
 {
-	private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/navigation.html";
+	private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/new/navigation.html";
 	private static final String[] COMMAND =
 	{
 		"_bbs_search_item",

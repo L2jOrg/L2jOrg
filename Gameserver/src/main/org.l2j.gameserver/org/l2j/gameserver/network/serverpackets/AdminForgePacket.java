@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 
 import java.math.BigInteger;
@@ -37,40 +38,40 @@ public class AdminForgePacket extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
         for (Part p : _parts) {
-            generate(p.b, p.str);
+            generate(p.b, p.str, buffer);
         }
     }
 
-    public boolean generate(byte type, String value) {
+    public boolean generate(byte type, String value, WritableBuffer buffer) {
         return switch (type | 32) {
             case 'c' -> {
-                writeByte(Integer.decode(value).byteValue());
+                buffer.writeByte(Integer.decode(value).byteValue());
                 yield true;
             }
             case 'd' -> {
-                writeInt(Integer.decode(value));
+                buffer.writeInt(Integer.decode(value));
                 yield true;
             }
             case 'h' -> {
-                writeShort(Integer.decode(value).shortValue());
+                buffer.writeShort(Integer.decode(value).shortValue());
                 yield true;
             }
             case 'f' -> {
-                writeDouble(Double.parseDouble(value));
+                buffer.writeDouble(Double.parseDouble(value));
                 yield true;
             }
             case 's' -> {
-                writeString(value);
+                buffer.writeString(value);
                 yield true;
             }
             case 'b', 'x' -> {
-                writeBytes(new BigInteger(value).toByteArray());
+                buffer.writeBytes(new BigInteger(value).toByteArray());
                 yield true;
             }
             case 'q' -> {
-                writeLong(Long.decode(value));
+                buffer.writeLong(Long.decode(value));
                 yield true;
             }
             default -> false;

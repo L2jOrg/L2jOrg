@@ -19,6 +19,7 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -26,6 +27,8 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneEn
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneExit;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;

@@ -19,7 +19,8 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.commons.xml.XmlReader;
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.MinionHolder;
@@ -60,7 +61,7 @@ public abstract class GameXmlReader extends XmlReader {
      * @return {@code false} if it fails to find the directory, {@code true} otherwise
      */
     protected boolean parseDatapackDirectory(String path, boolean recursive) {
-        return parseDirectory(new File(Config.DATAPACK_ROOT, path), recursive);
+        return parseDirectory(new File(getSettings(ServerSettings.class).dataPackDirectory().toFile(), path), recursive);
     }
 
     /**
@@ -115,5 +116,10 @@ public abstract class GameXmlReader extends XmlReader {
     public ItemHolder parseItemHolder(Node n) {
         final var attrs = n.getAttributes();
         return new ItemHolder(parseInt(attrs, "id"), parseLong(attrs, "count"), parseInt(attrs, "enchant", 0));
+    }
+
+    public Skill parseSkillInfo(Node node) {
+        final var attrs = node.getAttributes();
+        return SkillEngine.getInstance().getSkill(parseInt(attrs, "id"), parseInt(attrs, "level"));
     }
 }

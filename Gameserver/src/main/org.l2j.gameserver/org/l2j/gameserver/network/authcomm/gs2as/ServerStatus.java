@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
@@ -40,9 +41,9 @@ public class ServerStatus extends SendablePacket {
     }
 
     @Override
-    protected void writeImpl(AuthServerClient client) {
-        writeByte((byte) 0x06);
-        writeInt(status.size());
-        status.entrySet().forEach(entry ->  { writeInt(entry.getKey()); writeInt(entry.getValue()); });
+    protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+        buffer.writeByte(0x06);
+        buffer.writeInt(status.size());
+        status.entrySet().forEach(entry ->  { buffer.writeInt(entry.getKey()); buffer.writeInt(entry.getValue()); });
     }
 }

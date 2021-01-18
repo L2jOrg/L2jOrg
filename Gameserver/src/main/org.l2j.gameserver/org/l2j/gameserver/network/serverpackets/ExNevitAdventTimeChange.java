@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -29,18 +30,18 @@ public class ExNevitAdventTimeChange extends ServerPacket {
     private final int _time;
 
     public ExNevitAdventTimeChange(int time) {
-        _time = time > 240000 ? 240000 : time;
+        _time = Math.min(time, 240000);
         _paused = _time < 1;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_RESPONSE_CRYSTALITEM_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_RESPONSE_CRYSTALITEM_INFO, buffer );
 
         // state 0 - pause 1 - started
-        writeByte((byte) (_paused ? 0x00 : 0x01));
+        buffer.writeByte(!_paused);
         // left time in ms max is 16000 its 4m and state is automatically changed to quit
-        writeInt(_time);
+        buffer.writeInt(_time);
     }
 
 }

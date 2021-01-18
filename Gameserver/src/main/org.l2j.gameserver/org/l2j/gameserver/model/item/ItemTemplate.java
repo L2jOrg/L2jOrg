@@ -20,7 +20,6 @@ package org.l2j.gameserver.model.item;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemGrade;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.PcCondOverride;
@@ -32,7 +31,6 @@ import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
@@ -46,7 +44,10 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -64,7 +65,7 @@ import static org.l2j.gameserver.util.GameUtils.*;
  * <li>Weapon</li>
  * </ul>
  */
-public abstract class ItemTemplate extends ListenersContainer implements IIdentifiable {
+public abstract sealed class ItemTemplate extends ListenersContainer implements IIdentifiable permits Weapon, Armor, EtcItem {
     public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
     public static final int TYPE1_SHIELD_ARMOR = 1;
     public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
@@ -76,39 +77,36 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public static final int TYPE2_OTHER = 5;
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(ItemTemplate.class);
+
+    private final int id;
+    private final String name;
+
     protected int type1; // needed for item list (inventory)
     protected int type2; // different lists for armor, weapon, etc
     protected List<FuncTemplate> _funcTemplates;
     protected List<Condition> _preConditions;
-    private int id;
     private int displayId;
-    private String name;
     private int weight;
     private boolean stackable;
     protected CrystalType crystalType;
     protected int equipReuseDelay;
-    private long time;
-    private int _autoDestroyTime = -1;
+    private long duration;
     private long price;
     protected int crystalCount;
     private boolean sellable;
     private boolean dropable;
-    private boolean destroyable;
+    private boolean destroyable;                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     private boolean tradable;
     private boolean depositable;
     protected boolean enchantable;
     protected boolean questItem;
     private boolean freightable;
     private boolean olympiadRestricted;
-    private boolean cocRestricted;
     private boolean forNpc;
-    private boolean _common;
-    private boolean _heroItem;
-    private boolean _pvpItem;
+    private boolean heroItem;
     protected boolean immediateEffect;
     protected boolean exImmediateEffect;
     protected ActionType _defaultAction = ActionType.NONE;
-    private Map<AttributeType, AttributeHolder> _elementals = null;
     private List<ItemSkillHolder> skills;
 
     private int reuseDelay;
@@ -122,10 +120,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public ItemTemplate(int id, String name) {
         this.id = id;
         this.name = name;
-
-        _common = ((id >= 11605) && (id <= 12361));
-        _heroItem = ((id >= 6611) && (id <= 6621)) || ((id >= 9388) && (id <= 9390)) || (id == 6842);
-        _pvpItem = ((id >= 10667) && (id <= 10835)) || ((id >= 12852) && (id <= 12977)) || ((id >= 14363) && (id <= 14525)) || (id == 14528) || (id == 14529) || (id == 14558) || ((id >= 15913) && (id <= 16024)) || ((id >= 16134) && (id <= 16147)) || (id == 16149) || (id == 16151) || (id == 16153) || (id == 16155) || (id == 16157) || (id == 16159) || ((id >= 16168) && (id <= 16176)) || ((id >= 16179) && (id <= 16220));
     }
 
     /**
@@ -151,21 +145,8 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return equipReuseDelay;
     }
 
-
-    /**
-     * Returns the time of the item
-     *
-     * @return long
-     */
-    public final long getTime() {
-        return time;
-    }
-
-    /**
-     * @return the auto destroy time of the item in seconds: 0 or less - default
-     */
-    public final int getAutoDestroyTime() {
-        return _autoDestroyTime;
+    public final long getDuration() {
+        return duration;
     }
 
     /**
@@ -292,34 +273,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return name;
     }
 
-
-    public Collection<AttributeHolder> getAttributes() {
-        return _elementals != null ? _elementals.values() : null;
-    }
-
-    /**
-     * Sets the base elemental of the item.
-     *
-     * @param holder the element to set.
-     */
-    public void setAttributes(AttributeHolder holder) {
-        if (_elementals == null) {
-            _elementals = new LinkedHashMap<>(3);
-            _elementals.put(holder.getType(), holder);
-        } else {
-            final AttributeHolder attribute = getAttribute(holder.getType());
-            if (attribute != null) {
-                attribute.setValue(holder.getValue());
-            } else {
-                _elementals.put(holder.getType(), holder);
-            }
-        }
-    }
-
-    public AttributeHolder getAttribute(AttributeType type) {
-        return _elementals != null ? _elementals.get(type) : null;
-    }
-
     /**
      * @return the part of the body used with the item.
      */
@@ -403,31 +356,12 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, id) < 0 && enchantable;
     }
 
-    /**
-     * Returns if item is common
-     *
-     * @return boolean
-     */
-    public final boolean isCommon() {
-        return _common;
-    }
-
-    /**
-     * Returns if item is hero-only
-     *
-     * @return
-     */
     public final boolean isHeroItem() {
-        return _heroItem;
+        return heroItem;
     }
 
-    /**
-     * Returns if item is pvp
-     *
-     * @return
-     */
-    public final boolean isPvpItem() {
-        return _pvpItem;
+    public void setHeroItem(boolean hero) {
+        this.heroItem = hero;
     }
 
     public boolean isPotion() {
@@ -452,39 +386,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @param template : FuncTemplate to add
      */
     public void addFunctionTemplate(FuncTemplate template) {
-        switch (template.getStat()) {
-            case FIRE_RES:
-            case FIRE_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.FIRE, (int) template.getValue()));
-                break;
-            }
-            case WATER_RES:
-            case WATER_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.WATER, (int) template.getValue()));
-                break;
-            }
-            case WIND_RES:
-            case WIND_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.WIND, (int) template.getValue()));
-                break;
-            }
-            case EARTH_RES:
-            case EARTH_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.EARTH, (int) template.getValue()));
-                break;
-            }
-            case HOLY_RES:
-            case HOLY_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.HOLY, (int) template.getValue()));
-                break;
-            }
-            case DARK_RES:
-            case DARK_POWER: {
-                setAttributes(new AttributeHolder(AttributeType.DARK, (int) template.getValue()));
-                break;
-            }
-        }
-
         if (_funcTemplates == null) {
             _funcTemplates = new ArrayList<>();
         }
@@ -527,6 +428,17 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return nonNull(skills) ? skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : Collections.emptyList();
     }
 
+    public final boolean hasSkill(ItemSkillType type, int skillId) {
+        if(nonNull(skills)) {
+            for (var skill : skills) {
+                if(skill.getType() == type && skill.getSkillId() == skillId) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
         if (nonNull(skills)) {
             skills.stream().filter(sk -> sk.getType() == type).forEach(action);
@@ -560,7 +472,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         }
 
         // Don't allow hero equipment and restricted items during Olympiad
-        if ((isOlyRestrictedItem() || _heroItem) && (isPlayer(activeChar) && activeChar.getActingPlayer().isInOlympiadMode())) {
+        if ((isOlyRestrictedItem() || heroItem) && (isPlayer(activeChar) && activeChar.getActingPlayer().isInOlympiadMode())) {
             if (isEquipable()) {
                 activeChar.sendPacket(SystemMessageId.YOU_CANNOT_EQUIP_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
             } else {
@@ -617,7 +529,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     }
 
     public boolean isOlyRestrictedItem() {
-        return olympiadRestricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(id);
+        return olympiadRestricted;
     }
 
     public boolean isForNpc() {
@@ -750,7 +662,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     }
 
     public void setDuration(long duration) {
-        this.time = duration;
+        this.duration = duration;
     }
 
     public void setForNpc(Boolean forNpc) {

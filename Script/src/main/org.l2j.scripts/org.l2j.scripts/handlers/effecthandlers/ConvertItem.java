@@ -26,15 +26,13 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
 
 import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.GameUtils.isWeapon;
 
@@ -87,7 +85,7 @@ public final class ConvertItem extends AbstractEffect {
 		}
 		
 		final int enchantLevel = wpn.getEnchantLevel();
-		final AttributeHolder elementals = isNull(wpn.getAttributes())  ? null : wpn.getAttackAttribute();
+
 		var unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getBodyPart());
 		if (unequiped.size() <= 0) {
 			return;
@@ -125,11 +123,8 @@ public final class ConvertItem extends AbstractEffect {
 		if (isNull(newItem)) {
 			return;
 		}
-		
-		if (nonNull(elementals)) {
-			newItem.setAttribute(elementals, true);
-		}
-		newItem.setEnchantLevel(enchantLevel);
+
+		newItem.changeEnchantLevel(enchantLevel);
 		player.getInventory().equipItem(newItem);
 		
 		final SystemMessage msg;

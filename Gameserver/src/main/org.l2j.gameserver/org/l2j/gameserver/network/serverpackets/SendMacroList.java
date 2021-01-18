@@ -18,50 +18,50 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.MacroUpdateType;
 import org.l2j.gameserver.model.Macro;
-import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import static java.util.Objects.nonNull;
 
 public class SendMacroList extends ServerPacket {
-    private final int _count;
-    private final Macro _macro;
-    private final MacroUpdateType _updateType;
+    private final int count;
+    private final Macro macro;
+    private final MacroUpdateType updateType;
 
     public SendMacroList(int count, Macro macro, MacroUpdateType updateType) {
-        _count = count;
-        _macro = macro;
-        _updateType = updateType;
+        this.count = count;
+        this.macro = macro;
+        this.updateType = updateType;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MACRO_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.MACRO_LIST, buffer );
 
-        writeByte(_updateType.getId());
-        writeInt(_updateType != MacroUpdateType.LIST ? _macro.getId() : 0x00); // modified, created or deleted macro's id
-        writeByte(_count); // count of Macros
-        writeByte(nonNull(_macro)); // unknown
+        buffer.writeByte(updateType.getId());
+        buffer.writeInt(updateType != MacroUpdateType.LIST ? macro.getId() : 0x00); // modified, created or deleted macro's id
+        buffer.writeByte(count);
+        buffer.writeByte(nonNull(macro)); // unknown
 
-        if ((_macro != null) && (_updateType != MacroUpdateType.DELETE)) {
-            writeInt(_macro.getId()); // Macro ID
-            writeString(_macro.getName()); // Macmacros.comro Name
-            writeString(_macro.getDescr()); // Desc
-            writeString(_macro.getAcronym()); // acronym
-            writeInt(_macro.getIcon()); // icon
+        if (nonNull(macro) && updateType != MacroUpdateType.DELETE) {
+            buffer.writeInt(macro.getId());
+            buffer.writeString(macro.getName());
+            buffer.writeString(macro.getDescription());
+            buffer.writeString(macro.getAcronym());
+            buffer.writeInt(macro.getIcon());
 
-            writeByte(_macro.getCommands().size()); // count
+            buffer.writeByte(macro.getCommands().size()); // count
 
             int i = 1;
-            for (MacroCmd cmd : _macro.getCommands()) {
-                writeByte( i++); // command count
-                writeByte(cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
-                writeInt(cmd.getD1()); // skill id
-                writeByte(cmd.getD2()); // shortcut id
-                writeString(cmd.getCmd()); // command name
+            for (var cmd : macro.getCommands()) {
+                buffer.writeByte( i++); // command count
+                buffer.writeByte(cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
+                buffer.writeInt(cmd.getData1()); // skill id
+                buffer.writeByte(cmd.getData2()); // shortcut id
+                buffer.writeString(cmd.getCommand()); // command name
             }
         }
     }

@@ -42,7 +42,7 @@ public final class RequestFriendList extends ClientPacket {
         }
 
         player.sendPacket(SystemMessageId.FRIENDS_LIST);
-        player.sendPacket(player.getFriendList().stream().mapToObj(this::statusMessage).toArray(SystemMessage[]::new));
+        player.sendPackets(player.getFriendList().stream().mapToObj(this::statusMessage).toArray(SystemMessage[]::new));
         player.sendPacket(SystemMessageId.SEPARATOR_EQUALS);
     }
 

@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.item.Armor;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -107,30 +107,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
      * @return
      */
     protected static boolean isValid(Player player, Item item) {
-        if (!isValid(player)) {
-            return false;
-        }
-
-        // Item must belong to owner
-        if (item.getOwnerId() != player.getObjectId()) {
-            return false;
-        }
-        if (item.isAugmented()) {
-            return false;
-        }
-        if (item.isHeroItem()) {
-            return false;
-        }
-        if (item.isCommonItem()) {
-            return false;
-        }
-        if (item.isEtcItem()) {
-            return false;
-        }
-        if (item.isTimeLimitedItem()) {
-            return false;
-        }
-        if (item.isPvp() && !Config.ALT_ALLOW_AUGMENT_PVP_ITEMS) {
+        if (item.getOwnerId() != player.getObjectId() || !isValidItem(item) || !isValid(player)) {
             return false;
         }
 
@@ -150,11 +127,11 @@ public abstract class AbstractRefinePacket extends ClientPacket {
         }
 
         // blacklist check
-        if (Arrays.binarySearch(Config.AUGMENTATION_BLACKLIST, item.getId()) >= 0) {
-            return false;
-        }
+        return Arrays.binarySearch(Config.AUGMENTATION_BLACKLIST, item.getId()) < 0;
+    }
 
-        return true;
+    private static boolean isValidItem(Item item) {
+        return !item.isAugmented() && !item.isHeroItem() && !item.isEtcItem() && !item.isTimeLimitedItem();
     }
 
     /**

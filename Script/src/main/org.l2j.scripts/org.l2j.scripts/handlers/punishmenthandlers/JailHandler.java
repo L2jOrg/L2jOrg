@@ -21,6 +21,7 @@ package org.l2j.scripts.handlers.punishmenthandlers;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.TeleportTask;
@@ -28,7 +29,6 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.GameClient;
@@ -160,9 +160,8 @@ public class JailHandler implements IPunishmentHandler
 	{
 		player.setInstance(null);
 		
-		if (OlympiadManager.getInstance().isRegisteredInComp(player))
-		{
-			OlympiadManager.getInstance().removeDisconnectedCompetitor(player);
+		if (Olympiad.getInstance().isRegistered(player)) {
+			Olympiad.getInstance().unregisterPlayer(player);
 		}
 		
 		ThreadPool.schedule(new TeleportTask(player, JailZone.getLocationIn()), 2000);

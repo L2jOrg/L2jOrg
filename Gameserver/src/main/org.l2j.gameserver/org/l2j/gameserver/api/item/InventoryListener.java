@@ -20,7 +20,7 @@ package org.l2j.gameserver.api.item;
 
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 public interface InventoryListener {
 

@@ -221,7 +221,7 @@ public final class Baium extends AbstractNpcAI
                 if (npc != null)
                 {
                     zone.broadcastPacket(new Earthquake(npc.getX(), npc.getY(), npc.getZ(), 40, 10));
-                    zone.broadcastPacket(new PlaySound("BS02_A"));
+                    zone.broadcastPacket(PlaySound.sound("BS02_A"));
                     startQuestTimer("SOCIAL_ACTION", 8000, npc, player);
                 }
                 break;
@@ -521,7 +521,7 @@ public final class Baium extends AbstractNpcAI
         {
             setStatus(BossStatus.DEAD);
             addSpawn(TELE_CUBE, TELEPORT_CUBIC_LOC, false, 900000);
-            zone.broadcastPacket(new PlaySound("BS01_D"));
+            zone.broadcastPacket(PlaySound.sound("BS01_D"));
             final long respawnTime = Config.BAIUM_SPAWN_INTERVAL * 3600000;
             setRespawn(respawnTime);
             startQuestTimer("CLEAR_STATUS", respawnTime, null, null);

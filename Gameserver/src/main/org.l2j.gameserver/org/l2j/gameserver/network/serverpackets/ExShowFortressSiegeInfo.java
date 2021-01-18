@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -32,29 +33,29 @@ public class ExShowFortressSiegeInfo extends ServerPacket {
 
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_FORTRESS_SIEGE_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_FORTRESS_SIEGE_INFO, buffer );
 
-        writeInt(0); // Fortress Id
-        writeInt(0); // Total Barracks Count
+        buffer.writeInt(0); // Fortress Id
+        buffer.writeInt(0); // Total Barracks Count
         if (_csize > 0) {
             switch (_csize) {
                 case 3: {
                     switch (_csize2) {
                         case 0: {
-                            writeInt(0x03);
+                            buffer.writeInt(0x03);
                             break;
                         }
                         case 1: {
-                            writeInt(0x02);
+                            buffer.writeInt(0x02);
                             break;
                         }
                         case 2: {
-                            writeInt(0x01);
+                            buffer.writeInt(0x01);
                             break;
                         }
                         case 3: {
-                            writeInt(0x00);
+                            buffer.writeInt(0x00);
                             break;
                         }
                     }
@@ -65,23 +66,23 @@ public class ExShowFortressSiegeInfo extends ServerPacket {
                     switch (_csize2) {
                         // TODO: once control room supported, update packet.putInt(0x0x) to support 5th room
                         case 0: {
-                            writeInt(0x05);
+                            buffer.writeInt(0x05);
                             break;
                         }
                         case 1: {
-                            writeInt(0x04);
+                            buffer.writeInt(0x04);
                             break;
                         }
                         case 2: {
-                            writeInt(0x03);
+                            buffer.writeInt(0x03);
                             break;
                         }
                         case 3: {
-                            writeInt(0x02);
+                            buffer.writeInt(0x02);
                             break;
                         }
                         case 4: {
-                            writeInt(0x01);
+                            buffer.writeInt(0x01);
                             break;
                         }
                     }
@@ -90,7 +91,7 @@ public class ExShowFortressSiegeInfo extends ServerPacket {
             }
         } else {
             for (int i = 0; i < 0; i++) {
-                writeInt(0x00);
+                buffer.writeInt(0x00);
             }
         }
     }

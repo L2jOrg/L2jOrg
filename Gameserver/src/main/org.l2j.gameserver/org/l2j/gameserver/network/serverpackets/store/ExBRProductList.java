@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.store;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -42,52 +43,52 @@ public class ExBRProductList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_PRODUCT_LIST_ACK);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BR_PRODUCT_LIST_ACK, buffer );
 
-        writeLong(player.getAdena());
-        writeLong(0x00); // Hero coins
-        writeByte(type); // Type 0 - Home, 1 - History, 2 - Favorites
-        writeInt(products.size());
+        buffer.writeLong(player.getAdena());
+        buffer.writeLong(0x00); // Hero coins
+        buffer.writeByte(type); // Type 0 - Home, 1 - History, 2 - Favorites
+        buffer.writeInt(products.size());
 
         for (L2StoreProduct brItem : products) {
-            writeProduct(brItem);
+            writeProduct(brItem, buffer);
         }
     }
 
-    private void writeProduct(L2StoreProduct product) {
-        writeInt(product.getId());
-        writeByte(product.getCategory());
-        writeByte(product.getPaymentType());
-        writeInt(product.getPrice());
-        writeByte(product.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best
-        writeInt(product.getRecommended()); // Recommended: (bit flags) 1 - Top, 2 - Left, 4 - Right
-        writeInt(product.getStartSale());
-        writeInt(product.getEndSale());
-        writeByte(product.getDaysOfWeek());
-        writeByte(product.getStartHour());
-        writeByte(product.getStartMinute());
-        writeByte(product.getStopHour());
-        writeByte(product.getStopMinute());
-        writeInt(product.getStock());
-        writeInt(product.getMaxStock());
-        writeByte(product.getSalePercent());
-        writeByte(product.getMinLevel());
-        writeByte(product.getMaxLevel());
-        writeInt(product.getMinBirthday());
-        writeInt(product.getMaxBirthday());
-        writeInt(product.getRestrictionAmount());
-        writeInt(product.getAvailableCount());
-        writeByte(product.getItems().size());
+    private void writeProduct(L2StoreProduct product, WritableBuffer buffer) {
+        buffer.writeInt(product.getId());
+        buffer.writeByte(product.getCategory());
+        buffer.writeByte(product.getPaymentType());
+        buffer.writeInt(product.getPrice());
+        buffer.writeByte(product.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best
+        buffer.writeInt(product.getRecommended()); // Recommended: (bit flags) 1 - Top, 2 - Left, 4 - Right
+        buffer.writeInt(product.getStartSale());
+        buffer.writeInt(product.getEndSale());
+        buffer.writeByte(product.getDaysOfWeek());
+        buffer.writeByte(product.getStartHour());
+        buffer.writeByte(product.getStartMinute());
+        buffer.writeByte(product.getStopHour());
+        buffer.writeByte(product.getStopMinute());
+        buffer.writeInt(product.getStock());
+        buffer.writeInt(product.getMaxStock());
+        buffer.writeByte(product.getSalePercent());
+        buffer.writeByte(product.getMinLevel());
+        buffer.writeByte(product.getMaxLevel());
+        buffer.writeInt(product.getMinBirthday());
+        buffer.writeInt(product.getMaxBirthday());
+        buffer.writeInt(product.getRestrictionAmount());
+        buffer.writeInt(product.getAvailableCount());
+        buffer.writeByte(product.getItems().size());
         for (L2StoreItem item : product.getItems()) {
-            writeItem(item);
+            writeItem(item, buffer);
         }
     }
 
-    private void writeItem(L2StoreItem item) {
-        writeInt(item.getId());
-        writeInt((int) item.getCount());
-        writeInt(item.getWeight());
-        writeInt(item.isTradable());
+    private void writeItem(L2StoreItem item, WritableBuffer buffer) {
+        buffer.writeInt(item.getId());
+        buffer.writeInt((int) item.getCount());
+        buffer.writeInt(item.getWeight());
+        buffer.writeInt(item.isTradable());
     }
 }

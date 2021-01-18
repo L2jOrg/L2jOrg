@@ -18,7 +18,8 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.item.instance.Item;
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -38,15 +39,15 @@ public class ExPutItemResultForVariationCancel extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PUT_ITEM_RESULT_FOR_VARIATION_CANCEL);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PUT_ITEM_RESULT_FOR_VARIATION_CANCEL, buffer );
 
-        writeInt(_itemObjId);
-        writeInt(_itemId);
-        writeInt(_itemAug1);
-        writeInt(_itemAug2);
-        writeLong(_price);
-        writeInt(0x01);
+        buffer.writeInt(_itemObjId);
+        buffer.writeInt(_itemId);
+        buffer.writeInt(_itemAug1);
+        buffer.writeInt(_itemAug2);
+        buffer.writeLong(_price);
+        buffer.writeInt(0x01);
     }
 
 }

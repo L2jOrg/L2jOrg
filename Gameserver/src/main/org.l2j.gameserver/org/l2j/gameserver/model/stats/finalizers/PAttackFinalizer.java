@@ -21,7 +21,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
@@ -57,7 +57,7 @@ public class PAttackFinalizer implements IStatsFunction {
         }
         final double strBonus = creature.getSTR() > 0 ? BaseStats.STR.calcBonus(creature) : 1.;
         baseValue *= strBonus * creature.getLevelMod();
-        return Math.min(Stat.defaultValue(creature, stat, baseValue), Config.MAX_PATK);
+        return Stat.defaultValue(creature, stat, baseValue);
     }
 
     private double calcEnchantPAtkBonus(Item item) {

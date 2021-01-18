@@ -18,45 +18,36 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+/**
+ * @author JoeAlisson
+ */
 public final class StopMove extends ServerPacket {
-    private final int _objectId;
-    private final int _x;
-    private final int _y;
-    private final int _z;
-    private final int _heading;
+    private final int objectId;
+    private final int x;
+    private final int y;
+    private final int z;
+    private final int heading;
 
-    public StopMove(Creature cha) {
-        this(cha.getObjectId(), cha.getX(), cha.getY(), cha.getZ(), cha.getHeading());
-    }
-
-    /**
-     * @param objectId
-     * @param x
-     * @param y
-     * @param z
-     * @param heading
-     */
-    public StopMove(int objectId, int x, int y, int z, int heading) {
-        _objectId = objectId;
-        _x = x;
-        _y = y;
-        _z = z;
-        _heading = heading;
+    public StopMove(Creature creature) {
+        objectId = creature.getObjectId();
+        x = creature.getX();
+        y = creature.getY();
+        z = creature.getZ();
+        heading = creature.getHeading();
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.STOP_MOVE);
-
-        writeInt(_objectId);
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(_heading);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.STOP_MOVE, buffer );
+        buffer.writeInt(objectId);
+        buffer.writeInt(x);
+        buffer.writeInt(y);
+        buffer.writeInt(z);
+        buffer.writeInt(heading);
     }
-
 }

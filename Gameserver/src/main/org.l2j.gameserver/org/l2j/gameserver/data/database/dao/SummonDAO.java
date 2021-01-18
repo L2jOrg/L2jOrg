@@ -21,6 +21,7 @@ package org.l2j.gameserver.data.database.dao;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.SummonData;
+import org.l2j.gameserver.data.database.data.SummonSkillData;
 
 import java.util.List;
 
@@ -40,4 +41,12 @@ public interface SummonDAO extends DAO<SummonData> {
 
     @Query("REPLACE INTO character_summons (ownerId,summonId,summonSkillId,curHp,curMp,time) VALUES (:ownerId:,:id:,:skill:,:currentHp:,:currentMp:,:lifeTime:)")
     void save(int ownerId, int id, int skill, int currentHp, int currentMp, int lifeTime);
+
+    @Query("SELECT skill_id, skill_level, remaining_time, buff_index FROM character_summon_skills_save WHERE ownerId=:ownerId: AND summonSkillId=:summonSkillId: ORDER BY buff_index")
+    List<SummonSkillData> findSummonSkills(int ownerId, int summonSkillId);
+
+    @Query("DELETE FROM character_summon_skills_save WHERE ownerId=:ownerId: AND summonSkillId=:summonSkillId:")
+    void deleteSkillsSave(int ownerId, int summonSkillId);
+
+    void save(List<SummonSkillData> data);
 }

@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.CommissionItemData;
 import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -31,18 +31,15 @@ import org.l2j.gameserver.model.commission.CommissionItem;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Attachment;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.commission.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionList.CommissionListReplyType;
 import org.l2j.gameserver.util.MathUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.l2j.gameserver.world.zone.ZoneType;
 
-import java.sql.*;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentSkipListMap;
@@ -56,7 +53,6 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author NosBit
  */
 public final class CommissionManager {
-    private static final Logger LOGGER = LoggerFactory.getLogger(CommissionManager.class);
 
     private static final int INTERACTION_DISTANCE = 250;
     private static final int ITEMS_LIMIT_PER_REQUEST = 999;
@@ -65,46 +61,16 @@ public final class CommissionManager {
     private static final double REGISTRATION_FEE_PER_DAY = 0.001;
     private static final double SALE_FEE_PER_DAY = 0.005;
 
-    private static final String SELECT_ALL_ITEMS = "SELECT * FROM `items` WHERE `loc` = ?";
-    private static final String SELECT_ALL_COMMISSION_ITEMS = "SELECT * FROM `commission_items`";
-    private static final String INSERT_COMMISSION_ITEM = "INSERT INTO `commission_items`(`item_object_id`, `price_per_unit`, `start_time`, `duration_in_days`) VALUES (?, ?, ?, ?)";
-    private static final String DELETE_COMMISSION_ITEM = "DELETE FROM `commission_items` WHERE `commission_id` = ?";
-
     private final Map<Long, CommissionItem> _commissionItems = new ConcurrentSkipListMap<>();
 
     private CommissionManager() {
-        final Map<Integer, Item> itemInstances = new HashMap<>();
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            try (PreparedStatement ps = con.prepareStatement(SELECT_ALL_ITEMS)) {
-                ps.setString(1, ItemLocation.COMMISSION.name());
-                try (ResultSet rs = ps.executeQuery()) {
-                    while (rs.next()) {
-                        final Item itemInstance = new Item(rs);
-                        itemInstances.put(itemInstance.getObjectId(), itemInstance);
-                    }
-                }
+        for (var commissionItem : getDAO(ItemDAO.class).findCommissionItems()) {
+            _commissionItems.put(commissionItem.getCommissionId(), commissionItem);
+            if (commissionItem.getEndTime().isBefore(Instant.now())) {
+                expireSale(commissionItem);
+            } else {
+                commissionItem.setSaleEndTask(ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis()));
             }
-
-            try (Statement st = con.createStatement();
-                 ResultSet rs = st.executeQuery(SELECT_ALL_COMMISSION_ITEMS)) {
-                while (rs.next()) {
-                    final long commissionId = rs.getLong("commission_id");
-                    final Item itemInstance = itemInstances.get(rs.getInt("item_object_id"));
-                    if (itemInstance == null) {
-                        LOGGER.warn(": Failed loading commission item with commission id " + commissionId + " because item instance does not exist or failed to load.");
-                        continue;
-                    }
-                    final CommissionItem commissionItem = new CommissionItem(commissionId, itemInstance, rs.getLong("price_per_unit"), rs.getTimestamp("start_time").toInstant(), rs.getByte("duration_in_days"));
-                    _commissionItems.put(commissionItem.getCommissionId(), commissionItem);
-                    if (commissionItem.getEndTime().isBefore(Instant.now())) {
-                        expireSale(commissionItem);
-                    } else {
-                        commissionItem.setSaleEndTask(ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis()));
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Failed loading commission items.", e);
         }
     }
 
@@ -115,11 +81,11 @@ public final class CommissionManager {
      * @return {@code true} if the player is allowed to interact, {@code false} otherwise
      */
     public static boolean isPlayerAllowedToInteract(Player player) {
-        final Npc npc = player.getLastFolkNPC();
+        return  player.isInsideZone(ZoneType.PEACE);
+       /* final Npc npc = player.getLastFolkNPC();
         if (npc instanceof org.l2j.gameserver.model.actor.instance.CommissionManager) {
             return MathUtil.isInsideRadius3D(npc,player, INTERACTION_DISTANCE);
-        }
-        return false;
+        }*/
     }
 
     /**
@@ -229,30 +195,17 @@ public final class CommissionManager {
                 return;
             }
 
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement(INSERT_COMMISSION_ITEM, Statement.RETURN_GENERATED_KEYS)) {
-                final Instant startTime = Instant.now();
-                ps.setInt(1, itemInstance.getObjectId());
-                ps.setLong(2, pricePerUnit);
-                ps.setTimestamp(3, Timestamp.from(startTime));
-                ps.setByte(4, durationInDays);
-                ps.executeUpdate();
-                try (ResultSet rs = ps.getGeneratedKeys()) {
-                    if (rs.next()) {
-                        final CommissionItem commissionItem = new CommissionItem(rs.getLong(1), itemInstance, pricePerUnit, startTime, durationInDays);
-                        final ScheduledFuture<?> saleEndTask = ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
-                        commissionItem.setSaleEndTask(saleEndTask);
-                        _commissionItems.put(commissionItem.getCommissionId(), commissionItem);
-                        player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) ((durationInDays - 1) / 2)));
-                        player.sendPacket(SystemMessageId.THE_ITEM_HAS_BEEN_SUCCESSFULLY_REGISTERED);
-                        player.sendPacket(ExResponseCommissionRegister.SUCCEED);
-                    }
-                }
-            } catch (SQLException e) {
-                LOGGER.warn(getClass().getSimpleName() + ": Failed inserting commission item. ItemInstance: " + itemInstance, e);
-                player.sendPacket(SystemMessageId.THE_ITEM_HAS_FAILED_TO_BE_REGISTERED);
-                player.sendPacket(ExResponseCommissionRegister.FAILED);
-            }
+            CommissionItemData data = CommissionItemData.of(itemInstance.getObjectId(), pricePerUnit, durationInDays );
+            getDAO(ItemDAO.class).save(data);
+
+            final CommissionItem commissionItem = new CommissionItem(data, itemInstance);
+            final ScheduledFuture<?> saleEndTask = ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
+            commissionItem.setSaleEndTask(saleEndTask);
+            _commissionItems.put(commissionItem.getCommissionId(), commissionItem);
+
+            player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) ((durationInDays - 1) / 2)));
+            player.sendPacket(SystemMessageId.THE_ITEM_HAS_BEEN_SUCCESSFULLY_REGISTERED);
+            player.sendPacket(ExResponseCommissionRegister.SUCCEED);
         }
     }
 
@@ -275,7 +228,7 @@ public final class CommissionManager {
             return;
         }
 
-        if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() >= 3)) {
+        if (!player.isInventoryUnder80() || (player.getWeightPenalty() >= 3)) {
             player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
             player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_HAS_FAILED_BECAUSE_REQUIREMENTS_ARE_NOT_MET);
             player.sendPacket(ExResponseCommissionDelete.FAILED);
@@ -319,7 +272,7 @@ public final class CommissionManager {
             return;
         }
 
-        if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() >= 3)) {
+        if (!player.isInventoryUnder80() || (player.getWeightPenalty() >= 3)) {
             player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
             player.sendPacket(ExResponseCommissionBuyItem.FAILED);
             return;

@@ -68,7 +68,7 @@ public class Scout extends AbstractNpcAI {
         {
             final Monster monster = (Monster) npc;
 
-            if (!monster.isTeleporting() && !monster.hasMinions() && getQuestTimer("GC_SCOUT_EVENT_AI", npc, attacker) == null)
+            if (!monster.isTeleporting() && !monster.hasMinions() && !hasQuestTimer("GC_SCOUT_EVENT_AI", attacker, npc))
                 startQuestTimer("GC_SCOUT_EVENT_AI", SPAWN_DELAY, npc, attacker);
         }
 

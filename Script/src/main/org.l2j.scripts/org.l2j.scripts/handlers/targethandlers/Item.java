@@ -39,8 +39,8 @@ public class Item implements ITargetTypeHandler
 	}
 	
 	@Override
-	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject currentTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		return isItem(selectedTarget) ? selectedTarget : null;
+		return isItem(currentTarget) ? currentTarget : null;
 	}
 }

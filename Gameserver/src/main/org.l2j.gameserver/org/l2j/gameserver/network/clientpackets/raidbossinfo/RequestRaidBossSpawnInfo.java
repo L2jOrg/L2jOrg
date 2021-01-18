@@ -21,7 +21,7 @@ package org.l2j.gameserver.network.clientpackets.raidbossinfo;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.instancemanager.BossStatus;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
+import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpawnInfo;
@@ -40,8 +40,8 @@ public class RequestRaidBossSpawnInfo extends ClientPacket {
             final int bossId = readInt();
             if(GrandBossManager.getInstance().isDefined(bossId)) {
                 status.put(bossId, GrandBossManager.getInstance().getBossStatus(bossId));
-            } else if(DBSpawnManager.getInstance().isDefined(bossId)){
-                status.put(bossId, DBSpawnManager.getInstance().getNpcStatusId(bossId));
+            } else if(BossManager.getInstance().isDefined(bossId)){
+                status.put(bossId, BossManager.getInstance().getNpcStatusId(bossId));
             }
         }
     }

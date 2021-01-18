@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.html;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -32,12 +33,12 @@ public class ExPremiumManagerShowHtml extends AbstractHtmlPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PREMIUM_MANAGER_SHOW_HTML);
-        writeInt(getNpcObjId());
-        writeString(getHtml());
-        writeInt(-1);
-        writeInt(0);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PREMIUM_MANAGER_SHOW_HTML, buffer );
+        buffer.writeInt(getNpcObjId());
+        buffer.writeString(getHtml());
+        buffer.writeInt(-1);
+        buffer.writeInt(0);
     }
 
     @Override

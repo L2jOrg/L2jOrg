@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.GameClient;
@@ -36,16 +37,16 @@ public class NpcInfoAbnormalVisualEffect extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.NPC_INFO_ABNORMAL_VISUAL_EFFECT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.NPC_INFO_ABNORMAL_VISUAL_EFFECT, buffer );
 
-        writeInt(_npc.getObjectId());
-        writeInt(_npc.getTransformationDisplayId());
+        buffer.writeInt(_npc.getObjectId());
+        buffer.writeInt(_npc.getTransformationDisplayId());
 
         final Set<AbnormalVisualEffect> abnormalVisualEffects = _npc.getEffectList().getCurrentAbnormalVisualEffects();
-        writeInt(abnormalVisualEffects.size());
+        buffer.writeShort(abnormalVisualEffects.size());
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
-            writeShort((short) abnormalVisualEffect.getClientId());
+            buffer.writeShort(abnormalVisualEffect.getClientId());
         }
     }
 

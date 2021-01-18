@@ -27,10 +27,12 @@ import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.mail.MailEngine;
-import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.enums.SubclassInfoType;
-import org.l2j.gameserver.instancemanager.*;
+import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.InstanceManager;
+import org.l2j.gameserver.instancemanager.PetitionManager;
+import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -40,29 +42,24 @@ import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.clientpackets.craft.ExRequestCraftRandom;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
-import org.l2j.gameserver.network.serverpackets.craft.ReceiveCraftInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
+import org.l2j.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeWaitingListAlarm;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
-import org.l2j.gameserver.settings.AttendanceSettings;
-import org.l2j.gameserver.settings.ChatSettings;
-import org.l2j.gameserver.settings.GeneralSettings;
-import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.settings.*;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
@@ -110,7 +107,7 @@ public class EnterWorld extends ClientPacket {
         final Player player = client.getPlayer();
         if (player == null) {
             LOGGER.warn("EnterWorld failed! player returned 'null'.");
-            Disconnection.of(client).defaultSequence(false);
+            Disconnection.of(client).logout(false);
             return;
         }
 
@@ -150,17 +147,18 @@ public class EnterWorld extends ClientPacket {
             player.setIsDead(true);
         }
 
-        if (Config.ENABLE_VITALITY) {
+        if (getSettings(CharacterSettings.class).isVitalityEnabled()) {
             player.sendPacket(new ExVitalityEffectInfo(player));
+        }
+
+        if (Config.ENABLE_MAGIC_LAMP)
+        {
+            player.sendPacket(new ExMagicLampExpInfoUI(player));
         }
 
         client.sendPacket(new ExEnterWorld());
         player.getMacros().sendAllMacros();
         client.sendPacket(new ExGetBookMarkInfoPacket(player));
-
-        ItemList.sendList(player);
-        client.sendPacket(new ExQuestItemList(1, player));
-        client.sendPacket(new ExQuestItemList(2, player));
         player.sendPacket(ExBasicActionList.STATIC_PACKET);
 
         for (Castle castle : CastleManager.getInstance().getCastles()) {
@@ -216,23 +214,15 @@ public class EnterWorld extends ClientPacket {
         }
 
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
-        client.sendPacket(new ExUserInfoInvenWeight(player));
-        client.sendPacket(new ExAdenaInvenCount(player));
-        client.sendPacket(new ExBloodyCoinCount());
-        client.sendPacket(new ShortCutInit());
-        player.forEachShortcut(s -> {
-            if(s.isActive()) {
-                client.sendPacket(new ExActivateAutoShortcut(s.getClientId(), true));
-            }
-        });
         client.sendPacket(new ExDressRoomUiOpen());
 
         if (Config.PLAYER_SPAWN_PROTECTION > 0) {
             player.setSpawnProtection(true);
         }
 
-        player.spawnMe();
+        player.sendPacket(new UserInfo(player));
         player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
+        player.spawnMe();
 
         if (Event.isParticipant(player)) {
             Event.restorePlayerEventStatus(player);
@@ -246,7 +236,6 @@ public class EnterWorld extends ClientPacket {
             }
         }
 
-        player.sendPacket(new ExStorageMaxCount(player));
         client.sendPacket(new FriendListPacket(player));
 
         SystemMessage sm = getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN).addString(player.getName());
@@ -256,10 +245,6 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD);
 
         AnnouncementsManager.getInstance().showAnnouncements(player);
-
-        if (getSettings(ServerSettings.class).scheduleRestart() && (Config.SERVER_RESTART_SCHEDULE_MESSAGE)) {
-            player.sendPacket(new CreatureSay(2, ChatType.BATTLEFIELD, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
-        }
 
         if (showClanNotice) {
             final NpcHtmlMessage notice = new NpcHtmlMessage();
@@ -281,20 +266,6 @@ public class EnterWorld extends ClientPacket {
 
         client.sendPacket(new SkillCoolTime(player));
         client.sendPacket(new ExVoteSystemInfo(player));
-        client.sendPacket(new ReceiveCraftInfo(player));
-
-
-        for (Item item : player.getInventory().getItems()) {
-            if (item.isTimeLimitedItem()) {
-                item.scheduleLifeTimeTask();
-            }
-        }
-
-        for (Item whItem : player.getWarehouse().getItems()) {
-            if (whItem.isTimeLimitedItem()) {
-                whItem.scheduleLifeTimeTask();
-            }
-        }
 
         if (player.getClanJoinExpiryTime() > System.currentTimeMillis()) {
             player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
@@ -314,19 +285,10 @@ public class EnterWorld extends ClientPacket {
             player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
         }
 
-        if (!player.getPremiumItemList().isEmpty()) {
-            player.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
-        }
-
-        if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType())) {
-            player.sendPacket(new ExBeautyItemList(player));
-        }
-
         if(player.getActiveElementalSpiritType() >= 0) {
             client.sendPacket(new ElementalSpiritInfo(player.getActiveElementalSpiritType(), (byte) 2));
         }
 
-        player.broadcastUserInfo();
         player.sendPacket(StatusUpdate.of(player, StatusUpdateType.CUR_HP, (int) player.getCurrentHp()).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()));
         player.sendPacket(new ExUserInfoEquipSlot(player));
 
@@ -344,15 +306,11 @@ public class EnterWorld extends ClientPacket {
         }
 
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
-        player.sendPacket(new ExAutoSoulShot(0, true, 0));
-        player.sendPacket(new ExAutoSoulShot(0, true, 1));
-        player.sendPacket(new ExAutoSoulShot(0, true, 2));
-        player.sendPacket(new ExAutoSoulShot(0, true, 3));
 
-        if (Config.HARDWARE_INFO_ENABLED) {
+        if (getSettings(ServerSettings.class).isHardwareInfoEnabled()) {
             ThreadPool.schedule(() -> {
                 if (client.getHardwareInfo() == null) {
-                    Disconnection.of(client).defaultSequence(false);
+                    Disconnection.of(client).logout(false);
                 }
             }, 5000);
         }
@@ -369,8 +327,27 @@ public class EnterWorld extends ClientPacket {
                 player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
             }
         }
+        restoreItems(player);
         player.onEnter();
         Quest.playerEnter(player);
+    }
+
+    private void restoreItems(Player player) {
+        player.getInventory().restore();
+        player.sendPackets(new ExUserInfoInvenWeight(), new ExAdenaInvenCount(), new ExBloodyCoinCount());
+        ItemList.sendList(player);
+        client.sendPacket(new ExQuestItemList(1, player));
+        client.sendPacket(new ExQuestItemList(2, player));
+        player.sendPacket(new ExStorageMaxCount(player));
+        player.getWarehouse().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
+
+        for (int i = 0; i < 4; i++) {
+            player.sendPacket(new ExAutoSoulShot(0, true, i));
+        }
+
+        if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType())) {
+            player.sendPacket(new ExBeautyItemList(player));
+        }
     }
 
     private void sendAttendanceInfo(Player player) {

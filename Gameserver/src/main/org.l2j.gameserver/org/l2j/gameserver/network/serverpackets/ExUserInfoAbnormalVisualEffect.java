@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.GameClient;
@@ -36,20 +37,20 @@ public class ExUserInfoAbnormalVisualEffect extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT, buffer );
 
-        writeInt(player.getObjectId());
-        writeInt(player.getTransformationId());
+        buffer.writeInt(player.getObjectId());
+        buffer.writeInt(player.getTransformationId());
 
         final Set<AbnormalVisualEffect> abnormalVisualEffects = player.getEffectList().getCurrentAbnormalVisualEffects();
         final boolean isInvisible = player.isInvisible();
-        writeInt(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
+        buffer.writeInt(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
-            writeShort(abnormalVisualEffect.getClientId());
+            buffer.writeShort(abnormalVisualEffect.getClientId());
         }
         if (isInvisible) {
-            writeShort(AbnormalVisualEffect.STEALTH.getClientId());
+            buffer.writeShort(AbnormalVisualEffect.STEALTH.getClientId());
         }
     }
 

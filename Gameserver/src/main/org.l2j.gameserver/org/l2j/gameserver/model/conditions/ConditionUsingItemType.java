@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ArmorType;
 
 import static java.util.Objects.isNull;
@@ -67,7 +67,7 @@ public final class ConditionUsingItemType extends Condition {
             if (chest == null) {
                 return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }
-            final int chestMask = chest.getTemplate().getItemMask();
+            final int chestMask = chest.getItemMask();
 
             // If chest armor is different from the condition one return false
             if ((_mask & chestMask) == 0) {

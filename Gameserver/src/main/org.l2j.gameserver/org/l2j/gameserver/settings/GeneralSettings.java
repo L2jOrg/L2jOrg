@@ -39,7 +39,6 @@ public class GeneralSettings implements Settings {
     private boolean logItems;
     private boolean smallLogItems;
     private boolean loadCustomBuyList;
-    private boolean loadCustomMultisell;
     private boolean cachePlayersName;
 
     private IllegalActionPunishmentType defaultPunishment;
@@ -75,7 +74,6 @@ public class GeneralSettings implements Settings {
         allowMail = settingsFile.getBoolean("AllowMail", true);
 
         loadCustomBuyList = settingsFile.getBoolean("CustomBuyListLoad", false);
-        loadCustomMultisell = settingsFile.getBoolean("CustomMultisellLoad", false);
 
         cachePlayersName = settingsFile.getBoolean("CacheCharNames", true);
 
@@ -145,10 +143,6 @@ public class GeneralSettings implements Settings {
 
     public boolean loadCustomBuyList() {
         return loadCustomBuyList;
-    }
-
-    public boolean loadCustomMultisell() {
-        return loadCustomMultisell;
     }
 
     public boolean cachePlayersName() {

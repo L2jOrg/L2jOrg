@@ -24,7 +24,7 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.container.ItemContainer;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -103,10 +103,6 @@ public final class RequestCancelPostAttachment extends ClientPacket {
         int slots = 0;
 
         for (Item item : attachments.getItems()) {
-            if (item == null) {
-                continue;
-            }
-
             if (item.getOwnerId() != player.getObjectId()) {
                 GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get not own item from cancelled attachment!");
                 return;
@@ -143,10 +139,6 @@ public final class RequestCancelPostAttachment extends ClientPacket {
         // Proceed to the transfer
         final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
         for (Item item : attachments.getItems()) {
-            if (item == null) {
-                continue;
-            }
-
             final long count = item.getCount();
             final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), count, player.getInventory(), player, null);
             if (newItem == null) {

@@ -84,7 +84,7 @@ public abstract class AbstractInstance extends AbstractNpcAI {
 	 */
 	public void showOnScreenMsg(Instance instance, NpcStringId npcStringId, int position, int time, String... params)
 	{
-		instance.broadcastPacket(new ExShowScreenMessage(npcStringId, position, time, params));
+		instance.sendPacket(new ExShowScreenMessage(npcStringId, position, time, params));
 	}
 	
 	/**
@@ -98,7 +98,7 @@ public abstract class AbstractInstance extends AbstractNpcAI {
 	 */
 	public void showOnScreenMsg(Instance instance, NpcStringId npcStringId, int position, int time, boolean showEffect, String... params)
 	{
-		instance.broadcastPacket(new ExShowScreenMessage(npcStringId, position, time, showEffect, params));
+		instance.sendPacket(new ExShowScreenMessage(npcStringId, position, time, showEffect, params));
 	}
 	
 	/**
@@ -158,7 +158,7 @@ public abstract class AbstractInstance extends AbstractNpcAI {
 				}
 			}
 
-			instance = manager.createInstance(template, player);
+			instance = manager.createInstance(templateId, player);
 			
 			// Move each player from enter group to instance
 			for (Player member : enterGroup)

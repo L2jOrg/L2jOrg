@@ -55,8 +55,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.hash;
-import static org.l2j.commons.util.Util.isNotEmpty;
+import static org.l2j.commons.util.Util.*;
 
 /**
  * Represents a client connected on Game Server.
@@ -73,7 +72,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     private final FloodProtectors floodProtectors = new FloodProtectors(this);
 
     private final Crypt crypt;
-    private SessionKey sessionId;
+    private SessionKey sessionKey;
     private ConnectionState state;
     private AccountData account;
     private Player player;
@@ -113,7 +112,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
             }
             AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(account.getAccountName()));
         }
-
+        state = ConnectionState.DISCONNECTED;
         Disconnection.of(this).onDisconnection();
     }
 
@@ -124,7 +123,8 @@ public final class GameClient extends Client<Connection<GameClient>> {
     }
 
     public void close(boolean toLoginScreen) {
-        sendPacket(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
+        close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
+        state = ConnectionState.DISCONNECTED;
     }
 
     public byte[] enableCrypt() {
@@ -161,19 +161,20 @@ public final class GameClient extends Client<Connection<GameClient>> {
         account = getDAO(AccountDAO.class).findById(accountName);
         if(isNull(account)) {
             account = AccountData.of(accountName);
+            storeAccountData();
         }
     }
 
-    public SessionKey getSessionId() {
-        return sessionId;
+    public SessionKey getSessionKey() {
+        return sessionKey;
     }
 
-    public void setSessionId(SessionKey sk) {
-        sessionId = sk;
+    public void setSessionKey(SessionKey sk) {
+        sessionKey = sk;
     }
 
     public void sendPacket(ServerPacket packet) {
-        if (isNull(packet)) {
+        if (isNull(packet) || state == ConnectionState.DISCONNECTED) {
             return;
         }
 
@@ -181,6 +182,14 @@ public final class GameClient extends Client<Connection<GameClient>> {
         packet.runImpl(player);
     }
 
+    public void sendPackets(ServerPacket... packets) {
+        if(nonNull(packets)) {
+            writePackets(List.of(packets));
+            for (ServerPacket packet : packets) {
+                packet.runImpl(player);
+            }
+        }
+    }
 
     public void sendPacket(SystemMessageId smId) {
         sendPacket(SystemMessage.getSystemMessage(smId));
@@ -222,14 +231,14 @@ public final class GameClient extends Client<Connection<GameClient>> {
         return CharacterDeleteFailType.NONE;
     }
 
-    public void restore(int characterSlot) {
-        final int objectId = getObjectIdForSlot(characterSlot);
-        if (objectId < 0) {
+    public void restore(int slot) {
+        var info = getPlayerSelection(slot);
+        if(isNull(info)) {
             return;
         }
-
-        getDAO(PlayerDAO.class).updateDeleteTime(objectId, 0);
-        LOGGER_ACCOUNTING.info("Restore {} [{}]", objectId, this);
+        info.setDeleteTime(0);
+        getDAO(PlayerDAO.class).updateDeleteTime(info.getObjectId(), 0);
+        LOGGER_ACCOUNTING.info("Restore {} [{}]", info.getObjectId(), this);
     }
 
     public Player load(int slot) {
@@ -246,7 +255,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
             }
             if (player.getClient() != null)
             {
-                Disconnection.of(player).defaultSequence(false);
+                Disconnection.of(player).logout(false);
             }
             else
             {
@@ -326,9 +335,9 @@ public final class GameClient extends Client<Connection<GameClient>> {
             final String address = getHostAddress();
             final ConnectionState state = getConnectionState();
             return switch (state) {
-                case CONNECTED, CLOSING, DISCONNECTED  -> "[IP: " + (address == null ? "disconnected" : address) + "]";
-                case AUTHENTICATED -> "[Account: " + account + " - IP: " + (address == null ? "disconnected" : address) + "]";
-                case IN_GAME, JOINING_GAME -> "[Player: " + (player == null ? "disconnected" : player.getName() + "[" + player.getObjectId() + "]") + " - Account: " + account + " - IP: " + (address == null ? "disconnected" : address) + "]";
+                case CONNECTED, CLOSING, DISCONNECTED  -> "[Account: " + account + " -IP: " + (isNullOrEmpty(address) ? "disconnected" : address) + "]";
+                case AUTHENTICATED -> "[Account: " + account + " - IP: " + (isNullOrEmpty(address) ? "disconnected" : address) + "]";
+                case IN_GAME, JOINING_GAME -> "[Player: " + (isNull(player) ? "disconnected" : player) + " - Account: " + account + " - IP: " + (isNullOrEmpty(address) ? "disconnected" : address) + "]";
             };
         } catch (NullPointerException e) {
             return "[Character read failed due to disconnect]";
@@ -342,7 +351,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     public boolean saveSecondPassword(String password) {
         if (hasSecondPassword()) {
             LOGGER.warn("{} forced savePassword", this);
-            Disconnection.of(this).defaultSequence(false);
+            Disconnection.of(this).logout(false);
             return false;
         }
 
@@ -377,7 +386,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     public boolean changeSecondPassword(String password, String newPassword) {
         if (!hasSecondPassword()) {
             LOGGER.warn("{} forced changePassword", this);
-            Disconnection.of(this).defaultSequence(false);
+            Disconnection.of(this).logout(false);
             return false;
         }
 

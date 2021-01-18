@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -35,10 +36,10 @@ public class PledgeSkillDelete extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_SKILL_DELETE);
-        writeInt(skill.getId());
-        writeInt(skill.getLevel());
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_SKILL_DELETE, buffer );
+        buffer.writeInt(skill.getId());
+        buffer.writeInt(skill.getLevel());
     }
 
 }

@@ -24,8 +24,6 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.VillageMasterFighter;
-import org.l2j.gameserver.model.actor.instance.VillageMasterPriest;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 /**
@@ -47,8 +45,7 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 		MASTERS.put(30525, Race.DWARF); // Bronk, Dwarven Village Head Blacksmith
 	}
 	
-	private FirstClassTransferTalk()
-	{
+	private FirstClassTransferTalk() {
 		addStartNpc(MASTERS.keySet());
 		addTalkId(MASTERS.keySet());
 	}
@@ -64,34 +61,23 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 	{
 		String htmltext = npc.getId() + "_";
 		
-		if (MASTERS.get(npc.getId()) != player.getRace())
-		{
-			return htmltext += "no.html";
+		if (MASTERS.get(npc.getId()) != player.getRace()) {
+			return htmltext + "no.html";
 		}
 		
-		switch (MASTERS.get(npc.getId()))
-		{
-			case HUMAN:
-			{
-				if (player.getClassId().level() == 0)
-				{
-					if (player.isMageClass())
-					{
-						if (npc instanceof VillageMasterPriest)
-						{
+		switch (MASTERS.get(npc.getId())) {
+			case HUMAN: {
+				if (player.getClassId().level() == 0) {
+					if (player.isMageClass()) {
+						if (npc.getId() == 30031) {
 							htmltext += "mystic.html";
-						}
-						else
-						{
+						} else {
 							htmltext += "no.html";
 						}
 					}
-					else if (npc instanceof VillageMasterFighter)
-					{
+					else if (npc.getId() == 30026) {
 						htmltext += "fighter.html";
-					}
-					else
-					{
+					} else {
 						htmltext += "no.html";
 					}
 				}

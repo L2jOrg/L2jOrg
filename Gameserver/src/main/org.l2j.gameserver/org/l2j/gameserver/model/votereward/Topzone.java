@@ -47,14 +47,16 @@ public class Topzone extends VoteSystem {
 
         try {
             URLConnection con = new URL(Config.TOPZONE_SERVER_LINK).openConnection();
-            con.addRequestProperty("User-Agent", "L2TopZone");
+            con.addRequestProperty("User-Agent", "Mozilla/5.0");
             isr = new InputStreamReader(con.getInputStream());
             br = new BufferedReader(isr);
 
             String line;
             while ((line = br.readLine()) != null) {
-                int votes = Integer.valueOf(line);
-                return votes;
+                if (line.contains(">Votes : ")) {
+                    int votes = Integer.valueOf(line.split("<span class=\"classement\">")[1].split("</span>")[0]);
+                    return votes;
+                }
             }
 
             br.close();
@@ -69,6 +71,6 @@ public class Topzone extends VoteSystem {
 
     @Override
     public String getSiteName() {
-        return "Topzone";
+        return "Gowonda";
     }
 }

@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.RestorationItemHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -117,7 +117,7 @@ public final class RestorationRandom extends AbstractEffect {
             final Item newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
 
             if (nonNull(newItem) && createdItem.getMaxEnchant() > 0) {
-                newItem.setEnchantLevel(Rnd.get(createdItem.getMinEnchant(), createdItem.getMaxEnchant()));
+                newItem.changeEnchantLevel(Rnd.get(createdItem.getMinEnchant(), createdItem.getMaxEnchant()));
             }
 
             if (nonNull(extractedItems.get(newItem))){

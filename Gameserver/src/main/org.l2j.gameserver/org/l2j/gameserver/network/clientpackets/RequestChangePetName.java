@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.sql.impl.PetNameTable;
+import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -57,7 +57,7 @@ public final class RequestChangePetName extends ClientPacket {
             return;
         }
 
-        if (PetNameTable.getInstance().doesPetNameExist(_name, pet.getTemplate().getId())) {
+        if (PetDataTable.getInstance().doesPetNameExist(_name, pet.getTemplate().getId())) {
             activeChar.sendPacket(SystemMessageId.THIS_IS_ALREADY_IN_USE_BY_ANOTHER_PET);
             return;
         }
@@ -68,7 +68,7 @@ public final class RequestChangePetName extends ClientPacket {
             return;
         }
 
-        if (!PetNameTable.getInstance().isValidPetName(_name)) {
+        if (!PetDataTable.getInstance().isValidPetName(_name)) {
             activeChar.sendPacket(SystemMessageId.AN_INVALID_CHARACTER_IS_INCLUDED_IN_THE_PET_S_NAME);
             return;
         }
