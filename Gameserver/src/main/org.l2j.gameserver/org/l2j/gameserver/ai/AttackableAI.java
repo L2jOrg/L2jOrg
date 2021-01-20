@@ -24,6 +24,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.AISkillScope;
+import org.l2j.gameserver.instancemanager.BossManager;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Spawn;
@@ -502,6 +504,13 @@ public class AttackableAI extends CreatureAI {
             }
         }
 
+        if (npc.isRaid() && npc.isInCombat()){
+            npc.setRaidBossStatus(BossStatus.FIGHTING);
+        }
+
+        else if (npc.isRaid() && !npc.isInCombat() && !npc.isDead()) {
+            npc.setRaidBossStatus(BossStatus.ALIVE);
+        }
 
         Creature target = npc.getMostHated();
         if (getTarget() != target) {
