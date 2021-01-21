@@ -16,15 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.castle;
+package org.l2j.gameserver.network.clientpackets.siege;
 
+import org.l2j.gameserver.engine.siege.SiegeEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.siege.ExMercenaryCastleWarCastleInfo;
+import org.l2j.gameserver.network.serverpackets.siege.ExMercenaryCastleWarCastleSiegeInfo;
 
 import static java.util.Objects.nonNull;
 
-public class ExCastleWarInfo extends ClientPacket {
+/**
+ * @author JoeAlisson
+ */
+public class ExRequestMercenaryCastleWarCastleSiegeInfo extends ClientPacket {
 
     private int castleId;
 
@@ -35,9 +39,6 @@ public class ExCastleWarInfo extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        final var castle = CastleManager.getInstance().getCastleById(castleId);
-        if(nonNull(castle)) {
-            client.sendPacket(new ExMercenaryCastleWarCastleInfo(castle));
-        }
+        SiegeEngine.getInstance().showSiegeInfo(client.getPlayer(), castleId);
     }
 }

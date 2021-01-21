@@ -64,13 +64,13 @@ public class DimensionalMerchant extends AbstractNpcAI
         {
             case "package_deposit":
             {
-                if (player.getAccountChars().size() < 1)
+                if (player.getAccountPlayers().size() < 1)
                 {
                     player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
                 }
                 else
                 {
-                    player.sendPacket(new PackageToList(player.getAccountChars()));
+                    player.sendPacket(new PackageToList(player.getAccountPlayers()));
                 }
                 break;
             }

@@ -39,6 +39,8 @@ class SiegeSettings {
     int minClanLevel;
     int maxAttackers;
     int maxDefenders;
+    int minMercenaryLevel;
+    int maxMercenaries;
 
     private SiegeSettings() {
 
@@ -59,6 +61,8 @@ class SiegeSettings {
             settings.minClanLevel = reader.parseInt(attr, "min-clan-level");
             settings.maxAttackers = reader.parseInt(attr, "max-attackers");
             settings.maxDefenders = reader.parseInt(attr, "max-defenders");
+            settings.minMercenaryLevel = reader.parseInt(attr, "min-mercenary-level");
+            settings.maxMercenaries = reader.parseInt(attr, "min-mercenary-level");
         }
 
         return settings;

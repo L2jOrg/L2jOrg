@@ -1482,7 +1482,7 @@ public final class Player extends Playable {
         return data.getAccountName();
     }
 
-    public IntMap<String> getAccountChars() {
+    public IntMap<String> getAccountPlayers() {
         return accountPlayers;
     }
 

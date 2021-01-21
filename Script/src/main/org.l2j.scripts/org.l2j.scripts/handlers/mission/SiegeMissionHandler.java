@@ -19,7 +19,7 @@
 package org.l2j.scripts.handlers.mission;
 
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
@@ -61,9 +61,9 @@ public class SiegeMissionHandler extends AbstractMissionHandler {
 		event.getSiege().getDefenderClans().values().forEach(this::processSiegeClan);
 	}
 	
-	private void processSiegeClan(SiegeClanData siegeClan)
+	private void processSiegeClan(SiegeParticipant siegeParticipant)
 	{
-		final Clan clan = ClanTable.getInstance().getClan(siegeClan.getClanId());
+		final Clan clan = ClanTable.getInstance().getClan(siegeParticipant.getClanId());
 		if (clan != null)
 		{
 			clan.getOnlineMembers(0).forEach(player ->

@@ -23,10 +23,10 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.SiegeScheduleData;
-import org.l2j.gameserver.engine.siege.SiegeClanStatus;
+import org.l2j.gameserver.engine.siege.SiegeParticipantStatus;
 import org.l2j.gameserver.enums.SiegeTeleportWhoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
@@ -77,9 +77,9 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
 public class Siege implements Siegable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Siege.class);
 
-    private final IntMap<SiegeClanData> attackers = new CHashIntMap<>();
-    private final IntMap<SiegeClanData> defenders = new CHashIntMap<>();
-    private final IntMap<SiegeClanData> defendersWaiting = new CHashIntMap<>();
+    private final IntMap<SiegeParticipant> attackers = new CHashIntMap<>();
+    private final IntMap<SiegeParticipant> defenders = new CHashIntMap<>();
+    private final IntMap<SiegeParticipant> defendersWaiting = new CHashIntMap<>();
     private final List<ControlTower> controlTowers = new ArrayList<>();
     private final List<FlameTower> flameTowers = new ArrayList<>();
     private final Castle castle;
@@ -185,20 +185,20 @@ public class Siege implements Siegable {
     }
 
     private void addOwnerDefender(int clanId) {
-        defenders.put(clanId, new SiegeClanData(clanId, SiegeClanStatus.OWNER, castle.getId()));
+        defenders.put(clanId, new SiegeParticipant(clanId, SiegeParticipantStatus.OWNER, castle.getId()));
     }
 
-    private void addAttacker(SiegeClanData siegeClan) {
-        siegeClan.setStatus(SiegeClanStatus.ATTACKER);
-        getAttackerClans().put(siegeClan.getClanId(), siegeClan);
+    private void addAttacker(SiegeParticipant siegeParticipant) {
+        siegeParticipant.setStatus(SiegeParticipantStatus.ATTACKER);
+        getAttackerClans().put(siegeParticipant.getClanId(), siegeParticipant);
     }
 
-    private void addDefender(SiegeClanData siegeClan) {
-        defenders.put(siegeClan.getClanId(), siegeClan);
+    private void addDefender(SiegeParticipant siegeParticipant) {
+        defenders.put(siegeParticipant.getClanId(), siegeParticipant);
     }
 
-    private void addDefenderWaiting(SiegeClanData siegeClan) {
-        defendersWaiting.put(siegeClan.getClanId(), siegeClan);
+    private void addDefenderWaiting(SiegeParticipant siegeParticipant) {
+        defendersWaiting.put(siegeParticipant.getClanId(), siegeParticipant);
     }
 
     @Override
@@ -375,7 +375,7 @@ public class Siege implements Siegable {
 
                 doIfNonNull(getAttackerClan(castle.getOwnerId()), newOwner -> {
                     removeAttacker(newOwner);
-                    addDefender(newOwner, SiegeClanStatus.OWNER);
+                    addDefender(newOwner, SiegeParticipantStatus.OWNER);
                 });
                 endSiege();
                 return;
@@ -394,7 +394,7 @@ public class Siege implements Siegable {
                         if (allInSameAlliance) {
                             doIfNonNull(getAttackerClan(castle.getOwnerId()), newOwner -> {
                                 removeAttacker(newOwner);
-                                addDefender(newOwner, SiegeClanStatus.OWNER);
+                                addDefender(newOwner, SiegeParticipantStatus.OWNER);
                             });
                             endSiege();
                             return;
@@ -411,13 +411,13 @@ public class Siege implements Siegable {
 
                 doIfNonNull(getAttackerClan(castle.getOwnerId()), newOwner -> {
                     removeAttacker(newOwner);
-                    addDefender(newOwner, SiegeClanStatus.OWNER);
+                    addDefender(newOwner, SiegeParticipantStatus.OWNER);
                 });
 
                 for (Clan clan : ClanTable.getInstance().getClanAllies(allyId)) {
                     doIfNonNull(getAttackerClan(clan.getId()), siegeClan -> {
                         removeAttacker(siegeClan);
-                        addDefender(siegeClan, SiegeClanStatus.APPROVED);
+                        addDefender(siegeClan, SiegeParticipantStatus.APPROVED);
                     });
                 }
 
@@ -441,11 +441,11 @@ public class Siege implements Siegable {
         }
     }
 
-    private void removeAttacker(SiegeClanData sc) {
+    private void removeAttacker(SiegeParticipant sc) {
         attackers.remove(sc.getClanId());
     }
 
-    private void addDefender(SiegeClanData sc, SiegeClanStatus type) {
+    private void addDefender(SiegeParticipant sc, SiegeParticipantStatus type) {
         sc.setStatus(type);
         defenders.put(sc.getClanId(), sc);
     }
@@ -506,7 +506,7 @@ public class Siege implements Siegable {
             return;
         }
         var siegeClan = defendersWaiting.remove(clanId);
-        siegeClan.setStatus(SiegeClanStatus.APPROVED);
+        siegeClan.setStatus(SiegeParticipantStatus.APPROVED);
         addDefender(siegeClan);
         getDAO(CastleDAO.class).save(siegeClan);
     }
@@ -540,7 +540,7 @@ public class Siege implements Siegable {
     }
 
     private void clearSiegeWaitingClan() {
-        getDAO(CastleDAO.class).deleteWaintingClansByCastle(castle.getId());
+        getDAO(CastleDAO.class).deleteWaitingClansByCastle(castle.getId());
         defendersWaiting.clear();
     }
 
@@ -577,28 +577,28 @@ public class Siege implements Siegable {
             if (SiegeManager.getInstance().checkIsRegistered(clan, castle.getId())) {
                 player.sendPacket(SystemMessageId.YOU_HAVE_ALREADY_REQUESTED_A_CASTLE_SIEGE);
             } else {
-                saveSiegeClan(clan, SiegeClanStatus.ATTACKER);
+                saveSiegeClan(clan, SiegeParticipantStatus.ATTACKER);
             }
             return;
         }
 
-        if (checkIfCanRegister(player, SiegeClanStatus.ATTACKER)) {
-            saveSiegeClan(clan, SiegeClanStatus.ATTACKER);
+        if (checkIfCanRegister(player, SiegeParticipantStatus.ATTACKER)) {
+            saveSiegeClan(clan, SiegeParticipantStatus.ATTACKER);
         }
     }
 
-    private void saveSiegeClan(Clan clan, SiegeClanStatus typeId) {
-        SiegeClanData siegeClan = new SiegeClanData(clan.getId(), typeId, castle.getId());
-        getDAO(CastleDAO.class).save(siegeClan);
+    private void saveSiegeClan(Clan clan, SiegeParticipantStatus typeId) {
+        SiegeParticipant siegeParticipant = new SiegeParticipant(clan.getId(), typeId, castle.getId());
+        getDAO(CastleDAO.class).save(siegeParticipant);
 
         switch (typeId) {
-            case APPROVED, OWNER -> addDefender(siegeClan);
-            case WAITING -> addDefenderWaiting(siegeClan);
-            case ATTACKER ->  addAttacker(siegeClan);
+            case APPROVED, OWNER -> addDefender(siegeParticipant);
+            case WAITING -> addDefenderWaiting(siegeParticipant);
+            case ATTACKER ->  addAttacker(siegeParticipant);
         }
     }
 
-    private boolean checkIfCanRegister(Player player, SiegeClanStatus type) {
+    private boolean checkIfCanRegister(Player player, SiegeParticipantStatus type) {
         if (isRegistrationOver) {
             player.sendPacket(getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED).addCastleId(castle.getId()));
 
@@ -620,10 +620,10 @@ public class Siege implements Siegable {
         } else if (checkIfAlreadyRegisteredForSameDay(player.getClan())) {
             player.sendPacket(SystemMessageId.YOUR_APPLICATION_HAS_BEEN_DENIED_BECAUSE_YOU_HAVE_ALREADY_SUBMITTED_A_REQUEST_FOR_ANOTHER_CASTLE_SIEGE);
 
-        } else if (type == SiegeClanStatus.ATTACKER && getAttackerClans().size() >= SiegeManager.getInstance().getAttackerMaxClans()) {
+        } else if (type == SiegeParticipantStatus.ATTACKER && getAttackerClans().size() >= SiegeManager.getInstance().getAttackerMaxClans()) {
             player.sendPacket(SystemMessageId.NO_MORE_REGISTRATIONS_MAY_BE_ACCEPTED_FOR_THE_ATTACKER_SIDE);
 
-        } else if ((type == SiegeClanStatus.APPROVED || type == SiegeClanStatus.WAITING) && getDefenderClans().size() + getDefendersWaiting().size() >= SiegeManager.getInstance().getDefenderMaxClans()) {
+        } else if ((type == SiegeParticipantStatus.APPROVED || type == SiegeParticipantStatus.WAITING) && getDefenderClans().size() + getDefendersWaiting().size() >= SiegeManager.getInstance().getDefenderMaxClans()) {
             player.sendPacket(SystemMessageId.NO_MORE_REGISTRATIONS_MAY_BE_ACCEPTED_FOR_THE_DEFENDER_SIDE);
 
         } else {
@@ -648,13 +648,13 @@ public class Siege implements Siegable {
             if (SiegeManager.getInstance().checkIsRegistered(clan, castle.getId())) {
                 player.sendPacket(SystemMessageId.YOU_HAVE_ALREADY_REQUESTED_A_CASTLE_SIEGE);
             } else {
-                saveSiegeClan(clan, SiegeClanStatus.WAITING);
+                saveSiegeClan(clan, SiegeParticipantStatus.WAITING);
             }
             return;
         }
 
-        if (checkIfCanRegister(player, SiegeClanStatus.WAITING)) {
-            saveSiegeClan(clan, SiegeClanStatus.WAITING);
+        if (checkIfCanRegister(player, SiegeParticipantStatus.WAITING)) {
+            saveSiegeClan(clan, SiegeParticipantStatus.WAITING);
         }
     }
 
@@ -725,19 +725,19 @@ public class Siege implements Siegable {
     }
 
     private void removeFlags() {
-        attackers.values().forEach(SiegeClanData::removeFlags);
-        attackers.values().forEach(SiegeClanData::removeFlags);
+        attackers.values().forEach(SiegeParticipant::removeFlags);
+        attackers.values().forEach(SiegeParticipant::removeFlags);
     }
 
     /**
      * Remove flags from defenders.
      */
     private void removeDefenderFlags() {
-        defenders.values().forEach(SiegeClanData::removeFlags);
+        defenders.values().forEach(SiegeParticipant::removeFlags);
     }
 
     @Override
-    public final SiegeClanData getAttackerClan(Clan clan) {
+    public final SiegeParticipant getAttackerClan(Clan clan) {
         if (isNull(clan)) {
             return null;
         }
@@ -745,7 +745,7 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final SiegeClanData getAttackerClan(int clanId) {
+    public final SiegeParticipant getAttackerClan(int clanId) {
         return attackers.get(clanId);
     }
 
@@ -758,7 +758,7 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final SiegeClanData getDefenderClan(Clan clan) {
+    public final SiegeParticipant getDefenderClan(Clan clan) {
         if (clan == null) {
             return null;
         }
@@ -766,27 +766,27 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final SiegeClanData getDefenderClan(int clanId) {
+    public final SiegeParticipant getDefenderClan(int clanId) {
         return getDefenderClans().get(clanId);
     }
 
     @Override
-    public final IntMap<SiegeClanData> getDefenderClans() {
+    public final IntMap<SiegeParticipant> getDefenderClans() {
         return defenders;
     }
 
-    public final SiegeClanData getDefenderWaitingClan(Clan clan) {
+    public final SiegeParticipant getDefenderWaitingClan(Clan clan) {
         if (clan == null) {
             return null;
         }
         return getDefenderWaitingClan(clan.getId());
     }
 
-    public final SiegeClanData getDefenderWaitingClan(int clanId) {
+    public final SiegeParticipant getDefenderWaitingClan(int clanId) {
         return defendersWaiting.get(clanId);
     }
 
-    public final IntMap<SiegeClanData> getDefendersWaiting() {
+    public final IntMap<SiegeParticipant> getDefendersWaiting() {
         return defendersWaiting;
     }
 
@@ -814,7 +814,7 @@ public class Siege implements Siegable {
     @Override
     public Set<Npc> getFlag(Clan clan) {
         if (nonNull(clan)) {
-            return computeIfNonNull(getAttackerClan(clan), SiegeClanData::getFlags);
+            return computeIfNonNull(getAttackerClan(clan), SiegeParticipant::getFlags);
         }
         return null;
     }
@@ -848,7 +848,7 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final IntMap<SiegeClanData> getAttackerClans() {
+    public final IntMap<SiegeParticipant> getAttackerClans() {
         return attackers;
     }
 

@@ -20,7 +20,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.engine.siege.SiegeClanStatus;
+import org.l2j.gameserver.engine.siege.SiegeParticipantStatus;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
@@ -80,7 +80,7 @@ public final class SiegeDefenderList extends ServerPacket {
             buffer.writeString(ownerClan.getLeaderName());
             buffer.writeInt(ownerClan.getCrestId());
             buffer.writeInt(0x00); // signed time (seconds) (not storated by L2J)
-            buffer.writeInt(SiegeClanStatus.OWNER.ordinal());
+            buffer.writeInt(SiegeParticipantStatus.OWNER.ordinal());
             buffer.writeInt(ownerClan.getAllyId());
             buffer.writeString(ownerClan.getAllyName());
             buffer.writeString(""); // AllyLeaderName
@@ -99,7 +99,7 @@ public final class SiegeDefenderList extends ServerPacket {
             buffer.writeString(defendingClan.getLeaderName());
             buffer.writeInt(defendingClan.getCrestId());
             buffer.writeInt(0x00); // signed time (seconds) (not storated by L2J)
-            buffer.writeInt(SiegeClanStatus.APPROVED.ordinal());
+            buffer.writeInt(SiegeParticipantStatus.APPROVED.ordinal());
             buffer.writeInt(defendingClan.getAllyId());
             buffer.writeString(defendingClan.getAllyName());
             buffer.writeString(""); // AllyLeaderName
@@ -118,7 +118,7 @@ public final class SiegeDefenderList extends ServerPacket {
             buffer.writeString(defendingClan.getLeaderName());
             buffer.writeInt(defendingClan.getCrestId());
             buffer.writeInt(0x00); // signed time (seconds) (not storated by L2J)
-            buffer.writeInt(SiegeClanStatus.WAITING.ordinal());
+            buffer.writeInt(SiegeParticipantStatus.WAITING.ordinal());
             buffer.writeInt(defendingClan.getAllyId());
             buffer.writeString(defendingClan.getAllyName());
             buffer.writeString(""); // AllyLeaderName

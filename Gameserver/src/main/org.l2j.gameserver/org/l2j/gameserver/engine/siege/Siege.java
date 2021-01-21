@@ -22,8 +22,9 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.SiegeDAO;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -41,8 +42,8 @@ public class Siege extends AbstractEvent {
 
     private final Castle castle;
     private SiegeState state = SiegeState.NONE;
-    private final IntMap<SiegeClanData> attackers = new HashIntMap<>();
-    private final IntMap<SiegeClanData> defenders = new HashIntMap<>();
+    private final IntMap<SiegeParticipant> attackers = new HashIntMap<>();
+    private final IntMap<SiegeParticipant> defenders = new HashIntMap<>();
 
     public Siege(Castle castle) {
         this.castle = requireNonNull(castle);
@@ -52,7 +53,7 @@ public class Siege extends AbstractEvent {
     private void initOwner(Castle castle) {
         final var owner = castle.getOwner();
         if(nonNull(owner)) {
-            final var siegeClan = new SiegeClanData(owner.getId(), SiegeClanStatus.OWNER, castle.getId());
+            final var siegeClan = new SiegeParticipant(owner.getId(), SiegeParticipantStatus.OWNER, castle.getId());
             defenders.put(owner.getId(), siegeClan);
             getDAO(SiegeDAO.class).save(siegeClan);
         }
@@ -64,17 +65,16 @@ public class Siege extends AbstractEvent {
     }
 
     void registerAttacker(Clan clan) {
-        var siegeClan = new SiegeClanData(clan.getId(), SiegeClanStatus.ATTACKER, castle.getId());
+        var siegeClan = new SiegeParticipant(clan.getId(), SiegeParticipantStatus.ATTACKER, castle.getId());
         attackers.put(clan.getId(), siegeClan);
         getDAO(SiegeDAO.class).save(siegeClan);
     }
 
     void registerDefender(Clan clan) {
-        var siegeClan = new SiegeClanData(clan.getId(), SiegeClanStatus.WAITING, castle.getId());
+        var siegeClan = new SiegeParticipant(clan.getId(), SiegeParticipantStatus.WAITING, castle.getId());
         defenders.put(clan.getId(), siegeClan);
         getDAO(SiegeDAO.class).save(siegeClan);
     }
-
 
     void removeSiegeClan(Clan clan) {
         attackers.remove(clan.getId());
@@ -87,7 +87,7 @@ public class Siege extends AbstractEvent {
 
     }
 
-    public boolean isRegistered(Clan clan) {
+    boolean isRegistered(Clan clan) {
         return attackers.containsKey(clan.getId()) || defenders.containsKey(clan.getId());
     }
 
@@ -99,19 +99,19 @@ public class Siege extends AbstractEvent {
         return state;
     }
 
-    public boolean isInPreparation() {
+    boolean isInPreparation() {
         return state == SiegeState.PREPARATION;
     }
 
-    public int registeredAttackersAmount() {
+    int registeredAttackersAmount() {
         return attackers.size();
     }
 
-    public int registeredDefendersAmount() {
+    int registeredDefendersAmount() {
         return defenders.size();
     }
 
-    public void setState(SiegeState state) {
+    void setState(SiegeState state) {
         this.state = state;
     }
 
@@ -123,16 +123,16 @@ public class Siege extends AbstractEvent {
         };
     }
 
-    public Collection<SiegeClanData> getDefenderClans() {
+    public Collection<SiegeParticipant> getDefenderClans() {
         return defenders.values();
     }
 
-    public Collection<SiegeClanData> getAttackerClans() {
+    public Collection<SiegeParticipant> getAttackerClans() {
         return attackers.values();
     }
 
-    public void registerMercenaryRecruitment(Clan clan, long reward) {
-        SiegeClanData clanSiegeData = getSiegeClanData(clan);
+    void registerMercenaryRecruitment(Clan clan, long reward) {
+        SiegeParticipant clanSiegeData = getSiegeParticipant(clan);
 
         if(nonNull(clanSiegeData)) {
             clanSiegeData.setRecruitingMercenary(true);
@@ -141,31 +141,69 @@ public class Siege extends AbstractEvent {
         }
     }
 
-    public boolean isRecruitingMercenary(Clan clan) {
-        SiegeClanData clanSiegeData = getSiegeClanData(clan);
+    boolean isRecruitingMercenary(Clan clan) {
+        SiegeParticipant clanSiegeData = getSiegeParticipant(clan);
         return nonNull(clanSiegeData) && clanSiegeData.isRecruitingMercenary();
     }
 
-    private SiegeClanData getSiegeClanData(Clan clan) {
-        var siegeClanData = attackers.get(clan.getId());
-        if (isNull(siegeClanData)) {
-            siegeClanData = defenders.get(clan.getId());
+    SiegeParticipant getSiegeParticipant(Clan clan) {
+        var siegeClan = attackers.get(clan.getId());
+        if (isNull(siegeClan)) {
+            siegeClan = defenders.get(clan.getId());
         }
-        return siegeClanData;
+        return siegeClan;
     }
 
-    public void removeMercenaryRecruitment(Clan clan) {
-         final var siegeClanData = getSiegeClanData(clan);
+    void removeMercenaryRecruitment(Clan clan) {
+         final var siegeClanData = getSiegeParticipant(clan);
          siegeClanData.setMercenaryReward(0);
          siegeClanData.setRecruitingMercenary(false);
          getDAO(SiegeDAO.class).save(siegeClanData);
     }
 
-    public boolean isAttacker(Clan clan) {
+    void joinMercenary(Player player, Clan clan) {
+        final var participant = getSiegeParticipant(clan);
+        if(nonNull(participant)) {
+            participant.addMercenary(Mercenary.of(player));
+        }
+    }
+
+    public void leaveMercenary(Player player, Clan clan) {
+        final var participant = getSiegeParticipant(clan);
+        if(nonNull(participant)) {
+            participant.removeMercenary(player.getId());
+        }
+    }
+
+    boolean isAttacker(Clan clan) {
         return attackers.containsKey(clan.getId());
     }
 
-    public boolean isDefender(Clan clan) {
+    boolean isDefender(Clan clan) {
         return defenders.containsKey(clan.getId());
+    }
+
+    boolean hasStarted() {
+        return state == SiegeState.STARTED;
+    }
+
+    boolean isMercenary(int playerId) {
+        for (SiegeParticipant clan : attackers.values()) {
+            if(clan.hasMercenary(playerId)) {
+                return true;
+            }
+        }
+
+        for (SiegeParticipant clan : defenders.values()) {
+            if(clan.hasMercenary(playerId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    Collection<Mercenary> getMercenaries(Clan clan) {
+        final var siegeClan = getSiegeParticipant(clan);
+        return siegeClan.getMercenaries();
     }
 }

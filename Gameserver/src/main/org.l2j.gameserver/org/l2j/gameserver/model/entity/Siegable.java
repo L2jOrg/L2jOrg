@@ -19,7 +19,7 @@
 package org.l2j.gameserver.model.entity;
 
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.Npc;
 
@@ -34,19 +34,19 @@ public interface Siegable {
 
     void endSiege();
 
-    SiegeClanData getAttackerClan(int clanId);
+    SiegeParticipant getAttackerClan(int clanId);
 
-    SiegeClanData getAttackerClan(Clan clan);
+    SiegeParticipant getAttackerClan(Clan clan);
 
-    IntMap<SiegeClanData> getAttackerClans();
+    IntMap<SiegeParticipant> getAttackerClans();
 
     boolean checkIsAttacker(Clan clan);
 
-    SiegeClanData getDefenderClan(int clanId);
+    SiegeParticipant getDefenderClan(int clanId);
 
-    SiegeClanData getDefenderClan(Clan clan);
+    SiegeParticipant getDefenderClan(Clan clan);
 
-    IntMap<SiegeClanData> getDefenderClans();
+    IntMap<SiegeParticipant> getDefenderClans();
 
     boolean checkIsDefender(Clan clan);
 

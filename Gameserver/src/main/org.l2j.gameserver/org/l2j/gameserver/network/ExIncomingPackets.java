@@ -32,11 +32,7 @@ import org.l2j.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
 import org.l2j.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;
-import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarInfo;
-import org.l2j.gameserver.network.clientpackets.siege.ExPledgeMercenaryRecruitInfoSet;
-import org.l2j.gameserver.network.clientpackets.siege.ExRequestMercenaryCastleWarCastleSiegeAttacker;
-import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeDefender;
-import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeInfo;
+import org.l2j.gameserver.network.clientpackets.siege.*;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
@@ -491,8 +487,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(ExRequestMercenaryCastleWarCastleSiegeInfo::new, ConnectionState.IN_GAME_STATES),
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(ExRequestMercenaryCastleWarCastleSiegeAttacker::new, ConnectionState.IN_GAME_STATES),
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_DEFENDER_LIST(ExRequestMercenaryCastleWarCastleSiegeDefender::new, ConnectionState.IN_GAME_STATES),
-    EX_PLEDGE_MERCENARY_MEMBER_LIST(null, ConnectionState.IN_GAME_STATES),
-    EX_PLEDGE_MERCENARY_MEMBER_JOIN(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_MERCENARY_MEMBER_LIST(ExRequestPledgeMercenaryMemberList::new, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_MERCENARY_MEMBER_JOIN(ExRequestPledgeMercenaryMemberJoin::new, ConnectionState.IN_GAME_STATES),
     EX_PVPBOOK_LIST(ExRequestPvpBookList::new, ConnectionState.IN_GAME_STATES),
     EX_PVPBOOK_KILLER_LOCATION(ExRequestKillerLocation::new, ConnectionState.IN_GAME_STATES),
     EX_PVPBOOK_TELEPORT_TO_KILLER(ExTeleportToKiller::new, ConnectionState.IN_GAME_STATES),

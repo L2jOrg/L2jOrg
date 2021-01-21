@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.Creature;
@@ -49,17 +49,17 @@ public class Die extends ServerPacket {
             final Clan clan = player.getClan();
             boolean isInCastleDefense = false;
 
-            SiegeClanData siegeClan = null;
+            SiegeParticipant siegeParticipant = null;
             final Castle castle = CastleManager.getInstance().getCastle(creature);
             if ((castle != null) && castle.getSiege().isInProgress()) {
-                siegeClan = castle.getSiege().getAttackerClan(clan);
-                isInCastleDefense = (siegeClan == null) && castle.getSiege().checkIsDefender(clan);
+                siegeParticipant = castle.getSiege().getAttackerClan(clan);
+                isInCastleDefense = (siegeParticipant == null) && castle.getSiege().checkIsDefender(clan);
             }
 
             flags |= nonNull(clan) && clan.getHideoutId() > 0 ? 2 : 0; // clan hall
             flags |= (nonNull(clan) && (clan.getCastleId() > 0)) || isInCastleDefense ? 4 : 0; // castle
                                                                                               // 8  fortress
-            flags |= nonNull(siegeClan) && !siegeClan.getFlags().isEmpty() ? 16 : 0; // outpost
+            flags |= nonNull(siegeParticipant) && !siegeParticipant.getFlags().isEmpty() ? 16 : 0; // outpost
             flags |= creature.getAccessLevel().allowFixedRes() || player.getInventory().haveItemForSelfResurrection() ? 32 : 0; // feather
             // 128 adventure's song
         }

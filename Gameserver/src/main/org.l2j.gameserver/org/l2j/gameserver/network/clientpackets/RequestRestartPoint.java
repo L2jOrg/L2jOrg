@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
@@ -153,14 +153,14 @@ public final class RequestRestartPoint extends ClientPacket {
             }
             case 4: // to siege HQ
             {
-                SiegeClanData siegeClan = null;
+                SiegeParticipant siegeParticipant = null;
                 final Castle castle = CastleManager.getInstance().getCastle(player);
 
                 if ((castle != null) && castle.getSiege().isInProgress()) {
-                    siegeClan = castle.getSiege().getAttackerClan(player.getClan());
+                    siegeParticipant = castle.getSiege().getAttackerClan(player.getClan());
                 }
 
-                if (((siegeClan == null) || siegeClan.getFlags().isEmpty())) {
+                if (((siegeParticipant == null) || siegeParticipant.getFlags().isEmpty())) {
                     LOGGER.warn("Player [" + player.getName() + "] called RestartPointPacket - To Siege HQ and he doesn't have Siege HQ!");
                     return;
                 }

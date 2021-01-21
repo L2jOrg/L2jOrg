@@ -19,14 +19,11 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.engine.siege.Siege;
-import org.l2j.gameserver.engine.siege.SiegeClanStatus;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
@@ -45,7 +42,7 @@ public class ExMCWCastleSiegeDefenderList extends AbstractSiegeClanList {
 
         writeHeader(buffer, defenders.size(), client.getPlayer());
 
-        for (SiegeClanData defender : defenders) {
+        for (SiegeParticipant defender : defenders) {
             var clan = ClanTable.getInstance().getClan(defender.getClanId());
             writeClanInfo(buffer, clan);
             buffer.writeInt(defender.getStatus().ordinal());

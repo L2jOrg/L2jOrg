@@ -26,7 +26,7 @@
                 <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
             <DefaultRolloverStrategy max="5" fileIndex="min"/>
-            <ThresholdFilter level="debug"/>
+            <ThresholdFilter level="ALL"/>
         </RollingFile>
 
         <RollingFile name="packet_statistics" filename="logs/packet_statistics.log" filepattern="logs/$${date:yyyy-MM}/debug-%d{dd-MM-yyyy}-%i.log.gz" append="true" >
@@ -50,7 +50,7 @@
         <Logger name="org.l2j" level="warn">
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="org.l2j.gameserver.network" level="error">
+        <Logger name="org.l2j.gameserver.network" level="ALL">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="org.l2j.gameserver.network.authcomm.AuthServerCommunication" level="info">

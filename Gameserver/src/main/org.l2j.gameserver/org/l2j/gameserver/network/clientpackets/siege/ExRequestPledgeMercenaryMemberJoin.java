@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.castle;
+package org.l2j.gameserver.network.clientpackets.siege;
 
 import org.l2j.gameserver.engine.siege.SiegeEngine;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -24,16 +24,27 @@ import org.l2j.gameserver.network.clientpackets.ClientPacket;
 /**
  * @author JoeAlisson
  */
-public class ExRequestMercenaryCastleWarCastleSiegeDefender extends ClientPacket {
+public class ExRequestPledgeMercenaryMemberJoin extends ClientPacket {
+
+    private boolean joining;
     private int castleId;
+    private int clanId;
 
     @Override
     protected void readImpl() throws Exception {
+        readInt(); //playerId
+        joining = readIntAsBoolean()    ;
         castleId = readInt();
+        clanId = readInt();
     }
 
     @Override
-    protected void runImpl() {
-        SiegeEngine.getInstance().showDefenderList(client.getPlayer(), castleId);
+    protected void runImpl() throws Exception {
+        final var siegeEngine = SiegeEngine.getInstance();
+        if(joining) {
+            siegeEngine.joinMercenaries(client.getPlayer(), castleId, clanId);
+        } else {
+            siegeEngine.leaveMercenaries(client.getPlayer(), castleId, clanId);
+        }
     }
 }

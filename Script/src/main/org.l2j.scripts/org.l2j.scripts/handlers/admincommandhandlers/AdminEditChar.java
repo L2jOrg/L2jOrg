@@ -1267,7 +1267,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			throw new IllegalArgumentException("Player doesn't exist");
 		}
 		
-		final var chars = player.getAccountChars();
+		final var chars = player.getAccountPlayers();
 		final StringJoiner replyMSG = new StringJoiner("<br1>");
 		chars.values().forEach(replyMSG::add);
 

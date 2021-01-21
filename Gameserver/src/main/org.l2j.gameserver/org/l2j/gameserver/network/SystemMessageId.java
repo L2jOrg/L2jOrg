@@ -5429,9 +5429,6 @@ public final class SystemMessageId {
     @ClientString(id = 2795, message = "You've already requested a territory war in another territory elsewhere.")
     public static SystemMessageId YOU_VE_ALREADY_REQUESTED_A_TERRITORY_WAR_IN_ANOTHER_TERRITORY_ELSEWHERE;
 
-    @ClientString(id = 2796, message = "The clan who owns the territory cannot participate in the territory war as mercenaries.")
-    public static SystemMessageId THE_CLAN_WHO_OWNS_THE_TERRITORY_CANNOT_PARTICIPATE_IN_THE_TERRITORY_WAR_AS_MERCENARIES;
-
     @ClientString(id = 2797, message = "It is not a territory war registration period, so a request cannot be made at this time.")
     public static SystemMessageId IT_IS_NOT_A_TERRITORY_WAR_REGISTRATION_PERIOD_SO_A_REQUEST_CANNOT_BE_MADE_AT_THIS_TIME;
 
@@ -13399,10 +13396,7 @@ public final class SystemMessageId {
     public static SystemMessageId YOU_ARE_ALREADY_IN_YOUR_TERRITORY_THE_MOVE_FUNCTION_WILL_NOT_WORK;
 
     @ClientString(id = 7362, message = "The Newbie Buff disappeared. Get a new Newbie Buff from the Newbie Helper in the village.")
-    public static SystemMessageId THE_NEWBIE_BUFF_DISAPPEARED_GET_A_NEW_NEWBIE_BUFF_FROM_THE_NEWBIE_HELPER_IN_THE_VILLAGE;
-
-    @ClientString(id = 7363, message = "Applied to participate in the territory war as a mercenary.")
-    public static SystemMessageId APPLIED_TO_PARTICIPATE_IN_THE_TERRITORY_WAR_AS_A_MERCENARY;
+    public static SystemMessageId THE_NEWBIE_BUFF_DISAPPEARED_GET_A_NEW_NEWBIE_BUFF_FROM_THE_NEWBIE_HELPER_IN_THE_VILLAGE
 
     @ClientString(id = 7364, message = "Transformation is not available for this class.")
     public static SystemMessageId TRANSFORMATION_IS_NOT_AVAILABLE_FOR_THIS_CLASS;
@@ -13878,12 +13872,6 @@ public final class SystemMessageId {
     @ClientString(id = 13024, message = "There is a mercenary applicant. You can’t cancel now.")
     public static SystemMessageId THERE_IS_A_MERCENARY_APPLICANT_YOU_CANT_CANCEL_NOW;
 
-    @ClientString(id = 13025, message = "You cannot apply for mercenary after the castle siege starts.")
-    public static SystemMessageId YOU_CANNOT_APPLY_FOR_MERCENARY_AFTER_THE_CASTLE_SIEGE_STARTS;
-
-    @ClientString(id = 13026, message = "Mercenaries cannot join a clan that has been declared, has declared, or has mutually declared war.")
-    public static SystemMessageId MERCENARIES_CANNOT_JOIN_A_CLAN_THAT_HAS_BEEN_DECLARED_HAS_DECLARED_OR_HAS_MUTUALLY_DECLARED_WAR;
-
     @ClientString(id = 13027, message = "The next target is '$s1'.")
     public static SystemMessageId THE_NEXT_TARGET_IS_S1_;
 
@@ -13912,34 +13900,7 @@ public final class SystemMessageId {
     public static SystemMessageId YOUR_CLANS_CASTLE_SIEGE_TASK_IS_BEING_PROCESSED_TRY_AGAIN_AFTER_THE_PROCESS_ENDS
 
     @ClientString(id = 13039, message = "You cannot apply for mercenary now.")
-    public static SystemMessageId YOU_CANNOT_APPLY_FOR_MERCENARY_NOW;
-
-    @ClientString(id = 13040, message = "The clan is not recruiting mercenaries.")
-    public static SystemMessageId THE_CLAN_IS_NOT_RECRUITING_MERCENARIES;
-
-    @ClientString(id = 13041, message = "You cannot be a mercenary for your own clan.")
-    public static SystemMessageId YOU_CANNOT_BE_A_MERCENARY_FOR_YOUR_OWN_CLAN;
-
-    @ClientString(id = 13042, message = "Members of the clans that are registered as attackers/defenders or own the castle cannot be mercenaries.")
-    public static SystemMessageId MEMBERS_OF_THE_CLANS_THAT_ARE_REGISTERED_AS_ATTACKERS_DEFENDERS_OR_OWN_THE_CASTLE_CANNOT_BE_MERCENARIES;
-
-    @ClientString(id = 13043, message = "The character is participating as a mercenary.")
-    public static SystemMessageId THE_CHARACTER_IS_PARTICIPATING_AS_A_MERCENARY;
-
-    @ClientString(id = 13044, message = "Your level cannot be a mercenary.")
-    public static SystemMessageId YOUR_LEVEL_CANNOT_BE_A_MERCENARY;
-
-    @ClientString(id = 13045, message = "You cannot be a mercenary when you belong to a party.")
-    public static SystemMessageId YOU_CANNOT_BE_A_MERCENARY_WHEN_YOU_BELONG_TO_A_PARTY;
-
-    @ClientString(id = 13046, message = "Another character of your account is a mercenary. Only one character per account can be a mercenary.")
-    public static SystemMessageId ANOTHER_CHARACTER_OF_YOUR_ACCOUNT_IS_A_MERCENARY_ONLY_ONE_CHARACTER_PER_ACCOUNT_CAN_BE_A_MERCENARY;
-
-    @ClientString(id = 13047, message = "Not in mercenary mode.")
-    public static SystemMessageId NOT_IN_MERCENARY_MODE;
-
-    @ClientString(id = 13048, message = "You cannot cancel the mercenary status when you belong to a party.")
-    public static SystemMessageId YOU_CANNOT_CANCEL_THE_MERCENARY_STATUS_WHEN_YOU_BELONG_TO_A_PARTY;
+    public static SystemMessageId YOU_CANNOT_APPLY_FOR_MERCENARY_NOW
 
     @ClientString(id = 13049, message = "Killed by $c1‘s attack.")
     public static SystemMessageId KILLED_BY_C1S_ATTACK;
@@ -13977,14 +13938,8 @@ public final class SystemMessageId {
     @ClientString(id = 13060, message = "Cost $s1")
     public static SystemMessageId COST_S1;
 
-    @ClientString(id = 13061, message = "A clan that is not accepted as defenders cannot recruit mercenaries.")
-    public static SystemMessageId A_CLAN_THAT_IS_NOT_ACCEPTED_AS_DEFENDERS_CANNOT_RECRUIT_MERCENARIES;
-
     @ClientString(id = 13062, message = "You can’t sign up as a mercenary to a clan that is not accepted as a defender.")
     public static SystemMessageId YOU_CANT_SIGN_UP_AS_A_MERCENARY_TO_A_CLAN_THAT_IS_NOT_ACCEPTED_AS_A_DEFENDER;
-
-    @ClientString(id = 13063, message = "Exceeded the maximum number of mercenaries. You cannot apply.")
-    public static SystemMessageId EXCEEDED_THE_MAXIMUM_NUMBER_OF_MERCENARIES_YOU_CANNOT_APPLY;
 
     @ClientString(id = 13064, message = "Your mercenary clan’s castle siege task is being processed. Try again after the process ends.")
     public static SystemMessageId YOUR_MERCENARY_CLANS_CASTLE_SIEGE_TASK_IS_BEING_PROCESSED_TRY_AGAIN_AFTER_THE_PROCESS_ENDS;
@@ -16726,6 +16681,9 @@ public final class SystemMessageId {
     @ClientString(id = 2793, message = "You must have a minimum of $s1 people to enter this instanced zone.")
     public static SystemMessageId YOU_MUST_HAVE_A_MINIMUM_OF_S1_PEOPLE_TO_ENTER_THIS_INSTANCED_ZONE;
 
+    @ClientString(id = 2796, message = "The clan who owns the territory cannot participate in the territory war as mercenaries.")
+    public static SystemMessageId THE_CLAN_WHO_OWNS_THE_TERRITORY_CANNOT_PARTICIPATE_IN_THE_TERRITORY_WAR_AS_MERCENARIES;
+
     @ClientString(id = 2909, message = "A servitor cannot be summoned while on an airship.")
     public static SystemMessageId A_SERVITOR_CANNOT_BE_SUMMONED_WHILE_ON_AN_AIRSHIP;
 
@@ -17720,6 +17678,9 @@ public final class SystemMessageId {
     @ClientString(id = 7238, message = "You are too far way to trade.")
     public static SystemMessageId YOU_ARE_TOO_FAR_WAY_TO_TRADE;
 
+    @ClientString(id = 7363, message = "Applied to participate in the territory war as a mercenary.")
+    public static SystemMessageId APPLIED_TO_PARTICIPATE_IN_THE_TERRITORY_WAR_AS_A_MERCENARY;
+
     @ClientString(id = 7323, message = "Learned $s1 Lv. $s2.")
     public static SystemMessageId LEARNED_S1_LV_S2;
 
@@ -17729,6 +17690,12 @@ public final class SystemMessageId {
     @ClientString(id = 13019, message = "Cannot use timed hunting zones while waiting for the Olympiad.")
     public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;
 
+    @ClientString(id = 13025, message = "You cannot apply for mercenary after the castle siege starts.")
+    public static SystemMessageId YOU_CANNOT_APPLY_FOR_MERCENARY_AFTER_THE_CASTLE_SIEGE_STARTS;
+
+    @ClientString(id = 13026, message = "Mercenaries cannot join a clan that has been declared, has declared, or has mutually declared war.")
+    public static SystemMessageId MERCENARIES_CANNOT_JOIN_A_CLAN_THAT_HAS_BEEN_DECLARED_HAS_DECLARED_OR_HAS_MUTUALLY_DECLARED_WAR;
+
     @ClientString(id = 13036, message = "It is not a mercenary recruitment period.")
     public static SystemMessageId IT_IS_NOT_A_MERCENARY_RECRUITMENT_PERIOD;
 
@@ -17737,6 +17704,39 @@ public final class SystemMessageId {
 
     @ClientString(id = 13038, message = "Already recruiting mercenaries.")
     public static SystemMessageId ALREADY_RECRUITING_MERCENARIES;
+
+    @ClientString(id = 13040, message = "The clan is not recruiting mercenaries.")
+    public static SystemMessageId THE_CLAN_IS_NOT_RECRUITING_MERCENARIES;
+
+    @ClientString(id = 13041, message = "You cannot be a mercenary for your own clan.")
+    public static SystemMessageId YOU_CANNOT_BE_A_MERCENARY_FOR_YOUR_OWN_CLAN;
+
+    @ClientString(id = 13042, message = "Members of the clans that are registered as attackers/defenders or own the castle cannot be mercenaries.")
+    public static SystemMessageId MEMBERS_OF_THE_CLANS_THAT_ARE_REGISTERED_AS_ATTACKERS_DEFENDERS_OR_OWN_THE_CASTLE_CANNOT_BE_MERCENARIES;
+
+    @ClientString(id = 13043, message = "The character is participating as a mercenary.")
+    public static SystemMessageId THE_CHARACTER_IS_PARTICIPATING_AS_A_MERCENARY;
+
+    @ClientString(id = 13044, message = "Your level cannot be a mercenary.")
+    public static SystemMessageId YOUR_LEVEL_CANNOT_BE_A_MERCENARY;
+
+    @ClientString(id = 13045, message = "You cannot be a mercenary when you belong to a party.")
+    public static SystemMessageId YOU_CANNOT_BE_A_MERCENARY_WHEN_YOU_BELONG_TO_A_PARTY;
+
+    @ClientString(id = 13046, message = "Another character of your account is a mercenary. Only one character per account can be a mercenary.")
+    public static SystemMessageId ANOTHER_CHARACTER_OF_YOUR_ACCOUNT_IS_A_MERCENARY_ONLY_ONE_CHARACTER_PER_ACCOUNT_CAN_BE_A_MERCENARY;
+
+    @ClientString(id = 13047, message = "Not in mercenary mode.")
+    public static SystemMessageId NOT_IN_MERCENARY_MODE;
+
+    @ClientString(id = 13048, message = "You cannot cancel the mercenary status when you belong to a party.")
+    public static SystemMessageId YOU_CANNOT_CANCEL_THE_MERCENARY_STATUS_WHEN_YOU_BELONG_TO_A_PARTY;
+
+    @ClientString(id = 13061, message = "A clan that is not accepted as defenders cannot recruit mercenaries.")
+    public static SystemMessageId A_CLAN_THAT_IS_NOT_ACCEPTED_AS_DEFENDERS_CANNOT_RECRUIT_MERCENARIES;
+
+    @ClientString(id = 13063, message = "Exceeded the maximum number of mercenaries. You cannot apply.")
+    public static SystemMessageId EXCEEDED_THE_MAXIMUM_NUMBER_OF_MERCENARIES_YOU_CANNOT_APPLY;
 
     private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 
