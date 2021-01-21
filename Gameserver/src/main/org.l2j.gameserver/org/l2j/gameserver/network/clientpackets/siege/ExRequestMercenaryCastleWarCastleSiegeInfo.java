@@ -16,15 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.engine.siege;
+package org.l2j.gameserver.network.clientpackets.siege;
+
+import org.l2j.gameserver.engine.siege.SiegeEngine;
+import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.siege.ExMercenaryCastleWarCastleSiegeInfo;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
  */
-public enum SiegeClanStatus {
-    ATTACKER,
-    OWNER,
-    WAITING,
-    APPROVED,
-    DECLINED
+public class ExRequestMercenaryCastleWarCastleSiegeInfo extends ClientPacket {
+
+    private int castleId;
+
+    @Override
+    protected void readImpl() throws Exception {
+        castleId = readInt();
+    }
+
+    @Override
+    protected void runImpl() {
+        SiegeEngine.getInstance().showSiegeInfo(client.getPlayer(), castleId);
+    }
 }

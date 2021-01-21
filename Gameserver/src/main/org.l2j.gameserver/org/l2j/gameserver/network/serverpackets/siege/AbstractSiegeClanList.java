@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.engine.siege.Siege;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
@@ -60,10 +60,10 @@ public abstract class AbstractSiegeClanList extends ServerPacket {
         buffer.writeInt((int) (System.currentTimeMillis() / 1000)); // register time
     }
 
-    protected void writeMercenaryInfo(WritableBuffer buffer, SiegeClanData siegeClanData) {
-        buffer.writeInt(siegeClanData.isRecruitingMercenary());
-        buffer.writeLong(siegeClanData.getMercenaryReward());
-        buffer.writeInt(0); // mercenary count
+    protected void writeMercenaryInfo(WritableBuffer buffer, SiegeParticipant siegeParticipant) {
+        buffer.writeInt(siegeParticipant.isRecruitingMercenary());
+        buffer.writeLong(siegeParticipant.getMercenaryReward());
+        buffer.writeInt(siegeParticipant.getMercenariesCount());
     }
 
     protected void writeAllianceInfo(WritableBuffer buffer, Clan clan) {

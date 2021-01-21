@@ -19,9 +19,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
 
 public final class RequestRestartPoint extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestRestartPoint.class);
-    protected int _requestedPointType;
+    private int _requestedPointType;
 
     @Override
     public void readImpl() {
@@ -91,7 +91,7 @@ public final class RequestRestartPoint extends ClientPacket {
         portPlayer(player);
     }
 
-    protected final void portPlayer(Player player) {
+    private void portPlayer(Player player) {
         Location loc = null;
         Instance instance = null;
 
@@ -153,14 +153,14 @@ public final class RequestRestartPoint extends ClientPacket {
             }
             case 4: // to siege HQ
             {
-                SiegeClanData siegeClan = null;
+                SiegeParticipant siegeParticipant = null;
                 final Castle castle = CastleManager.getInstance().getCastle(player);
 
                 if ((castle != null) && castle.getSiege().isInProgress()) {
-                    siegeClan = castle.getSiege().getAttackerClan(player.getClan());
+                    siegeParticipant = castle.getSiege().getAttackerClan(player.getClan());
                 }
 
-                if (((siegeClan == null) || siegeClan.getFlags().isEmpty())) {
+                if (((siegeParticipant == null) || siegeParticipant.getFlags().isEmpty())) {
                     LOGGER.warn("Player [" + player.getName() + "] called RestartPointPacket - To Siege HQ and he doesn't have Siege HQ!");
                     return;
                 }

@@ -1,9 +1,11 @@
-DROP TABLE IF EXISTS `siege_clans`;
-CREATE TABLE IF NOT EXISTS `siege_clans`
+DROP TABLE IF EXISTS `siege_mercenaries`;
+DROP TABLE IF EXISTS siege_participants;
+CREATE TABLE IF NOT EXISTS siege_participants
 (
     `castle_id`         INT     NOT NULL DEFAULT 0,
     `clan_id`           INT     NOT NULL DEFAULT 0,
     `status`            ENUM ('ATTACKER', 'OWNER', 'WAITING', 'APPROVED', 'DECLINED'),
+    `register_time`     DATETIME NOT NULL DEFAULT (CURRENT_TIMESTAMP),
     `recruit_mercenary` BOOLEAN NOT NULL DEFAULT FALSE,
     `mercenary_reward`  INT     NOT NULL DEFAULT 0,
 
@@ -13,7 +15,6 @@ CREATE TABLE IF NOT EXISTS `siege_clans`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
 
-DROP TABLE IF EXISTS `siege_mercenaries`;
 CREATE TABLE IF NOT EXISTS `siege_mercenaries`
 (
     `castle_id` INT          NOT NULL DEFAULT 0,
@@ -21,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `siege_mercenaries`
     `mercenary` INT UNSIGNED NOT NULL,
 
     PRIMARY KEY (`castle_id`, `clan_id`, `mercenary`),
-    FOREIGN KEY (`castle_id`, `clan_id`) REFERENCES siege_clans (`castle_id`, `clan_id`),
+    FOREIGN KEY (`castle_id`, `clan_id`) REFERENCES siege_participants (`castle_id`, `clan_id`),
     FOREIGN KEY (`mercenary`) REFERENCES characters (charId) ON DELETE CASCADE
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;

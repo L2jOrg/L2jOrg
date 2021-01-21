@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.castle;
+package org.l2j.gameserver.network.clientpackets.siege;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;

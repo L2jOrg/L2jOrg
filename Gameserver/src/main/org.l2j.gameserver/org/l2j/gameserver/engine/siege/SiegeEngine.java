@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
@@ -34,12 +35,10 @@ import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.siege.ExMCWCastleSiegeAttackerList;
-import org.l2j.gameserver.network.serverpackets.siege.ExMCWCastleSiegeDefenderList;
-import org.l2j.gameserver.network.serverpackets.siege.ExMercenaryCastleWarCastleSiegeInfo;
-import org.l2j.gameserver.network.serverpackets.siege.ExMercenarySiegeHUDInfo;
+import org.l2j.gameserver.network.serverpackets.siege.*;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
@@ -346,8 +345,15 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
         if (!validateRecruitmentRights(player, siege, clan))
             return;
 
-        if(!siege.isRegistered(clan)) {
+        final var participant = siege.getSiegeParticipant(clan);
+
+        if(isNull(participant)) {
             player.sendPacket(TO_RECRUIT_MERCENARIES_CLANS_MUST_PARTICIPATE_IN_THE_CASTLE_SIEGE);
+            return;
+        }
+
+        if(participant.isWaitingApproval() || participant.isDeclined()) {
+            player.sendPacket(A_CLAN_THAT_IS_NOT_ACCEPTED_AS_DEFENDERS_CANNOT_RECRUIT_MERCENARIES);
             return;
         }
 
@@ -358,6 +364,7 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
         siege.registerMercenaryRecruitment(clan, reward);
         sendParticipantSameTypeList(player, clan, siege);
+        //MERCENARY_PARTICIPATION_IS_REQUESTED_IN_S1_TERRITORY
     }
 
     private void sendParticipantSameTypeList(Player player, Clan clan, Siege siege) {
@@ -373,8 +380,10 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
         final Clan clan = player.getClan();
 
         if (validateRecruitmentRights(player, siege, clan)) {
+            // THERE_IS_A_MERCENARY_APPLICANT_YOU_CANT_CANCEL_NOW
             siege.removeMercenaryRecruitment(clan);
             sendParticipantSameTypeList(player, clan, siege);
+            // MERCENARY_PARTICIPATION_REQUEST_IS_CANCELLED_IN_S1_TERRITORY
         }
     }
 
@@ -386,6 +395,146 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
             player.sendPacket(IT_IS_NOT_A_MERCENARY_RECRUITMENT_PERIOD);
             return false;
         }
+        return true;
+    }
+
+    public void showMercenaries(Player player, int castleId, int clanId) {
+        final var siege = sieges.get(castleId);
+        final var clan = ClanEngine.getInstance().getClan(clanId);
+        if(nonNull(siege) && nonNull(clan) && siege.isRecruitingMercenary(clan)) {
+            final var mercenaries = updateMercenariesStatus(siege, clan);
+            player.sendPacket(new ExPledgeMercenaryMemberList(siege, clan, mercenaries));
+        }
+    }
+
+    private Collection<Mercenary> updateMercenariesStatus(Siege siege, Clan clan) {
+        final var mercenaries = siege.getMercenaries(clan);
+        for (Mercenary mercenary : mercenaries)
+            updateMercenary(mercenary);
+        return mercenaries;
+    }
+
+    private void updateMercenary(Mercenary mercenary) {
+        var player = World.getInstance().findPlayer(mercenary.getId());
+        if(nonNull(player)) {
+            mercenary.update(player);
+        } else {
+            mercenary.setOnline(false);
+        }
+    }
+
+    public void joinMercenaries(Player player, int castleId, int clanId) {
+        final var siege = sieges.get(castleId);
+        if(nonNull(siege)) {
+            final var clan = ClanEngine.getInstance().getClan(clanId);
+
+            if (!validateMercenary(player, clan, siege)) {
+                player.sendPacket(ExPledgeMercenaryMemberJoin.joinFailed(clanId));
+                return;
+            }
+
+            siege.joinMercenary(player, clan);
+            player.sendPacket(APPLIED_TO_PARTICIPATE_IN_THE_TERRITORY_WAR_AS_A_MERCENARY);
+            player.sendPacket(ExPledgeMercenaryMemberJoin.joined(clanId));
+        }
+    }
+
+    private boolean validateMercenary(Player player, Clan clan, Siege siege) {
+        if(siege.hasStarted()) {
+            player.sendPacket(YOU_CANNOT_APPLY_FOR_MERCENARY_AFTER_THE_CASTLE_SIEGE_STARTS);
+            return false;
+        }
+
+        if(player.getLevel() < settings.minMercenaryLevel) {
+            player.sendPacket(YOUR_LEVEL_CANNOT_BE_A_MERCENARY);
+            return false;
+        }
+
+        if(player.isInParty()) {
+            player.sendPacket(YOU_CANNOT_BE_A_MERCENARY_WHEN_YOU_BELONG_TO_A_PARTY);
+            return false;
+        }
+
+        if(isNull(clan) || !siege.isRecruitingMercenary(clan)) {
+            player.sendPacket(THE_CLAN_IS_NOT_RECRUITING_MERCENARIES);
+            return false;
+        }
+
+        final var participant = siege.getSiegeParticipant(clan);
+        if(participant.getMercenariesCount() >= settings.maxMercenaries) {
+            player.sendPacket(EXCEEDED_THE_MAXIMUM_NUMBER_OF_MERCENARIES_YOU_CANNOT_APPLY);
+            return false;
+        }
+
+        final var playerClan = player.getClan();
+
+        if(nonNull(playerClan) && clan.isAtWarWith(playerClan)) {
+            player.sendPacket(MERCENARIES_CANNOT_JOIN_A_CLAN_THAT_HAS_BEEN_DECLARED_HAS_DECLARED_OR_HAS_MUTUALLY_DECLARED_WAR);
+            return false;
+        }
+
+        if(playerClan == clan) {
+            player.sendPacket(YOU_CANNOT_BE_A_MERCENARY_FOR_YOUR_OWN_CLAN);
+            return false;
+        }
+
+        if(siege.isRegistered(playerClan)) {
+            player.sendPacket(MEMBERS_OF_THE_CLANS_THAT_ARE_REGISTERED_AS_ATTACKERS_DEFENDERS_OR_OWN_THE_CASTLE_CANNOT_BE_MERCENARIES);
+            return false;
+        }
+
+        final var castle = siege.getCastle();
+        if(nonNull(castle.getOwner()) && castle.getOwner() == player.getClan()) {
+            player.sendPacket(THE_CLAN_WHO_OWNS_THE_TERRITORY_CANNOT_PARTICIPATE_IN_THE_TERRITORY_WAR_AS_MERCENARIES);
+            return false;
+        }
+
+        if(isMercenary(player.getId())) {
+            player.sendPacket(THE_CHARACTER_IS_PARTICIPATING_AS_A_MERCENARY);
+            return false;
+        }
+
+        if(player.getAccountPlayers().keySet().anyMatch(this::isMercenary)) {
+            player.sendPacket(ANOTHER_CHARACTER_OF_YOUR_ACCOUNT_IS_A_MERCENARY_ONLY_ONE_CHARACTER_PER_ACCOUNT_CAN_BE_A_MERCENARY);
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean isMercenary(int playerId) {
+        for (Siege siege : sieges.values()) {
+            if(siege.isMercenary(playerId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void leaveMercenaries(Player player, int castleId, int clanId) {
+        final var siege = sieges.get(castleId);
+        final var clan = ClanEngine.getInstance().getClan(clanId);
+        if(nonNull(siege) && nonNull(clan)) {
+            if(!validateLeaveMercenary(player)) {
+                player.sendPacket(ExPledgeMercenaryMemberJoin.leaveFailed(clanId));
+                return;
+            }
+            siege.leaveMercenary(player, clan);
+            player.sendPacket(ExPledgeMercenaryMemberJoin.left(clanId));
+        }
+    }
+
+    private boolean validateLeaveMercenary(Player player) {
+        if (player.isInParty()) {
+            player.sendPacket(YOU_CANNOT_CANCEL_THE_MERCENARY_STATUS_WHEN_YOU_BELONG_TO_A_PARTY);
+            return false;
+        }
+
+        if (!isMercenary(player.getId())) {
+            player.sendPacket(NOT_IN_MERCENARY_MODE);
+            return false;
+        }
+
         return true;
     }
 

@@ -36,7 +36,7 @@ public interface SiegeDAO extends DAO<Object> {
     @Query("DELETE FROM castle_siege_guards WHERE castleId = :castleId: AND isHired = 1")
     void deleteHiredGuardsOfCastle(int castleId);
 
-    @Query("SELECT EXISTS(SELECT 1 FROM siege_clans WHERE clan_id=:clanId: AND castle_id=:castleId:)")
+    @Query("SELECT EXISTS(SELECT 1 FROM siege_participants WHERE clan_id=:clanId: AND castle_id=:castleId:)")
     boolean isRegistered(int clanId, int castleId);
 
     @Query("SELECT * FROM castle_siege_guards WHERE isHired = 1")

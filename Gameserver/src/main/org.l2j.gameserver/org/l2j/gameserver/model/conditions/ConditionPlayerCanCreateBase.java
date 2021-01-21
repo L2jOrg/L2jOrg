@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.data.database.data.SiegeClanData;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
@@ -80,7 +80,7 @@ public class ConditionPlayerCanCreateBase extends Condition {
             sm.addSkillName(skill);
             player.sendPacket(sm);
             canCreateBase = false;
-        } else if (zeroIfNullOrElse(castle.getSiege().getAttackerClan(player.getClan()), SiegeClanData::getNumFlags) >= SiegeManager.getInstance().getFlagMaxCount()) {
+        } else if (zeroIfNullOrElse(castle.getSiege().getAttackerClan(player.getClan()), SiegeParticipant::getNumFlags) >= SiegeManager.getInstance().getFlagMaxCount()) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
             sm.addSkillName(skill);
             player.sendPacket(sm);

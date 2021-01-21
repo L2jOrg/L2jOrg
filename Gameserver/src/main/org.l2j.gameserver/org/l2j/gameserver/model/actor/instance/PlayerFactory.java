@@ -131,7 +131,7 @@ public class PlayerFactory {
 
         for (PlayerSelectInfo info : client.getPlayersInfo()) {
             if(info.getObjectId() != player.getObjectId()) {
-                player.getAccountChars().put(info.getObjectId(), info.getName());
+                player.getAccountPlayers().put(info.getObjectId(), info.getName());
             }
         }
         loadSummons(player);

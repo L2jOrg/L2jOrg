@@ -18,13 +18,17 @@
  */
 package org.l2j.gameserver.data.database.data;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.gameserver.engine.siege.SiegeClanStatus;
+import org.l2j.gameserver.engine.siege.Mercenary;
+import org.l2j.gameserver.engine.siege.SiegeParticipantStatus;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 
+import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -33,11 +37,14 @@ import static java.util.Objects.isNull;
 /**
  * @author JoeAlisson
  */
-@Table("siege_clans")
-public class SiegeClanData {
+@Table("siege_participants")
+public class SiegeParticipant {
 
     @NonUpdatable
     private final Set<Npc> flags = ConcurrentHashMap.newKeySet();
+
+    @NonUpdatable
+    private final IntMap<Mercenary> mercenaries = new HashIntMap<>();
 
     @Column("castle_id")
     private int castleId;
@@ -51,12 +58,12 @@ public class SiegeClanData {
     @Column("mercenary_reward")
     private long mercenaryReward;
 
-    private SiegeClanStatus status;
+    private SiegeParticipantStatus status;
 
-    public SiegeClanData() {
+    public SiegeParticipant() {
     }
 
-    public SiegeClanData(int id, SiegeClanStatus status, int castleId) {
+    public SiegeParticipant(int id, SiegeParticipantStatus status, int castleId) {
         this.clanId = id;
         this.status = status;
         this.castleId = castleId;
@@ -96,11 +103,11 @@ public class SiegeClanData {
         return clanId;
     }
 
-    public SiegeClanStatus getStatus() {
+    public SiegeParticipantStatus getStatus() {
         return status;
     }
 
-    public void setStatus(SiegeClanStatus status) {
+    public void setStatus(SiegeParticipantStatus status) {
         this.status = status;
     }
 
@@ -118,5 +125,33 @@ public class SiegeClanData {
 
     public boolean isRecruitingMercenary() {
         return recruitingMercenary;
+    }
+
+    public void addMercenary(Mercenary mercenary) {
+        mercenaries.put(mercenary.getId(), mercenary);
+    }
+
+    public void removeMercenary(int playerId) {
+        mercenaries.remove(playerId);
+    }
+
+    public Collection<Mercenary> getMercenaries() {
+        return mercenaries.values();
+    }
+
+    public boolean hasMercenary(int playerId) {
+        return mercenaries.containsKey(playerId);
+    }
+
+    public int getMercenariesCount() {
+        return mercenaries.size();
+    }
+
+    public boolean isWaitingApproval() {
+        return status == SiegeParticipantStatus.WAITING;
+    }
+
+    public boolean isDeclined() {
+        return status == SiegeParticipantStatus.DECLINED;
     }
 }
