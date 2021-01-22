@@ -468,18 +468,20 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
         final var playerClan = player.getClan();
 
-        if(nonNull(playerClan) && clan.isAtWarWith(playerClan)) {
-            player.sendPacket(MERCENARIES_CANNOT_JOIN_A_CLAN_THAT_HAS_BEEN_DECLARED_HAS_DECLARED_OR_HAS_MUTUALLY_DECLARED_WAR);
-            return false;
+        if(nonNull(playerClan)) {
+            if(clan.isAtWarWith(playerClan)) {
+                player.sendPacket(MERCENARIES_CANNOT_JOIN_A_CLAN_THAT_HAS_BEEN_DECLARED_HAS_DECLARED_OR_HAS_MUTUALLY_DECLARED_WAR);
+                return false;
+            }
+
+            if(siege.isRegistered(playerClan)) {
+                player.sendPacket(MEMBERS_OF_THE_CLANS_THAT_ARE_REGISTERED_AS_ATTACKERS_DEFENDERS_OR_OWN_THE_CASTLE_CANNOT_BE_MERCENARIES);
+                return false;
+            }
         }
 
         if(playerClan == clan) {
             player.sendPacket(YOU_CANNOT_BE_A_MERCENARY_FOR_YOUR_OWN_CLAN);
-            return false;
-        }
-
-        if(siege.isRegistered(playerClan)) {
-            player.sendPacket(MEMBERS_OF_THE_CLANS_THAT_ARE_REGISTERED_AS_ATTACKERS_DEFENDERS_OR_OWN_THE_CASTLE_CANNOT_BE_MERCENARIES);
             return false;
         }
 
