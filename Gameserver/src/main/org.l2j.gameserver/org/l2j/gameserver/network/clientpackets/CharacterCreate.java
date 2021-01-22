@@ -108,6 +108,7 @@ public final class CharacterCreate extends ClientPacket {
 
         PlayerTemplate template = PlayerTemplateData.getInstance().getTemplate(classId);
         if (isNull(template) || (ClassId.getClassId(classId).level() > 0)) {
+            LOGGER.warn("Character Creation Failure: Character class {} is invalid. Possible client hack {}", classId , client);
             client.sendPacket(new CharCreateFail(REASON_CREATION_FAILED));
             return;
         }

@@ -5256,6 +5256,7 @@ public final class Player extends Playable {
         storeElementalSpirits();
 
         shortcuts.storeMe();
+
         getDAO(PlayerVariablesDAO.class).save(variables);
 
         final var playerDAO = getDAO(PlayerDAO.class);
