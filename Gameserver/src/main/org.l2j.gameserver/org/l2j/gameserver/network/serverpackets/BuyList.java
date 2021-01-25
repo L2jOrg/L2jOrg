@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
@@ -37,23 +38,23 @@ public final class BuyList extends AbstractItemPacket {
         _listId = list.getListId();
         _list = list.getProducts();
         _money = player.getAdena();
-        _inventorySlots = player.getInventory().getItems((item) -> !item.isQuestItem()).size();
+        _inventorySlots = player.getInventory().getSize();
         _castleTaxRate = castleTaxRate;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BUY_SELL_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BUY_SELL_LIST, buffer );
 
-        writeInt(0x00); // Type BUY
-        writeLong(_money); // current money
-        writeInt(_listId);
-        writeInt(_inventorySlots);
-        writeShort((short) _list.size());
+        buffer.writeInt(0x00); // Type BUY
+        buffer.writeLong(_money); // current money
+        buffer.writeInt(_listId);
+        buffer.writeInt(_inventorySlots);
+        buffer.writeShort(_list.size());
         for (Product product : _list) {
             if ((product.getCount() > 0) || !product.hasLimitedStock()) {
-                writeItem(product);
-                writeLong((long) (product.getPrice() * (1.0 + _castleTaxRate + product.getBaseTaxRate())));
+                writeItem(product, buffer);
+                buffer.writeLong((long) (product.getPrice() * (1.0 + _castleTaxRate + product.getBaseTaxRate())));
             }
         }
     }

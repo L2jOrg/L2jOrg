@@ -19,21 +19,19 @@
 package org.l2j.gameserver.model;
 
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import org.l2j.gameserver.network.serverpackets.PartySpelled;
 import org.l2j.gameserver.network.serverpackets.ShortBuffStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadSpelledInfo;
-import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,8 +41,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -185,7 +184,7 @@ public final class EffectList {
      * @return {@code true} if the skill ID is present in the effect list (includes active and passive effects), {@code false} otherwise
      */
     public boolean isAffectedBySkill(int skillId) {
-        return (actives.stream().anyMatch(i -> i.getSkill().getId() == skillId)) || (passives.stream().anyMatch(i -> i.getSkill().getId() == skillId));
+        return nonNull(getBuffInfoBySkillId(skillId));
     }
 
     /**
@@ -195,7 +194,17 @@ public final class EffectList {
      * @return {@code BuffInfo} of the first active or passive effect found.
      */
     public BuffInfo getBuffInfoBySkillId(int skillId) {
-        return Stream.concat(actives.stream(), passives.stream()).filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+        for (var active : actives) {
+            if(active.getSkillId() == skillId) {
+                return active;
+            }
+        }
+        for (var passive : passives) {
+            if(passive.getSkillId() == skillId) {
+                return passive;
+            }
+        }
+        return null;
     }
 
     public int remainTimeBySkillIdOrAbnormalType(int skillId, AbnormalType type) {
@@ -452,15 +461,17 @@ public final class EffectList {
      * Updates the effect flags and icons.<br>
      * Presents overload:<br>
      * {@link #stopSkillEffects(boolean, Skill)}<br>
-     *
-     * @param removed {@code true} if the effect is removed, {@code false} otherwise
+     *  @param removed {@code true} if the effect is removed, {@code false} otherwise
      * @param skillId the skill ID
+     * @return
      */
-    public void stopSkillEffects(boolean removed, int skillId) {
+    public boolean stopSkillEffects(boolean removed, int skillId) {
         final BuffInfo info = getBuffInfoBySkillId(skillId);
-        if (info != null) {
+        if (nonNull(info)) {
             remove(info, removed, true, true);
+            return true;
         }
+        return false;
     }
 
     /**
@@ -554,12 +565,12 @@ public final class EffectList {
             // case TOGGLE: Do toggles have limit?
             switch (buffType) {
                 case TRIGGER -> {
-                    if (triggerBuffCount.get() > Config.TRIGGERED_BUFFS_MAX_AMOUNT) {
+                    if (triggerBuffCount.get() > getSettings(CharacterSettings.class).maxTriggeredBuffs()) {
                         return true;
                     }
                 }
                 case DANCE -> {
-                    if (danceCount.get() > Config.DANCES_MAX_AMOUNT) {
+                    if (danceCount.get() > getSettings(CharacterSettings.class).maxDances()) {
                         return true;
                     }
                 }
@@ -655,13 +666,10 @@ public final class EffectList {
         }
 
         if (info.getOption() != null) {
-            // Remove separately if its an option.
             removeOption(info, removed);
         } else if (info.getSkill().isPassive()) {
-            // Remove Passive effect.
             removePassive(info, removed);
         } else {
-            // Remove active effect.
             removeActive(info, removed);
             if (isNpc(owner)) // Fix for all NPC debuff animations removed.
             {
@@ -669,7 +677,6 @@ public final class EffectList {
             }
         }
 
-        // Update stats, effect flags and icons.
         if (update) {
             updateEffectList(broadcast);
         }
@@ -901,24 +908,22 @@ public final class EffectList {
             final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
 
             if (!actives.isEmpty()) {
-                //@formatter:off
-                actives.stream()
-                        .filter(Objects::nonNull)
-                        .filter(BuffInfo::isInUse)
-                        .forEach(info ->
-                        {
-                            if (info.getSkill().isHealingPotionSkill()) {
-                                shortBuffStatusUpdate(info);
-                            } else {
-                                asu.ifPresent(a -> a.addSkill(info));
-                                ps.filter(p -> !info.getSkill().isToggle()).ifPresent(p -> p.addSkill(info));
-                                os.ifPresent(o -> o.addSkill(info));
+                for (BuffInfo info : actives) {
+                    if(info.isInUse()) {
+                        if(info.getSkill().isHealingPotionSkill()) {
+                            shortBuffStatusUpdate(info);
+                        } else {
+                            asu.ifPresent(a -> a.addSkill(info));
+                            if(!info.getSkill().isToggle()) {
+                                ps.ifPresent(p -> p.addSkill(info));
                             }
-                        });
-                //@formatter:on
+                            os.ifPresent(o -> o.addSkill(info));
+                        }
+                    }
+
+                }
             }
 
-            // Send icon update for player buff bar.
             asu.ifPresent(owner::sendPacket);
 
             // Player or summon is in party. Broadcast packet to everyone in the party.
@@ -930,11 +935,8 @@ public final class EffectList {
             }
 
             // Send icon update to all olympiad observers.
-            if (os.isPresent()) {
-                final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
-                if ((game != null) && game.isBattleStarted()) {
-                    os.ifPresent(game.getStadium()::broadcastPacketToObservers);
-                }
+            if (os.isPresent() && Olympiad.getInstance().isMatchInBattle(player.getOlympiadMatchId())) {
+                Olympiad.getInstance().sendPacketToMatch(player.getOlympiadMatchId(), os.get());
             }
         }
 
@@ -942,11 +944,11 @@ public final class EffectList {
         final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(owner);
 
         // @formatter:off
-        owner.getStatus().getStatusListener().stream()
-                .filter(GameUtils::isPlayer)
-                .map(Creature::getActingPlayer)
-                .forEach(upd::sendTo);
-        // @formatter:on
+        for (Creature creature : owner.getStatus().getStatusListener()) {
+            if(creature instanceof Player playerListener) {
+                playerListener.sendPacket(upd);
+            }
+        }
 
         if (isPlayer(owner) && (owner.getTarget() == owner)) {
             owner.sendPacket(upd);
@@ -1002,8 +1004,8 @@ public final class EffectList {
     private void updateEffectList(boolean broadcast) {
         // Create new empty flags.
         long flags = 0;
-        final Set<AbnormalType> abnormalTypeFlags = EnumSet.noneOf(AbnormalType.class);
-        final Set<AbnormalVisualEffect> abnormalVisualEffectFlags = EnumSet.noneOf(AbnormalVisualEffect.class);
+        final Set<AbnormalType> abnormalTypes = EnumSet.noneOf(AbnormalType.class);
+        final Set<AbnormalVisualEffect> abnormalVisualEffects = EnumSet.noneOf(AbnormalVisualEffect.class);
         final Set<BuffInfo> unhideBuffs = new HashSet<>();
 
         // Recalculate new flags
@@ -1018,7 +1020,7 @@ public final class EffectList {
                         unhideBuffs.removeIf(b -> b.isAbnormalType(skill.getAbnormalType()));
                     }
                     // If this incoming buff is hidden and its first of its abnormal, or it removes any previous hidden buff with the same or lower abnormal level and add this instead.
-                    else if (!abnormalTypeFlags.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl()))) {
+                    else if (!abnormalTypes.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl()))) {
                         unhideBuffs.add(info);
                     }
                 }
@@ -1029,13 +1031,13 @@ public final class EffectList {
                 }
 
                 // Add the AbnormalType flag.
-                abnormalTypeFlags.add(skill.getAbnormalType());
+                abnormalTypes.add(skill.getAbnormalType());
 
                 // Add AbnormalVisualEffect flag.
                 if (skill.hasAbnormalVisualEffect()) {
                     var visual = skill.getAbnormalVisualEffect();
-                    abnormalVisualEffectFlags.addAll(visual); // TODO review : why two lists ?
-                    abnormalVisualEffects.addAll(visual);
+                    abnormalVisualEffects.addAll(visual); // TODO review : why two lists ?
+                    this.abnormalVisualEffects.addAll(visual);
                     if (broadcast) {
                         owner.updateAbnormalVisualEffects();
                     }
@@ -1057,7 +1059,7 @@ public final class EffectList {
 
         // Replace the old flags with the new flags.
         effectFlags = flags;
-        stackedEffects = abnormalTypeFlags;
+        stackedEffects = abnormalTypes;
 
         // Unhide the selected buffs.
         unhideBuffs.forEach(b ->
@@ -1071,8 +1073,8 @@ public final class EffectList {
 
         if (broadcast) {
             // Check if there is change in AbnormalVisualEffect
-            if (!abnormalVisualEffectFlags.containsAll(abnormalVisualEffects)) {
-                abnormalVisualEffects = abnormalVisualEffectFlags;
+            if (!abnormalVisualEffects.containsAll(this.abnormalVisualEffects)) {
+                this.abnormalVisualEffects = abnormalVisualEffects;
                 owner.updateAbnormalVisualEffects();
             }
 

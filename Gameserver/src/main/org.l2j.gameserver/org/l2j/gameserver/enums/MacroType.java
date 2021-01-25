@@ -20,8 +20,6 @@
 package org.l2j.gameserver.enums;
 
 /**
- * Macro type enumerated.
- *
  * @author Zoey76
  */
 public enum MacroType {
@@ -31,5 +29,17 @@ public enum MacroType {
     TEXT,
     SHORTCUT,
     ITEM,
-    DELAY
+    DELAY;
+
+    public static MacroType from(byte id) {
+        return switch (id) {
+            case 1 -> SKILL;
+            case 2 -> ACTION;
+            case 3 -> TEXT;
+            case 4 -> SHORTCUT;
+            case 5 -> ITEM;
+            case 6 -> DELAY;
+            default -> NONE;
+        };
+    }
 }

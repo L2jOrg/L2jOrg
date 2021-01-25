@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
@@ -34,10 +35,10 @@ public class ExElementalSpiritGetExp extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(EX_ELEMENTAL_SPIRIT_GET_EXP);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(EX_ELEMENTAL_SPIRIT_GET_EXP, buffer);
 
-        writeByte(type);
-        writeLong(experience);
+        buffer.writeByte(type);
+        buffer.writeLong(experience);
     }
 }

@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -29,17 +31,18 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -105,18 +108,19 @@ public class RequestBuySeed extends ClientPacket {
         int slots = 0;
         int totalWeight = 0;
 
-        final Map<Integer, SeedProduction> _productInfo = new HashMap<>();
+        final IntMap<SeedProduction> _productInfo = new HashIntMap<>();
+        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
         for (ItemHolder ih : _items) {
             final SeedProduction sp = manor.getSeedProduct(_manorId, ih.getId(), false);
-            if ((sp == null) || (sp.getPrice() <= 0) || (sp.getAmount() < ih.getCount()) || ((Inventory.MAX_ADENA / ih.getCount()) < sp.getPrice())) {
+            if ((sp == null) || (sp.getPrice() <= 0) || (sp.getAmount() < ih.getCount()) || MathUtil.checkMulOverFlow(sp.getPrice(), ih.getCount(), maxAdena)) {
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
 
             // Calculate price
             totalPrice += (sp.getPrice() * ih.getCount());
-            if (totalPrice > Inventory.MAX_ADENA) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.");
+            if (totalPrice > maxAdena) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + maxAdena + " adena worth of goods.");
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

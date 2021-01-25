@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -33,22 +34,22 @@ public class PledgeReceiveMemberInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_VIEW_PLEDGE_MEMBER_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_VIEW_PLEDGE_MEMBER_INFO, buffer );
 
-        writeInt(_member.getPledgeType());
-        writeString(_member.getName());
-        writeString(_member.getTitle()); // title
-        writeInt(_member.getPowerGrade()); // power
+        buffer.writeInt(_member.getPledgeType());
+        buffer.writeString(_member.getName());
+        buffer.writeString(_member.getTitle()); // title
+        buffer.writeInt(_member.getPowerGrade()); // power
 
         // clan or subpledge name
         if (_member.getPledgeType() != 0) {
-            writeString((_member.getClan().getSubPledge(_member.getPledgeType())).getName());
+            buffer.writeString((_member.getClan().getSubPledge(_member.getPledgeType())).getName());
         } else {
-            writeString(_member.getClan().getName());
+            buffer.writeString(_member.getClan().getName());
         }
 
-        writeString(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
+        buffer.writeString(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
     }
 
 }

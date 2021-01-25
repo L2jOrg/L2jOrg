@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -36,11 +37,11 @@ public class ChairSit extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.CHAIR_SIT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.CHAIR_SIT, buffer );
 
-        writeInt(_activeChar.getObjectId());
-        writeInt(_staticObjectId);
+        buffer.writeInt(_activeChar.getObjectId());
+        buffer.writeInt(_staticObjectId);
     }
 
 }

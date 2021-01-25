@@ -85,7 +85,7 @@ public class NotFriend implements IAffectObjectHandler
 			}
 
 			// Olympiad.
-			if (player.isInOlympiadMode() && targetPlayer.isInOlympiadMode() && (player.getOlympiadGameId() == targetPlayer.getOlympiadGameId()))
+			if (player.isInOlympiadMode() && targetPlayer.isInOlympiadMode() && (player.getOlympiadMatchId() == targetPlayer.getOlympiadMatchId()))
 			{
 				return true;
 			}

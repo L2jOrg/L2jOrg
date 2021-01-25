@@ -23,7 +23,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerHpChange;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -34,6 +33,8 @@ import org.slf4j.LoggerFactory;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+
+import static java.util.Objects.isNull;
 
 
 public class CreatureStatus {
@@ -173,20 +174,9 @@ public class CreatureStatus {
         setCurrentMp(Math.max(_currentMp - value, 0));
     }
 
-    /**
-     * Start the HP/MP/CP Regeneration task.<br>
-     * <B><U>Actions</U>:</B>
-     * <ul>
-     * <li>Calculate the regen task period</li>
-     * <li>Launch the HP/MP/CP Regeneration task with Medium priority</li>
-     * </ul>
-     */
     public final synchronized void startHpMpRegeneration() {
-        if ((_regTask == null) && !owner.isDead()) {
-            // Get the Regeneration period
+        if (isNull(_regTask) && !owner.isDead()) {
             final int period = Formulas.getRegeneratePeriod(owner);
-
-            // Create the HP/MP/CP Regeneration task
             _regTask = ThreadPool.scheduleAtFixedRate(this::doRegeneration, period, period);
         }
     }
@@ -239,7 +229,6 @@ public class CreatureStatus {
      * @return @{code true} if hp was changed, @{code false} otherwise.
      */
     public boolean setCurrentHp(double newHp, boolean broadcastPacket) {
-        // Get the Max HP of the Creature
         final int oldHp = (int) _currentHp;
         final double maxHp = owner.getStats().getMaxHp();
 
@@ -249,37 +238,27 @@ public class CreatureStatus {
             }
 
             if (newHp >= maxHp) {
-                // Set the RegenActive flag to false
                 _currentHp = maxHp;
                 _flagsRegenActive &= ~REGEN_FLAG_HP;
 
-                // Stop the HP/MP/CP Regeneration task
                 if (_flagsRegenActive == 0) {
                     stopHpMpRegeneration();
                 }
             } else {
-                // Set the RegenActive flag to true
                 _currentHp = newHp;
                 _flagsRegenActive |= REGEN_FLAG_HP;
-
-                // Start the HP/MP/CP Regeneration task with Medium priority
                 startHpMpRegeneration();
             }
         }
 
         final boolean hpWasChanged = oldHp != _currentHp;
 
-        // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
         if (hpWasChanged) {
             if (broadcastPacket) {
                 owner.broadcastStatusUpdate();
             }
             EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(getOwner(), oldHp, _currentHp), getOwner());
-            if (getOwner() instanceof Player) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHpChange((Player) getOwner()), getOwner());
-            }
         }
-
         return hpWasChanged;
     }
 

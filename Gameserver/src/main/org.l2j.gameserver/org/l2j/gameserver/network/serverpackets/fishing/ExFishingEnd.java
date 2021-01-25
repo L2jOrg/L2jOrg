@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.fishing;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -36,10 +37,10 @@ public class ExFishingEnd extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_FISHING_END);
-        writeInt(_player.getObjectId());
-        writeByte((byte) _reason.getReason());
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_FISHING_END, buffer );
+        buffer.writeInt(_player.getObjectId());
+        buffer.writeByte(_reason.getReason());
     }
 
 

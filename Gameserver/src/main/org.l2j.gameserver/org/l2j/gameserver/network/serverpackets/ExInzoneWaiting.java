@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.maps.IntLongMap;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -34,26 +35,26 @@ import java.util.concurrent.TimeUnit;
 public class ExInzoneWaiting extends ServerPacket {
     private final int _currentTemplateId;
     private final IntLongMap _instanceTimes;
-    private final boolean _sendByClient;
+    private final boolean _hide;
 
-    public ExInzoneWaiting(Player activeChar, boolean sendByClient) {
+    public ExInzoneWaiting(Player activeChar, boolean hide) {
         final Instance instance = InstanceManager.getInstance().getPlayerInstance(activeChar, false);
         _currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
         _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar);
-        _sendByClient = sendByClient;
+        _hide = hide;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_INZONE_WAITING_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_INZONE_WAITING_INFO, buffer );
 
-        writeByte((byte) (_sendByClient ? 0x00 : 0x01)); // Grand Crusade
-        writeInt(_currentTemplateId);
-        writeInt(_instanceTimes.size());
+        buffer.writeByte(!_hide); // Grand Crusade
+        buffer.writeInt(_currentTemplateId);
+        buffer.writeInt(_instanceTimes.size());
         for (var entry : _instanceTimes.entrySet()) {
             final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
-            writeInt(entry.getKey());
-            writeInt((int) instanceTime);
+            buffer.writeInt(entry.getKey());
+            buffer.writeInt((int) instanceTime);
         }
     }
 

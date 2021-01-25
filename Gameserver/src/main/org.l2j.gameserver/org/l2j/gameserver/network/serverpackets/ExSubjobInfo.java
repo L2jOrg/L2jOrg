@@ -18,10 +18,10 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.enums.SubclassType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -44,25 +44,21 @@ public class ExSubjobInfo extends ServerPacket {
 
         _subs = new ArrayList<>();
         _subs.add(0, new SubInfo(player));
-
-        for (SubClass sub : player.getSubClasses().values()) {
-            _subs.add(new SubInfo(sub));
-        }
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SUBJOB_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SUBJOB_INFO, buffer );
 
-        writeByte((byte) _type);
-        writeInt(_currClassId);
-        writeInt(_currRace);
-        writeInt(_subs.size());
+        buffer.writeByte(_type);
+        buffer.writeInt(_currClassId);
+        buffer.writeInt(_currRace);
+        buffer.writeInt(_subs.size());
         for (SubInfo sub : _subs) {
-            writeInt(sub.getIndex());
-            writeInt(sub.getClassId());
-            writeInt(sub.getLevel());
-            writeByte((byte) sub.getType());
+            buffer.writeInt(sub.getIndex());
+            buffer.writeInt(sub.getClassId());
+            buffer.writeInt(sub.getLevel());
+            buffer.writeByte(sub.getType());
         }
     }
 
@@ -72,13 +68,6 @@ public class ExSubjobInfo extends ServerPacket {
         private final int _classId;
         private final int _level;
         private final int _type;
-
-        public SubInfo(SubClass sub) {
-            _index = sub.getClassIndex();
-            _classId = sub.getClassId();
-            _level = sub.getLevel();
-            _type = sub.isDualClass() ? SubclassType.DUALCLASS.ordinal() : SubclassType.SUBCLASS.ordinal();
-        }
 
         public SubInfo(Player player) {
             _index = 0;

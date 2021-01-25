@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -41,16 +42,16 @@ public class ExCubeGameAddPlayer extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BLOCK_UPSET_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BLOCK_UPSET_LIST, buffer );
 
-        writeInt(0x01);
+        buffer.writeInt(0x01);
 
-        writeInt(0xffffffff);
+        buffer.writeInt(0xffffffff);
 
-        writeInt(_isRedTeam ? 0x01 : 0x00);
-        writeInt(_player.getObjectId());
-        writeString(_player.getName());
+        buffer.writeInt(_isRedTeam ? 0x01 : 0x00);
+        buffer.writeInt(_player.getObjectId());
+        buffer.writeString(_player.getName());
     }
 
 }

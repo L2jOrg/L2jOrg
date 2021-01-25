@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Servitor;
@@ -45,26 +46,26 @@ public class PetStatusUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PET_STATUS_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PET_STATUS_UPDATE, buffer );
 
-        writeInt(summon.getSummonType());
-        writeInt(summon.getObjectId());
-        writeInt(summon.getX());
-        writeInt(summon.getY());
-        writeInt(summon.getZ());
-        writeString(summon.getTitle());
-        writeInt(currentFed);
-        writeInt(maxFed);
-        writeInt((int) summon.getCurrentHp());
-        writeInt(summon.getMaxHp());
-        writeInt((int) summon.getCurrentMp());
-        writeInt(summon.getMaxMp());
-        writeInt(summon.getLevel());
-        writeLong(summon.getStats().getExp());
-        writeLong(summon.getExpForThisLevel());
-        writeLong(summon.getExpForNextLevel());
-        writeInt(0x00);
+        buffer.writeInt(summon.getSummonType());
+        buffer.writeInt(summon.getObjectId());
+        buffer.writeInt(summon.getX());
+        buffer.writeInt(summon.getY());
+        buffer.writeInt(summon.getZ());
+        buffer.writeString(summon.getTitle());
+        buffer.writeInt(currentFed);
+        buffer.writeInt(maxFed);
+        buffer.writeInt((int) summon.getCurrentHp());
+        buffer.writeInt(summon.getMaxHp());
+        buffer.writeInt((int) summon.getCurrentMp());
+        buffer.writeInt(summon.getMaxMp());
+        buffer.writeInt(summon.getLevel());
+        buffer.writeLong(summon.getStats().getExp());
+        buffer.writeLong(summon.getExpForThisLevel());
+        buffer.writeLong(summon.getExpForNextLevel());
+        buffer.writeInt(0x00);
     }
 
 }

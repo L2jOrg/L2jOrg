@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets.olympiad;
 
-import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.olympiad.OlympiadRuleType;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
@@ -37,7 +37,6 @@ public class ExOlympiadMatchMaking extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        OlympiadEngine.getInstance().registerPlayer(client.getPlayer(), OlympiadRuleType.of(ruleType));
-        client.sendPacket(new ExOlympiadRecord());
+        Olympiad.getInstance().requestMatchMaking(client.getPlayer());
     }
 }

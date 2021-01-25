@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
@@ -39,10 +40,10 @@ public class LockAccountIP extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client) {
-		writeByte((byte)0x0b);
-		writeString(_account);
-		writeString(_IP);
-		writeInt(_time);
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x0b);
+		buffer.writeString(_account);
+		buffer.writeString(_IP);
+		buffer.writeInt(_time);
 	}
 }

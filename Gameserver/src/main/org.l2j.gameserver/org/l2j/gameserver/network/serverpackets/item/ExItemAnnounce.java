@@ -18,8 +18,9 @@
  */
 package org.l2j.gameserver.network.serverpackets.item;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -46,12 +47,12 @@ public class ExItemAnnounce extends ServerPacket {
 	}
 	
 	@Override
-	public void writeImpl(GameClient client) {
-		writeId(ServerExPacketId.EX_ITEM_ANNOUNCE);
-		writeByte(type.ordinal());
-		writeSizedString(player.getName());
-		writeInt(item.getId());
-		writeByte(item.getEnchantLevel());
-		writeInt(sourceItemId);
+	public void writeImpl(GameClient client, WritableBuffer buffer) {
+		writeId(ServerExPacketId.EX_ITEM_ANNOUNCE, buffer );
+		buffer.writeByte(type.ordinal());
+		buffer.writeSizedString(player.getName());
+		buffer.writeInt(item.getId());
+		buffer.writeByte(item.getEnchantLevel());
+		buffer.writeInt(sourceItemId);
 	}
 }

@@ -41,7 +41,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.util;
     exports org.l2j.gameserver.ai;
     exports org.l2j.gameserver.model.effects;
-    exports org.l2j.gameserver.model.item.instance;
     exports org.l2j.gameserver.model.actor.stat;
     exports org.l2j.gameserver.model.stats;
     exports org.l2j.gameserver.model.events.impl.character.player;
@@ -53,7 +52,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.item.container;
     exports org.l2j.gameserver.engine.geo;
     exports org.l2j.gameserver.model.events.impl.character.npc;
-    exports org.l2j.gameserver.model.olympiad;
     exports org.l2j.gameserver.model.html;
     exports org.l2j.gameserver.model.html.styles;
     exports org.l2j.gameserver.model.html.formatters;
@@ -119,6 +117,8 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.util.exp4j;
     exports org.l2j.gameserver.engine.olympiad;
     exports org.l2j.gameserver.engine.item.shop;
+    exports org.l2j.gameserver.engine.rank;
+    exports org.l2j.gameserver.network.serverpackets.commission;
 
     uses org.l2j.gameserver.handler.IActionHandler;
     uses org.l2j.gameserver.handler.IActionShiftHandler;
@@ -139,6 +139,13 @@ module org.l2j.gameserver {
             org.l2j.gameserver.engine.item.container.listener.BroochListener;
 
     uses org.l2j.gameserver.api.item.InventoryListener;
+    provides org.l2j.gameserver.api.item.InventoryListener
+            with org.l2j.gameserver.engine.item.container.listener.StatsListener;
+
+    provides org.l2j.commons.database.TypeHandler
+            with org.l2j.gameserver.data.database.handler.CommissionItemHandler,
+                 org.l2j.gameserver.data.database.handler.MacroHandler;
+
     uses org.l2j.gameserver.handler.IPunishmentHandler;
     uses org.l2j.gameserver.handler.IUserCommandHandler;
     uses org.l2j.gameserver.handler.IVoicedCommandHandler;
@@ -153,6 +160,4 @@ module org.l2j.gameserver {
     uses org.l2j.gameserver.model.events.AbstractScript;
     uses org.l2j.gameserver.handler.IParseBoardHandler;
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
-    provides org.l2j.gameserver.api.item.InventoryListener
-        with org.l2j.gameserver.engine.item.container.listener.StatsListener;
 }

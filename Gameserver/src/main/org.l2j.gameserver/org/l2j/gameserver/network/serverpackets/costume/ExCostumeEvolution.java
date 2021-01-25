@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.costume;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -53,21 +54,21 @@ public class ExCostumeEvolution extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_COSTUME_EVOLUTION);
-        writeByte(success);
-        writeInt(targetCostumes.size());
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_COSTUME_EVOLUTION, buffer );
+        buffer.writeByte(success);
+        buffer.writeInt(targetCostumes.size());
 
         for (CostumeData targetCostume : targetCostumes) {
-            writeInt(targetCostume.getId());
-            writeLong(targetCostume.getAmount());
+            buffer.writeInt(targetCostume.getId());
+            buffer.writeLong(targetCostume.getAmount());
         }
         if(nonNull(resultCostume)) {
-            writeInt(1);
-            writeInt(resultCostume.getId());
-            writeLong(resultCostume.getAmount());
+            buffer.writeInt(1);
+            buffer.writeInt(resultCostume.getId());
+            buffer.writeLong(resultCostume.getAmount());
         } else {
-            writeInt(0);
+            buffer.writeInt(0);
         }
     }
 }

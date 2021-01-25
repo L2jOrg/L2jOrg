@@ -28,7 +28,4 @@ public interface GlobalVariableDAO extends DAO<Object> {
 
     @Query("TRUNCATE global_variables")
     boolean deleteAll();
-
-    @Query("DELETE FROM global_variables WHERE var like 'MA_C%'")
-    void deleteRaidBonus();
 }

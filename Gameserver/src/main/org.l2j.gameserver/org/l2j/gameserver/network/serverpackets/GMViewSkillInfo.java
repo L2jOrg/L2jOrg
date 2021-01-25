@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -35,22 +36,22 @@ public class GMViewSkillInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GM_VIEW_SKILL_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.GM_VIEW_SKILL_INFO, buffer );
 
-        writeString(_activeChar.getName());
-        writeInt(_skills.size());
+        buffer.writeString(_activeChar.getName());
+        buffer.writeInt(_skills.size());
 
         final boolean isDisabled = (_activeChar.getClan() != null) && (_activeChar.getClan().getReputationScore() < 0);
 
         for (Skill skill : _skills) {
-            writeInt(skill.isPassive() ? 1 : 0);
-            writeShort((short) skill.getDisplayLevel());
-            writeShort((short) skill.getSubLevel());
-            writeInt(skill.getDisplayId());
-            writeInt(0x00);
-            writeByte((byte) (isDisabled && skill.isClanSkill() ? 1 : 0));
-            writeByte((byte)(skill.isEnchantable() ? 1 : 0));
+            buffer.writeInt(skill.isPassive() ? 1 : 0);
+            buffer.writeShort(skill.getDisplayLevel());
+            buffer.writeShort(skill.getSubLevel());
+            buffer.writeInt(skill.getDisplayId());
+            buffer.writeInt(0x00);
+            buffer.writeByte(isDisabled && skill.isClanSkill());
+            buffer.writeByte(skill.isEnchantable());
         }
     }
 

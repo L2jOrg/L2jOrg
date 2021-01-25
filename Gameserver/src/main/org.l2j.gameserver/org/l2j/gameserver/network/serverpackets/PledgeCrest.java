@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.CrestData;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.network.GameClient;
@@ -42,16 +43,16 @@ public final class PledgeCrest extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_CREST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLEDGE_CREST, buffer );
 
-        writeInt(getSettings(ServerSettings.class).serverId());
-        writeInt(_crestId);
+        buffer.writeInt(getSettings(ServerSettings.class).serverId());
+        buffer.writeInt(_crestId);
         if (_data != null) {
-            writeInt(_data.length);
-            writeBytes(_data);
+            buffer.writeInt(_data.length);
+            buffer.writeBytes(_data);
         } else {
-            writeInt(0);
+            buffer.writeInt(0);
         }
     }
 

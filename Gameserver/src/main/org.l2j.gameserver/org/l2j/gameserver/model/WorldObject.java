@@ -39,9 +39,6 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldRegion;
 import org.l2j.gameserver.world.zone.ZoneType;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
@@ -57,8 +54,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     private WorldRegion worldRegion;
 
     private InstanceType instanceType;
-
-    private volatile Map<String, Object> scripts;
 
     private volatile int x = 0;
 
@@ -157,7 +152,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
             setWorldRegion(World.getInstance().getRegion(this));
 
             World.getInstance().addObject(this);
-            worldRegion.addVisibleObject(this);
         }
 
         // this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
@@ -212,9 +206,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     public abstract void sendInfo(Player activeChar);
 
-    public void sendPacket(ServerPacket... packets) {
+    // TODO move to Playable only
+    public void sendPacket(ServerPacket packets) {
     }
 
+    // TODO move to Playable only
     public void sendPacket(SystemMessageId id) {
     }
 
@@ -265,50 +261,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     public boolean isInsideZone(ZoneType zone) {
         return false;
-    }
-
-    /**
-     * @param <T>
-     * @param script
-     * @return
-     */
-    public final <T> T addScript(T script) {
-        if (scripts == null) {
-            // Double-checked locking
-            synchronized (this) {
-                if (scripts == null) {
-                    scripts = new ConcurrentHashMap<>();
-                }
-            }
-        }
-        scripts.put(script.getClass().getName(), script);
-        return script;
-    }
-
-    /**
-     * @param <T>
-     * @param script
-     * @return
-     */
-    @SuppressWarnings("unchecked")
-    public final <T> T removeScript(Class<T> script) {
-        if (scripts == null) {
-            return null;
-        }
-        return (T) scripts.remove(script.getName());
-    }
-
-    /**
-     * @param <T>
-     * @param script
-     * @return
-     */
-    @SuppressWarnings("unchecked")
-    public final <T> T getScript(Class<T> script) {
-        if (scripts == null) {
-            return null;
-        }
-        return (T) scripts.get(script.getName());
     }
 
     public void removeStatusListener(Creature object) {

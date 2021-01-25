@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.item.upgrade;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.api.item.UpgradeType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -39,11 +40,11 @@ public class ExShowUpgradeSystemNormal extends AbstractUpgradeSystem {
      *   FE 03 02 :  01 00 02 00 64 00 00 00 00 00 00 00 00 00 - Normal
      */
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_UPGRADE_SYSTEM_NORMAL);
-        writeShort(0x01); // flag
-        writeShort(type.ordinal());
-        writeShort(0x64); // commission ratio
-        writeMaterial(Collections.emptyList());
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_UPGRADE_SYSTEM_NORMAL, buffer );
+        buffer.writeShort(0x01); // flag
+        buffer.writeShort(type.ordinal());
+        buffer.writeShort(0x64); // commission ratio
+        writeMaterial(Collections.emptyList(), buffer);
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets.olympiad;
 
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRankingInfo;
 
@@ -43,7 +44,6 @@ public class ExRequestOlympiadRanking extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        client.sendPacket(new ExOlympiadRankingInfo());
+        Olympiad.getInstance().showRanking(client.getPlayer(), type, scope, currentSeason, classId, worldId);
     }
-
 }

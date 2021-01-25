@@ -18,15 +18,14 @@
  */
 package org.l2j.gameserver.model.item.container;
 
-import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.world.World;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author DS
@@ -58,7 +57,7 @@ public class Attachment extends ItemContainer {
     public void setNewMailId(int mailId) {
         this.mailId = mailId;
         for (Item item : items.values()) {
-            item.setItemLocation(getBaseLocation(), mailId);
+            item.changeItemLocation(getBaseLocation(), mailId);
         }
 
         updateDatabase();
@@ -67,7 +66,7 @@ public class Attachment extends ItemContainer {
     public void returnToWh(ItemContainer wh) {
         for (Item item : items.values()) {
             if (wh == null) {
-                item.setItemLocation(ItemLocation.WAREHOUSE);
+                item.changeItemLocation(ItemLocation.WAREHOUSE);
             } else {
                 transferItem("Expire", item.getObjectId(), item.getCount(), wh, null, null);
             }
@@ -77,7 +76,7 @@ public class Attachment extends ItemContainer {
     @Override
     protected void addItem(Item item) {
         super.addItem(item);
-        item.setItemLocation(getBaseLocation(), mailId);
+        item.changeItemLocation(getBaseLocation(), mailId);
         item.updateDatabase(true);
     }
 
@@ -93,26 +92,16 @@ public class Attachment extends ItemContainer {
 
     @Override
     public void restore() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND loc=? AND loc_data=?")) {
-            statement.setInt(1, _ownerId);
-            statement.setString(2, getBaseLocation().name());
-            statement.setInt(3, mailId);
-            try (ResultSet inv = statement.executeQuery()) {
-                while (inv.next()) {
-                    final Item item = new Item(inv);
-                    World.getInstance().addObject(item);
+        for (ItemData data : getDAO(ItemDAO.class).findItemsAttachment(_ownerId, mailId)) {
+            final Item item = new Item(data);
+            World.getInstance().addObject(item);
 
-                    // If stackable item is found just add to current quantity
-                    if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
-                        addItem("Restore", item, null, null);
-                    } else {
-                        addItem(item);
-                    }
-                }
+            // If stackable item is found just add to current quantity
+            if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
+                addItem("Restore", item, null, null);
+            } else {
+                addItem(item);
             }
-        } catch (Exception e) {
-            LOGGER.warn("could not restore container:", e);
         }
     }
 

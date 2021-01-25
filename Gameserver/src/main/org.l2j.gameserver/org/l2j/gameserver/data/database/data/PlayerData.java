@@ -127,7 +127,6 @@ public class PlayerData {
         return data;
     }
 
-
     public int getCharId() {
         return charId;
     }
@@ -180,16 +179,8 @@ public class PlayerData {
         return accountName;
     }
 
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public long getLastAccess() {
@@ -202,10 +193,6 @@ public class PlayerData {
 
     public long getExpBeforeDeath() {
         return expBeforeDeath;
-    }
-
-    public byte getLevel() {
-        return level;
     }
 
     public long getSp() {
@@ -240,8 +227,16 @@ public class PlayerData {
         return pvp;
     }
 
+    public void setPvP(int pvp) {
+        this.pvp = pvp;
+    }
+
     public int getPk() {
         return pk;
+    }
+
+    public void setPk(int pk) {
+        this.pk = pk;
     }
 
     public long getOnlineTime() {
@@ -250,6 +245,10 @@ public class PlayerData {
 
     public boolean isNobless() {
         return nobless;
+    }
+
+    public void setNobless(boolean nobless) {
+        this.nobless = nobless;
     }
 
     public long getClanJoinExpiryTime() {
@@ -266,6 +265,10 @@ public class PlayerData {
 
     public int getClanId() {
         return clanId;
+    }
+
+    public void setClanId(int clanId) {
+        this.clanId = clanId;
     }
 
     public int getPowerGrade() {
@@ -404,10 +407,6 @@ public class PlayerData {
         this.levelJoinedAcademy = level;
     }
 
-    public void setObjectId(int objectId) {
-        this.charId = objectId;
-    }
-
     public int getRace() {
         return race;
     }
@@ -448,6 +447,10 @@ public class PlayerData {
         this.z = z;
     }
 
+    public byte getLevel() {
+        return level;
+    }
+
     public void setLevel(byte level) {
         this.level = level;
     }
@@ -462,6 +465,14 @@ public class PlayerData {
 
     public void setDeleteTime(long deleteTime) {
         this.deletetime = deleteTime;
+    }
+
+    public void setFame(int fame) {
+        this.fame = fame;
+    }
+
+    public void addOnlineTime(long time) {
+        onlineTime += time;
     }
 }
 

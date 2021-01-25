@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -25,20 +26,19 @@ import org.l2j.gameserver.network.ServerExPacketId;
  * @author mrTJO & UnAfraid
  */
 public class ExConfirmAddingContact extends ServerPacket {
-    private final String _charName;
-    private final boolean _added;
+    private final String name;
+    private final boolean added;
 
-    public ExConfirmAddingContact(String charName, boolean added) {
-        _charName = charName;
-        _added = added;
+    public ExConfirmAddingContact(String name, boolean added) {
+        this.name = name;
+        this.added = added;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_AGIT_AUCTION_CMD);
-
-        writeString(_charName);
-        writeInt(_added ? 0x01 : 0x00);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_AGIT_AUCTION_CMD, buffer );
+        buffer.writeString(name);
+        buffer.writeInt(added);
     }
 
 }

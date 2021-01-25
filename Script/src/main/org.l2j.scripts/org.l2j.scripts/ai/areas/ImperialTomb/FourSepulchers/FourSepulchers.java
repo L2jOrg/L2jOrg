@@ -311,7 +311,7 @@ public class FourSepulchers extends AbstractNpcAI
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 					}
 					npc.broadcastSay(ChatType.NPC_GENERAL, VICTIM_MSG[Rnd.get(VICTIM_MSG.length)]);
-					startQuestTimer("VICTIM_FLEE", 3000, npc, null, false);
+					startQuestTimer("VICTIM_FLEE", 3000, npc, null);
 				}
 				return null;
 			}
@@ -356,7 +356,7 @@ public class FourSepulchers extends AbstractNpcAI
 				}
 				else if (sepulcherId > 0)
 				{
-					startQuestTimer("WAVE_DEFEATED_CHECK", 5000, null, player, false);
+					startQuestTimer("WAVE_DEFEATED_CHECK", 5000, null, player);
 				}
 				return null;
 			}
@@ -402,7 +402,7 @@ public class FourSepulchers extends AbstractNpcAI
 		{
 			npc.disableCoreAI(true);
 			npc.setRunning();
-			startQuestTimer("VICTIM_FLEE", 1000, npc, null, false);
+			startQuestTimer("VICTIM_FLEE", 1000, npc, null);
 		}
 		if (npc.getId() == ROOM_5_STATUE_GUARD)
 		{
@@ -412,7 +412,7 @@ public class FourSepulchers extends AbstractNpcAI
 			npc.setTargetable(false);
 			npc.setIsInvul(true);
 			cancelQuestTimer("REMOVE_PETRIFY", npc, null);
-			startQuestTimer("REMOVE_PETRIFY", 5 * 60 * 1000, npc, null, false); // 5 minutes
+			startQuestTimer("REMOVE_PETRIFY", 5 * 60 * 1000, npc, null); // 5 minutes
 		}
 		return super.onSpawn(npc);
 	}
@@ -599,7 +599,7 @@ public class FourSepulchers extends AbstractNpcAI
 		// Init progress
 		STORED_PROGRESS.put(sepulcherId, 1); // start from 1
 		// Start
-		startQuestTimer("SPAWN_MYSTERIOUS_CHEST", ENTRY_DELAY * 60 * 1000, npc, player, false);
+		startQuestTimer("SPAWN_MYSTERIOUS_CHEST", ENTRY_DELAY * 60 * 1000, npc, player);
 	}
 	
 	private void spawnNextWave(Player player)
@@ -625,7 +625,7 @@ public class FourSepulchers extends AbstractNpcAI
 		}
 		if ((currentWave == 2) || (currentWave == 5))
 		{
-			startQuestTimer("WAVE_DEFEATED_CHECK", 5000, null, player, false);
+			startQuestTimer("WAVE_DEFEATED_CHECK", 5000, null, player);
 		}
 		else
 		{

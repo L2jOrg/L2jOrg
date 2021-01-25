@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.quest.Event;
 /**
  * @author Mobius
  */
-public class ElpiesManager extends AbstractEventManager<AbstractEvent<?>> {
+public class ElpiesManager extends AbstractEventManager<AbstractEvent> {
 
     private ElpiesManager() {
     }

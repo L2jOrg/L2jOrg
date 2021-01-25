@@ -22,7 +22,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -30,10 +30,9 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.holders.PetItemHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.holders.PetItemRequest;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.PetItemList;
 
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -73,24 +72,24 @@ public final class SummonPet extends AbstractEffect {
             return;
         }
 
-        final PetItemHolder holder = player.removeScript(PetItemHolder.class);
-        if (isNull(holder)) {
+        final PetItemRequest request = player.getRequest(PetItemRequest.class);
+        if (isNull(request)) {
             LOGGER.warn("Summoning pet without attaching PetItemHandler!", new Throwable());
             return;
         }
-
-        final Item collar = holder.getItem();
+        player.removeRequest(PetItemRequest.class);
+        final Item collar = request.getItem();
         if (player.getInventory().getItemByObjectId(collar.getObjectId()) != collar) {
             LOGGER.warn("Player: {} is trying to summon pet from item that he doesn't owns.", player);
             return;
         }
 
-        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
-        if (isNull(petData ) || (petData.getNpcId() == -1)) {
+        final PetTemplate petTemplate = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
+        if (isNull(petTemplate) || (petTemplate.getNpcId() == -1)) {
             return;
         }
 
-        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petTemplate.getNpcId());
         final Pet pet = Pet.spawnPet(npcTemplate, player, collar);
 
         pet.setShowSummonAnimation(true);
@@ -107,12 +106,12 @@ public final class SummonPet extends AbstractEffect {
             pet.storeMe();
         }
 
-        collar.setEnchantLevel(pet.getLevel());
+        collar.changeEnchantLevel(pet.getLevel());
         player.setPet(pet);
         pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
         pet.startFeed();
         pet.setFollowStatus(true);
-        pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
+        pet.sendItemList();
         pet.broadcastStatusUpdate();
     }
 

@@ -36,10 +36,10 @@ public class ThreadPool {
 
     }
 
-    private void initThreadPools(int threadPoolSize, int scheduledPoolSize) {
+    private void initThreadPools(int threadPoolSize, int scheduledPoolSize, int maxPoolSize) {
         final var rejectedHandler = new RejectedExecutionHandlerImpl();
 
-        executor = new ThreadPoolExecutor(threadPoolSize, Integer.MAX_VALUE, 5, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), rejectedHandler);
+        executor = new ThreadPoolExecutor(threadPoolSize, maxPoolSize, 10, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), rejectedHandler);
         scheduledExecutor = new ScheduledThreadPoolExecutor(scheduledPoolSize, new PriorityThreadFactory("ScheduledThreadPool", Thread.NORM_PRIORITY), rejectedHandler);
         scheduledExecutor.setRemoveOnCancelPolicy(true);
         forkPool = new ForkJoinPool(threadPoolSize, ForkJoinPool.defaultForkJoinWorkerThreadFactory, rejectedHandler, false);
@@ -66,7 +66,7 @@ public class ThreadPool {
     }
 
     public static ScheduledFuture<?> schedule(Runnable r, Duration delay) {
-        return schedule(r, delay.toSeconds(), TimeUnit.SECONDS);
+        return schedule(r, delay.toMillis(), TimeUnit.MILLISECONDS);
     }
 
     public static ScheduledFuture<?> schedule(Runnable r, long delay){
@@ -162,12 +162,12 @@ public class ThreadPool {
         list.append("\tgetTaskCount: ........ ").append(scheduledExecutor.getTaskCount()).append("\n");
     }
 
-    public static void init(int threadPoolSize, int scheduledPoolSize) {
+    public static void init(int threadPoolSize, int scheduledPoolSize, int maxPoolSize) {
         synchronized (ThreadPool.class) {
 
             var instance = getInstance();
             if(isNull(instance.scheduledExecutor)) {
-                instance.initThreadPools(threadPoolSize, scheduledPoolSize);
+                instance.initThreadPools(threadPoolSize, scheduledPoolSize, maxPoolSize);
             }
         }
     }

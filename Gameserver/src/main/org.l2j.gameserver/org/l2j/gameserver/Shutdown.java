@@ -25,10 +25,9 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
-import org.l2j.gameserver.engine.olympiad.OlympiadEngine;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
@@ -113,6 +112,9 @@ public class Shutdown extends Thread {
             case GM_RESTART -> LOGGER.info("GM restart received. Restarting NOW!");
         }
 
+        AuthServerCommunication.getInstance().shutdown();
+        LOGGER.info("Auth server communication has been shut down.");
+
         // last byebye, save all data and quit this server
         saveData();
 
@@ -126,9 +128,6 @@ public class Shutdown extends Thread {
 
             WorldTimeController.getInstance().stopTimer();
             LOGGER.info("Game Time Controller: Timer stopped.");
-
-            AuthServerCommunication.getInstance().shutdown();
-            LOGGER.info("Auth server Communication: Thread interrupted.");
 
             DatabaseAccess.shutdown();
             LOGGER.info("Database connection has been shut down.");
@@ -248,7 +247,7 @@ public class Shutdown extends Thread {
         LOGGER.info("All players disconnected and saved.");
 
         // Save all raidboss and GrandBoss status ^_^
-        DBSpawnManager.getInstance().cleanUp();
+        BossManager.getInstance().cleanUp();
         LOGGER.info("RaidBossSpawnManager: All raidboss info saved.");
 
         GrandBossManager.getInstance().cleanUp();
@@ -257,11 +256,8 @@ public class Shutdown extends Thread {
         ItemAuctionManager.getInstance().shutdown();
         LOGGER.info("Item Auction Manager: All tasks stopped.");
 
-        OlympiadEngine.getInstance().saveOlympiadStatus();
+        Olympiad.getInstance().saveOlympiadStatus();
         LOGGER.info("Olympiad System: Data saved.");
-
-        Hero.getInstance().shutdown();
-        LOGGER.info("Hero System: Data saved.");
 
         ClanTable.getInstance().shutdown();
         LOGGER.info("Clan System: Data saved.");
@@ -278,7 +274,6 @@ public class Shutdown extends Thread {
         GlobalVariablesManager.getInstance().storeMe();
         LOGGER.info("Global Variables Manager: Variables saved.");
 
-        // Schemes save.
         SchemeBufferTable.getInstance().saveSchemes();
         LOGGER.info("SchemeBufferTable data has been saved.");
 
@@ -301,7 +296,7 @@ public class Shutdown extends Thread {
      * This disconnects all clients from the server.
      */
     private void disconnectAllCharacters() {
-        World.getInstance().forEachPlayer(player -> Disconnection.of(player).defaultSequence(true));
+        World.getInstance().forEachPlayer(player -> Disconnection.of(player).logout(true));
     }
 
     private enum  ShutdownMode {

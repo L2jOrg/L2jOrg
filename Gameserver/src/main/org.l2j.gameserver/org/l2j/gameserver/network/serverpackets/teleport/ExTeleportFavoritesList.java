@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.teleport;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -34,12 +35,12 @@ public class ExTeleportFavoritesList extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_TELEPORT_FAVORITES_LIST);
-        writeByte(open);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_TELEPORT_FAVORITES_LIST, buffer );
+        buffer.writeByte(open);
         final var teleports = client.getPlayer().getTeleportFavorites();
-        writeInt(teleports.size());
-        teleports.forEach(this::writeInt);
+        buffer.writeInt(teleports.size());
+        teleports.forEach(buffer::writeInt);
 
     }
 }

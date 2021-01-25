@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -49,27 +50,25 @@ public class ExOlympiadSpelledInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_OLYMPIAD_SPELLED_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_OLYMPIAD_SPELLED_INFO, buffer );
 
-        writeInt(_playerId);
-        writeInt(_effects.size() + _effects2.size());
+        buffer.writeInt(_playerId);
+        buffer.writeInt(_effects.size() + _effects2.size());
         for (BuffInfo info : _effects) {
             if ((info != null) && info.isInUse()) {
-                writeInt(info.getSkill().getDisplayId());
-                writeShort((short) info.getSkill().getDisplayLevel());
-                writeShort((short) 0x00); // Sub level
-                writeInt(info.getSkill().getAbnormalType().getClientId());
-                writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime());
+                buffer.writeInt(info.getSkill().getDisplayId());
+                buffer.writeInt(info.getSkill().getDisplayLevel());
+                buffer.writeShort(0x00); // Sub level
+                writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime(), buffer);
             }
         }
         for (Skill skill : _effects2) {
             if (skill != null) {
-                writeInt(skill.getDisplayId());
-                writeShort((short) skill.getDisplayLevel());
-                writeShort((short) 0x00); // Sub level
-                writeInt(skill.getAbnormalType().getClientId());
-                writeShort((short) -1);
+                buffer.writeInt(skill.getDisplayId());
+                buffer.writeInt(skill.getDisplayLevel());
+                buffer.writeShort(0x00); // Sub level
+                buffer.writeShort(-1);
             }
         }
     }

@@ -25,9 +25,11 @@ import org.l2j.gameserver.network.serverpackets.ExInzoneWaiting;
  * @author UnAfraid
  */
 public class RequestInzoneWaitingTime extends ClientPacket {
+    private boolean _hide;
+
     @Override
     public void readImpl() {
-
+        _hide = readChar() == 0;
     }
 
     @Override
@@ -36,6 +38,6 @@ public class RequestInzoneWaitingTime extends ClientPacket {
         if (activeChar == null) {
             return;
         }
-        client.sendPacket(new ExInzoneWaiting(activeChar, true));
+        client.sendPacket(new ExInzoneWaiting(activeChar, _hide));
     }
 }

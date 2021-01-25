@@ -40,6 +40,6 @@ public class ExRankingCharRankers extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        client.sendPacket(new ExRankList(group, scope, race));
+        client.sendPacket(new ExRankList(client.getPlayer(), group, scope, race));
     }
 }

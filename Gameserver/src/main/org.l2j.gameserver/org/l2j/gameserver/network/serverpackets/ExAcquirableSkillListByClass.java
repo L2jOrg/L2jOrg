@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.GameClient;
@@ -38,20 +39,20 @@ public class ExAcquirableSkillListByClass extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS, buffer );
 
-        writeShort((short) _type.getId());
-        writeShort((short) _learnable.size());
+        buffer.writeShort(_type.getId());
+        buffer.writeShort(_learnable.size());
         for (SkillLearn skill : _learnable) {
-            writeInt(skill.getSkillId());
-            writeShort((short) skill.getSkillLevel());
-            writeShort((short) skill.getSkillLevel());
-            writeByte((byte) skill.getGetLevel());
-            writeLong(skill.getLevelUpSp());
-            writeByte((byte) skill.getRequiredItems().size());
+            buffer.writeInt(skill.getSkillId());
+            buffer.writeShort(skill.getSkillLevel());
+            buffer.writeShort(skill.getSkillLevel());
+            buffer.writeByte(skill.getGetLevel());
+            buffer.writeLong(skill.getLevelUpSp());
+            buffer.writeByte(skill.getRequiredItems().size());
             if (_type == AcquireSkillType.SUBPLEDGE) {
-                writeShort((short) 0x00);
+                buffer.writeShort(0x00);
             }
         }
     }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.mail.MailState;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -38,14 +39,14 @@ public class ExChangePostState extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CHANGE_POST_STATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CHANGE_POST_STATE, buffer );
 
-        writeInt(receivedBoard);
-        writeInt(changedMailsId.length);
+        buffer.writeInt(receivedBoard);
+        buffer.writeInt(changedMailsId.length);
         for (int mailId : changedMailsId) {
-            writeInt(mailId);
-            writeInt(state.ordinal());
+            buffer.writeInt(mailId);
+            buffer.writeInt(state.ordinal());
         }
     }
 

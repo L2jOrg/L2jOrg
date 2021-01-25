@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
@@ -99,7 +99,7 @@ public class Seed implements IItemHandler
 		final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
 		if (skills != null)
 		{
-			skills.forEach(holder -> activeChar.useMagic(holder.getSkill(), item, false, false));
+			skills.forEach(holder -> activeChar.useSkill(holder.getSkill(), item, false, false));
 		}
 		return true;
 	}

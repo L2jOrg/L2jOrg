@@ -20,7 +20,9 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
@@ -34,32 +36,21 @@ public class ItemOnGroundData {
     @Column("item_id")
     private int itemId;
 
-    private long count;
-
     @Column("enchant_level")
     private int enchantLevel;
 
+    @Column("drop_time")
+    private long dropTime;
+
+    @Column("special_ensoul")
+    private int specialEnsoul;
+
+    private long count;
     private int x;
     private int y;
     private int z;
-
-    @Column("drop_time")
-    private long dropTime;
     private int equipable;
-
-    public static ItemOnGroundData of(Item item) {
-        final var data = new ItemOnGroundData();
-        data.objectId = item.getObjectId();
-        data.itemId = item.getId();
-        data.count = item.getCount();
-        data.enchantLevel = item.getEnchantLevel();
-        data.x = item.getX();
-        data.y = item.getY();
-        data.z = item.getZ();
-        data.dropTime = item.isProtected() ? -1 : item.getDropTime();
-        data.equipable = item.isEquipable() ? 1 : 0;
-        return data;
-    }
+    private int ensoul;
 
     public int getObjectId() {
         return objectId;
@@ -91,5 +82,34 @@ public class ItemOnGroundData {
 
     public long getDropTime() {
         return dropTime;
+    }
+
+    public int getSpecialEnsoul() {
+        return specialEnsoul;
+    }
+
+    public int getEnsoul() {
+        return ensoul;
+    }
+
+    public static ItemOnGroundData of(Item item) {
+        final var data = new ItemOnGroundData();
+        data.objectId = item.getObjectId();
+        data.itemId = item.getId();
+        data.count = item.getCount();
+        data.enchantLevel = item.getEnchantLevel();
+        data.x = item.getX();
+        data.y = item.getY();
+        data.z = item.getZ();
+        data.dropTime = item.isProtected() ? -1 : item.getDropTime();
+        data.equipable = item.isEquipable() ? 1 : 0;
+        if(nonNull(item.getSpecialAbility())) {
+            data.ensoul = item.getSpecialAbility().id();
+        }
+
+        if(nonNull(item.getAdditionalSpecialAbility())) {
+            data.specialEnsoul = item.getAdditionalSpecialAbility().id();
+        }
+        return data;
     }
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.teleport;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -35,7 +36,7 @@ public class ExShowTeleportUi extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_TELEPORT_UI);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_TELEPORT_UI, buffer );
     }
 }

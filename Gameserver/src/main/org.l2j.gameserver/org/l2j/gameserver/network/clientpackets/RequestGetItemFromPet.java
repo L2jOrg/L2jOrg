@@ -20,8 +20,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.network.serverpackets.PetItemList;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -74,7 +73,7 @@ public final class RequestGetItemFromPet extends ClientPacket {
 
         final Item transferedItem = pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet);
         if (transferedItem != null) {
-            player.sendPacket(new PetItemList(pet.getInventory().getItems()));
+            pet.sendItemList();
         } else {
             LOGGER.warn("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
         }

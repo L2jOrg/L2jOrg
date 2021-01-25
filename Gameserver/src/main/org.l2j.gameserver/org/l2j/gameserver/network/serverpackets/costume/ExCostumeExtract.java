@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.costume;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -54,13 +55,13 @@ public class ExCostumeExtract extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_COSTUME_EXTRACT);
-        writeByte(success);
-        writeInt(costumeId);
-        writeLong(amount);
-        writeInt(extractedItem);
-        writeLong(amount);
-        writeLong(totalAmount);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_COSTUME_EXTRACT, buffer );
+        buffer.writeByte(success);
+        buffer.writeInt(costumeId);
+        buffer.writeLong(amount);
+        buffer.writeInt(extractedItem);
+        buffer.writeLong(amount);
+        buffer.writeLong(totalAmount);
     }
 }

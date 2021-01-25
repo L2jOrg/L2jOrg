@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.StatusUpdateType;
@@ -36,7 +37,7 @@ import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -62,7 +63,7 @@ public class Party extends AbstractPlayerGroup {
 
     // @formatter:off
     private static final double[] BONUS_EXP_SP = {
-        1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 2.0
+        1.0, 1.6, 1.65, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2
     };
     // @formatter:on
 
@@ -182,7 +183,7 @@ public class Party extends AbstractPlayerGroup {
      */
     public void broadcastToPartyMembersNewLeader() {
         members.forEach(member -> {
-            member.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET, new PartySmallWindowAll(member, this));
+            member.sendPackets(PartySmallWindowDeleteAll.STATIC_PACKET, new PartySmallWindowAll(member, this));
             member.broadcastUserInfo();
         });
     }
@@ -282,7 +283,7 @@ public class Party extends AbstractPlayerGroup {
             sm.addString(target.getName());
             sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
 
-            members.forEach(m -> m.sendPacket(new ExTacticalSign(target, tacticalSignId), sm));
+            members.forEach(m -> m.sendPackets(new ExTacticalSign(target, tacticalSignId), sm));
         } else if (tacticalTarget == target) {
             // Sign already assigned
             // If the sign is applied on the same target, remove it
@@ -294,7 +295,7 @@ public class Party extends AbstractPlayerGroup {
 
             final SystemMessage sm = getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2).addPcName(activeChar).addString(target.getName()).addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
 
-            members.forEach(m -> m.sendPacket(new ExTacticalSign(tacticalTarget, 0), new ExTacticalSign(target, tacticalSignId), sm));
+            members.forEach(m -> m.sendPackets(new ExTacticalSign(tacticalTarget, 0), new ExTacticalSign(target, tacticalSignId), sm));
         }
     }
 
@@ -576,8 +577,9 @@ public class Party extends AbstractPlayerGroup {
                         }
                         clan.addHuntingPoints(member, target, finalExp);
                     }
-                    member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true, false);
+                    member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true);
                     PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
+                    MagicLampData.getInstance().addLampExp(member, exp, true);
                 }
             } else {
                 member.addExpAndSp(0, 0);
@@ -826,7 +828,7 @@ public class Party extends AbstractPlayerGroup {
         return members;
     }
 
-    public boolean contains(Player player) {
+    public boolean isMember(Player player) {
         return members.contains(player);
     }
 

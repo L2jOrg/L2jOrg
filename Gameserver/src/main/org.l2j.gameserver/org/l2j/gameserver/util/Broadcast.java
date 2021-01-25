@@ -154,7 +154,7 @@ public final class Broadcast {
      * @param packets
      */
     public static void toAllOnlinePlayers(ServerPacket... packets) {
-        World.getInstance().forEachPlayer(p -> p.sendPacket(packets));
+        World.getInstance().forEachPlayer(p -> p.sendPackets(packets));
     }
 
     public static void toAllOnlinePlayers(String text) {

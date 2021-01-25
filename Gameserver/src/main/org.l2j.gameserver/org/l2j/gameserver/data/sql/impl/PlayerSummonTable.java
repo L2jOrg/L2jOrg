@@ -24,13 +24,12 @@ import org.l2j.gameserver.data.database.dao.SummonDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.network.serverpackets.PetItemList;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -83,14 +82,14 @@ public class PlayerSummonTable {
             LOGGER.warn("Null pet summoning item for {}", player);
             return;
         }
-        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
-        if (isNull(petData)) {
+        final PetTemplate petTemplate = PetDataTable.getInstance().getPetDataByItemId(item.getId());
+        if (isNull(petTemplate)) {
             LOGGER.warn("Null pet data for: {} and summoning item: {}", player, item);
             return;
         }
-        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petTemplate.getNpcId());
         if (isNull(npcTemplate)) {
-            LOGGER.warn("Null pet NPC template for: {} and pet Id: {}", player,petData.getNpcId());
+            LOGGER.warn("Null pet NPC template for: {} and pet Id: {}", player, petTemplate.getNpcId());
             return;
         }
 
@@ -116,12 +115,12 @@ public class PlayerSummonTable {
             pet.storeMe();
         }
 
-        item.setEnchantLevel(pet.getLevel());
+        item.changeEnchantLevel(pet.getLevel());
         player.setPet(pet);
         pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
         pet.startFeed();
         pet.setFollowStatus(true);
-        pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
+        pet.sendItemList();
         pet.broadcastStatusUpdate();
     }
 

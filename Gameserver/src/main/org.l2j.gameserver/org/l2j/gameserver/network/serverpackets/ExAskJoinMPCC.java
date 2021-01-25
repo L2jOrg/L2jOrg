@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -34,11 +35,11 @@ public class ExAskJoinMPCC extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ASK_JOIN_MPCC);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ASK_JOIN_MPCC, buffer );
 
-        writeString(_requestorName); // name of CCLeader
-        writeInt(0x00); // TODO: Find me
+        buffer.writeString(_requestorName); // name of CCLeader
+        buffer.writeInt(0x00); // TODO: Find me
     }
 
 }

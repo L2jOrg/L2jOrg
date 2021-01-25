@@ -26,7 +26,7 @@ import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -115,7 +115,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
         // Check if the char can crystallize items and return if false;
         boolean canCrystallize = true;
 
-        switch (itemToRemove.getTemplate().getCrystalType()) {
+        switch (itemToRemove.getCrystalType()) {
             case D: {
                 if (skillLevel < 1) {
                     canCrystallize = false;

@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.EtcItem;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 
@@ -59,7 +59,7 @@ public class ExtractableItems implements IItemHandler {
 			return false;
 		}
 		
-		if (!player.isInventoryUnder80(false)) {
+		if (!player.isInventoryUnder80()) {
 			player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 			return false;
 		}

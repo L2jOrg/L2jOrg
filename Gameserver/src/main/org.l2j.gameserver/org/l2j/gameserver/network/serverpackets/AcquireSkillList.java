@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -42,29 +43,29 @@ public class AcquireSkillList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ACQUIRE_SKILL_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ACQUIRE_SKILL_LIST, buffer );
 
-        writeShort((short) _learnable.size());
+        buffer.writeShort(_learnable.size());
         for (SkillLearn skill : _learnable) {
             if (skill == null) {
                 continue;
             }
-            writeInt(skill.getSkillId());
-            writeShort((short) skill.getSkillLevel());
-            writeLong(skill.getLevelUpSp());
-            writeByte((byte) skill.getGetLevel());
-            writeShort((short) 0x00); // Salvation: Changed from byte to short.
+            buffer.writeInt(skill.getSkillId());
+            buffer.writeShort(skill.getSkillLevel());
+            buffer.writeLong(skill.getLevelUpSp());
+            buffer.writeByte(skill.getGetLevel());
+            buffer.writeShort(0x00); // Salvation: Changed from byte to short.
             if (skill.getRequiredItems().size() > 0) {
                 for (ItemHolder item : skill.getRequiredItems()) {
-                    writeByte((byte) 0x01);
-                    writeInt(item.getId());
-                    writeLong(item.getCount());
+                    buffer.writeByte(0x01);
+                    buffer.writeInt(item.getId());
+                    buffer.writeLong(item.getCount());
                 }
             } else {
-                writeByte((byte) 0x00);
+                buffer.writeByte( 0x00);
             }
-            writeByte((byte) 0x00);
+            buffer.writeByte(0x00);
         }
     }
 

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -45,15 +46,15 @@ public class ExShowTerritory extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_TERRITORY);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_TERRITORY, buffer );
 
-        writeInt(_vertices.size());
-        writeInt(_minZ);
-        writeInt(_maxZ);
+        buffer.writeInt(_vertices.size());
+        buffer.writeInt(_minZ);
+        buffer.writeInt(_maxZ);
         for (ILocational loc : _vertices) {
-            writeInt(loc.getX());
-            writeInt(loc.getY());
+            buffer.writeInt(loc.getX());
+            buffer.writeInt(loc.getY());
         }
     }
 

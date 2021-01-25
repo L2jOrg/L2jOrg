@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
+import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -38,7 +39,6 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
@@ -69,11 +69,7 @@ public class PlayerStatus extends PlayableStatus {
     public final void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption, boolean ignoreCP) {
         final var me = getOwner();
 
-        if (me.isDead()) {
-            return;
-        }
-
-        if (me.isHpBlocked() && !(isDOT || isHPConsumption)) {
+        if (me.isDead() || (me.isHpBlocked() && !(isDOT || isHPConsumption))) {
             return;
         }
 
@@ -89,7 +85,6 @@ public class PlayerStatus extends PlayableStatus {
             if (me.isCrafting() || me.isInStoreMode()) {
                 me.setPrivateStoreType(PrivateStoreType.NONE);
                 me.standUp();
-                me.broadcastUserInfo();
             } else if (me.isSitting()) {
                 me.standUp();
             }
@@ -129,6 +124,7 @@ public class PlayerStatus extends PlayableStatus {
             }
 
             // Check and calculate transfered damage
+            // TODO move to effect
             final Summon summon = me.getFirstServitor();
             if (nonNull(summon) && isInsideRadius3D(me, summon, 1000)) {
                 tDmg = value * me.getStats().getValue(Stat.TRANSFER_DAMAGE_SUMMON_PERCENT, 0) / 100;
@@ -136,7 +132,7 @@ public class PlayerStatus extends PlayableStatus {
                 // Only transfer dmg up to current HP, it should not be killed
                 tDmg = Math.min(summon.getCurrentHp() - 1, tDmg);
                 if (tDmg > 0) {
-                    summon.reduceCurrentHp(tDmg, attacker, null, DamageType.OTHER);
+                    summon.reduceCurrentHp(tDmg, attacker, null, DamageType.TRANSFERED_DAMAGE);
                     value -= tDmg;
                     fullValue = value; // reduce the announced value here as player will get a message about summon damage
                 }
@@ -148,7 +144,7 @@ public class PlayerStatus extends PlayableStatus {
                 mpDam = value - mpDam;
                 if (mpDam > me.getCurrentMp()) {
                     me.sendPacket(SystemMessageId.MP_BECAME_0_AND_THE_ARCANE_SHIELD_IS_DISAPPEARING);
-                    me.stopSkillEffects(true, 1556);
+                    me.stopSkillEffects(true, CommonSkill.ARCANE_SHIELD.getId());
                     value = mpDam - me.getCurrentMp();
                     me.setCurrentMp(0);
                 } else {
@@ -159,7 +155,7 @@ public class PlayerStatus extends PlayableStatus {
             }
 
             final Player caster = me.getTransferingDamageTo();
-            if (nonNull(caster) && !caster.isDead() && (me != caster) &&  nonNull(me.getParty()) && me.getParty().contains(caster) && isInsideRadius3D(me, caster, 1000)) {
+            if (nonNull(caster) && !caster.isDead() && (me != caster) &&  nonNull(me.getParty()) && me.getParty().isMember(caster) && isInsideRadius3D(me, caster, 1000)) {
 
                 double transferDmg = value * me.getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0) / 100;
                 transferDmg = Math.min(caster.getCurrentHp() - 1, transferDmg);
@@ -241,15 +237,6 @@ public class PlayerStatus extends PlayableStatus {
         if ((me.getCurrentHp() < 0.5) && !isHPConsumption && !me.isUndying()) {
             me.abortAttack();
             me.abortCast();
-
-            if (me.isInOlympiadMode()) {
-                stopHpMpRegeneration();
-                me.setIsDead(true);
-                me.setIsPendingRevive(true);
-                doIfNonNull(me.getPet(), pet -> pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE));
-                me.getServitors().values().forEach(s -> s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE));
-                return;
-            }
             me.doDie(attacker);
         }
     }

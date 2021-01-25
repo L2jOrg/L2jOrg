@@ -22,6 +22,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.StartRotation;
 
+import static java.util.Objects.isNull;
+
 /**
  * This class ...
  *
@@ -43,10 +45,10 @@ public final class StartRotating extends ClientPacket {
             return;
         }
 
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (isNull(player) || player.isAlikeDead()) {
             return;
         }
-        activeChar.broadcastPacket(new StartRotation(activeChar.getObjectId(), _degree, _side, 0));
+        player.broadcastPacket(new StartRotation(player.getObjectId(), _degree, _side, 0));
     }
 }

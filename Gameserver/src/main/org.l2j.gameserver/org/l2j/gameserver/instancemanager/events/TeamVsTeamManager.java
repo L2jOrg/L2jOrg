@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.quest.Event;
 /**
  * @author Mobius
  */
-public class TeamVsTeamManager extends AbstractEventManager<AbstractEvent<?>> {
+public class TeamVsTeamManager extends AbstractEventManager<AbstractEvent> {
 
     private TeamVsTeamManager() { }
 

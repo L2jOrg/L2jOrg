@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.stats.Stat;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;

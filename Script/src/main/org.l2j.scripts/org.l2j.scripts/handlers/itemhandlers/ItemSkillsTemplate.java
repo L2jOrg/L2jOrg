@@ -25,7 +25,7 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -48,7 +48,7 @@ public class ItemSkillsTemplate implements IItemHandler {
 
     @Override
     public boolean useItem(Playable playable, Item item, boolean forceUse) {
-        if (!isPlayer(playable) && !isPet(playable)) {
+        if ((!isPlayer(playable) && !isPet(playable)) || !isSkillReducer(item)) {
             return false;
         }
 
@@ -90,7 +90,7 @@ public class ItemSkillsTemplate implements IItemHandler {
 
                 var player  = playable.getActingPlayer();
 
-                if (itemSkill.hasAnyEffectType(EffectType.EXTRACT_ITEM) && nonNull(player) && !playable.getActingPlayer().isInventoryUnder80(false)) {
+                if (itemSkill.hasAnyEffectType(EffectType.EXTRACT_ITEM) && nonNull(player) && !playable.getActingPlayer().isInventoryUnder80()) {
                     player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
                     return false;
                 }
@@ -116,7 +116,7 @@ public class ItemSkillsTemplate implements IItemHandler {
                 }
                 else {
                     playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-                    if (playable.useMagic(itemSkill, item, forceUse, false)) {
+                    if (playable.useSkill(itemSkill, item, forceUse, false)) {
                         successfulUse = true;
                     } else {
                         continue;
@@ -138,6 +138,13 @@ public class ItemSkillsTemplate implements IItemHandler {
         }
 
         return successfulUse;
+    }
+
+    private boolean isSkillReducer(Item item) {
+        return switch (item.getAction()) {
+            case CALL_SKILL, SKILL_REDUCE, SKILL_REDUCE_ON_SKILL_SUCCESS -> true;
+            default -> false;
+        };
     }
 
     private boolean checkUseSkill(Playable playable, Item item, Skill itemSkill) {

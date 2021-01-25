@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @param <T>
  * @author UnAfraid
  */
-public abstract class AbstractEventMember<T extends AbstractEvent<?>> {
+public abstract class AbstractEventMember<T extends AbstractEvent> {
     private final T _event;
     private final AtomicInteger _score = new AtomicInteger();
     private final Player player;

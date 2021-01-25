@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.CreatureFollowTaskManager;
@@ -44,7 +44,6 @@ import static org.l2j.gameserver.util.GameUtils.*;
  * <li>CreatureAI</li>
  */
 public abstract class AbstractAI implements Ctrl {
-    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractAI.class);
 
     /**
      * The character that this AI manages
@@ -161,12 +160,10 @@ public abstract class AbstractAI implements Ctrl {
     @Override
     @SafeVarargs
     public final void setIntention(CtrlIntention intention, Object... args) {
-        // Stop the follow mode if necessary
         if ((intention != AI_INTENTION_FOLLOW) && (intention != AI_INTENTION_ATTACK)) {
             stopFollow();
         }
 
-        // Launch the onIntention method of the CreatureAI corresponding to the new Intention
         switch (intention) {
             case AI_INTENTION_IDLE: {
                 onIntentionIdle();
@@ -583,16 +580,9 @@ public abstract class AbstractAI implements Ctrl {
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
      */
     protected void clientNotifyDead() {
-        // Send a Server->Client packet Die to the actor and all Player in its _knownPlayers
-        final Die msg = new Die(actor);
-        actor.broadcastPacket(msg);
-
-        // Init AI
+        actor.broadcastPacket(new Die(actor));
         intention = AI_INTENTION_IDLE;
         _target = null;
-
-        // Cancel the follow task if necessary
-        stopFollow();
     }
 
     /**
@@ -647,9 +637,6 @@ public abstract class AbstractAI implements Ctrl {
         }
     }
 
-    /**
-     * Stop an AI Follow Task.
-     */
     public synchronized void stopFollow() {
         CreatureFollowTaskManager.getInstance().remove(actor);
     }
@@ -662,9 +649,6 @@ public abstract class AbstractAI implements Ctrl {
         _target = target;
     }
 
-    /**
-     * Stop all Ai tasks and futures.
-     */
     public void stopAITask() {
         stopFollow();
     }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.rank;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -38,52 +39,53 @@ public class ExRankList extends ServerPacket {
     private final int race;
     private final byte group;
     private final byte scope;
+    private final List<RankData> rankers;
 
-    public ExRankList(byte group, byte scope, int race) {
+    public ExRankList(Player player, byte group, byte scope, int race) {
         this.group = group;
         this.scope = scope;
         this.race = race;
+
+        rankers = switch (group) {
+            case 0 -> listServerRankers(player, scope);
+            case 1 -> listRaceRankers(player, scope, race);
+            case 2 -> listClanRankers(player);
+            case 3 -> listFriendsRankers(player);
+            default -> Collections.emptyList();
+        };
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(ServerExPacketId.EX_RANKING_CHAR_RANKERS);
-        writeByte(group);
-        writeByte(scope);
-        writeInt(race);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(ServerExPacketId.EX_RANKING_CHAR_RANKERS, buffer );
+        buffer.writeByte(group);
+        buffer.writeByte(scope);
+        buffer.writeInt(race);
 
-        List<RankData> rankers = switch (group) {
-            case 0 -> listServerRankers(client.getPlayer(), scope);
-            case 1 -> listRaceRankers(client.getPlayer(), scope, race);
-            case 2 -> listClanRankers(client.getPlayer());
-            case 3 -> listFriendsRankers(client.getPlayer());
-            default -> Collections.emptyList();
-        };
-
-        writeInt(rankers.size());
+        buffer.writeInt(rankers.size());
 
         for (var ranker : rankers) {
-            writeSizedString(ranker.getPlayerName());
-            writeSizedString(ranker.getClanName());
-            writeInt(ranker.getLevel());
-            writeInt(ranker.getClassId());
-            writeInt(ranker.getRace());
-            writeInt(ranker.getRank());
-            writeInt(ranker.getRankSnapshot());
-            writeInt(ranker.getRankRaceSnapshot());
+            buffer.writeSizedString(ranker.getPlayerName());
+            buffer.writeSizedString(ranker.getClanName());
+            buffer.writeInt(ranker.getLevel());
+            buffer.writeInt(ranker.getClassId());
+            buffer.writeInt(ranker.getRace());
+            buffer.writeInt(ranker.getRank());
+            buffer.writeInt(ranker.getRankSnapshot());
+            buffer.writeInt(ranker.getRankRaceSnapshot());
         }
     }
 
     private List<RankData> listRaceRankers(Player player, byte scope, int race) {
         if(scope == 0) {
-            return RankEngine.getInstance().getRaceRankers(race);
+            return RankEngine.getInstance().getTopRaceRankers(race);
         }
         return RankEngine.getInstance().getRaceRankersByPlayer(player);
     }
 
     private List<RankData> listServerRankers(Player player, byte scope) {
         if(scope == 0) {
-            return RankEngine.getInstance().getRankers();
+            return RankEngine.getInstance().getTopRankers();
         }
         return RankEngine.getInstance().getRankersByPlayer(player);
     }

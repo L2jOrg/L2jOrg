@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -42,13 +43,13 @@ public class ExPVPMatchCCRecord extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PVPMATCH_CC_RECORD);
-        writeInt(_state); // 0 - initialize, 1 - update, 2 - finish
-        writeInt(_players.size());
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PVPMATCH_CC_RECORD, buffer );
+        buffer.writeInt(_state); // 0 - initialize, 1 - update, 2 - finish
+        buffer.writeInt(_players.size());
         for (Entry<Player, Integer> entry : _players.entrySet()) {
-            writeString(entry.getKey().getName());
-            writeInt(entry.getValue());
+            buffer.writeString(entry.getKey().getName());
+            buffer.writeInt(entry.getValue());
         }
     }
 

@@ -40,12 +40,12 @@ public class CanSummonCubicSkillCondition implements SkillCondition {
     @Override
     public boolean canUse(Creature caster, Skill skill, WorldObject target)
     {
-        if (!isPlayer(caster) || caster.isAlikeDead() || caster.getActingPlayer().inObserverMode()) {
+        if (!isPlayer(caster) || caster.isAlikeDead() || caster.getActingPlayer().isInObserverMode()) {
             return false;
         }
 
         final Player player = caster.getActingPlayer();
-        return !player.inObserverMode() && !player.isMounted() && !player.isSpawnProtected() && !player.isTeleportProtected();
+        return !player.isInObserverMode() && !player.isMounted() && !player.isSpawnProtected() && !player.isTeleportProtected();
     }
 
     public static final class Factory extends SkillConditionFactory {

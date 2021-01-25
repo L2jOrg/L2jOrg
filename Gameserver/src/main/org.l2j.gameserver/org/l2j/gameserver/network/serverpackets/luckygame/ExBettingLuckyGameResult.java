@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.luckygame;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.LuckyGameItemType;
 import org.l2j.gameserver.enums.LuckyGameResultType;
 import org.l2j.gameserver.enums.LuckyGameType;
@@ -62,17 +63,17 @@ public class ExBettingLuckyGameResult extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BETTING_LUCKY_GAME_RESULT);
-        writeInt(_result.getClientId());
-        writeInt(_type.ordinal());
-        writeInt(_ticketCount);
-        writeInt(_size);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BETTING_LUCKY_GAME_RESULT, buffer );
+        buffer.writeInt(_result.getClientId());
+        buffer.writeInt(_type.ordinal());
+        buffer.writeInt(_ticketCount);
+        buffer.writeInt(_size);
         for (Entry<LuckyGameItemType, List<ItemHolder>> reward : rewards.entrySet()) {
             for (ItemHolder item : reward.getValue()) {
-                writeInt(reward.getKey().getClientId());
-                writeInt(item.getId());
-                writeInt((int) item.getCount());
+                buffer.writeInt(reward.getKey().getClientId());
+                buffer.writeInt(item.getId());
+                buffer.writeInt((int) item.getCount());
             }
         }
     }

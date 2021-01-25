@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -34,11 +35,11 @@ public final class TutorialShowQuestionMark extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOW_TUTORIAL_MARK);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.SHOW_TUTORIAL_MARK, buffer );
 
-        writeByte( _markType);
-        writeInt(_markId);
+        buffer.writeByte( _markType);
+        buffer.writeInt(_markId);
     }
 
 }

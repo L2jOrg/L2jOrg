@@ -134,8 +134,7 @@ public class CreatureFollowTaskManager
         ATTACK_FOLLOW_CREATURES.putIfAbsent(creature, range);
     }
 
-    public void remove(Creature creature)
-    {
+    public void remove(Creature creature) {
         NORMAL_FOLLOW_CREATURES.remove(creature);
         ATTACK_FOLLOW_CREATURES.remove(creature);
     }

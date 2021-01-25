@@ -20,14 +20,19 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.engine.item.AttendanceEngine;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.item.EnchantItemEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.L2Store;
+import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.instancemanager.DailyTaskManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
@@ -119,7 +124,7 @@ public class AdminReload implements IAdminCommandHandler {
                 }
             }
             case "multisell" -> {
-                MultisellData.getInstance().load();
+                MultisellEngine.getInstance().load();
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Multisells.");
             }
             case "buylist" -> {
@@ -179,12 +184,20 @@ public class AdminReload implements IAdminCommandHandler {
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fishing data.");
             }
             case "attendance" -> {
-                AttendanceRewardData.getInstance().load();
+                AttendanceEngine.getInstance().load();
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Attendance Reward data.");
             }
             case "instance" -> {
                 InstanceManager.getInstance().load();
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Instances data.");
+            }
+            case "dailytasks" -> {
+                DailyTaskManager.getInstance().onReset();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded daily tasks.");
+            }
+            case "rankings" -> {
+                RankEngine.getInstance().updateRankers();
+                AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded daily tasks.");
             }
             default -> activeChar.sendMessage(RELOAD_USAGE);
         }

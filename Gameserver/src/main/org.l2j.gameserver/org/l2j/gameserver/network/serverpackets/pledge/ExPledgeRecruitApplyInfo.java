@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.ClanEntryStatus;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -34,10 +35,10 @@ public class ExPledgeRecruitApplyInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_APPLY_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_APPLY_INFO, buffer );
 
-        writeInt(_status.ordinal());
+        buffer.writeInt(_status.ordinal());
     }
 
 }

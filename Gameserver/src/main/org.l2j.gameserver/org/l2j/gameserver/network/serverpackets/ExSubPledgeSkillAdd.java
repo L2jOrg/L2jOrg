@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -36,12 +37,12 @@ public class ExSubPledgeSkillAdd extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SUBPLEDGE_SKILL_ADD);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SUBPLEDGE_SKILL_ADD, buffer );
 
-        writeInt(_type);
-        writeInt(_skillId);
-        writeInt(_skillLevel);
+        buffer.writeInt(_type);
+        buffer.writeInt(_skillId);
+        buffer.writeInt(_skillLevel);
     }
 
 }

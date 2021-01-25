@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.commons.util.Util;
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Clan;
@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
+import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -53,151 +54,153 @@ public class ExCharInfo extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CHAR_INFO);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CHAR_INFO, buffer );
 
-        writeShort(0x151 + dynamicSize);
+        buffer.writeShort(0x151 + dynamicSize);
 
         var appearence = player.getAppearance();
-        writeInt(player.getObjectId());
-        writeShort(player.getRace().ordinal());
-        writeByte(appearence.isFemale());
-        writeInt(player.getBaseClass());
+        buffer.writeInt(player.getObjectId());
+        buffer.writeShort(player.getRace().ordinal());
+        buffer.writeByte(appearence.isFemale());
+        buffer.writeInt(player.getBaseClass());
 
-        writeShort(0x32);
+        buffer.writeShort(0x32);
         for (InventorySlot slot : PAPERDOLL_ORDER) {
-            writeInt(player.getInventory().getPaperdollItemDisplayId(slot));
+            buffer.writeInt(player.getInventory().getPaperdollItemDisplayId(slot));
         }
 
-        writeShort(0x1A);
+        buffer.writeShort(0x1A);
         for (InventorySlot slot : getPaperdollOrderAugument()) { // normal
             var augment = player.getInventory().getPaperdollAugmentation(slot);
-            writeInt(Util.zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
+            buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
         }
         for (InventorySlot slot : getPaperdollOrderAugument()) { // random
             var augment = player.getInventory().getPaperdollAugmentation(slot);
-            writeInt(Util.zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
+            buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
         }
 
-        writeByte(player.getInventory().getArmorMaxEnchant());
+        buffer.writeByte(player.getInventory().getArmorMaxEnchant());
 
-        writeShort(0x26); // slot item shape shift mask size
-        writeInt(0x00); // right hand
-        writeInt(0x00); // left hand
-        writeInt(0x00); // two hand
-        writeInt(0x00); // gloves
-        writeInt(0x00); // chest
-        writeInt(0x00); // legs
-        writeInt(0x00); // feet
-        writeInt(0x00); // hair
-        writeInt(0x00); // hair 2
+        buffer.writeShort(0x26); // slot item shape shift mask size
+        buffer.writeInt(0x00); // right hand
+        buffer.writeInt(0x00); // left hand
+        buffer.writeInt(0x00); // two hand
+        buffer.writeInt(0x00); // gloves
+        buffer.writeInt(0x00); // chest
+        buffer.writeInt(0x00); // legs
+        buffer.writeInt(0x00); // feet
+        buffer.writeInt(0x00); // hair
+        buffer.writeInt(0x00); // hair 2
 
-        writeByte(player.getPvpFlag());
-        writeInt(player.getReputation());
+        buffer.writeByte(player.getPvpFlag());
+        buffer.writeInt(player.getReputation());
 
-        writeInt(player.getMAtkSpd());
-        writeInt(player.getPAtkSpd());
+        buffer.writeInt(player.getMAtkSpd());
+        buffer.writeInt(player.getPAtkSpd());
 
-        writeInt((int) player.getRunSpeed());
-        writeInt((int) player.getWalkSpeed());
-        writeInt((int) player.getSwimRunSpeed());
-        writeInt((int) player.getSwimWalkSpeed());
+        buffer.writeInt((int) player.getRunSpeed());
+        buffer.writeInt((int) player.getWalkSpeed());
+        buffer.writeInt((int) player.getSwimRunSpeed());
+        buffer.writeInt((int) player.getSwimWalkSpeed());
 
-        writeInt(0x00); // mount speed?
-        writeInt(0x00); // mount speed?
+        buffer.writeInt(0x00); // mount speed?
+        buffer.writeInt(0x00); // mount speed?
         int flySpeed = player.isFlying() ? (int) player.getRunSpeed() : 0;
-        writeInt(flySpeed);
-        writeInt(flySpeed);
+        buffer.writeInt(flySpeed);
+        buffer.writeInt(flySpeed);
 
-        writeFloat((float) player.getMovementSpeedMultiplier());
-        writeFloat((float) player.getAttackSpeedMultiplier());
+        buffer.writeFloat((float) player.getMovementSpeedMultiplier());
+        buffer.writeFloat((float) player.getAttackSpeedMultiplier());
 
-        writeFloat((float) player.getCollisionRadius());
-        writeFloat((float) player.getCollisionHeight());
+        buffer.writeFloat((float) player.getCollisionRadius());
+        buffer.writeFloat((float) player.getCollisionHeight());
 
-        writeInt(player.getVisualHair());
-        writeInt(player.getVisualHairColor());
-        writeInt(player.getVisualFace());
+        buffer.writeInt(player.getVisualHair());
+        buffer.writeInt(player.getVisualHairColor());
+        buffer.writeInt(player.getVisualFace());
 
-        writeSizedString(appearence.getVisibleTitle());
+        buffer.writeSizedString(appearence.getVisibleTitle());
 
-        writeInt(appearence.getVisibleClanId());
-        writeInt(appearence.getVisibleClanCrestId());
-        writeInt(appearence.getVisibleAllyId());
-        writeInt(appearence.getVisibleAllyCrestId());
+        buffer.writeInt(appearence.getVisibleClanId());
+        buffer.writeInt(appearence.getVisibleClanCrestId());
+        buffer.writeInt(appearence.getVisibleAllyId());
+        buffer.writeInt(appearence.getVisibleAllyCrestId());
 
-        writeByte(!player.isSitting());
-        writeByte(player.isRunning());
-        writeByte(player.isInCombat());
-        writeByte(!player.isInOlympiadMode() && player.isAlikeDead());
-        writeByte(player.getMountType().ordinal());
-        writeByte(player.getPrivateStoreType().getId());
+        buffer.writeByte(!player.isSitting());
+        buffer.writeByte(player.isRunning());
+        buffer.writeByte(player.isInCombat());
+        buffer.writeByte(!player.isInOlympiadMode() && player.isAlikeDead());
+        buffer.writeByte(player.getMountType().ordinal());
+        buffer.writeByte(player.getPrivateStoreType().getId());
 
-        writeInt(player.getCubics().size());
-        player.getCubics().keySet().forEach(this::writeShort);
+        buffer.writeInt(player.getCubics().size());
+        player.getCubics().keySet().forEach(buffer::writeShort);
 
-        writeByte(player.isInMatchingRoom());
-        writeByte(player.isInsideZone(ZoneType.WATER) ? 1 : player.isFlyingMounted() ? 2 : 0);
-        writeShort(player.getRecomHave());
-        writeInt(player.getMountNpcId() == 0 ? 0 : player.getMountNpcId() + 1000000);
-        writeInt(player.getActiveClass());
-        writeInt(0x00); // foot effect
+        buffer.writeByte(player.isInMatchingRoom());
+        buffer.writeByte(player.isInsideZone(ZoneType.WATER) ? 1 : player.isFlyingMounted() ? 2 : 0);
+        buffer.writeShort(player.getRecomHave());
+        buffer.writeInt(player.getMountNpcId() == 0 ? 0 : player.getMountNpcId() + 1000000);
+        buffer.writeInt(player.getActiveClass());
+        buffer.writeInt(0x00); // foot effect
 
-        writeByte(player.isMounted() ? 0 : player.getInventory().getWeaponEnchant());
-        writeByte(player.getTeam().getId());
+        buffer.writeByte(player.isMounted() ? 0 : player.getInventory().getWeaponEnchant());
+        buffer.writeByte(player.getTeam().getId());
 
-        writeInt(appearence.getVisibleClanLargeCrestId());
-        writeByte(player.isNoble());
-        writeByte((player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 2 : 0));
+        buffer.writeInt(appearence.getVisibleClanLargeCrestId());
+        buffer.writeByte(player.isNoble());
+        buffer.writeByte((player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 2 : 0));
 
-        writeByte(player.isFishing());
+        buffer.writeByte(player.isFishing());
         var baitLocation = player.getFishing().getBaitLocation();
-        writeInt(baitLocation.getX());
-        writeInt(baitLocation.getY());
-        writeInt(baitLocation.getZ());
+        buffer.writeInt(baitLocation.getX());
+        buffer.writeInt(baitLocation.getY());
+        buffer.writeInt(baitLocation.getZ());
 
-        writeInt(appearence.getNameColor());
-        writeInt(player.getHeading());
-        writeByte(player.getPledgeClass());
-        writeShort(player.getPledgeType());
+        buffer.writeInt(appearence.getNameColor());
+        buffer.writeInt(player.getHeading());
+        buffer.writeByte(player.getPledgeClass());
+        buffer.writeShort(player.getPledgeType());
 
-        writeInt(appearence.getTitleColor());
-        writeByte(0x00); // cursed weapon level
-        writeInt(zeroIfNullOrElse(player.getClan(), Clan::getReputationScore));
-        writeInt(player.getTransformationDisplayId());
-        writeInt(player.getAgathionId());
+        buffer.writeInt(appearence.getTitleColor());
+        buffer.writeByte(0x00); // cursed weapon level
+        buffer.writeInt(zeroIfNullOrElse(player.getClan(), Clan::getReputationScore));
+        buffer.writeInt(player.getTransformationDisplayId());
+        buffer.writeInt(player.getAgathionId());
 
-        writeByte(0x01); // pvp restrain status
+        buffer.writeByte(0x01); // pvp restrain status
 
-        writeInt((int) Math.round(player.getCurrentCp()));
-        writeInt(player.getMaxHp());
-        writeInt((int) Math.round(player.getCurrentHp()));
-        writeInt(player.getMaxMp());
-        writeInt((int) Math.round(player.getCurrentMp()));
-        writeByte(0x00); // lecture mark
+        buffer.writeInt((int) Math.round(player.getCurrentCp()));
+        buffer.writeInt(player.getMaxHp());
+        buffer.writeInt((int) Math.round(player.getCurrentHp()));
+        buffer.writeInt(player.getMaxMp());
+        buffer.writeInt((int) Math.round(player.getCurrentMp()));
+        buffer.writeByte(0x00); // lecture mark
 
         var abnormalVisualEffects = player.getEffectList().getCurrentAbnormalVisualEffects();
-        writeInt(abnormalVisualEffects.size());
-        abnormalVisualEffects.forEach(effect -> writeShort(effect.getClientId()));
+        buffer.writeInt(abnormalVisualEffects.size());
+        for (AbnormalVisualEffect effect : abnormalVisualEffects) {
+            buffer.writeShort(effect.getClientId());
+        }
 
-        writeByte(0); // ceremony of chaos position
-        writeByte(player.isHairAccessoryEnabled());
-        writeByte(player.getAbilityPointsUsed());
-        writeInt(0x00); // cursed weapon equipped id
-        writeInt(0x00); // wait action id
-        writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
-        writeShort(0x00); // notoriety
+        buffer.writeByte(0); // ceremony of chaos position
+        buffer.writeByte(player.isHairAccessoryEnabled());
+        buffer.writeByte(player.getAbilityPointsUsed());
+        buffer.writeInt(0x00); // cursed weapon equipped id
+        buffer.writeInt(0x00); // wait action id
+        buffer.writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
+        buffer.writeShort(0x00); // notoriety
 
-        writeShort(0x16 + appearence.getVisibleName().length() * 2);
-        writeByte(0x00); // create or update
-        writeByte(0x00); // show spawn event
+        buffer.writeShort(0x16 + appearence.getVisibleName().length() * 2);
+        buffer.writeByte(0x00); // create or update
+        buffer.writeByte(0x00); // show spawn event
 
         ILocational loc = nonNull(player.getVehicle()) ? player.getInVehiclePosition() : player;
-        writeInt(loc.getX());
-        writeInt(loc.getY());
-        writeInt(loc.getZ());
-        writeInt(zeroIfNullOrElse(player.getVehicle(), WorldObject::getObjectId));
+        buffer.writeInt(loc.getX());
+        buffer.writeInt(loc.getY());
+        buffer.writeInt(loc.getZ());
+        buffer.writeInt(zeroIfNullOrElse(player.getVehicle(), WorldObject::getObjectId));
 
-        writeSizedString(appearence.getVisibleName());
+        buffer.writeSizedString(appearence.getVisibleName());
     }
 }

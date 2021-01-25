@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.model.entity.ClanHall;
@@ -36,17 +37,17 @@ public class ExShowAgitInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_SHOW_AGIT_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_SHOW_AGIT_INFO, buffer );
 
         final Collection<ClanHall> clanHalls = ClanHallManager.getInstance().getClanHalls();
-        writeInt(clanHalls.size());
+        buffer.writeInt(clanHalls.size());
         clanHalls.forEach(clanHall ->
         {
-            writeInt(clanHall.getId());
-            writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getName()); // owner clan name
-            writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getLeaderName()); // leader name
-            writeInt(clanHall.getType().getClientVal()); // Clan hall type
+            buffer.writeInt(clanHall.getId());
+            buffer.writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getName()); // owner clan name
+            buffer.writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getLeaderName()); // leader name
+            buffer.writeInt(clanHall.getType().getClientVal()); // Clan hall type
         });
     }
 

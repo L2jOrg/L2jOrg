@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -36,11 +37,11 @@ public class ExAlterSkillRequest extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ALTER_SKILL_REQUEST);
-        writeInt(_nextSkillId);
-        writeInt(_currentSkillId);
-        writeInt(_alterTime);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ALTER_SKILL_REQUEST, buffer );
+        buffer.writeInt(_nextSkillId);
+        buffer.writeInt(_currentSkillId);
+        buffer.writeInt(_alterTime);
     }
 
 }

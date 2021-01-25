@@ -28,6 +28,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * Format: (ch)
  *
  * @author mrTJO & UnAfraid
+ * @author JoeAlisson
  */
 public final class RequestExShowContactList extends ClientPacket {
     @Override
@@ -40,11 +41,6 @@ public final class RequestExShowContactList extends ClientPacket {
             return;
         }
 
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
-            return;
-        }
-
-        client.sendPacket(new ExShowContactList(activeChar));
+        client.sendPacket(new ExShowContactList());
     }
 }

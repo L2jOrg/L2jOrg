@@ -19,7 +19,7 @@
 package org.l2j.gameserver.model.actor.request;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 /**
  * @author UnAfraid
@@ -70,7 +70,7 @@ public final class EnchantItemRequest extends AbstractRequest {
     }
 
     @Override
-    public boolean isUsing(int objectId) {
+    public boolean isUsingItem(int objectId) {
         return (objectId > 0) && ((objectId == enchantingItemObjectId) || (objectId == enchantingScrollObjectId) || (objectId == supportItemObjectId));
     }
 }

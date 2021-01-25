@@ -159,7 +159,7 @@ public class AccessLevel {
      *
      * @return boolean: true if access level have gm access, otherwise false<br>
      */
-    public boolean isGm() {
+    public boolean isGM() {
         return _isGm;
     }
 

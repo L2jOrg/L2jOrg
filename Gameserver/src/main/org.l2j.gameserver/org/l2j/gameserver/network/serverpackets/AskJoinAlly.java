@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -35,13 +36,13 @@ public class AskJoinAlly extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ASK_JOIN_ALLIANCE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ASK_JOIN_ALLIANCE, buffer );
 
-        writeInt(_requestorObjId);
-        writeString(null); // Ally Name ?
-        writeString(null); // TODO: Find me!
-        writeString(_requestorName);
+        buffer.writeInt(_requestorObjId);
+        buffer.writeString(null); // Ally Name ?
+        buffer.writeString(null); // TODO: Find me!
+        buffer.writeString(_requestorName);
     }
 
 }

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -33,19 +34,19 @@ public class ExDuelUpdateUserInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_DUEL_UPDATE_USER_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_DUEL_UPDATE_USER_INFO, buffer );
 
-        writeString(_activeChar.getName());
-        writeInt(_activeChar.getObjectId());
-        writeInt(_activeChar.getClassId().getId());
-        writeInt(_activeChar.getLevel());
-        writeInt((int) _activeChar.getCurrentHp());
-        writeInt(_activeChar.getMaxHp());
-        writeInt((int) _activeChar.getCurrentMp());
-        writeInt(_activeChar.getMaxMp());
-        writeInt((int) _activeChar.getCurrentCp());
-        writeInt(_activeChar.getMaxCp());
+        buffer.writeString(_activeChar.getName());
+        buffer.writeInt(_activeChar.getObjectId());
+        buffer.writeInt(_activeChar.getClassId().getId());
+        buffer.writeInt(_activeChar.getLevel());
+        buffer.writeInt((int) _activeChar.getCurrentHp());
+        buffer.writeInt(_activeChar.getMaxHp());
+        buffer.writeInt((int) _activeChar.getCurrentMp());
+        buffer.writeInt(_activeChar.getMaxMp());
+        buffer.writeInt((int) _activeChar.getCurrentCp());
+        buffer.writeInt(_activeChar.getMaxCp());
     }
 
 }

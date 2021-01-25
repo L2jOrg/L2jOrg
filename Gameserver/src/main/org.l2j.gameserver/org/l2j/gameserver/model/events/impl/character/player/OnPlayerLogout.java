@@ -27,14 +27,14 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  * @author UnAfraid
  */
 public class OnPlayerLogout implements IBaseEvent {
-    private final Player _activeChar;
+    private final Player player;
 
-    public OnPlayerLogout(Player activeChar) {
-        _activeChar = activeChar;
+    public OnPlayerLogout(Player player) {
+        this.player = player;
     }
 
-    public Player getActiveChar() {
-        return _activeChar;
+    public Player getPlayer() {
+        return player;
     }
 
     @Override

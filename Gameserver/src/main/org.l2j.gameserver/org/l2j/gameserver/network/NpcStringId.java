@@ -6973,8 +6973,7 @@ public final class NpcStringId {
 
     @ClientString(id = 91412, message = "West and east area near the Talking Island Village")
     public static NpcStringId WEST_AND_EAST_AREA_NEAR_THE_TALKING_ISLAND_VILLAGE;
-    @ClientString(id = 93301, message = "|Lv. 40-44| Exploring the West Outskirts of the Dungeon of Abyss")
-    public static NpcStringId LV_40_44_EXPLORING_THE_WEST_OUTSKIRTS_OF_THE_DUNGEON_OF_ABYSS;
+
     @ClientString(id = 93302, message = "|Lv. 40-44| Exploring the West Outskirts of the Dungeon of Abyss (In Progress)")
     public static NpcStringId LV_40_44_EXPLORING_THE_WEST_OUTSKIRTS_OF_THE_DUNGEON_OF_ABYSS_IN_PROGRESS;
     @ClientString(id = 93303, message = "|Lv. 40-44| Exploring the West Outskirts of the Dungeon of Abyss (Done)")
@@ -21004,8 +21003,7 @@ public final class NpcStringId {
     public static NpcStringId DAMN_IT_GIANTS_CAVE_IS_NOT_SAFE_AFTER_THE_INVASION;
     @ClientString(id = 1803454, message = "I won't wait for too long! I'll be gone in one minute!")
     public static NpcStringId I_WON_T_WAIT_FOR_TOO_LONG_I_LL_BE_GONE_IN_ONE_MINUTE;
-    @ClientString(id = 1803455, message = "Character $s1 has become a hero. Class: $s2. Congratulations!")
-    public static NpcStringId CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS;
+
     @ClientString(id = 1803456, message = "Gladiator")
     public static NpcStringId GLADIATOR;
     @ClientString(id = 1803457, message = "Warlord")
@@ -24401,6 +24399,9 @@ public final class NpcStringId {
     @ClientString(id = 42247, message = "Oh, this is dragging on too long... At this rate I won't make it home before the seven seals are broken.")
     public static NpcStringId OH_THIS_IS_DRAGGING_ON_TOO_LONG_AT_THIS_RATE_I_WON_T_MAKE_IT_HOME_BEFORE_THE_SEVEN_SEALS_ARE_BROKEN;
 
+    @ClientString(id = 93301, message = "|Lv. 40-44| Exploring the West Outskirts of the Dungeon of Abyss")
+    public static NpcStringId LV_40_44_EXPLORING_THE_WEST_OUTSKIRTS_OF_THE_DUNGEON_OF_ABYSS;
+
     @ClientString(id = 99702, message = "What are you looking at?")
     public static NpcStringId WHAT_ARE_YOU_LOOKING_AT;
 
@@ -24757,6 +24758,12 @@ public final class NpcStringId {
 
     @ClientString(id = 1803290, message = "My servants can keep me safe! I have nothing to fear!")
     public static NpcStringId MY_SERVANTS_CAN_KEEP_ME_SAFE_I_HAVE_NOTHING_TO_FEAR;
+
+    @ClientString(id = 1803455, message = "Character $s1 has become a hero. Class: $s2. Congratulations!")
+    public static NpcStringId CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS;
+
+    @ClientString(id = 1803770, message = "Glory to the heroes who have defeated Lord Ishka!")
+    public static NpcStringId GLORY_TO_THE_HEROES_WHO_HAVE_DEFEATED_LORD_ISHKA;
 
 
     private static IntMap<NpcStringId> VALUES = new HashIntMap<>();

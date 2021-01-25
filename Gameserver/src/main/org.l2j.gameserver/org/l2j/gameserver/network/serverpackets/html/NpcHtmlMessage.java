@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.html;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -70,13 +71,13 @@ public final class NpcHtmlMessage extends AbstractHtmlPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.NPC_HTML_MESSAGE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.NPC_HTML_MESSAGE, buffer );
 
-        writeInt(getNpcObjId());
-        writeString(getHtml());
-        writeInt(_itemId);
-        writeInt(0x00); // TODO: Find me!
+        buffer.writeInt(getNpcObjId());
+        buffer.writeString(getHtml());
+        buffer.writeInt(_itemId);
+        buffer.writeInt(0x00); // TODO: Find me!
     }
 
     @Override

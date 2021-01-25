@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.GameClient;
@@ -29,27 +30,27 @@ import java.util.Set;
  * @author Sdw
  */
 public class ExUserInfoAbnormalVisualEffect extends ServerPacket {
-    private final Player _activeChar;
+    private final Player player;
 
     public ExUserInfoAbnormalVisualEffect(Player cha) {
-        _activeChar = cha;
+        player = cha;
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT, buffer );
 
-        writeInt(_activeChar.getObjectId());
-        writeInt(_activeChar.getTransformationId());
+        buffer.writeInt(player.getObjectId());
+        buffer.writeInt(player.getTransformationId());
 
-        final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
-        final boolean isInvisible = _activeChar.isInvisible();
-        writeInt(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
+        final Set<AbnormalVisualEffect> abnormalVisualEffects = player.getEffectList().getCurrentAbnormalVisualEffects();
+        final boolean isInvisible = player.isInvisible();
+        buffer.writeInt(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
-            writeShort((short) abnormalVisualEffect.getClientId());
+            buffer.writeShort(abnormalVisualEffect.getClientId());
         }
         if (isInvisible) {
-            writeShort((short) AbnormalVisualEffect.STEALTH.getClientId());
+            buffer.writeShort(AbnormalVisualEffect.STEALTH.getClientId());
         }
     }
 

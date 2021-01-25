@@ -45,7 +45,7 @@ public class CanSummonSkillCondition implements SkillCondition {
 		
 		boolean canSummon = true;
 
-		if (player.isFlyingMounted() || player.isMounted() || player.inObserverMode() || player.isTeleporting())
+		if (player.isFlyingMounted() || player.isMounted() || player.isInObserverMode() || player.isTeleporting())
 		{
 			canSummon = false;
 		}

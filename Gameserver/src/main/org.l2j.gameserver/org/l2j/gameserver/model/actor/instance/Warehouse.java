@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -54,5 +55,13 @@ public class Warehouse extends Folk {
         }
 
         return "data/html/warehouse/" + pom + ".htm";
+    }
+
+    @Override
+    public void showChatWindow(Player player, int val) {
+        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && showPkDenyChatWindow(player, "warehouse")) {
+            return;
+        }
+        super.showChatWindow(player, val);
     }
 }

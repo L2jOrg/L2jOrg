@@ -160,11 +160,12 @@ public class HtmlUtil {
      */
     private static String getGauge(int width, long current, long max, boolean displayAsPercentage, String backgroundImage, String image, long imageHeight, long top) {
         current = Math.min(current, max);
+        max = Math.max(1, max);
         final StringBuilder sb = new StringBuilder();
         sb.append("<table width=").append(width).append(" cellpadding=0 cellspacing=0>");
 
         sb.append("<tr>").append("<td background=\"").append(backgroundImage).append("\">");
-        sb.append("<img src=\"").append(image).append("\" width=").append(current / max * width);
+        sb.append("<img src=\"").append(image).append("\" width=").append(current /max * width);
         sb.append(" height=").append(imageHeight).append("></td></tr>");
 
         sb.append("<tr>");

@@ -27,12 +27,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
-import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchEnd;
-import org.l2j.gameserver.world.zone.AbstractZoneSettings;
-import org.l2j.gameserver.world.zone.ZoneManager;
-import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,16 +48,6 @@ public class OlympiadStadiumZone extends SpawnZone {
 
     public OlympiadStadiumZone(int id) {
         super(id);
-        AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-        if (settings == null) {
-            settings = new Settings();
-        }
-        setSettings(settings);
-    }
-
-    @Override
-    public Settings getSettings() {
-        return (Settings) super.getSettings();
     }
 
     @Override
@@ -76,23 +61,12 @@ public class OlympiadStadiumZone extends SpawnZone {
 
     @Override
     protected final void onEnter(Creature creature) {
-        OlympiadGameTask task;
-        if (nonNull(task = getSettings().getOlympiadTask()) && task.isBattleStarted()) {
-            creature.setInsideZone(ZoneType.PVP, true);
-            if (isPlayer(creature)) {
-                creature.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-                task.getGame().sendOlympiadInfo(creature);
-            }
-        }
-
         if (isPlayable(creature)) {
             final Player player = creature.getActingPlayer();
             if (nonNull(player)) {
-                // only participants, observers and GMs allowed
-                if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.inObserverMode()) {
+                if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode()) {
                     ThreadPool.execute(new KickPlayer(player));
                 } else {
-                    // check for pet
                     final Summon pet = player.getPet();
                     if (nonNull(pet)) {
                         pet.unSummon(player);
@@ -104,13 +78,8 @@ public class OlympiadStadiumZone extends SpawnZone {
 
     @Override
     protected final void onExit(Creature creature) {
-        OlympiadGameTask task;
-        if ( nonNull(task = getSettings().getOlympiadTask()) && task.isBattleStarted()) {
-            creature.setInsideZone(ZoneType.PVP, false);
-            if (isPlayer(creature)) {
-                creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
-                creature.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
-            }
+        if (isPlayer(creature)) {
+            creature.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
         }
     }
 
@@ -137,22 +106,6 @@ public class OlympiadStadiumZone extends SpawnZone {
         public void run() {
             player.getServitors().values().forEach(s -> s.unSummon(player));
             player.teleToLocation(TeleportWhereType.TOWN, null);
-        }
-    }
-
-    public static final class Settings extends AbstractZoneSettings {
-        private OlympiadGameTask _task = null;
-
-        protected Settings() {
-        }
-
-        public OlympiadGameTask getOlympiadTask() {
-            return _task;
-        }
-
-        @Override
-        public void clear() {
-            _task = null;
         }
     }
 }

@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
@@ -69,7 +69,7 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		skills.forEach(holder -> activeChar.useMagic(holder.getSkill(), item, false, false));
+		skills.forEach(holder -> activeChar.useSkill(holder.getSkill(), item, false, false));
 		return true;
 	}
 }

@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.model;
 
+import org.l2j.gameserver.data.database.data.ItemVariationData;
 import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.options.Options;
 
 import java.util.Objects;
 
@@ -28,49 +28,47 @@ import java.util.Objects;
  * Used to store an augmentation and its bonuses.
  *
  * @author durgus, UnAfraid, Pere
+ * @author JoeAlisson
  */
 public final class VariationInstance {
-    private final int _mineralId;
-    private final Options _option1;
-    private final Options _option2;
 
-    public VariationInstance(int mineralId, int option1Id, int option2Id) {
-        _mineralId = mineralId;
-        _option1 = AugmentationEngine.getInstance().getOptions(option1Id);
-        _option2 = AugmentationEngine.getInstance().getOptions(option2Id);
-        if ((_option1 == null) || (_option2 == null)) {
-            throw new IllegalArgumentException("Couldn't find option for id: " + option1Id + " or id: " + option1Id);
-        }
+    private final ItemVariationData data;
+
+    public VariationInstance(int itemObjectId, int mineralId, int option1Id, int option2Id) {
+        Objects.requireNonNull(AugmentationEngine.getInstance().getOptions(option1Id), "Couldn't find option for id " + option1Id);
+        Objects.requireNonNull(AugmentationEngine.getInstance().getOptions(option2Id), "Couldn't find option for id "+ option2Id);
+        data = ItemVariationData.of(itemObjectId, mineralId, option1Id, option2Id);
     }
 
-    public VariationInstance(int mineralId, Options op1, Options op2) {
-        Objects.requireNonNull(op1);
-        Objects.requireNonNull(op2);
-
-        _mineralId = mineralId;
-        _option1 = op1;
-        _option2 = op2;
+    public VariationInstance(ItemVariationData data) {
+        Objects.requireNonNull(AugmentationEngine.getInstance().getOptions(data.getOption1()), "Couldn't find option for id " + data.getOption1());
+        Objects.requireNonNull(AugmentationEngine.getInstance().getOptions(data.getOption2()), "Couldn't find option for id " + data.getOption2());
+        this.data = data;
     }
 
     public int getMineralId() {
-        return _mineralId;
+        return data.getMineralId();
     }
 
     public int getOption1Id() {
-        return _option1.getId();
+        return data.getOption1();
     }
 
     public int getOption2Id() {
-        return _option2.getId();
+        return data.getOption2();
     }
 
     public void applyBonus(Player player) {
-        _option1.apply(player);
-        _option2.apply(player);
+        AugmentationEngine.getInstance().getOptions(data.getOption1()).apply(player);
+        AugmentationEngine.getInstance().getOptions(data.getOption2()).apply(player);
     }
 
     public void removeBonus(Player player) {
-        _option1.remove(player);
-        _option2.remove(player);
+        AugmentationEngine.getInstance().getOptions(data.getOption1()).remove(player);
+        AugmentationEngine.getInstance().getOptions(data.getOption2()).remove(player);
+    }
+
+    public ItemVariationData getData() {
+        return data;
     }
 }

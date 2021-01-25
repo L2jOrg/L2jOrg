@@ -24,7 +24,7 @@ import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 /**
  * Note: In retail this effect doesn't stack. It appears that the active value is taken from the last such effect.

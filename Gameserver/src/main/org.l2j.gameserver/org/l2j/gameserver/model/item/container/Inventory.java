@@ -18,27 +18,28 @@
  */
 package org.l2j.gameserver.model.item.container;
 
-import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.item.InventoryListener;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
@@ -50,6 +51,7 @@ import java.util.stream.Collectors;
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.model.item.CommonItem.WEDDING_BOUQUET;
@@ -62,7 +64,6 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public abstract class Inventory extends ItemContainer {
 
     public static final int BEAUTY_TICKET_ID = 36308;
-    public static final long MAX_ADENA = Config.MAX_ADENA;
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
 
@@ -105,24 +106,23 @@ public abstract class Inventory extends ItemContainer {
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
-    public Item dropItem(String process, Item item, Player actor, Object reference) {
+    public Item dropItem(String process, Item item, Player actor, WorldObject reference) {
         if (item == null) {
             return null;
         }
 
-        synchronized (item) {
-            if (!items.containsKey(item.getObjectId())) {
-                return null;
-            }
-
-            removeItem(item);
-            item.setOwnerId(process, 0, actor, reference);
-            item.setItemLocation(ItemLocation.VOID);
-            item.setLastChange(Item.REMOVED);
-
-            item.updateDatabase();
-            refreshWeight();
+        if (!items.containsKey(item.getObjectId())) {
+            return null;
         }
+
+        removeItem(item);
+        item.changeOwner(process, 0, actor, reference);
+        item.changeItemLocation(ItemLocation.VOID);
+        item.setLastChange(ItemChangeType.REMOVED);
+
+        item.updateDatabase();
+        refreshWeight();
+
         return item;
     }
 
@@ -136,30 +136,25 @@ public abstract class Inventory extends ItemContainer {
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the destroyed item or the updated item in inventory
      */
-    public Item dropItem(String process, int objectId, long count, Player actor, Object reference) {
+    public Item dropItem(String process, int objectId, long count, Player actor, WorldObject reference) {
         Item item = getItemByObjectId(objectId);
         if (item == null) {
             return null;
         }
 
-        synchronized (item) {
-            if (!items.containsKey(item.getObjectId())) {
-                return null;
-            }
+        // Adjust item quantity and create new instance to drop
+        // Directly drop entire item
+        if (item.getCount() > count) {
+            item.changeCount(process, -count, actor, reference);
+            item.setLastChange(ItemChangeType.MODIFIED);
+            item.updateDatabase();
 
-            // Adjust item quantity and create new instance to drop
-            // Directly drop entire item
-            if (item.getCount() > count) {
-                item.changeCount(process, -count, actor, reference);
-                item.setLastChange(Item.MODIFIED);
-                item.updateDatabase();
-
-                item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
-                item.updateDatabase();
-                refreshWeight();
-                return item;
-            }
+            item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
+            item.updateDatabase();
+            refreshWeight();
+            return item;
         }
+
         return dropItem(process, item, actor, reference);
     }
 
@@ -290,8 +285,8 @@ public abstract class Inventory extends ItemContainer {
             if (nonNull(old)) {
                 paperdoll.remove(slot);
 
-                old.setItemLocation(getBaseLocation());
-                old.setLastChange(Item.MODIFIED);
+                old.changeItemLocation(getBaseLocation());
+                old.setLastChange(ItemChangeType.MODIFIED);
 
                 wearedMask &= ~old.getItemMask();
                 listeners.forEach(l -> l.notifyUnequiped(slot, old, this));
@@ -300,8 +295,8 @@ public abstract class Inventory extends ItemContainer {
 
             if (nonNull(item)) {
                 paperdoll.put(slot, item);
-                item.setItemLocation(getEquipLocation(), slot.getId());
-                item.setLastChange(Item.MODIFIED);
+                item.changeItemLocation(getEquipLocation(), slot.getId());
+                item.setLastChange(ItemChangeType.MODIFIED);
                 wearedMask |= item.getItemMask();
                 listeners.forEach(l -> l.notifyEquiped(slot, item, this));
                 item.updateDatabase();
@@ -648,41 +643,30 @@ public abstract class Inventory extends ItemContainer {
      */
     @Override
     public void restore() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data")) {
-            ps.setInt(1, getOwnerId());
-            ps.setString(2, getBaseLocation().name());
-            ps.setString(3, getEquipLocation().name());
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
+        for (ItemData data : getDAO(ItemDAO.class).findInventoryItems(getOwnerId(), getBaseLocation(), getEquipLocation())) {
+            if(data.getTime() > 0 && (data.getTime() - System.currentTimeMillis() <= 1000)) {
+                getOwner().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(data.getItemId()));
+                getDAO(ItemDAO.class).deleteItem(data.getObjectId());
+                continue;
+            }
+            final Item item = new Item(data);
 
-                    try {
-                        final Item item = new Item(rs);
-                        if (isPlayer(getOwner())) {
-                            final Player player = (Player) getOwner();
-
-                            if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
-                                item.setItemLocation(ItemLocation.INVENTORY);
-                            }
-                        }
-
-                        World.getInstance().addObject(item);
-
-                        // If stackable item is found in inventory just add to current quantity
-                        if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
-                            addItem("Restore", item, getOwner().getActingPlayer(), null);
-                        } else {
-                            addItem(item);
-                        }
-                    }catch (Exception e) {
-                        LOGGER.warn("Could not restore item {}  for {}", rs.getInt("item_id"), getOwner());
-                    }
+            if(getOwner() instanceof Player player) {
+                if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
+                    item.changeItemLocation(ItemLocation.INVENTORY);
                 }
             }
-            refreshWeight();
-        } catch (Exception e) {
-            LOGGER.warn("Could not restore inventory: " + e.getMessage(), e);
+
+            World.getInstance().addObject(item);
+
+            // If stackable item is found in inventory just add to current quantity
+            if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
+                addItem("Restore", item, getOwner().getActingPlayer(), null);
+            } else {
+                addItem(item);
+            }
         }
+        refreshWeight();
     }
 
     public int getTalismanSlots() {

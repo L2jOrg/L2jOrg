@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.vip;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -25,12 +26,12 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 public class ReceiveVipLuckyGameInfo extends ServerPacket {
 
     @Override
-    protected void writeImpl(GameClient client) {
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
         final var player = client.getPlayer();
-        writeId(ServerExPacketId.EX_LUCKY_GAME_INFO);
-        writeByte(true); //Enable 1
-        writeInt((int) player.getAdena());
-        writeInt(player.getNCoins());
+        writeId(ServerExPacketId.EX_LUCKY_GAME_INFO, buffer );
+        buffer.writeByte(true); //Enable 1
+        buffer.writeInt((int) player.getAdena());
+        buffer.writeInt(player.getNCoins());
     }
 
 }

@@ -20,11 +20,11 @@
 package org.l2j.scripts.handlers.itemhandlers;
 
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.PetItemHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.holders.PetItemRequest;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -43,37 +43,37 @@ public class SummonItems extends ItemSkillsTemplate
 			return false;
 		}
 		
-		final Player activeChar = playable.getActingPlayer();
-		if (!activeChar.getFloodProtectors().getItemPetSummon().tryPerformAction("summon items") || (activeChar.getBlockCheckerArena() != -1) || activeChar.inObserverMode() || activeChar.isAllSkillsDisabled() || activeChar.isCastingNow())
+		final Player player = playable.getActingPlayer();
+		if (!player.getFloodProtectors().getItemPetSummon().tryPerformAction("summon items") || (player.getBlockCheckerArena() != -1) || player.isInObserverMode() || player.isAllSkillsDisabled() || player.isCastingNow())
 		{
 			return false;
 		}
 		
-		if (activeChar.isSitting())
+		if (player.isSitting())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
 			return false;
 		}
 		
-		if (activeChar.hasPet() || activeChar.isMounted())
+		if (player.hasPet() || player.isMounted())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return false;
 		}
 		
-		if (activeChar.isAttackingNow())
+		if (player.isAttackingNow())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
 			return false;
 		}
 		
-		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
-		if ((petData == null) || (petData.getNpcId() == -1))
+		final PetTemplate petTemplate = PetDataTable.getInstance().getPetDataByItemId(item.getId());
+		if ((petTemplate == null) || (petTemplate.getNpcId() == -1))
 		{
 			return false;
 		}
 		
-		activeChar.addScript(new PetItemHolder(item));
+		player.addRequest(new PetItemRequest(player, item));
 		return super.useItem(playable, item, forceUse);
 	}
 }

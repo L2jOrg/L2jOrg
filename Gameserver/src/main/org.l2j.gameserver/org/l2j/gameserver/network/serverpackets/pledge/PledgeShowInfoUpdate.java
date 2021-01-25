@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.pledge;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,12 +36,12 @@ public class PledgeShowInfoUpdate extends PledgeAbstractPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_SHOW_INFO_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.PLEDGE_SHOW_INFO_UPDATE, buffer );
 
-        writeInt(clan.getId());
-        writeInt(getSettings(ServerSettings.class).serverId());
-        writeClanInfo(0x00);
+        buffer.writeInt(clan.getId());
+        buffer.writeInt(getSettings(ServerSettings.class).serverId());
+        writeClanInfo(0x00, buffer);
     }
 
 }

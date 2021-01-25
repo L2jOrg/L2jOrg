@@ -74,7 +74,7 @@ public class ExRequestCostumeExtract extends ClientPacket {
         if(isNull(costume) || costume.getAmount() < amount) {
             player.sendPacket(THIS_TRANSFORMATION_CANNOT_BE_EXTRACTED);
             return false;
-        } else if(!player.isInventoryUnder90(true)) {
+        } else if(!player.isInventoryUnder90()) {
             player.sendPacket(NOT_ENOUGH_SPACE_IN_THE_INVENTORY_PLEASE_MAKE_MORE_ROOM_AND_TRY_AGAIN);
             return false;
         }

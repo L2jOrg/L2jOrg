@@ -21,43 +21,16 @@ package org.l2j.gameserver.model.eventengine;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
+import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.nio.file.Path;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @param <T>
  * @author UnAfraid
  */
-public abstract class AbstractEvent<T extends AbstractEventMember<?>> extends AbstractScript {
-    private final Map<Integer, T> _members = new ConcurrentHashMap<>();
-    private IEventState _state;
-
-    public final Map<Integer, T> getMembers() {
-        return _members;
-    }
-
-    public final T getMember(int objectId) {
-        return _members.get(objectId);
-    }
-
-    public final void addMember(T member) {
-        _members.put(member.getObjectId(), member);
-    }
-
-    public final void broadcastPacket(ServerPacket... packets) {
-        _members.values().forEach(member -> member.sendPacket(packets));
-    }
-
-    public final IEventState getState() {
-        return _state;
-    }
-
-    public final void setState(IEventState state) {
-        _state = state;
-    }
+public abstract class AbstractEvent extends AbstractScript {
 
     @Override
     public final String getScriptName() {
@@ -74,7 +47,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>> extends Ab
      * @return {@code true} if player is on event, {@code false} otherwise.
      */
     public boolean isOnEvent(Player player) {
-        return _members.containsKey(player.getObjectId());
+        return false;
     }
 
     /**
@@ -100,4 +73,9 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>> extends Ab
     public boolean canRevive(Player player) {
         return true;
     }
+
+    public abstract void sendMessage(SystemMessageId messageId);
+
+    public abstract void sendPacket(ServerPacket packet);
+
 }

@@ -21,7 +21,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.enums.ShortcutType;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
 import static java.util.Objects.isNull;

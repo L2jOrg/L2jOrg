@@ -93,7 +93,7 @@ public final class RequestJoinParty extends ClientPacket {
         }
 
         if (target.isInOlympiadMode() || requestor.isInOlympiadMode()) {
-            if ((target.isInOlympiadMode() != requestor.isInOlympiadMode()) || (target.getOlympiadGameId() != requestor.getOlympiadGameId()) || (target.getOlympiadSide() != requestor.getOlympiadSide())) {
+            if ((target.isInOlympiadMode() != requestor.isInOlympiadMode()) || (target.getOlympiadMatchId() != requestor.getOlympiadMatchId()) || (target.getOlympiadSide() != requestor.getOlympiadSide())) {
                 requestor.sendPacket(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS);
                 return;
             }

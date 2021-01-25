@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -35,11 +36,11 @@ public class ExTacticalSign extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_TACTICAL_SIGN);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_TACTICAL_SIGN, buffer );
 
-        writeInt(_target.getObjectId());
-        writeInt(_tokenId);
+        buffer.writeInt(_target.getObjectId());
+        buffer.writeInt(_tokenId);
     }
 
 }

@@ -22,6 +22,7 @@ package org.l2j.gameserver.world.zone;
  * Zone Ids.
  *
  * @author Zoey76
+ * @author JoeAlisson
  */
 public enum ZoneType {
     PVP,
@@ -48,9 +49,12 @@ public enum ZoneType {
     NO_RESTART,
     FISHING,
     UNDYING,
-    TAX;
+    TAX,
+    RAID_LIMIT;
+
+    private static final int ZONE_COUNT = values().length;
 
     public static int getZoneCount() {
-        return values().length;
+        return ZONE_COUNT;
     }
 }

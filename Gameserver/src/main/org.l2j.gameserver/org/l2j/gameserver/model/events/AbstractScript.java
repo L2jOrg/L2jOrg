@@ -23,11 +23,11 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.DoorDataManager;
+import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.scripting.ManagedScript;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
@@ -56,7 +56,6 @@ import org.l2j.gameserver.model.events.impl.character.player.*;
 import org.l2j.gameserver.model.events.impl.instance.*;
 import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
-import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
@@ -77,8 +76,7 @@ import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.model.stats.Stat;
@@ -781,13 +779,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * Provides instant callback operation when Olympiad match finishes.
-     */
-    protected final List<AbstractEventListener> setOlympiadMatchResult(Consumer<OnOlympiadMatchResult> callback) {
-        return registerConsumer(callback, EventType.ON_OLYMPIAD_MATCH_RESULT, ListenerRegisterType.OLYMPIAD);
-    }
-
-    /**
      * Provides instant callback operation when castle siege begins
      */
     protected final List<AbstractEventListener> setCastleSiegeStartId(Consumer<OnCastleSiegeStart> callback, int... castleIds) {
@@ -1147,11 +1138,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      */
     public long getQuestItemsCount(Player player, int... itemIds) {
         long count = 0;
-        for (Item item : player.getInventory().getItems()) {
-            if (item == null) {
-                continue;
-            }
-
+        for (Item item : player.getInventory().getQuestItems()) {
             for (int itemId : itemIds) {
                 if (item.getId() == itemId) {
                     if (MathUtil.checkAddOverFlow(count, item.getCount())) {
@@ -1839,8 +1826,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             player.sendPacket(smsg);
         }
         // send packets
-        player.sendPacket(new ExUserInfoInvenWeight(player));
-        player.sendPacket(new ExAdenaInvenCount(player));
+        player.sendPacket(new ExUserInfoInvenWeight());
+        player.sendPacket(new ExAdenaInvenCount());
         player.sendPacket(new ExBloodyCoinCount());
     }
 
@@ -1878,39 +1865,12 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         // set enchant level for item if that item is not adena
         if ((enchantlevel > 0) && (itemId != CommonItem.ADENA)) {
-            item.setEnchantLevel(enchantlevel);
+            item.changeEnchantLevel(enchantlevel);
         }
 
         if (playSound) {
             playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
         }
-        sendItemGetMessage(player, item, count);
-    }
-
-    public static void giveItems(Player player, int itemId, long count, AttributeType attributeType, int attributeValue) {
-        if (count <= 0) {
-            return;
-        }
-
-        // Add items to player's inventory
-        final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
-        if (item == null) {
-            return;
-        }
-
-        // set enchant level for item if that item is not adena
-        if ((attributeType != null) && (attributeValue > 0)) {
-            item.setAttribute(new AttributeHolder(attributeType, attributeValue), true);
-            if (item.isEquipped()) {
-                // Recalculate all stats
-                player.getStats().recalculateStats(true);
-            }
-
-            final InventoryUpdate iu = new InventoryUpdate();
-            iu.addModifiedItem(item);
-            player.sendInventoryUpdate(iu);
-        }
-
         sendItemGetMessage(player, item, count);
     }
 
@@ -2075,7 +2035,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     public static void playSound(Instance world, String sound) {
-        world.broadcastPacket(new PlaySound(sound));
+        world.sendPacket(PlaySound.sound(sound));
     }
 
     /**
@@ -2085,7 +2045,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param sound  the name of the sound to play
      */
     public static void playSound(Player player, String sound) {
-        player.sendPacket(QuestSound.getSound(sound));
+        player.sendPacket(PlaySound.sound(sound));
     }
 
     /**
@@ -2108,6 +2068,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public static void addExpAndSp(Player player, long exp, int sp) {
         player.addExpAndSp((long) player.getStats().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStats().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
         PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
+        MagicLampData.getInstance().addLampExp(player, exp, true);
     }
 
     /**
@@ -2150,7 +2111,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     public static void specialCamera(Instance world, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk) {
-        world.broadcastPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
+        world.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
     }
 
     public static void addRadar(Player player, ILocational loc) {

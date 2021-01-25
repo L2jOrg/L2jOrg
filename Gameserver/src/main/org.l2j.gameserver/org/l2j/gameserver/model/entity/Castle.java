@@ -217,8 +217,8 @@ public final class Castle extends AbstractResidence {
                 return;
             }
             data.updateTreasury(-amount);
-        } else if (data.getTreasury() + amount > Inventory.MAX_ADENA) {
-            data.setTreasury(Inventory.MAX_ADENA);
+        } else if (data.getTreasury() + amount > getSettings(CharacterSettings.class).maxAdena()) {
+            data.setTreasury(getSettings(CharacterSettings.class).maxAdena());
         } else {
             data.updateTreasury(amount);
         }
@@ -447,7 +447,7 @@ public final class Castle extends AbstractResidence {
         if (nonNull(clan)) {
             clan.setCastleId(getId()); // Set has castle flag for new owner
             clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-            clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
+            clan.broadcastToOnlineMembers(PlaySound.music("Siege_Victory"));
         }
     }
 

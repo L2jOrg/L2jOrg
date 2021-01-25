@@ -18,8 +18,11 @@
  */
 package org.l2j.gameserver.instancemanager;
 
+import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -37,10 +40,13 @@ import org.l2j.gameserver.model.eventengine.ScheduleTarget;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.Node;
 
 import java.util.Collections;
 
@@ -51,10 +57,22 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 /**
  * @author UnAfraid
  */
-public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
+public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(DailyTaskManager.class);
+    IntSet resetSkills = new HashIntSet();
 
     private DailyTaskManager() {
+    }
+
+    @Override
+    public void config(GameXmlReader reader, Node configNode) {
+        final var dailyConfig = configNode.getFirstChild();
+        if(nonNull(dailyConfig) && dailyConfig.getNodeName().equals("daily-config")) {
+            for(var skillNode = dailyConfig.getFirstChild(); nonNull(skillNode); skillNode = skillNode.getNextSibling()) {
+                resetSkills.add(reader.parseInt(skillNode.getAttributes(), "id"));
+            }
+        }
     }
 
     @Override
@@ -62,7 +80,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     }
 
     @ScheduleTarget
-    private void onReset() {
+    public void onReset() {
         ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
         resetDailyMissionRewards();
         resetDailySkills();
@@ -86,11 +104,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
                 player.sendPacket(new ExWorldChatCnt(player));
             }
 
-            if (Config.TRAINING_CAMP_ENABLE) {
-                player.resetTraingCampDuration();
-                player.getAccountVariables().storeMe();
-            }
-
             if(player.getVipTier() > 0) {
                 VipEngine.getInstance().checkVipTierExpiration(player);
             }
@@ -110,11 +123,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
             LOGGER.info("Daily world chat points has been reset.");
         }
 
-        if (Config.TRAINING_CAMP_ENABLE) {
-            getDAO(AccountDAO.class).deleteAccountVariable("TRAINING_CAMP_DURATION");
-            LOGGER.info("Training Camp daily time has been resetted.");
-        }
-
         getDAO(PlayerVariablesDAO.class).resetRevengeData();
     }
 
@@ -127,9 +135,9 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     private void onClansTask(){
         for (Clan clan : ClanTable.getInstance().getClans()) {
             checkNewLeader(clan);
-            ClanRewardManager.getInstance().checkArenaProgress(clan);
+            ClanRewardManager.getInstance().resetArenaProgress(clan);
         }
-        GlobalVariablesManager.getInstance().resetRaidBonus();
+        getDAO(ClanDAO.class).resetArenaProgress();
         LOGGER.info("Clans has been updated");
     }
 
@@ -144,7 +152,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
 
     @ScheduleTarget
     private void onVitalityReset() {
-        if (!Config.ENABLE_VITALITY) {
+        if (!getSettings(CharacterSettings.class).isVitalityEnabled()) {
             return;
         }
 
@@ -155,9 +163,8 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     }
 
     private void resetDailySkills() {
-        for (SkillHolder skill : getVariables().getList("reset_skills", SkillHolder.class, Collections.emptyList())) {
-            getDAO(PlayerDAO.class).deleteSkillSave(skill.getSkillId());
-        }
+        final var playerDao = getDAO(PlayerDAO.class);
+        resetSkills.forEach(playerDao::deleteSkillSave);
         LOGGER.info("Daily skill reuse cleaned.");
     }
 

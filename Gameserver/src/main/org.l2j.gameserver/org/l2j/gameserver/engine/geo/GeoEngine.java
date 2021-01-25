@@ -333,11 +333,11 @@ public class GeoEngine {
      * @return {@code boolean} : True if origin can see target
      */
     public final boolean canSeeTarget(WorldObject origin, WorldObject target) {
-        if (isDoor(target) || isArtifact(target) || (isCreature(target) && ((Creature) target).isFlying())) {
+        if (isDoor(target) || isArtifact(target) || (target instanceof Creature creature && creature.isFlying())) {
             return true;
         }
 
-        double theight = isCreature(target) ? ((Creature) target).getCollisionHeight() * 2 : 0;
+        double theight = calcIfIsCreature(target, Creature::getCollisionHeight) * 2;
         return canSeeTarget(origin, target.getLocation(), theight);
     }
 

@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.Clan.RankPrivs;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -30,13 +31,13 @@ public class PledgePowerGradeList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_PLEDGE_POWER_GRADE_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_PLEDGE_POWER_GRADE_LIST, buffer );
 
-        writeInt(_privs.length);
+        buffer.writeInt(_privs.length);
         for (RankPrivs temp : _privs) {
-            writeInt(temp.getRank());
-            writeInt(temp.getParty());
+            buffer.writeInt(temp.getRank());
+            buffer.writeInt(temp.getParty());
         }
     }
 

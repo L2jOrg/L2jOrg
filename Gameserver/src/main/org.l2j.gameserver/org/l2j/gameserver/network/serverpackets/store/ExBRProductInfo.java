@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.store;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -42,21 +43,21 @@ public class ExBRProductInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_PRODUCT_INFO_ACK);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BR_PRODUCT_INFO_ACK, buffer );
 
-        writeInt(item.getId());
-        writeInt(item.getPrice());
-        writeInt(item.getItems().size());
+        buffer.writeInt(item.getId());
+        buffer.writeInt(item.getPrice());
+        buffer.writeInt(item.getItems().size());
         for (L2StoreItem item : item.getItems()) {
-            writeInt(item.getId());
-            writeInt((int) item.getCount());
-            writeInt(item.getWeight());
-            writeInt(item.isTradable());
+            buffer.writeInt(item.getId());
+            buffer.writeInt((int) item.getCount());
+            buffer.writeInt(item.getWeight());
+            buffer.writeInt(item.isTradable());
         }
-        writeLong(adenas);
-        writeLong(points);
-        writeLong(coins);
+        buffer.writeLong(adenas);
+        buffer.writeLong(points);
+        buffer.writeLong(coins);
     }
 
 }

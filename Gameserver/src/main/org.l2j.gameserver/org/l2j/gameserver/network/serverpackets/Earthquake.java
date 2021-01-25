@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -58,15 +59,15 @@ public class Earthquake extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EARTHQUAKE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.EARTHQUAKE, buffer );
 
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
-        writeInt(_intensity);
-        writeInt(_duration);
-        writeInt(0x00); // Unknown
+        buffer.writeInt(_x);
+        buffer.writeInt(_y);
+        buffer.writeInt(_z);
+        buffer.writeInt(_intensity);
+        buffer.writeInt(_duration);
+        buffer.writeInt(0x00); // Unknown
     }
 
 }

@@ -22,12 +22,15 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
 import org.l2j.gameserver.model.interfaces.ITerritorized;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -106,7 +109,13 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     public void spawnAll(Instance instance) {
-        spawns.parallelStream().forEach(template -> template.spawn(instance));
+        if(getSettings(ServerSettings.class).parallelismThreshold() < spawns.size()) {
+            spawns.parallelStream().forEach(template -> template.spawn(instance));
+        } else {
+            for (NpcSpawnTemplate spawn : spawns) {
+                spawn.spawn(instance);
+            }
+        }
     }
 
     public void despawnAll() {
@@ -114,7 +123,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     @Override
-    public SpawnGroup clone() {
+    public SpawnGroup clone() { // TODO change to a copy method
         final SpawnGroup group = new SpawnGroup(_name, _spawnByDefault);
 
         // Clone banned territories

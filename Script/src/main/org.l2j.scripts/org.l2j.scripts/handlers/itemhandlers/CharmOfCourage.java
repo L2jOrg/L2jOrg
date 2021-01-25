@@ -21,7 +21,7 @@ package org.l2j.scripts.handlers.itemhandlers;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -46,7 +46,7 @@ public class CharmOfCourage implements IItemHandler
 		final Player activeChar = playable.getActingPlayer();
 		
 		int level = activeChar.getLevel();
-		final int itemLevel = item.getTemplate().getCrystalType().getId();
+		final int itemLevel = item.getCrystalType().getId();
 		
 		if (level < 20)
 		{

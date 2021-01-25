@@ -25,7 +25,11 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.network.serverpackets.PlaySound.*;
 
 /**
  * This class manages all RaidBoss.<br>
@@ -58,7 +62,7 @@ public class RaidBoss extends Monster {
     public void onSpawn() {
         super.onSpawn();
         setRandomWalking(false);
-        broadcastPacket(new PlaySound(1, getParameters().getString("RaidSpawnMusic", "Rm01_A"), 0, 0, 0, 0, 0));
+        broadcastPacket(PlaySound.music(getParameters().getString("RaidSpawnMusic", "Rm01_A")));
     }
 
     @Override
@@ -71,7 +75,7 @@ public class RaidBoss extends Monster {
      */
     @Override
     protected void startMaintenanceTask() {
-        _maintenanceTask = ThreadPool.scheduleAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
+        _maintenanceTask = ThreadPool.scheduleAtFixedRate(this::checkAndReturnToSpawn, 60000, getMaintenanceInterval() + Rnd.get(5000));
     }
 
     protected void checkAndReturnToSpawn() {
@@ -102,7 +106,7 @@ public class RaidBoss extends Monster {
 
     @Override
     public boolean useVitalityRate() {
-        return Config.RAIDBOSS_USE_VITALITY;
+        return getSettings(CharacterSettings.class).raidBossUseVitality();
     }
 
     public void setUseRaidCurse(boolean val) {

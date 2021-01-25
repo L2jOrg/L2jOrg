@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.friend;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
@@ -54,70 +55,70 @@ public class ExFriendDetailInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_FRIEND_DETAIL_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_FRIEND_DETAIL_INFO, buffer );
 
-        writeInt(_objectId);
+        buffer.writeInt(_objectId);
 
         if (isNull(friend)) {
-            WriteFriendInfo();
+            WriteFriendInfo(buffer);
         } else {
-            writePlayerInfo();
+            writePlayerInfo(buffer);
         }
     }
 
-    private void writePlayerInfo() {
-        writeString(friend.getName());
-        writeInt(friend.isOnline());
-        writeInt(friend.isOnline() ? friend.getObjectId() : 0);
-        writeShort(friend.getLevel());
-        writeShort(friend.getClassId().getId());
-        writeInt(friend.getClanId());
-        writeInt(friend.getClanCrestId());
-        writeString(friend.getClan() != null ? friend.getClan().getName() : "");
-        writeInt(friend.getAllyId());
-        writeInt(friend.getAllyCrestId());
-        writeString(friend.getClan() != null ? friend.getClan().getAllyName() : "");
+    private void writePlayerInfo(WritableBuffer buffer) {
+        buffer.writeString(friend.getName());
+        buffer.writeInt(friend.isOnline());
+        buffer.writeInt(friend.isOnline() ? friend.getObjectId() : 0);
+        buffer.writeShort(friend.getLevel());
+        buffer.writeShort(friend.getClassId().getId());
+        buffer.writeInt(friend.getClanId());
+        buffer.writeInt(friend.getClanCrestId());
+        buffer.writeString(friend.getClan() != null ? friend.getClan().getName() : "");
+        buffer.writeInt(friend.getAllyId());
+        buffer.writeInt(friend.getAllyCrestId());
+        buffer.writeString(friend.getClan() != null ? friend.getClan().getAllyName() : "");
 
         var createDate = friend.getCreateDate();
-        writeByte(createDate.getMonthValue());
-        writeByte(createDate.getDayOfMonth());
+        buffer.writeByte(createDate.getMonthValue());
+        buffer.writeByte(createDate.getDayOfMonth());
 
-        writeInt(-1);
-        writeString(""); //TODO  memo
+        buffer.writeInt(-1);
+        buffer.writeString(""); //TODO  memo
     }
 
-    private void WriteFriendInfo() {
-        writeString(_name);
-        writeInt(info.online);
-        writeInt(info.online ? info.objectId : 0);
-        writeShort(info.level);
-        writeShort(info.classId);
-        writeInt(info.clanId);
+    private void WriteFriendInfo(WritableBuffer buffer) {
+        buffer.writeString(_name);
+        buffer.writeInt(info.online);
+        buffer.writeInt(info.online ? info.objectId : 0);
+        buffer.writeShort(info.level);
+        buffer.writeShort(info.classId);
+        buffer.writeInt(info.clanId);
 
         Clan clan;
         if(info.clanId > 0 && nonNull(clan = ClanTable.getInstance().getClan(info.clanId))) {
-            writeInt(clan.getCrestId());
-            writeString(clan.getName());
-            writeInt(clan.getAllyId());
-            writeInt(clan.getAllyCrestId());
-            writeString(clan.getAllyName());
+            buffer.writeInt(clan.getCrestId());
+            buffer.writeString(clan.getName());
+            buffer.writeInt(clan.getAllyId());
+            buffer.writeInt(clan.getAllyCrestId());
+            buffer.writeString(clan.getAllyName());
         } else {
-            writeInt(0);
-            writeString("");
-            writeInt(0);
-            writeInt(0);
-            writeString("");
+            buffer.writeInt(0);
+            buffer.writeString("");
+            buffer.writeInt(0);
+            buffer.writeInt(0);
+            buffer.writeString("");
         }
 
         if(nonNull(info.createDate)) {
-            writeByte(info.createDate.getMonthValue());
-            writeByte(info.createDate.getDayOfMonth());
+            buffer.writeByte(info.createDate.getMonthValue());
+            buffer.writeByte(info.createDate.getDayOfMonth());
         } else  {
-            writeByte(0);
-            writeByte(0);
+            buffer.writeByte(0);
+            buffer.writeByte(0);
         }
-        writeInt((int) ((System.currentTimeMillis() - info.lastAccess) / 1000));
-        writeString(""); //TODO  memo
+        buffer.writeInt((int) ((System.currentTimeMillis() - info.lastAccess) / 1000));
+        buffer.writeString(""); //TODO  memo
     }
 }

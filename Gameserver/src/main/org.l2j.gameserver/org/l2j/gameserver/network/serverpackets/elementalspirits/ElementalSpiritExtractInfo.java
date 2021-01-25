@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -34,25 +35,25 @@ public class ElementalSpiritExtractInfo extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ELEMENTAL_SPIRIT_EXTRACT_INFO);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ELEMENTAL_SPIRIT_EXTRACT_INFO, buffer );
 
         var spirit = client.getPlayer().getElementalSpirit(ElementalType.of(type));
         if(isNull(spirit)) {
-            writeByte(0);
-            writeByte(0);
+            buffer.writeByte(0);
+            buffer.writeByte(0);
             return;
         }
 
-        writeByte(type); // active elemental spirit
-        writeByte(1); // is extract ?
+        buffer.writeByte(type); // active elemental spirit
+        buffer.writeByte(1); // is extract ?
         
-        writeByte(1); // cost count
+        buffer.writeByte(1); // cost count
          // for each cost count
-        writeInt(57); // item id
-        writeInt(1000000); // item count
+        buffer.writeInt(57); // item id
+        buffer.writeInt(1000000); // item count
 
-        writeInt(spirit.getExtractItem());
-        writeInt(spirit.getExtractAmount());
+        buffer.writeInt(spirit.getExtractItem());
+        buffer.writeInt(spirit.getExtractAmount());
     }
 }

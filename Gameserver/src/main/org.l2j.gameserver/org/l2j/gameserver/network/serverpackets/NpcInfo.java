@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.NpcInfoType;
@@ -223,141 +224,141 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.NPC_INFO);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.NPC_INFO, buffer );
 
-        writeInt(_npc.getObjectId());
-        writeByte((_npc.isShowSummonAnimation() ? 0x02 : 0x00)); // // 0=teleported 1=default 2=summoned
-        writeShort(37); // mask_bits_37
-        writeBytes(_masks);
+        buffer.writeInt(_npc.getObjectId());
+        buffer.writeByte((_npc.isShowSummonAnimation() ? 0x02 : 0x00)); // // 0=teleported 1=default 2=summoned
+        buffer.writeShort(37); // mask_bits_37
+        buffer.writeBytes(_masks);
 
         // Block 1
-        writeByte(_initSize);
+        buffer.writeByte(_initSize);
 
         if (containsMask(NpcInfoType.ATTACKABLE)) {
-            writeByte(isAttackable(_npc) && !(_npc instanceof Guard));
+            buffer.writeByte(isAttackable(_npc) && !(_npc instanceof Guard));
         }
         if (containsMask(NpcInfoType.RELATIONS)) {
-            writeInt(0x00); // unknown
+            buffer.writeInt(0x00); // unknown
         }
         if (containsMask(NpcInfoType.TITLE)) {
-            writeString(_npc.getTitle());
+            buffer.writeString(_npc.getTitle());
         }
 
         // Block 2
-        writeShort( _blockSize);
+        buffer.writeShort( _blockSize);
         if (containsMask(NpcInfoType.ID)) {
-            writeInt(_npc.getTemplate().getDisplayId() + 1000000);
+            buffer.writeInt(_npc.getTemplate().getDisplayId() + 1000000);
         }
         if (containsMask(NpcInfoType.POSITION)) {
-            writeInt(_npc.getX());
-            writeInt(_npc.getY());
-            writeInt(_npc.getZ());
+            buffer.writeInt(_npc.getX());
+            buffer.writeInt(_npc.getY());
+            buffer.writeInt(_npc.getZ());
         }
         if (containsMask(NpcInfoType.HEADING)) {
-            writeInt(_npc.getHeading());
+            buffer.writeInt(_npc.getHeading());
         }
         if (containsMask(NpcInfoType.UNKNOWN2)) {
-            writeInt(0x00); // Unknown
+            buffer.writeInt(0x00); // Unknown
         }
         if (containsMask(NpcInfoType.ATK_CAST_SPEED)) {
-            writeInt(_npc.getPAtkSpd());
-            writeInt(_npc.getMAtkSpd());
+            buffer.writeInt(_npc.getPAtkSpd());
+            buffer.writeInt(_npc.getMAtkSpd());
         }
         if (containsMask(NpcInfoType.SPEED_MULTIPLIER)) {
-            writeFloat((float) _npc.getStats().getMovementSpeedMultiplier());
-            writeFloat((float) _npc.getStats().getAttackSpeedMultiplier());
+            buffer.writeFloat((float) _npc.getStats().getMovementSpeedMultiplier());
+            buffer.writeFloat((float) _npc.getStats().getAttackSpeedMultiplier());
         }
         if (containsMask(NpcInfoType.EQUIPPED)) {
-            writeInt(_npc.getRightHandItem());
-            writeInt(0x00); // Armor id?
-            writeInt(_npc.getLeftHandItem());
+            buffer.writeInt(_npc.getRightHandItem());
+            buffer.writeInt(0x00); // Armor id?
+            buffer.writeInt(_npc.getLeftHandItem());
         }
         if (containsMask(NpcInfoType.ALIVE)) {
-            writeByte(!_npc.isDead());
+            buffer.writeByte(!_npc.isDead());
         }
         if (containsMask(NpcInfoType.RUNNING)) {
-            writeByte(_npc.isRunning());
+            buffer.writeByte(_npc.isRunning());
         }
         if (containsMask(NpcInfoType.SWIM_OR_FLY)) {
-            writeByte((byte) (_npc.isInsideZone(ZoneType.WATER) ? 0x01 : _npc.isFlying() ? 0x02 : 0x00));
+            buffer.writeByte((_npc.isInsideZone(ZoneType.WATER) ? 0x01 : _npc.isFlying() ? 0x02 : 0x00));
         }
         if (containsMask(NpcInfoType.TEAM)) {
-            writeByte((byte) _npc.getTeam().getId());
+            buffer.writeByte(_npc.getTeam().getId());
         }
         if (containsMask(NpcInfoType.ENCHANT)) {
-            writeInt(_npc.getEnchantEffect());
+            buffer.writeInt(_npc.getEnchantEffect());
         }
         if (containsMask(NpcInfoType.FLYING)) {
-            writeInt(_npc.isFlying());
+            buffer.writeInt(_npc.isFlying());
         }
         if (containsMask(NpcInfoType.CLONE)) {
-            writeInt(_npc.getCloneObjId()); // Player ObjectId with Decoy
+            buffer.writeInt(_npc.getCloneObjId()); // Player ObjectId with Decoy
         }
         if (containsMask(NpcInfoType.COLOR_EFFECT)) {
-            writeInt(_npc.getColorEffect()); // Color effect
+            buffer.writeInt(_npc.getColorEffect()); // Color effect
         }
         if (containsMask(NpcInfoType.DISPLAY_EFFECT)) {
-            writeInt(_npc.getDisplayEffect());
+            buffer.writeInt(_npc.getDisplayEffect());
         }
         if (containsMask(NpcInfoType.TRANSFORMATION)) {
-            writeInt(_npc.getTransformationDisplayId()); // Transformation ID
+            buffer.writeInt(_npc.getTransformationDisplayId()); // Transformation ID
         }
         if (containsMask(NpcInfoType.CURRENT_HP)) {
-            writeInt((int) _npc.getCurrentHp());
+            buffer.writeInt((int) _npc.getCurrentHp());
         }
         if (containsMask(NpcInfoType.CURRENT_MP)) {
-            writeInt((int) _npc.getCurrentMp());
+            buffer.writeInt((int) _npc.getCurrentMp());
         }
         if (containsMask(NpcInfoType.MAX_HP)) {
-            writeInt(_npc.getMaxHp());
+            buffer.writeInt(_npc.getMaxHp());
         }
         if (containsMask(NpcInfoType.MAX_MP)) {
-            writeInt(_npc.getMaxMp());
+            buffer.writeInt(_npc.getMaxMp());
         }
         if (containsMask(NpcInfoType.SUMMONED)) {
-            writeByte((byte) 0x00); // 2 - do some animation on spawn
+            buffer.writeByte(0x00); // 2 - do some animation on spawn
         }
         if (containsMask(NpcInfoType.UNKNOWN12)) {
-            writeInt(0x00);
-            writeInt(0x00);
+            buffer.writeInt(0x00);
+            buffer.writeInt(0x00);
         }
         if (containsMask(NpcInfoType.NAME)) {
-            writeString(_npc.getName());
+            buffer.writeString(_npc.getName());
         }
         if (containsMask(NpcInfoType.NAME_NPCSTRINGID)) {
             final NpcStringId nameString = _npc.getNameString();
-            writeInt(nameString != null ? nameString.getId() : -1); // NPCStringId for name
+            buffer.writeInt(nameString != null ? nameString.getId() : -1); // NPCStringId for name
         }
         if (containsMask(NpcInfoType.TITLE_NPCSTRINGID)) {
             final NpcStringId titleString = _npc.getTitleString();
-            writeInt(titleString != null ? titleString.getId() : -1); // NPCStringId for title
+            buffer.writeInt(titleString != null ? titleString.getId() : -1); // NPCStringId for title
         }
         if (containsMask(NpcInfoType.PVP_FLAG)) {
-            writeByte((byte) _npc.getPvpFlag()); // PVP flag
+            buffer.writeByte(_npc.getPvpFlag()); // PVP flag
         }
         if (containsMask(NpcInfoType.REPUTATION)) {
-            writeInt(_npc.getReputation()); // Reputation
+            buffer.writeInt(_npc.getReputation()); // Reputation
         }
         if (containsMask(NpcInfoType.CLAN)) {
-            writeInt(_clanId);
-            writeInt(_clanCrest);
-            writeInt(_clanLargeCrest);
-            writeInt(_allyId);
-            writeInt(_allyCrest);
+            buffer.writeInt(_clanId);
+            buffer.writeInt(_clanCrest);
+            buffer.writeInt(_clanLargeCrest);
+            buffer.writeInt(_allyId);
+            buffer.writeInt(_allyCrest);
         }
 
         if (containsMask(NpcInfoType.VISUAL_STATE)) {
-            writeByte((byte) _statusMask);
+            buffer.writeByte(_statusMask);
         }
 
         if (containsMask(NpcInfoType.ABNORMALS)) {
-            writeShort((short) (_abnormalVisualEffects.size() + (_npc.isInvisible() ? 1 : 0)));
+            buffer.writeShort((_abnormalVisualEffects.size() + (_npc.isInvisible() ? 1 : 0)));
             for (AbnormalVisualEffect abnormalVisualEffect : _abnormalVisualEffects) {
-                writeShort((short) abnormalVisualEffect.getClientId());
+                buffer.writeShort(abnormalVisualEffect.getClientId());
             }
             if (_npc.isInvisible()) {
-                writeShort((short) AbnormalVisualEffect.STEALTH.getClientId());
+                buffer.writeShort(AbnormalVisualEffect.STEALTH.getClientId());
             }
         }
     }

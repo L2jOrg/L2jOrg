@@ -39,7 +39,7 @@ public final class RequestOlympiadMatchList extends ClientPacket {
     @Override
     public void runImpl() {
         final Player activeChar = client.getPlayer();
-        if ((activeChar == null) || !activeChar.inObserverMode()) {
+        if ((activeChar == null) || !activeChar.isInObserverMode()) {
             return;
         }
 

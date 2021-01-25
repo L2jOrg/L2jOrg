@@ -18,16 +18,16 @@
  */
 package org.l2j.scripts.handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.holders.SummonRequestHolder;
+import org.l2j.gameserver.model.holders.SummonRequest;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.item.instance.Item;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -74,7 +74,7 @@ public final class CallPc extends AbstractEffect {
                 target.sendPacket( getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(itemId));
             }
 
-            target.addScript(new SummonRequestHolder(player, skill));
+            target.addRequest(new SummonRequest(player, skill));
             target.sendPacket(new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT).addString(player.getName()).addZoneName(player.getX(), player.getY(), player.getZ())
                     .addTime(30000).addRequesterId(player.getObjectId()));
         }
@@ -105,12 +105,12 @@ public final class CallPc extends AbstractEffect {
             return false;
         }
 
-        if (target.isFlyingMounted() || target.isInTraingCamp() || target.isInTimedHuntingZone()) {
+        if (target.isFlyingMounted() || target.isInTimedHuntingZone()) {
             creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
             return false;
         }
 
-        if (target.inObserverMode() || OlympiadManager.getInstance().isRegisteredInComp(target) || target.isInsideZone(ZoneType.NO_SUMMON_FRIEND) || target.isInsideZone(ZoneType.JAIL)) {
+        if (target.isInObserverMode() || Olympiad.getInstance().isRegistered(target) || target.isInsideZone(ZoneType.NO_SUMMON_FRIEND) || target.isInsideZone(ZoneType.JAIL)) {
             creature.sendPacket(getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING).addString(target.getName()));
             return false;
         }

@@ -18,14 +18,24 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.ConcurrentIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.BossData;
+
+import java.util.Collection;
 
 /**
  * @author JoeAlisson
  */
-public interface BossDAO extends DAO<Object>  {
+public interface BossDAO extends DAO<BossData>  {
 
-    @Query("UPDATE grandboss_data set status = :status: where boss_id = :bossId:")
-    void updateStatus(int bossId, int status);
+    @Query("SELECT * FROM boss_data")
+    ConcurrentIntMap<BossData> findAllBosses();
+
+    @Query("DELETE FROM boss_data WHERE boss_id = :bossId:")
+    void deleteBossData(int bossId);
+
+    boolean save(Collection<BossData> data);
 }

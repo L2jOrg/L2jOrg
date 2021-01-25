@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
@@ -34,7 +33,6 @@ import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.isAlphaNumeric;
 import static org.l2j.gameserver.network.serverpackets.CharCreateFail.CharacterCreateFailReason.*;
 
 public final class CharacterCreate extends ClientPacket {
@@ -96,18 +94,21 @@ public final class CharacterCreate extends ClientPacket {
             return;
         }
 
-        if (!isAlphaNumeric(name) || !getSettings(ServerSettings.class).acceptPlayerName(name)) {
+        var serverSettings = getSettings(ServerSettings.class);
+        if (!serverSettings.acceptPlayerName(name)) {
             client.sendPacket(new CharCreateFail(REASON_INCORRECT_NAME));
             return;
         }
 
-        if (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0 && client.getPlayerCount() >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) {
+
+        if (!serverSettings.allowPlayersCount(client.getPlayerCount())) {
             client.sendPacket(new CharCreateFail(REASON_TOO_MANY_CHARACTERS));
             return;
         }
 
         PlayerTemplate template = PlayerTemplateData.getInstance().getTemplate(classId);
         if (isNull(template) || (ClassId.getClassId(classId).level() > 0)) {
+            LOGGER.warn("Character Creation Failure: Character class {} is invalid. Possible client hack {}", classId , client);
             client.sendPacket(new CharCreateFail(REASON_CREATION_FAILED));
             return;
         }

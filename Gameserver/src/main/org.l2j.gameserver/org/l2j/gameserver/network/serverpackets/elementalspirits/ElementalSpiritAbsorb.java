@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 
 import static org.l2j.gameserver.network.ServerExPacketId.EX_ELEMENTAL_SPIRIT_ABSORB;
@@ -29,8 +30,8 @@ public class ElementalSpiritAbsorb extends UpdateElementalSpiritPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client)  {
-        writeId(EX_ELEMENTAL_SPIRIT_ABSORB);
-        writeUpdate(client);
+    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
+        writeId(EX_ELEMENTAL_SPIRIT_ABSORB, buffer);
+        writeUpdate(client, buffer);
     }
 }

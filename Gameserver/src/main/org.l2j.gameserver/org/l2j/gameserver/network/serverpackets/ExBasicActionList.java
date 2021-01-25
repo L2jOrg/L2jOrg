@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -157,12 +158,12 @@ public final class ExBasicActionList extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BASIC_ACTION_LIST);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BASIC_ACTION_LIST, buffer );
 
-        writeInt(_actionIds.length);
+        buffer.writeInt(_actionIds.length);
         for (int _actionId : _actionIds) {
-            writeInt(_actionId);
+            buffer.writeInt(_actionId);
         }
     }
 

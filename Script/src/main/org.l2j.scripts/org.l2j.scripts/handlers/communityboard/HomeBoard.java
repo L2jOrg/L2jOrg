@@ -18,6 +18,8 @@
  */
 package org.l2j.scripts.handlers.communityboard;
 
+import io.github.joealisson.primitive.ArrayIntList;
+import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
@@ -25,29 +27,46 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CommunityDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
-import org.l2j.gameserver.data.xml.impl.MultisellData;
+import org.l2j.gameserver.data.xml.impl.ClassListData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
+import org.l2j.gameserver.instancemanager.CommissionManager;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.BuyList;
-import org.l2j.gameserver.network.serverpackets.ExBuySellList;
-import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2j.gameserver.network.serverpackets.ShowBoard;
+import org.l2j.gameserver.model.base.ClassId;
+import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.commission.ExShowCommission;
+import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.l2j.scripts.handlers.admincommandhandlers.AdminHtml;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
+import static java.lang.Math.min;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.parseNextInt;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
@@ -60,6 +79,8 @@ public final class HomeBoard implements IParseBoardHandler {
 
     private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/new/navigation.html";
     private static final int PAGE_LIMIT = 6;
+    private static final Logger LOGGER = LoggerFactory.getLogger(HomeBoard.class);
+
 
     private static final String[] COMMANDS = {
         "_bbshome",
@@ -79,8 +100,17 @@ public final class HomeBoard implements IParseBoardHandler {
             Config.COMMUNITYBOARD_ENABLE_BUFFS ? "_bbsskillunselect" : null,
             Config.COMMUNITYBOARD_ENABLE_BUFFS ? "_bbsgivebuffs" : null,
             Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null,
+            Config.COMMUNITYBOARD_ENABLE_CLEANUP ? "_bbscleanup" : null,
             Config.COMMUNITYBOARD_ENABLE_PREMIUM ? "_bbspremium" : null,
-            Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null
+            Config.COMMUNITYBOARD_ENABLE_AUTO_HP_MP_CP ? "_bbsautohpmpcp" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtlevel" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtadena" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtl2coin" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtvipcoin" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_bbsauction" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtclass" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtgiveskill" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtremoveskill" : null,
     };
 
     private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {
@@ -125,7 +155,7 @@ public final class HomeBoard implements IParseBoardHandler {
         return commands.stream().filter(Objects::nonNull).toArray(String[]::new);
     }
 
-    private String getSchemesListAsHtml(Map<String, ArrayList<Integer>> schemes) {
+    private String getSchemesListAsHtml(Map<String, IntList> schemes) {
         String result = "<tr><td height=4></td></tr>";
         int schemesCount = 0;
 
@@ -135,7 +165,7 @@ public final class HomeBoard implements IParseBoardHandler {
         }
         else
         {
-            for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet()) {
+            for (var scheme : schemes.entrySet()) {
                 if(schemesCount == 0 || schemesCount == 2)
                     result += "<tr>";
 
@@ -155,7 +185,7 @@ public final class HomeBoard implements IParseBoardHandler {
         return result;
     }
 
-    private String getSchemeTD(Map.Entry<String, ArrayList<Integer>> scheme) {
+    private String getSchemeTD(Map.Entry<String, IntList> scheme) {
         final int cost = getFee(scheme.getValue());
 
         String result = "";
@@ -206,14 +236,12 @@ public final class HomeBoard implements IParseBoardHandler {
             activeChar.sendMessage("You can't use the Community Board right now.");
             return false;
         }
-
         if (KARMA_CHECK.test(activeChar)) {
             activeChar.sendMessage("Players with Karma cannot use the Community Board.");
             return false;
         }
 
         String returnHtml = null;
-        final String navigation = HtmCache.getInstance().getHtm(activeChar, NAVIGATION_PATH);
         if (command.equals("_bbshome") || command.equals("_bbstop")) {
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
@@ -225,19 +253,21 @@ public final class HomeBoard implements IParseBoardHandler {
                 returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
             }
         } else if (command.startsWith("_bbsmultisell")) {
+            LOGGER.info("call multisell engine homeboard");
             final String fullBypass = command.replace("_bbsmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
             final int multisellId = Integer.parseInt(buypassOptions[0]);
-            final String page = buypassOptions[1];
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
-            MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, false);
+            if ((fullBypass.length() > 0) && fullBypass.endsWith(".html")) {
+                final String path = buypassOptions[1];
+                returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
+            }
         } else if (command.startsWith("_bbsexcmultisell")) {
             final String fullBypass = command.replace("_bbsexcmultisell ", "");
             final String[] buypassOptions = fullBypass.split(",");
             final int multisellId = Integer.parseInt(buypassOptions[0]);
-            final String page = buypassOptions[1];
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
-            MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, true);
+            MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, true);
         } else if (command.startsWith("_bbssell")) {
             final String page = command.replace("_bbssell ", "");
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
@@ -281,9 +311,7 @@ public final class HomeBoard implements IParseBoardHandler {
                     targets.stream().filter(target -> !isSummon(target) || !skill.isSharedWithSummon()).forEach(target -> {
                         skill.applyEffects(activeChar, target);
                         if (Config.COMMUNITYBOARD_CAST_ANIMATIONS) {
-                            activeChar.sendPacket(new MagicSkillUse(activeChar, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
-                            // not recommend broadcast
-                            // activeChar.broadcastPacket(new MagicSkillUse(activeChar, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+                            activeChar.sendPacket(new MagicSkillUse(activeChar, target, skill, skill.getReuseDelay()));
                         }
                     });
                 }
@@ -312,7 +340,22 @@ public final class HomeBoard implements IParseBoardHandler {
             }
 
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
-        } else if (command.startsWith("_bbspremium")) {
+        }
+        else if (command.startsWith("_bbscleanup"))
+        {
+            final String page = command.replace("_bbscleanup ", "");
+            activeChar.stopAllEffects();
+
+            final Summon summon = activeChar.getPet();
+            if (summon != null)
+            {
+                summon.stopAllEffects();
+            }
+            activeChar.sendMessage("You removed all buffs!");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
+        }
+
+        else if (command.startsWith("_bbspremium")) {
                 //_bbspremium;L2 amount;VIP amout ex: _bbspremium;100;200
                 final String fullBypass = command.replace("_bbspremium ", "");
                 final String[] buypassOptions = fullBypass.split(";");
@@ -346,7 +389,7 @@ public final class HomeBoard implements IParseBoardHandler {
                     canCreateScheme = false;
                 }
 
-                final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
+                final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
                 if (schemes != null) {
                     if (schemes.size() == Config.BUFFER_MAX_SCHEMES) {
                         activeChar.sendMessage("Maximum schemes amount is already reached.");
@@ -360,7 +403,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 }
 
                 if (canCreateScheme) {
-                    SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayList<>());
+                    SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayIntList());
                     returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1, returnHtml);
                 } else {
                     returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
@@ -389,25 +432,25 @@ public final class HomeBoard implements IParseBoardHandler {
             final String schemeName = st.nextToken();
             final int skillId = Integer.parseInt(st.nextToken());
             final int page = Integer.parseInt(st.nextToken());
-            final List<Integer> skills = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName);
+            final IntList skills = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName);
 
             if (currentCommand.startsWith("_bbsskillselect") && !schemeName.equalsIgnoreCase("none")) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
                 if (skill.isDance()) {
-                    if (getCountOf(skills, true) < Config.DANCES_MAX_AMOUNT) {
+                    if (getCountOf(skills, true) < getSettings(CharacterSettings.class).maxDances()) {
                         skills.add(skillId);
                     } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of dances/songs.");
                     }
                 } else {
-                    if (getCountOf(skills, false) < Config.BUFFS_MAX_AMOUNT) {
+                    if (getCountOf(skills, false) < getSettings(CharacterSettings.class).maxBuffs()) {
                         skills.add(skillId);
                     } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of buffs.");
                     }
                 }
             } else if (currentCommand.startsWith("_bbsskillunselect")) {
-                skills.remove(Integer.valueOf(skillId));
+                skills.remove(skillId);
             }
 
             returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page, returnHtml);
@@ -439,7 +482,9 @@ public final class HomeBoard implements IParseBoardHandler {
                 activeChar.sendMessage("You don't have a pet.");
             }
             else if ((cost == 0) || activeChar.reduceAdena("Community Board Buffer", cost, target, true)) {
-                for (int skillId : SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName)) {
+                final var it = SchemeBufferTable.getInstance().getScheme(activeChar.getObjectId(), schemeName).iterator();
+                while (it.hasNext()) {
+                    var skillId = it.nextInt();
                     SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId)).applyEffects(target, target);
                 }
             }
@@ -450,18 +495,131 @@ public final class HomeBoard implements IParseBoardHandler {
             final String currentCommand = st.nextToken();
 
             final String schemeName = st.nextToken();
-            final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
+            final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
             if ((schemes != null) && schemes.containsKey(schemeName)) {
                 schemes.remove(schemeName);
             }
 
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
         }
+        else if (command.startsWith("_cbbsobtlevel")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            var level = parseNextInt(st, 0);
+            final var playableTarget = (Playable) activeChar;
+            final var maxAddLevel = LevelData.getInstance().getMaxLevel() - playableTarget.getLevel();
+                if (actualCommand.equalsIgnoreCase("_cbbsobtlevel")) {
+                    level = level - playableTarget.getLevel();
+                    playableTarget.getStats().addLevel((byte) min(maxAddLevel, level));
+                    removeAllSkills(activeChar);
+                    giveAllSkills(activeChar, true);
+                }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+            }
+        else if (command.startsWith("_cbbsobtgiveskill")) {
+            giveAllSkills(activeChar, true);
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
+        else if (command.startsWith("_cbbsobtremoveskill")) {
+            removeAllSkills(activeChar);
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
+        else if (command.startsWith("_cbbsobtadena")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            if (actualCommand.equalsIgnoreCase("_cbbsobtadena")) {
+                activeChar.addItem("Adena", 57, 100000000, activeChar, true);
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
+        else if (command.startsWith("_cbbsobtl2coin")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            if (actualCommand.equalsIgnoreCase("_cbbsobtl2coin")) {
+                activeChar.addItem("L2Coins", 91663, 100000000, activeChar, true);
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
+        else if (command.startsWith("_cbbsobtvipcoin")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            if (actualCommand.equalsIgnoreCase("_cbbsobtvipcoin")) {
+                activeChar.addItem("Vip Coins", 29520, 100000000, activeChar, true);
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
+        else if (command.startsWith("_bbsauction")) {
+            final StringTokenizer st = new StringTokenizer(command, "");
+            final var cmd = st.nextToken();
+            if ((cmd.equalsIgnoreCase("_bbsauction show_commission")) && activeChar.isInsideZone(ZoneType.PEACE)) {
+                      activeChar.sendPacket(ExShowCommission.STATIC_PACKET);
+            }
+            else {
+                BuilderUtil.sendSysMessage(activeChar, "You cannot use Auction House outside Town ");
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
+        }
+        else if (command.startsWith("_cbbsobtclass"))
+        {
+            try
+            {
+                final String val = command.substring(14).trim();
+                final int classidval = Integer.parseInt(val);
+                final WorldObject target = activeChar.getTarget();
+                if ((target == null) || !isPlayer(target))
+                {
+                    return false;
+                }
+                final Player player = target.getActingPlayer();
+                if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
+                {
+                    player.setClassId(classidval);
+                    player.setBaseClass(player.getActiveClass());
+
+                    final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
+
+                    player.store(false);
+                    player.broadcastUserInfo();
+                    player.sendSkillList();
+                    player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+                    player.sendPacket(new ExUserInfoInvenWeight());
+                    player.sendMessage("A GM changed your class to " + newclass + ".");
+                    activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
+                }
+                else
+                {
+                    BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <valid_new_classid>");
+                }
+            }
+            catch (StringIndexOutOfBoundsException e)
+            {
+                //AdminHtml.showAdminHtml(activeChar, "setclass/human_fighter.htm");
+            }
+            catch (NumberFormatException e)
+            {
+                BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <valid_new_classid>");
+            }
+        }
 
         if (nonNull(returnHtml)) {
             if (Config.CUSTOM_CB_ENABLED) {
-                final Map<String, ArrayList<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
+                final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
 
+                final String navigation = HtmCache.getInstance().getHtm(activeChar, NAVIGATION_PATH);
                 returnHtml = returnHtml.replace("%schemes%", getSchemesListAsHtml(schemes));
                 returnHtml = returnHtml.replace("%max_schemes%", Integer.toString(Config.BUFFER_MAX_SCHEMES));
                 returnHtml = returnHtml.replace("%navigation%", navigation);
@@ -486,7 +644,32 @@ public final class HomeBoard implements IParseBoardHandler {
         return false;
     }
 
-    private String setHtmlSchemeBuffList(Player player, String groupType, String schemeName, List<Integer> skills, int page,  String returnHtml) {
+    private void removeAllSkills (Player activeChar){
+        for (Skill skill : activeChar.getAllSkills()) {
+            activeChar.removeSkill(skill);
+        }
+        BuilderUtil.sendSysMessage(activeChar, "You have removed all skills from " + activeChar.getName() + ".");
+        activeChar.sendMessage("Admin removed all skills from you.");
+        activeChar.sendSkillList();
+        activeChar.broadcastUserInfo();
+        activeChar.sendPacket(new AcquireSkillList(activeChar));
+        }
+
+    private void giveAllSkills(Player activeChar, boolean includedByFs)
+    {
+        if (!isPlayer(activeChar))
+        {
+            activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+            return;
+        }
+        final Player player = activeChar.getActingPlayer();
+        // Notify player and admin
+        BuilderUtil.sendSysMessage(activeChar, "You gave " + player.giveAvailableSkills(includedByFs, true) + " skills to " + player.getName());
+        player.sendSkillList();
+        player.sendPacket(new AcquireSkillList(player));
+    }
+
+    private String setHtmlSchemeBuffList(Player player, String groupType, String schemeName, IntList skills, int page,  String returnHtml) {
         int skillCount = 0;
         int buffCount = 1;
         int danceCount = 1;
@@ -494,7 +677,7 @@ public final class HomeBoard implements IParseBoardHandler {
         // Feeding all Buffs / Dances buttons
         // 36 equals number od buff + dance displayed in html (hard coded)
         for(int i = 1 ; i <= 36 ; i++) {
-            Skill skill = null;
+            Skill skill;
 
             if(skillCount < skills.size()) {
                 skill = SkillEngine.getInstance().getSkill(skills.get(skillCount), 1);
@@ -529,10 +712,11 @@ public final class HomeBoard implements IParseBoardHandler {
     {
         returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
-        final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
+        final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         returnHtml = setHtmlSchemeBuffList(player, groupType, schemeName, schemeSkills, page, returnHtml);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
-        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + Config.BUFFS_MAX_AMOUNT + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
+        var characterSettings = getSettings(CharacterSettings.class);
+        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + characterSettings.maxBuffs() + " buffs, " + getCountOf(schemeSkills, true) + " / " + characterSettings.maxDances() + " dances/songs");
         returnHtml = returnHtml.replace("%typesframe%", getTypesFrame(groupType, schemeName));
         returnHtml = returnHtml.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
         return returnHtml;
@@ -564,7 +748,7 @@ public final class HomeBoard implements IParseBoardHandler {
         // Cut skills list up to page number.
         // skills = skills.subList((page - 1) * PAGE_LIMIT, Math.min(page * PAGE_LIMIT, skills.size()));
 
-        final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
+        final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         final StringBuilder sb = new StringBuilder(skills.size() * 150);
         int column = 0;
         int maxColumn = skills.size() <= 16 ? 4 : 7;
@@ -665,7 +849,7 @@ public final class HomeBoard implements IParseBoardHandler {
      * @param list : A list of skill ids.
      * @return a global fee for all skills contained in list.
      */
-    private static int getFee(List<Integer> list)
+    private static int getFee(IntList list)
     {
         if (Config.BUFFER_STATIC_BUFF_COST > 0)
         {
@@ -673,9 +857,9 @@ public final class HomeBoard implements IParseBoardHandler {
         }
 
         int fee = 0;
-        for (int sk : list)
-        {
-            fee += SchemeBufferTable.getInstance().getAvailableBuff(sk).getPrice();
+        final var it = list.iterator();
+        while (it.hasNext()) {
+            fee += SchemeBufferTable.getInstance().getAvailableBuff(it.nextInt()).getPrice();
         }
 
         return fee;
@@ -686,7 +870,7 @@ public final class HomeBoard implements IParseBoardHandler {
         return (objectsSize / pageSize) + ((objectsSize % pageSize) == 0 ? 0 : 1);
     }
 
-    private static long getCountOf(List<Integer> skills, boolean dances)
+    private static long getCountOf(IntList skills, boolean dances)
     {
         return skills.stream().filter(sId -> SkillEngine.getInstance().getSkill(sId, 1).isDance() == dances).count();
     }

@@ -19,29 +19,25 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
+import java.util.EnumSet;
+
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
- * The Class ConditionPlayerRace.
  *
  * @author mkizub, Zoey76
+ * @author JoeAlisson
  */
 public class ConditionPlayerRace extends Condition {
-    private final Race[] _races;
+    private final EnumSet<Race> races;
 
-    /**
-     * Instantiates a new condition player race.
-     *
-     * @param races the list containing the allowed races.
-     */
-    public ConditionPlayerRace(Race[] races) {
-        _races = races;
+    public ConditionPlayerRace(EnumSet<Race> races) {
+        this.races = races;
     }
 
     @Override
@@ -49,6 +45,6 @@ public class ConditionPlayerRace extends Condition {
         if (!isPlayer(effector)) {
             return false;
         }
-        return CommonUtil.contains(_races, effector.getActingPlayer().getRace());
+        return races.contains(effector.getActingPlayer().getRace());
     }
 }

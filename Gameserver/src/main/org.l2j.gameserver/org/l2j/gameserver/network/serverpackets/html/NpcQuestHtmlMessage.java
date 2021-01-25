@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets.html;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -36,12 +37,12 @@ public final class NpcQuestHtmlMessage extends AbstractHtmlPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_NPC_QUEST_HTML_MESSAGE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_NPC_QUEST_HTML_MESSAGE, buffer );
 
-        writeInt(getNpcObjId());
-        writeString(getHtml());
-        writeInt(_questId);
+        buffer.writeInt(getNpcObjId());
+        buffer.writeString(getHtml());
+        buffer.writeInt(_questId);
     }
 
 

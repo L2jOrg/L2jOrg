@@ -29,7 +29,7 @@ public class OnPlayerCpChange implements IBaseEvent {
         _activeChar = activeChar;
     }
 
-    public Player getActiveChar() {
+    public Player getPlayer() {
         return _activeChar;
     }
 

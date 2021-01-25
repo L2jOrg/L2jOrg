@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -35,16 +36,16 @@ public class AbnormalStatusUpdate extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ABNORMAL_STATUS_UPDATE);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ABNORMAL_STATUS_UPDATE, buffer );
 
-        writeShort(_effects.size());
+        buffer.writeShort(_effects.size());
         for (BuffInfo info : _effects) {
             if ((info != null) && info.isInUse()) {
-                writeInt(info.getSkill().getDisplayId());
-                writeShort(info.getSkill().getDisplayLevel());
-                writeInt(info.getSkill().getAbnormalType().getClientId());
-                writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime());
+                buffer.writeInt(info.getSkill().getDisplayId());
+                buffer.writeShort(info.getSkill().getDisplayLevel());
+                buffer.writeInt(info.getSkill().getAbnormalType().getClientId());
+                writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime(), buffer);
             }
         }
     }

@@ -69,7 +69,7 @@ public class Batur extends AbstractNpcAI
 
     @Override
     public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon) {
-        if(npc.getId() == BATUR_ID && getQuestTimer("BATUR_DESPAWN_THREAD", null, null) == null) {
+        if(npc.getId() == BATUR_ID && !hasQuestTimer("BATUR_DESPAWN_THREAD", null, null)) {
             startQuestTimer("BATUR_DESPAWN_THREAD", TIME_TO_LIVE, null, null);
         }
         return super.onAttack(npc, attacker, damage, isSummon);

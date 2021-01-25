@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.actor.request.TeleportRequest;
 import org.l2j.gameserver.network.SystemMessageId;
 
 public final class RequestTargetCanceld extends ClientPacket {
@@ -45,5 +46,7 @@ public final class RequestTargetCanceld extends ClientPacket {
         } else {
             player.setTarget(null);
         }
+
+        player.removeRequest(TeleportRequest.class);
     }
 }

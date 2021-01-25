@@ -33,6 +33,7 @@ import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,6 +44,7 @@ import java.util.EnumSet;
 import java.util.List;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.SPACE;
 
 /**
@@ -211,7 +213,7 @@ public final class TeleportHolder {
      * @return {@code true} when all requirements are met otherwise {@code false}
      */
     private boolean shouldPayFee(Player player, TeleportLocation loc) {
-        return !isNormalTeleport() || (((player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+        return !isNormalTeleport() || ((player.getLevel() > getSettings(CharacterSettings.class).maxFreeTeleportLevel()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
     }
 
     /**
@@ -225,7 +227,7 @@ public final class TeleportHolder {
      */
     private long calculateFee(Player player, TeleportLocation loc) {
         if (isNormalTeleport()) {
-            if (!player.isSubClassActive() && (player.getLevel() <= Config.MAX_FREE_TELEPORT_LEVEL)) {
+            if (player.getLevel() <= getSettings(CharacterSettings.class).maxFreeTeleportLevel()) {
                 return 0;
             }
 

@@ -23,7 +23,9 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -38,6 +40,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -99,7 +102,7 @@ public class VariationData extends GameXmlReader {
                                 final int optionId = parseInt(optionNode.getAttributes(), "id");
                                 final Options opt = AugmentationEngine.getInstance().getOptions(optionId);
                                 if (opt == null) {
-                                    LOGGER.warn(": Null option for id " + optionId);
+                                    LOGGER.warn("Null option for id " + optionId);
                                     return;
                                 }
                                 options.put(opt, optionChance);
@@ -112,8 +115,8 @@ public class VariationData extends GameXmlReader {
                                 for (int id = fromId; id <= toId; id++) {
                                     final Options op = AugmentationEngine.getInstance().getOptions(id);
                                     if (op == null) {
-                                        LOGGER.warn(": Null option for id " + id);
-                                        return;
+                                        LOGGER.warn("Null option for id " + id);
+                                        continue;
                                     }
                                     options.put(op, optionChance);
                                 }
@@ -195,14 +198,23 @@ public class VariationData extends GameXmlReader {
      * @return VariationInstance
      */
     public VariationInstance generateRandomVariation(Variation variation, Item targetItem) {
-        final VariationWeaponType weaponType = ((targetItem.getWeaponItem() != null) && targetItem.getWeaponItem().isMagicWeapon()) ? VariationWeaponType.MAGE : VariationWeaponType.WARRIOR;
-        return generateRandomVariation(variation, weaponType);
-    }
-
-    private VariationInstance generateRandomVariation(Variation variation, VariationWeaponType weaponType) {
+        VariationWeaponType weaponType = getVariationWeaponType(targetItem);
         Options option1 = variation.getRandomEffect(weaponType, 0);
         Options option2 = variation.getRandomEffect(weaponType, 1);
-        return ((option1 != null) && (option2 != null)) ? new VariationInstance(variation.getMineralId(), option1, option2) : null;
+        return nonNull(option1) && nonNull(option2) ? new VariationInstance(targetItem.getObjectId(), variation.getMineralId(), option1.getId(), option2.getId()) : null;
+
+    }
+
+    public VariationWeaponType getVariationWeaponType(Item targetItem) {
+        VariationWeaponType weaponType;
+        if(targetItem.isMagicWeapon() ) {
+            weaponType  = VariationWeaponType.MAGE;
+        } else if(targetItem.getBodyPart() == BodyPart.BACK && targetItem.getEnchantLevel() < 10) {
+            weaponType  = VariationWeaponType.CLOAK;
+        } else {
+            weaponType = VariationWeaponType.WARRIOR;
+        }
+        return weaponType;
     }
 
     public final Variation getVariation(int mineralId) {

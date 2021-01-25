@@ -18,10 +18,11 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.Elementals;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -49,20 +50,20 @@ public class ExChooseInventoryAttributeItem extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM, buffer );
 
-        writeInt(_itemId);
-        writeLong(_count);
-        writeInt(_atribute == AttributeType.FIRE ? 1 : 0); // Fire
-        writeInt(_atribute == AttributeType.WATER ? 1 : 0); // Water
-        writeInt(_atribute == AttributeType.WIND ? 1 : 0); // Wind
-        writeInt(_atribute == AttributeType.EARTH ? 1 : 0); // Earth
-        writeInt(_atribute == AttributeType.HOLY ? 1 : 0); // Holy
-        writeInt(_atribute == AttributeType.DARK ? 1 : 0); // Unholy
-        writeInt(_level); // Item max attribute level
-        writeInt(_items.size());
-        _items.forEach(this::writeInt);
+        buffer.writeInt(_itemId);
+        buffer.writeLong(_count);
+        buffer.writeInt(_atribute == AttributeType.FIRE ? 1 : 0); // Fire
+        buffer.writeInt(_atribute == AttributeType.WATER ? 1 : 0); // Water
+        buffer.writeInt(_atribute == AttributeType.WIND ? 1 : 0); // Wind
+        buffer.writeInt(_atribute == AttributeType.EARTH ? 1 : 0); // Earth
+        buffer.writeInt(_atribute == AttributeType.HOLY ? 1 : 0); // Holy
+        buffer.writeInt(_atribute == AttributeType.DARK ? 1 : 0); // Unholy
+        buffer.writeInt(_level); // Item max attribute level
+        buffer.writeInt(_items.size());
+        _items.forEach(buffer::writeInt);
     }
 
 }

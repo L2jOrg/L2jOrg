@@ -18,36 +18,22 @@
  */
 package org.l2j.gameserver.model.eventengine;
 
-import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.eventengine.drop.IEventDrop;
 import org.l2j.gameserver.model.events.AbstractScript;
-import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.ListenerRegisterType;
-import org.l2j.gameserver.model.events.annotations.RegisterEvent;
-import org.l2j.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.w3c.dom.Node;
 
 import java.nio.file.Path;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.Collections;
+import java.util.Set;
 
 /**
  * @author UnAfraid
  */
-public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends AbstractScript {
-    private final Set<T> events = ConcurrentHashMap.newKeySet();
-    private final Deque<Player> registeredPlayers = new ConcurrentLinkedDeque<>();
-    private final AtomicReference<IEventState> state = new AtomicReference<>();
-    private String name;
-    private volatile StatsSet variables = StatsSet.EMPTY_STATSET;
-    private volatile Set<EventScheduler> schedulers = Collections.emptySet();
-    private volatile Set<IConditionalEventScheduler> conditionalSchedulers = Collections.emptySet();
-    private volatile Map<String, IEventDrop> rewards = Collections.emptyMap();
+public abstract class AbstractEventManager<T extends AbstractEvent> extends AbstractScript {
 
-    public abstract void onInitialized();
+    private String name;
+    private Set<EventScheduler> schedulers = Collections.emptySet();
+    private Set<IConditionalEventScheduler> conditionalSchedulers = Collections.emptySet();
 
     public String getName() {
         return name;
@@ -55,14 +41,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public StatsSet getVariables() {
-        return variables;
-    }
-
-    public void setVariables(StatsSet variables) {
-        this.variables = new StatsSet(Collections.unmodifiableMap(variables.getSet()));
     }
 
     public EventScheduler getScheduler(String name) {
@@ -81,18 +59,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
         conditionalSchedulers = Collections.unmodifiableSet(schedulers);
     }
 
-    public IEventDrop getRewards(String name) {
-        return rewards.get(name);
-    }
-
-    public void setRewards(Map<String, IEventDrop> rewards) {
-        this.rewards = Collections.unmodifiableMap(rewards);
-    }
-
-    public Set<T> getEvents() {
-        return events;
-    }
-
     public void startScheduler() {
         schedulers.forEach(EventScheduler::startScheduler);
     }
@@ -109,68 +75,7 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
         //@formatter:on
     }
 
-    public IEventState getState() {
-        return state.get();
-    }
-
-    public void setState(IEventState newState) {
-        final IEventState previousState = state.get();
-        state.set(newState);
-        onStateChange(previousState, newState);
-    }
-
-    public boolean setState(IEventState previousState, IEventState newState) {
-        if (state.compareAndSet(previousState, newState)) {
-            onStateChange(previousState, newState);
-            return true;
-        }
-        return false;
-    }
-
-    public final boolean registerPlayer(Player player) {
-        return canRegister(player, true) && registeredPlayers.offer(player);
-    }
-
-    public final boolean unregisterPlayer(Player player) {
-        return registeredPlayers.remove(player);
-    }
-
-    public final boolean isRegistered(Player player) {
-        return registeredPlayers.contains(player);
-    }
-
-    public boolean canRegister(Player player, boolean sendMessage) {
-        return !registeredPlayers.contains(player);
-    }
-
-    public final Queue<Player> getRegisteredPlayers() {
-        return registeredPlayers;
-    }
-
-    @RegisterEvent(EventType.ON_PLAYER_LOGOUT)
-    @RegisterType(ListenerRegisterType.GLOBAL)
-    public void OnPlayerLogout(OnPlayerLogout event) {
-
-        final Player player = event.getActiveChar();
-        if (registeredPlayers.remove(player)) {
-            onUnregisteredPlayer(player);
-        }
-    }
-
-    /**
-     * Triggered when a player is automatically removed from the event manager because he disconnected
-     *
-     * @param player
-     */
-    protected void onUnregisteredPlayer(Player player) {
-
-    }
-
-    /**
-     * Triggered when state is changed
-     */
-    protected void onStateChange(IEventState previousState, IEventState newState) {
-
+    public void config(GameXmlReader reader, Node configNode) {
     }
 
     @Override
@@ -182,4 +87,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>> extends A
     public Path getScriptPath() {
         return null;
     }
+
+    public abstract void onInitialized();
 }

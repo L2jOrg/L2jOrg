@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureDamageReceived;
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
 import org.l2j.gameserver.model.events.returns.DamageReturn;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 
 import java.util.function.Function;
 

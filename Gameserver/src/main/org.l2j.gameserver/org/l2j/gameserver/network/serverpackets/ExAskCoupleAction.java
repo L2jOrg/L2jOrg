@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -34,11 +35,11 @@ public class ExAskCoupleAction extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_ASK_COUPLE_ACTION);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ASK_COUPLE_ACTION, buffer );
 
-        writeInt(_actionId);
-        writeInt(_charObjId);
+        buffer.writeInt(_actionId);
+        buffer.writeInt(_charObjId);
     }
 
 }

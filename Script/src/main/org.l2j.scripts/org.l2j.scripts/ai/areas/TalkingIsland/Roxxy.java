@@ -46,7 +46,7 @@ public final class Roxxy extends AbstractNpcAI
 		if (event.equals("TEXT_SPAM") && (npc != null))
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN, 1000);
-			startQuestTimer("TEXT_SPAM", Rnd.get(10000, 30000), npc, null, false);
+			startQuestTimer("TEXT_SPAM", Rnd.get(10000, 30000), npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -54,7 +54,7 @@ public final class Roxxy extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		startQuestTimer("TEXT_SPAM", 10000, npc, null, false);
+		startQuestTimer("TEXT_SPAM", 10000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

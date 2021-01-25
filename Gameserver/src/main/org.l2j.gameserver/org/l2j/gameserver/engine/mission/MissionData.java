@@ -21,6 +21,7 @@ package org.l2j.gameserver.engine.mission;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -124,12 +125,30 @@ public class MissionData extends GameXmlReader {
     }
 
     public boolean isCompleted(Player player, int missionId) {
-        var mission = missions.get(missionId);
-        return nonNull(mission) && mission.stream().anyMatch(data -> data.isCompleted(player));
+        var missionsHolder = missions.get(missionId);
+
+        if(Util.isNullOrEmpty(missionsHolder)) {
+            return false;
+        }
+
+        for (MissionDataHolder data : missionsHolder) {
+            if(data.isCompleted(player)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int getAvailableMissionCount(Player player) {
-        return (int) missions.values().stream().flatMap(List::stream).filter(mission -> mission.isAvailable(player)).count();
+        int count = 0;
+        for (List<MissionDataHolder> missionsHolder : missions.values()) {
+            for (MissionDataHolder mission : missionsHolder) {
+                if(mission.isAvailable(player)) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     public Collection<MissionDataHolder> getMissions(int id) {

@@ -34,25 +34,18 @@ import static org.l2j.gameserver.util.GameUtils.isPet;
 public final class PetStop implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
-	{
-		if (!isPet(player.getPet()))
-		{
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed) {
+		if (!isPet(player.getPet())) {
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 			return;
 		}
 		
 		final Pet pet = player.getPet();
-		if (pet.isUncontrollable())
-		{
+		if (pet.isUncontrollable()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_YOUR_PET_WHEN_ITS_HUNGER_GAUGE_IS_AT_0);
-		}
-		else if (pet.isBetrayed())
-		{
+		} else if (pet.isBetrayed()) {
 			player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
-		}
-		else
-		{
+		} else {
 			pet.cancelAction();
 		}
 	}

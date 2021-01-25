@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -48,21 +49,21 @@ public class RecipeItemMakeInfo extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) throws InvalidDataPacketException {
+    public void writeImpl(GameClient client, WritableBuffer buffer) throws InvalidDataPacketException {
         final RecipeList recipe = RecipeData.getInstance().getRecipeList(_id);
         if (recipe != null) {
-            writeId(ServerPacketId.RECIPE_ITEM_MAKE_INFO);
-            writeInt(_id);
-            writeInt(recipe.isDwarvenRecipe() ? 0 : 1); // 0 = Dwarven - 1 = Common
-            writeInt((int) _activeChar.getCurrentMp());
-            writeInt(_activeChar.getMaxMp());
-            writeInt(_success ? 1 : 0); // item creation success/failed
-            writeByte(0x00); // activate or deactivate a line named "addSuccess: +0%" , maybe deprecated
-            writeLong(0x00); // might need a Double here, addSuccess chance
+            writeId(ServerPacketId.RECIPE_ITEM_MAKE_INFO, buffer );
+            buffer.writeInt(_id);
+            buffer.writeInt(recipe.isDwarvenRecipe() ? 0 : 1); // 0 = Dwarven - 1 = Common
+            buffer.writeInt((int) _activeChar.getCurrentMp());
+            buffer.writeInt(_activeChar.getMaxMp());
+            buffer.writeInt(_success ? 1 : 0); // item creation success/failed
+            buffer.writeByte(0x00); // activate or deactivate a line named "addSuccess: +0%" , maybe deprecated
+            buffer.writeLong(0x00); // might need a Double here, addSuccess chance
 
-            writeDouble(_activeChar.getStats().getValue(Stat.CRAFT_RATE_MASTER)); // Chance Bonus craft chance rate
-            writeByte(1); // activate or deactivate Critical rate info line
-            writeDouble(_activeChar.getStats().getValue(Stat.CRAFT_RATE_CRITICAL)); // Critical rate chance
+            buffer.writeDouble(_activeChar.getStats().getValue(Stat.CRAFT_RATE_MASTER)); // Chance Bonus craft chance rate
+            buffer.writeByte(1); // activate or deactivate Critical rate info line
+            buffer.writeDouble(_activeChar.getStats().getValue(Stat.CRAFT_RATE_CRITICAL)); // Critical rate chance
         } else {
             LOGGER.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
             throw new InvalidDataPacketException();

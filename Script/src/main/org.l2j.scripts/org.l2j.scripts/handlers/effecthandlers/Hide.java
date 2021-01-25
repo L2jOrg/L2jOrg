@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.world.World;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -62,7 +62,7 @@ public final class Hide extends AbstractEffect {
 	public void onExit(Creature effector, Creature effected, Skill skill) {
 		if (isPlayer(effected)) {
 			final Player activeChar = effected.getActingPlayer();
-			if (!activeChar.inObserverMode()) {
+			if (!activeChar.isInObserverMode()) {
 				activeChar.setInvisible(false);
 			}
 		}

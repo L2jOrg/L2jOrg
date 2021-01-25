@@ -21,9 +21,9 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -207,13 +207,12 @@ public class AdminGrandBoss implements IAdminCommandHandler
 	{
 		if (Arrays.asList(ANTHARAS, VALAKAS, BAIUM, QUEENANT, ORFEN, CORE).contains(grandBossId))
 		{
-			final int bossStatus = GrandBossManager.getInstance().getBossStatus(grandBossId);
+			final var bossStatus = GrandBossManager.getInstance().getBossStatus(grandBossId);
 			NoRestartZone bossZone = null;
-			String textColor = null;
-			String text = null;
+			String textColor;
+			String text;
 			String htmlPatch = null;
-			int deadStatus = 0;
-			
+
 			switch (grandBossId)
 			{
 				case ANTHARAS:
@@ -252,28 +251,21 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			
 			if (Arrays.asList(ANTHARAS, VALAKAS, BAIUM).contains(grandBossId))
 			{
-				deadStatus = 3;
 				switch (bossStatus)
 				{
-					case 0:
+					case ALIVE:
 					{
 						textColor = "00FF00"; // Green
 						text = "Alive";
 						break;
 					}
-					case 1:
-					{
-						textColor = "FFFF00"; // Yellow
-						text = "Waiting";
-						break;
-					}
-					case 2:
+					case FIGHTING:
 					{
 						textColor = "FF9900"; // Orange
 						text = "In Fight";
 						break;
 					}
-					case 3:
+					case DEAD:
 					{
 						textColor = "FF0000"; // Red
 						text = "Dead";
@@ -288,16 +280,15 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			}
 			else
 			{
-				deadStatus = 1;
 				switch (bossStatus)
 				{
-					case 0:
+					case ALIVE:
 					{
 						textColor = "00FF00"; // Green
 						text = "Alive";
 						break;
 					}
-					case 1:
+					case DEAD:
 					{
 						textColor = "FF0000"; // Red
 						text = "Dead";
@@ -311,14 +302,14 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				}
 			}
 			
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(grandBossId);
-			final String bossRespawn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(info.getLong("respawn_time"));
+			final var info = GrandBossManager.getInstance().getBossData(grandBossId);
+			final String bossRespawn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(info.getRespawnTime());
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			html.setHtml(HtmCache.getInstance().getHtm(activeChar, htmlPatch));
 			html.replace("%bossStatus%", text);
 			html.replace("%bossColor%", textColor);
-			html.replace("%respawnTime%", bossStatus == deadStatus ? bossRespawn : "Already respawned!");
+			html.replace("%respawnTime%", bossStatus == BossStatus.DEAD ? bossRespawn : "Already respawned!");
 			html.replace("%playersInside%", nonNull(bossZone) ? String.valueOf(bossZone.getPlayersInsideCount()) : "Zone not found!");
 			activeChar.sendPacket(html);
 		}

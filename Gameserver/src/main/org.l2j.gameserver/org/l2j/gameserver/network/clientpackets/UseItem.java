@@ -35,10 +35,11 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EtcItem;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,6 +49,7 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isBetween;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -132,9 +134,9 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getReputation() < 0)) {
+        if (!getSettings(CharacterSettings.class).allowPKTeleport() && player.getReputation() < 0) {
             final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-            if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
+            if (nonNull(skills) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
                 return;
             }
         }
@@ -204,6 +206,9 @@ public final class UseItem extends ClientPacket {
     }
 
     private boolean checkCanUse(Player player, Item item) {
+        if(item.isEquipped()) {
+            return true;
+        }
         var bodyPart = item.getBodyPart();
         return checkUnlockedSlot(player, item, bodyPart) && (!item.isHeroItem() || player.isHero() || player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
                 &&  !player.getInventory().isItemSlotBlocked(bodyPart);
@@ -217,24 +222,24 @@ public final class UseItem extends ClientPacket {
                 }
             }
             case TALISMAN -> {
-                if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0)) {
+                if (player.getInventory().getTalismanSlots() == 0) {
                     player.sendPacket(getSystemMessage(YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET).addItemName(item));
                     return false;
                 }
             }
             case BROOCH_JEWEL -> {
-                if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0)) {
+                if (player.getInventory().getBroochJewelSlots() == 0) {
                     player.sendPacket(getSystemMessage(YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH).addItemName(item));
                     return false;
                 }
             }
             case AGATHION -> {
-                if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0)) {
+                if (player.getInventory().getAgathionSlots() == 0) {
                     return false;
                 }
             }
             case ARTIFACT -> {
-                if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0)) {
+                if (player.getInventory().getArtifactSlots() == 0) {
                     player.sendPacket(getSystemMessage(NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1).addItemName(item));
                     return false;
                 }

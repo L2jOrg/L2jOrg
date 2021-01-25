@@ -53,7 +53,7 @@ public class AdminRepairChar implements IAdminCommandHandler {
 
 		var objectId = PlayerNameTable.getInstance().getIdByName(name);
 		getDAO(PlayerDAO.class).updateToValidLocation(objectId);
-		getDAO(ShortcutDAO.class).deleteAll(objectId);
+		getDAO(ShortcutDAO.class).deleteFromPlayer(objectId);
 		getDAO(ItemDAO.class).updateToInventory(objectId);
 	}
 

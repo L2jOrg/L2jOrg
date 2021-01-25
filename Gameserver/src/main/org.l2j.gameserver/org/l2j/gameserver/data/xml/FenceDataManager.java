@@ -42,6 +42,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -161,8 +162,21 @@ public final class FenceDataManager extends GameXmlReader {
             return false;
         };
 
+        return checkRegionFences(x, y, filter);
+    }
+
+    private boolean checkRegionFences(int x, int y, Predicate<Fence> filter) {
         final WorldRegion region = World.getInstance().getRegion(x, y); // Should never be null.
-        return region != null && regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
+        if(nonNull(region)) {
+            for (Fence fence : regions.getOrDefault(region, Collections.emptyList())) {
+                if(filter.test(fence)){
+                    return true;
+                }
+            }
+        } else {
+            LOGGER.warn("Location without region {},{}", x, y);
+        }
+        return false;
     }
 
     private boolean crossLinePart(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double xMin, double yMin, double xMax, double yMax) {

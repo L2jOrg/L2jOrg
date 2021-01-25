@@ -21,12 +21,12 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameAddPlayer;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameChangeTeam;
@@ -157,21 +157,10 @@ public final class HandysBlockCheckerManager {
                 return false;
             }
 
-            if (OlympiadManager.getInstance().isRegistered(player)) {
-                OlympiadManager.getInstance().unRegisterNoble(player);
+            if (Olympiad.getInstance().isRegistered(player)) {
                 player.sendPacket(SystemMessageId.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER);
+                return false;
             }
-
-            // if(UnderGroundColiseum.getInstance().isRegisteredPlayer(player))
-            // {
-            // UngerGroundColiseum.getInstance().removeParticipant(player);
-            // player.sendPacket(SystemMessageId.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
-            // }
-            // if(KrateiCubeManager.getInstance().isRegisteredPlayer(player))
-            // {
-            // KrateiCubeManager.getInstance().removeParticipant(player);
-            // player.sendPacket(SystemMessageId.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
-            // }
 
             if (_registrationPenalty.contains(player.getObjectId())) {
                 player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_SECONDS_BEFORE_ATTEMPTING_TO_REGISTER_AGAIN);
@@ -297,7 +286,7 @@ public final class HandysBlockCheckerManager {
     public void onDisconnect(Player player) {
         final int arena = player.getBlockCheckerArena();
         final int team = getHolder(arena).getPlayerTeam(player);
-        getInstance().removePlayer(player, arena, team);
+        removePlayer(player, arena, team);
         if (player.getTeam() != Team.NONE) {
             player.stopAllEffects();
             // Remove team aura

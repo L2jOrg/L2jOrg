@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -40,14 +41,14 @@ public class ExBrLoadEventTopRankers extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_BR_LOAD_EVENT_TOP_RANKERS_ACK);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_BR_LOAD_EVENT_TOP_RANKERS_ACK, buffer );
 
-        writeInt(_eventId);
-        writeInt(_day);
-        writeInt(_count);
-        writeInt(_bestScore);
-        writeInt(_myScore);
+        buffer.writeInt(_eventId);
+        buffer.writeInt(_day);
+        buffer.writeInt(_count);
+        buffer.writeInt(_bestScore);
+        buffer.writeInt(_myScore);
     }
 
 }

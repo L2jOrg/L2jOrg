@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2j.gameserver.network.serverpackets.GMViewItemList;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -317,7 +317,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			target.sendMessage("Admin spawned " + num + " " + template.getName() + " in your inventory.");
 		}
 		BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " " + template.getName() + "(" + id + ") in " + target.getName() + " inventory.");
-		target.sendPacket(new ExAdenaInvenCount(target));
+		target.sendPacket(new ExAdenaInvenCount());
 	}
 	
 	private int getCoinId(String name) {

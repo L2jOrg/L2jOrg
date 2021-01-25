@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -34,13 +35,13 @@ public final class AskJoinPledge extends ServerPacket {
     }
 
     @Override
-    public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ASK_JOIN_PLEDGE);
-        writeInt(_requestor.getObjectId());
-        writeString(_requestor.getName());
-        writeString(_pledgeName);
+    public void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerPacketId.ASK_JOIN_PLEDGE, buffer );
+        buffer.writeInt(_requestor.getObjectId());
+        buffer.writeString(_requestor.getName());
+        buffer.writeString(_pledgeName);
         if (_pledgeType != 0) {
-            writeInt(_pledgeType);
+            buffer.writeInt(_pledgeType);
         }
     }
 
