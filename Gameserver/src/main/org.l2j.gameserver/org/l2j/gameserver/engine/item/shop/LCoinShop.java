@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.LinkedHashIntMap;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.LCoinShopDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.l2store.RestrictionPeriod;
@@ -68,6 +69,9 @@ public class LCoinShop extends GameXmlReader {
 
     @Override
     public void load() {
+        if (!Config.ENABLE_LCOIN_STORE){
+            return;
+        }
         parseDatapackFile("data/shop/l-coin.xml");
         releaseResources();
         reloadShopHistory();

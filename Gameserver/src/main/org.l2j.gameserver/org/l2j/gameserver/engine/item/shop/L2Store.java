@@ -20,6 +20,7 @@ package org.l2j.gameserver.engine.item.shop;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.L2StoreDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
@@ -67,6 +68,9 @@ public class L2Store extends GameXmlReader {
 
     @Override
     public void load() {
+        if (!Config.ENABLE_L2_STORE){
+            return;
+        }
         primeItems.clear();
         parseDatapackFile("data/shop/l2-store.xml");
         LOGGER.info("Loaded {} items", primeItems.size());

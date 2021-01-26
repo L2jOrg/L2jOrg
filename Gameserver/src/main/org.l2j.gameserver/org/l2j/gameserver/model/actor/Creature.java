@@ -2271,6 +2271,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         if (!isSpawned()) {
             _move = null;
+            if (isPlayer(this))
+                getActingPlayer().broadcastUserInfo();
             return true;
         }
 
@@ -2424,6 +2426,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             revalidateZone(true);
         }
         broadcastPacket(new StopMove(this));
+        if (isPlayer(this))
+            getActingPlayer().broadcastUserInfo();
     }
 
     public boolean isShowSummonAnimation() {
@@ -2714,6 +2718,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Set the Creature _move object to MoveData object
         _move = m;
+        if (isPlayer(this))
+            getActingPlayer().broadcastUserInfo();
 
         // Add the Creature to movingObjects of the GameTimeController
         // The GameTimeController manage objects movement
@@ -2730,6 +2736,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!isOnGeodataPath()) {
             // Cancel the move action
             _move = null;
+            if (isPlayer(this))
+                getActingPlayer().broadcastUserInfo();
             return false;
         }
 
@@ -2738,6 +2746,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if ((speed <= 0) || isMovementDisabled()) {
             // Cancel the move action
             _move = null;
+            if (isPlayer(this))
+                getActingPlayer().broadcastUserInfo();
             return false;
         }
 
