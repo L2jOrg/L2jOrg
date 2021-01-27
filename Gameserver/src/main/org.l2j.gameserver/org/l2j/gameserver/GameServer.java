@@ -139,8 +139,12 @@ public class GameServer {
         VipEngine.init();
         ElementalSpiritEngine.init();
         TeleportEngine.init();
-        L2Store.init();
-        LCoinShop.init();
+        if (Config.ENABLE_L2_STORE){
+            L2Store.init();
+        }
+        if (Config.ENABLE_LCOIN_STORE){
+            LCoinShop.init();
+        }
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
         AttendanceEngine.init();

@@ -485,7 +485,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param packet
      */
     public void broadcastPacket(ServerPacket packet) {
-        checkBroadcast(packet);
+      //  checkBroadcast(packet);
         World.getInstance().forEachVisibleObject(this, Player.class, packet::sendTo, this::isVisibleFor);
     }
 
@@ -496,14 +496,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
      */
     public void broadcastPacket(ServerPacket packet, int radius) {
-        checkBroadcast(packet);
+      //  checkBroadcast(packet);
         World.getInstance().forEachPlayerInRange(this, radius, packet::sendTo, this::isVisibleFor);
     }
 
     protected void checkBroadcast(ServerPacket packet) {
-        if(World.getInstance().getPlayersCountInSurroundRegions(this) > 10) {
+     /*   if(World.getInstance().getPlayersCountInSurroundRegions(this) > 10) {
             packet.sendInBroadcast(true);
-        }
+        }*/
     }
 
     /**
@@ -2271,6 +2271,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         if (!isSpawned()) {
             _move = null;
+            //TODO find the right call to update stats
+          /*  if (isPlayer(this))
+                getActingPlayer().broadcastUserInfo();*/
             return true;
         }
 
@@ -2424,6 +2427,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             revalidateZone(true);
         }
         broadcastPacket(new StopMove(this));
+        /*if (isPlayer(this))
+            getActingPlayer().broadcastUserInfo();*/
     }
 
     public boolean isShowSummonAnimation() {
@@ -2674,7 +2679,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     }
                 }
             }
-
+          //  final Location destination = GeoData.getInstance().moveCheck(curX, curY, curZ, x, y, z, getInstanceId());
+           // getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
             // If no distance to go through, the movement is canceled
             if ((distance < 1) && (geoSettings.isEnabledPathFinding() || GameUtils.isPlayable(this))) {
                 if (GameUtils.isSummon(this)) {
@@ -2713,6 +2719,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Set the Creature _move object to MoveData object
         _move = m;
+        if (isPlayer(this))
+            sendPacket(new UserInfo(getActingPlayer()));
+
 
         // Add the Creature to movingObjects of the GameTimeController
         // The GameTimeController manage objects movement
@@ -2729,6 +2738,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!isOnGeodataPath()) {
             // Cancel the move action
             _move = null;
+           /* if (isPlayer(this))
+                getActingPlayer().broadcastUserInfo();*/
             return false;
         }
 
@@ -2737,6 +2748,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if ((speed <= 0) || isMovementDisabled()) {
             // Cancel the move action
             _move = null;
+           /* if (isPlayer(this))
+                getActingPlayer().broadcastUserInfo();*/
             return false;
         }
 

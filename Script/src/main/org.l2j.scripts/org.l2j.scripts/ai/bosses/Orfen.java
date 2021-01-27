@@ -284,6 +284,7 @@ public final class Orfen extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
+		GrandBossManager.getInstance().setBossStatus(ORFEN, BossStatus.FIGHTING);
 		final int npcId = npc.getId();
 		if (npcId == ORFEN)
 		{

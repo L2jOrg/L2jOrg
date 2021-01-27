@@ -99,8 +99,8 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
 
                 itm.getTemplate().forEachSkill(ItemSkillType.NORMAL, holder ->
                 {
-
-                    if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                    InventorySlot itmSlot = InventorySlot.fromId(itm.getLocationSlot());
+                    if(verifySkillActiveIfAddtionalAgathion(itmSlot, holder)) {
                         return;
                     }
 
