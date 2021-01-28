@@ -24,6 +24,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.NextAction;
+import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
@@ -37,6 +38,7 @@ import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
@@ -178,6 +180,10 @@ public final class UseItem extends ClientPacket {
                     player.addTimeStampItem(item, reuseDelay);
                     sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
                 }
+            }
+            if (VariationData.getInstance().getVariation(itemId) != null)
+            {
+                player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
             }
         }
     }

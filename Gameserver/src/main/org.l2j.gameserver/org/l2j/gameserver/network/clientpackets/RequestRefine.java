@@ -76,7 +76,7 @@ public final class RequestRefine extends AbstractRefinePacket {
             return;
         }
 
-        final Item feeItem = player.getInventory().getItemByObjectId(_feeItemObjId);
+        final Item feeItem = player.getInventory().getItemByItemId(57);
         if (feeItem == null) {
             return;
         }
