@@ -256,6 +256,7 @@ public final class ItemEngine extends GameXmlReader {
         weapon.setRestrictSkills(parseBoolean(attr, "restrict-skills"));
         weapon.setEquipReuseDelay(parseInt(attr, "equip-reuse-delay"));
         weapon.setHeroItem(parseBoolean(attr, "hero"));
+        weapon.setEnchantBless(parseBoolean(attr, "enchant_bless"));
     }
 
     private void parseArmor(Node armorNode) {
@@ -284,6 +285,7 @@ public final class ItemEngine extends GameXmlReader {
         armor.setEnchantable(parseBoolean(attr, "enchant-enabled"));
         armor.setEquipReuseDelay(parseInt(attr, "equip-reuse-delay"));
         armor.setHeroItem(parseBoolean(attr, "hero"));
+        armor.setEnchantBless(parseBoolean(attr, "enchant_bless"));
     }
 
     private void parseItem(Node itemNode) {
@@ -350,6 +352,7 @@ public final class ItemEngine extends GameXmlReader {
         item.setSelfResurrection(parseBoolean(attr, "self-resurrection"));
         item.setAction(parseEnum(attr, ActionType.class, "action"));
         item.setAutoUseType(parseEnum(attr, AutoUseType.class, "auto-use"));
+        item.setEnchantBless(parseBoolean(attr, "enchant_bless"));
     }
 
     private void parseCommonAttributes(ItemTemplate item, Node node) {

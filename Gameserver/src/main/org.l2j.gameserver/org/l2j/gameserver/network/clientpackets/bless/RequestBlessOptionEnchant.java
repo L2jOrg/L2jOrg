@@ -23,9 +23,9 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class RequestBlessOptionEnchant extends ClientPacket {
 
-    private static final Set<ItemGrade> ALLOWED_GRADES = Set.of(
-            ItemGrade.C, ItemGrade.B, ItemGrade.A, ItemGrade.S
-    );
+//    private static final Set<ItemGrade> ALLOWED_GRADES = Set.of(
+//            ItemGrade.C, ItemGrade.B, ItemGrade.A, ItemGrade.S
+//    );
 
     private int _objectId;
 
@@ -39,12 +39,15 @@ public class RequestBlessOptionEnchant extends ClientPacket {
         final Player activeChar = client.getPlayer();
 
         if (activeChar == null) {
+            client.sendPacket(new ExBlessOptionEnchant(false));
             return;
         } else if (activeChar.isInStoreMode()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+            client.sendPacket(new ExBlessOptionEnchant(false));
             return;
         } else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+            client.sendPacket(new ExBlessOptionEnchant(false));
             return;
         }
 
@@ -69,7 +72,12 @@ public class RequestBlessOptionEnchant extends ClientPacket {
             return;
         }
 
-        if (!ALLOWED_GRADES.contains(request.getItem().getTemplate().getItemGrade())) {
+//        if (!ALLOWED_GRADES.contains(request.getItem().getTemplate().getItemGrade())) {
+//            client.sendPacket(new ExBlessOptionEnchant(false));
+//            return;
+//        }
+
+        if (request.getItem().getTemplate().isEnchantBless()) {
             client.sendPacket(new ExBlessOptionEnchant(false));
             return;
         }

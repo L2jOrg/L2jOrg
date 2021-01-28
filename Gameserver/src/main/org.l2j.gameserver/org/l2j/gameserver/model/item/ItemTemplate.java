@@ -108,7 +108,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     protected boolean exImmediateEffect;
     protected ActionType _defaultAction = ActionType.NONE;
     private List<ItemSkillHolder> skills;
-
+    protected boolean isEnchantBless;
     private int reuseDelay;
     private int reuseGroup;
 
@@ -675,5 +675,13 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
 
     public void setCrystalCount(int count) {
         crystalCount = count;
+    }
+
+    public boolean isEnchantBless() {
+        return isEnchantBless;
+    }
+
+    public void setEnchantBless(boolean bless) {
+        isEnchantBless = bless;
     }
 }
