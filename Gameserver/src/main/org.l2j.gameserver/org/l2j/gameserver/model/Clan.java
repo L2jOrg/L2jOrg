@@ -362,15 +362,14 @@ public class Clan implements IIdentifiable, INamable {
         };
     }
 
-    /**
-     * @return the online clan member count.
-     */
     public int getOnlineMembersCount() {
-        //@formatter:off
-        return (int) members.values().stream()
-                .filter(ClanMember::isOnline)
-                .count();
-        //@formatter:on
+        int count = 0;
+        for (ClanMember member : members.values()) {
+            if(member.isOnline()) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public void forEachMember(Consumer<ClanMember> action) {
@@ -378,15 +377,19 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void forEachOnlineMember(Consumer<Player> action) {
-        onlineMembersStream().forEach(action);
+        for (ClanMember member : members.values()) {
+            if(member.isOnline()) {
+                action.accept(member.getPlayerInstance());
+            }
+        }
     }
 
     public void forEachOnlineMember(Consumer<Player> action, Predicate<Player> filter) {
-        onlineMembersStream().filter(filter).forEach(action);
-    }
-
-    private Stream<Player> onlineMembersStream() {
-        return members.values().stream().filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance);
+        for (ClanMember member : members.values()) {
+            if(member.isOnline() && filter.test(member.getPlayerInstance())) {
+                action.accept(member.getPlayerInstance());
+            }
+        }
     }
 
     public int getAllyId() {
@@ -666,7 +669,11 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastToOnlineMembers(ServerPacket packet) {
-        onlineMembersStream().forEach(packet::sendTo);
+        for (ClanMember member : members.values()) {
+            if(member.isOnline()) {
+                member.getPlayerInstance().sendPacket(packet);
+            }
+        }
     }
 
     public void broadcastCSToOnlineMembers(CreatureSay packet, Player broadcaster) {
