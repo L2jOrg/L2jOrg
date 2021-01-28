@@ -206,4 +206,19 @@ public class Siege extends AbstractEvent {
         final var siegeClan = getSiegeParticipant(clan);
         return siegeClan.getMercenaries();
     }
+
+    public void removeMercenary(int playerId) {
+        for (SiegeParticipant participant : attackers.values()) {
+            if(participant.hasMercenary(playerId)) {
+                participant.removeMercenary(playerId);
+                return;
+            }
+        }
+        for (SiegeParticipant participant : defenders.values()) {
+            if(participant.hasMercenary(playerId)) {
+                participant.removeMercenary(playerId);
+                return;
+            }
+        }
+    }
 }

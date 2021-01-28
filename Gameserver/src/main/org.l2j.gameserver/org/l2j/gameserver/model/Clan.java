@@ -68,7 +68,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -471,31 +470,44 @@ public class Clan implements IIdentifiable, INamable {
         //@formatter:on
     }
 
-    /**
-     * @return the online clan member count.
-     */
     public int getOnlineMembersCount() {
-        //@formatter:off
-        return (int) members.values().stream()
-                .filter(ClanMember::isOnline)
-                .count();
-        //@formatter:on
+        int count = 0;
+        for (ClanMember member : members.values()) {
+            if(member.isOnline()) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public void forEachMember(Consumer<ClanMember> action, Predicate<ClanMember> filter) {
-        members.values().stream().filter(filter).forEach(action);
+        for (ClanMember member : members.values()) {
+            if(filter.test(member)) {
+                action.accept(member);
+            }
+        }
+    }
+
+    public void forEachMember(Consumer<ClanMember> action) {
+        for (ClanMember member : members.values()) {
+            action.accept(member);
+        }
     }
 
     public void forEachOnlineMember(Consumer<Player> action) {
-        onlineMembersStream().forEach(action);
+        for (ClanMember member : members.values()) {
+            if(member.isOnline()) {
+                action.accept(member.getPlayerInstance());
+            }
+        }
     }
 
     public void forEachOnlineMember(Consumer<Player> action, Predicate<Player> filter) {
-        onlineMembersStream().filter(filter).forEach(action);
-    }
-
-    private Stream<Player> onlineMembersStream() {
-        return members.values().stream().filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance);
+        for (ClanMember member : members.values()) {
+            if(member.isOnline() && filter.test(member.getPlayerInstance())) {
+                action.accept(member.getPlayerInstance());
+            }
+        }
     }
 
     public int getAllyId() {
@@ -859,7 +871,11 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastToOnlineMembers(ServerPacket packet) {
-        onlineMembersStream().forEach(packet::sendTo);
+        for (ClanMember member : members.values()) {
+            if(member.isOnline()) {
+                member.getPlayerInstance().sendPacket(packet);
+            }
+        }
     }
 
     public void broadcastCSToOnlineMembers(CreatureSay packet, Player broadcaster) {

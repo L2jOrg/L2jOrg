@@ -219,7 +219,6 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
             return;
 
         registerDefender(player, clan, siege);
-
     }
 
     public void cancelAttacker(Player player, int castleId) {
@@ -264,6 +263,7 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
         siege.registerDefender(clan);
         player.sendPacket(new ExMCWCastleSiegeDefenderList(siege));
+        onSiegeRegistration(clan);
     }
 
     private void registerAttacker(Player player, Clan clan, Siege siege) {
@@ -285,6 +285,17 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
         siege.registerAttacker(clan);
         player.sendPacket(new ExMCWCastleSiegeAttackerList(siege));
+        onSiegeRegistration(clan);
+    }
+
+    private void onSiegeRegistration(Clan clan) {
+        clan.forEachMember(member -> removeMercenary(member.getObjectId()));
+    }
+
+    private void removeMercenary(int playerId) {
+        for (Siege siege : sieges.values()) {
+            siege.removeMercenary(playerId);
+        }
     }
 
     private boolean validateRegistration(Player player, Siege siege, Clan clan) {
