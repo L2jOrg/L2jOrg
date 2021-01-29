@@ -128,6 +128,17 @@ public class GolbergRoom extends AbstractInstance
             }
             case "SPAWN_TRESURE":
             {
+                final Instance world = player.getInstanceWorld();
+
+                if (world == null)
+                {
+                    return null;
+                }
+                if (world.getParameters().getInt("treasureCounter", 0) == 0)
+                {
+                    world.getParameters().set("treasureCounter", 0);
+                }
+
                 if (player.isGM())
                 {
                     if (_treasureCounter <= 27)

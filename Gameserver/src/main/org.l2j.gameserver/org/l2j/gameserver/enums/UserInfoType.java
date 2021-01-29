@@ -55,7 +55,7 @@ public enum UserInfoType implements IUpdateTypeComponent {
     RANKER(0x18, 6),
     STATS_POINTS(0x19, 16),
     STATS_ABILITIES(0x1A, 18),
-    UNK(0x1B, 0);
+    ELIXIR_USED(0x1B, 1);
 
     private final int mask;
     private final int blockLength;

@@ -379,9 +379,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeShort(0x01);
         }
         
-        if(containsMask(UserInfoType.UNK)) {
-            buffer.writeShort(0);
-            buffer.writeSizedString(""); // some string or craft points
+        if(containsMask(UserInfoType.ELIXIR_USED)) {
+            buffer.writeShort(0x00);
+            buffer.writeInt(0x00); // some string or craft points
         }
     }
 
