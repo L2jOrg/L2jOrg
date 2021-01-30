@@ -35,7 +35,6 @@ public class ExRankingCharRankers extends ClientPacket {
         group = readByte();
         scope = readByte();
         race = readInt();
-
     }
 
     @Override

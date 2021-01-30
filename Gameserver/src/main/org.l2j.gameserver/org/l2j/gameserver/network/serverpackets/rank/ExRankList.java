@@ -62,6 +62,7 @@ public class ExRankList extends ServerPacket {
         buffer.writeByte(scope);
         buffer.writeInt(race);
 
+
         buffer.writeInt(rankers.size());
 
         for (var ranker : rankers) {
@@ -73,6 +74,7 @@ public class ExRankList extends ServerPacket {
             buffer.writeInt(ranker.getRank());
             buffer.writeInt(ranker.getRankSnapshot());
             buffer.writeInt(ranker.getRankRaceSnapshot());
+            buffer.writeInt(0); // TODO: ClassRank Snapshot
         }
     }
 
