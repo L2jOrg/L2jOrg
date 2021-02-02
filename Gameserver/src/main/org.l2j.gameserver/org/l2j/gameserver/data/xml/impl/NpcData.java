@@ -520,8 +520,15 @@ public class NpcData extends GameXmlReader {
                         template.setClans(clans);
                         template.setIgnoreClanNpcIds(ignoreClanNpcIds);
 
+
+
                         if (dropLists != null) {
                             for (DropHolder dropHolder : dropLists) {
+                                if (!Config.DROP_RANDOM_CRAFT_MATERIALS && (dropHolder.getItemId() >= 92908) && (dropHolder.getItemId() <= 92919))
+                                {
+                                    continue;
+                                }
+
                                 switch (dropHolder.getDropType()) {
                                     case DROP:
                                     case LUCKY: // TODO: Luck is added to death drops.

@@ -358,7 +358,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         if(containsMask(UserInfoType.STATS_POINTS)) {
             buffer.writeShort(UserInfoType.STATS_POINTS.getBlockLength());
             var statsData = player.getStatsData();
-            buffer.writeShort(statsData.getPoints());
+            buffer.writeShort(statsData.getPoints()+5);
             buffer.writeShort(statsData.getValue(BaseStats.STR));
             buffer.writeShort(statsData.getValue(BaseStats.DEX));
             buffer.writeShort(statsData.getValue(BaseStats.CON));
@@ -380,8 +380,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         }
         
         if(containsMask(UserInfoType.ELIXIR_USED)) {
+            buffer.writeShort(5);
             buffer.writeShort(0x00);
-            buffer.writeInt(0x00); // some string or craft points
         }
     }
 
