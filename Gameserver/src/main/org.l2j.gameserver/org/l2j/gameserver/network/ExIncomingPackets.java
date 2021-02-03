@@ -42,6 +42,8 @@ import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleW
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
+import org.l2j.gameserver.network.clientpackets.collections.ExCollectionCloseUi;
+import org.l2j.gameserver.network.clientpackets.collections.ExCollectionOpenUi;
 import org.l2j.gameserver.network.clientpackets.commission.*;
 import org.l2j.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.costume.*;
@@ -565,6 +567,50 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PK_PENALTY_LIST_ONLY_LOC(null, ConnectionState.IN_GAME_STATES),
     EX_TRY_PET_EXTRACT_SYSTEM(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_V3_SET_ANNOUNCE(null, ConnectionState.IN_GAME_STATES),
+    EX_RANKING_FESTIVAL_OPEN(null, ConnectionState.IN_GAME_STATES),
+    EX_RANKING_FESTIVAL_BUY(null, ConnectionState.IN_GAME_STATES),
+    EX_RANKING_FESTIVAL_BONUS(null, ConnectionState.IN_GAME_STATES),
+    EX_RANKING_FESTIVAL_RANKING(null, ConnectionState.IN_GAME_STATES),
+    EX_RANKING_FESTIVAL_MY_RECEIVED_BONUS(null, ConnectionState.IN_GAME_STATES),
+    EX_RANKING_FESTIVAL_REWARD(null, ConnectionState.IN_GAME_STATES),
+    EX_TIMER_CHECK(null, ConnectionState.IN_GAME_STATES),
+    EX_STEADY_BOX_LOAD(null, ConnectionState.IN_GAME_STATES),
+    EX_STEADY_OPEN_SLOT(null, ConnectionState.IN_GAME_STATES),
+    EX_STEADY_OPEN_BOX(null, ConnectionState.IN_GAME_STATES),
+    EX_STEADY_GET_REWARD(null, ConnectionState.IN_GAME_STATES),
+    EX_PET_RANKING_MY_INFO(null, ConnectionState.IN_GAME_STATES),
+    EX_PET_RANKING_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_OPEN_UI(ExCollectionOpenUi::new, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_CLOSE_UI(ExCollectionCloseUi::new, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_UPDATE_FAVORITE(null, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_FAVORITE_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_SUMMARY(null, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_REGISTER(null, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_RECEIVE_REWARD(null, ConnectionState.IN_GAME_STATES),
+    EX_PVPBOOK_SHARE_REVENGE_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_PVPBOOK_SHARE_REVENGE_REQ_SHARE_REVENGEINFO(null, ConnectionState.IN_GAME_STATES),
+    EX_PVPBOOK_SHARE_REVENGE_KILLER_LOCATION(null, ConnectionState.IN_GAME_STATES),
+    EX_PVPBOOK_SHARE_REVENGE_TELEPORT_TO_KILLER(null, ConnectionState.IN_GAME_STATES),
+    EX_PVPBOOK_SHARE_REVENGE_SHARED_TELEPORT_TO_KILLER(null, ConnectionState.IN_GAME_STATES),
+    EX_PENALTY_ITEM_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_PENALTY_ITEM_RESTORE(null, ConnectionState.IN_GAME_STATES),
+    EX_USER_WATCHER_TARGET_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_USER_WATCHER_ADD(null, ConnectionState.IN_GAME_STATES),
+    EX_USER_WATCHER_DELETE(null, ConnectionState.IN_GAME_STATES),
+    EX_HOMUNCULUS_ACTIVATE_SLOT(null, ConnectionState.IN_GAME_STATES),
+    EX_SUMMON_HOMUNCULUS_COUPON(null, ConnectionState.IN_GAME_STATES),
+    EX_SUBJUGATION_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_SUBJUGATION_RANKING(null, ConnectionState.IN_GAME_STATES),
+    EX_SUBJUGATION_GACHA_UI(null, ConnectionState.IN_GAME_STATES),
+    EX_SUBJUGATION_GACHA(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_DONATION_INFO(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_DONATION_REQUEST(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_CONTRIBUTION_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_RANKING_MY_INFO(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_RANKING_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_ITEM_RESTORE_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_ITEM_RESTORE(null, ConnectionState.IN_GAME_STATES),
     ;
 
     static final ExIncomingPackets[] PACKET_ARRAY = values();
