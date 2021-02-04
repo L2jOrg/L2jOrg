@@ -33,6 +33,7 @@ import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Optional;
 
+import static java.lang.Math.round;
 import static java.util.Objects.nonNull;
 
 /**
@@ -382,6 +383,17 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         if(containsMask(UserInfoType.ELIXIR_USED)) {
             buffer.writeShort(5);
             buffer.writeShort(0x00);
+        }
+
+        // Send exp bonus change.
+        if (containsMask(UserInfoType.VITA_FAME))
+        {
+
+           // player.sendPacket(new ExUserBoostStat(player));
+            if (Config.ENABLE_VITALITY)
+            {
+                player.sendPacket(new ExVitalityEffectInfo(player));
+            }
         }
     }
 

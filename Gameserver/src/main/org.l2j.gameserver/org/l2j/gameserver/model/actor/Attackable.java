@@ -437,14 +437,16 @@ public class Attackable extends Npc {
                                         double finalExp = exp;
                                         if (useVitalityRate()) {
                                             finalExp *= attacker.getStats().getExpBonusMultiplier();
+                                            if (attacker.getSayhaGraceSupportEndTime() < System.currentTimeMillis())
+                                            {
+                                                attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true);
+                                            }
+                                            PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+                                            MagicLampData.getInstance().addLampExp(attacker, exp, true);
                                         }
                                         clan.addHuntingPoints(attacker, this, finalExp);
                                     }
-                                    attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true);
-                                    PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
-                                    MagicLampData.getInstance().addLampExp(attacker, exp, true);
                                 }
-
                                 rewardAttributeExp(attacker, damage, totalDamage);
                             }
                         }

@@ -109,6 +109,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
+import org.l2j.gameserver.network.serverpackets.grace.ExVitalExInfo;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
@@ -7993,6 +7994,40 @@ public final class Player extends Playable {
 
     public void updateVitalityPoints(int points, boolean useRates) {
         getStats().updateVitalityPoints(points, useRates);
+    }
+
+    public void setSayhaGraceSupportEndTime(long endTime)
+    {
+        if (variables.getSayaGraceSupportEndTime() < System.currentTimeMillis())
+        {
+            variables.setSayaGraceSupportEndTime(endTime);
+           // sendPacket(new ExUserBoostStat(this, ));
+            sendPacket(new ExVitalityEffectInfo(this));
+            sendPacket(new ExVitalExInfo(this));
+        }
+    }
+
+    public long getSayhaGraceSupportEndTime()
+    {
+        return variables.getSayaGraceSupportEndTime();
+    }
+
+    public boolean setLimitedSayhaGraceEndTime(long endTime)
+    {
+        if (endTime > variables.getLimitedSayaGraceEndTime())
+        {
+            variables.setLimitedSayaGraceEndTime(endTime);
+            //sendPacket(new ExUserBoostStat(this));
+            sendPacket(new ExVitalityEffectInfo(this));
+            sendPacket(new ExVitalExInfo(this));
+            return true;
+        }
+        return false;
+    }
+
+    public long getLimitedSayhaGraceEndTime()
+    {
+        return variables.getLimitedSayaGraceEndTime();
     }
 
     public void checkItemRestriction() {

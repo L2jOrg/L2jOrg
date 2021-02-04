@@ -28,8 +28,6 @@ import org.l2j.commons.database.annotation.Table;
 public class PlayerVariableData {
 
     public static final int REVENGE_USABLE_FUNCTIONS = 5;
-    public static final String MAGIC_LAMP_EXP = "MAGIC_LAMP_EXP";
-    public static final String MAGIC_LAMP_COUNT = "MAGIC_LAMP_COUNT";
 
     @Column("player_id")
     private int playerId;
@@ -135,6 +133,12 @@ public class PlayerVariableData {
 
     @Column("lamp_count")
     private int lampCount;
+
+    @Column("saya_support")
+    private long sayaSupportXp;
+
+    @Column("saya_limited")
+    private long sayaLimitedXp;
 
     public boolean isHairAccessoryEnabled() {
         return hairAccessoryEnabled;
@@ -419,6 +423,22 @@ public class PlayerVariableData {
 
     public void setLampCount(int count) {
         this.lampCount = count;
+    }
+
+    public long getSayaGraceSupportEndTime (){
+        return sayaSupportXp;
+    }
+
+    public long getLimitedSayaGraceEndTime(){
+        return sayaLimitedXp;
+    }
+
+    public void setSayaGraceSupportEndTime(long endTime){
+        this.sayaSupportXp = endTime;
+    }
+
+    public void setLimitedSayaGraceEndTime(long endTime){
+        this.sayaLimitedXp = endTime;
     }
 
     public static PlayerVariableData init(int playerId, byte face, byte hairStyle, byte hairColor) {

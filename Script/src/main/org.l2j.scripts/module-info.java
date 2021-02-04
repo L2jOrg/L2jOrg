@@ -171,6 +171,7 @@ open module org.l2j.scripts {
                 Reuse.Factory,
                 ReuseSkillById.Factory,
                 Root.Factory,
+                SayhaGraceSupport.Factory,
                 SendSystemMessageToClan.Factory,
                 ServitorShare.Factory,
                 SilentMove.Factory,

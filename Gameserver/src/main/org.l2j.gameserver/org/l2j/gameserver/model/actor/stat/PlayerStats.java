@@ -345,9 +345,18 @@ public class PlayerStats extends PlayableStats {
     }
 
     public double getVitalityExpBonus() {
-        return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, getSettings(RateSettings.class).rateVitalityExpMul()) : 1.0;
+        final double bonus = (getVitalityPoints() > 0) ? getMul(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1;
+        if ((bonus == 1) && (getCreature().getLimitedSayhaGraceEndTime() > System.currentTimeMillis()))
+        {
+            return getLimitedSayhaGraceExpBonus();
+        }
+        return bonus;
     }
 
+    public double getLimitedSayhaGraceExpBonus()
+    {
+        return Config.RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
+    }
     /*
      * Set current vitality points to this value if quiet = true - does not send system messages
      */

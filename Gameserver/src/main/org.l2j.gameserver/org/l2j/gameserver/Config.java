@@ -422,6 +422,18 @@ public final class Config {
     public static int VITALITY_CONSUME_BY_BOSS;
 
     // --------------------------------------------------
+    // Vitality Settings
+    // --------------------------------------------------
+    public static boolean ENABLE_VITALITY;
+    public static int STARTING_VITALITY_POINTS;
+    public static boolean RAIDBOSS_USE_VITALITY;
+    public static float RATE_VITALITY_EXP_MULTIPLIER;
+    public static float RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
+    public static int VITALITY_MAX_ITEMS_ALLOWED;
+    public static float RATE_VITALITY_LOST;
+    public static float RATE_VITALITY_GAIN;
+
+    // --------------------------------------------------
     // PvP Settings
     // --------------------------------------------------
     public static boolean KARMA_DROP_GM;
@@ -1202,6 +1214,18 @@ public final class Config {
         if (RATE_INSTANCE_PARTY_SP < 0) {
             RATE_INSTANCE_PARTY_SP = RATE_PARTY_SP;
         }
+
+        ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
+        STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
+        RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 3);
+        RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
+        VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
+        if (VITALITY_MAX_ITEMS_ALLOWED == 0)
+        {
+            VITALITY_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
+        }
+        RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
+        RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
 
         RATE_EXTRACTABLE = RatesSettings.getFloat("RateExtractable", 1);
         RATE_DROP_MANOR = RatesSettings.getInt("RateDropManor", 1);

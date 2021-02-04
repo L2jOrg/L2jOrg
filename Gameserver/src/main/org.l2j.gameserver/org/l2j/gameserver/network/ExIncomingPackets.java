@@ -47,7 +47,6 @@ import org.l2j.gameserver.network.clientpackets.collections.ExCollectionOpenUi;
 import org.l2j.gameserver.network.clientpackets.commission.*;
 import org.l2j.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.costume.*;
-//import org.l2j.gameserver.network.clientpackets.craft.ExRequestCraftRandom;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2j.gameserver.network.clientpackets.elementalspirits.*;

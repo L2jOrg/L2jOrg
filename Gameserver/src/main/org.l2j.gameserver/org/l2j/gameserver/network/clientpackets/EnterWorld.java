@@ -152,6 +152,12 @@ public class EnterWorld extends ClientPacket {
             player.sendPacket(new ExVitalityEffectInfo(player));
         }
 
+        // Sayha's Grace.
+        if (Config.ENABLE_VITALITY)
+        {
+            player.sendPacket(new ExVitalityEffectInfo(player));
+        }
+
         if (Config.ENABLE_MAGIC_LAMP)
         {
             player.sendPacket(new ExMagicLampExpInfoUI(player));
