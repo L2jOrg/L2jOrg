@@ -823,6 +823,11 @@ public final class Player extends Playable {
         getDAO(PlayerDAO.class).save(statsData);
     }
 
+    public void setElixirsPoints(short elixirs) {
+        statsData.setElixirsPoints(elixirs);
+        getDAO(PlayerDAO.class).save(statsData);
+    }
+
     public void enableAutoSoulShot(ShotType type, int itemId) {
         activeSoulShots.put(type, itemId);
         sendPackets(new ExAutoSoulShot(itemId, true, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
