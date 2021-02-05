@@ -9,12 +9,15 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.scripts.handlers.targethandlers.Item;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 public class SayhaGraceSupport  extends AbstractEffect
 {
        @Override
     public boolean canStart(Creature effector, Creature effected, Skill skill)
     {
-        return (effected != null);
+
+        return isPlayer(effected);
     }
 
     @Override

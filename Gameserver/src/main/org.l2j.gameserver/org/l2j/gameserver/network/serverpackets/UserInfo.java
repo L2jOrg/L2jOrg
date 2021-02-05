@@ -29,12 +29,14 @@ import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Optional;
 
 import static java.lang.Math.round;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Sdw, UnAfraid
@@ -390,7 +392,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         {
 
            // player.sendPacket(new ExUserBoostStat(player));
-            if (Config.ENABLE_VITALITY)
+            if (getSettings(CharacterSettings.class).isVitalityEnabled())
             {
                 player.sendPacket(new ExVitalityEffectInfo(player));
             }
