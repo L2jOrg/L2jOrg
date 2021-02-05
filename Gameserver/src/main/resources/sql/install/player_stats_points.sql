@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS `player_stats_points`;
 CREATE TABLE IF NOT EXISTS `player_stats_points` (
     `player_id` INT UNSIGNED NOT NULL,
     `points` SMALLINT NOT NULL DEFAULT 0,
+    `elixirs` SMALLINT NOT NULL DEFAULT 0,
     `strength` SMALLINT NOT NULL DEFAULT 0,
     `dexterity` SMALLINT NOT NULL DEFAULT 0,
     `constitution` SMALLINT NOT NULL DEFAULT 0,

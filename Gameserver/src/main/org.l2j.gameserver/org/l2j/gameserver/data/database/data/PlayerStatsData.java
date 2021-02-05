@@ -31,6 +31,7 @@ public class PlayerStatsData {
     @Column("player_id")
     private int playerId;
     private short points;
+    private short elixirs;
     private short strength;
     private short dexterity;
     private short constitution;
@@ -53,15 +54,23 @@ public class PlayerStatsData {
     }
 
     public short getPoints() {
-        return points;
+        return (short) (points + elixirs);
+    }
+
+    public short getElixirsPoints() {
+        return elixirs;
     }
 
     public void setPoints(short points) {
         this.points = points;
     }
 
+    public void setElixirsPoints(short elixirs) {
+        this.elixirs = elixirs;
+    }
+
     public boolean update(short str, short dex, short con, short intt, short wit, short men) {
-        if(strength + dexterity + constitution + intelligence + witness + mentality + str + dex + con + intt + wit + men <= points) {
+        if(strength + dexterity + constitution + intelligence + witness + mentality + str + dex + con + intt + wit + men <= getPoints()) {
             strength += str;
             dexterity += dex;
             constitution += con;
