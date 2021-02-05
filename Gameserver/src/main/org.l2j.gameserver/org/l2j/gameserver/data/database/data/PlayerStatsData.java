@@ -66,7 +66,7 @@ public class PlayerStatsData {
     }
 
     public void setElixirsPoints(short elixirs) {
-        this.elixirs = elixirs;
+        this.elixirs += elixirs;
     }
 
     public boolean update(short str, short dex, short con, short intt, short wit, short men) {

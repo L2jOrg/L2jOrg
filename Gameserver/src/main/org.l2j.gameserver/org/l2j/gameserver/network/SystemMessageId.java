@@ -17765,6 +17765,9 @@ public final class SystemMessageId {
     @ClientString(id = 13103, message = "Not enough resources to renew the list.")
     public static SystemMessageId NOT_ENOUGH_RESOURCES_TO_RENEW_THE_LIST;
 
+    @ClientString(id = 13280, message = "You cannot use any more Elixirs.")
+    public static SystemMessageId YOU_CANNOT_USE_ANY_MORE_ELIXIRS;
+
     private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 
     static {

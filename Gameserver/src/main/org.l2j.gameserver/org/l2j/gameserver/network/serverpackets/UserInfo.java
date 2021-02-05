@@ -296,6 +296,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeByte(0x00); // unk
             buffer.writeByte(0x00); // unk
             buffer.writeShort(0x00); // unk 196
+            // player.sendPacket(new ExUserBoostStat(player));
+            if (getSettings(CharacterSettings.class).isVitalityEnabled()) {
+                player.sendPacket(new ExVitalityEffectInfo(player));
+            }
         }
 
         if (containsMask(UserInfoType.SLOTS)) {
@@ -382,21 +386,20 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeShort(0x01);
         }
         
-        if(containsMask(UserInfoType.ELIXIR_USED) && player.getStatsData().getElixirsPoints() > 0) {
+        if(containsMask(UserInfoType.ELIXIR_USED)) {
             buffer.writeShort(player.getStatsData().getElixirsPoints());
             buffer.writeShort(0x00);
         }
 
-        // Send exp bonus change.
+        /*// Send exp bonus change.
         if (containsMask(UserInfoType.VITA_FAME))
         {
-
            // player.sendPacket(new ExUserBoostStat(player));
             if (getSettings(CharacterSettings.class).isVitalityEnabled())
             {
                 player.sendPacket(new ExVitalityEffectInfo(player));
             }
-        }
+        }*/
     }
 
     private int calculateRelation(Player activeChar) {

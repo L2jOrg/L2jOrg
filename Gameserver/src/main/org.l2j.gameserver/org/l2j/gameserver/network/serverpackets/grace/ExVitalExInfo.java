@@ -17,9 +17,9 @@ public class ExVitalExInfo extends ServerPacket {
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_VITAL_EX_INFO, buffer );
-        buffer.writeInt((int) (_player.getLimitedSayhaGraceEndTime() / 1000)); // currentmilis / 1000, when limited sayha ends
-        buffer.writeInt((int) (_player.getSayhaGraceSupportEndTime() / 1000)); // currentmilis / 1000, when sayha grace suport ends
-        buffer.writeInt((int) (_player.getStats().getLimitedSayhaGraceExpBonus() * 100)); // Limited sayha bonus
+        buffer.writeInt((int) (50)); // currentmilis / 1000, when limited sayha ends
+        buffer.writeInt((int) (50)); // currentmilis / 1000, when sayha grace suport ends
+        buffer.writeInt((int) (50)); // Limited sayha bonus
         buffer.writeInt(0x82); // Limited sayha bonus adena (shown as 130%, actually 30%)
     }
 

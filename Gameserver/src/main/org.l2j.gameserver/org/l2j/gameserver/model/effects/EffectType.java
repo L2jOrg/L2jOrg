@@ -67,7 +67,8 @@ public enum EffectType {
     SUMMON_NPC,
     TELEPORT,
     TELEPORT_TO_TARGET,
-    ABNORMAL_SHIELD;
+    ABNORMAL_SHIELD,
+    ELIXIR;
 
     public long mask() {
         return this == NONE ? 0 :  1L << ordinal();

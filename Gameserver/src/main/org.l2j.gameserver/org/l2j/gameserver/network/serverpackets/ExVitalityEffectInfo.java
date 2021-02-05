@@ -45,10 +45,10 @@ public class ExVitalityEffectInfo extends ServerPacket {
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_VITALITY_EFFECT_INFO, buffer );
 
-        buffer.writeInt(_points);
-        buffer.writeInt(_vitalityBonus); // Vitality Bonus
+        buffer.writeInt(500);
+        buffer.writeInt(2); // Vitality Bonus
         buffer.writeShort(0x00); // Vitality additional bonus in %
-        buffer.writeShort(_vitalityItemsRemaining); // How much vitality items remaining for use
+        buffer.writeShort(0); // How much vitality items remaining for use
         buffer.writeShort(getSettings(RateSettings.class).maxItemsVitality()); // Max number of items for use
     }
 
