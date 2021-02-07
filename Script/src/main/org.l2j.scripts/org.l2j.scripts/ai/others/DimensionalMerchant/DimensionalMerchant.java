@@ -38,8 +38,6 @@ import org.l2j.scripts.ai.AbstractNpcAI;
  */
 public class DimensionalMerchant extends AbstractNpcAI
 {
-    // NPC
-    private static final int MERCHANT = 32478; // Dimensional Merchant
     // Others
     private static final int ATTENDANCE_REWARD_MULTISELL = 3247801;
     private static final int HAIR_MULTISELL = 4706;
@@ -53,7 +51,6 @@ public class DimensionalMerchant extends AbstractNpcAI
 
     private DimensionalMerchant()
     {
-        addTalkId(MERCHANT);
     }
 
     @Override
