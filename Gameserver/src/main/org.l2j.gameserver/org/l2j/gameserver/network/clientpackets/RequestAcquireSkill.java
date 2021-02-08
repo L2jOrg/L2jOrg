@@ -356,7 +356,6 @@ public final class RequestAcquireSkill extends ClientPacket {
         player.sendPacket(new ExBasicActionList(ExBasicActionList.DEFAULT_ACTION_LIST));
         player.sendSkillList(skill.getId());
 
-        player.updateShortCuts(id, level, 0);
         showSkillList(trainer, player);
 
         // If skill is expand type then sends packet:

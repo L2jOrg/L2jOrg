@@ -5516,6 +5516,7 @@ public final class Player extends Playable {
         if (store) {
             storeSkill(newSkill, oldSkill);
         }
+        updateShortCuts(newSkill.getId(), newSkill.getLevel(), 0);
         return oldSkill;
     }
 
