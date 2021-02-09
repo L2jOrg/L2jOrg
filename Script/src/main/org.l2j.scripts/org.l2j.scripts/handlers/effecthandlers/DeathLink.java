@@ -64,7 +64,7 @@ public final class DeathLink extends AbstractEffect {
         }
 
         final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-        final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power * (-((effector.getCurrentHp() * 2) / effector.getMaxHp()) + 2), effected.getMDef(), mcrit);
+        final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power + (power * (-1*(((effector.getCurrentHp())/effector.getMaxHp())-1))), effected.getMDef(), mcrit);
         effector.doAttack(damage, effected, skill, false, false, mcrit, false);
     }
 

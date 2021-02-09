@@ -18,7 +18,10 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @author L2CCCP
+ * @Reworked Vicochips
+ */
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class MagicLampData  extends GameXmlReader {

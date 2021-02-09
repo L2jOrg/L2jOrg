@@ -232,21 +232,15 @@ public class GolbergRoom extends AbstractInstance
     @Override
     public String onKill(Npc npc, Player player, boolean isSummon)
     {
-        switch (npc.getId())
-        {
-            case GOLBERG:
-            {
+        switch (npc.getId()) {
+            case GOLBERG -> {
                 startQuestTimer("SPAWN_TRESURE", 1000, npc, player);
                 final Instance world = npc.getInstanceWorld();
-                if (world != null)
-                {
+                if (world != null) {
                     world.finishInstance();
                 }
-                break;
             }
-            case GOLBERG_TREASURE_CHEST:
-            {
-                break;
+            case GOLBERG_TREASURE_CHEST -> {
             }
         }
         return super.onKill(npc, player, isSummon);
