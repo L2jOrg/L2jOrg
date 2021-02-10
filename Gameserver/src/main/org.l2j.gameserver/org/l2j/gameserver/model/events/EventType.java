@@ -112,6 +112,7 @@ public enum EventType {
     ON_PLAYER_CHAT(OnPlayerChat.class, void.class, ChatFilterReturn.class),
     ON_PLAYER_ABILITY_POINTS_CHANGED(OnPlayerAbilityPointsChanged.class, void.class),
     ON_PLAYER_CP_CHANGE(OnPlayerCpChange.class, void.class),
+    ON_PLAYER_HP_CHANGE(OnPlayerHpChange.class, void.class),
     ON_PLAYER_MP_CHANGE(OnPlayerMpChange.class, void.class),
     // Clan events
     ON_PLAYER_CLAN_CREATE(OnPlayerClanCreate.class, void.class),

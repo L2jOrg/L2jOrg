@@ -18,30 +18,79 @@
  */
 package org.l2j.scripts.handlers.communityboard;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
+import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.model.events.annotations.RegisterEvent;
+import org.l2j.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import org.l2j.gameserver.model.item.EtcItem;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.ScheduledFuture;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author Thoss
  **/
 public class AutoHpMpCp implements IParseBoardHandler {
-    private static final Logger LOGGER = LoggerFactory.getLogger(HomeBoard.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AutoHpMpCp.class);
     private static final String[] CMD =  new String[] { "_bbsautohpmpcp" };
 
-    private static Map<Integer, List<String>> _listenedPlayer = new ConcurrentHashMap<>();
+    private static final int AUTO_POTION_INTERVAL = 1000;
+    private static final Map<String, List<Integer>> potionsList = Map.of(
+            "autohp", Config.AUTO_HP_ITEM_IDS,
+            "automp", Config.AUTO_MP_ITEM_IDS,
+            "autocp", Config.AUTO_CP_ITEM_IDS);
+
+    private static final ForkJoinPool autoPotionPool = new ForkJoinPool();
+    private static Map<Integer, List<String>> listenedPlayer = new ConcurrentHashMap<>();
+
+    private static final DoAutoPotion doAutoPotion = new DoAutoPotion();
+    private static ScheduledFuture<?> autoPotionTask;
+
 
     private AutoHpMpCp() {
+        autoPotionTask = ThreadPool.scheduleAtFixedDelay(doAutoPotion, AUTO_POTION_INTERVAL, AUTO_POTION_INTERVAL);
+    }
 
+    @RegisterEvent(EventType.ON_PLAYER_LOGIN)
+    @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+    public void OnPlayerLogin(OnPlayerLogout event)
+    {
+        final Player activeChar = event.getPlayer();
+
+        final int autoHp = activeChar.getAutoHp();
+        final int autoMp = activeChar.getAutoMp();
+        final int autoCp = activeChar.getAutoCp();
+
+        if(autoHp > 0) executeCommand(activeChar, "autohp", autoCp);
+        if(autoMp > 0) executeCommand(activeChar, "automp", autoCp);
+        if(autoCp > 0) executeCommand(activeChar, "autocp", autoCp);
+    }
+
+    @RegisterEvent(EventType.ON_PLAYER_LOGOUT)
+    @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+    public void OnPlayerLogout(OnPlayerLogout event)
+    {
+        final int playerOID = event.getPlayer().getObjectId();
+        if (listenedPlayer.containsKey(playerOID)) {
+            listenedPlayer.remove(playerOID);
+        }
     }
 
     @Override
@@ -63,6 +112,50 @@ public class AutoHpMpCp implements IParseBoardHandler {
         return true;
     }
 
+    private static String processCommand(Player activeChar, String command, StringTokenizer params) {
+        try {
+            int percent = Math.min(99, Integer.parseInt(params.nextToken()));
+
+            if(percent < 0) {
+                activeChar.sendMessage("You can not specify a negative value!");
+                return "";
+            }
+
+            return executeCommand(activeChar, command,percent);
+
+        } catch(NumberFormatException e) {
+            activeChar.sendMessage("Incorrect number");
+            return "";
+        }
+    }
+
+    private static String executeCommand(Player activeChar, String command, int percent) {
+        List<String> listenedKeys = listenedPlayer.get(activeChar.getObjectId());
+
+        if(percent > 0) {
+            setPercentByCommand(activeChar, command, percent);
+
+            if (listenedKeys == null)
+                listenedPlayer.put(activeChar.getObjectId(), new ArrayList<>());
+
+            listenedPlayer.get(activeChar.getObjectId()).add(command);
+            activeChar.sendMessage("You have enabled " + command + " recovery. You will automatically recover at a value of " + percent + "% or less.");
+        } else {
+            setPercentByCommand(activeChar, command, percent);
+
+            if (listenedKeys == null) return "";
+
+            if(listenedPlayer.get(activeChar.getObjectId()).size() > 1)
+                listenedPlayer.get(activeChar.getObjectId()).remove(command);
+            else
+                listenedPlayer.remove(activeChar.getObjectId());
+
+            activeChar.sendMessage(command + " system disabled.");
+        }
+
+        return "";
+    }
+
     private static int getPercentByCommand(Player activeChar, String command) {
         switch (command) {
             case "autocp" -> { return activeChar.getAutoCp(); }
@@ -81,120 +174,226 @@ public class AutoHpMpCp implements IParseBoardHandler {
         }
     }
 
-    private static String processCommand(Player activeChar, String command, StringTokenizer params) {
-        if(getPercentByCommand(activeChar, command) > 0) {
-            List<String> listenedKeys = _listenedPlayer.get(activeChar.getObjectId());
-            if (listenedKeys == null) {
-                LOGGER.error("Try to stop non existent command {} for {}", activeChar, command);
-                return "";
-            }
-            _listenedPlayer.get(activeChar.getObjectId()).remove(command);
+    private static final class DoAutoPotion implements Runnable {
 
-            setPercentByCommand(activeChar, command, 0);
-            activeChar.sendMessage(command + " system disabled.");
-        } else {
-            int percent;
-            try {
-                percent = Math.min(99, Integer.parseInt(params.nextToken()));
-            } catch(NumberFormatException e) {
-                activeChar.sendMessage("Incorrect number");
-                return "";
-            }
-            if(percent <= 0) {
-                activeChar.sendMessage("You can not specify zero or negative value!");
-                return "";
-            }
-
-            List<String> listenedKeys = _listenedPlayer.get(activeChar.getObjectId());
-            if (listenedKeys == null)
-                _listenedPlayer.put(activeChar.getObjectId(), new ArrayList<>());
-            _listenedPlayer.get(activeChar.getObjectId()).add(command);
-
-            setPercentByCommand(activeChar, command, percent);
-            activeChar.sendMessage("You have enabled an " + command + " recovery. Your xP will automatically recover at a value of " + percent + "% or less.");
+        @Override
+        public void run() {
+            autoPotionPool.submit(this::useAutoPotion);
         }
-        return "";
+
+        private void useAutoPotion() {
+            for (Map.Entry<Integer, List<String>> playerInfo : listenedPlayer.entrySet()) {
+                Player player = World.getInstance().findPlayer(playerInfo.getKey());
+
+                if(player == null) {
+                    listenedPlayer.remove(playerInfo.getKey());
+                    return;
+                }
+
+                playerInfo.getValue().forEach(command -> {
+                    if(canUseAutoPotion(player, command)) {
+                        boolean success = false;
+                        for (int itemId : potionsList.get(command)) {
+                            final Item potion = player.getInventory().getItemByItemId(itemId);
+                            if ((potion != null) && (potion.getCount() > 0)) {
+                                success = true;
+                                int reuseDelay = potion.getReuseDelay();
+                                if (reuseDelay <= 0 || player.getItemRemainingReuseTime(potion.getObjectId()) <= 0) {
+                                    EtcItem etcItem = potion.getEtcItem();
+                                    IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
+
+                                    if (nonNull(handler) && handler.useItem(player, potion, false)) {
+                                        player.onActionRequest();
+                                        if(reuseDelay > 0) {
+                                            player.addTimeStampItem(potion, reuseDelay);
+                                        }
+                                    }
+                                }
+                                player.sendMessage(command + " potion: Restored.");
+                                break;
+                            }
+                        }
+                        if (!success) {
+                            player.sendMessage(command + " potion: You are out of potions!");
+                            listenedPlayer.get(playerInfo.getKey()).remove(command);
+                        }
+                    }
+                });
+
+            }
+        }
+
+        private boolean canUseAutoPotion(Player player, String command) {
+            return canUseAutoPlay(player) && getPercentByCommand(player, command) >= player.getCurrentHpPercent();
+        }
+
+        private boolean canUseAutoPlay(Player player) {
+            return  player.getAI().getIntention() != CtrlIntention.AI_INTENTION_PICK_UP &&
+                    player.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST &&
+                    !player.hasBlockActions() &&
+                    !player.isControlBlocked() &&
+                    !player.isAlikeDead() &&
+                    !player.isInObserverMode() &&
+                    !player.isCastingNow();
+        }
     }
 
-    public void onPlayerCpChange(Player player) {
+    public void shutdown() {
+        autoPotionPool.shutdown();
+        autoPotionTask.cancel(true);
+        autoPotionTask = null;
+    }
+
+    public static IParseBoardHandler provider() {
+        return new AutoHpMpCp();
+    }
+
+    @Override
+    public String[] getCommunityBoardCommands() {
+        return CMD;
+    }
+}
+
+/*
+*
+* code below as a reminder for system picking up item "auto" in player inventory
+* Might cause bad performance because iterating over whole inventory so use with care
+*
+*
+*
+*
+Item effectedItem = null;
+int effectedItemPower = 0;
+
+Item instantItem = null;
+int instantItemPower = 0;
+
+final EffectList playerEffects = player.getEffectList();
+loop: for(Item item : player.getInventory().getItems())
+{
+    ItemSkillHolder skillEntry = item.getTemplate().getAllSkills().get(0);
+    if(skillEntry == null)
+        continue;
+
+    Skill skill = skillEntry.getSkill();
+    for(AbstractEffect et : skill.getEffects(EffectScope.GENERAL))
+    {
+        if(et.getEffectType() == EffectType.MANAHEAL_BY_LEVEL || et.getEffectType() == EffectType.MANAHEAL_PERCENT)
+        {
+            for(BuffInfo effect : playerEffects.getEffects())
+            {
+                if(effect.getSkill() == skill)
+                {
+                    // Dot not apply potion if another one already healing
+                    effectedItem = null;
+                    effectedItemPower = 0;
+                    break loop;
+                }
+            }
+
+            if(!ItemFunctions.checkForceUseItem(player, item, false) || !ItemFunctions.checkUseItem(player, item, false))
+                continue loop;
+
+            int power = (int) et.getValue();
+            if(power > effectedItemPower)
+            {
+                if(skill.checkCondition(player, player, false, false, true, false, false))
+                {
+                    effectedItem = item;
+                    effectedItemPower = power;
+                    continue loop;
+                }
+            }
+        }
+    }
+}
+
+loop: for(ItemInstance item : player.getInventory().getItems())
+{
+    SkillEntry skillEntry = item.getTemplate().getFirstSkill();
+    if(skillEntry == null)
+        continue;
+
+    if(!ItemFunctions.checkForceUseItem(player, item, false) || !ItemFunctions.checkUseItem(player, item, false))
+        continue;
+
+    Skill skill = skillEntry.getTemplate();
+    for(EffectTemplate et : skill.getEffectTemplates(EffectUseType.NORMAL_INSTANT))
+    {
+        if(et.getEffectType() == EffectType.RestoreMP)
+        {
+            int power = (int) et.getValue();
+            if(et.getParam().getBool("percent", false))
+                power = power * (int) (player.getMaxMp() / 100.);
+            if(power > instantItemPower)
+            {
+                if(skill.checkCondition(player, player, false, false, true, false, false))
+                {
+                    instantItem = item;
+                    instantItemPower = power;
+                    continue loop;
+                }
+            }
+        }
+    }
+}
+
+if(instantItem != null)
+    useItem(player, instantItem);
+
+if(effectedItem != null)
+{
+    if(instantItemPower == 0 || percent >= (newMp + instantItemPower) / (player.getMaxMp() / 100.))
+        useItem(player, effectedItem);
+}
+
+private static class ChangeCurrentCpListener extends OnPlayerCpChange {
+    public ChangeCurrentCpListener(Player activeChar) {
+        super(activeChar);
+    }
+
+    public void OnPlayerCpChange(Player player)
+    {
         if(player.isDead())
             return;
 
-        List<String> listenedKeys = _listenedPlayer.get(player.getObjectId());
-        if(listenedKeys == null || !listenedKeys.contains("autocp"))
-            return;
-
-        int percent = player.getAutoCp();
-        int currentPercent = (int) (player.getCurrentCp() / (player.getMaxCp() / 100.));
+        int percent = player.getVarInt("autocp", 0);
+        int currentPercent = (int) (newCp / (player.getMaxCp() / 100.));
         if(percent <= 0 || currentPercent <= 0 || currentPercent > percent)
             return;
 
-        LOGGER.info("onPlayerCpChange for {}", player);
-    }
-
-    public void onPlayerHpChange(Player player) {
-        if(player.isDead())
-            return;
-
-        List<String> listenedKeys = _listenedPlayer.get(player.getObjectId());
-        if(listenedKeys == null || !listenedKeys.contains("autohp"))
-            return;
-
-        int percent = player.getAutoHp();
-        int currentPercent = (int) (player.getCurrentHp() / (player.getMaxHp() / 100.));
-        if(percent <= 0 || currentPercent <= 0 || currentPercent > percent)
-            return;
-
-        LOGGER.info("onPlayerHpChange for {}", player);
-    }
-
-    public void onPlayerMpChange(Player player) {
-        if(player.isDead())
-            return;
-
-        List<String> listenedKeys = _listenedPlayer.get(player.getObjectId());
-        if(listenedKeys == null || !listenedKeys.contains("automp"))
-            return;
-
-        int percent = player.getAutoMp();
-        int currentPercent = (int) (player.getCurrentMp() / (player.getMaxMp() / 100.));
-        if(percent <= 0 || currentPercent <= 0 || currentPercent > percent)
-            return;
-
-        LOGGER.info("onPlayerMpChange for {}", player);
-
-        // TODO: Find item in player inventory that are instant heal (not over time) and trigger 1
-        // TODO: Compare all player effects to item with effect in his inventory matching EffectType.MANAHEAL_BY_LEVEL || EffectType.MANAHEAL_PERCENT
-        // TODO: If 1 effect is matching then do nothing (item in process)
-        // TODO: if no effect currently, then trigger use an item with heal over time
-
-        /*
-        Item effectedItem = null;
+        ItemInstance effectedItem = null;
         int effectedItemPower = 0;
 
-        Item instantItem = null;
+        ItemInstance instantItem = null;
         int instantItemPower = 0;
 
-        final EffectList playerEffects = player.getEffectList();
-        loop: for(Item item : player.getInventory().getItems())
+        final Collection<Abnormal> abnormals = player.getAbnormalList().values();
+        loop: for(ItemInstance item : player.getInventory().getItems())
         {
-            ItemSkillHolder skillEntry = item.getTemplate().getAllSkills().get(0);
+            SkillEntry skillEntry = item.getTemplate().getFirstSkill();
             if(skillEntry == null)
                 continue;
 
-            Skill skill = skillEntry.getSkill();
-            for(AbstractEffect et : skill.getEffects(EffectScope.GENERAL))
+            Skill skill = skillEntry.getTemplate();
+            for(EffectTemplate et : skill.getEffectTemplates(EffectUseType.NORMAL))
             {
-                if(et.getEffectType() == EffectType.MANAHEAL_BY_LEVEL || et.getEffectType() == EffectType.MANAHEAL_PERCENT)
+                if(et.getEffectType() == EffectType.RestoreCP)
                 {
-                    for(BuffInfo effect : playerEffects.getEffects())
+                    for(Abnormal abnormal : abnormals)
                     {
-                        if(effect.getSkill() == skill)
+                        if(abnormal.getSkill() == skill)
                         {
-                            // Dot not apply potion if another one already healing
-                            effectedItem = null;
-                            effectedItemPower = 0;
-                            break loop;
+                            for(Effect effect : abnormal.getEffects())
+                            {
+                                if(effect.getEffectType() == EffectType.RestoreCP)
+                                {
+                                    // Не хиляем, если уже наложена какая-либо хилка.
+                                    effectedItem = null;
+                                    effectedItemPower = 0;
+                                    break loop;
+                                }
+                            }
                         }
                     }
 
@@ -227,11 +426,11 @@ public class AutoHpMpCp implements IParseBoardHandler {
             Skill skill = skillEntry.getTemplate();
             for(EffectTemplate et : skill.getEffectTemplates(EffectUseType.NORMAL_INSTANT))
             {
-                if(et.getEffectType() == EffectType.RestoreMP)
+                if(et.getEffectType() == EffectType.RestoreCP)
                 {
                     int power = (int) et.getValue();
                     if(et.getParam().getBool("percent", false))
-                        power = power * (int) (player.getMaxMp() / 100.);
+                        power = power * (int) (player.getMaxCp() / 100.);
                     if(power > instantItemPower)
                     {
                         if(skill.checkCondition(player, player, false, false, true, false, false))
@@ -250,271 +449,8 @@ public class AutoHpMpCp implements IParseBoardHandler {
 
         if(effectedItem != null)
         {
-            if(instantItemPower == 0 || percent >= (newMp + instantItemPower) / (player.getMaxMp() / 100.))
+            if(instantItemPower == 0 || percent >= (newCp + instantItemPower) / (player.getMaxCp() / 100.))
                 useItem(player, effectedItem);
         }
-        */
     }
-
-
-    /*
-    private static class ChangeCurrentCpListener extends OnPlayerCpChange {
-        public ChangeCurrentCpListener(Player activeChar) {
-            super(activeChar);
-        }
-
-        public void OnPlayerCpChange(Player player)
-        {
-            if(player.isDead())
-                return;
-
-            int percent = player.getVarInt("autocp", 0);
-            int currentPercent = (int) (newCp / (player.getMaxCp() / 100.));
-            if(percent <= 0 || currentPercent <= 0 || currentPercent > percent)
-                return;
-
-            ItemInstance effectedItem = null;
-            int effectedItemPower = 0;
-
-            ItemInstance instantItem = null;
-            int instantItemPower = 0;
-
-            final Collection<Abnormal> abnormals = player.getAbnormalList().values();
-            loop: for(ItemInstance item : player.getInventory().getItems())
-            {
-                SkillEntry skillEntry = item.getTemplate().getFirstSkill();
-                if(skillEntry == null)
-                    continue;
-
-                Skill skill = skillEntry.getTemplate();
-                for(EffectTemplate et : skill.getEffectTemplates(EffectUseType.NORMAL))
-                {
-                    if(et.getEffectType() == EffectType.RestoreCP)
-                    {
-                        for(Abnormal abnormal : abnormals)
-                        {
-                            if(abnormal.getSkill() == skill)
-                            {
-                                for(Effect effect : abnormal.getEffects())
-                                {
-                                    if(effect.getEffectType() == EffectType.RestoreCP)
-                                    {
-                                        // Не хиляем, если уже наложена какая-либо хилка.
-                                        effectedItem = null;
-                                        effectedItemPower = 0;
-                                        break loop;
-                                    }
-                                }
-                            }
-                        }
-
-                        if(!ItemFunctions.checkForceUseItem(player, item, false) || !ItemFunctions.checkUseItem(player, item, false))
-                            continue loop;
-
-                        int power = (int) et.getValue();
-                        if(power > effectedItemPower)
-                        {
-                            if(skill.checkCondition(player, player, false, false, true, false, false))
-                            {
-                                effectedItem = item;
-                                effectedItemPower = power;
-                                continue loop;
-                            }
-                        }
-                    }
-                }
-            }
-
-            loop: for(ItemInstance item : player.getInventory().getItems())
-            {
-                SkillEntry skillEntry = item.getTemplate().getFirstSkill();
-                if(skillEntry == null)
-                    continue;
-
-                if(!ItemFunctions.checkForceUseItem(player, item, false) || !ItemFunctions.checkUseItem(player, item, false))
-                    continue;
-
-                Skill skill = skillEntry.getTemplate();
-                for(EffectTemplate et : skill.getEffectTemplates(EffectUseType.NORMAL_INSTANT))
-                {
-                    if(et.getEffectType() == EffectType.RestoreCP)
-                    {
-                        int power = (int) et.getValue();
-                        if(et.getParam().getBool("percent", false))
-                            power = power * (int) (player.getMaxCp() / 100.);
-                        if(power > instantItemPower)
-                        {
-                            if(skill.checkCondition(player, player, false, false, true, false, false))
-                            {
-                                instantItem = item;
-                                instantItemPower = power;
-                                continue loop;
-                            }
-                        }
-                    }
-                }
-            }
-
-            if(instantItem != null)
-                useItem(player, instantItem);
-
-            if(effectedItem != null)
-            {
-                if(instantItemPower == 0 || percent >= (newCp + instantItemPower) / (player.getMaxCp() / 100.))
-                    useItem(player, effectedItem);
-            }
-        }
-    }
-
-    private static class ChangeCurrentHpListener implements OnChangeCurrentHpListener
-    {
-        @Override
-        public void onChangeCurrentHp(Creature actor, double oldHp, double newHp)
-        {
-            if(!actor.isPlayer() || actor.isDead())
-                return;
-
-            Player player = actor.getPlayer();
-
-            int percent = player.getVarInt("autohp", 0);
-            int currentPercent = (int) (newHp / (player.getMaxHp() / 100.));
-            if(percent <= 0 || currentPercent <= 0 || currentPercent > percent)
-                return;
-
-            ItemInstance effectedItem = null;
-            int effectedItemPower = 0;
-
-            ItemInstance instantItem = null;
-            int instantItemPower = 0;
-
-            final Collection<Abnormal> abnormals = player.getAbnormalList().values();
-            loop: for(ItemInstance item : player.getInventory().getItems())
-            {
-                SkillEntry skillEntry = item.getTemplate().getFirstSkill();
-                if(skillEntry == null)
-                    continue;
-
-                Skill skill = skillEntry.getTemplate();
-                for(EffectTemplate et : skill.getEffectTemplates(EffectUseType.NORMAL))
-                {
-                    if(et.getEffectType() == EffectType.RestoreHP)
-                    {
-                        for(Abnormal abnormal : abnormals)
-                        {
-                            if(abnormal.getSkill() == skill)
-                            {
-                                for(Effect effect : abnormal.getEffects())
-                                {
-                                    if(effect.getEffectType() == EffectType.RestoreHP)
-                                    {
-                                        // Не хиляем, если уже наложена какая-либо хилка.
-                                        effectedItem = null;
-                                        effectedItemPower = 0;
-                                        break loop;
-                                    }
-                                }
-                            }
-                        }
-
-                        if(!ItemFunctions.checkForceUseItem(player, item, false) || !ItemFunctions.checkUseItem(player, item, false))
-                            continue loop;
-
-                        int power = (int) et.getValue();
-                        if(power > effectedItemPower)
-                        {
-                            if(skill.checkCondition(player, player, false, false, true, false, false))
-                            {
-                                effectedItem = item;
-                                effectedItemPower = power;
-                                continue loop;
-                            }
-                        }
-                    }
-                }
-            }
-
-            loop: for(ItemInstance item : player.getInventory().getItems())
-            {
-                SkillEntry skillEntry = item.getTemplate().getFirstSkill();
-                if(skillEntry == null)
-                    continue;
-
-                if(!ItemFunctions.checkForceUseItem(player, item, false) || !ItemFunctions.checkUseItem(player, item, false))
-                    continue;
-
-                Skill skill = skillEntry.getTemplate();
-                for(EffectTemplate et : skill.getEffectTemplates(EffectUseType.NORMAL_INSTANT))
-                {
-                    if(et.getEffectType() == EffectType.RestoreHP)
-                    {
-                        int power = (int) et.getValue();
-                        if(et.getParam().getBool("percent", false))
-                            power = power * (int) (player.getMaxHp() / 100.);
-                        if(power > instantItemPower)
-                        {
-                            if(skill.checkCondition(player, player, false, false, true, false, false))
-                            {
-                                instantItem = item;
-                                instantItemPower = power;
-                                continue loop;
-                            }
-                        }
-                    }
-                }
-            }
-
-            if(instantItem != null)
-                useItem(player, instantItem);
-
-            if(effectedItem != null)
-            {
-                if(instantItemPower == 0 || percent >= (newHp + instantItemPower) / (player.getMaxHp() / 100.))
-                    useItem(player, effectedItem);
-            }
-        }
-    }
-
-    private static class PlayerEnterListener implements OnPlayerEnterListener
-    {
-        public void onPlayerEnter(Player player)
-        {
-            if(!Config.ALLOW_AUTOHEAL_COMMANDS)
-                return;
-
-            int percent = player.getVarInt("autocp", 0);
-            if(percent > 0)
-            {
-                player.addListener(CHANGE_CURRENT_CP_LISTENER);
-                player.sendMessage("You are using an automatic CP recovery. Your CP will automatically recover at a value of " + percent + "% or less.");
-            }
-            percent = player.getVarInt("autohp", 0);
-            if(percent > 0)
-            {
-                player.addListener(CHANGE_CURRENT_HP_LISTENER);
-                player.sendMessage("You are using an automatic HP recovery. Your HP will automatically recover at a value of " + percent + "% or less.");
-            }
-            percent = player.getVarInt("automp", 0);
-            if(percent > 0)
-            {
-                player.addListener(CHANGE_CURRENT_MP_LISTENER);
-                player.sendMessage("You are using an automatic MP recovery. Your MP will automatically recover at a value of " + percent + "% or less.");
-            }
-        }
-    }
-
-    private static void useItem(Player player, ItemInstance item)
-    {
-        // Запускаем в новом потоке, потому что итем может юзнуться несколько раз проигнорировав откат итема
-        ThreadPoolManager.getInstance().execute(() -> player.useItem(item, false, false));
-    }
-    */
-
-    public static IParseBoardHandler provider() {
-        return new AutoHpMpCp();
-    }
-
-    @Override
-    public String[] getCommunityBoardCommands() {
-        return CMD;
-    }
-}
+}*/
