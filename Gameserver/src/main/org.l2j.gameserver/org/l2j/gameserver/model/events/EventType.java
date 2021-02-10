@@ -20,7 +20,7 @@ package org.l2j.gameserver.model.events;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.events.impl.OnDayNightChange;
+import org.l2j.gameserver.model.events.impl.server.OnDayNightChange;
 import org.l2j.gameserver.model.events.impl.character.*;
 import org.l2j.gameserver.model.events.impl.character.npc.*;
 import org.l2j.gameserver.model.events.impl.character.player.*;
@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
+import org.l2j.gameserver.model.events.impl.server.OnServerShutDown;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
@@ -175,8 +176,6 @@ public enum EventType {
     // Trap events
     ON_TRAP_ACTION(OnTrapAction.class, void.class),
 
-    ON_DAY_NIGHT_CHANGE(OnDayNightChange.class, void.class),
-
     // Instance events
     ON_INSTANCE_CREATED(OnInstanceCreated.class, void.class),
     ON_INSTANCE_DESTROY(OnInstanceDestroy.class, void.class),
@@ -185,7 +184,11 @@ public enum EventType {
     ON_INSTANCE_STATUS_CHANGE(OnInstanceStatusChange.class, void.class),
 
     ON_ELEMENTAL_SPIRIT_UPGRADE(OnElementalSpiritUpgrade.class, Void.class),
-    ON_ELEMENTAL_SPIRIT_LEARN(OnElementalSpiritLearn.class, Void.class);
+    ON_ELEMENTAL_SPIRIT_LEARN(OnElementalSpiritLearn.class, Void.class),
+
+    // Server events
+    ON_DAY_NIGHT_CHANGE(OnDayNightChange.class, void.class),
+    ON_SERVER_SHUTDOWN(OnServerShutDown.class, void.class);
 
     private final Class<? extends IBaseEvent> _eventClass;
     private final Class<?>[] _returnClass;
