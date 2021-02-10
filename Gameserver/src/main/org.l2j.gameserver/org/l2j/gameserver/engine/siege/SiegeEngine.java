@@ -43,10 +43,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Collection;
+import java.util.EnumSet;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
@@ -86,9 +88,9 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
     }
 
     private void scheduleNextSiegeDate(Castle castle) {
-        var schedules = settings.siegeSchedules.get(castle.getId());
+        var scheduleDays = settings.siegeScheduleDays.get(castle.getId());
 
-        if(Util.isNullOrEmpty(schedules)) {
+        if(Util.isNullOrEmpty(scheduleDays)) {
             return;
         }
 
@@ -97,16 +99,16 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
         while(isNull(nextAvailable)) {
             siegeDate = siegeDate.plusWeeks(1);
-            nextAvailable = nextAvailableSiegeDate(schedules, siegeDate);
+            nextAvailable = nextAvailableSiegeDate(scheduleDays, siegeDate);
         }
 
         castle.setSiegeDate(nextAvailable);
     }
 
-    private LocalDateTime nextAvailableSiegeDate(Collection<SiegeSchedule> schedules, LocalDateTime siegeDate) {
+    private LocalDateTime nextAvailableSiegeDate(EnumSet<DayOfWeek> scheduleDays, LocalDateTime siegeDate) {
         LocalDateTime nextAvailable = null;
-        for (SiegeSchedule schedule : schedules) {
-            var temp =  siegeDate.with(TemporalAdjusters.next(schedule.day())).withHour(schedule.hour());
+        for (var day : scheduleDays) {
+            var temp =  siegeDate.with(TemporalAdjusters.next(day));
             if(countSiegesInDay(temp.toLocalDate()) < settings.maxSiegesInDay && (isNull(nextAvailable) || nextAvailable.isAfter(temp))) {
                 nextAvailable = temp;
             }
@@ -143,22 +145,16 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
     private void filterScheduledSieges() {
         var now = LocalDateTime.now();
-        var siegeRemainingTime = getScheduler("stop-siege").getRemainingTime(TimeUnit.SECONDS);
-        var endHour = now.plusSeconds(siegeRemainingTime).plusMinutes(30).getHour();
-
         sieges = new HashIntMap<>();
 
-        for (var schedulesEntry : settings.siegeSchedules.entrySet()) {
-            var castleId = schedulesEntry.getKey();
+        for (var scheduleDay : settings.siegeScheduleDays.entrySet()) {
+            var castleId = scheduleDay.getKey();
             var castle = CastleManager.getInstance().getCastleById(castleId);
 
             if(nonNull(castle) &&  castle.getSiegeDate().withHour(0).compareTo(now) <= 0) {
-                var schedules = schedulesEntry.getValue();
-                for (SiegeSchedule schedule : schedules) {
-                    if(schedule.day() == now.getDayOfWeek() && schedule.hour() >= now.getHour() && schedule.hour() <= endHour) {
-                        sieges.put(castleId, new Siege(castle));
-                        break;
-                    }
+                var days = scheduleDay.getValue();
+                if(days.contains(now.getDayOfWeek())) {
+                    sieges.put(castleId, new Siege(castle));
                 }
             }
         }
@@ -173,7 +169,18 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
     @ScheduleTarget
     public void onSiegeStart() {
+        for (Siege siege : sieges.values()) {
+            startSiege(siege);
+        }
+    }
 
+    private void startSiege(Siege siege) {
+        if(siege.hasAttackers()) {
+            siege.start();
+        } else {
+            siege.cancelDueNoInterest();
+        }
+        Broadcast.toAllOnlinePlayers(new ExMercenarySiegeHUDInfo(siege));
     }
 
     @ScheduleTarget

@@ -79,6 +79,7 @@ public class SiegeZone extends Zone {
     @Override
     protected void onEnter(Creature creature) {
         if (getSettings().isActiveSiege()) {
+
             creature.setInsideZone(ZoneType.PVP, true);
             creature.setInsideZone(ZoneType.SIEGE, true);
             creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true); // FIXME: Custom ?

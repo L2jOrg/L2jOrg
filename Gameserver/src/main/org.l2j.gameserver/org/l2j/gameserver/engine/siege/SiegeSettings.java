@@ -24,8 +24,7 @@ import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Node;
 
 import java.time.DayOfWeek;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.EnumSet;
 
 import static java.util.Objects.nonNull;
 
@@ -34,7 +33,7 @@ import static java.util.Objects.nonNull;
  */
 class SiegeSettings {
 
-    final IntMap<Collection<SiegeSchedule>> siegeSchedules = new HashIntMap<>();
+    final IntMap<EnumSet<DayOfWeek>> siegeScheduleDays = new HashIntMap<>();
     int maxSiegesInDay;
     int minClanLevel;
     int maxAttackers;
@@ -42,9 +41,7 @@ class SiegeSettings {
     int minMercenaryLevel;
     int maxMercenaries;
 
-    private SiegeSettings() {
-
-    }
+    private SiegeSettings() { }
 
     static SiegeSettings parse(GameXmlReader reader, Node configNode) {
         SiegeSettings settings = new SiegeSettings();
@@ -64,20 +61,12 @@ class SiegeSettings {
             settings.minMercenaryLevel = reader.parseInt(attr, "min-mercenary-level");
             settings.maxMercenaries = reader.parseInt(attr, "min-mercenary-level");
         }
-
         return settings;
     }
 
     private static void parseCastleInfo(SiegeSettings settings, GameXmlReader reader, Node castleNode) {
         var id = reader.parseInt(castleNode.getAttributes(), "id");
-        for(var node = castleNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-            if(node.getNodeName().equals("scheduled-day")) {
-                var attrs = node.getAttributes();
-                var day = reader.parseEnum(attrs, DayOfWeek.class, "day");
-                var hour = reader.parseInt(attrs, "hour");
-                settings.siegeSchedules.computeIfAbsent(id, i -> new ArrayList<>()).add(new SiegeSchedule(day, hour));
-            }
-        }
-
+        var days = reader.parseEnumSet(castleNode.getFirstChild(), DayOfWeek.class);
+        settings.siegeScheduleDays.put(id, days);
     }
 }

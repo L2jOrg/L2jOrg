@@ -501,7 +501,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     protected void checkBroadcast(ServerPacket packet) {
-        if(World.getInstance().getPlayersCountInSurroundRegions(this) > 10) {
+        if(World.getInstance().getPlayersCountInSurroundRegions(this) > 100) {
             packet.sendInBroadcast(true);
         }
     }

@@ -40,7 +40,7 @@ public class ThreadPool {
         final var rejectedHandler = new RejectedExecutionHandlerImpl();
 
         executor = new ThreadPoolExecutor(threadPoolSize, maxPoolSize, 10, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), rejectedHandler);
-        scheduledExecutor = new ScheduledThreadPoolExecutor(scheduledPoolSize, new PriorityThreadFactory("ScheduledThreadPool", Thread.NORM_PRIORITY), rejectedHandler);
+        scheduledExecutor = new ScheduledThreadPoolExecutor(scheduledPoolSize, new PriorityThreadFactory("ScheduledThreadPool", Thread.MIN_PRIORITY), rejectedHandler);
         scheduledExecutor.setRemoveOnCancelPolicy(true);
         forkPool = new ForkJoinPool(threadPoolSize, ForkJoinPool.defaultForkJoinWorkerThreadFactory, rejectedHandler, false);
 

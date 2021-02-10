@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -84,7 +85,7 @@ public final class Action extends ClientPacket {
         // If object requested does not exist, add warn msg into logs
         // pressing e.g. pickup many times quickly would get you here
         if (isNull(obj)) {
-            client.sendPacket(ActionFailed.STATIC_PACKET);
+            client.sendPackets(ActionFailed.STATIC_PACKET, new DeleteObject(objectId));
             return;
         }
 

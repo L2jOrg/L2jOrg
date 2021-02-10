@@ -453,7 +453,11 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
 
     public boolean checkAnySkill(ItemSkillType type, Predicate<ItemSkillHolder> predicate) {
         if(nonNull(skills)) {
-            return skills.stream().filter(sk -> sk.getType() == type).anyMatch(predicate);
+            for (ItemSkillHolder skill : skills) {
+                if(skill.getType() == type && predicate.test(skill)) {
+                    return true;
+                }
+            }
         }
         return false;
     }

@@ -57,7 +57,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
     private volatile boolean shutdown = false;
 
     private AuthServerCommunication() {
-        connector = Connector.create(AuthServerClient::new, new PacketHandler(), this);
+        connector = Connector.create(AuthServerClient::new, new PacketHandler(), this).threadPoolSize(2);
     }
 
     public void connect() throws IOException, ExecutionException, InterruptedException {

@@ -3544,33 +3544,33 @@ public final class Player extends Playable {
                     player.sendPacket(charInfo);
                 }
 
-                // Update relation.
-                final int relation = getRelation(player);
-                Integer oldRelation = getKnownRelations().get(player.getObjectId());
-                if ((oldRelation == null) || (oldRelation != relation)) {
-                    final RelationChanged rc = new RelationChanged();
-                    rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
-                    if (hasSummon()) {
-                        final Summon pet = getPet();
-                        if (pet != null) {
-                            rc.addRelation(pet, relation, !isInsideZone(ZoneType.PEACE));
-                        }
-                        if (hasServitors()) {
-                            getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneType.PEACE)));
-                        }
-                    }
-                    player.sendPacket(rc);
-                    getKnownRelations().put(player.getObjectId(), relation);
-                }
+                updateKnownRelation(player);
             }
         });
     }
 
-    public final void broadcastTitleInfo() {
-        // Send a Server->Client packet UserInfo to this Player
-        broadcastUserInfo(UserInfoType.CLAN);
+    private void updateKnownRelation(Player player) {
+        final int relation = getRelation(player);
+        Integer oldRelation = getKnownRelations().get(player.getObjectId());
+        if ((oldRelation == null) || (oldRelation != relation)) {
+            final RelationChanged rc = new RelationChanged();
+            rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
+            if (hasSummon()) {
+                final Summon pet = getPet();
+                if (pet != null) {
+                    rc.addRelation(pet, relation, !isInsideZone(ZoneType.PEACE));
+                }
+                if (hasServitors()) {
+                    getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneType.PEACE)));
+                }
+            }
+            player.sendPacket(rc);
+            getKnownRelations().put(player.getObjectId(), relation);
+        }
+    }
 
-        // Send a Server->Client packet TitleUpdate to all Player in _KnownPlayers of the Player
+    public final void broadcastTitleInfo() {
+        broadcastUserInfo(UserInfoType.CLAN);
         broadcastPacket(new NicknameChanged(this));
     }
 
