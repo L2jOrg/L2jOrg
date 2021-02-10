@@ -480,7 +480,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public void sendMessage(String text) {
         // default implementation
     }
-    
+
     private void teleToLocation(int x, int y, int z, int heading, Instance instance) {
         final LocationReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureTeleport(this, x, y, z, heading, instance), this, LocationReturn.class);
         if (term != null) {

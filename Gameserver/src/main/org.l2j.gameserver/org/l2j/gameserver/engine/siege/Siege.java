@@ -18,21 +18,31 @@
  */
 package org.l2j.gameserver.engine.siege;
 
-import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.SiegeDAO;
 import org.l2j.gameserver.data.database.data.SiegeParticipant;
+import org.l2j.gameserver.engine.clan.ClanEngine;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.Broadcast;
 
 import java.util.Collection;
 
 import static java.util.Objects.*;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.gameserver.network.SystemMessageId.S1_S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED;
+import static org.l2j.gameserver.network.SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author JoeAlisson
@@ -40,9 +50,11 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 public class Siege extends AbstractEvent {
 
     private final Castle castle;
+    private final IntMap<SiegeParticipant> attackers = new CHashIntMap<>();
+    private final IntMap<SiegeParticipant> defenders = new CHashIntMap<>();
+
+    private Clan owner;
     private SiegeState state = SiegeState.NONE;
-    private final IntMap<SiegeParticipant> attackers = new HashIntMap<>();
-    private final IntMap<SiegeParticipant> defenders = new HashIntMap<>();
 
     public Siege(Castle castle) {
         this.castle = requireNonNull(castle);
@@ -50,7 +62,7 @@ public class Siege extends AbstractEvent {
     }
 
     private void initOwner(Castle castle) {
-        final var owner = castle.getOwner();
+        owner = castle.getOwner();
         if(nonNull(owner)) {
             final var siegeClan = new SiegeParticipant(owner.getId(), SiegeParticipantStatus.OWNER, castle.getId());
             defenders.put(owner.getId(), siegeClan);
@@ -214,5 +226,87 @@ public class Siege extends AbstractEvent {
                 return;
             }
         }
+    }
+
+    void start() {
+        filterNotAcceptedDefenders();
+        state = SiegeState.STARTED;
+
+        updateParticipantState();
+        expelPossibleAttackers();
+
+        castle.spawnDoor();
+        var zone = castle.getSiegeZone();
+        zone.setIsActive(true);
+        Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.17"));
+    }
+
+    private void expelPossibleAttackers() {
+        castle.getSiegeZone().forEachPlayer(p -> p.teleToLocation(TeleportWhereType.TOWN), this::isPossibleAttacker);
+    }
+
+    private boolean isPossibleAttacker(Player player) {
+        var clan = player.getClan();
+        return (isNull(clan) || !defenders.containsKey(clan.getId())) && !player.isInObserverMode();
+    }
+
+    private void updateParticipantState() {
+        for (SiegeParticipant participant : attackers.values()) {
+            var clan = ClanEngine.getInstance().getClan(participant.getClanId());
+            clan.forEachOnlineMember(this::setAttackerState);
+        }
+
+        for (SiegeParticipant participant : defenders.values()) {
+            var clan = ClanEngine.getInstance().getClan(participant.getClanId());
+            clan.forEachOnlineMember(this::setDefenderState);
+        }
+    }
+
+    private void setDefenderState(Player player) {
+        setSiegeState(player, (byte) 2);
+    }
+
+    private void setAttackerState(Player player) {
+        setSiegeState(player, (byte) 1);
+    }
+
+    // TODO change magic to enum
+    private void setSiegeState(Player player, byte state) {
+        player.setSiegeState(state);
+        player.setSiegeSide(castle.getId());
+        if(isInsideZone(player)) {
+            player.setIsInSiege(true);
+        }
+        player.broadcastUserInfo(UserInfoType.RELATION);
+
+    }
+
+    private boolean isInsideZone(ILocational loc) {
+        return castle.checkIfInZone(loc);
+    }
+
+    private void filterNotAcceptedDefenders() {
+        final var it = defenders.values().iterator();
+        while(it.hasNext()) {
+            var defender = it.next();
+            switch (defender.getStatus()) {
+                case DECLINED, WAITING -> it.remove();
+            }
+        }
+    }
+
+    void cancelDueNoInterest() {
+        SystemMessage message;
+        if(nonNull(owner)) {
+            message = getSystemMessage(S1_S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED);
+        } else {
+            message = getSystemMessage(THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
+        }
+        Broadcast.toAllOnlinePlayers(message.addCastleId(castle.getId()));
+        state = SiegeState.NONE;
+    }
+
+    boolean hasAttackers() {
+        return !attackers.isEmpty();
     }
 }

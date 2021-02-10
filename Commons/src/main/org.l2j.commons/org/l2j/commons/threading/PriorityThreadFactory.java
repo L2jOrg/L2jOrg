@@ -42,7 +42,7 @@ public class PriorityThreadFactory implements ThreadFactory {
 
 	@Override
 	public Thread newThread(Runnable r) {
-		return new PriorityThread(r, name + "-" + threadNumber.getAndDecrement(), priority);
+		return new PriorityThread(r, name + "-" + threadNumber.getAndIncrement(), priority);
 	}
 
 	private static final class PriorityThread extends Thread {
