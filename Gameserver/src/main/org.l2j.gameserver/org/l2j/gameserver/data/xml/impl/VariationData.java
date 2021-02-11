@@ -211,7 +211,18 @@ public class VariationData extends GameXmlReader {
             weaponType  = VariationWeaponType.MAGE;
         } else if(targetItem.getBodyPart() == BodyPart.BACK && targetItem.getEnchantLevel() < 10) {
             weaponType  = VariationWeaponType.CLOAK;
-        } else {
+        } else if (targetItem.isArmor() && targetItem.getBodyPart() == BodyPart.HEAD){
+            weaponType = VariationWeaponType.HELMET;
+        } else if (targetItem.isArmor() && targetItem.getBodyPart() == BodyPart.GLOVES){
+            weaponType = VariationWeaponType.GLOVES;
+        } else if (targetItem.isArmor() && targetItem.getBodyPart() == BodyPart.FEET){
+            weaponType = VariationWeaponType.BOOTS;
+        } else if (targetItem.isArmor() && (targetItem.getBodyPart() == BodyPart.CHEST || targetItem.getBodyPart() == BodyPart.FULL_ARMOR )){
+            weaponType = VariationWeaponType.CHEST;
+        } else if (targetItem.isArmor()){
+            weaponType = VariationWeaponType.ARMOR;
+        }
+        else {
             weaponType = VariationWeaponType.WARRIOR;
         }
         return weaponType;
