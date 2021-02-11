@@ -20,7 +20,7 @@ package org.l2j.gameserver.world;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.OnDayNightChange;
+import org.l2j.gameserver.model.events.impl.server.OnDayNightChange;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;

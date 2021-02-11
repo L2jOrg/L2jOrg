@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
 import org.l2j.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.model.events.impl.OnDayNightChange;
+import org.l2j.gameserver.model.events.impl.server.OnDayNightChange;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;

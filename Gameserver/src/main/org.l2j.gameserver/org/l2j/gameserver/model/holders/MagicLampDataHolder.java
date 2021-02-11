@@ -3,7 +3,10 @@ package org.l2j.gameserver.model.holders;
 import org.l2j.gameserver.enums.LampMode;
 import org.l2j.gameserver.enums.LampType;
 import org.l2j.gameserver.model.StatsSet;
-
+/**
+ * @author L2CCCP
+ * Reworked Vicochips
+ */
 public class MagicLampDataHolder
 {
     private final LampMode _mode;

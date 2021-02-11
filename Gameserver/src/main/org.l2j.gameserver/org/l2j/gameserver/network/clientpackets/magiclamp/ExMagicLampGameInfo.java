@@ -3,7 +3,10 @@ package org.l2j.gameserver.network.clientpackets.magiclamp;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.magiclamp.ExMagicLampGameInfoUI;
-
+/**
+ * @author L2CCCP
+ * Reworked Vicochips
+ */
 public class ExMagicLampGameInfo  extends ClientPacket {
     private byte _mode;
     @Override

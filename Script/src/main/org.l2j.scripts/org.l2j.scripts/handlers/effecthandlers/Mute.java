@@ -58,6 +58,7 @@ public final class Mute extends AbstractEffect {
 		}
 
 		effected.abortCast();
+		effected.breakCast();
 		effected.getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 	}
 

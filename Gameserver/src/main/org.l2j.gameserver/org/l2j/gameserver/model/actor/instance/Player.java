@@ -5268,8 +5268,6 @@ public final class Player extends Playable {
             _randomCraft.store();
         }
 
-        shortcuts.storeMe();
-
         getDAO(PlayerVariablesDAO.class).save(variables);
 
         final var playerDAO = getDAO(PlayerDAO.class);
@@ -5531,6 +5529,7 @@ public final class Player extends Playable {
         if (store) {
             storeSkill(newSkill, oldSkill);
         }
+        updateShortCuts(newSkill.getId(), newSkill.getLevel(), 0);
         return oldSkill;
     }
 
