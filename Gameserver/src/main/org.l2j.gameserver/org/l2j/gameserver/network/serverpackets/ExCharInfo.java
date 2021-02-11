@@ -59,7 +59,7 @@ public class ExCharInfo extends ServerPacket {
 
         //0x151 272 protocol
         //0x155 286 protocol or +4 it's from unk dynamic size
-        buffer.writeShort(0x155 + dynamicSize);
+        buffer.writeShort(0x154 + dynamicSize);
 
         var appearence = player.getAppearance();
         buffer.writeInt(player.getObjectId());
@@ -118,6 +118,7 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeFloat((float) player.getCollisionRadius());
         buffer.writeFloat((float) player.getCollisionHeight());
 
+
         buffer.writeInt(player.getVisualHair());
         buffer.writeInt(player.getVisualHairColor());
         buffer.writeInt(player.getVisualFace());
@@ -132,7 +133,6 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeByte(!player.isSitting());
         buffer.writeByte(player.isRunning());
         buffer.writeByte(player.isInCombat());
-        buffer.writeByte(!player.isInOlympiadMode() && player.isAlikeDead());
         buffer.writeByte(player.getMountType().ordinal());
         buffer.writeByte(player.getPrivateStoreType().getId());
 
@@ -186,12 +186,14 @@ public class ExCharInfo extends ServerPacket {
         }
 
         buffer.writeByte(0); // ceremony of chaos position
+        buffer.writeByte(0); // pledge game user flag
         buffer.writeByte(player.isHairAccessoryEnabled());
         buffer.writeByte(player.getAbilityPointsUsed());
         buffer.writeInt(0x00); // cursed weapon equipped id
         buffer.writeInt(0x00); // wait action id
         buffer.writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
         buffer.writeShort(0x00); // notoriety
+        buffer.writeInt(0xFFFF); // main class
 
         buffer.writeInt(-1); // fix unk new (286 protocol)
 
@@ -206,5 +208,6 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeInt(zeroIfNullOrElse(player.getVehicle(), WorldObject::getObjectId));
 
         buffer.writeSizedString(appearence.getVisibleName());
+        buffer.writeByte(player.isAlikeDead());
     }
 }
