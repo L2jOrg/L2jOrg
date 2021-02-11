@@ -75,9 +75,16 @@ public class Monster extends Attackable {
             return true;
         }
 
-        if (GameUtils.isMonster(attacker)) {
+        // Why a Monster should never attack another one ?
+        // Some skills are explicitly telling the oposite
+        // FIXME: This next comment could create a new EPIC bug :p
+        // The purpose of the comments above is to locate quickly this new potential bug
+        // TODO: @JoeAlisson
+        // TODO: @Vicochips
+        // TODO: @Thoss
+        /*if (GameUtils.isMonster(attacker)) {
             return false;
-        }
+        }*/
 
         if(attacker instanceof FriendlyMob && isAggressive() && !getAggroList().isEmpty() && GameUtils.isPlayable(getTarget())) {
             return true;

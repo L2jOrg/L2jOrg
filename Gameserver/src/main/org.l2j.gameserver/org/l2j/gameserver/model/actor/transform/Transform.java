@@ -311,7 +311,6 @@ public final class Transform implements IIdentifiable {
             if (isPlayer(creature)) {
                 final Player player = creature.getActingPlayer();
                 final boolean hasTransformSkills = player.hasTransformSkills();
-
                 if (_name != null) {
                     player.getAppearance().setVisibleName(null);
                 }
@@ -329,9 +328,9 @@ public final class Transform implements IIdentifiable {
 
                 player.sendPacket(ExBasicActionList.STATIC_PACKET);
 
+                player.getEffectList().stopEffects(AbnormalType.SPECIAL_RIDE);
                 player.getEffectList().stopEffects(AbnormalType.TRANSFORM);
                 player.getEffectList().stopEffects(AbnormalType.CHANGEBODY);
-                player.getEffectList().stopEffects(AbnormalType.SPECIAL_RIDE);
 
                 if (hasTransformSkills) {
                     player.sendSkillList();

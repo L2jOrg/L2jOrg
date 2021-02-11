@@ -14,7 +14,10 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.List;
 
-
+/**
+ * @author L2CCCP
+ * Reworked Vicochips
+ */
 public class ExMagicLampGameInfoUI extends ServerPacket {
 
     private final Player _player;

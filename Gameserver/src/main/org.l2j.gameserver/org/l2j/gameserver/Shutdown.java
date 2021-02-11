@@ -28,6 +28,9 @@ import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.impl.server.OnDayNightChange;
+import org.l2j.gameserver.model.events.impl.server.OnServerShutDown;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
@@ -106,6 +109,9 @@ public class Shutdown extends Thread {
     }
 
     private void saveDataAndReleaseResources() {
+        // Notify shutdown to subscribed Consumers
+        EventDispatcher.getInstance().notifyEventAsync(new OnServerShutDown());
+
         switch (shutdownMode) {
             case SIGTERM -> LOGGER.info("SIGTERM received. Shutting down NOW!");
             case GM_SHUTDOWN -> LOGGER.info("GM shutdown received. Shutting down NOW!");

@@ -17,7 +17,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+/**
+ * @author L2CCCP
+ * @Reworked Vicochips
+ */
 public class ExMagicLampGameResult extends ServerPacket {
     private final Map<LampType, MagicLampHolder> _reward = new HashMap<>();
 
