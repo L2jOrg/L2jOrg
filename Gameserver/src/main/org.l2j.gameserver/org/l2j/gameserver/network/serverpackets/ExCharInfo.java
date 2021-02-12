@@ -57,8 +57,6 @@ public class ExCharInfo extends ServerPacket {
     protected void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_CHAR_INFO, buffer );
 
-        //0x151 272 protocol
-        //0x155 286 protocol or +4 it's from unk dynamic size
         buffer.writeShort(0x154 + dynamicSize);
 
         var appearence = player.getAppearance();
@@ -118,10 +116,9 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeFloat((float) player.getCollisionRadius());
         buffer.writeFloat((float) player.getCollisionHeight());
 
-
+        buffer.writeInt(player.getVisualFace());
         buffer.writeInt(player.getVisualHair());
         buffer.writeInt(player.getVisualHairColor());
-        buffer.writeInt(player.getVisualFace());
 
         buffer.writeSizedString(appearence.getVisibleTitle());
 
@@ -185,7 +182,6 @@ public class ExCharInfo extends ServerPacket {
             buffer.writeShort(effect.getClientId());
         }
 
-        buffer.writeByte(0); // ceremony of chaos position
         buffer.writeByte(0); // pledge game user flag
         buffer.writeByte(player.isHairAccessoryEnabled());
         buffer.writeByte(player.getAbilityPointsUsed());
@@ -195,9 +191,7 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeShort(0x00); // notoriety
         buffer.writeInt(0xFFFF); // main class
 
-        buffer.writeInt(-1); // fix unk new (286 protocol)
-
-        buffer.writeShort(0x16 + appearence.getVisibleName().length() * 2);
+        buffer.writeShort(0x17 + appearence.getVisibleName().length() * 2);
         buffer.writeByte(0x00); // create or update
         buffer.writeByte(0x00); // show spawn event
 
@@ -208,6 +202,6 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeInt(zeroIfNullOrElse(player.getVehicle(), WorldObject::getObjectId));
 
         buffer.writeSizedString(appearence.getVisibleName());
-        buffer.writeByte(player.isAlikeDead());
+        buffer.writeByte(!player.isInOlympiadMode() && player.isAlikeDead());
     }
 }
