@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.type.ArmorType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
