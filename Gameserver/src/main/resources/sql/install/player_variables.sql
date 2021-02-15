@@ -36,6 +36,9 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
 	`monster_return` INT DEFAULT -1,
 	`lamp_xp` INT DEFAULT 0,
 	`lamp_count` INT DEFAULT 0,
+	`saya_support`  INT DEFAULT 0,
+    `saya_limited`  INT DEFAULT 0,
+
     PRIMARY KEY (`player_id`),
     FOREIGN KEY (`player_id`) REFERENCES characters(`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
