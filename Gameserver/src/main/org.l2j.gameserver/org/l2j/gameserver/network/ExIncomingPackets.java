@@ -83,6 +83,8 @@ import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
 import org.l2j.gameserver.network.clientpackets.stats.ExResetStatusBonus;
 import org.l2j.gameserver.network.clientpackets.stats.ExSetStatusBonus;
+import org.l2j.gameserver.network.clientpackets.subjugation.ExRequestSubjugationList;
+import org.l2j.gameserver.network.clientpackets.subjugation.ExRequestSubjugationRank;
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleport;
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoriteList;
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoritesAddDel;
@@ -597,8 +599,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_USER_WATCHER_DELETE(null, ConnectionState.IN_GAME_STATES),
     EX_HOMUNCULUS_ACTIVATE_SLOT(null, ConnectionState.IN_GAME_STATES),
     EX_SUMMON_HOMUNCULUS_COUPON(null, ConnectionState.IN_GAME_STATES),
-    EX_SUBJUGATION_LIST(null, ConnectionState.IN_GAME_STATES),
-    EX_SUBJUGATION_RANKING(null, ConnectionState.IN_GAME_STATES),
+    EX_SUBJUGATION_LIST(ExRequestSubjugationList::new, ConnectionState.IN_GAME_STATES),
+    EX_SUBJUGATION_RANKING(ExRequestSubjugationRank::new, ConnectionState.IN_GAME_STATES),
     EX_SUBJUGATION_GACHA_UI(null, ConnectionState.IN_GAME_STATES),
     EX_SUBJUGATION_GACHA(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_DONATION_INFO(null, ConnectionState.IN_GAME_STATES),
