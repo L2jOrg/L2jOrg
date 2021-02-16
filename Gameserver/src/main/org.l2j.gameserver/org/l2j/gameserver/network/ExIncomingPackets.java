@@ -74,9 +74,7 @@ import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpaw
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
 import org.l2j.gameserver.network.clientpackets.raidserver.ExConnectToRaidServer;
 import org.l2j.gameserver.network.clientpackets.randomcraft.*;
-import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
-import org.l2j.gameserver.network.clientpackets.rank.ExRankingCharRankers;
-import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;
+import org.l2j.gameserver.network.clientpackets.rank.*;
 import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneEnter;
 import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
 import org.l2j.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
@@ -555,8 +553,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_BLESS_OPTION_PUT_ITEM(RequestBlessOptionPutItem::new, ConnectionState.IN_GAME_STATES),
     EX_BLESS_OPTION_ENCHANT(RequestBlessOptionEnchant::new, ConnectionState.IN_GAME_STATES),
     EX_BLESS_OPTION_CANCEL(RequestBlessOptionCancel::new, ConnectionState.IN_GAME_STATES),
-    EX_PVP_RANKING_MY_INFO(null, ConnectionState.IN_GAME_STATES),
-    EX_PVP_RANKING_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_PVP_RANKING_MY_INFO(ExRequestPvPMyRank::new, ConnectionState.IN_GAME_STATES),
+    EX_PVP_RANKING_LIST(ExRequestPvPRanking::new, ConnectionState.IN_GAME_STATES),
     EX_ACQUIRE_PET_SKILL(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_V3_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_ENEMY_INFO_LIST(null, ConnectionState.IN_GAME_STATES),

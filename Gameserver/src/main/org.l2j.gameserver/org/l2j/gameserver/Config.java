@@ -852,8 +852,8 @@ public final class Config {
         ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
         ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
         ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
-        ENABLE_L2_STORE = Feature.getBoolean("EnableL2Store", false);
-        ENABLE_LCOIN_STORE = Feature.getBoolean("EnableLCoinStore", false);
+        ENABLE_L2_STORE = Feature.getBoolean("EnableL2Store", true);
+        ENABLE_LCOIN_STORE = Feature.getBoolean("EnableLCoinStore", true);
 
 
         // Load Character config file (if exists)

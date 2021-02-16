@@ -29,16 +29,18 @@ public class ExRankingCharRankers extends ClientPacket {
     private byte group;
     private byte scope;
     private int race;
+    private int classe;
 
     @Override
     protected void readImpl() throws Exception {
         group = readByte();
         scope = readByte();
         race = readInt();
+        classe = readInt();
     }
 
     @Override
     protected void runImpl() {
-        client.sendPacket(new ExRankList(client.getPlayer(), group, scope, race));
+        client.sendPacket(new ExRankList(client.getPlayer(), group, scope, race, classe));
     }
 }
