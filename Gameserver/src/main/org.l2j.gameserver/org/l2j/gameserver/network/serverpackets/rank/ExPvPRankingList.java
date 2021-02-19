@@ -51,9 +51,9 @@ public class ExPvPRankingList extends ServerPacket {
             buffer.writeInt(ranker.getLevel());
             buffer.writeInt(ranker.getRace());
             buffer.writeInt(ranker.getClassId());
-            buffer.writeInt(5);
+            buffer.writeInt(5); //TODO pvpcount
             buffer.writeInt(ranker.getRank());
-            buffer.writeInt(2); //prev rank
+            buffer.writeInt(2); //TODO prev rank
             buffer.writeInt(5);// TODO: killcount
             buffer.writeInt(2);// TODO: diecount
 

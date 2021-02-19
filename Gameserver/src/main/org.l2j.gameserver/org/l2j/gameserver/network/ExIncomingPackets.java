@@ -42,8 +42,7 @@ import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleW
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
-import org.l2j.gameserver.network.clientpackets.collections.ExCollectionCloseUi;
-import org.l2j.gameserver.network.clientpackets.collections.ExCollectionOpenUi;
+import org.l2j.gameserver.network.clientpackets.collections.*;
 import org.l2j.gameserver.network.clientpackets.commission.*;
 import org.l2j.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.costume.*;
@@ -83,6 +82,8 @@ import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
 import org.l2j.gameserver.network.clientpackets.stats.ExResetStatusBonus;
 import org.l2j.gameserver.network.clientpackets.stats.ExSetStatusBonus;
+import org.l2j.gameserver.network.clientpackets.subjugation.ExRequestSubjugationGacha;
+import org.l2j.gameserver.network.clientpackets.subjugation.ExRequestSubjugationGachaUI;
 import org.l2j.gameserver.network.clientpackets.subjugation.ExRequestSubjugationList;
 import org.l2j.gameserver.network.clientpackets.subjugation.ExRequestSubjugationRank;
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleport;
@@ -581,12 +582,12 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PET_RANKING_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_COLLECTION_OPEN_UI(ExCollectionOpenUi::new, ConnectionState.IN_GAME_STATES),
     EX_COLLECTION_CLOSE_UI(ExCollectionCloseUi::new, ConnectionState.IN_GAME_STATES),
-    EX_COLLECTION_LIST(null, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_LIST(ExRequestCollectionList::new, ConnectionState.IN_GAME_STATES),
     EX_COLLECTION_UPDATE_FAVORITE(null, ConnectionState.IN_GAME_STATES),
     EX_COLLECTION_FAVORITE_LIST(null, ConnectionState.IN_GAME_STATES),
-    EX_COLLECTION_SUMMARY(null, ConnectionState.IN_GAME_STATES),
-    EX_COLLECTION_REGISTER(null, ConnectionState.IN_GAME_STATES),
-    EX_COLLECTION_RECEIVE_REWARD(null, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_SUMMARY(ExRequestCollectionSummary::new, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_REGISTER(ExRequestCollectionRegister::new, ConnectionState.IN_GAME_STATES),
+    EX_COLLECTION_RECEIVE_REWARD(ExRequestCollectionReward::new, ConnectionState.IN_GAME_STATES),
     EX_PVPBOOK_SHARE_REVENGE_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_PVPBOOK_SHARE_REVENGE_REQ_SHARE_REVENGEINFO(null, ConnectionState.IN_GAME_STATES),
     EX_PVPBOOK_SHARE_REVENGE_KILLER_LOCATION(null, ConnectionState.IN_GAME_STATES),
@@ -601,8 +602,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_SUMMON_HOMUNCULUS_COUPON(null, ConnectionState.IN_GAME_STATES),
     EX_SUBJUGATION_LIST(ExRequestSubjugationList::new, ConnectionState.IN_GAME_STATES),
     EX_SUBJUGATION_RANKING(ExRequestSubjugationRank::new, ConnectionState.IN_GAME_STATES),
-    EX_SUBJUGATION_GACHA_UI(null, ConnectionState.IN_GAME_STATES),
-    EX_SUBJUGATION_GACHA(null, ConnectionState.IN_GAME_STATES),
+    EX_SUBJUGATION_GACHA_UI(ExRequestSubjugationGachaUI::new, ConnectionState.IN_GAME_STATES),
+    EX_SUBJUGATION_GACHA(ExRequestSubjugationGacha::new, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_DONATION_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_DONATION_REQUEST(null, ConnectionState.IN_GAME_STATES),
     EX_PLEDGE_CONTRIBUTION_LIST(null, ConnectionState.IN_GAME_STATES),

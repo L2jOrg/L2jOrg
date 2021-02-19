@@ -20,11 +20,11 @@ public class ExPvPRankingMyInfo extends ServerPacket {
     protected void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_PVP_RANKING_MY_INFO, buffer );
 
-            buffer.writeInt(5);
-            buffer.writeInt(1);
-            buffer.writeInt(5);
-            buffer.writeInt(5);
-            buffer.writeInt(5);
+            buffer.writeInt(5); //Todo pvppoint
+            buffer.writeInt(1); //Todo rank
+            buffer.writeInt(5); //Todo prevrank
+            buffer.writeInt(5); //Todo killcount
+            buffer.writeInt(5); //Todo diecount
 
     }
 }
