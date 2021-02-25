@@ -50,11 +50,11 @@ public final class VariationInstance {
         return data.getMineralId();
     }
 
-    public int getOption1Id() {
+    public int getNormalId() {
         return data.getOption1();
     }
 
-    public int getOption2Id() {
+    public int getRandomId() {
         return data.getOption2();
     }
 

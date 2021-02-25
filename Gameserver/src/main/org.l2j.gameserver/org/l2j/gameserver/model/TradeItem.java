@@ -22,8 +22,6 @@ import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.EnsoulOption;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Objects;
 
 public class TradeItem {
@@ -62,8 +60,8 @@ public class TradeItem {
 
         augmentation = item.getAugmentation();
         if (item.getAugmentation() != null) {
-            _augmentationOption1 = item.getAugmentation().getOption1Id();
-            _augmentationOption1 = item.getAugmentation().getOption2Id();
+            _augmentationOption1 = item.getAugmentation().getNormalId();
+            _augmentationOption1 = item.getAugmentation().getRandomId();
         }
     }
 

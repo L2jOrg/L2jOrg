@@ -26,6 +26,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.model.TowerSpawn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
@@ -48,6 +49,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.EnumSet;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
@@ -169,9 +171,7 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
     @ScheduleTarget
     public void onSiegeStart() {
-        for (Siege siege : sieges.values()) {
-            startSiege(siege);
-        }
+        sieges.values().forEach(this::startSiege);
     }
 
     private void startSiege(Siege siege) {
@@ -564,6 +564,10 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
     public int remainTimeToFinish() {
         return (int) getScheduler("stop-siege").getRemainingTime(TimeUnit.SECONDS);
+    }
+
+    Collection<TowerSpawn> controlTowersOf(int castleId) {
+       return settings.controlTowers.getOrDefault(castleId, Collections.emptyList());
     }
 
     public static SiegeEngine getInstance() {

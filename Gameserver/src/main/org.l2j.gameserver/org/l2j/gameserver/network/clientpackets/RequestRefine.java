@@ -23,7 +23,6 @@ import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.Variation;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.model.options.VariationWeaponType;
@@ -127,7 +126,7 @@ public final class RequestRefine extends AbstractRefinePacket {
         }
 
         targetItem.setAugmentation(augment, true);
-        player.sendPacket(new ExVariationResult(augment.getOption1Id(), augment.getOption2Id(), true));
+        player.sendPacket(new ExVariationResult(augment.getNormalId(), augment.getRandomId(), true));
 
         iu.addModifiedItem(targetItem);
         player.sendInventoryUpdate(iu);

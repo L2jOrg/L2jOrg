@@ -34,8 +34,8 @@ public class ExPutItemResultForVariationCancel extends ServerPacket {
         _itemObjId = item.getObjectId();
         _itemId = item.getDisplayId();
         _price = price;
-        _itemAug1 = item.getAugmentation().getOption1Id();
-        _itemAug2 = item.getAugmentation().getOption2Id();
+        _itemAug1 = item.getAugmentation().getNormalId();
+        _itemAug2 = item.getAugmentation().getRandomId();
     }
 
     @Override

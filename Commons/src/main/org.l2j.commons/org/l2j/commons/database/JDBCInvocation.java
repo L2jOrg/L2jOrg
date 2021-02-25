@@ -204,11 +204,11 @@ class JDBCInvocation implements InvocationHandler {
             return new QueryDescriptor(method, query);
         }
 
-        var matcher = PARAMETER_PATTERN.matcher(query);
         var parameterMapper = mapParameters(method.getParameters());
         IntMap<IntKeyValue<Class<?>>> parameters = new HashIntMap<>();
 
         var parameterCount = 0;
+        var matcher = PARAMETER_PATTERN.matcher(query);
         while (matcher.find()) {
             if(!parameterMapper.containsKey(matcher.group(1))) {
                 LOGGER.error("There is no correspondent parameter to variable {} on method {}#{}", matcher.group(1), method.getDeclaringClass().getName(), method.getName());

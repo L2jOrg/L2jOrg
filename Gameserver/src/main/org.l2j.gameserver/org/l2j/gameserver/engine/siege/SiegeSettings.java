@@ -20,10 +20,13 @@ package org.l2j.gameserver.engine.siege;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.model.TowerSpawn;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Node;
 
 import java.time.DayOfWeek;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.EnumSet;
 
 import static java.util.Objects.nonNull;
@@ -34,6 +37,7 @@ import static java.util.Objects.nonNull;
 class SiegeSettings {
 
     final IntMap<EnumSet<DayOfWeek>> siegeScheduleDays = new HashIntMap<>();
+    final IntMap<Collection<TowerSpawn>> controlTowers = new HashIntMap<>();
     int maxSiegesInDay;
     int minClanLevel;
     int maxAttackers;
@@ -65,8 +69,23 @@ class SiegeSettings {
     }
 
     private static void parseCastleInfo(SiegeSettings settings, GameXmlReader reader, Node castleNode) {
-        var id = reader.parseInt(castleNode.getAttributes(), "id");
+        var castleId = reader.parseInt(castleNode.getAttributes(), "id");
+        for(var node = castleNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+            switch (node.getNodeName()) {
+                case "scheduled-days" -> settings.siegeScheduleDays.put(castleId, reader.parseEnumSet(node, DayOfWeek.class));
+                case "control-tower" -> parseControlTower(castleId, reader, node, settings);
+            }
+        }
         var days = reader.parseEnumSet(castleNode.getFirstChild(), DayOfWeek.class);
-        settings.siegeScheduleDays.put(id, days);
+        settings.siegeScheduleDays.put(castleId, days);
+
+    }
+
+    private static void parseControlTower(int castleId, GameXmlReader reader, Node controlTowerNode, SiegeSettings settings) {
+        var controlTowerId = reader.parseInt(controlTowerNode.getAttributes(), "id");
+        for(var node = controlTowerNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+            var location = reader.parseLocation(node);
+            settings.controlTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new TowerSpawn(controlTowerId, location));
+        }
     }
 }

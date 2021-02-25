@@ -78,8 +78,8 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
                 buffer.writeShort(22); // 10 + 4 * 3
                 buffer.writeInt(inventory.getPaperdollObjectId(slot));
                 buffer.writeInt(inventory.getPaperdollItemId(slot));
-                buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
-                buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
+                buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getNormalId));
+                buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getRandomId));
                 buffer.writeInt(0x00); // Visual ID not used on classic
             }
         }

@@ -367,7 +367,7 @@ public class MultiSellChoose extends ClientPacket {
         if ((itemEnchantment != null) && ((count > 1)
                 || (itemEnchantment.getEnchantLevel() != enchantLevel)
                 || ((itemEnchantment.getAugmentation() == null) && ((augmentOption1 != 0) || (augmentOption2 != 0)))
-                || ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getOption1Id() != augmentOption1) || (itemEnchantment.getAugmentation().getOption2Id() != augmentOption2)))
+                || ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getNormalId() != augmentOption1) || (itemEnchantment.getAugmentation().getRandomId() != augmentOption2)))
                 || ((soulCrystalOptions.length > 0) && !CommonUtil.contains(soulCrystalOptions, itemEnchantment.getSoulCrystalOption()))
                 || ((soulCrystalOptions.length == 0) && nonNull(itemEnchantment.getSoulCrystalOption()))
                 || ((soulCrystalSpecialOptions.length > 0) && !CommonUtil.contains(soulCrystalSpecialOptions, itemEnchantment.getSoulCrystalSpecialOption()))
