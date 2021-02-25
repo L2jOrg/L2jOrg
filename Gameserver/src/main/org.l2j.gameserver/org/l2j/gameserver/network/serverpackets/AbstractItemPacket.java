@@ -150,8 +150,8 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
     }
 
     private void writeItemAugment(Item item, WritableBuffer buffer) {
-        buffer.writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getOption1Id));
-        buffer.writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getOption2Id));
+        buffer.writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getNormalId));
+        buffer.writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getRandomId));
     }
 
     private int calculateMask(Item item) {
@@ -250,8 +250,8 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 
     protected void writeItemAugment(ItemInfo item, WritableBuffer buffer) {
         if ((item != null) && (item.getAugmentation() != null)) {
-            buffer.writeInt(item.getAugmentation().getOption1Id());
-            buffer.writeInt(item.getAugmentation().getOption2Id());
+            buffer.writeInt(item.getAugmentation().getNormalId());
+            buffer.writeInt(item.getAugmentation().getRandomId());
         } else {
             buffer.writeInt(0);
             buffer.writeInt(0);

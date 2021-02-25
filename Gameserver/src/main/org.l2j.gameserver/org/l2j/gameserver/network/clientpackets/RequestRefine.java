@@ -126,7 +126,7 @@ public final class RequestRefine extends AbstractRefinePacket {
         }
 
         targetItem.setAugmentation(augment, true);
-        player.sendPacket(new ExVariationResult(augment.getOption1Id(), augment.getOption2Id(), true));
+        player.sendPacket(new ExVariationResult(augment.getNormalId(), augment.getRandomId(), true));
 
         iu.addModifiedItem(targetItem);
         player.sendInventoryUpdate(iu);

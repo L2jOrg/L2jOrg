@@ -125,11 +125,11 @@ public class PlayerSelectInfo {
     }
 
     public int getAugmentationOption1() {
-        return nonNull(_augmentation) ? _augmentation.getOption1Id() : 0;
+        return nonNull(_augmentation) ? _augmentation.getNormalId() : 0;
     }
 
     public int getAugmentationOption2() {
-        return nonNull(_augmentation) ? _augmentation.getOption2Id() : 0;
+        return nonNull(_augmentation) ? _augmentation.getRandomId() : 0;
     }
 
     public boolean isHairAccessoryEnabled() {

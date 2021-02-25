@@ -221,9 +221,6 @@ public class Siege implements Siegable {
                 //saveCastleSiege();
                 return;
             }
-
-
-
             isInProgress = true;
 
             loadSiegeClan();
@@ -340,7 +337,7 @@ public class Siege implements Siegable {
         }
     }
 
-    public void midVictory() {
+      public void midVictory() {
         if (isInProgress) {
 
             if (castle.getOwnerId() > 0) {

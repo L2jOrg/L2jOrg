@@ -60,8 +60,8 @@ public class TradeItem {
 
         augmentation = item.getAugmentation();
         if (item.getAugmentation() != null) {
-            _augmentationOption1 = item.getAugmentation().getOption1Id();
-            _augmentationOption1 = item.getAugmentation().getOption2Id();
+            _augmentationOption1 = item.getAugmentation().getNormalId();
+            _augmentationOption1 = item.getAugmentation().getRandomId();
         }
     }
 

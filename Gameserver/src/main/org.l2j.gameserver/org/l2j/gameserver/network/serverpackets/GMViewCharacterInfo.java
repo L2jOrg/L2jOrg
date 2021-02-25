@@ -90,8 +90,8 @@ public class GMViewCharacterInfo extends ServerPacket {
 
         for (var slot : getPaperdollOrder()) { // TODO review
             final VariationInstance augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
-            buffer.writeInt(augment != null ? augment.getOption1Id() : 0); // Confirmed
-            buffer.writeInt(augment != null ? augment.getOption2Id() : 0); // Confirmed
+            buffer.writeInt(augment != null ? augment.getNormalId() : 0); // Confirmed
+            buffer.writeInt(augment != null ? augment.getRandomId() : 0); // Confirmed
         }
 
         buffer.writeByte( _activeChar.getInventory().getTalismanSlots()); // CT2.3
