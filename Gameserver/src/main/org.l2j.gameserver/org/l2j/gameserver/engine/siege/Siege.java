@@ -27,6 +27,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.ControlTower;
+import org.l2j.gameserver.model.actor.instance.FlameTower;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
@@ -60,6 +61,7 @@ public class Siege extends AbstractEvent {
     private final IntMap<SiegeParticipant> attackers = new CHashIntMap<>();
     private final IntMap<SiegeParticipant> defenders = new CHashIntMap<>();
     private final List<ControlTower> controlTowers = new ArrayList<>();
+    private final List<FlameTower> flameTowers = new ArrayList<>();
 
     private Clan owner;
     private SiegeState state = SiegeState.NONE;
@@ -250,13 +252,31 @@ public class Siege extends AbstractEvent {
 
         castle.spawnDoor();
         spawnControlTowers();
+        spawnFlameTowers();
         var zone = castle.getZone();
         zone.setIsActive(true);
         Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.17"));
     }
 
+    private void spawnFlameTowers() {
+        SiegeEngine.getInstance().flameTowersOf(castle).forEach(this::spawnFlameTower);
+    }
+
+    private void spawnFlameTower(TowerSpawn towerSpawn) {
+        try {
+            final var spawn = new Spawn(towerSpawn.getId());
+            spawn.setLocation(towerSpawn.getLocation());
+            final var tower = (FlameTower) spawn.doSpawn();
+            tower.setUpgradeLevel(towerSpawn.getUpgradeLevel());
+            tower.setZoneList(towerSpawn.getZoneList());
+            flameTowers.add(tower);
+        } catch (ClassNotFoundException | NoSuchMethodException e) {
+            LOGGER.error("Could not spawn flame tower in {}'s Castle Siege {}", castle, e);
+        }
+    }
+
     private void spawnControlTowers() {
-        SiegeEngine.getInstance().controlTowersOf(castle.getId()).forEach(this::spawnControlTower);
+        SiegeEngine.getInstance().controlTowersOf(castle).forEach(this::spawnControlTower);
     }
 
     private void spawnControlTower(TowerSpawn towerSpawn) {
@@ -264,7 +284,6 @@ public class Siege extends AbstractEvent {
             final var spawn = new Spawn(towerSpawn.getId());
             spawn.setLocation(towerSpawn.getLocation());
             controlTowers.add((ControlTower) spawn.doSpawn());
-            //[Location] X: 113115 Y: 144829 Z: -2446 Heading: 0
         } catch (ClassNotFoundException | NoSuchMethodException e) {
             LOGGER.error("Could not spawn control tower in {}'s Castle Siege {}", castle, e);
         }

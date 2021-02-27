@@ -28,6 +28,7 @@ import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.EnumSet;
+import java.util.HashMap;
 
 import static java.util.Objects.nonNull;
 
@@ -38,6 +39,7 @@ class SiegeSettings {
 
     final IntMap<EnumSet<DayOfWeek>> siegeScheduleDays = new HashIntMap<>();
     final IntMap<Collection<TowerSpawn>> controlTowers = new HashIntMap<>();
+    final IntMap<Collection<TowerSpawn>> flameTowers = new HashIntMap<>();
     int maxSiegesInDay;
     int minClanLevel;
     int maxAttackers;
@@ -52,40 +54,50 @@ class SiegeSettings {
         final var siegeConfig= configNode.getFirstChild();
 
         if(nonNull(siegeConfig) && siegeConfig.getNodeName().equals("siege-config")) {
-            for(var node = siegeConfig.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-                if(node.getNodeName().equals("castle")) {
-                    parseCastleInfo(settings, reader, node);
-                }
-            }
-            var attr = siegeConfig.getAttributes();
-            settings.maxSiegesInDay = reader.parseInt(attr, "max-in-day");
-            settings.minClanLevel = reader.parseInt(attr, "min-clan-level");
-            settings.maxAttackers = reader.parseInt(attr, "max-attackers");
-            settings.maxDefenders = reader.parseInt(attr, "max-defenders");
-            settings.minMercenaryLevel = reader.parseInt(attr, "min-mercenary-level");
-            settings.maxMercenaries = reader.parseInt(attr, "min-mercenary-level");
+            settings.parseConfig(siegeConfig, reader);
         }
         return settings;
     }
 
-    private static void parseCastleInfo(SiegeSettings settings, GameXmlReader reader, Node castleNode) {
+    private void parseConfig(Node siegeConfig, GameXmlReader reader) {
+        for(var node = siegeConfig.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+            if(node.getNodeName().equals("castle")) {
+                parseCastleInfo(reader, node);
+            }
+        }
+        var attr = siegeConfig.getAttributes();
+        maxSiegesInDay = reader.parseInt(attr, "max-in-day");
+        minClanLevel = reader.parseInt(attr, "min-clan-level");
+        maxAttackers = reader.parseInt(attr, "max-attackers");
+        maxDefenders = reader.parseInt(attr, "max-defenders");
+        minMercenaryLevel = reader.parseInt(attr, "min-mercenary-level");
+        maxMercenaries = reader.parseInt(attr, "min-mercenary-level");
+    }
+
+    private void parseCastleInfo(GameXmlReader reader, Node castleNode) {
         var castleId = reader.parseInt(castleNode.getAttributes(), "id");
         for(var node = castleNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
             switch (node.getNodeName()) {
-                case "scheduled-days" -> settings.siegeScheduleDays.put(castleId, reader.parseEnumSet(node, DayOfWeek.class));
-                case "control-tower" -> parseControlTower(castleId, reader, node, settings);
+                case "scheduled-days" -> siegeScheduleDays.put(castleId, reader.parseEnumSet(node, DayOfWeek.class));
+                case "control-tower" -> parseControlTower(castleId, reader, node);
+                case "flame-tower" -> parseFlameTower(castleId, reader, node);
             }
         }
         var days = reader.parseEnumSet(castleNode.getFirstChild(), DayOfWeek.class);
-        settings.siegeScheduleDays.put(castleId, days);
+        siegeScheduleDays.put(castleId, days);
 
     }
 
-    private static void parseControlTower(int castleId, GameXmlReader reader, Node controlTowerNode, SiegeSettings settings) {
-        var controlTowerId = reader.parseInt(controlTowerNode.getAttributes(), "id");
-        for(var node = controlTowerNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-            var location = reader.parseLocation(node);
-            settings.controlTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new TowerSpawn(controlTowerId, location));
-        }
+    private void parseFlameTower(int castleId, GameXmlReader reader, Node flameNode) {
+        var towerId = reader.parseInt(flameNode.getAttributes(), "id");
+        var location = reader.parseLocation(flameNode);
+        var zones = reader.parseIntList(flameNode.getFirstChild());
+        flameTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new TowerSpawn(towerId, location, zones));
+    }
+
+    private void parseControlTower(int castleId, GameXmlReader reader, Node controlNode) {
+        var towerId = reader.parseInt(controlNode.getAttributes(), "id");
+        var location = reader.parseLocation(controlNode);
+        controlTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new TowerSpawn(towerId, location));
     }
 }

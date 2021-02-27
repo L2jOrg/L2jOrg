@@ -566,8 +566,12 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
         return (int) getScheduler("stop-siege").getRemainingTime(TimeUnit.SECONDS);
     }
 
-    Collection<TowerSpawn> controlTowersOf(int castleId) {
-       return settings.controlTowers.getOrDefault(castleId, Collections.emptyList());
+    Collection<TowerSpawn> controlTowersOf(Castle castle) {
+       return settings.controlTowers.getOrDefault(castle.getId(), Collections.emptyList());
+    }
+
+    Collection<TowerSpawn> flameTowersOf(Castle castle) {
+        return settings.flameTowers.getOrDefault(castle.getId(), Collections.emptyList());
     }
 
     public static SiegeEngine getInstance() {

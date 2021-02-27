@@ -134,7 +134,7 @@ public final class SiegeManager {
                         zoneList.add(Integer.parseInt(st.nextToken()));
                     }
 
-                    flameTowers.add(new TowerSpawn(npcId, new Location(x, y, z), zoneList));
+                    //flameTowers.add(new TowerSpawn(npcId, new Location(x, y, z), zoneList));
                 } catch (Exception e) {
                     LOGGER.warn("Error while loading flame tower(s) for " + castle.getName() + " castle.");
                 }

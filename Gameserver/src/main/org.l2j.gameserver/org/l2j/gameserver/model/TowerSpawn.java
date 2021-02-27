@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.IntList;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 
 import java.util.List;
@@ -29,7 +30,7 @@ import java.util.List;
 public class TowerSpawn implements IIdentifiable {
     private final int _npcId;
     private final Location _location;
-    private List<Integer> _zoneList = null;
+    private IntList _zoneList = null;
     private int _upgradeLevel = 0;
 
     public TowerSpawn(int npcId, Location location) {
@@ -37,7 +38,7 @@ public class TowerSpawn implements IIdentifiable {
         _npcId = npcId;
     }
 
-    public TowerSpawn(int npcId, Location location, List<Integer> zoneList) {
+    public TowerSpawn(int npcId, Location location, IntList zoneList) {
         _location = location;
         _npcId = npcId;
         _zoneList = zoneList;
@@ -57,7 +58,7 @@ public class TowerSpawn implements IIdentifiable {
         return _location;
     }
 
-    public List<Integer> getZoneList() {
+    public IntList  getZoneList() {
         return _zoneList;
     }
 
