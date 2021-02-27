@@ -19,6 +19,7 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import io.github.joealisson.primitive.IntList;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Tower;
@@ -35,7 +36,7 @@ import java.util.List;
  */
 public class FlameTower extends Tower {
     private int _upgradeLevel = 0;
-    private List<Integer> _zoneList;
+    private IntList _zoneList;
 
     public FlameTower(NpcTemplate template) {
         super(template);
@@ -70,7 +71,7 @@ public class FlameTower extends Tower {
         _upgradeLevel = level;
     }
 
-    public final void setZoneList(List<Integer> list) {
+    public final void setZoneList(IntList list) {
         _zoneList = list;
         enableZones(true);
     }
