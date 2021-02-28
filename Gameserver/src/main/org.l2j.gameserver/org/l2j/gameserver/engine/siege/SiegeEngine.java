@@ -26,7 +26,8 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.TowerSpawn;
+import org.l2j.gameserver.model.ArtifactSpawn;
+import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
@@ -566,12 +567,16 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
         return (int) getScheduler("stop-siege").getRemainingTime(TimeUnit.SECONDS);
     }
 
-    Collection<TowerSpawn> controlTowersOf(Castle castle) {
+    Collection<ArtifactSpawn> controlTowersOf(Castle castle) {
        return settings.controlTowers.getOrDefault(castle.getId(), Collections.emptyList());
     }
 
-    Collection<TowerSpawn> flameTowersOf(Castle castle) {
+    Collection<ArtifactSpawn> flameTowersOf(Castle castle) {
         return settings.flameTowers.getOrDefault(castle.getId(), Collections.emptyList());
+    }
+
+    ArtifactSpawn castleLordOf(Castle castle) {
+        return settings.castleLords.get(castle.getId());
     }
 
     public static SiegeEngine getInstance() {

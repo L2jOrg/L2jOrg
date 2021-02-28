@@ -27,18 +27,18 @@ import java.util.List;
 /**
  * @author malyelfik
  */
-public class TowerSpawn implements IIdentifiable {
+public class ArtifactSpawn implements IIdentifiable {
     private final int _npcId;
     private final Location _location;
     private IntList _zoneList = null;
     private int _upgradeLevel = 0;
 
-    public TowerSpawn(int npcId, Location location) {
+    public ArtifactSpawn(int npcId, Location location) {
         _location = location;
         _npcId = npcId;
     }
 
-    public TowerSpawn(int npcId, Location location, IntList zoneList) {
+    public ArtifactSpawn(int npcId, Location location, IntList zoneList) {
         _location = location;
         _npcId = npcId;
         _zoneList = zoneList;

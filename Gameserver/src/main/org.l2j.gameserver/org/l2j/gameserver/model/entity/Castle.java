@@ -45,7 +45,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -68,7 +67,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Objects;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -615,7 +613,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public int getTrapUpgradeLevel(int towerIndex) {
-        return zeroIfNullOrElse(SiegeManager.getInstance().getFlameTowers(getId()).get(towerIndex), TowerSpawn::getUpgradeLevel);
+        return zeroIfNullOrElse(SiegeManager.getInstance().getFlameTowers(getId()).get(towerIndex), ArtifactSpawn::getUpgradeLevel);
     }
 
     public void setTrapUpgrade(int towerIndex, int level, boolean save) {

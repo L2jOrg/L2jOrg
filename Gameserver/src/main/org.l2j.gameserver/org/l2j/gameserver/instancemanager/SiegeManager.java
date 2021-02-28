@@ -26,7 +26,7 @@ import org.l2j.gameserver.data.database.dao.SiegeDAO;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.TowerSpawn;
+import org.l2j.gameserver.model.ArtifactSpawn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Siege;
@@ -47,8 +47,8 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 public final class SiegeManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeManager.class);
 
-    private final IntMap<List<TowerSpawn>> _controlTowers = new HashIntMap<>();
-    private final IntMap<List<TowerSpawn>> _flameTowers = new HashIntMap<>();
+    private final IntMap<List<ArtifactSpawn>> _controlTowers = new HashIntMap<>();
+    private final IntMap<List<ArtifactSpawn>> _flameTowers = new HashIntMap<>();
 
     private int _attackerMaxClans = 500; // Max number of clans
     private int _attackerRespawnDelay = 0; // Time in ms. Changeable in siege.config
@@ -95,7 +95,7 @@ public final class SiegeManager {
 
         // TODO before start Siege
         for (Castle castle : CastleManager.getInstance().getCastles()) {
-            final List<TowerSpawn> controlTowers = new ArrayList<>();
+            final List<ArtifactSpawn> controlTowers = new ArrayList<>();
             for (int i = 1; i < 0xFF; i++) {
                 final String settingsKeyName = castle.getName() + "ControlTower" + i;
                 if (!siegeSettings.containskey(settingsKeyName)) {
@@ -109,13 +109,13 @@ public final class SiegeManager {
                     final int z = Integer.parseInt(st.nextToken());
                     final int npcId = Integer.parseInt(st.nextToken());
 
-                    controlTowers.add(new TowerSpawn(npcId, new Location(x, y, z)));
+                    controlTowers.add(new ArtifactSpawn(npcId, new Location(x, y, z)));
                 } catch (Exception e) {
                     LOGGER.warn(": Error while loading control tower(s) for " + castle.getName() + " castle.");
                 }
             }
 
-            final List<TowerSpawn> flameTowers = new ArrayList<>();
+            final List<ArtifactSpawn> flameTowers = new ArrayList<>();
             for (int i = 1; i < 0xFF; i++) {
                 final String settingsKeyName = castle.getName() + "FlameTower" + i;
                 if (!siegeSettings.containskey(settingsKeyName)) {
@@ -148,11 +148,11 @@ public final class SiegeManager {
         }
     }
 
-    public final List<TowerSpawn> getControlTowers(int castleId) {
+    public final List<ArtifactSpawn> getControlTowers(int castleId) {
         return _controlTowers.get(castleId);
     }
 
-    public final List<TowerSpawn> getFlameTowers(int castleId) {
+    public final List<ArtifactSpawn> getFlameTowers(int castleId) {
         return _flameTowers.get(castleId);
     }
 
