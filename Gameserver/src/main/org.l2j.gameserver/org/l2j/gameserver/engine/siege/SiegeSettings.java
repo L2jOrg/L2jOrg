@@ -20,7 +20,7 @@ package org.l2j.gameserver.engine.siege;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.model.TowerSpawn;
+import org.l2j.gameserver.model.ArtifactSpawn;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Node;
 
@@ -37,8 +37,9 @@ import static java.util.Objects.nonNull;
 class SiegeSettings {
 
     final IntMap<Set<DayOfWeek>> siegeScheduleDays = new HashIntMap<>();
-    final IntMap<Collection<TowerSpawn>> controlTowers = new HashIntMap<>();
-    final IntMap<Collection<TowerSpawn>> flameTowers = new HashIntMap<>();
+    final IntMap<ArtifactSpawn> castleLords = new HashIntMap<>();
+    final IntMap<Collection<ArtifactSpawn>> controlTowers = new HashIntMap<>();
+    final IntMap<Collection<ArtifactSpawn>> flameTowers = new HashIntMap<>();
     int maxSiegesInDay;
     int minClanLevel;
     int maxAttackers;
@@ -78,6 +79,7 @@ class SiegeSettings {
         for(var node = castleNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
             switch (node.getNodeName()) {
                 case "scheduled-days" -> siegeScheduleDays.put(castleId, reader.parseEnumSet(node, DayOfWeek.class));
+                case "castle-lord" -> parseCastleLord(castleId, reader, node);
                 case "control-tower" -> parseControlTower(castleId, reader, node);
                 case "flame-tower" -> parseFlameTower(castleId, reader, node);
             }
@@ -87,16 +89,22 @@ class SiegeSettings {
 
     }
 
+    private void parseCastleLord(int castleId, GameXmlReader reader, Node node) {
+        var id = reader.parseInt(node.getAttributes(), "id");
+        var location = reader.parseLocation(node);
+        castleLords.put(castleId, new ArtifactSpawn(id, location));
+    }
+
     private void parseFlameTower(int castleId, GameXmlReader reader, Node flameNode) {
         var towerId = reader.parseInt(flameNode.getAttributes(), "id");
         var location = reader.parseLocation(flameNode);
         var zones = reader.parseIntList(flameNode.getFirstChild());
-        flameTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new TowerSpawn(towerId, location, zones));
+        flameTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new ArtifactSpawn(towerId, location, zones));
     }
 
     private void parseControlTower(int castleId, GameXmlReader reader, Node controlNode) {
         var towerId = reader.parseInt(controlNode.getAttributes(), "id");
         var location = reader.parseLocation(controlNode);
-        controlTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new TowerSpawn(towerId, location));
+        controlTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new ArtifactSpawn(towerId, location));
     }
 }

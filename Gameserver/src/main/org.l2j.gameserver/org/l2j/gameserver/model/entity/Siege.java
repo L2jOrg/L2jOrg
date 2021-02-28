@@ -294,7 +294,7 @@ public class Siege implements Siegable {
 
     private void spawnControlTower() {
         try {
-            for (TowerSpawn ts : SiegeManager.getInstance().getControlTowers(castle.getId())) {
+            for (ArtifactSpawn ts : SiegeManager.getInstance().getControlTowers(castle.getId())) {
                 final Spawn spawn = new Spawn(ts.getId());
                 spawn.setLocation(ts.getLocation());
                 controlTowers.add((ControlTower) spawn.doSpawn());
@@ -307,7 +307,7 @@ public class Siege implements Siegable {
 
     private void spawnFlameTower() {
         try {
-            for (TowerSpawn ts : SiegeManager.getInstance().getFlameTowers(castle.getId())) {
+            for (ArtifactSpawn ts : SiegeManager.getInstance().getFlameTowers(castle.getId())) {
                 final Spawn spawn = new Spawn(ts.getId());
                 spawn.setLocation(ts.getLocation());
 

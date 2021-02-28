@@ -589,7 +589,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public int getTrapUpgradeLevel(int towerIndex) {
-        return zeroIfNullOrElse(SiegeManager.getInstance().getFlameTowers(getId()).get(towerIndex), TowerSpawn::getUpgradeLevel);
+        return zeroIfNullOrElse(SiegeManager.getInstance().getFlameTowers(getId()).get(towerIndex), ArtifactSpawn::getUpgradeLevel);
     }
 
     public void setTrapUpgrade(int towerIndex, int level, boolean save) {

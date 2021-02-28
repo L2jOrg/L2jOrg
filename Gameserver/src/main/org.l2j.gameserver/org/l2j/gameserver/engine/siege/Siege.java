@@ -244,25 +244,43 @@ public class Siege extends AbstractEvent {
         updateParticipantState();
         expelPossibleAttackers();
 
-        castle.spawnDoor();
-        spawnControlTowers();
-        spawnFlameTowers();
+        spawnSiegeObjects();
         var zone = castle.getSiegeZone();
         zone.setIsActive(true);
         Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.17"));
+    }
+
+    private void spawnSiegeObjects() {
+        castle.spawnDoor();
+        spawnCastleLord();
+        spawnControlTowers();
+        spawnFlameTowers();
+    }
+
+    private void spawnCastleLord() {
+        var lord = SiegeEngine.getInstance().castleLordOf(castle);
+        if(nonNull(lord)) {
+            try {
+                var spawn = new Spawn(lord.getId());
+                spawn.setLocation(lord.getLocation());
+                spawn.doSpawn();
+            } catch (ClassNotFoundException | NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void spawnFlameTowers() {
         SiegeEngine.getInstance().flameTowersOf(castle).forEach(this::spawnFlameTower);
     }
 
-    private void spawnFlameTower(TowerSpawn towerSpawn) {
+    private void spawnFlameTower(ArtifactSpawn artifactSpawn) {
         try {
-            final var spawn = new Spawn(towerSpawn.getId());
-            spawn.setLocation(towerSpawn.getLocation());
+            final var spawn = new Spawn(artifactSpawn.getId());
+            spawn.setLocation(artifactSpawn.getLocation());
             final var tower = (FlameTower) spawn.doSpawn();
-            tower.setUpgradeLevel(towerSpawn.getUpgradeLevel());
-            tower.setZoneList(towerSpawn.getZoneList());
+            tower.setUpgradeLevel(artifactSpawn.getUpgradeLevel());
+            tower.setZoneList(artifactSpawn.getZoneList());
             flameTowers.add(tower);
         } catch (ClassNotFoundException | NoSuchMethodException e) {
             LOGGER.error("Could not spawn flame tower in {}'s Castle Siege {}", castle, e);
@@ -273,10 +291,10 @@ public class Siege extends AbstractEvent {
         SiegeEngine.getInstance().controlTowersOf(castle).forEach(this::spawnControlTower);
     }
 
-    private void spawnControlTower(TowerSpawn towerSpawn) {
+    private void spawnControlTower(ArtifactSpawn artifactSpawn) {
         try {
-            final var spawn = new Spawn(towerSpawn.getId());
-            spawn.setLocation(towerSpawn.getLocation());
+            final var spawn = new Spawn(artifactSpawn.getId());
+            spawn.setLocation(artifactSpawn.getLocation());
             controlTowers.add((ControlTower) spawn.doSpawn());
         } catch (ClassNotFoundException | NoSuchMethodException e) {
             LOGGER.error("Could not spawn control tower in {}'s Castle Siege {}", castle, e);
