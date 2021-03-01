@@ -2370,7 +2370,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Set the timer of last position update to now
         m._moveTimestamp = gameTicks;
 
-        broadcastPacket(new MoveToLocation(this));
+       // broadcastPacket(new MoveToLocation(this));
 
         if (distFraction > 1) {
             ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
