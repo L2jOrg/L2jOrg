@@ -98,7 +98,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 import static java.lang.Math.max;
 import static java.util.Objects.isNull;
@@ -142,6 +141,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
     private final Map<StatusUpdateType, Integer> _statusUpdates = new ConcurrentHashMap<>();
     private final IntMap<AtomicInteger> blockActionsAllowedSkills = new CHashIntMap<>();
+    private final Map<ShotType, Double> chargedShots = new EnumMap<>(ShotType.class);
 
     protected boolean _showSummonAnimation = false;
     protected boolean _isTeleporting = false;
@@ -216,7 +216,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private volatile Map<BasicProperty, BasicPropertyResist> _basicPropertyResists;
     private ScheduledFuture<?> _hitTask = null;
 
-    private Map<ShotType, Double> chargedShots = new EnumMap<>(ShotType.class);
     private boolean _AIdisabled = false;
 
     /**
@@ -480,7 +479,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param packet
      */
     public void broadcastPacket(ServerPacket packet) {
-      //  checkBroadcast(packet);
+        checkBroadcast(packet);
         World.getInstance().forEachVisibleObject(this, Player.class, packet::sendTo, this::isVisibleFor);
     }
 
@@ -491,14 +490,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
      */
     public void broadcastPacket(ServerPacket packet, int radius) {
-      //  checkBroadcast(packet);
+        checkBroadcast(packet);
         World.getInstance().forEachPlayerInRange(this, radius, packet::sendTo, this::isVisibleFor);
     }
 
     protected void checkBroadcast(ServerPacket packet) {
-     /*   if(World.getInstance().getPlayersCountInSurroundRegions(this) > 10) {
+        if(World.getInstance().getPlayersCountInSurroundRegions(this) > 100) { // need to profile to find out the best amount
             packet.sendInBroadcast(true);
-        }*/
+        }
     }
 
     /**
@@ -1083,15 +1082,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public final synchronized TimeStamp getSkillReuseTimeStamp(long hashCode) {
         return _reuseTimeStampsSkills.get(hashCode);
-    }
-
-    /**
-     * Gets the disabled skills map.
-     *
-     * @return the disabled skills map
-     */
-    public Map<Long, Long> getDisabledSkills() {
-        return _disabledSkills;
     }
 
     /**
@@ -3856,15 +3846,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return CategoryManager.getInstance().isInCategory(type, this);
     }
 
-    public final boolean isInOneOfCategory(CategoryType... types) {
-        for (CategoryType type : types) {
-            if (CategoryManager.getInstance().isInCategory(type, getId())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     /**
      * @return the character that summoned this NPC.
      */
@@ -3919,28 +3900,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
-     * Gets the summoned NPC by object ID.
-     *
-     * @param objectId the summoned NPC object ID
-     * @return the summoned NPC
-     */
-    public final Npc getSummonedNpc(int objectId) {
-        if (_summonedNpcs != null) {
-            return _summonedNpcs.get(objectId);
-        }
-        return null;
-    }
-
-    /**
-     * Gets the summoned NPC count.
-     *
-     * @return the summoned NPC count
-     */
-    public final int getSummonedNpcCount() {
-        return _summonedNpcs != null ? _summonedNpcs.size() : 0;
-    }
-
-    /**
      * Resets the summoned NPCs list.
      */
     public final void resetSummonedNpcs() {
@@ -3959,15 +3918,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public SkillCaster removeSkillCaster(SkillCastingType castingType) {
         return skillCasters.remove(castingType);
-    }
-
-    @SafeVarargs
-    public final List<SkillCaster> getSkillCasters(Predicate<SkillCaster> filter, Predicate<SkillCaster>... filters) {
-        for (Predicate<SkillCaster> additionalFilter : filters) {
-            filter = filter.and(additionalFilter);
-        }
-
-        return skillCasters.values().stream().filter(filter).collect(Collectors.toList());
     }
 
     @SafeVarargs
