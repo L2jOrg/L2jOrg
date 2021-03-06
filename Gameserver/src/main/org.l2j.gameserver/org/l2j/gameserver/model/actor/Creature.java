@@ -1183,16 +1183,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
-     * Kill the Creature.<br>
-     * <B><U>Actions</U>:</B>
-     * <ul>
-     * <li>Set target to null and cancel Attack or Cast</li>
-     * <li>Stop movement</li>
-     * <li>Stop HP/MP/CP Regeneration task</li>
-     * <li>Stop all active skills effects in progress on the Creature</li>
-     * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform</li>
-     * <li>Notify Creature AI</li>
-     * </ul>
+     * Kill the Creature.
      *
      * @param killer The Creature who killed it
      * @return false if the creature hasn't been killed.
@@ -1215,17 +1206,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         broadcastStatusUpdate();
         stopMove(null);
 
+        onDie(killer);
         if (hasAI()) {
             getAI().notifyEvent(CtrlEvent.EVT_DEAD);
         }
-
-        onDie(killer);
         return true;
     }
 
     protected void onDie(Creature killer) {
-        EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), killer);
-
+        EventDispatcher.getInstance().notifyEventAsync(new OnCreatureKilled(killer, this), killer);
         ZoneManager.getInstance().getRegion(this).onDeath(this);
 
         getAttackByList().clear();
@@ -1337,7 +1326,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public void setAI(CreatureAI newAI) {
         final CreatureAI oldAI = _ai;
-        if ((oldAI != null) && (oldAI != newAI) && (oldAI instanceof AttackableAI)) {
+        if ((oldAI != newAI) && (oldAI instanceof AttackableAI)) {
             oldAI.stopAITask();
         }
         _ai = newAI;
@@ -1470,11 +1459,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return _isOverloaded;
     }
 
-    /**
-     * Set the overloaded status of the Creature is overloaded (if True, the Player can't take more item).
-     *
-     * @param value
-     */
     public final void setIsOverloaded(boolean value) {
         _isOverloaded = value;
     }
@@ -1546,7 +1530,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return running;
     }
 
-    private final void setIsRunning(boolean value) {
+    private void setIsRunning(boolean value) {
         if (running == value) {
             return;
         }
