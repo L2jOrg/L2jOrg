@@ -128,8 +128,6 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
  * Each template is loaded once in the server cache memory (reduce memory use).<br>
  * When a new instance of Creature is spawned, server just create a link between the instance and the template.<br>
  * This link is stored in {@link #_template}
- *
- * @version $Revision: 1.53.2.45.2.34 $ $Date: 2005/04/11 10:06:08 $
  */
 public abstract class Creature extends WorldObject implements ISkillsHolder, IDeletable {
     public static final Logger LOGGER = LoggerFactory.getLogger(Creature.class.getName());
@@ -138,21 +136,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private final IntMap<Skill> _skills = new CHashIntMap<>();
     private final byte[] _zones = new byte[ZoneType.getZoneCount()];
     private final StampedLock _attackLock = new StampedLock();
-    /**
-     * Creatures effect list.
-     */
+
     private final EffectList _effectList = new EffectList(this);
     private final AtomicInteger abnormalShieldBlocks = new AtomicInteger();
     private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
     private final Map<StatusUpdateType, Integer> _statusUpdates = new ConcurrentHashMap<>();
+    private final IntMap<AtomicInteger> blockActionsAllowedSkills = new CHashIntMap<>();
 
     protected boolean _showSummonAnimation = false;
     protected boolean _isTeleporting = false;
     protected byte _zoneValidateCounter = 4;
     protected long _exceptions = 0;
-    /**
-     * Movement data of this Creature
-     */
+
     protected MoveData _move;
     /**
      * Future Skill Cast
@@ -168,7 +163,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private boolean _isUndying = false;
     private boolean _isFlying = false;
     private boolean _blockActions = false;
-    private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills = new ConcurrentHashMap<>();
+
     private CreatureStats stats;
     private CreatureStatus _status;
     private CreatureTemplate _template; // The link on the CreatureTemplate object containing generic and static properties of this Creature type (ex : Max HP, Speed...)
@@ -205,12 +200,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     private BuffFinishTask _buffFinishTask = null;
 
-    private Optional<Transform> _transform = Optional.empty();
+    private Transform transform;
     private boolean _cursorKeyMovement = false;
     private boolean _cursorKeyMovementActive = true;
-    /**
-     * This creature's target.
-     */
+
     private WorldObject _target;
     // set by the start of attack, in game ticks
     private volatile long _attackEndTime;
@@ -326,7 +319,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@code true} if this creature is transformed including stance transformation {@code false} otherwise.
      */
     public boolean isTransformed() {
-        return _transform.isPresent();
+        return nonNull(transform);
     }
 
     /**
@@ -334,7 +327,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@code true} if this creature is transformed under the given filter conditions, {@code false} otherwise.
      */
     public boolean checkTransformed(Predicate<Transform> filter) {
-        return _transform.filter(filter).isPresent();
+        return nonNull(transform) && filter.test(transform);
     }
 
     /**
@@ -359,17 +352,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
 
-        _transform = Optional.of(transformation);
+        transform = transformation;
         transformation.onTransform(this, addSkills);
     }
 
     public void untransform() {
-        _transform.ifPresent(t -> t.onUntransform(this));
-        _transform = Optional.empty();
+        if(nonNull(transform)) {
+            transform.onUntransform(this);
+            transform = null;
+        }
     }
 
     public Optional<Transform> getTransformation() {
-        return _transform;
+        return Optional.of(transform);
     }
 
     /**
@@ -378,21 +373,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return Transformation Id
      */
     public int getTransformationId() {
-        return _transform.map(Transform::getId).orElse(0);
+        return nonNull(transform)  ? transform.getId() : 0;
     }
 
     public int getTransformationDisplayId() {
-        return _transform.filter(transform -> !transform.isStance()).map(Transform::getDisplayId).orElse(0);
+        return nonNull(transform) && !transform.isStance() ? transform.getDisplayId() : 0;
     }
 
     public double getCollisionRadius() {
         final double defaultCollisionRadius = _template.getCollisionRadius();
-        return _transform.map(transform -> transform.getCollisionRadius(this, defaultCollisionRadius)).orElse(defaultCollisionRadius);
+        return nonNull(transform) ? transform.getCollisionRadius(this, defaultCollisionRadius) : defaultCollisionRadius;
     }
 
     public double getCollisionHeight() {
         final double defaultCollisionHeight = _template.getCollisionHeight();
-        return _transform.map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
+        return nonNull(transform) ? transform.getCollisionHeight(this, defaultCollisionHeight) : defaultCollisionHeight;
     }
 
     /**
@@ -1846,24 +1841,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         updateAbnormalVisualEffects();
     }
 
-    /**
-     * Stop L2Effect: Transformation.<br>
-     * <B><U>Actions</U>:</B>
-     * <ul>
-     * <li>Remove Transformation Effect</li>
-     * <li>Notify the Creature AI</li>
-     * <li>Send Server->Client UserInfo/CharInfo packet</li>
-     * </ul>
-     *
-     * @param removeEffects
-     */
     public final void stopTransformation(boolean removeEffects) {
         if (removeEffects) {
             _effectList.stopEffects(AbnormalType.TRANSFORM);
             _effectList.stopEffects(AbnormalType.CHANGEBODY);
         }
 
-        if (_transform.isPresent()) {
+        if (nonNull(transform)) {
             untransform();
         }
 
@@ -3193,18 +3177,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return _effectList.getDanceCount();
     }
 
-    // Quest event ON_SPELL_FNISHED
     public void notifyQuestEventSkillFinished(Skill skill, WorldObject target) {
 
     }
 
-    /**
-     * @return the Level Modifier ((level + 89) / 100).
-     */
     public double getLevelMod() {
-        // Untested: (lvl + 89 + unk5,5forSkill4.0Else * odyssey_lvl_mod) / 100; odyssey_lvl_mod = (lvl-99) min 0.
         final double defaultLevelMod = ((getLevel() + 89) / 100d);
-        return _transform.filter(transform -> !transform.isStance()).map(transform -> transform.getLevelMod(this)).orElse(defaultLevelMod);
+        return nonNull(transform) && !transform.isStance() ? transform.getLevelMod(this) : defaultLevelMod;
     }
 
     /**
@@ -3870,7 +3849,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         final WeaponType defaultWeaponType = _template.getBaseAttackType();
-        return _transform.map(transform -> transform.getBaseAttackType(this, defaultWeaponType)).orElse(defaultWeaponType);
+        return nonNull(transform) ? transform.getBaseAttackType(this, defaultWeaponType) : defaultWeaponType;
     }
 
     public final boolean isInCategory(CategoryType type) {
@@ -4154,15 +4133,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void addBlockActionsAllowedSkill(int skillId) {
-        _blockActionsAllowedSkills.computeIfAbsent(skillId, k -> new AtomicInteger()).incrementAndGet();
+        blockActionsAllowedSkills.computeIfAbsent(skillId, k -> new AtomicInteger()).incrementAndGet();
     }
 
     public void removeBlockActionsAllowedSkill(int skillId) {
-        _blockActionsAllowedSkills.computeIfPresent(skillId, (k, v) -> v.decrementAndGet() != 0 ? v : null);
+        blockActionsAllowedSkills.computeIfPresent(skillId, (k, v) -> v.decrementAndGet() != 0 ? v : null);
     }
 
     public boolean isBlockedActionsAllowedSkill(Skill skill) {
-        return _blockActionsAllowedSkills.containsKey(skill.getId());
+        return blockActionsAllowedSkills.containsKey(skill.getId());
     }
 
     /**
