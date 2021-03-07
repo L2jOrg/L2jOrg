@@ -38,6 +38,8 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneRegion;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -50,6 +52,8 @@ import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
  * @author DS
  */
 public abstract class Vehicle extends Creature {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Vehicle.class);
+
     protected final Set<Player> _passengers = ConcurrentHashMap.newKeySet();
     protected int _dockId = 0;
     protected Location _oustLoc = null;
@@ -102,7 +106,7 @@ public abstract class Vehicle extends Creature {
 
     @Override
     public boolean moveToNextRoutePoint() {
-        _move = null;
+        move = null;
 
         if (_currentPath != null) {
             _runState++;
@@ -135,7 +139,7 @@ public abstract class Vehicle extends Creature {
                         }
 
                         m._moveStartTime = WorldTimeController.getInstance().getGameTicks();
-                        _move = m;
+                        move = m;
 
                         WorldTimeController.getInstance().registerMovingObject(this);
                         return true;
@@ -310,7 +314,7 @@ public abstract class Vehicle extends Creature {
 
     @Override
     public void stopMove(Location loc) {
-        _move = null;
+        move = null;
         if (loc != null) {
             setXYZ(loc);
             setHeading(loc.getHeading());
