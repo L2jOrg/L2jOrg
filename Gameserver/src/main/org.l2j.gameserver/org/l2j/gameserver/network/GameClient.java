@@ -123,7 +123,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     }
 
     public void close(boolean toLoginScreen) {
-        close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
+        sendPacket(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
         state = ConnectionState.DISCONNECTED;
     }
 
