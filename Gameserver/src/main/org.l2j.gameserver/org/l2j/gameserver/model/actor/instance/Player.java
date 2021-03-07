@@ -588,7 +588,11 @@ public final class Player extends Playable {
     }
 
     public String getCondOverrideKey() {
-        return isGM() && nonNull(variables.getCondOverrideKey()) ? variables.getCondOverrideKey().trim().equalsIgnoreCase("") ? Long.toString(PcCondOverride.getAllExceptionsMask()) : variables.getCondOverrideKey() : variables.getCondOverrideKey();
+        return isGM() && nonNull(variables.getCondOverrideKey()) ? parseCondOverrideOrDefault() : variables.getCondOverrideKey();
+    }
+
+    private String parseCondOverrideOrDefault() {
+        return variables.getCondOverrideKey().trim().equalsIgnoreCase("") ? Long.toString(PcCondOverride.getAllExceptionsMask()) : variables.getCondOverrideKey();
     }
 
     public long getAttendanceDate() {

@@ -69,13 +69,13 @@ public class Merchant extends Folk {
     public final void showBuyWindow(Player player, int val, boolean applyCastleTax) {
         final ProductList buyList = BuyListData.getInstance().getBuyList(val);
         if (buyList == null) {
-            LOGGER.warn("BuyList not found! BuyListId:" + val);
+            LOGGER.warn("BuyList not found! BuyListId: {}", val);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         if (!buyList.isNpcAllowed(getId())) {
-            LOGGER.warn("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
+            LOGGER.warn("Npc not allowed in BuyList! BuyListId: {} Npc Id: {}", val, getId());
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

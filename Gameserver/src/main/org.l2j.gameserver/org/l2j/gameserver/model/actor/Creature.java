@@ -152,14 +152,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     private final byte[] zones = new byte[ZoneType.getZoneCount()];
 
-    private volatile CreatureAI ai;
-    private volatile IntMap<Npc> summonedNpcs;
-    private volatile CreatureContainer seenCreatures;
-    private volatile IntMap<IgnoreSkillHolder> ignoreSkillEffects;
-    private volatile IntMap<OptionsSkillHolder> triggerSkills;
-    private volatile Set<WeakReference<Creature>> attackByList;
-    private volatile Map<BasicProperty, BasicPropertyResist> basicPropertyResists;
-
     private volatile long attackEndTime;
     private volatile long disableRangedAttackEndTime;
 
@@ -167,6 +159,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private String title;
     private Creature summoner;
     private Transform transform;
+    private CreatureAI ai;
+    private IntMap<Npc> summonedNpcs;
     private WorldObject target;
     private CreatureStats stats;
     private CreatureStatus status;
@@ -174,7 +168,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private CreatureTemplate template;
     private SkillChannelizer channelizer;
     private SkillChannelized channelized;
+    private CreatureContainer seenCreatures;
     private ScheduledFuture<?> hitTask;
+    private IntMap<IgnoreSkillHolder> ignoreSkillEffects;
+    private IntMap<OptionsSkillHolder> triggerSkills;
+    private Set<WeakReference<Creature>> attackByList;
+    private Map<BasicProperty, BasicPropertyResist> basicPropertyResists;
 
     private int reputation = 0;
     private double hpUpdateIncCheck;
@@ -192,7 +191,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private boolean blockActions;
     private boolean cursorKeyMovement;
     private boolean cursorKeyMovementActive;
-    private boolean AIdisabled;
+    private boolean aiDisabled;
 
     /**
      * Creates a creature.
@@ -307,9 +306,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@code true} if template is found and transformation is done, {@code false} otherwise.
      */
     public boolean transform(int id, boolean addSkills) {
-        final Transform transform = TransformData.getInstance().getTransform(id);
-        if (transform != null) {
-            transform(transform, addSkills);
+        final var transformation = TransformData.getInstance().getTransform(id);
+        if (nonNull(transformation)) {
+            transform(transformation, addSkills);
             return true;
         }
 
@@ -669,7 +668,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     return;
                 }
 
-                if (checkTransformed(transform -> !transform.canAttack())) {
+                if (checkTransformed(transformation -> !transformation.canAttack())) {
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
@@ -1232,18 +1231,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         doRevive();
     }
 
-    /**
-     * Gets this creature's AI.
-     *
-     * @return the AI
-     */
     public CreatureAI getAI() {
-        CreatureAI ai = this.ai;
-        if (ai == null) {
+        if (isNull(ai) ) {
             synchronized (this) {
-                ai = this.ai;
-                if (ai == null) {
-                    this.ai = ai = initAI();
+                if (isNull(ai)) {
+                    this.ai = initAI();
                 }
             }
         }
@@ -1334,7 +1326,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return True if the Creature can't attack (stun, sleep, attackEndTime, fakeDeath, paralyze, attackMute).
      */
     public boolean isAttackingDisabled() {
-        return hasBlockActions() || isAttackingNow() || isAlikeDead() || isPhysicalAttackMuted() || AIdisabled;
+        return hasBlockActions() || isAttackingNow() || isAlikeDead() || isPhysicalAttackMuted() || aiDisabled;
     }
 
     public final boolean isConfused() {
@@ -1880,27 +1872,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             case PHYSICAL_ATTACK, PHYSICAL_DEFENCE, EVASION_RATE, ACCURACY, CRITICAL_RATE, MAGIC_CRITICAL_RATE, MAGIC_EVASION_RATE, ACCURACY_MAGIC,
                     MAGIC_ATTACK, MAGIC_ATTACK_SPEED, MAGICAL_DEFENCE, HIT_AT_NIGHT -> info.addComponentType(UserInfoType.STATS);
 
-            case MAX_CP -> {
-                if (isPlayer(this)) {
-                    info.addComponentType(UserInfoType.MAX_HPCPMP);
-                } else {
-                    su.addUpdate(StatusUpdateType.MAX_CP, stats.getMaxCp());
-                }
-            }
-            case MAX_HP -> {
-                if (isPlayer(this)) {
-                    info.addComponentType(UserInfoType.MAX_HPCPMP);
-                } else {
-                    su.addUpdate(StatusUpdateType.MAX_HP, stats.getMaxHp());
-                }
-            }
-            case MAX_MP -> {
-                if (isPlayer(this)) {
-                    info.addComponentType(UserInfoType.MAX_HPCPMP);
-                } else {
-                    su.addUpdate(StatusUpdateType.MAX_CP, stats.getMaxMp());
-                }
-            }
+            case MAX_CP -> addVitalStatInfoType(su, info, StatusUpdateType.MAX_CP, stats.getMaxCp());
+            case MAX_HP -> addVitalStatInfoType(su, info, StatusUpdateType.MAX_HP, stats.getMaxHp());
+            case MAX_MP -> addVitalStatInfoType(su, info, StatusUpdateType.MAX_CP, stats.getMaxMp());
+
             case STAT_STR, STAT_CON, STAT_DEX, STAT_INT, STAT_WIT, STAT_MEN ->
                     info.addComponentType(UserInfoType.BASE_STATS, UserInfoType.STATS_ABILITIES, UserInfoType.STATS_POINTS);
 
@@ -1910,6 +1885,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             case ELEMENTAL_SPIRIT_EARTH_ATTACK, ELEMENTAL_SPIRIT_EARTH_DEFENSE, ELEMENTAL_SPIRIT_FIRE_ATTACK, ELEMENTAL_SPIRIT_FIRE_DEFENSE,
                     ELEMENTAL_SPIRIT_WATER_ATTACK, ELEMENTAL_SPIRIT_WATER_DEFENSE, ELEMENTAL_SPIRIT_WIND_ATTACK, ELEMENTAL_SPIRIT_WIND_DEFENSE -> info.addComponentType(UserInfoType.SPIRITS);
+        }
+    }
+
+    private void addVitalStatInfoType(StatusUpdate su, UserInfo info, StatusUpdateType updateType, int maxStat) {
+        if (isPlayer(this)) {
+            info.addComponentType(UserInfoType.MAX_HPCPMP);
+        } else {
+            su.addUpdate(updateType, maxStat);
         }
     }
 
@@ -2006,9 +1989,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public final void abortAttack() {
         if (isAttackingNow()) {
-            final ScheduledFuture<?> hitTask = this.hitTask;
-            if (hitTask != null) {
-                hitTask.cancel(false);
+            final var actualHitTask = this.hitTask;
+            if (actualHitTask != null) {
+                actualHitTask.cancel(false);
                 this.hitTask = null;
             }
             sendPacket(ActionFailed.STATIC_PACKET);
@@ -2696,7 +2679,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - hitTime);
+        hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), (long) attackTime - hitTime);
     }
 
     public void onFirstHitTimeForDual(Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack) {
@@ -2709,21 +2692,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // First dual attack is the first hit only.
         final Hit hit = attack.getHits().get(0);
-        final Creature target = ((Creature) hit.getTarget());
+        final Creature hitTarget = ((Creature) hit.getTarget());
 
-        if ((target == null) || target.isDead() || !isInSurroundingRegion(target)) {
+        if ((hitTarget == null) || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
             getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
             return;
         }
 
         if (hit.isMiss()) {
-            notifyAttackAvoid(target, false);
+            notifyAttackAvoid(hitTarget, false);
         } else {
-            onHitTarget(target, weapon, hit);
+            onHitTarget(hitTarget, weapon, hit);
         }
     }
 
-    public void onSecondHitTimeForDual(Weapon weapon, Attack attack, int hitTime1, int hitTime2, int attackTime) {
+    public void onSecondHitTimeForDual(Weapon weapon, Attack attack, long hitTime1, long hitTime2, long attackTime) {
         if (isDead) {
             getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
             return;
@@ -2732,34 +2715,34 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Second dual attack is the remaining hits (first hit not included)
         for (int i = 1; i < attack.getHits().size(); i++) {
             final Hit hit = attack.getHits().get(i);
-            final Creature target = ((Creature) hit.getTarget());
-            if ((target == null) || target.isDead() || !isInSurroundingRegion(target)) {
+            final Creature hitTarget = ((Creature) hit.getTarget());
+            if ((hitTarget == null) || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
                 continue;
             }
 
             if (hit.isMiss()) {
-                notifyAttackAvoid(target, false);
+                notifyAttackAvoid(hitTarget, false);
             } else {
-                onHitTarget(target, weapon, hit);
+                onHitTarget(hitTarget, weapon, hit);
             }
         }
 
         hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
     }
 
-    public void onHitTarget(Creature target, Weapon weapon, Hit hit) {
+    public void onHitTarget(Creature hitTarget, Weapon weapon, Hit hit) {
         // reduce targets HP
-        doAttack(hit.getDamage(), target, null, false, false, hit.isCritical(), false);
+        doAttack(hit.getDamage(), hitTarget, null, false, false, hit.isCritical(), false);
 
         // Notify to scripts when the attack has been done.
-        EventDispatcher.getInstance().notifyEvent(new OnCreatureAttack(this, target, null), this);
-        EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target, null), target);
+        EventDispatcher.getInstance().notifyEvent(new OnCreatureAttack(this, hitTarget, null), this);
+        EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, hitTarget, null), hitTarget);
 
         if (triggerSkills != null) {
             for (OptionsSkillHolder holder : triggerSkills.values()) {
                 if ((!hit.isCritical() && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && hit.isCritical())) {
                     if (Rnd.get(100) < holder.getChance()) {
-                        SkillCaster.triggerCast(this, target, holder.getSkill(), null, false);
+                        SkillCaster.triggerCast(this, hitTarget, holder.getSkill(), null, false);
                     }
                 }
             }
@@ -2767,7 +2750,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Launch weapon Special ability effect if available
         if (hit.isCritical() && (weapon != null)) {
-            weapon.applyConditionalSkills(this, target, null, ItemSkillType.ON_CRITICAL_SKILL);
+            weapon.applyConditionalSkills(this, hitTarget, null, ItemSkillType.ON_CRITICAL_SKILL);
         }
     }
 
@@ -3464,11 +3447,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void disableCoreAI(boolean val) {
-        AIdisabled = val;
+        aiDisabled = val;
     }
 
     public boolean isCoreAIDisabled() {
-        return AIdisabled;
+        return aiDisabled;
     }
 
     /**
