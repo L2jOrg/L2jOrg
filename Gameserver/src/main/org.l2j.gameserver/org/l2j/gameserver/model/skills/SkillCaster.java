@@ -61,6 +61,7 @@ import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
+import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -255,14 +256,14 @@ public class SkillCaster implements Runnable {
                 activeWeapon.applyConditionalSkills(caster, creature, skill, ItemSkillType.ON_MAGIC_SKILL);
             }
 
-            if (caster.hasTriggerSkills()) {
-                for (OptionsSkillHolder holder : caster.getTriggerSkills().values()) {
-                    if ((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK))) {
-                        if (Rnd.chance(holder.getChance())) {
-                            triggerCast(caster, creature, holder.getSkill(), null, false);
-                        }
-                    }
-                }
+            caster.forEachTriggerSkill(holder -> triggerCast(caster, skill, creature, holder));
+        }
+    }
+
+    private static void triggerCast(Creature caster, Skill skill, Creature creature, OptionsSkillHolder holder) {
+        if ((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK))) {
+            if (Rnd.chance(holder.getChance())) {
+                triggerCast(caster, creature, holder.getSkill(), null, false);
             }
         }
     }

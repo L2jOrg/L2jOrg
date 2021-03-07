@@ -92,6 +92,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.StampedLock;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import static java.lang.Math.max;
@@ -147,12 +148,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private final IntMap<AtomicInteger> blockActionsAllowedSkills = new CHashIntMap<>();
     private final Map<ShotType, Double> chargedShots = new EnumMap<>(ShotType.class);
     private final Map<StatusUpdateType, Integer> statusUpdates = new ConcurrentHashMap<>();
+    private final Map<BasicProperty, BasicPropertyResist> basicPropertyResists = new EnumMap<>(BasicProperty.class);
 
     private final byte[] zones = new byte[ZoneType.getZoneCount()];
 
-    private volatile IntMap<Npc> summonedNpcs;
-    private volatile IntMap<OptionsSkillHolder> triggerSkills;
-    private volatile Map<BasicProperty, BasicPropertyResist> basicPropertyResists;
     private volatile long attackEndTime;
     private volatile long disableRangedAttackEndTime;
 
@@ -162,6 +161,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private Transform transform;
     private CreatureAI ai;
     private WorldObject target;
+    private IntMap<Npc> summonedNpcs;
     private CreatureStats stats;
     private CreatureStatus status;
     private BuffFinishTask buffFinishTask;
@@ -169,6 +169,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private SkillChannelizer channelizer;
     private SkillChannelized channelized;
     private ScheduledFuture<?> hitTask;
+    private IntMap<OptionsSkillHolder> triggerSkills;
 
     private int reputation = 0;
     private double hpUpdateIncCheck;
@@ -2635,15 +2636,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         for (Hit hit : attack.getHits()) {
-            final Creature target = ((Creature) hit.getTarget());
-            if ((target == null) || target.isDead() || !isInSurroundingRegion(target)) {
+            final Creature hitTarget = ((Creature) hit.getTarget());
+            if ((hitTarget == null) || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
                 continue;
             }
 
             if (hit.isMiss()) {
-                notifyAttackAvoid(target, false);
+                notifyAttackAvoid(hitTarget, false);
             } else {
-                onHitTarget(target, weapon, hit);
+                onHitTarget(hitTarget, weapon, hit);
             }
         }
 
@@ -3484,27 +3485,26 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         lethalable = val;
     }
 
-    public boolean hasTriggerSkills() {
-        return (triggerSkills != null) && !triggerSkills.isEmpty();
-    }
-
-    public IntMap<OptionsSkillHolder> getTriggerSkills() {
-        if (triggerSkills == null) {
-            synchronized (this) {
-                if (triggerSkills == null) {
-                    triggerSkills = new CHashIntMap<>();
-                }
-            }
+    public void forEachTriggerSkill(Consumer<OptionsSkillHolder> action) {
+        if(nonNull(triggerSkills)) {
+            triggerSkills.values().forEach(action);
         }
-        return triggerSkills;
     }
 
     public void addTriggerSkill(OptionsSkillHolder holder) {
-        getTriggerSkills().put(holder.getSkillId(), holder);
+        triggerSkills().put(holder.getSkillId(), holder);
     }
 
+    private synchronized IntMap<OptionsSkillHolder> triggerSkills() {
+        if(isNull(triggerSkills)) {
+            triggerSkills = new CHashIntMap<>();
+        }
+        return triggerSkills;
+    }
     public void removeTriggerSkill(OptionsSkillHolder holder) {
-        getTriggerSkills().remove(holder.getSkillId());
+        if(nonNull(triggerSkills)) {
+            triggerSkills.remove(holder.getSkillId());
+        }
     }
 
     /**
@@ -3622,18 +3622,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @param npc the summoned NPC
      */
-    public final void addSummonedNpc(Npc npc) {
+    public final synchronized void addSummonedNpc(Npc npc) {
         if (summonedNpcs == null) {
-            synchronized (this) {
-                if (summonedNpcs == null) {
-                    summonedNpcs = new CHashIntMap<>();
-                }
-            }
+            summonedNpcs = new CHashIntMap<>();
         }
-
         summonedNpcs.put(npc.getObjectId(), npc);
-
-        npc.setSummoner(this);
     }
 
     /**
@@ -3859,14 +3852,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return the basic property resist
      */
     public BasicPropertyResist getBasicPropertyResist(BasicProperty basicProperty) {
-        if (basicPropertyResists == null) {
-            synchronized (this) {
-                if (basicPropertyResists == null) {
-                    basicPropertyResists = new ConcurrentHashMap<>();
-                }
-            }
-        }
-
         return basicPropertyResists.computeIfAbsent(basicProperty, k -> new BasicPropertyResist());
     }
 
