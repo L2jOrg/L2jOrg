@@ -172,7 +172,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private ScheduledFuture<?> hitTask;
     private IntMap<IgnoreSkillHolder> ignoreSkillEffects;
     private IntMap<OptionsSkillHolder> triggerSkills;
-    private Set<WeakReference<Creature>> attackByList;
     private Map<BasicProperty, BasicPropertyResist> basicPropertyResists;
 
     private int reputation = 0;
@@ -1147,9 +1146,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         EventDispatcher.getInstance().notifyEventAsync(new OnCreatureKilled(killer, this), killer);
         ZoneManager.getInstance().getRegion(this).onDeath(this);
 
-        getAttackByList().clear();
         forgetTarget();
-
         if (isChannelized()) {
             getSkillChannelized().abortChannelization();
         }
@@ -1295,20 +1292,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public boolean isRaidMinion() {
         return false;
-    }
-
-    /**
-     * @return a list of Creature that attacked.
-     */
-    public final Set<WeakReference<Creature>> getAttackByList() {
-        if (attackByList == null) {
-            synchronized (this) {
-                if (attackByList == null) {
-                    attackByList = ConcurrentHashMap.newKeySet();
-                }
-            }
-        }
-        return attackByList;
     }
 
     public final boolean isControlBlocked() {

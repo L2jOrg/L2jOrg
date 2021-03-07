@@ -84,6 +84,7 @@ public class Attackable extends Npc {
 
     private final AtomicReference<ItemHolder> _harvestItem = new AtomicReference<>();
     private final AtomicReference<Collection<ItemHolder>> _sweepItems = new AtomicReference<>();
+    private final Set<WeakReference<Creature>> attackByList = ConcurrentHashMap.newKeySet();
     // Raid
     private boolean _isRaid = false;
     private boolean _isRaidMinion = false;
@@ -284,6 +285,7 @@ public class Attackable extends Npc {
     @Override
     protected void onDie(Creature killer) {
         calculateRewards(killer);
+        attackByList.clear();
         super.onDie(killer);
     }
 
@@ -1483,5 +1485,9 @@ public class Attackable extends Npc {
             getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
         }
         super.setTarget(object);
+    }
+
+    public final Set<WeakReference<Creature>> getAttackByList() {
+        return attackByList;
     }
 }
