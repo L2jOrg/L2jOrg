@@ -133,7 +133,8 @@ public final class SummonNpc extends AbstractEffect {
 
 
                 final Npc npc = spawn.doSpawn(false);
-                player.addSummonedNpc(npc); // npc.setSummoner(player);
+                player.addSummonedNpc(npc);
+                npc.setSummoner(player);
                 npc.setName(npcTemplate.getName());
                 npc.setTitle(npcTemplate.getName());
                 if (despawnDelay > 0) {

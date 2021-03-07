@@ -4555,11 +4555,13 @@ public final class Player extends Playable {
         return summons;
     }
 
-    /**
-     * @return any summoned trap by this player or null.
-     */
     public Trap getTrap() {
-        return getSummonedNpcs().stream().filter(GameUtils::isTrap).map(Trap.class::cast).findAny().orElse(null);
+        for (Npc summonedNpc : getSummonedNpcs()) {
+            if(summonedNpc instanceof Trap trap) {
+                return trap;
+            }
+        }
+        return null;
     }
 
     public void addServitor(Summon servitor) {

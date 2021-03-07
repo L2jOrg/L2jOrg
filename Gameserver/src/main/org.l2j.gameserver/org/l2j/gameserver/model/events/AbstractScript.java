@@ -1615,6 +1615,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             }
             if (summoner != null) {
                 summoner.addSummonedNpc(npc);
+                npc.setSummoner(summoner);
             }
             return npc;
         } catch (Exception e) {
