@@ -150,6 +150,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     private final byte[] zones = new byte[ZoneType.getZoneCount()];
 
+    private volatile IntMap<Npc> summonedNpcs;
+    private volatile IntMap<OptionsSkillHolder> triggerSkills;
+    private volatile Map<BasicProperty, BasicPropertyResist> basicPropertyResists;
     private volatile long attackEndTime;
     private volatile long disableRangedAttackEndTime;
 
@@ -158,7 +161,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private Creature summoner;
     private Transform transform;
     private CreatureAI ai;
-    private IntMap<Npc> summonedNpcs;
     private WorldObject target;
     private CreatureStats stats;
     private CreatureStatus status;
@@ -167,8 +169,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private SkillChannelizer channelizer;
     private SkillChannelized channelized;
     private ScheduledFuture<?> hitTask;
-    private IntMap<OptionsSkillHolder> triggerSkills;
-    private Map<BasicProperty, BasicPropertyResist> basicPropertyResists;
 
     private int reputation = 0;
     private double hpUpdateIncCheck;
