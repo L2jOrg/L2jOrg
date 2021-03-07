@@ -166,7 +166,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private CreatureTemplate template;
     private SkillChannelizer channelizer;
     private SkillChannelized channelized;
-    private CreatureContainer seenCreatures;
     private ScheduledFuture<?> hitTask;
     private IntMap<OptionsSkillHolder> triggerSkills;
     private Map<BasicProperty, BasicPropertyResist> basicPropertyResists;
@@ -397,23 +396,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if ((summoner != null)) {
             summoner.removeSummonedNpc(getObjectId());
         }
-
-        // Stop on creature see task and clear the data
-        if (seenCreatures != null) {
-            seenCreatures.stop();
-            seenCreatures.reset();
-        }
     }
 
     @Override
     public void onSpawn() {
         super.onSpawn();
         revalidateZone(true);
-
-        // restart task
-        if (seenCreatures != null) {
-            seenCreatures.start();
-        }
     }
 
     public synchronized void onTeleported() {
@@ -3821,24 +3809,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public boolean isBlockedActionsAllowedSkill(Skill skill) {
         return blockActionsAllowedSkills.containsKey(skill.getId());
-    }
-
-    public void initSeenCreatures(int range) {
-        initSeenCreatures(range, null);
-    }
-
-    public void initSeenCreatures(int range, Predicate<Creature> condition) {
-        if (seenCreatures == null) {
-            synchronized (this) {
-                if (seenCreatures == null) {
-                    seenCreatures = new CreatureContainer(this, range, condition);
-                }
-            }
-        }
-    }
-
-    public CreatureContainer getSeenCreatures() {
-        return seenCreatures;
     }
 
     public MoveType getMoveType() {
