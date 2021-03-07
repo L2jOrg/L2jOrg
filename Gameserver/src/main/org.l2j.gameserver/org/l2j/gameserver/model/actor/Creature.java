@@ -180,8 +180,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private double hpUpdateIncCheck;
     private double hpUpdateDecCheck;
     private double hpUpdateInterval;
-    private boolean allSkillsDisabled;
     private boolean lethalable = true;
+    private boolean allSkillsDisabled;
     private boolean isDead;
     private boolean isImmobilized;
     private boolean isOverloaded;
@@ -263,21 +263,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     @Override
     public final boolean isInsideZone(ZoneType zone) {
-        final Instance instance = getInstanceWorld();
-        switch (zone) {
-            case PVP: {
-                if (nonNull(instance) && instance.isPvP()) {
-                    return true;
-                }
-                return zones[ZoneType.PVP.ordinal()] > 0 && zones[ZoneType.PEACE.ordinal()] == 0;
-            }
-            case PEACE: {
-                if (nonNull(instance) && instance.isPvP()) {
-                    return false;
-                }
-            }
-        }
-        return zones[zone.ordinal()] > 0;
+        return switch (zone) {
+            case PVP -> isInPvPInstance() || zones[ZoneType.PVP.ordinal()] > 0;
+            case PEACE -> !isInPvPInstance() && zones[ZoneType.PEACE.ordinal()] > 0;
+            default -> zones[zone.ordinal()] > 0;
+        };
+    }
+
+    private boolean isInPvPInstance() {
+        return falseIfNullOrElse(getInstanceWorld(), Instance::isPvP);
     }
 
     public final void setInsideZone(ZoneType zone, boolean state) {
@@ -447,12 +441,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
-     * Send a packet to the Creature AND to all Player in the _KnownPlayers of the Creature.<br>
-     * <B><U>Concept</U>:</B><br>
-     * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<br>
-     * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
-     *
-     * @param packet
+     * Send a packet to Players around
      */
     public void broadcastPacket(ServerPacket packet) {
         checkBroadcast(packet);
@@ -460,17 +449,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
-     * Send a packet to the Creature AND to all Player in the radius (max knownlist radius) from the Creature.<br>
-     * <B><U>Concept</U>:</B><br>
-     * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<br>
-     * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
+     * Send a packet to Players around in the radius
      */
     public void broadcastPacket(ServerPacket packet, int radius) {
         checkBroadcast(packet);
         World.getInstance().forEachPlayerInRange(this, radius, packet::sendTo, this::isVisibleFor);
     }
 
-    protected void checkBroadcast(ServerPacket packet) {
+    private void checkBroadcast(ServerPacket packet) {
         if(World.getInstance().getPlayersCountInSurroundRegions(this) > 100) { // need to profile to find out the best amount
             packet.sendInBroadcast(true);
         }
@@ -495,7 +481,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 final double doubleMulti = currentHp / hpUpdateInterval;
                 int intMulti = (int) doubleMulti;
 
-                hpUpdateDecCheck = hpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
+                hpUpdateDecCheck = hpUpdateInterval * (doubleMulti < intMulti ? --intMulti : intMulti);
                 hpUpdateIncCheck = hpUpdateDecCheck + hpUpdateInterval;
             }
 
@@ -538,24 +524,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public void sendMessage(String text) {
         // default implementation
     }
-
-    /**
-     * Teleport a Creature and its pet if necessary.<br>
-     * <B><U>Actions</U>:</B>
-     * <ul>
-     * <li>Stop the movement of the Creature</li>
-     * <li>Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion</li>
-     * <li>Send a Server->Client packet TeleportToLocationt to the Creature AND to all Player in its _KnownPlayers</li>
-     * <li>Modify the position of the pet if necessary</li>
-     * </ul>
-     *
-     * @param x
-     * @param y
-     * @param z
-     * @param heading
-     * @param instance
-     */
-    public void teleToLocation(int x, int y, int z, int heading, Instance instance) {
+    
+    private void teleToLocation(int x, int y, int z, int heading, Instance instance) {
         final LocationReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureTeleport(this, x, y, z, heading, instance), this, LocationReturn.class);
         if (term != null) {
             if (term.terminate()) {
@@ -1258,11 +1228,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    /**
-     * Revives the Creature using skill.
-     *
-     * @param revivePower
-     */
     public void doRevive(double revivePower) {
         doRevive();
     }
@@ -1631,16 +1596,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return template;
     }
 
-    /**
-     * Set the template of the Creature.<br>
-     * <B><U>Concept</U>:</B><br>
-     * Each Creature owns generic and static properties (ex : all Keltir have the same number of HP...).<br>
-     * All of those properties are stored in a different template for each type of Creature.<br>
-     * Each template is loaded once in the server cache memory (reduce memory use).<br>
-     * When a new instance of Creature is spawned, server just create a link between the instance and the template This link is stored in <B>_template</B>.
-     *
-     * @param template
-     */
     protected final void setTemplate(CreatureTemplate template) {
         this.template = template;
     }
@@ -1668,11 +1623,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return title != null ? title : "";
     }
 
-    /**
-     * Set the Title of the Creature.
-     *
-     * @param value
-     */
     public final void setTitle(String value) {
         if (value == null) {
             title = "";
@@ -1760,17 +1710,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         effectList.stopEffectsOnDamage();
     }
 
-    /**
-     * Stop a specified/all Fake Death abnormal L2Effect.<br>
-     * <B><U>Actions</U>:</B>
-     * <ul>
-     * <li>Delete a specified/all (if effect=null) Fake Death abnormal L2Effect from Creature and update client magic icon</li>
-     * <li>Set the abnormal effect flag _fake_death to False</li>
-     * <li>Notify the Creature AI</li>
-     * </ul>
-     *
-     * @param removeEffects
-     */
     public final void stopFakeDeath(boolean removeEffects) {
         if (removeEffects) {
             stopEffects(EffectFlag.FAKE_DEATH);
@@ -1840,11 +1779,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         updateEffectIcons(false);
     }
 
-    /**
-     * Updates Effect Icons for this character(player/summon) and his party if any.
-     *
-     * @param partyOnly
-     */
     public void updateEffectIcons(boolean partyOnly) {
         // overridden
     }
@@ -1894,102 +1828,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 info = new UserInfo(getActingPlayer(), false);
                 info.addComponentType(UserInfoType.SLOTS, UserInfoType.ENCHANTLEVEL);
             }
-            for (Stat stat : changed) {
-                if (info != null) {
-                    switch (stat) {
-                        case SPEED:
-                        case RUN_SPEED:
-                        case WALK_SPEED:
-                        case SWIM_RUN_SPEED:
-                        case SWIM_WALK_SPEED:
-                        case FLY_RUN_SPEED:
-                        case FLY_WALK_SPEED: {
-                            info.addComponentType(UserInfoType.MULTIPLIER);
-                            break;
-                        }
-                        case PHYSICAL_ATTACK_SPEED: {
-                            info.addComponentType(UserInfoType.MULTIPLIER, UserInfoType.STATS);
-                            break;
-                        }
-                        case PHYSICAL_ATTACK:
-                        case PHYSICAL_DEFENCE:
-                        case EVASION_RATE:
-                        case ACCURACY:
-                        case CRITICAL_RATE:
-                        case MAGIC_CRITICAL_RATE:
-                        case MAGIC_EVASION_RATE:
-                        case ACCURACY_MAGIC:
-                        case MAGIC_ATTACK:
-                        case MAGIC_ATTACK_SPEED:
-                        case MAGICAL_DEFENCE:
-                        case HIT_AT_NIGHT: {
-                            info.addComponentType(UserInfoType.STATS);
-                            break;
-                        }
-                        case MAX_CP: {
-                            if (isPlayer(this)) {
-                                info.addComponentType(UserInfoType.MAX_HPCPMP);
-                            } else {
-                                su.addUpdate(StatusUpdateType.MAX_CP, stats.getMaxCp());
-                            }
-                            break;
-                        }
-                        case MAX_HP: {
-                            if (isPlayer(this)) {
-                                info.addComponentType(UserInfoType.MAX_HPCPMP);
-                            } else {
-                                su.addUpdate(StatusUpdateType.MAX_HP, stats.getMaxHp());
-                            }
-                            break;
-                        }
-                        case MAX_MP: {
-                            if (isPlayer(this)) {
-                                info.addComponentType(UserInfoType.MAX_HPCPMP);
-                            } else {
-                                su.addUpdate(StatusUpdateType.MAX_CP, stats.getMaxMp());
-                            }
-                            break;
-                        }
-                        case STAT_STR:
-                        case STAT_CON:
-                        case STAT_DEX:
-                        case STAT_INT:
-                        case STAT_WIT:
-                        case STAT_MEN: {
-                            info.addComponentType(UserInfoType.BASE_STATS);
-                            info.addComponentType(UserInfoType.STATS_ABILITIES);
-                            info.addComponentType(UserInfoType.STATS_POINTS);
-                            break;
-                        }
-                        case FIRE_RES:
-                        case WATER_RES:
-                        case WIND_RES:
-                        case EARTH_RES:
-                        case HOLY_RES:
-                        case DARK_RES: {
-                            info.addComponentType(UserInfoType.ELEMENTALS);
-                            break;
-                        }
-                        case FIRE_POWER:
-                        case WATER_POWER:
-                        case WIND_POWER:
-                        case EARTH_POWER:
-                        case HOLY_POWER:
-                        case DARK_POWER: {
-                            info.addComponentType(UserInfoType.ATK_ELEMENTAL);
-                            break;
-                        }
-                        case ELEMENTAL_SPIRIT_EARTH_ATTACK:
-                        case ELEMENTAL_SPIRIT_EARTH_DEFENSE:
-                        case ELEMENTAL_SPIRIT_FIRE_ATTACK:
-                        case ELEMENTAL_SPIRIT_FIRE_DEFENSE:
-                        case ELEMENTAL_SPIRIT_WATER_ATTACK:
-                        case ELEMENTAL_SPIRIT_WATER_DEFENSE:
-                        case ELEMENTAL_SPIRIT_WIND_ATTACK:
-                        case ELEMENTAL_SPIRIT_WIND_DEFENSE:
-                            info.addComponentType(UserInfoType.SPIRITS);
-                            break;
-                    }
+            if (info != null) {
+                for (Stat stat : changed) {
+                    addStatInfoType(su, info, stat);
                 }
             }
 
@@ -2026,6 +1867,49 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             } else if (su.hasUpdates()) {
                 broadcastPacket(su);
             }
+        }
+    }
+
+    private void addStatInfoType(StatusUpdate su, UserInfo info, Stat stat) {
+        switch (stat) {
+            case SPEED, RUN_SPEED, WALK_SPEED, SWIM_RUN_SPEED, SWIM_WALK_SPEED, FLY_RUN_SPEED,
+                    FLY_WALK_SPEED -> info.addComponentType(UserInfoType.MULTIPLIER);
+
+            case PHYSICAL_ATTACK_SPEED -> info.addComponentType(UserInfoType.MULTIPLIER, UserInfoType.STATS);
+
+            case PHYSICAL_ATTACK, PHYSICAL_DEFENCE, EVASION_RATE, ACCURACY, CRITICAL_RATE, MAGIC_CRITICAL_RATE, MAGIC_EVASION_RATE, ACCURACY_MAGIC,
+                    MAGIC_ATTACK, MAGIC_ATTACK_SPEED, MAGICAL_DEFENCE, HIT_AT_NIGHT -> info.addComponentType(UserInfoType.STATS);
+
+            case MAX_CP -> {
+                if (isPlayer(this)) {
+                    info.addComponentType(UserInfoType.MAX_HPCPMP);
+                } else {
+                    su.addUpdate(StatusUpdateType.MAX_CP, stats.getMaxCp());
+                }
+            }
+            case MAX_HP -> {
+                if (isPlayer(this)) {
+                    info.addComponentType(UserInfoType.MAX_HPCPMP);
+                } else {
+                    su.addUpdate(StatusUpdateType.MAX_HP, stats.getMaxHp());
+                }
+            }
+            case MAX_MP -> {
+                if (isPlayer(this)) {
+                    info.addComponentType(UserInfoType.MAX_HPCPMP);
+                } else {
+                    su.addUpdate(StatusUpdateType.MAX_CP, stats.getMaxMp());
+                }
+            }
+            case STAT_STR, STAT_CON, STAT_DEX, STAT_INT, STAT_WIT, STAT_MEN ->
+                    info.addComponentType(UserInfoType.BASE_STATS, UserInfoType.STATS_ABILITIES, UserInfoType.STATS_POINTS);
+
+            case FIRE_RES, WATER_RES, WIND_RES, EARTH_RES, HOLY_RES, DARK_RES -> info.addComponentType(UserInfoType.ELEMENTALS);
+
+            case FIRE_POWER, WATER_POWER, WIND_POWER, EARTH_POWER, HOLY_POWER, DARK_POWER -> info.addComponentType(UserInfoType.ATK_ELEMENTAL);
+
+            case ELEMENTAL_SPIRIT_EARTH_ATTACK, ELEMENTAL_SPIRIT_EARTH_DEFENSE, ELEMENTAL_SPIRIT_FIRE_ATTACK, ELEMENTAL_SPIRIT_FIRE_DEFENSE,
+                    ELEMENTAL_SPIRIT_WATER_ATTACK, ELEMENTAL_SPIRIT_WATER_DEFENSE, ELEMENTAL_SPIRIT_WIND_ATTACK, ELEMENTAL_SPIRIT_WIND_DEFENSE -> info.addComponentType(UserInfoType.SPIRITS);
         }
     }
 
@@ -2084,16 +1968,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public final boolean isOnGeodataPath() {
         final MoveData m = move;
-        if (m == null) {
+        if (isNull(m) || m.onGeodataPathIndex == -1) {
             return false;
         }
-        if (m.onGeodataPathIndex == -1) {
-            return false;
-        }
-        if (m.onGeodataPathIndex == (m.geoPath.size() - 1)) {
-            return false;
-        }
-        return true;
+        return m.onGeodataPathIndex != (m.geoPath.size() - 1);
     }
 
     /**
@@ -2161,12 +2039,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return abortCast(SkillCaster::isAnyNormalType);
     }
 
-    /**
-     * Try to break this character's casting using the given filters.
-     *
-     * @param filter
-     * @return {@code true} if a skill casting has been aborted, {@code false} otherwise.
-     */
     public final boolean abortCast(Predicate<SkillCaster> filter) {
         final SkillCaster skillCaster = getSkillCaster(SkillCaster::canAbortCast, filter);
         if (skillCaster != null) {
@@ -2336,19 +2208,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    /**
-     * Stop movement of the Creature (Called by AI Accessor only).<br>
-     * <B><U>Actions</U>:</B>
-     * <ul>
-     * <li>Delete movement data of the Creature</li>
-     * <li>Set the current position (x,y,z), its current WorldRegion if necessary and its heading</li>
-     * <li>Remove the WorldObject object from _gmList of GmListTable</li>
-     * <li>Remove object from _knownObjects and _knownPlayer of all surrounding WorldRegion L2Characters</li>
-     * </ul>
-     * <FONT COLOR=#FF0000><B><U>Caution</U>: This method DOESN'T send Server->Client packet StopMove/StopRotation</B></FONT>
-     *
-     * @param loc
-     */
     public void stopMove(Location loc) {
         move = null;
         cursorKeyMovement = false;
@@ -2767,15 +2626,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return result;
     }
 
-    /**
-     * Add Exp and Sp to the Creature.<br>
-     * <B><U> Overridden in </U> :</B>
-     * <li>Player</li>
-     * <li>Pet</li>
-     *
-     * @param addToExp
-     * @param addToSp
-     */
     public void addExpAndSp(double addToExp, double addToSp) {
         // Dummy method (overridden by players and pets)
     }
@@ -3557,7 +3407,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public final void setCurrentMp(double newMp, boolean broadcast) {
-        status.setCurrentMp(newMp, false);
+        status.setCurrentMp(newMp, broadcast);
     }
 
     /**
@@ -3593,17 +3443,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return false;
     }
 
-    /**
-     * Send system message about damage.
-     *  @param target
-     * @param skill
-     * @param damage
-     * @param elementalDamage
-     * @param crit
-     * @param miss
-     */
     public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
-
+        // default
     }
 
     public AttributeType getAttackElement() {
@@ -3724,11 +3565,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return true;
     }
 
-    /**
-     * Dummy method overriden in {@link Player}
-     *
-     * @param val
-     */
     public void setCanRevive(boolean val) {
     }
 
@@ -3795,12 +3631,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return 0;
     }
 
-    /**
-     * Notifies to listeners that current character avoid attack.
-     *
-     * @param target
-     * @param isDot
-     */
     public void notifyAttackAvoid(Creature target, boolean isDot) {
         EventDispatcher.getInstance().notifyEventAsync(new OnCreatureAttackAvoid(this, target, isDot), target);
     }
@@ -3892,8 +3722,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return skillCasters.put(castingType, skillCaster);
     }
 
-    public SkillCaster removeSkillCaster(SkillCastingType castingType) {
-        return skillCasters.remove(castingType);
+    public void removeSkillCaster(SkillCastingType castingType) {
+        skillCasters.remove(castingType);
     }
 
     @SafeVarargs
@@ -4040,18 +3870,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     /**
      * Sets amount of debuffs that player can avoid
-     *
-     * @param times
      */
-    public void setAbnormalShieldBlocks(int times) {
-        abnormalShieldBlocks.set(times);
+    public void setAbnormalShieldBlocks(int amount) {
+        abnormalShieldBlocks.set(amount);
     }
 
-    /**
-     * @return the amount of debuffs that player can avoid
-     */
-    public int decrementAbnormalShieldBlocks() {
-        return abnormalShieldBlocks.decrementAndGet();
+    public void decrementAbnormalShieldBlocks() {
+        abnormalShieldBlocks.decrementAndGet();
     }
 
     public boolean hasAbnormalType(AbnormalType abnormalType) {
@@ -4070,22 +3895,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return blockActionsAllowedSkills.containsKey(skill.getId());
     }
 
-    /**
-     * Initialize creature container that looks up for creatures around its owner, and notifies with onCreatureSee upon discovery.<br>
-     *
-     * @param range
-     */
     public void initSeenCreatures(int range) {
         initSeenCreatures(range, null);
     }
 
-    /**
-     * Initialize creature container that looks up for creatures around its owner, and notifies with onCreatureSee upon discovery.<br>
-     * <i>The condition can be null</i>
-     *
-     * @param range
-     * @param condition
-     */
     public void initSeenCreatures(int range, Predicate<Creature> condition) {
         if (seenCreatures == null) {
             synchronized (this) {
@@ -4103,7 +3916,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public MoveType getMoveType() {
         if (isMoving() && running) {
             return MoveType.RUNNING;
-        } else if (isMoving() && !running) {
+        } else if (isMoving()) {
             return MoveType.WALKING;
         }
         return MoveType.STANDING;
@@ -4268,7 +4081,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         public int _zDestination;
         public double _xAccurate; // otherwise there would be rounding errors
         public double _yAccurate;
-        public double _zAccurate;
         public int _heading;
 
         public boolean disregardingGeodata;
