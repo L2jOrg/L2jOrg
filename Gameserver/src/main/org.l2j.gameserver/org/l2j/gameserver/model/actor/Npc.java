@@ -1414,13 +1414,6 @@ public class Npc extends Creature {
     }
 
     /**
-     * Initialize creature container that looks up for creatures around its owner, and notifies with onCreatureSee upon discovery.
-     */
-    public void initSeenCreatures() {
-        initSeenCreatures(getTemplate().getAggroRange());
-    }
-
-    /**
      * @return the NpcStringId for name
      */
     public NpcStringId getNameString() {
