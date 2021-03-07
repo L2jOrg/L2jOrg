@@ -358,7 +358,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
 
             return initializeNpcInstance(npc);
         } catch (Exception e) {
-            LOGGER.warn("Error while spawning " + _template.getId(), e);
+            LOGGER.warn("Error while spawning {}", _template.getId(), e);
         }
         return null;
     }

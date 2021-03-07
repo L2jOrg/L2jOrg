@@ -333,7 +333,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public Optional<Transform> getTransformation() {
-        return Optional.of(transform);
+        return Optional.ofNullable(transform);
     }
 
     /**
