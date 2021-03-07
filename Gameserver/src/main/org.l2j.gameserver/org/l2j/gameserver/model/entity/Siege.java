@@ -292,9 +292,9 @@ public class Siege implements Siegable {
             }
 
             final int relation = member.getRelation(player);
-            final Integer oldRelation = member.getKnownRelations().get(player.getObjectId());
+            final int oldRelation = member.getKnownRelations().get(player.getObjectId());
 
-            if (isNull(oldRelation) || oldRelation != relation) {
+            if (oldRelation != relation) {
                 final RelationChanged rc = new RelationChanged();
                 rc.addRelation(member, relation, member.isAutoAttackable(player));
 

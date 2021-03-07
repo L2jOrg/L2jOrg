@@ -128,6 +128,8 @@ import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.WaterZone;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -166,6 +168,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
  * && fixes by Bru7aLMike
  */
 public final class Player extends Playable {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Player.class);
 
     private final GameClient client;
     private final PlayerData data;
@@ -1971,8 +1975,8 @@ public final class Player extends Playable {
             }
 
             final int relation = getRelation(player);
-            final Integer oldrelation = getKnownRelations().get(player.getObjectId());
-            if ((oldrelation == null) || (oldrelation != relation)) {
+            final int oldrelation = getKnownRelations().get(player.getObjectId());
+            if (oldrelation != relation) {
                 final RelationChanged rc = new RelationChanged();
                 rc.addRelation(this, relation, isAutoAttackable(player));
                 if (hasSummon()) {
@@ -1999,11 +2003,11 @@ public final class Player extends Playable {
 
         // This function is called too often from movement code
         if (force) {
-            _zoneValidateCounter = 4;
+            zoneValidateCounter = 4;
         } else {
-            _zoneValidateCounter--;
-            if (_zoneValidateCounter < 0) {
-                _zoneValidateCounter = 4;
+            zoneValidateCounter--;
+            if (zoneValidateCounter < 0) {
+                zoneValidateCounter = 4;
             } else {
                 return;
             }
@@ -3568,8 +3572,8 @@ public final class Player extends Playable {
 
                 // Update relation.
                 final int relation = getRelation(player);
-                Integer oldRelation = getKnownRelations().get(player.getObjectId());
-                if ((oldRelation == null) || (oldRelation != relation)) {
+                int oldRelation = getKnownRelations().get(player.getObjectId());
+                if ( (oldRelation != relation)) {
                     final RelationChanged rc = new RelationChanged();
                     rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
                     if (hasSummon()) {
@@ -5142,8 +5146,8 @@ public final class Player extends Playable {
             }
 
             final int relation = getRelation(player);
-            final Integer oldrelation = getKnownRelations().get(player.getObjectId());
-            if ((oldrelation == null) || (oldrelation != relation)) {
+            final int oldrelation = getKnownRelations().get(player.getObjectId());
+            if (oldrelation != relation) {
                 final RelationChanged rc = new RelationChanged();
                 rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
                 if (hasSummon()) {
@@ -5434,7 +5438,7 @@ public final class Player extends Playable {
                 }
 
                 // Skills under reuse.
-                for (Entry<Long, TimeStamp> ts : getSkillReuseTimeStamps().entrySet()) {
+                for (var ts : getSkillReuseTimeStamps().entrySet()) {
                     final long hash = ts.getKey();
                     if (storedSkills.contains(hash)) {
                         continue;
@@ -9126,13 +9130,13 @@ public final class Player extends Playable {
     @Override
     public void addOverrideCond(PcCondOverride... excs) {
         super.addOverrideCond(excs);
-        setCondOverrideKey(Long.toString(_exceptions));
+        setCondOverrideKey(Long.toString(exceptions));
     }
 
     @Override
     public void removeOverridedCond(PcCondOverride... excs) {
         super.removeOverridedCond(excs);
-        setCondOverrideKey(Long.toString(_exceptions));
+        setCondOverrideKey(Long.toString(exceptions));
     }
 
     public void storeVariables () {

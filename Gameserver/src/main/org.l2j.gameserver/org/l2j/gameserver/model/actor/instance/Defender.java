@@ -31,12 +31,16 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Comparator;
 
 import static java.util.Objects.nonNull;
 
 public class Defender extends Attackable {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Defender.class);
+
     private Castle _castle = null; // the castle which the instance should defend
 
     public Defender(NpcTemplate template) {
