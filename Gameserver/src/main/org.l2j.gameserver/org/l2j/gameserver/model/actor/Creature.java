@@ -58,7 +58,6 @@ import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.events.returns.DamageReturn;
 import org.l2j.gameserver.model.events.returns.LocationReturn;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.holders.IgnoreSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IDeletable;
@@ -86,7 +85,6 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.l2j.gameserver.world.zone.ZoneType;
 
-import java.lang.ref.WeakReference;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingDeque;
@@ -170,7 +168,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private SkillChannelized channelized;
     private CreatureContainer seenCreatures;
     private ScheduledFuture<?> hitTask;
-    private IntMap<IgnoreSkillHolder> ignoreSkillEffects;
     private IntMap<OptionsSkillHolder> triggerSkills;
     private Map<BasicProperty, BasicPropertyResist> basicPropertyResists;
 
@@ -3727,41 +3724,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             channelized = new SkillChannelized();
         }
         return channelized;
-    }
-
-    public void addIgnoreSkillEffects(SkillHolder holder) {
-        final IgnoreSkillHolder ignoreSkillHolder = getIgnoreSkillEffects().get(holder.getSkillId());
-        if (ignoreSkillHolder != null) {
-            ignoreSkillHolder.increaseInstances();
-            return;
-        }
-        getIgnoreSkillEffects().put(holder.getSkillId(), new IgnoreSkillHolder(holder));
-    }
-
-    public void removeIgnoreSkillEffects(SkillHolder holder) {
-        final IgnoreSkillHolder ignoreSkillHolder = getIgnoreSkillEffects().get(holder.getSkillId());
-        if ((ignoreSkillHolder != null) && (ignoreSkillHolder.decreaseInstances() < 1)) {
-            getIgnoreSkillEffects().remove(holder.getSkillId());
-        }
-    }
-
-    public boolean isIgnoringSkillEffects(int skillId, int skillLvl) {
-        if (ignoreSkillEffects != null) {
-            final SkillHolder holder = getIgnoreSkillEffects().get(skillId);
-            return ((holder != null) && ((holder.getLevel() < 1) || (holder.getLevel() == skillLvl)));
-        }
-        return false;
-    }
-
-    private IntMap<IgnoreSkillHolder> getIgnoreSkillEffects() {
-        if (ignoreSkillEffects == null) {
-            synchronized (this) {
-                if (ignoreSkillEffects == null) {
-                    ignoreSkillEffects = new CHashIntMap<>();
-                }
-            }
-        }
-        return ignoreSkillEffects;
     }
 
     @Override

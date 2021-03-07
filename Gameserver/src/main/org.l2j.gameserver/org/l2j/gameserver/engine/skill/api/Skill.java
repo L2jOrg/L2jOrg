@@ -336,10 +336,6 @@ public final class Skill implements IIdentifiable, Cloneable {
             return;
         }
 
-        if (effected.isIgnoringSkillEffects(id, level)) {
-            return;
-        }
-
         boolean addContinuousEffects = !passive && (operateType.isToggle() || (operateType.isContinuous() && Formulas.calcEffectSuccess(effector, effected, this)));
         if (!self && !passive) {
             final BuffInfo info = new BuffInfo(effector, effected, this, !instant, item, null);
