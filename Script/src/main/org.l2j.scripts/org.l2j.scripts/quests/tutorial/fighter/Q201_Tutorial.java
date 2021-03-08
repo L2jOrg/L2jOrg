@@ -28,7 +28,7 @@ import org.l2j.scripts.quests.tutorial.Tutorial;
  */
 public class Q201_Tutorial extends Tutorial {
 
-    private static final int SUPERVISOR = 30008;
+    private static final int TRAINER = 30008;
     private static final int NEWBIE_HELPER = 30009;
     private static final Location HELPER_LOCATION  = new Location(-71424, 258336, -3109);
     private static final Location VILLAGE_LOCATION = new Location(-84046, 243283, -3728, 18316);
@@ -37,7 +37,7 @@ public class Q201_Tutorial extends Tutorial {
 
     public Q201_Tutorial() {
         super(201, ClassId.FIGHTER);
-        addFirstTalkId(SUPERVISOR);
+        addFirstTalkId(TRAINER);
     }
 
     @Override
