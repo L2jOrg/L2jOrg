@@ -46,6 +46,7 @@ import org.l2j.gameserver.network.serverpackets.html.TutorialWindowType;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.network.serverpackets.ShowTutorialMark.*;
 
 /**
  * @author JoeAlisson
@@ -53,9 +54,9 @@ import static java.util.Objects.nonNull;
 public abstract class Tutorial extends Quest {
 
     private static final int BLUE_GEM = 6353;
-    private static final int QUESTION_MARK_ID_1 = 1;
-    private static final int QUESTION_MARK_ID_2 = 5;
-    private static final int QUESTION_MARK_ID_3 = 28;
+    private static final int QM_CHAT = 1;
+    private static final int QM_QUEST_PROGRESS = 9;
+    private static final int QM_MEET_NEWBIE_HELPER = 21;
     private static final String RADAR_HTM = "..\\L2text_Classic\\QT_001_Radar_01.htm";
 
     private static final ItemHolder SOULSHOT_REWARD = new ItemHolder(91927, 200);
@@ -88,27 +89,12 @@ public abstract class Tutorial extends Quest {
 
         String htmltext = null;
         switch (event) {
-            case "start_newbie_tutorial" -> {
-                if (state.getMemoState() == 0) {
-                    state.startQuest();
-                    showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
-                    var startingEvent = startingVoiceHtml();
-                    playTutorialVoice(player, startingEvent.getSound());
-                    showTutorialHtml(player, startingEvent.getHtml());
-                }
-            }
-            case "tutorial_move.html" -> {
-                player.sendPacket(new TutorialEnableClientEvent(1));
-                playTutorialVoice(player, "tutorial_voice_003");
-                showTutorialHtml(player, event);
-            }
-            case "tutorial_exit.html" -> {
-                player.sendPacket(new TutorialEnableClientEvent(0));
-                showTutorialHtml(player, event);
-            }
+            case "start_newbie_tutorial" -> startTutorial(player, state);
+            case "tutorial_move.html" -> showMoveTutorial(event, player);
+            case "tutorial_exit.html" -> exitTutorial(event, player);
             case "8", "question_mark_1" -> {
                 if (state.getMemoState() < 3) {
-                    player.sendPackets(new TutorialShowQuestionMark(QUESTION_MARK_ID_1, 0), TutorialCloseHtml.STATIC_PACKET);
+                    player.sendPackets(ShowTutorialMark.question(Mark.CHAT), TutorialCloseHtml.STATIC_PACKET);
                 }
                 player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
             }
@@ -116,40 +102,68 @@ public abstract class Tutorial extends Quest {
                 player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
                 player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
             }
-            case "reward_2" -> {
-                if (state.isMemoState(4)) {
-                    state.setMemoState(5);
-                    if (player.isMageClass() && (player.getRace() != Race.ORC)) {
-                        giveItems(player, SPIRITSHOT_REWARD);
-                        playTutorialVoice(player, "tutorial_voice_027");
-                    } else {
-                        giveItems(player, SOULSHOT_REWARD);
-                        playTutorialVoice(player, "tutorial_voice_026");
-                    }
-                    htmltext = "go_village.html";
-                    player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_3, 0));
-                }
-            }
-            case "1" -> { // Client Event On Character move
-                if (state.getMemoState() < 2) {
-                    player.sendPacket(new TutorialEnableClientEvent(2));
-                    playTutorialVoice(player, "tutorial_voice_004");
-                    showTutorialHtml(player, "tutorial_point_view.html");
-                }
-            }
-            case "2" -> { // Client Event Change point of view
-                if (state.getMemoState() < 2) {
-                    player.sendPacket(new TutorialEnableClientEvent(8));
-                    playTutorialVoice(player, "tutorial_voice_005");
-                    showTutorialHtml(player, "tutorial_init_point_view.html");
-                }
-            }
+            case "reward_2" -> htmltext = receiveTrainerReward(player, state);
+            case "1" -> onPlayerMove(player, state);
+            case "2" -> onChangePointOfView(player, state);
             case "go_to_newbie_helper" -> {
                 player.teleToLocation(villageLocation());
                 state.setState(State.COMPLETED);
             }
         }
         return htmltext;
+    }
+
+    private String receiveTrainerReward(Player player, QuestState state) {
+        if (state.isMemoState(4)) {
+            state.setMemoState(5);
+            if (player.isMageClass() && (player.getRace() != Race.ORC)) {
+                giveItems(player, SPIRITSHOT_REWARD);
+                playTutorialVoice(player, "tutorial_voice_027");
+            } else {
+                giveItems(player, SOULSHOT_REWARD);
+                playTutorialVoice(player, "tutorial_voice_026");
+            }
+            player.sendPacket(ShowTutorialMark.info(Mark.MEET_NEWBIE_HELPER));
+            return "go_village.html";
+        }
+        return null;
+    }
+
+    private void onChangePointOfView(Player player, QuestState state) {
+        if (state.getMemoState() < 2) {
+            player.sendPacket(new TutorialEnableClientEvent(8));
+            playTutorialVoice(player, "tutorial_voice_005");
+            showTutorialHtml(player, "tutorial_init_point_view.html");
+        }
+    }
+
+    private void onPlayerMove(Player player, QuestState state) {
+        if (state.getMemoState() < 2) {
+            player.sendPacket(new TutorialEnableClientEvent(2));
+            playTutorialVoice(player, "tutorial_voice_004");
+            showTutorialHtml(player, "tutorial_point_view.html");
+        }
+    }
+
+    private void exitTutorial(String event, Player player) {
+        player.sendPacket(new TutorialEnableClientEvent(0));
+        showTutorialHtml(player, event);
+    }
+
+    private void showMoveTutorial(String event, Player player) {
+        player.sendPacket(new TutorialEnableClientEvent(1));
+        playTutorialVoice(player, "tutorial_voice_003");
+        showTutorialHtml(player, event);
+    }
+
+    private void startTutorial(Player player, QuestState state) {
+        if (state.getMemoState() == 0) {
+            state.startQuest();
+            showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
+            var startingEvent = startingVoiceHtml();
+            playTutorialVoice(player, startingEvent.getSound());
+            showTutorialHtml(player, startingEvent.getHtml());
+        }
     }
 
     @Override
@@ -160,90 +174,112 @@ public abstract class Tutorial extends Quest {
         }
 
         if(npc.getId() == newbieHelperId()) {
-            if(questState.isCompleted()) {
-                return npc.getId() + "-5.html";
-            }
-
-            if (questState.getMemoState() < 3 && questState.getCond() == 3) {
-                questState.setMemoState(3);
-            }
-
-            switch (questState.getMemoState()) {
-                case 0 -> {
-                    questState.setMemoState(1);
-                    if (!player.isMageClass()) {
-                        return "../kill_gremlins_fighter.html";
-                    } else if (Race.ORC == player.getRace()) {
-                        return "../kill_gremlins_orc_mystic.html";
-                    }
-                    return "../kill_gremlins_mystic.html";
-                }
-                case 1 -> {
-                    if (!player.isMageClass()) {
-                        return "../fighter_back.html";
-                    } else if (Race.ORC == player.getRace()) {
-                        return "../mystic_orc_back.html";
-                    }
-                    return "../mystic_back.html";
-                }
-                case 3 -> {
-                    player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
-                    player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
-                    questState.setMemoState(4);
-                    questState.setCond(3);
-                    takeItems(player, BLUE_GEM, -1);
-                    giveItems(player, ESCAPE_REWARD);
-                    giveItems(player, WIND_WALK_POTION);
-
-                    if (player.isMageClass() && (player.getRace() != Race.ORC)) {
-                        giveItems(player, SPIRITSHOT_REWARD);
-                        playTutorialVoice(player, "tutorial_voice_027");
-                        return npc.getId() + "-3.html";
-                    }
-                    giveItems(player, SOULSHOT_REWARD);
-                    playTutorialVoice(player, "tutorial_voice_026");
-
-                    return npc.getId() + "-2.html";
-                }
-                case 4 -> {
-                    return npc.getId() + "-4.html";
-                }
-                case 5, 6 -> {
-                    return npc.getId() + "-5.html";
-                }
-            }
+            String htmlText = onNewbieHelperChat(npc, player, questState);
+            if (htmlText != null)
+                return htmlText;
         } else {
-            if(questState.isCompleted()) {
-                return npc.getId() + "-4.html";
-            }
-            switch (questState.getMemoState()) {
-                case 0, 1, 2, 3 -> {
-                    return npc.getId() + "-1.html";
-                }
-                case 4 -> {
-                    return npc.getId() + "-2.html";
-                }
-                case 5, 6 -> {
-                    return npc.getId() + "-4.html";
-                }
-            }
+            String htmlText = onTrainerTalk(npc, questState);
+            if (htmlText != null)
+                return htmlText;
         }
         return npc.getId() + "-1.html";
+    }
+
+    private String onTrainerTalk(Npc npc, QuestState questState) {
+        if(questState.isCompleted()) {
+            return npc.getId() + "-4.html";
+        }
+        switch (questState.getMemoState()) {
+            case 0, 1, 2, 3 -> {
+                return npc.getId() + "-1.html";
+            }
+            case 4 -> {
+                return npc.getId() + "-2.html";
+            }
+            case 5, 6 -> {
+                return npc.getId() + "-4.html";
+            }
+        }
+        return null;
+    }
+
+    private String onNewbieHelperChat(Npc npc, Player player, QuestState questState) {
+        if(questState.isCompleted()) {
+            return npc.getId() + "-5.html";
+        }
+
+        if (questState.getMemoState() < 3 && questState.getCond() == 3) {
+            questState.setMemoState(3);
+        }
+
+        return switch (questState.getMemoState()) {
+            case 0 -> showKillGremlins(player, questState);
+            case 1 -> showForgetMission(player);
+            case 3 -> giveNewbieHelperReward(npc, player, questState);
+            case 4 -> npc.getId() + "-4.html";
+            case 5, 6 -> npc.getId() + "-5.html";
+            default -> null;
+        };
+    }
+
+    private String giveNewbieHelperReward(Npc npc, Player player, QuestState questState) {
+        player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
+        player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
+        questState.setMemoState(4);
+        questState.setCond(3);
+        takeItems(player, BLUE_GEM, -1);
+        giveItems(player, ESCAPE_REWARD);
+        giveItems(player, WIND_WALK_POTION);
+
+        if (player.isMageClass() && (player.getRace() != Race.ORC)) {
+            giveItems(player, SPIRITSHOT_REWARD);
+            playTutorialVoice(player, "tutorial_voice_027");
+            return npc.getId() + "-3.html";
+        }
+        giveItems(player, SOULSHOT_REWARD);
+        playTutorialVoice(player, "tutorial_voice_026");
+        return npc.getId() + "-2.html";
+    }
+
+    private String showForgetMission(Player player) {
+        if (!player.isMageClass()) {
+            return "../fighter_back.html";
+        } else if (Race.ORC == player.getRace()) {
+            return "../mystic_orc_back.html";
+        }
+        return "../mystic_back.html";
+    }
+
+    private String showKillGremlins(Player player, QuestState questState) {
+        questState.setMemoState(1);
+        if (!player.isMageClass()) {
+            return "../kill_gremlins_fighter.html";
+        } else if (Race.ORC == player.getRace()) {
+            return "../kill_gremlins_orc_mystic.html";
+        }
+        return "../kill_gremlins_mystic.html";
     }
 
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
         final var questState = getQuestState(killer, false);
-        if (nonNull(questState) && questState.getCond() < 2 && questState.getMemoState() > 0 && !hasQuestItems(killer, BLUE_GEM) && (Rnd.chance(25))) {
-            killer.addItem("Quest", BLUE_GEM, 1, killer, true);
-            questState.setMemoState(3);
-            questState.setCond(2);
-            playSound(killer, "ItemSound.quest_tutorial");
-            killer.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_2, 0));
-            killer.sendPacket(new TutorialShowHtml(RADAR_HTM, TutorialWindowType.COMPOSITE));
-            playTutorialVoice(killer, "tutorial_voice_013");
+        if (canReceiveBlueGemstone(killer, questState) && Rnd.chance(50)) {
+            dropBlueGemstone(killer, questState);
         }
         return super.onKill(npc, killer, isSummon);
+    }
+
+    private void dropBlueGemstone(Player killer, QuestState questState) {
+        killer.addItem("Quest", BLUE_GEM, 1, killer, true);
+        questState.setMemoState(3);
+        questState.setCond(2);
+        playSound(killer, "ItemSound.quest_tutorial");
+        killer.sendPackets(ShowTutorialMark.info(Mark.QUEST_PROGRESS), new TutorialShowHtml(RADAR_HTM, TutorialWindowType.COMPOSITE));
+        playTutorialVoice(killer, "tutorial_voice_013");
+    }
+
+    private boolean canReceiveBlueGemstone(Player killer, QuestState questState) {
+        return nonNull(questState) && questState.getCond() < 2 && !hasQuestItems(killer, BLUE_GEM);
     }
 
     protected void playTutorialVoice(Player player, String voice) {
@@ -307,27 +343,33 @@ public abstract class Tutorial extends Quest {
         }
 
         switch (event.getMarkId()) {
-            case QUESTION_MARK_ID_1 -> {
-                if (qs.getCond() == 1) {
-                    showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
-                    addRadar(player, helperLocation());
-                    showTutorialHtml(player, "tutorial_newbie_helper.html");
-                    playTutorialVoice(player, "tutorial_voice_007");
-                }
-            }
-            case QUESTION_MARK_ID_2 -> {
-                if (qs.getCond() == 2) {
-                    addRadar(event.getPlayer(), helperLocation());
-                    showTutorialHtml(event.getPlayer(), "tutorial_gemstone_found.html");
-                }
-            }
-            case QUESTION_MARK_ID_3 -> {
-                if (qs.getCond() == 3) {
-                    addRadar(event.getPlayer(), villageLocation());
-                    playSound(event.getPlayer(), "ItemSound.quest_tutorial");
-                    qs.setState(State.COMPLETED);
-                }
-            }
+            case QM_CHAT -> showNewbieHelperChat(player, qs);
+            case QM_QUEST_PROGRESS -> showGemstoneFound(event, qs);
+            case QM_MEET_NEWBIE_HELPER -> onMeetNewbieHelper(event, qs);
+        }
+    }
+
+    private void onMeetNewbieHelper(OnPlayerPressTutorialMark event, QuestState qs) {
+        if (qs.getCond() == 3) {
+            addRadar(event.getPlayer(), villageLocation());
+            playSound(event.getPlayer(), "ItemSound.quest_tutorial");
+            qs.setState(State.COMPLETED);
+        }
+    }
+
+    private void showGemstoneFound(OnPlayerPressTutorialMark event, QuestState qs) {
+        if (qs.getCond() == 2) {
+            addRadar(event.getPlayer(), helperLocation());
+            showTutorialHtml(event.getPlayer(), "tutorial_gemstone_found.html");
+        }
+    }
+
+    private void showNewbieHelperChat(Player player, QuestState qs) {
+        if (qs.getCond() == 1) {
+            showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
+            addRadar(player, helperLocation());
+            showTutorialHtml(player, "tutorial_newbie_helper.html");
+            playTutorialVoice(player, "tutorial_voice_007");
         }
     }
 
