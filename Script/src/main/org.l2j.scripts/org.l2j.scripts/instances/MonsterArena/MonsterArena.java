@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -23,9 +23,11 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2j.scripts.instances.AbstractInstance;
@@ -64,6 +66,11 @@ public class MonsterArena extends AbstractInstance {
 		25811, // Satur
 		25812, // Kosnak
 		25813, // Garaki
+		25834, // Shadai
+		25835, // Turabait
+		25836, // Tier
+		25837, // Cherkya
+		25838, // Spicula
 	};
 
 	private static final int BATTLE_BOX_1 = 70917;
@@ -97,6 +104,19 @@ public class MonsterArena extends AbstractInstance {
 			}
 			case "enter_monster_arena": {
 				// If you died, you may return to the arena.
+				if (player.isGM()){
+					enterArenaInstance(player, npc, TEMPLATE_ID);
+					final Instance world = player.getInstanceWorld();
+					if (world != null) {
+						final Npc machine = world.getNpc(MACHINE);
+						machine.setScriptValue(player.getClanId());
+						startQuestTimer("machine_talk", 10000, machine, null);
+						startQuestTimer("start_countdown", 60000, machine, null);
+						startQuestTimer("next_spawn", 60000, machine, null);
+						var clan = player.getClan();
+						clan.setArenaProgress(1);
+					}
+				}
 				if ((player.getClan() != null) && (player.getCommandChannel() != null))
 				{
 					for (Player member : player.getCommandChannel().getMembers())
@@ -133,7 +153,7 @@ public class MonsterArena extends AbstractInstance {
 					}
 				}
 
-				enterInstance(player, npc, TEMPLATE_ID);
+				enterArenaInstance(player, npc, TEMPLATE_ID);
 
 				final Instance world = player.getInstanceWorld();
 				if (world != null)
@@ -154,44 +174,34 @@ public class MonsterArena extends AbstractInstance {
 				}
 				break;
 			}
-			case "machine_talk":
-			{
+			case "machine_talk": {
 				final Instance world = npc.getInstanceWorld();
-				if (world != null)
-				{
+				if (world != null) {
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WELCOME_TO_THE_ARENA_TEST_YOUR_CLAN_S_STRENGTH);
 				}
 				break;
 			}
-			case "start_countdown":
-			{
+			case "start_countdown": {
 				final Instance world = npc.getInstanceWorld();
-				if (world != null)
-				{
+				if (world != null) {
 					world.setStatus(1);
-					for (Player plr : world.getPlayers())
-					{
-						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1800, 0, NpcStringId.REMAINING_TIME));
+					for (Player plr : world.getPlayers()) {
+						plr.sendPacket(new ExSendUIEvent(plr, false, false, (int) world.getRemainingTime() / 1000, 0, NpcStringId.REMAINING_TIME));
 					}
 				}
 				break;
 			}
-			case "next_spawn":
-			{
+			case "next_spawn": {
 				final Instance world = npc.getInstanceWorld();
-				if (world != null)
-				{
+				if (world != null) {
 					world.spawnGroup("boss_" + ClanTable.getInstance().getClan(npc.getScriptValue()).getArenaProgress());
 				}
 				break;
 			}
-			case "supply_reward":
-			{
+			case "supply_reward": {
 				final Instance world = npc.getInstanceWorld();
-				if ((world != null) && (npc.getId() == SUPPLIES) && (player.getLevel() > 39))
-				{
-					if (!REWARDED_PLAYERS.contains(player) && npc.isScriptValue(0))
-					{
+				if ((world != null) && (npc.getId() == SUPPLIES) && (player.getLevel() > 39)) {
+					if (!REWARDED_PLAYERS.contains(player) && npc.isScriptValue(0)) {
 						npc.setScriptValue(1);
 						npc.doDie(npc);
 						REWARDED_PLAYERS.add(player);
@@ -234,8 +244,7 @@ public class MonsterArena extends AbstractInstance {
 				}
 				break;
 			}
-			case "remove_supplies":
-			{
+			case "remove_supplies": {
 				final Instance world = npc.getInstanceWorld();
 				if (world != null)
 				{
@@ -249,13 +258,40 @@ public class MonsterArena extends AbstractInstance {
 				}
 				break;
 			}
+			case "extratime": {
+				final Instance world = player.getInstanceWorld();
+				int count = world.getParameters().getInt("extratime");
+				world.setParameter("extratime", count++);
+				long remainingTime = world.getRemainingTime();
+				int additionnalTime = 0;
+				if(Rnd.get(100) < 10)
+					additionnalTime = 5;
+				else {
+					additionnalTime = Rnd.get(4);
+				}
+
+				remainingTime += additionnalTime * 60000;
+				world.setDuration((int) (remainingTime / 1000) / 60);
+
+				for (Player plr : world.getPlayers()) {
+					//FIXME: Do need to cancel current UIEvent ?
+					plr.sendPacket(new ExSendUIEvent(plr, false, false, (int) remainingTime / 1000, 0, NpcStringId.REMAINING_TIME));
+				}
+			}
 		}
 		return null;
 	}
 
+	private void enterArenaInstance(Player player, Npc npc, int templateId) {
+		enterInstance(player, npc, templateId);
+		final Instance world = player.getInstanceWorld();
+		if (world != null) {
+			world.setParameter("extratime", 0);
+		}
+	}
+
 	@Override
-	public void onInstanceLeave(Player player, Instance instance)
-	{
+	public void onInstanceLeave(Player player, Instance instance) {
 		player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.REMAINING_TIME));
 	}
 
@@ -299,8 +335,11 @@ public class MonsterArena extends AbstractInstance {
 	}
 
 	@Override
-	public String onFirstTalk(Npc npc, Player player)
-	{
+	public String onFirstTalk(Npc npc, Player player) {
+		final Instance world = player.getInstanceWorld();
+		if(npc.getId() == MACHINE && world.getParameters().getInt("extratime") < 5) {
+			return npc.getId() + "-extratime.htm";
+		}
 		return npc.getId() + "-01.htm";
 	}
 

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -66,6 +66,8 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.TaxZone;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -79,6 +81,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * It uses a template to fetch some static values.
  */
 public class Npc extends Creature {
+    private static final Logger  LOGGER = LoggerFactory.getLogger(Npc.class);
     /**
      * The interaction distance of the Folk(is used as offset in MovetoLocation method)
      */
@@ -1408,13 +1411,6 @@ public class Npc extends Creature {
      */
     public boolean hasSkillChance() {
         return Rnd.get(100) < Rnd.get(getTemplate().getMinSkillChance(), getTemplate().getMaxSkillChance());
-    }
-
-    /**
-     * Initialize creature container that looks up for creatures around its owner, and notifies with onCreatureSee upon discovery.
-     */
-    public void initSeenCreatures() {
-        initSeenCreatures(getTemplate().getAggroRange());
     }
 
     /**

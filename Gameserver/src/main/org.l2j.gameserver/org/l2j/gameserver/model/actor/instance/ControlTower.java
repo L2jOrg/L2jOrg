@@ -1,6 +1,6 @@
 /*
  * Copyright © 2019 L2J Mobius
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Tower;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -32,6 +34,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * Class for Control Tower instance.
  */
 public class ControlTower extends Tower {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ControlTower.class);
+
     private volatile Set<Spawn> _guards;
 
     public ControlTower(NpcTemplate template) {

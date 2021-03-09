@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -70,8 +70,8 @@ public final class Broadcast {
                 player.sendPacket(mov);
                 if ((mov instanceof ExCharInfo) && (isPlayer(character))) {
                     final int relation = ((Player) character).getRelation(player);
-                    final Integer oldrelation = character.getKnownRelations().get(player.getObjectId());
-                    if ((oldrelation != null) && (oldrelation != relation)) {
+                    final int oldrelation = character.getKnownRelations().get(player.getObjectId());
+                    if (oldrelation != relation) {
                         final RelationChanged rc = new RelationChanged();
                         rc.addRelation((Player) character, relation, character.isAutoAttackable(player));
                         if (character.hasSummon()) {

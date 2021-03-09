@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -30,13 +30,13 @@ public class Q10960_Tutorial extends Tutorial {
 
     private static final QuestSoundHtmlHolder STARTING_HTML_VOICE = new QuestSoundHtmlHolder("tutorial_voice_001j", "main.html");
     private static final int NEWBIE_HELPER = 34108;
-    private static final int SUPERVISOR = 34109;
+    private static final int TRAINER = 34109;
     private static final Location HELPER_LOC = new Location(-124731, 38070, 1208);
     private static final Location VILLAGE_LOCATION = new Location(-118073, 45131, 368, 43039);
 
     public Q10960_Tutorial() {
         super(10960, ClassId.JIN_KAMAEL_SOLDIER);
-        addFirstTalkId(SUPERVISOR);
+        addFirstTalkId(TRAINER);
     }
 
     @Override

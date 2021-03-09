@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -84,7 +84,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author JoeAlisson
  */
 public class Pet extends Summon {
-    protected static final Logger LOGGER_PET = LoggerFactory.getLogger(Pet.class.getName());
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Pet.class);
 
     private final PetTemplate petTemplate;
     private final PetInventory _inventory;
@@ -311,7 +311,7 @@ public class Pet extends Summon {
 
         if (!GameUtils.isItem(object)) {
             // dont try to pickup anything that is not an item :)
-            LOGGER_PET.warn(this + " trying to pickup wrong target." + object);
+            LOGGER.warn(this + " trying to pickup wrong target." + object);
             sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -564,7 +564,7 @@ public class Pet extends Summon {
             if (protect) {
                 dropit.getDropProtection().protect(getOwner());
             }
-            LOGGER_PET.debug("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
+            LOGGER.debug("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
             dropit.dropMe(this, getX(), getY(), getZ() + 100);
         }
     }
@@ -1023,7 +1023,7 @@ public class Pet extends Summon {
                     sendPacket(SystemMessageId.YOUR_PET_IS_STARVING_AND_WILL_NOT_OBEY_UNTIL_IT_GETS_IT_S_FOOD_FEED_YOUR_PET);
                 }
             } catch (Exception e) {
-                LOGGER_PET.error("Pet [ObjectId: " + getObjectId() + "] a feed task error has occurred", e);
+                LOGGER.error("Pet [ObjectId: " + getObjectId() + "] a feed task error has occurred", e);
             }
         }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -123,7 +123,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
     }
 
     public void close(boolean toLoginScreen) {
-        close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
+        sendPacket(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
         state = ConnectionState.DISCONNECTED;
     }
 

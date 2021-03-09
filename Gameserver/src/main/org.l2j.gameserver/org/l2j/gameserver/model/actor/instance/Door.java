@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -46,6 +46,8 @@ import org.l2j.gameserver.network.serverpackets.StaticObject;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.Future;
 
@@ -54,6 +56,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
 
 public final class Door extends Creature {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Door.class);
     boolean open;
     private boolean _isAttackableDoor;
     private boolean inverted;
