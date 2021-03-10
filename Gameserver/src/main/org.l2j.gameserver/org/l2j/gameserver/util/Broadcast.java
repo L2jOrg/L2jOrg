@@ -64,31 +64,10 @@ public final class Broadcast {
      * @param mov
      */
     public static void toKnownPlayers(Creature character, ServerPacket mov) {
-        World.getInstance().forEachVisibleObject(character, Player.class, player ->
-        {
-            try {
-                player.sendPacket(mov);
-                if ((mov instanceof ExCharInfo) && (isPlayer(character))) {
-                    final int relation = ((Player) character).getRelation(player);
-                    final int oldrelation = character.getKnownRelations().get(player.getObjectId());
-                    if (oldrelation != relation) {
-                        final RelationChanged rc = new RelationChanged();
-                        rc.addRelation((Player) character, relation, character.isAutoAttackable(player));
-                        if (character.hasSummon()) {
-                            final Summon pet = character.getPet();
-                            if (pet != null) {
-                                rc.addRelation(pet, relation, character.isAutoAttackable(player));
-                            }
-                            if (character.hasServitors()) {
-                                character.getServitors().values().forEach(s -> rc.addRelation(s, relation, character.isAutoAttackable(player)));
-                            }
-                        }
-                        player.sendPacket(rc);
-                        character.getKnownRelations().put(player.getObjectId(), relation);
-                    }
-                }
-            } catch (NullPointerException e) {
-                LOGGER.warn(e.getMessage(), e);
+        World.getInstance().forEachVisibleObject(character, Player.class, player -> {
+            player.sendPacket(mov);
+            if (mov instanceof ExCharInfo && character instanceof Player broadcaster) {
+                broadcaster.updateRelation(player);
             }
         });
     }

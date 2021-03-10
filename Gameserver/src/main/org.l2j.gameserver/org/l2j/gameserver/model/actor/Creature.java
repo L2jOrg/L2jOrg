@@ -440,7 +440,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         World.getInstance().forEachPlayerInRange(this, radius, packet::sendTo, this::isVisibleFor);
     }
 
-    private void checkBroadcast(ServerPacket packet) {
+    protected void checkBroadcast(ServerPacket packet) {
         if(World.getInstance().getPlayersCountInSurroundRegions(this) > 100) { // need to profile to find out the best amount
             packet.sendInBroadcast(true);
         }
