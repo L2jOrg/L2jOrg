@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -64,6 +64,8 @@ import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.ref.WeakReference;
 import java.util.*;
@@ -78,8 +80,11 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.doIfIsCreature;
 
 public class Attackable extends Npc {
+    private static final Logger  LOGGER = LoggerFactory.getLogger(Attackable.class);
+
     private final AtomicReference<ItemHolder> _harvestItem = new AtomicReference<>();
     private final AtomicReference<Collection<ItemHolder>> _sweepItems = new AtomicReference<>();
+    private final Set<WeakReference<Creature>> attackByList = ConcurrentHashMap.newKeySet();
     // Raid
     private boolean _isRaid = false;
     private boolean _isRaidMinion = false;
@@ -280,6 +285,7 @@ public class Attackable extends Npc {
     @Override
     protected void onDie(Creature killer) {
         calculateRewards(killer);
+        attackByList.clear();
         super.onDie(killer);
     }
 
@@ -1481,5 +1487,9 @@ public class Attackable extends Npc {
             getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
         }
         super.setTarget(object);
+    }
+
+    public final Set<WeakReference<Creature>> getAttackByList() {
+        return attackByList;
     }
 }

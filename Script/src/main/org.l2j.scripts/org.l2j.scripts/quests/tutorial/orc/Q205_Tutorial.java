@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -28,7 +28,7 @@ import org.l2j.scripts.quests.tutorial.Tutorial;
  */
 public class Q205_Tutorial extends Tutorial {
 
-    private static final int SUPERVISOR = 30573;
+    private static final int TRAINER = 30573;
     private static final int NEWBIE_HELPER = 30575;
     private static final Location HELPER_LOCATION  = new Location(-56736, -113680, -672);
     private static final Location VILLAGE_LOCATION = new Location(-45113, -113598, -192, 45809);
@@ -37,7 +37,7 @@ public class Q205_Tutorial extends Tutorial {
 
     public Q205_Tutorial() {
         super(205, ClassId.ORC_FIGHTER, ClassId.ORC_MAGE);
-        addFirstTalkId(SUPERVISOR);
+        addFirstTalkId(TRAINER);
     }
 
     @Override

@@ -1,6 +1,6 @@
 /*
  * Copyright © 2019 L2J Mobius
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -30,8 +30,12 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.BuyList;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.util.GameUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Merchant extends Folk {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Merchant.class);
 
     public Merchant(NpcTemplate template) {
         super(template);
@@ -65,13 +69,13 @@ public class Merchant extends Folk {
     public final void showBuyWindow(Player player, int val, boolean applyCastleTax) {
         final ProductList buyList = BuyListData.getInstance().getBuyList(val);
         if (buyList == null) {
-            Creature.LOGGER.warn("BuyList not found! BuyListId:" + val);
+            LOGGER.warn("BuyList not found! BuyListId: {}", val);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         if (!buyList.isNpcAllowed(getId())) {
-            Creature.LOGGER.warn("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
+            LOGGER.warn("Npc not allowed in BuyList! BuyListId: {} Npc Id: {}", val, getId());
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

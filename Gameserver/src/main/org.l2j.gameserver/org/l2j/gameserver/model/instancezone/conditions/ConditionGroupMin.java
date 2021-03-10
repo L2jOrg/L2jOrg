@@ -1,6 +1,6 @@
 /*
  * Copyright © 2019 L2J Mobius
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *

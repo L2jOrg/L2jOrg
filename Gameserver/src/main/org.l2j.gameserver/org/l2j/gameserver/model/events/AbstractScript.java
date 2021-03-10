@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -1615,6 +1615,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             }
             if (summoner != null) {
                 summoner.addSummonedNpc(npc);
+                npc.setSummoner(summoner);
             }
             return npc;
         } catch (Exception e) {

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -292,9 +292,9 @@ public class Siege implements Siegable {
             }
 
             final int relation = member.getRelation(player);
-            final Integer oldRelation = member.getKnownRelations().get(player.getObjectId());
+            final int oldRelation = member.getKnownRelations().get(player.getObjectId());
 
-            if (isNull(oldRelation) || oldRelation != relation) {
+            if (oldRelation != relation) {
                 final RelationChanged rc = new RelationChanged();
                 rc.addRelation(member, relation, member.isAutoAttackable(player));
 

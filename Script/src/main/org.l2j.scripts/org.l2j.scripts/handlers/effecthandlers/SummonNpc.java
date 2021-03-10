@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019-2020 L2JOrg
+ * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -133,7 +133,8 @@ public final class SummonNpc extends AbstractEffect {
 
 
                 final Npc npc = spawn.doSpawn(false);
-                player.addSummonedNpc(npc); // npc.setSummoner(player);
+                player.addSummonedNpc(npc);
+                npc.setSummoner(player);
                 npc.setName(npcTemplate.getName());
                 npc.setTitle(npcTemplate.getName());
                 if (despawnDelay > 0) {
