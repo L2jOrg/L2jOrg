@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.type.ArmorType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -211,7 +212,18 @@ public class VariationData extends GameXmlReader {
             weaponType  = VariationWeaponType.MAGE;
         } else if(targetItem.getBodyPart() == BodyPart.BACK && targetItem.getEnchantLevel() < 10) {
             weaponType  = VariationWeaponType.CLOAK;
-        } else {
+        } else if (targetItem.isArmor() && targetItem.getBodyPart() == BodyPart.HEAD){
+            weaponType = VariationWeaponType.HELMET;
+        } else if (targetItem.isArmor() && targetItem.getBodyPart() == BodyPart.GLOVES){
+            weaponType = VariationWeaponType.GLOVES;
+        } else if (targetItem.isArmor() && targetItem.getBodyPart() == BodyPart.FEET){
+            weaponType = VariationWeaponType.BOOTS;
+        } else if (targetItem.isArmor() && (targetItem.getBodyPart() == BodyPart.CHEST || targetItem.getBodyPart() == BodyPart.FULL_ARMOR )){
+            weaponType = VariationWeaponType.CHEST;
+        } else if (targetItem.isArmor()){
+            weaponType = VariationWeaponType.ARMOR;
+        }
+        else {
             weaponType = VariationWeaponType.WARRIOR;
         }
         return weaponType;
